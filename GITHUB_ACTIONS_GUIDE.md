@@ -23,7 +23,7 @@ git commit -m "Initial commit: TalkLand Flutter app"
 
 ```bash
 # GitHub에서 제공하는 URL로 변경하세요
-git remote add origin https://github.com/YOUR_USERNAME/talkland_flutter.git
+git remote add origin https://github.com/zeyziyo/talkland_flutter.git
 git branch -M main
 git push -u origin main
 ```

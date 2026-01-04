@@ -4,7 +4,7 @@
 
 ### 1단계: GitHub에서 새 저장소 생성
 
-1. https://github.com/new 방문
+1. https://github.com/zeyziyo/talkland_flutter 방문
 2. 저장소 이름 입력 (예: `talkland_flutter`)
 3. Private 선택 (추천)
 4. **중요**: "Add .gitignore" 와 "Add README" 체크 해제 ❌
@@ -18,7 +18,7 @@ GitHub에서 생성한 저장소 URL을 복사한 후 실행:
 cd c:\FlutterProjects\talkland_flutter
 
 # YOUR_USERNAME을 본인 GitHub 사용자명으로 변경
-git remote add origin https://github.com/YOUR_USERNAME/talkland_flutter.git
+git remote add origin https://github.com/zeyziyo/talkland_flutter.git
 
 # main 브랜치로 변경
 git branch -M main
@@ -104,7 +104,7 @@ adb install app-release.apk
 git remote -v
 
 # 없다면 다시 추가
-git remote add origin https://github.com/YOUR_USERNAME/talkland_flutter.git
+git remote add origin https://github.com/zeyziyo/talkland_flutter.git
 ```
 
 ### 🔒 Permission denied
@@ -122,4 +122,4 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
-그러면 https://github.com/YOUR_USERNAME/talkland_flutter/releases 에서 APK를 다운로드할 수 있습니다!
+그러면 https://github.com/zeyziyo/talkland_flutter/releases 에서 APK를 다운로드할 수 있습니다!
