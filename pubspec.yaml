@@ -23,9 +23,6 @@ dependencies:
   # Text-to-Speech (TTS)
   flutter_tts: ^4.2.0
   
-  # Audio Recording
-  record: ^5.1.0
-  
   # Translation API
   http: ^1.2.0
   
