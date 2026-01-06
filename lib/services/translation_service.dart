@@ -67,19 +67,3 @@ class TranslationService {
     }
   }
 }
-  
-  /// Health check for server availability
-  static Future<bool> checkServerHealth() async {
-    try {
-      final uri = Uri.parse('$_baseUrl/api/health');
-      final response = await http.get(uri).timeout(
-        const Duration(seconds: 5),
-      );
-      
-      return response.statusCode == 200;
-    } catch (e) {
-      print('[Translation] Health check failed: $e');
-      return false;
-    }
-  }
-}
