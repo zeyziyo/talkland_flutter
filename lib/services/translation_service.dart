@@ -1,10 +1,9 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'package:translator/translator.dart';
 import 'database_service.dart';
 
-/// Translation service using TalkLand server API
+/// Translation service using Google Translate
 class TranslationService {
-  static const String _baseUrl = 'https://talkland.onrender.com';
+  static final _translator = GoogleTranslator();
   
   /// Translate text from source language to target language
   /// 
@@ -39,58 +38,35 @@ class TranslationService {
       print('[Translation] Cache unavailable (web platform)');
     }
     
-    // 2. Call server API
+    // 2. Call Google Translate API directly
     try {
-      final uri = Uri.parse('$_baseUrl/api/translate');
-      
-      print('[Translation] Calling API: $sourceLang -> $targetLang');
+      print('[Translation] Calling Google Translate: $sourceLang -> $targetLang');
       print('[Translation] Text: ${normalized.substring(0, normalized.length > 20 ? 20 : normalized.length)}...');
       
-      final response = await http.post(
-        uri,
-        headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({
-          'text': normalized,
-          'source_lang': sourceLang,
-          'target_lang': targetLang,
-        }),
-      ).timeout(
-        const Duration(seconds: 10),
-        onTimeout: () {
-          throw Exception('Translation timeout after 10 seconds');
-        },
+      final translation = await _translator.translate(
+        normalized,
+        from: sourceLang,
+        to: targetLang,
       );
       
-      print('[Translation] Response status: ${response.statusCode}');
+      final translatedText = translation.text;
       
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        
-        if (data['error'] != null) {
-          throw Exception('Translation API error: ${data['error']}');
-        }
-        
-        final translation = data['translated_text'] as String;
-        
-        // 3. Cache the result (skip on web)
-        try {
-          await DatabaseService.cacheTranslation(cacheKey, translation);
-        } catch (e) {
-          // Database not available - skip
-          print('[Translation] Could not cache (web platform)');
-        }
-        
-        print('[Translation] API call successful: $translation');
-        return translation;
-      } else {
-        print('[Translation] Error response: ${response.body}');
-        throw Exception('Translation failed: HTTP ${response.statusCode}');
+      // 3. Cache the result (skip on web)
+      try {
+        await DatabaseService.cacheTranslation(cacheKey, translatedText);
+      } catch (e) {
+        // Database not available - skip
+        print('[Translation] Could not cache (web platform)');
       }
+      
+      print('[Translation] Translation successful: $translatedText');
+      return translatedText;
     } catch (e) {
       print('[Translation] Error: $e');
       rethrow;
     }
   }
+}
   
   /// Health check for server availability
   static Future<bool> checkServerHealth() async {

@@ -25,6 +25,7 @@ dependencies:
   
   # Translation API
   http: ^1.2.0
+  translator: ^1.0.0
   
   # Local Database
   sqflite: ^2.3.0
