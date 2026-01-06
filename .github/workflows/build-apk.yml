@@ -31,6 +31,8 @@ jobs:
       run: flutter pub get
       
     - name: Build APK
+      env:
+        FLUTTER_ROOT: ${{ env.FLUTTER_ROOT }}
       run: flutter build apk --release
       
     - name: Upload APK
