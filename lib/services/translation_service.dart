@@ -5,6 +5,22 @@ import 'database_service.dart';
 class TranslationService {
   static final _translator = GoogleTranslator();
   
+  /// Convert language code to translator package format
+  /// 
+  /// translator package uses simple codes: 'ko', 'ja', 'zh', 'es', 'en'
+  /// But we use 'zh-CN' in app, need to convert to 'zh'
+  static String _normalizeLanguageCode(String langCode) {
+    final map = {
+      'zh-CN': 'zh-cn',  // Simplified Chinese
+      'zh-TW': 'zh-tw',  // Traditional Chinese
+      'ko': 'ko',
+      'ja': 'ja',
+      'en': 'en',
+      'es': 'es',
+    };
+    return map[langCode] ?? langCode.toLowerCase();
+  }
+  
   /// Translate text from source language to target language
   /// 
   /// Parameters:
@@ -38,20 +54,24 @@ class TranslationService {
       print('[Translation] Cache unavailable (web platform)');
     }
     
-    // 2. Call Google Translate API directly
+    // 2. Normalize language codes for translator package
+    final normalizedSourceLang = _normalizeLanguageCode(sourceLang);
+    final normalizedTargetLang = _normalizeLanguageCode(targetLang);
+    
+    // 3. Call Google Translate API directly
     try {
-      print('[Translation] Calling Google Translate: $sourceLang -> $targetLang');
+      print('[Translation] Calling Google Translate: $sourceLang($normalizedSourceLang) -> $targetLang($normalizedTargetLang)');
       print('[Translation] Text: ${normalized.substring(0, normalized.length > 20 ? 20 : normalized.length)}...');
       
       final translation = await _translator.translate(
         normalized,
-        from: sourceLang,
-        to: targetLang,
+        from: normalizedSourceLang,
+        to: normalizedTargetLang,
       );
       
       final translatedText = translation.text;
       
-      // 3. Cache the result (skip on web)
+      // 4. Cache the result (skip on web)
       try {
         await DatabaseService.cacheTranslation(cacheKey, translatedText);
       } catch (e) {
