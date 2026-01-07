@@ -292,6 +292,10 @@ class AppState extends ChangeNotifier {
       
       // Clear status message after save
       _statusMessage = '';
+      
+      // Reload study records to update review count in tab
+      await loadStudyRecords();
+      
       notifyListeners();
       
       print('[AppState] Translation saved successfully');

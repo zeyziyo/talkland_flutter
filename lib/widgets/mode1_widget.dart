@@ -187,32 +187,8 @@ class Mode1Widget extends StatelessWidget {
                           ),
                         ),
                         
-                        // Status Message
-                        if (appState.statusMessage.isNotEmpty)
-                          Padding(
-                            padding: const EdgeInsets.only(top: 16),
-                            child: Card(
-                              color: Colors.blue[50],
-                              child: Padding(
-                                padding: const EdgeInsets.all(12),
-                                child: Row(
-                                  children: [
-                                    const Icon(Icons.info_outline, size: 20, color: Colors.blue),
-                                    const SizedBox(width: 8),
-                                    Expanded(
-                                      child: Text(
-                                        appState.statusMessage,
-                                        style: const TextStyle(color: Colors.blue),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        
-                        // Extra padding at bottom for save button
-                        const SizedBox(height: 80),
+                        // Extra padding at bottom for save button and device buttons
+                        const SizedBox(height: 100),
                       ],
                     ),
                   ),
@@ -224,35 +200,37 @@ class Mode1Widget extends StatelessWidget {
               ),
             ),
             
-            // Bottom Save Button (Always visible)
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    blurRadius: 4,
-                    offset: const Offset(0, -2),
-                  ),
-                ],
-              ),
-              child: SizedBox(
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: (appState.sourceText.isEmpty || appState.translatedText.isEmpty)
-                      ? null
-                      : () => appState.saveTranslation(),
-                  icon: const Icon(Icons.save),
-                  label: const Text(
-                    '데이터 저장',
-                    style: TextStyle(fontSize: 16),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF667eea),
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    disabledBackgroundColor: Colors.grey[300],
+            // Bottom Save Button (Always visible) with SafeArea
+            SafeArea(
+              child: Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      blurRadius: 4,
+                      offset: const Offset(0, -2),
+                    ),
+                  ],
+                ),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton.icon(
+                    onPressed: (appState.sourceText.isEmpty || appState.translatedText.isEmpty)
+                        ? null
+                        : () => appState.saveTranslation(),
+                    icon: const Icon(Icons.save),
+                    label: const Text(
+                      '데이터 저장',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF667eea),
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      disabledBackgroundColor: Colors.grey[300],
+                    ),
                   ),
                 ),
               ),
