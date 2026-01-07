@@ -400,6 +400,8 @@ class DatabaseService {
           'target_lang': targetLang,
           'target_id': targetId,
           'target_text': targetRecords.first['text'],
+          'translated_text': targetRecords.first['text'], // Alias for Mode2Widget compatibility
+          'date': translation['created_at'], // Alias for compatibility
           'created_at': translation['created_at'],
           'review_count': targetRecords.first['review_count'] ?? 0,
           'last_reviewed': targetRecords.first['last_reviewed'],
