@@ -149,7 +149,7 @@ class DatabaseService {
     print('[DB] Language table created/verified: $tableName');
   }
   
-  /// 언어 테이블에 텍스트 삽입 (중복 체크 없음)
+  /// 언어 테이블에 텍스트 삽입 (중복 시 기존 ID 반환)
   static Future<int> insertLanguageRecord(String langCode, String text) async {
     final db = await database;
     final tableName = 'lang_$langCode'.replaceAll('-', '_');
@@ -157,6 +157,21 @@ class DatabaseService {
     // 테이블이 없으면 생성
     await createLanguageTable(langCode);
     
+    // 중복 검사: 동일한 텍스트가 이미 존재하는지 확인 (대소문자 무시)
+    final existing = await db.query(
+      tableName,
+      where: 'LOWER(text) = LOWER(?)',
+      whereArgs: [text],
+      limit: 1,
+    );
+    
+    if (existing.isNotEmpty) {
+      final existingId = existing.first['id'] as int;
+      print('[DB] Found existing text in $tableName: id=$existingId, text=${text.substring(0, text.length > 20 ? 20 : text.length)}...');
+      return existingId;
+    }
+    
+    // 새 레코드 삽입
     final id = await db.insert(tableName, {
       'text': text,
       'audio_file': null,
@@ -285,7 +300,7 @@ class DatabaseService {
     };
   }
   
-  /// 번역 관계 저장
+  /// 번역 관계 저장 (중복 시 무시)
   static Future<void> saveTranslationLink({
     required String sourceLang,
     required int sourceId,
@@ -294,6 +309,20 @@ class DatabaseService {
   }) async {
     final db = await database;
     
+    // 중복 검사: 동일한 번역 관계가 이미 존재하는지 확인
+    final existing = await db.query(
+      'translations',
+      where: 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ?',
+      whereArgs: [sourceLang, sourceId, targetLang, targetId],
+      limit: 1,
+    );
+    
+    if (existing.isNotEmpty) {
+      print('[DB] Translation link already exists: $sourceLang($sourceId) -> $targetLang($targetId)');
+      return;
+    }
+    
+    // 새 번역 관계 생성
     await db.insert('translations', {
       'source_lang': sourceLang,
       'source_id': sourceId,
