@@ -117,55 +117,9 @@ class _Mode2WidgetState extends State<Mode2Widget> {
   Widget build(BuildContext context) {
     return Consumer<AppState>(
       builder: (context, appState, child) {
-        if (appState.studyRecords.isEmpty) {
-          return Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.library_books_outlined,
-                  size: 64,
-                  color: Colors.grey[400],
-                ),
-                const SizedBox(height: 16),
-                Text(
-                  '아직 학습 기록이 없습니다',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.grey[600],
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  '검색 모드에서 번역을 하면\n자동으로 저장됩니다',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey[500],
-                  ),
-                ),
-                const SizedBox(height: 24),
-                ElevatedButton.icon(
-                  onPressed: () => _importJsonFile(context),
-                  icon: const Icon(Icons.upload_file),
-                  label: const Text('JSON 파일 불러오기'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF667eea),
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 24,
-                      vertical: 12,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          );
-        }
-
         return Column(
           children: [
-            // Header with language filter
+            // Header with language filter (Always visible)
             Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
@@ -201,7 +155,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                     ],
                   ),
                   const SizedBox(height: 12),
-                  // Language filter dropdown
+                  // Language filter dropdown (Always visible)
                   Row(
                     children: [
                       const Text(
@@ -241,9 +195,53 @@ class _Mode2WidgetState extends State<Mode2Widget> {
               ),
             ),
 
-            // Study Records List
+            // Study Records List OR Empty State
             Expanded(
-              child: ListView.builder(
+              child: appState.studyRecords.isEmpty
+                  ? Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.library_books_outlined,
+                            size: 64,
+                            color: Colors.grey[400],
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            '선택한 언어의 학습 기록이 없습니다',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.grey[600],
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            '검색 모드에서 번역을 하거나\\nJSON 파일을 불러오세요',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.grey[500],
+                            ),
+                          ),
+                          const SizedBox(height: 24),
+                          ElevatedButton.icon(
+                            onPressed: () => _importJsonFile(context),
+                            icon: const Icon(Icons.upload_file),
+                            label: const Text('JSON 파일 불러오기'),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFF667eea),
+                              foregroundColor: Colors.white,
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 24,
+                                vertical: 12,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  : ListView.builder(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 itemCount: appState.studyRecords.length,
                 itemBuilder: (context, index) {

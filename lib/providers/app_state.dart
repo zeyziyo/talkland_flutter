@@ -290,7 +290,8 @@ class AppState extends ChangeNotifier {
         targetId: targetId,
       );
       
-      _statusMessage = '저장 완료';
+      // Clear status message after save
+      _statusMessage = '';
       notifyListeners();
       
       print('[AppState] Translation saved successfully');

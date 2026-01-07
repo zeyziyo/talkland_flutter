@@ -24,25 +24,6 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // Status Message
-          Consumer<AppState>(
-            builder: (context, appState, child) {
-              if (appState.statusMessage.isEmpty) {
-                return const SizedBox(height: 4);
-              }
-              return Container(
-                width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                color: Colors.blue[50],
-                child: Text(
-                  appState.statusMessage,
-                  style: const TextStyle(fontSize: 14),
-                  textAlign: TextAlign.center,
-                ),
-              );
-            },
-          ),
-          
           // Tab Selector
           Consumer<AppState>(
             builder: (context, appState, child) {
