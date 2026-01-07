@@ -217,13 +217,15 @@ class Mode1Widget extends StatelessWidget {
                 child: SizedBox(
                   width: double.infinity,
                   child: ElevatedButton.icon(
-                    onPressed: (appState.sourceText.isEmpty || appState.translatedText.isEmpty)
+                    onPressed: (appState.sourceText.isEmpty || 
+                                appState.translatedText.isEmpty ||
+                                appState.isSaved)
                         ? null
                         : () => appState.saveTranslation(),
                     icon: const Icon(Icons.save),
-                    label: const Text(
-                      '데이터 저장',
-                      style: TextStyle(fontSize: 16),
+                    label: Text(
+                      appState.isSaved ? '저장 완료' : '데이터 저장',
+                      style: const TextStyle(fontSize: 16),
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF667eea),

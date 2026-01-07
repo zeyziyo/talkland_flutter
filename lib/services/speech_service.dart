@@ -104,11 +104,38 @@ class SpeechService {
     }
     
     try {
+      print('[TTS] Speaking: "$text" in language: $lang');
+      
+      // Configure TTS parameters
       await _flutterTts.setLanguage(lang);
       await _flutterTts.setSpeechRate(slow ? 0.3 : 0.5);
-      await _flutterTts.speak(text);
+      await _flutterTts.setVolume(1.0);
+      await _flutterTts.setPitch(1.0);
+      
+      // Set completion and error handlers
+      _flutterTts.setCompletionHandler(() {
+        print('[TTS] Speech completed successfully');
+      });
+      
+      _flutterTts.setErrorHandler((msg) {
+        print('[TTS] Error during speech: $msg');
+      });
+      
+      _flutterTts.setStartHandler(() {
+        print('[TTS] Speech started');
+      });
+      
+      // Speak the text
+      final result = await _flutterTts.speak(text);
+      
+      if (result == 1) {
+        print('[TTS] Speak command sent successfully');
+      } else {
+        print('[TTS] Speak command failed with result: $result');
+      }
     } catch (e) {
-      print('TTS Error: $e');
+      print('[TTS] Error: $e');
+      rethrow;
     }
   }
   

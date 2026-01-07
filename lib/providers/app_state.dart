@@ -20,6 +20,7 @@ class AppState extends ChangeNotifier {
   bool _isListening = false;
   bool _isTranslating = false;
   bool _isSpeaking = false;
+  bool _isSaved = false; // Track if current translation is saved
   String _statusMessage = '';
   
   // Duplicate detection & translation reuse state
@@ -40,6 +41,7 @@ class AppState extends ChangeNotifier {
   bool get isListening => _isListening;
   bool get isTranslating => _isTranslating;
   bool get isSpeaking => _isSpeaking;
+  bool get isSaved => _isSaved;
   String get statusMessage => _statusMessage;
   List<Map<String, dynamic>> get studyRecords => _studyRecords;
   List<Map<String, dynamic>> get similarSources => _similarSources;
@@ -255,6 +257,7 @@ class AppState extends ChangeNotifier {
       // Auto-save translation (will be called in saveTranslation method)
       _isTranslating = false;
       _statusMessage = '번역 완료 (저장 필요)';
+      _isSaved = false; // Reset save state for new translation
       notifyListeners();
     } catch (e) {
       _isTranslating = false;
@@ -292,6 +295,7 @@ class AppState extends ChangeNotifier {
       
       // Clear status message after save
       _statusMessage = '';
+      _isSaved = true; // Mark as saved
       
       // Reload study records to update review count in tab
       await loadStudyRecords();
@@ -299,7 +303,7 @@ class AppState extends ChangeNotifier {
       notifyListeners();
       
       print('[AppState] Translation saved successfully');
-    } catch (e) {
+    } catch (e) { {
       _statusMessage = '저장 실패: $e';
       notifyListeners();
       print('[AppState] Error saving translation: $e');
@@ -419,6 +423,7 @@ class AppState extends ChangeNotifier {
     _selectedSourceId = null;
     _similarSources = [];
     _showDuplicateDialog = false;
+    _isSaved = false; // Reset save state
     notifyListeners();
   }
   
