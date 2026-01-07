@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../widgets/mode1_widget.dart';
 import '../widgets/mode2_widget.dart';
+import '../widgets/mode3_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -41,6 +42,11 @@ class HomeScreen extends StatelessWidget {
                       label: Text('복습 (${appState.studyRecords.length})'),
                       icon: const Icon(Icons.library_books),
                     ),
+                    ButtonSegment<int>(
+                      value: 2,
+                      label: Text('학습 자료 (${appState.studyMaterials.length})'),
+                      icon: const Icon(Icons.topic),
+                    ),
                   ],
                   selected: {appState.currentMode},
                   onSelectionChanged: (Set<int> newSelection) {
@@ -71,8 +77,10 @@ class HomeScreen extends StatelessWidget {
               builder: (context, appState, child) {
                 if (appState.currentMode == 0) {
                   return const Mode1Widget();
-                } else {
+                } else if (appState.currentMode == 1) {
                   return const Mode2Widget();
+                } else {
+                  return const Mode3Widget();
                 }
               },
             ),

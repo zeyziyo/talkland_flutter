@@ -9,7 +9,7 @@ class AppState extends ChangeNotifier {
   // Services
   final SpeechService _speechService = SpeechService();
   
-  // Current mode: 0 = 검색, 1 = 복습
+  // Current mode: 0 = 검색, 1 = 복습, 2 = 학습 자료
   int _currentMode = 0;
   
   // Mode 1 (검색) State
@@ -32,6 +32,12 @@ class AppState extends ChangeNotifier {
   List<Map<String, dynamic>> _studyRecords = [];
   String _selectedReviewLanguage = 'ja'; // Filter by target language
   
+  // Mode 3 (학습 자료) State
+  List<Map<String, dynamic>> _studyMaterials = []; // Available study materials
+  int? _selectedMaterialId; // Currently selected material
+  List<Map<String, dynamic>> _materialRecords = []; // Sentences in selected material
+  Set<int> _studiedTranslationIds = {}; // Reviewed translations in current session
+  
   // Getters
   int get currentMode => _currentMode;
   String get sourceText => _sourceText;
@@ -48,6 +54,12 @@ class AppState extends ChangeNotifier {
   int? get selectedSourceId => _selectedSourceId;
   bool get showDuplicateDialog => _showDuplicateDialog;
   String get selectedReviewLanguage => _selectedReviewLanguage;
+  
+  // Mode 3 Getters
+  List<Map<String, dynamic>> get studyMaterials => _studyMaterials;
+  int? get selectedMaterialId => _selectedMaterialId;
+  List<Map<String, dynamic>> get materialRecords => _materialRecords;
+  Set<int> get studiedTranslationIds => _studiedTranslationIds;
   
   // Language display names (Native + Korean name)
   static const Map<String, String> languageNames = {
@@ -117,6 +129,9 @@ class AppState extends ChangeNotifier {
     if (mode == 1) {
       // Load review mode data
       loadStudyRecords();
+    } else if (mode == 2) {
+      // Load Mode 3 study materials
+      loadStudyMaterials();
     }
     
     notifyListeners();
@@ -470,6 +485,107 @@ class AppState extends ChangeNotifier {
         'total': 0,
         'errors': ['Import failed: $e'],
       };
+    }
+  }
+  
+  // ==========================================
+  // Mode 3: Study Materials
+  // ==========================================
+  
+  /// Load all study materials
+  Future<void> loadStudyMaterials() async {
+    try {
+      _studyMaterials = await DatabaseService.getAllStudyMaterials();
+      
+      // Auto-select first material if none selected
+      if (_studyMaterials.isNotEmpty && _selectedMaterialId == null) {
+        _selectedMaterialId = _studyMaterials.first['id'] as int;
+        await loadMaterialRecords(_selectedMaterialId!);
+      }
+      
+      notifyListeners();
+    } catch (e) {
+      print('[AppState] Error loading study materials: $e');
+      _studyMaterials = [];
+      notifyListeners();
+    }
+  }
+  
+  /// Select a study material and load its records
+  Future<void> selectMaterial(int materialId) async {
+    _selectedMaterialId = materialId;
+    _studiedTranslationIds.clear(); // Reset studied items
+    await loadMaterialRecords(materialId);
+  }
+  
+  /// Load records for selected material
+  Future<void> loadMaterialRecords(int materialId) async {
+    try {
+      _materialRecords = await DatabaseService.getRecordsByMaterialId(materialId);
+      notifyListeners();
+    } catch (e) {
+      print('[AppState] Error loading material records: $e');
+      _materialRecords = [];
+      notifyListeners();
+    }
+  }
+  
+  /// Import JSON file with metadata (Mode 3)
+  Future<Map<String, dynamic>> importJsonWithMetadata(
+    String jsonContent,
+    {String? fileName}
+  ) async {
+    try {
+      final result = await DatabaseService.importFromJsonWithMetadata(
+        jsonContent,
+        fileName: fileName,
+      );
+      
+      // Reload study materials after import
+      if (result['success'] == true) {
+        await loadStudyMaterials();
+        
+        // Auto-select the newly imported material
+        final materialId = result['material_id'] as int?;
+        if (materialId != null) {
+          await selectMaterial(materialId);
+        }
+      }
+      
+      return result;
+    } catch (e) {
+      print('[AppState] Error importing JSON with metadata: $e');
+      return {
+        'success': false,
+        'imported': 0,
+        'skipped': 0,
+        'total': 0,
+        'errors': ['Import failed: $e'],
+      };
+    }
+  }
+  
+  /// Mark translation as studied in current session
+  void markTranslationAsStudied(int translationId) {
+    _studiedTranslationIds.add(translationId);
+    notifyListeners();
+  }
+  
+  /// Play TTS for material record (source or target)
+  Future<void> playMaterialTts({
+    required String text,
+    required String lang,
+    int? recordId,
+  }) async {
+    try {
+      // TODO: Check for cached audio file in database
+      // If recordId is provided, try to load audio from database first
+      
+      await _speechService.speak(text, lang: _getLangCode(lang));
+      
+      // TODO: Save generated TTS to database if recordId is provided
+    } catch (e) {
+      print('[AppState] Error playing material TTS: $e');
     }
   }
   

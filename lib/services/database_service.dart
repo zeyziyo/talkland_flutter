@@ -23,7 +23,7 @@ class DatabaseService {
     
     return await openDatabase(
       path,
-      version: 2, // Version upgraded from 1 to 2
+      version: 3, // Version 3: Added study_materials table for Mode 3
       onCreate: (db, version) async {
         await _createBaseTables(db);
       },
@@ -31,6 +31,10 @@ class DatabaseService {
         if (oldVersion < 2) {
           // Migrate from old schema to new schema
           await _migrateToV2(db);
+        }
+        if (oldVersion < 3) {
+          // Migrate to v3: Add study_materials table
+          await _migrateToV3(db);
         }
       },
     );
@@ -46,7 +50,8 @@ class DatabaseService {
         source_id INTEGER NOT NULL,
         target_lang TEXT NOT NULL,
         target_id INTEGER NOT NULL,
-        created_at TEXT NOT NULL
+        created_at TEXT NOT NULL,
+        material_id INTEGER
       )
     ''');
     
@@ -56,6 +61,20 @@ class DatabaseService {
         cache_key TEXT PRIMARY KEY,
         translation TEXT NOT NULL,
         timestamp INTEGER NOT NULL
+      )
+    ''');
+    
+    // 학습 자료 메타데이터 테이블 (모드3용)
+    await db.execute('''
+      CREATE TABLE study_materials (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        subject TEXT NOT NULL,
+        source TEXT NOT NULL,
+        source_language TEXT NOT NULL,
+        target_language TEXT NOT NULL,
+        file_name TEXT,
+        created_at TEXT NOT NULL,
+        imported_at TEXT NOT NULL
       )
     ''');
     
@@ -123,6 +142,37 @@ class DatabaseService {
       }
     } catch (e) {
       print('[DB] Migration error: $e');
+    }
+  }
+  
+  /// V2에서 V3로 마이그레이션
+  static Future<void> _migrateToV3(Database db) async {
+    try {
+      print('[DB] Starting migration to v3...');
+      
+      // 1. study_materials 테이블 생성
+      await db.execute('''
+        CREATE TABLE IF NOT EXISTS study_materials (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          subject TEXT NOT NULL,
+          source TEXT NOT NULL,
+          source_language TEXT NOT NULL,
+          target_language TEXT NOT NULL,
+          file_name TEXT,
+          created_at TEXT NOT NULL,
+          imported_at TEXT NOT NULL
+        )
+      ''');
+      
+      // 2. translations 테이블에 material_id 컬럼 추가
+      await db.execute('''
+        ALTER TABLE translations ADD COLUMN material_id INTEGER
+      ''');
+      
+      print('[DB] Migration to v3 completed successfully');
+    } catch (e) {
+      print('[DB] Migration to v3 error: $e');
+      // ALTER TABLE은 이미 존재하면 에러가 발생하므로 무시
     }
   }
   
@@ -743,5 +793,243 @@ class DatabaseService {
         'errors': ['Failed to parse JSON: $e'],
       };
     }
+  }
+  
+  // ==========================================
+  // Mode 3: Study Materials Metadata Management
+  // ==========================================
+  
+  /// Create study material metadata and return its ID
+  static Future<int> createStudyMaterial({
+    required String subject,
+    required String source,
+    required String sourceLanguage,
+    required String targetLanguage,
+    String? fileName,
+    required String createdAt,
+  }) async {
+    final db = await database;
+    
+    final id = await db.insert('study_materials', {
+      'subject': subject,
+      'source': source,
+      'source_language': sourceLanguage,
+      'target_language': targetLanguage,
+      'file_name': fileName,
+      'created_at': createdAt,
+      'imported_at': DateTime.now().toIso8601String(),
+    });
+    
+    print('[DB] Study material created: id=$id, subject=$subject');
+    return id;
+  }
+  
+  /// Import study materials from JSON file with metadata
+  static Future<Map<String, dynamic>> importFromJsonWithMetadata(
+    String jsonContent,
+    {String? fileName}
+  ) async {
+    try {
+      final data = json.decode(jsonContent) as Map<String, dynamic>;
+      final sourceLang = data['source_language'] as String;
+      final targetLang = data['target_language'] as String;
+      final subject = data['subject'] as String? ?? 'Unknown';
+      final source = data['source'] as String? ?? 'Unknown';
+      final fileCreatedAt = data['created_at'] as String? ?? DateTime.now().toIso8601String();
+      final entries = data['entries'] as List;
+      
+      // 1. Create study material metadata
+      final materialId = await createStudyMaterial(
+        subject: subject,
+        source: source,
+        sourceLanguage: sourceLang,
+        targetLanguage: targetLang,
+        fileName: fileName,
+        createdAt: fileCreatedAt,
+      );
+      
+      int importedCount = 0;
+      int skippedCount = 0;
+      List<String> errors = [];
+      
+      for (var i = 0; i < entries.length; i++) {
+        try {
+          final entry = entries[i] as Map<String, dynamic>;
+          final sourceText = entry['source_text'] as String;
+          final targetText = entry['target_text'] as String;
+          
+          if (sourceText.trim().isEmpty || targetText.trim().isEmpty) {
+            skippedCount++;
+            continue;
+          }
+          
+          // 2. Insert to source language table
+          final sourceId = await insertLanguageRecord(sourceLang, sourceText);
+          
+          // 3. Insert to target language table
+          final targetId = await insertLanguageRecord(targetLang, targetText);
+          
+          // 4. Create translation link with material_id
+          await saveTranslationLinkWithMaterial(
+            sourceLang: sourceLang,
+            sourceId: sourceId,
+            targetLang: targetLang,
+            targetId: targetId,
+            materialId: materialId,
+          );
+          
+          importedCount++;
+        } catch (e) {
+          errors.add('Entry ${i + 1}: $e');
+          skippedCount++;
+        }
+      }
+      
+      print('[DB] Import with metadata complete: $importedCount imported, $skippedCount skipped, material_id=$materialId');
+      
+      return {
+        'success': true,
+        'material_id': materialId,
+        'imported': importedCount,
+        'skipped': skippedCount,
+        'total': entries.length,
+        'errors': errors,
+      };
+    } catch (e) {
+      print('[DB] Error importing JSON with metadata: $e');
+      return {
+        'success': false,
+        'imported': 0,
+        'skipped': 0,
+        'total': 0,
+        'errors': ['Failed to parse JSON: $e'],
+      };
+    }
+  }
+  
+  /// Save translation link with material_id
+  static Future<void> saveTranslationLinkWithMaterial({
+    required String sourceLang,
+    required int sourceId,
+    required String targetLang,
+    required int targetId,
+    required int materialId,
+  }) async {
+    final db = await database;
+    
+    // 중복 검사: 동일한 번역 관계가 이미 존재하는지 확인
+    final existing = await db.query(
+      'translations',
+      where: 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ?',
+      whereArgs: [sourceLang, sourceId, targetLang, targetId],
+      limit: 1,
+    );
+    
+    if (existing.isNotEmpty) {
+      print('[DB] Translation link already exists: $sourceLang($sourceId) -> $targetLang($targetId)');
+      return;
+    }
+    
+    // 새 번역 관계 생성 (material_id 포함)
+    await db.insert('translations', {
+      'source_lang': sourceLang,
+      'source_id': sourceId,
+      'target_lang': targetLang,
+      'target_id': targetId,
+      'material_id': materialId,
+      'created_at': DateTime.now().toIso8601String(),
+    });
+    
+    print('[DB] Translation link with material saved: $sourceLang($sourceId) -> $targetLang($targetId), material_id=$materialId');
+  }
+  
+  /// Get all study materials
+  static Future<List<Map<String, dynamic>>> getAllStudyMaterials() async {
+    final db = await database;
+    
+    final materials = await db.query(
+      'study_materials',
+      orderBy: 'imported_at DESC',
+    );
+    
+    print('[DB] Retrieved ${materials.length} study materials');
+    return materials;
+  }
+  
+  /// Get study material by ID
+  static Future<Map<String, dynamic>?> getStudyMaterialById(int materialId) async {
+    final db = await database;
+    
+    final materials = await db.query(
+      'study_materials',
+      where: 'id = ?',
+      whereArgs: [materialId],
+      limit: 1,
+    );
+    
+    if (materials.isEmpty) {
+      return null;
+    }
+    
+    return materials.first;
+  }
+  
+  /// Get all translations for a specific study material
+  static Future<List<Map<String, dynamic>>> getRecordsByMaterialId(int materialId) async {
+    final db = await database;
+    
+    // translations 테이블에서 material_id로 필터링
+    final translations = await db.query(
+      'translations',
+      where: 'material_id = ?',
+      whereArgs: [materialId],
+      orderBy: 'created_at ASC',
+    );
+    
+    List<Map<String, dynamic>> results = [];
+    
+    for (var translation in translations) {
+      final sourceLang = translation['source_lang'] as String;
+      final sourceId = translation['source_id'] as int;
+      final targetLang = translation['target_lang'] as String;
+      final targetId = translation['target_id'] as int;
+      
+      // 소스 텍스트 가져오기
+      final sourceTableName = 'lang_$sourceLang'.replaceAll('-', '_');
+      final sourceRecords = await db.query(
+        sourceTableName,
+        where: 'id = ?',
+        whereArgs: [sourceId],
+        limit: 1,
+      );
+      
+      // 대상 텍스트 가져오기
+      final targetTableName = 'lang_$targetLang'.replaceAll('-', '_');
+      final targetRecords = await db.query(
+        targetTableName,
+        where: 'id = ?',
+        whereArgs: [targetId],
+        limit: 1,
+      );
+      
+      if (sourceRecords.isNotEmpty && targetRecords.isNotEmpty) {
+        results.add({
+          'id': translation['id'],
+          'source_lang': sourceLang,
+          'source_id': sourceId,
+          'source_text': sourceRecords.first['text'],
+          'source_audio': sourceRecords.first['audio_file'],
+          'target_lang': targetLang,
+          'target_id': targetId,
+          'target_text': targetRecords.first['text'],
+          'target_audio': targetRecords.first['audio_file'],
+          'material_id': materialId,
+          'created_at': translation['created_at'],
+        });
+      }
+    }
+    
+    print('[DB] Retrieved ${results.length} records for material_id=$materialId');
+    return results;
   }
 }
