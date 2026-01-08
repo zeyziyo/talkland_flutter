@@ -64,5 +64,16 @@
   "similarTextFound": "유사한 텍스트 발견",
   "useExistingText": "기존 텍스트 사용",
   "createNew": "새 문장으로 진행",
-  "reviewCount": "복습 {count}회"
+  "reviewCount": "복습 {count}회",
+  "tabSpeaking": "말하기",
+  "speakingPractice": "말하기 연습",
+  "intervalSeconds": "간격: {seconds}초",
+  "yourPronunciation": "내 발음",
+  "correctAnswer": "정답",
+  "score": "정확도: {score}%",
+  "perfect": "완벽해요!",
+  "good": "좋아요",
+  "tryAgain": "다시 시도",
+  "startPractice": "연습 시작",
+  "stopPractice": "연습 중지"
 }

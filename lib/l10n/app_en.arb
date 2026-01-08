@@ -396,5 +396,31 @@
         "type": "int"
       }
     }
-  }
+  },
+  
+  "tabSpeaking": "Speaking",
+  "speakingPractice": "Speaking Practice",
+  "intervalSeconds": "Interval: {seconds}s",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "yourPronunciation": "Your Pronunciation",
+  "correctAnswer": "Correct Answer",
+  "score": "Accuracy: {score}%",
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "perfect": "Perfect!",
+  "good": "Good",
+  "tryAgain": "Try Again",
+  "startPractice": "Start Practice",
+  "stopPractice": "Stop Practice"
 }

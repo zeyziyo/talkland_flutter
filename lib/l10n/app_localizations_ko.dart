@@ -229,4 +229,41 @@ class AppLocalizationsKo extends AppLocalizations {
   String reviewCount(int count) {
     return '복습 $count회';
   }
+
+  @override
+  String get tabSpeaking => '말하기';
+
+  @override
+  String get speakingPractice => '말하기 연습';
+
+  @override
+  String intervalSeconds(int seconds) {
+    return '간격: $seconds초';
+  }
+
+  @override
+  String get yourPronunciation => '내 발음';
+
+  @override
+  String get correctAnswer => '정답';
+
+  @override
+  String score(String score) {
+    return '정확도: $score%';
+  }
+
+  @override
+  String get perfect => '완벽해요!';
+
+  @override
+  String get good => '좋아요';
+
+  @override
+  String get tryAgain => '다시 시도';
+
+  @override
+  String get startPractice => '연습 시작';
+
+  @override
+  String get stopPractice => '연습 중지';
 }

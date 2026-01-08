@@ -5,6 +5,7 @@ import '../providers/app_state.dart';
 import '../widgets/mode1_widget.dart';
 import '../widgets/mode2_widget.dart';
 import '../widgets/mode3_widget.dart';
+import '../widgets/mode4_widget.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -75,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: EdgeInsets.only(top: 10.0),
                     child: Text(
-                      "여기서 원하는 학습 모드를 선택하세요.\n\n🔍 검색: 음성 번역 및 듣기\n📖 복습: 저장된 문장 복습\n📄 자료: 외부 학습 자료 가져오기",
+                      "여기서 원하는 학습 모드를 선택하세요.\n\n🔍 검색: 음성 번역 및 듣기\n📖 복습: 저장된 문장 복습\n📄 자료: 외부 학습 자료 가져오기\n🎙️ 말하기: 발음 연습 및 평가",
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -195,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ButtonSegment<int>(
                         value: 0,
                         icon: Icon(Icons.search),
-                        tooltip: '검색', // Add localized tooltip later if needed
+                        tooltip: '검색', 
                       ),
                       ButtonSegment<int>(
                         value: 1,
@@ -206,6 +207,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         value: 2,
                         icon: Icon(Icons.description),
                         tooltip: '학습 자료',
+                      ),
+                      ButtonSegment<int>(
+                        value: 3,
+                        icon: Icon(Icons.record_voice_over),
+                        tooltip: '말하기',
                       ),
                     ],
                   selected: {appState.currentMode},
@@ -239,8 +245,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   return const Mode1Widget();
                 } else if (appState.currentMode == 1) {
                   return const Mode2Widget();
-                } else {
+                } else if (appState.currentMode == 2) {
                   return const Mode3Widget();
+                } else {
+                  return const Mode4Widget();
                 }
               },
             ),

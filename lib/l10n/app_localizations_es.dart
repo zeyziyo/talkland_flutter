@@ -233,4 +233,41 @@ class AppLocalizationsEs extends AppLocalizations {
   String reviewCount(int count) {
     return 'Revisado $count vez/veces';
   }
+
+  @override
+  String get tabSpeaking => 'Speaking';
+
+  @override
+  String get speakingPractice => 'Speaking Practice';
+
+  @override
+  String intervalSeconds(int seconds) {
+    return 'Interval: ${seconds}s';
+  }
+
+  @override
+  String get yourPronunciation => 'Your Pronunciation';
+
+  @override
+  String get correctAnswer => 'Correct Answer';
+
+  @override
+  String score(String score) {
+    return 'Accuracy: $score%';
+  }
+
+  @override
+  String get perfect => 'Perfect!';
+
+  @override
+  String get good => 'Good';
+
+  @override
+  String get tryAgain => 'Try Again';
+
+  @override
+  String get startPractice => 'Start Practice';
+
+  @override
+  String get stopPractice => 'Stop Practice';
 }

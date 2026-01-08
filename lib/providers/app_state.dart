@@ -592,8 +592,175 @@ class AppState extends ChangeNotifier {
   }
   
   // ==========================================
-  // Helpers
+  // Mode 4: Speaking Practice
   // ==========================================
+  
+  int _mode4Interval = 5; // Seconds
+  bool _mode4SessionActive = false;
+  Map<String, dynamic>? _currentMode4Question;
+  String _mode4UserAnswer = '';
+  double? _mode4Score; // 0.0 to 100.0
+  String _mode4Feedback = '';
+  
+  int get mode4Interval => _mode4Interval;
+  bool get mode4SessionActive => _mode4SessionActive;
+  Map<String, dynamic>? get currentMode4Question => _currentMode4Question;
+  String get mode4UserAnswer => _mode4UserAnswer;
+  double? get mode4Score => _mode4Score;
+  String get mode4Feedback => _mode4Feedback;
+  
+  void setMode4Interval(int seconds) {
+    _mode4Interval = seconds;
+    notifyListeners();
+  }
+  
+  Future<void> toggleMode4Session() async {
+    _mode4SessionActive = !_mode4SessionActive;
+    
+    if (_mode4SessionActive) {
+      // Start session
+      if (_materialRecords.isEmpty) {
+        _statusMessage = '먼저 학습 자료를 선택하세요';
+        _mode4SessionActive = false;
+      } else {
+        await _nextMode4Question();
+      }
+    } else {
+      // Stop session
+      _speechService.stopSTT();
+      _speechService.stopSpeaking();
+    }
+    notifyListeners();
+  }
+  
+  Future<void> _nextMode4Question() async {
+    if (!_mode4SessionActive || _materialRecords.isEmpty) return;
+    
+    // Pick random question
+    final randomIndex = DateTime.now().millisecondsSinceEpoch % _materialRecords.length;
+    _currentMode4Question = _materialRecords[randomIndex];
+    _mode4UserAnswer = '';
+    _mode4Score = null;
+    _mode4Feedback = '';
+    
+    notifyListeners();
+    
+    // Auto-play TTS for source text
+    final sourceText = _currentMode4Question!['source_text'] as String;
+    final sourceLang = _currentMode4Question!['source_lang'] as String;
+    
+    await _speechService.speak(sourceText, lang: _getLangCode(sourceLang));
+    
+    // Start listening for answer
+    _startMode4Listening();
+  }
+  
+  Future<void> _startMode4Listening() async {
+    try {
+      _isListening = true;
+      notifyListeners();
+      
+      final targetLang = _currentMode4Question!['target_lang'] as String;
+      
+      await _speechService.startSTT(
+        lang: _getLangCode(targetLang),
+        onResult: (text) {
+          _mode4UserAnswer = text;
+          notifyListeners();
+        },
+      );
+      
+      // Wait for silence/completion? 
+      // SpeechService usually relies on manual stop or timeout. 
+      // For this mode, we might need a manual "Done" or auto-detect. 
+      // Let's assume the user speaks and we define a timeout or "Check" action.
+      // But user wanted "Interval". So maybe we wait for X seconds then check?
+      
+      // Implementation plan: 
+      // 1. Speak source (done)
+      // 2. Listen for (Interval - TTS duration) OR just fixed window?
+      // Let's trigger a delayed check.
+      
+      Future.delayed(Duration(seconds: _mode4Interval), () {
+        if (_mode4SessionActive) {
+          _checkMode4Answer();
+        }
+      });
+      
+    } catch (e) {
+      print('Mode 4 Listen Error: $e');
+      _isListening = false;
+      notifyListeners();
+    }
+  }
+  
+  Future<void> _checkMode4Answer() async {
+    if (!_mode4SessionActive) return;
+    
+    await _speechService.stopSTT();
+    _isListening = false;
+    
+    final targetText = _currentMode4Question!['target_text'] as String;
+    
+    // Calculate Score
+    final similarity = _calculateSimilarity(_mode4UserAnswer, targetText);
+    _mode4Score = similarity * 100;
+    
+    // Feedback
+    if (_mode4Score! >= 90) {
+      _mode4Feedback = 'Perfect!';
+    } else if (_mode4Score! >= 70) {
+      _mode4Feedback = 'Good';
+    } else {
+      _mode4Feedback = 'Try Again';
+    }
+    
+    notifyListeners();
+    
+    // Wait a bit to show result, then next question
+    Future.delayed(const Duration(seconds: 3), () {
+      if (_mode4SessionActive) {
+        _nextMode4Question();
+      }
+    });
+  }
+  
+  /// Levenshtein distance based similarity (0.0 to 1.0)
+  double _calculateSimilarity(String s1, String s2) {
+    if (s1.isEmpty || s2.isEmpty) return 0.0;
+    
+    String normal1 = s1.toLowerCase().replaceAll(RegExp(r'[^\w\s]'), '');
+    String normal2 = s2.toLowerCase().replaceAll(RegExp(r'[^\w\s]'), '');
+    
+    if (normal1 == normal2) return 1.0;
+    
+    // Simple Levenshtein implementation
+    List<List<int>> d = List.generate(
+      normal1.length + 1,
+      (i) => List<int>.filled(normal2.length + 1, 0),
+    );
+
+    for (int i = 0; i <= normal1.length; i++) d[i][0] = i;
+    for (int j = 0; j <= normal2.length; j++) d[0][j] = j;
+
+    for (int i = 1; i <= normal1.length; i++) {
+      for (int j = 1; j <= normal2.length; j++) {
+        int cost = (normal1[i - 1] == normal2[j - 1]) ? 0 : 1;
+        d[i][j] = [
+          d[i - 1][j] + 1, // deletion
+          d[i][j - 1] + 1, // insertion
+          d[i - 1][j - 1] + cost, // substitution
+        ].reduce((curr, next) => curr < next ? curr : next);
+      }
+    }
+
+    int maxLength = (normal1.length > normal2.length) ? normal1.length : normal2.length;
+    int distance = d[normal1.length][normal2.length];
+    
+    return 1.0 - (distance / maxLength);
+  }
+
+
   
   String _getLangCode(String lang) {
     // Map app language codes to STT/TTS language codes

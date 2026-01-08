@@ -487,6 +487,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Review {count} time(s)'**
   String reviewCount(int count);
+
+  /// No description provided for @tabSpeaking.
+  ///
+  /// In en, this message translates to:
+  /// **'Speaking'**
+  String get tabSpeaking;
+
+  /// No description provided for @speakingPractice.
+  ///
+  /// In en, this message translates to:
+  /// **'Speaking Practice'**
+  String get speakingPractice;
+
+  /// No description provided for @intervalSeconds.
+  ///
+  /// In en, this message translates to:
+  /// **'Interval: {seconds}s'**
+  String intervalSeconds(int seconds);
+
+  /// No description provided for @yourPronunciation.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Pronunciation'**
+  String get yourPronunciation;
+
+  /// No description provided for @correctAnswer.
+  ///
+  /// In en, this message translates to:
+  /// **'Correct Answer'**
+  String get correctAnswer;
+
+  /// No description provided for @score.
+  ///
+  /// In en, this message translates to:
+  /// **'Accuracy: {score}%'**
+  String score(String score);
+
+  /// No description provided for @perfect.
+  ///
+  /// In en, this message translates to:
+  /// **'Perfect!'**
+  String get perfect;
+
+  /// No description provided for @good.
+  ///
+  /// In en, this message translates to:
+  /// **'Good'**
+  String get good;
+
+  /// No description provided for @tryAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Try Again'**
+  String get tryAgain;
+
+  /// No description provided for @startPractice.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Practice'**
+  String get startPractice;
+
+  /// No description provided for @stopPractice.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop Practice'**
+  String get stopPractice;
 }
 
 class _AppLocalizationsDelegate
