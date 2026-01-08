@@ -355,7 +355,7 @@ jobs:
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: talkland-release-apk
+        name: talkie-release-apk
         path: build/app/outputs/flutter-apk/app-release.apk
         retention-days: 30
 ```
