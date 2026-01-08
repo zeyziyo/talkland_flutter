@@ -26,6 +26,7 @@ class DatabaseService {
       version: 3, // Version 3: Added study_materials table for Mode 3
       onCreate: (db, version) async {
         await _createBaseTables(db);
+        await _ensureDefaultMaterial(db);
       },
       onUpgrade: (db, oldVersion, newVersion) async {
         if (oldVersion < 2) {
@@ -169,11 +170,47 @@ class DatabaseService {
         ALTER TABLE translations ADD COLUMN material_id INTEGER
       ''');
       
+      // 3. 기본 학습 자료(ID=0) 생성 - V3 마이그레이션 시 함께 생성
+      await _ensureDefaultMaterial(db);
+      
       print('[DB] Migration to v3 completed successfully');
     } catch (e) {
       print('[DB] Migration to v3 error: $e');
       // ALTER TABLE은 이미 존재하면 에러가 발생하므로 무시
     }
+  }
+
+  /// 기본 학습 자료 보장 (ID=0)
+  static Future<void> _ensureDefaultMaterial(Database db) async {
+    try {
+      // ID=0인 레코드가 있는지 확인
+      final result = await db.query(
+        'study_materials',
+        where: 'id = ?',
+        whereArgs: [0],
+      );
+
+      if (result.isEmpty) {
+        // ID=0으로 강제 삽입
+        await db.rawInsert('''
+          INSERT INTO study_materials (id, subject, source, source_language, target_language, created_at, imported_at)
+          VALUES (0, 'No', 'Google', 'auto', 'auto', ?, ?)
+        ''', [
+          DateTime.now().toIso8601String(),
+          DateTime.now().toIso8601String(),
+        ]);
+        print('[DB] Default material (ID=0) created');
+      }
+    } catch (e) {
+      print('[DB] Error creating default material: $e');
+    }
+  }
+
+  /// 기본 학습 자료 ID 가져오기 (없으면 생성)
+  static Future<int> getOrCreateDefaultMaterial() async {
+    final db = await database;
+    await _ensureDefaultMaterial(db);
+    return 0;
   }
   
   // ==========================================
@@ -356,6 +393,7 @@ class DatabaseService {
     required int sourceId,
     required String targetLang,
     required int targetId,
+    required int materialId,
   }) async {
     final db = await database;
     
@@ -379,9 +417,10 @@ class DatabaseService {
       'target_lang': targetLang,
       'target_id': targetId,
       'created_at': DateTime.now().toIso8601String(),
+      'material_id': materialId,
     });
     
-    print('[DB] Translation link saved: $sourceLang($sourceId) -> $targetLang($targetId)');
+    print('[DB] Translation link saved: $sourceLang($sourceId) -> $targetLang($targetId) [Material: $materialId]');
   }
   
   // ==========================================
@@ -765,6 +804,7 @@ class DatabaseService {
             sourceId: sourceId,
             targetLang: targetLang,
             targetId: targetId,
+            materialId: 0, // Default to 0 for generic imports if no specific material
           );
           
           importedCount++;

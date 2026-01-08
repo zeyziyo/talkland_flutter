@@ -129,11 +129,10 @@ class AppState extends ChangeNotifier {
     _currentMode = mode;
     
     if (mode == 1) {
-      // Load review mode data
-      loadStudyRecords();
-    } else if (mode == 2) {
-      // Load Mode 3 study materials
+      // Study Material mode - Load materials
       loadStudyMaterials();
+    } else if (mode == 2) {
+      // Speaking Mode
     }
     
     notifyListeners();
@@ -302,12 +301,16 @@ class AppState extends ChangeNotifier {
         _translatedText,
       );
       
+      // 1.5 Get default material ID (0)
+      final materialId = await DatabaseService.getOrCreateDefaultMaterial();
+      
       // 2. Create translation link
       await DatabaseService.saveTranslationLink(
         sourceLang: _sourceLang,
         sourceId: _selectedSourceId!,
         targetLang: _targetLang,
         targetId: targetId,
+        materialId: materialId,
       );
       
       // Clear status message after save
@@ -514,10 +517,51 @@ class AppState extends ChangeNotifier {
   }
   
   /// Select a study material and load its records
-  Future<void> selectMaterial(int materialId) async {
+  Future<void> selectMaterial(int? materialId) async {
     _selectedMaterialId = materialId;
-    _studiedTranslationIds.clear(); // Reset studied items
-    await loadMaterialRecords(materialId);
+    if (materialId != null) {
+      if (materialId == -1) {
+        // Load ALL records (Review Mode functionality integrated here)
+        await loadAllRecordsIntoMaterialView();
+      } else {
+        await loadMaterialRecords(materialId);
+      }
+    } else {
+      _materialRecords = [];
+    }
+    notifyListeners();
+  }
+
+  /// Load all records into the material view list (for "Review All" feature)
+  Future<void> loadAllRecordsIntoMaterialView() async {
+    try {
+      final db = await DatabaseService.database;
+      
+      // Query identical to loadStudyRecords but storing in _materialRecords
+      final List<Map<String, dynamic>> maps = await db.rawQuery('''
+        SELECT 
+          t.id, 
+          t.source_lang, t.source_id, 
+          t.target_lang, t.target_id,
+          t.material_id,
+          t.created_at,
+          l1.text as source_text,
+          l2.text as target_text,
+          l2.review_count,
+          l2.last_reviewed
+        FROM translations t
+        INNER JOIN lang_$_sourceLang l1 ON t.source_id = l1.id
+        INNER JOIN lang_$_targetLang l2 ON t.target_id = l2.id
+        WHERE t.source_lang = ? AND t.target_lang = ?
+        ORDER BY t.created_at DESC
+      ''', [_sourceLang, _targetLang]);
+
+      _materialRecords = maps;
+      notifyListeners();
+      print('[AppState] Loaded ${_materialRecords.length} records for Review All view');
+    } catch (e) {
+      print('[AppState] Error loading all records for material view: $e');
+    }
   }
   
   /// Load records for selected material

@@ -3,7 +3,6 @@ import '../l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../widgets/mode1_widget.dart';
-import '../widgets/mode2_widget.dart';
 import '../widgets/mode3_widget.dart';
 import '../widgets/mode4_widget.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
@@ -171,19 +170,22 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () => _showLanguageSettingsDialog(context),
                   tooltip: '언어 설정',
                 );
-              } else if (appState.currentMode == 1) { // Review Mode
-                return IconButton(
-                  key: buttonKey,
-                  icon: const Icon(Icons.refresh),
-                  onPressed: () => appState.loadStudyRecords(),
-                  tooltip: l10n.refresh,
-                );
-              } else if (appState.currentMode == 2) { // Study Material Mode
-                return IconButton(
-                  key: buttonKey,
-                  icon: const Icon(Icons.arrow_downward),
-                  onPressed: () => _handleImport(context),
-                  tooltip: l10n.importJsonFile,
+              } else if (appState.currentMode == 1) { // Study Material Mode
+                return Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    IconButton(
+                      icon: const Icon(Icons.refresh),
+                      onPressed: () => appState.loadStudyMaterials(),
+                      tooltip: l10n.refresh,
+                    ),
+                    IconButton(
+                      key: buttonKey,
+                      icon: const Icon(Icons.arrow_downward),
+                      onPressed: () => _handleImport(context),
+                      tooltip: l10n.importJsonFile,
+                    ),
+                  ],
                 );
               }
               return const SizedBox.shrink();
@@ -205,20 +207,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       ButtonSegment<int>(
                         value: 0,
                         icon: Icon(Icons.search),
-                        tooltip: '검색', 
+                        tooltip: '검색',
                       ),
                       ButtonSegment<int>(
                         value: 1,
                         icon: Icon(Icons.auto_stories),
-                        tooltip: '복습',
+                        tooltip: '학습+복습',
                       ),
                       ButtonSegment<int>(
                         value: 2,
-                        icon: Icon(Icons.description),
-                        tooltip: '학습 자료',
-                      ),
-                      ButtonSegment<int>(
-                        value: 3,
                         icon: Icon(Icons.record_voice_over),
                         tooltip: '말하기',
                       ),
@@ -253,8 +250,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 if (appState.currentMode == 0) {
                   return const Mode1Widget();
                 } else if (appState.currentMode == 1) {
-                  return const Mode2Widget();
-                } else if (appState.currentMode == 2) {
                   return const Mode3Widget();
                 } else {
                   return const Mode4Widget();

@@ -25,7 +25,6 @@ class Mode1Widget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
 
-                        
                         const SizedBox(height: 24),
                         
                         // Source Text Input
@@ -157,7 +156,6 @@ class Mode1Widget extends StatelessWidget {
                                       offset: appState.translatedText.length,
                                     ),
                                   decoration: const InputDecoration(
-                                    // hintText: '번역 결과가 여기에 표시됩니다',
                                     border: OutlineInputBorder(),
                                   ),
                                   maxLines: 3,
@@ -168,7 +166,6 @@ class Mode1Widget extends StatelessWidget {
                           ),
                         ),
                         
-                        // Extra padding at bottom for save button and device buttons
                         const SizedBox(height: 100),
                       ],
                     ),
@@ -181,7 +178,7 @@ class Mode1Widget extends StatelessWidget {
               ),
             ),
             
-            // Bottom Save Button (Always visible) with SafeArea
+            // Bottom Save Button
             SafeArea(
               child: Container(
                 padding: const EdgeInsets.all(16),
@@ -257,7 +254,6 @@ class Mode1Widget extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 
-                // Similar sources list
                 ...appState.similarSources.map((record) {
                   final text = record['text'] as String;
                   final id = record['id'] as int;
@@ -281,7 +277,6 @@ class Mode1Widget extends StatelessWidget {
                 
                 const SizedBox(height: 16),
                 
-                // New entry button
                 SizedBox(
                   width: double.infinity,
                   child: OutlinedButton.icon(
@@ -300,6 +295,4 @@ class Mode1Widget extends StatelessWidget {
       ),
     );
   }
-
-
 }
