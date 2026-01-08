@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'dart:convert';
+import 'dart:io';
+import 'package:file_picker/file_picker.dart';
 import '../services/database_service.dart';
 import '../services/translation_service.dart';
 import '../services/speech_service.dart';
@@ -658,5 +660,46 @@ class AppState extends ChangeNotifier {
   void dispose() {
     _speechService.dispose();
     super.dispose();
+  }
+
+  /// Pick JSON file and import into database
+  Future<Map<String, dynamic>?> pickAndImportJson() async {
+    try {
+      final result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['json'],
+        withData: kIsWeb, // Important for Web
+      );
+      
+      if (result == null || result.files.isEmpty) {
+        return null; // User canceled
+      }
+      
+      final PlatformFile file = result.files.single;
+      final String fileName = file.name;
+      String jsonContent;
+      
+      if (kIsWeb) {
+        // On web, use bytes
+        if (file.bytes != null) {
+          jsonContent = utf8.decode(file.bytes!);
+        } else {
+          return {'success': false, 'error': 'Failed to read file content (Web)'};
+        }
+      } else {
+        // On mobile/desktop, use path
+        if (file.path != null) {
+          jsonContent = await File(file.path!).readAsString();
+        } else {
+          return {'success': false, 'error': 'File path not found'};
+        }
+      }
+      
+      // Perform import
+      return await importJsonWithMetadata(jsonContent, fileName: fileName);
+      
+    } catch (e) {
+      return {'success': false, 'error': e.toString()};
+    }
   }
 }

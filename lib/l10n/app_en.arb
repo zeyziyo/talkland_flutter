@@ -1,0 +1,400 @@
+{
+  "@@locale": "en",
+  
+  "appTitle": "TalkLand",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  
+  "tabReview": "Review ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "tabStudyMaterial": "Study Material ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "search": "Search",
+  "@search": {
+    "description": "Search mode label"
+  },
+  
+  "translate": "Translate",
+  "@translate": {
+    "description": "Translate button"
+  },
+  
+  "listen": "Listen",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  
+  "saveData": "Save Data",
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  
+  "saved": "Saved",
+  "@saved": {
+    "description": "Data saved status"
+  },
+  
+  "delete": "Delete",
+  "materialInfo": "Material Info",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "@delete": {
+    "description": "Delete button"
+  },
+  
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  
+  "confirm": "OK",
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
+  
+  "refresh": "Refresh",
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  
+  "studyRecords": "Study Records ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "targetLanguageFilter": "Target Language Filter:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  
+  "noRecords": "No study records for selected language",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  
+  "saveTranslationsFromSearch": "Save translations from search mode",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  
+  "flip": "Flip",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  
+  "hide": "Hide",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  
+  "deleteRecord": "Delete Record",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  
+  "confirmDelete": "Are you sure you want to delete this study record?",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
+  
+  "recordDeleted": "Record deleted successfully",
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
+  
+  "deleteFailed": "Delete failed: {error}",
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "importJsonFile": "Import JSON File",
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
+  
+  "importing": "Importing...",
+  "@importing": {
+    "description": "Import in progress"
+  },
+  
+  "importComplete": "Import Complete",
+  "@importComplete": {
+    "description": "Import success title"
+  },
+  
+  "importFailed": "Import Failed",
+  "@importFailed": {
+    "description": "Import error title"
+  },
+  
+  "importFile": "File: {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "importTotal": "Total: {count} items",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "importAdded": "Added: {count} items",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "importSkipped": "Skipped: {count} items",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "errors": "Errors:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  
+  "error": "Error",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  
+  "importErrorMessage": "Failed to import file:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "selectStudyMaterial": "Select Study Material",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  
+  "subject": "Subject:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  
+  "source": "Source:",
+  "@source": {
+    "description": "Source label"
+  },
+  
+  "file": "File:",
+  "@file": {
+    "description": "File label"
+  },
+  
+  "progress": "Progress: {current} / {total}",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "importJsonFilePrompt": "Please import a JSON file",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
+  
+  "selectMaterialPrompt": "Please select a study material",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  
+  "studyComplete": "Studied",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  
+  "markAsStudied": "Mark as Studied",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  
+  "listening": "Listening...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  
+  "recognized": "Recognition complete",
+  "@recognized": {
+    "description": "STT complete status"
+  },
+  
+  "recognitionFailed": "Speech recognition failed: {error}",
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "checking": "Checking...",
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
+  
+  "translating": "Translating...",
+  "@translating": {
+    "description": "Translation in progress"
+  },
+  
+  "translationComplete": "Translation complete (save required)",
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
+  
+  "translationLoaded": "Loaded saved translation",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
+  
+  "translationFailed": "Translation failed: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "enterTextToTranslate": "Please enter text to translate",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  
+  "saving": "Saving...",
+  "@saving": {
+    "description": "Save in progress"
+  },
+  
+  "noTranslationToSave": "No translation to save",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  
+  "saveFailed": "Save failed: {error}",
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "playing": "Playing...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  
+  "noTextToPlay": "No text to play",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  
+  "playbackFailed": "Playback failed: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  
+  "sourceLanguage": "Source Language",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  
+  "targetLanguage": "Target Language",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  
+  "similarTextFound": "Similar text found",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  
+  "useExistingText": "Use Existing",
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
+  
+  "createNew": "Create New Entry",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  
+  "reviewCount": "Review {count} time(s)",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
+}

@@ -1,0 +1,233 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for French (`fr`).
+class AppLocalizationsFr extends AppLocalizations {
+  AppLocalizationsFr([String locale = 'fr']) : super(locale);
+
+  @override
+  String get appTitle => 'TalkLand';
+
+  @override
+  String tabReview(int count) {
+    return 'Review ($count)';
+  }
+
+  @override
+  String tabStudyMaterial(int count) {
+    return 'Study Material ($count)';
+  }
+
+  @override
+  String get search => 'Search';
+
+  @override
+  String get translate => 'Translate';
+
+  @override
+  String get listen => 'Listen';
+
+  @override
+  String get saveData => 'Save Data';
+
+  @override
+  String get saved => 'Saved';
+
+  @override
+  String get delete => 'Delete';
+
+  @override
+  String get materialInfo => 'Material Info';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get confirm => 'OK';
+
+  @override
+  String get refresh => 'Refresh';
+
+  @override
+  String studyRecords(int count) {
+    return 'Study Records ($count)';
+  }
+
+  @override
+  String get targetLanguageFilter => 'Target Language Filter:';
+
+  @override
+  String get noRecords => 'No study records for selected language';
+
+  @override
+  String get saveTranslationsFromSearch => 'Save translations from search mode';
+
+  @override
+  String get flip => 'Flip';
+
+  @override
+  String get hide => 'Hide';
+
+  @override
+  String get deleteRecord => 'Delete Record';
+
+  @override
+  String get confirmDelete =>
+      'Are you sure you want to delete this study record?';
+
+  @override
+  String get recordDeleted => 'Record deleted successfully';
+
+  @override
+  String deleteFailed(String error) {
+    return 'Delete failed: $error';
+  }
+
+  @override
+  String get importJsonFile => 'Import JSON File';
+
+  @override
+  String get importing => 'Importing...';
+
+  @override
+  String get importComplete => 'Import Complete';
+
+  @override
+  String get importFailed => 'Import Failed';
+
+  @override
+  String importFile(String fileName) {
+    return 'File: $fileName';
+  }
+
+  @override
+  String importTotal(int count) {
+    return 'Total: $count items';
+  }
+
+  @override
+  String importAdded(int count) {
+    return 'Added: $count items';
+  }
+
+  @override
+  String importSkipped(int count) {
+    return 'Skipped: $count items';
+  }
+
+  @override
+  String get errors => 'Errors:';
+
+  @override
+  String get error => 'Error';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'Failed to import file:\\n$error';
+  }
+
+  @override
+  String get selectStudyMaterial => 'Select Study Material';
+
+  @override
+  String get subject => 'Subject:';
+
+  @override
+  String get source => 'Source:';
+
+  @override
+  String get file => 'File:';
+
+  @override
+  String progress(int current, int total) {
+    return 'Progress: $current / $total';
+  }
+
+  @override
+  String get importJsonFilePrompt => 'Please import a JSON file';
+
+  @override
+  String get selectMaterialPrompt => 'Please select a study material';
+
+  @override
+  String get studyComplete => 'Studied';
+
+  @override
+  String get markAsStudied => 'Mark as Studied';
+
+  @override
+  String get listening => 'Listening...';
+
+  @override
+  String get recognized => 'Recognition complete';
+
+  @override
+  String recognitionFailed(String error) {
+    return 'Speech recognition failed: $error';
+  }
+
+  @override
+  String get checking => 'Checking...';
+
+  @override
+  String get translating => 'Translating...';
+
+  @override
+  String get translationComplete => 'Translation complete (save required)';
+
+  @override
+  String get translationLoaded => 'Loaded saved translation';
+
+  @override
+  String translationFailed(String error) {
+    return 'Translation failed: $error';
+  }
+
+  @override
+  String get enterTextToTranslate => 'Please enter text to translate';
+
+  @override
+  String get saving => 'Saving...';
+
+  @override
+  String get noTranslationToSave => 'No translation to save';
+
+  @override
+  String saveFailed(String error) {
+    return 'Save failed: $error';
+  }
+
+  @override
+  String get playing => 'Playing...';
+
+  @override
+  String get noTextToPlay => 'No text to play';
+
+  @override
+  String playbackFailed(String error) {
+    return 'Playback failed: $error';
+  }
+
+  @override
+  String get sourceLanguage => 'Source Language';
+
+  @override
+  String get targetLanguage => 'Target Language';
+
+  @override
+  String get similarTextFound => 'Similar text found';
+
+  @override
+  String get useExistingText => 'Use Existing';
+
+  @override
+  String get createNew => 'Create New Entry';
+
+  @override
+  String reviewCount(int count) {
+    return 'Review $count time(s)';
+  }
+}

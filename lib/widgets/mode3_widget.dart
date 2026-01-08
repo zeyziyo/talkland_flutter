@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:file_picker/file_picker.dart';
 import 'dart:io';
 import '../providers/app_state.dart';
+import '../l10n/app_localizations.dart';
 
 /// Mode 3: 학습 자료 - JSON 파일 불러와서 학습
 class Mode3Widget extends StatefulWidget {
@@ -13,7 +14,7 @@ class Mode3Widget extends StatefulWidget {
 }
 
 class _Mode3WidgetState extends State<Mode3Widget> {
-  bool _isImporting = false;
+
   
   @override
   void initState() {
@@ -25,103 +26,11 @@ class _Mode3WidgetState extends State<Mode3Widget> {
     });
   }
   
-  /// Import JSON file from device
-  Future<void> _importJsonFile(BuildContext context) async {
-    try {
-      setState(() {
-        _isImporting = true;
-      });
-      
-      final result = await FilePicker.platform.pickFiles(
-        type: FileType.custom,
-        allowedExtensions: ['json'],
-      );
-      
-      if (result == null || result.files.isEmpty) {
-        setState(() {
-          _isImporting = false;
-        });
-        return;
-      }
-      
-      final file = File(result.files.single.path!);
-      final jsonContent = await file.readAsString();
-      final fileName = result.files.single.name;
-      
-      if (!context.mounted) return;
-      final appState = Provider.of<AppState>(context, listen: false);
-      
-      // Import with metadata
-      final importResult = await appState.importJsonWithMetadata(
-        jsonContent,
-        fileName: fileName,
-      );
-      
-      setState(() {
-        _isImporting = false;
-      });
-      
-      if (!context.mounted) return;
-      
-      // Show result dialog
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: Text(
-            importResult['success'] == true ? '✅ 불러오기 완료' : '❌ 불러오기 실패',
-          ),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('파일: $fileName'),
-              const SizedBox(height: 8),
-              Text('전체: ${importResult['total']}개'),
-              Text('추가: ${importResult['imported']}개'),
-              Text('건너뜀: ${importResult['skipped']}개'),
-              if (importResult['errors'] != null && 
-                  (importResult['errors'] as List).isNotEmpty) ...[
-                const SizedBox(height: 8),
-                const Text('오류:', style: TextStyle(fontWeight: FontWeight.bold)),
-                ...(importResult['errors'] as List).map(
-                  (error) => Text('• $error', style: const TextStyle(fontSize: 12)),
-                ),
-              ],
-            ],
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('확인'),
-            ),
-          ],
-        ),
-      );
-    } catch (e) {
-      setState(() {
-        _isImporting = false;
-      });
-      
-      if (!context.mounted) return;
-      
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: const Text('❌ 오류'),
-          content: Text('파일 불러오기 실패:\\n$e'),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('확인'),
-            ),
-          ],
-        ),
-      );
-    }
-  }
+
   
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Consumer<AppState>(
       builder: (context, appState, child) {
         final studyMaterials = appState.studyMaterials;
@@ -131,29 +40,7 @@ class _Mode3WidgetState extends State<Mode3Widget> {
         
         return Column(
           children: [
-            // Import button
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: ElevatedButton.icon(
-                onPressed: _isImporting ? null : () => _importJsonFile(context),
-                icon: _isImporting
-                    ? const SizedBox(
-                        width: 16,
-                        height: 16,
-                        child: CircularProgressIndicator(strokeWidth: 2),
-                      )
-                    : const Icon(Icons.file_upload),
-                label: Text(_isImporting ? '불러오는 중...' : 'JSON 파일 불러오기'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF667eea),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 12,
-                    horizontal: 24,
-                  ),
-                ),
-              ),
-            ),
+
             
             // Material selector
             if (studyMaterials.isNotEmpty) ...[
@@ -167,8 +54,8 @@ class _Mode3WidgetState extends State<Mode3Widget> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      '학습 자료 선택',
+                    Text(
+                      l10n.selectStudyMaterial,
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -203,10 +90,39 @@ class _Mode3WidgetState extends State<Mode3Widget> {
                         }
                       },
                     ),
-                    if (selectedMaterialId != null) ...[
-                      const SizedBox(height: 12),
-                      _buildMaterialInfo(appState, selectedMaterialId),
-                    ],
+                    const SizedBox(height: 16),
+                    // Metadata (Collapsible)
+                    if (selectedMaterialId != null)
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 16),
+                        child: Card(
+                          elevation: 0,
+                          color: Colors.grey[50],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                            side: BorderSide(color: Colors.grey[200]!),
+                          ),
+                          child: Theme(
+                            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                            child: ExpansionTile(
+                              title: Text(
+                                l10n.materialInfo ?? 'Material Info', // Fallback or add key
+                                style: const TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xFF667eea),
+                                ),
+                              ),
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                                  child: _buildMaterialInfo(appState, selectedMaterialId),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                   ],
                 ),
               ),
@@ -222,7 +138,7 @@ class _Mode3WidgetState extends State<Mode3Widget> {
                     const Icon(Icons.bar_chart, size: 20),
                     const SizedBox(width: 8),
                     Text(
-                      '진행률: ${studiedIds.length} / ${materialRecords.length}',
+                      l10n.progress(studiedIds.length, materialRecords.length),
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
@@ -255,10 +171,10 @@ class _Mode3WidgetState extends State<Mode3Widget> {
                             color: Colors.grey[300],
                           ),
                           const SizedBox(height: 16),
-                          Text(
+                            Text(
                             studyMaterials.isEmpty
-                                ? 'JSON 파일을 불러와주세요'
-                                : '학습 자료를 선택하세요',
+                                ? l10n.importJsonFilePrompt
+                                : l10n.selectMaterialPrompt,
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.grey[600],
@@ -284,6 +200,10 @@ class _Mode3WidgetState extends State<Mode3Widget> {
   
   /// Build material metadata info card
   Widget _buildMaterialInfo(AppState appState, int materialId) {
+    // Note: l10n is not available here directly, but we can pass it or look it up if context is available.
+    // However, this is a method inside State class, so we can use context.
+    final l10n = AppLocalizations.of(context)!;
+    
     final material = appState.studyMaterials.firstWhere(
       (m) => m['id'] == materialId,
     );
@@ -302,8 +222,8 @@ class _Mode3WidgetState extends State<Mode3Widget> {
             children: [
               const Icon(Icons.topic, size: 16, color: Color(0xFF667eea)),
               const SizedBox(width: 4),
-              const Text(
-                '주제: ',
+              Text(
+                l10n.subject,
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
               ),
               Text(
@@ -317,8 +237,8 @@ class _Mode3WidgetState extends State<Mode3Widget> {
             children: [
               const Icon(Icons.source, size: 16, color: Color(0xFF667eea)),
               const SizedBox(width: 4),
-              const Text(
-                '출처: ',
+              Text(
+                l10n.source,
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
               ),
               Text(
@@ -333,8 +253,8 @@ class _Mode3WidgetState extends State<Mode3Widget> {
               children: [
                 const Icon(Icons.insert_drive_file, size: 16, color: Color(0xFF667eea)),
                 const SizedBox(width: 4),
-                const Text(
-                  '파일: ',
+                Text(
+                  l10n.file,
                   style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
                 ),
                 Expanded(
@@ -358,6 +278,7 @@ class _Mode3WidgetState extends State<Mode3Widget> {
     Map<String, dynamic> record,
     Set<int> studiedIds,
   ) {
+    final l10n = AppLocalizations.of(context)!;
     final translationId = record['id'] as int;
     final sourceText = record['source_text'] as String;
     final targetText = record['target_text'] as String;
@@ -413,7 +334,7 @@ class _Mode3WidgetState extends State<Mode3Widget> {
                       recordId: record['source_id'] as int?,
                     );
                   },
-                  tooltip: '듣기',
+                  tooltip: l10n.listen,
                 ),
               ],
             ),
@@ -460,7 +381,7 @@ class _Mode3WidgetState extends State<Mode3Widget> {
                       recordId: record['target_id'] as int?,
                     );
                   },
-                  tooltip: '듣기',
+                  tooltip: l10n.listen,
                 ),
               ],
             ),
@@ -477,7 +398,7 @@ class _Mode3WidgetState extends State<Mode3Widget> {
                         appState.markTranslationAsStudied(translationId);
                       },
                 icon: Icon(isStudied ? Icons.check_circle : Icons.circle_outlined),
-                label: Text(isStudied ? '학습 완료' : '학습 표시'),
+                label: Text(isStudied ? l10n.studyComplete : l10n.markAsStudied),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: isStudied ? Colors.grey : const Color(0xFF667eea),
                   foregroundColor: Colors.white,

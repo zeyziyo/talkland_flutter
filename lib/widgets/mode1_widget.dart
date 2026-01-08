@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
+import '../l10n/app_localizations.dart';
 
 /// Mode 1: 검색 모드 - STT → 번역 → TTS
 class Mode1Widget extends StatelessWidget {
@@ -8,6 +9,8 @@ class Mode1Widget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Consumer<AppState>(
       builder: (context, appState, child) {
         return Column(
@@ -21,29 +24,7 @@ class Mode1Widget extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        // Language Selection
-                        Row(
-                          children: [
-                            Expanded(
-                              child: _buildLanguageDropdown(
-                                label: '모국어',
-                                value: appState.sourceLang,
-                                onChanged: (value) => appState.setSourceLang(value!),
-                              ),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 8),
-                              child: Icon(Icons.arrow_forward, size: 24),
-                            ),
-                            Expanded(
-                              child: _buildLanguageDropdown(
-                                label: '대상 언어',
-                                value: appState.targetLang,
-                                onChanged: (value) => appState.setTargetLang(value!),
-                              ),
-                            ),
-                          ],
-                        ),
+
                         
                         const SizedBox(height: 24),
                         
@@ -74,12 +55,12 @@ class Mode1Widget extends StatelessWidget {
                                           onPressed: appState.isListening
                                               ? () => appState.stopListening()
                                               : () => appState.startListening(),
-                                          tooltip: '음성 인식',
+                                          tooltip: l10n.listening,
                                         ),
                                         IconButton(
                                           icon: const Icon(Icons.clear),
                                           onPressed: () => appState.clearTexts(),
-                                          tooltip: '지우기',
+                                          tooltip: l10n.cancel,
                                         ),
                                       ],
                                     ),
@@ -98,9 +79,9 @@ class Mode1Widget extends StatelessWidget {
                                       appState.searchSimilarSources(value);
                                     }
                                   },
-                                  decoration: const InputDecoration(
-                                    hintText: '번역할 텍스트를 입력하거나 마이크를 눌러주세요',
-                                    border: OutlineInputBorder(),
+                                  decoration: InputDecoration(
+                                    hintText: l10n.enterTextToTranslate,
+                                    border: const OutlineInputBorder(),
                                   ),
                                   maxLines: 3,
                                 ),
@@ -124,7 +105,7 @@ class Mode1Widget extends StatelessWidget {
                                 )
                               : const Icon(Icons.translate),
                           label: Text(
-                            appState.isTranslating ? '번역 중...' : '번역하기',
+                            appState.isTranslating ? l10n.translating : l10n.translate,
                             style: const TextStyle(fontSize: 16),
                           ),
                           style: ElevatedButton.styleFrom(
@@ -165,7 +146,7 @@ class Mode1Widget extends StatelessWidget {
                                           : (appState.isSpeaking
                                               ? () => appState.stopSpeaking()
                                               : () => appState.speak()),
-                                      tooltip: '듣기',
+                                      tooltip: l10n.listen,
                                     ),
                                   ],
                                 ),
@@ -176,7 +157,7 @@ class Mode1Widget extends StatelessWidget {
                                       offset: appState.translatedText.length,
                                     ),
                                   decoration: const InputDecoration(
-                                    hintText: '번역 결과가 여기에 표시됩니다',
+                                    // hintText: '번역 결과가 여기에 표시됩니다',
                                     border: OutlineInputBorder(),
                                   ),
                                   maxLines: 3,
@@ -224,7 +205,7 @@ class Mode1Widget extends StatelessWidget {
                         : () => appState.saveTranslation(),
                     icon: const Icon(Icons.save),
                     label: Text(
-                      appState.isSaved ? '저장 완료' : '데이터 저장',
+                      appState.isSaved ? l10n.saved : l10n.saveData,
                       style: const TextStyle(fontSize: 16),
                     ),
                     style: ElevatedButton.styleFrom(
@@ -244,6 +225,7 @@ class Mode1Widget extends StatelessWidget {
   }
 
   Widget _buildDuplicateDialog(BuildContext context, AppState appState) {
+    final l10n = AppLocalizations.of(context)!;
     return Container(
       color: Colors.black54,
       child: Center(
@@ -258,9 +240,9 @@ class Mode1Widget extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
-                      '유사한 문장이 있습니다',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    Text(
+                      l10n.similarTextFound,
+                      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                     IconButton(
                       icon: const Icon(Icons.close),
@@ -269,9 +251,9 @@ class Mode1Widget extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                const Text(
-                  '기존 문장을 사용하시겠습니까?',
-                  style: TextStyle(fontSize: 14, color: Colors.grey),
+                Text(
+                  l10n.useExistingText,
+                  style: const TextStyle(fontSize: 14, color: Colors.grey),
                 ),
                 const SizedBox(height: 16),
                 
@@ -305,7 +287,7 @@ class Mode1Widget extends StatelessWidget {
                   child: OutlinedButton.icon(
                     onPressed: () => appState.createNewSource(),
                     icon: const Icon(Icons.add),
-                    label: const Text('새 문장으로 진행'),
+                    label: Text(l10n.createNew),
                     style: OutlinedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 12),
                     ),
@@ -319,38 +301,5 @@ class Mode1Widget extends StatelessWidget {
     );
   }
 
-  Widget _buildLanguageDropdown({
-    required String label,
-    required String value,
-    required void Function(String?) onChanged,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(fontSize: 12, color: Colors.grey),
-        ),
-        const SizedBox(height: 4),
-        DropdownButtonFormField<String>(
-          value: value,
-          decoration: const InputDecoration(
-            border: OutlineInputBorder(),
-            contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-          ),
-          items: AppState.languageNames.entries.map((entry) {
-            return DropdownMenuItem(
-              value: entry.key,
-              child: Text(
-                entry.value,
-                overflow: TextOverflow.ellipsis,
-              ),
-            );
-          }).toList(),
-          onChanged: onChanged,
-          isExpanded: true,
-        ),
-      ],
-    );
-  }
+
 }

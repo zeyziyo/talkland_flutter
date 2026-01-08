@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
+import '../l10n/app_localizations.dart';
 
 /// Mode 2: 복습 모드 - 저장된 학습 기록 표시
 class Mode2Widget extends StatefulWidget {
@@ -26,74 +27,14 @@ class _Mode2WidgetState extends State<Mode2Widget> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    
     return Consumer<AppState>(
       builder: (context, appState, child) {
         return Column(
           children: [
-            // Header with language filter (Always visible)
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        '📚 학습 기록 (${appState.studyRecords.length})',
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      // Refresh button
-                      TextButton.icon(
-                        onPressed: () => appState.loadStudyRecords(),
-                        icon: const Icon(Icons.refresh),
-                        label: const Text('새로고침'),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 12),
-                  // Language filter dropdown (Always visible)
-                  Row(
-                    children: [
-                      const Text(
-                        '대상 언어 필터:',
-                        style: TextStyle(fontSize: 14, color: Colors.grey),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: DropdownButtonFormField<String>(
-                          value: appState.selectedReviewLanguage,
-                          decoration: const InputDecoration(
-                            border: OutlineInputBorder(),
-                            contentPadding: EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 8,
-                            ),
-                          ),
-                          items: AppState.languageNames.entries.map((entry) {
-                            return DropdownMenuItem(
-                              value: entry.key,
-                              child: Text(
-                                entry.value,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            );
-                          }).toList(),
-                          onChanged: (value) {
-                            if (value != null) {
-                              appState.setReviewLanguage(value);
-                            }
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            // Content taking up space
+
 
             // Study Records List OR Empty State
             Expanded(
@@ -109,7 +50,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                           ),
                           const SizedBox(height: 16),
                           Text(
-                            '선택한 언어의 학습 기록이 없습니다',
+                            l10n.noRecords,
                             style: TextStyle(
                               fontSize: 18,
                               color: Colors.grey[600],
@@ -117,7 +58,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                           ),
                           const SizedBox(height: 8),
                           Text(
-                            '검색 모드에서 번역을 저장해보세요',
+                            l10n.saveTranslationsFromSearch,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 14,
@@ -144,12 +85,12 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                       showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                          title: const Text('🗑️ 레코드 삭제'),
+                          title: Text('🗑️ ${l10n.deleteRecord}'),
                           content: Column(
                             mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text('이 학습 기록을 삭제하시겠습니까?'),
+                              Text(l10n.confirmDelete),
                               const SizedBox(height: 12),
                               Container(
                                 padding: const EdgeInsets.all(12),
@@ -187,7 +128,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                           actions: [
                             TextButton(
                               onPressed: () => Navigator.of(context).pop(),
-                              child: const Text('취소'),
+                              child: Text(l10n.cancel),
                             ),
                             TextButton(
                               onPressed: () async {
@@ -196,9 +137,9 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                                   await appState.deleteRecord(id);
                                   if (context.mounted) {
                                     ScaffoldMessenger.of(context).showSnackBar(
-                                      const SnackBar(
-                                        content: Text('✅ 레코드가 삭제되었습니다'),
-                                        duration: Duration(seconds: 2),
+                                      SnackBar(
+                                        content: Text('✅ ${l10n.recordDeleted}'),
+                                        duration: const Duration(seconds: 2),
                                       ),
                                     );
                                   }
@@ -206,7 +147,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                                   if (context.mounted) {
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
-                                        content: Text('❌ 삭제 실패: $e'),
+                                        content: Text('❌ ${l10n.deleteFailed(e.toString())}'),
                                         backgroundColor: Colors.red,
                                         duration: const Duration(seconds: 3),
                                       ),
@@ -217,7 +158,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                               style: TextButton.styleFrom(
                                 foregroundColor: Colors.red,
                               ),
-                              child: const Text('삭제'),
+                              child: Text(l10n.delete),
                             ),
                           ],
                         ),
@@ -280,7 +221,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                                         ? Icons.visibility_off
                                         : Icons.visibility,
                                   ),
-                                  label: Text(isExpanded ? '숨기기' : '뒤집기'),
+                                  label: Text(isExpanded ? l10n.hide : l10n.flip),
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: const Color(0xFF667eea),
                                     foregroundColor: Colors.white,
@@ -295,7 +236,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                                     );
                                   },
                                   icon: const Icon(Icons.volume_up),
-                                  label: const Text('듣기'),
+                                  label: Text(l10n.listen),
                                   style: OutlinedButton.styleFrom(
                                     foregroundColor: const Color(0xFF667eea),
                                   ),
@@ -310,7 +251,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                               '${AppState.languageNames[record['source_lang']]} → '
                               '${AppState.languageNames[record['target_lang']]} | '
                               '${_formatDate(record['date'] as String)}'
-                              '${record['review_count'] as int > 0 ? ' | 복습 ${record['review_count']}회' : ''}',
+                              '${record['review_count'] as int > 0 ? ' | ${l10n.reviewCount(record['review_count'] as int)}' : ''}',
                               style: TextStyle(
                                 fontSize: 12,
                                 color: Colors.grey[600],
