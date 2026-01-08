@@ -66,7 +66,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get saveTranslationsFromSearch => '검색 모드에서 번역을 저장해보세요';
 
   @override
-  String get flip => '뒤집기';
+  String get flip => '보이기';
 
   @override
   String get hide => '숨기기';

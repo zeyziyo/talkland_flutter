@@ -14,7 +14,7 @@ class Mode3Widget extends StatefulWidget {
 }
 
 class _Mode3WidgetState extends State<Mode3Widget> {
-
+  final Set<int> _expandedCards = {};
   
   @override
   void initState() {
@@ -25,8 +25,6 @@ class _Mode3WidgetState extends State<Mode3Widget> {
       appState.loadStudyMaterials();
     });
   }
-  
-
   
   @override
   Widget build(BuildContext context) {
@@ -40,8 +38,6 @@ class _Mode3WidgetState extends State<Mode3Widget> {
         
         return Column(
           children: [
-
-            
             // Material selector
             if (studyMaterials.isNotEmpty) ...[
               Container(
@@ -56,7 +52,7 @@ class _Mode3WidgetState extends State<Mode3Widget> {
                   children: [
                     Text(
                       l10n.selectStudyMaterial,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
@@ -87,6 +83,8 @@ class _Mode3WidgetState extends State<Mode3Widget> {
                       onChanged: (int? value) {
                         if (value != null) {
                           appState.selectMaterial(value);
+                          // Clear expanded cards when material changes
+                          _expandedCards.clear();
                         }
                       },
                     ),
@@ -106,7 +104,7 @@ class _Mode3WidgetState extends State<Mode3Widget> {
                             data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
                             child: ExpansionTile(
                               title: Text(
-                                l10n.materialInfo ?? 'Material Info', // Fallback or add key
+                                l10n.materialInfo,
                                 style: const TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,
@@ -200,8 +198,6 @@ class _Mode3WidgetState extends State<Mode3Widget> {
   
   /// Build material metadata info card
   Widget _buildMaterialInfo(AppState appState, int materialId) {
-    // Note: l10n is not available here directly, but we can pass it or look it up if context is available.
-    // However, this is a method inside State class, so we can use context.
     final l10n = AppLocalizations.of(context)!;
     
     final material = appState.studyMaterials.firstWhere(
@@ -224,7 +220,7 @@ class _Mode3WidgetState extends State<Mode3Widget> {
               const SizedBox(width: 4),
               Text(
                 l10n.subject,
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
+                style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
               ),
               Text(
                 material['subject'] as String,
@@ -239,7 +235,7 @@ class _Mode3WidgetState extends State<Mode3Widget> {
               const SizedBox(width: 4),
               Text(
                 l10n.source,
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
+                style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
               ),
               Text(
                 material['source'] as String,
@@ -255,7 +251,7 @@ class _Mode3WidgetState extends State<Mode3Widget> {
                 const SizedBox(width: 4),
                 Text(
                   l10n.file,
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
+                  style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
                 ),
                 Expanded(
                   child: Text(
@@ -285,6 +281,7 @@ class _Mode3WidgetState extends State<Mode3Widget> {
     final sourceLang = record['source_lang'] as String;
     final targetLang = record['target_lang'] as String;
     final isStudied = studiedIds.contains(translationId);
+    final isExpanded = _expandedCards.contains(translationId);
     
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
@@ -325,89 +322,120 @@ class _Mode3WidgetState extends State<Mode3Widget> {
                     ),
                   ),
                 ),
-                IconButton(
-                  icon: const Icon(Icons.volume_up),
-                  onPressed: () {
-                    appState.playMaterialTts(
-                      text: sourceText,
-                      lang: sourceLang,
-                      recordId: record['source_id'] as int?,
-                    );
-                  },
-                  tooltip: l10n.listen,
-                ),
-              ],
-            ),
-            
-            const Divider(height: 16),
-            
-            // Target text
-            Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 8,
-                    vertical: 4,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.green[100],
-                    borderRadius: BorderRadius.circular(4),
-                  ),
-                  child: Text(
-                    targetLang.toUpperCase(),
-                    style: const TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    targetText,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.volume_up),
-                  onPressed: () {
-                    appState.playMaterialTts(
-                      text: targetText,
-                      lang: targetLang,
-                      recordId: record['target_id'] as int?,
-                    );
-                  },
-                  tooltip: l10n.listen,
-                ),
               ],
             ),
             
             const SizedBox(height: 12),
             
-            // Study button
-            Align(
-              alignment: Alignment.centerRight,
-              child: ElevatedButton.icon(
-                onPressed: isStudied
-                    ? null
-                    : () {
-                        appState.markTranslationAsStudied(translationId);
-                      },
-                icon: Icon(isStudied ? Icons.check_circle : Icons.circle_outlined),
-                label: Text(isStudied ? l10n.studyComplete : l10n.markAsStudied),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: isStudied ? Colors.grey : const Color(0xFF667eea),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 8,
-                  ),
+            // Target text (Hidden by default, expandable)
+            if (isExpanded) ...[
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.green[50],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(top: 2),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 4,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.green[200],
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Text(
+                        targetLang.toUpperCase(),
+                        style: const TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        targetText,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xFF2c5282),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
+              const SizedBox(height: 12),
+            ],
+            
+            // Actions
+            Row(
+              children: [
+                // Show/Hide Button
+                ElevatedButton.icon(
+                  onPressed: () {
+                    setState(() {
+                      if (isExpanded) {
+                        _expandedCards.remove(translationId);
+                      } else {
+                        _expandedCards.add(translationId);
+                      }
+                    });
+                  },
+                  icon: Icon(
+                    isExpanded ? Icons.visibility_off : Icons.visibility,
+                    size: 18,
+                  ),
+                  label: Text(isExpanded ? l10n.hide : l10n.flip),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF667eea),
+                    foregroundColor: Colors.white,
+                  ),
+                ),
+                
+                const SizedBox(width: 8),
+                
+                // Listen Button (Only for Target)
+                if (isExpanded)
+                  OutlinedButton.icon(
+                    onPressed: () {
+                      appState.playMaterialTts(
+                        text: targetText,
+                        lang: targetLang,
+                        recordId: record['target_id'] as int?,
+                      );
+                    },
+                    icon: const Icon(Icons.volume_up, size: 18),
+                    label: Text(l10n.listen),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: const Color(0xFF667eea),
+                    ),
+                  ),
+                  
+                const Spacer(),
+                
+                // Study Check Button
+                IconButton(
+                  onPressed: isStudied
+                      ? null
+                      : () {
+                          appState.markTranslationAsStudied(translationId);
+                        },
+                  icon: Icon(
+                    isStudied ? Icons.check_circle : Icons.check_circle_outline,
+                    color: isStudied ? Colors.green : Colors.grey,
+                    size: 28,
+                  ),
+                  tooltip: isStudied ? l10n.studyComplete : l10n.markAsStudied,
+                ),
+              ],
             ),
           ],
         ),

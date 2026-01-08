@@ -66,7 +66,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get saveTranslationsFromSearch => 'Save translations from search mode';
 
   @override
-  String get flip => 'Flip';
+  String get flip => 'Show';
 
   @override
   String get hide => 'Hide';

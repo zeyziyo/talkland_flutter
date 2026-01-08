@@ -18,7 +18,7 @@
   "targetLanguageFilter": "대상 언어 필터:",
   "noRecords": "선택한 언어의 학습 기록이 없습니다",
   "saveTranslationsFromSearch": "검색 모드에서 번역을 저장해보세요",
-  "flip": "뒤집기",
+  "flip": "보이기",
   "hide": "숨기기",
   "deleteRecord": "레코드 삭제",
   "confirmDelete": "이 학습 기록을 삭제하시겠습니까?",

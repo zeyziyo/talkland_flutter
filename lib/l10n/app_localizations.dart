@@ -209,7 +209,7 @@ abstract class AppLocalizations {
   /// Show translation button
   ///
   /// In en, this message translates to:
-  /// **'Flip'**
+  /// **'Show'**
   String get flip;
 
   /// Hide translation button

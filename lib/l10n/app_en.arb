@@ -100,7 +100,7 @@
     "description": "Instruction to save data"
   },
   
-  "flip": "Flip",
+  "flip": "Show",
   "@flip": {
     "description": "Show translation button"
   },
