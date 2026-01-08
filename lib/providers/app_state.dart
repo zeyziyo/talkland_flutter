@@ -697,7 +697,7 @@ class AppState extends ChangeNotifier {
   Future<void> _checkMode4Answer() async {
     if (!_mode4SessionActive) return;
     
-    await _speechService.stopSTT();
+    _speechService.stopSTT();
     _isListening = false;
     
     final targetText = _currentMode4Question!['target_text'] as String;
