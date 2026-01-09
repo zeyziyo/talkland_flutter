@@ -809,62 +809,9 @@ class AppState extends ChangeNotifier {
     if (!_mode3SessionActive) return;
     
     _cancelMode3Timers(); // Stop timeout since we got an answer (implied by this being called? Wait.)
-    // Actually _checkMode3Answer was called by the delayed future in old code. 
-    // New logic: STT Service auto-stops on silence (finalResult).
-    // The SpeechService calls stopSTT() on finalResult.
-    // We need to trigger _checkMode3Answer when STT is DONE.
-    // But SpeechService onResult doesn't directly tell us "DONE" in this callback structure effectively unless we change it.
-    // However, in _startMode3Listening above, I didn't hook into "Final Result".
-    // 
-    // OLD CODE relied on fixed delay. NEW REQUEST expects "Auto next after completion".
-    // SpeechService currently has `stopSTT` inside `onResult` when `finalResult` is true.
-    // But it doesn't notify AppState to check answer.
-    // 
-    // Issue: The previous code just waited `_mode3Interval` then checked.
-    // Reform: We should check answer EITHER when `finalResult` is received OR timeout.
-    // BUT user said: "If time passes without pronunciation -> Retry".
-    // "If pronunciation completed -> Check score -> Next"
-    // 
-    // So we need to detect "Pronunciation Completed".
-    // SpeechService `startSTT`'s `onResult` should probably expose `isFinal` or we infer it.
-    // Let's modify `_startMode3Listening` logic slightly to handle the `onResult` better if possible.
-    // Or we poll? No.
-    // 
-    // Let's modify _startMode3Listening to check answer if we get a result.
-    // But wait, user might be partial. SpeechToText gives partials.
-    // 
-    // We will trust the User's "Retry/Timeout" constraint mainly for "No input".
-    // If we have input, do we wait for timeout?
-    // User said: "Show score AFTER pronunciation complete".
-    // This implies we need to know when it is complete.
-    // 
-    // If I change `startSTT` in SpeechService to allow a callback on "Done", that would be best.
-    // But I can't easily change signature everywhere.
-    // 
-    // Hack: `SpeechService.startSTT` calls `stopSTT` internally on final result.
-    // I can check `_speechService.lastRecognizedText`? 
-    // 
-    // BETTER: Use a debouncer? Or just rely on `finalResult` from the library if SpeechService passes it?
-    // Looking at SpeechService: `onResult(result.recognizedWords)` is called. It doesn't pass the `SpeechRecognitionResult` object.
-    // 
-    // I will modify `_startMode3Listening` to assume if `_mode3UserAnswer` is stable for X ms? 
-    // OR, I can Rely on `_speechService` isListening going false?
-    // 
-    // Let's assume for now:
-    // If we get ANY text, we reset the "Timeout for Retry" and maybe start "silence detection"?
-    // The `SpeechService` uses `dictation` and `pauseFor: 3s`. It will stop itself.
-    // When it stops, we should check the answer.
-    // 
-    // How do we know it stopped? `SpeechService` doesn't have a stream for status.
-    // 
-    // ALTERNATIVE: I will add a polling check or just use the timeout for "NO input".
-    // If `_mode3UserAnswer` is NOT empty when timer fires, then we check answer!
-    // If `_mode3UserAnswer` IS empty, then we show Retry.
-    
-    // Let's update `_handleMode3Timeout` to differentiate.
-  }
-  
-  // Adjusted logic intended for _handleMode3Timeout replacement below
+    // Stop listening if technically still active
+    _speechService.stopSTT();
+    _isListening = false;
 
     
     final targetText = _currentMode3Question!['target_text'] as String;
