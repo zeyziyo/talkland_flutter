@@ -27,6 +27,7 @@ dependencies:
   
   # Text-to-Speech (TTS)
   flutter_tts: ^4.2.0
+  audio_session: ^0.1.21
   
   # Translation API
   http: ^1.2.0

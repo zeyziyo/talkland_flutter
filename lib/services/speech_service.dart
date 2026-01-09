@@ -1,5 +1,6 @@
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:audio_session/audio_session.dart';
 
 /// Speech service for STT and TTS across platforms
 class SpeechService {
@@ -35,6 +36,11 @@ class SpeechService {
       await _flutterTts.setVolume(1.0);
       await _flutterTts.setSpeechRate(0.5);
       await _flutterTts.setPitch(1.0);
+      
+      // Fix for Volume Control: Force Audio Session to Speech
+      // This ensures volume buttons control the correct stream and audio focus is managed
+      final session = await AudioSession.instance;
+      await session.configure(const AudioSessionConfiguration.speech());
       
       // Fix for Volume Control: Force Media Stream
       // iOS: AVAudioSessionCategoryPlayback (ignores silent switch, uses media volume)
@@ -91,11 +97,11 @@ class SpeechService {
       listenOptions: stt.SpeechListenOptions(
         // Use dictation for better sentence recognition and handling of pauses
         listenMode: stt.ListenMode.dictation, 
-        cancelOnError: true,
+        cancelOnError: false, // Fix: Don't stop on minor errors
         partialResults: true,
       ),
       // Increase pause duration to prevent cutting off too early
-      pauseFor: const Duration(seconds: 3),
+      pauseFor: const Duration(seconds: 5), // Fix: Increased from 3s to 5s
     );
   }
   
