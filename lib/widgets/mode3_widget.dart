@@ -1,558 +1,244 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:file_picker/file_picker.dart';
-import 'dart:io';
 import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
 
-/// Mode 3: 학습 자료 및 복습 모드
-/// - 기본적으로 학습 자료를 선택하여 학습
-/// - '전체 복습' 선택 시 모든 저장된 문장 복습 (구 Mode 2 기능 통합)
-class Mode3Widget extends StatefulWidget {
+/// Mode 3: 말하기 모드
+/// - 선택한 학습 자료 또는 전체 문장을 바탕으로 발음 연습
+/// - 대기 시간 설정 기능 (버튼 방식)
+class Mode3Widget extends StatelessWidget {
   const Mode3Widget({super.key});
 
   @override
-  State<Mode3Widget> createState() => _Mode3WidgetState();
-}
-
-class _Mode3WidgetState extends State<Mode3Widget> {
-  final Set<int> _expandedCards = {};
-  
-  @override
-  void initState() {
-    super.initState();
-    // Load study materials when widget is initialized
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      final appState = Provider.of<AppState>(context, listen: false);
-      appState.loadStudyMaterials();
-    });
-  }
-  
-  @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    
     return Consumer<AppState>(
       builder: (context, appState, child) {
-        final studyMaterials = appState.studyMaterials;
-        final selectedMaterialId = appState.selectedMaterialId;
-        final materialRecords = appState.materialRecords;
-        final studiedIds = appState.studiedTranslationIds;
+        final currentQuestion = appState.currentMode3Question;
         
-        // Prepare dropdown items
-        final List<DropdownMenuItem<int>> dropdownItems = [];
-        
-        // 1. Add "Review All" option
-        dropdownItems.add(
-          DropdownMenuItem(
-            value: -1,
-            child: Row(
-              children: [
-                const Icon(Icons.all_inclusive, size: 16, color: Colors.indigo),
-                const SizedBox(width: 8),
-                Text(
-                  '전체 복습 (All Records)', // Could be localized if needed
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ),
-        );
-        
-        // 2. Add actual materials
-        dropdownItems.addAll(studyMaterials.map((material) {
-          final id = material['id'] as int;
-          final subject = material['subject'] as String;
-          final sourceLang = material['source_language'] as String;
-          final targetLang = material['target_language'] as String;
-          
-          
-          String label = '$subject ($sourceLang → $targetLang)';
-          if (id == 0) {
-             // Use current app languages for the default material label
-             label = 'No (${AppState.languageNames[appState.sourceLang]} → ${AppState.languageNames[appState.targetLang]})';
-          }
-
-          return DropdownMenuItem<int>(
-            value: id,
-            child: Text(label),
-          );
-        }));
-
         return Column(
           children: [
-            // Material selector
+            // ==========================================
+            // 1. Top Settings Panel
+            // ==========================================
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16),
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Colors.blue[50],
-                borderRadius: BorderRadius.circular(12),
+                color: Colors.purple[50], // Distinct color for Speaking Mode
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
               ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text(
-                    l10n.selectStudyMaterial,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 8),
+                  // Material Selector
                   DropdownButtonFormField<int>(
-                    value: selectedMaterialId,
-                    decoration: const InputDecoration(
+                    value: appState.selectedMaterialId,
+                    decoration: InputDecoration(
+                      labelText: l10n.selectStudyMaterial,
                       filled: true,
                       fillColor: Colors.white,
-                      border: OutlineInputBorder(),
-                      contentPadding: EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 8,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                     ),
-                    items: dropdownItems,
-                    onChanged: (int? value) {
-                      if (value != null) {
-                        appState.selectMaterial(value);
-                        // Clear expanded cards when material changes
-                        _expandedCards.clear();
-                      }
-                    },
+                    items: appState.studyMaterials.map((material) {
+                      return DropdownMenuItem<int>(
+                        value: material['id'] as int,
+                        child: Text(
+                          material['subject'] as String,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      );
+                    }).toList(),
+                    onChanged: appState.mode3SessionActive 
+                      ? null // Disable while active
+                      : (val) {
+                          if (val != null) appState.selectMaterial(val);
+                        },
                   ),
+                  const SizedBox(height: 16),
                   
-                  // Metadata (Collapsible) - Only show if specific material selected (not -1)
-                  if (selectedMaterialId != null && selectedMaterialId != -1) ...[
-                    const SizedBox(height: 16),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 0), // Removed extra padding
-                      child: Card(
-                        elevation: 0,
-                        color: Colors.grey[50],
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                          side: BorderSide(color: Colors.grey[200]!),
-                        ),
-                        child: Theme(
-                          data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-                          child: ExpansionTile(
-                            title: Text(
-                              l10n.materialInfo,
-                              style: const TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF667eea),
-                              ),
-                            ),
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                                child: _buildMaterialInfo(appState, selectedMaterialId),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ],
-              ),
-            ),
-            
-            const SizedBox(height: 16),
-            
-            // Progress indicator (Only for specific materials, unlikely needed for "All" but acceptable)
-            if (materialRecords.isNotEmpty && selectedMaterialId != -1)
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Row(
-                  children: [
-                    const Icon(Icons.bar_chart, size: 20),
-                    const SizedBox(width: 8),
-                    Text(
-                      l10n.progress(studiedIds.length, materialRecords.length),
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    const Spacer(),
-                    Text(
-                      '${((studiedIds.length / materialRecords.length) * 100).toStringAsFixed(0)}%',
-                      style: const TextStyle(
-                        fontSize: 14,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              
-            if (selectedMaterialId == -1 && materialRecords.isNotEmpty)
-               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Row(
-                  children: [
-                    const Icon(Icons.list, size: 20),
-                    const SizedBox(width: 8),
-                    Text(
-                      '총 ${materialRecords.length}개의 기록 (전체 보기)',
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            
-            const SizedBox(height: 16),
-            
-            // Records list
-            Expanded(
-              child: materialRecords.isEmpty
-                  ? Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.library_books_outlined,
-                            size: 64,
-                            color: Colors.grey[300],
-                          ),
-                          const SizedBox(height: 16),
-                          Text(
-                            selectedMaterialId == null 
-                                ? l10n.selectMaterialPrompt 
-                                : l10n.noRecords,
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.grey[600],
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  : ListView.builder(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      itemCount: materialRecords.length,
-                      itemBuilder: (context, index) {
-                        final record = materialRecords[index];
-                        return _buildRecordCard(appState, record, studiedIds);
-                      },
-                    ),
-            ),
-          ],
-        );
-      },
-    );
-  }
-  
-  /// Build material metadata info card
-  Widget _buildMaterialInfo(AppState appState, int materialId) {
-    final l10n = AppLocalizations.of(context)!;
-    
-    // Find material might fail if lists changed, use safeguard
-    final material = appState.studyMaterials.firstWhere(
-      (m) => m['id'] == materialId,
-      orElse: () => {},
-    );
-    
-    if (material.isEmpty) return const SizedBox.shrink();
-    
-    return Container(
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: Colors.grey[300]!),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              const Icon(Icons.topic, size: 16, color: Color(0xFF667eea)),
-              const SizedBox(width: 4),
-              Text(
-                l10n.subject,
-                style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
-              ),
-              Text(
-                material['subject'] as String? ?? 'N/A',
-                style: const TextStyle(fontSize: 12),
-              ),
-            ],
-          ),
-          const SizedBox(height: 4),
-          Row(
-            children: [
-              const Icon(Icons.source, size: 16, color: Color(0xFF667eea)),
-              const SizedBox(width: 4),
-              Text(
-                l10n.source,
-                style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
-              ),
-              Text(
-                material['source'] as String? ?? 'N/A',
-                style: const TextStyle(fontSize: 12),
-              ),
-            ],
-          ),
-          if (material['file_name'] != null) ...[
-            const SizedBox(height: 4),
-            Row(
-              children: [
-                const Icon(Icons.insert_drive_file, size: 16, color: Color(0xFF667eea)),
-                const SizedBox(width: 4),
-                Text(
-                  l10n.file,
-                  style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
-                ),
-                Expanded(
-                  child: Text(
-                    material['file_name'] as String,
-                    style: const TextStyle(fontSize: 12),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ],
-            ),
-        ],
-        ],
-      ),
-    );
-  }
-  
-  /// Build individual record card
-  Widget _buildRecordCard(
-    AppState appState,
-    Map<String, dynamic> record,
-    Set<int> studiedIds,
-  ) {
-    final l10n = AppLocalizations.of(context)!;
-    final translationId = record['id'] as int;
-    final sourceText = record['source_text'] as String;
-    final targetText = record['target_text'] as String;
-    final sourceLang = record['source_lang'] as String;
-    final targetLang = record['target_lang'] as String;
-    final isStudied = studiedIds.contains(translationId);
-    final isExpanded = _expandedCards.contains(translationId);
-    
-    return InkWell(
-      onLongPress: () {
-        _showDeleteDialog(context, appState, record, l10n);
-      },
-      child: Card(
-        margin: const EdgeInsets.only(bottom: 12),
-        elevation: 2,
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Source text
-              Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 8,
-                      vertical: 4,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.blue[100],
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: Text(
-                      sourceLang.toUpperCase(),
-                      style: const TextStyle(
-                        fontSize: 10,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blue,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      sourceText,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              
-              const SizedBox(height: 12),
-              
-              // Target text (Hidden by default, expandable)
-              if (isExpanded) ...[
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: Colors.green[50],
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  // Interval Selector (Button Style Redesign)
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        margin: const EdgeInsets.only(top: 2),
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 4,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.green[200],
-                          borderRadius: BorderRadius.circular(4),
-                        ),
+                      IconButton(
+                        icon: const Icon(Icons.remove_circle_outline, size: 28),
+                        color: Colors.red[300],
+                        onPressed: appState.mode3SessionActive 
+                            || appState.mode3Interval <= 3 
+                            ? null 
+                            : () => appState.setMode3Interval(appState.mode3Interval - 1),
+                        tooltip: '감소',
+                      ),
+                      
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 24),
                         child: Text(
-                          targetLang.toUpperCase(),
+                          l10n.intervalSeconds(appState.mode3Interval),
                           style: const TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                            fontWeight: FontWeight.bold, 
+                            fontSize: 18,
+                            color: Colors.deepPurple
                           ),
                         ),
                       ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Text(
-                          targetText,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xFF2c5282),
-                          ),
-                        ),
+                      
+                      IconButton(
+                        icon: const Icon(Icons.add_circle_outline, size: 28),
+                        color: Colors.green[300],
+                        onPressed: appState.mode3SessionActive 
+                            || appState.mode3Interval >= 60 
+                            ? null 
+                            : () => appState.setMode3Interval(appState.mode3Interval + 1),
+                        tooltip: '증가',
                       ),
                     ],
                   ),
-                ),
-                const SizedBox(height: 12),
-              ],
-              
-              // Actions
-              Row(
-                children: [
-                  // Show/Hide Button
+                  
+                  const SizedBox(height: 8),
+                  
+                  // Start/Stop Button
                   ElevatedButton.icon(
-                    onPressed: () {
-                      setState(() {
-                        if (isExpanded) {
-                          _expandedCards.remove(translationId);
-                        } else {
-                          _expandedCards.add(translationId);
-                        }
-                      });
-                    },
-                    icon: Icon(
-                      isExpanded ? Icons.visibility_off : Icons.visibility,
-                      size: 18,
-                    ),
-                    label: Text(isExpanded ? l10n.hide : l10n.flip),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF667eea),
-                      foregroundColor: Colors.white,
-                    ),
-                  ),
-                  
-                  const SizedBox(width: 8),
-                  
-                  // Listen Button (Only for Target)
-                  if (isExpanded)
-                    OutlinedButton.icon(
-                      onPressed: () {
-                        appState.playMaterialTts(
-                          text: targetText,
-                          lang: targetLang,
-                          recordId: record['target_id'] as int?,
-                        );
-                      },
-                      icon: const Icon(Icons.volume_up, size: 18),
-                      label: Text(l10n.listen),
-                      style: OutlinedButton.styleFrom(
-                        foregroundColor: const Color(0xFF667eea),
-                      ),
-                    ),
-                    
-                  const Spacer(),
-                  
-                  // Study Check Button
-                  IconButton(
-                    onPressed: isStudied
+                    onPressed: appState.studyMaterials.isEmpty
                         ? null
-                        : () {
-                            appState.markTranslationAsStudied(translationId);
-                          },
+                        : () => appState.toggleMode3Session(),
                     icon: Icon(
-                      isStudied ? Icons.check_circle : Icons.check_circle_outline,
-                      color: isStudied ? Colors.green : Colors.grey,
-                      size: 28,
+                      appState.mode3SessionActive ? Icons.stop : Icons.play_arrow,
                     ),
-                    tooltip: isStudied ? l10n.studyComplete : l10n.markAsStudied,
+                    label: Text(
+                      appState.mode3SessionActive ? l10n.stopPractice : l10n.startPractice,
+                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: appState.mode3SessionActive ? Colors.red : Colors.purple,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                    ),
                   ),
                 ],
               ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  void _showDeleteDialog(BuildContext context, AppState appState, Map<String, dynamic> record, AppLocalizations l10n) {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text('🗑️ ${l10n.deleteRecord}'),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(l10n.confirmDelete),
-            const SizedBox(height: 12),
-            Container(
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: Colors.grey[100],
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Text(
-                record['source_text'] as String,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
+            ),
+            
+            // ==========================================
+            // 2. Practice Area
+            // ==========================================
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: currentQuestion == null
+                    ? Center(
+                        child: Text(
+                          appState.studyMaterials.isEmpty
+                              ? l10n.importJsonFilePrompt
+                              : l10n.startPractice, 
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.grey[400], fontSize: 18),
+                        ),
+                      )
+                    : Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          // Source Text (Native)
+                          const Text(
+                            "🇰🇷", // Fixed to Source flag or dynamic
+                            style: TextStyle(fontSize: 32),
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            currentQuestion['source_text'] as String,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87,
+                            ),
+                          ),
+                          
+                          const SizedBox(height: 48),
+                          
+                          // Feedback Area
+                          if (appState.mode3UserAnswer.isNotEmpty) ...[
+                            Text(
+                              l10n.yourPronunciation,
+                              style: TextStyle(color: Colors.grey[600], fontSize: 12),
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              appState.mode3UserAnswer,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                fontSize: 18,
+                                color: Colors.purple,
+                                fontStyle: FontStyle.italic,
+                              ),
+                            ),
+                          ],
+                          
+                          const SizedBox(height: 24),
+                          
+                          // Result / Score
+                          if (appState.mode3Score != null) ...[
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                              decoration: BoxDecoration(
+                                color: _getScoreColor(appState.mode3Score!),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Text(
+                                appState.mode3Feedback,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 16),
+                            Text(
+                              l10n.score(appState.mode3Score!.toStringAsFixed(1)),
+                              style: TextStyle(
+                                color: Colors.grey[700],
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(height: 16),
+                             Text(
+                              l10n.correctAnswer,
+                              style: TextStyle(color: Colors.grey[600], fontSize: 12),
+                            ),
+                            Text(
+                              currentQuestion['target_text'] as String,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.grey[800],
+                              ),
+                            ),
+                          ] else if (appState.mode3SessionActive) ...[
+                            // Listening Indicator
+                            const CircularProgressIndicator(),
+                            const SizedBox(height: 16),
+                            Text(l10n.listening),
+                          ],
+                        ],
+                      ),
               ),
             ),
           ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(l10n.cancel),
-          ),
-          TextButton(
-            onPressed: () async {
-              Navigator.of(context).pop();
-              try {
-                await appState.deleteRecord(record['id'] as int);
-                if (context.mounted) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('✅ ${l10n.recordDeleted}')),
-                  );
-                }
-              } catch (e) {
-                // Error handling
-              }
-            },
-            style: TextButton.styleFrom(foregroundColor: Colors.red),
-            child: Text(l10n.delete),
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
-}
 
+  Color _getScoreColor(double score) {
+    if (score >= 90) return Colors.green;
+    if (score >= 70) return Colors.orange;
+    return Colors.red;
+  }
+}

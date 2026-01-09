@@ -1,0 +1,11 @@
+What's New in Version 1.0.1:
+
+🎉 UI/UX Improvements:
+- Redesigned Speaking Mode: Precise interval control (3s-60s) with new button interface.
+- Enhanced Search Mode: Added clear/reset text buttons.
+- Improved Dropdown: Better material labels showing language pairs.
+
+🛠️ Bug Fixes:
+- Microphone now auto-stops correctly after speech.
+- Fixed deletion issues in Study list.
+- General performance improvements.

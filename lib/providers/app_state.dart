@@ -11,7 +11,7 @@ class AppState extends ChangeNotifier {
   // Services
   final SpeechService _speechService = SpeechService();
   
-  // Current mode: 0 = 검색, 1 = 복습, 2 = 학습 자료
+  // Current mode: 0 = 검색, 1 = 복습/학습, 2 = 말하기
   int _currentMode = 0;
   
   // Mode 1 (검색) State
@@ -34,7 +34,7 @@ class AppState extends ChangeNotifier {
   List<Map<String, dynamic>> _studyRecords = [];
   String _selectedReviewLanguage = 'ja'; // Filter by target language
   
-  // Mode 3 (학습 자료) State
+  // Mode 2 (학습 자료 & 복습) State
   List<Map<String, dynamic>> _studyMaterials = []; // Available study materials
   int? _selectedMaterialId; // Currently selected material
   List<Map<String, dynamic>> _materialRecords = []; // Sentences in selected material
@@ -57,7 +57,7 @@ class AppState extends ChangeNotifier {
   bool get showDuplicateDialog => _showDuplicateDialog;
   String get selectedReviewLanguage => _selectedReviewLanguage;
   
-  // Mode 3 Getters
+  // Mode 2 Getters
   List<Map<String, dynamic>> get studyMaterials => _studyMaterials;
   int? get selectedMaterialId => _selectedMaterialId;
   List<Map<String, dynamic>> get materialRecords => _materialRecords;
@@ -129,10 +129,10 @@ class AppState extends ChangeNotifier {
     _currentMode = mode;
     
     if (mode == 1) {
-      // Study Material mode - Load materials
+      // Study Material mode (Mode 2) - Load materials
       loadStudyMaterials();
     } else if (mode == 2) {
-      // Speaking Mode
+      // Speaking Mode (Mode 3)
     }
     
     notifyListeners();
@@ -187,7 +187,7 @@ class AppState extends ChangeNotifier {
       _showDuplicateDialog = _similarSources.isNotEmpty;
       notifyListeners();
     } catch (e) {
-      print('[AppState] Error searching similar sources: $e');
+      debugPrint('[AppState] Error searching similar sources: $e');
       _similarSources = [];
       _showDuplicateDialog = false;
       notifyListeners();
@@ -233,12 +233,12 @@ class AppState extends ChangeNotifier {
       if (_selectedSourceId != null) {
         // Reuse existing source
         sourceId = _selectedSourceId!;
-        print('[AppState] Reusing existing source: id=$sourceId');
+        debugPrint('[AppState] Reusing existing source: id=$sourceId');
       } else {
         // Create new source entry
         sourceId = await DatabaseService.insertLanguageRecord(_sourceLang, _sourceText);
         _selectedSourceId = sourceId;
-        print('[AppState] Created new source: id=$sourceId');
+        debugPrint('[AppState] Created new source: id=$sourceId');
       }
       
       // 2. Check if translation already exists
@@ -257,7 +257,7 @@ class AppState extends ChangeNotifier {
         _isTranslating = false;
         _statusMessage = '저장된 번역 불러옴';
         notifyListeners();
-        print('[AppState] Loaded existing translation from database');
+        debugPrint('[AppState] Loaded existing translation from database');
         return;
       }
       
@@ -323,11 +323,11 @@ class AppState extends ChangeNotifier {
       
       notifyListeners();
       
-      print('[AppState] Translation saved successfully');
+      debugPrint('[AppState] Translation saved successfully');
     } catch (e) {
       _statusMessage = '저장 실패: $e';
       notifyListeners();
-      print('[AppState] Error saving translation: $e');
+      debugPrint('[AppState] Error saving translation: $e');
     }
   }
   
@@ -385,7 +385,7 @@ class AppState extends ChangeNotifier {
       );
       notifyListeners();
     } catch (e) {
-      print('[AppState] Error loading study records (web platform): $e');
+      debugPrint('[AppState] Error loading study records (web platform): $e');
       _studyRecords = []; // Empty list on web
       notifyListeners();
     }
@@ -402,7 +402,7 @@ class AppState extends ChangeNotifier {
     try {
       await _speechService.speak(text, lang: _getLangCode(lang));
     } catch (e) {
-      print('[AppState] Error playing TTS: $e');
+      debugPrint('[AppState] Error playing TTS: $e');
     }
   }
   
@@ -412,7 +412,7 @@ class AppState extends ChangeNotifier {
       await DatabaseService.incrementReviewCount(id);
       await loadStudyRecords(); // Reload to update UI
     } catch (e) {
-      print('[AppState] Error incrementing review count: $e');
+      debugPrint('[AppState] Error incrementing review count: $e');
     }
   }
   
@@ -433,9 +433,9 @@ class AppState extends ChangeNotifier {
         }
       }
       
-      print('[AppState] Record deleted successfully: id=$id');
+      debugPrint('[AppState] Record deleted successfully: id=$id');
     } catch (e) {
-      print('[AppState] Error deleting record: $e');
+      debugPrint('[AppState] Error deleting record: $e');
       rethrow;
     }
   }
@@ -488,14 +488,14 @@ class AppState extends ChangeNotifier {
             _selectedReviewLanguage = targetLang;
           }
         } catch (e) {
-          print('[AppState] Could not parse target language from JSON: $e');
+          debugPrint('[AppState] Could not parse target language from JSON: $e');
         }
         await loadStudyRecords();
       }
       
       return result;
     } catch (e) {
-      print('[AppState] Error importing JSON file: $e');
+      debugPrint('[AppState] Error importing JSON file: $e');
       return {
         'success': false,
         'imported': 0,
@@ -523,7 +523,7 @@ class AppState extends ChangeNotifier {
       
       notifyListeners();
     } catch (e) {
-      print('[AppState] Error loading study materials: $e');
+      debugPrint('[AppState] Error loading study materials: $e');
       _studyMaterials = [];
       notifyListeners();
     }
@@ -571,9 +571,9 @@ class AppState extends ChangeNotifier {
 
       _materialRecords = maps;
       notifyListeners();
-      print('[AppState] Loaded ${_materialRecords.length} records for Review All view');
+      debugPrint('[AppState] Loaded ${_materialRecords.length} records for Review All view');
     } catch (e) {
-      print('[AppState] Error loading all records for material view: $e');
+      debugPrint('[AppState] Error loading all records for material view: $e');
     }
   }
   
@@ -583,7 +583,7 @@ class AppState extends ChangeNotifier {
       _materialRecords = await DatabaseService.getRecordsByMaterialId(materialId);
       notifyListeners();
     } catch (e) {
-      print('[AppState] Error loading material records: $e');
+      debugPrint('[AppState] Error loading material records: $e');
       _materialRecords = [];
       notifyListeners();
     }
@@ -613,7 +613,7 @@ class AppState extends ChangeNotifier {
       
       return result;
     } catch (e) {
-      print('[AppState] Error importing JSON with metadata: $e');
+      debugPrint('[AppState] Error importing JSON with metadata: $e');
       return {
         'success': false,
         'imported': 0,
@@ -644,43 +644,43 @@ class AppState extends ChangeNotifier {
       
       // TODO: Save generated TTS to database if recordId is provided
     } catch (e) {
-      print('[AppState] Error playing material TTS: $e');
+      debugPrint('[AppState] Error playing material TTS: $e');
     }
   }
   
   // ==========================================
-  // Mode 4: Speaking Practice
+  // Mode 3: Speaking Practice
   // ==========================================
   
-  int _mode4Interval = 5; // Seconds
-  bool _mode4SessionActive = false;
-  Map<String, dynamic>? _currentMode4Question;
-  String _mode4UserAnswer = '';
-  double? _mode4Score; // 0.0 to 100.0
-  String _mode4Feedback = '';
+  int _mode3Interval = 5; // Seconds
+  bool _mode3SessionActive = false;
+  Map<String, dynamic>? _currentMode3Question;
+  String _mode3UserAnswer = '';
+  double? _mode3Score; // 0.0 to 100.0
+  String _mode3Feedback = '';
   
-  int get mode4Interval => _mode4Interval;
-  bool get mode4SessionActive => _mode4SessionActive;
-  Map<String, dynamic>? get currentMode4Question => _currentMode4Question;
-  String get mode4UserAnswer => _mode4UserAnswer;
-  double? get mode4Score => _mode4Score;
-  String get mode4Feedback => _mode4Feedback;
+  int get mode3Interval => _mode3Interval;
+  bool get mode3SessionActive => _mode3SessionActive;
+  Map<String, dynamic>? get currentMode3Question => _currentMode3Question;
+  String get mode3UserAnswer => _mode3UserAnswer;
+  double? get mode3Score => _mode3Score;
+  String get mode3Feedback => _mode3Feedback;
   
-  void setMode4Interval(int seconds) {
-    _mode4Interval = seconds;
+  void setMode3Interval(int seconds) {
+    _mode3Interval = seconds;
     notifyListeners();
   }
   
-  Future<void> toggleMode4Session() async {
-    _mode4SessionActive = !_mode4SessionActive;
+  Future<void> toggleMode3Session() async {
+    _mode3SessionActive = !_mode3SessionActive;
     
-    if (_mode4SessionActive) {
+    if (_mode3SessionActive) {
       // Start session
       if (_materialRecords.isEmpty) {
         _statusMessage = '먼저 학습 자료를 선택하세요';
-        _mode4SessionActive = false;
+        _mode3SessionActive = false;
       } else {
-        await _nextMode4Question();
+        await _nextMode3Question();
       }
     } else {
       // Stop session
@@ -690,39 +690,39 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
   
-  Future<void> _nextMode4Question() async {
-    if (!_mode4SessionActive || _materialRecords.isEmpty) return;
+  Future<void> _nextMode3Question() async {
+    if (!_mode3SessionActive || _materialRecords.isEmpty) return;
     
     // Pick random question
     final randomIndex = DateTime.now().millisecondsSinceEpoch % _materialRecords.length;
-    _currentMode4Question = _materialRecords[randomIndex];
-    _mode4UserAnswer = '';
-    _mode4Score = null;
-    _mode4Feedback = '';
+    _currentMode3Question = _materialRecords[randomIndex];
+    _mode3UserAnswer = '';
+    _mode3Score = null;
+    _mode3Feedback = '';
     
     notifyListeners();
     
     // Auto-play TTS for source text
-    final sourceText = _currentMode4Question!['source_text'] as String;
-    final sourceLang = _currentMode4Question!['source_lang'] as String;
+    final sourceText = _currentMode3Question!['source_text'] as String;
+    final sourceLang = _currentMode3Question!['source_lang'] as String;
     
     await _speechService.speak(sourceText, lang: _getLangCode(sourceLang));
     
     // Start listening for answer
-    _startMode4Listening();
+    _startMode3Listening();
   }
   
-  Future<void> _startMode4Listening() async {
+  Future<void> _startMode3Listening() async {
     try {
       _isListening = true;
       notifyListeners();
       
-      final targetLang = _currentMode4Question!['target_lang'] as String;
+      final targetLang = _currentMode3Question!['target_lang'] as String;
       
       await _speechService.startSTT(
         lang: _getLangCode(targetLang),
         onResult: (text) {
-          _mode4UserAnswer = text;
+          _mode3UserAnswer = text;
           notifyListeners();
         },
       );
@@ -738,46 +738,46 @@ class AppState extends ChangeNotifier {
       // 2. Listen for (Interval - TTS duration) OR just fixed window?
       // Let's trigger a delayed check.
       
-      Future.delayed(Duration(seconds: _mode4Interval), () {
-        if (_mode4SessionActive) {
-          _checkMode4Answer();
+      Future.delayed(Duration(seconds: _mode3Interval), () {
+        if (_mode3SessionActive) {
+          _checkMode3Answer();
         }
       });
       
     } catch (e) {
-      print('Mode 4 Listen Error: $e');
+      debugPrint('[AppState] Mode 3 Listen Error: $e');
       _isListening = false;
       notifyListeners();
     }
   }
   
-  Future<void> _checkMode4Answer() async {
-    if (!_mode4SessionActive) return;
+  Future<void> _checkMode3Answer() async {
+    if (!_mode3SessionActive) return;
     
     _speechService.stopSTT();
     _isListening = false;
     
-    final targetText = _currentMode4Question!['target_text'] as String;
+    final targetText = _currentMode3Question!['target_text'] as String;
     
     // Calculate Score
-    final similarity = _calculateSimilarity(_mode4UserAnswer, targetText);
-    _mode4Score = similarity * 100;
+    final similarity = _calculateSimilarity(_mode3UserAnswer, targetText);
+    _mode3Score = similarity * 100;
     
     // Feedback
-    if (_mode4Score! >= 90) {
-      _mode4Feedback = 'Perfect!';
-    } else if (_mode4Score! >= 70) {
-      _mode4Feedback = 'Good';
+    if (_mode3Score! >= 90) {
+      _mode3Feedback = 'Perfect!';
+    } else if (_mode3Score! >= 70) {
+      _mode3Feedback = 'Good';
     } else {
-      _mode4Feedback = 'Try Again';
+      _mode3Feedback = 'Try Again';
     }
     
     notifyListeners();
     
     // Wait a bit to show result, then next question
     Future.delayed(const Duration(seconds: 3), () {
-      if (_mode4SessionActive) {
-        _nextMode4Question();
+      if (_mode3SessionActive) {
+        _nextMode3Question();
       }
     });
   }

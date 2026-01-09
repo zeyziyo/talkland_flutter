@@ -3,8 +3,8 @@ import '../l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../widgets/mode1_widget.dart';
+import '../widgets/mode2_widget.dart';
 import '../widgets/mode3_widget.dart';
-import '../widgets/mode4_widget.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 import '../widgets/help_dialog.dart';
 
@@ -170,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () => _showLanguageSettingsDialog(context),
                   tooltip: '언어 설정',
                 );
-              } else if (appState.currentMode == 1) { // Study Material Mode
+              } else if (appState.currentMode == 1) { // Study Material Mode (Mode 2)
                 return Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -225,14 +225,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     appState.switchMode(newSelection.first);
                   },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.resolveWith((states) {
-                      if (states.contains(MaterialState.selected)) {
+                    backgroundColor: WidgetStateProperty.resolveWith((states) {
+                      if (states.contains(WidgetState.selected)) {
                         return const Color(0xFF667eea);
                       }
                       return Colors.white;
                     }),
-                    foregroundColor: MaterialStateProperty.resolveWith((states) {
-                      if (states.contains(MaterialState.selected)) {
+                    foregroundColor: WidgetStateProperty.resolveWith((states) {
+                      if (states.contains(WidgetState.selected)) {
                         return Colors.white;
                       }
                       return const Color(0xFF667eea);
@@ -250,9 +250,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 if (appState.currentMode == 0) {
                   return const Mode1Widget();
                 } else if (appState.currentMode == 1) {
-                  return const Mode3Widget();
+                  return const Mode2Widget(); // Updated to Mode2Widget
                 } else {
-                  return const Mode4Widget();
+                  return const Mode3Widget(); // Updated to Mode3Widget
                 }
               },
             ),

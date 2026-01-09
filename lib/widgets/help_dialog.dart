@@ -91,19 +91,21 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
       padding: const EdgeInsets.all(16),
       children: [
         _buildSectionTitle('🔍 ${l10n.search} (Mode 1)'),
-        Text(l10n.helpMode1Desc), // "Recognize voice, translate, and listen."
+        Text(l10n.helpMode1Desc), 
+        const SizedBox(height: 8),
+        const Text('• Speak or type to translate.\n• Results are auto-checked for duplicates.\n• Use "Clear" to reset inputs.\n• Save to add to your "No Subject" list.'),
         const SizedBox(height: 16),
         
-        _buildSectionTitle('📖 ${l10n.tabReview} (Mode 2)'),
-        Text(l10n.helpMode2Desc), // "Review saved sentences and track progress."
+        _buildSectionTitle('📖 ${l10n.tabStudyMaterial} (Mode 2)'), 
+        Text(l10n.helpMode2Desc), 
+        const SizedBox(height: 8),
+        const Text('• View all your saved translations and imported materials.\n• Long-press a card to DELETE it.\n• Filter by language using the dropdown.'),
         const SizedBox(height: 16),
         
-        _buildSectionTitle('📄 ${l10n.tabStudyMaterial} (Mode 3)'),
-        Text(l10n.helpMode3Desc), // "Import study materials and study systematically."
-        const SizedBox(height: 16),
-        
-        _buildSectionTitle('🎙️ ${l10n.tabSpeaking} (Mode 4)'),
-        Text(l10n.helpMode4Desc), // "Practice speaking with immediate feedback."
+        _buildSectionTitle('🎙️ ${l10n.tabSpeaking} (Mode 3)'),
+        Text(l10n.helpMode4Desc), 
+        const SizedBox(height: 8),
+        const Text('• Practice shadowing sentences.\n• Set Interval: Use [-] and [+] buttons to adjust wait time (3s-60s).\n• Feedback: Get a similarity score (0-100) on your pronunciation.'),
       ],
     );
   }
