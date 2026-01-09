@@ -40,7 +40,22 @@ class SpeechService {
       // Fix for Volume Control: Force Audio Session to Speech
       // This ensures volume buttons control the correct stream and audio focus is managed
       final session = await AudioSession.instance;
-      await session.configure(const AudioSessionConfiguration.speech());
+      
+      // Configure for Speech (Source: PlayAndRecord, Usage: VoiceCommunication/Speech)
+      // This is critical for avoiding "Voice not detected" on some Android devices
+      await session.configure(const AudioSessionConfiguration(
+        avAudioSessionCategory: AVAudioSessionCategory.playAndRecord,
+        avAudioSessionCategoryOptions: AVAudioSessionCategoryOptions.allowBluetooth | 
+                                      AVAudioSessionCategoryOptions.defaultToSpeaker,
+        avAudioSessionMode: AVAudioSessionMode.voiceChat,
+        androidAudioAttributes: AndroidAudioAttributes(
+          contentType: AndroidAudioContentType.speech,
+          flags: AndroidAudioFlags.none,
+          usage: AndroidAudioUsage.voiceCommunication,
+        ),
+        androidAudioFocusGainType: AndroidAudioFocusGainType.gainTransient,
+        androidWillPauseWhenDucked: true,
+      ));
       
       // Fix for Volume Control: Force Media Stream
       // iOS: AVAudioSessionCategoryPlayback (ignores silent switch, uses media volume)
@@ -94,6 +109,13 @@ class SpeechService {
         }
       },
       localeId: lang,
+      // Android: Force on-device recognition (offline) if available for better performance
+      onDevice: true,
+      
+      // Explicitly set a long listen duration to avoid default 30s timeout if needed
+      // (Though usually this is for how long it listens *total*)
+      listenFor: const Duration(seconds: 60),
+
       listenOptions: stt.SpeechListenOptions(
         // Use dictation for better sentence recognition and handling of pauses
         listenMode: stt.ListenMode.dictation, 
