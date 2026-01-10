@@ -103,10 +103,8 @@ class SpeechService {
         _lastRecognizedText = result.recognizedWords;
         onResult(result.recognizedWords);
         
-        // Auto-stop when final result is received
-        if (result.finalResult) {
-          stopSTT();
-        }
+        // Note: Removed auto-stop on finalResult to allow users to speak complete sentences
+        // Users must manually tap the mic button to stop, or wait for timeout
       },
       localeId: lang,
       // Android: Force on-device recognition (offline) if available for better performance

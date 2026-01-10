@@ -4,7 +4,7 @@ import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
 
 /// Mode 1: 검색 모드 - STT → 번역 → TTS
-class Mode1Widget extends StatelessWidget {
+class Mode1Widget extends StatefulWidget {
   final Key? micButtonKey;
   final Key? translateButtonKey;
   final Key? saveButtonKey;
@@ -17,11 +17,59 @@ class Mode1Widget extends StatelessWidget {
   });
 
   @override
+  State<Mode1Widget> createState() => _Mode1WidgetState();
+}
+
+class _Mode1WidgetState extends State<Mode1Widget> {
+  // Persistent controllers to preserve Korean IME composition state
+  late TextEditingController _sourceTextController;
+  late TextEditingController _translatedTextController;
+  
+  @override
+  void initState() {
+    super.initState();
+    // Initialize controllers with empty text
+    _sourceTextController = TextEditingController();
+    _translatedTextController = TextEditingController();
+  }
+  
+  @override
+  void dispose() {
+    // Clean up controllers
+    _sourceTextController.dispose();
+    _translatedTextController.dispose();
+    super.dispose();
+  }
+
+
+  
+  @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
 
     return Consumer<AppState>(
       builder: (context, appState, child) {
+        // Sync controllers with AppState only if text actually changed
+        // This preserves cursor position and IME composition state
+        if (_sourceTextController.text != appState.sourceText) {
+          final oldSelection = _sourceTextController.selection;
+          _sourceTextController.text = appState.sourceText;
+          // Restore cursor position if it's still valid
+          if (oldSelection.baseOffset <= appState.sourceText.length) {
+            _sourceTextController.selection = oldSelection;
+          } else {
+            _sourceTextController.selection = TextSelection.collapsed(
+              offset: appState.sourceText.length,
+            );
+          }
+        }
+        
+        if (_translatedTextController.text != appState.translatedText) {
+          _translatedTextController.text = appState.translatedText;
+          _translatedTextController.selection = TextSelection.collapsed(
+            offset: appState.translatedText.length,
+          );
+        }
         return Column(
           children: [
             // Scrollable content
@@ -56,7 +104,7 @@ class Mode1Widget extends StatelessWidget {
                                     Row(
                                       children: [
                                         IconButton(
-                                          key: micButtonKey,
+                                          key: widget.micButtonKey,
                                           icon: Icon(
                                             appState.isListening ? Icons.mic : Icons.mic_none,
                                             color: appState.isListening ? Colors.red : null,
@@ -77,10 +125,7 @@ class Mode1Widget extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 8),
                                 TextField(
-                                  controller: TextEditingController(text: appState.sourceText)
-                                    ..selection = TextSelection.collapsed(
-                                      offset: appState.sourceText.length,
-                                    ),
+                                  controller: _sourceTextController,
                                   onChanged: (value) {
                                     appState.setSourceText(value);
                                     // Auto-search for similar sources when text changes
@@ -103,7 +148,7 @@ class Mode1Widget extends StatelessWidget {
                         
                         // Translate Button
                         ElevatedButton.icon(
-                          key: translateButtonKey,
+                          key: widget.translateButtonKey,
                           onPressed: appState.isTranslating
                               ? null
                               : () => appState.translate(),
@@ -169,10 +214,7 @@ class Mode1Widget extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 8),
                                 TextField(
-                                  controller: TextEditingController(text: appState.translatedText)
-                                    ..selection = TextSelection.collapsed(
-                                      offset: appState.translatedText.length,
-                                    ),
+                                  controller: _translatedTextController,
                                   decoration: const InputDecoration(
                                     border: OutlineInputBorder(),
                                   ),
@@ -213,7 +255,7 @@ class Mode1Widget extends StatelessWidget {
                 child: SizedBox(
                   width: double.infinity,
                   child: ElevatedButton.icon(
-                    key: saveButtonKey,
+                    key: widget.saveButtonKey,
                     onPressed: (appState.sourceText.isEmpty || 
                                 appState.translatedText.isEmpty ||
                                 appState.isSaved)
