@@ -7,7 +7,12 @@ import '../l10n/app_localizations.dart';
 /// - 기본적으로 학습 자료를 선택하여 학습
 /// - '전체 복습' 선택 시 모든 저장된 문장 복습
 class Mode2Widget extends StatefulWidget {
-  const Mode2Widget({super.key});
+  final Key? materialDropdownKey;
+
+  const Mode2Widget({
+    super.key,
+    this.materialDropdownKey,
+  });
 
   @override
   State<Mode2Widget> createState() => _Mode2WidgetState();
@@ -80,6 +85,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
           children: [
             // Material selector
             Container(
+              key: widget.materialDropdownKey,
               margin: const EdgeInsets.symmetric(horizontal: 16),
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(

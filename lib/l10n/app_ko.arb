@@ -94,6 +94,25 @@
   "helpTourDesc": "앱의 주요 기능을 배우려면 튜토리얼을 시작하세요.",
   "startTutorial": "튜토리얼 시작",
   
+  "tutorialMicTitle": "음성 입력",
+  "tutorialMicDesc": "마이크 버튼을 눌러 음성으로 입력할 수 있습니다.",
+  "tutorialTransTitle": "번역하기",
+  "tutorialTransDesc": "입력한 텍스트를 번역합니다.",
+  "tutorialSaveTitle": "저장하기",
+  "tutorialSaveDesc": "번역된 결과를 학습 기록에 저장하세요.",
+  
+  "tutorialM2SelectTitle": "자료 선택 & 필터",
+  "tutorialM2SelectDesc": "학습할 자료를 선택하거나 전체 복습 모드로 전환합니다.",
+  "tutorialM2ListTitle": "학습 목록",
+  "tutorialM2ListDesc": "저장된 카드를 확인하고, 뒤집어서 정답을 확인하세요.",
+  
+  "tutorialM3SelectTitle": "자료 선택",
+  "tutorialM3SelectDesc": "말하기 연습을 진행할 자료 세트를 선택하세요.",
+  "tutorialM3IntervalTitle": "간격 설정",
+  "tutorialM3IntervalDesc": "문장 사이의 대기 시간을 조절합니다.",
+  "tutorialM3StartTitle": "연습 시작",
+  "tutorialM3StartDesc": "재생 버튼을 눌러 원어민 음성을 듣고 따라하세요.",
+
   "startWarning": "주의",
   "noVoiceDetected": "목소리가 감지되지 않았어요"
 }

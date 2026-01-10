@@ -7,7 +7,16 @@ import '../l10n/app_localizations.dart';
 /// - 선택한 학습 자료 또는 전체 문장을 바탕으로 발음 연습
 /// - 대기 시간 설정 기능 (버튼 방식)
 class Mode3Widget extends StatelessWidget {
-  const Mode3Widget({super.key});
+  final Key? materialDropdownKey;
+  final Key? intervalSettingsKey;
+  final Key? startStopButtonKey;
+
+  const Mode3Widget({
+    super.key,
+    this.materialDropdownKey,
+    this.intervalSettingsKey,
+    this.startStopButtonKey,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +45,7 @@ class Mode3Widget extends StatelessWidget {
                 children: [
                   // Material Selector
                   DropdownButtonFormField<int>(
+                    key: materialDropdownKey,
                     value: appState.selectedMaterialId,
                     decoration: InputDecoration(
                       labelText: l10n.selectStudyMaterial,
@@ -65,6 +75,7 @@ class Mode3Widget extends StatelessWidget {
                   
                   // Interval Selector (Button Style Redesign)
                   Row(
+                    key: intervalSettingsKey,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
@@ -105,6 +116,7 @@ class Mode3Widget extends StatelessWidget {
                   
                   // Start/Stop Button
                   ElevatedButton.icon(
+                    key: startStopButtonKey,
                     onPressed: appState.studyMaterials.isEmpty
                         ? null
                         : () => appState.toggleMode3Session(),

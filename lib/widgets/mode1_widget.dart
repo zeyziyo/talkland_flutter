@@ -5,7 +5,16 @@ import '../l10n/app_localizations.dart';
 
 /// Mode 1: 검색 모드 - STT → 번역 → TTS
 class Mode1Widget extends StatelessWidget {
-  const Mode1Widget({super.key});
+  final Key? micButtonKey;
+  final Key? translateButtonKey;
+  final Key? saveButtonKey;
+
+  const Mode1Widget({
+    super.key,
+    this.micButtonKey,
+    this.translateButtonKey,
+    this.saveButtonKey,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +56,7 @@ class Mode1Widget extends StatelessWidget {
                                     Row(
                                       children: [
                                         IconButton(
+                                          key: micButtonKey,
                                           icon: Icon(
                                             appState.isListening ? Icons.mic : Icons.mic_none,
                                             color: appState.isListening ? Colors.red : null,
@@ -93,6 +103,7 @@ class Mode1Widget extends StatelessWidget {
                         
                         // Translate Button
                         ElevatedButton.icon(
+                          key: translateButtonKey,
                           onPressed: appState.isTranslating
                               ? null
                               : () => appState.translate(),
@@ -202,6 +213,7 @@ class Mode1Widget extends StatelessWidget {
                 child: SizedBox(
                   width: double.infinity,
                   child: ElevatedButton.icon(
+                    key: saveButtonKey,
                     onPressed: (appState.sourceText.isEmpty || 
                                 appState.translatedText.isEmpty ||
                                 appState.isSaved)

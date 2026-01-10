@@ -16,31 +16,36 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // GlobalKeys for tutorial targets
-  final GlobalKey _actionButtonKey = GlobalKey();
-  final GlobalKey _tabKey = GlobalKey();
-  final GlobalKey _helpKey = GlobalKey();
+  // Mode 1 Keys
+  final GlobalKey _micButtonKey = GlobalKey();
+  final GlobalKey _translateButtonKey = GlobalKey();
+  final GlobalKey _saveButtonKey = GlobalKey();
+
+  // Mode 2 Keys
+  final GlobalKey _mode2DropdownKey = GlobalKey();
+
+  // Mode 3 Keys
+  final GlobalKey _mode3DropdownKey = GlobalKey();
+  final GlobalKey _mode3IntervalKey = GlobalKey();
+  final GlobalKey _mode3StartButtonKey = GlobalKey();
 
   late TutorialCoachMark tutorialCoachMark;
 
   void _showTutorial(BuildContext context) {
+    if (!mounted) return;
+    final appState = Provider.of<AppState>(context, listen: false);
+    
+    // Create tutorial targets based on current mode
     tutorialCoachMark = TutorialCoachMark(
-      targets: _createTargets(),
+      targets: _createTargets(appState.currentMode),
       colorShadow: const Color(0xFF667eea),
       textSkip: "SKIP",
       paddingFocus: 10,
       opacityShadow: 0.8,
-      onFinish: () {
-        debugPrint("Tutorial finished");
-      },
-      onClickTarget: (target) {
-        debugPrint("onClickTarget: $target");
-      },
-      onClickOverlay: (target) {
-        debugPrint("onClickOverlay: $target");
-      },
+      onFinish: () {},
+      onClickTarget: (target) {},
+      onClickOverlay: (target) {},
       onSkip: () {
-        debugPrint("skip");
         return true;
       },
     );
@@ -48,10 +53,11 @@ class _HomeScreenState extends State<HomeScreen> {
     tutorialCoachMark.show(context: context);
   }
 
-  List<TargetFocus> _createTargets() {
+  List<TargetFocus> _createTargets(int modeIndex) {
     List<TargetFocus> targets = [];
+    final l10n = AppLocalizations.of(context)!;
 
-    // Target 1: Tab Selector
+    // Common Target: Tab Selector
     targets.add(
       TargetFocus(
         identify: "Mode Tabs",
@@ -61,22 +67,18 @@ class _HomeScreenState extends State<HomeScreen> {
           TargetContent(
             align: ContentAlign.bottom,
             builder: (context, controller) {
-              return const Column(
+              return Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "모드 선택",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20.0,
-                    ),
+                    l10n.helpTabModes, // "기능 소개" or "Modes"
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.white),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(top: 10.0),
                     child: Text(
-                      "여기서 원하는 학습 모드를 선택하세요.\n\n🔍 검색: 음성 번역 및 듣기\n📖 복습: 저장된 문장 복습\n📄 자료: 외부 학습 자료 가져오기\n🎙️ 말하기: 발음 연습 및 평가",
+                      "여기서 원하는 학습 모드를 선택할 수 있습니다.", // "You can select modes here."
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -88,44 +90,97 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
 
-    // Target 2: Action Button (varies by mode)
-    targets.add(
-      TargetFocus(
-        identify: "Action Button",
-        keyTarget: _actionButtonKey,
-        alignSkip: Alignment.bottomLeft,
-        contents: [
-          TargetContent(
-            align: ContentAlign.bottom,
-            builder: (context, controller) {
-              return const Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "주요 기능",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20.0,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(top: 10.0),
-                    child: Text(
-                      "현재 모드에 맞는 주요 기능이 여기에 표시됩니다.\n\n(예: 언어 설정, 목록 새로고침, 파일 불러오기)",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                ],
-              );
-            },
-          ),
-        ],
-      ),
-    );
+    // Mode-specific targets
+    if (modeIndex == 0) {
+      // Mode 1: Mic -> Translate -> Save
+      targets.add(_buildTarget(
+        _micButtonKey, 
+        l10n.tutorialMicTitle, 
+        l10n.tutorialMicDesc,
+        ContentAlign.bottom,
+      ));
+      targets.add(_buildTarget(
+        _translateButtonKey, 
+        l10n.tutorialTransTitle, 
+        l10n.tutorialTransDesc,
+        ContentAlign.top,
+      ));
+      targets.add(_buildTarget(
+        _saveButtonKey, 
+        l10n.tutorialSaveTitle, 
+        l10n.tutorialSaveDesc,
+        ContentAlign.top,
+      ));
+    } else if (modeIndex == 1) {
+      // Mode 2: Dropdown
+      targets.add(_buildTarget(
+        _mode2DropdownKey, 
+        l10n.tutorialM2SelectTitle, 
+        l10n.tutorialM2SelectDesc,
+        ContentAlign.bottom,
+      ));
+      // Action Button (Import) is also relevant in Mode 2
+      targets.add(_buildTarget(
+        _actionButtonKey, 
+        l10n.importJsonFile, 
+        l10n.tutorialM2SelectDesc, // Re-use descriptive text about selecting materials
+        ContentAlign.bottom,
+      ));
+    } else if (modeIndex == 2) {
+      // Mode 3: Dropdown -> Interval -> Start
+      targets.add(_buildTarget(
+        _mode3DropdownKey, 
+        l10n.tutorialM3SelectTitle, 
+        l10n.tutorialM3SelectDesc,
+        ContentAlign.bottom,
+      ));
+      targets.add(_buildTarget(
+        _mode3IntervalKey, 
+        l10n.tutorialM3IntervalTitle, 
+        l10n.tutorialM3IntervalDesc,
+        ContentAlign.bottom,
+      ));
+      targets.add(_buildTarget(
+        _mode3StartButtonKey, 
+        l10n.tutorialM3StartTitle, 
+        l10n.tutorialM3StartDesc,
+        ContentAlign.top,
+      ));
+    }
 
     return targets;
+  }
+
+  TargetFocus _buildTarget(GlobalKey key, String title, String desc, ContentAlign align) {
+    return TargetFocus(
+      identify: title,
+      keyTarget: key,
+      alignSkip: Alignment.topRight,
+      contents: [
+        TargetContent(
+          align: align,
+          builder: (context, controller) {
+            return Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.white),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0),
+                  child: Text(
+                    desc,
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
+            );
+          },
+        ),
+      ],
+    );
   }
 
   @override
@@ -251,11 +306,21 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Consumer<AppState>(
               builder: (context, appState, child) {
                 if (appState.currentMode == 0) {
-                  return const Mode1Widget();
+                  return Mode1Widget(
+                    micButtonKey: _micButtonKey,
+                    translateButtonKey: _translateButtonKey,
+                    saveButtonKey: _saveButtonKey,
+                  );
                 } else if (appState.currentMode == 1) {
-                  return const Mode2Widget(); // Updated to Mode2Widget
+                  return Mode2Widget(
+                    materialDropdownKey: _mode2DropdownKey,
+                  ); 
                 } else {
-                  return const Mode3Widget(); // Updated to Mode3Widget
+                  return Mode3Widget(
+                    materialDropdownKey: _mode3DropdownKey,
+                    intervalSettingsKey: _mode3IntervalKey,
+                    startStopButtonKey: _mode3StartButtonKey,
+                  ); 
                 }
               },
             ),
