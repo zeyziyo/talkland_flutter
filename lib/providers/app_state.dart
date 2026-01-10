@@ -152,7 +152,7 @@ class AppState extends ChangeNotifier {
       
       await _speechService.startSTT(
         lang: _getLangCode(_sourceLang),
-        onResult: (text) {
+        onResult: (text, isFinal) {  // Added isFinal parameter
           _sourceText = text;
           _statusMessage = '인식 완료';
           stopListening(); // Auto-stop mic after recognition
@@ -769,14 +769,21 @@ class AppState extends ChangeNotifier {
       
       await _speechService.startSTT(
         lang: _getLangCode(targetLang),
-        onResult: (text) {
+        onResult: (text, isFinal) {  // Added isFinal parameter
           _mode3UserAnswer = text;
           notifyListeners();
+          
+          // Mode 3: Immediately check answer when finalResult is detected
+          // This prevents waiting for 5-second pauseFor timeout
+          if (isFinal && text.trim().isNotEmpty) {
+            _cancelMode3Timers();  // Cancel timeout timer
+            _checkMode3Answer();   // Check answer immediately
+          }
         },
       );
       
       // Start Timeout Timer (Respect configured interval + buffer for speech)
-      // Add 10 seconds buffer to allow user time to speak after listening
+      // This is a fallback in case finalResult is not detected
       _mode3Timer = Timer(
         Duration(seconds: _mode3Interval + 10), 
         _handleMode3Timeout,

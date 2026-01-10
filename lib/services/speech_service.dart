@@ -81,10 +81,10 @@ class SpeechService {
   /// 
   /// Parameters:
   /// - lang: Language code (e.g., 'ko_KR', 'en_US')
-  /// - onResult: Callback when text is recognized
+  /// - onResult: Callback when text is recognized (text, isFinal)
   Future<void> startSTT({
     required String lang,
-    required Function(String) onResult,
+    required Function(String, bool) onResult,  // Added bool for finalResult
   }) async {
     if (!_isInitialized) {
       final initialized = await initialize();
@@ -101,7 +101,7 @@ class SpeechService {
     await _speechToText.listen(
       onResult: (result) {
         _lastRecognizedText = result.recognizedWords;
-        onResult(result.recognizedWords);
+        onResult(result.recognizedWords, result.finalResult);  // Pass finalResult to callback
         
         // Note: Removed auto-stop on finalResult to allow users to speak complete sentences
         // Users must manually tap the mic button to stop, or wait for timeout
