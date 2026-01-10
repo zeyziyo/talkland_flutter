@@ -396,4 +396,11 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get languageSettings => 'Nyelvi beállítások';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Válasszon tananyagot.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'JSON fájl importálása az eszköz mappájából.';
 }

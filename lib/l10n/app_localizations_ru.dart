@@ -398,4 +398,11 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get languageSettings => 'Настройки языка';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Выберите учебные материалы.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Импортировать JSON-файл из папки устройства.';
 }

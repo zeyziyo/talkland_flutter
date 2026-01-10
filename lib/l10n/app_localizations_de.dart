@@ -405,4 +405,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get languageSettings => 'Spracheinstellungen';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Wählen Sie Lernmaterialien aus.';
+
+  @override
+  String get tutorialM2ImportDesc => 'JSON-Datei aus Geräteordner importieren.';
 }

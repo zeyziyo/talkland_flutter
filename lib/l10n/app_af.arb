@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Praat",
   "tooltipDecrease": "Verminder",
   "tooltipIncrease": "Verhoog",
-  "languageSettings": "Taalinstellings"
+  "languageSettings": "Taalinstellings",
+  "tutorialM2DropdownDesc": "Kies studiemateriaal.",
+  "tutorialM2ImportDesc": "Voer JSON-lêer in vanaf toestelgids."
 }

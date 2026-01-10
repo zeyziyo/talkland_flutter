@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Tal",
   "tooltipDecrease": "Minska",
   "tooltipIncrease": "Öka",
-  "languageSettings": "Språkinställningar"
+  "languageSettings": "Språkinställningar",
+  "tutorialM2DropdownDesc": "Välj studiematerial.",
+  "tutorialM2ImportDesc": "Importera JSON-fil från enhetsmapp."
 }

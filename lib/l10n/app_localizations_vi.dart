@@ -396,4 +396,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get languageSettings => 'Cài đặt ngôn ngữ';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Chọn tài liệu học tập.';
+
+  @override
+  String get tutorialM2ImportDesc => 'Nhập tệp JSON từ thư mục thiết bị.';
 }

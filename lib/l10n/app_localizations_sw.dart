@@ -393,4 +393,11 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get languageSettings => 'Mipangilio ya lugha';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Chagua nyenzo za kusoma.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Leta faili ya JSON kutoka kwenye folda ya kifaa.';
 }

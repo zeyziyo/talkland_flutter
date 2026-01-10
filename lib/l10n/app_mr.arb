@@ -114,5 +114,7 @@
   "tooltipSpeaking": "बोलणे",
   "tooltipDecrease": "कमी करा",
   "tooltipIncrease": "वाढवा",
-  "languageSettings": "भाषा सेटिंग्ज"
+  "languageSettings": "भाषा सेटिंग्ज",
+  "tutorialM2DropdownDesc": "अभ्यास साहित्य निवडा.",
+  "tutorialM2ImportDesc": "डिव्हाइस फोल्डरमधून JSON फाइल आयात करा."
 }

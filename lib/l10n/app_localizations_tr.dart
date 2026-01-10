@@ -397,4 +397,11 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get languageSettings => 'Dil ayarları';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Çalışma materyallerini seçin.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Cihaz klasöründen JSON dosyası içe aktarın.';
 }

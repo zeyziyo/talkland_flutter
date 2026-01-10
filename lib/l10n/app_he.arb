@@ -114,5 +114,7 @@
   "tooltipSpeaking": "דיבור",
   "tooltipDecrease": "הפחתה",
   "tooltipIncrease": "הגדלה",
-  "languageSettings": "הגדרות שפה"
+  "languageSettings": "הגדרות שפה",
+  "tutorialM2DropdownDesc": "בחר חומרי לימוד.",
+  "tutorialM2ImportDesc": "ייבא קובץ JSON מתיקיית המכשיר."
 }

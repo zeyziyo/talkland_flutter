@@ -43,9 +43,9 @@ class _HomeScreenState extends State<HomeScreen> {
     // Create tutorial targets based on current mode
     tutorialCoachMark = TutorialCoachMark(
       targets: _createTargets(appState.currentMode),
-      colorShadow: const Color(0xFF667eea),
+      colorShadow: Colors.black,
       textSkip: "SKIP",
-      paddingFocus: 10,
+      paddingFocus: 5,
       opacityShadow: 0.8,
       onFinish: () {},
       onClickTarget: (target) {},
@@ -68,6 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
         identify: "Mode Tabs",
         keyTarget: _tabKey,
         alignSkip: Alignment.topRight,
+        radius: 3,
         contents: [
           TargetContent(
             align: ContentAlign.bottom,
@@ -102,34 +103,39 @@ class _HomeScreenState extends State<HomeScreen> {
         _micButtonKey, 
         l10n.tutorialMicTitle, 
         l10n.tutorialMicDesc,
-        ContentAlign.bottom,
+        ContentAlign.top, // Changed from bottom to top
+        radius: 3,
       ));
       targets.add(_buildTarget(
         _translateButtonKey, 
         l10n.tutorialTransTitle, 
         l10n.tutorialTransDesc,
         ContentAlign.top,
+        radius: 3,
       ));
       targets.add(_buildTarget(
         _saveButtonKey, 
         l10n.tutorialSaveTitle, 
         l10n.tutorialSaveDesc,
         ContentAlign.top,
+        radius: 3,
       ));
     } else if (modeIndex == 1) {
       // Mode 2: Dropdown
       targets.add(_buildTarget(
         _mode2DropdownKey, 
         l10n.tutorialM2SelectTitle, 
-        l10n.tutorialM2SelectDesc,
+        l10n.tutorialM2DropdownDesc,
         ContentAlign.bottom,
+        radius: 3,
       ));
       // Action Button (Import) is also relevant in Mode 2
       targets.add(_buildTarget(
         _actionButtonKey, 
         l10n.importJsonFile, 
-        l10n.tutorialM2SelectDesc, // Re-use descriptive text about selecting materials
+        l10n.tutorialM2ImportDesc,
         ContentAlign.bottom,
+        radius: 3,
       ));
     } else if (modeIndex == 2) {
       // Mode 3: Dropdown -> Interval -> Start
@@ -138,29 +144,33 @@ class _HomeScreenState extends State<HomeScreen> {
         l10n.tutorialM3SelectTitle, 
         l10n.tutorialM3SelectDesc,
         ContentAlign.bottom,
+        radius: 3,
       ));
       targets.add(_buildTarget(
         _mode3IntervalKey, 
         l10n.tutorialM3IntervalTitle, 
         l10n.tutorialM3IntervalDesc,
         ContentAlign.bottom,
+        radius: 3,
       ));
       targets.add(_buildTarget(
         _mode3StartButtonKey, 
         l10n.tutorialM3StartTitle, 
         l10n.tutorialM3StartDesc,
         ContentAlign.top,
+        radius: 8,
       ));
     }
 
     return targets;
   }
 
-  TargetFocus _buildTarget(GlobalKey key, String title, String desc, ContentAlign align) {
+  TargetFocus _buildTarget(GlobalKey key, String title, String desc, ContentAlign align, {double radius = 10}) {
     return TargetFocus(
       identify: title,
       keyTarget: key,
       alignSkip: Alignment.topRight,
+      radius: radius,
       contents: [
         TargetContent(
           align: align,
@@ -188,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                // Navigation instruction
+                // Navigation instruction (always visible)
                 Padding(
                   padding: const EdgeInsets.only(top: 16.0),
                   child: Row(

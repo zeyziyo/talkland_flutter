@@ -396,4 +396,10 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get languageSettings => 'भाषा सेटिंग्ज';
+
+  @override
+  String get tutorialM2DropdownDesc => 'अभ्यास साहित्य निवडा.';
+
+  @override
+  String get tutorialM2ImportDesc => 'डिव्हाइस फोल्डरमधून JSON फाइल आयात करा.';
 }

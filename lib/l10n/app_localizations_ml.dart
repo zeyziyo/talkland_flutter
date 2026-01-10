@@ -400,4 +400,11 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get languageSettings => 'ഭാഷാ ക്രമീകരണങ്ങൾ';
+
+  @override
+  String get tutorialM2DropdownDesc => 'പഠന സാമഗ്രികൾ തിരഞ്ഞെടുക്കുക.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'ഉപകരണ ഫോൾഡറിൽ നിന്ന് JSON ഫയൽ ഇറക്കുമതി ചെയ്യുക.';
 }

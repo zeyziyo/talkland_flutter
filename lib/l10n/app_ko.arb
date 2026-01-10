@@ -114,5 +114,7 @@
   "tooltipSpeaking": "말하기",
   "tooltipDecrease": "감소",
   "tooltipIncrease": "증가",
-  "languageSettings": "Language Settings"
+  "languageSettings": "Language Settings",
+  "tutorialM2DropdownDesc": "학습할 자료를 선택합니다.",
+  "tutorialM2ImportDesc": "기기의 폴더에서 JSON 파일을 불러옵니다."
 }

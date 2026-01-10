@@ -399,4 +399,11 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get languageSettings => 'భాష సెట్టింగ్‌లు';
+
+  @override
+  String get tutorialM2DropdownDesc => 'అధ్యయన విషయాలను ఎంచుకోండి.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'పరికర ఫోల్డర్ నుండి JSON ఫైల్‌ను దిగుమతి చేయండి.';
 }

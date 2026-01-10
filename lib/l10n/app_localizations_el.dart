@@ -397,4 +397,11 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get languageSettings => 'Ρυθμίσεις γλώσσας';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Επιλέξτε εκπαιδευτικό υλικό.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Εισαγωγή αρχείου JSON από φάκελο συσκευής.';
 }

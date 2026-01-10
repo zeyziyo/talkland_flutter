@@ -401,5 +401,7 @@
   "tooltipSpeaking": "Speaking",
   "tooltipDecrease": "Decrease",
   "tooltipIncrease": "Increase",
-  "languageSettings": "Language Settings"
+  "languageSettings": "Language Settings",
+  "tutorialM2DropdownDesc": "Select study materials.",
+  "tutorialM2ImportDesc": "Import JSON file from device folder."
 }

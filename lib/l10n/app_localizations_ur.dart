@@ -393,4 +393,10 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get languageSettings => 'زبان کی ترتیبات';
+
+  @override
+  String get tutorialM2DropdownDesc => 'مطالعاتی مواد منتخب کریں۔';
+
+  @override
+  String get tutorialM2ImportDesc => 'ڈیوائس فولڈر سے JSON فائل درآمد کریں۔';
 }

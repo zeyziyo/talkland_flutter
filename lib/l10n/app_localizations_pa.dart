@@ -396,4 +396,10 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get languageSettings => 'ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ';
+
+  @override
+  String get tutorialM2DropdownDesc => 'ਅਧਿਐਨ ਸਮੱਗਰੀ ਚੁਣੋ।';
+
+  @override
+  String get tutorialM2ImportDesc => 'ਡਿਵਾਈਸ ਫੋਲਡਰ ਤੋਂ JSON ਫਾਈਲ ਆਯਾਤ ਕਰੋ।';
 }

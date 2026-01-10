@@ -401,5 +401,7 @@
   "tooltipSpeaking": "スピーキング",
   "tooltipDecrease": "減少",
   "tooltipIncrease": "増加",
-  "languageSettings": "言語設定"
+  "languageSettings": "言語設定",
+  "tutorialM2DropdownDesc": "学習資料を選択します。",
+  "tutorialM2ImportDesc": "デバイスのフォルダからJSONファイルを読み込みます。"
 }

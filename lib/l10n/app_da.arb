@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Tale",
   "tooltipDecrease": "Formindsk",
   "tooltipIncrease": "Forøg",
-  "languageSettings": "Sprogindstillinger"
+  "languageSettings": "Sprogindstillinger",
+  "tutorialM2DropdownDesc": "Vælg studiemateriale.",
+  "tutorialM2ImportDesc": "Importer JSON-fil fra enhedsmappe."
 }

@@ -391,4 +391,10 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get languageSettings => 'Sprogindstillinger';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Vælg studiemateriale.';
+
+  @override
+  String get tutorialM2ImportDesc => 'Importer JSON-fil fra enhedsmappe.';
 }

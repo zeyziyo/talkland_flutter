@@ -114,5 +114,7 @@
   "tooltipSpeaking": "बोलना",
   "tooltipDecrease": "कम करें",
   "tooltipIncrease": "बढ़ाएं",
-  "languageSettings": "भाषा सेटिंग्स"
+  "languageSettings": "भाषा सेटिंग्स",
+  "tutorialM2DropdownDesc": "अध्ययन सामग्री चुनें।",
+  "tutorialM2ImportDesc": "डिवाइस फ़ोल्डर से JSON फ़ाइल आयात करें।"
 }

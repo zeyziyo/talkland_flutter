@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Bercakap",
   "tooltipDecrease": "Kurangkan",
   "tooltipIncrease": "Tambahkan",
-  "languageSettings": "Tetapan bahasa"
+  "languageSettings": "Tetapan bahasa",
+  "tutorialM2DropdownDesc": "Pilih bahan pembelajaran.",
+  "tutorialM2ImportDesc": "Import fail JSON dari folder peranti."
 }

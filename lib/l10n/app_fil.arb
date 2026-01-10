@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Pagsasalita",
   "tooltipDecrease": "Bawasan",
   "tooltipIncrease": "Dagdagan",
-  "languageSettings": "Mga setting ng wika"
+  "languageSettings": "Mga setting ng wika",
+  "tutorialM2DropdownDesc": "Pumili ng mga materyales sa pag-aaral.",
+  "tutorialM2ImportDesc": "Mag-import ng JSON file mula sa folder ng device."
 }

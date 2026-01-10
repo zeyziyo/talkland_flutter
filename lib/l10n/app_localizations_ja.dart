@@ -400,4 +400,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get languageSettings => '言語設定';
+
+  @override
+  String get tutorialM2DropdownDesc => '学習資料を選択します。';
+
+  @override
+  String get tutorialM2ImportDesc => 'デバイスのフォルダからJSONファイルを読み込みます。';
 }

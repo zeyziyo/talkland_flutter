@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Kuzungumza",
   "tooltipDecrease": "Punguza",
   "tooltipIncrease": "Ongeza",
-  "languageSettings": "Mipangilio ya lugha"
+  "languageSettings": "Mipangilio ya lugha",
+  "tutorialM2DropdownDesc": "Chagua nyenzo za kusoma.",
+  "tutorialM2ImportDesc": "Leta faili ya JSON kutoka kwenye folda ya kifaa."
 }

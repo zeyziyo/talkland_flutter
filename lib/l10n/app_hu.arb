@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Beszéd",
   "tooltipDecrease": "Csökkentés",
   "tooltipIncrease": "Növelés",
-  "languageSettings": "Nyelvi beállítások"
+  "languageSettings": "Nyelvi beállítások",
+  "tutorialM2DropdownDesc": "Válasszon tananyagot.",
+  "tutorialM2ImportDesc": "JSON fájl importálása az eszköz mappájából."
 }

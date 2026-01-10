@@ -401,4 +401,11 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get languageSettings => 'Configuración de idioma';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Selecciona materiales de estudio.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Importar archivo JSON desde la carpeta del dispositivo.';
 }

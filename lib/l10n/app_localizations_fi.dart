@@ -393,4 +393,10 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get languageSettings => 'Kieliasetukset';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Valitse oppimateriaali.';
+
+  @override
+  String get tutorialM2ImportDesc => 'Tuo JSON-tiedosto laitteen kansiosta.';
 }

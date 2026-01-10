@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Mluvení",
   "tooltipDecrease": "Snížit",
   "tooltipIncrease": "Zvýšit",
-  "languageSettings": "Nastavení jazyka"
+  "languageSettings": "Nastavení jazyka",
+  "tutorialM2DropdownDesc": "Vyberte studijní materiály.",
+  "tutorialM2ImportDesc": "Importovat soubor JSON ze složky zařízení."
 }

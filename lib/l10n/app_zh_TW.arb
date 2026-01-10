@@ -114,5 +114,7 @@
   "tooltipSpeaking": "口語",
   "tooltipDecrease": "減少",
   "tooltipIncrease": "增加",
-  "languageSettings": "語言設定"
+  "languageSettings": "語言設定",
+  "tutorialM2DropdownDesc": "選擇學習資料。",
+  "tutorialM2ImportDesc": "從裝置資料夾匯入JSON檔案。"
 }

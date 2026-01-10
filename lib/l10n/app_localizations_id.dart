@@ -401,4 +401,10 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get languageSettings => 'Pengaturan bahasa';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Pilih materi belajar.';
+
+  @override
+  String get tutorialM2ImportDesc => 'Impor file JSON dari folder perangkat.';
 }

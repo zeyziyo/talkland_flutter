@@ -391,4 +391,11 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get languageSettings => 'Nastavení jazyka';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Vyberte studijní materiály.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Importovat soubor JSON ze složky zařízení.';
 }

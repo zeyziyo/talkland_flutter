@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Konuşma",
   "tooltipDecrease": "Azalt",
   "tooltipIncrease": "Artır",
-  "languageSettings": "Dil ayarları"
+  "languageSettings": "Dil ayarları",
+  "tutorialM2DropdownDesc": "Çalışma materyallerini seçin.",
+  "tutorialM2ImportDesc": "Cihaz klasöründen JSON dosyası içe aktarın."
 }

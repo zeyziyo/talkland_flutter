@@ -394,4 +394,10 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get languageSettings => 'Tetapan bahasa';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Pilih bahan pembelajaran.';
+
+  @override
+  String get tutorialM2ImportDesc => 'Import fail JSON dari folder peranti.';
 }

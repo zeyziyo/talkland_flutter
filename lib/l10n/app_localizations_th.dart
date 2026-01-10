@@ -392,4 +392,10 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get languageSettings => 'การตั้งค่าภาษา';
+
+  @override
+  String get tutorialM2DropdownDesc => 'เลือกเนื้อหาการเรียน';
+
+  @override
+  String get tutorialM2ImportDesc => 'นำเข้าไฟล์ JSON จากโฟลเดอร์อุปกรณ์';
 }

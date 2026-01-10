@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Ομιλία",
   "tooltipDecrease": "Μείωση",
   "tooltipIncrease": "Αύξηση",
-  "languageSettings": "Ρυθμίσεις γλώσσας"
+  "languageSettings": "Ρυθμίσεις γλώσσας",
+  "tutorialM2DropdownDesc": "Επιλέξτε εκπαιδευτικό υλικό.",
+  "tutorialM2ImportDesc": "Εισαγωγή αρχείου JSON από φάκελο συσκευής."
 }

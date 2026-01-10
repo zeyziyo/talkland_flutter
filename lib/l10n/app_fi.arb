@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Puhuminen",
   "tooltipDecrease": "Vähennä",
   "tooltipIncrease": "Lisää",
-  "languageSettings": "Kieliasetukset"
+  "languageSettings": "Kieliasetukset",
+  "tutorialM2DropdownDesc": "Valitse oppimateriaali.",
+  "tutorialM2ImportDesc": "Tuo JSON-tiedosto laitteen kansiosta."
 }

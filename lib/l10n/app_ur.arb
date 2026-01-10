@@ -114,5 +114,7 @@
   "tooltipSpeaking": "بولنا",
   "tooltipDecrease": "کم کریں",
   "tooltipIncrease": "بڑھائیں",
-  "languageSettings": "زبان کی ترتیبات"
+  "languageSettings": "زبان کی ترتیبات",
+  "tutorialM2DropdownDesc": "مطالعاتی مواد منتخب کریں۔",
+  "tutorialM2ImportDesc": "ڈیوائس فولڈر سے JSON فائل درآمد کریں۔"
 }

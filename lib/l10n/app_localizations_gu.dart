@@ -395,4 +395,10 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get languageSettings => 'ભાષા સેટિંગ્સ';
+
+  @override
+  String get tutorialM2DropdownDesc => 'અભ્યાસ સામગ્રી પસંદ કરો.';
+
+  @override
+  String get tutorialM2ImportDesc => 'ઉપકરણ ફોલ્ડરમાંથી JSON ફાઇલ આયાત કરો.';
 }

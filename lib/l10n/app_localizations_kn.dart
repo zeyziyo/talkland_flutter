@@ -399,4 +399,10 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get languageSettings => 'ಭಾಷಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳು';
+
+  @override
+  String get tutorialM2DropdownDesc => 'ಅಧ್ಯಯನ ವಸ್ತುಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ.';
+
+  @override
+  String get tutorialM2ImportDesc => 'ಸಾಧನ ಫೋಲ್ಡರ್‌ನಿಂದ JSON ಫೈಲ್ ಆಮದು ಮಾಡಿ.';
 }

@@ -394,4 +394,10 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get languageSettings => 'Налаштування мови';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Виберіть навчальні матеріали.';
+
+  @override
+  String get tutorialM2ImportDesc => 'Імпортувати JSON-файл з папки пристрою.';
 }

@@ -403,4 +403,11 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get languageSettings => 'மொழி அமைப்புகள்';
+
+  @override
+  String get tutorialM2DropdownDesc => 'கற்றல் பொருட்களைத் தேர்ந்தெடுக்கவும்.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'சாதன கோப்புறையிலிருந்து JSON கோப்பை இறக்குமதி செய்யவும்.';
 }

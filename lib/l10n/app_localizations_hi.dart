@@ -402,4 +402,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get languageSettings => 'भाषा सेटिंग्स';
+
+  @override
+  String get tutorialM2DropdownDesc => 'अध्ययन सामग्री चुनें।';
+
+  @override
+  String get tutorialM2ImportDesc => 'डिवाइस फ़ोल्डर से JSON फ़ाइल आयात करें।';
 }

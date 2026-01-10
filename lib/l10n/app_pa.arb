@@ -114,5 +114,7 @@
   "tooltipSpeaking": "ਬੋਲਣਾ",
   "tooltipDecrease": "ਘਟਾਓ",
   "tooltipIncrease": "ਵਧਾਓ",
-  "languageSettings": "ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ"
+  "languageSettings": "ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ",
+  "tutorialM2DropdownDesc": "ਅਧਿਐਨ ਸਮੱਗਰੀ ਚੁਣੋ।",
+  "tutorialM2ImportDesc": "ਡਿਵਾਈਸ ਫੋਲਡਰ ਤੋਂ JSON ਫਾਈਲ ਆਯਾਤ ਕਰੋ।"
 }

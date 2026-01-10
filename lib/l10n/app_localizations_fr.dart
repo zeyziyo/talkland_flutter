@@ -401,4 +401,11 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get languageSettings => 'Paramètres de langue';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Sélectionnez le matériel d\'étude.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Importer un fichier JSON depuis le dossier de l\'appareil.';
 }

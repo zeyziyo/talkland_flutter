@@ -114,5 +114,7 @@
   "tooltipSpeaking": "ಮಾತನಾಡುವುದು",
   "tooltipDecrease": "ಕಡಿಮೆ",
   "tooltipIncrease": "ಹೆಚ್ಚಿಸು",
-  "languageSettings": "ಭಾಷಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+  "languageSettings": "ಭಾಷಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+  "tutorialM2DropdownDesc": "ಅಧ್ಯಯನ ವಸ್ತುಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
+  "tutorialM2ImportDesc": "ಸಾಧನ ಫೋಲ್ಡರ್‌ನಿಂದ JSON ಫೈಲ್ ಆಮದು ಮಾಡಿ."
 }

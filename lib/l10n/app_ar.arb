@@ -114,5 +114,7 @@
   "tooltipSpeaking": "تحدث",
   "tooltipDecrease": "تقليل",
   "tooltipIncrease": "زيادة",
-  "languageSettings": "إعدادات اللغة"
+  "languageSettings": "إعدادات اللغة",
+  "tutorialM2DropdownDesc": "اختر مواد الدراسة.",
+  "tutorialM2ImportDesc": "استيراد ملف JSON من مجلد الجهاز."
 }

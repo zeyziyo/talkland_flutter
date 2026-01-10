@@ -114,5 +114,7 @@
   "tooltipSpeaking": "কথা বলা",
   "tooltipDecrease": "হ্রাস",
   "tooltipIncrease": "বৃদ্ধি",
-  "languageSettings": "ভাষা সেটিংস"
+  "languageSettings": "ভাষা সেটিংস",
+  "tutorialM2DropdownDesc": "অধ্যয়ন উপকরণ নির্বাচন করুন।",
+  "tutorialM2ImportDesc": "ডিভাইস ফোল্ডার থেকে JSON ফাইল আমদানি করুন।"
 }

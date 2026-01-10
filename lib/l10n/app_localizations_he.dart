@@ -389,4 +389,10 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get languageSettings => 'הגדרות שפה';
+
+  @override
+  String get tutorialM2DropdownDesc => 'בחר חומרי לימוד.';
+
+  @override
+  String get tutorialM2ImportDesc => 'ייבא קובץ JSON מתיקיית המכשיר.';
 }

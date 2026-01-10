@@ -114,5 +114,7 @@
   "tooltipSpeaking": "พูด",
   "tooltipDecrease": "ลด",
   "tooltipIncrease": "เพิ่ม",
-  "languageSettings": "การตั้งค่าภาษา"
+  "languageSettings": "การตั้งค่าภาษา",
+  "tutorialM2DropdownDesc": "เลือกเนื้อหาการเรียน",
+  "tutorialM2ImportDesc": "นำเข้าไฟล์ JSON จากโฟลเดอร์อุปกรณ์"
 }

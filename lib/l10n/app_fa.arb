@@ -114,5 +114,7 @@
   "tooltipSpeaking": "صحبت کردن",
   "tooltipDecrease": "کاهش",
   "tooltipIncrease": "افزایش",
-  "languageSettings": "تنظیمات زبان"
+  "languageSettings": "تنظیمات زبان",
+  "tutorialM2DropdownDesc": "مطالب آموزشی را انتخاب کنید.",
+  "tutorialM2ImportDesc": "فایل JSON را از پوشه دستگاه وارد کنید."
 }

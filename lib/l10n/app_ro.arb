@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Vorbire",
   "tooltipDecrease": "Scădere",
   "tooltipIncrease": "Creștere",
-  "languageSettings": "Setări limbă"
+  "languageSettings": "Setări limbă",
+  "tutorialM2DropdownDesc": "Selectați materiale de studiu.",
+  "tutorialM2ImportDesc": "Importați fișier JSON din folderul dispozitivului."
 }

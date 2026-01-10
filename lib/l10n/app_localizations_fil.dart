@@ -401,4 +401,11 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get languageSettings => 'Mga setting ng wika';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Pumili ng mga materyales sa pag-aaral.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Mag-import ng JSON file mula sa folder ng device.';
 }

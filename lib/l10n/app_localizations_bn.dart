@@ -397,4 +397,11 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get languageSettings => 'ভাষা সেটিংস';
+
+  @override
+  String get tutorialM2DropdownDesc => 'অধ্যয়ন উপকরণ নির্বাচন করুন।';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'ডিভাইস ফোল্ডার থেকে JSON ফাইল আমদানি করুন।';
 }

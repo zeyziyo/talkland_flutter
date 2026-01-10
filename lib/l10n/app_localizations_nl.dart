@@ -395,4 +395,10 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get languageSettings => 'Taalinstellingen';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Selecteer studiemateriaal.';
+
+  @override
+  String get tutorialM2ImportDesc => 'Importeer JSON-bestand uit apparaatmap.';
 }

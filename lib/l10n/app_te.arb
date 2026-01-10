@@ -114,5 +114,7 @@
   "tooltipSpeaking": "మాట్లాడటం",
   "tooltipDecrease": "తగ్గించు",
   "tooltipIncrease": "పెంచు",
-  "languageSettings": "భాష సెట్టింగ్‌లు"
+  "languageSettings": "భాష సెట్టింగ్‌లు",
+  "tutorialM2DropdownDesc": "అధ్యయన విషయాలను ఎంచుకోండి.",
+  "tutorialM2ImportDesc": "పరికర ఫోల్డర్ నుండి JSON ఫైల్‌ను దిగుమతి చేయండి."
 }

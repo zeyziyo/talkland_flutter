@@ -395,4 +395,11 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get languageSettings => 'Setări limbă';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Selectați materiale de studiu.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Importați fișier JSON din folderul dispozitivului.';
 }

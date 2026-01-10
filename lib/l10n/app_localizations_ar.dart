@@ -394,4 +394,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get languageSettings => 'إعدادات اللغة';
+
+  @override
+  String get tutorialM2DropdownDesc => 'اختر مواد الدراسة.';
+
+  @override
+  String get tutorialM2ImportDesc => 'استيراد ملف JSON من مجلد الجهاز.';
 }

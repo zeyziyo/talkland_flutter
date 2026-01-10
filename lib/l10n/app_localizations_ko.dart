@@ -389,4 +389,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get languageSettings => 'Language Settings';
+
+  @override
+  String get tutorialM2DropdownDesc => '학습할 자료를 선택합니다.';
+
+  @override
+  String get tutorialM2ImportDesc => '기기의 폴더에서 JSON 파일을 불러옵니다.';
 }

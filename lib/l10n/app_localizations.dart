@@ -869,6 +869,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Language Settings'**
   String get languageSettings;
+
+  /// No description provided for @tutorialM2DropdownDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Select study materials.'**
+  String get tutorialM2DropdownDesc;
+
+  /// No description provided for @tutorialM2ImportDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Import JSON file from device folder.'**
+  String get tutorialM2ImportDesc;
 }
 
 class _AppLocalizationsDelegate

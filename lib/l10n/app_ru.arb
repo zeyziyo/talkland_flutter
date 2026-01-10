@@ -114,5 +114,7 @@
   "tooltipSpeaking": "Говорение",
   "tooltipDecrease": "Уменьшить",
   "tooltipIncrease": "Увеличить",
-  "languageSettings": "Настройки языка"
+  "languageSettings": "Настройки языка",
+  "tutorialM2DropdownDesc": "Выберите учебные материалы.",
+  "tutorialM2ImportDesc": "Импортировать JSON-файл из папки устройства."
 }

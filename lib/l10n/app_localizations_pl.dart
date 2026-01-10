@@ -399,4 +399,10 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get languageSettings => 'Ustawienia języka';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Wybierz materiały do nauki.';
+
+  @override
+  String get tutorialM2ImportDesc => 'Importuj plik JSON z folderu urządzenia.';
 }

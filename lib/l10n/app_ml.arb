@@ -114,5 +114,7 @@
   "tooltipSpeaking": "സംസാരിക്കുക",
   "tooltipDecrease": "കുറയ്ക്കുക",
   "tooltipIncrease": "വർദ്ധിപ്പിക്കുക",
-  "languageSettings": "ഭാഷാ ക്രമീകരണങ്ങൾ"
+  "languageSettings": "ഭാഷാ ക്രമീകരണങ്ങൾ",
+  "tutorialM2DropdownDesc": "പഠന സാമഗ്രികൾ തിരഞ്ഞെടുക്കുക.",
+  "tutorialM2ImportDesc": "ഉപകരണ ഫോൾഡറിൽ നിന്ന് JSON ഫയൽ ഇറക്കുമതി ചെയ്യുക."
 }

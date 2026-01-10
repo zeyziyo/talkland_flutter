@@ -391,4 +391,10 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get languageSettings => 'Taalinstellings';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Kies studiemateriaal.';
+
+  @override
+  String get tutorialM2ImportDesc => 'Voer JSON-lêer in vanaf toestelgids.';
 }

@@ -43,7 +43,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get delete => '删除';
 
   @override
-  String get materialInfo => 'Material Info';
+  String get materialInfo => '资料信息';
 
   @override
   String get cancel => '取消';
@@ -319,11 +319,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tutorialMicDesc => '点击麦克风按钮开始语音输入。';
 
   @override
-  String get tutorialTabDesc =>
-      'You can select your desired learning mode here.';
+  String get tutorialTabDesc => '您可以在这里选择所需的学习模式。';
 
   @override
-  String get tutorialTapToContinue => 'Tap to continue';
+  String get tutorialTapToContinue => '点击继续';
 
   @override
   String get tutorialTransTitle => '翻译';
@@ -374,22 +373,28 @@ class AppLocalizationsZh extends AppLocalizations {
   String get noVoiceDetected => '未检测到声音';
 
   @override
-  String get tooltipSearch => 'Search';
+  String get tooltipSearch => '搜索';
 
   @override
-  String get tooltipStudyReview => 'Study+Review';
+  String get tooltipStudyReview => '学习+复习';
 
   @override
-  String get tooltipSpeaking => 'Speaking';
+  String get tooltipSpeaking => '口语';
 
   @override
-  String get tooltipDecrease => 'Decrease';
+  String get tooltipDecrease => '减少';
 
   @override
-  String get tooltipIncrease => 'Increase';
+  String get tooltipIncrease => '增加';
 
   @override
-  String get languageSettings => 'Language Settings';
+  String get languageSettings => '语言设置';
+
+  @override
+  String get tutorialM2DropdownDesc => '选择学习资料。';
+
+  @override
+  String get tutorialM2ImportDesc => '从设备文件夹导入JSON文件。';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -777,6 +782,12 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get languageSettings => '语言设置';
+
+  @override
+  String get tutorialM2DropdownDesc => '选择学习资料。';
+
+  @override
+  String get tutorialM2ImportDesc => '从设备文件夹导入JSON文件。';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -1164,4 +1175,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get languageSettings => '語言設定';
+
+  @override
+  String get tutorialM2DropdownDesc => '選擇學習資料。';
+
+  @override
+  String get tutorialM2ImportDesc => '從裝置資料夾匯入JSON檔案。';
 }

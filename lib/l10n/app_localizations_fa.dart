@@ -395,4 +395,10 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get languageSettings => 'تنظیمات زبان';
+
+  @override
+  String get tutorialM2DropdownDesc => 'مطالب آموزشی را انتخاب کنید.';
+
+  @override
+  String get tutorialM2ImportDesc => 'فایل JSON را از پوشه دستگاه وارد کنید.';
 }
