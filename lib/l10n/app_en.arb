@@ -444,6 +444,8 @@
   "startTutorial": "Start Tutorial",
   "tutorialMicTitle": "Voice Input",
   "tutorialMicDesc": "Tap the mic button to start voice input.",
+  "tutorialTabDesc": "You can select your desired learning mode here.",
+  "tutorialTapToContinue": "Tap to continue",
   "tutorialTransTitle": "Translate",
   "tutorialTransDesc": "Tap here to translate your text.",
   "tutorialSaveTitle": "Save",

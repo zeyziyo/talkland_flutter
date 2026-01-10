@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   const Padding(
                     padding: EdgeInsets.only(top: 10.0),
                     child: Text(
-                      "여기서 원하는 학습 모드를 선택할 수 있습니다.", // "You can select modes here."
+                      l10n.tutorialTabDesc,
                       style: TextStyle(color: Colors.yellowAccent, fontSize: 16.0),
                     ),
                   ),
@@ -188,15 +188,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 // Navigation instruction
-                const Padding(
-                  padding: EdgeInsets.only(top: 16.0),
+                Padding(
+                  padding: const EdgeInsets.only(top: 16.0),
                   child: Row(
                     children: [
-                      Icon(Icons.touch_app, color: Colors.cyanAccent, size: 16),
-                      SizedBox(width: 8),
+                      const Icon(Icons.touch_app, color: Colors.cyanAccent, size: 16),
+                      const SizedBox(width: 8),
                       Text(
-                        '화면을 탭하여 계속',
-                        style: TextStyle(
+                        l10n.tutorialTapToContinue,
+                        style: const TextStyle(
                           color: Colors.cyanAccent,
                           fontSize: 14.0,
                           fontStyle: FontStyle.italic,
