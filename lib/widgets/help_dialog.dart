@@ -116,7 +116,7 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
               ),
               _buildModeCard(
                 icon: Icons.auto_stories,
-                title: '${l10n.tabStudyMaterial} (Mode 2)',
+                title: '${l10n.mode2Title} (Mode 2)',
                 desc: l10n.helpMode2Desc,
                 details: l10n.helpMode2Details,
                 color: Colors.green[50]!,

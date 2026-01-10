@@ -4,6 +4,7 @@
   "appTitle": "Talkie",
   "tabReview": "복습 ({count})",
   "tabStudyMaterial": "학습 자료 ({count})",
+  "mode2Title": "복습",
   "search": "검색",
   "translate": "번역",
   "listen": "듣기",
@@ -89,6 +90,9 @@
   
   "helpMode3Desc": "학습 자료의 문장을 듣고 직접 말하는 연습을 합니다.",
   "helpMode3Details": "• 자료 선택: 학습할 자료 팩 선택\n• 간격 조절: [-] [+] 버튼으로 문장 사이 대기 시간 설정 (3초~60초)\n• 시작/정지: 재생 버튼으로 쉐도잉 세션 제어\n• 말하기: 원어민 음성을 듣고 따라서 말하기\n• 피드백: 발음 정확도 점수(0~100) 및 색상 표시 (초록/주황/빨강)\n• 재시도: 인식 실패 시 재시도 버튼 사용",
+  "helpJsonDesc": "학습 자료를 가져오려면 다음과 같은 구조의 JSON 파일을 사용하세요:",
+  "helpTourDesc": "앱의 주요 기능을 배우려면 튜토리얼을 시작하세요.",
+  "startTutorial": "튜토리얼 시작",
   
   "startWarning": "주의",
   "noVoiceDetected": "목소리가 감지되지 않았어요"

@@ -25,6 +25,11 @@
       }
     }
   },
+
+  "mode2Title": "Review",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
   
   "search": "Search",
   "@search": {
