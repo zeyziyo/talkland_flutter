@@ -25,6 +25,11 @@
       }
     }
   },
+
+  "mode2Title": "Review",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
   
   "search": "Search",
   "@search": {
@@ -52,6 +57,10 @@
   },
   
   "delete": "Delete",
+  "materialInfo": "Material Info",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
   "@delete": {
     "description": "Delete button"
   },
@@ -96,7 +105,7 @@
     "description": "Instruction to save data"
   },
   
-  "flip": "Flip",
+  "flip": "Show",
   "@flip": {
     "description": "Show translation button"
   },
@@ -393,7 +402,7 @@
       }
     }
   },
-
+  
   "tabSpeaking": "Speaking",
   "speakingPractice": "Speaking Practice",
   "intervalSeconds": "Interval: {seconds}s",
@@ -424,7 +433,6 @@
   "helpTabModes": "Modes",
   "helpTabJson": "JSON Format",
   "helpTabTour": "Tour",
-  "mode2Title": "Review",
   "helpMode1Desc": "Recognize voice, translate to target language, and listen to the result.",
   "helpMode1Details": "• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: 'Save Data' adds to history\n• Clear: Reset all inputs",
   "helpMode2Desc": "Review saved sentences with auto-hide translations and track your review count.",
@@ -434,7 +442,6 @@
   "helpJsonDesc": "To import study materials in Mode 3, create a JSON file with the following structure:",
   "helpTourDesc": "Start the interactive tutorial to learn the main features.",
   "startTutorial": "Start Tutorial",
-  
   "tutorialMicTitle": "Voice Input",
   "tutorialMicDesc": "Tap the mic button to start voice input.",
   "tutorialTransTitle": "Translate",
