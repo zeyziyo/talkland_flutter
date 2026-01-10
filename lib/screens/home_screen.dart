@@ -150,9 +150,12 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: const Icon(Icons.help_outline),
             tooltip: '사용법 가이드',
             onPressed: () {
+              // Get current mode from AppState to show relevant help page
+              final currentMode = Provider.of<AppState>(context, listen: false).currentMode;
               showDialog(
                 context: context,
                 builder: (context) => HelpDialog(
+                  initialModeIndex: currentMode,
                   onStartTutorial: () => _showTutorial(context),
                 ),
               );

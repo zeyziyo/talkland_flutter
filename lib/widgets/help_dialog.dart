@@ -3,11 +3,12 @@ import 'package:flutter/services.dart';
 import '../l10n/app_localizations.dart';
 
 class HelpDialog extends StatefulWidget {
-  final VoidCallback onStartTutorial;
+  final int initialModeIndex;
 
   const HelpDialog({
     super.key,
     required this.onStartTutorial,
+    this.initialModeIndex = 0,
   });
 
   @override
@@ -16,16 +17,23 @@ class HelpDialog extends StatefulWidget {
 
 class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  late PageController _pageController;
+  int _currentPage = 0;
 
   @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 3, vsync: this);
+    // Map home screen index (0,1,2) to page index (0,1,2)
+    // Mode 1 (index 0) -> Page 0
+    _currentPage = widget.initialModeIndex;
+    _pageController = PageController(initialPage: _currentPage);
   }
 
   @override
   void dispose() {
     _tabController.dispose();
+    _pageController.dispose();
     super.dispose();
   }
 
@@ -46,7 +54,7 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  l10n.helpTitle, // "Usage Guide"
+                  l10n.helpTitle,
                   style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
                 IconButton(
@@ -63,9 +71,9 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
               labelColor: const Color(0xFF667eea),
               unselectedLabelColor: Colors.grey,
               tabs: [
-                Tab(text: l10n.helpTabModes), // "Modes"
-                Tab(text: l10n.helpTabJson),  // "JSON Format"
-                Tab(text: l10n.helpTabTour),  // "Interactive Tour"
+                Tab(text: l10n.helpTabModes),
+                Tab(text: l10n.helpTabJson),
+                Tab(text: l10n.helpTabTour),
               ],
             ),
             
@@ -87,26 +95,127 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
   }
 
   Widget _buildModesGuide(AppLocalizations l10n) {
-    return ListView(
-      padding: const EdgeInsets.all(16),
+    return Column(
       children: [
-        _buildSectionTitle('🔍 ${l10n.search} (Mode 1)'),
-        Text(l10n.helpMode1Desc), 
-        const SizedBox(height: 8),
-        Text(l10n.helpMode1Details), // Localized details
-        const SizedBox(height: 16),
+        Expanded(
+          child: PageView(
+            controller: _pageController,
+            onPageChanged: (index) {
+              setState(() {
+                _currentPage = index;
+              });
+            },
+            children: [
+              _buildModeCard(
+                icon: Icons.search,
+                title: '${l10n.search} (Mode 1)',
+                desc: l10n.helpMode1Desc,
+                details: l10n.helpMode1Details,
+                color: Colors.blue[50]!,
+              ),
+              _buildModeCard(
+                icon: Icons.auto_stories,
+                title: '${l10n.tabStudyMaterial} (Mode 2)',
+                desc: l10n.helpMode2Desc,
+                details: l10n.helpMode2Details,
+                color: Colors.green[50]!,
+              ),
+              _buildModeCard(
+                icon: Icons.record_voice_over,
+                title: '${l10n.tabSpeaking} (Mode 3)',
+                desc: l10n.helpMode3Desc,
+                details: l10n.helpMode3Details,
+                color: Colors.purple[50]!,
+              ),
+            ],
+          ),
+        ),
         
-        _buildSectionTitle('📖 ${l10n.tabStudyMaterial} (Mode 2)'), 
-        Text(l10n.helpMode2Desc), 
-        const SizedBox(height: 8),
-        Text(l10n.helpMode2Details), // Localized details
-        const SizedBox(height: 16),
-        
-        _buildSectionTitle('🎙️ ${l10n.tabSpeaking} (Mode 3)'),
-        Text(l10n.helpMode3Desc), 
-        const SizedBox(height: 8),
-        Text(l10n.helpMode3Details), // Localized details
+        // Page Indicator
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: List.generate(3, (index) {
+              return Container(
+                margin: const EdgeInsets.symmetric(horizontal: 4),
+                width: 8,
+                height: 8,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: _currentPage == index
+                      ? const Color(0xFF667eea)
+                      : Colors.grey[300],
+                ),
+              );
+            }),
+          ),
+        ),
       ],
+    );
+  }
+
+  Widget _buildModeCard({
+    required IconData icon,
+    required String title,
+    required String desc,
+    required String details,
+    required Color color,
+  }) {
+    return Container(
+      margin: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(24),
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(icon, size: 64, color: const Color(0xFF667eea)),
+            const SizedBox(height: 16),
+            Text(
+              title,
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.black87,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 16),
+            Text(
+              desc,
+              style: const TextStyle(
+                fontSize: 16,
+                fontStyle: FontStyle.italic,
+                color: Colors.black54,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const Divider(height: 32),
+            Container(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                details,
+                style: const TextStyle(
+                    fontSize: 15,
+                    height: 1.6,
+                    color: Colors.black87
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
