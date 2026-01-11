@@ -154,9 +154,10 @@ class _HomeScreenState extends State<HomeScreen> {
       final Offset center = Offset(offset.dx + size.width / 2, offset.dy + size.height / 2);
       
       // Define a tiny Fixed Size for the highlight target (so circle radius works from this small box)
+      // Updated to Size(24, 24) to represent radius 12, making it easier to tap
       position = TargetPosition(
-        Size(10, 10), // Small fixed size
-        Offset(center.dx - 5, center.dy - 5), // Centered
+        const Size(24, 24), // Fixed size for radius 12
+        Offset(center.dx - 12, center.dy - 12), // Centered
       );
     }
 

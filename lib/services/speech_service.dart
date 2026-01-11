@@ -32,6 +32,13 @@ class SpeechService {
         return false;
       }
       
+      // Configure TTS
+      await _flutterTts.setVolume(1.0);
+      await _flutterTts.setSpeechRate(0.5);
+      await _flutterTts.setPitch(1.0);
+      // Critical Fix: Wait for completion so we don't start listening while speaking
+      await _flutterTts.awaitSpeakCompletion(true);
+      
       // Initial configuration
       await _configureForPlayback();
       
