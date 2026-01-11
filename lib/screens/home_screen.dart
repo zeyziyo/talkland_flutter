@@ -63,40 +63,14 @@ class _HomeScreenState extends State<HomeScreen> {
     final l10n = AppLocalizations.of(context)!;
 
     // Common Target: Tab Selector
-    targets.add(
-      TargetFocus(
-        identify: "Mode Tabs",
-        keyTarget: _tabKey,
-        alignSkip: Alignment.topRight,
-        shape: ShapeLightFocus.Circle,
-        paddingFocus: 0,
-        radius: 3,
-        contents: [
-          TargetContent(
-            align: ContentAlign.bottom,
-            builder: (context, controller) {
-              return Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    l10n.helpTabModes, // "기능 소개" or "Modes"
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.yellowAccent),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10.0),
-                    child: Text(
-                      l10n.tutorialTabDesc,
-                      style: const TextStyle(color: Colors.yellowAccent, fontSize: 16.0),
-                    ),
-                  ),
-                ],
-              );
-            },
-          ),
-        ],
-      ),
-    );
+    // Common Target: Tab Selector
+    targets.add(_buildTarget(
+      _tabKey,
+      l10n.helpTabModes,
+      l10n.tutorialTabDesc,
+      ContentAlign.bottom,
+      radius: 6,
+    ));
 
     // Mode-specific targets
     if (modeIndex == 0) {
@@ -167,7 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return targets;
   }
 
-  TargetFocus _buildTarget(GlobalKey key, String title, String desc, ContentAlign align, {double radius = 3}) {
+  TargetFocus _buildTarget(GlobalKey key, String title, String desc, ContentAlign align, {double radius = 6}) {
     // Calculate target position manually to force a fixed small size highlight
     // regardless of the actual widget size.
     final RenderBox? renderBox = key.currentContext?.findRenderObject() as RenderBox?;
