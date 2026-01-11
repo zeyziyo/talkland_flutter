@@ -385,12 +385,14 @@ class _HomeScreenState extends State<HomeScreen> {
               _buildLanguageDropdown(
                 label: l10n.sourceLanguage,
                 value: appState.sourceLang,
+                languageNames: appState.languageNames,
                 onChanged: (v) => appState.setSourceLang(v!),
               ),
               const SizedBox(height: 16),
               _buildLanguageDropdown(
                 label: l10n.targetLanguage,
                 value: appState.targetLang,
+                languageNames: appState.languageNames,
                 onChanged: (v) => appState.setTargetLang(v!),
               ),
             ],
@@ -409,6 +411,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _buildLanguageDropdown({
     required String label,
     required String value,
+    required Map<String, String> languageNames,
     required void Function(String?) onChanged,
   }) {
     return Column(
@@ -425,7 +428,7 @@ class _HomeScreenState extends State<HomeScreen> {
             border: OutlineInputBorder(),
             contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           ),
-          items: AppState.languageNames.entries.map((entry) {
+          items: languageNames.entries.map((entry) {
             return DropdownMenuItem(
               value: entry.key,
               child: Text(

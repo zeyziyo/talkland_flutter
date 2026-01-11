@@ -95,7 +95,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
-                                      AppState.languageNames[appState.sourceLang] ?? '',
+                                      appState.languageNames[appState.sourceLang] ?? '',
                                       style: const TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
@@ -183,7 +183,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
-                                      AppState.languageNames[appState.targetLang] ?? '',
+                                      appState.languageNames[appState.targetLang] ?? '',
                                       style: const TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,

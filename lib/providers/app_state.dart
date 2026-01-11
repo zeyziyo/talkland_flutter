@@ -6,6 +6,7 @@ import 'dart:async'; // Added for Timer
 import '../services/database_service.dart';
 import '../services/translation_service.dart';
 import '../services/speech_service.dart';
+import '../constants/language_constants.dart';
 
 /// App-wide state management for Talkie
 class AppState extends ChangeNotifier {
@@ -80,63 +81,10 @@ class AppState extends ChangeNotifier {
     }).toList();
   }
   
-  // Language display names (Native + Korean name)
-  static const Map<String, String> languageNames = {
-    // East Asian
-    'ko': '한국어 (Korean)',
-    'ja': '日本語 (Japanese)',
-    'zh-CN': '中文简体 (Chinese Simplified)',
-    'zh-TW': '中文繁體 (Chinese Traditional)',
-    
-    // South Asian
-    'hi': 'हिन्दी (Hindi)',
-    'bn': 'বাংলা (Bengali)',
-    'ta': 'தமிழ் (Tamil)',
-    'te': 'తెలుగు (Telugu)',
-    'mr': 'मराठी (Marathi)',
-    'ur': 'اردو (Urdu)',
-    'gu': 'ગુજરાતી (Gujarati)',
-    'kn': 'ಕನ್ನಡ (Kannada)',
-    'ml': 'മലയാളം (Malayalam)',
-    'pa': 'ਪੰਜਾਬੀ (Punjabi)',
-    
-    // European
-    'en': 'English (English)',
-    'es': 'Español (Spanish)',
-    'fr': 'Français (French)',
-    'de': 'Deutsch (German)',
-    'it': 'Italiano (Italian)',
-    'pt': 'Português (Portuguese)',
-    'ru': 'Русский (Russian)',
-    'pl': 'Polski (Polish)',
-    'uk': 'Українська (Ukrainian)',
-    'nl': 'Nederlands (Dutch)',
-    'el': 'Ελληνικά (Greek)',
-    'cs': 'Čeština (Czech)',
-    'ro': 'Română (Romanian)',
-    'sv': 'Svenska (Swedish)',
-    'da': 'Dansk (Danish)',
-    'fi': 'Suomi (Finnish)',
-    'no': 'Norsk (Norwegian)',
-    'hu': 'Magyar (Hungarian)',
-    
-    // Southeast Asian
-    'id': 'Bahasa Indonesia (Indonesian)',
-    'vi': 'Tiếng Việt (Vietnamese)',
-    'th': 'ไทย (Thai)',
-    'fil': 'Filipino (Filipino)',
-    'ms': 'Bahasa Melayu (Malay)',
-    
-    // Middle Eastern
-    'ar': 'العربية (Arabic)',
-    'tr': 'Türkçe (Turkish)',
-    'fa': 'فارسی (Persian)',
-    'he': 'עברית (Hebrew)',
-    
-    // African
-    'sw': 'Kiswahili (Swahili)',
-    'af': 'Afrikaans (Afrikaans)',
-  };
+  // Language display names (Dynamic)
+  Map<String, String> get languageNames => 
+      LanguageConstants.getLanguageMap(_sourceLang);
+
   
   // ==========================================
   // Mode Switching
