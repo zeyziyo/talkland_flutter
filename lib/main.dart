@@ -22,25 +22,41 @@ class TalkieApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => AppState(),
-      child: MaterialApp(
-        title: 'Talkie',
-        
-        // Localization
-        localizationsDelegates: const [
-          AppLocalizations.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: AppLocalizations.supportedLocales,
-        
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-          useMaterial3: true,
-        ),
-        home: const HomeScreen(),
-        debugShowCheckedModeBanner: false,
+      child: Consumer<AppState>(
+        builder: (context, appState, child) {
+          return MaterialApp(
+            title: 'Talkie',
+            
+            // Localization
+            locale: _resolveLocale(appState.sourceLang),
+            localizationsDelegates: const [
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: AppLocalizations.supportedLocales,
+            
+            theme: ThemeData(
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+              useMaterial3: true,
+            ),
+            home: const HomeScreen(),
+            debugShowCheckedModeBanner: false,
+          );
+        },
       ),
     );
+  }
+
+  Locale _resolveLocale(String langCode) {
+    // Handle special cases with script/country codes
+    if (langCode == 'zh-CN') {
+      return const Locale('zh', 'CN');
+    } else if (langCode == 'zh-TW') {
+      return const Locale('zh', 'TW');
+    }
+    // For simple language codes (ko, en, ja, etc.)
+    return Locale(langCode);
   }
 }

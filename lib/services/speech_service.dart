@@ -32,17 +32,21 @@ class SpeechService {
         return false;
       }
       
-      // Configure TTS
-      await _flutterTts.setVolume(1.0);
-      await _flutterTts.setSpeechRate(0.5);
-      await _flutterTts.setPitch(1.0);
+      // Initial configuration
+      await _configureForPlayback();
       
-      // Fix for Volume Control: Force Audio Session to Speech
-      // This ensures volume buttons control the correct stream and audio focus is managed
+      _isInitialized = true;
+      return true;
+    } catch (e) {
+      print('Speech service initialization error: $e');
+      return false;
+    }
+  }
+
+  /// Configure Audio Session for Recording (STT)
+  Future<void> _configureForRecording() async {
+    try {
       final session = await AudioSession.instance;
-      
-      // Configure for Speech (Source: PlayAndRecord, Usage: VoiceCommunication/Speech)
-      // This is critical for avoiding "Voice not detected" on some Android devices
       await session.configure(AudioSessionConfiguration(
         avAudioSessionCategory: AVAudioSessionCategory.playAndRecord,
         avAudioSessionCategoryOptions: AVAudioSessionCategoryOptions.allowBluetooth | 
@@ -56,10 +60,29 @@ class SpeechService {
         androidAudioFocusGainType: AndroidAudioFocusGainType.gainTransient,
         androidWillPauseWhenDucked: true,
       ));
-      
-      // Fix for Volume Control: Force Media Stream
-      // iOS: AVAudioSessionCategoryPlayback (ignores silent switch, uses media volume)
-      // Android: AudioAttributes USAGE_MEDIA
+    } catch (e) {
+      print('Error configuring audio for recording: $e');
+    }
+  }
+
+  /// Configure Audio Session for Playback (TTS)
+  Future<void> _configureForPlayback() async {
+    try {
+      final session = await AudioSession.instance;
+      await session.configure(AudioSessionConfiguration(
+        avAudioSessionCategory: AVAudioSessionCategory.playback,
+        avAudioSessionCategoryOptions: AVAudioSessionCategoryOptions.duckOthers,
+        avAudioSessionMode: AVAudioSessionMode.spokenAudio,
+        androidAudioAttributes: const AndroidAudioAttributes(
+          contentType: AndroidAudioContentType.speech,
+          flags: AndroidAudioFlags.none,
+          usage: AndroidAudioUsage.media,
+        ),
+        androidAudioFocusGainType: AndroidAudioFocusGainType.gain,
+        androidWillPauseWhenDucked: false,
+      ));
+
+      // Ensure iOS category is also set correctly
       await _flutterTts.setIosAudioCategory(
         IosTextToSpeechAudioCategory.playback,
         [
@@ -68,12 +91,8 @@ class SpeechService {
           IosTextToSpeechAudioCategoryOptions.allowBluetoothA2DP,
         ],
       );
-      
-      _isInitialized = true;
-      return true;
     } catch (e) {
-      print('Speech service initialization error: $e');
-      return false;
+      print('Error configuring audio for playback: $e');
     }
   }
   
@@ -92,6 +111,9 @@ class SpeechService {
         throw Exception('Speech service not available');
       }
     }
+    
+    // Always configure for recording before starting listener
+    await _configureForRecording();
     
     if (_isListening) return;
     
@@ -142,35 +164,12 @@ class SpeechService {
     }
     
     try {
-      // Reconfigure audio session to playback/media mode for TTS
-      // This ensures volume buttons control media volume, not call volume
-      final session = await AudioSession.instance;
-      await session.configure(AudioSessionConfiguration(
-        avAudioSessionCategory: AVAudioSessionCategory.playback,
-        avAudioSessionCategoryOptions: AVAudioSessionCategoryOptions.duckOthers,
-        avAudioSessionMode: AVAudioSessionMode.spokenAudio,
-        androidAudioAttributes: const AndroidAudioAttributes(
-          contentType: AndroidAudioContentType.speech,
-          flags: AndroidAudioFlags.none,
-          usage: AndroidAudioUsage.media,  // Changed from voiceCommunication to media
-        ),
-        androidAudioFocusGainType: AndroidAudioFocusGainType.gain,
-        androidWillPauseWhenDucked: false,
-      ));
+      // Configuration for playback
+      await _configureForPlayback();
       
       await _flutterTts.setLanguage(lang);
       await _flutterTts.setSpeechRate(slow ? 0.3 : 0.5);
       await _flutterTts.setVolume(1.0);
-      
-      // Ensure we are using the correct mode before speaking
-      await _flutterTts.setIosAudioCategory(
-        IosTextToSpeechAudioCategory.playback,
-        [
-          IosTextToSpeechAudioCategoryOptions.defaultToSpeaker,
-           IosTextToSpeechAudioCategoryOptions.allowBluetooth,
-           IosTextToSpeechAudioCategoryOptions.allowBluetoothA2DP,
-        ]
-      );
 
       await _flutterTts.speak(text);
     } catch (e) {
