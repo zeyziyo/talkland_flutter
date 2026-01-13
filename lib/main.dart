@@ -13,7 +13,12 @@ void main() async {
     sqfliteFfiInit();
     databaseFactory = databaseFactoryFfi;
   }
-  await dotenv.load(fileName: ".env");
+  try {
+    await dotenv.load(fileName: ".env");
+  } catch (e) {
+    print("Warning: Failed to load .env file: $e");
+    // Ensure app continues even if .env fails to load
+  }
   runApp(const TalkieApp());
 }
 
