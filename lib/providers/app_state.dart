@@ -318,6 +318,14 @@ class AppState extends ChangeNotifier {
       // Reload study records to update review count in tab
       await loadStudyRecords();
       
+      // Reload study materials to update counts and metadata
+      await loadStudyMaterials();
+      
+      // If Mode 2 is currently viewing a specific material (or 'All'), reload it immediately
+      if (_selectedMaterialId != null) {
+        await loadMaterialRecords(_selectedMaterialId!);
+      }
+      
       notifyListeners();
       
       debugPrint('[AppState] Translation saved successfully');

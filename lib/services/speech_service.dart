@@ -89,11 +89,11 @@ class SpeechService {
         avAudioSessionCategoryOptions: AVAudioSessionCategoryOptions.duckOthers, 
         avAudioSessionMode: AVAudioSessionMode.spokenAudio,
         androidAudioAttributes: const AndroidAudioAttributes(
-          contentType: AndroidAudioContentType.speech,
+          contentType: AndroidAudioContentType.music, // Force Music type for guaranteed Media Volume control
           flags: AndroidAudioFlags.none,
-          usage: AndroidAudioUsage.media, // Revert to media: safest for standard playback
+          usage: AndroidAudioUsage.media, 
         ),
-        androidAudioFocusGainType: AndroidAudioFocusGainType.gainTransientMayDuck,
+        androidAudioFocusGainType: AndroidAudioFocusGainType.gain, // Request PERMANENT focus to bind volume keys
         androidWillPauseWhenDucked: false,
       ));
 
@@ -106,6 +106,9 @@ class SpeechService {
           IosTextToSpeechAudioCategoryOptions.allowBluetoothA2DP,
         ],
       );
+      
+      // Explicitly activate the session
+      await session.setActive(true);
     } catch (e) {
       print('Error configuring audio for playback: $e');
     }
