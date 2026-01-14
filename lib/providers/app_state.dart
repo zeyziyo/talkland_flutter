@@ -7,11 +7,13 @@ import '../services/database_service.dart';
 import '../services/translation_service.dart';
 import '../services/speech_service.dart';
 import '../constants/language_constants.dart';
+import '../services/usage_service.dart';
 
 /// App-wide state management for Talkie
 class AppState extends ChangeNotifier {
   // Services
   final SpeechService _speechService = SpeechService();
+  final UsageService _usageService = UsageService();
   
   // Current mode: 0 = 검색, 1 = 복습/학습, 2 = 말하기
   int _currentMode = 0;
@@ -195,6 +197,7 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
   
+  
   /// Translate text with duplicate detection and reuse
   Future<void> translate() async {
     if (_sourceText.isEmpty) {
@@ -207,6 +210,9 @@ class AppState extends ChangeNotifier {
       _isTranslating = true;
       _statusMessage = '확인 중...';
       notifyListeners();
+
+      // 0. Check Limits (NEW)
+      await _usageService.checkLimitOrThrow();
       
       // 0. Duplicate Check (Triggered ONLY once per text change)
       // Check only if:
@@ -268,6 +274,9 @@ class AppState extends ChangeNotifier {
         targetLang: _targetLang,
       );
       
+      // 4. Increment Usage (NEW)
+      await _usageService.incrementUsage();
+      
       // Auto-save translation (will be called in saveTranslation method)
       _isTranslating = false;
       _statusMessage = '번역 완료 (저장 필요)';
@@ -275,7 +284,14 @@ class AppState extends ChangeNotifier {
       notifyListeners();
     } catch (e) {
       _isTranslating = false;
-      _statusMessage = '번역 실패: $e';
+      if (e is LimitReachedException) {
+        _statusMessage = '일일 번역 한도 초과';
+        debugPrint('[AppState] Limit reached: $e');
+        // We rethrow so the UI can catch it and show the dialog
+        rethrow;
+      } else {
+        _statusMessage = '번역 실패: $e';
+      }
       notifyListeners();
       rethrow;
     }
@@ -1087,5 +1103,12 @@ class AppState extends ChangeNotifier {
     } catch (e) {
       return {'success': false, 'error': e.toString()};
     }
+  }
+
+
+  /// Add refill amount (e.g. from Ad)
+  Future<void> refill(int amount) async {
+    await _usageService.addRefill(amount);
+    notifyListeners();
   }
 }

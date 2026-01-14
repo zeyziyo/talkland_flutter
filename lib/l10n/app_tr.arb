@@ -97,7 +97,7 @@
   "tutorialM2SelectTitle": "Seç & Filtrele",
   "tutorialM2SelectDesc": "Materyal seç veya 'Tümünü Tekrarla'ya geç.",
   "tutorialM2ListTitle": "Çalışma Listesi",
-  "tutorialM2ListDesc": "Kayıtlı kartlarını kontrol et ve cevapları gör.",
+  "tutorialM2ListDesc": "Kayıtlı kartlarını kontrol et ve cevapları gör. (Long-press to delete)",
   "tutorialM3SelectTitle": "Materyal Seç",
   "tutorialM3SelectDesc": "Konuşma pratiği için bir set seç.",
   "tutorialM3IntervalTitle": "Aralık",

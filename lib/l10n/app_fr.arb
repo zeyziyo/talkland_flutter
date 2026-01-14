@@ -385,7 +385,7 @@
   "tutorialM2SelectTitle": "Sélection & Filtre",
   "tutorialM2SelectDesc": "Choisissez le matériel d'étude ou passez à 'Tout Réviser'.",
   "tutorialM2ListTitle": "Liste d'Étude",
-  "tutorialM2ListDesc": "Vérifiez vos cartes enregistrées et retournez-les pour voir les réponses.",
+  "tutorialM2ListDesc": "Vérifiez vos cartes enregistrées et retournez-les pour voir les réponses. (Long-press to delete)",
   "tutorialM3SelectTitle": "Sélectionner Matériel",
   "tutorialM3SelectDesc": "Choisissez un set de matériel pour pratiquer l'oral.",
   "tutorialM3IntervalTitle": "Intervalle",

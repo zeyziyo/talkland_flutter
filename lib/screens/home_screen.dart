@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // Mode 2 Keys
   final GlobalKey _mode2DropdownKey = GlobalKey();
+  final GlobalKey _mode2ListKey = GlobalKey();
 
   // Mode 3 Keys
   final GlobalKey _mode3DropdownKey = GlobalKey();
@@ -111,6 +112,14 @@ class _HomeScreenState extends State<HomeScreen> {
         l10n.importJsonFile, 
         l10n.tutorialM2ImportDesc,
         ContentAlign.bottom,
+        radius: 12,
+      ));
+      // Mode 2 List Target
+      targets.add(_buildTarget(
+        _mode2ListKey, 
+        l10n.tutorialM2ListTitle, 
+        l10n.tutorialM2ListDesc,
+        ContentAlign.top,
         radius: 12,
       ));
     } else if (modeIndex == 2) {
@@ -353,6 +362,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 } else if (appState.currentMode == 1) {
                   return Mode2Widget(
                     materialDropdownKey: _mode2DropdownKey,
+                    tutorialListKey: _mode2ListKey,
                   ); 
                 } else {
                   return Mode3Widget(

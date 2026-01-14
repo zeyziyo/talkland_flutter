@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
+import '../services/usage_service.dart';
 
 /// Mode 1: 검색 모드 - STT → 번역 → TTS
 class Mode1Widget extends StatefulWidget {
@@ -172,7 +173,15 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                           key: widget.translateButtonKey,
                           onPressed: appState.isTranslating
                               ? null
-                              : () => appState.translate(),
+                              : () async {
+                              try {
+                                await appState.translate();
+                              } catch (e) {
+                                if (e is LimitReachedException && context.mounted) {
+                                  _showLimitDialog(context, appState);
+                                }
+                              }
+                            },
                           icon: appState.isTranslating
                               ? const SizedBox(
                                   width: 16,
@@ -312,6 +321,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
   }
 
   Widget _buildDuplicateDialog(BuildContext context, AppState appState) {
+    // ... existing code ...
     final l10n = AppLocalizations.of(context)!;
     return Container(
       color: Colors.black54,
@@ -382,6 +392,70 @@ class _Mode1WidgetState extends State<Mode1Widget> {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  void _showLimitDialog(BuildContext context, AppState appState) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => AlertDialog(
+        title: const Text('번역 한도 초과'),
+        content: const Text(
+          '일일 무료 번역(5회)을 모두 사용했습니다.\n\n'
+          '광고를 보고 5회를 즉시 충전하시겠습니까?',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('취소'),
+          ),
+          ElevatedButton.icon(
+            icon: const Icon(Icons.play_arrow),
+            label: const Text('광고 보고 충전 (+5회)'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blueAccent,
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () async {
+              Navigator.pop(context); // Close dialog
+              
+              // Show mock Ad (Loading)
+              showDialog(
+                context: context,
+                barrierDismissible: false,
+                builder: (context) => const Center(
+                  child: Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(24.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          CircularProgressIndicator(),
+                          SizedBox(height: 16),
+                          Text('광고 시청 중... (3초)'),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              );
+              
+              // Simulate Ad duration
+              await Future.delayed(const Duration(seconds: 3));
+              
+              if (context.mounted) {
+                Navigator.pop(context); // Close loading
+                await appState.refill(5);
+                
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('번역 횟수가 5회 충전되었습니다!')),
+                );
+              }
+            },
+          ),
+        ],
       ),
     );
   }

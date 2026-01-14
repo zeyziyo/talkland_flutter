@@ -97,7 +97,7 @@
   "tutorialM2SelectTitle": "தேர்ந்தெடு & வடிகட்டி",
   "tutorialM2SelectDesc": "பொருட்களைத் தேர்ந்தெடுக்கவும் அல்லது 'அனைத்தையும் மதிப்பாய்வு செய்' என்பதற்கு மாறவும்.",
   "tutorialM2ListTitle": "படிப்பு பட்டியல்",
-  "tutorialM2ListDesc": "உங்கள் கார்டுகளைச் சரிபார்த்து அவற்றைத் திருப்பவும்.",
+  "tutorialM2ListDesc": "உங்கள் கார்டுகளைச் சரிபார்த்து அவற்றைத் திருப்பவும். (Long-press to delete)",
   "tutorialM3SelectTitle": "பொருளைத் தேர்ந்தெடு",
   "tutorialM3SelectDesc": "பேச்சுப் பயிற்சிக்கான தொகுப்பைத் தேர்ந்தெடுக்கவும்.",
   "tutorialM3IntervalTitle": "இடைவேளை",

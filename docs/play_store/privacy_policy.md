@@ -14,8 +14,20 @@ Our App requires access to your device's microphone (`android.permission.RECORD_
 ### Study Data
 The App stores your study records (source text, translated text, and review history) locally on your device using an internal database. This data is not transmitted to any external server related to us.
 
+
 ## 2. Third-Party Services
-We may use third-party services for speech recognition and translation functionalities (e.g., Google ML Kit, Android Speech Recognizer, or similar APIs). These providers may process data according to their own privacy policies.
+We may use third-party services for speech recognition, translation, and advertising services. These providers may process data according to their own privacy policies.
+
+### Advertising (AdMob)
+This App uses Google AdMob to display advertisements. AdMob may use:
+- **Advertising ID**: A unique identifier on your device to serve personalized ads.
+- **Cookies**: To collect information about your interactions with ads.
+You can manage your ad preferences in your device settings (e.g., "Opt out of personalized ads").
+- [Google AdMob Privacy Policy](https://policies.google.com/technologies/ads)
+
+### Functional Services
+- **Google ML Kit / Speech Services**: For speech recognition.
+- **Cloud Translation API**: For text translation.
 
 ## 3. Data Security
 Since your study data is stored locally on your device, it is as secure as your device itself. We recommend keeping your device software updated.
@@ -27,4 +39,4 @@ Our App does not knowingly collect personal information from children under the 
 We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes.
 
 ## 6. Contact Us
-If you have any questions about this Privacy Policy, please contact us at: [Your Support Email]
+If you have any questions about this Privacy Policy, please contact us at: talkie.help@gmail.com

@@ -97,7 +97,7 @@
   "tutorialM2SelectTitle": "Kiválasztás és Szűrő",
   "tutorialM2SelectDesc": "Válasszon anyagot vagy 'Összes áttekintése'.",
   "tutorialM2ListTitle": "Tanulólista",
-  "tutorialM2ListDesc": "Ellenőrizze a kártyákat és fordítsa meg őket.",
+  "tutorialM2ListDesc": "Ellenőrizze a kártyákat és fordítsa meg őket. (Long-press to delete)",
   "tutorialM3SelectTitle": "Anyag Kiválasztása",
   "tutorialM3SelectDesc": "Válasszon készletet beszédgyakorláshoz.",
   "tutorialM3IntervalTitle": "Időköz",

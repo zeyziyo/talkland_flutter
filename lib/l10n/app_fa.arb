@@ -97,7 +97,7 @@
   "tutorialM2SelectTitle": "انتخاب و فیلتر",
   "tutorialM2SelectDesc": "مطالب را انتخاب کنید یا به 'مرور همه' بروید.",
   "tutorialM2ListTitle": "لیست مطالعه",
-  "tutorialM2ListDesc": "کارت‌های خود را بررسی کرده و برگردانید.",
+  "tutorialM2ListDesc": "کارت‌های خود را بررسی کرده و برگردانید. (Long-press to delete)",
   "tutorialM3SelectTitle": "انتخاب مطلب",
   "tutorialM3SelectDesc": "یک مجموعه برای تمرین صحبت کردن انتخاب کنید.",
   "tutorialM3IntervalTitle": "فاصله",

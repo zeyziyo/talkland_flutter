@@ -8,10 +8,12 @@ import '../l10n/app_localizations.dart';
 /// - '전체 복습' 선택 시 모든 저장된 문장 복습
 class Mode2Widget extends StatefulWidget {
   final Key? materialDropdownKey;
+  final Key? tutorialListKey;
 
   const Mode2Widget({
     super.key,
     this.materialDropdownKey,
+    this.tutorialListKey,
   });
 
   @override
@@ -231,6 +233,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
             
             // Records list
             Expanded(
+              key: widget.tutorialListKey,
               child: materialRecords.isEmpty
                   ? Center(
                       child: Column(

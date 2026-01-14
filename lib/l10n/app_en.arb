@@ -387,7 +387,7 @@
   "tutorialM2SelectTitle": "Select & Filter",
   "tutorialM2SelectDesc": "Choose study materials or switch to 'Review All'.",
   "tutorialM2ListTitle": "Study List",
-  "tutorialM2ListDesc": "Check your saved cards and flip them to see answers.",
+  "tutorialM2ListDesc": "Check your saved cards and flip them to see answers. (Long-press to delete)",
   "tutorialM3SelectTitle": "Select Material",
   "tutorialM3SelectDesc": "Choose a material set for speaking practice.",
   "tutorialM3IntervalTitle": "Interval",

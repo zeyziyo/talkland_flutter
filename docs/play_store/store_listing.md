@@ -30,6 +30,24 @@ Talkie supports comprehensive translation and learning across 43 languages:
 - **Middle Eastern:** Arabic, Turkish, Persian, Hebrew
 - **African:** Swahili, Afrikaans
 
+**Flexible Plans:**
+- **Free:** Start with 5 daily translations. Watch an ad to refill **5 more translations** instantly.
+- **Pro:** Upgrade to remove ads and get 1,500 monthly translations (avg. 50/day) with no interruptions.
+
+## Custom Study Material Example (JSON)
+Create your own study list (`my_study.json`) and import it:
+```json
+{
+  "source_language": "en",
+  "target_language": "ko",
+  "subject": "Travel Phrases",
+  "entries": [
+    {"source_text": "Where is the station?", "target_text": "역이 어디에 있나요?"},
+    {"source_text": "How much is this?", "target_text": "이거 얼마예요?"}
+  ]
+}
+```
+
 **Why Talkie?**
 - **Privacy First:** Your voice data is processed securely and not stored permanently.
 - **Offline First:** Your study records live on your device.

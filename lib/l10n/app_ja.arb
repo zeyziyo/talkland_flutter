@@ -385,7 +385,7 @@
   "tutorialM2SelectTitle": "選択とフィルタ",
   "tutorialM2SelectDesc": "学習する教材を選択するか、全復習モードに切り替えます。",
   "tutorialM2ListTitle": "学習リスト",
-  "tutorialM2ListDesc": "保存されたカードを確認し、裏返して正解を確認します。",
+  "tutorialM2ListDesc": "保存されたカードを確認し、裏返して正解を確認します。(長押しで削除)",
   "tutorialM3SelectTitle": "教材選択",
   "tutorialM3SelectDesc": "スピーキング練習を行う教材セットを選択してください。",
   "tutorialM3IntervalTitle": "間隔設定",
