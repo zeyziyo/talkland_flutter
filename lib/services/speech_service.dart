@@ -1,10 +1,6 @@
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:audio_session/audio_session.dart';
-import 'dart:io';
-import 'dart:typed_data';
-import 'package:path_provider/path_provider.dart';
-import 'package:path/path.dart' as path;
 
 /// Speech service for STT and TTS across platforms
 class SpeechService {
@@ -87,16 +83,17 @@ class SpeechService {
   Future<void> _configureForPlayback() async {
     try {
       final session = await AudioSession.instance;
+      // Use 'speech' preset base but optimize for robust playback
       await session.configure(AudioSessionConfiguration(
         avAudioSessionCategory: AVAudioSessionCategory.playback,
-        avAudioSessionCategoryOptions: AVAudioSessionCategoryOptions.duckOthers,
+        avAudioSessionCategoryOptions: AVAudioSessionCategoryOptions.duckOthers, 
         avAudioSessionMode: AVAudioSessionMode.spokenAudio,
         androidAudioAttributes: const AndroidAudioAttributes(
           contentType: AndroidAudioContentType.speech,
           flags: AndroidAudioFlags.none,
-          usage: AndroidAudioUsage.media,
+          usage: AndroidAudioUsage.assistant, // Treat as assistant (higher priority)
         ),
-        androidAudioFocusGainType: AndroidAudioFocusGainType.gainTransientMayDuck, // Better for TTS
+        androidAudioFocusGainType: AndroidAudioFocusGainType.gainTransientMayDuck,
         androidWillPauseWhenDucked: false,
       ));
 
@@ -225,83 +222,7 @@ class SpeechService {
     }
   }
   
-  /// Synthesize text to audio file and return bytes
-  Future<Uint8List?> synthesizeToByteArray(String text, String lang) async {
-    try {
-      if (!_isInitialized) await initialize();
 
-      // Ensure language is set (added fallback check from speak method)
-       bool isAvailable = await _flutterTts.isLanguageAvailable(lang);
-      if (!isAvailable && lang.contains('-')) {
-          final baseLang = lang.split('-')[0];
-          if (await _flutterTts.isLanguageAvailable(baseLang)) {
-            lang = baseLang;
-          } else {
-             return null;
-          }
-      }
-
-      await _flutterTts.setLanguage(lang);
-      
-      // Use a unique filename
-      String fileName = 'tts_${DateTime.now().millisecondsSinceEpoch}.wav';
-      String filePath = '';
-
-      if (Platform.isAndroid) {
-        // Android: flutter_tts saves to getExternalFilesDir(null)
-        final dir = await getExternalStorageDirectory();
-        if (dir != null) {
-           filePath = path.join(dir.path, fileName);
-           // flutter_tts expects just the filename for Android
-           await _flutterTts.synthesizeToFile(text, fileName);
-        } else {
-           // Fallback if external storage is null (unlikely but possible)
-           return null;
-        }
-      } else if (Platform.isIOS) {
-        // iOS: flutter_tts saves to NSDocumentDirectory
-        final dir = await getApplicationDocumentsDirectory();
-        filePath = path.join(dir.path, fileName);
-        // iOS expects just the filename too usually, but let's check
-        // flutter_tts ios implementation: uses `NSSearchPathForDirectoriesInDomains(NSDocumentDirectory...`
-        await _flutterTts.synthesizeToFile(text, fileName);
-      } else {
-        return null; // Not supported on other platforms yet
-      }
-      
-      final file = File(filePath);
-      
-      // Wait for file to exist (polling)
-      int attempts = 0;
-      while (!await file.exists() && attempts < 20) {
-        await Future.delayed(const Duration(milliseconds: 100));
-        attempts++;
-      }
-      
-      if (await file.exists()) {
-        // Wait a small extra buffer to ensure write completion
-        await Future.delayed(const Duration(milliseconds: 100));
-        
-        final bytes = await file.readAsBytes();
-        
-        // Clean up
-        try {
-          await file.delete();
-        } catch (e) {
-          print('Error deleting temp TTS file: $e');
-        }
-        
-        return bytes;
-      }
-      
-      print('TTS File generated but not found at: $filePath');
-      return null;
-
-    } catch (e) {
-      print('Synthesize Error: $e');
-      return null;
-    }
-  }
 
   /// Stop TTS playback
   Future<void> stopSpeaking() async {
