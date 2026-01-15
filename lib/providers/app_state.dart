@@ -17,12 +17,12 @@ class AppState extends ChangeNotifier {
   final UsageService _usageService = UsageService();
   SharedPreferences? _prefs;
 
-  AppState() {
-    _loadSettings();
+  AppState(this._prefs) {
+    _initSettings();
   }
 
-  Future<void> _loadSettings() async {
-    _prefs = await SharedPreferences.getInstance();
+  void _initSettings() {
+    // Synchronous initialization from already-loaded prefs
     final savedSource = _prefs?.getString('sourceLang');
     final savedTarget = _prefs?.getString('targetLang');
 
@@ -33,7 +33,8 @@ class AppState extends ChangeNotifier {
       _targetLang = savedTarget;
       _selectedReviewLanguage = savedTarget; // Sync review filter
     }
-    notifyListeners();
+      _selectedReviewLanguage = savedTarget; // Sync review filter
+    }
   }
 
   Future<void> _saveSettings() async {

@@ -9,6 +9,7 @@ import 'dart:io';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,16 +29,20 @@ void main() async {
     await MobileAds.instance.initialize();
   }
 
-  runApp(const TalkieApp());
+  // Initialize SharedPrefs
+  final prefs = await SharedPreferences.getInstance();
+
+  runApp(TalkieApp(prefs: prefs));
 }
 
 class TalkieApp extends StatelessWidget {
-  const TalkieApp({super.key});
+  final SharedPreferences prefs;
+  const TalkieApp({super.key, required this.prefs});
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => AppState(),
+      create: (context) => AppState(prefs),
       child: Consumer<AppState>(
         builder: (context, appState, child) {
           return MaterialApp(

@@ -100,7 +100,7 @@
   "tutorialM2SelectTitle": "자료 선택 & 필터",
   "tutorialM2SelectDesc": "학습할 자료를 선택하거나 전체 복습 모드로 전환합니다.",
   "tutorialM2ListTitle": "학습 목록",
-  "tutorialM2ListDesc": "저장된 카드를 확인하고, 뒤집어서 정답을 확인하세요. (길게 누르면 삭제)",
+  "tutorialM2ListDesc": "이 카드를 길게 누르면(Long Click) 삭제할 수 있습니다. 저장된 문장을 확인하고 뒤집어보세요.",
   "tutorialM3SelectTitle": "자료 선택",
   "tutorialM3SelectDesc": "말하기 연습을 진행할 자료 세트를 선택하세요.",
   "tutorialM3IntervalTitle": "간격 설정",

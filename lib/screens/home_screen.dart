@@ -153,6 +153,16 @@ class _HomeScreenState extends State<HomeScreen> {
         ContentAlign.bottom,
         radius: 12,
       ));
+      // Mode 2 List Target (Moved Up)
+      targets.add(_buildTarget(
+        _mode2ListKey, 
+        l10n.tutorialM2ListTitle, 
+        l10n.tutorialM2ListDesc,
+        ContentAlign.bottom, // Changed to bottom to avoid clipping
+        radius: 8,
+        shape: ShapeLightFocus.Circle, // Reverted to Circle as per user feedback
+        keepWidgetSize: true, // Key Fix: Use real size so it's visible
+      ));
       // Action Button (Import) is also relevant in Mode 2
       targets.add(_buildTarget(
         _actionButtonKey, 
@@ -160,16 +170,6 @@ class _HomeScreenState extends State<HomeScreen> {
         l10n.tutorialM2ImportDesc,
         ContentAlign.bottom,
         radius: 12,
-      ));
-      // Mode 2 List Target
-      targets.add(_buildTarget(
-        _mode2ListKey, 
-        l10n.tutorialM2ListTitle, 
-        l10n.tutorialM2ListDesc,
-        ContentAlign.top,
-        radius: 8,
-        shape: ShapeLightFocus.Circle, // User requested Circle
-        keepWidgetSize: true, // Key Fix: Use real size so it's visible
       ));
     } else if (modeIndex == 2) {
       // Mode 3: Dropdown -> Interval -> Start
