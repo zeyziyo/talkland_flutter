@@ -351,7 +351,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get tutorialM2ListTitle => 'Studielista';
 
   @override
-  String get tutorialM2ListDesc => 'Kolla kort och vänd dem.';
+  String get tutorialM2ListDesc =>
+      'Kolla kort och vänd dem. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Välj Material';

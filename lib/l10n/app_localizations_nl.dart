@@ -352,7 +352,8 @@ class AppLocalizationsNl extends AppLocalizations {
   String get tutorialM2ListTitle => 'Studielijst';
 
   @override
-  String get tutorialM2ListDesc => 'Bekijk opgeslagen kaarten en draai ze om.';
+  String get tutorialM2ListDesc =>
+      'Bekijk opgeslagen kaarten en draai ze om. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Selecteer Materiaal';

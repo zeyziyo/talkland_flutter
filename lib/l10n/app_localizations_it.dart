@@ -359,7 +359,7 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'Controlla le tue carte salvate e girale per vedere le risposte.';
+      'Controlla le tue carte salvate e girale per vedere le risposte. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Seleziona Materiale';

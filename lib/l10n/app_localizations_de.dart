@@ -359,7 +359,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'Überprüfen Sie Ihre gespeicherten Karten und drehen Sie sie um.';
+      'Überprüfen Sie Ihre gespeicherten Karten und drehen Sie sie um. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Materialwahl';

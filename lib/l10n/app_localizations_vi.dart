@@ -353,7 +353,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'Kiểm tra các thẻ đã lưu và lật chúng để xem câu trả lời.';
+      'Kiểm tra các thẻ đã lưu và lật chúng để xem câu trả lời. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Chọn tài liệu';

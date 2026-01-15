@@ -349,7 +349,8 @@ class AppLocalizationsUr extends AppLocalizations {
   String get tutorialM2ListTitle => 'مطالعہ کی فہرست';
 
   @override
-  String get tutorialM2ListDesc => 'اپنے کارڈز چیک کریں اور انہیں پلٹیں۔';
+  String get tutorialM2ListDesc =>
+      'اپنے کارڈز چیک کریں اور انہیں پلٹیں۔ (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'مواد منتخب کریں';

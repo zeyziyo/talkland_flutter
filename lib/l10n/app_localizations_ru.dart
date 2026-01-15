@@ -354,7 +354,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'Просматривайте карточки и переворачивайте их.';
+      'Просматривайте карточки и переворачивайте их. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Выбор материала';

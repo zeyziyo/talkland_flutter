@@ -351,7 +351,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'تفقد بطاقاتك المحفوظة واقلبها لرؤية الإجابات.';
+      'تفقد بطاقاتك المحفوظة واقلبها لرؤية الإجابات. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'اختر مادة';

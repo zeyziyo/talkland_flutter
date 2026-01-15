@@ -356,7 +356,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'ನಿಮ್ಮ ಕಾರ್ಡ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಅವುಗಳನ್ನು ತಿರುಗಿಸಿ.';
+      'ನಿಮ್ಮ ಕಾರ್ಡ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಅವುಗಳನ್ನು ತಿರುಗಿಸಿ. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'ವಸ್ತು ಆಯ್ಕೆಮಾಡಿ';

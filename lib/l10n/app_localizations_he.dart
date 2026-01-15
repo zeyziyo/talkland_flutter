@@ -346,7 +346,8 @@ class AppLocalizationsHe extends AppLocalizations {
   String get tutorialM2ListTitle => 'רשימת לימוד';
 
   @override
-  String get tutorialM2ListDesc => 'בדוק את הכרטיסים והפוך אותם.';
+  String get tutorialM2ListDesc =>
+      'בדוק את הכרטיסים והפוך אותם. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'בחר חומר';

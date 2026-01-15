@@ -353,7 +353,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'Ellenőrizze a kártyákat és fordítsa meg őket.';
+      'Ellenőrizze a kártyákat és fordítsa meg őket. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Anyag Kiválasztása';

@@ -346,7 +346,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get tutorialM2ListTitle => '学習リスト';
 
   @override
-  String get tutorialM2ListDesc => '保存されたカードを確認し、裏返して正解を確認します。';
+  String get tutorialM2ListDesc => '保存されたカードを確認し、裏返して正解を確認します。(長押しで削除)';
 
   @override
   String get tutorialM3SelectTitle => '教材選択';

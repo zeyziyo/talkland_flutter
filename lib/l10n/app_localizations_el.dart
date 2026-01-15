@@ -354,7 +354,8 @@ class AppLocalizationsEl extends AppLocalizations {
   String get tutorialM2ListTitle => 'Λίστα Μελέτης';
 
   @override
-  String get tutorialM2ListDesc => 'Ελέγξτε τις κάρτες και γυρίστε τις.';
+  String get tutorialM2ListDesc =>
+      'Ελέγξτε τις κάρτες και γυρίστε τις. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Επιλογή Υλικού';

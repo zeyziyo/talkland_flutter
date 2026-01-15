@@ -356,7 +356,7 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'Suriin ang iyong mga na-save na card at i-flip ang mga ito.';
+      'Suriin ang iyong mga na-save na card at i-flip ang mga ito. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Pumili ng Materyales';

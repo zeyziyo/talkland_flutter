@@ -346,7 +346,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tutorialM2ListTitle => '학습 목록';
 
   @override
-  String get tutorialM2ListDesc => '저장된 카드를 확인하고, 뒤집어서 정답을 확인하세요.';
+  String get tutorialM2ListDesc => '저장된 카드를 확인하고, 뒤집어서 정답을 확인하세요. (길게 누르면 삭제)';
 
   @override
   String get tutorialM3SelectTitle => '자료 선택';

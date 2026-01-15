@@ -353,7 +353,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'Kayıtlı kartlarını kontrol et ve cevapları gör.';
+      'Kayıtlı kartlarını kontrol et ve cevapları gör. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Materyal Seç';

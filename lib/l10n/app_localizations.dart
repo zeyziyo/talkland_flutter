@@ -783,7 +783,7 @@ abstract class AppLocalizations {
   /// No description provided for @tutorialM2ListDesc.
   ///
   /// In en, this message translates to:
-  /// **'Check your saved cards and flip them to see answers.'**
+  /// **'Check your saved cards and flip them to see answers. (Long-press to delete)'**
   String get tutorialM2ListDesc;
 
   /// No description provided for @tutorialM3SelectTitle.

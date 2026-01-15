@@ -350,7 +350,8 @@ class AppLocalizationsNo extends AppLocalizations {
   String get tutorialM2ListTitle => 'Studieliste';
 
   @override
-  String get tutorialM2ListDesc => 'Sjekk kortene og snu dem.';
+  String get tutorialM2ListDesc =>
+      'Sjekk kortene og snu dem. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Velg Materiell';

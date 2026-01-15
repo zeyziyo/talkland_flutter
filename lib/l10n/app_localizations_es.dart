@@ -357,7 +357,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'Revisa tus tarjetas guardadas y gíralas para ver respuestas.';
+      'Revisa tus tarjetas guardadas y gíralas para ver respuestas. (Mantén presionado para eliminar)';
 
   @override
   String get tutorialM3SelectTitle => 'Seleccionar Material';

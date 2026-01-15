@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart'; // Add import
 import '../services/usage_service.dart';
 
 /// Mode 1: 검색 모드 - STT → 번역 → TTS
@@ -23,22 +24,44 @@ class Mode1Widget extends StatefulWidget {
 
 class _Mode1WidgetState extends State<Mode1Widget> {
   // Persistent controllers to preserve Korean IME composition state
-  late TextEditingController _sourceTextController;
   late TextEditingController _translatedTextController;
+
+  // Rewarded Ad
+  RewardedAd? _rewardedAd;
   
   @override
   void initState() {
     super.initState();
+    _loadRewardedAd(); // Load Ad on init
+
     // Initialize controllers with empty text
     _sourceTextController = TextEditingController();
     _translatedTextController = TextEditingController();
   }
+
+  void _loadRewardedAd() {
+    RewardedAd.load(
+      adUnitId: 'ca-app-pub-3940256099942544/5224354917', // Test Rewarded ID
+      request: const AdRequest(),
+      rewardedAdLoadCallback: RewardedAdLoadCallback(
+        onAdLoaded: (ad) {
+          debugPrint('$ad loaded.');
+          _rewardedAd = ad;
+        },
+        onAdFailedToLoad: (LoadAdError error) {
+          debugPrint('RewardedAd failed to load: $error');
+          _rewardedAd = null;
+        },
+      ),
+    );
+  }
   
   @override
   void dispose() {
-    // Clean up controllers
+    // Clean up controllers and ads
     _sourceTextController.dispose();
     _translatedTextController.dispose();
+    _rewardedAd?.dispose();
     super.dispose();
   }
 
@@ -421,37 +444,27 @@ class _Mode1WidgetState extends State<Mode1Widget> {
             onPressed: () async {
               Navigator.pop(context); // Close dialog
               
-              // Show mock Ad (Loading)
-              showDialog(
-                context: context,
-                barrierDismissible: false,
-                builder: (context) => const Center(
-                  child: Card(
-                    child: Padding(
-                      padding: EdgeInsets.all(24.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          CircularProgressIndicator(),
-                          SizedBox(height: 16),
-                          Text('광고 시청 중... (3초)'),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              );
-              
-              // Simulate Ad duration
-              await Future.delayed(const Duration(seconds: 3));
-              
-              if (context.mounted) {
-                Navigator.pop(context); // Close loading
-                await appState.refill(5);
-                
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('번역 횟수가 5회 충전되었습니다!')),
+              if (_rewardedAd != null) {
+                // Show Real Ad
+                _rewardedAd!.show(
+                  onUserEarnedReward: (AdWithoutView ad, RewardItem rewardItem) async {
+                    // Reward the user
+                    await appState.refill(5);
+                    if (context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('번역 횟수가 5회 충전되었습니다!')),
+                      );
+                    }
+                    // Load next ad
+                    _loadRewardedAd();
+                  },
                 );
+              } else {
+                // Ad not ready
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('광고를 불러오는 중입니다. 잠시 후 다시 시도해주세요.')),
+                );
+                _loadRewardedAd(); // Retry load
               }
             },
           ),

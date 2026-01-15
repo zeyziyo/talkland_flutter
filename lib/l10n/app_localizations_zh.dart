@@ -346,7 +346,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tutorialM2ListTitle => '学习列表';
 
   @override
-  String get tutorialM2ListDesc => '查看已保存的卡片并翻转查看答案。';
+  String get tutorialM2ListDesc => '查看已保存的卡片并翻转查看答案。 (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => '选择资料';
@@ -745,7 +745,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get tutorialM2ListTitle => '学习列表';
 
   @override
-  String get tutorialM2ListDesc => '查看已保存的卡片并翻转查看答案。';
+  String get tutorialM2ListDesc => '查看已保存的卡片并翻转查看答案。(长按删除)';
 
   @override
   String get tutorialM3SelectTitle => '选择资料';
@@ -1138,7 +1138,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get tutorialM2ListTitle => '學習列表';
 
   @override
-  String get tutorialM2ListDesc => '查看已儲存的卡片並翻轉查看答案。';
+  String get tutorialM2ListDesc => '查看已儲存的卡片並翻轉查看答案。(長按刪除)';
 
   @override
   String get tutorialM3SelectTitle => '選擇資料';

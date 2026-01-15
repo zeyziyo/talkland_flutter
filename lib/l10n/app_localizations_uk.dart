@@ -351,7 +351,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get tutorialM2ListTitle => 'Список';
 
   @override
-  String get tutorialM2ListDesc => 'Переглядайте картки та перевертайте їх.';
+  String get tutorialM2ListDesc =>
+      'Переглядайте картки та перевертайте їх. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Вибір матеріалу';

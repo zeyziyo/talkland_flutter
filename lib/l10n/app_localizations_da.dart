@@ -348,7 +348,8 @@ class AppLocalizationsDa extends AppLocalizations {
   String get tutorialM2ListTitle => 'Studieliste';
 
   @override
-  String get tutorialM2ListDesc => 'Tjek kort og vend dem.';
+  String get tutorialM2ListDesc =>
+      'Tjek kort og vend dem. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Vælg Materiale';

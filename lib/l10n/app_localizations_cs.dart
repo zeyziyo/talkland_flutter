@@ -348,7 +348,8 @@ class AppLocalizationsCs extends AppLocalizations {
   String get tutorialM2ListTitle => 'Seznam';
 
   @override
-  String get tutorialM2ListDesc => 'Prohlížejte karty a otáčejte je.';
+  String get tutorialM2ListDesc =>
+      'Prohlížejte karty a otáčejte je. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Výběr materiálu';

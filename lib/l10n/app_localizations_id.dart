@@ -357,7 +357,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'Periksa kartu tersimpan Anda dan balik untuk melihat jawaban.';
+      'Periksa kartu tersimpan Anda dan balik untuk melihat jawaban. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Pilih Materi';

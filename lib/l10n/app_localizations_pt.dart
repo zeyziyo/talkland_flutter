@@ -356,7 +356,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'Verifique seus cartões salvos e vire-os para ver as respostas.';
+      'Verifique seus cartões salvos e vire-os para ver as respostas. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Selecionar Material';

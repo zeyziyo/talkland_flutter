@@ -351,7 +351,8 @@ class AppLocalizationsMs extends AppLocalizations {
   String get tutorialM2ListTitle => 'Senarai Kajian';
 
   @override
-  String get tutorialM2ListDesc => 'Semak kad disimpan anda dan terbalikkan.';
+  String get tutorialM2ListDesc =>
+      'Semak kad disimpan anda dan terbalikkan. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Pilih Bahan';

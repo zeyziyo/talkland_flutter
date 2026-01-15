@@ -352,7 +352,8 @@ class AppLocalizationsRo extends AppLocalizations {
   String get tutorialM2ListTitle => 'Listă Studiu';
 
   @override
-  String get tutorialM2ListDesc => 'Verifică cardurile și întoarce-le.';
+  String get tutorialM2ListDesc =>
+      'Verifică cardurile și întoarce-le. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Selectare Material';

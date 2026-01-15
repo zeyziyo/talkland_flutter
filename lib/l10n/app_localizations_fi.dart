@@ -350,7 +350,8 @@ class AppLocalizationsFi extends AppLocalizations {
   String get tutorialM2ListTitle => 'Opiskelulista';
 
   @override
-  String get tutorialM2ListDesc => 'Tarkista kortit ja käännä ne.';
+  String get tutorialM2ListDesc =>
+      'Tarkista kortit ja käännä ne. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Valitse Materiaali';

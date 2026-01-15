@@ -351,7 +351,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get tutorialM2ListTitle => 'અભ્યાસ યાદી';
 
   @override
-  String get tutorialM2ListDesc => 'તમારા કાર્ડ્સ તપાસો અને તેમને ફેરવો.';
+  String get tutorialM2ListDesc =>
+      'તમારા કાર્ડ્સ તપાસો અને તેમને ફેરવો. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'સામગ્રી પસંદ કરો';

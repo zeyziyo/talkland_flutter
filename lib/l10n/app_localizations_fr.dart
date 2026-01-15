@@ -359,7 +359,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'Vérifiez vos cartes enregistrées et retournez-les pour voir les réponses.';
+      'Vérifiez vos cartes enregistrées et retournez-les pour voir les réponses. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Sélectionner Matériel';

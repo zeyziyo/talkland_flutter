@@ -355,7 +355,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'Check your saved cards and flip them to see answers.';
+      'Check your saved cards and flip them to see answers. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Select Material';

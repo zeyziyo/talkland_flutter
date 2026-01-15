@@ -356,7 +356,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'अपने सहेजे गए कार्ड देखें और उत्तर देखने के लिए उन्हें पलटें.';
+      'अपने सहेजे गए कार्ड देखें और उत्तर देखने के लिए उन्हें पलटें. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'सामग्री चुनें';

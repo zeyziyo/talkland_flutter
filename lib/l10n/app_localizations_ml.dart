@@ -355,7 +355,8 @@ class AppLocalizationsMl extends AppLocalizations {
   String get tutorialM2ListTitle => 'പഠന ലിസ്റ്റ്';
 
   @override
-  String get tutorialM2ListDesc => 'നിങ്ങളുടെ കാർഡുകൾ പരിശോധിച്ച് അവ മറിക്കുക.';
+  String get tutorialM2ListDesc =>
+      'നിങ്ങളുടെ കാർഡുകൾ പരിശോധിച്ച് അവ മറിക്കുക. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'മെറ്റീരിയൽ തിരഞ്ഞെടുക്കുക';

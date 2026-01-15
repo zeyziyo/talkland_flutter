@@ -358,7 +358,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'உங்கள் கார்டுகளைச் சரிபார்த்து அவற்றைத் திருப்பவும்.';
+      'உங்கள் கார்டுகளைச் சரிபார்த்து அவற்றைத் திருப்பவும். (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'பொருளைத் தேர்ந்தெடு';

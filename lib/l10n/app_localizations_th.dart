@@ -349,7 +349,8 @@ class AppLocalizationsTh extends AppLocalizations {
   String get tutorialM2ListTitle => 'รายการเรียนรู้';
 
   @override
-  String get tutorialM2ListDesc => 'ตรวจสอบการ์ดที่บันทึกไว้และพลิกดูคำตอบ';
+  String get tutorialM2ListDesc =>
+      'ตรวจสอบการ์ดที่บันทึกไว้และพลิกดูคำตอบ (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'เลือกสื่อ';

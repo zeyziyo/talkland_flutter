@@ -354,7 +354,8 @@ class AppLocalizationsPl extends AppLocalizations {
   String get tutorialM2ListTitle => 'Lista Nauki';
 
   @override
-  String get tutorialM2ListDesc => 'Sprawdź zapisane karty i odwracaj je.';
+  String get tutorialM2ListDesc =>
+      'Sprawdź zapisane karty i odwracaj je. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Wybierz Materiał';

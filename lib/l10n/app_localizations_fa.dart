@@ -351,7 +351,8 @@ class AppLocalizationsFa extends AppLocalizations {
   String get tutorialM2ListTitle => 'لیست مطالعه';
 
   @override
-  String get tutorialM2ListDesc => 'کارت‌های خود را بررسی کرده و برگردانید.';
+  String get tutorialM2ListDesc =>
+      'کارت‌های خود را بررسی کرده و برگردانید. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'انتخاب مطلب';

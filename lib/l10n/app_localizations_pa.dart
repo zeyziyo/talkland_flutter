@@ -352,7 +352,8 @@ class AppLocalizationsPa extends AppLocalizations {
   String get tutorialM2ListTitle => 'ਅਧਿਐਨ ਸੂਚੀ';
 
   @override
-  String get tutorialM2ListDesc => 'ਆਪਣੇ ਕਾਰਡ ਚੈੱਕ ਕਰੋ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਪਲਟੋ।';
+  String get tutorialM2ListDesc =>
+      'ਆਪਣੇ ਕਾਰਡ ਚੈੱਕ ਕਰੋ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਪਲਟੋ। (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'ਸਮੱਗਰੀ ਚੁਣੋ';

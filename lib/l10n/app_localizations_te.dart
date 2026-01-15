@@ -355,7 +355,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get tutorialM2ListDesc =>
-      'మీ కార్డులను తనిఖీ చేయండి మరియు వాటిని తిప్పండి.';
+      'మీ కార్డులను తనిఖీ చేయండి మరియు వాటిని తిప్పండి. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'మెటీరియల్ ఎంచుకోండి';

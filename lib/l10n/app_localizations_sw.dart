@@ -350,7 +350,8 @@ class AppLocalizationsSw extends AppLocalizations {
   String get tutorialM2ListTitle => 'Orodha ya Kusoma';
 
   @override
-  String get tutorialM2ListDesc => 'Angalia kadi zako na uzigeuze.';
+  String get tutorialM2ListDesc =>
+      'Angalia kadi zako na uzigeuze. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Chagua Nyenzo';

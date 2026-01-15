@@ -353,7 +353,8 @@ class AppLocalizationsBn extends AppLocalizations {
   String get tutorialM2ListTitle => 'অধ্যয়ন তালিকা';
 
   @override
-  String get tutorialM2ListDesc => 'আপনার কার্ডগুলি পরীক্ষা করুন এবং উল্টান।';
+  String get tutorialM2ListDesc =>
+      'আপনার কার্ডগুলি পরীক্ষা করুন এবং উল্টান। (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'উপকরণ নির্বাচন';
