@@ -310,7 +310,8 @@ class AppLocalizationsAr extends AppLocalizations {
       'لاستيراد مواد الدراسة في الوضع 3، قم بإنشاء ملف JSON بالهيكل التالي:';
 
   @override
-  String get helpTourDesc => 'ابدأ الجولة التفاعلية لتعلم الميزات الرئيسية.';
+  String get helpTourDesc =>
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'بدء الجولة';
@@ -400,6 +401,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => 'استيراد ملف JSON من مجلد الجهاز.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

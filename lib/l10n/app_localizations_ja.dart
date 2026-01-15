@@ -287,7 +287,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get helpMode1Details =>
-      '• 音声入力: マイクアイコンをタップして会話を開始/停止\n• テキスト入力: 直接入力して翻訳可能\n• 自動検索: 入力時に類似の既存の文章があれば通知\n• 翻訳: 「翻訳」ボタンですぐに翻訳を実行\n• 聞く: スピーカーアイコンで原文/翻訳文を再生 (TTS)\n• 保存: 「保存」ボタンで学習記録に保存\n• クリア: 「削除」ボタンで入力内容を消去';
+      '• 言語設定: 上部の翻訳アイコンで言語を変更\n• ヘルプ: 上部のハテナアイコンで使い方ガイドを確認\n• 音声入力: マイクアイコンをタップして会話を開始/停止\n• テキスト入力: 直接入力して翻訳可能\n• 自動検索: 入力時に類似の既存の文章があれば通知\n• 翻訳: 「翻訳」ボタンですぐに翻訳を実行\n• 聞く: スピーカーアイコンで原文/翻訳文を再生 (TTS)\n• 保存: 「保存」ボタンで学習記録に保存\n• クリア: 「削除」ボタンで入力内容を消去';
 
   @override
   String get helpMode2Desc => '保存された文章を復習します。翻訳を隠して確認し、復習回数を記録しましょう。';
@@ -307,7 +307,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get helpJsonDesc => 'モード3等で学習教材をインポートするには、以下の構造のJSONファイルを使用してください:';
 
   @override
-  String get helpTourDesc => 'アプリの主な機能を学ぶにはチュートリアルを開始してください。';
+  String get helpTourDesc =>
+      'チュートリアルを開始すると、**ハイライトサークル（円）**が主な機能を案内します。\n(例：学習カードを**ハイライトサークル**が指しているときに長押しすると削除できます。)';
 
   @override
   String get startTutorial => 'チュートリアル開始';
@@ -395,6 +396,12 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => 'デバイスのフォルダからJSONファイルを読み込みます。';
+
+  @override
+  String get tutorialLangSettingsTitle => '言語設定';
+
+  @override
+  String get tutorialLangSettingsDesc => '翻訳元の言語と翻訳先の言語を設定します。';
 
   @override
   String get copy => 'コピー';

@@ -313,7 +313,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'ముఖ్య లక్షణాలను నేర్చుకోవడానికి ఇంటరాక్టివ్ టూర్‌ను ప్రారంభించండి.';
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'టూర్ ప్రారంభించు';
@@ -406,6 +406,13 @@ class AppLocalizationsTe extends AppLocalizations {
   @override
   String get tutorialM2ImportDesc =>
       'పరికర ఫోల్డర్ నుండి JSON ఫైల్‌ను దిగుమతి చేయండి.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

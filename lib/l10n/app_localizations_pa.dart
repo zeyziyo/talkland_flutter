@@ -311,7 +311,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'ਮੁੱਖ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਸਿੱਖਣ ਲਈ ਇੰਟਰਐਕਟਿਵ ਟੂਰ ਸ਼ੁਰੂ ਕਰੋ।';
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'ਟੂਰ ਸ਼ੁਰੂ ਕਰੋ';
@@ -403,6 +403,13 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => 'ਡਿਵਾਈਸ ਫੋਲਡਰ ਤੋਂ JSON ਫਾਈਲ ਆਯਾਤ ਕਰੋ।';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

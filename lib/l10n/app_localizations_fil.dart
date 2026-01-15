@@ -313,7 +313,7 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'Simulan ang interactive na pasyal para matutunan ang mga feature.';
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Simulan ang Pasyal';
@@ -408,6 +408,13 @@ class AppLocalizationsFil extends AppLocalizations {
   @override
   String get tutorialM2ImportDesc =>
       'Mag-import ng JSON file mula sa folder ng device.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

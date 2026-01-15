@@ -289,7 +289,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpMode1Details =>
-      '• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: \'Save Data\' adds to history\n• Clear: Reset all inputs';
+      '• Language Settings: Change language via top Translate icon\n• Help: Check guide via top Help icon\n• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: \'Save Data\' adds to history\n• Clear: Reset all inputs';
 
   @override
   String get helpMode2Desc =>
@@ -313,7 +313,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'Start the interactive tutorial to learn the main features.';
+      'The **Highlight Circle** will guide you through the main features.\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Start Tutorial';
@@ -407,6 +407,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => 'Import JSON file from device folder.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

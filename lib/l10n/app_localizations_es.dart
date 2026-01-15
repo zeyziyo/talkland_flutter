@@ -289,7 +289,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get helpMode1Details =>
-      '• Entrada de Voz: Toca el icono del micro para empezar/parar\n• Entrada de Texto: Escribe directamente para traducir\n• Auto-Búsqueda: Detecta frases existentes similares\n• Traducir: Toca para traducción instantánea\n• Escuchar: Icono de altavoz para TTS (Original/Traducido)\n• Guardar: \'Guardar\' añade al historial\n• Limpiar: Reinicia todos los campos';
+      '• Configuración de idioma: Cambia el idioma mediante el icono de traducir superior\n• Ayuda: Consulta la guía mediante el icono de ayuda superior\n• Entrada de Voz: Toca el icono del micro para empezar/parar\n• Entrada de Texto: Escribe directamente para traducir\n• Auto-Búsqueda: Detecta frases existentes similares\n• Traducir: Toca para traducción instantánea\n• Escuchar: Icono de altavoz para TTS (Original/Traducido)\n• Guardar: \'Guardar\' añade al historial\n• Limpiar: Reinicia todos los campos';
 
   @override
   String get helpMode2Desc =>
@@ -313,7 +313,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'Inicia el tutorial interactivo para aprender las funciones principales.';
+      'El **Círculo Resaltado** le guiará a través de las funciones principales.\n(p. ej., puede eliminar un registro manteniendo pulsado cuando el **Círculo Resaltado** lo señale.)';
 
   @override
   String get startTutorial => 'Iniciar Tutorial';
@@ -410,6 +410,13 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get tutorialM2ImportDesc =>
       'Importar archivo JSON desde la carpeta del dispositivo.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Configuración de idioma';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure los idiomas de origen y destino para la traducción.';
 
   @override
   String get copy => 'Copiar';

@@ -313,7 +313,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'ಪ್ರಮುಖ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಕಲಿಯಲು ಸಂವಾದಾತ್ಮಕ ಪ್ರವಾಸವನ್ನು ಪ್ರಾರಂಭಿಸಿ.';
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'ಪ್ರವಾಸ ಪ್ರಾರಂಭಿಸಿ';
@@ -405,6 +405,13 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => 'ಸಾಧನ ಫೋಲ್ಡರ್‌ನಿಂದ JSON ಫೈಲ್ ಆಮದು ಮಾಡಿ.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

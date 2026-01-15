@@ -310,7 +310,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'Aloita interaktiivinen kierros oppiaksesi toiminnot.';
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Aloita Kierros';
@@ -400,6 +400,13 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => 'Tuo JSON-tiedosto laitteen kansiosta.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

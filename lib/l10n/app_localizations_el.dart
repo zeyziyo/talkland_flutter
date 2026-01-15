@@ -314,7 +314,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'Ξεκινήστε την περιήγηση για να μάθετε τις λειτουργίες.';
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Έναρξη Περιήγησης';
@@ -405,6 +405,13 @@ class AppLocalizationsEl extends AppLocalizations {
   @override
   String get tutorialM2ImportDesc =>
       'Εισαγωγή αρχείου JSON από φάκελο συσκευής.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

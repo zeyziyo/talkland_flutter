@@ -310,7 +310,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'تور تعاملی را برای یادگیری ویژگی‌های اصلی شروع کنید.';
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'شروع تور';
@@ -402,6 +402,13 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => 'فایل JSON را از پوشه دستگاه وارد کنید.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

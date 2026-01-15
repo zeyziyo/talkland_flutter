@@ -312,7 +312,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'Bắt đầu hướng dẫn tương tác để tìm hiểu các tính năng chính.';
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Bắt đầu hướng dẫn';
@@ -402,6 +402,13 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => 'Nhập tệp JSON từ thư mục thiết bị.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Sao chép';

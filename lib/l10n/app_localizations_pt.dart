@@ -313,7 +313,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'Inicie o tutorial interativo para aprender as principais funções.';
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Iniciar Tutorial';
@@ -408,6 +408,13 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get tutorialM2ImportDesc =>
       'Importar arquivo JSON da pasta do dispositivo.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

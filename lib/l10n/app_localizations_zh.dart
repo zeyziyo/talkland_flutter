@@ -397,6 +397,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tutorialM2ImportDesc => '从设备文件夹导入JSON文件。';
 
   @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
+
+  @override
   String get copy => '复制';
 
   @override
@@ -686,7 +693,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get helpMode1Details =>
-      '• 语音输入：点击麦克风图标开始/停止聆听\n• 文本输入：直接输入文本进行翻译\n• 自动搜索：检测相似的现有句子\n• 翻译：点击按钮立即翻译\n• 收听：点击扬声器图标收听 TTS（原文/译文）\n• 保存：“保存数据”添加到历史记录\n• 清除：重置所有输入';
+      '• 语言设置：通过顶部翻译图标更改语言\n• 帮助：通过顶部帮助图标查看指南\n• 语音输入：点击麦克风图标开始/停止聆听\n• 文本输入：直接输入文本进行翻译\n• 自动搜索：检测相似的现有句子\n• 翻译：点击按钮立即翻译\n• 收听：点击扬声器图标收听 TTS（原文/译文）\n• 保存：“保存数据”添加到历史记录\n• 清除：重置所有输入';
 
   @override
   String get helpMode2Desc => '复习已保存的句子，自动隐藏译文并跟踪复习次数。';
@@ -706,7 +713,8 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get helpJsonDesc => '要在模式 3 中导入学习资料，请创建具有以下结构的 JSON 文件：';
 
   @override
-  String get helpTourDesc => '启动交互式教程以了解主要功能。';
+  String get helpTourDesc =>
+      '开始教程后，**高亮圆圈**将引导您了解主要功能。\n(例如：当**高亮圆圈**指向学习卡片时，长按可将其删除。)';
 
   @override
   String get startTutorial => '开始教程';
@@ -794,6 +802,18 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get tutorialM2ImportDesc => '从设备文件夹导入JSON文件。';
+
+  @override
+  String get tutorialLangSettingsTitle => '语言设置';
+
+  @override
+  String get tutorialLangSettingsDesc => '设置翻译的源语言和目标语言。';
+
+  @override
+  String get copy => '复制';
+
+  @override
+  String get copiedToClipboard => '已复制到剪贴板！';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -1079,7 +1099,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get helpMode1Details =>
-      '• 語音輸入：點擊麥克風圖示開始/停止聆聽\n• 文字輸入：直接輸入文字進行翻譯\n• 自動搜尋：偵測相似的現有句子\n• 翻譯：點擊按鈕立即翻譯\n• 收聽：點擊揚聲器圖示收聽 TTS（原文/譯文）\n• 儲存：「儲存資料」添加到歷史記錄\n• 清除：重設所有輸入';
+      '• 語言設定：透過頂部翻譯圖示更改語言\n• 幫助：透過頂部幫助圖示查看指南\n• 語音輸入：點擊麥克風圖示開始/停止聆聽\n• 文字輸入：直接輸入文字進行翻譯\n• 自動搜尋：偵測相似的現有句子\n• 翻譯：點擊按鈕立即翻譯\n• 收聽：點擊揚聲器圖示收聽 TTS（原文/譯文）\n• 儲存：「儲存資料」添加到歷史記錄\n• 清除：重設所有輸入';
 
   @override
   String get helpMode2Desc => '複習已儲存的句子，自動隱藏譯文並追蹤複習次數。';
@@ -1099,7 +1119,8 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get helpJsonDesc => '要在模式 3 中匯入學習資料，請建立具有以下結構的 JSON 檔案：';
 
   @override
-  String get helpTourDesc => '啟動互動式教學以了解主要功能。';
+  String get helpTourDesc =>
+      '開始教學後，**高亮圓圈**將引導您了解主要功能。\n(例如：當**高亮圓圈**指向學習卡片時，長按可將其刪除。)';
 
   @override
   String get startTutorial => '開始教學';
@@ -1187,4 +1208,16 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get tutorialM2ImportDesc => '從裝置資料夾匯入JSON檔案。';
+
+  @override
+  String get tutorialLangSettingsTitle => '語言設定';
+
+  @override
+  String get tutorialLangSettingsDesc => '設定翻譯的來源語言和目標語言。';
+
+  @override
+  String get copy => '複製';
+
+  @override
+  String get copiedToClipboard => '已複製到剪貼板！';
 }

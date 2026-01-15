@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'dart:convert';
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async'; // Added for Timer
 import '../services/database_service.dart';
 import '../services/translation_service.dart';
@@ -14,6 +15,32 @@ class AppState extends ChangeNotifier {
   // Services
   final SpeechService _speechService = SpeechService();
   final UsageService _usageService = UsageService();
+  SharedPreferences? _prefs;
+
+  AppState() {
+    _loadSettings();
+  }
+
+  Future<void> _loadSettings() async {
+    _prefs = await SharedPreferences.getInstance();
+    final savedSource = _prefs?.getString('sourceLang');
+    final savedTarget = _prefs?.getString('targetLang');
+
+    if (savedSource != null && savedSource.isNotEmpty) {
+      _sourceLang = savedSource;
+    }
+    if (savedTarget != null && savedTarget.isNotEmpty) {
+      _targetLang = savedTarget;
+      _selectedReviewLanguage = savedTarget; // Sync review filter
+    }
+    notifyListeners();
+  }
+
+  Future<void> _saveSettings() async {
+    await _prefs?.setString('sourceLang', _sourceLang);
+    await _prefs?.setString('targetLang', _targetLang);
+  }
+
   
   // Current mode: 0 = 검색, 1 = 복습/학습, 2 = 말하기
   int _currentMode = 0;
@@ -473,6 +500,7 @@ class AppState extends ChangeNotifier {
   
   void setSourceLang(String lang) {
     _sourceLang = lang;
+    _saveSettings(); // Save persistence
     _duplicateCheckTriggered = false; // Reset check
     // Reset selected source when language changes
     _selectedSourceId = null;
@@ -493,6 +521,8 @@ class AppState extends ChangeNotifier {
   
   void setTargetLang(String lang) {
     _targetLang = lang;
+    _saveSettings(); // Save persistence
+
     
     // Sync Review Tab Filter
     _selectedReviewLanguage = lang;

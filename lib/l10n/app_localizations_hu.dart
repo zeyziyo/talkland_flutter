@@ -312,7 +312,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'Indítsa el az interaktív túrát a funkciók megismeréséhez.';
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Túra Indítása';
@@ -403,6 +403,13 @@ class AppLocalizationsHu extends AppLocalizations {
   @override
   String get tutorialM2ImportDesc =>
       'JSON fájl importálása az eszköz mappájából.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

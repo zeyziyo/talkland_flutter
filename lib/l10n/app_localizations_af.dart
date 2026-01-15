@@ -309,7 +309,8 @@ class AppLocalizationsAf extends AppLocalizations {
   String get helpJsonDesc => 'Vir invoer in Modus 3, skep JSON:';
 
   @override
-  String get helpTourDesc => 'Begin interaktiewe toer om funksies te leer.';
+  String get helpTourDesc =>
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Begin Toer';
@@ -398,6 +399,13 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => 'Voer JSON-lêer in vanaf toestelgids.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

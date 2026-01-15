@@ -309,7 +309,8 @@ class AppLocalizationsDa extends AppLocalizations {
   String get helpJsonDesc => 'For import i Tilstand 3, opret JSON:';
 
   @override
-  String get helpTourDesc => 'Start interaktiv tur for at lære funktioner.';
+  String get helpTourDesc =>
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Start Tur';
@@ -398,6 +399,13 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => 'Importer JSON-fil fra enhedsmappe.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

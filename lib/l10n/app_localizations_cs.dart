@@ -309,7 +309,8 @@ class AppLocalizationsCs extends AppLocalizations {
   String get helpJsonDesc => 'Pro import v Režimu 3 vytvořte JSON:';
 
   @override
-  String get helpTourDesc => 'Spusťte interaktivní prohlídku pro seznámení.';
+  String get helpTourDesc =>
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Spustit prohlídku';
@@ -399,6 +400,13 @@ class AppLocalizationsCs extends AppLocalizations {
   @override
   String get tutorialM2ImportDesc =>
       'Importovat soubor JSON ze složky zařízení.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

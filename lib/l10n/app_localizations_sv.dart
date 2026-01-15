@@ -312,7 +312,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get helpTourDesc =>
-      'Starta interaktiv tur för att lära dig funktioner.';
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Starta Tur';
@@ -401,6 +401,13 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => 'Importera JSON-fil från enhetsmapp.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

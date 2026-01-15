@@ -287,7 +287,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get helpMode1Details =>
-      '• 음성 입력: 마이크 아이콘을 눌러 말하기/멈추기\n• 텍스트 입력: 직접 타이핑하여 입력 가능\n• 자동 검색: 입력 시 유사한 문장이 있으면 알림\n• 번역하기: \'번역\' 버튼으로 즉시 번역 실행\n• 듣기: 스피커 아이콘으로 원어/번역문 듣기 (TTS)\n• 저장: \'데이터 저장\' 버튼으로 학습 기록 저장\n• 초기화: \'지우기\' 버튼으로 입력 내용 삭제';
+      '• 언어 설정: 상단 번역 아이콘으로 언어 변경\n• 도움말: 상단 물음표 아이콘으로 사용법 가이드 확인\n• 음성 입력: 마이크 아이콘을 눌러 말하기/멈추기\n• 텍스트 입력: 직접 타이핑하여 입력 가능\n• 자동 검색: 입력 시 유사한 문장이 있으면 알림\n• 번역하기: \'번역\' 버튼으로 즉시 번역 실행\n• 듣기: 스피커 아이콘으로 원어/번역문 듣기 (TTS)\n• 저장: \'데이터 저장\' 버튼으로 학습 기록 저장\n• 초기화: \'지우기\' 버튼으로 입력 내용 삭제';
 
   @override
   String get helpMode2Desc => '저장된 문장을 복습합니다. 번역을 가리고 확인하며 복습 횟수를 기록하세요.';
@@ -307,7 +307,8 @@ class AppLocalizationsKo extends AppLocalizations {
   String get helpJsonDesc => '학습 자료를 가져오려면 다음과 같은 구조의 JSON 파일을 사용하세요:';
 
   @override
-  String get helpTourDesc => '앱의 주요 기능을 배우려면 튜토리얼을 시작하세요.';
+  String get helpTourDesc =>
+      '튜토리얼을 시작하면 **하이라이트 원(Circle)**이 주요 기능을 안내해 드립니다.\n(예: 학습 카드를 **하이라이트 원**이 가리킬 때 길게 누르면 삭제할 수 있습니다.)';
 
   @override
   String get startTutorial => '튜토리얼 시작';
@@ -395,6 +396,12 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => '기기의 폴더에서 JSON 파일을 불러옵니다.';
+
+  @override
+  String get tutorialLangSettingsTitle => '언어 설정';
+
+  @override
+  String get tutorialLangSettingsDesc => '번역할 원본 언어와 대상 언어를 설정합니다.';
 
   @override
   String get copy => '복사';

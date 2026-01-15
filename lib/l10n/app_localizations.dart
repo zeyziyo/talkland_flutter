@@ -669,7 +669,7 @@ abstract class AppLocalizations {
   /// No description provided for @helpMode1Details.
   ///
   /// In en, this message translates to:
-  /// **'• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: \'Save Data\' adds to history\n• Clear: Reset all inputs'**
+  /// **'• Language Settings: Change language via top Translate icon\n• Help: Check guide via top Help icon\n• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: \'Save Data\' adds to history\n• Clear: Reset all inputs'**
   String get helpMode1Details;
 
   /// No description provided for @helpMode2Desc.
@@ -705,7 +705,7 @@ abstract class AppLocalizations {
   /// No description provided for @helpTourDesc.
   ///
   /// In en, this message translates to:
-  /// **'Start the interactive tutorial to learn the main features.'**
+  /// **'The **Highlight Circle** will guide you through the main features.\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)'**
   String get helpTourDesc;
 
   /// No description provided for @startTutorial.
@@ -881,6 +881,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Import JSON file from device folder.'**
   String get tutorialM2ImportDesc;
+
+  /// No description provided for @tutorialLangSettingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Language Settings'**
+  String get tutorialLangSettingsTitle;
+
+  /// No description provided for @tutorialLangSettingsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Configure source and target languages for translation.'**
+  String get tutorialLangSettingsDesc;
 
   /// No description provided for @copy.
   ///

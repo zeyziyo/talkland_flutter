@@ -310,7 +310,8 @@ class AppLocalizationsSw extends AppLocalizations {
   String get helpJsonDesc => 'Kwa kuleta katika Hali 3, unda JSON:';
 
   @override
-  String get helpTourDesc => 'Anza ziara ya maingiliano kujifunza vipengele.';
+  String get helpTourDesc =>
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Anza Ziara';
@@ -401,6 +402,13 @@ class AppLocalizationsSw extends AppLocalizations {
   @override
   String get tutorialM2ImportDesc =>
       'Leta faili ya JSON kutoka kwenye folda ya kifaa.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';

@@ -308,7 +308,8 @@ class AppLocalizationsTh extends AppLocalizations {
       'เพื่อนำเข้าสื่อการเรียนรู้ในโหมด 3 กรุณาสร้างไฟล์ JSON ตามโครงสร้างนี้:';
 
   @override
-  String get helpTourDesc => 'เริ่มทัวร์แนะนำเพื่อเรียนรู้ฟีเจอร์หลัก';
+  String get helpTourDesc =>
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'เริ่มทัวร์';
@@ -399,6 +400,13 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get tutorialM2ImportDesc => 'นำเข้าไฟล์ JSON จากโฟลเดอร์อุปกรณ์';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Language Settings';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';
