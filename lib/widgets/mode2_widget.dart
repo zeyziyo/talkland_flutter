@@ -233,7 +233,8 @@ class _Mode2WidgetState extends State<Mode2Widget> {
             
             // Records list
             Expanded(
-              key: widget.tutorialListKey,
+              // Key goes to Empty View if empty, otherwise it's handled inside the list
+              key: materialRecords.isEmpty ? widget.tutorialListKey : null,
               child: materialRecords.isEmpty
                   ? Center(
                       child: Column(
@@ -262,7 +263,12 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                       itemCount: materialRecords.length,
                       itemBuilder: (context, index) {
                         final record = materialRecords[index];
-                        return _buildRecordCard(appState, record, studiedIds);
+                        return _buildRecordCard(
+                          appState, 
+                          record, 
+                          studiedIds,
+                          key: index == 0 ? widget.tutorialListKey : null,
+                        );
                       },
                     ),
             ),
@@ -352,8 +358,9 @@ class _Mode2WidgetState extends State<Mode2Widget> {
   Widget _buildRecordCard(
     AppState appState,
     Map<String, dynamic> record,
-    Set<int> studiedIds,
-  ) {
+    Set<int> studiedIds, {
+    Key? key,
+  }) {
     final l10n = AppLocalizations.of(context)!;
     final translationId = record['id'] as int;
     final sourceText = record['source_text'] as String;
@@ -364,6 +371,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
     final isExpanded = _expandedCards.contains(translationId);
     
     return InkWell(
+      key: key,
       onLongPress: () {
         _showDeleteDialog(context, appState, record, l10n);
       },
