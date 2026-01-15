@@ -368,13 +368,13 @@
   "helpTabJson": "Format JSON",
   "helpTabTour": "Tour",
   "helpMode1Desc": "Reconnaître la voix, traduire dans langue cible et écouter le résultat.",
-  "helpMode1Details": "• Entrée Vocale: Appuyez sur le micro pour démarrer/arrêter\n• Entrée Texte: Tapez directement pour traduire\n• Auto-Recherche: Détecte les phrases existantes similaires\n• Traduire: Appuyez pour une traduction instantanée\n• Écouter: Icône haut-parleur pour TTS (Original/Traduit)\n• Enregistrer: 'Enregistrer' ajoute à l'historique\n• Effacer: Réinitialiser toutes les entrées",
+  "helpMode1Details": "• Paramètres de langue : Changez la langue via l'icône de traduction\n• Aide : Consultez le guide via l'icône d'aide\n• Entrée Vocale: Appuyez sur le micro pour démarrer/arrêter\n• Entrée Texte: Tapez directement pour traduire\n• Auto-Recherche: Détecte les phrases existantes similaires\n• Traduire: Appuyez pour une traduction instantanée\n• Écouter: Icône haut-parleur pour TTS (Original/Traduit)\n• Enregistrer: 'Enregistrer' ajoute à l'historique\n• Effacer: Réinitialiser toutes les entrées",
   "helpMode2Desc": "Révisez les phrases enregistrées avec masquage auto des traductions.",
   "helpMode2Details": "• Sélection Matériel: Choisissez un set ou 'Tout Réviser'\n• Retourner Carte: Utilisez 'Afficher/Masquer' pour voir la traduction\n• Écouter: Jouer TTS pour la phrase\n• Marquer Étudié: Coche (V) pour les éléments terminés\n• Supprimer: Appui long sur la carte\n• Filtre: Voir tout ou filtrer par matériel",
   "helpMode3Desc": "Pratiquez l'oral en écoutant et répétant les phrases (Shadowing).",
   "helpMode3Details": "• Sélection Matériel: Choisissez le pack d'apprentissage\n• Intervalle: [-] [+] ajuster le temps d'attente (3s-60s)\n• Début/Arrêt: Contrôler la session\n• Parler: Écoutez l'audio et répétez après\n• Feedback: Score de précision (0-100) avec code couleur\n• Réessayer: Utilisez le bouton si aucune voix détectée",
   "helpJsonDesc": "Pour importer du matériel en Mode 3, créez un fichier JSON avec cette structure:",
-  "helpTourDesc": "Démarrez le tutoriel interactif pour apprendre les fonctionnalités principales.",
+  "helpTourDesc": "Le **Cercle de Surbrillance** vous guidera à travers les fonctionnalités principales.\n(ex : vous pouvez supprimer un enregistrement en appuyant longuement lorsque le **Cercle de Surbrillance** le pointe.)",
   "startTutorial": "Démarrer Tutoriel",
   "tutorialMicTitle": "Entrée Vocale",
   "tutorialMicDesc": "Appuyez sur le micro pour commencer l'entrée vocale.",
@@ -405,5 +405,7 @@
   "tutorialM2DropdownDesc": "Sélectionnez le matériel d'étude.",
   "tutorialM2ImportDesc": "Importer un fichier JSON depuis le dossier de l'appareil.",
   "copy": "Copier",
-  "copiedToClipboard": "Copié dans le presse-papier!"
+  "copiedToClipboard": "Copié dans le presse-papier!",
+  "tutorialLangSettingsTitle": "Paramètres de langue",
+  "tutorialLangSettingsDesc": "Configurez les langues source et cible pour la traduction."
 }

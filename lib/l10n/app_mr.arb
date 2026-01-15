@@ -86,7 +86,7 @@
   "helpMode3Desc": "ऐकून आणि पुनरावृत्ती करून बोलण्याचा सराव करा (Shadowing).",
   "helpMode3Details": "• निवडा: पॅकेज निवडा\n• मध्यांतर: [-] [+] प्रतीक्षा वेळ (3से-60से)\n• सुरू/थांबा: सत्र नियंत्रित करा\n• बोला: ऑडिओ ऐका आणि पुनरावृत्ती करा\n• स्कोअर: अचूकता (0-100)\n• पुन्हा प्रयत्न: आवाज न सापडल्यास बटण",
   "helpJsonDesc": "मोड 3 मध्ये आयात करण्यासाठी, JSON तयार करा:",
-  "helpTourDesc": "मुख्य वैशिष्ट्ये शिकण्यासाठी परस्परसंवादीूर सुरू करा.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "टूर सुरू करा",
   "tutorialMicTitle": "व्हॉइस इनपुट",
   "tutorialMicDesc": "व्हॉइस इनपुटसाठी माईक बटण टॅप करा.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "वाढवा",
   "languageSettings": "भाषा सेटिंग्ज",
   "tutorialM2DropdownDesc": "अभ्यास साहित्य निवडा.",
-  "tutorialM2ImportDesc": "डिव्हाइस फोल्डरमधून JSON फाइल आयात करा."
+  "tutorialM2ImportDesc": "डिव्हाइस फोल्डरमधून JSON फाइल आयात करा.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

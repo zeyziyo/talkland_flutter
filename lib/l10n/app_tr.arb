@@ -86,7 +86,7 @@
   "helpMode3Desc": "Dinleyip tekrarlayarak konuşma pratiği yap (Shadowing).",
   "helpMode3Details": "• Materyal Seç: Çalışma paketi seç\n• Aralık: [-] [+] bekleme süresi (3sn-60sn)\n• Başlat/Durdur: Oturumu kontrol et\n• Konuş: Sesi dinle ve tekrarla\n• Geri Bildirim: Doğruluk puanı (0-100)\n• Tekrar Dene: Ses algılanmazsa butonu kullan",
   "helpJsonDesc": "Mod 3'te materyal aktarmak için bu yapıda JSON oluşturun:",
-  "helpTourDesc": "Ana özellikleri öğrenmek için interaktif turu başlatın.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Turu Başlat",
   "tutorialMicTitle": "Ses Girişi",
   "tutorialMicDesc": "Ses girişini başlatmak için mikrofon butonuna dokunun.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Artır",
   "languageSettings": "Dil ayarları",
   "tutorialM2DropdownDesc": "Çalışma materyallerini seçin.",
-  "tutorialM2ImportDesc": "Cihaz klasöründen JSON dosyası içe aktarın."
+  "tutorialM2ImportDesc": "Cihaz klasöründen JSON dosyası içe aktarın.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

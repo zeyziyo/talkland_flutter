@@ -86,7 +86,7 @@
   "helpMode3Desc": "విని మరియు పునరావృతం చేస్తూ మాట్లాడటం సాధన చేయండి (Shadowing).",
   "helpMode3Details": "• ఎంచుకోండి: ప్యాకేజీని ఎంచుకోండి\n• విరామం: [-] [+] వేచి ఉండే సమయం (3సె-60సె)\n• ప్రారంభించు/ఆపు: సెషన్‌ను నియంత్రించండి\n• మాట్లాడు: ఆడియో వినండి మరియు పునరావృతం చేయండి\n• స్కోర్: ఖచ్చితత్వం (0-100)\n• మళ్ళీ ప్రయత్నించు: వాయిస్ గుర్తించబడకపోతే బటన్",
   "helpJsonDesc": "మోడ్ 3లో దిగుమతి చేయడానికి, JSONని సృష్టించండి:",
-  "helpTourDesc": "ముఖ్య లక్షణాలను నేర్చుకోవడానికి ఇంటరాక్టివ్ టూర్‌ను ప్రారంభించండి.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "టూర్ ప్రారంభించు",
   "tutorialMicTitle": "వాయిస్ ఇన్‌పుట్",
   "tutorialMicDesc": "వాయిస్ ఇన్‌పుట్ కోసం మైక్ బటన్‌ను నొక్కండి.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "పెంచు",
   "languageSettings": "భాష సెట్టింగ్‌లు",
   "tutorialM2DropdownDesc": "అధ్యయన విషయాలను ఎంచుకోండి.",
-  "tutorialM2ImportDesc": "పరికర ఫోల్డర్ నుండి JSON ఫైల్‌ను దిగుమతి చేయండి."
+  "tutorialM2ImportDesc": "పరికర ఫోల్డర్ నుండి JSON ఫైల్‌ను దిగుమతి చేయండి.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

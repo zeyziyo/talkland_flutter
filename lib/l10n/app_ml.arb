@@ -86,7 +86,7 @@
   "helpMode3Desc": "കേട്ട് ആവർത്തിച്ച് സംസാരിക്കാൻ പരിശീലിക്കുക (Shadowing).",
   "helpMode3Details": "• തിരഞ്ഞെടുക്കുക: പാക്കേജ് തിരഞ്ഞെടുക്കുക\n• ഇടവേള: [-] [+] കാത്തിരിപ്പ് സമയം (3സെ-60സെ)\n• ആരംഭിക്കുക/നിർത്തുക: സെഷൻ നിയന്ത്രിക്കുക\n• സംസാരിക്കുക: ഓഡിയോ കേട്ട് ആവർത്തിക്കുക\n• സ്കോർ: കൃത്യത (0-100)\n• വീണ്ടും ശ്രമിക്കുക: ശബ്ദം കണ്ടെത്തിയില്ലെങ്കിൽ ബട്ടൺ",
   "helpJsonDesc": "മോഡ് 3-ൽ ഇറക്കുമതി ചെയ്യാൻ, JSON സൃഷ്ടിക്കുക:",
-  "helpTourDesc": "പ്രധാന സവിശേഷതകൾ പഠിക്കാൻ ഇൻ്ററാക്റ്റീവ് ടൂർ ആരംഭിക്കുക.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "ടൂർ ആരംഭിക്കുക",
   "tutorialMicTitle": "വോയ്സ് ഇൻപുട്ട്",
   "tutorialMicDesc": "വോയ്സ് ഇൻപുട്ടിനായി മൈക്ക് ബട്ടൺ ടാപ്പ് ചെയ്യുക.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "വർദ്ധിപ്പിക്കുക",
   "languageSettings": "ഭാഷാ ക്രമീകരണങ്ങൾ",
   "tutorialM2DropdownDesc": "പഠന സാമഗ്രികൾ തിരഞ്ഞെടുക്കുക.",
-  "tutorialM2ImportDesc": "ഉപകരണ ഫോൾഡറിൽ നിന്ന് JSON ഫയൽ ഇറക്കുമതി ചെയ്യുക."
+  "tutorialM2ImportDesc": "ഉപകരണ ഫോൾഡറിൽ നിന്ന് JSON ഫയൽ ഇറക്കുമതി ചെയ്യുക.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

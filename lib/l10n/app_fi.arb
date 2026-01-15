@@ -86,7 +86,7 @@
   "helpMode3Desc": "Harjoittele puhumista kuuntelemalla ja toistamalla (Shadowing).",
   "helpMode3Details": "• Valitse: Valitse paketti\n• Aikaväli: [-] [+] odotusaika (3s-60s)\n• Aloita/Lopeta: Hallitse istuntoa\n• Puhu: Kuuntele ja toista\n• Pisteet: Tarkkuus (0-100)\n• Uusinta: Painike jos ääntä ei tunnisteta",
   "helpJsonDesc": "Tilan 3 tuontia varten luo JSON:",
-  "helpTourDesc": "Aloita interaktiivinen kierros oppiaksesi toiminnot.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Aloita Kierros",
   "tutorialMicTitle": "Äänisyöte",
   "tutorialMicDesc": "Napauta mikrofonia äänisyötettä varten.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Lisää",
   "languageSettings": "Kieliasetukset",
   "tutorialM2DropdownDesc": "Valitse oppimateriaali.",
-  "tutorialM2ImportDesc": "Tuo JSON-tiedosto laitteen kansiosta."
+  "tutorialM2ImportDesc": "Tuo JSON-tiedosto laitteen kansiosta.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

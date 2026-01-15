@@ -136,6 +136,14 @@ class _HomeScreenState extends State<HomeScreen> {
         ContentAlign.top,
         radius: 12,
       ));
+      // Language Settings (Action Button)
+      targets.add(_buildTarget(
+        _actionButtonKey, 
+        l10n.tutorialLangSettingsTitle, 
+        l10n.tutorialLangSettingsDesc,
+        ContentAlign.bottom,
+        radius: 12,
+      ));
     } else if (modeIndex == 1) {
       // Mode 2: Dropdown
       targets.add(_buildTarget(
@@ -159,7 +167,9 @@ class _HomeScreenState extends State<HomeScreen> {
         l10n.tutorialM2ListTitle, 
         l10n.tutorialM2ListDesc,
         ContentAlign.top,
-        radius: 12,
+        radius: 8,
+        shape: ShapeLightFocus.Circle, // User requested Circle
+        keepWidgetSize: true, // Key Fix: Use real size so it's visible
       ));
     } else if (modeIndex == 2) {
       // Mode 3: Dropdown -> Interval -> Start
@@ -189,24 +199,39 @@ class _HomeScreenState extends State<HomeScreen> {
     return targets;
   }
 
-  TargetFocus _buildTarget(GlobalKey key, String title, String desc, ContentAlign align, {double radius = 12}) {
+  TargetFocus _buildTarget(
+    GlobalKey key, 
+    String title, 
+    String desc, 
+    ContentAlign align, {
+    double radius = 12,
+    ShapeLightFocus shape = ShapeLightFocus.Circle,
+    bool keepWidgetSize = false,
+  }) {
     // Calculate target position manually to force a fixed small size highlight
     // regardless of the actual widget size.
     final RenderBox? renderBox = key.currentContext?.findRenderObject() as RenderBox?;
     TargetPosition? position;
     
     if (renderBox != null) {
-      final Offset offset = renderBox.localToGlobal(Offset.zero);
-      final Size size = renderBox.size;
-      // Center of the target widget
-      final Offset center = Offset(offset.dx + size.width / 2, offset.dy + size.height / 2);
-      
-      // Define a tiny Fixed Size for the highlight target (so circle radius works from this small box)
-      // Updated to Size(24, 24) to represent radius 12, making it easier to tap
-      position = TargetPosition(
-        const Size(24, 24), // Fixed size for radius 12
-        Offset(center.dx - 12, center.dy - 12), // Centered
-      );
+      if (keepWidgetSize) {
+        // Use the actual widget size and position
+        final Offset offset = renderBox.localToGlobal(Offset.zero);
+        final Size size = renderBox.size;
+        position = TargetPosition(size, offset);
+      } else {
+        // Force tiny fixed size (default behavior for icons)
+        final Offset offset = renderBox.localToGlobal(Offset.zero);
+        final Size size = renderBox.size;
+        // Center of the target widget
+        final Offset center = Offset(offset.dx + size.width / 2, offset.dy + size.height / 2);
+        
+        // Define a tiny Fixed Size for the highlight target (so circle radius works from this small box)
+        position = TargetPosition(
+          const Size(24, 24), // Fixed size for radius 12
+          Offset(center.dx - 12, center.dy - 12), // Centered
+        );
+      }
     }
 
     return TargetFocus(
@@ -214,7 +239,7 @@ class _HomeScreenState extends State<HomeScreen> {
       keyTarget: position == null ? key : null, // Fallback to key if position calc fails
       targetPosition: position,
       alignSkip: Alignment.topRight,
-      shape: ShapeLightFocus.Circle,
+      shape: shape,
       paddingFocus: 0,
       radius: radius,
       contents: [

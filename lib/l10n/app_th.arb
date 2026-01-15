@@ -86,7 +86,7 @@
   "helpMode3Desc": "ฝึกพูดโดยการฟังและพูดตาม (Shadowing)",
   "helpMode3Details": "• เลือกสื่อ: เลือกแพ็คเกจการเรียนรู้\n• ระยะห่าง: [-] [+] ปรับเวลารอ (3วิ-60วิ)\n• เริ่ม/หยุด: ควบคุมเซสชัน\n• พูด: ฟังเสียงและพูดตาม\n• ผลตอบรับ: คะแนนความแม่นยำ (0-100)\n• ลองใหม่: ใช้ปุ่มลองใหม่หากไม่พบเสียง",
   "helpJsonDesc": "เพื่อนำเข้าสื่อการเรียนรู้ในโหมด 3 กรุณาสร้างไฟล์ JSON ตามโครงสร้างนี้:",
-  "helpTourDesc": "เริ่มทัวร์แนะนำเพื่อเรียนรู้ฟีเจอร์หลัก",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "เริ่มทัวร์",
   "tutorialMicTitle": "เสียงเข้า",
   "tutorialMicDesc": "แตะปุ่มไมค์เพื่อเริ่มเสียงเข้า",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "เพิ่ม",
   "languageSettings": "การตั้งค่าภาษา",
   "tutorialM2DropdownDesc": "เลือกเนื้อหาการเรียน",
-  "tutorialM2ImportDesc": "นำเข้าไฟล์ JSON จากโฟลเดอร์อุปกรณ์"
+  "tutorialM2ImportDesc": "นำเข้าไฟล์ JSON จากโฟลเดอร์อุปกรณ์",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

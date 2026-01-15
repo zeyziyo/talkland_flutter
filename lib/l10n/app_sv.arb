@@ -86,7 +86,7 @@
   "helpMode3Desc": "Öva tala genom att lyssna och upprepa (Shadowing).",
   "helpMode3Details": "• Välj: Välj paket\n• Intervall: [-] [+] väntetid (3s-60s)\n• Start/Stopp: Kontrollera session\n• Tala: Lyssna och upprepa\n• Poäng: Noggrannhet (0-100)\n• Försök: Knapp om röst ej hittas",
   "helpJsonDesc": "För import i Läge 3, skapa JSON:",
-  "helpTourDesc": "Starta interaktiv tur för att lära dig funktioner.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Starta Tur",
   "tutorialMicTitle": "Röstinmatning",
   "tutorialMicDesc": "Tryck på mikrofonen för röstinmatning.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Öka",
   "languageSettings": "Språkinställningar",
   "tutorialM2DropdownDesc": "Välj studiematerial.",
-  "tutorialM2ImportDesc": "Importera JSON-fil från enhetsmapp."
+  "tutorialM2ImportDesc": "Importera JSON-fil från enhetsmapp.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

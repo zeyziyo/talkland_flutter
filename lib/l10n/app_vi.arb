@@ -86,7 +86,7 @@
   "helpMode3Desc": "Luyện nói bằng cách nghe và nhại lại câu (Shadowing).",
   "helpMode3Details": "• Chọn tài liệu: Chọn gói học tập\n• Khoảng cách: [-] [+] điều chỉnh thời gian chờ (3s-60s)\n• Bắt đầu/Dừng: Điều khiển phiên nhại lại\n• Nói: Nghe âm thanh và lặp lại theo\n• Phản hồi: Điểm chính xác (0-100) với mã màu\n• Thử lại: Sử dụng nút thử lại nếu không phát hiện được giọng nói",
   "helpJsonDesc": "Để nhập tài liệu học tập trong Chế độ 3, hãy tạo tệp JSON với cấu trúc sau:",
-  "helpTourDesc": "Bắt đầu hướng dẫn tương tác để tìm hiểu các tính năng chính.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Bắt đầu hướng dẫn",
   "tutorialMicTitle": "Nhập giọng nói",
   "tutorialMicDesc": "Nhấn nút mic để bắt đầu nhập giọng nói.",
@@ -118,5 +118,7 @@
   "tutorialM2DropdownDesc": "Chọn tài liệu học tập.",
   "tutorialM2ImportDesc": "Nhập tệp JSON từ thư mục thiết bị.",
   "copy": "Sao chép",
-  "copiedToClipboard": "Đã sao chép vào bộ nhớ tạm!"
+  "copiedToClipboard": "Đã sao chép vào bộ nhớ tạm!",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

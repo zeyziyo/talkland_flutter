@@ -86,7 +86,7 @@
   "helpMode3Desc": "Практика мови через слухання та повторення (Shadowing).",
   "helpMode3Details": "• Вибір: Виберіть пакет\n• Інтервал: [-] [+] пауза (3с-60с)\n• Старт/Стоп: Керування сесією\n• Говорити: Слухайте та повторюйте\n• Оцінка: Точність (0-100)\n• Повтор: Кнопка повтору, якщо голос не виявлено",
   "helpJsonDesc": "Для імпорту матеріалів у режимі 3 створіть файл JSON:",
-  "helpTourDesc": "Запустіть інтерактивний тур для ознайомлення.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Почати тур",
   "tutorialMicTitle": "Голосовий ввід",
   "tutorialMicDesc": "Натисніть мікрофон для вводу голосом.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Збільшити",
   "languageSettings": "Налаштування мови",
   "tutorialM2DropdownDesc": "Виберіть навчальні матеріали.",
-  "tutorialM2ImportDesc": "Імпортувати JSON-файл з папки пристрою."
+  "tutorialM2ImportDesc": "Імпортувати JSON-файл з папки пристрою.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

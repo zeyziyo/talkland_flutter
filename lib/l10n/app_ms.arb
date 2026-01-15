@@ -86,7 +86,7 @@
   "helpMode3Desc": "Latih bercakap dengan mendengar dan mengulang (Shadowing).",
   "helpMode3Details": "• Pilih: Pilih pakej\n• Selang: [-] [+] masa menunggu (3s-60s)\n• Mula/Berhenti: Kawal sesi\n• Bercakap: Dengar dan ulang\n• Skor: Ketepatan (0-100)\n• Cuba lagi: Butang jika suara tidak dikesan",
   "helpJsonDesc": "Untuk import Mod 3, cipta JSON:",
-  "helpTourDesc": "Mulakan lawatan interaktif untuk belajar fungsi utama.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Mula Lawatan",
   "tutorialMicTitle": "Input Suara",
   "tutorialMicDesc": "Ketik butang mikrofon untuk input suara.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Tambahkan",
   "languageSettings": "Tetapan bahasa",
   "tutorialM2DropdownDesc": "Pilih bahan pembelajaran.",
-  "tutorialM2ImportDesc": "Import fail JSON dari folder peranti."
+  "tutorialM2ImportDesc": "Import fail JSON dari folder peranti.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

@@ -86,7 +86,7 @@
   "helpMode3Desc": "Magsanay magsalita sa pamamagitan ng pakikinig at pag-uulit (Shadowing).",
   "helpMode3Details": "• Pumili: Pumili ng package\n• Agwat: [-] [+] oras ng paghihintay (3s-60s)\n• Simulan/Itigil: Kontrolin ang sesyon\n• Magsalita: Makinig at ulitin\n• Marka: Kawastuhan (0-100)\n• Subukan muli: Button kung hindi makita ang boses",
   "helpJsonDesc": "Para sa pag-import sa Mode 3, lumikha ng JSON:",
-  "helpTourDesc": "Simulan ang interactive na pasyal para matutunan ang mga feature.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Simulan ang Pasyal",
   "tutorialMicTitle": "Voice Input",
   "tutorialMicDesc": "I-tap ang mic button para sa voice input.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Dagdagan",
   "languageSettings": "Mga setting ng wika",
   "tutorialM2DropdownDesc": "Pumili ng mga materyales sa pag-aaral.",
-  "tutorialM2ImportDesc": "Mag-import ng JSON file mula sa folder ng device."
+  "tutorialM2ImportDesc": "Mag-import ng JSON file mula sa folder ng device.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

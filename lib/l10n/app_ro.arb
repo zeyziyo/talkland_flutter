@@ -86,7 +86,7 @@
   "helpMode3Desc": "Practică vorbire prin ascultare și repetare (Shadowing).",
   "helpMode3Details": "• Selectare: Alege pachet\n• Interval: [-] [+] pauză (3s-60s)\n• Start/Stop: Control sesiune\n• Vorbește: Ascultă și repetă\n• Scor: Acuratețe (0-100)\n• Reîncearcă: Buton dacă vocea nu este detectată",
   "helpJsonDesc": "Pentru import materiale în Mod 3, creați JSON:",
-  "helpTourDesc": "Începeți turul interactiv pentru a învăța funcțiile.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Start Tur",
   "tutorialMicTitle": "Intrare Vocală",
   "tutorialMicDesc": "Apasă microfonul pentru intrare vocală.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Creștere",
   "languageSettings": "Setări limbă",
   "tutorialM2DropdownDesc": "Selectați materiale de studiu.",
-  "tutorialM2ImportDesc": "Importați fișier JSON din folderul dispozitivului."
+  "tutorialM2ImportDesc": "Importați fișier JSON din folderul dispozitivului.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

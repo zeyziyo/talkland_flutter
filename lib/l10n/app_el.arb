@@ -86,7 +86,7 @@
   "helpMode3Desc": "Πρακτική ομιλίας μέσω ακρόασης και επανάληψης (Shadowing).",
   "helpMode3Details": "• Επιλογή: Διαλέξτε πακέτο\n• Διάστημα: [-] [+] χρόνος αναμονής (3δ-60δ)\n• Start/Stop: Έλεγχος συνεδρίας\n• Ομιλία: Ακούστε και επαναλάβετε\n• Βαθμολογία: Ακρίβεια (0-100)\n• Επανάληψη: Κουμπί δοκιμής ξανά",
   "helpJsonDesc": "Για εισαγωγή υλικού στη Λειτουργία 3, δημιουργήστε JSON:",
-  "helpTourDesc": "Ξεκινήστε την περιήγηση για να μάθετε τις λειτουργίες.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Έναρξη Περιήγησης",
   "tutorialMicTitle": "Φωνητική Είσοδος",
   "tutorialMicDesc": "Πατήστε το μικρόφωνο για φωνητική εισαγωγή.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Αύξηση",
   "languageSettings": "Ρυθμίσεις γλώσσας",
   "tutorialM2DropdownDesc": "Επιλέξτε εκπαιδευτικό υλικό.",
-  "tutorialM2ImportDesc": "Εισαγωγή αρχείου JSON από φάκελο συσκευής."
+  "tutorialM2ImportDesc": "Εισαγωγή αρχείου JSON από φάκελο συσκευής.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

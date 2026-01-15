@@ -86,7 +86,7 @@
   "helpMode3Desc": "Oefen spreken door te luisteren en na te zeggen (Shadowing).",
   "helpMode3Details": "• Selecteer Materiaal: Kies studiepakket\n• Interval: [-] [+] pas wachttijd aan (3s-60s)\n• Start/Stop: Beheer sessie\n• Spreek: Luister audio en herhaal\n• Feedback: Score (0-100)\n• Probeer Opnieuw: Knop als stem niet gedetecteerd",
   "helpJsonDesc": "Om studiematerialen in Modus 3 te importeren, maak JSON bestand met deze structuur:",
-  "helpTourDesc": "Start de interactieve rondleiding om hoofdfuncties te leren.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Start Rondleiding",
   "tutorialMicTitle": "Spraakinvoer",
   "tutorialMicDesc": "Tik op de microfoonknop om te starten.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Verhogen",
   "languageSettings": "Taalinstellingen",
   "tutorialM2DropdownDesc": "Selecteer studiemateriaal.",
-  "tutorialM2ImportDesc": "Importeer JSON-bestand uit apparaatmap."
+  "tutorialM2ImportDesc": "Importeer JSON-bestand uit apparaatmap.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

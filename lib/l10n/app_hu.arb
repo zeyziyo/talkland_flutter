@@ -86,7 +86,7 @@
   "helpMode3Desc": "Beszédgyakorlás hallgatással és ismétléssel (Shadowing).",
   "helpMode3Details": "• Kiválasztás: Válasszon csomagot\n• Időköz: [-] [+] várakozás (3mp-60mp)\n• Start/Stop: Munkamenet vezérlése\n• Beszéd: Hallgassa és ismételje\n• Pontszám: Pontosság (0-100)\n• Újra: Gomb ha a hang nem észlelhető",
   "helpJsonDesc": "3. Mód importhoz hozzon létre JSON-t:",
-  "helpTourDesc": "Indítsa el az interaktív túrát a funkciók megismeréséhez.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Túra Indítása",
   "tutorialMicTitle": "Hangbemenet",
   "tutorialMicDesc": "Érintse meg a mikrofont a hangbemenethez.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Növelés",
   "languageSettings": "Nyelvi beállítások",
   "tutorialM2DropdownDesc": "Válasszon tananyagot.",
-  "tutorialM2ImportDesc": "JSON fájl importálása az eszköz mappájából."
+  "tutorialM2ImportDesc": "JSON fájl importálása az eszköz mappájából.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

@@ -86,7 +86,7 @@
   "helpMode3Desc": "Ćwicz mówienie poprzez słuchanie i powtarzanie (Shadowing).",
   "helpMode3Details": "• Wybierz Materiał: Wybierz pakiet\n• Interwał: [-] [+] czas oczekiwania (3s-60s)\n• Start/Stop: Kontrola sesji\n• Mów: Słuchaj audio i powtarzaj\n• Feedback: Wynik dokładności (0-100)\n• Ponów: Przycisk ponawiania jeśli głos niewykryty",
   "helpJsonDesc": "Aby zaimportować materiały w Trybie 3, utwórz plik JSON o strukturze:",
-  "helpTourDesc": "Uruchom interaktywny przewodnik aby poznać główne funkcje.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Start Przewodnik",
   "tutorialMicTitle": "Głos",
   "tutorialMicDesc": "Dotknij mikrofonu aby rozpocząć wprowadzanie głosem.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Zwiększ",
   "languageSettings": "Ustawienia języka",
   "tutorialM2DropdownDesc": "Wybierz materiały do nauki.",
-  "tutorialM2ImportDesc": "Importuj plik JSON z folderu urządzenia."
+  "tutorialM2ImportDesc": "Importuj plik JSON z folderu urządzenia.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

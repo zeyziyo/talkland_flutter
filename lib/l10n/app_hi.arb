@@ -86,7 +86,7 @@
   "helpMode3Desc": "सुनकर और दोहराकर बोलने का अभ्यास करें (Shadowing).",
   "helpMode3Details": "• सामग्री चुनें: लर्निंग पैक चुनें\n• अंतराल: [-] [+] प्रतीक्षा समय समायोजित करें (3s-60s)\n• स्टार्ट/स्टॉप: सत्र नियंत्रित करें\n• बोलें: ऑडियो सुनें और दोहराएं\n• फ़ीडबैक: सटीकता स्कोर (0-100)\n• पुनः प्रयास करें: यदि आवाज़ का पता नहीं चलता है तो बटन का उपयोग करें",
   "helpJsonDesc": "मोड 3 में सामग्री आयात करने के लिए, निम्न संरचना के साथ JSON फ़ाइल बनाएं:",
-  "helpTourDesc": "मुख्य विशेषताओं को जानने के लिए इंटरैक्टिव टूर शुरू करें.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "टूर शुरू करें",
   "tutorialMicTitle": "वॉइस इनपुट",
   "tutorialMicDesc": "वॉइस इनपुट शुरू करने के लिए माइक बटन टैप करें.",
@@ -118,5 +118,7 @@
   "tutorialM2DropdownDesc": "अध्ययन सामग्री चुनें।",
   "tutorialM2ImportDesc": "डिवाइस फ़ोल्डर से JSON फ़ाइल आयात करें।",
   "copy": "कॉपी करें",
-  "copiedToClipboard": "क्लिपबोर्ड पर कॉपी किया गया!"
+  "copiedToClipboard": "क्लिपबोर्ड पर कॉपी किया गया!",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

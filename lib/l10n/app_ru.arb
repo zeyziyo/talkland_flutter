@@ -86,7 +86,7 @@
   "helpMode3Desc": "Практика речи через прослушивание и повторение (Shadowing).",
   "helpMode3Details": "• Выбор: Выберите учебный пакет\n• Интервал: [-] [+] пауза (3с-60с)\n• Старт/Стоп: Управление сессией\n• Говорить: Слушайте аудио и повторяйте\n• Оценка: Точность (0-100) с цветом\n• Повтор: Кнопка повтора, если голос не распознан",
   "helpJsonDesc": "Для импорта материалов в режиме 3 создайте JSON файл следующей структуры:",
-  "helpTourDesc": "Запустите интерактивный тур для ознакомления с функциями.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Начать тур",
   "tutorialMicTitle": "Голосовой ввод",
   "tutorialMicDesc": "Нажмите на микрофон для голосового ввода.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Увеличить",
   "languageSettings": "Настройки языка",
   "tutorialM2DropdownDesc": "Выберите учебные материалы.",
-  "tutorialM2ImportDesc": "Импортировать JSON-файл из папки устройства."
+  "tutorialM2ImportDesc": "Импортировать JSON-файл из папки устройства.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

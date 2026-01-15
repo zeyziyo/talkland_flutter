@@ -86,7 +86,7 @@
   "helpMode3Desc": "تدرب على التحدث بالاستماع والترديد (Shadowing).",
   "helpMode3Details": "• اختيار المادة: اختر حزمة تعلم\n• الفاصل: [-] [+] وقت الانتظار (3-60 ثانية)\n• بدء/إيقاف: التحكم بالجلسة\n• تحدث: استمع للصوت وردد\n• الملاحظات: درجة الدقة (0-100)\n• إعادة المحاولة: زر إعادة المحاولة إذا لم يتم اكتشاف الصوت",
   "helpJsonDesc": "لاستيراد مواد الدراسة في الوضع 3، قم بإنشاء ملف JSON بالهيكل التالي:",
-  "helpTourDesc": "ابدأ الجولة التفاعلية لتعلم الميزات الرئيسية.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "بدء الجولة",
   "tutorialMicTitle": "إدخال صوتي",
   "tutorialMicDesc": "اضغط زر الميكروفون لبدء الإدخال الصوتي.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "زيادة",
   "languageSettings": "إعدادات اللغة",
   "tutorialM2DropdownDesc": "اختر مواد الدراسة.",
-  "tutorialM2ImportDesc": "استيراد ملف JSON من مجلد الجهاز."
+  "tutorialM2ImportDesc": "استيراد ملف JSON من مجلد الجهاز.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

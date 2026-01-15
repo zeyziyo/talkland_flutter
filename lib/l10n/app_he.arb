@@ -86,7 +86,7 @@
   "helpMode3Desc": "תרגל דיבור על ידי האזנה וחזרה (Shadowing).",
   "helpMode3Details": "• בחר: בחר חבילה\n• מרווח: [-] [+] זמן המתנה (3ש'-60ש')\n• התחל/עצור: שליטה בסשן\n• דבר: האזן וחזור\n• ניקוד: דיוק (0-100)\n• נסה שוב: כפתור אם קול לא מזוהה",
   "helpJsonDesc": "לייבוא חומרים במצב 3, צור JSON:",
-  "helpTourDesc": "התחל את הסיור האינטראקטיבי ללימוד התכונות.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "התחל סיור",
   "tutorialMicTitle": "קלט קולי",
   "tutorialMicDesc": "הקש על המיקרופון לקלט קולי.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "הגדלה",
   "languageSettings": "הגדרות שפה",
   "tutorialM2DropdownDesc": "בחר חומרי לימוד.",
-  "tutorialM2ImportDesc": "ייבא קובץ JSON מתיקיית המכשיר."
+  "tutorialM2ImportDesc": "ייבא קובץ JSON מתיקיית המכשיר.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

@@ -86,7 +86,7 @@
   "helpMode3Desc": "Oefen praat deur te luister en te herhaal (Shadowing).",
   "helpMode3Details": "• Kies: Kies pakket\n• Interval: [-] [+] wagtyd (3s-60s)\n• Begin/Stop: Beheer sessie\n• Praat: Luister en herhaal\n• Telling: Akkuraatheid (0-100)\n• Probeer weer: Knoppie as stem nie bespeur word nie",
   "helpJsonDesc": "Vir invoer in Modus 3, skep JSON:",
-  "helpTourDesc": "Begin interaktiewe toer om funksies te leer.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Begin Toer",
   "tutorialMicTitle": "Stem Invoer",
   "tutorialMicDesc": "Tik die mikrofoon vir stem invoer.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Verhoog",
   "languageSettings": "Taalinstellings",
   "tutorialM2DropdownDesc": "Kies studiemateriaal.",
-  "tutorialM2ImportDesc": "Voer JSON-lêer in vanaf toestelgids."
+  "tutorialM2ImportDesc": "Voer JSON-lêer in vanaf toestelgids.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

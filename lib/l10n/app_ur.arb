@@ -86,7 +86,7 @@
   "helpMode3Desc": "سن کر اور دہرا کر بولنے کی مشق کریں (Shadowing)۔",
   "helpMode3Details": "• منتخب کریں: پیکیج منتخب کریں\n• وقفہ: [-] [+] انتظار کا وقت (3سیکنڈ-60سیکنڈ)\n• شروع/بند: سیشن کنٹرول کریں\n• بولیں: آڈیو سنیں اور دہرائیں\n• سکور: درستگی (0-100)\n• دوبارہ کوشش: اگر آواز نہ ملے تو بٹن",
   "helpJsonDesc": "موڈ 3 میں درآمد کرنے کے لیے، JSON بنائیں:",
-  "helpTourDesc": "اہم خصوصیات سیکھنے کے لیے انٹرایکٹو ٹور شروع کریں۔",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "ٹور شروع کریں",
   "tutorialMicTitle": "وائس ان پٹ",
   "tutorialMicDesc": "وائس ان پٹ کے لیے مائک بٹن دبائیں۔",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "بڑھائیں",
   "languageSettings": "زبان کی ترتیبات",
   "tutorialM2DropdownDesc": "مطالعاتی مواد منتخب کریں۔",
-  "tutorialM2ImportDesc": "ڈیوائس فولڈر سے JSON فائل درآمد کریں۔"
+  "tutorialM2ImportDesc": "ڈیوائس فولڈر سے JSON فائل درآمد کریں۔",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

@@ -86,7 +86,7 @@
   "helpMode3Desc": "تمرین صحبت کردن با گوش دادن و تکرار (Shadowing).",
   "helpMode3Details": "• انتخاب: بسته را انتخاب کنید\n• فاصله: [-] [+] زمان انتظار (3ثانیه-60ثانیه)\n• شروع/توقف: کنترل جلسه\n• صحبت کردن: گوش دهید و تکرار کنید\n• امتیاز: دقت (0-100)\n• تلاش مجدد: دکمه تلاش مجدد در صورت عدم تشخیص صدا",
   "helpJsonDesc": "برای وارد کردن مطالب در حالت 3، JSON بسازید:",
-  "helpTourDesc": "تور تعاملی را برای یادگیری ویژگی‌های اصلی شروع کنید.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "شروع تور",
   "tutorialMicTitle": "ورودی صوتی",
   "tutorialMicDesc": "برای ورودی صوتی دکمه میکروفون را لمس کنید.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "افزایش",
   "languageSettings": "تنظیمات زبان",
   "tutorialM2DropdownDesc": "مطالب آموزشی را انتخاب کنید.",
-  "tutorialM2ImportDesc": "فایل JSON را از پوشه دستگاه وارد کنید."
+  "tutorialM2ImportDesc": "فایل JSON را از پوشه دستگاه وارد کنید.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

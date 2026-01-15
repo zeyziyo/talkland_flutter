@@ -86,7 +86,7 @@
   "helpMode3Desc": "Latihan bicara dengan mendengar dan menirukan (Shadowing).",
   "helpMode3Details": "• Pilih Materi: Pilih paket belajar\n• Interval: [-] [+] atur waktu tunggu (3d-60d)\n• Mulai/Berhenti: Kontrol sesi\n• Bicara: Dengar audio dan ulangi\n• Umpan Balik: Skor akurasi (0-100)\n• Coba Lagi: Gunakan tombol coba lagi jika suara tidak terdeteksi",
   "helpJsonDesc": "Untuk mengimpor materi belajar di Mode 3, buat file JSON dengan struktur berikut:",
-  "helpTourDesc": "Mulai tur interaktif untuk mempelajari fitur utama.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Mulai Tur",
   "tutorialMicTitle": "Input Suara",
   "tutorialMicDesc": "Ketuk tombol mikrofon untuk mulai input suara.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Tambah",
   "languageSettings": "Pengaturan bahasa",
   "tutorialM2DropdownDesc": "Pilih materi belajar.",
-  "tutorialM2ImportDesc": "Impor file JSON dari folder perangkat."
+  "tutorialM2ImportDesc": "Impor file JSON dari folder perangkat.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

@@ -86,7 +86,7 @@
   "helpMode3Desc": "Øv tale ved at lytte og gentage (Shadowing).",
   "helpMode3Details": "• Vælg: Vælg pakke\n• Interval: [-] [+] ventetid (3s-60s)\n• Start/Stop: Kontroller session\n• Tal: Lyt og gentag\n• Score: Nøjagtighed (0-100)\n• Prøv igen: Knap hvis stemme ej fundet",
   "helpJsonDesc": "For import i Tilstand 3, opret JSON:",
-  "helpTourDesc": "Start interaktiv tur for at lære funktioner.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Start Tur",
   "tutorialMicTitle": "Stemmeindput",
   "tutorialMicDesc": "Tryk på mikrofonen for stemmeindput.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Forøg",
   "languageSettings": "Sprogindstillinger",
   "tutorialM2DropdownDesc": "Vælg studiemateriale.",
-  "tutorialM2ImportDesc": "Importer JSON-fil fra enhedsmappe."
+  "tutorialM2ImportDesc": "Importer JSON-fil fra enhedsmappe.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

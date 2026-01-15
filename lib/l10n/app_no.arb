@@ -86,7 +86,7 @@
   "helpMode3Desc": "Øv på å snakke ved å lytte og gjenta (Shadowing).",
   "helpMode3Details": "• Velg: Velg pakke\n• Intervall: [-] [+] ventetid (3s-60s)\n• Start/Stopp: Kontroller økt\n• Snakk: Lytt og gjenta\n• Poeng: Nøyaktighet (0-100)\n• Prøv igjen: Knapp hvis stemme ikke funnet",
   "helpJsonDesc": "For import i Modus 3, opprett JSON:",
-  "helpTourDesc": "Start interaktiv tur for å lære funksjoner.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Start Tur",
   "tutorialMicTitle": "Stemmeinndata",
   "tutorialMicDesc": "Trykk på mikrofonen for stemmeinndata.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Øk",
   "languageSettings": "Språkinnstillinger",
   "tutorialM2DropdownDesc": "Velg studiemateriale.",
-  "tutorialM2ImportDesc": "Importer JSON-fil fra enhetsmappe."
+  "tutorialM2ImportDesc": "Importer JSON-fil fra enhetsmappe.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

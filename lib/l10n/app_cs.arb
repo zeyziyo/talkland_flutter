@@ -86,7 +86,7 @@
   "helpMode3Desc": "Cvičení mluvení poslechem a opakováním (Shadowing).",
   "helpMode3Details": "• Výběr: Zvolte balíček\n• Interval: [-] [+] prodleva (3s-60s)\n• Start/Stop: Ovládání relace\n• Mluvit: Poslouchejte a opakujte\n• Skóre: Přesnost (0-100)\n• Znovu: Tlačítko opakování při nerozpoznání",
   "helpJsonDesc": "Pro import v Režimu 3 vytvořte JSON:",
-  "helpTourDesc": "Spusťte interaktivní prohlídku pro seznámení.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Spustit prohlídku",
   "tutorialMicTitle": "Hlasový vstup",
   "tutorialMicDesc": "Klepněte na mikrofon pro hlasový vstup.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Zvýšit",
   "languageSettings": "Nastavení jazyka",
   "tutorialM2DropdownDesc": "Vyberte studijní materiály.",
-  "tutorialM2ImportDesc": "Importovat soubor JSON ze složky zařízení."
+  "tutorialM2ImportDesc": "Importovat soubor JSON ze složky zařízení.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

@@ -86,7 +86,7 @@
   "helpMode3Desc": "Pratica il parlato ascoltando e ripetendo (Shadowing).",
   "helpMode3Details": "• Seleziona Materiale: Scegli pacchetto studio\n• Intervallo: [-] [+] regola attesa (3s-60s)\n• Start/Stop: Controlla sessione\n• Parla: Ascolta audio e ripeti\n• Feedback: Punteggio precisione (0-100)\n• Riprova: Usa pulsante riprova se voce non rilevata",
   "helpJsonDesc": "Per importare materiali di studio in Modalità 3, crea file JSON con questa struttura:",
-  "helpTourDesc": "Avvia il tutorial interattivo per imparare le funzioni principali.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Inizia Tutorial",
   "tutorialMicTitle": "Input Vocale",
   "tutorialMicDesc": "Tocca il pulsante microfono per iniziare input vocale.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Aumenta",
   "languageSettings": "Impostazioni lingua",
   "tutorialM2DropdownDesc": "Seleziona materiali di studio.",
-  "tutorialM2ImportDesc": "Importa file JSON dalla cartella del dispositivo."
+  "tutorialM2ImportDesc": "Importa file JSON dalla cartella del dispositivo.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

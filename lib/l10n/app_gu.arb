@@ -86,7 +86,7 @@
   "helpMode3Desc": "સાંભળીને અને પુનરાવર્તન કરીને બોલવાની પ્રેક્ટિસ કરો (Shadowing).",
   "helpMode3Details": "• પસંદ કરો: પેકેજ પસંદ કરો\n• અંતરાલ: [-] [+] પ્રતીક્ષા સમય (3સે-60સે)\n• શરૂ/બંધ: સત્ર નિયંત્રિત કરો\n• બોલો: ઓડિયો સાંભળો અને પુનરાવર્તન કરો\n• સ્કોર: ચોકસાઈ (0-100)\n• ફરી પ્રયાસ: જો અવાજ ન મળે તો બટન",
   "helpJsonDesc": "મોડ 3 માં આયાત કરવા માટે, JSON બનાવો:",
-  "helpTourDesc": "મુખ્ય સુવિધાઓ શીખવા માટે ઇન્ટરેક્ટિવ ટૂર શરૂ કરો.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "ટૂર શરૂ કરો",
   "tutorialMicTitle": "વોઇસ ઇનપુટ",
   "tutorialMicDesc": "વોઇસ ઇનપુટ માટે માઇક બટન ટેપ કરો.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "વધારો",
   "languageSettings": "ભાષા સેટિંગ્સ",
   "tutorialM2DropdownDesc": "અભ્યાસ સામગ્રી પસંદ કરો.",
-  "tutorialM2ImportDesc": "ઉપકરણ ફોલ્ડરમાંથી JSON ફાઇલ આયાત કરો."
+  "tutorialM2ImportDesc": "ઉપકરણ ફોલ્ડરમાંથી JSON ફાઇલ આયાત કરો.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }

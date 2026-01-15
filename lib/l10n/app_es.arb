@@ -368,13 +368,13 @@
   "helpTabJson": "Formato JSON",
   "helpTabTour": "Tour",
   "helpMode1Desc": "Reconoce voz, traduce al idioma destino y escucha el resultado.",
-  "helpMode1Details": "• Entrada de Voz: Toca el icono del micro para empezar/parar\n• Entrada de Texto: Escribe directamente para traducir\n• Auto-Búsqueda: Detecta frases existentes similares\n• Traducir: Toca para traducción instantánea\n• Escuchar: Icono de altavoz para TTS (Original/Traducido)\n• Guardar: 'Guardar' añade al historial\n• Limpiar: Reinicia todos los campos",
+  "helpMode1Details": "• Configuración de idioma: Cambia el idioma mediante el icono de traducir superior\n• Ayuda: Consulta la guía mediante el icono de ayuda superior\n• Entrada de Voz: Toca el icono del micro para empezar/parar\n• Entrada de Texto: Escribe directamente para traducir\n• Auto-Búsqueda: Detecta frases existentes similares\n• Traducir: Toca para traducción instantánea\n• Escuchar: Icono de altavoz para TTS (Original/Traducido)\n• Guardar: 'Guardar' añade al historial\n• Limpiar: Reinicia todos los campos",
   "helpMode2Desc": "Repasa oraciones guardadas con auto-ocultar traducciones y seguimiento.",
   "helpMode2Details": "• Seleccionar Material: Elige set o 'Repasar Todo'\n• Girar Tarjeta: Usa 'Mostrar/Ocultar' para ver traducción\n• Escuchar: Reproduce TTS para la oración \n• Marcar Estudiado: Check (V) para ítems completados\n• Eliminar: Mantén presionada la tarjeta\n• Filtro: Ver todo o filtrar por material",
   "helpMode3Desc": "Practica hablando escuchando y repitiendo oraciones (Shadowing).",
   "helpMode3Details": "• Seleccionar Material: Elige paquete de aprendizaje\n• Intervalo: [-] [+] ajusta tiempo de espera (3s-60s)\n• Iniciar/Parar: Controla la sesión\n• Hablar: Escucha el audio y repite después\n• Feedback: Puntuación de precisión (0-100) con código de color\n• Reintentar: Usa el botón si no se detecta voz",
   "helpJsonDesc": "Para importar materiales en Modo 3, crea un archivo JSON con esta estructura:",
-  "helpTourDesc": "Inicia el tutorial interactivo para aprender las funciones principales.",
+  "helpTourDesc": "El **Círculo Resaltado** le guiará a través de las funciones principales.\n(p. ej., puede eliminar un registro manteniendo pulsado cuando el **Círculo Resaltado** lo señale.)",
   "startTutorial": "Iniciar Tutorial",
   "tutorialMicTitle": "Entrada de Voz",
   "tutorialMicDesc": "Toca el micrófono para iniciar la entrada de voz.",
@@ -405,5 +405,7 @@
   "tutorialM2DropdownDesc": "Selecciona materiales de estudio.",
   "tutorialM2ImportDesc": "Importar archivo JSON desde la carpeta del dispositivo.",
   "copy": "Copiar",
-  "copiedToClipboard": "¡Copiado al portapapeles!"
+  "copiedToClipboard": "¡Copiado al portapapeles!",
+  "tutorialLangSettingsTitle": "Configuración de idioma",
+  "tutorialLangSettingsDesc": "Configure los idiomas de origen y destino para la traducción."
 }

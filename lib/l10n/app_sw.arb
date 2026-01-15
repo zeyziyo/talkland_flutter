@@ -86,7 +86,7 @@
   "helpMode3Desc": "Fanya mazoezi ya kuzungumza kwa kusikiliza na kurudia (Shadowing).",
   "helpMode3Details": "• Chagua: Chagua kifurushi\n• Muda: [-] [+] muda wa kusubiri (3s-60s)\n• Anza/Simama: Dhibiti kikao\n• Zungumza: Sikiliza na rudia\n• Alama: Usahihi (0-100)\n• Jaribu tena: Kitufe ikiwa sauti haigunduliwi",
   "helpJsonDesc": "Kwa kuleta katika Hali 3, unda JSON:",
-  "helpTourDesc": "Anza ziara ya maingiliano kujifunza vipengele.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Anza Ziara",
   "tutorialMicTitle": "Ingizo la Sauti",
   "tutorialMicDesc": "Gonga maikrofoni kwa ingizo la sauti.",
@@ -116,5 +116,7 @@
   "tooltipIncrease": "Ongeza",
   "languageSettings": "Mipangilio ya lugha",
   "tutorialM2DropdownDesc": "Chagua nyenzo za kusoma.",
-  "tutorialM2ImportDesc": "Leta faili ya JSON kutoka kwenye folda ya kifaa."
+  "tutorialM2ImportDesc": "Leta faili ya JSON kutoka kwenye folda ya kifaa.",
+  "tutorialLangSettingsTitle": "Language Settings",
+  "tutorialLangSettingsDesc": "Configure source and target languages for translation."
 }
