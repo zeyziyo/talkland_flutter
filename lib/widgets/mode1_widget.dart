@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart'; // Add import
+import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState; // Add import
 import '../services/usage_service.dart';
 
 /// Mode 1: 검색 모드 - STT → 번역 → TTS
@@ -24,6 +24,7 @@ class Mode1Widget extends StatefulWidget {
 
 class _Mode1WidgetState extends State<Mode1Widget> {
   // Persistent controllers to preserve Korean IME composition state
+  late TextEditingController _sourceTextController;
   late TextEditingController _translatedTextController;
 
   // Rewarded Ad
