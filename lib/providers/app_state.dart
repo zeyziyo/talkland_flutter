@@ -32,6 +32,10 @@ class AppState extends ChangeNotifier {
     if (savedTarget != null && savedTarget.isNotEmpty) {
       _targetLang = savedTarget;
       _selectedReviewLanguage = savedTarget; // Sync review filter
+    } else {
+      // Default to English if no target language saved
+      _targetLang = 'en';
+      _selectedReviewLanguage = 'en';
     }
   }
 
@@ -48,7 +52,7 @@ class AppState extends ChangeNotifier {
   String _sourceText = '';
   String _translatedText = '';
   String _sourceLang = 'ko';
-  String _targetLang = 'ja';
+  String _targetLang = 'en'; // Changed default from 'ja' to 'en'
   bool _isListening = false;
   bool _isTranslating = false;
   bool _isSpeaking = false;
@@ -63,7 +67,7 @@ class AppState extends ChangeNotifier {
   
   // Mode 2 (복습) State
   List<Map<String, dynamic>> _studyRecords = [];
-  String _selectedReviewLanguage = 'ja'; // Filter by target language
+  String _selectedReviewLanguage = 'en'; // Filter by target language, default 'en'
   
   // Mode 2 (학습 자료 & 복습) State
   List<Map<String, dynamic>> _studyMaterials = []; // Available study materials
@@ -1097,8 +1101,8 @@ class AppState extends ChangeNotifier {
   Future<Map<String, dynamic>?> pickAndImportJson() async {
     try {
       final result = await FilePicker.platform.pickFiles(
-        type: FileType.any, // Changed from custom to any to fix Android disabled file issue
-        // allowedExtensions: ['json'], // Removed because we use FileType.any
+        type: FileType.custom, // Restrict to specific extensions
+        allowedExtensions: ['json'],
         withData: kIsWeb, // Important for Web
       );
       
