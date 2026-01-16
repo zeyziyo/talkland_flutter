@@ -1097,8 +1097,8 @@ class AppState extends ChangeNotifier {
   Future<Map<String, dynamic>?> pickAndImportJson() async {
     try {
       final result = await FilePicker.platform.pickFiles(
-        type: FileType.custom,
-        allowedExtensions: ['json'],
+        type: FileType.any, // Changed from custom to any to fix Android disabled file issue
+        // allowedExtensions: ['json'], // Removed because we use FileType.any
         withData: kIsWeb, // Important for Web
       );
       
@@ -1107,6 +1107,12 @@ class AppState extends ChangeNotifier {
       }
       
       final PlatformFile file = result.files.single;
+      
+      // Manual validation for JSON extension
+      if (!file.name.toLowerCase().endsWith('.json')) {
+        return {'success': false, 'error': '잘못된 파일 형식입니다. .json 파일을 선택해주세요.'};
+      }
+
       final String fileName = file.name;
       String jsonContent;
       

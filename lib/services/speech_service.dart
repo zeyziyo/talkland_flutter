@@ -86,14 +86,15 @@ class SpeechService {
       // Use 'speech' preset base but optimize for robust playback
       await session.configure(AudioSessionConfiguration(
         avAudioSessionCategory: AVAudioSessionCategory.playback,
-        avAudioSessionCategoryOptions: AVAudioSessionCategoryOptions.duckOthers, 
-        avAudioSessionMode: AVAudioSessionMode.spokenAudio,
+        avAudioSessionCategoryOptions: AVAudioSessionCategoryOptions.duckOthers | 
+                                      AVAudioSessionCategoryOptions.defaultToSpeaker, // Fix: Force speaker
+        avAudioSessionMode: AVAudioSessionMode.defaultMode, // Fix: Use default mode instead of spokenAudio to avoid voice processing effects
         androidAudioAttributes: const AndroidAudioAttributes(
-          contentType: AndroidAudioContentType.music, // Force Music type for guaranteed Media Volume control
+          contentType: AndroidAudioContentType.music, // Force Music type
           flags: AndroidAudioFlags.none,
           usage: AndroidAudioUsage.media, 
         ),
-        androidAudioFocusGainType: AndroidAudioFocusGainType.gain, // Request PERMANENT focus to bind volume keys
+        androidAudioFocusGainType: AndroidAudioFocusGainType.gain,
         androidWillPauseWhenDucked: false,
       ));
 
@@ -173,48 +174,62 @@ class SpeechService {
     await _configureForPlayback();
   }
 
-  /// Speak text using TTS
+  /// Speak text using TTS with Retry Logic
   Future<void> speak(String text, {String lang = 'ko-KR', bool slow = false}) async {
     if (!_isInitialized) {
       await initialize();
     }
     
-    try {
-      // Stop any previous playback to clear buffers
-      await _flutterTts.stop();
-      
-      // Configuration for playback
-      await _configureForPlayback();
-      
-      // Check if language is available
-      bool isAvailable = await _flutterTts.isLanguageAvailable(lang);
-      if (!isAvailable) {
-        print('TTS Language not available: $lang');
+    // Retry mechanism: Try up to 2 times
+    int attempts = 0;
+    bool success = false;
+    
+    while (!success && attempts < 2) {
+      attempts++;
+      try {
+        // Stop any previous playback to clear buffers
+        await _flutterTts.stop();
         
-        if (lang.contains('-')) {
-          final baseLang = lang.split('-')[0];
-          if (await _flutterTts.isLanguageAvailable(baseLang)) {
-            print('Falling back to: $baseLang');
-            lang = baseLang; 
+        // Configuration for playback (Force reset every time)
+        await _configureForPlayback();
+        
+        // Check if language is available
+        bool isAvailable = await _flutterTts.isLanguageAvailable(lang);
+        if (!isAvailable) {
+          print('TTS Language not available: $lang');
+          
+          if (lang.contains('-')) {
+            final baseLang = lang.split('-')[0];
+            if (await _flutterTts.isLanguageAvailable(baseLang)) {
+              print('Falling back to: $baseLang');
+              lang = baseLang; 
+            } else {
+               print('TTS Language and fallback unavailable.');
+               return;
+            }
           } else {
-             print('TTS Language and fallback unavailable.');
              return;
           }
+        }
+
+        await _flutterTts.setLanguage(lang);
+        await _flutterTts.setSpeechRate(slow ? 0.3 : 0.5);
+        await _flutterTts.setVolume(1.0);
+        
+        // Small delay after configuration
+        await Future.delayed(const Duration(milliseconds: 100)); // Increased delay slightly
+
+        await _flutterTts.speak(text);
+        success = true;
+      } catch (e) {
+        print('TTS Error (Attempt $attempts): $e');
+        if (attempts >= 2) {
+          print('TTS failed after 2 attempts.');
         } else {
-           return;
+          // Wait briefly before retrying
+          await Future.delayed(const Duration(milliseconds: 300));
         }
       }
-
-      await _flutterTts.setLanguage(lang);
-      await _flutterTts.setSpeechRate(slow ? 0.3 : 0.5);
-      await _flutterTts.setVolume(1.0);
-      
-      // Small delay after configuration
-      await Future.delayed(const Duration(milliseconds: 50));
-
-      await _flutterTts.speak(text);
-    } catch (e) {
-      print('TTS Error: $e');
     }
   }
   
