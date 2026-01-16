@@ -65,9 +65,9 @@ class SpeechService {
         avAudioSessionCategory: AVAudioSessionCategory.playAndRecord,
         avAudioSessionCategoryOptions: AVAudioSessionCategoryOptions.allowBluetooth | 
                                       AVAudioSessionCategoryOptions.defaultToSpeaker,
-        avAudioSessionMode: AVAudioSessionMode.defaultMode,
+        avAudioSessionMode: AVAudioSessionMode.videoRecording, // Changed to videoRecording to avoid Voice Call volume mode
         androidAudioAttributes: const AndroidAudioAttributes(
-          contentType: AndroidAudioContentType.music, // Changed from speech to music to force media volume
+          contentType: AndroidAudioContentType.music, 
           flags: AndroidAudioFlags.none,
           usage: AndroidAudioUsage.media,
         ),
@@ -148,6 +148,7 @@ class SpeechService {
         // Users must manually tap the mic button to stop, or wait for timeout
       },
       localeId: lang,
+      onDevice: true, // Force on-device recognition to avoid network audio mode switches
       // Android: Force on-device recognition (offline) if available for better performance
       // Explicitly set a long listen duration to avoid default 30s timeout if needed
       listenFor: const Duration(seconds: 60),
