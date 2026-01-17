@@ -57,7 +57,10 @@ class AppState extends ChangeNotifier {
   bool _isTranslating = false;
   bool _isSpeaking = false;
   bool _isSaved = false; // Track if current translation is saved
+  bool _isSaved = false; // Track if current translation is saved
   String _statusMessage = '';
+  String _contextTag = ''; // Context for ambiguous translations
+  bool _isWordMode = false; // Toggle between Word and Sentence mode
   
   // Duplicate detection & translation reuse state
   List<Map<String, dynamic>> _similarSources = [];
@@ -74,6 +77,7 @@ class AppState extends ChangeNotifier {
   int? _selectedMaterialId; // Currently selected material
   List<Map<String, dynamic>> _materialRecords = []; // Sentences in selected material
   Set<int> _studiedTranslationIds = {}; // Reviewed translations in current session
+  String _recordTypeFilter = 'all'; // 'all', 'word', 'sentence'
   
   // Getters
   int get currentMode => _currentMode;
@@ -85,7 +89,10 @@ class AppState extends ChangeNotifier {
   bool get isTranslating => _isTranslating;
   bool get isSpeaking => _isSpeaking;
   bool get isSaved => _isSaved;
+  bool get isSaved => _isSaved;
   String get statusMessage => _statusMessage;
+  String get contextTag => _contextTag;
+  bool get isWordMode => _isWordMode;
   List<Map<String, dynamic>> get studyRecords => _studyRecords;
   List<Map<String, dynamic>> get similarSources => _similarSources;
   int? get selectedSourceId => _selectedSourceId;
@@ -97,6 +104,16 @@ class AppState extends ChangeNotifier {
   int? get selectedMaterialId => _selectedMaterialId;
   List<Map<String, dynamic>> get materialRecords => _materialRecords;
   Set<int> get studiedTranslationIds => _studiedTranslationIds;
+  String get recordTypeFilter => _recordTypeFilter;
+
+  /// Get material records filtered by type (Word/Sentence)
+  List<Map<String, dynamic>> get filteredMaterialRecords {
+    if (_recordTypeFilter == 'all') return _materialRecords;
+    return _materialRecords.where((r) {
+      final type = r['type'] as String? ?? 'sentence';
+      return type == _recordTypeFilter;
+    }).toList();
+  }
 
   /// Get study materials filtered by current source/target languages
   List<Map<String, dynamic>> get filteredStudyMaterials {
@@ -135,6 +152,13 @@ class AppState extends ChangeNotifier {
       loadStudyMaterials(); // Ensure materials are loaded
       
       // Auto-select first material if none selected
+      if (_studyMaterials.isNotEmpty && _selectedMaterialId == null) {
+        selectMaterial(_studyMaterials.first['id'] as int);
+      }
+    } else if (mode == 3) {
+      // Game Mode (Mode 4)
+      loadStudyMaterials();
+       // Auto-select first material
       if (_studyMaterials.isNotEmpty && _selectedMaterialId == null) {
         selectMaterial(_studyMaterials.first['id'] as int);
       }
@@ -282,6 +306,7 @@ class AppState extends ChangeNotifier {
         _sourceLang,
         sourceId,
         _targetLang,
+        context: _contextTag,
       );
       
       if (existingTranslation != null) {
@@ -354,7 +379,10 @@ class AppState extends ChangeNotifier {
         sourceId: _selectedSourceId!,
         targetLang: _targetLang,
         targetId: targetId,
+        targetId: targetId,
         materialId: materialId,
+        context: _contextTag.isNotEmpty ? _contextTag : null,
+        type: _isWordMode ? 'word' : 'sentence',
       );
       
       // Clear status message after save
@@ -501,6 +529,16 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
   
+  void setContextTag(String tag) {
+    _contextTag = tag;
+    notifyListeners();
+  }
+  
+  void setWordMode(bool isWord) {
+    _isWordMode = isWord;
+    notifyListeners();
+  }
+  
   void setSourceLang(String lang) {
     _sourceLang = lang;
     _saveSettings(); // Save persistence
@@ -555,7 +593,10 @@ class AppState extends ChangeNotifier {
     _similarSources = [];
     _showDuplicateDialog = false;
     _duplicateCheckTriggered = false;
+    _showDuplicateDialog = false;
+    _duplicateCheckTriggered = false;
     _isSaved = false; // Reset save state
+    _contextTag = '';
     notifyListeners();
   }
   
@@ -709,6 +750,11 @@ class AppState extends ChangeNotifier {
     }
   }
   
+  void setRecordTypeFilter(String filter) {
+    _recordTypeFilter = filter;
+    notifyListeners();
+  }
+
   /// Import JSON file with metadata (Mode 3)
   Future<Map<String, dynamic>> importJsonWithMetadata(
     String jsonContent,
@@ -787,6 +833,7 @@ class AppState extends ChangeNotifier {
   
   int _mode3Interval = 5; // Seconds
   bool _mode3SessionActive = false;
+  bool _practiceOnlyWords = false; // Filter option
   Map<String, dynamic>? _currentMode3Question;
   String _mode3UserAnswer = '';
   double? _mode3Score; // 0.0 to 100.0
@@ -802,11 +849,17 @@ class AppState extends ChangeNotifier {
   
   int get mode3Interval => _mode3Interval;
   bool get mode3SessionActive => _mode3SessionActive;
+  bool get isPracticeOnlyWords => _practiceOnlyWords;
   Map<String, dynamic>? get currentMode3Question => _currentMode3Question;
   String get mode3UserAnswer => _mode3UserAnswer;
   double? get mode3Score => _mode3Score;
   String get mode3Feedback => _mode3Feedback;
   bool get showRetryButton => _showRetryButton;
+  
+  void setPracticeOnlyWords(bool value) {
+    _practiceOnlyWords = value;
+    notifyListeners();
+  }
   
   void setMode3Interval(int seconds) {
     _mode3Interval = seconds;
@@ -850,7 +903,15 @@ class AppState extends ChangeNotifier {
     // Filter out completed questions
     final availableQuestions = _materialRecords.where((record) {
       final id = record['id'] as int;
-      return !_mode3CompletedQuestionIds.contains(id);
+      if (_mode3CompletedQuestionIds.contains(id)) return false;
+      
+      // Filter by type if option enabled
+      if (_practiceOnlyWords) {
+        final type = record['type'] as String? ?? 'sentence';
+        if (type != 'word') return false;
+      }
+      
+      return true;
     }).toList();
     
     if (availableQuestions.isEmpty) {
@@ -1149,5 +1210,33 @@ class AppState extends ChangeNotifier {
   Future<void> refill(int amount) async {
     await _usageService.addRefill(amount);
     notifyListeners();
+  }
+  // ==========================================
+  // Mode 4: Game Support
+  // ==========================================
+  
+  /// Start listening for Game Mode (Continuous-ish)
+  Future<void> startMode4Listening({
+    required String lang,
+    required Function(String text, bool isFinal) onResult,
+  }) async {
+    try {
+      _isListening = true; // Update global state for UI indicators
+      notifyListeners();
+      
+      await _speechService.startSTT(
+        lang: _getLangCode(lang),
+        onResult: (text, isFinal) {
+          onResult(text, isFinal);
+          if (isFinal) {
+             // Listening stopped
+          }
+        },
+      );
+    } catch (e) {
+      debugPrint('[AppState] Mode 4 Listen Error: $e');
+      _isListening = false;
+      notifyListeners();
+    }
   }
 }

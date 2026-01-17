@@ -120,5 +120,334 @@
   "copy": "Kopieren",
   "copiedToClipboard": "In die Zwischenablage kopiert!",
   "tutorialLangSettingsTitle": "Spracheinstellungen",
-  "tutorialLangSettingsDesc": "Konfigurieren Sie Quell- und Zielsprachen für die Übersetzung."
+  "tutorialLangSettingsDesc": "Konfigurieren Sie Quell- und Zielsprachen für die Übersetzung.",
+  "tutorialContextTitle": "Kontext-Tag",
+  "tutorialContextDesc": "Fügen Sie Kontext hinzu (z. B. Morgen), um ähnliche Sätze zu unterscheiden.",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "@recognized": {
+    "description": "STT complete status"
+  },
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "gameDirection": "Game Direction",
+  "watchAdAndRefill": "Watch Ad & Refill (+5)",
+  "@importFailed": {
+    "description": "Import error title"
+  },
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "@translating": {
+    "description": "Translation in progress"
+  },
+  "@subject": {
+    "description": "Subject label"
+  },
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "@delete": {
+    "description": "Delete button"
+  },
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
+  "rainDropGameDesc": "Speak the translation of the falling word!",
+  "noStudyMaterial": "No study material found.",
+  "finalScore": "Final Score",
+  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
+  "contextTagHint": "Describe situation for easier classification later",
+  "labelWord": "Word",
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@totalRecords": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@importComplete": {
+    "description": "Import success title"
+  },
+  "@source": {
+    "description": "Source label"
+  },
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
+  "labelType": "Type:",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "@importing": {
+    "description": "Import in progress"
+  },
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "reviewAll": "Review All",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
+  "playAgain": "Play Again",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  "filterAll": "All",
+  "startGame": "Start Game",
+  "translationLimitExceeded": "Translation Limit Exceeded",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
+  "practiceWordsOnly": "Practice Words Only",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "labelSentence": "Sentence",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
+  "scoreLabel": "Score",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  "@saved": {
+    "description": "Data saved status"
+  },
+  "gameOver": "Game Over",
+  "speed": "Speed",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "@translate": {
+    "description": "Translate button"
+  },
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "totalRecords": "Total {count} records (View All)",
+  "resetPracticeHistory": "Reset Practice History",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "retry": "Retry?",
+  "translationRefilled": "Translations refilled by 5!",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rainDropGame": "Rain Drop Game",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "@search": {
+    "description": "Search mode label"
+  },
+  "speakNow": "Speak now!",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "adLoading": "Loading ad, please try again in a moment.",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "@saving": {
+    "description": "Save in progress"
+  },
+  "@file": {
+    "description": "File label"
+  },
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tutorialGameDesc": "Play a game to practice your vocabulary! Catch falling words by speaking their translation.",
+  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
+  "tutorialM1ToggleTitle": "Word/Sentence Mode",
+  "tutorialGameTitle": "Rain Drop Game",
+  "tutorialM3WordsTitle": "Practice Words",
+  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text."
 }

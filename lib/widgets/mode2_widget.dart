@@ -40,7 +40,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
       builder: (context, appState, child) {
         final studyMaterials = appState.filteredStudyMaterials;
         final selectedMaterialId = appState.selectedMaterialId;
-        final materialRecords = appState.materialRecords;
+        final materialRecords = appState.filteredMaterialRecords; // Use filtered records
         final studiedIds = appState.studiedTranslationIds;
         
         // Prepare dropdown items
@@ -55,7 +55,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                 const Icon(Icons.all_inclusive, size: 16, color: Colors.indigo),
                 const SizedBox(width: 8),
                 Text(
-                  '전체 복습 (All Records)', // Could be localized if needed
+                  l10n.reviewAll, // Could be localized if needed
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
@@ -182,6 +182,28 @@ class _Mode2WidgetState extends State<Mode2Widget> {
               ),
             ),
             
+            const SizedBox(height: 12),
+            
+            // Filter Selector
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: SegmentedButton<String>(
+                segments: [
+                  ButtonSegment<String>(value: 'all', label: Text(l10n.filterAll), icon: const Icon(Icons.list)),
+                  ButtonSegment<String>(value: 'word', label: Text(l10n.labelWord), icon: const Icon(Icons.abc)),
+                  ButtonSegment<String>(value: 'sentence', label: Text(l10n.labelSentence), icon: const Icon(Icons.short_text)),
+                ],
+                selected: {appState.recordTypeFilter},
+                onSelectionChanged: (Set<String> newSelection) {
+                  appState.setRecordTypeFilter(newSelection.first);
+                },
+                 style: ButtonStyle(
+                  visualDensity: VisualDensity.compact,
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                ),
+              ),
+            ),
+
             const SizedBox(height: 16),
             
             // Progress indicator
@@ -219,7 +241,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                     const Icon(Icons.list, size: 20),
                     const SizedBox(width: 8),
                     Text(
-                      '총 ${materialRecords.length}개의 기록 (전체 보기)',
+                      l10n.totalRecords(materialRecords.length),
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
@@ -259,7 +281,12 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                       ),
                     )
                   : ListView.builder(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.only(
+                        left: 16, 
+                        right: 16, 
+                        top: 16, 
+                        bottom: 100, // Add bottom padding for FAB/Ad/Nav Bar
+                      ),
                       itemCount: materialRecords.length,
                       itemBuilder: (context, index) {
                         final record = materialRecords[index];
@@ -367,6 +394,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
     final targetText = record['target_text'] as String;
     final sourceLang = record['source_lang'] as String;
     final targetLang = record['target_lang'] as String;
+    final contextTag = record['context'] as String?; // Retrieve context
     final isStudied = studiedIds.contains(translationId);
     final isExpanded = _expandedCards.contains(translationId);
     
@@ -408,14 +436,34 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                   Expanded(
                     child: Text(
                       sourceText,
-                      style: const TextStyle(
-                        fontSize: 16,
+                      style: TextStyle(
+                        fontSize: (record['type'] == 'word') ? 24 : 16,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
                 ],
               ),
+              
+              // Context Tag Display (New)
+              if (contextTag != null && contextTag.isNotEmpty) ...[
+                const SizedBox(height: 4),
+                Row(
+                  children: [
+                    const SizedBox(width: 44), // Indent to align with text (Badge width + gap)
+                    Icon(Icons.info_outline, size: 12, color: Colors.grey[600]),
+                    const SizedBox(width: 4),
+                    Text(
+                      contextTag,
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey[700],
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
               
               const SizedBox(height: 12),
               
@@ -454,10 +502,10 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                       Expanded(
                         child: Text(
                           targetText,
-                          style: const TextStyle(
-                            fontSize: 16,
+                          style: TextStyle(
+                            fontSize: (record['type'] == 'word') ? 24 : 16,
                             fontWeight: FontWeight.w500,
-                            color: Color(0xFF2c5282),
+                            color: const Color(0xFF2c5282),
                           ),
                         ),
                       ),

@@ -10,12 +10,14 @@ class Mode3Widget extends StatelessWidget {
   final Key? materialDropdownKey;
   final Key? intervalSettingsKey;
   final Key? startStopButtonKey;
+  final Key? wordCheckKey; // Add Key
 
   const Mode3Widget({
     super.key,
     this.materialDropdownKey,
     this.intervalSettingsKey,
     this.startStopButtonKey,
+    this.wordCheckKey, // Add Key
   });
 
   @override
@@ -71,7 +73,26 @@ class Mode3Widget extends StatelessWidget {
                           if (val != null) appState.selectMaterial(val);
                         },
                   ),
-                  const SizedBox(height: 16),
+                  
+                  // Practice Words Only Checkbox
+                  CheckboxListTile(
+                    title: Text(
+                      l10n.practiceWordsOnly, 
+                      l10n.practiceWordsOnly, 
+                      style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                    ),
+                    key: wordCheckKey, // Assign Key
+                    value: appState.isPracticeOnlyWords,
+                    onChanged: appState.mode3SessionActive 
+                        ? null 
+                        : (val) => appState.setPracticeOnlyWords(val ?? false),
+                    controlAffinity: ListTileControlAffinity.leading,
+                    contentPadding: EdgeInsets.zero,
+                    dense: true,
+                    activeColor: Colors.deepPurple,
+                  ),
+                  
+                  const SizedBox(height: 8),
                   
                   // Interval Selector (Button Style Redesign)
                   Row(
@@ -161,7 +182,7 @@ class Mode3Widget extends StatelessWidget {
                                 child: TextButton.icon(
                                   onPressed: () => appState.resetMode3Progress(),
                                   icon: const Icon(Icons.refresh, color: Colors.grey),
-                                  label: const Text('연습 기록 초기화', style: TextStyle(color: Colors.grey)),
+                                  label: Text(l10n.resetPracticeHistory, style: const TextStyle(color: Colors.grey)),
                                 ),
                               ),
                           ],
@@ -178,13 +199,40 @@ class Mode3Widget extends StatelessWidget {
                           const SizedBox(height: 8),
                           Text(
                             currentQuestion['source_text'] as String,
-                            textAlign: TextAlign.center,
                             style: const TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
                               color: Colors.black87,
                             ),
                           ),
+                          
+                          // Context Tag Hint (New)
+                          if (currentQuestion['context'] != null && (currentQuestion['context'] as String).isNotEmpty) ...[
+                            const SizedBox(height: 8),
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                              decoration: BoxDecoration(
+                                color: Colors.grey[200],
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(color: Colors.grey[300]!),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(Icons.info_outline, size: 14, color: Colors.grey[600]),
+                                  const SizedBox(width: 4),
+                                  Text(
+                                    currentQuestion['context'] as String,
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.grey[700],
+                                      fontStyle: FontStyle.italic,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                           
                           const SizedBox(height: 24),
                           
@@ -261,7 +309,7 @@ class Mode3Widget extends StatelessWidget {
                                   ElevatedButton.icon(
                                     onPressed: () => appState.retryMode3Question(),
                                     icon: const Icon(Icons.refresh),
-                                    label: const Text("Retry? (2s)"),
+                                    label: Text(l10n.retry),
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.orange,
                                       foregroundColor: Colors.white,

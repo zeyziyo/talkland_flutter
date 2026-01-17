@@ -120,5 +120,334 @@
   "tutorialLangSettingsTitle": "언어 설정",
   "tutorialLangSettingsDesc": "번역할 원본 언어와 대상 언어를 설정합니다.",
   "copy": "복사",
-  "copiedToClipboard": "클립보드에 복사되었습니다!"
+  "copiedToClipboard": "클립보드에 복사되었습니다!",
+  "tutorialContextTitle": "상황/문맥 태그",
+  "tutorialContextDesc": "같은 문장이라도 상황(예: 아침, 저녁)을 적어두면 별도로 저장할 수 있어요.",
+  "labelType": "종류:",
+  "labelWord": "단어",
+  "labelSentence": "문장",
+  "contextTagLabel": "문맥/상황 (선택사항) - 예: 아침인사, 존댓말",
+  "contextTagHint": "나중에 구분하기 쉽도록 상황을 적어주세요",
+  "translationLimitExceeded": "번역 한도 초과",
+  "translationLimitMessage": "일일 무료 번역(5회)을 모두 사용했습니다.\\n\\n광고를 보고 5회를 즉시 충전하시겠습니까?",
+  "watchAdAndRefill": "광고 보고 충전 (+5회)",
+  "translationRefilled": "번역 횟수가 5회 충전되었습니다!",
+  "adLoading": "광고를 불러오는 중입니다. 잠시 후 다시 시도해주세요.",
+  "reviewAll": "전체 복습",
+  "totalRecords": "총 {count}개의 기록 (전체 보기)",
+  "filterAll": "전체",
+  "practiceWordsOnly": "단어만 연습 (Words Only)",
+  "resetPracticeHistory": "연습 기록 초기화",
+  "retry": "다시 시도?",
+  "noStudyMaterial": "학습 자료가 없습니다.",
+  "rainDropGame": "Rain Drop Game",
+  "rainDropGameDesc": "떨어지는 단어의 번역을 말하세요!",
+  "gameDirection": "게임 방향 (Game Direction)",
+  "speed": "속도",
+  "startGame": "게임 시작",
+  "gameOver": "Game Over",
+  "finalScore": "최종 점수",
+  "playAgain": "다시 하기",
+  "speakNow": "말하세요! (Speak!)",
+  "scoreLabel": "점수",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "@recognized": {
+    "description": "STT complete status"
+  },
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "@importFailed": {
+    "description": "Import error title"
+  },
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "@translating": {
+    "description": "Translation in progress"
+  },
+  "@subject": {
+    "description": "Subject label"
+  },
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "@delete": {
+    "description": "Delete button"
+  },
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@totalRecords": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@importComplete": {
+    "description": "Import success title"
+  },
+  "@source": {
+    "description": "Source label"
+  },
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "@importing": {
+    "description": "Import in progress"
+  },
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "@errors": {
+    "description": "Error section label"
+  },
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  "@saved": {
+    "description": "Data saved status"
+  },
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "@translate": {
+    "description": "Translate button"
+  },
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "@search": {
+    "description": "Search mode label"
+  },
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "@saving": {
+    "description": "Save in progress"
+  },
+  "@file": {
+    "description": "File label"
+  },
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tutorialGameDesc": "단어 게임을 통해 학습한 내용을 확인해보세요! 떨어지는 단어의 의미를 말해서 점수를 얻으세요.",
+  "tutorialM3WordsDesc": "이 옵션을 체크하면 저장된 '단어'만 연습합니다.",
+  "tutorialM1ToggleTitle": "단어/문장 모드",
+  "tutorialGameTitle": "Rain Drop 게임",
+  "tutorialM3WordsTitle": "단어만 연습",
+  "tutorialM1ToggleDesc": "단어와 문장 모드를 여기서 전환할 수 있습니다. 단어는 목록에서 더 크게 표시됩니다."
 }

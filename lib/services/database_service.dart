@@ -23,7 +23,7 @@ class DatabaseService {
     
     return await openDatabase(
       path,
-      version: 4, // Version 4: Rename default material "No" to "Basic"
+      version: 6, // Version 6: Add type column (word/sentence)
       onCreate: (db, version) async {
         await _createBaseTables(db);
         await _ensureDefaultMaterial(db);
@@ -41,6 +41,14 @@ class DatabaseService {
           // Migrate to v4: Rename default material "No" to "Basic"
           await _migrateToV4(db);
         }
+        if (oldVersion < 5) {
+          // Migrate to v5: Add context column
+          await _migrateToV5(db);
+        }
+        if (oldVersion < 6) {
+          // Migrate to v6: Add type column (word/sentence)
+          await _migrateToV6(db);
+        }
       },
     );
   }
@@ -56,7 +64,10 @@ class DatabaseService {
         target_lang TEXT NOT NULL,
         target_id INTEGER NOT NULL,
         created_at TEXT NOT NULL,
-        material_id INTEGER
+        material_id INTEGER,
+        context TEXT,
+        type TEXT DEFAULT 'sentence'
+      )
       )
     ''');
     
@@ -195,6 +206,35 @@ class DatabaseService {
       print('[DB] Migration to v4 completed successfully');
     } catch (e) {
       print('[DB] Migration to v4 error: $e');
+    }
+  }
+
+  /// V4에서 V5로 마이그레이션
+  static Future<void> _migrateToV5(Database db) async {
+    try {
+      print('[DB] Starting migration to v5...');
+      
+      // translations 테이블에 context 컬럼 추가
+      await db.execute('ALTER TABLE translations ADD COLUMN context TEXT');
+      
+      print('[DB] Migration to v5 completed successfully');
+    } catch (e) {
+      print('[DB] Migration to v5 error: $e');
+      // If column exists, ignore
+    }
+  }
+
+  /// V6 마이그레이션: type 컬럼 추가
+  static Future<void> _migrateToV6(Database db) async {
+    try {
+      print('[DB] Starting migration to v6...');
+      
+      // translations 테이블에 type 컬럼 추가 (기본값: sentence)
+      await db.execute("ALTER TABLE translations ADD COLUMN type TEXT DEFAULT 'sentence'");
+      
+      print('[DB] Migration to v6 completed successfully');
+    } catch (e) {
+      print('[DB] Migration to v6 error: $e');
     }
   }
 
@@ -369,23 +409,37 @@ class DatabaseService {
   }
   
   /// 번역이 이미 존재하는지 확인
+  /// context가 주어진 경우 해당 context와 정확히 일치하는지 확인
   static Future<Map<String, dynamic>?> getTranslationIfExists(
     String sourceLang,
     int sourceId,
-    String targetLang,
-  ) async {
+    String targetLang, {
+    String? context,
+  }) async {
     final db = await database;
+    
+    // Build query to match context exactly (or both null)
+    String whereClause;
+    List<dynamic> whereArgs;
+    
+    if (context == null || context.isEmpty) {
+      // If filtering by "no context", strictly find records with NULL or EMPTY context
+      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND (context IS NULL OR context = "")';
+      whereArgs = [sourceLang, sourceId, targetLang];
+    } else {
+      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND context = ?';
+      whereArgs = [sourceLang, sourceId, targetLang, context];
+    }
     
     // translations 테이블에서 관계 찾기
     final translations = await db.query(
       'translations',
-      where: 'source_lang = ? AND source_id = ? AND target_lang = ?',
-      whereArgs: [sourceLang, sourceId, targetLang],
+      where: whereClause,
+      whereArgs: whereArgs,
       limit: 1,
     );
     
     if (translations.isEmpty) {
-      print('[DB] No existing translation found');
       return null;
     }
     
@@ -405,34 +459,57 @@ class DatabaseService {
       return null;
     }
     
-    print('[DB] Found existing translation: $sourceLang($sourceId) -> $targetLang($targetId)');
+    print('[DB] Found existing translation: $sourceLang($sourceId) -> $targetLang($targetId) [Context: ${translation['context']}]');
     return {
       'target_id': targetId,
       'target_text': targetRecords.first['text'] as String,
       'audio_file': targetRecords.first['audio_file'],
+      'context': translation['context'],
     };
   }
   
   /// 번역 관계 저장 (중복 시 무시)
+  /// context가 다르면 다른 레코드로 취급
   static Future<void> saveTranslationLink({
     required String sourceLang,
     required int sourceId,
     required String targetLang,
     required int targetId,
     required int materialId,
+    String? context,
+    String type = 'sentence', // Added type
   }) async {
     final db = await database;
     
     // 중복 검사: 동일한 번역 관계가 이미 존재하는지 확인
+    // Context가 null인 경우와 있는 경우를 구분해서 처리
+    String whereClause;
+    List<dynamic> whereArgs;
+
+    if (context == null) {
+      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND context IS NULL';
+      whereArgs = [sourceLang, sourceId, targetLang, targetId];
+    } else {
+      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND context = ?';
+      whereArgs = [sourceLang, sourceId, targetLang, targetId, context];
+    }
+    
+    // Type check?? For now let's append type to query if we want strict separation
+    // But existing check logic was mainly about ID links.
+    // If I save the same sentence as "Word", it should probably be a separate entry or just update?
+    // Let's stick to: if identical link exists, we skip.
+    // Maybe we should update type if it differs?
+    // For simplicity in this batch: insert if not exists.
+    
     final existing = await db.query(
       'translations',
-      where: 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ?',
-      whereArgs: [sourceLang, sourceId, targetLang, targetId],
+      where: whereClause,
+      whereArgs: whereArgs,
       limit: 1,
     );
     
     if (existing.isNotEmpty) {
-      print('[DB] Translation link already exists: $sourceLang($sourceId) -> $targetLang($targetId)');
+      print('[DB] Translation link already exists: $sourceLang($sourceId) -> $targetLang($targetId) [Context: $context]');
       return;
     }
     
@@ -444,9 +521,11 @@ class DatabaseService {
       'target_id': targetId,
       'created_at': DateTime.now().toIso8601String(),
       'material_id': materialId,
+      'context': context,
+      'type': type,
     });
     
-    print('[DB] Translation link saved: $sourceLang($sourceId) -> $targetLang($targetId) [Material: $materialId]');
+    print('[DB] Translation link saved: $sourceLang($sourceId) -> $targetLang($targetId) [Material: $materialId] [Type: $type]');
   }
   
   // ==========================================
@@ -549,6 +628,8 @@ class DatabaseService {
           'created_at': translation['created_at'],
           'review_count': targetRecords.first['review_count'] ?? 0,
           'last_reviewed': targetRecords.first['last_reviewed'],
+          'context': translation['context'],
+          'type': translation['type'] ?? 'sentence',
         });
       }
     }
@@ -605,6 +686,8 @@ class DatabaseService {
           'date': translation['created_at'],
           'review_count': targetRecords.first['review_count'] ?? 0,
           'last_reviewed': targetRecords.first['last_reviewed'],
+          'context': translation['context'],
+          'type': translation['type'] ?? 'sentence',
         });
       }
     }
@@ -801,6 +884,7 @@ class DatabaseService {
       final data = json.decode(jsonContent) as Map<String, dynamic>;
       final sourceLang = data['source_language'] as String;
       final targetLang = data['target_language'] as String;
+      final defaultType = data['default_type'] as String? ?? 'sentence';
       final entries = data['entries'] as List;
       
       int importedCount = 0;
@@ -824,13 +908,15 @@ class DatabaseService {
           // 2. Insert to target language table
           final targetId = await insertLanguageRecord(targetLang, targetText);
           
-          // 3. Create translation link
+            // 3. Create translation link
           await saveTranslationLink(
             sourceLang: sourceLang,
             sourceId: sourceId,
             targetLang: targetLang,
             targetId: targetId,
             materialId: 0, // Default to 0 for generic imports if no specific material
+            context: entry['context'] as String?, // Import context
+            type: entry['type'] as String? ?? defaultType, // Use entry type or default type
           );
           
           importedCount++;
@@ -925,6 +1011,7 @@ class DatabaseService {
       final subject = data['subject'] as String? ?? 'Unknown';
       final source = data['source'] as String? ?? 'Unknown';
       final fileCreatedAt = data['created_at'] as String? ?? DateTime.now().toIso8601String();
+      final defaultType = data['default_type'] as String? ?? 'sentence';
       final entries = data['entries'] as List;
       
       // 1. Create study material metadata
@@ -965,6 +1052,8 @@ class DatabaseService {
             targetLang: targetLang,
             targetId: targetId,
             materialId: materialId,
+            context: entry['context'] as String?, // Import context
+            type: entry['type'] as String? ?? defaultType, // Use entry type or default type
           );
           
           importedCount++;
@@ -996,21 +1085,36 @@ class DatabaseService {
     }
   }
   
-  /// Save translation link with material_id
   static Future<void> saveTranslationLinkWithMaterial({
     required String sourceLang,
     required int sourceId,
     required String targetLang,
     required int targetId,
     required int materialId,
+    String? context, // Added context param
+    String type = 'sentence', // Added type
   }) async {
     final db = await database;
     
     // 중복 검사: 동일한 번역 관계가 이미 존재하는지 확인
+    // Context aware check needed? Assuming imports might duplicate simple text relations
+    // For now, check strict duplication including context if provided, or ignore context for loose check?
+    // Let's stick to strict check: if context differs, it's a NEW link.
+    
+    String whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND material_id = ?';
+    List<dynamic> whereArgs = [sourceLang, sourceId, targetLang, targetId, materialId];
+    
+    if (context != null) {
+      whereClause += ' AND context = ?';
+      whereArgs.add(context);
+    } else {
+       whereClause += ' AND (context IS NULL OR context = "")';
+    }
+
     final existing = await db.query(
       'translations',
-      where: 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ?',
-      whereArgs: [sourceLang, sourceId, targetLang, targetId],
+      where: whereClause,
+      whereArgs: whereArgs,
       limit: 1,
     );
     
@@ -1026,10 +1130,12 @@ class DatabaseService {
       'target_lang': targetLang,
       'target_id': targetId,
       'material_id': materialId,
+      'context': context, // Save context
+      'type': type,
       'created_at': DateTime.now().toIso8601String(),
     });
     
-    print('[DB] Translation link with material saved: $sourceLang($sourceId) -> $targetLang($targetId), material_id=$materialId');
+    print('[DB] Translation link with material saved: $sourceLang($sourceId) -> $targetLang($targetId), material_id=$materialId [Type: $type]');
   }
   
   /// Get all study materials
@@ -1133,6 +1239,8 @@ class DatabaseService {
           'target_audio': targetRecords.first['audio_file'],
           'material_id': materialId,
           'created_at': translation['created_at'],
+          'context': translation['context'],
+          'type': translation['type'] ?? 'sentence',
         });
       }
     }

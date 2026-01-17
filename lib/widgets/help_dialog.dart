@@ -223,18 +223,21 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
   Widget _buildJsonGuide(AppLocalizations l10n) {
     const jsonExample = '''
 {
-  "subject": "Basic Greetings",
+  "subject": "Basic Vocabulary",
   "source": "Textbook Vol.1",
   "source_language": "ko",
   "target_language": "en",
+  "default_type": "word",
   "entries": [
     {
-      "source_text": "안녕하세요",
-      "target_text": "Hello"
+      "source_text": "사과",
+      "target_text": "Apple",
+      "context": "Fruit"
     },
     {
-      "source_text": "감사합니다",
-      "target_text": "Thank you"
+      "source_text": "안녕하세요",
+      "target_text": "Hello",
+      "type": "sentence"
     }
   ]
 }''';

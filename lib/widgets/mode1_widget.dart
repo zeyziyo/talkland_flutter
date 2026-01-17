@@ -11,11 +11,16 @@ class Mode1Widget extends StatefulWidget {
   final Key? translateButtonKey;
   final Key? saveButtonKey;
 
+  final Key? contextFieldKey; // Add key for tutorial
+  final Key? toggleButtonKey; // Add key for tutorial
+
   const Mode1Widget({
     super.key,
     this.micButtonKey,
     this.translateButtonKey,
     this.saveButtonKey,
+    this.contextFieldKey,
+    this.toggleButtonKey, // Add Toggle Key
   });
 
   @override
@@ -26,6 +31,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
   // Persistent controllers to preserve Korean IME composition state
   late TextEditingController _sourceTextController;
   late TextEditingController _translatedTextController;
+  late TextEditingController _contextController;
 
   // Rewarded Ad
   RewardedAd? _rewardedAd;
@@ -38,6 +44,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
     // Initialize controllers with empty text
     _sourceTextController = TextEditingController();
     _translatedTextController = TextEditingController();
+    _contextController = TextEditingController();
   }
 
   void _loadRewardedAd() {
@@ -62,6 +69,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
     // Clean up controllers and ads
     _sourceTextController.dispose();
     _translatedTextController.dispose();
+    _contextController.dispose();
     _rewardedAd?.dispose();
     super.dispose();
   }
@@ -93,6 +101,13 @@ class _Mode1WidgetState extends State<Mode1Widget> {
           _translatedTextController.text = appState.translatedText;
           _translatedTextController.selection = TextSelection.collapsed(
             offset: appState.translatedText.length,
+          );
+        }
+        
+        if (_contextController.text != appState.contextTag) {
+          _contextController.text = appState.contextTag;
+          _contextController.selection = TextSelection.collapsed(
+            offset: appState.contextTag.length
           );
         }
         return Column(
@@ -184,6 +199,54 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                     border: const OutlineInputBorder(),
                                   ),
                                   maxLines: 3,
+                                ),
+                                const SizedBox(height: 12),
+                                // Word/Sentence Toggle
+                                Row(
+                                  children: [
+                                    Text(l10n.labelType, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[700])),
+                                    const SizedBox(width: 12),
+                                    Expanded(
+                                      child: SegmentedButton<bool>(
+                                        key: widget.toggleButtonKey, // Assign Toggle Key
+                                        segments: [
+                                          ButtonSegment<bool>(
+                                            value: true, 
+                                            label: Text(l10n.labelWord), 
+                                            icon: const Icon(Icons.abc),
+                                          ),
+                                          ButtonSegment<bool>(
+                                            value: false, 
+                                            label: Text(l10n.labelSentence), 
+                                            icon: const Icon(Icons.short_text),
+                                          ),
+                                        ],
+                                        selected: {appState.isWordMode},
+                                        onSelectionChanged: (Set<bool> newSelection) {
+                                          appState.setWordMode(newSelection.first);
+                                        },
+                                        style: ButtonStyle(
+                                          visualDensity: VisualDensity.compact,
+                                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 12),
+                                TextField(
+                                  key: widget.contextFieldKey, // Assign key
+                                  controller: _contextController,
+                                  onChanged: (value) {
+                                    appState.setContextTag(value);
+                                  },
+                                  decoration: InputDecoration(
+                                    labelText: l10n.contextTagLabel,
+                                    hintText: l10n.contextTagHint,
+                                    border: const OutlineInputBorder(),
+                                    isDense: true,
+                                    prefixIcon: const Icon(Icons.tag, size: 20),
+                                  ),
                                 ),
                               ],
                             ),
@@ -425,19 +488,18 @@ class _Mode1WidgetState extends State<Mode1Widget> {
       context: context,
       barrierDismissible: false,
       builder: (context) => AlertDialog(
-        title: const Text('번역 한도 초과'),
-        content: const Text(
-          '일일 무료 번역(5회)을 모두 사용했습니다.\n\n'
-          '광고를 보고 5회를 즉시 충전하시겠습니까?',
+        title: Text(AppLocalizations.of(context)!.translationLimitExceeded),
+        content: Text(
+          AppLocalizations.of(context)!.translationLimitMessage,
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('취소'),
+            child: Text(AppLocalizations.of(context)!.cancel),
           ),
           ElevatedButton.icon(
             icon: const Icon(Icons.play_arrow),
-            label: const Text('광고 보고 충전 (+5회)'),
+            label: Text(AppLocalizations.of(context)!.watchAdAndRefill),
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blueAccent,
               foregroundColor: Colors.white,
@@ -453,7 +515,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                     await appState.refill(5);
                     if (context.mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('번역 횟수가 5회 충전되었습니다!')),
+                        SnackBar(content: Text(AppLocalizations.of(context)!.translationRefilled)),
                       );
                     }
                     // Load next ad
@@ -463,7 +525,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
               } else {
                 // Ad not ready
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('광고를 불러오는 중입니다. 잠시 후 다시 시도해주세요.')),
+                  SnackBar(content: Text(AppLocalizations.of(context)!.adLoading)),
                 );
                 _loadRewardedAd(); // Retry load
               }

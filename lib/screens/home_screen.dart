@@ -6,6 +6,7 @@ import '../providers/app_state.dart';
 import '../widgets/mode1_widget.dart';
 import '../widgets/mode2_widget.dart';
 import '../widgets/mode3_widget.dart';
+import '../widgets/mode4_widget.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 import '../widgets/help_dialog.dart';
 
@@ -21,6 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _micButtonKey = GlobalKey();
   final GlobalKey _translateButtonKey = GlobalKey();
   final GlobalKey _saveButtonKey = GlobalKey();
+  final GlobalKey _saveButtonKey = GlobalKey();
+  final GlobalKey _contextFieldKey = GlobalKey();
+  final GlobalKey _mode1ToggleKey = GlobalKey(); // Mode 1 Toggle Key
 
   // Mode 2 Keys
   final GlobalKey _mode2DropdownKey = GlobalKey();
@@ -29,7 +33,9 @@ class _HomeScreenState extends State<HomeScreen> {
   // Mode 3 Keys
   final GlobalKey _mode3DropdownKey = GlobalKey();
   final GlobalKey _mode3IntervalKey = GlobalKey();
+  final GlobalKey _mode3IntervalKey = GlobalKey();
   final GlobalKey _mode3StartButtonKey = GlobalKey();
+  final GlobalKey _mode3WordCheckKey = GlobalKey(); // Mode 3 Checkbox Key
   
   // Tutorial Keys - Fixed
   final GlobalKey _tabKey = GlobalKey();
@@ -129,6 +135,18 @@ class _HomeScreenState extends State<HomeScreen> {
         ContentAlign.top,
         radius: 12,
       ));
+      
+      // Context Field Tutorial
+      targets.add(_buildTarget(
+        _contextFieldKey,
+        l10n.tutorialContextTitle, 
+        l10n.tutorialContextDesc,
+        ContentAlign.top,
+        radius: 12,
+        keepWidgetSize: true, // Show full text field
+        shape: ShapeLightFocus.RRect,
+      ));
+
       targets.add(_buildTarget(
         _saveButtonKey, 
         l10n.tutorialSaveTitle, 
@@ -180,6 +198,14 @@ class _HomeScreenState extends State<HomeScreen> {
         ContentAlign.bottom,
         radius: 12,
       ));
+      // Practice Words Only Checkbox
+      targets.add(_buildTarget(
+        _mode3WordCheckKey,
+        l10n.tutorialM3WordsTitle,
+        l10n.tutorialM3WordsDesc,
+        ContentAlign.bottom,
+      ));
+      targets.add(_buildTarget(
       targets.add(_buildTarget(
         _mode3IntervalKey, 
         l10n.tutorialM3IntervalTitle, 
@@ -193,6 +219,32 @@ class _HomeScreenState extends State<HomeScreen> {
         l10n.tutorialM3StartDesc,
         ContentAlign.top,
         radius: 12,
+      ));
+        ContentAlign.top,
+        radius: 12,
+      ));
+    } else if (modeIndex == 3) {
+      // Mode 4: Game (Just show one target on the tab to explain it?)
+      // Or maybe explain the start button?
+      // Since Mode 4 is simple, let's just point to the Game Tab initially or Explain the concept.
+      // But we are ALREADY in the mode. 
+      // Let's assume we are inside the mode view.
+      // There is no specific key passed to Mode4Widget yet. 
+      // For now, let's just show a general welcome to the game mode using the Tab key as anchor?
+      // Or better, let's skip adding specific internal targets for Mode 4 for now and just rely on the Help Dialog,
+      // UNLESS we want to add keys to Mode4Widget.
+      // User asked for "comprehensive", so let's add a target for the "Start Game" button or Title if possible.
+      // However, Mode4Widget is stateless/simple.
+      // Let's stick to the Tab explanation or add a known key if possible.
+      // Actually, let's reuse the Tab Key to say "This is the game mode".
+      targets.add(_buildTarget(
+        _tabKey,
+        l10n.tutorialGameTitle,
+        l10n.tutorialGameDesc,
+        ContentAlign.top,
+        shape: ShapeLightFocus.RRect,
+        keepWidgetSize: true, // Highlight the whole tab bar? No just the tab.
+        // Actually _tabKey is on the Container of SegmentedButton.
       ));
     }
 
@@ -389,6 +441,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         icon: const Icon(Icons.record_voice_over),
                         tooltip: l10n.tooltipSpeaking,
                       ),
+                      ButtonSegment<int>(
+                        value: 3,
+                        icon: const Icon(Icons.videogame_asset),
+                        tooltip: l10n.rainDropGame,
+                      ),
                     ],
                   selected: {appState.currentMode},
                   onSelectionChanged: (Set<int> newSelection) {
@@ -418,23 +475,27 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Consumer<AppState>(
               builder: (context, appState, child) {
                 if (appState.currentMode == 0) {
-                  return Mode1Widget(
                     micButtonKey: _micButtonKey,
                     translateButtonKey: _translateButtonKey,
                     saveButtonKey: _saveButtonKey,
+                    contextFieldKey: _contextFieldKey,
+                    toggleButtonKey: _mode1ToggleKey, // Pass Toggle Key
                   );
                 } else if (appState.currentMode == 1) {
                   return Mode2Widget(
                     materialDropdownKey: _mode2DropdownKey,
                     tutorialListKey: _mode2ListKey,
                   ); 
-                } else {
                   return Mode3Widget(
                     materialDropdownKey: _mode3DropdownKey,
                     intervalSettingsKey: _mode3IntervalKey,
                     startStopButtonKey: _mode3StartButtonKey,
+                    wordCheckKey: _mode3WordCheckKey, // Pass Checkbox Key
                   ); 
+                } else if (appState.currentMode == 3) {
+                  return const Mode4Widget();
                 }
+                return const SizedBox.shrink();
               },
             ),
           ),

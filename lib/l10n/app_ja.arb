@@ -407,5 +407,47 @@
   "copy": "コピー",
   "copiedToClipboard": "クリップボードにコピーしました！",
   "tutorialLangSettingsTitle": "言語設定",
-  "tutorialLangSettingsDesc": "翻訳元の言語と翻訳先の言語を設定します。"
+  "tutorialLangSettingsDesc": "翻訳元の言語と翻訳先の言語を設定します。",
+  "tutorialContextTitle": "文脈タグ",
+  "tutorialContextDesc": "同じ文章でも状況（例：朝、夜）を追加して区別できます。",
+  "gameDirection": "Game Direction",
+  "watchAdAndRefill": "Watch Ad & Refill (+5)",
+  "rainDropGameDesc": "Speak the translation of the falling word!",
+  "noStudyMaterial": "No study material found.",
+  "finalScore": "Final Score",
+  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
+  "contextTagHint": "Describe situation for easier classification later",
+  "labelWord": "Word",
+  "@totalRecords": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "labelType": "Type:",
+  "reviewAll": "Review All",
+  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
+  "playAgain": "Play Again",
+  "filterAll": "All",
+  "startGame": "Start Game",
+  "translationLimitExceeded": "Translation Limit Exceeded",
+  "practiceWordsOnly": "Practice Words Only",
+  "labelSentence": "Sentence",
+  "scoreLabel": "Score",
+  "gameOver": "Game Over",
+  "speed": "Speed",
+  "totalRecords": "Total {count} records (View All)",
+  "resetPracticeHistory": "Reset Practice History",
+  "retry": "Retry?",
+  "translationRefilled": "Translations refilled by 5!",
+  "rainDropGame": "Rain Drop Game",
+  "speakNow": "Speak now!",
+  "adLoading": "Loading ad, please try again in a moment.",
+  "tutorialGameDesc": "Play a game to practice your vocabulary! Catch falling words by speaking their translation.",
+  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
+  "tutorialM1ToggleTitle": "Word/Sentence Mode",
+  "tutorialGameTitle": "Rain Drop Game",
+  "tutorialM3WordsTitle": "Practice Words",
+  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text."
 }
