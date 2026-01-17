@@ -318,7 +318,7 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
               foregroundColor: Colors.white,
             ),
           ),
-          ),
+
           const SizedBox(height: 16),
           TextButton.icon(
             onPressed: _launchUrl,
