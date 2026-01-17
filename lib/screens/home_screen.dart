@@ -22,7 +22,6 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _micButtonKey = GlobalKey();
   final GlobalKey _translateButtonKey = GlobalKey();
   final GlobalKey _saveButtonKey = GlobalKey();
-  final GlobalKey _saveButtonKey = GlobalKey();
   final GlobalKey _contextFieldKey = GlobalKey();
   final GlobalKey _mode1ToggleKey = GlobalKey(); // Mode 1 Toggle Key
 
@@ -32,7 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // Mode 3 Keys
   final GlobalKey _mode3DropdownKey = GlobalKey();
-  final GlobalKey _mode3IntervalKey = GlobalKey();
   final GlobalKey _mode3IntervalKey = GlobalKey();
   final GlobalKey _mode3StartButtonKey = GlobalKey();
   final GlobalKey _mode3WordCheckKey = GlobalKey(); // Mode 3 Checkbox Key
@@ -475,6 +473,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Consumer<AppState>(
               builder: (context, appState, child) {
                 if (appState.currentMode == 0) {
+                  return Mode1Widget(
                     micButtonKey: _micButtonKey,
                     translateButtonKey: _translateButtonKey,
                     saveButtonKey: _saveButtonKey,
@@ -486,6 +485,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     materialDropdownKey: _mode2DropdownKey,
                     tutorialListKey: _mode2ListKey,
                   ); 
+                } else if (appState.currentMode == 2) {
                   return Mode3Widget(
                     materialDropdownKey: _mode3DropdownKey,
                     intervalSettingsKey: _mode3IntervalKey,

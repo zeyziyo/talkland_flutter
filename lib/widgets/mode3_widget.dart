@@ -78,7 +78,6 @@ class Mode3Widget extends StatelessWidget {
                   CheckboxListTile(
                     title: Text(
                       l10n.practiceWordsOnly, 
-                      l10n.practiceWordsOnly, 
                       style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                     ),
                     key: wordCheckKey, // Assign Key
