@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,8 +31,16 @@
             text-align: center;
         }
 
-        h1 { margin: 0; font-size: 2.5rem; }
-        .subtitle { font-size: 1.2rem; opacity: 0.9; margin-top: 0.5rem; }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
 
         .container {
             max-width: 900px;
@@ -44,11 +53,19 @@
             border-radius: 16px;
             padding: 2rem;
             margin-bottom: 3rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
-        h2 { color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
-        h3 { color: #333; margin-top: 1.5rem; }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #333;
+            margin-top: 1.5rem;
+        }
 
         /* Animation Containers */
         .demo-box {
@@ -71,9 +88,10 @@
             background: white;
             padding: 1rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             width: 80%;
         }
+
         .typewriter {
             overflow: hidden;
             border-right: 3px solid var(--primary-color);
@@ -81,15 +99,35 @@
             margin: 0;
             animation: typing 3.5s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
         }
+
         @keyframes typing {
-            0% { width: 0 }
-            50% { width: 100% }
-            90% { width: 100% }
-            100% { width: 0 }
+            0% {
+                width: 0
+            }
+
+            50% {
+                width: 100%
+            }
+
+            90% {
+                width: 100%
+            }
+
+            100% {
+                width: 0
+            }
         }
+
         @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: var(--primary-color); }
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: var(--primary-color);
+            }
         }
 
         /* Mode 3: Pulse Animation */
@@ -100,14 +138,31 @@
             padding: 1rem;
             animation: pulse-ring 2s infinite;
         }
+
         @keyframes pulse-ring {
-            0% { box-shadow: 0 0 0 0 rgba(98, 0, 238, 0.7); transform: scale(1); }
-            70% { box-shadow: 0 0 0 20px rgba(98, 0, 238, 0); transform: scale(1.1); }
-            100% { box-shadow: 0 0 0 0 rgba(98, 0, 238, 0); transform: scale(1); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(98, 0, 238, 0.7);
+                transform: scale(1);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(98, 0, 238, 0);
+                transform: scale(1.1);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(98, 0, 238, 0);
+                transform: scale(1);
+            }
         }
 
         /* Mode 4: Falling Words */
-        .game-area { width: 100%; height: 100%; position: relative; }
+        .game-area {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
         .falling-word {
             position: absolute;
             top: -20px;
@@ -120,11 +175,28 @@
             font-weight: bold;
             animation: fall 3s infinite linear;
         }
+
         @keyframes fall {
-            0% { top: -20px; opacity: 1; }
-            80% { opacity: 1; }
-            90% { top: 160px; opacity: 0; transform: translateX(-50%) scale(1.2); } /* Catch effect */
-            100% { top: 160px; opacity: 0; }
+            0% {
+                top: -20px;
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            90% {
+                top: 160px;
+                opacity: 0;
+                transform: translateX(-50%) scale(1.2);
+            }
+
+            /* Catch effect */
+            100% {
+                top: 160px;
+                opacity: 0;
+            }
         }
 
         /* Code Block Styling */
@@ -136,6 +208,7 @@
             overflow-x: auto;
             font-size: 0.9rem;
         }
+
         .copy-btn {
             display: inline-block;
             background: var(--primary-color);
@@ -155,7 +228,10 @@
             text-decoration: none;
             font-weight: bold;
         }
-        .back-btn:hover { text-decoration: underline; }
+
+        .back-btn:hover {
+            text-decoration: underline;
+        }
 
         footer {
             text-align: center;
@@ -166,23 +242,25 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
-        <h1>Talkie User Guide</h1>
+        <h1><span translate="no">Talkie</span> User Guide</h1>
         <p class="subtitle">Mastering the App & Importing Custom Materials</p>
     </header>
 
     <div class="container">
-        
+
         <a href="index.html" class="back-btn">&larr; Back to Home</a>
 
         <!-- Feature Guide -->
         <section class="guide-section">
             <h2>App Features</h2>
-            
+
             <h3>1. Translation & Saving (Mode 1)</h3>
-            <p>Type any sentence or word in your native language. Talkie translates it instantly. Toggle between "Word" and "Sentence" mode to categorize your learning.</p>
+            <p>Type any sentence or word in your native language. Talkie translates it instantly. Toggle between "Word"
+                and "Sentence" mode to categorize your learning.</p>
             <div class="demo-box">
                 <div class="typing-container">
                     <div class="typewriter">Hello -> 안녕하세요</div>
@@ -207,10 +285,12 @@
         <!-- Advanced: Importing Materials -->
         <section class="guide-section" id="import-guide">
             <h2>Advanced: Create Your Own Study Materials</h2>
-            <p>You can import your own list of words and sentences using a <strong>JSON file</strong>. This is perfect for studying specific topics like "Travel", "Business", or "TOEIC".</p>
+            <p>You can import your own list of words and sentences using a <strong>JSON file</strong>. This is perfect
+                for studying specific topics like "Travel", "Business", or "TOEIC".</p>
 
             <h3>1. JSON File Format</h3>
-            <p>Create a text file with the extension <code>.json</code> (e.g., <code>travel_words.json</code>). Copy the format below:</p>
+            <p>Create a text file with the extension <code>.json</code> (e.g., <code>travel_words.json</code>). Copy the
+                format below:</p>
             <pre><code>{
   "title": "Essential Travel Phrases",
   "default_type": "sentence",
@@ -236,12 +316,13 @@
 
             <h3>2. Generate with AI (ChatGPT / Copilot)</h3>
             <p>Don't want to type it manually? Ask AI to do it for you! Copy and paste this prompt:</p>
-            <div style="background: #e8eaed; padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+            <div
+                style="background: #e8eaed; padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary-color);">
                 <p style="margin: 0; font-family: sans-serif; font-style: italic;">
-                    "Please create a JSON file for a language learning app. 
+                    "Please create a JSON file for a language learning app.
                     The topic is <strong>[Your Topic, e.g., Business English]</strong>.
-                    It should have a 'title', a 'default_type' of 'sentence', and a list of 'translations'. 
-                    Each item needs 'source' (English), 'target' (Korean), and a 'context' tag. 
+                    It should have a 'title', a 'default_type' of 'sentence', and a list of 'translations'.
+                    Each item needs 'source' (English), 'target' (Korean), and a 'context' tag.
                     Please include 10 useful phrases."
                 </p>
             </div>
@@ -249,9 +330,12 @@
             <h3>3. How to Import to App</h3>
             <p>Once you have your <code>.json</code> file:</p>
             <ol>
-                <li><strong>Email to Self</strong>: Send the file to your own email address. Open the email on your phone and download the file.</li>
-                <li><strong>USB Transfer</strong>: Connect your phone to your PC via USB and copy the file to your "Downloads" folder.</li>
-                <li><strong>In App</strong>: Go to <strong>Mode 2 (Review)</strong>, tap the <strong>Import Icon (⬇️)</strong>, and select your file.</li>
+                <li><strong>Email to Self</strong>: Send the file to your own email address. Open the email on your
+                    phone and download the file.</li>
+                <li><strong>USB Transfer</strong>: Connect your phone to your PC via USB and copy the file to your
+                    "Downloads" folder.</li>
+                <li><strong>In App</strong>: Go to <strong>Mode 2 (Review)</strong>, tap the <strong>Import Icon
+                        (⬇️)</strong>, and select your file.</li>
             </ol>
         </section>
 
@@ -262,4 +346,5 @@
     </footer>
 
 </body>
+
 </html>

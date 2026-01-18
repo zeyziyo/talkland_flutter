@@ -449,5 +449,6 @@
   "tutorialM1ToggleTitle": "Word/Sentence Mode",
   "tutorialGameTitle": "Rain Drop Game",
   "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text."
+  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
+  "viewOnlineGuide": "View Online User Guide"
 }

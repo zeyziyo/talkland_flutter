@@ -8,11 +8,13 @@ import '../l10n/app_localizations.dart';
 class Mode4Widget extends StatefulWidget {
   final Key? gameStartButtonKey;
   final Key? gameSpeedKey;
+  final Key? gameDirectionKey;
 
   const Mode4Widget({
     super.key,
     this.gameStartButtonKey,
     this.gameSpeedKey,
+    this.gameDirectionKey,
   });
 
   @override
@@ -339,6 +341,7 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
                   children: [
                     // Direction
                     SwitchListTile(
+                        key: widget.gameDirectionKey,
                         title: Text(_nativeToForeign 
                           ? '${appState.languageNames[appState.sourceLang]} → ${appState.languageNames[appState.targetLang]}'
                           : '${appState.languageNames[appState.targetLang]} → ${appState.languageNames[appState.sourceLang]}'

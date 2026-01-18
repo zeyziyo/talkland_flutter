@@ -37,6 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
   // Mode 4 Tutorial Keys
   final GlobalKey _mode4SpeedKey = GlobalKey();
   final GlobalKey _mode4StartKey = GlobalKey();
+  final GlobalKey _mode4DirectionKey = GlobalKey();
 
   final GlobalKey _mode3WordCheckKey = GlobalKey(); // Mode 3 Checkbox Key
   
@@ -241,6 +242,12 @@ class _HomeScreenState extends State<HomeScreen> {
         _tabKey,
         l10n.tutorialGameTitle,
         l10n.tutorialGameDesc,
+        ContentAlign.bottom,
+      ));
+      targets.add(_buildTarget(
+        _mode4DirectionKey,
+        l10n.gameDirection,
+        l10n.tutorialGameDesc, // Or specific desc "Change learning direction"
         ContentAlign.bottom,
       ));
       targets.add(_buildTarget(
@@ -509,6 +516,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   return Mode4Widget(
                     gameStartButtonKey: _mode4StartKey,
                     gameSpeedKey: _mode4SpeedKey,
+                    gameDirectionKey: _mode4DirectionKey,
                   );
                 }
                 return const SizedBox.shrink();
