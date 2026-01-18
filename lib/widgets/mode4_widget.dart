@@ -54,6 +54,8 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
   // Settings
   bool _nativeToForeign = true; // Source -> Target (Speak Target)
   double _gameSpeed = 1.0; // Multiplier
+  int _repeatCount = 1; // How many times to repeat the list
+  int _spawnsRemaining = 0; // Total words left to spawn
   
   // Entities
   List<FallingWord> _fallingWords = [];
@@ -91,6 +93,8 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
       _level = 1;
       _fallingWords.clear();
       _timeSinceLastSpawn = 0;
+      // Calculate total spawns
+      _spawnsRemaining = appState.filteredMaterialRecords.length * _repeatCount;
     });
 
     // Start STT
@@ -114,17 +118,21 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
       appState.stopListening();
     }
 
-    setState(() {
-      _isPlaying = false;
-    });
+    if (mounted) {
+      setState(() {
+        _isPlaying = false;
+      });
+    }
   }
 
   void _gameOver() {
     _stopGame();
-    setState(() {
-      _isGameOver = true;
-      _isPlaying = false; // Show Game Over Screen
-    });
+    if (mounted) {
+      setState(() {
+        _isGameOver = true;
+        _isPlaying = false; // Show Game Over Screen
+      });
+    }
   }
 
   void _startContinuousSTT(AppState appState) async {
@@ -145,61 +153,16 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
   Future<void> _listenLoop(AppState appState, String langCode) async {
     if (!_isPlaying) return;
 
-    // Use a custom start listening method or modified one?
-    // We can't easily modify AppState to support "Game Mode" continuous listening without changing it.
-    // But we can just call startListening repeatedly.
-    
-    // However, AppState uses `_speechService`.
-    // Let's use `appState.startListening` but we need to intercept results.
-    // AppState updates `sourceText` (or adds answer logic?).
-    // Actually, AppState.startListening updates `_sourceText`. 
-    // BUT, Mode 4 logic needs to check this text.
-    
-    // IMPORTANT: AppState's startListening is designed for Mode 1 (sets _sourceText).
-    // Mode 3 has its own `_startMode3Listening`.
-    // We should implement `_startMode4Listening` in AppState OR
-    // expose `SpeechService` or just use `appState` generic listening and monitor `sourceText`?
-    // Monitoring `sourceText` is tricky because of race conditions.
-    
-    // BETTER: Add `startGameListening` to AppState or use SpeechService directly?
-    // I cannot use SpeechService directly easily as it is private in AppState.
-    // I should add `startGameListening` to AppState.
-    // OR, I can use `startListening` and use a Listener on `appState.sourceText`.
-    
-    // Let's assume for now I will add `startMode4Listening` to AppState later. 
-    // For now I'll write the UI code assuming it exists or verify current AppState APIs.
-    // AppState has `startListening`. It sets `_sourceText`.
-    // I can listen to `appState` changes.
-    
-    // Wait, let's look at `Mode3`. It calls `_speechService.startSTT` directly inside AppState.
-    // I should add a method in AppState for Mode 4.
-    
-    // Let's rely on adding `startMode4Listening` to `AppState`.
-    // It will take a callback `onResult`.
-    
-    appState.startMode4Listening(
-      (result) {
-        // Handle result
-        _checkAnswer(result, appState);
-        
-        // Restart listening for continuous effect if game is still on
-        // Note: Do this after a short delay or immediately depending on engine
-        // Assuming result is final. If partial, we check but don't restart.
-        // AppState wrapper simplifies this, let's assume it returns final.
-        // To be safe, re-trigger loop.
-        if (_isPlaying) {
-             _listenLoop(appState, langCode);
-        }
-      },
-      langCode: langCode,
-    );
-  }      lang: langCode,
+    // Use the valid method signature from AppState (line 1239)
+    await appState.startMode4Listening(
+      lang: langCode,
       onResult: (text, isFinal) {
         _checkAnswer(text);
         
-         // Restart if stopped and still playing
+        // Restart listening if final result received and game is still on
         if (isFinal && _isPlaying) {
-           Future.delayed(const Duration(milliseconds: 500), () {
+           // Small delay to allow UI to update and not spam engine
+           Future.delayed(const Duration(milliseconds: 100), () {
              if (_isPlaying) _listenLoop(appState, langCode);
            });
         }
@@ -239,11 +202,15 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
         _score += hitIds.length * 10 * _level;
         _fallingWords.removeWhere((w) => hitIds.contains(w.id));
       });
+      // Check for win condition if no words left and no spawns remaining
+      if (_fallingWords.isEmpty && _spawnsRemaining <= 0) {
+        _gameOver();
+      }
     }
   }
   
   String _normalize(String text) {
-    return text.toLowerCase().replaceAll(RegExp(r'[^\w\s가-힣]'), '').trim();
+    return text.toLowerCase().replaceAll(RegExp(r'[^\w\s가-힣0-9]'), '').trim();
   }
 
   void _updateGame(AppState appState) {
@@ -253,7 +220,7 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
     _timeSinceLastSpawn += dt;
 
     // Spawn
-    if (_timeSinceLastSpawn > (_spawnRate / _gameSpeed)) {
+    if (_timeSinceLastSpawn > (_spawnRate / _gameSpeed) && _spawnsRemaining > 0) {
       _spawnWord(appState);
       _timeSinceLastSpawn = 0;
     }
@@ -277,6 +244,9 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
         
         if (_lives <= 0) {
           _gameOver();
+        } else if (_fallingWords.isEmpty && _spawnsRemaining <= 0) {
+           // Game Won / Finished
+           _gameOver();
         }
       }
     });
@@ -309,16 +279,19 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
     final screenW = MediaQuery.of(context).size.width;
     final x = Random().nextDouble() * (screenW - 100) + 20; // Padding
     
-    _fallingWords.add(FallingWord(
-      id: DateTime.now().millisecondsSinceEpoch.toString() + Random().nextInt(1000).toString(), // Unique ID
-      text: fallingText,
-      answer: answerText,
-      correctMeaning: answerText,
-      x: x,
-      y: -50,
-      speed: 1.0 + (_level * 0.2) + Random().nextDouble(),
-      color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
-    ));
+    setState(() {
+        _spawnsRemaining--; 
+        _fallingWords.add(FallingWord(
+          id: DateTime.now().millisecondsSinceEpoch.toString() + Random().nextInt(1000).toString(), // Unique ID
+          text: fallingText,
+          answer: answerText,
+          correctMeaning: answerText,
+          x: x,
+          y: -50,
+          speed: 1.0 + (_level * 0.2) + Random().nextDouble(),
+          color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
+        ));
+    });
   }
 
   @override
@@ -342,100 +315,102 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
 
   Widget _buildStartScreen(AppLocalizations l10n, AppState appState) {
     return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.videogame_asset, size: 80, color: Colors.indigo),
-            const SizedBox(height: 24),
-            Text(
-              l10n.rainDropGame, 
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.indigo[800]),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              l10n.rainDropGameDesc,
-              style: const TextStyle(fontSize: 16, color: Colors.grey),
-            ),
-            const SizedBox(height: 40),
-            
-            // Settings Card
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  children: [
-                    // Direction
-                    SwitchListTile(
-                        key: widget.gameDirectionKey,
-                        title: Text(_nativeToForeign 
-                          ? '${appState.languageNames[appState.sourceLang]} → ${appState.languageNames[appState.targetLang]}'
-                          : '${appState.languageNames[appState.targetLang]} → ${appState.languageNames[appState.sourceLang]}'
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.videogame_asset, size: 80, color: Colors.indigo),
+              const SizedBox(height: 24),
+              Text(
+                l10n.rainDropGame, 
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.indigo[800]),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                l10n.rainDropGameDesc,
+                style: const TextStyle(fontSize: 16, color: Colors.grey),
+              ),
+              const SizedBox(height: 40),
+              
+              // Settings Card
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    children: [
+                      // Direction
+                      SwitchListTile(
+                          key: widget.gameDirectionKey,
+                          title: Text(_nativeToForeign 
+                            ? '${appState.languageNames[appState.sourceLang]} → ${appState.languageNames[appState.targetLang]}'
+                            : '${appState.languageNames[appState.targetLang]} → ${appState.languageNames[appState.sourceLang]}'
+                        ),
+                        subtitle: Text(l10n.gameDirection),
+                        value: _nativeToForeign,
+                        onChanged: (val) => setState(() => _nativeToForeign = val),
+                        secondary: const Icon(Icons.swap_horiz),
                       ),
-                      subtitle: Text(l10n.gameDirection),
-                      value: _nativeToForeign,
-                      onChanged: (val) => setState(() => _nativeToForeign = val),
-                      secondary: const Icon(Icons.swap_horiz),
-                    ),
-                    const Divider(),
-                    // Speed (Buttons)
-                    ListTile(
-                      key: widget.gameSpeedKey,
-                      title: Text('${l10n.speed}: ${_gameSpeed.toStringAsFixed(1)}x'),
-                      subtitle: Row(
-                        children: [
-                          IconButton(
-                            icon: const Icon(Icons.remove_circle_outline, size: 28),
-                            color: Colors.indigo[300],
-                            onPressed: _gameSpeed <= 0.5 
-                                ? null 
-                                : () => setState(() => _gameSpeed = (_gameSpeed - 0.5).clamp(0.5, 3.0)),
-                            tooltip: l10n.tooltipDecrease,
-                          ),
-                          Expanded(
-                            child: Center(
-                              child: Text(
-                                _gameSpeed.toStringAsFixed(1),
-                                style: TextStyle(
-                                  fontSize: 18, 
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.indigo[700]
-                                ),
-                              ),
+                      const Divider(),
+                      // Speed
+                      ListTile(
+                        key: widget.gameSpeedKey,
+                        title: Text('${l10n.speed}: ${_gameSpeed.toStringAsFixed(1)}x'),
+                        subtitle: Row(
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.remove_circle_outline),
+                              onPressed: _gameSpeed <= 0.5 ? null : () => setState(() => _gameSpeed = (_gameSpeed - 0.5).clamp(0.5, 3.0)),
                             ),
-                          ),
-                          IconButton(
-                            icon: const Icon(Icons.add_circle_outline, size: 28),
-                            color: Colors.indigo[300],
-                            onPressed: _gameSpeed >= 3.0 
-                                ? null 
-                                : () => setState(() => _gameSpeed = (_gameSpeed + 0.5).clamp(0.5, 3.0)),
-                            tooltip: l10n.tooltipIncrease,
-                          ),
-                        ],
+                            Text(_gameSpeed.toStringAsFixed(1)),
+                            IconButton(
+                              icon: const Icon(Icons.add_circle_outline),
+                              onPressed: _gameSpeed >= 3.0 ? null : () => setState(() => _gameSpeed = (_gameSpeed + 0.5).clamp(0.5, 3.0)),
+                            ),
+                          ],
+                        ),
+                        leading: const Icon(Icons.speed),
                       ),
-                      leading: const Icon(Icons.speed),
-                    ),
-                  ],
+                      const Divider(),
+                      // Repeat Count
+                      ListTile(
+                        title: Text('Repeats: $_repeatCount'), // Needs localization ideally
+                        subtitle: Row(
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.remove_circle_outline),
+                              onPressed: _repeatCount <= 1 ? null : () => setState(() => _repeatCount--),
+                            ),
+                            Text('$_repeatCount'),
+                            IconButton(
+                              icon: const Icon(Icons.add_circle_outline),
+                              onPressed: _repeatCount >= 10 ? null : () => setState(() => _repeatCount++),
+                            ),
+                          ],
+                        ),
+                        leading: const Icon(Icons.repeat),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(height: 24),
-            
-            ElevatedButton.icon(
-              key: widget.gameStartButtonKey,
-              onPressed: () => _startGame(appState),
-              icon: const Icon(Icons.play_arrow),
-              label: Text(l10n.startGame),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.indigo,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
-                textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              const SizedBox(height: 24),
+              
+              ElevatedButton.icon(
+                key: widget.gameStartButtonKey,
+                onPressed: () => _startGame(appState),
+                icon: const Icon(Icons.play_arrow),
+                label: Text(l10n.startGame),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.indigo,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+                  textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -477,16 +452,12 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
   Widget _buildGameScreen(AppLocalizations l10n, AppState appState) {
     return Stack(
       children: [
-        // Game Area
+        // Game Area - GestureDetector to dismiss keyboard if needed, mostly for focus
         Positioned.fill(
-          child: GestureDetector(
-            onTap: () {
-               FocusScope.of(context).unfocus();
-            },
-            child: Container(
-              color: Colors.blue[50],
-              child: Stack(
-                children: [
+          child: Container(
+            color: Colors.blue[50],
+            child: Stack(
+              children: [
                    // Words
                    ..._fallingWords.map((word) => Positioned(
                      left: word.x,
@@ -521,8 +492,7 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
                        color: Colors.red.withOpacity(0.3),
                      ),
                    ),
-                ],
-              ),
+              ],
             ),
           ),
         ),
@@ -543,6 +513,9 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
                     const Icon(Icons.favorite, color: Colors.red),
                     const SizedBox(width: 4),
                     Text('x $_lives', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                    const SizedBox(width: 16),
+                     // Optional: Show progress
+                    Text('Left: $_spawnsRemaining', style: const TextStyle(fontSize: 16, color: Colors.grey)),
                   ],
                 ),
                 Text(
@@ -550,8 +523,9 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
                   style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.indigo),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.pause),
-                  onPressed: _stopGame,
+                  icon: const Icon(Icons.stop_circle_outlined, color: Colors.red, size: 30),
+                  onPressed: _stopGame, // Acts as Quit
+                  tooltip: l10n.cancel, 
                 ),
               ],
             ),
