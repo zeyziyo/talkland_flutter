@@ -6,7 +6,14 @@ import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
 
 class Mode4Widget extends StatefulWidget {
-  const Mode4Widget({super.key});
+  final Key? gameStartButtonKey;
+  final Key? gameSpeedKey;
+
+  const Mode4Widget({
+    super.key,
+    this.gameStartButtonKey,
+    this.gameSpeedKey,
+  });
 
   @override
   State<Mode4Widget> createState() => _Mode4WidgetState();
@@ -342,16 +349,41 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
                       secondary: const Icon(Icons.swap_horiz),
                     ),
                     const Divider(),
-                    // Speed
+                    // Speed (Buttons)
                     ListTile(
+                      key: widget.gameSpeedKey,
                       title: Text('${l10n.speed}: ${_gameSpeed.toStringAsFixed(1)}x'),
-                      subtitle: Slider(
-                        value: _gameSpeed,
-                        min: 0.5,
-                        max: 3.0,
-                        divisions: 5,
-                        label: _gameSpeed.toString(),
-                        onChanged: (val) => setState(() => _gameSpeed = val),
+                      subtitle: Row(
+                        children: [
+                          IconButton(
+                            icon: const Icon(Icons.remove_circle_outline, size: 28),
+                            color: Colors.indigo[300],
+                            onPressed: _gameSpeed <= 0.5 
+                                ? null 
+                                : () => setState(() => _gameSpeed = (_gameSpeed - 0.5).clamp(0.5, 3.0)),
+                            tooltip: l10n.tooltipDecrease,
+                          ),
+                          Expanded(
+                            child: Center(
+                              child: Text(
+                                _gameSpeed.toStringAsFixed(1),
+                                style: TextStyle(
+                                  fontSize: 18, 
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.indigo[700]
+                                ),
+                              ),
+                            ),
+                          ),
+                          IconButton(
+                            icon: const Icon(Icons.add_circle_outline, size: 28),
+                            color: Colors.indigo[300],
+                            onPressed: _gameSpeed >= 3.0 
+                                ? null 
+                                : () => setState(() => _gameSpeed = (_gameSpeed + 0.5).clamp(0.5, 3.0)),
+                            tooltip: l10n.tooltipIncrease,
+                          ),
+                        ],
                       ),
                       leading: const Icon(Icons.speed),
                     ),
@@ -362,6 +394,7 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
             const SizedBox(height: 24),
             
             ElevatedButton.icon(
+              key: widget.gameStartButtonKey,
               onPressed: () => _startGame(appState),
               icon: const Icon(Icons.play_arrow),
               label: Text(l10n.startGame),

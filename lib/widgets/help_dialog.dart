@@ -320,12 +320,19 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
           ),
 
           const SizedBox(height: 16),
-          TextButton.icon(
+          ElevatedButton.icon(
             onPressed: _launchUrl,
             icon: const Icon(Icons.open_in_browser),
-            label: const Text("View Online User Guide"), // Fallback if l10n missing
-            style: TextButton.styleFrom(
+            label: Text(
+              l10n.viewOnlineGuide, 
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white,
               foregroundColor: const Color(0xFF667eea),
+              side: const BorderSide(color: Color(0xFF667eea), width: 1.5),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              elevation: 0,
             ),
           ),
         ],

@@ -150,6 +150,7 @@
   "playAgain": "다시 하기",
   "speakNow": "말하세요! (Speak!)",
   "scoreLabel": "점수",
+  "viewOnlineGuide": "온라인 가이드 보기",
   "@flip": {
     "description": "Show translation button"
   },

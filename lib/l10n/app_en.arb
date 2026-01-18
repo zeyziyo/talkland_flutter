@@ -449,5 +449,7 @@
   "finalScore": "Final Score",
   "playAgain": "Play Again",
   "speakNow": "Speak now!",
-  "scoreLabel": "Score"
+  "speakNow": "Speak now!",
+  "scoreLabel": "Score",
+  "viewOnlineGuide": "View Online User Guide"
 }

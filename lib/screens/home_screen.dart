@@ -33,6 +33,11 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _mode3DropdownKey = GlobalKey();
   final GlobalKey _mode3IntervalKey = GlobalKey();
   final GlobalKey _mode3StartButtonKey = GlobalKey();
+  
+  // Mode 4 Tutorial Keys
+  final GlobalKey _mode4SpeedKey = GlobalKey();
+  final GlobalKey _mode4StartKey = GlobalKey();
+
   final GlobalKey _mode3WordCheckKey = GlobalKey(); // Mode 3 Checkbox Key
   
   // Tutorial Keys - Fixed
@@ -236,10 +241,21 @@ class _HomeScreenState extends State<HomeScreen> {
         _tabKey,
         l10n.tutorialGameTitle,
         l10n.tutorialGameDesc,
+        ContentAlign.bottom,
+      ));
+      targets.add(_buildTarget(
+        _mode4SpeedKey,
+        l10n.speed,
+        l10n.tutorialM3IntervalDesc, // Reusing interval desc as it's similar (adjust wait time/speed) or we can use generic.
         ContentAlign.top,
-        shape: ShapeLightFocus.RRect,
-        keepWidgetSize: true, // Highlight the whole tab bar? No just the tab.
-        // Actually _tabKey is on the Container of SegmentedButton.
+        radius: 12,
+      ));
+      targets.add(_buildTarget(
+        _mode4StartKey,
+        l10n.startGame,
+        l10n.tutorialM3StartDesc, // Reusing 'Tap play to start...'
+        ContentAlign.top,
+        radius: 12,
       ));
     }
 
@@ -490,7 +506,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     wordCheckKey: _mode3WordCheckKey, // Pass Checkbox Key
                   ); 
                 } else if (appState.currentMode == 3) {
-                  return const Mode4Widget();
+                  return Mode4Widget(
+                    gameStartButtonKey: _mode4StartKey,
+                    gameSpeedKey: _mode4SpeedKey,
+                  );
                 }
                 return const SizedBox.shrink();
               },
