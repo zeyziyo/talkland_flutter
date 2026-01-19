@@ -66,7 +66,7 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
   static const int _fps = 60;
   static const double _spawnRate = 2.0; // Seconds
   double _timeSinceLastSpawn = 0;
-
+  
   // Screen
   double _screenWidth = 0;
   double _screenHeight = 0;
@@ -113,10 +113,9 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
     // Stop STT handled globally by AppState usually, but we need to ensure it stops
     // We can call stopListening if we started it.
     // However, AppState.stopListening() notifies listeners.
+    // Stop STT
     final appState = Provider.of<AppState>(context, listen: false);
-    if (appState.isListening) {
-      appState.stopListening();
-    }
+    appState.stopMode4Listening();
 
     if (mounted) {
       setState(() {
@@ -143,29 +142,11 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
         ? appState.targetLang 
         : appState.sourceLang;
     
-    // We need a way to listen continuously or restart listening.
-    // AppState.startListening() stops on final result.
-    // We need to hook into onResult and restart.
-    
-    _listenLoop(appState, targetLangCode);
-  }
-
-  Future<void> _listenLoop(AppState appState, String langCode) async {
-    if (!_isPlaying) return;
-
-    // Use the valid method signature from AppState (line 1239)
-    await appState.startMode4Listening(
-      lang: langCode,
+    // Just call once, AppState handles auto-restart via Status Stream
+    appState.startMode4Listening(
+      lang: targetLangCode,
       onResult: (text, isFinal) {
         _checkAnswer(text);
-        
-        // Restart listening if final result received and game is still on
-        if (isFinal && _isPlaying) {
-           // Small delay to allow UI to update and not spam engine
-           Future.delayed(const Duration(milliseconds: 100), () {
-             if (_isPlaying) _listenLoop(appState, langCode);
-           });
-        }
       },
     );
   }
@@ -502,46 +483,48 @@ class _Mode4WidgetState extends State<Mode4Widget> with TickerProviderStateMixin
           top: 0,
           left: 0,
           right: 0,
-          child: Container(
-            color: Colors.white.withOpacity(0.9),
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    const Icon(Icons.favorite, color: Colors.red),
-                    const SizedBox(width: 4),
-                    Text('x $_lives', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                    const SizedBox(width: 16),
-                     // Optional: Show progress
-                    Text('Left: $_spawnsRemaining', style: const TextStyle(fontSize: 16, color: Colors.grey)),
-                  ],
-                ),
-                Text(
-                  '${l10n.scoreLabel}: $_score', 
-                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.indigo),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.stop_circle_outlined, color: Colors.red, size: 30),
-                  onPressed: _stopGame, // Acts as Quit
-                  tooltip: l10n.cancel, 
-                ),
-              ],
+          child: SafeArea(
+            child: Container(
+              color: Colors.white.withValues(alpha: 0.9), // Fix deprecated withOpacity
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      const Icon(Icons.favorite, color: Colors.red),
+                      const SizedBox(width: 4),
+                      Text('x $_lives', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                      const SizedBox(width: 16),
+                       // Optional: Show progress
+                      Text('Left: $_spawnsRemaining', style: const TextStyle(fontSize: 16, color: Colors.grey)),
+                    ],
+                  ),
+                  Text(
+                    '${l10n.scoreLabel}: $_score', 
+                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.indigo),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.stop_circle_outlined, color: Colors.red, size: 30),
+                    onPressed: _stopGame, // Acts as Quit
+                    tooltip: l10n.cancel, 
+                  ),
+                ],
+              ),
             ),
           ),
         ),
         
         // Mic Indicator
         Positioned(
-          bottom: 20,
+          bottom: 100, // Raised to avoid ads and bottom gestures
           left: 0,
           right: 0,
           child: Center(
              child: Container(
                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                decoration: BoxDecoration(
-                 color: Colors.white.withOpacity(0.9),
+                 color: Colors.white.withValues(alpha: 0.9), // Fix deprecated
                  borderRadius: BorderRadius.circular(30),
                  boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 10)],
                ),

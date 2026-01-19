@@ -1165,9 +1165,14 @@ class AppState extends ChangeNotifier {
   
   @override
   void dispose() {
+    _speechStatusSubscription?.cancel();
     _speechService.dispose();
     super.dispose();
   }
+
+  // Stream Subscription for auto-restart
+  StreamSubscription<String>? _speechStatusSubscription;
+  bool _mode4Active = false; // Flag to track game active state
 
   /// Pick JSON file and import into database
   Future<Map<String, dynamic>?> pickAndImportJson() async {
@@ -1227,21 +1232,33 @@ class AppState extends ChangeNotifier {
   // ==========================================
   
   /// Start listening for Game Mode (Continuous-ish)
+  /// Start listening for Game Mode (Continuous)
   Future<void> startMode4Listening({
     required String lang,
     required Function(String text, bool isFinal) onResult,
   }) async {
     try {
-      _isListening = true; // Update global state for UI indicators
+      _mode4Active = true;
+      _isListening = true;
       notifyListeners();
+
+      // Listen to status for auto-restart
+      _speechStatusSubscription?.cancel();
+      _speechStatusSubscription = _speechService.statusStream.listen((status) {
+        if (_mode4Active && (status == 'done' || status == 'notListening')) {
+             debugPrint('[AppState] Auto-restarting Mode 4 STT...');
+             // Restart immediately
+             _speechService.startContinuousSTT(
+               lang: _getLangCode(lang),
+               onResult: onResult,
+             );
+        }
+      });
       
-      await _speechService.startSTT(
+      await _speechService.startContinuousSTT(
         lang: _getLangCode(lang),
         onResult: (text, isFinal) {
           onResult(text, isFinal);
-          if (isFinal) {
-             // Listening stopped
-          }
         },
       );
     } catch (e) {
@@ -1249,5 +1266,14 @@ class AppState extends ChangeNotifier {
       _isListening = false;
       notifyListeners();
     }
+  }
+
+  /// Stop Mode 4 Listening explicitly
+  Future<void> stopMode4Listening() async {
+    _mode4Active = false;
+    _speechStatusSubscription?.cancel();
+    await _speechService.stopSTT();
+    _isListening = false;
+    notifyListeners();
   }
 }

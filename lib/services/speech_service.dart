@@ -1,6 +1,7 @@
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:audio_session/audio_session.dart';
+import 'dart:async';
 
 /// Speech service for STT and TTS across platforms
 class SpeechService {
@@ -12,6 +13,10 @@ class SpeechService {
   bool _isRestarting = false; // Flag to prevent audio session reset during restart
   String _lastRecognizedText = '';
   
+  // Stream for status events
+  final _statusController = StreamController<String>.broadcast();
+  Stream<String> get statusStream => _statusController.stream;
+
   // Callback for silence detection (auto-stop after speech ends)
   Function? onSilenceDetected;
   
@@ -27,6 +32,8 @@ class SpeechService {
         onError: (error) => print('STT Error: $error'),
         onStatus: (status) async {
           print('STT Status: $status');
+          _statusController.add(status); // Broadcast status
+          
           // Fix: Automatically reset audio session when listening stops naturally
           // But allow 'restart' logic (flag checked inside startSTT)
           if ((status == 'done' || status == 'notListening') && !_isRestarting) {
@@ -172,6 +179,43 @@ class SpeechService {
         autoPunctuation: true, 
       ),
       pauseFor: const Duration(seconds: 3), // Reduce to 3s for snappier end-of-speech detection
+    );
+  }
+
+  /// Start continuous speech recognition (for Game Mode)
+  Future<void> startContinuousSTT({
+    required String lang,
+    required Function(String, bool) onResult,
+  }) async {
+    if (!_isInitialized) await initialize();
+    
+    // Ensure clean state
+    if (_isListening) {
+      _isRestarting = true;
+      await _speechToText.cancel();
+      _isListening = false;
+      _isRestarting = false;
+    }
+    
+    await _configureForRecording();
+    _lastRecognizedText = '';
+    _isListening = true;
+
+    await _speechToText.listen(
+      onResult: (result) {
+        _lastRecognizedText = result.recognizedWords;
+        onResult(result.recognizedWords, result.finalResult);  
+      },
+      localeId: lang,
+      onDevice: false,
+      listenFor: const Duration(seconds: 60), // Longer duration
+      listenOptions: stt.SpeechListenOptions(
+        listenMode: stt.ListenMode.dictation,
+        cancelOnError: true,
+        partialResults: true,
+        autoPunctuation: false, // Less processing for game
+      ),
+      pauseFor: const Duration(seconds: 10), // Long pause allowed (10s)
     );
   }
   
