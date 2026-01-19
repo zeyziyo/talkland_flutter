@@ -151,20 +151,30 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                                      decoration: BoxDecoration(
-                                        color: Colors.blue[100],
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                      child: Text(
-                                        appState.languageNames[appState.sourceLang] ?? '',
-                                        style: TextStyle(
-                                          fontSize: 16, // Slightly smaller to fit badge
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.blue.shade800,
+                                    Row(
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                                          decoration: BoxDecoration(
+                                            color: Colors.blue[100],
+                                            borderRadius: BorderRadius.circular(8),
+                                          ),
+                                          child: Text(
+                                            appState.languageNames[appState.sourceLang] ?? '',
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.blue.shade800,
+                                            ),
+                                          ),
                                         ),
-                                      ),
+                                        const SizedBox(width: 8),
+                                        IconButton(
+                                          icon: const Icon(Icons.swap_horiz, size: 28, color: Colors.blue),
+                                          onPressed: () => appState.swapLanguages(),
+                                          tooltip: l10n.swapLanguages,
+                                        ),
+                                      ],
                                     ),
                                     Row(
                                       children: [
