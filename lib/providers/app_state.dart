@@ -892,6 +892,11 @@ class AppState extends ChangeNotifier {
     _mode3Timer = null;
     _retryAutoSkipTimer = null;
   }
+  
+  /// Allow user to skip current question manually
+  Future<void> skipMode3Question() async {
+    await _nextMode3Question();
+  }
 
   Future<void> _nextMode3Question() async {
     _cancelMode3Timers(); // Reset timers before next question
@@ -1031,26 +1036,33 @@ class AppState extends ChangeNotifier {
     _mode3Score = similarity * 100;
     
     // Feedback
+    // Feedback Logic
     if (_mode3Score! >= 90) {
       _mode3Feedback = 'Perfect!';
       // Add to completed list so it doesn't show up again this session
       final currentId = _currentMode3Question!['id'] as int;
       _mode3CompletedQuestionIds.add(currentId);
       
-    } else if (_mode3Score! >= 70) {
-      _mode3Feedback = 'Good';
+      notifyListeners();
+      
+      // Auto-advance only on success
+      Future.delayed(const Duration(seconds: 2), () {
+        if (_mode3SessionActive) {
+          _nextMode3Question();
+        }
+      });
+      
     } else {
+      // Incorrect Answer
       _mode3Feedback = 'Try Again';
+      _showRetryButton = true;
+      notifyListeners();
+      
+      // Guide user to retry (TTS)
+      Future.delayed(const Duration(milliseconds: 500), () {
+         _speechService.speak("Try again", lang: "en-US");
+      });
     }
-    
-    notifyListeners();
-    
-    // Wait a bit to show result, then next question
-    Future.delayed(const Duration(seconds: 3), () {
-      if (_mode3SessionActive) {
-        _nextMode3Question();
-      }
-    });
   }
   
   /// Levenshtein distance based similarity (0.0 to 1.0)

@@ -452,5 +452,6 @@
   "speakNow": "Speak now!",
   "scoreLabel": "Score",
   "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials"
+  "getMaterials": "Get Materials",
+  "next": "Next"
 }

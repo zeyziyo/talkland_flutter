@@ -523,4 +523,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get viewOnlineGuide => '온라인 가이드 보기';
+
+  @override
+  String get getMaterials => '자료 받기';
+
+  @override
+  String get next => '다음';
 }

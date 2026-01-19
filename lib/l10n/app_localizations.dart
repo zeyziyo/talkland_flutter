@@ -1121,6 +1121,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'View Online User Guide'**
   String get viewOnlineGuide;
+
+  /// No description provided for @getMaterials.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Materials'**
+  String get getMaterials;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
 }
 
 class _AppLocalizationsDelegate

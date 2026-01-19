@@ -72,10 +72,9 @@ class _Mode2WidgetState extends State<Mode2Widget> {
           final targetLang = material['target_language'] as String;
           
           
-          String label = '$subject ($sourceLang → $targetLang)';
+          String label = subject;
           if (id == 0) {
-             // Use current app languages for the default material label
-             label = 'Basic (${appState.languageNames[appState.sourceLang]} → ${appState.languageNames[appState.targetLang]})';
+             label = 'Basic';
           }
 
           return DropdownMenuItem<int>(

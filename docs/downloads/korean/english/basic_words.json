@@ -1,98 +1,98 @@
 {
-    "subject": "Basic Words",
+    "subject": "기초 단어",
     "source": "Talkie Sample",
     "source_language": "ko",
-    "target_language": "es",
+    "target_language": "en",
     "default_type": "word",
     "entries": [
         {
             "source_text": "사과",
-            "target_text": "Manzana",
+            "target_text": "Apple",
             "type": "word"
         },
         {
             "source_text": "바나나",
-            "target_text": "Plátano",
+            "target_text": "Banana",
             "type": "word"
         },
         {
             "source_text": "물",
-            "target_text": "Agua",
+            "target_text": "Water",
             "type": "word"
         },
         {
             "source_text": "밥",
-            "target_text": "Arroz",
+            "target_text": "Rice",
             "type": "word"
         },
         {
             "source_text": "빵",
-            "target_text": "Pan",
+            "target_text": "Bread",
             "type": "word"
         },
         {
             "source_text": "우유",
-            "target_text": "Leche",
+            "target_text": "Milk",
             "type": "word"
         },
         {
             "source_text": "커피",
-            "target_text": "Café",
+            "target_text": "Coffee",
             "type": "word"
         },
         {
             "source_text": "차",
-            "target_text": "Té",
+            "target_text": "Tea",
             "type": "word"
         },
         {
             "source_text": "고기",
-            "target_text": "Carne",
+            "target_text": "Meat",
             "type": "word"
         },
         {
             "source_text": "생선",
-            "target_text": "Pescado",
+            "target_text": "Fish",
             "type": "word"
         },
         {
             "source_text": "야채",
-            "target_text": "Verdura",
+            "target_text": "Vegetable",
             "type": "word"
         },
         {
             "source_text": "과일",
-            "target_text": "Fruta",
+            "target_text": "Fruit",
             "type": "word"
         },
         {
             "source_text": "계란",
-            "target_text": "Huevo",
+            "target_text": "Egg",
             "type": "word"
         },
         {
             "source_text": "소금",
-            "target_text": "Sal",
+            "target_text": "Salt",
             "type": "word"
         },
         {
             "source_text": "설탕",
-            "target_text": "Azúcar",
+            "target_text": "Sugar",
             "type": "word"
         },
         {
             "source_text": "집",
-            "target_text": "Casa",
+            "target_text": "House",
             "type": "word"
         },
         {
             "source_text": "학교",
-            "target_text": "Escuela",
+            "target_text": "School",
             "type": "word"
         },
         {
             "source_text": "회사",
-            "target_text": "Empresa",
+            "target_text": "Company",
             "type": "word"
         },
         {
@@ -102,217 +102,217 @@
         },
         {
             "source_text": "공원",
-            "target_text": "Parque",
+            "target_text": "Park",
             "type": "word"
         },
         {
             "source_text": "가게",
-            "target_text": "Tienda",
+            "target_text": "Store",
             "type": "word"
         },
         {
             "source_text": "시장",
-            "target_text": "Mercado",
+            "target_text": "Market",
             "type": "word"
         },
         {
             "source_text": "식당",
-            "target_text": "Restaurante",
+            "target_text": "Restaurant",
             "type": "word"
         },
         {
             "source_text": "화장실",
-            "target_text": "Baño",
+            "target_text": "Bathroom",
             "type": "word"
         },
         {
             "source_text": "방",
-            "target_text": "Habitación",
+            "target_text": "Room",
             "type": "word"
         },
         {
             "source_text": "문",
-            "target_text": "Puerta",
+            "target_text": "Door",
             "type": "word"
         },
         {
             "source_text": "창문",
-            "target_text": "Ventana",
+            "target_text": "Window",
             "type": "word"
         },
         {
             "source_text": "책상",
-            "target_text": "Escritorio",
+            "target_text": "Desk",
             "type": "word"
         },
         {
             "source_text": "의자",
-            "target_text": "Silla",
+            "target_text": "Chair",
             "type": "word"
         },
         {
             "source_text": "침대",
-            "target_text": "Cama",
+            "target_text": "Bed",
             "type": "word"
         },
         {
             "source_text": "사람",
-            "target_text": "Persona",
+            "target_text": "Person",
             "type": "word"
         },
         {
             "source_text": "남자",
-            "target_text": "Hombre",
+            "target_text": "Man",
             "type": "word"
         },
         {
             "source_text": "여자",
-            "target_text": "Mujer",
+            "target_text": "Woman",
             "type": "word"
         },
         {
             "source_text": "아이",
-            "target_text": "Niño",
+            "target_text": "Child",
             "type": "word"
         },
         {
             "source_text": "가족",
-            "target_text": "Familia",
+            "target_text": "Family",
             "type": "word"
         },
         {
             "source_text": "아버지",
-            "target_text": "Padre",
+            "target_text": "Father",
             "type": "word"
         },
         {
             "source_text": "어머니",
-            "target_text": "Madre",
+            "target_text": "Mother",
             "type": "word"
         },
         {
             "source_text": "친구",
-            "target_text": "Amigo",
+            "target_text": "Friend",
             "type": "word"
         },
         {
             "source_text": "선생님",
-            "target_text": "Maestro",
+            "target_text": "Teacher",
             "type": "word"
         },
         {
             "source_text": "의사",
-            "target_text": "Médico",
+            "target_text": "Doctor",
             "type": "word"
         },
         {
             "source_text": "머리",
-            "target_text": "Cabeza",
+            "target_text": "Head",
             "type": "word"
         },
         {
             "source_text": "눈",
-            "target_text": "Ojo",
+            "target_text": "Eye",
             "type": "word"
         },
         {
             "source_text": "코",
-            "target_text": "Nariz",
+            "target_text": "Nose",
             "type": "word"
         },
         {
             "source_text": "입",
-            "target_text": "Boca",
+            "target_text": "Mouth",
             "type": "word"
         },
         {
             "source_text": "손",
-            "target_text": "Mano",
+            "target_text": "Hand",
             "type": "word"
         },
         {
             "source_text": "발",
-            "target_text": "Pie",
+            "target_text": "Foot",
             "type": "word"
         },
         {
             "source_text": "팔",
-            "target_text": "Brazo",
+            "target_text": "Arm",
             "type": "word"
         },
         {
             "source_text": "다리",
-            "target_text": "Pierna",
+            "target_text": "Leg",
             "type": "word"
         },
         {
             "source_text": "옷",
-            "target_text": "Ropa",
+            "target_text": "Clothes",
             "type": "word"
         },
         {
             "source_text": "신발",
-            "target_text": "Zapato",
+            "target_text": "Shoes",
             "type": "word"
         },
         {
             "source_text": "강아지",
-            "target_text": "Perro",
+            "target_text": "Dog",
             "type": "word"
         },
         {
             "source_text": "고양이",
-            "target_text": "Gato",
+            "target_text": "Cat",
             "type": "word"
         },
         {
             "source_text": "새",
-            "target_text": "Pájaro",
+            "target_text": "Bird",
             "type": "word"
         },
         {
             "source_text": "나무",
-            "target_text": "Árbol",
+            "target_text": "Tree",
             "type": "word"
         },
         {
             "source_text": "꽃",
-            "target_text": "Flor",
+            "target_text": "Flower",
             "type": "word"
         },
         {
             "source_text": "하늘",
-            "target_text": "Cielo",
+            "target_text": "Sky",
             "type": "word"
         },
         {
             "source_text": "해",
-            "target_text": "Sol",
+            "target_text": "Sun",
             "type": "word"
         },
         {
             "source_text": "달",
-            "target_text": "Luna",
+            "target_text": "Moon",
             "type": "word"
         },
         {
             "source_text": "별",
-            "target_text": "Estrella",
+            "target_text": "Star",
             "type": "word"
         },
         {
             "source_text": "바다",
-            "target_text": "Mar",
+            "target_text": "Sea",
             "type": "word"
         },
         {
             "source_text": "시간",
-            "target_text": "Tiempo",
+            "target_text": "Time",
             "type": "word"
         },
         {
             "source_text": "날",
-            "target_text": "Día",
+            "target_text": "Day",
             "type": "word"
         },
         {
@@ -322,182 +322,182 @@
         },
         {
             "source_text": "주",
-            "target_text": "Semana",
+            "target_text": "Week",
             "type": "word"
         },
         {
             "source_text": "월",
-            "target_text": "Mes",
+            "target_text": "Month",
             "type": "word"
         },
         {
             "source_text": "년",
-            "target_text": "Año",
+            "target_text": "Year",
             "type": "word"
         },
         {
             "source_text": "오늘",
-            "target_text": "Hoy",
+            "target_text": "Today",
             "type": "word"
         },
         {
             "source_text": "내일",
-            "target_text": "Mañana",
+            "target_text": "Tomorrow",
             "type": "word"
         },
         {
             "source_text": "어제",
-            "target_text": "Ayer",
+            "target_text": "Yesterday",
             "type": "word"
         },
         {
             "source_text": "지금",
-            "target_text": "Ahora",
+            "target_text": "Now",
             "type": "word"
         },
         {
             "source_text": "숫자",
-            "target_text": "Número",
+            "target_text": "Number",
             "type": "word"
         },
         {
             "source_text": "하나",
-            "target_text": "Uno",
+            "target_text": "One",
             "type": "word"
         },
         {
             "source_text": "둘",
-            "target_text": "Dos",
+            "target_text": "Two",
             "type": "word"
         },
         {
             "source_text": "셋",
-            "target_text": "Tres",
+            "target_text": "Three",
             "type": "word"
         },
         {
             "source_text": "많다",
-            "target_text": "Muchos",
+            "target_text": "Many",
             "type": "word"
         },
         {
             "source_text": "적다",
-            "target_text": "Pocos",
+            "target_text": "Few",
             "type": "word"
         },
         {
             "source_text": "크다",
-            "target_text": "Grande",
+            "target_text": "Big",
             "type": "word"
         },
         {
             "source_text": "작다",
-            "target_text": "Pequeño",
+            "target_text": "Small",
             "type": "word"
         },
         {
             "source_text": "멀다",
-            "target_text": "Lejos",
+            "target_text": "Far",
             "type": "word"
         },
         {
             "source_text": "가깝다",
-            "target_text": "Cerca",
+            "target_text": "Close",
             "type": "word"
         },
         {
             "source_text": "좋다",
-            "target_text": "Bueno",
+            "target_text": "Good",
             "type": "word"
         },
         {
             "source_text": "나쁘다",
-            "target_text": "Malo",
+            "target_text": "Bad",
             "type": "word"
         },
         {
             "source_text": "덥다",
-            "target_text": "Caliente",
+            "target_text": "Hot",
             "type": "word"
         },
         {
             "source_text": "춥다",
-            "target_text": "Frío",
+            "target_text": "Cold",
             "type": "word"
         },
         {
             "source_text": "쉽다",
-            "target_text": "Fácil",
+            "target_text": "Easy",
             "type": "word"
         },
         {
             "source_text": "어렵다",
-            "target_text": "Difícil",
+            "target_text": "Difficult",
             "type": "word"
         },
         {
             "source_text": "예쁘다",
-            "target_text": "Bonito",
+            "target_text": "Pretty",
             "type": "word"
         },
         {
             "source_text": "빠르다",
-            "target_text": "Rápido",
+            "target_text": "Fast",
             "type": "word"
         },
         {
             "source_text": "느리다",
-            "target_text": "Lento",
+            "target_text": "Slow",
             "type": "word"
         },
         {
             "source_text": "가다",
-            "target_text": "Ir",
+            "target_text": "Go",
             "type": "word"
         },
         {
             "source_text": "오다",
-            "target_text": "Venir",
+            "target_text": "Come",
             "type": "word"
         },
         {
             "source_text": "먹다",
-            "target_text": "Comer",
+            "target_text": "Eat",
             "type": "word"
         },
         {
             "source_text": "마시다",
-            "target_text": "Beber",
+            "target_text": "Drink",
             "type": "word"
         },
         {
             "source_text": "보다",
-            "target_text": "Ver",
+            "target_text": "See",
             "type": "word"
         },
         {
             "source_text": "듣다",
-            "target_text": "Escuchar",
+            "target_text": "Hear",
             "type": "word"
         },
         {
             "source_text": "자다",
-            "target_text": "Dormir",
+            "target_text": "Sleep",
             "type": "word"
         },
         {
             "source_text": "일하다",
-            "target_text": "Trabajar",
+            "target_text": "Work",
             "type": "word"
         },
         {
             "source_text": "공부하다",
-            "target_text": "Estudiar",
+            "target_text": "Study",
             "type": "word"
         },
         {
             "source_text": "사랑하다",
-            "target_text": "Amar",
+            "target_text": "Love",
             "type": "word"
         }
     ]

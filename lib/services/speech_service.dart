@@ -9,6 +9,7 @@ class SpeechService {
   
   bool _isInitialized = false;
   bool _isListening = false;
+  bool _isRestarting = false; // Flag to prevent audio session reset during restart
   String _lastRecognizedText = '';
   
   // Callback for silence detection (auto-stop after speech ends)
@@ -27,7 +28,8 @@ class SpeechService {
         onStatus: (status) async {
           print('STT Status: $status');
           // Fix: Automatically reset audio session when listening stops naturally
-          if (status == 'done' || status == 'notListening') {
+          // But allow 'restart' logic (flag checked inside startSTT)
+          if ((status == 'done' || status == 'notListening') && !_isRestarting) {
             await _configureForPlayback();
             _isListening = false;
           }
@@ -64,14 +66,15 @@ class SpeechService {
       await session.configure(AudioSessionConfiguration(
         avAudioSessionCategory: AVAudioSessionCategory.playAndRecord,
         avAudioSessionCategoryOptions: AVAudioSessionCategoryOptions.allowBluetooth | 
-                                      AVAudioSessionCategoryOptions.defaultToSpeaker,
-        avAudioSessionMode: AVAudioSessionMode.videoRecording, // Changed to videoRecording to avoid Voice Call volume mode
+                                      AVAudioSessionCategoryOptions.defaultToSpeaker |
+                                      AVAudioSessionCategoryOptions.allowAirPlay, // Added AirPlay
+        avAudioSessionMode: AVAudioSessionMode.measurement, // 'measurement' is often recommended for STT to minimize processing
         androidAudioAttributes: const AndroidAudioAttributes(
-          contentType: AndroidAudioContentType.music, 
+          contentType: AndroidAudioContentType.speech, // Explicitly speech
           flags: AndroidAudioFlags.none,
-          usage: AndroidAudioUsage.media,
+          usage: AndroidAudioUsage.media, // Revert to media as assistance is not defined
         ),
-        androidAudioFocusGainType: AndroidAudioFocusGainType.gainTransient,
+        androidAudioFocusGainType: AndroidAudioFocusGainType.gainTransientExclusive, // Exclusive focus
         androidWillPauseWhenDucked: true,
       ));
     } catch (e) {
@@ -131,35 +134,44 @@ class SpeechService {
       }
     }
     
-    // Always configure for recording before starting listener
-    await _configureForRecording();
+    // Ensure clean state by cancelling any previous session
+    if (_isListening) {
+      _isRestarting = true; // Prevent onStatus from resetting audio session
+      await _speechToText.cancel();
+      _isListening = false;
+      _isRestarting = false;
+    }
     
-    if (_isListening) return;
+    // Configure audio session specifically for speech recognition
+    // Use smaller buffer or specific mode if possible, but basic config is usually safer
+    await _configureForRecording();
     
     _lastRecognizedText = '';
     _isListening = true;
     
+    /* 
+      Stability Improvement: 
+      Sometimes onDevice: false can be slow. 
+      But onDevice: true fails if no offline pack.
+      We stick to onDevice: false as requested, but ensure other parameters are optimal.
+    */
+
     await _speechToText.listen(
       onResult: (result) {
         _lastRecognizedText = result.recognizedWords;
-        onResult(result.recognizedWords, result.finalResult);  // Pass finalResult to callback
-        
-        // Note: Removed auto-stop on finalResult to allow users to speak complete sentences
-        // Users must manually tap the mic button to stop, or wait for timeout
+        onResult(result.recognizedWords, result.finalResult);  
       },
       localeId: lang,
-      onDevice: false, // Changed to false to allow network-based recognition for better accuracy
-      // Android: Force on-device recognition (offline) was causing issues where offline packs are missing
-      listenFor: const Duration(seconds: 60),
+      onDevice: false, 
+      listenFor: const Duration(seconds: 30), // Reduce max duration to avoid deep timeouts
       
       listenOptions: stt.SpeechListenOptions(
-        // Use dictation for better sentence recognition and handling of pauses
-        listenMode: stt.ListenMode.dictation, 
-        cancelOnError: false, // Fix: Don't stop on minor errors
+        listenMode: stt.ListenMode.dictation, // Dictation is best for phrases
+        cancelOnError: true, // true is better for reliability - allows auto-restart on error
         partialResults: true,
+        autoPunctuation: true, 
       ),
-      // Increase pause duration to prevent cutting off too early
-      pauseFor: const Duration(seconds: 5), // Fix: Increased from 3s to 5s
+      pauseFor: const Duration(seconds: 3), // Reduce to 3s for snappier end-of-speech detection
     );
   }
   

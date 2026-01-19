@@ -538,4 +538,10 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get viewOnlineGuide => 'View Online User Guide';
+
+  @override
+  String get getMaterials => 'Get Materials';
+
+  @override
+  String get next => 'Next';
 }

@@ -524,6 +524,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get viewOnlineGuide => 'View Online User Guide';
+
+  @override
+  String get getMaterials => 'Get Materials';
+
+  @override
+  String get next => 'Next';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -1046,6 +1052,12 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get viewOnlineGuide => 'View Online User Guide';
+
+  @override
+  String get getMaterials => 'Get Materials';
+
+  @override
+  String get next => 'Next';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -1568,4 +1580,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get viewOnlineGuide => 'View Online User Guide';
+
+  @override
+  String get getMaterials => 'Get Materials';
+
+  @override
+  String get next => 'Next';
 }

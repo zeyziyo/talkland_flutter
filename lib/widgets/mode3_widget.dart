@@ -293,6 +293,40 @@ class Mode3Widget extends StatelessWidget {
                                 color: Colors.grey[800],
                               ),
                             ),
+                            
+                            if (appState.showRetryButton) ...[
+                              const SizedBox(height: 24),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  // Retry Button
+                                  ElevatedButton.icon(
+                                    onPressed: () => appState.retryMode3Question(),
+                                    icon: const Icon(Icons.refresh),
+                                    label: Text(l10n.retry),
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.orange,
+                                      foregroundColor: Colors.white,
+                                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                                    ),
+                                  ),
+                                  
+                                  const SizedBox(width: 16),
+                                  
+                                  // Skip / Next Button
+                                  OutlinedButton.icon(
+                                    onPressed: () => appState.skipMode3Question(),
+                                    icon: const Icon(Icons.skip_next),
+                                    label: Text(l10n.next),
+                                    style: OutlinedButton.styleFrom(
+                                      foregroundColor: Colors.grey[700],
+                                      side: BorderSide(color: Colors.grey[400]!),
+                                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ] else if (appState.mode3SessionActive) ...[
                             // Active Practice State
                             const SizedBox(height: 16),
