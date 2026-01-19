@@ -526,10 +526,14 @@ class _HomeScreenState extends State<HomeScreen> {
           
           // Banner Ad Widget
           if (_isBannerAdReady)
-            SizedBox(
-              width: _bannerAd!.size.width.toDouble(),
-              height: _bannerAd!.size.height.toDouble(),
-              child: AdWidget(ad: _bannerAd!),
+            SafeArea(
+              top: false,
+              child: Container(
+                color: Colors.white, // Background to ensure visibility
+                width: _bannerAd!.size.width.toDouble(),
+                height: _bannerAd!.size.height.toDouble(),
+                child: AdWidget(ad: _bannerAd!),
+              ),
             ),
         ],
       ),
