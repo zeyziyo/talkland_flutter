@@ -24,13 +24,13 @@ class GameLobbyWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                l10n.rainDropGame, // Use existing "Game" title or new one
+                l10n.gameModeTitle,
                 style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.indigo),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 10),
               Text(
-                "Choose your practice mode", // Needs l10n potentially
+                l10n.gameModeDesc,
                 style: const TextStyle(fontSize: 18, color: Colors.grey),
                 textAlign: TextAlign.center,
               ),
@@ -39,8 +39,8 @@ class GameLobbyWidget extends StatelessWidget {
               // Game 1: Word Defense
               _buildGameCard(
                 context,
-                title: "🛡️ Word Defense",
-                desc: "Defend your base by speaking words correctly before enemies reach you.",
+                title: "🛡️ ${l10n.wordDefenseTitle}",
+                desc: l10n.wordDefenseDesc,
                 color: Colors.red[100]!,
                 icon: Icons.shield,
                 onTap: onStartDefense,
@@ -51,8 +51,8 @@ class GameLobbyWidget extends StatelessWidget {
               // Game 2: Dialogue Quest
               _buildGameCard(
                 context,
-                title: "🗣️ Dialogue Quest",
-                desc: "Roleplay in scenarios. Choose the right response and speak it aloud.",
+                title: "🗣️ ${l10n.dialogueQuestTitle}",
+                desc: l10n.dialogueQuestDesc,
                 color: Colors.blue[100]!,
                 icon: Icons.forum,
                 onTap: onStartDialogue,

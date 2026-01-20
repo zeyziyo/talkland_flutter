@@ -1046,9 +1046,8 @@ class AppState extends ChangeNotifier {
       return;
     }
     
-    // Timeout with no input -> Treat as wrong answer
     _mode3Score = 0.0;
-    _mode3Feedback = 'Time Up!';
+    _mode3Feedback = 'TIME_UP'; // Code for Time Up
     notifyListeners();
     
     // Auto-advance
@@ -1077,13 +1076,13 @@ class AppState extends ChangeNotifier {
     // Feedback
     // Feedback Logic
     if (_mode3Score! >= 90) {
-      _mode3Feedback = 'Perfect!';
+      _mode3Feedback = 'PERFECT'; // Code for Perfect
       // Add to completed list so it doesn't show up again this session
       final currentId = _currentMode3Question!['id'] as int;
       _mode3CompletedQuestionIds.add(currentId);
     } else {
       // Incorrect Answer
-      _mode3Feedback = 'Keep Trying!';
+      _mode3Feedback = 'TRY_AGAIN'; // Code for Keep Trying
       // Do NOT add to completed list, so it can appear again later
     }
     

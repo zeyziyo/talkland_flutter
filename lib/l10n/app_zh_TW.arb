@@ -145,8 +145,6 @@
   "@hide": {
     "description": "Hide translation button"
   },
-  "gameDirection": "Game Direction",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
   "@importFailed": {
     "description": "Import error title"
   },
@@ -193,24 +191,11 @@
   "@importJsonFile": {
     "description": "Import JSON button"
   },
-  "rainDropGameDesc": "Speak the translation of the falling word!",
-  "noStudyMaterial": "No study material found.",
-  "finalScore": "Final Score",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "labelWord": "Word",
   "@saveData": {
     "description": "Save translation button"
   },
   "@importTotal": {
     "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@totalRecords": {
     "placeholders": {
       "count": {
         "type": "int"
@@ -237,7 +222,6 @@
   "@recordDeleted": {
     "description": "Delete success message"
   },
-  "labelType": "Type:",
   "@markAsStudied": {
     "description": "Mark study button text"
   },
@@ -258,7 +242,6 @@
   "@appTitle": {
     "description": "Application title"
   },
-  "reviewAll": "Review All",
   "@errors": {
     "description": "Error section label"
   },
@@ -279,14 +262,9 @@
   "@selectStudyMaterial": {
     "description": "Study material selector label"
   },
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "playAgain": "Play Again",
   "@deleteRecord": {
     "description": "Delete record dialog title"
   },
-  "filterAll": "All",
-  "startGame": "Start Game",
-  "translationLimitExceeded": "Translation Limit Exceeded",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
@@ -301,7 +279,6 @@
   "@confirm": {
     "description": "Confirm/OK button"
   },
-  "practiceWordsOnly": "Practice Words Only",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
@@ -316,19 +293,15 @@
       }
     }
   },
-  "labelSentence": "Sentence",
   "@importJsonFilePrompt": {
     "description": "Empty state prompt"
   },
-  "scoreLabel": "Score",
   "@saveTranslationsFromSearch": {
     "description": "Instruction to save data"
   },
   "@saved": {
     "description": "Data saved status"
   },
-  "gameOver": "Game Over",
-  "speed": "Speed",
   "@importAdded": {
     "description": "Successfully imported count",
     "placeholders": {
@@ -352,8 +325,6 @@
   "@targetLanguage": {
     "description": "Target language label"
   },
-  "totalRecords": "Total {count} records (View All)",
-  "resetPracticeHistory": "Reset Practice History",
   "@importErrorMessage": {
     "description": "Import error message",
     "placeholders": {
@@ -392,8 +363,6 @@
   "@error": {
     "description": "Error dialog title"
   },
-  "retry": "Retry?",
-  "translationRefilled": "Translations refilled by 5!",
   "@reviewCount": {
     "description": "Review count display",
     "placeholders": {
@@ -402,7 +371,6 @@
       }
     }
   },
-  "rainDropGame": "Rain Drop Game",
   "@translationFailed": {
     "description": "Translation error",
     "placeholders": {
@@ -414,11 +382,9 @@
   "@search": {
     "description": "Search mode label"
   },
-  "speakNow": "Speak now!",
   "@similarTextFound": {
     "description": "Duplicate detection title"
   },
-  "adLoading": "Loading ad, please try again in a moment.",
   "@progress": {
     "description": "Progress indicator",
     "placeholders": {
@@ -444,13 +410,18 @@
       }
     }
   },
-  "tutorialGameDesc": "Play a game to practice your vocabulary! Catch falling words by speaking their translation.",
   "tutorialM3WordsDesc": "Check this to practice only your saved words.",
   "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialGameTitle": "Rain Drop Game",
   "tutorialM3WordsTitle": "Practice Words",
   "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "next": "Next"
+  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeDesc": "Time to think before the answer is revealed.",
+  "autoPlay": "Auto-Play",
+  "timeUp": "Time Up!",
+  "gameModeTitle": "Game Mode",
+  "gameModeDesc": "Choose your practice mode",
+  "wordDefenseTitle": "Word Defense",
+  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
+  "dialogueQuestTitle": "Dialogue Quest",
+  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud."
 }

@@ -251,7 +251,7 @@ class Mode3Widget extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                                 child: Text(
-                                  appState.mode3Feedback,
+                                  _getFeedbackText(context, appState.mode3Feedback),
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
@@ -333,6 +333,22 @@ class Mode3Widget extends StatelessWidget {
         );
       },
     );
+
+
+  String _getFeedbackText(BuildContext context, String code) {
+    final l10n = AppLocalizations.of(context)!;
+    switch (code) {
+      case 'PERFECT':
+        return l10n.perfect;
+      case 'TRY_AGAIN':
+        return l10n.tryAgain;
+      case 'TIME_UP':
+        return l10n.timeUp;
+      case 'Completed All!': // Legacy or fallback
+        return 'All Done!';
+      default:
+        return code;
+    }
   }
 
   Color _getScoreColor(double score) {
