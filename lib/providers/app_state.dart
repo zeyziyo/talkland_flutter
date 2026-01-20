@@ -628,8 +628,8 @@ class AppState extends ChangeNotifier {
     _saveSettings(); // Save persistence
 
     
-    // Sync Review Tab Filter - DISABLED to prevent hiding records when swapping
-    // _selectedReviewLanguage = lang;
+    // Sync Review Tab Filter - ENABLED
+    _selectedReviewLanguage = lang;
     
     // Cleanup: Consistency check
     // 1. Clear Mode 1 translation (output invalid)
@@ -639,7 +639,7 @@ class AppState extends ChangeNotifier {
     clearTexts();
     
     // 2. Reload Mode 2 records (new target)
-    // loadStudyRecords(); // Don't verify/reload yet, keep current view
+     loadStudyRecords(); 
     
     // 3. Reset Mode 3 (incompatible target)
     selectMaterial(null); 
@@ -655,14 +655,14 @@ class AppState extends ChangeNotifier {
     
     _saveSettings(); // Save persistence
     
-     // Sync Review Tab Filter - DISABLED
-    // _selectedReviewLanguage = _targetLang;
+     // Sync Review Tab Filter - ENABLED
+     _selectedReviewLanguage = _targetLang;
     
     // Clear texts as direction flipped
     clearTexts();
     
     // Reload Mode 2/3 for consistency
-    // loadStudyRecords(); // Keep current list
+    loadStudyRecords(); // Keep current list
     selectMaterial(null);
     loadStudyMaterials();
     
