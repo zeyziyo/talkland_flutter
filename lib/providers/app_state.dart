@@ -122,9 +122,9 @@ class AppState extends ChangeNotifier {
       final mSource = material['source_language'] as String;
       final mTarget = material['target_language'] as String;
 
-      // Show if languages match current app settings
-      // Also handle 'auto' fallback just in case
+      // Show if languages match current app settings OR switched settings
       return (mSource == _sourceLang && mTarget == _targetLang) ||
+             (mSource == _targetLang && mTarget == _sourceLang) ||
              (mSource == 'auto' && mTarget == 'auto');
     }).toList();
   }
@@ -564,8 +564,8 @@ class AppState extends ChangeNotifier {
     _saveSettings(); // Save persistence
 
     
-    // Sync Review Tab Filter
-    _selectedReviewLanguage = lang;
+    // Sync Review Tab Filter - DISABLED to prevent hiding records when swapping
+    // _selectedReviewLanguage = lang;
     
     // Cleanup: Consistency check
     // 1. Clear Mode 1 translation (output invalid)
@@ -575,7 +575,7 @@ class AppState extends ChangeNotifier {
     clearTexts();
     
     // 2. Reload Mode 2 records (new target)
-    loadStudyRecords();
+    // loadStudyRecords(); // Don't verify/reload yet, keep current view
     
     // 3. Reset Mode 3 (incompatible target)
     selectMaterial(null); 
@@ -591,14 +591,14 @@ class AppState extends ChangeNotifier {
     
     _saveSettings(); // Save persistence
     
-     // Sync Review Tab Filter
-    _selectedReviewLanguage = _targetLang;
+     // Sync Review Tab Filter - DISABLED
+    // _selectedReviewLanguage = _targetLang;
     
     // Clear texts as direction flipped
     clearTexts();
     
     // Reload Mode 2/3 for consistency
-    loadStudyRecords();
+    // loadStudyRecords(); // Keep current list
     selectMaterial(null);
     loadStudyMaterials();
     
@@ -742,9 +742,10 @@ class AppState extends ChangeNotifier {
         FROM translations t
         INNER JOIN lang_$_sourceLang l1 ON t.source_id = l1.id
         INNER JOIN lang_$_targetLang l2 ON t.target_id = l2.id
-        WHERE t.source_lang = ? AND t.target_lang = ?
+        WHERE (t.source_lang = ? AND t.target_lang = ?) 
+           OR (t.source_lang = ? AND t.target_lang = ?)
         ORDER BY t.created_at DESC
-      ''', [_sourceLang, _targetLang]);
+      ''', [_sourceLang, _targetLang, _targetLang, _sourceLang]);
 
       _materialRecords = maps;
       notifyListeners();
@@ -986,6 +987,21 @@ class AppState extends ChangeNotifier {
       
       final targetLang = _currentMode3Question!['target_lang'] as String;
       
+      // Listen to status for faster response (check answer when STT stops)
+      _speechStatusSubscription?.cancel();
+      _speechStatusSubscription = _speechService.statusStream.listen((status) {
+        if (status == 'done' || status == 'notListening') {
+          // If session ended and we haven't checked answer yet (checking if active)
+          if (_mode3SessionActive && _mode3UserAnswer.trim().isNotEmpty) {
+             debugPrint('[AppState] Mode 3 STT done, checking answer immediately');
+             // Small delay to ensure final result processed if any
+             Future.delayed(const Duration(milliseconds: 300), () {
+               _checkMode3Answer();
+             });
+          }
+        }
+      });
+      
       await _speechService.startSTT(
         lang: _getLangCode(targetLang),
         onResult: (text, isFinal) {  // Added isFinal parameter
@@ -1004,7 +1020,7 @@ class AppState extends ChangeNotifier {
       // Start Timeout Timer (Respect configured interval + buffer for speech)
       // This is a fallback in case finalResult is not detected
       _mode3Timer = Timer(
-        Duration(seconds: _mode3Interval + 10), 
+        Duration(seconds: _mode3Interval + 5), // Reduced buffer from 10 to 5s
         _handleMode3Timeout,
       );
       

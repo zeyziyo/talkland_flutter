@@ -1181,14 +1181,21 @@ class DatabaseService {
     String whereClause = 'material_id = ?';
     List<dynamic> whereArgs = [materialId];
     
-    if (sourceLang != null) {
-      whereClause += ' AND source_lang = ?';
-      whereArgs.add(sourceLang);
-    }
-    
-    if (targetLang != null) {
-      whereClause += ' AND target_lang = ?';
-      whereArgs.add(targetLang);
+    // If both languages provided, check for bidirectional match
+    if (sourceLang != null && targetLang != null) {
+      whereClause += ' AND ((source_lang = ? AND target_lang = ?) OR (source_lang = ? AND target_lang = ?))';
+      whereArgs.addAll([sourceLang, targetLang, targetLang, sourceLang]);
+    } else {
+      // Single language filtering
+      if (sourceLang != null) {
+        whereClause += ' AND source_lang = ?';
+        whereArgs.add(sourceLang);
+      }
+      
+      if (targetLang != null) {
+        whereClause += ' AND target_lang = ?';
+        whereArgs.add(targetLang);
+      }
     }
     
     // translations 테이블에서 필터링
