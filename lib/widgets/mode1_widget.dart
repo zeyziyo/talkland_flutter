@@ -52,7 +52,32 @@ class _Mode1WidgetState extends State<Mode1Widget> {
     _noteController = TextEditingController();
   }
 
-// ... (rest of initState/dispose unchanged)
+  void _loadRewardedAd() {
+    RewardedAd.load(
+      adUnitId: UsageService.adUnitId,
+      request: const AdRequest(),
+      rewardedAdLoadCallback: RewardedAdLoadCallback(
+        onAdLoaded: (ad) {
+          debugPrint('$ad loaded.');
+          _rewardedAd = ad;
+        },
+        onAdFailedToLoad: (LoadAdError error) {
+          debugPrint('RewardedAd failed to load: $error');
+          _rewardedAd = null;
+        },
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    // Clean up controllers and ads
+    _sourceTextController.dispose();
+    _translatedTextController.dispose();
+    _noteController.dispose();
+    _rewardedAd?.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
