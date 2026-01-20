@@ -931,10 +931,10 @@ class AppState extends ChangeNotifier {
       final id = record['id'] as int;
       if (_mode3CompletedQuestionIds.contains(id)) return false;
       
-      // Filter by type if option enabled
-      if (_practiceOnlyWords) {
-        final type = record['type'] as String? ?? 'sentence';
-        if (type != 'word') return false;
+      // Filter by type using the shared Mode 2 filter
+      if (_recordTypeFilter != 'all') {
+         final type = record['type'] as String? ?? 'sentence';
+         if (type != _recordTypeFilter) return false;
       }
       
       return true;
@@ -1019,8 +1019,10 @@ class AppState extends ChangeNotifier {
       
       // Start Timeout Timer (Respect configured interval + buffer for speech)
       // This is a fallback in case finalResult is not detected
+      // Start Timeout Timer (Respect configured interval + buffer for speech)
+      // Increase buffer to prevent premature skipping
       _mode3Timer = Timer(
-        Duration(seconds: _mode3Interval + 5), // Reduced buffer from 10 to 5s
+        Duration(seconds: _mode3Interval + 10), // Increased buffer to 10s
         _handleMode3Timeout,
       );
       
@@ -1094,7 +1096,16 @@ class AppState extends ChangeNotifier {
     // _mode3Interval is "Thinking Time" in Mode 2, or "Interval" in Mode 3?
     // In Mode 3 UI it says "Interval (Seconds)".
     
-    Future.delayed(Duration(seconds: _mode3Interval), () {
+    // Auto-advance logic
+    // Ensure user has enough time to read feedback (Wrong or Correct)
+    // Use a fixed comfortable duration for reviewing result (e.g. 2 seconds) + Interval?
+    // User requested: "Show text... then move on".
+    // If the interval is meant to be "Wait time between questions", we should respect it.
+    // Ensure minimum wait time of 3 seconds so they can see the red text.
+    
+    int waitSeconds = _mode3Interval < 3 ? 3 : _mode3Interval;
+
+    Future.delayed(Duration(seconds: waitSeconds), () {
       if (_mode3SessionActive) {
         _nextMode3Question();
       }

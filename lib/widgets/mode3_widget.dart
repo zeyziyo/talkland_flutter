@@ -76,21 +76,7 @@ class Mode3Widget extends StatelessWidget {
                     ),
                     
                     // Practice Words Only Checkbox
-                    CheckboxListTile(
-                      title: Text(
-                        l10n.practiceWordsOnly, 
-                        style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-                      ),
-                      key: wordCheckKey, // Assign Key
-                      value: appState.isPracticeOnlyWords,
-                      onChanged: appState.mode3SessionActive 
-                          ? null 
-                          : (val) => appState.setPracticeOnlyWords(val ?? false),
-                      controlAffinity: ListTileControlAffinity.leading,
-                      contentPadding: EdgeInsets.zero,
-                      dense: true,
-                      activeColor: Colors.deepPurple,
-                    ),
+
                     
                     const SizedBox(height: 8),
                     

@@ -34,11 +34,6 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _mode3IntervalKey = GlobalKey();
   final GlobalKey _mode3StartButtonKey = GlobalKey();
   
-  // Mode 4 Tutorial Keys
-  final GlobalKey _mode4SpeedKey = GlobalKey();
-  final GlobalKey _mode4StartKey = GlobalKey();
-  final GlobalKey _mode4DirectionKey = GlobalKey();
-
   final GlobalKey _mode3WordCheckKey = GlobalKey(); // Mode 3 Checkbox Key
   
   // Tutorial Keys - Fixed
