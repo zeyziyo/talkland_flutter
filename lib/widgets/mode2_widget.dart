@@ -697,25 +697,64 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                   ],
                 ),
                 
-                // Context Tag
-                if (contextTag != null && contextTag.isNotEmpty) ...[
-                  const SizedBox(height: 4),
-                  Row(
-                    children: [
-                      const SizedBox(width: 44),
-                      Icon(Icons.info_outline, size: 12, color: Colors.grey[600]),
-                      const SizedBox(width: 4),
-                      Text(
-                        contextTag,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.grey[700],
-                          fontStyle: FontStyle.italic,
+                // Context Tag & Hint
+                Builder(
+                  builder: (context) {
+                    final isWord = record['type'] == 'word';
+                    // Show hint only if not expanded (answer hidden)
+                    final showHint = isWord && !isExpanded;
+                    String hintText = '';
+                    
+                    if (showHint) {
+                      final answer = bottomText; // The hidden text
+                      hintText = answer.split(' ').map((w) {
+                        if (w.isEmpty) return '';
+                        if (w.length <= 1) return w;
+                        return w[0] + '-' * (w.length - 1);
+                      }).join(' ');
+                    }
+
+                    if ((contextTag != null && contextTag.isNotEmpty) || (showHint && hintText.isNotEmpty)) {
+                      return Padding(
+                        padding: const EdgeInsets.only(top: 4),
+                        child: Row(
+                          children: [
+                            const SizedBox(width: 44),
+                            if (contextTag != null && contextTag.isNotEmpty) ...[
+                              Icon(Icons.info_outline, size: 12, color: Colors.grey[600]),
+                              const SizedBox(width: 4),
+                              Flexible( // Use Flexible to avoid overflow
+                                child: Text(
+                                  contextTag,
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.grey[700],
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              if (showHint && hintText.isNotEmpty) const SizedBox(width: 12),
+                            ],
+                            
+                            if (showHint && hintText.isNotEmpty)
+                              Text(
+                                hintText,
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.red[300],
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1.5,
+                                  fontFamily: 'monospace', // Ensure dashes align
+                                ),
+                              ),
+                          ],
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      );
+                    }
+                    return const SizedBox.shrink();
+                  }
+                ),
                 
                 const SizedBox(height: 12),
                 

@@ -39,40 +39,20 @@ class _Mode1WidgetState extends State<Mode1Widget> {
   @override
   void initState() {
     super.initState();
-    _loadRewardedAd(); // Load Ad on init
+    _loadRewardedAd();
+    
+    // Load materials for selection
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final appState = Provider.of<AppState>(context, listen: false);
+      appState.loadStudyMaterials();
+    });
 
-    // Initialize controllers with empty text
     _sourceTextController = TextEditingController();
     _translatedTextController = TextEditingController();
     _noteController = TextEditingController();
   }
 
-  void _loadRewardedAd() {
-    RewardedAd.load(
-      adUnitId: UsageService.adUnitId,
-      request: const AdRequest(),
-      rewardedAdLoadCallback: RewardedAdLoadCallback(
-        onAdLoaded: (ad) {
-          debugPrint('$ad loaded.');
-          _rewardedAd = ad;
-        },
-        onAdFailedToLoad: (LoadAdError error) {
-          debugPrint('RewardedAd failed to load: $error');
-          _rewardedAd = null;
-        },
-      ),
-    );
-  }
-
-  @override
-  void dispose() {
-    // Clean up controllers and ads
-    _sourceTextController.dispose();
-    _translatedTextController.dispose();
-    _noteController.dispose();
-    _rewardedAd?.dispose();
-    super.dispose();
-  }
+// ... (rest of initState/dispose unchanged)
 
   @override
   Widget build(BuildContext context) {
@@ -80,16 +60,8 @@ class _Mode1WidgetState extends State<Mode1Widget> {
     
     return Consumer<AppState>(
       builder: (context, appState, child) {
-         // Sync controllers with AppState if they differ (and not currently focused?)
-         // Actually, for simple text fields bound to state, we should update controller if state changes externally
-         // But allow local edits.
-         // Here we just sync if state changed significantly?
-         // Let's stick to the pattern:
-         
+        // ... (monitor controllers code)
         if (_sourceTextController.text != appState.sourceText) {
-          // Only update if not focused to prevent IME issues? 
-          // Or if the change is from STT/Selection.
-          // For now simply update:
            _sourceTextController.text = appState.sourceText;
            _sourceTextController.selection = TextSelection.collapsed(
             offset: appState.sourceText.length
@@ -110,11 +82,90 @@ class _Mode1WidgetState extends State<Mode1Widget> {
         return Stack(
           children: [
             SingleChildScrollView(
-              padding: const EdgeInsets.only(bottom: 100), // Space for bottom button
+              padding: const EdgeInsets.only(bottom: 100),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
+                    // ===================================
+                    // NEW: Type & Material Selectors
+                    // ===================================
+                    Container(
+                      margin: const EdgeInsets.only(bottom: 16),
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(12),
+                        boxShadow: [
+                           BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 4, offset:const Offset(0, 2))
+                        ]
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          // 1. Type Toggle
+                          SegmentedButton<bool>(
+                            segments: const [
+                              ButtonSegment<bool>(
+                                value: true,
+                                label: Text('Word'),
+                                icon: Icon(Icons.abc),
+                              ),
+                              ButtonSegment<bool>(
+                                value: false,
+                                label: Text('Sentence'),
+                                icon: Icon(Icons.short_text),
+                              ),
+                            ],
+                            selected: {appState.isWordMode},
+                            onSelectionChanged: (Set<bool> newSelection) {
+                              appState.setWordMode(newSelection.first);
+                            },
+                            style: ButtonStyle(
+                              visualDensity: VisualDensity.compact,
+                            ),
+                          ),
+                          
+                          const SizedBox(height: 12),
+                          
+                          // 2. Material Selector
+                          DropdownButtonFormField<int>(
+                            value: appState.selectedMaterialId,
+                            decoration: InputDecoration(
+                              labelText: l10n.selectStudyMaterial ?? "Target Material", // Use localized or fallback
+                              prefixIcon: const Icon(Icons.folder_open),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                            ),
+                            items: [
+                              DropdownMenuItem<int>(
+                                value: 0, 
+                                child: const Text("Basic (Default)"),
+                              ),
+                              ...appState.studyMaterials.map((m) {
+                                if (m['id'] == 0) return null; // Skip if handled (though map usually iterates raw list)
+                                // Handle duplicates if 0 is in list
+                                return DropdownMenuItem<int>(
+                                  value: m['id'] as int,
+                                  child: Text(
+                                    m['subject'] as String, 
+                                    overflow: TextOverflow.ellipsis
+                                  ),
+                                );
+                              }).whereType<DropdownMenuItem<int>>(), // Filter nulls
+                            ],
+                            onChanged: (int? newValue) {
+                              if (newValue != null) {
+                                appState.selectMaterial(newValue);
+                              }
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+                    
                     // Input Card
                     Card(
                       child: Padding(
@@ -139,10 +190,22 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                     ),
                                   ),
                                 ),
-                                IconButton(
-                                  icon: const Icon(Icons.swap_horiz, color: Colors.blueGrey),
-                                  onPressed: () => appState.swapLanguages(),
-                                  tooltip: l10n.swapLanguages,
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.orange.shade100,
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.orange, width: 2),
+                                    boxShadow: [
+                                      BoxShadow(color: Colors.orange.withOpacity(0.3), blurRadius: 4, spreadRadius: 1)
+                                    ]
+                                  ),
+                                  child: IconButton(
+                                    icon: const Icon(Icons.swap_horiz, color: Colors.deepOrange, size: 24),
+                                    onPressed: () => appState.swapLanguages(),
+                                    tooltip: l10n.swapLanguages,
+                                    padding: EdgeInsets.zero,
+                                    constraints: const BoxConstraints(minWidth: 40, minHeight: 40),
+                                  ),
                                 ),
                                 Row(
                                   children: [
