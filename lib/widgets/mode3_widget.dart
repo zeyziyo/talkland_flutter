@@ -193,7 +193,7 @@ class Mode3Widget extends StatelessWidget {
                             ),
                             
                             // Context Tag Hint (New)
-                            if (currentQuestion['context'] != null && (currentQuestion['context'] as String).isNotEmpty) ...[
+                            if (currentQuestion['note'] != null && (currentQuestion['note'] as String).isNotEmpty) ...[
                               const SizedBox(height: 8),
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
@@ -208,7 +208,7 @@ class Mode3Widget extends StatelessWidget {
                                     Icon(Icons.info_outline, size: 14, color: Colors.grey[600]),
                                     const SizedBox(width: 4),
                                     Text(
-                                      currentQuestion['context'] as String,
+                                      currentQuestion['note'] as String,
                                       style: TextStyle(
                                         fontSize: 14,
                                         color: Colors.grey[700],

@@ -631,7 +631,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
         ? (record['source_text'] as String) 
         : (record['target_text'] as String);
         
-    final contextTag = record['context'] as String?;
+    final contextTag = record['note'] as String?;
     final isStudied = studiedIds.contains(translationId);
     final isExpanded = _expandedCards.contains(translationId);
     final isPlaying = _isAutoPlaying && _currentPlayingIndex == index;
