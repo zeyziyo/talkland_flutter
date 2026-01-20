@@ -414,6 +414,38 @@
   "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
   "tutorialM3WordsTitle": "Practice Words",
   "tutorialM3WordsDesc": "Check this to practice only your saved words.",
+  "labelType": "Type:",
+  "labelWord": "Word",
+  "labelSentence": "Sentence",
+  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
+  "contextTagHint": "Describe situation for easier classification later",
+  "translationLimitExceeded": "Translation Limit Exceeded",
+  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
+  "watchAdAndRefill": "Watch Ad & Refill (+5)",
+  "translationRefilled": "Translations refilled by 5!",
+  "adLoading": "Loading ad, please try again in a moment.",
+  "reviewAll": "Review All",
+  "totalRecords": "Total {count} records (View All)",
+  "@totalRecords": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterAll": "All",
+  "practiceWordsOnly": "Practice Words Only",
+  "resetPracticeHistory": "Reset Practice History",
+  "retry": "Retry?",
+  "noStudyMaterial": "No study material found.",
+  "gameOver": "Game Over",
+  "playAgain": "Play Again",
+  "speakNow": "Speak now!",
+  "scoreLabel": "Score",
+  "viewOnlineGuide": "View Online User Guide",
+  "getMaterials": "Get Materials",
+  "swapLanguages": "Swap Languages",
+  "next": "Next",
   "thinkingTimeInterval": "Thinking Time Interval",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",

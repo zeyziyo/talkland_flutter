@@ -423,5 +423,37 @@
   "wordDefenseTitle": "Word Defense",
   "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
   "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud."
+  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
+  "labelType": "Type:",
+  "labelWord": "Word",
+  "labelSentence": "Sentence",
+  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
+  "contextTagHint": "Describe situation for easier classification later",
+  "translationLimitExceeded": "Translation Limit Exceeded",
+  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
+  "watchAdAndRefill": "Watch Ad & Refill (+5)",
+  "translationRefilled": "Translations refilled by 5!",
+  "adLoading": "Loading ad, please try again in a moment.",
+  "reviewAll": "Review All",
+  "totalRecords": "Total {count} records (View All)",
+  "@totalRecords": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterAll": "All",
+  "practiceWordsOnly": "Practice Words Only",
+  "resetPracticeHistory": "Reset Practice History",
+  "retry": "Retry?",
+  "noStudyMaterial": "No study material found.",
+  "gameOver": "Game Over",
+  "playAgain": "Play Again",
+  "speakNow": "Speak now!",
+  "scoreLabel": "Score",
+  "viewOnlineGuide": "View Online User Guide",
+  "getMaterials": "Get Materials",
+  "swapLanguages": "Swap Languages",
+  "next": "Next"
 }

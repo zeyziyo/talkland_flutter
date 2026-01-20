@@ -333,6 +333,7 @@ class Mode3Widget extends StatelessWidget {
         );
       },
     );
+  }
 
 
   String _getFeedbackText(BuildContext context, String code) {
