@@ -31,7 +31,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
   // Persistent controllers to preserve Korean IME composition state
   late TextEditingController _sourceTextController;
   late TextEditingController _translatedTextController;
-  late TextEditingController _contextController;
+  late TextEditingController _noteController;
 
   // Rewarded Ad
   RewardedAd? _rewardedAd;
@@ -44,219 +44,47 @@ class _Mode1WidgetState extends State<Mode1Widget> {
     // Initialize controllers with empty text
     _sourceTextController = TextEditingController();
     _translatedTextController = TextEditingController();
-    _contextController = TextEditingController();
+    _noteController = TextEditingController();
   }
 
-  void _loadRewardedAd() {
-    RewardedAd.load(
-      adUnitId: 'ca-app-pub-2281211992064241/9125789706', // Production Rewarded ID
-      request: const AdRequest(),
-      rewardedAdLoadCallback: RewardedAdLoadCallback(
-        onAdLoaded: (ad) {
-          debugPrint('$ad loaded.');
-          _rewardedAd = ad;
-        },
-        onAdFailedToLoad: (LoadAdError error) {
-          debugPrint('RewardedAd failed to load: $error');
-          _rewardedAd = null;
-        },
-      ),
-    );
-  }
-  
+  // ... (dispose)
   @override
   void dispose() {
     // Clean up controllers and ads
     _sourceTextController.dispose();
     _translatedTextController.dispose();
-    _contextController.dispose();
+    _noteController.dispose();
     _rewardedAd?.dispose();
     super.dispose();
   }
 
-
+  // ... (build)
   
-  @override
-  Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-
-    return Consumer<AppState>(
-      builder: (context, appState, child) {
-        // Sync controllers with AppState only if text actually changed
-        // This preserves cursor position and IME composition state
-        if (_sourceTextController.text != appState.sourceText) {
-          final oldSelection = _sourceTextController.selection;
-          _sourceTextController.text = appState.sourceText;
-          // Restore cursor position if it's still valid
-          if (oldSelection.baseOffset <= appState.sourceText.length) {
-            _sourceTextController.selection = oldSelection;
-          } else {
-            _sourceTextController.selection = TextSelection.collapsed(
-              offset: appState.sourceText.length,
-            );
-          }
-        }
-        
-        if (_translatedTextController.text != appState.translatedText) {
-          _translatedTextController.text = appState.translatedText;
-          _translatedTextController.selection = TextSelection.collapsed(
-            offset: appState.translatedText.length,
+        if (_noteController.text != appState.note) {
+          _noteController.text = appState.note;
+          _noteController.selection = TextSelection.collapsed(
+            offset: appState.note.length
           );
         }
         
-        if (_contextController.text != appState.contextTag) {
-          _contextController.text = appState.contextTag;
-          _contextController.selection = TextSelection.collapsed(
-            offset: appState.contextTag.length
-          );
-        }
-        return Column(
-          children: [
-            // Scrollable content
-            Expanded(
-              child: Stack(
-                children: [
-                  SingleChildScrollView(
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        // Status Message
-                        if (appState.statusMessage.isNotEmpty)
-                          Container(
-                            width: double.infinity,
-                            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                            margin: const EdgeInsets.only(bottom: 16),
-                            decoration: BoxDecoration(
-                              color: Colors.amber.shade100,
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: Colors.amber.shade300),
-                            ),
-                            child: Text(
-                              appState.statusMessage,
-                              style: TextStyle(color: Colors.brown.shade800),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-
-                        const SizedBox(height: 24),
-                        
-                        // Source Text Input
-                        Card(
-                          child: Padding(
-                            padding: const EdgeInsets.all(16),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                                          decoration: BoxDecoration(
-                                            color: Colors.blue[100],
-                                            borderRadius: BorderRadius.circular(8),
-                                          ),
-                                          child: Text(
-                                            appState.languageNames[appState.sourceLang] ?? '',
-                                            style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.blue.shade800,
-                                            ),
-                                          ),
-                                        ),
-                                        const SizedBox(width: 8),
-                                        IconButton(
-                                          icon: const Icon(Icons.swap_horiz, size: 28, color: Colors.blue),
-                                          onPressed: () => appState.swapLanguages(),
-                                          tooltip: l10n.swapLanguages,
-                                        ),
-                                      ],
+        // ...
+        
+                                // ...
+                                  const SizedBox(height: 12),
+                                  TextField(
+                                    key: widget.contextFieldKey, // Keep key prop name
+                                    controller: _noteController,
+                                    onChanged: (value) {
+                                      appState.setNote(value);
+                                    },
+                                    decoration: InputDecoration(
+                                      labelText: l10n.contextTagLabel,
+                                      hintText: l10n.contextTagHint,
+                                      border: const OutlineInputBorder(),
+                                      isDense: true,
+                                      prefixIcon: const Icon(Icons.note, size: 20), // Changed icon to note
                                     ),
-                                    Row(
-                                      children: [
-                                        IconButton(
-                                          key: widget.micButtonKey,
-                                          icon: Icon(
-                                            appState.isListening ? Icons.mic : Icons.mic_none,
-                                            color: appState.isListening ? Colors.red : null,
-                                          ),
-                                          onPressed: appState.isListening
-                                              ? () => appState.stopListening()
-                                              : () => appState.startListening(),
-                                          tooltip: l10n.listening,
-                                        ),
-                                        IconButton(
-                                          icon: const Icon(Icons.clear),
-                                          onPressed: () => appState.clearTexts(),
-                                          tooltip: l10n.cancel,
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 8),
-                                TextField(
-                                  controller: _sourceTextController,
-                                  onChanged: (value) {
-                                    appState.setSourceText(value);
-                                  },
-                                  decoration: InputDecoration(
-                                    hintText: l10n.enterTextToTranslate,
-                                    border: const OutlineInputBorder(),
                                   ),
-                                  maxLines: 3,
-                                ),
-                                const SizedBox(height: 12),
-                                // Word/Sentence Toggle
-                                Row(
-                                  children: [
-                                    Text(l10n.labelType, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[700])),
-                                    const SizedBox(width: 12),
-                                    Expanded(
-                                      child: SegmentedButton<bool>(
-                                        segments: [
-                                          ButtonSegment<bool>(
-                                            value: true, 
-                                            label: Text(l10n.labelWord), 
-                                            icon: const Icon(Icons.abc),
-                                          ),
-                                          ButtonSegment<bool>(
-                                            value: false, 
-                                            label: Text(l10n.labelSentence), 
-                                            icon: const Icon(Icons.short_text),
-                                          ),
-                                        ],
-                                        selected: {appState.isWordMode},
-                                        onSelectionChanged: (Set<bool> newSelection) {
-                                          appState.setWordMode(newSelection.first);
-                                        },
-                                        style: ButtonStyle(
-                                          visualDensity: VisualDensity.compact,
-                                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 12),
-                                TextField(
-                                  key: widget.contextFieldKey, // Assign key
-                                  controller: _contextController,
-                                  onChanged: (value) {
-                                    appState.setContextTag(value);
-                                  },
-                                  decoration: InputDecoration(
-                                    labelText: l10n.contextTagLabel,
-                                    hintText: l10n.contextTagHint,
-                                    border: const OutlineInputBorder(),
-                                    isDense: true,
-                                    prefixIcon: const Icon(Icons.tag, size: 20),
-                                  ),
-                                ),
                               ],
                             ),
                           ),

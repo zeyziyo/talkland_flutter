@@ -414,11 +414,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         icon: const Icon(Icons.record_voice_over),
                         tooltip: l10n.tooltipSpeaking,
                       ),
-                      ButtonSegment<int>(
-                        value: 2,
-                        icon: const Icon(Icons.record_voice_over),
-                        tooltip: l10n.tooltipSpeaking,
-                      ),
                     ],
                   selected: {appState.currentMode},
                   onSelectionChanged: (Set<int> newSelection) {

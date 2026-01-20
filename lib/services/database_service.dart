@@ -23,37 +23,16 @@ class DatabaseService {
     
     return await openDatabase(
       path,
-      version: 6, // Version 6: Add type column (word/sentence)
+      version: 1, // Reset to Version 1 for release
       onCreate: (db, version) async {
         await _createBaseTables(db);
         await _ensureDefaultMaterial(db);
       },
-      onUpgrade: (db, oldVersion, newVersion) async {
-        if (oldVersion < 2) {
-          // Migrate from old schema to new schema
-          await _migrateToV2(db);
-        }
-        if (oldVersion < 3) {
-          // Migrate to v3: Add study_materials table
-          await _migrateToV3(db);
-        }
-        if (oldVersion < 4) {
-          // Migrate to v4: Rename default material "No" to "Basic"
-          await _migrateToV4(db);
-        }
-        if (oldVersion < 5) {
-          // Migrate to v5: Add context column
-          await _migrateToV5(db);
-        }
-        if (oldVersion < 6) {
-          // Migrate to v6: Add type column (word/sentence)
-          await _migrateToV6(db);
-        }
-      },
+      // No onUpgrade needed since we are resetting to V1 before release
     );
   }
   
-  /// 기본 테이블 생성 (언어별 테이블은 동적 생성)
+  /// 기본 테이블 생성 (최종 스키마)
   static Future<void> _createBaseTables(Database db) async {
     // 번역 관계 테이블
     await db.execute('''
@@ -65,7 +44,7 @@ class DatabaseService {
         target_id INTEGER NOT NULL,
         created_at TEXT NOT NULL,
         material_id INTEGER,
-        context TEXT,
+        note TEXT,
         type TEXT DEFAULT 'sentence'
       )
     ''');
@@ -79,7 +58,7 @@ class DatabaseService {
       )
     ''');
     
-    // 학습 자료 메타데이터 테이블 (모드3용)
+    // 학습 자료 메타데이터 테이블
     await db.execute('''
       CREATE TABLE study_materials (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -94,147 +73,6 @@ class DatabaseService {
     ''');
     
     print('[DB] Base tables created successfully');
-  }
-  
-  /// V1에서 V2로 마이그레이션
-  static Future<void> _migrateToV2(Database db) async {
-    try {
-      // 1. 새 테이블 생성
-      await _createBaseTables(db);
-      
-      // 2. 기존 study_records 데이터가 있으면 마이그레이션
-      final tables = await db.rawQuery(
-        "SELECT name FROM sqlite_master WHERE type='table' AND name='study_records'"
-      );
-      
-      if (tables.isNotEmpty) {
-        final oldRecords = await db.query('study_records', orderBy: 'date DESC');
-        
-        for (var record in oldRecords) {
-          final sourceText = record['source_text'] as String;
-          final translatedText = record['translated_text'] as String;
-          final sourceLang = record['source_lang'] as String;
-          final targetLang = record['target_lang'] as String;
-          final date = record['date'] as String;
-          final reviewCount = record['review_count'] as int? ?? 0;
-          
-          // 언어별 테이블 생성 (없으면)
-          await createLanguageTable(sourceLang);
-          await createLanguageTable(targetLang);
-          
-          // 소스 텍스트 삽입
-          final sourceId = await db.insert('lang_$sourceLang', {
-            'text': sourceText,
-            'audio_file': null,
-            'created_at': date,
-            'last_reviewed': record['last_reviewed'],
-            'review_count': reviewCount,
-          });
-          
-          // 번역 텍스트 삽입
-          final targetId = await db.insert('lang_$targetLang', {
-            'text': translatedText,
-            'audio_file': null,
-            'created_at': date,
-            'last_reviewed': null,
-            'review_count': 0,
-          });
-          
-          // 번역 관계 생성
-          await db.insert('translations', {
-            'source_lang': sourceLang,
-            'source_id': sourceId,
-            'target_lang': targetLang,
-            'target_id': targetId,
-            'created_at': date,
-          });
-        }
-        
-        // 3. 기존 테이블 삭제 (선택적)
-        // await db.execute('DROP TABLE study_records');
-        
-        print('[DB] Migrated ${oldRecords.length} records to new schema');
-      }
-    } catch (e) {
-      print('[DB] Migration error: $e');
-    }
-  }
-  
-  /// V2에서 V3로 마이그레이션
-  static Future<void> _migrateToV3(Database db) async {
-    try {
-      print('[DB] Starting migration to v3...');
-      
-      // 1. study_materials 테이블 생성
-      await db.execute('''
-        CREATE TABLE IF NOT EXISTS study_materials (
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
-          subject TEXT NOT NULL,
-          source TEXT NOT NULL,
-          source_language TEXT NOT NULL,
-          target_language TEXT NOT NULL,
-          file_name TEXT,
-          created_at TEXT NOT NULL,
-          imported_at TEXT NOT NULL
-        )
-      ''');
-      
-      // 2. translations 테이블에 material_id 컬럼 추가
-      await db.execute('''
-        ALTER TABLE translations ADD COLUMN material_id INTEGER
-      ''');
-      
-      // 3. 기본 학습 자료(ID=0) 생성 - V3 마이그레이션 시 함께 생성
-      await _ensureDefaultMaterial(db);
-      
-      print('[DB] Migration to v3 completed successfully');
-    } catch (e) {
-      print('[DB] Migration to v3 error: $e');
-      // ALTER TABLE은 이미 존재하면 에러가 발생하므로 무시
-    }
-  }
-
-  /// V3에서 V4로 마이그레이션
-  static Future<void> _migrateToV4(Database db) async {
-    try {
-      print('[DB] Starting migration to v4...');
-      
-      // Update default material name from "No" to "Basic"
-      await db.rawUpdate("UPDATE study_materials SET subject = 'Basic' WHERE id = 0");
-      
-      print('[DB] Migration to v4 completed successfully');
-    } catch (e) {
-      print('[DB] Migration to v4 error: $e');
-    }
-  }
-
-  /// V4에서 V5로 마이그레이션
-  static Future<void> _migrateToV5(Database db) async {
-    try {
-      print('[DB] Starting migration to v5...');
-      
-      // translations 테이블에 context 컬럼 추가
-      await db.execute('ALTER TABLE translations ADD COLUMN context TEXT');
-      
-      print('[DB] Migration to v5 completed successfully');
-    } catch (e) {
-      print('[DB] Migration to v5 error: $e');
-      // If column exists, ignore
-    }
-  }
-
-  /// V6 마이그레이션: type 컬럼 추가
-  static Future<void> _migrateToV6(Database db) async {
-    try {
-      print('[DB] Starting migration to v6...');
-      
-      // translations 테이블에 type 컬럼 추가 (기본값: sentence)
-      await db.execute("ALTER TABLE translations ADD COLUMN type TEXT DEFAULT 'sentence'");
-      
-      print('[DB] Migration to v6 completed successfully');
-    } catch (e) {
-      print('[DB] Migration to v6 error: $e');
-    }
   }
 
   /// 기본 학습 자료 보장 (ID=0)
@@ -406,31 +244,29 @@ class DatabaseService {
     print('[DB] Found ${topResults.length} similar texts (strict) in $tableName');
     return topResults;
   }
-  
+
   /// 번역이 이미 존재하는지 확인
-  /// context가 주어진 경우 해당 context와 정확히 일치하는지 확인
+  /// note가 주어진 경우 해당 note와 정확히 일치하는지 확인
   static Future<Map<String, dynamic>?> getTranslationIfExists(
     String sourceLang,
     int sourceId,
     String targetLang, {
-    String? context,
+    String? note,
   }) async {
     final db = await database;
     
-    // Build query to match context exactly (or both null)
     String whereClause;
     List<dynamic> whereArgs;
     
-    if (context == null || context.isEmpty) {
-      // If filtering by "no context", strictly find records with NULL or EMPTY context
-      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND (context IS NULL OR context = "")';
+    if (note == null || note.isEmpty) {
+      // If filtering by "no note", strictly find records with NULL or EMPTY note
+      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND (note IS NULL OR note = "")';
       whereArgs = [sourceLang, sourceId, targetLang];
     } else {
-      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND context = ?';
-      whereArgs = [sourceLang, sourceId, targetLang, context];
+      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND note = ?';
+      whereArgs = [sourceLang, sourceId, targetLang, note];
     }
     
-    // translations 테이블에서 관계 찾기
     final translations = await db.query(
       'translations',
       where: whereClause,
@@ -445,7 +281,6 @@ class DatabaseService {
     final translation = translations.first;
     final targetId = translation['target_id'] as int;
     
-    // 대상 언어 테이블에서 텍스트 가져오기
     final targetTableName = 'lang_$targetLang'.replaceAll('-', '_');
     final targetRecords = await db.query(
       targetTableName,
@@ -458,47 +293,37 @@ class DatabaseService {
       return null;
     }
     
-    print('[DB] Found existing translation: $sourceLang($sourceId) -> $targetLang($targetId) [Context: ${translation['context']}]');
+    print('[DB] Found existing translation: $sourceLang($sourceId) -> $targetLang($targetId) [Note: ${translation['note']}]');
     return {
       'target_id': targetId,
       'target_text': targetRecords.first['text'] as String,
       'audio_file': targetRecords.first['audio_file'],
-      'context': translation['context'],
+      'note': translation['note'],
     };
   }
   
-  /// 번역 관계 저장 (중복 시 무시)
-  /// context가 다르면 다른 레코드로 취급
+  /// 번역 관계 저장
   static Future<void> saveTranslationLink({
     required String sourceLang,
     required int sourceId,
     required String targetLang,
     required int targetId,
     required int materialId,
-    String? context,
-    String type = 'sentence', // Added type
+    String? note,
+    String type = 'sentence',
   }) async {
     final db = await database;
     
-    // 중복 검사: 동일한 번역 관계가 이미 존재하는지 확인
-    // Context가 null인 경우와 있는 경우를 구분해서 처리
     String whereClause;
     List<dynamic> whereArgs;
 
-    if (context == null) {
-      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND context IS NULL';
+    if (note == null) {
+      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND note IS NULL';
       whereArgs = [sourceLang, sourceId, targetLang, targetId];
     } else {
-      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND context = ?';
-      whereArgs = [sourceLang, sourceId, targetLang, targetId, context];
+      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND note = ?';
+      whereArgs = [sourceLang, sourceId, targetLang, targetId, note];
     }
-    
-    // Type check?? For now let's append type to query if we want strict separation
-    // But existing check logic was mainly about ID links.
-    // If I save the same sentence as "Word", it should probably be a separate entry or just update?
-    // Let's stick to: if identical link exists, we skip.
-    // Maybe we should update type if it differs?
-    // For simplicity in this batch: insert if not exists.
     
     final existing = await db.query(
       'translations',
@@ -508,11 +333,10 @@ class DatabaseService {
     );
     
     if (existing.isNotEmpty) {
-      print('[DB] Translation link already exists: $sourceLang($sourceId) -> $targetLang($targetId) [Context: $context]');
+      print('[DB] Translation link already exists: $sourceLang($sourceId) -> $targetLang($targetId) [Note: $note]');
       return;
     }
     
-    // 새 번역 관계 생성
     await db.insert('translations', {
       'source_lang': sourceLang,
       'source_id': sourceId,
@@ -520,17 +344,13 @@ class DatabaseService {
       'target_id': targetId,
       'created_at': DateTime.now().toIso8601String(),
       'material_id': materialId,
-      'context': context,
+      'note': note,
       'type': type,
     });
     
     print('[DB] Translation link saved: $sourceLang($sourceId) -> $targetLang($targetId) [Material: $materialId] [Type: $type]');
   }
-  
-  // ==========================================
-  // 오디오 파일 저장
-  // ==========================================
-  
+
   /// 오디오 파일 저장
   static Future<void> saveAudioFile(
     String langCode,
@@ -569,18 +389,13 @@ class DatabaseService {
     
     return records.first['audio_file'] as Uint8List;
   }
-  
-  // ==========================================
-  // 복습 모드용 조회
-  // ==========================================
-  
+
   /// 특정 대상 언어로 번역된 모든 레코드 가져오기
   static Future<List<Map<String, dynamic>>> getRecordsByTargetLanguage(
     String targetLang,
   ) async {
     final db = await database;
     
-    // translations 테이블에서 대상 언어로 필터링
     final translations = await db.query(
       'translations',
       where: 'target_lang = ?',
@@ -591,11 +406,10 @@ class DatabaseService {
     List<Map<String, dynamic>> results = [];
     
     for (var translation in translations) {
-      final sourceLang = translation['source_lang'] as String;
+       final sourceLang = translation['source_lang'] as String;
       final sourceId = translation['source_id'] as int;
       final targetId = translation['target_id'] as int;
       
-      // 소스 텍스트 가져오기
       final sourceTableName = 'lang_$sourceLang'.replaceAll('-', '_');
       final sourceRecords = await db.query(
         sourceTableName,
@@ -604,7 +418,6 @@ class DatabaseService {
         limit: 1,
       );
       
-      // 대상 텍스트 가져오기
       final targetTableName = 'lang_$targetLang'.replaceAll('-', '_');
       final targetRecords = await db.query(
         targetTableName,
@@ -622,12 +435,12 @@ class DatabaseService {
           'target_lang': targetLang,
           'target_id': targetId,
           'target_text': targetRecords.first['text'],
-          'translated_text': targetRecords.first['text'], // Alias for Mode2Widget compatibility
-          'date': translation['created_at'], // Alias for compatibility
+          'translated_text': targetRecords.first['text'],
+          'date': translation['created_at'],
           'created_at': translation['created_at'],
           'review_count': targetRecords.first['review_count'] ?? 0,
           'last_reviewed': targetRecords.first['last_reviewed'],
-          'context': translation['context'],
+          'note': translation['note'],
           'type': translation['type'] ?? 'sentence',
         });
       }
@@ -685,7 +498,7 @@ class DatabaseService {
           'date': translation['created_at'],
           'review_count': targetRecords.first['review_count'] ?? 0,
           'last_reviewed': targetRecords.first['last_reviewed'],
-          'context': translation['context'],
+          'note': translation['note'],
           'type': translation['type'] ?? 'sentence',
         });
       }
@@ -868,16 +681,6 @@ class DatabaseService {
   // ==========================================
   
   /// Import study materials from JSON file
-  /// 
-  /// Expected JSON format:
-  /// {
-  ///   "source_language": "ko",
-  ///   "target_language": "ja",
-  ///   "entries": [
-  ///     {"source_text": "안녕하세요", "target_text": "こんにちは"},
-  ///     ...
-  ///   ]
-  /// }
   static Future<Map<String, dynamic>> importFromJson(String jsonContent) async {
     try {
       final data = json.decode(jsonContent) as Map<String, dynamic>;
@@ -914,7 +717,7 @@ class DatabaseService {
             targetLang: targetLang,
             targetId: targetId,
             materialId: 0, // Default to 0 for generic imports if no specific material
-            context: (entry['note'] ?? entry['context']) as String?, // Import context/note
+            note: (entry['note'] ?? entry['context']) as String?, // Import context/note
             type: entry['type'] as String? ?? defaultType, // Use entry type or default type
           );
           
@@ -1051,7 +854,7 @@ class DatabaseService {
             targetLang: targetLang,
             targetId: targetId,
             materialId: materialId,
-            context: (entry['note'] ?? entry['context']) as String?, // Import context/note
+            note: (entry['note'] ?? entry['context']) as String?, // Import context/note
             type: entry['type'] as String? ?? defaultType, // Use entry type or default type
           );
           
@@ -1090,24 +893,19 @@ class DatabaseService {
     required String targetLang,
     required int targetId,
     required int materialId,
-    String? context, // Added context param
-    String type = 'sentence', // Added type
+    String? note,
+    String type = 'sentence',
   }) async {
     final db = await database;
-    
-    // 중복 검사: 동일한 번역 관계가 이미 존재하는지 확인
-    // Context aware check needed? Assuming imports might duplicate simple text relations
-    // For now, check strict duplication including context if provided, or ignore context for loose check?
-    // Let's stick to strict check: if context differs, it's a NEW link.
     
     String whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND material_id = ?';
     List<dynamic> whereArgs = [sourceLang, sourceId, targetLang, targetId, materialId];
     
-    if (context != null) {
-      whereClause += ' AND context = ?';
-      whereArgs.add(context);
+    if (note != null) {
+      whereClause += ' AND note = ?';
+      whereArgs.add(note);
     } else {
-       whereClause += ' AND (context IS NULL OR context = "")';
+       whereClause += ' AND (note IS NULL OR note = "")';
     }
 
     final existing = await db.query(
@@ -1129,7 +927,7 @@ class DatabaseService {
       'target_lang': targetLang,
       'target_id': targetId,
       'material_id': materialId,
-      'context': context, // Save context
+      'note': note, // Save note
       'type': type,
       'created_at': DateTime.now().toIso8601String(),
     });
@@ -1137,16 +935,20 @@ class DatabaseService {
     print('[DB] Translation link with material saved: $sourceLang($sourceId) -> $targetLang($targetId), material_id=$materialId [Type: $type]');
   }
   
-  /// Get all study materials
+  /// Get all study materials with type counts
   static Future<List<Map<String, dynamic>>> getAllStudyMaterials() async {
     final db = await database;
     
-    final materials = await db.query(
-      'study_materials',
-      orderBy: 'imported_at DESC',
-    );
+    // Query with subqueries to count words and sentences for each material
+    final materials = await db.rawQuery('''
+      SELECT m.*, 
+        (SELECT COUNT(*) FROM translations t WHERE t.material_id = m.id AND (t.type = 'word' OR t.type IS NULL)) as word_count,
+        (SELECT COUNT(*) FROM translations t WHERE t.material_id = m.id AND t.type = 'sentence') as sentence_count
+      FROM study_materials m 
+      ORDER BY m.imported_at DESC
+    ''');
     
-    print('[DB] Retrieved ${materials.length} study materials');
+    print('[DB] Retrieved ${materials.length} study materials with counts');
     return materials;
   }
   
@@ -1245,7 +1047,7 @@ class DatabaseService {
           'target_audio': targetRecords.first['audio_file'],
           'material_id': materialId,
           'created_at': translation['created_at'],
-          'context': translation['context'],
+          'note': translation['note'],
           'type': translation['type'] ?? 'sentence',
         });
       }

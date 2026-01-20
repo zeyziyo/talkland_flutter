@@ -58,7 +58,7 @@ class AppState extends ChangeNotifier {
   bool _isSpeaking = false;
   bool _isSaved = false; // Track if current translation is saved
   String _statusMessage = '';
-  String _contextTag = ''; // Context for ambiguous translations
+  String _note = ''; // Note for ambiguous translations
   bool _isWordMode = false; // Toggle between Word and Sentence mode
   
   // Duplicate detection & translation reuse state
@@ -89,13 +89,119 @@ class AppState extends ChangeNotifier {
   bool get isSpeaking => _isSpeaking;
   bool get isSaved => _isSaved;
   String get statusMessage => _statusMessage;
-  String get contextTag => _contextTag;
+  String get note => _note;
   bool get isWordMode => _isWordMode;
   List<Map<String, dynamic>> get studyRecords => _studyRecords;
   List<Map<String, dynamic>> get similarSources => _similarSources;
   int? get selectedSourceId => _selectedSourceId;
   bool get showDuplicateDialog => _showDuplicateDialog;
   String get selectedReviewLanguage => _selectedReviewLanguage;
+
+  void setNote(String value) {
+    _note = value;
+    notifyListeners();
+  }
+  
+  void setWordMode(bool value) {
+    _isWordMode = value;
+    notifyListeners();
+  }
+  
+  /// Search for similar source texts
+  Future<void> searchSimilarSources(String text) async {
+    _duplicateCheckTriggered = true;
+    
+    // Perform loose search
+    final results = await DatabaseService.searchSimilarText(_sourceLang, text);
+    _similarSources = results;
+    
+    notifyListeners();
+  }
+  
+  /// Check if translation exists, including note check
+  Future<void> _checkDuplicate() async {
+    if (_selectedSourceId == null) return;
+    
+    // Check if translation exists with same note
+    final existing = await DatabaseService.getTranslationIfExists(
+      _sourceLang, 
+      _selectedSourceId!, 
+      _targetLang, 
+      note: _note
+    );
+    
+    if (existing != null) {
+      // Restore existing translation
+      _translatedText = existing['target_text'];
+      _isSaved = true; // Mark as saved since it exists
+      
+      // If note differs (was null vs empty?), update UI note?
+      if (existing['note'] != null) {
+        _note = existing['note'];
+      }
+      
+      _statusMessage = 'Saved translation found.';
+    } else {
+       _isSaved = false;
+    }
+    notifyListeners();
+  }
+  
+  Future<void> saveTranslation() async {
+    if (_sourceText.isEmpty || _translatedText.isEmpty) return;
+    
+    try {
+      int sId = _selectedSourceId ?? -1;
+      
+      // 1. If strict new entry (sourceId null), insert source
+      if (sId == -1) {
+         sId = await DatabaseService.insertLanguageRecord(_sourceLang, _sourceText);
+         _selectedSourceId = sId;
+      }
+      
+      // 2. Insert target
+      final tId = await DatabaseService.insertLanguageRecord(_targetLang, _translatedText);
+      
+      // 3. Link with Note
+      await DatabaseService.saveTranslationLink(
+        sourceLang: _sourceLang,
+        sourceId: sId,
+        targetLang: _targetLang,
+        targetId: tId,
+        materialId: _selectedMaterialId ?? 0, // Default to Basic (0) or selected
+        note: _note.isEmpty ? null : _note,
+        type: _isWordMode ? 'word' : 'sentence',
+      );
+      
+      _isSaved = true;
+      _statusMessage = 'Saved!';
+      
+      // Refresh Mode 2 list if active
+      if (_currentMode == 1) {
+        loadStudyMaterials();
+      }
+      
+      notifyListeners();
+    } catch (e) {
+      _statusMessage = 'Save failed: $e';
+      notifyListeners();
+    }
+  }
+  
+  void selectSource(Map<String, dynamic> source) {
+    _selectedSourceId = source['id'] as int;
+    _sourceText = source['text'] as String;
+    
+    // Reset translation state for new source selection? 
+    // Or check if translation exists for this source + current note?
+    // Let's trigger check.
+    _duplicateCheckTriggered = false;
+    _checkDuplicate(); 
+    
+    notifyListeners();
+  }
+
+  // ... (rest of the file)
   
   // Mode 2 Getters
   List<Map<String, dynamic>> get studyMaterials => _studyMaterials;
@@ -113,19 +219,32 @@ class AppState extends ChangeNotifier {
     }).toList();
   }
 
-  /// Get study materials filtered by current source/target languages
+  /// Get study materials filtered by current source/target languages AND record type
   List<Map<String, dynamic>> get filteredStudyMaterials {
     return _studyMaterials.where((material) {
       final id = material['id'] as int;
-      if (id == 0) return true; // Always show default material (container)
+      if (id == 0) return true; // Always show default (Basic)
 
       final mSource = material['source_language'] as String;
       final mTarget = material['target_language'] as String;
 
-      // Show if languages match current app settings OR switched settings
-      return (mSource == _sourceLang && mTarget == _targetLang) ||
+      // 1. Language Check
+      final langMatch = (mSource == _sourceLang && mTarget == _targetLang) ||
              (mSource == _targetLang && mTarget == _sourceLang) ||
              (mSource == 'auto' && mTarget == 'auto');
+             
+      if (!langMatch) return false;
+
+      // 2. Type Check (Word/Sentence)
+      if (_recordTypeFilter == 'word') {
+        final count = material['word_count'] as int? ?? 0;
+        if (count == 0) return false;
+      } else if (_recordTypeFilter == 'sentence') {
+        final count = material['sentence_count'] as int? ?? 0;
+        if (count == 0) return false;
+      }
+      
+      return true;
     }).toList();
   }
   
@@ -964,6 +1083,9 @@ class AppState extends ChangeNotifier {
     
     await _speechService.speak(sourceText, lang: _getLangCode(sourceLang));
     
+    // Add delay to ensure TTS audio is fully cleared before listening
+    await Future.delayed(const Duration(milliseconds: 500));
+    
     // Start listening for answer
     _startMode3Listening();
   }
@@ -1073,29 +1195,8 @@ class AppState extends ChangeNotifier {
     final similarity = _calculateSimilarity(_mode3UserAnswer, targetText);
     _mode3Score = similarity * 100;
     
-    // Feedback
     // Feedback Logic
     if (_mode3Score! >= 90) {
-      _mode3Feedback = 'PERFECT'; // Code for Perfect
-      // Add to completed list so it doesn't show up again this session
-      final currentId = _currentMode3Question!['id'] as int;
-      _mode3CompletedQuestionIds.add(currentId);
-    } else {
-      // Incorrect Answer
-      _mode3Feedback = 'TRY_AGAIN'; // Code for Keep Trying
-      // Do NOT add to completed list, so it can appear again later
-    }
-    
-    notifyListeners();
-
-    // Auto-advance for both correct and incorrect
-    // Wait configured interval (or default 2s if too fast preferred), let's use 3s or strictly interval?
-    // User said "show for designated time then move next".
-    // Let's use 3 seconds (enough to read) or _mode3Interval?
-    // _mode3Interval is "Thinking Time" in Mode 2, or "Interval" in Mode 3?
-    // In Mode 3 UI it says "Interval (Seconds)".
-    
-    // Auto-advance logic
     // Ensure user has enough time to read feedback (Wrong or Correct)
     // Use a fixed comfortable duration for reviewing result (e.g. 2 seconds) + Interval?
     // User requested: "Show text... then move on".
