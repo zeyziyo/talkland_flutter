@@ -220,6 +220,28 @@ class AppState extends ChangeNotifier {
       return true;
     }).toList();
   }
+
+  /// Get study materials specifically for Mode 1 (Save Target Selection)
+  /// Matches the 'Word/Sentence' toggle state.
+  List<Map<String, dynamic>> get mode1StudyMaterials {
+    return _studyMaterials.where((material) {
+      final id = material['id'] as int;
+      if (id == 0) return true; // Always show Basic
+
+      final wordCount = material['word_count'] as int? ?? 0;
+      final sentenceCount = material['sentence_count'] as int? ?? 0;
+      final totalCount = wordCount + sentenceCount;
+
+      // Show if material contains the selected type OR is empty
+      if (_isWordMode) {
+        // Word Mode: Show if has words or empty
+        return wordCount > 0 || totalCount == 0;
+      } else {
+        // Sentence Mode: Show if has sentences or empty
+        return sentenceCount > 0 || totalCount == 0;
+      }
+    }).toList();
+  }
   
   // Language display names (Dynamic)
   // ALWAYS return English names as per user request to ensure readability
@@ -247,6 +269,7 @@ class AppState extends ChangeNotifier {
       }
     } else if (mode == 3) {
       // Game Mode (Mode 4)
+      _recordTypeFilter = 'all'; // Reset filter so all materials are visible
       loadStudyMaterials();
        // Auto-select first material
       if (_studyMaterials.isNotEmpty && _selectedMaterialId == null) {
@@ -822,11 +845,57 @@ class AppState extends ChangeNotifier {
   /// Load records for selected material
   Future<void> loadMaterialRecords(int materialId) async {
     try {
-      _materialRecords = await DatabaseService.getRecordsByMaterialId(
-        materialId,
-        sourceLang: _sourceLang,
-        targetLang: _targetLang,
+      // 1. Find material metadata to check language direction
+      final material = _studyMaterials.firstWhere(
+        (m) => m['id'] == materialId,
+        orElse: () => {},
       );
+
+      bool needSwap = false;
+      String queryTargetLang = _targetLang;
+
+      if (material.isNotEmpty) {
+        final mSource = material['source_language'] as String;
+        final mTarget = material['target_language'] as String;
+
+        // Check if material direction matches current App settings
+        // Case 1: Match (En->Ko == En->Ko)
+        if (mSource == _sourceLang && mTarget == _targetLang) {
+          needSwap = false;
+          queryTargetLang = _targetLang;
+        }
+        // Case 2: Swap (Ko->En == En->Ko) -> Need to fetch Ko target and swap
+        else if (mSource == _targetLang && mTarget == _sourceLang) {
+          needSwap = true;
+          queryTargetLang = _sourceLang; // Fetch original target (which is our source)
+        }
+        // Case 3: Auto or mismatch - Default to simple query
+      }
+
+      var records = await DatabaseService.getRecordsByMaterialId(
+        materialId,
+        sourceLang: needSwap ? _targetLang : _sourceLang, 
+        targetLang: queryTargetLang,
+      );
+
+      // 2. Perform Swap if needed
+      if (needSwap) {
+        records = records.map((r) {
+          return {
+            ...r,
+            'source_lang': r['target_lang'],
+            'source_text': r['target_text'],
+            'target_lang': r['source_lang'],
+            'target_text': r['source_text'],
+            // ID references might be tricky if used for editing, 
+            // but for Display/Practice (Mode 2/3), text is primary.
+            // If editing, we might need original IDs. 
+            // But Mode 3 just uses text.
+          };
+        }).toList();
+      }
+
+      _materialRecords = records;
       notifyListeners();
     } catch (e) {
       debugPrint('[AppState] Error loading material records: $e');

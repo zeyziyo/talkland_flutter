@@ -169,7 +169,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                 value: 0, 
                                 child: const Text("Basic (Default)"),
                               ),
-                              ...appState.studyMaterials.map((m) {
+                              ...appState.mode1StudyMaterials.map((m) {
                                 if (m['id'] == 0) return null; // Skip if handled (though map usually iterates raw list)
                                 // Handle duplicates if 0 is in list
                                 return DropdownMenuItem<int>(
