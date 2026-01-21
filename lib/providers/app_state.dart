@@ -987,10 +987,12 @@ class AppState extends ChangeNotifier {
   
   int _mode3Interval = 5; // Seconds
   bool _mode3SessionActive = false;
-  bool _practiceOnlyWords = false; // Filter option
   Map<String, dynamic>? _currentMode3Question;
-  String _mode3UserAnswer = '';
-  double? _mode3Score; // 0.0 to 100.0
+  String _mode3UserAnswer = ''; // User's spoken text for feedback
+  Timer? _mode3Timer; // Timer for auto-advance
+  bool _practiceWordsOnly = false; // Filter for "Words Only" in Mode 3
+
+  // Getters
   String _mode3Feedback = '';
   
   // Track completed questions (Perfect score) in current session to avoid repetition
@@ -998,25 +1000,28 @@ class AppState extends ChangeNotifier {
   
   // Timeout & Retry Logic
   bool _showRetryButton = false;
-  Timer? _mode3Timer;
+  // Timer? _mode3Timer; // This was moved above
   Timer? _retryAutoSkipTimer;
   
   int get mode3Interval => _mode3Interval;
   bool get mode3SessionActive => _mode3SessionActive;
-  bool get isPracticeOnlyWords => _practiceOnlyWords;
   Map<String, dynamic>? get currentMode3Question => _currentMode3Question;
   String get mode3UserAnswer => _mode3UserAnswer;
   double? get mode3Score => _mode3Score;
   String get mode3Feedback => _mode3Feedback;
   bool get showRetryButton => _showRetryButton;
+  bool get practiceWordsOnly => _practiceWordsOnly;
   
-  void setPracticeOnlyWords(bool value) {
-    _practiceOnlyWords = value;
-    notifyListeners();
-  }
+
   
   void setMode3Interval(int seconds) {
     _mode3Interval = seconds;
+    notifyListeners();
+  }
+
+  void setPracticeWordsOnly(bool value) {
+    if (_mode3SessionActive) return;
+    _practiceWordsOnly = value;
     notifyListeners();
   }
   
@@ -1103,6 +1108,12 @@ class AppState extends ChangeNotifier {
     
     // Start listening for answer
     _startMode3Listening();
+  }
+
+  void setPracticeWordsOnly(bool value) {
+    if (_mode3SessionActive) return;
+    _practiceWordsOnly = value;
+    notifyListeners();
   }
   
   /// Called when user clicks "Retry"

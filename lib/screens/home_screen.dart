@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // Mode 2 Keys
   final GlobalKey _mode2DropdownKey = GlobalKey();
-  final GlobalKey _mode2DropdownKey = GlobalKey();
+
   final GlobalKey _mode2ListKey = GlobalKey();
   final GlobalKey _mode2ToggleKey = GlobalKey(); // Mode 2 Toggle Key
 

@@ -77,7 +77,7 @@ class Mode3Widget extends StatelessWidget {
                     
                     // Practice Words Only Checkbox
                     CheckboxListTile(
-                      key: widget.wordCheckKey,
+                      key: wordCheckKey,
                       title: Text(l10n.tutorialM3WordsTitle),
                       subtitle: Text(l10n.tutorialM3WordsDesc),
                       value: appState.practiceWordsOnly,
