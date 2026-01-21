@@ -1167,9 +1167,9 @@ class AppState extends ChangeNotifier {
       // Start Timeout Timer (Respect configured interval + buffer for speech)
       // This is a fallback in case finalResult is not detected
       // Start Timeout Timer (Respect configured interval + buffer for speech)
-      // Increase buffer to prevent premature skipping
+      // User Logic: "If no response in 3 seconds -> Next"
       _mode3Timer = Timer(
-        Duration(seconds: _mode3Interval + 10), // Increased buffer to 10s
+        const Duration(seconds: 3), 
         _handleMode3Timeout,
       );
       
@@ -1195,10 +1195,13 @@ class AppState extends ChangeNotifier {
     
     _mode3Score = 0.0;
     _mode3Feedback = 'TIME_UP'; // Code for Time Up
+    _mode3UserAnswer = '(No Voice)'; // Show placeholder? Or keep empty? User said "If no response... next". 
+    // And "show user pronunciation" applies to "Wrong answer".
     notifyListeners();
     
     // Auto-advance
-    Future.delayed(Duration(seconds: _mode3Interval), () {
+    // User said "move to next".
+    Future.delayed(const Duration(seconds: 1), () {
       if (_mode3SessionActive) {
          _nextMode3Question();
       }
