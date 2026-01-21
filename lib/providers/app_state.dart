@@ -1139,15 +1139,25 @@ class AppState extends ChangeNotifier {
       _speechStatusSubscription?.cancel();
       _speechStatusSubscription = _speechService.statusStream.listen((status) {
         if (status == 'done' || status == 'notListening') {
-          // If session ended and we haven't checked answer yet (checking if active)
-          if (_mode3SessionActive && 
-              _mode3UserAnswer.trim().isNotEmpty &&
-              DateTime.now().difference(_sttStartTime!).inMilliseconds > 1000) { // Safety check
-             debugPrint('[AppState] Mode 3 STT done, checking answer immediately');
-             // Small delay to ensure final result processed if any
-             Future.delayed(const Duration(milliseconds: 300), () {
-               _checkMode3Answer();
-             });
+          // If session ended (from native silence detection or manual stop)
+          if (_mode3SessionActive) {
+             debugPrint('[AppState] Mode 3 STT status: $status');
+             
+             // If we have an answer, check it
+             if (_mode3UserAnswer.trim().isNotEmpty) {
+                 // Small delay to ensure final result processed
+                 Future.delayed(const Duration(milliseconds: 300), () {
+                   _checkMode3Answer();
+                 });
+             } else {
+               // If NO answer (Silence Timeout), treat as timeout
+               // Wait briefly to ensure no lagging partial results come in
+               Future.delayed(const Duration(milliseconds: 500), () {
+                 if (_mode3UserAnswer.isEmpty && _isListening) {
+                   _handleMode3Timeout();
+                 }
+               });
+             }
           }
         }
       });
@@ -1173,14 +1183,8 @@ class AppState extends ChangeNotifier {
         },
       );
       
-      // Start Timeout Timer (Respect configured interval + buffer for speech)
-      // This is a fallback in case finalResult is not detected
-      // Start Timeout Timer (Respect configured interval + buffer for speech)
-      // User Logic: "If no response in 3 seconds -> Next"
-      _mode3Timer = Timer(
-        const Duration(seconds: 3), 
-        _handleMode3Timeout,
-      );
+      // Removed hard 3s Timer. Rely on SpeechService's pauseFor (3s silence detection).
+      // _mode3Timer = Timer(...)
       
     } catch (e) {
       debugPrint('[AppState] Mode 3 Listen Error: $e');
