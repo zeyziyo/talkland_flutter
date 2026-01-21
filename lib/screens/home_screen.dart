@@ -429,45 +429,86 @@ class _HomeScreenState extends State<HomeScreen> {
               return Container(
                 key: _tabKey,
                 margin: const EdgeInsets.all(16),
-                  child: SegmentedButton<int>(
-                    showSelectedIcon: false,
-                    segments: [
-                      ButtonSegment<int>(
-                        value: 0,
-                        icon: const Icon(Icons.search),
-                        tooltip: l10n.tooltipSearch,
+                  child: Row(
+                    children: [
+                      // Mode Selector (Flexible to take available space)
+                      Expanded(
+                        flex: 3,
+                        child: SegmentedButton<int>(
+                          showSelectedIcon: false,
+                          segments: [
+                            ButtonSegment<int>(
+                              value: 0,
+                              icon: const Icon(Icons.search),
+                              tooltip: l10n.tooltipSearch,
+                            ),
+                            ButtonSegment<int>(
+                              value: 1,
+                              icon: const Icon(Icons.auto_stories),
+                              tooltip: l10n.tooltipStudyReview,
+                            ),
+                            ButtonSegment<int>(
+                              value: 2,
+                              icon: const Icon(Icons.record_voice_over),
+                              tooltip: l10n.tooltipSpeaking,
+                            ),
+                          ],
+                          selected: {appState.currentMode},
+                          onSelectionChanged: (Set<int> newSelection) {
+                            appState.switchMode(newSelection.first);
+                          },
+                          style: ButtonStyle(
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            visualDensity: VisualDensity.compact,
+                            backgroundColor: WidgetStateProperty.resolveWith((states) {
+                              if (states.contains(WidgetState.selected)) {
+                                return const Color(0xFF667eea);
+                              }
+                              return Colors.white;
+                            }),
+                            foregroundColor: WidgetStateProperty.resolveWith((states) {
+                              if (states.contains(WidgetState.selected)) {
+                                return Colors.white;
+                              }
+                              return const Color(0xFF667eea);
+                            }),
+                          ),
+                        ),
                       ),
-                      ButtonSegment<int>(
-                        value: 1,
-                        icon: const Icon(Icons.auto_stories),
-                        tooltip: l10n.tooltipStudyReview,
-                      ),
-                      ButtonSegment<int>(
-                        value: 2,
-                        icon: const Icon(Icons.record_voice_over),
-                        tooltip: l10n.tooltipSpeaking,
+                      
+                      const SizedBox(width: 8),
+                      
+                      // Word/Sentence Toggle (Text Only)
+                      Expanded(
+                        flex: 2,
+                        child: SegmentedButton<String>(
+                          showSelectedIcon: false,
+                          segments: [
+                            ButtonSegment<String>(
+                              value: 'word', 
+                              label: Text(l10n.labelWord, maxLines: 1, overflow: TextOverflow.ellipsis),
+                              // No Icon
+                            ),
+                            ButtonSegment<String>(
+                              value: 'sentence', 
+                              label: Text(l10n.labelSentence, maxLines: 1, overflow: TextOverflow.ellipsis),
+                              // No Icon
+                            ),
+                          ],
+                          selected: {appState.recordTypeFilter == 'all' ? 'word' : appState.recordTypeFilter},
+                          onSelectionChanged: (Set<String> newSelection) {
+                            // This updates both filter and _isWordMode
+                            appState.setRecordTypeFilter(newSelection.first); 
+                          },
+                          style: ButtonStyle(
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            visualDensity: VisualDensity.compact,
+                          ),
+                        ),
                       ),
                     ],
-                  selected: {appState.currentMode},
-                  onSelectionChanged: (Set<int> newSelection) {
-                    appState.switchMode(newSelection.first);
-                  },
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.resolveWith((states) {
-                      if (states.contains(WidgetState.selected)) {
-                        return const Color(0xFF667eea);
-                      }
-                      return Colors.white;
-                    }),
-                    foregroundColor: WidgetStateProperty.resolveWith((states) {
-                      if (states.contains(WidgetState.selected)) {
-                        return Colors.white;
-                      }
-                      return const Color(0xFF667eea);
-                    }),
                   ),
-                ),
-              );
+                );
             },
           ),
           

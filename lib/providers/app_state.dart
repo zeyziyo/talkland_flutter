@@ -104,6 +104,8 @@ class AppState extends ChangeNotifier {
   
   void setWordMode(bool value) {
     _isWordMode = value;
+    // Sync with Mode 2/3 filter
+    _recordTypeFilter = value ? 'word' : 'sentence';
     notifyListeners();
   }
   
@@ -906,6 +908,12 @@ class AppState extends ChangeNotifier {
   
   void setRecordTypeFilter(String filter) {
     _recordTypeFilter = filter;
+    // Sync with Mode 1 boolean
+    if (filter == 'word') {
+      _isWordMode = true;
+    } else if (filter == 'sentence') {
+      _isWordMode = false;
+    }
     notifyListeners();
   }
 
@@ -1186,7 +1194,6 @@ class AppState extends ChangeNotifier {
             _cancelMode3Timers();  // Cancel timeout timer
             _checkMode3Answer();   // Check answer immediately
           }
-        },
         },
       );
       

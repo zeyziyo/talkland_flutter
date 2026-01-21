@@ -131,39 +131,14 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           // 1. Type Toggle
-                          Container(
-                            key: widget.toggleButtonKey,
-                            child: SegmentedButton<bool>(
-                              segments: [
-                                ButtonSegment<bool>(
-                                  value: true,
-                                  label: Text(l10n.labelWord),
-                                  icon: const Icon(Icons.abc),
-                                ),
-                                ButtonSegment<bool>(
-                                  value: false,
-                                  label: Text(l10n.labelSentence),
-                                  icon: const Icon(Icons.short_text),
-                                ),
-                              ],
-                              selected: {appState.isWordMode},
-                              onSelectionChanged: (Set<bool> newSelection) {
-                                appState.setWordMode(newSelection.first);
-                              },
-                              style: ButtonStyle(
-                                visualDensity: VisualDensity.compact,
-                              ),
-                            ),
-                          ),
-                          
-                          const SizedBox(height: 12),
+
                           
                           // 2. Material Selector
                           DropdownButtonFormField<int>(
                             key: widget.materialDropdownKey,
                             value: appState.selectedMaterialId,
                             decoration: InputDecoration(
-                              labelText: l10n.selectStudyMaterial ?? "Target Material", // Use localized or fallback
+                              labelText: l10n.selectStudyMaterial ?? "Target Material",
                               prefixIcon: const Icon(Icons.folder_open),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(8),
@@ -173,7 +148,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                             items: [
                               DropdownMenuItem<int>(
                                 value: 0, 
-                                child: const Text("Basic (Default)"),
+                                child: Text(l10n.basicDefault),
                               ),
                               ...appState.mode1StudyMaterials.map((m) {
                                 if (m['id'] == 0) return null; // Skip if handled (though map usually iterates raw list)

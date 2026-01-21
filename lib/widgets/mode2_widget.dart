@@ -74,7 +74,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
           
           String label = subject;
           if (id == 0) {
-             label = 'Basic';
+             label = l10n.basic;
           }
 
           return DropdownMenuItem<int>(
@@ -103,38 +103,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                 ),
               ),
 
-            // Word/Sentence Toggle (Added above Dropdown)
-             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Container(
-                key: widget.toggleButtonKey,
-                child: SegmentedButton<String>(
-                  segments: [
-                    ButtonSegment<String>(
-                      value: 'word', 
-                      label: Text(l10n.labelWord), 
-                      icon: const Icon(Icons.abc)
-                    ),
-                    ButtonSegment<String>(
-                      value: 'sentence', 
-                      label: Text(l10n.labelSentence), 
-                      icon: const Icon(Icons.short_text)
-                    ),
-                  ],
-                  selected: {appState.recordTypeFilter == 'all' ? 'word' : appState.recordTypeFilter}, // Default 'all' to 'word'
-                  onSelectionChanged: (Set<String> newSelection) {
-                    appState.setRecordTypeFilter(newSelection.first); // This filters the records list
-                  },
-                  style: ButtonStyle(
-                    visualDensity: VisualDensity.compact,
-                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                  ),
-                  showSelectedIcon: true,
-                ),
-              ),
-            ),
-            
-            const SizedBox(height: 12),
+
 
             // Material selector
             Container(

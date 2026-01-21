@@ -47,32 +47,7 @@ class Mode3Widget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     // Word/Sentence Toggle
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 12),
-                      child: SegmentedButton<String>(
-                        segments: [
-                          ButtonSegment<String>(
-                            value: 'word', 
-                            label: Text(l10n.labelWord), 
-                            icon: const Icon(Icons.abc)
-                          ),
-                          ButtonSegment<String>(
-                            value: 'sentence', 
-                            label: Text(l10n.labelSentence), 
-                            icon: const Icon(Icons.short_text)
-                          ),
-                        ],
-                        selected: {appState.recordTypeFilter == 'all' ? 'word' : appState.recordTypeFilter},
-                        onSelectionChanged: (Set<String> newSelection) {
-                          appState.setRecordTypeFilter(newSelection.first); 
-                        },
-                        style: ButtonStyle(
-                          visualDensity: VisualDensity.compact,
-                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                        ),
-                        showSelectedIcon: true,
-                      ),
-                    ),
+
 
                     // Material Selector
                     DropdownButtonFormField<int>(
