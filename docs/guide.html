@@ -156,48 +156,7 @@
             }
         }
 
-        /* Mode 4: Falling Words */
-        .game-area {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
 
-        .falling-word {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent-color);
-            color: black;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: bold;
-            animation: fall 3s infinite linear;
-        }
-
-        @keyframes fall {
-            0% {
-                top: -20px;
-                opacity: 1;
-            }
-
-            80% {
-                opacity: 1;
-            }
-
-            90% {
-                top: 160px;
-                opacity: 0;
-                transform: translateX(-50%) scale(1.2);
-            }
-
-            /* Catch effect */
-            100% {
-                top: 160px;
-                opacity: 0;
-            }
-        }
 
         /* Code Block Styling */
         pre {
@@ -267,11 +226,25 @@
                 </div>
             </div>
 
-            <h3>2. Speaking Practice (Mode 3)</h3>
-            <p>The app listens to your pronunciation. Tap the microphone and speak the sentence shown on screen.</p>
+            <h3>2. Review & Flashcards (Mode 2)</h3>
+            <p>Review your saved items with smart flashcards.</p>
+            <ul>
+                <li><strong>Word/Sentence Filter:</strong> Toggle to study only words or sentences.</li>
+                <li><strong>Hints:</strong> Visual hints (e.g., first letters) help you recall words.</li>
+                <li><strong>Auto-Play:</strong> Enable auto-play to listen to your list hands-free.</li>
+            </ul>
+
+            <h3>3. Speaking Practice (Mode 3)</h3>
+            <p>Test your speaking skills with real-time AI feedback.</p>
             <div class="demo-box">
                 <div class="mic-icon">🎙️</div>
             </div>
+            <ul>
+                <li><strong>Smart Listening:</strong> The app listens automatically. No need to tap repeatedly.</li>
+                <li><strong>Instant Feedback:</strong> Get "Perfect" or "Try Again" scores immediately.</li>
+                <li><strong>Silence Detection:</strong> If you don't speak for 3 seconds, the app moves to the next
+                    question.</li>
+            </ul>
 
 
         </section>
