@@ -26,3 +26,6 @@
 6. **DUPLICATE KEY CHECK**:
    - Before adding keys to ARB/JSON, **SEARCH** the file to ensure the key does not already exist.
 
+7. **STRUCTURAL PRESERVATION**:
+   - When modifying a widget's children, **NEVER** remove the parent wrapper (e.g., `Column`, `Row`, `Container`) unless explicitly intended.
+   - **ALWAYS** check that `children: []` or `child:` is correctly nested within its parent after an edit.
