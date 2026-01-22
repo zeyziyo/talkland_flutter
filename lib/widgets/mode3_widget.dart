@@ -165,7 +165,7 @@ class Mode3Widget extends StatelessWidget {
               // 2. Practice Area
               // ==========================================
               Expanded(
-                child: Stack(
+                child: Stack( // Wrap properly
                   children: [
                     Padding(
                   padding: const EdgeInsets.all(24.0),

@@ -1211,40 +1211,7 @@ class AppState extends ChangeNotifier {
     }
   }
 
-          _mode3UserAnswer = text;
-          notifyListeners();
-          
-          // Mode 3: Any result (even partial) means user is speaking.
-          // Cancel initial silence timer immediately.
-          if (text.trim().isNotEmpty) {
-             _mode3Timer?.cancel();
-          }
 
-          // Immediately check answer when finalResult is detected
-          // This prevents waiting for 5-second pauseFor timeout
-          if (isFinal && text.trim().isNotEmpty) {
-            _cancelMode3Timers();  // Cancel timeout timer
-            _checkMode3Answer();   // Check answer immediately
-          }
-        },
-      );
-      
-      // Start Initial Silence Timer (3 seconds)
-      // If user says nothing for 3 seconds, mark as timeout.
-      // If user starts speaking, onResult will cancel this timer.
-      _mode3Timer = Timer(const Duration(seconds: 3), () {
-        if (_mode3SessionActive && _mode3UserAnswer.isEmpty) {
-          debugPrint('[AppState] Initial Silence Timeout (3s)');
-          _handleMode3Timeout();
-        }
-      });
-      
-    } catch (e) {
-      debugPrint('[AppState] Mode 3 Listen Error: $e');
-      _isListening = false;
-      notifyListeners();
-    }
-  }
   
   void _handleMode3Timeout() {
     if (!_mode3SessionActive) return;
