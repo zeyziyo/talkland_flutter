@@ -165,7 +165,9 @@ class Mode3Widget extends StatelessWidget {
               // 2. Practice Area
               // ==========================================
               Expanded(
-                child: Padding(
+                child: Stack(
+                  children: [
+                    Padding(
                   padding: const EdgeInsets.all(24.0),
                   child: currentQuestion == null
                       ? Center(
@@ -322,51 +324,69 @@ class Mode3Widget extends StatelessWidget {
                               ),
                               
                               if (appState.showRetryButton) ...[
-                                // Should theoretically not be reached if auto-flow is implemented,
-                                // but if we keep showRetryButton logic for some edge case, we can show a status instead of buttons.
-                                // User requested removing buttons.
                                 const SizedBox(height: 24),
-                                Text(
-                                  l10n.noVoiceDetected,
-                                  style: TextStyle(color: Colors.red[300], fontSize: 16),
+                                ElevatedButton.icon(
+                                  onPressed: () => appState.retryMode3Question(),
+                                  icon: const Icon(Icons.refresh),
+                                  label: Text(l10n.tryAgain), // "Retry"
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.orange,
+                                    foregroundColor: Colors.white,
+                                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                                  ),
                                 ),
+                              ] else if (appState.isListening) ...[
+                                // Stop Recording Button (Manual Control)
+                                const SizedBox(height: 32),
+                                ElevatedButton.icon(
+                                  onPressed: () => appState.stopMode3ListeningManual(),
+                                  icon: const Icon(Icons.stop_circle_outlined, size: 32),
+                                  label: const Text('Stop Recording', style: TextStyle(fontSize: 18)), // Localize later?
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.red,
+                                    foregroundColor: Colors.white,
+                                    padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                                  ),
+                                ),
+                                const SizedBox(height: 16),
+                                // Pulse or indicator
+                                const Text("Listening...", style: TextStyle(color: Colors.red)),
                               ] else ...[
-                                // Mic Icon (Listening)
-                                const SizedBox(height: 16),
-                                Stack(
-                                  alignment: Alignment.center,
-                                  children: [
-                                    Container(
-                                      width: 100,
-                                      height: 100,
-                                      decoration: BoxDecoration(
-                                        color: Colors.red.withOpacity(0.1),
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                    const Icon(
-                                      Icons.mic,
-                                      size: 60,
-                                      color: Colors.red,
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 16),
-                                Text(
-                                  l10n.listening,
-                                  style: TextStyle(
-                                    color: Colors.red[400], 
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
+                                // Start Recording Button (Manual Control)
+                                const SizedBox(height: 32),
+                                ElevatedButton.icon(
+                                  onPressed: () => appState.retryMode3Question(), // Same as start listening
+                                  icon: const Icon(Icons.mic, size: 32),
+                                  label: const Text('Start Recording', style: TextStyle(fontSize: 18)),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.blueAccent,
+                                    foregroundColor: Colors.white,
+                                    padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                                   ),
                                 ),
                               ],
-                            ], // End of if (mode3Score != null) else if (active)
-                          // Add bottom padding to lift the centered content
-                          const SizedBox(height: 120), // Increased to 120 for Ad space
-                        ],
+                            ],
+                            
+                            // Add bottom padding to lift the centered content
+                            const SizedBox(height: 120), // Increased to 120 for Ad space
+                          ],
+                      ),
+                  ),
+                  
+                  // Floating Next Button
+                  if (appState.mode3SessionActive && currentQuestion != null)
+                    Positioned(
+                      bottom: 24,
+                      right: 24,
+                      child: FloatingActionButton(
+                        onPressed: () => appState.skipMode3Question(),
+                        backgroundColor: Colors.purple,
+                        child: const Icon(Icons.arrow_forward_ios),
+                      ),
                     ),
-                ),
+                ],
               ),
             ],
           ),

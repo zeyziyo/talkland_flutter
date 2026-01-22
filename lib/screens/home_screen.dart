@@ -370,33 +370,21 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: const Color(0xFF667eea),
         foregroundColor: Colors.white,
         actions: [
-          // Help Button (Manual) - Optional, can keep or remove if in menu
-          IconButton(
-            key: _helpKey,
-            icon: const Icon(Icons.help_outline),
-            tooltip: '사용법 가이드',
-            onPressed: () {
-               final currentMode = Provider.of<AppState>(context, listen: false).currentMode;
-               showDialog(
-                context: context,
-                builder: (context) => HelpDialog(
-                  initialModeIndex: currentMode,
-                  onStartTutorial: () => _showTutorial(context),
-                ),
-              );
-            },
-          ),
-          
-          // Menu Button
           PopupMenuButton<String>(
             onSelected: (value) {
+              final appState = Provider.of<AppState>(context, listen: false);
               switch (value) {
+                case 'refresh':
+                   appState.loadStudyMaterials();
+                   break;
+                case 'import':
+                   _handleImport(context);
+                   break;
                 case 'help':
-                   final currentMode = Provider.of<AppState>(context, listen: false).currentMode;
                    showDialog(
                     context: context,
                     builder: (context) => HelpDialog(
-                      initialModeIndex: currentMode,
+                      initialModeIndex: appState.currentMode,
                       onStartTutorial: () => _showTutorial(context),
                     ),
                   );
@@ -411,27 +399,35 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             itemBuilder: (BuildContext context) {
               final l10n = AppLocalizations.of(context)!;
+              final appState = Provider.of<AppState>(context, listen: false);
+              final isMode2 = appState.currentMode == 1;
+
               return [
-                PopupMenuItem<String>(
-                  value: 'help',
-                  child: Row(
-                    children: [
-                      const Icon(Icons.help_outline, color: Colors.blue),
-                      const SizedBox(width: 8),
-                      Text(l10n.menuHelp),
-                    ],
+                // Context-aware actions for Mode 2 (Review)
+                if (isMode2) ...[
+                  PopupMenuItem<String>(
+                    value: 'refresh',
+                    child: Row(
+                      children: [
+                        const Icon(Icons.refresh, color: Colors.grey),
+                        const SizedBox(width: 8),
+                        Text(l10n.refresh),
+                      ],
+                    ),
                   ),
-                ),
-                PopupMenuItem<String>(
-                  value: 'downloads',
-                  child: Row(
-                    children: [
-                      const Icon(Icons.download_rounded, color: Colors.green),
-                      const SizedBox(width: 8),
-                      Text(l10n.menuDownloads),
-                    ],
+                  PopupMenuItem<String>(
+                    value: 'import',
+                    child: Row(
+                      children: [
+                        const Icon(Icons.file_upload, color: Colors.blueGrey),
+                        const SizedBox(width: 8),
+                        Text(l10n.importJsonFile),
+                      ],
+                    ),
                   ),
-                ),
+                  const PopupMenuDivider(),
+                ],
+                
                 PopupMenuItem<String>(
                   value: 'settings',
                   child: Row(
@@ -442,40 +438,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
+                 PopupMenuItem<String>(
+                  value: 'downloads',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.download_rounded, color: Colors.green),
+                      const SizedBox(width: 8),
+                      Text(l10n.menuDownloads),
+                    ],
+                  ),
+                ),
+                const PopupMenuDivider(),
+                PopupMenuItem<String>(
+                  value: 'help',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.help_outline, color: Colors.blue),
+                      const SizedBox(width: 8),
+                      Text(l10n.menuHelp),
+                    ],
+                  ),
+                ),
               ];
-            },
-          ),
-
-          Consumer<AppState>(
-            builder: (context, appState, child) {
-              final buttonKey = _actionButtonKey; // Use key here
-              
-              if (appState.currentMode == 0) { // Search Mode
-                return IconButton(
-                  key: buttonKey,
-                  icon: const Icon(Icons.translate),
-                  onPressed: () => _showLanguageSettingsDialog(context),
-                  tooltip: '언어 설정',
-                );
-              } else if (appState.currentMode == 1) { // Study Material Mode (Mode 2)
-                return Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      icon: const Icon(Icons.refresh),
-                      onPressed: () => appState.loadStudyMaterials(),
-                      tooltip: l10n.refresh,
-                    ),
-                    IconButton(
-                      key: buttonKey,
-                      icon: const Icon(Icons.arrow_downward),
-                      onPressed: () => _handleImport(context),
-                      tooltip: l10n.importJsonFile,
-                    ),
-                  ],
-                );
-              }
-              return const SizedBox.shrink();
             },
           ),
         ],

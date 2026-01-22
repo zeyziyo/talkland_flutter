@@ -133,6 +133,8 @@ class SpeechService {
   Future<void> startSTT({
     required String lang,
     required Function(String, bool) onResult,  // Added bool for finalResult
+    Duration? listenFor,
+    Duration? pauseFor,
   }) async {
     if (!_isInitialized) {
       final initialized = await initialize();
@@ -170,7 +172,7 @@ class SpeechService {
       },
       localeId: lang,
       onDevice: false, 
-      listenFor: const Duration(seconds: 30), // Reduce max duration to avoid deep timeouts
+      listenFor: listenFor ?? const Duration(seconds: 30), // Default 30s
       
       listenOptions: stt.SpeechListenOptions(
         listenMode: stt.ListenMode.dictation, // Dictation is best for phrases
@@ -178,7 +180,7 @@ class SpeechService {
         partialResults: true,
         autoPunctuation: true, 
       ),
-      pauseFor: const Duration(seconds: 3), // Reduce to 3s for snappier end-of-speech detection
+      pauseFor: pauseFor ?? const Duration(seconds: 3), // Default 3s
     );
   }
 

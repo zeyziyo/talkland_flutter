@@ -1135,6 +1135,17 @@ class AppState extends ChangeNotifier {
   
   DateTime? _sttStartTime;
 
+  /// Manual Stop for Mode 3
+  Future<void> stopMode3ListeningManual() async {
+    if (!_isListening) return;
+    
+    // Stop STT explicitly
+    await _speechService.stopSTT();
+    
+    // The status listener will catch 'done' and process the answer.
+    // Ensure we don't treat it as timeout.
+  }
+
   Future<void> _startMode3Listening() async {
     try {
       _isListening = true;
@@ -1147,34 +1158,29 @@ class AppState extends ChangeNotifier {
       _speechStatusSubscription?.cancel();
       _speechStatusSubscription = _speechService.statusStream.listen((status) {
         if (status == 'done' || status == 'notListening') {
-          // CHECK FOR PREMATURE STOP (Bug Fix)
-          // If STT stops too quickly (< 1000ms) without result, it's likely a system glitch or noise cancellation.
-          // We should RESTART instead of timing out to prevent skipping.
-          final elapsed = DateTime.now().difference(_sttStartTime!).inMilliseconds;
-          if (elapsed < 1000 && _mode3UserAnswer.isEmpty && _mode3SessionActive) {
-             debugPrint('[AppState] Premature STT stop detected (${elapsed}ms). Restarting...');
-             // Recursive restart - ensure we don't stack listeners (handled by cancel at start of func)
-             _startMode3Listening(); 
-             return; 
-          }
-
-          // If session ended normally (from native silence detection or manual stop)
+          // If stopped manually, we process answer.
+          // If stopped by system (glitch), we might want to restart?
+          // For now, let's assume if user didn't press Stop, it's a glitch if < 1s.
+          
+           // If session ended normally (from native silence detection or manual stop)
           if (_mode3SessionActive) {
-             debugPrint('[AppState] Mode 3 STT status: $status (Elapsed: ${elapsed}ms)');
+             debugPrint('[AppState] Mode 3 STT status: $status');
              
              // If we have an answer, check it
              if (_mode3UserAnswer.trim().isNotEmpty) {
-                 // Small delay to ensure final result processed
                  Future.delayed(const Duration(milliseconds: 300), () {
                    _checkMode3Answer();
                  });
              } else {
-               // If NO answer (Silence Timeout), treat as timeout
-               // Wait briefly to ensure no lagging partial results come in
-               Future.delayed(const Duration(milliseconds: 500), () {
-                 if (_mode3UserAnswer.isEmpty && _isListening) {
-                   _handleMode3Timeout();
-                 }
+               // If NO answer and stopped, it might be silence or manual stop without speech.
+               // User wants "Retry" button.
+               Future.delayed(const Duration(milliseconds: 300), () {
+                   if (_mode3UserAnswer.isEmpty) {
+                       // Don't auto-timeout. Show Retry/Idle state.
+                       _mode3Feedback = 'Press Record to Speak';
+                       _showRetryButton = true; 
+                       notifyListeners();
+                   }
                });
              }
           }
@@ -1183,12 +1189,27 @@ class AppState extends ChangeNotifier {
       
       await _speechService.startSTT(
         lang: _getLangCode(targetLang),
+        listenFor: const Duration(minutes: 5), // Manual control
+        pauseFor: const Duration(minutes: 2),
         onResult: (text, isFinal) {  // Added isFinal parameter
           // Ignore results if too fast (noise/residual)
           if (DateTime.now().difference(_sttStartTime!).inMilliseconds < 500) {
             debugPrint('[AppState] Ignoring premature STT result: $text');
             return;
           }
+           _mode3UserAnswer = text;
+           notifyListeners();
+        }
+      );
+      
+    } catch (e) {
+      debugPrint('[AppState] Mode 3 Listen Error: $e');
+      _isListening = false;
+      _mode3Feedback = 'Error: $e';
+      _showRetryButton = true;
+      notifyListeners();
+    }
+  }
 
           _mode3UserAnswer = text;
           notifyListeners();
