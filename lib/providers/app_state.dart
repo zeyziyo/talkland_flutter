@@ -1064,74 +1064,7 @@ class AppState extends ChangeNotifier {
   }
   
   /// Allow user to skip current question manually
-  Future<void> skipMode3Question() async {
-    await _nextMode3Question();
-  }
 
-  Future<void> _nextMode3Question() async {
-    _cancelMode3Timers(); // Reset timers before next question
-    _showRetryButton = false;
-    
-    if (!_mode3SessionActive || _materialRecords.isEmpty) return;
-    
-    // Filter out completed questions
-    final availableQuestions = _materialRecords.where((record) {
-      final id = record['id'] as int;
-      if (_mode3CompletedQuestionIds.contains(id)) return false;
-      
-      // Filter by type using the shared Mode 2 filter
-      if (_recordTypeFilter != 'all') {
-         final type = record['type'] as String? ?? 'sentence';
-         if (type != _recordTypeFilter) return false;
-      }
-      
-      return true;
-    }).toList();
-    
-    if (availableQuestions.isEmpty) {
-      _mode3SessionActive = false;
-      _mode3Feedback = 'Completed All!';
-      // _statusMessage = '모든 문장을 완벽하게 학습했습니다!'; // Removed as per user request
-      notifyListeners();
-      await _speechService.speak("All practice completed!", lang: "en-US");
-      return;
-    }
-    
-    // Pick random question from available ones
-    final randomIndex = DateTime.now().millisecondsSinceEpoch % availableQuestions.length;
-    _currentMode3Question = availableQuestions[randomIndex];
-    _mode3UserAnswer = '';
-    _mode3Score = null;
-    _mode3Feedback = '';
-    
-    notifyListeners();
-    
-    // Auto-play TTS for source text
-    final sourceText = _currentMode3Question!['source_text'] as String;
-    final sourceLang = _currentMode3Question!['source_lang'] as String;
-    
-    await _speechService.speak(sourceText, lang: _getLangCode(sourceLang));
-    
-    // Add delay to ensure TTS audio is fully cleared before listening
-    // Increased to 1500ms to prevent STT from picking up TTS residue or noise
-    await Future.delayed(const Duration(milliseconds: 1500));
-    
-    // Start listening for answer
-    _startMode3Listening();
-  }
-
-
-  
-  /// Called when user clicks "Retry"
-  Future<void> retryMode3Question() async {
-    _cancelMode3Timers();
-    _showRetryButton = false;
-    _mode3UserAnswer = ''; // Clear previous bad answer
-    notifyListeners();
-    
-    // Simple restart listening
-    _startMode3Listening();
-  }
   
   DateTime? _sttStartTime;
 
@@ -1302,13 +1235,13 @@ class AppState extends ChangeNotifier {
       final records = materialRecords[selectedMaterialId!] ?? [];
       
       // Filter by practiceWordsOnly
-      var candidates = records;
+      List<Map<String, dynamic>> candidates = records;
       if (practiceWordsOnly) {
           candidates = candidates.where((r) => (r['is_word'] as int? ?? 0) == 1).toList();
       }
       
       if (candidates.isEmpty) return [];
-      return candidates;
+      return candidates.cast<Map<String, Object?>>();
   }
 
   // Retry logic
