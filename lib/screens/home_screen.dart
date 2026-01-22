@@ -24,19 +24,13 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _translateButtonKey = GlobalKey();
   final GlobalKey _saveButtonKey = GlobalKey();
   final GlobalKey _contextFieldKey = GlobalKey();
-  final GlobalKey _saveButtonKey = GlobalKey();
-  final GlobalKey _contextFieldKey = GlobalKey();
   final GlobalKey _mode1DropdownKey = GlobalKey(); // Mode 1 Material Dropdown Key
 
   // Mode 2 Keys
   final GlobalKey _mode2DropdownKey = GlobalKey();
-
-  final GlobalKey _mode2ListKey = GlobalKey();
-  final GlobalKey _mode2DropdownKey = GlobalKey();
   final GlobalKey _mode2ListKey = GlobalKey();
 
   // Mode 3 Keys
-  final GlobalKey _mode3DropdownKey = GlobalKey();
   final GlobalKey _mode3DropdownKey = GlobalKey();
   
   // Tutorial Keys - Fixed
@@ -348,7 +342,6 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: const Color(0xFF667eea),
         foregroundColor: Colors.white,
         actions: [
-        actions: [
           PopupMenuButton<String>(
             key: _actionButtonKey,
             onSelected: (value) {
@@ -545,8 +538,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   return Mode1Widget(
                     micButtonKey: _micButtonKey,
                     translateButtonKey: _translateButtonKey,
-                    saveButtonKey: _saveButtonKey,
-                    contextFieldKey: _contextFieldKey,
                     saveButtonKey: _saveButtonKey,
                     contextFieldKey: _contextFieldKey,
                     materialDropdownKey: _mode1DropdownKey, // New Key
