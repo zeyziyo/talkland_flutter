@@ -43,6 +43,7 @@ class Mode3Widget extends StatelessWidget {
                     bottomRight: Radius.circular(20),
                   ),
                 ),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     // Material Selector
