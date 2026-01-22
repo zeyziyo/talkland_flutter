@@ -388,6 +388,7 @@ class Mode3Widget extends StatelessWidget {
                     ),
                 ],
               ),
+            ),
             ],
           ),
         );
