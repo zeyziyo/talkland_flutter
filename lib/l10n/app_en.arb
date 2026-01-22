@@ -472,5 +472,7 @@
   "mode3Start": "Start",
   "mode3Stop": "Stop",
   "mode3Next": "Next",
-  "mode3TryAgain": "Try Again"
+  "mode3TryAgain": "Try Again",
+  "swapLanguages": "Swap Languages",
+  "tutorialSwapDesc": "Switch between source and target languages."
 }
