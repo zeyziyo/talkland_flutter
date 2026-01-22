@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _micButtonKey = GlobalKey();
   final GlobalKey _translateButtonKey = GlobalKey();
   final GlobalKey _saveButtonKey = GlobalKey();
+  final GlobalKey _swapButtonKey = GlobalKey(); // New: Swap Button Key
   final GlobalKey _contextFieldKey = GlobalKey();
   final GlobalKey _mode1DropdownKey = GlobalKey(); // Mode 1 Material Dropdown Key
 
@@ -133,6 +134,15 @@ class _HomeScreenState extends State<HomeScreen> {
         radius: 12,
       ));
       
+      // Swap Button Tutorial
+      targets.add(_buildTarget(
+        _swapButtonKey, 
+        l10n.swapLanguages ?? "Language Swap", // Fallback if key missing 
+        l10n.tutorialSwapDesc ?? "Swap languages",
+        ContentAlign.top,
+        radius: 12,
+      ));
+
       // Context Field Tutorial
       targets.add(_buildTarget(
         _contextFieldKey,
@@ -538,6 +548,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   return Mode1Widget(
                     micButtonKey: _micButtonKey,
                     translateButtonKey: _translateButtonKey,
+                    swapButtonKey: _swapButtonKey, // Pass New Key
                     saveButtonKey: _saveButtonKey,
                     contextFieldKey: _contextFieldKey,
                     materialDropdownKey: _mode1DropdownKey, // New Key

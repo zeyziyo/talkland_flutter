@@ -1059,10 +1059,21 @@ class AppState extends ChangeNotifier {
   // NEW: Direct Start Method for Dropdown
   Future<void> startMode3SessionDirectly() async {
       _mode3SessionActive = true;
-      if (_materialRecords.isEmpty) {
-        // Retry loading logic? Or assume selectMaterial loaded it?
-        // Usually selectMaterial loads records.
+
+      // Smart Filter Check: If current filter hides all content, switch to 'all'
+      if (_recordTypeFilter != 'all' && selectedMaterialId != null) {
+         final currentMatches = _getAvailableQuestions(); 
+         if (currentMatches.isEmpty) {
+             // Check if ANY records exist for this material
+             final allRecords = (materialRecords[selectedMaterialId!] as List?) ?? [];
+             if (allRecords.isNotEmpty) {
+                 debugPrint('[AppState] Auto-switching filter to ALL for Mode 3 content');
+                 _recordTypeFilter = 'all'; // Direct update to avoid extra notify loop
+                 // or use setRecordTypeFilter('all') if we want side effects
+             }
+         }
       }
+
       await _nextMode3Question();
       notifyListeners();
   }

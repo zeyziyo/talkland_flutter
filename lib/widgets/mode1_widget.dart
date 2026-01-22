@@ -9,6 +9,7 @@ import '../services/usage_service.dart';
 class Mode1Widget extends StatefulWidget {
   final Key? micButtonKey;
   final Key? translateButtonKey;
+  final Key? swapButtonKey;
   final Key? saveButtonKey;
 
   final Key? contextFieldKey;
@@ -18,6 +19,7 @@ class Mode1Widget extends StatefulWidget {
     super.key,
     this.micButtonKey,
     this.translateButtonKey,
+    this.swapButtonKey,
     this.saveButtonKey,
     this.contextFieldKey,
     this.materialDropdownKey,
@@ -204,6 +206,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                     ]
                                   ),
                                   child: IconButton(
+                                    key: widget.swapButtonKey,
                                     icon: const Icon(Icons.swap_horiz, color: Colors.deepOrange, size: 24),
                                     onPressed: () => appState.swapLanguages(),
                                     tooltip: l10n.swapLanguages,
