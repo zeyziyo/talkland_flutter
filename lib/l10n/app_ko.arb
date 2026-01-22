@@ -453,5 +453,11 @@
   "tutorialM1ToggleTitle": "단어/문장 모드",
   "tutorialM3WordsDesc": "체크하면 저장된 단어만 연습합니다.",
   "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening"
+  "micButtonTooltip": "Start Listening",
+  "menuHelp": "Help",
+  "menuDownloads": "Downloads",
+  "menuSettings": "Settings",
+  "languageSettingsTitle": "Language Settings",
+  "sourceLanguageLabel": "Source Language",
+  "targetLanguageLabel": "Target Language"
 }

@@ -461,5 +461,11 @@
   "wordModeLabel": "Word Mode",
   "accuracy": "Accuracy",
   "basicDefault": "Basic (Default)",
-  "basic": "Basic"
+  "basic": "Basic",
+  "menuHelp": "Help",
+  "menuDownloads": "Downloads",
+  "menuSettings": "Settings",
+  "languageSettingsTitle": "Language Settings",
+  "sourceLanguageLabel": "Source Language",
+  "targetLanguageLabel": "Target Language"
 }

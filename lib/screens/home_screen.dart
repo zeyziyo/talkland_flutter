@@ -1,4 +1,5 @@
 import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import '../l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
@@ -683,5 +684,111 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       );
     }
+  }
+  Future<void> _launchURL(String urlString) async {
+    final Uri url = Uri.parse(urlString);
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      if (mounted) {
+         ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Could not launch $urlString')),
+        );
+      }
+    }
+  }
+
+  void _showLanguageSettingsDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        final appState = Provider.of<AppState>(context, listen: false); // Listen false to avoid rebuild loop inside dialog
+        final l10n = AppLocalizations.of(context)!;
+        
+        // Local state for the dialog
+        String tempSource = appState.sourceLang;
+        String tempTarget = appState.targetLang;
+
+        return StatefulBuilder(
+          builder: (context, setDialogState) {
+            return AlertDialog(
+              title: Text(l10n.languageSettingsTitle),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Source Language (My Language)
+                  Text(l10n.sourceLanguageLabel, style: const TextStyle(fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 8),
+                  DropdownButtonFormField<String>(
+                    value: tempSource,
+                    decoration: const InputDecoration(border: OutlineInputBorder()),
+                    items: const [
+                       DropdownMenuItem(value: 'ko', child: Text('한국어 (Korean)')),
+                       DropdownMenuItem(value: 'en', child: Text('English')),
+                       DropdownMenuItem(value: 'ja', child: Text('日本語 (Japanese)')),
+                       DropdownMenuItem(value: 'es', child: Text('Español (Spanish)')),
+                       DropdownMenuItem(value: 'fr', child: Text('Français (French)')),
+                    ],
+                    onChanged: (value) {
+                      if (value != null) {
+                        setDialogState(() {
+                          tempSource = value;
+                          // If source and target are same, try to swap or reset target
+                          if (tempSource == tempTarget) {
+                             if (tempSource == 'ko') tempTarget = 'en';
+                             else tempTarget = 'ko';
+                          }
+                        });
+                      }
+                    },
+                  ),
+                  const SizedBox(height: 16),
+                  
+                  // Target Language (Study Language)
+                   Text(l10n.targetLanguageLabel, style: const TextStyle(fontWeight: FontWeight.bold)),
+                   const SizedBox(height: 8),
+                   DropdownButtonFormField<String>(
+                    value: tempTarget,
+                    decoration: const InputDecoration(border: OutlineInputBorder()),
+                     items: const [
+                       DropdownMenuItem(value: 'en', child: Text('English')),
+                       DropdownMenuItem(value: 'ja', child: Text('日本語 (Japanese)')),
+                       DropdownMenuItem(value: 'es', child: Text('Español (Spanish)')),
+                       DropdownMenuItem(value: 'fr', child: Text('Français (French)')),
+                       DropdownMenuItem(value: 'ko', child: Text('한국어 (Korean)')),
+                    ],
+                    onChanged: (value) {
+                      if (value != null) {
+                        setDialogState(() {
+                          tempTarget = value;
+                           if (tempSource == tempTarget) {
+                             if (tempTarget == 'ko') tempSource = 'en';
+                             else tempSource = 'ko';
+                          }
+                        });
+                      }
+                    },
+                  ),
+                ],
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: Text(l10n.cancel ?? 'Cancel'),
+                ),
+                FilledButton(
+                  onPressed: () {
+                    // Update AppState
+                    appState.setSourceLang(tempSource);
+                    appState.setTargetLang(tempTarget);
+                    Navigator.pop(context);
+                  },
+                  child: Text(l10n.saveData ?? 'Save'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
   }
 }

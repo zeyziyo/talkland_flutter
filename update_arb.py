@@ -11,6 +11,12 @@ MISSING_KEYS = {
     "tutorialM1ToggleTitle": "Word/Sentence Mode",
     "tutorialM3WordsDesc": "Check this to practice only your saved words.",
     "enterTextHint": "Enter text to translate",
+    "menuHelp": "Help",
+    "menuDownloads": "Downloads",
+    "menuSettings": "Settings",
+    "languageSettingsTitle": "Language Settings",
+    "sourceLanguageLabel": "Source Language",
+    "targetLanguageLabel": "Target Language",
     "micButtonTooltip": "Start Listening"
 }
 
