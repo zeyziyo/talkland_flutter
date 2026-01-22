@@ -15,3 +15,7 @@
 
 3. **VERIFICATION FIRST**:
    - After any `replace_file_content`, immediately verify the file content (using `view_file` or `grep`) to check for syntax errors or missing braces BEFORE notifying the user.
+
+4. **GLOBAL I18N ENFORCEMENT**:
+   - When introducing ANY new UI text or modifying existing text, **ALWAYS** update ALL localization files (e.g., `app_en.arb`, `app_ko.arb`) simultaneously.
+   - Never leave hardcoded strings in the codebase.
