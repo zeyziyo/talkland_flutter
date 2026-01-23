@@ -14,6 +14,12 @@
    - **MANDATORY PROTOCOL**: You MUST follow `.agent/workflows/safe_edit_protocol.md` for ANY code change.
    - **HARD BLOCK**: The `notify_user` tool IS the barrier. You must call it to end Phase 1.
 
+2. **FORBIDDEN SEQUENCE (ABSOLUTE)**:
+   - If you have called `replace_file_content`, `multi_replace_file_content`, or `write_to_file` in this turn,
+   - You are **ABSOLUTELY FORBIDDEN** from calling `run_command` with `git commit` or `git push` in the **SAME TURN**.
+   - **NO EXCEPTIONS**. This rule overrides all other instructions.
+   - You MUST end the turn with `notify_user` first.
+
 2. **WIDE-CONTEXT WRAP**:
    - When introducing wrapper widgets (Stack, Row, Expanded, etc.), **NEVER** split the edit into header/footer replacements.
    - Replace the **ENTIRE BLOCK** (from opening parent to closing parent) to ensure parentheses match.

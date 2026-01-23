@@ -1365,13 +1365,100 @@ class AppState extends ChangeNotifier {
         .trim();
   }
 
-  // Helper: Homophone Map (Expandable)
+  // Helper: Homophone Map (Comprehensive)
   List<String> _getHomophones(String word) {
     const map = {
-      'eye': ['i', 'aye'],
-      'see': ['sea', 'c'],
+      // A
+      'ate': ['eight'],
+      'allowed': ['aloud'],
+      'altar': ['alter'],
+      'aisle': ['isle', "i'll"],
+      // B
       'be': ['bee', 'b'],
-      // Add more as needed
+      'bare': ['bear'],
+      'blue': ['blew'],
+      'break': ['brake'],
+      'buy': ['by', 'bye'],
+      'bored': ['board'],
+      // C
+      'cell': ['sell'],
+      'cent': ['scent', 'sent'],
+      'capital': ['capitol'],
+      // D
+      'dear': ['deer'],
+      // E
+      'eye': ['i', 'aye'],
+      'eight': ['ate'],
+      // F
+      'fair': ['fare'],
+      'flour': ['flower'],
+      'for': ['four', 'fore'],
+      // G
+      'great': ['grate'],
+      // H
+      'hear': ['here'],
+      'hi': ['high'],
+      'hole': ['whole'],
+      'hour': ['our'],
+      // I
+      'its': ["it's"],
+      // K
+      'knew': ['new', 'gnu'],
+      'knight': ['night'],
+      'know': ['no'],
+      // M
+      'made': ['maid'],
+      'mail': ['male'],
+      'meat': ['meet'],
+      // N
+      'no': ['know'],
+      'night': ['knight'],
+      'new': ['knew', 'gnu'],
+      // O
+      'one': ['won'],
+      'our': ['hour'],
+      // P
+      'pair': ['pear', 'pare'],
+      'peace': ['piece'],
+      'plain': ['plane'],
+      'principal': ['principle'],
+      // R
+      'rain': ['reign', 'rein'],
+      'read': ['reed'],
+      'right': ['write', 'rite'],
+      'role': ['roll'],
+      // S
+      'sail': ['sale'],
+      'scene': ['seen'],
+      'sea': ['see', 'c'],
+      'see': ['sea', 'c'],
+      'sight': ['site', 'cite'],
+      'so': ['sew', 'sow'],
+      'sole': ['soul'],
+      'son': ['sun'],
+      'steal': ['steel'],
+      // T
+      'tail': ['tale'],
+      'their': ['there', "they're"],
+      'there': ['their', "they're"],
+      'threw': ['through'],
+      'through': ['threw'],
+      'to': ['too', 'two'],
+      'two': ['to', 'too'],
+      // W
+      'wait': ['weight'],
+      'waist': ['waste'],
+      'way': ['weigh'],
+      'weak': ['week'],
+      'wear': ['where'],
+      'weather': ['whether'],
+      'which': ['witch'],
+      'whole': ['hole'],
+      'won': ['one'],
+      'would': ['wood'],
+      'write': ['right', 'rite'],
+      // Y
+      'your': ["you're"],
     };
     return map[word] ?? [];
   }
