@@ -609,7 +609,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc =>
+      'Intercambio mi idioma con el idioma que estoy aprendiendo.';
 
   @override
   String get recognizedText => 'Recognized Text:';
@@ -619,5 +620,5 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get tutorialM3ResetDesc =>
-      'Clear your progress and accuracy scores to start fresh.';
+      'Restablece tu progreso y puntuación de precisión, comenzando nuevamente desde el principio.';
 }

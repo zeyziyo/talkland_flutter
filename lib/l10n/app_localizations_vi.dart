@@ -601,7 +601,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc =>
+      'Tôi sử dụng song song ngôn ngữ mẹ đẻ với ngôn ngữ mà tôi đang học.';
 
   @override
   String get recognizedText => 'Recognized Text:';

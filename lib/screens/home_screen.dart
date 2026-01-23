@@ -456,20 +456,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const PopupMenuDivider(),
 
-                ),
-                
-                // 3. Settings & Help
-                PopupMenuItem<String>(
-                  value: 'settings',
-                  child: Row(
-                    children: [
-                      const Icon(Icons.translate, color: Colors.orange),
-                      const SizedBox(width: 8),
-                      Text(l10n.menuSettings),
-                    ],
-                  ),
-                ),
-                const PopupMenuDivider(),
                 PopupMenuItem<String>(
                   value: 'help',
                   child: Row(
@@ -484,7 +470,6 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           ),
         ],
-      ),
       ),
       drawer: Drawer(
         child: Consumer<AppState>(

@@ -605,7 +605,8 @@ class AppLocalizationsTe extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc =>
+      'నేను నేర్చుకుంటున్న భాషతో నా భాషను మార్చుకుంటాను.';
 
   @override
   String get recognizedText => 'Recognized Text:';

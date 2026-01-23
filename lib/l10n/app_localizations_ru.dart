@@ -604,7 +604,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc => 'Я меняю свой язык с языком, который изучаю.';
 
   @override
   String get recognizedText => 'Recognized Text:';

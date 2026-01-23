@@ -604,7 +604,8 @@ class AppLocalizationsEl extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc =>
+      'Ανταλλάσσω τη γλώσσα μου με τη γλώσσα που μαθαίνω.';
 
   @override
   String get recognizedText => 'Recognized Text:';

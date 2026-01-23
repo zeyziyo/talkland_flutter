@@ -600,7 +600,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc =>
+      'Jag byter ut mitt språk mot det språk jag lär mig.';
 
   @override
   String get recognizedText => 'Recognized Text:';

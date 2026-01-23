@@ -599,7 +599,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc => 'Vaihdan kieleni oppimaani kieleen.';
 
   @override
   String get recognizedText => 'Recognized Text:';

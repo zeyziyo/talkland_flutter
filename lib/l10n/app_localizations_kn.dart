@@ -604,7 +604,8 @@ class AppLocalizationsKn extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc =>
+      'ನಾನು ನನ್ನ ಭಾಷೆಯನ್ನು ಕಲಿಯುತ್ತಿರುವ ಭಾಷೆಯೊಂದಿಗೆ ಬದಲಾಯಿಸುತ್ತೇನೆ.';
 
   @override
   String get recognizedText => 'Recognized Text:';

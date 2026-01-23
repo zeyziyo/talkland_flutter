@@ -607,7 +607,8 @@ class AppLocalizationsFil extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc =>
+      'Pinapalitan ko ang aking wika ng wikang aking pinag-aaralan.';
 
   @override
   String get recognizedText => 'Recognized Text:';

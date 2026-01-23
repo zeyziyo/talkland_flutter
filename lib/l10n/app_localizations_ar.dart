@@ -600,7 +600,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc => 'أبدل لغتي باللغة التي أتعلمها.';
 
   @override
   String get recognizedText => 'Recognized Text:';

@@ -601,7 +601,8 @@ class AppLocalizationsFa extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc =>
+      'من زبان خودم را با زبانی که در حال یادگیری آن هستم عوض می‌کنم.';
 
   @override
   String get recognizedText => 'Recognized Text:';

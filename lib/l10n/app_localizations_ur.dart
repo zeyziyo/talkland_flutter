@@ -599,7 +599,8 @@ class AppLocalizationsUr extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc =>
+      'میں اپنی زبان کو اس زبان کے ساتھ تبدیل کرتا ہوں جو میں سیکھ رہا ہوں۔';
 
   @override
   String get recognizedText => 'Recognized Text:';

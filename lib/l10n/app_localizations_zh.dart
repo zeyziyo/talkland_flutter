@@ -593,7 +593,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc => '我用我正在学习的语言替换我的母语。';
 
   @override
   String get recognizedText => 'Recognized Text:';
@@ -1195,6 +1195,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get mode3TryAgain => 'Try Again';
 
   @override
+  String get tutorialSwapDesc => '我用我正在学习的语言替换我的母语。';
+
+  @override
   String get recognizedText => 'Recognized Text:';
 
   @override
@@ -1792,6 +1795,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get mode3TryAgain => 'Try Again';
+
+  @override
+  String get tutorialSwapDesc => '我用我正在學習的語言取代我的母語。';
 
   @override
   String get recognizedText => 'Recognized Text:';

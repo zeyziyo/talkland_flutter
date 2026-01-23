@@ -602,7 +602,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
+  String get tutorialSwapDesc => 'Îmi schimb limba cu limba pe care o învăț.';
 
   @override
   String get recognizedText => 'Recognized Text:';
