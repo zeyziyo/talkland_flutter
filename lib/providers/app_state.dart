@@ -1181,13 +1181,13 @@ class AppState extends ChangeNotifier {
     final targetText = _currentMode3Question!['target_text'] as String;
     
     // Normalize both for comparison
-    final String normalize = (String input) {
+    String normalize(String input) {
       return input
           .toLowerCase()
           .replaceAll(RegExp(r'[^\w\s]'), '') // Remove punctuation
           .replaceAll(RegExp(r'\s+'), ' ')    // Collapse spaces
           .trim();
-    };
+    }
 
     final normalizedUser = normalize(_mode3UserAnswer);
     final normalizedTarget = normalize(targetText);
