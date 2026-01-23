@@ -1011,19 +1011,15 @@ class AppState extends ChangeNotifier {
   double? _mode3Score; // 0.0 to 100.0
   Map<String, dynamic>? _currentMode3Question;
   String _mode3UserAnswer = ''; // User's spoken text for feedback
-  List<String> _mode3Alternates = []; // N-best alternatives from STT engine
-  Timer? _mode3Timer; // Timer for auto-advance
-  bool _practiceWordsOnly = false; // Filter for "Words Only" in Mode 3
-
-  // Getters
   String _mode3Feedback = '';
+  bool _practiceWordsOnly = false; // Filter for "Words Only" in Mode 3
   
   // Track completed questions (Perfect score) in current session to avoid repetition
   final Set<int> _mode3CompletedQuestionIds = {};
   
   // Timeout & Retry Logic
   bool _showRetryButton = false;
-  // Timer? _mode3Timer; // This was moved above
+  Timer? _mode3Timer;
   Timer? _retryAutoSkipTimer;
   
   bool _isEvaluating = false; // Guard to prevent multiple evaluations 
@@ -1158,7 +1154,6 @@ class AppState extends ChangeNotifier {
         pauseFor: const Duration(seconds: 3),
         onResult: (text, isFinal, alternates) {
            _mode3UserAnswer = text;
-           _mode3Alternates = alternates; // Store for checking
            
            // EVALUATION TRIGGER: Check immediately if final result received
            if (isFinal && _mode3SessionActive && !_isEvaluating) {
@@ -1184,6 +1179,9 @@ class AppState extends ChangeNotifier {
     
     _isEvaluating = true;
     
+    // Tiny delay to ensure final STT result is captured in _mode3UserAnswer
+    await Future.delayed(const Duration(milliseconds: 200));
+
     // Ensure listening is stopped
     _speechService.stopSTT();
     _isListening = false;
@@ -1194,28 +1192,7 @@ class AppState extends ChangeNotifier {
     final normalizedUser = _normalizeText(_mode3UserAnswer);
     final normalizedTarget = _normalizeText(targetText);
     
-    // Homophone Check (Layer 1: N-best alternatives from STT)
-    bool isMatchFound = (normalizedUser == normalizedTarget);
-    
-    if (!isMatchFound) {
-      for (final alt in _mode3Alternates) {
-        if (_normalizeText(alt) == normalizedTarget) {
-          isMatchFound = true;
-          debugPrint('[AppState] N-best Match: "$alt" accepted for "$normalizedTarget"');
-          break;
-        }
-      }
-    }
-
-    // Homophone Check (Layer 2: Hardcoded English mappings as fallback)
-    if (!isMatchFound) {
-      final homophones = _getHomophones(normalizedTarget);
-      if (homophones.contains(normalizedUser)) {
-        isMatchFound = true;
-        debugPrint('[AppState] Hardcoded Homophone Match: "$normalizedUser" accepted for "$normalizedTarget"');
-      }
-    }
-    
+    // Mode 3 evaluation logic
     debugPrint('[AppState] Mode 3 Check:');
     debugPrint('  - Original User: "$_mode3UserAnswer"');
     debugPrint('  - Original Target: "$targetText"');
@@ -1233,12 +1210,7 @@ class AppState extends ChangeNotifier {
         
         debugPrint('  - Similarity: $_mode3Score');
         
-        // Match fallback
-        if (isMatchFound) {
-             _mode3Score = 100.0;
-        }
-
-        if (_mode3Score! >= 85) { // Relaxed threshold slightly to 85
+        if (_mode3Score! >= 100) { // Threshold 100%
           _mode3Feedback = 'PERFECT';
           _mode3CompletedQuestionIds.add(_currentMode3Question!['id'] as int);
           await _speechService.speak("Perfect!", lang: "en-US");
@@ -1384,110 +1356,6 @@ class AppState extends ChangeNotifier {
         .trim();
   }
 
-  // Helper: Homophone Map (Comprehensive)
-  List<String> _getHomophones(String word) {
-    const map = {
-      // A
-      'ate': ['eight'],
-      'allowed': ['aloud'],
-      'altar': ['alter'],
-      'aisle': ['isle', "i'll"],
-      // B
-      'be': ['bee', 'b'],
-      'bare': ['bear'],
-      'blue': ['blew'],
-      'break': ['brake'],
-      'buy': ['by', 'bye'],
-      'bored': ['board'],
-      // C
-      'cell': ['sell'],
-      'cent': ['scent', 'sent'],
-      'capital': ['capitol'],
-      // D
-      'dear': ['deer'],
-      // E
-      'eye': ['i', 'aye'],
-      'eight': ['ate'],
-      // F
-      'fair': ['fare'],
-      'flour': ['flower'],
-      'for': ['four', 'fore'],
-      // G
-      'great': ['grate'],
-      // H
-      'hear': ['here'],
-      'hi': ['high'],
-      'hole': ['whole'],
-      'hour': ['our'],
-      // I
-      'its': ["it's"],
-      // K
-      'knew': ['new', 'gnu'],
-      'knight': ['night'],
-      'know': ['no'],
-      // M
-      'made': ['maid'],
-      'mail': ['male'],
-      'meat': ['meet'],
-      // N
-      'no': ['know'],
-      'night': ['knight'],
-      'new': ['knew', 'gnu'],
-      // O
-      'one': ['won'],
-      'our': ['hour'],
-      // P
-      'pair': ['pear', 'pare'],
-      'peace': ['piece'],
-      'plain': ['plane'],
-      'principal': ['principle'],
-      // R
-      'rain': ['reign', 'rein'],
-      'read': ['reed'],
-      'right': ['write', 'rite'],
-      'role': ['roll'],
-      // S
-      'sail': ['sale'],
-      'scene': ['seen'],
-      'sea': ['see', 'c'],
-      'see': ['sea', 'c'],
-      'sight': ['site', 'cite'],
-      'so': ['sew', 'sow'],
-      'sole': ['soul'],
-      'son': ['sun'],
-      'steal': ['steel'],
-      // T
-      'tail': ['tale'],
-      'their': ['there', "they're"],
-      'there': ['their', "they're"],
-      'threw': ['through'],
-      'through': ['threw'],
-      'to': ['too', 'two'],
-      'two': ['to', 'too'],
-      // W
-      'wait': ['weight'],
-      'waist': ['waste'],
-      'way': ['weigh'],
-      'weak': ['week'],
-      'wear': ['where'],
-      'weather': ['whether'],
-      'which': ['witch'],
-      'whole': ['hole'],
-      'won': ['one'],
-      'would': ['wood'],
-      'write': ['right', 'rite'],
-      // Y
-      'your': ["you're"],
-      // Common Conversational / Pronunciation errors
-      'i': ['eye', 'aye'],
-      'a': ['ei', 'eight'],
-      'it': ['eat'],
-      'is': ['ease'],
-      'of': ['off'],
-      'you': ['u'],
-    };
-    return map[word] ?? [];
-  }
 
   String _getServiceLocale(String lang) {
     // Map app language codes to STT/TTS language codes

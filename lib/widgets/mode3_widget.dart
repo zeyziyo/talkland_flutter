@@ -171,14 +171,6 @@ class Mode3Widget extends StatelessWidget {
                                 // Dynamic Content Area (Buttons vs Result)
                                 if (appState.showRetryButton) ...[
                                    // Result & Score Shown
-                                   if (appState.mode3UserAnswer.isNotEmpty)
-                                     Text(
-                                        appState.mode3UserAnswer,
-                                        textAlign: TextAlign.center,
-                                        style: const TextStyle(
-                                          fontSize: 18, color: Colors.purple, fontStyle: FontStyle.italic),
-                                     ),
-                                     
                                    const SizedBox(height: 20),
                                    
                                    if (appState.mode3Score != null)
@@ -197,14 +189,14 @@ class Mode3Widget extends StatelessWidget {
                                               '${l10n.accuracy}: ${appState.mode3Score!.toStringAsFixed(1)}%',
                                                 style: TextStyle(
                                                   color: _getScoreColor(appState.mode3Score!),
-                                                  fontWeight: FontWeight.bold, fontSize: 22), // Larger Score
+                                                  fontWeight: FontWeight.bold, fontSize: 20), // Reduced from 22
                                             ),
                                             const SizedBox(height: 12),
                                             
                                             // Target Text (Correct Answer)
                                             Text(
                                               currentQuestion['target_text'] as String,
-                                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.blueGrey),
+                                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.blueGrey), // Reduced from 18
                                               textAlign: TextAlign.center,
                                             ),
                                             
@@ -218,19 +210,19 @@ class Mode3Widget extends StatelessWidget {
                                                 children: [
                                                   Text(
                                                     "${l10n.recognizedText}: ", 
-                                                    style: const TextStyle(fontSize: 16, color: Colors.grey, fontWeight: FontWeight.bold),
+                                                    style: const TextStyle(fontSize: 14, color: Colors.grey, fontWeight: FontWeight.bold), // Reduced from 16
                                                   ),
                                                   Expanded(
-                                                    child: Text(
-                                                      appState.mode3UserAnswer.isEmpty ? "( ... )" : appState.mode3UserAnswer,
-                                                      style: TextStyle(
-                                                        fontSize: 18,
-                                                        fontWeight: FontWeight.w600,
-                                                        fontStyle: FontStyle.italic,
-                                                        color: appState.mode3UserAnswer.isEmpty ? Colors.grey : Colors.black87
+                                                      child: Text(
+                                                        appState.mode3UserAnswer.isEmpty ? "( ... )" : appState.mode3UserAnswer,
+                                                        style: TextStyle(
+                                                          fontSize: 14, // Reduced from 16
+                                                          fontWeight: FontWeight.w600,
+                                                          fontStyle: FontStyle.italic,
+                                                          color: appState.mode3UserAnswer.isEmpty ? Colors.grey : Colors.black87
+                                                        ),
+                                                        textAlign: TextAlign.left,
                                                       ),
-                                                      textAlign: TextAlign.left,
-                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -243,60 +235,60 @@ class Mode3Widget extends StatelessWidget {
                                    
                                     // Next or Retry Button
                                     // Next or Retry + Next Logic
-                                    if ((appState.mode3Score ?? 0) >= 90)
-                                       // Perfect Score -> Show Big Next
-                                       SizedBox(
-                                         width: double.infinity,
-                                         child: ElevatedButton.icon(
-                                           onPressed: () => appState.skipMode3Question(),
-                                           icon: const Icon(Icons.arrow_forward, size: 28),
-                                           label: Text(l10n.mode3Next, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-                                           style: ElevatedButton.styleFrom(
-                                             backgroundColor: Colors.blue,
-                                             foregroundColor: Colors.white,
-                                             padding: const EdgeInsets.symmetric(vertical: 20),
-                                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                                             elevation: 4,
-                                           ),
-                                         ),
-                                       )
-                                    else
-                                       // Retry AND Next Side-by-Side
-                                       Row(
-                                         children: [
-                                           // Retry Button (Orange)
-                                            Expanded(
-                                              child: ElevatedButton.icon(
-                                                onPressed: () => appState.retryMode3Question(),
-                                                icon: const Icon(Icons.refresh, size: 24),
-                                                label: Text(l10n.mode3TryAgain, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                                                style: ElevatedButton.styleFrom(
-                                                  backgroundColor: Colors.orange,
-                                                  foregroundColor: Colors.white,
-                                                  padding: const EdgeInsets.symmetric(vertical: 20),
-                                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                                                  elevation: 4,
-                                                ),
-                                              ),
+                                    // Next / Reset Row
+                                    Row(
+                                      children: [
+                                        // Retry Button (if not perfect)
+                                        // Retry Button
+                                        Expanded(
+                                          child: ElevatedButton.icon(
+                                            onPressed: () => appState.retryMode3Question(),
+                                            icon: const Icon(Icons.refresh, size: 16),
+                                            label: Text(l10n.mode3TryAgain, style: const TextStyle(fontSize: 13)),
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor: Colors.orange,
+                                              foregroundColor: Colors.white,
+                                              padding: const EdgeInsets.symmetric(vertical: 16),
+                                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                                             ),
-                                            const SizedBox(width: 16),
-                                            // Next Button (Blue)
-                                            Expanded(
-                                              child: ElevatedButton.icon(
-                                                onPressed: () => appState.skipMode3Question(),
-                                                icon: const Icon(Icons.arrow_forward, size: 24),
-                                                label: Text(l10n.mode3Next, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                                                style: ElevatedButton.styleFrom(
-                                                  backgroundColor: Colors.blue,
-                                                  foregroundColor: Colors.white,
-                                                  padding: const EdgeInsets.symmetric(vertical: 20),
-                                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                                                  elevation: 4,
-                                                ),
-                                              ),
+                                          ),
+                                        ),
+                                        const SizedBox(width: 8),
+                                        // Next Button
+                                        Expanded(
+                                          child: ElevatedButton.icon(
+                                            onPressed: () => appState.skipMode3Question(),
+                                            icon: const Icon(Icons.arrow_forward, size: 16),
+                                            label: Text(l10n.mode3Next, style: const TextStyle(fontSize: 13)),
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor: Colors.blue,
+                                              foregroundColor: Colors.white,
+                                              padding: const EdgeInsets.symmetric(vertical: 16),
+                                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                                             ),
-                                         ],
-                                       ),
+                                          ),
+                                        ),
+                                        const SizedBox(width: 8),
+                                        // Reset Button
+                                        Expanded(
+                                          child: OutlinedButton.icon(
+                                            onPressed: () => appState.resetMode3Progress(),
+                                            icon: const Icon(Icons.history, size: 16),
+                                            label: Text(l10n.resetPracticeHistory, 
+                                              style: const TextStyle(fontSize: 12),
+                                              textAlign: TextAlign.center,
+                                              maxLines: 2,
+                                            ),
+                                            style: OutlinedButton.styleFrom(
+                                              foregroundColor: Colors.grey[700],
+                                              side: BorderSide(color: Colors.grey[400]!),
+                                              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 4),
+                                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
 
                                 ] else ...[
                                    // Recording Controls
@@ -364,22 +356,6 @@ class Mode3Widget extends StatelessWidget {
               const Divider(height: 1, thickness: 0.5, color: Colors.grey),
               const SizedBox(height: 16),
               
-              // Reset Button (Fixed at Bottom via Column)
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40),
-                child: OutlinedButton.icon(
-                  key: resetButtonKey, 
-                  onPressed: () => appState.resetMode3Progress(),
-                  icon: const Icon(Icons.refresh, size: 18),
-                  label: Text(l10n.resetPracticeHistory),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: Colors.grey, // De-emphasize to avoid clashing with Next
-                    side: const BorderSide(color: Colors.grey),
-                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                  ),
-                ),
-              ),
               const SizedBox(height: 16),
             ],
           ),
@@ -403,8 +379,8 @@ class Mode3Widget extends StatelessWidget {
 
 
   Color _getScoreColor(double score) {
-    if (score >= 90) return Colors.green;
-    if (score >= 70) return Colors.orange;
+    if (score >= 100) return Colors.green;
+    if (score >= 80) return Colors.orange;
     return Colors.red;
   }
 }
