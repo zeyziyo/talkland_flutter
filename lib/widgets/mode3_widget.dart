@@ -68,12 +68,6 @@ class Mode3Widget extends StatelessWidget {
                           if (val != null) {
                             // Fix: await the material loading so data is ready before starting session
                             await appState.selectMaterial(val);
-                            
-                            // Auto-start (load first question) when material is selected
-                            // valid manual start:
-                            if (context.mounted) {
-                               appState.startMode3SessionDirectly(); 
-                            }
                           }
                         },
                     ),
@@ -105,64 +99,74 @@ class Mode3Widget extends StatelessWidget {
                         : Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                // Source Text Display (Horizontal)
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                // Source Text Display (Vertical Layout)
+                                Column(
                                   children: [
-                                    const Text("🇰🇷", style: TextStyle(fontSize: 24)),
-                                    const SizedBox(width: 12),
-                                    Flexible(
-                                      child: Text(
-                                        currentQuestion['source_text'] as String,
-                                        textAlign: TextAlign.center,
-                                        style: const TextStyle(
-                                          fontSize: 32, // Larger Text
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black87,
-                                        ),
-                                      ),
-                                    ),
-                                    // Hint & First Letter
-                                    if (currentQuestion['note'] != null && (currentQuestion['note'] as String).isNotEmpty) ...[
-                                      const SizedBox(width: 8),
-                                      Tooltip(
-                                        message: currentQuestion['note'] as String,
-                                        child: Container(
-                                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                     // 1. Flag + Text (Horizontal)
+                                     Row(
+                                       mainAxisAlignment: MainAxisAlignment.center,
+                                       children: [
+                                         const Text("🇰🇷", style: TextStyle(fontSize: 24)),
+                                         const SizedBox(width: 12),
+                                         Flexible(
+                                           child: Text(
+                                             currentQuestion['source_text'] as String,
+                                             textAlign: TextAlign.center,
+                                             style: const TextStyle(
+                                               fontSize: 26,
+                                               fontWeight: FontWeight.bold,
+                                               color: Colors.black87,
+                                             ),
+                                           ),
+                                         ),
+                                       ],
+                                     ),
+                                     
+                                     // 2. Hint (Below)
+                                     if (currentQuestion['note'] != null && (currentQuestion['note'] as String).isNotEmpty) ...[
+                                        const SizedBox(height: 12), // Space between text and hint
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                                           decoration: BoxDecoration(
-                                            color: Colors.grey[200],
-                                            borderRadius: BorderRadius.circular(8),
+                                            color: Colors.grey[100],
+                                            borderRadius: BorderRadius.circular(20), // Pill shape
                                             border: Border.all(color: Colors.grey[300]!),
                                           ),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
-                                              Icon(Icons.info_outline, size: 14, color: Colors.grey[600]),
-                                              const SizedBox(width: 4),
+                                              Icon(Icons.lightbulb_outline, size: 14, color: Colors.amber[700]),
+                                              const SizedBox(width: 6),
                                               Text(
                                                 currentQuestion['note'] as String,
                                                 style: TextStyle(
                                                   fontStyle: FontStyle.italic,
-                                                  fontSize: 18, // Larger Hint
+                                                  fontSize: 14, // Reduced hint size
+                                                  color: Colors.grey[700],
                                                 ),
                                               ),
                                               // First Letter Hint
-                                              const SizedBox(width: 6),
-                                              Text(
-                                                _getFirstLetterHint(currentQuestion['target_text'] as String),
-                                                style: TextStyle(
-                                                  fontSize: 12,
-                                                  color: Colors.red[300],
-                                                  fontWeight: FontWeight.bold,
-                                                  fontFamily: 'monospace',
-                                                ),
+                                              const SizedBox(width: 8),
+                                              Container(
+                                                 padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                                 decoration: BoxDecoration(
+                                                   color: Colors.red[50],
+                                                   borderRadius: BorderRadius.circular(4),
+                                                 ),
+                                                 child: Text(
+                                                  _getFirstLetterHint(currentQuestion['target_text'] as String),
+                                                  style: TextStyle(
+                                                    fontSize: 12,
+                                                    color: Colors.red[400],
+                                                    fontWeight: FontWeight.bold,
+                                                    fontFamily: 'monospace',
+                                                  ),
+                                                 ),
                                               ),
                                             ],
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                     ],
                                   ],
                                 ),
                                 
@@ -240,6 +244,7 @@ class Mode3Widget extends StatelessWidget {
                                       children: [
                                         // Retry Button (if not perfect)
                                         // Retry Button
+                                        // Retry Button
                                         Expanded(
                                           child: ElevatedButton.icon(
                                             onPressed: () => appState.retryMode3Question(),
@@ -248,7 +253,7 @@ class Mode3Widget extends StatelessWidget {
                                             style: ElevatedButton.styleFrom(
                                               backgroundColor: Colors.orange,
                                               foregroundColor: Colors.white,
-                                              padding: const EdgeInsets.symmetric(vertical: 16),
+                                              padding: const EdgeInsets.symmetric(vertical: 12), // Reduced padding
                                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                                             ),
                                           ),
@@ -263,7 +268,7 @@ class Mode3Widget extends StatelessWidget {
                                             style: ElevatedButton.styleFrom(
                                               backgroundColor: Colors.blue,
                                               foregroundColor: Colors.white,
-                                              padding: const EdgeInsets.symmetric(vertical: 16),
+                                              padding: const EdgeInsets.symmetric(vertical: 12), // Reduced padding
                                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                                             ),
                                           ),
@@ -277,12 +282,13 @@ class Mode3Widget extends StatelessWidget {
                                             label: Text(l10n.resetPracticeHistory, 
                                               style: const TextStyle(fontSize: 12),
                                               textAlign: TextAlign.center,
-                                              maxLines: 2,
+                                              maxLines: 1, // Force single line if possible or ellipsis
+                                              overflow: TextOverflow.ellipsis,
                                             ),
                                             style: OutlinedButton.styleFrom(
                                               foregroundColor: Colors.grey[700],
                                               side: BorderSide(color: Colors.grey[400]!),
-                                              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 4),
+                                              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 4), // Reduced padding
                                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                                             ),
                                           ),

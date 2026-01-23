@@ -148,7 +148,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                             items: [
                               DropdownMenuItem<int>(
                                 value: 0, 
-                                child: Text(l10n.basicDefault),
+                                child: Text(appState.isWordMode ? '기본 단어집' : '기본 문장집'),
                               ),
                               ...appState.mode1StudyMaterials.map((m) {
                                 if (m['id'] == 0) return null; // Skip if handled (though map usually iterates raw list)
@@ -196,24 +196,14 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.orange.shade100,
-                                    shape: BoxShape.circle,
-                                    border: Border.all(color: Colors.orange, width: 2),
-                                    boxShadow: [
-                                      BoxShadow(color: Colors.orange.withValues(alpha: 0.3), blurRadius: 4, spreadRadius: 1)
-                                    ]
-                                  ),
-                                  child: IconButton(
+                                IconButton(
                                     key: widget.swapButtonKey,
-                                    icon: const Icon(Icons.swap_horiz, color: Colors.deepOrange, size: 24),
+                                    icon: const Icon(Icons.swap_horiz, color: Colors.deepOrange, size: 32),
                                     onPressed: () => appState.swapLanguages(),
                                     tooltip: l10n.swapLanguages,
                                     padding: EdgeInsets.zero,
                                     constraints: const BoxConstraints(minWidth: 40, minHeight: 40),
                                   ),
-                                ),
                                 Row(
                                   children: [
                                     IconButton(
@@ -246,7 +236,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                   color: Colors.grey.shade400,
                                   fontStyle: FontStyle.italic,
                                 ),
-                                border: InputBorder.none,
+                                border: const OutlineInputBorder(),
                               ),
                               onChanged: (text) {
                                 appState.setSourceText(text);

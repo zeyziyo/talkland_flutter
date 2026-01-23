@@ -351,16 +351,55 @@ class _HomeScreenState extends State<HomeScreen> {
     
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          '🌍 ${l10n.appTitle}',
-          style: const TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-          ),
+        title: Consumer<AppState>(
+          builder: (context, appState, child) {
+            return SegmentedButton<String>(
+              key: _globalToggleKey,
+              showSelectedIcon: false,
+              segments: [
+                ButtonSegment<String>(
+                  value: 'word', 
+                  label: Text(l10n.labelWord, maxLines: 1),
+                ),
+                ButtonSegment<String>(
+                  value: 'sentence', 
+                  label: Text(l10n.labelSentence, maxLines: 1),
+                ),
+              ],
+              selected: {appState.recordTypeFilter == 'all' ? 'word' : appState.recordTypeFilter},
+              onSelectionChanged: (Set<String> newSelection) {
+                appState.setRecordTypeFilter(newSelection.first); 
+              },
+              style: ButtonStyle(
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                visualDensity: VisualDensity.compact,
+                backgroundColor: WidgetStateProperty.resolveWith((states) {
+                   // Invert colors since it's on primary AppBar
+                  if (states.contains(WidgetState.selected)) {
+                    return Colors.white;
+                  }
+                  return const Color(0xFF667eea);
+                }),
+                foregroundColor: WidgetStateProperty.resolveWith((states) {
+                  if (states.contains(WidgetState.selected)) {
+                    return const Color(0xFF667eea);
+                  }
+                  return Colors.white; // Unselected text white on blue bg
+                }),
+                 side: WidgetStateProperty.all(const BorderSide(color: Colors.white)),
+              ),
+            );
+          },
         ),
         centerTitle: true,
         backgroundColor: const Color(0xFF667eea),
         foregroundColor: Colors.white,
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+          ),
+        ),
         actions: [
           PopupMenuButton<String>(
             key: _actionButtonKey,
@@ -417,16 +456,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const PopupMenuDivider(),
 
-                // 2. Refresh (Always handy)
-                PopupMenuItem<String>(
-                  value: 'refresh',
-                  child: Row(
-                    children: [
-                      const Icon(Icons.refresh, color: Colors.grey),
-                      const SizedBox(width: 8),
-                      Text(l10n.refresh),
-                    ],
-                  ),
                 ),
                 
                 // 3. Settings & Help
@@ -456,100 +485,71 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          // Tab Selector
-          Consumer<AppState>(
-            builder: (context, appState, child) {
-              final l10n = AppLocalizations.of(context)!;
-              return Container(
-                key: _tabKey,
-                margin: const EdgeInsets.all(16),
-                  child: Row(
+      ),
+      drawer: Drawer(
+        child: Consumer<AppState>(
+          builder: (context, appState, child) {
+            return ListView(
+              padding: EdgeInsets.zero,
+              children: [
+                DrawerHeader(
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF667eea),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      // Mode Selector (Flexible to take available space)
-                      Expanded(
-                        flex: 3,
-                        child: SegmentedButton<int>(
-                          showSelectedIcon: false,
-                          segments: [
-                            ButtonSegment<int>(
-                              value: 0,
-                              icon: const Icon(Icons.search),
-                              tooltip: l10n.tooltipSearch,
-                            ),
-                            ButtonSegment<int>(
-                              value: 1,
-                              icon: const Icon(Icons.auto_stories),
-                              tooltip: l10n.tooltipStudyReview,
-                            ),
-                            ButtonSegment<int>(
-                              value: 2,
-                              icon: const Icon(Icons.record_voice_over),
-                              tooltip: l10n.tooltipSpeaking,
-                            ),
-                          ],
-                          selected: {appState.currentMode},
-                          onSelectionChanged: (Set<int> newSelection) {
-                            appState.switchMode(newSelection.first);
-                          },
-                          style: ButtonStyle(
-                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            visualDensity: VisualDensity.compact,
-                            backgroundColor: WidgetStateProperty.resolveWith((states) {
-                              if (states.contains(WidgetState.selected)) {
-                                return const Color(0xFF667eea);
-                              }
-                              return Colors.white;
-                            }),
-                            foregroundColor: WidgetStateProperty.resolveWith((states) {
-                              if (states.contains(WidgetState.selected)) {
-                                return Colors.white;
-                              }
-                              return const Color(0xFF667eea);
-                            }),
-                          ),
-                        ),
-                      ),
-                      
-                      const SizedBox(width: 8),
-                      
-                      // Word/Sentence Toggle (Text Only)
-                      Expanded(
-                        flex: 2,
-                        child: SegmentedButton<String>(
-                          key: _globalToggleKey,
-                          showSelectedIcon: false,
-                          segments: [
-                            ButtonSegment<String>(
-                              value: 'word', 
-                              label: Text(l10n.labelWord, maxLines: 1, overflow: TextOverflow.ellipsis),
-                              // No Icon
-                            ),
-                            ButtonSegment<String>(
-                              value: 'sentence', 
-                              label: Text(l10n.labelSentence, maxLines: 1, overflow: TextOverflow.ellipsis),
-                              // No Icon
-                            ),
-                          ],
-                          selected: {appState.recordTypeFilter == 'all' ? 'word' : appState.recordTypeFilter},
-                          onSelectionChanged: (Set<String> newSelection) {
-                            // This updates both filter and _isWordMode
-                            appState.setRecordTypeFilter(newSelection.first); 
-                          },
-                          style: ButtonStyle(
-                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            visualDensity: VisualDensity.compact,
-                          ),
-                        ),
-                      ),
+                       const Icon(Icons.language, color: Colors.white, size: 48),
+                       const SizedBox(height: 10),
+                       Text(
+                         l10n.appTitle,
+                         style: const TextStyle(
+                           color: Colors.white,
+                           fontSize: 24,
+                           fontWeight: FontWeight.bold,
+                         ),
+                       ),
                     ],
                   ),
-                );
-            },
-          ),
-          
-          // Mode Content
+                ),
+                ListTile(
+                  leading: const Icon(Icons.keyboard),
+                  title: const Text('입력'),
+                  selected: appState.currentMode == 0,
+                  selectedColor: const Color(0xFF667eea),
+                  onTap: () {
+                    appState.switchMode(0);
+                    Navigator.pop(context); // Close drawer
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.auto_stories),
+                  title: const Text('복습'),
+                  selected: appState.currentMode == 1,
+                  selectedColor: const Color(0xFF667eea),
+                  onTap: () {
+                    appState.switchMode(1);
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.record_voice_over),
+                  title: const Text('발음 연습'),
+                  selected: appState.currentMode == 2,
+                  selectedColor: const Color(0xFF667eea),
+                  onTap: () {
+                    appState.switchMode(2);
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+      body: Column(
+        children: [
           Expanded(
             child: Consumer<AppState>(
               builder: (context, appState, child) {
@@ -557,10 +557,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   return Mode1Widget(
                     micButtonKey: _micButtonKey,
                     translateButtonKey: _translateButtonKey,
-                    swapButtonKey: _swapButtonKey, // Pass New Key
+                    swapButtonKey: _swapButtonKey, 
                     saveButtonKey: _saveButtonKey,
                     contextFieldKey: _contextFieldKey,
-                    materialDropdownKey: _mode1DropdownKey, // New Key
+                    materialDropdownKey: _mode1DropdownKey,
                   );
                 } else if (appState.currentMode == 1) {
                   return Mode2Widget(
@@ -578,12 +578,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           
-          // Banner Ad Widget
           if (_isBannerAdReady)
             SafeArea(
               top: false,
               child: Container(
-                color: Colors.white, // Background to ensure visibility
+                color: Colors.white,
                 width: _bannerAd!.size.width.toDouble(),
                 height: _bannerAd!.size.height.toDouble(),
                 child: AdWidget(ad: _bannerAd!),

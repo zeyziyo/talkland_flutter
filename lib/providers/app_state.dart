@@ -473,8 +473,17 @@ class AppState extends ChangeNotifier {
         _translatedText,
       );
       
-      // 1.5 Get default material ID (0)
-      final materialId = await DatabaseService.getOrCreateDefaultMaterial();
+      
+      // 1.5 Determine Material ID
+      // If user selected a specific material (Mode 1 Dropdown), use it.
+      // If 0 or null, it falls back to default.
+      int materialId = 0;
+      if (_selectedMaterialId != null && _selectedMaterialId != 0) {
+        materialId = _selectedMaterialId!;
+      } else {
+        await DatabaseService.getOrCreateDefaultMaterial(); // Ensure default exists
+        materialId = 0; 
+      }
       
       // 2. Create translation link
       await DatabaseService.saveTranslationLink(
@@ -720,7 +729,8 @@ class AppState extends ChangeNotifier {
   /// Import study materials from JSON file content
   Future<Map<String, dynamic>> importFromJsonFile(String jsonContent, {String? fileName}) async {
     try {
-      final result = await DatabaseService.importFromJson(jsonContent, fileName: fileName);
+      // Pass null for fileName so DatabaseService uses 'subject' from JSON or default
+      final result = await DatabaseService.importFromJson(jsonContent, fileName: null);
       
       // Reload study records after import
       // Reset filter to show all records by getting the target language from JSON
@@ -800,6 +810,11 @@ class AppState extends ChangeNotifier {
         await loadAllRecordsIntoMaterialView();
       } else {
         await loadMaterialRecords(materialId);
+      }
+      
+      // Auto-start for Mode 3 if active
+      if (_currentMode == 2) { // 2 is Speaking Mode
+         await startMode3SessionDirectly();
       }
     } else {
       _materialRecords = [];
@@ -1076,6 +1091,7 @@ class AppState extends ChangeNotifier {
   
   // NEW: Direct Start Method for Dropdown
   Future<void> startMode3SessionDirectly() async {
+      await _speechService.stopSTT(); // Ensure clean state
       _mode3SessionActive = true;
 
       // Smart Filter Check: If current filter hides all content, switch to 'all'

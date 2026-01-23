@@ -712,7 +712,7 @@ class DatabaseService {
             source: 'Device Import',
             sourceLanguage: sourceLang,
             targetLanguage: targetLang,
-            fileName: fileName,
+            fileName: fileName ?? subject,
             createdAt: DateTime.now().toIso8601String(),
           );
           
