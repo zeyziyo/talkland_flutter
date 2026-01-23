@@ -171,14 +171,14 @@ class SpeechService {
         onResult(result.recognizedWords, result.finalResult);  
       },
       localeId: lang,
-      onDevice: false, 
       listenFor: listenFor ?? const Duration(seconds: 30), // Default 30s
       
       listenOptions: stt.SpeechListenOptions(
         listenMode: stt.ListenMode.dictation, // Dictation is best for phrases
         cancelOnError: true, // true is better for reliability - allows auto-restart on error
         partialResults: true,
-        autoPunctuation: true, 
+        autoPunctuation: true,
+        onDevice: false, 
       ),
       pauseFor: pauseFor ?? const Duration(seconds: 3), // Default 3s
     );
@@ -209,13 +209,13 @@ class SpeechService {
         onResult(result.recognizedWords, result.finalResult);  
       },
       localeId: lang,
-      onDevice: false,
       listenFor: const Duration(seconds: 60), // Longer duration
       listenOptions: stt.SpeechListenOptions(
         listenMode: stt.ListenMode.dictation,
         cancelOnError: true,
         partialResults: true,
         autoPunctuation: false, // Less processing for game
+        onDevice: false,
       ),
       pauseFor: const Duration(seconds: 10), // Long pause allowed (10s)
     );

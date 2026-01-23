@@ -45,7 +45,7 @@ class Mode3Widget extends StatelessWidget {
                     // Material Selector
                     DropdownButtonFormField<int>(
                       key: materialDropdownKey,
-                      value: appState.selectedMaterialId,
+                      initialValue: appState.selectedMaterialId,
                       decoration: InputDecoration(
                         labelText: l10n.selectStudyMaterial,
                         filled: true,

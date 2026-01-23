@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
-import 'package:url_launcher/url_launcher.dart'; // Changed to url_launcher
 
 /// Mode 2: 학습 자료 및 복습 모드
 /// - 기본적으로 학습 자료를 선택하여 학습
@@ -147,7 +146,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                   ),
                   const SizedBox(height: 8),
                   DropdownButtonFormField<int>(
-                    value: selectedMaterialId,
+                    initialValue: selectedMaterialId,
                     decoration: const InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
@@ -606,7 +605,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
            border: isPlaying ? Border.all(color: Colors.blueAccent, width: 3) : null, // Highlight playing
            boxShadow: [
              if (isPlaying)
-               BoxShadow(color: Colors.blue.withOpacity(0.3), blurRadius: 10, spreadRadius: 2)
+               BoxShadow(color: Colors.blue.withValues(alpha: 0.3), blurRadius: 10, spreadRadius: 2)
              else 
                const BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2))
            ]

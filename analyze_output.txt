@@ -1,0 +1,7 @@
+Analyzing talkie...                                             
+
+warning - The include file 'package:flutter_lints/flutter.yaml' in 'C:\FlutterProjects\talkie\analysis_options.yaml' can't be found when analyzing 'C:\FlutterProjects\talkie' - analysis_options.yaml:10:10 - include_file_not_found
+warning - The left operand can't be null, so the right operand is never executed - lib\screens\home_screen.dart:729:46 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\screens\home_screen.dart:738:48 - dead_null_aware_expression
+
+3 issues found. (ran in 4.2s)

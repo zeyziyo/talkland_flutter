@@ -7,7 +7,6 @@ import '../providers/app_state.dart';
 import '../widgets/mode1_widget.dart';
 import '../widgets/mode2_widget.dart';
 import '../widgets/mode3_widget.dart';
-import '../widgets/mode4_widget.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 import '../widgets/help_dialog.dart';
 
@@ -38,7 +37,6 @@ class _HomeScreenState extends State<HomeScreen> {
   // Tutorial Keys - Fixed
   final GlobalKey _globalToggleKey = GlobalKey(); // New Global Toggle Key
   final GlobalKey _tabKey = GlobalKey();
-  final GlobalKey _helpKey = GlobalKey();
   final GlobalKey _actionButtonKey = GlobalKey();
 
   // AdMob Banner
@@ -138,8 +136,8 @@ class _HomeScreenState extends State<HomeScreen> {
       // Swap Button Tutorial
       targets.add(_buildTarget(
         _swapButtonKey, 
-        l10n.swapLanguages ?? "Language Swap", // Fallback if key missing 
-        l10n.tutorialSwapDesc ?? "Swap languages",
+        l10n.swapLanguages, 
+        l10n.tutorialSwapDesc,
         ContentAlign.top,
         radius: 12,
       ));
@@ -394,7 +392,6 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             itemBuilder: (BuildContext context) {
               final l10n = AppLocalizations.of(context)!;
-              final appState = Provider.of<AppState>(context, listen: false);
 
               return [
                 // 1. Get Materials Options (Unified)
@@ -675,7 +672,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text(l10n.sourceLanguageLabel, style: const TextStyle(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
                   DropdownButtonFormField<String>(
-                    value: tempSource,
+                    initialValue: tempSource,
                     decoration: const InputDecoration(border: OutlineInputBorder()),
                     items: const [
                        DropdownMenuItem(value: 'ko', child: Text('한국어 (Korean)')),
@@ -703,7 +700,7 @@ class _HomeScreenState extends State<HomeScreen> {
                    Text(l10n.targetLanguageLabel, style: const TextStyle(fontWeight: FontWeight.bold)),
                    const SizedBox(height: 8),
                    DropdownButtonFormField<String>(
-                    value: tempTarget,
+                    initialValue: tempTarget,
                     decoration: const InputDecoration(border: OutlineInputBorder()),
                      items: const [
                        DropdownMenuItem(value: 'en', child: Text('English')),
@@ -729,7 +726,7 @@ class _HomeScreenState extends State<HomeScreen> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(context),
-                  child: Text(l10n.cancel ?? 'Cancel'),
+                  child: Text(l10n.cancel),
                 ),
                 FilledButton(
                   onPressed: () {
@@ -738,7 +735,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     appState.setTargetLang(tempTarget);
                     Navigator.pop(context);
                   },
-                  child: Text(l10n.saveData ?? 'Save'),
+                  child: Text(l10n.saveData),
                 ),
               ],
             );

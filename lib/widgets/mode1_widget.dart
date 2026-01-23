@@ -124,7 +124,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(12),
                         boxShadow: [
-                           BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 4, offset:const Offset(0, 2))
+                           BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 4, offset:const Offset(0, 2))
                         ]
                       ),
                       child: Column(
@@ -136,9 +136,9 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                           // 2. Material Selector
                           DropdownButtonFormField<int>(
                             key: widget.materialDropdownKey,
-                            value: appState.selectedMaterialId,
+                            initialValue: appState.selectedMaterialId,
                             decoration: InputDecoration(
-                              labelText: l10n.selectStudyMaterial ?? "Target Material",
+                              labelText: l10n.selectStudyMaterial,
                               prefixIcon: const Icon(Icons.folder_open),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(8),
@@ -202,7 +202,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                     shape: BoxShape.circle,
                                     border: Border.all(color: Colors.orange, width: 2),
                                     boxShadow: [
-                                      BoxShadow(color: Colors.orange.withOpacity(0.3), blurRadius: 4, spreadRadius: 1)
+                                      BoxShadow(color: Colors.orange.withValues(alpha: 0.3), blurRadius: 4, spreadRadius: 1)
                                     ]
                                   ),
                                   child: IconButton(

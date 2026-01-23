@@ -1095,11 +1095,7 @@ class AppState extends ChangeNotifier {
     _retryAutoSkipTimer = null;
   }
   
-  /// Allow user to skip current question manually
-
-  
-  DateTime? _sttStartTime;
-
+  /// Allow user to skip current question manually\n
   /// Manual Stop for Mode 3
   Future<void> stopMode3ListeningManual() async {
     if (!_isListening) return;
@@ -1118,7 +1114,6 @@ class AppState extends ChangeNotifier {
   Future<void> _startMode3Listening() async {
     try {
       _isListening = true;
-      _sttStartTime = DateTime.now();
       _mode3UserAnswer = ''; // Reset answer
       _mode3Score = null;    // Reset score
       _mode3Feedback = '';   // Reset feedback
@@ -1157,7 +1152,6 @@ class AppState extends ChangeNotifier {
         // 3s: Allows 3s pause for breathing/thinking, but stops before engine hangs.
         listenFor: const Duration(seconds: 30), 
         pauseFor: const Duration(seconds: 3),
-        lang: _getServiceLocale(_targetLang), // Explicit locale
         onResult: (text, isFinal) {
            _mode3UserAnswer = text;
            notifyListeners();

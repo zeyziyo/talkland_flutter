@@ -172,7 +172,7 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -339,18 +339,5 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
       ),
     );
   }
-
-  Widget _buildSectionTitle(String title) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0),
-      child: Text(
-        title,
-        style: const TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.bold,
-          color: Color(0xFF667eea),
-        ),
-      ),
-    );
-  }
 }
+
