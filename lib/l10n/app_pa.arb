@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "ਇੱਕ ਅਧਿਐਨ ਸਮੱਗਰੀ ਚੁਣੋ",
   "sectionWord": "ਸ਼ਬਦ ਭਾਗ",
-  "sectionSentence": "ਵਾਕ ਭਾਗ"
+  "sectionSentence": "ਵਾਕ ਭਾਗ",
+  "tabWord": "ਸ਼ਬਦ",
+  "tabSentence": "ਵਾਕ",
+  "titleFormat": "{type}: {materialName}"
 }

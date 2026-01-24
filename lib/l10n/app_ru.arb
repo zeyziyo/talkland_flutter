@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Выберите учебный материал",
   "sectionWord": "Раздел слов",
-  "sectionSentence": "Раздел предложений"
+  "sectionSentence": "Раздел предложений",
+  "tabWord": "слово",
+  "tabSentence": "предложение",
+  "titleFormat": "{type}: {materialName}"
 }

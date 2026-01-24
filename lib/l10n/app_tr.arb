@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Bir çalışma materyali seçin",
   "sectionWord": "Kelime bölümü",
-  "sectionSentence": "Cümle bölümü"
+  "sectionSentence": "Cümle bölümü",
+  "tabWord": "kelime",
+  "tabSentence": "cümle",
+  "titleFormat": "{type}: {materialName}"
 }

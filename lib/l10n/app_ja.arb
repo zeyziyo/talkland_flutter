@@ -476,9 +476,11 @@
   "tutorialSwapDesc": "私の言語と学習言語を交換してください。",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
-,
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "学習教材セットを選択",
   "sectionWord": "単語セクション",
-  "sectionSentence": "文章セクション"
+  "sectionSentence": "文章セクション",
+  "tabWord": "言葉",
+  "tabSentence": "文章",
+  "titleFormat": "{type}: {materialName}"
 }

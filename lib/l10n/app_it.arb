@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Seleziona un materiale di studio",
   "sectionWord": "Sezione di parole",
-  "sectionSentence": "Sezione della frase"
+  "sectionSentence": "Sezione della frase",
+  "tabWord": "parola",
+  "tabSentence": "frase",
+  "titleFormat": "{type}: {materialName}"
 }

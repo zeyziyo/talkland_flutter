@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "انتخاب یک منبع مطالعه",
   "sectionWord": "بخش کلمات",
-  "sectionSentence": "بخش جمله"
+  "sectionSentence": "بخش جمله",
+  "tabWord": "کلمه",
+  "tabSentence": "جمله",
+  "titleFormat": "{type}: {materialName}"
 }

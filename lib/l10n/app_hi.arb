@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "अध्ययन सामग्री का चयन करें",
   "sectionWord": "शब्द अनुभाग",
-  "sectionSentence": "वाक्य अनुभाग"
+  "sectionSentence": "वाक्य अनुभाग",
+  "tabWord": "शब्द",
+  "tabSentence": "वाक्य",
+  "titleFormat": "{type}: {materialName}"
 }

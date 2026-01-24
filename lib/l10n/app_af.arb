@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Kies 'n studiemateriaal",
   "sectionWord": "Woordafdeling",
-  "sectionSentence": "Sin-afdeling"
+  "sectionSentence": "Sin-afdeling",
+  "tabWord": "woord",
+  "tabSentence": "sin",
+  "titleFormat": "{type}: {materialName}"
 }

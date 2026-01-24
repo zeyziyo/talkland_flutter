@@ -286,31 +286,25 @@ class AppLocalizationsMr extends AppLocalizations {
   String get helpMode1Desc => 'आवाज ओळखा, भाषांतर करा आणि निकाल ऐका.';
 
   @override
-  String get helpMode1Details =>
-      '• आवाज: सुरू/थांबवण्यासाठी माईक टॅप करा\n• मजकूर: भाषांतरासाठी थेट टाईप करा\n• ऑटो-सर्च: समान वाक्ये शोधते\n• भाषांतर: त्वरित भाषांतरासाठी बटण\n• ऐका: TTS साठी स्पीकर चिन्ह\n• जतन करा: इतिहासामध्ये जोडते\n• साफ करा: सर्व रीसेट करा';
+  String get helpMode1Details => '• आवाज: सुरू/थांबवण्यासाठी माईक टॅप करा\n• मजकूर: भाषांतरासाठी थेट टाईप करा\n• ऑटो-सर्च: समान वाक्ये शोधते\n• भाषांतर: त्वरित भाषांतरासाठी बटण\n• ऐका: TTS साठी स्पीकर चिन्ह\n• जतन करा: इतिहासामध्ये जोडते\n• साफ करा: सर्व रीसेट करा';
 
   @override
-  String get helpMode2Desc =>
-      'लपविलेल्या भाषांतरासह जतन केलेल्या वाक्यांचे पुनरावलोकन करा.';
+  String get helpMode2Desc => 'लपविलेल्या भाषांतरासह जतन केलेल्या वाक्यांचे पुनरावलोकन करा.';
 
   @override
-  String get helpMode2Details =>
-      '• निवडा: संच किंवा \'सर्व पुनरावलोकन\' निवडा\n• पलटवा: भाषांतर \'दाखवा/लपवा\'\n• ऐका: वाक्यासाठी TTS प्ले करा\n• चिन्हांकित करा: पूर्ण झाल्यासाठी टिक (V)\n• काढून टाका: काढण्यासाठी कार्ड दाबून ठेवा\n• फिल्टर: सर्व किंवा साहित्यानुसार पहा';
+  String get helpMode2Details => '• निवडा: संच किंवा \'सर्व पुनरावलोकन\' निवडा\n• पलटवा: भाषांतर \'दाखवा/लपवा\'\n• ऐका: वाक्यासाठी TTS प्ले करा\n• चिन्हांकित करा: पूर्ण झाल्यासाठी टिक (V)\n• काढून टाका: काढण्यासाठी कार्ड दाबून ठेवा\n• फिल्टर: सर्व किंवा साहित्यानुसार पहा';
 
   @override
-  String get helpMode3Desc =>
-      'ऐकून आणि पुनरावृत्ती करून बोलण्याचा सराव करा (Shadowing).';
+  String get helpMode3Desc => 'ऐकून आणि पुनरावृत्ती करून बोलण्याचा सराव करा (Shadowing).';
 
   @override
-  String get helpMode3Details =>
-      '• निवडा: पॅकेज निवडा\n• मध्यांतर: [-] [+] प्रतीक्षा वेळ (3से-60से)\n• सुरू/थांबा: सत्र नियंत्रित करा\n• बोला: ऑडिओ ऐका आणि पुनरावृत्ती करा\n• स्कोअर: अचूकता (0-100)\n• पुन्हा प्रयत्न: आवाज न सापडल्यास बटण';
+  String get helpMode3Details => '• निवडा: पॅकेज निवडा\n• मध्यांतर: [-] [+] प्रतीक्षा वेळ (3से-60से)\n• सुरू/थांबा: सत्र नियंत्रित करा\n• बोला: ऑडिओ ऐका आणि पुनरावृत्ती करा\n• स्कोअर: अचूकता (0-100)\n• पुन्हा प्रयत्न: आवाज न सापडल्यास बटण';
 
   @override
   String get helpJsonDesc => 'मोड 3 मध्ये आयात करण्यासाठी, JSON तयार करा:';
 
   @override
-  String get helpTourDesc =>
-      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
+  String get helpTourDesc => 'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'टूर सुरू करा';
@@ -322,8 +316,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get tutorialMicDesc => 'व्हॉइस इनपुटसाठी माईक बटण टॅप करा.';
 
   @override
-  String get tutorialTabDesc =>
-      'तुम्ही येथे तुमची इच्छित शिकण्याची पद्धत निवडू शकता.';
+  String get tutorialTabDesc => 'तुम्ही येथे तुमची इच्छित शिकण्याची पद्धत निवडू शकता.';
 
   @override
   String get tutorialTapToContinue => 'सुरू ठेवण्यासाठी टॅप करा';
@@ -332,8 +325,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get tutorialTransTitle => 'भाषांतर';
 
   @override
-  String get tutorialTransDesc =>
-      'तुमचा मजकूर भाषांतरित करण्यासाठी येथे टॅप करा.';
+  String get tutorialTransDesc => 'तुमचा मजकूर भाषांतरित करण्यासाठी येथे टॅप करा.';
 
   @override
   String get tutorialSaveTitle => 'जतन करा';
@@ -345,15 +337,13 @@ class AppLocalizationsMr extends AppLocalizations {
   String get tutorialM2SelectTitle => 'निवडा आणि फिल्टर';
 
   @override
-  String get tutorialM2SelectDesc =>
-      'साहित्य निवडा किंवा \'सर्व पुनरावलोकन\' वर जा.';
+  String get tutorialM2SelectDesc => 'साहित्य निवडा किंवा \'सर्व पुनरावलोकन\' वर जा.';
 
   @override
   String get tutorialM2ListTitle => 'अभ्यास सूची';
 
   @override
-  String get tutorialM2ListDesc =>
-      'तुमची कार्ड तपासा आणि त्यांना पलटवा. (Long-press to delete)';
+  String get tutorialM2ListDesc => 'तुमची कार्ड तपासा आणि त्यांना पलटवा. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'साहित्य निवडा';
@@ -365,8 +355,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get tutorialM3IntervalTitle => 'मध्यांतर';
 
   @override
-  String get tutorialM3IntervalDesc =>
-      'वाक्यांमधील प्रतीक्षा वेळ समायोजित करा.';
+  String get tutorialM3IntervalDesc => 'वाक्यांमधील प्रतीक्षा वेळ समायोजित करा.';
 
   @override
   String get tutorialM3StartTitle => 'सुरू करा';
@@ -408,8 +397,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get tutorialLangSettingsTitle => 'Language Settings';
 
   @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
+  String get tutorialLangSettingsDesc => 'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';
@@ -421,22 +409,37 @@ class AppLocalizationsMr extends AppLocalizations {
   String get tutorialContextTitle => 'संदर्भ टॅग';
 
   @override
-  String get tutorialContextDesc =>
-      'समान वाक्ये वेगळी करण्यासाठी संदर्भ (उदा. सकाळ) जोडा.';
+  String get tutorialContextDesc => 'समान वाक्ये वेगळी करण्यासाठी संदर्भ (उदा. सकाळ) जोडा.';
 
   @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
+  String get thinkingTimeInterval => 'Thinking Time Interval';
 
   @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
+  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
 
   @override
-  String get tutorialM3WordsTitle => 'Practice Words';
+  String get autoPlay => 'Auto-Play';
 
   @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
+  String get timeUp => 'Time Up!';
+
+  @override
+  String get gameModeTitle => 'Game Mode';
+
+  @override
+  String get gameModeDesc => 'Choose your practice mode';
+
+  @override
+  String get wordDefenseTitle => 'Word Defense';
+
+  @override
+  String get wordDefenseDesc => 'Defend your base by speaking words correctly before enemies reach you.';
+
+  @override
+  String get dialogueQuestTitle => 'Dialogue Quest';
+
+  @override
+  String get dialogueQuestDesc => 'Roleplay in scenarios. Choose the right response and speak it aloud.';
 
   @override
   String get labelType => 'Type:';
@@ -448,19 +451,16 @@ class AppLocalizationsMr extends AppLocalizations {
   String get labelSentence => 'Sentence';
 
   @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
+  String get contextTagLabel => 'Context/Situation (Optional) - Ex: Morning greeting, polite form';
 
   @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
+  String get contextTagHint => 'Describe situation for easier classification later';
 
   @override
   String get translationLimitExceeded => 'Translation Limit Exceeded';
 
   @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
+  String get translationLimitMessage => 'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
 
   @override
   String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
@@ -519,44 +519,6 @@ class AppLocalizationsMr extends AppLocalizations {
   String get next => 'Next';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
-
-  @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
-
-  @override
-  String get autoPlay => 'Auto-Play';
-
-  @override
-  String get timeUp => 'Time Up!';
-
-  @override
-  String get gameModeTitle => 'Game Mode';
-
-  @override
-  String get gameModeDesc => 'Choose your practice mode';
-
-  @override
-  String get wordDefenseTitle => 'Word Defense';
-
-  @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
-
-  @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
-
-  @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
   String get wordModeLabel => 'Word Mode';
 
   @override
@@ -567,6 +529,18 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get basic => 'Basic';
+
+  @override
+  String get tutorialM3WordsTitle => 'Practice Words';
+
+  @override
+  String get tutorialM3WordsDesc => 'Check this to practice only your saved words.';
+
+  @override
+  String get enterTextHint => 'Enter text to translate';
+
+  @override
+  String get micButtonTooltip => 'Start Listening';
 
   @override
   String get menuHelp => 'Help';
@@ -611,8 +585,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get tutorialM3ResetTitle => 'Reset History';
 
   @override
-  String get tutorialM3ResetDesc =>
-      'Clear your progress and accuracy scores to start fresh.';
+  String get tutorialM3ResetDesc => 'Clear your progress and accuracy scores to start fresh.';
 
   @override
   String get menuSelectMaterialSet => 'अभ्यास साहित्य निवडा';
@@ -622,4 +595,10 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get sectionSentence => 'वाक्य विभाग';
+
+  @override
+  String get tabWord => 'शब्द';
+
+  @override
+  String get tabSentence => 'वाक्य';
 }

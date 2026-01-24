@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "เลือกสื่อการเรียน",
   "sectionWord": "ส่วนของคำ",
-  "sectionSentence": "ส่วนประโยค"
+  "sectionSentence": "ส่วนประโยค",
+  "tabWord": "คำ",
+  "tabSentence": "ประโยค",
+  "titleFormat": "{type}: {materialName}"
 }

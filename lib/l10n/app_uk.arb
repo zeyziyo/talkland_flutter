@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Виберіть навчальний матеріал",
   "sectionWord": "Розділ слів",
-  "sectionSentence": "Розділ речення"
+  "sectionSentence": "Розділ речення",
+  "tabWord": "слово",
+  "tabSentence": "речення",
+  "titleFormat": "{type}: {materialName}"
 }

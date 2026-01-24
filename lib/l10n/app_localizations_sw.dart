@@ -66,8 +66,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get noRecords => 'Hakuna rekodi kwa lugha iliyochaguliwa';
 
   @override
-  String get saveTranslationsFromSearch =>
-      'Hifadhi tafsiri kutoka kwa hali ya utafutaji';
+  String get saveTranslationsFromSearch => 'Hifadhi tafsiri kutoka kwa hali ya utafutaji';
 
   @override
   String get flip => 'Geuza';
@@ -287,31 +286,25 @@ class AppLocalizationsSw extends AppLocalizations {
   String get helpMode1Desc => 'Tambua sauti, tafsiri na sikiliza matokeo.';
 
   @override
-  String get helpMode1Details =>
-      '• Sauti: Gonga maikrofoni kuanza/kusimamisha\n• Maandishi: Andika moja kwa moja kwa kutafsiri\n• Utafutaji Kiotomatiki: Inagundua sentensi zinazofanana\n• Tafsiri: Kitufe cha tafsiri ya papo hapo\n• Sikiliza: Aikoni ya spika kwa TTS\n• Hifadhi: Inaongeza kwenye historia\n• Futa: Weka upya yote';
+  String get helpMode1Details => '• Sauti: Gonga maikrofoni kuanza/kusimamisha\n• Maandishi: Andika moja kwa moja kwa kutafsiri\n• Utafutaji Kiotomatiki: Inagundua sentensi zinazofanana\n• Tafsiri: Kitufe cha tafsiri ya papo hapo\n• Sikiliza: Aikoni ya spika kwa TTS\n• Hifadhi: Inaongeza kwenye historia\n• Futa: Weka upya yote';
 
   @override
-  String get helpMode2Desc =>
-      'Pitia sentensi zilizohifadhiwa na tafsiri iliyofichwa.';
+  String get helpMode2Desc => 'Pitia sentensi zilizohifadhiwa na tafsiri iliyofichwa.';
 
   @override
-  String get helpMode2Details =>
-      '• Chagua: Chagua seti au \'Pitia Zote\'\n• Geuza: \'Onyesha/Ficha\' tafsiri\n• Sikiliza: Cheza TTS kwa sentensi\n• Weka alama: Tiki (V) kwa zilizokamilika\n• Futa: Bonyeza kwa muda mrefu kufuta\n• Kichujio: Tazama zote au kwa nyenzo';
+  String get helpMode2Details => '• Chagua: Chagua seti au \'Pitia Zote\'\n• Geuza: \'Onyesha/Ficha\' tafsiri\n• Sikiliza: Cheza TTS kwa sentensi\n• Weka alama: Tiki (V) kwa zilizokamilika\n• Futa: Bonyeza kwa muda mrefu kufuta\n• Kichujio: Tazama zote au kwa nyenzo';
 
   @override
-  String get helpMode3Desc =>
-      'Fanya mazoezi ya kuzungumza kwa kusikiliza na kurudia (Shadowing).';
+  String get helpMode3Desc => 'Fanya mazoezi ya kuzungumza kwa kusikiliza na kurudia (Shadowing).';
 
   @override
-  String get helpMode3Details =>
-      '• Chagua: Chagua kifurushi\n• Muda: [-] [+] muda wa kusubiri (3s-60s)\n• Anza/Simama: Dhibiti kikao\n• Zungumza: Sikiliza na rudia\n• Alama: Usahihi (0-100)\n• Jaribu tena: Kitufe ikiwa sauti haigunduliwi';
+  String get helpMode3Details => '• Chagua: Chagua kifurushi\n• Muda: [-] [+] muda wa kusubiri (3s-60s)\n• Anza/Simama: Dhibiti kikao\n• Zungumza: Sikiliza na rudia\n• Alama: Usahihi (0-100)\n• Jaribu tena: Kitufe ikiwa sauti haigunduliwi';
 
   @override
   String get helpJsonDesc => 'Kwa kuleta katika Hali 3, unda JSON:';
 
   @override
-  String get helpTourDesc =>
-      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
+  String get helpTourDesc => 'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Anza Ziara';
@@ -323,8 +316,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get tutorialMicDesc => 'Gonga maikrofoni kwa ingizo la sauti.';
 
   @override
-  String get tutorialTabDesc =>
-      'Unaweza kuchagua hali ya kujifunza unayotaka hapa.';
+  String get tutorialTabDesc => 'Unaweza kuchagua hali ya kujifunza unayotaka hapa.';
 
   @override
   String get tutorialTapToContinue => 'Gusa ili kuendelea';
@@ -351,8 +343,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get tutorialM2ListTitle => 'Orodha ya Kusoma';
 
   @override
-  String get tutorialM2ListDesc =>
-      'Angalia kadi zako na uzigeuze. (Long-press to delete)';
+  String get tutorialM2ListDesc => 'Angalia kadi zako na uzigeuze. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Chagua Nyenzo';
@@ -400,15 +391,13 @@ class AppLocalizationsSw extends AppLocalizations {
   String get tutorialM2DropdownDesc => 'Chagua nyenzo za kusoma.';
 
   @override
-  String get tutorialM2ImportDesc =>
-      'Leta faili ya JSON kutoka kwenye folda ya kifaa.';
+  String get tutorialM2ImportDesc => 'Leta faili ya JSON kutoka kwenye folda ya kifaa.';
 
   @override
   String get tutorialLangSettingsTitle => 'Language Settings';
 
   @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
+  String get tutorialLangSettingsDesc => 'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';
@@ -420,22 +409,37 @@ class AppLocalizationsSw extends AppLocalizations {
   String get tutorialContextTitle => 'Lebo ya Muktadha';
 
   @override
-  String get tutorialContextDesc =>
-      'Ongeza muktadha (k.m. Asubuhi) ili kutofautisha sentensi zinazofanana.';
+  String get tutorialContextDesc => 'Ongeza muktadha (k.m. Asubuhi) ili kutofautisha sentensi zinazofanana.';
 
   @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
+  String get thinkingTimeInterval => 'Thinking Time Interval';
 
   @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
+  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
 
   @override
-  String get tutorialM3WordsTitle => 'Practice Words';
+  String get autoPlay => 'Auto-Play';
 
   @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
+  String get timeUp => 'Time Up!';
+
+  @override
+  String get gameModeTitle => 'Game Mode';
+
+  @override
+  String get gameModeDesc => 'Choose your practice mode';
+
+  @override
+  String get wordDefenseTitle => 'Word Defense';
+
+  @override
+  String get wordDefenseDesc => 'Defend your base by speaking words correctly before enemies reach you.';
+
+  @override
+  String get dialogueQuestTitle => 'Dialogue Quest';
+
+  @override
+  String get dialogueQuestDesc => 'Roleplay in scenarios. Choose the right response and speak it aloud.';
 
   @override
   String get labelType => 'Type:';
@@ -447,19 +451,16 @@ class AppLocalizationsSw extends AppLocalizations {
   String get labelSentence => 'Sentence';
 
   @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
+  String get contextTagLabel => 'Context/Situation (Optional) - Ex: Morning greeting, polite form';
 
   @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
+  String get contextTagHint => 'Describe situation for easier classification later';
 
   @override
   String get translationLimitExceeded => 'Translation Limit Exceeded';
 
   @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
+  String get translationLimitMessage => 'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
 
   @override
   String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
@@ -518,44 +519,6 @@ class AppLocalizationsSw extends AppLocalizations {
   String get next => 'Next';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
-
-  @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
-
-  @override
-  String get autoPlay => 'Auto-Play';
-
-  @override
-  String get timeUp => 'Time Up!';
-
-  @override
-  String get gameModeTitle => 'Game Mode';
-
-  @override
-  String get gameModeDesc => 'Choose your practice mode';
-
-  @override
-  String get wordDefenseTitle => 'Word Defense';
-
-  @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
-
-  @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
-
-  @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
   String get wordModeLabel => 'Word Mode';
 
   @override
@@ -566,6 +529,18 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get basic => 'Basic';
+
+  @override
+  String get tutorialM3WordsTitle => 'Practice Words';
+
+  @override
+  String get tutorialM3WordsDesc => 'Check this to practice only your saved words.';
+
+  @override
+  String get enterTextHint => 'Enter text to translate';
+
+  @override
+  String get micButtonTooltip => 'Start Listening';
 
   @override
   String get menuHelp => 'Help';
@@ -601,8 +576,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc =>
-      'Ninabadilisha lugha yangu na lugha ninayojifunza.';
+  String get tutorialSwapDesc => 'Ninabadilisha lugha yangu na lugha ninayojifunza.';
 
   @override
   String get recognizedText => 'Recognized Text:';
@@ -611,8 +585,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get tutorialM3ResetTitle => 'Reset History';
 
   @override
-  String get tutorialM3ResetDesc =>
-      'Clear your progress and accuracy scores to start fresh.';
+  String get tutorialM3ResetDesc => 'Clear your progress and accuracy scores to start fresh.';
 
   @override
   String get menuSelectMaterialSet => 'Chagua nyenzo ya kujifunzia';
@@ -622,4 +595,10 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get sectionSentence => 'Sehemu ya sentensi';
+
+  @override
+  String get tabWord => 'neno';
+
+  @override
+  String get tabSentence => 'sentensi';
 }

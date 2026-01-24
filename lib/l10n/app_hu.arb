@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Válasszon egy tanulmányi anyagot",
   "sectionWord": "Szószakasz",
-  "sectionSentence": "Mondatszakasz"
+  "sectionSentence": "Mondatszakasz",
+  "tabWord": "szó",
+  "tabSentence": "mondat",
+  "titleFormat": "{type}: {materialName}"
 }

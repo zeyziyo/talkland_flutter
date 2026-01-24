@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Kies studiemateriaal.",
   "sectionWord": "Woordsectie",
-  "sectionSentence": "Zinsdeel"
+  "sectionSentence": "Zinsdeel",
+  "tabWord": "woord",
+  "tabSentence": "zin",
+  "titleFormat": "{type}: {materialName}"
 }

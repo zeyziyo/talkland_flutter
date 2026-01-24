@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Pumili ng materyal sa pag-aaral",
   "sectionWord": "Seksyon ng salita",
-  "sectionSentence": "Seksyon ng Pangungusap"
+  "sectionSentence": "Seksyon ng Pangungusap",
+  "tabWord": "salita",
+  "tabSentence": "pangungusap",
+  "titleFormat": "{type}: {materialName}"
 }

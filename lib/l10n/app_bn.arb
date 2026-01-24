@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "একটি অধ্যয়নের উপাদান নির্বাচন করুন",
   "sectionWord": "শব্দ বিভাগ",
-  "sectionSentence": "বাক্য বিভাগ"
+  "sectionSentence": "বাক্য বিভাগ",
+  "tabWord": "শব্দ",
+  "tabSentence": "বাক্য",
+  "titleFormat": "{type}: {materialName}"
 }

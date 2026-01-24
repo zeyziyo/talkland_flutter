@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "בחירת חומר לימוד",
   "sectionWord": "מקטע מילים",
-  "sectionSentence": "קטע משפט"
+  "sectionSentence": "קטע משפט",
+  "tabWord": "מִלָה",
+  "tabSentence": "מִשׁפָּט",
+  "titleFormat": "{type}: {materialName}"
 }

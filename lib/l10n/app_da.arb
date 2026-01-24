@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Vælg et studiemateriale",
   "sectionWord": "Ordsektion",
-  "sectionSentence": "Sætningsafsnit"
+  "sectionSentence": "Sætningsafsnit",
+  "tabWord": "ord",
+  "tabSentence": "dømme",
+  "titleFormat": "{type}: {materialName}"
 }

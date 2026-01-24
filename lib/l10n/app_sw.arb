@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Chagua nyenzo ya kujifunzia",
   "sectionWord": "Sehemu ya maneno",
-  "sectionSentence": "Sehemu ya sentensi"
+  "sectionSentence": "Sehemu ya sentensi",
+  "tabWord": "neno",
+  "tabSentence": "sentensi",
+  "titleFormat": "{type}: {materialName}"
 }

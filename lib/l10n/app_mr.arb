@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "अभ्यास साहित्य निवडा",
   "sectionWord": "शब्द विभाग",
-  "sectionSentence": "वाक्य विभाग"
+  "sectionSentence": "वाक्य विभाग",
+  "tabWord": "शब्द",
+  "tabSentence": "वाक्य",
+  "titleFormat": "{type}: {materialName}"
 }

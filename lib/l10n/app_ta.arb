@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "ஒரு ஆய்வுப் பொருளைத் தேர்ந்தெடுக்கவும்",
   "sectionWord": "சொல் பிரிவு",
-  "sectionSentence": "வாக்கியப் பிரிவு"
+  "sectionSentence": "வாக்கியப் பிரிவு",
+  "tabWord": "சொல்",
+  "tabSentence": "தண்டனை",
+  "titleFormat": "{type}: {materialName}"
 }

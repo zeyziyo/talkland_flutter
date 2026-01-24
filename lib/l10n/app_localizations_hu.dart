@@ -66,8 +66,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get noRecords => 'Nincs rekord a választott nyelvhez';
 
   @override
-  String get saveTranslationsFromSearch =>
-      'Mentse a fordításokat a keresési módból';
+  String get saveTranslationsFromSearch => 'Mentse a fordításokat a keresési módból';
 
   @override
   String get flip => 'Fordít';
@@ -284,35 +283,28 @@ class AppLocalizationsHu extends AppLocalizations {
   String get helpTabTour => 'Túra';
 
   @override
-  String get helpMode1Desc =>
-      'Hangfelismerés, fordítás és eredmény meghallgatása.';
+  String get helpMode1Desc => 'Hangfelismerés, fordítás és eredmény meghallgatása.';
 
   @override
-  String get helpMode1Details =>
-      '• Hang: Érintse meg a mikrofont az indításhoz/leállításhoz\n• Szöveg: Írjon közvetlenül a fordításhoz\n• Auto-Keresés: Hasonló mondatokat keres\n• Fordítás: Gomb az azonnali fordításhoz\n• Hallgatás: Hangszóró ikon a TTS-hez\n• Mentés: Hozzáadja az előzményekhez\n• Törlés: Összes visszaállítása';
+  String get helpMode1Details => '• Hang: Érintse meg a mikrofont az indításhoz/leállításhoz\n• Szöveg: Írjon közvetlenül a fordításhoz\n• Auto-Keresés: Hasonló mondatokat keres\n• Fordítás: Gomb az azonnali fordításhoz\n• Hallgatás: Hangszóró ikon a TTS-hez\n• Mentés: Hozzáadja az előzményekhez\n• Törlés: Összes visszaállítása';
 
   @override
-  String get helpMode2Desc =>
-      'Mentett mondatok áttekintése rejtett fordítással.';
+  String get helpMode2Desc => 'Mentett mondatok áttekintése rejtett fordítással.';
 
   @override
-  String get helpMode2Details =>
-      '• Kiválasztás: Válasszon készletet vagy \'Összes\'\n• Fordítás: \'Mutat/Rejt\' fordítás megtekintése\n• Hallgatás: Mondat TTS lejátszása\n• Jelölés: Pipa (V) a kész elemekhez\n• Törlés: Hosszan nyomja meg a kártyát\n• Szűrő: Összes vagy anyag szerint';
+  String get helpMode2Details => '• Kiválasztás: Válasszon készletet vagy \'Összes\'\n• Fordítás: \'Mutat/Rejt\' fordítás megtekintése\n• Hallgatás: Mondat TTS lejátszása\n• Jelölés: Pipa (V) a kész elemekhez\n• Törlés: Hosszan nyomja meg a kártyát\n• Szűrő: Összes vagy anyag szerint';
 
   @override
-  String get helpMode3Desc =>
-      'Beszédgyakorlás hallgatással és ismétléssel (Shadowing).';
+  String get helpMode3Desc => 'Beszédgyakorlás hallgatással és ismétléssel (Shadowing).';
 
   @override
-  String get helpMode3Details =>
-      '• Kiválasztás: Válasszon csomagot\n• Időköz: [-] [+] várakozás (3mp-60mp)\n• Start/Stop: Munkamenet vezérlése\n• Beszéd: Hallgassa és ismételje\n• Pontszám: Pontosság (0-100)\n• Újra: Gomb ha a hang nem észlelhető';
+  String get helpMode3Details => '• Kiválasztás: Válasszon csomagot\n• Időköz: [-] [+] várakozás (3mp-60mp)\n• Start/Stop: Munkamenet vezérlése\n• Beszéd: Hallgassa és ismételje\n• Pontszám: Pontosság (0-100)\n• Újra: Gomb ha a hang nem észlelhető';
 
   @override
   String get helpJsonDesc => '3. Mód importhoz hozzon létre JSON-t:';
 
   @override
-  String get helpTourDesc =>
-      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
+  String get helpTourDesc => 'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Túra Indítása';
@@ -345,15 +337,13 @@ class AppLocalizationsHu extends AppLocalizations {
   String get tutorialM2SelectTitle => 'Kiválasztás és Szűrő';
 
   @override
-  String get tutorialM2SelectDesc =>
-      'Válasszon anyagot vagy \'Összes áttekintése\'.';
+  String get tutorialM2SelectDesc => 'Válasszon anyagot vagy \'Összes áttekintése\'.';
 
   @override
   String get tutorialM2ListTitle => 'Tanulólista';
 
   @override
-  String get tutorialM2ListDesc =>
-      'Ellenőrizze a kártyákat és fordítsa meg őket. (Long-press to delete)';
+  String get tutorialM2ListDesc => 'Ellenőrizze a kártyákat és fordítsa meg őket. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Anyag Kiválasztása';
@@ -401,15 +391,13 @@ class AppLocalizationsHu extends AppLocalizations {
   String get tutorialM2DropdownDesc => 'Válasszon tananyagot.';
 
   @override
-  String get tutorialM2ImportDesc =>
-      'JSON fájl importálása az eszköz mappájából.';
+  String get tutorialM2ImportDesc => 'JSON fájl importálása az eszköz mappájából.';
 
   @override
   String get tutorialLangSettingsTitle => 'Language Settings';
 
   @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
+  String get tutorialLangSettingsDesc => 'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';
@@ -421,22 +409,37 @@ class AppLocalizationsHu extends AppLocalizations {
   String get tutorialContextTitle => 'Kontextus címke';
 
   @override
-  String get tutorialContextDesc =>
-      'Adjon hozzá kontextust (pl. Reggel) a hasonló mondatok megkülönböztetéséhez.';
+  String get tutorialContextDesc => 'Adjon hozzá kontextust (pl. Reggel) a hasonló mondatok megkülönböztetéséhez.';
 
   @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
+  String get thinkingTimeInterval => 'Thinking Time Interval';
 
   @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
+  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
 
   @override
-  String get tutorialM3WordsTitle => 'Practice Words';
+  String get autoPlay => 'Auto-Play';
 
   @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
+  String get timeUp => 'Time Up!';
+
+  @override
+  String get gameModeTitle => 'Game Mode';
+
+  @override
+  String get gameModeDesc => 'Choose your practice mode';
+
+  @override
+  String get wordDefenseTitle => 'Word Defense';
+
+  @override
+  String get wordDefenseDesc => 'Defend your base by speaking words correctly before enemies reach you.';
+
+  @override
+  String get dialogueQuestTitle => 'Dialogue Quest';
+
+  @override
+  String get dialogueQuestDesc => 'Roleplay in scenarios. Choose the right response and speak it aloud.';
 
   @override
   String get labelType => 'Type:';
@@ -448,19 +451,16 @@ class AppLocalizationsHu extends AppLocalizations {
   String get labelSentence => 'Sentence';
 
   @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
+  String get contextTagLabel => 'Context/Situation (Optional) - Ex: Morning greeting, polite form';
 
   @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
+  String get contextTagHint => 'Describe situation for easier classification later';
 
   @override
   String get translationLimitExceeded => 'Translation Limit Exceeded';
 
   @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
+  String get translationLimitMessage => 'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
 
   @override
   String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
@@ -519,44 +519,6 @@ class AppLocalizationsHu extends AppLocalizations {
   String get next => 'Next';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
-
-  @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
-
-  @override
-  String get autoPlay => 'Auto-Play';
-
-  @override
-  String get timeUp => 'Time Up!';
-
-  @override
-  String get gameModeTitle => 'Game Mode';
-
-  @override
-  String get gameModeDesc => 'Choose your practice mode';
-
-  @override
-  String get wordDefenseTitle => 'Word Defense';
-
-  @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
-
-  @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
-
-  @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
   String get wordModeLabel => 'Word Mode';
 
   @override
@@ -567,6 +529,18 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get basic => 'Basic';
+
+  @override
+  String get tutorialM3WordsTitle => 'Practice Words';
+
+  @override
+  String get tutorialM3WordsDesc => 'Check this to practice only your saved words.';
+
+  @override
+  String get enterTextHint => 'Enter text to translate';
+
+  @override
+  String get micButtonTooltip => 'Start Listening';
 
   @override
   String get menuHelp => 'Help';
@@ -602,8 +576,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc =>
-      'Felcserélem a nyelvemet azzal a nyelvvel, amit tanulok.';
+  String get tutorialSwapDesc => 'Felcserélem a nyelvemet azzal a nyelvvel, amit tanulok.';
 
   @override
   String get recognizedText => 'Recognized Text:';
@@ -612,8 +585,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get tutorialM3ResetTitle => 'Reset History';
 
   @override
-  String get tutorialM3ResetDesc =>
-      'Clear your progress and accuracy scores to start fresh.';
+  String get tutorialM3ResetDesc => 'Clear your progress and accuracy scores to start fresh.';
 
   @override
   String get menuSelectMaterialSet => 'Válasszon egy tanulmányi anyagot';
@@ -623,4 +595,10 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get sectionSentence => 'Mondatszakasz';
+
+  @override
+  String get tabWord => 'szó';
+
+  @override
+  String get tabSentence => 'mondat';
 }

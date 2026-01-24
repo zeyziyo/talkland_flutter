@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "ಅಧ್ಯಯನ ಸಾಮಗ್ರಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "sectionWord": "ಪದ ವಿಭಾಗ",
-  "sectionSentence": "ವಾಕ್ಯ ವಿಭಾಗ"
+  "sectionSentence": "ವಾಕ್ಯ ವಿಭಾಗ",
+  "tabWord": "ಪದ",
+  "tabSentence": "ವಾಕ್ಯ",
+  "titleFormat": "{type}: {materialName}"
 }

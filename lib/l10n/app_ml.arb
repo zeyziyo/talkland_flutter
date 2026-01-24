@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "ഒരു പഠന സാമഗ്രി തിരഞ്ഞെടുക്കുക",
   "sectionWord": "പദ വിഭാഗം",
-  "sectionSentence": "വാക്യ വിഭാഗം"
+  "sectionSentence": "വാക്യ വിഭാഗം",
+  "tabWord": "വാക്ക്",
+  "tabSentence": "വാചകം",
+  "titleFormat": "{type}: {materialName}"
 }

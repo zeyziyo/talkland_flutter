@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "選擇學習資料",
   "sectionWord": "文字部分",
-  "sectionSentence": "句子部分"
+  "sectionSentence": "句子部分",
+  "tabWord": "單字",
+  "tabSentence": "句子",
+  "titleFormat": "{type}: {materialName}"
 }

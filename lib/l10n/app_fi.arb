@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Valitse opiskelumateriaali",
   "sectionWord": "Sanaosio",
-  "sectionSentence": "Lauseosa"
+  "sectionSentence": "Lauseosa",
+  "tabWord": "sana",
+  "tabSentence": "tuomita",
+  "titleFormat": "{type}: {materialName}"
 }

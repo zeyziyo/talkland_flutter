@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Pilih bahan pembelajaran",
   "sectionWord": "Bahagian perkataan",
-  "sectionSentence": "Bahagian ayat"
+  "sectionSentence": "Bahagian ayat",
+  "tabWord": "perkataan",
+  "tabSentence": "ayat",
+  "titleFormat": "{type}: {materialName}"
 }

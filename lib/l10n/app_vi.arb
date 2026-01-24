@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Chọn tài liệu học tập",
   "sectionWord": "Phần chữ",
-  "sectionSentence": "Phần câu"
+  "sectionSentence": "Phần câu",
+  "tabWord": "từ",
+  "tabSentence": "câu",
+  "titleFormat": "{type}: {materialName}"
 }

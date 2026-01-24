@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _mode3ResetKey = GlobalKey(); // New: Reset Button Key
   
   // Tutorial Keys - Fixed
-  final GlobalKey _globalToggleKey = GlobalKey(); // New Global Toggle Key
+  // final GlobalKey _globalToggleKey = GlobalKey(); // Removed
   final GlobalKey _tabKey = GlobalKey();
   final GlobalKey _actionButtonKey = GlobalKey();
 
@@ -153,15 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
         shape: ShapeLightFocus.RRect,
       ));
 
-      targets.add(_buildTarget(
-        _globalToggleKey,
-        l10n.tutorialM1ToggleTitle,
-        l10n.tutorialM1ToggleDesc,
-        ContentAlign.bottom,
-        radius: 12,
-        keepWidgetSize: true, // Highlight full toggle
-        shape: ShapeLightFocus.RRect,
-      ));
+
 
        // New: Mode 1 Dropdown -> Point to Menu
        targets.add(_buildTarget(
@@ -189,15 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ));
     } else if (modeIndex == 1) {
       // Mode 2: Toggle
-      targets.add(_buildTarget(
-        _globalToggleKey,
-        l10n.tutorialM1ToggleTitle, // Reuse Mode 1 title
-        l10n.tutorialM1ToggleDesc,  // Reuse Mode 1 desc
-        ContentAlign.bottom,
-        radius: 12,
-        keepWidgetSize: true, // Highlight full toggle
-        shape: ShapeLightFocus.RRect,
-      ));
+
 
       // Mode 2: Dropdown -> Point to Menu
       targets.add(_buildTarget(
@@ -353,42 +337,25 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Consumer<AppState>(
           builder: (context, appState, child) {
-            return SegmentedButton<String>(
-              key: _globalToggleKey,
-              showSelectedIcon: false,
-              segments: [
-                ButtonSegment<String>(
-                  value: 'word', 
-                  label: Text(l10n.labelWord, maxLines: 1),
-                ),
-                ButtonSegment<String>(
-                  value: 'sentence', 
-                  label: Text(l10n.labelSentence, maxLines: 1),
-                ),
-              ],
-              selected: {appState.recordTypeFilter == 'all' ? 'word' : appState.recordTypeFilter},
-              onSelectionChanged: (Set<String> newSelection) {
-                appState.setRecordTypeFilter(newSelection.first); 
-              },
-              style: ButtonStyle(
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                visualDensity: VisualDensity.compact,
-                backgroundColor: WidgetStateProperty.resolveWith((states) {
-                   // Invert colors since it's on primary AppBar
-                  if (states.contains(WidgetState.selected)) {
-                    return Colors.white;
-                  }
-                  return const Color(0xFF667eea);
-                }),
-                foregroundColor: WidgetStateProperty.resolveWith((states) {
-                  if (states.contains(WidgetState.selected)) {
-                    return const Color(0xFF667eea);
-                  }
-                  return Colors.white; // Unselected text white on blue bg
-                }),
-                 side: WidgetStateProperty.all(const BorderSide(color: Colors.white)),
-              ),
-            );
+             final l10n = AppLocalizations.of(context)!;
+             final type = appState.recordTypeFilter == 'word' 
+                 ? l10n.tabWord 
+                 : l10n.tabSentence;
+             
+             // Get material name
+             String materialName = l10n.basic;
+             final material = appState.studyMaterials.firstWhere(
+               (m) => m['id'] == appState.selectedMaterialId,
+               orElse: () => {},
+             );
+             if (material.isNotEmpty) {
+               materialName = material['subject'] as String? ?? l10n.basic;
+             }
+
+             return Text(
+               '$type: $materialName',
+               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+             );
           },
         ),
         centerTitle: true,
@@ -780,101 +747,90 @@ class _HomeScreenState extends State<HomeScreen> {
            return count > 0;
         }).toList();
 
-        return AlertDialog(
-          title: Text(l10n.menuSelectMaterialSet),
-          content: SizedBox( // Constrain height
-            width: double.maxFinite,
-            child: SingleChildScrollView(
+        return DefaultTabController(
+          length: 2,
+          child: AlertDialog(
+            title: Text(l10n.menuSelectMaterialSet),
+            content: SizedBox( // Constrain height
+              width: double.maxFinite,
+              height: 400, // Fixed height for TabView
               child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // 1. Word Section
-                  Container(
-                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                    color: Colors.blue[50],
-                    width: double.infinity,
-                    child: Text(
-                      l10n.sectionWord,
-                      style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
+                  TabBar(
+                    labelColor: Colors.blueAccent,
+                    unselectedLabelColor: Colors.grey,
+                    tabs: [
+                      Tab(text: l10n.tabWord),
+                      Tab(text: l10n.tabSentence),
+                    ],
+                  ),
+                  Expanded(
+                    child: TabBarView(
+                      children: [
+                        // Word Tab
+                        ListView(
+                          children: [
+                            ListTile(
+                              leading: const Icon(Icons.all_inclusive, color: Colors.indigo),
+                              title: Text(l10n.reviewAll),
+                              onTap: () {
+                                appState.setRecordTypeFilter('word');
+                                appState.selectMaterial(-1);
+                                Navigator.pop(context);
+                              },
+                            ),
+                            const Divider(),
+                            ...wordMaterials.map((m) => ListTile(
+                                  leading: const Icon(Icons.book, color: Colors.blueAccent),
+                                  title: Text(m['subject'] as String),
+                                  subtitle: Text('${l10n.wordModeLabel}: ${m['word_count']} / ${l10n.labelSentence}: ${m['sentence_count']}'),
+                                  onTap: () {
+                                     appState.setRecordTypeFilter('word');
+                                     appState.selectMaterial(m['id'] as int);
+                                     Navigator.pop(context);
+                                  },
+                                )),
+                          ],
+                        ),
+                        // Sentence Tab
+                        ListView(
+                          children: [
+                            ListTile(
+                              leading: const Icon(Icons.all_inclusive, color: Colors.indigo),
+                              title: Text(l10n.reviewAll),
+                              onTap: () {
+                                appState.setRecordTypeFilter('sentence');
+                                appState.selectMaterial(-1);
+                                Navigator.pop(context);
+                              },
+                            ),
+                            const Divider(),
+                            ...sentenceMaterials.map((m) => ListTile(
+                                  leading: const Icon(Icons.article, color: Colors.deepOrangeAccent),
+                                  title: Text(m['subject'] as String),
+                                  subtitle: Text('${l10n.wordModeLabel}: ${m['word_count']} / ${l10n.labelSentence}: ${m['sentence_count']}'),
+                                  onTap: () {
+                                     appState.setRecordTypeFilter('sentence'); // Auto switch to sentence
+                                     appState.selectMaterial(m['id'] as int);
+                                     Navigator.pop(context);
+                                  },
+                                )),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 4),
-                  // Review All Words Option
-                  ListTile(
-                    leading: const Icon(Icons.all_inclusive, color: Colors.blueAccent),
-                    title: Text(l10n.reviewAll),
-                    dense: true,
-                    onTap: () async {
-                      // Select All + Word Mode
-                      appState.setWordMode(true);
-                       appState.switchMode(1); // Switch to Mode 2 (Review) or Mode 1? User didn't specify, but "Review All" implies Mode 2.
-                       // Actually, let's just select material. The mode switch might be manual.
-                       // But if user selects a material, they probably want to study it. 
-                       // I'll just select it.
-                      await appState.selectMaterial(-1);
-                      if (context.mounted) Navigator.pop(context);
-                    },
-                  ),
-                  ...wordMaterials.map((m) => ListTile(
-                    title: Text(m['subject'] as String),
-                    subtitle: Text('Words: ${m['word_count'] ?? 0}'),
-                    dense: true,
-                    onTap: () async {
-                       appState.setWordMode(true);
-                       await appState.selectMaterial(m['id'] as int);
-                       if (context.mounted) Navigator.pop(context);
-                    },
-                  )),
-                  
-                  const Divider(),
-                  
-                  // 2. Sentence Section
-                  Container(
-                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                    color: Colors.green[50],
-                    width: double.infinity,
-                    child: Text(
-                      l10n.sectionSentence,
-                      style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.green),
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  // Review All Sentences Option
-                  ListTile(
-                    leading: const Icon(Icons.all_inclusive, color: Colors.green),
-                    title: Text(l10n.reviewAll),
-                    dense: true,
-                    onTap: () async {
-                      // Select All + Sentence Mode
-                      appState.setWordMode(false);
-                      // Switch to Mode 2? 
-                      // appState.switchMode(1); 
-                      await appState.selectMaterial(-1);
-                      if (context.mounted) Navigator.pop(context);
-                    },
-                  ),
-                  ...sentenceMaterials.map((m) => ListTile(
-                    title: Text(m['subject'] as String),
-                    subtitle: Text('Sentences: ${m['sentence_count'] ?? 0}'),
-                    dense: true,
-                    onTap: () async {
-                       appState.setWordMode(false);
-                       await appState.selectMaterial(m['id'] as int);
-                       if (context.mounted) Navigator.pop(context);
-                    },
-                  )),
                 ],
               ),
             ),
-          ),
-          actions: [
+            actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
               child: Text(l10n.cancel),
             ),
           ],
-        );
+        ),
+      );
       },
     );
   }

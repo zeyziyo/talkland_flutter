@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "اختر مادة دراسية",
   "sectionWord": "قسم الكلمات",
-  "sectionSentence": "قسم الجملة"
+  "sectionSentence": "قسم الجملة",
+  "tabWord": "كلمة",
+  "tabSentence": "جملة",
+  "titleFormat": "{type}: {materialName}"
 }

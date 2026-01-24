@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Restablece tu progreso y puntuación de precisión, comenzando nuevamente desde el principio.",
   "menuSelectMaterialSet": "Seleccione un material de estudio",
   "sectionWord": "Sección de palabras",
-  "sectionSentence": "Sección de oración"
+  "sectionSentence": "Sección de oración",
+  "tabWord": "palabra",
+  "tabSentence": "oración",
+  "titleFormat": "{type}: {materialName}"
 }

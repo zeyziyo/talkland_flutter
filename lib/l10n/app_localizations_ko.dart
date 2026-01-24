@@ -286,29 +286,25 @@ class AppLocalizationsKo extends AppLocalizations {
   String get helpMode1Desc => '음성을 인식하여 번역하고, 결과를 듣습니다. 새로운 표현을 익히기에 좋습니다.';
 
   @override
-  String get helpMode1Details =>
-      '• 언어 설정: 상단 번역 아이콘으로 언어 변경\n• 도움말: 상단 물음표 아이콘으로 사용법 가이드 확인\n• 음성 입력: 마이크 아이콘을 눌러 말하기/멈추기\n• 텍스트 입력: 직접 타이핑하여 입력 가능\n• 자동 검색: 입력 시 유사한 문장이 있으면 알림\n• 번역하기: \'번역\' 버튼으로 즉시 번역 실행\n• 듣기: 스피커 아이콘으로 원어/번역문 듣기 (TTS)\n• 저장: \'데이터 저장\' 버튼으로 학습 기록 저장\n• 초기화: \'지우기\' 버튼으로 입력 내용 삭제';
+  String get helpMode1Details => '• 언어 설정: 상단 번역 아이콘으로 언어 변경\n• 도움말: 상단 물음표 아이콘으로 사용법 가이드 확인\n• 음성 입력: 마이크 아이콘을 눌러 말하기/멈추기\n• 텍스트 입력: 직접 타이핑하여 입력 가능\n• 자동 검색: 입력 시 유사한 문장이 있으면 알림\n• 번역하기: \'번역\' 버튼으로 즉시 번역 실행\n• 듣기: 스피커 아이콘으로 원어/번역문 듣기 (TTS)\n• 저장: \'데이터 저장\' 버튼으로 학습 기록 저장\n• 초기화: \'지우기\' 버튼으로 입력 내용 삭제';
 
   @override
   String get helpMode2Desc => '저장된 문장을 복습합니다. 번역을 가리고 확인하며 복습 횟수를 기록하세요.';
 
   @override
-  String get helpMode2Details =>
-      '• 자료 선택: 상단 메뉴(점 3개) > \'학습 자료집 선택\'에서 자료 선택\n• 카드 뒤집기: \'보이기/숨기기\' 버튼으로 번역 확인\n• 듣기: \'듣기\' 버튼으로 해당 문장 다시 듣기\n• 학습 체크: 완료된 문장은 체크 표시 (V)\n• 삭제: 카드를 길게 누르면 삭제 다이얼로그 표시\n• 필터: 전체 기록 보기 또는 학습 자료별 정렬';
+  String get helpMode2Details => '• 자료 선택: 상단 메뉴(점 3개) > \'학습 자료집 선택\'에서 자료 선택\n• 카드 뒤집기: \'보이기/숨기기\' 버튼으로 번역 확인\n• 듣기: \'듣기\' 버튼으로 해당 문장 다시 듣기\n• 학습 체크: 완료된 문장은 체크 표시 (V)\n• 삭제: 카드를 길게 누르면 삭제 다이얼로그 표시\n• 필터: 전체 기록 보기 또는 학습 자료별 정렬';
 
   @override
   String get helpMode3Desc => '학습 자료의 문장을 듣고 직접 말하는 연습을 합니다.';
 
   @override
-  String get helpMode3Details =>
-      '• 자료 선택: 상단 메뉴(점 3개) > \'학습 자료집 선택\'에서 연습할 자료 선택\n• 간격 조절: [-] [+] 버튼으로 문장 사이 대기 시간 설정 (3초~60초)\n• 시작/정지: 재생 버튼으로 쉐도잉 세션 제어\n• 말하기: 원어민 음성을 듣고 따라서 말하기\n• 피드백: 발음 정확도 점수(0~100) 및 색상 표시 (초록/주황/빨강)\n• 재시도: 인식 실패 시 재시도 버튼 사용';
+  String get helpMode3Details => '• 자료 선택: 상단 메뉴(점 3개) > \'학습 자료집 선택\'에서 연습할 자료 선택\n• 간격 조절: [-] [+] 버튼으로 문장 사이 대기 시간 설정 (3초~60초)\n• 시작/정지: 재생 버튼으로 쉐도잉 세션 제어\n• 말하기: 원어민 음성을 듣고 따라서 말하기\n• 피드백: 발음 정확도 점수(0~100) 및 색상 표시 (초록/주황/빨강)\n• 재시도: 인식 실패 시 재시도 버튼 사용';
 
   @override
   String get helpJsonDesc => '학습 자료를 가져오려면 다음과 같은 구조의 JSON 파일을 사용하세요:';
 
   @override
-  String get helpTourDesc =>
-      '튜토리얼을 시작하면 **하이라이트 원(Circle)**이 주요 기능을 안내해 드립니다.\n(예: 학습 카드를 **하이라이트 원**이 가리킬 때 길게 누르면 삭제할 수 있습니다.)';
+  String get helpTourDesc => '튜토리얼을 시작하면 **하이라이트 원(Circle)**이 주요 기능을 안내해 드립니다.\n(예: 학습 카드를 **하이라이트 원**이 가리킬 때 길게 누르면 삭제할 수 있습니다.)';
 
   @override
   String get startTutorial => '튜토리얼 시작';
@@ -347,8 +343,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tutorialM2ListTitle => '학습 목록';
 
   @override
-  String get tutorialM2ListDesc =>
-      '이 카드를 길게 누르면(Long Click) 삭제할 수 있습니다. 저장된 문장을 확인하고 뒤집어보세요.';
+  String get tutorialM2ListDesc => '이 카드를 길게 누르면(Long Click) 삭제할 수 있습니다. 저장된 문장을 확인하고 뒤집어보세요.';
 
   @override
   String get tutorialM3SelectTitle => '자료 선택';
@@ -414,21 +409,37 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tutorialContextTitle => '상황/문맥 태그';
 
   @override
-  String get tutorialContextDesc =>
-      '같은 문장이라도 상황(예: 아침, 저녁)을 적어두면 별도로 저장할 수 있어요.';
+  String get tutorialContextDesc => '같은 문장이라도 상황(예: 아침, 저녁)을 적어두면 별도로 저장할 수 있어요.';
 
   @override
-  String get tutorialM1ToggleTitle => '단어/문장 모드';
+  String get thinkingTimeInterval => '생각 시간 간격';
 
   @override
-  String get tutorialM1ToggleDesc =>
-      '단어와 문장 모드를 여기서 전환할 수 있습니다. 단어는 목록에서 더 크게 표시됩니다.';
+  String get thinkingTimeDesc => '정답이 공개되기 전 생각할 시간입니다.';
 
   @override
-  String get tutorialM3WordsTitle => '단어 연습';
+  String get autoPlay => '자동 재생';
 
   @override
-  String get tutorialM3WordsDesc => '체크하면 저장된 단어만 연습합니다.';
+  String get timeUp => '시간 초과!';
+
+  @override
+  String get gameModeTitle => '게임 모드';
+
+  @override
+  String get gameModeDesc => '연습할 게임 모드를 선택하세요';
+
+  @override
+  String get wordDefenseTitle => '단어 디펜스';
+
+  @override
+  String get wordDefenseDesc => '적이 도착하기 전에 단어를 말해서 기지를 방어하세요.';
+
+  @override
+  String get dialogueQuestTitle => '대화 퀘스트';
+
+  @override
+  String get dialogueQuestDesc => '상황극을 통해 대화 연습을 하세요. 적절한 답변을 선택하고 말해보세요.';
 
   @override
   String get labelType => '종류:';
@@ -449,8 +460,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get translationLimitExceeded => '번역 한도 초과';
 
   @override
-  String get translationLimitMessage =>
-      '일일 무료 번역(5회)을 모두 사용했습니다.\\n\\n광고를 보고 5회를 즉시 충전하시겠습니까?';
+  String get translationLimitMessage => '일일 무료 번역(5회)을 모두 사용했습니다.\\n\\n광고를 보고 5회를 즉시 충전하시겠습니까?';
 
   @override
   String get watchAdAndRefill => '광고 보고 충전 (+5회)';
@@ -509,42 +519,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get next => '다음';
 
   @override
-  String get thinkingTimeInterval => '생각 시간 간격';
-
-  @override
-  String get thinkingTimeDesc => '정답이 공개되기 전 생각할 시간입니다.';
-
-  @override
-  String get autoPlay => '자동 재생';
-
-  @override
-  String get timeUp => '시간 초과!';
-
-  @override
-  String get gameModeTitle => '게임 모드';
-
-  @override
-  String get gameModeDesc => '연습할 게임 모드를 선택하세요';
-
-  @override
-  String get wordDefenseTitle => '단어 디펜스';
-
-  @override
-  String get wordDefenseDesc => '적이 도착하기 전에 단어를 말해서 기지를 방어하세요.';
-
-  @override
-  String get dialogueQuestTitle => '대화 퀘스트';
-
-  @override
-  String get dialogueQuestDesc => '상황극을 통해 대화 연습을 하세요. 적절한 답변을 선택하고 말해보세요.';
-
-  @override
-  String get micButtonTooltip => '음성 인식 시작';
-
-  @override
-  String get enterTextHint => '번역할 텍스트를 입력하세요';
-
-  @override
   String get wordModeLabel => '단어 모드';
 
   @override
@@ -555,6 +529,18 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get basic => '기본';
+
+  @override
+  String get tutorialM3WordsTitle => '단어 연습';
+
+  @override
+  String get tutorialM3WordsDesc => '체크하면 저장된 단어만 연습합니다.';
+
+  @override
+  String get enterTextHint => '번역할 텍스트를 입력하세요';
+
+  @override
+  String get micButtonTooltip => '음성 인식 시작';
 
   @override
   String get menuHelp => '도움말';
@@ -609,4 +595,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get sectionSentence => '문장 섹션';
+
+  @override
+  String get tabWord => '단어';
+
+  @override
+  String get tabSentence => '문장';
 }

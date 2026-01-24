@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Välj ett studiematerial",
   "sectionWord": "Ordavsnitt",
-  "sectionSentence": "Meningsavsnitt"
+  "sectionSentence": "Meningsavsnitt",
+  "tabWord": "ord",
+  "tabSentence": "döma",
+  "titleFormat": "{type}: {materialName}"
 }

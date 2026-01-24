@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "અભ્યાસ સામગ્રી પસંદ કરો",
   "sectionWord": "શબ્દ વિભાગ",
-  "sectionSentence": "વાક્ય વિભાગ"
+  "sectionSentence": "વાક્ય વિભાગ",
+  "tabWord": "શબ્દ",
+  "tabSentence": "વાક્ય",
+  "titleFormat": "{type}: {materialName}"
 }

@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "అధ్యయన సామగ్రిని ఎంచుకోండి",
   "sectionWord": "పద విభాగం",
-  "sectionSentence": "వాక్య విభాగం"
+  "sectionSentence": "వాక్య విభాగం",
+  "tabWord": "పదం",
+  "tabSentence": "వాక్యం",
+  "titleFormat": "{type}: {materialName}"
 }

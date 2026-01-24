@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Επιλέξτε ένα υλικό μελέτης",
   "sectionWord": "Ενότητα λέξεων",
-  "sectionSentence": "Ενότητα προτάσεων"
+  "sectionSentence": "Ενότητα προτάσεων",
+  "tabWord": "λέξη",
+  "tabSentence": "πρόταση",
+  "titleFormat": "{type}: {materialName}"
 }

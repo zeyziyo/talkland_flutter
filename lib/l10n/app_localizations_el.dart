@@ -66,8 +66,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get noRecords => 'Χωρίς εγγραφές για την επιλεγμένη γλώσσα';
 
   @override
-  String get saveTranslationsFromSearch =>
-      'Αποθηκεύστε μεταφράσεις από τη λειτουργία αναζήτησης';
+  String get saveTranslationsFromSearch => 'Αποθηκεύστε μεταφράσεις από τη λειτουργία αναζήτησης';
 
   @override
   String get flip => 'Γύρισμα';
@@ -179,8 +178,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get translating => 'Μετάφραση...';
 
   @override
-  String get translationComplete =>
-      'Μετάφραση ολοκληρώθηκε (απαιτείται αποθήκευση)';
+  String get translationComplete => 'Μετάφραση ολοκληρώθηκε (απαιτείται αποθήκευση)';
 
   @override
   String get translationLoaded => 'Φορτώθηκε αποθηκευμένη μετάφραση';
@@ -285,36 +283,28 @@ class AppLocalizationsEl extends AppLocalizations {
   String get helpTabTour => 'Περιήγηση';
 
   @override
-  String get helpMode1Desc =>
-      'Αναγνώριση φωνής, μετάφραση και ακρόαση αποτελέσματος.';
+  String get helpMode1Desc => 'Αναγνώριση φωνής, μετάφραση και ακρόαση αποτελέσματος.';
 
   @override
-  String get helpMode1Details =>
-      '• Φωνή: Πατήστε μικρόφωνο για έναρξη/διακοπή\n• Κείμενο: Πληκτρολογήστε για μετάφραση\n• Auto-Search: Εντοπίζει παρόμοιες προτάσεις\n• Μετάφραση: Κουμπί για άμεση μετάφραση\n• Ακρόαση: Εικονίδιο ηχείου για TTS\n• Αποθήκευση: Προσθήκη στο ιστορικό\n• Καθαρισμός: Επαναφορά όλων';
+  String get helpMode1Details => '• Φωνή: Πατήστε μικρόφωνο για έναρξη/διακοπή\n• Κείμενο: Πληκτρολογήστε για μετάφραση\n• Auto-Search: Εντοπίζει παρόμοιες προτάσεις\n• Μετάφραση: Κουμπί για άμεση μετάφραση\n• Ακρόαση: Εικονίδιο ηχείου για TTS\n• Αποθήκευση: Προσθήκη στο ιστορικό\n• Καθαρισμός: Επαναφορά όλων';
 
   @override
-  String get helpMode2Desc =>
-      'Επανάληψη αποθηκευμένων προτάσεων με απόκρυψη μετάφρασης.';
+  String get helpMode2Desc => 'Επανάληψη αποθηκευμένων προτάσεων με απόκρυψη μετάφρασης.';
 
   @override
-  String get helpMode2Details =>
-      '• Επιλογή: Διαλέξτε σετ ή \'Όλα\'\n• Γύρισμα: \'Εμφάνιση/Απόκρυψη\' μετάφρασης\n• Ακρόαση: Αναπαραγωγή TTS\n• Σήμανση: Τικ (V) για ολοκληρωμένα\n• Διαγραφή: Παρατεταμένο πάτημα κάρτας\n• Φίλτρο: Προβολή όλων ή ανά υλικό';
+  String get helpMode2Details => '• Επιλογή: Διαλέξτε σετ ή \'Όλα\'\n• Γύρισμα: \'Εμφάνιση/Απόκρυψη\' μετάφρασης\n• Ακρόαση: Αναπαραγωγή TTS\n• Σήμανση: Τικ (V) για ολοκληρωμένα\n• Διαγραφή: Παρατεταμένο πάτημα κάρτας\n• Φίλτρο: Προβολή όλων ή ανά υλικό';
 
   @override
-  String get helpMode3Desc =>
-      'Πρακτική ομιλίας μέσω ακρόασης και επανάληψης (Shadowing).';
+  String get helpMode3Desc => 'Πρακτική ομιλίας μέσω ακρόασης και επανάληψης (Shadowing).';
 
   @override
-  String get helpMode3Details =>
-      '• Επιλογή: Διαλέξτε πακέτο\n• Διάστημα: [-] [+] χρόνος αναμονής (3δ-60δ)\n• Start/Stop: Έλεγχος συνεδρίας\n• Ομιλία: Ακούστε και επαναλάβετε\n• Βαθμολογία: Ακρίβεια (0-100)\n• Επανάληψη: Κουμπί δοκιμής ξανά';
+  String get helpMode3Details => '• Επιλογή: Διαλέξτε πακέτο\n• Διάστημα: [-] [+] χρόνος αναμονής (3δ-60δ)\n• Start/Stop: Έλεγχος συνεδρίας\n• Ομιλία: Ακούστε και επαναλάβετε\n• Βαθμολογία: Ακρίβεια (0-100)\n• Επανάληψη: Κουμπί δοκιμής ξανά';
 
   @override
-  String get helpJsonDesc =>
-      'Για εισαγωγή υλικού στη Λειτουργία 3, δημιουργήστε JSON:';
+  String get helpJsonDesc => 'Για εισαγωγή υλικού στη Λειτουργία 3, δημιουργήστε JSON:';
 
   @override
-  String get helpTourDesc =>
-      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
+  String get helpTourDesc => 'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Έναρξη Περιήγησης';
@@ -326,8 +316,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get tutorialMicDesc => 'Πατήστε το μικρόφωνο για φωνητική εισαγωγή.';
 
   @override
-  String get tutorialTabDesc =>
-      'Μπορείτε να επιλέξετε την επιθυμητή λειτουργία μάθησης εδώ.';
+  String get tutorialTabDesc => 'Μπορείτε να επιλέξετε την επιθυμητή λειτουργία μάθησης εδώ.';
 
   @override
   String get tutorialTapToContinue => 'Πατήστε για συνέχεια';
@@ -354,8 +343,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get tutorialM2ListTitle => 'Λίστα Μελέτης';
 
   @override
-  String get tutorialM2ListDesc =>
-      'Ελέγξτε τις κάρτες και γυρίστε τις. (Long-press to delete)';
+  String get tutorialM2ListDesc => 'Ελέγξτε τις κάρτες και γυρίστε τις. (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'Επιλογή Υλικού';
@@ -403,15 +391,13 @@ class AppLocalizationsEl extends AppLocalizations {
   String get tutorialM2DropdownDesc => 'Επιλέξτε εκπαιδευτικό υλικό.';
 
   @override
-  String get tutorialM2ImportDesc =>
-      'Εισαγωγή αρχείου JSON από φάκελο συσκευής.';
+  String get tutorialM2ImportDesc => 'Εισαγωγή αρχείου JSON από φάκελο συσκευής.';
 
   @override
   String get tutorialLangSettingsTitle => 'Language Settings';
 
   @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
+  String get tutorialLangSettingsDesc => 'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';
@@ -423,22 +409,37 @@ class AppLocalizationsEl extends AppLocalizations {
   String get tutorialContextTitle => 'Ετικέτα περιβάλλοντος';
 
   @override
-  String get tutorialContextDesc =>
-      'Προσθέστε πλαίσιο (π.χ. Πρωί) για να διακρίνετε παρόμοιες προτάσεις.';
+  String get tutorialContextDesc => 'Προσθέστε πλαίσιο (π.χ. Πρωί) για να διακρίνετε παρόμοιες προτάσεις.';
 
   @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
+  String get thinkingTimeInterval => 'Thinking Time Interval';
 
   @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
+  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
 
   @override
-  String get tutorialM3WordsTitle => 'Practice Words';
+  String get autoPlay => 'Auto-Play';
 
   @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
+  String get timeUp => 'Time Up!';
+
+  @override
+  String get gameModeTitle => 'Game Mode';
+
+  @override
+  String get gameModeDesc => 'Choose your practice mode';
+
+  @override
+  String get wordDefenseTitle => 'Word Defense';
+
+  @override
+  String get wordDefenseDesc => 'Defend your base by speaking words correctly before enemies reach you.';
+
+  @override
+  String get dialogueQuestTitle => 'Dialogue Quest';
+
+  @override
+  String get dialogueQuestDesc => 'Roleplay in scenarios. Choose the right response and speak it aloud.';
 
   @override
   String get labelType => 'Type:';
@@ -450,19 +451,16 @@ class AppLocalizationsEl extends AppLocalizations {
   String get labelSentence => 'Sentence';
 
   @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
+  String get contextTagLabel => 'Context/Situation (Optional) - Ex: Morning greeting, polite form';
 
   @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
+  String get contextTagHint => 'Describe situation for easier classification later';
 
   @override
   String get translationLimitExceeded => 'Translation Limit Exceeded';
 
   @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
+  String get translationLimitMessage => 'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
 
   @override
   String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
@@ -521,44 +519,6 @@ class AppLocalizationsEl extends AppLocalizations {
   String get next => 'Next';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
-
-  @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
-
-  @override
-  String get autoPlay => 'Auto-Play';
-
-  @override
-  String get timeUp => 'Time Up!';
-
-  @override
-  String get gameModeTitle => 'Game Mode';
-
-  @override
-  String get gameModeDesc => 'Choose your practice mode';
-
-  @override
-  String get wordDefenseTitle => 'Word Defense';
-
-  @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
-
-  @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
-
-  @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
   String get wordModeLabel => 'Word Mode';
 
   @override
@@ -569,6 +529,18 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get basic => 'Basic';
+
+  @override
+  String get tutorialM3WordsTitle => 'Practice Words';
+
+  @override
+  String get tutorialM3WordsDesc => 'Check this to practice only your saved words.';
+
+  @override
+  String get enterTextHint => 'Enter text to translate';
+
+  @override
+  String get micButtonTooltip => 'Start Listening';
 
   @override
   String get menuHelp => 'Help';
@@ -604,8 +576,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc =>
-      'Ανταλλάσσω τη γλώσσα μου με τη γλώσσα που μαθαίνω.';
+  String get tutorialSwapDesc => 'Ανταλλάσσω τη γλώσσα μου με τη γλώσσα που μαθαίνω.';
 
   @override
   String get recognizedText => 'Recognized Text:';
@@ -614,8 +585,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get tutorialM3ResetTitle => 'Reset History';
 
   @override
-  String get tutorialM3ResetDesc =>
-      'Clear your progress and accuracy scores to start fresh.';
+  String get tutorialM3ResetDesc => 'Clear your progress and accuracy scores to start fresh.';
 
   @override
   String get menuSelectMaterialSet => 'Επιλέξτε ένα υλικό μελέτης';
@@ -625,4 +595,10 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get sectionSentence => 'Ενότητα προτάσεων';
+
+  @override
+  String get tabWord => 'λέξη';
+
+  @override
+  String get tabSentence => 'πρόταση';
 }

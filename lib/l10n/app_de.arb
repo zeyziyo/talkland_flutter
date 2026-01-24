@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Lernmaterial auswählen",
   "sectionWord": "Wortabschnitt",
-  "sectionSentence": "Satzabschnitt"
+  "sectionSentence": "Satzabschnitt",
+  "tabWord": "Wort",
+  "tabSentence": "Satz",
+  "titleFormat": "{type}: {materialName}"
 }

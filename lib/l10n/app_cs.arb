@@ -479,5 +479,8 @@
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
   "menuSelectMaterialSet": "Vyberte studijní materiál",
   "sectionWord": "Sekce slov",
-  "sectionSentence": "Sekce věty"
+  "sectionSentence": "Sekce věty",
+  "tabWord": "slovo",
+  "tabSentence": "věta",
+  "titleFormat": "{type}: {materialName}"
 }
