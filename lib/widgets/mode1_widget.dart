@@ -229,7 +229,8 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                             
                             TextField(
                               controller: _sourceTextController,
-                              maxLines: 3,
+                              minLines: 2,
+                              maxLines: null,
                               decoration: InputDecoration(
                                 hintText: l10n.enterTextHint,
                                 hintStyle: TextStyle(
@@ -361,7 +362,8 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                               decoration: const InputDecoration(
                                 border: OutlineInputBorder(),
                               ),
-                              maxLines: 3,
+                              minLines: 2,
+                              maxLines: null,
                               readOnly: true,
                             ),
                           ],

@@ -594,11 +594,11 @@ class _HomeScreenState extends State<HomeScreen> {
       // Immediate Transition Logic
       final materialId = importResult['material_id'] as int? ?? 0;
       
-      // 1. Select the new material
+      // 2. Select the new material
       await appState.selectMaterial(materialId);
       
-      // 2. Switch to Mode 3 (Speaking Practice) to show "First Item" immediately
-      appState.switchMode(2); 
+      // Removed auto-switch to Mode 3 based on user feedback.
+      // appState.switchMode(2); 
 
       // 3. Show non-blocking feedback
       ScaffoldMessenger.of(context).showSnackBar(

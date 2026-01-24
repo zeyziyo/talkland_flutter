@@ -972,11 +972,13 @@ class AppState extends ChangeNotifier {
           
           if (isVisible) {
              await selectMaterial(materialId);
-             await startMode3SessionDirectly();
+             
+             // Auto-start ONLY if currently in Mode 3 (Speaking Practice)
+             if (_currentMode == 2) {
+                await startMode3SessionDirectly();
+             }
           } else {
-            // Optional: If not visible, we could force-switch languages, 
-            // but for now, just respecting the filter is safer to avoid confusing the user.
-            debugPrint('[AppState] Imported material $materialId hidden by filter (Lang mismatch)');
+             debugPrint('[AppState] Imported material $materialId hidden by filter (Lang mismatch)');
           }
         }
       }
@@ -1250,7 +1252,10 @@ class AppState extends ChangeNotifier {
 
   Future<void> _nextMode3Question() async {
     _cancelMode3Timers();
-    _speechService.stopSTT(); // Ensure stop
+    _speechStatusSubscription?.cancel(); // Critical: Stop listening to old status events
+    _speechStatusSubscription = null;
+    
+    await _speechService.stopSTT(); // Ensure stop
     _isListening = false;
     
     if (filteredStudyMaterials.isEmpty) {

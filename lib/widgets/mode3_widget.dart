@@ -246,51 +246,45 @@ class Mode3Widget extends StatelessWidget {
                                         // Retry Button
                                         // Retry Button
                                         Expanded(
-                                          child: ElevatedButton.icon(
+                                          child: ElevatedButton(
                                             onPressed: () => appState.retryMode3Question(),
-                                            icon: const Icon(Icons.refresh, size: 16),
-                                            label: Text(l10n.mode3TryAgain, style: const TextStyle(fontSize: 13)),
                                             style: ElevatedButton.styleFrom(
                                               backgroundColor: Colors.orange,
                                               foregroundColor: Colors.white,
-                                              padding: const EdgeInsets.symmetric(vertical: 12), // Reduced padding
+                                              padding: const EdgeInsets.symmetric(vertical: 12),
                                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                                             ),
+                                            child: const Icon(Icons.refresh, size: 36),
                                           ),
                                         ),
                                         const SizedBox(width: 8),
                                         // Next Button
                                         Expanded(
-                                          child: ElevatedButton.icon(
+                                        Expanded(
+                                          child: ElevatedButton(
                                             onPressed: () => appState.skipMode3Question(),
-                                            icon: const Icon(Icons.arrow_forward, size: 16),
-                                            label: Text(l10n.mode3Next, style: const TextStyle(fontSize: 13)),
                                             style: ElevatedButton.styleFrom(
                                               backgroundColor: Colors.blue,
                                               foregroundColor: Colors.white,
-                                              padding: const EdgeInsets.symmetric(vertical: 12), // Reduced padding
+                                              padding: const EdgeInsets.symmetric(vertical: 12),
                                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                                             ),
+                                            child: const Icon(Icons.arrow_forward, size: 36),
                                           ),
                                         ),
                                         const SizedBox(width: 8),
                                         // Reset Button
                                         Expanded(
-                                          child: OutlinedButton.icon(
+                                        Expanded(
+                                          child: OutlinedButton(
                                             onPressed: () => appState.resetMode3Progress(),
-                                            icon: const Icon(Icons.history, size: 16),
-                                            label: Text(l10n.resetPracticeHistory, 
-                                              style: const TextStyle(fontSize: 12),
-                                              textAlign: TextAlign.center,
-                                              maxLines: 1, // Force single line if possible or ellipsis
-                                              overflow: TextOverflow.ellipsis,
-                                            ),
                                             style: OutlinedButton.styleFrom(
                                               foregroundColor: Colors.grey[700],
                                               side: BorderSide(color: Colors.grey[400]!),
-                                              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 4), // Reduced padding
+                                              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 4),
                                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                                             ),
+                                            child: const Icon(Icons.history, size: 36),
                                           ),
                                         ),
                                       ],
