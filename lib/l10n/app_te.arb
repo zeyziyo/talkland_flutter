@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "నేను నేర్చుకుంటున్న భాషతో నా భాషను మార్చుకుంటాను.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "అధ్యయన సామగ్రిని ఎంచుకోండి",
+  "sectionWord": "పద విభాగం",
+  "sectionSentence": "వాక్య విభాగం"
 }

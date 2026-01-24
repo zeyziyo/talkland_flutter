@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Felcserélem a nyelvemet azzal a nyelvvel, amit tanulok.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Válasszon egy tanulmányi anyagot",
+  "sectionWord": "Szószakasz",
+  "sectionSentence": "Mondatszakasz"
 }

@@ -615,4 +615,13 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'Выберите учебный материал';
+
+  @override
+  String get sectionWord => 'Раздел слов';
+
+  @override
+  String get sectionSentence => 'Раздел предложений';
 }

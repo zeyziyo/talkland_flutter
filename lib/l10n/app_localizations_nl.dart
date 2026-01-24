@@ -613,4 +613,13 @@ class AppLocalizationsNl extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'Kies studiemateriaal.';
+
+  @override
+  String get sectionWord => 'Woordsectie';
+
+  @override
+  String get sectionSentence => 'Zinsdeel';
 }

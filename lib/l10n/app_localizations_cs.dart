@@ -610,4 +610,13 @@ class AppLocalizationsCs extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'Vyberte studijní materiál';
+
+  @override
+  String get sectionWord => 'Sekce slov';
+
+  @override
+  String get sectionSentence => 'Sekce věty';
 }

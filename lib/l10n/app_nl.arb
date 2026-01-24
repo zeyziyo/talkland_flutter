@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Ik wissel mijn eigen taal om met de taal die ik aan het leren ben.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Kies studiemateriaal.",
+  "sectionWord": "Woordsectie",
+  "sectionSentence": "Zinsdeel"
 }

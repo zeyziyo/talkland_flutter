@@ -619,4 +619,13 @@ class AppLocalizationsFil extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'Pumili ng materyal sa pag-aaral';
+
+  @override
+  String get sectionWord => 'Seksyon ng salita';
+
+  @override
+  String get sectionSentence => 'Seksyon ng Pangungusap';
 }

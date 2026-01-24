@@ -604,6 +604,15 @@ class AppLocalizationsZh extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => '选择学习资料集';
+
+  @override
+  String get sectionWord => '单词部分';
+
+  @override
+  String get sectionSentence => '句子部分';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -1206,6 +1215,15 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => '选择学习资料';
+
+  @override
+  String get sectionWord => '文字部分';
+
+  @override
+  String get sectionSentence => '句子部分';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -1808,4 +1826,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => '選擇學習資料';
+
+  @override
+  String get sectionWord => '文字部分';
+
+  @override
+  String get sectionSentence => '句子部分';
 }

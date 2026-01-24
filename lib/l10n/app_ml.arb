@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "ഞാൻ എന്റെ ഭാഷ പഠിക്കുന്ന ഭാഷയുമായി മാറ്റുന്നു.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "ഒരു പഠന സാമഗ്രി തിരഞ്ഞെടുക്കുക",
+  "sectionWord": "പദ വിഭാഗം",
+  "sectionSentence": "വാക്യ വിഭാഗം"
 }

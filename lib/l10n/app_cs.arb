@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Vyměňuji si jazyk s jazykem, který se učím.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Vyberte studijní materiál",
+  "sectionWord": "Sekce slov",
+  "sectionSentence": "Sekce věty"
 }

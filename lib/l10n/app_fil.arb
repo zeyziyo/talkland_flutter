@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Pinapalitan ko ang aking wika ng wikang aking pinag-aaralan.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Pumili ng materyal sa pag-aaral",
+  "sectionWord": "Seksyon ng salita",
+  "sectionSentence": "Seksyon ng Pangungusap"
 }

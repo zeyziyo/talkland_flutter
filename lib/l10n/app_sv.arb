@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Jag byter ut mitt språk mot det språk jag lär mig.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Välj ett studiematerial",
+  "sectionWord": "Ordavsnitt",
+  "sectionSentence": "Meningsavsnitt"
 }

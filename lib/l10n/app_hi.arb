@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "मैं अपनी भाषा को उस भाषा से बदल लेता हूँ जिसे मैं सीख रहा हूँ।",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "अध्ययन सामग्री का चयन करें",
+  "sectionWord": "शब्द अनुभाग",
+  "sectionSentence": "वाक्य अनुभाग"
 }

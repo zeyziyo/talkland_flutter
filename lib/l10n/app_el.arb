@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Ανταλλάσσω τη γλώσσα μου με τη γλώσσα που μαθαίνω.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Επιλέξτε ένα υλικό μελέτης",
+  "sectionWord": "Ενότητα λέξεων",
+  "sectionSentence": "Ενότητα προτάσεων"
 }

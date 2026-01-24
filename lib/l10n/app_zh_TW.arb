@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "我用我正在學習的語言取代我的母語。",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "選擇學習資料",
+  "sectionWord": "文字部分",
+  "sectionSentence": "句子部分"
 }

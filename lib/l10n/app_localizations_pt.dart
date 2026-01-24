@@ -619,4 +619,13 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'Selecione um material de estudo';
+
+  @override
+  String get sectionWord => 'Seção de palavras';
+
+  @override
+  String get sectionSentence => 'Seção de frases';
 }

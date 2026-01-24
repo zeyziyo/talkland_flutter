@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Saya mengganti bahasa saya dengan bahasa yang sedang saya pelajari.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Pilih bahan pembelajaran",
+  "sectionWord": "Bagian kata",
+  "sectionSentence": "Bagian kalimat"
 }

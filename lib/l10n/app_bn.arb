@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "আমি যে ভাষা শিখছি তার সাথে আমার ভাষা বদল করি।",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "একটি অধ্যয়নের উপাদান নির্বাচন করুন",
+  "sectionWord": "শব্দ বিভাগ",
+  "sectionSentence": "বাক্য বিভাগ"
 }

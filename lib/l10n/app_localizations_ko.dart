@@ -294,14 +294,14 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get helpMode2Details =>
-      '• 자료 선택: 상단 메뉴에서 학습 자료 선택 또는 \'전체 복습\'\n• 카드 뒤집기: \'보이기/숨기기\' 버튼으로 번역 확인\n• 듣기: \'듣기\' 버튼으로 해당 문장 다시 듣기\n• 학습 체크: 완료된 문장은 체크 표시 (V)\n• 삭제: 카드를 길게 누르면 삭제 다이얼로그 표시\n• 필터: 전체 기록 보기 또는 학습 자료별 정렬';
+      '• 자료 선택: 상단 메뉴(점 3개) > \'학습 자료집 선택\'에서 자료 선택\n• 카드 뒤집기: \'보이기/숨기기\' 버튼으로 번역 확인\n• 듣기: \'듣기\' 버튼으로 해당 문장 다시 듣기\n• 학습 체크: 완료된 문장은 체크 표시 (V)\n• 삭제: 카드를 길게 누르면 삭제 다이얼로그 표시\n• 필터: 전체 기록 보기 또는 학습 자료별 정렬';
 
   @override
   String get helpMode3Desc => '학습 자료의 문장을 듣고 직접 말하는 연습을 합니다.';
 
   @override
   String get helpMode3Details =>
-      '• 자료 선택: 학습할 자료 팩 선택\n• 간격 조절: [-] [+] 버튼으로 문장 사이 대기 시간 설정 (3초~60초)\n• 시작/정지: 재생 버튼으로 쉐도잉 세션 제어\n• 말하기: 원어민 음성을 듣고 따라서 말하기\n• 피드백: 발음 정확도 점수(0~100) 및 색상 표시 (초록/주황/빨강)\n• 재시도: 인식 실패 시 재시도 버튼 사용';
+      '• 자료 선택: 상단 메뉴(점 3개) > \'학습 자료집 선택\'에서 연습할 자료 선택\n• 간격 조절: [-] [+] 버튼으로 문장 사이 대기 시간 설정 (3초~60초)\n• 시작/정지: 재생 버튼으로 쉐도잉 세션 제어\n• 말하기: 원어민 음성을 듣고 따라서 말하기\n• 피드백: 발음 정확도 점수(0~100) 및 색상 표시 (초록/주황/빨강)\n• 재시도: 인식 실패 시 재시도 버튼 사용';
 
   @override
   String get helpJsonDesc => '학습 자료를 가져오려면 다음과 같은 구조의 JSON 파일을 사용하세요:';
@@ -341,7 +341,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tutorialM2SelectTitle => '자료 선택 & 필터';
 
   @override
-  String get tutorialM2SelectDesc => '학습할 자료를 선택하거나 전체 복습 모드로 전환합니다.';
+  String get tutorialM2SelectDesc => '상단 메뉴(점 3개)를 눌러 학습할 자료를 선택하세요.';
 
   @override
   String get tutorialM2ListTitle => '학습 목록';
@@ -354,7 +354,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tutorialM3SelectTitle => '자료 선택';
 
   @override
-  String get tutorialM3SelectDesc => '말하기 연습을 진행할 자료 세트를 선택하세요.';
+  String get tutorialM3SelectDesc => '상단 메뉴(점 3개)를 눌러 연습할 자료 세트를 선택하세요.';
 
   @override
   String get tutorialM3IntervalTitle => '간격 설정';
@@ -393,7 +393,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get languageSettings => 'Language Settings';
 
   @override
-  String get tutorialM2DropdownDesc => '학습할 자료를 선택합니다.';
+  String get tutorialM2DropdownDesc => '상단 메뉴를 통해 학습할 자료를 선택할 수 있습니다.';
 
   @override
   String get tutorialM2ImportDesc => '기기의 폴더에서 JSON 파일을 불러옵니다.';
@@ -600,4 +600,13 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get tutorialM3ResetDesc => '진행 상황과 정확도 점수를 초기화하여 처음부터 다시 시작합니다.';
+
+  @override
+  String get menuSelectMaterialSet => '학습 자료집 선택';
+
+  @override
+  String get sectionWord => '단어 섹션';
+
+  @override
+  String get sectionSentence => '문장 섹션';
 }

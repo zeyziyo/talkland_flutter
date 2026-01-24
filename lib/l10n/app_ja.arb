@@ -477,4 +477,8 @@
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+,
+  "menuSelectMaterialSet": "学習教材セットを選択",
+  "sectionWord": "単語セクション",
+  "sectionSentence": "文章セクション"
 }

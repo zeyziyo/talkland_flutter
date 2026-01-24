@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "ನಾನು ನನ್ನ ಭಾಷೆಯನ್ನು ಕಲಿಯುತ್ತಿರುವ ಭಾಷೆಯೊಂದಿಗೆ ಬದಲಾಯಿಸುತ್ತೇನೆ.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "ಅಧ್ಯಯನ ಸಾಮಗ್ರಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+  "sectionWord": "ಪದ ವಿಭಾಗ",
+  "sectionSentence": "ವಾಕ್ಯ ವಿಭಾಗ"
 }

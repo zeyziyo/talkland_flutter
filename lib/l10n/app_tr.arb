@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Kendi dilimi, öğrenmekte olduğum dille değiştiriyorum.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Bir çalışma materyali seçin",
+  "sectionWord": "Kelime bölümü",
+  "sectionSentence": "Cümle bölümü"
 }

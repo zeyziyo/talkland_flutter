@@ -619,4 +619,13 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'अध्ययन सामग्री का चयन करें';
+
+  @override
+  String get sectionWord => 'शब्द अनुभाग';
+
+  @override
+  String get sectionSentence => 'वाक्य अनुभाग';
 }

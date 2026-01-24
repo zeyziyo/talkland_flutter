@@ -135,7 +135,16 @@ lib/
 └── l10n/                        # Internationalization (43 languages)
     ├── app_ko.arb               # Korean
     ├── app_en.arb               # English
+    ├── app_en.arb               # English
     └── ...
+
+## 다국어 번역 (Localization)
+이 프로젝트는 `tool/manage_l10n.dart` 스크립트를 통해 자동화된 국제화를 지원합니다.
+새로운 문자열 추가 시:
+1. `lib/l10n/app_ko.arb`에 키 추가
+2. `dart tool/manage_l10n.dart` 실행 (나머지 언어 자동 번역)
+자세한 내용은 `.agent/workflows/update_localization.md`를 참고하세요.
+
 ```
 
 ## 개발 히스토리 (Development History)

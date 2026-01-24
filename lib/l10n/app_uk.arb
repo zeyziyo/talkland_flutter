@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Я міняю свою мову з мовою, яку вивчаю.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Виберіть навчальний матеріал",
+  "sectionWord": "Розділ слів",
+  "sectionSentence": "Розділ речення"
 }

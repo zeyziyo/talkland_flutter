@@ -617,4 +617,13 @@ class AppLocalizationsTe extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'అధ్యయన సామగ్రిని ఎంచుకోండి';
+
+  @override
+  String get sectionWord => 'పద విభాగం';
+
+  @override
+  String get sectionSentence => 'వాక్య విభాగం';
 }

@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Tôi sử dụng song song ngôn ngữ mẹ đẻ với ngôn ngữ mà tôi đang học.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Chọn tài liệu học tập",
+  "sectionWord": "Phần chữ",
+  "sectionSentence": "Phần câu"
 }

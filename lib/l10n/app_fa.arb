@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "من زبان خودم را با زبانی که در حال یادگیری آن هستم عوض می‌کنم.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "انتخاب یک منبع مطالعه",
+  "sectionWord": "بخش کلمات",
+  "sectionSentence": "بخش جمله"
 }

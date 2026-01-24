@@ -610,4 +610,13 @@ class AppLocalizationsFi extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'Valitse opiskelumateriaali';
+
+  @override
+  String get sectionWord => 'Sanaosio';
+
+  @override
+  String get sectionSentence => 'Lauseosa';
 }

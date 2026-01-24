@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Я меняю свой язык с языком, который изучаю.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Выберите учебный материал",
+  "sectionWord": "Раздел слов",
+  "sectionSentence": "Раздел предложений"
 }

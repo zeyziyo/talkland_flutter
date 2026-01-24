@@ -613,4 +613,13 @@ class AppLocalizationsFa extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'انتخاب یک منبع مطالعه';
+
+  @override
+  String get sectionWord => 'بخش کلمات';
+
+  @override
+  String get sectionSentence => 'بخش جمله';
 }

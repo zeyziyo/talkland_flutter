@@ -117,60 +117,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                     // ===================================
                     // NEW: Type & Material Selectors
                     // ===================================
-                    Container(
-                      margin: const EdgeInsets.only(bottom: 16),
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(12),
-                        boxShadow: [
-                           BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 4, offset:const Offset(0, 2))
-                        ]
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          // 1. Type Toggle
 
-                          
-                          // 2. Material Selector
-                          DropdownButtonFormField<int>(
-                            key: widget.materialDropdownKey,
-                            initialValue: appState.selectedMaterialId,
-                            decoration: InputDecoration(
-                              labelText: l10n.selectStudyMaterial,
-                              prefixIcon: const Icon(Icons.folder_open),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                            ),
-                            items: [
-                              DropdownMenuItem<int>(
-                                value: 0, 
-                                child: Text(appState.isWordMode ? '기본 단어집' : '기본 문장집'),
-                              ),
-                              ...appState.mode1StudyMaterials.map((m) {
-                                if (m['id'] == 0) return null; // Skip if handled (though map usually iterates raw list)
-                                // Handle duplicates if 0 is in list
-                                return DropdownMenuItem<int>(
-                                  value: m['id'] as int,
-                                  child: Text(
-                                    m['subject'] as String, 
-                                    overflow: TextOverflow.ellipsis
-                                  ),
-                                );
-                              }).whereType<DropdownMenuItem<int>>(), // Filter nulls
-                            ],
-                            onChanged: (int? newValue) {
-                              if (newValue != null) {
-                                appState.selectMaterial(newValue);
-                              }
-                            },
-                          ),
-                        ],
-                      ),
-                    ),
                     
                     // Input Card
                     Card(

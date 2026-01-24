@@ -478,5 +478,8 @@
   "recognizedText": "Recognized Text:",
   "resetPracticeHistory": "Reset Practice History",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Select Study Material Set",
+  "sectionWord": "Word Section",
+  "sectionSentence": "Sentence Section"
 }

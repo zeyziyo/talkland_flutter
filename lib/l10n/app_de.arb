@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Ich tausche meine Sprache mit der Sprache, die ich lerne.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Lernmaterial auswählen",
+  "sectionWord": "Wortabschnitt",
+  "sectionSentence": "Satzabschnitt"
 }

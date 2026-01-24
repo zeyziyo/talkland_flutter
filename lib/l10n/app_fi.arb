@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Vaihdan kieleni oppimaani kieleen.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Valitse opiskelumateriaali",
+  "sectionWord": "Sanaosio",
+  "sectionSentence": "Lauseosa"
 }

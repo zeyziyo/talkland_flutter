@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Ek ruil my taal met die taal wat ek leer.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Kies 'n studiemateriaal",
+  "sectionWord": "Woordafdeling",
+  "sectionSentence": "Sin-afdeling"
 }

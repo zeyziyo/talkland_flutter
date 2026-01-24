@@ -1277,6 +1277,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Clear your progress and accuracy scores to start fresh.'**
   String get tutorialM3ResetDesc;
+
+  /// No description provided for @menuSelectMaterialSet.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Study Material Set'**
+  String get menuSelectMaterialSet;
+
+  /// No description provided for @sectionWord.
+  ///
+  /// In en, this message translates to:
+  /// **'Word Section'**
+  String get sectionWord;
+
+  /// No description provided for @sectionSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Sentence Section'**
+  String get sectionSentence;
 }
 
 class _AppLocalizationsDelegate

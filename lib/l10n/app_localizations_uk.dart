@@ -612,4 +612,13 @@ class AppLocalizationsUk extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'Виберіть навчальний матеріал';
+
+  @override
+  String get sectionWord => 'Розділ слів';
+
+  @override
+  String get sectionSentence => 'Розділ речення';
 }

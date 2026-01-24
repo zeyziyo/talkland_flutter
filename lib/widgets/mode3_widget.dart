@@ -30,50 +30,7 @@ class Mode3Widget extends StatelessWidget {
               // ==========================================
               // 1. Top Settings Panel
               // ==========================================
-              Container(
-                padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                decoration: BoxDecoration(
-                  color: Colors.purple[50], // Distinct color for Speaking Mode
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20),
-                  ),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    // Material Selector
-                    DropdownButtonFormField<int>(
-                      key: materialDropdownKey,
-                      initialValue: appState.selectedMaterialId,
-                      decoration: InputDecoration(
-                        labelText: l10n.selectStudyMaterial,
-                        filled: true,
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                      ),
-                      items: appState.filteredStudyMaterials.map((material) {
-                        return DropdownMenuItem<int>(
-                          value: material['id'] as int,
-                          child: Text(
-                            material['subject'] as String,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        );
-                      }).toList(),
-                      onChanged: (val) async {
-                          if (val != null) {
-                            // Fix: await the material loading so data is ready before starting session
-                            await appState.selectMaterial(val);
-                          }
-                        },
-                    ),
-                  ],
-                ),
-              ),
+
               
               // ==========================================
               // 2. Practice Area

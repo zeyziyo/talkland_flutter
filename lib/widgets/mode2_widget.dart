@@ -102,111 +102,56 @@ class _Mode2WidgetState extends State<Mode2Widget> {
 
 
 
-            // Material selector
-            Container(
-              key: widget.materialDropdownKey,
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.blue[50],
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                       Row(
-                        children: [
-                          IconButton(
-                            icon: Icon(_isAutoPlaying ? Icons.pause_circle_filled : Icons.play_circle_filled),
-                            color: _isAutoPlaying ? Colors.orange : Colors.green,
-                            iconSize: 32,
-                            onPressed: () {
-                              if (_isAutoPlaying) {
-                                _stopAutoPlay();
-                              } else {
-                                _startAutoPlay(appState);
-                              }
-                            },
-                            tooltip: _isAutoPlaying ? l10n.stopPractice : l10n.autoPlay, // Reusing stopPractice as 'Pause' roughly fits, or create new if needed. Let's use autoPlay for start.
-                          ),
-                          IconButton(
-                            icon: const Icon(Icons.settings),
-                            color: Colors.grey[700],
-                            onPressed: () => _showThinkingTimeSettings(context),
-                            tooltip: l10n.thinkingTimeInterval,
-                          ),
-                        ],
-                      ),
-                      // Website Link Button
 
-                    ],
-                  ),
-                  const SizedBox(height: 8),
-                  DropdownButtonFormField<int>(
-                    initialValue: selectedMaterialId,
-                    decoration: const InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white,
-                      border: OutlineInputBorder(),
-                      contentPadding: EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 8,
-                      ),
-                    ),
-                    items: dropdownItems,
-                    onChanged: (int? value) {
-                      if (value != null) {
-                        appState.selectMaterial(value);
-                        // Clear expanded cards when material changes
-                        _expandedCards.clear();
-                      }
-                    },
-                  ),
-                  
-                  // Metadata (Collapsible) - Only show if specific material selected (not -1)
-                  if (selectedMaterialId != null && selectedMaterialId != -1) ...[
-                    const SizedBox(height: 16),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 0),
-                      child: Card(
-                        elevation: 0,
-                        color: Colors.grey[50],
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                          side: BorderSide(color: Colors.grey[200]!),
-                        ),
-                        child: Theme(
-                          data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-                          child: ExpansionTile(
-                            title: Text(
-                              l10n.materialInfo,
-                              style: const TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF667eea),
-                              ),
-                            ),
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                                child: _buildMaterialInfo(appState, selectedMaterialId),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ],
-              ),
-            ),
             
             const SizedBox(height: 16),
 
-            // Old Filter Selector REMOVED
+            // Thinking Time Settings
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                   // Auto Play Button
+                   TextButton.icon(
+                    onPressed: () {
+                      if (_isAutoPlaying) {
+                        _stopAutoPlay();
+                      } else {
+                        final appState = Provider.of<AppState>(context, listen: false);
+                        _startAutoPlay(appState);
+                      }
+                    },
+                    icon: Icon(_isAutoPlaying ? Icons.stop_circle_outlined : Icons.play_circle_outline, size: 16),
+                    label: Text(
+                      _isAutoPlaying ? l10n.stopPractice : l10n.autoPlay,
+                      style: const TextStyle(fontSize: 12),
+                    ),
+                    style: TextButton.styleFrom(
+                      foregroundColor: _isAutoPlaying ? Colors.red : Colors.green[700],
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      minimumSize: Size.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                   TextButton.icon(
+                    onPressed: () => _showThinkingTimeSettings(context),
+                    icon: const Icon(Icons.timer_outlined, size: 16),
+                    label: Text(
+                      '${l10n.thinkingTimeInterval}: ${_thinkingInterval}s',
+                       style: const TextStyle(fontSize: 12),
+                    ),
+                    style: TextButton.styleFrom(
+                      foregroundColor: Colors.grey[600],
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      minimumSize: Size.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                  ),
+                ],
+              ),
+            ),
 
             const SizedBox(height: 16),
             
@@ -312,80 +257,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
   
 
 
-  Widget _buildMaterialInfo(AppState appState, int materialId) {
-    final l10n = AppLocalizations.of(context)!;
-    
-    // Find material might fail if lists changed, use safeguard
-    final material = appState.studyMaterials.firstWhere(
-      (m) => m['id'] == materialId,
-      orElse: () => {},
-    );
-    
-    if (material.isEmpty) return const SizedBox.shrink();
-    
-    return Container(
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: Colors.grey[300]!),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              const Icon(Icons.topic, size: 16, color: Color(0xFF667eea)),
-              const SizedBox(width: 4),
-              Text(
-                l10n.subject,
-                style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
-              ),
-              Text(
-                material['subject'] as String? ?? 'N/A',
-                style: const TextStyle(fontSize: 12),
-              ),
-            ],
-          ),
-          const SizedBox(height: 4),
-          Row(
-            children: [
-              const Icon(Icons.source, size: 16, color: Color(0xFF667eea)),
-              const SizedBox(width: 4),
-              Text(
-                l10n.source,
-                style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
-              ),
-              Text(
-                material['source'] as String? ?? 'N/A',
-                style: const TextStyle(fontSize: 12),
-              ),
-            ],
-          ),
-          if (material['file_name'] != null) ...[
-            const SizedBox(height: 4),
-            Row(
-              children: [
-                const Icon(Icons.insert_drive_file, size: 16, color: Color(0xFF667eea)),
-                const SizedBox(width: 4),
-                Text(
-                  l10n.file,
-                  style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
-                ),
-                Expanded(
-                  child: Text(
-                    material['file_name'] as String,
-                    style: const TextStyle(fontSize: 12),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ],
-            ),
-        ],
-        ],
-      ),
-    );
-  }
+
   
   // Auto-play state
   bool _isAutoPlaying = false;

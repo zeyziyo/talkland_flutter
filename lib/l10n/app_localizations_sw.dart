@@ -613,4 +613,13 @@ class AppLocalizationsSw extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'Chagua nyenzo ya kujifunzia';
+
+  @override
+  String get sectionWord => 'Sehemu ya maneno';
+
+  @override
+  String get sectionSentence => 'Sehemu ya sentensi';
 }

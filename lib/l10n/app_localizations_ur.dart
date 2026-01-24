@@ -611,4 +611,13 @@ class AppLocalizationsUr extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'مطالعہ کا مواد منتخب کریں۔';
+
+  @override
+  String get sectionWord => 'لفظ سیکشن';
+
+  @override
+  String get sectionSentence => 'جملے کا سیکشن';
 }

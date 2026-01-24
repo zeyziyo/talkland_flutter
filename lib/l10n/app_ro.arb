@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Îmi schimb limba cu limba pe care o învăț.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Selectați un material de studiu",
+  "sectionWord": "Secțiune de cuvinte",
+  "sectionSentence": "Secțiunea de propoziții"
 }

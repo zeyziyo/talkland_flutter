@@ -477,4 +477,8 @@
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
   "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+,
+  "menuSelectMaterialSet": "选择学习资料集",
+  "sectionWord": "单词部分",
+  "sectionSentence": "句子部分"
 }

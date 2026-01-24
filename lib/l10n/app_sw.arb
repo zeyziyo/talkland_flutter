@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "Ninabadilisha lugha yangu na lugha ninayojifunza.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "Chagua nyenzo ya kujifunzia",
+  "sectionWord": "Sehemu ya maneno",
+  "sectionSentence": "Sehemu ya sentensi"
 }

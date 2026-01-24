@@ -609,4 +609,13 @@ class AppLocalizationsAf extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'Kies \'n studiemateriaal';
+
+  @override
+  String get sectionWord => 'Woordafdeling';
+
+  @override
+  String get sectionSentence => 'Sin-afdeling';
 }

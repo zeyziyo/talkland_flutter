@@ -476,5 +476,8 @@
   "tutorialSwapDesc": "હું મારી ભાષાને જે ભાષા શીખી રહ્યો છું તેની સાથે બદલી નાખું છું.",
   "recognizedText": "Recognized Text:",
   "tutorialM3ResetTitle": "Reset History",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh."
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "menuSelectMaterialSet": "અભ્યાસ સામગ્રી પસંદ કરો",
+  "sectionWord": "શબ્દ વિભાગ",
+  "sectionSentence": "વાક્ય વિભાગ"
 }

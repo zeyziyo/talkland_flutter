@@ -616,4 +616,13 @@ class AppLocalizationsBn extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'একটি অধ্যয়নের উপাদান নির্বাচন করুন';
+
+  @override
+  String get sectionWord => 'শব্দ বিভাগ';
+
+  @override
+  String get sectionSentence => 'বাক্য বিভাগ';
 }

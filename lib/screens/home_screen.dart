@@ -163,11 +163,11 @@ class _HomeScreenState extends State<HomeScreen> {
         shape: ShapeLightFocus.RRect,
       ));
 
-      // New: Mode 1 Dropdown
-      targets.add(_buildTarget(
-        _mode1DropdownKey,
-        l10n.tutorialM2DropdownDesc, // Use same desc as Mode 2
-        l10n.tutorialM2SelectTitle,  // Use same title as Mode 2
+       // New: Mode 1 Dropdown -> Point to Menu
+       targets.add(_buildTarget(
+        _actionButtonKey, // Point to Menu Button
+        l10n.tutorialM2SelectTitle, // "Select Material"
+        l10n.tutorialM2DropdownDesc, // "Select materials..."
         ContentAlign.bottom,
         radius: 12,
       ));
@@ -199,9 +199,9 @@ class _HomeScreenState extends State<HomeScreen> {
         shape: ShapeLightFocus.RRect,
       ));
 
-      // Mode 2: Dropdown
+      // Mode 2: Dropdown -> Point to Menu
       targets.add(_buildTarget(
-        _mode2DropdownKey, 
+        _actionButtonKey, // Point to Menu
         l10n.tutorialM2SelectTitle, 
         l10n.tutorialM2DropdownDesc,
         ContentAlign.bottom,
@@ -226,9 +226,9 @@ class _HomeScreenState extends State<HomeScreen> {
         radius: 12,
       ));
     } else if (modeIndex == 2) {
-      // Mode 3: Dropdown only (Simple)
+      // Mode 3: Dropdown -> Point to Menu
       targets.add(_buildTarget(
-        _mode3DropdownKey, 
+        _actionButtonKey, // Point to Menu
         l10n.tutorialM3SelectTitle, 
         l10n.tutorialM3SelectDesc,
         ContentAlign.bottom,
@@ -427,6 +427,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 case 'settings':
                   _showLanguageSettingsDialog(context);
                   break;
+                case 'select_material':
+                  _showMaterialSelectionDialog(context);
+                  break;
               }
             },
             itemBuilder: (BuildContext context) {
@@ -454,7 +457,29 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
+                PopupMenuItem<String>(
+                  value: 'select_material',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.folder_open, color: Colors.blueAccent),
+                      const SizedBox(width: 8),
+                      Text(l10n.menuSelectMaterialSet),
+                    ],
+                  ),
+                ),
+                
                 const PopupMenuDivider(),
+
+                PopupMenuItem<String>(
+                  value: 'settings',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.settings, color: Colors.grey),
+                      const SizedBox(width: 8),
+                      Text(l10n.menuSettings),
+                    ],
+                  ),
+                ),
 
                 PopupMenuItem<String>(
                   value: 'help',
@@ -729,5 +754,129 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+
+  void _showMaterialSelectionDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        final appState = Provider.of<AppState>(context, listen: false); // Listen false
+        final l10n = AppLocalizations.of(context)!;
+        
+        final materials = appState.studyMaterials;
+        
+        // Filter materials for each section
+        // Note: material['id'] == 0 is Basic.
+        // We can include Basic in both if it has content or is default.
+        
+        final wordMaterials = materials.where((m) {
+           if (m['id'] == 0) return true; // Always show Basic
+           final count = m['word_count'] as int? ?? 0;
+           return count > 0;
+        }).toList();
+        
+        final sentenceMaterials = materials.where((m) {
+           if (m['id'] == 0) return true; // Always show Basic
+           final count = m['sentence_count'] as int? ?? 0;
+           return count > 0;
+        }).toList();
+
+        return AlertDialog(
+          title: Text(l10n.menuSelectMaterialSet),
+          content: SizedBox( // Constrain height
+            width: double.maxFinite,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // 1. Word Section
+                  Container(
+                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                    color: Colors.blue[50],
+                    width: double.infinity,
+                    child: Text(
+                      l10n.sectionWord,
+                      style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  // Review All Words Option
+                  ListTile(
+                    leading: const Icon(Icons.all_inclusive, color: Colors.blueAccent),
+                    title: Text(l10n.reviewAll),
+                    dense: true,
+                    onTap: () async {
+                      // Select All + Word Mode
+                      appState.setWordMode(true);
+                       appState.switchMode(1); // Switch to Mode 2 (Review) or Mode 1? User didn't specify, but "Review All" implies Mode 2.
+                       // Actually, let's just select material. The mode switch might be manual.
+                       // But if user selects a material, they probably want to study it. 
+                       // I'll just select it.
+                      await appState.selectMaterial(-1);
+                      if (context.mounted) Navigator.pop(context);
+                    },
+                  ),
+                  ...wordMaterials.map((m) => ListTile(
+                    title: Text(m['subject'] as String),
+                    subtitle: Text('Words: ${m['word_count'] ?? 0}'),
+                    dense: true,
+                    onTap: () async {
+                       appState.setWordMode(true);
+                       await appState.selectMaterial(m['id'] as int);
+                       if (context.mounted) Navigator.pop(context);
+                    },
+                  )),
+                  
+                  const Divider(),
+                  
+                  // 2. Sentence Section
+                  Container(
+                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                    color: Colors.green[50],
+                    width: double.infinity,
+                    child: Text(
+                      l10n.sectionSentence,
+                      style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.green),
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  // Review All Sentences Option
+                  ListTile(
+                    leading: const Icon(Icons.all_inclusive, color: Colors.green),
+                    title: Text(l10n.reviewAll),
+                    dense: true,
+                    onTap: () async {
+                      // Select All + Sentence Mode
+                      appState.setWordMode(false);
+                      // Switch to Mode 2? 
+                      // appState.switchMode(1); 
+                      await appState.selectMaterial(-1);
+                      if (context.mounted) Navigator.pop(context);
+                    },
+                  ),
+                  ...sentenceMaterials.map((m) => ListTile(
+                    title: Text(m['subject'] as String),
+                    subtitle: Text('Sentences: ${m['sentence_count'] ?? 0}'),
+                    dense: true,
+                    onTap: () async {
+                       appState.setWordMode(false);
+                       await appState.selectMaterial(m['id'] as int);
+                       if (context.mounted) Navigator.pop(context);
+                    },
+                  )),
+                ],
+              ),
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text(l10n.cancel),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
 }

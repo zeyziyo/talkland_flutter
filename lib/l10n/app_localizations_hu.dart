@@ -614,4 +614,13 @@ class AppLocalizationsHu extends AppLocalizations {
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get menuSelectMaterialSet => 'Válasszon egy tanulmányi anyagot';
+
+  @override
+  String get sectionWord => 'Szószakasz';
+
+  @override
+  String get sectionSentence => 'Mondatszakasz';
 }
