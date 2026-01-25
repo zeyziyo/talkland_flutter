@@ -1,6 +1,6 @@
 {
-    "subject": "기초 명사 (Basic Nouns)",
-    "source": "Talkie Sample",
+    "subject": "명사",
+    "source": "Gemini 3",
     "source_language": "ko",
     "target_language": "en",
     "default_type": "word",
