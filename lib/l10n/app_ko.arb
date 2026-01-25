@@ -468,6 +468,11 @@
 
   "menuDeviceImport": "기기에서 자료 가져오기",
   "menuSettings": "언어 설정",
+  "basicWords": "기본 단어들",
+  "basicSentences": "기본 문장들",
+  "selectMaterialSet": "학습 자료집 선택",
+  "sectionWords": "단어",
+  "sectionSentences": "문장",
   "languageSettingsTitle": "언어 설정",
   "sourceLanguageLabel": "내 언어 (Source)",
   "targetLanguageLabel": "학습 언어 (Target)",

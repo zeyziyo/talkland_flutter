@@ -442,6 +442,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get dialogueQuestDesc => 'Roleplay in scenarios. Choose the right response and speak it aloud.';
 
   @override
+  String get tutorialM1ToggleDesc => 'Switch between Word and Sentence mode here. Words are saved with larger text.';
+
+  @override
   String get labelType => 'Type:';
 
   @override
@@ -531,6 +534,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get basic => 'Basic';
 
   @override
+  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
+
+  @override
   String get tutorialM3WordsTitle => 'Practice Words';
 
   @override
@@ -553,6 +559,21 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get menuSettings => 'Settings';
+
+  @override
+  String get basicWords => 'Basic Words';
+
+  @override
+  String get basicSentences => 'Basic Sentences';
+
+  @override
+  String get selectMaterialSet => 'Select Study Material Set';
+
+  @override
+  String get sectionWords => 'Words';
+
+  @override
+  String get sectionSentences => 'Sentences';
 
   @override
   String get languageSettingsTitle => 'Language Settings';
@@ -601,6 +622,11 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get tabSentence => '句子';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -1041,6 +1067,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get dialogueQuestDesc => 'Roleplay in scenarios. Choose the right response and speak it aloud.';
 
   @override
+  String get tutorialM1ToggleDesc => 'Switch between Word and Sentence mode here. Words are saved with larger text.';
+
+  @override
   String get labelType => 'Type:';
 
   @override
@@ -1130,6 +1159,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get basic => 'Basic';
 
   @override
+  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
+
+  @override
   String get tutorialM3WordsTitle => 'Practice Words';
 
   @override
@@ -1200,6 +1232,11 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get tabSentence => '句子';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -1640,6 +1677,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get dialogueQuestDesc => 'Roleplay in scenarios. Choose the right response and speak it aloud.';
 
   @override
+  String get tutorialM1ToggleDesc => 'Switch between Word and Sentence mode here. Words are saved with larger text.';
+
+  @override
   String get labelType => 'Type:';
 
   @override
@@ -1729,6 +1769,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get basic => 'Basic';
 
   @override
+  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
+
+  @override
   String get tutorialM3WordsTitle => 'Practice Words';
 
   @override
@@ -1799,4 +1842,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get tabSentence => '句子';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
 }

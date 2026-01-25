@@ -442,6 +442,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get dialogueQuestDesc => '상황극을 통해 대화 연습을 하세요. 적절한 답변을 선택하고 말해보세요.';
 
   @override
+  String get tutorialM1ToggleDesc => 'Switch between Word and Sentence mode here. Words are saved with larger text.';
+
+  @override
   String get labelType => '종류:';
 
   @override
@@ -531,6 +534,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get basic => '기본';
 
   @override
+  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
+
+  @override
   String get tutorialM3WordsTitle => '단어 연습';
 
   @override
@@ -553,6 +559,21 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get menuSettings => '언어 설정';
+
+  @override
+  String get basicWords => '기본 단어들';
+
+  @override
+  String get basicSentences => '기본 문장들';
+
+  @override
+  String get selectMaterialSet => '학습 자료집 선택';
+
+  @override
+  String get sectionWords => '단어';
+
+  @override
+  String get sectionSentences => '문장';
 
   @override
   String get languageSettingsTitle => '언어 설정';
@@ -601,4 +622,9 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get tabSentence => '문장';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
 }

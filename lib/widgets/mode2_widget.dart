@@ -43,42 +43,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
         final materialRecords = appState.filteredMaterialRecords; // Use filtered records
         final studiedIds = appState.studiedTranslationIds;
         
-        // Prepare dropdown items
-        final List<DropdownMenuItem<int>> dropdownItems = [];
-        
-        // 1. Add "Review All" option
-        dropdownItems.add(
-          DropdownMenuItem(
-            value: -1,
-            child: Row(
-              children: [
-                const Icon(Icons.all_inclusive, size: 16, color: Colors.indigo),
-                const SizedBox(width: 8),
-                Text(
-                  l10n.reviewAll, // Could be localized if needed
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ),
-        );
-        
-        // 2. Add actual materials
-        dropdownItems.addAll(studyMaterials.map((material) {
-          final id = material['id'] as int;
-          final subject = material['subject'] as String;
-          // sourceLang and targetLang unused
-          
-          String label = subject;
-          if (id == 0) {
-             label = l10n.basic;
-          }
 
-          return DropdownMenuItem<int>(
-            value: id,
-            child: Text(label),
-          );
-        }));
 
         return Column(
           children: [

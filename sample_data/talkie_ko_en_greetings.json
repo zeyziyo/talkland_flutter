@@ -1,6 +1,6 @@
 {
     "subject": "인사말",
-    "source": "Talkie Sample",
+    "source": "Gemini 3",
     "source_language": "ko",
     "target_language": "en",
     "default_type": "sentence",

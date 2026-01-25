@@ -337,68 +337,70 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Consumer<AppState>(
           builder: (context, appState, child) {
-             final l10n = AppLocalizations.of(context)!;
-             final type = appState.recordTypeFilter == 'word' 
-                 ? l10n.tabWord 
-                 : l10n.tabSentence;
-             
-             // Get material name
-             String materialName = l10n.basic;
-             final material = appState.studyMaterials.firstWhere(
-               (m) => m['id'] == appState.selectedMaterialId,
-               orElse: () => {},
-             );
-             if (material.isNotEmpty) {
-               materialName = material['subject'] as String? ?? l10n.basic;
-             }
-
-             return Text(
-               '$type: $materialName',
-               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-             );
-          },
-        ),
-        centerTitle: true,
-        backgroundColor: const Color(0xFF667eea),
-        foregroundColor: Colors.white,
-        leading: Builder(
-          builder: (context) => IconButton(
-            icon: const Icon(Icons.menu),
-            onPressed: () => Scaffold.of(context).openDrawer(),
-          ),
-        ),
-        actions: [
-          PopupMenuButton<String>(
-            key: _actionButtonKey,
-            onSelected: (value) {
-              final appState = Provider.of<AppState>(context, listen: false);
-              switch (value) {
-                case 'refresh':
-                   appState.loadStudyMaterials();
-                   break;
-                case 'import':
-                   _handleImport(context);
-                   break;
-                case 'help':
-                   showDialog(
-                    context: context,
-                    builder: (context) => HelpDialog(
-                      initialModeIndex: appState.currentMode,
-                      onStartTutorial: () => _showTutorial(context),
-                    ),
+                // Get material name
+                String materialName;
+                if (appState.selectedMaterialId == 0) {
+                  materialName = appState.recordTypeFilter == 'word'
+                      ? l10n.basicWords
+                      : l10n.basicSentences;
+                } else {
+                  final material = appState.studyMaterials.firstWhere(
+                    (m) => m['id'] == appState.selectedMaterialId,
+                    orElse: () => {},
                   );
-                  break;
-                case 'downloads':
-                  _launchURL('https://zeyziyo.github.io/talkie/index.html#downloads');
-                  break;
-                case 'settings':
-                  _showLanguageSettingsDialog(context);
-                  break;
-                case 'select_material':
-                  _showMaterialSelectionDialog(context);
-                  break;
-              }
-            },
+                  materialName = material['subject'] as String? ?? l10n.basicWords;
+                }
+
+                return Text(
+                  materialName,
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                );
+              },
+            ),
+            centerTitle: true,
+            backgroundColor: const Color(0xFF667eea),
+            foregroundColor: Colors.white,
+            leading: Builder(
+              builder: (context) => IconButton(
+                icon: const Icon(Icons.menu),
+                onPressed: () => Scaffold.of(context).openDrawer(),
+              ),
+            ),
+            actions: [
+              IconButton(
+                icon: const Icon(Icons.folder_open),
+                tooltip: l10n.selectMaterialSet,
+                onPressed: () => _showMaterialSelectionDialog(context),
+              ),
+              PopupMenuButton<String>(
+                key: _actionButtonKey,
+                onSelected: (value) {
+                  final appState = Provider.of<AppState>(context, listen: false);
+                  switch (value) {
+                    case 'refresh':
+                      appState.loadStudyMaterials();
+                      break;
+                    case 'import':
+                      _handleImport(context);
+                      break;
+                    case 'help':
+                      showDialog(
+                        context: context,
+                        builder: (context) => HelpDialog(
+                          initialModeIndex: appState.currentMode,
+                          onStartTutorial: () => _showTutorial(context),
+                        ),
+                      );
+                      break;
+                    case 'downloads':
+                      _launchURL('https://zeyziyo.github.io/talkie/index.html#downloads');
+                      break;
+                    case 'settings':
+                      _showLanguageSettingsDialog(context);
+                      break;
+                    // select_material removed from menu as it's now an icon
+                  }
+                },
             itemBuilder: (BuildContext context) {
               final l10n = AppLocalizations.of(context)!;
 
@@ -421,16 +423,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       const Icon(Icons.file_upload, color: Colors.blueGrey),
                       const SizedBox(width: 8),
                       Text(l10n.menuDeviceImport), // "Device..."
-                    ],
-                  ),
-                ),
-                PopupMenuItem<String>(
-                  value: 'select_material',
-                  child: Row(
-                    children: [
-                      const Icon(Icons.folder_open, color: Colors.blueAccent),
-                      const SizedBox(width: 8),
-                      Text(l10n.menuSelectMaterialSet),
                     ],
                   ),
                 ),
@@ -780,16 +772,20 @@ class _HomeScreenState extends State<HomeScreen> {
                               },
                             ),
                             const Divider(),
-                            ...wordMaterials.map((m) => ListTile(
-                                  leading: const Icon(Icons.book, color: Colors.blueAccent),
-                                  title: Text(m['subject'] as String),
-                                  subtitle: Text('${l10n.wordModeLabel}: ${m['word_count']} / ${l10n.labelSentence}: ${m['sentence_count']}'),
-                                  onTap: () {
-                                     appState.setRecordTypeFilter('word');
-                                     appState.selectMaterial(m['id'] as int);
-                                     Navigator.pop(context);
-                                  },
-                                )),
+                            ...wordMaterials.map((m) {
+                                  String subject = m['subject'] as String;
+                                  if (m['id'] == 0) subject = l10n.basicWords;
+                                  return ListTile(
+                                    leading: const Icon(Icons.book, color: Colors.blueAccent),
+                                    title: Text(subject),
+                                    subtitle: Text('${l10n.wordModeLabel}: ${m['word_count']} / ${l10n.labelSentence}: ${m['sentence_count']}'),
+                                    onTap: () {
+                                       appState.setRecordTypeFilter('word');
+                                       appState.selectMaterial(m['id'] as int);
+                                       Navigator.pop(context);
+                                    },
+                                  );
+                            }),
                           ],
                         ),
                         // Sentence Tab
@@ -805,16 +801,20 @@ class _HomeScreenState extends State<HomeScreen> {
                               },
                             ),
                             const Divider(),
-                            ...sentenceMaterials.map((m) => ListTile(
-                                  leading: const Icon(Icons.article, color: Colors.deepOrangeAccent),
-                                  title: Text(m['subject'] as String),
-                                  subtitle: Text('${l10n.wordModeLabel}: ${m['word_count']} / ${l10n.labelSentence}: ${m['sentence_count']}'),
-                                  onTap: () {
-                                     appState.setRecordTypeFilter('sentence'); // Auto switch to sentence
-                                     appState.selectMaterial(m['id'] as int);
-                                     Navigator.pop(context);
-                                  },
-                                )),
+                            ...sentenceMaterials.map((m) {
+                                  String subject = m['subject'] as String;
+                                  if (m['id'] == 0) subject = l10n.basicSentences;
+                                  return ListTile(
+                                    leading: const Icon(Icons.article, color: Colors.deepOrangeAccent),
+                                    title: Text(subject),
+                                    subtitle: Text('${l10n.wordModeLabel}: ${m['word_count']} / ${l10n.labelSentence}: ${m['sentence_count']}'),
+                                    onTap: () {
+                                       appState.setRecordTypeFilter('sentence'); // Auto switch to sentence
+                                       appState.selectMaterial(m['id'] as int);
+                                       Navigator.pop(context);
+                                    },
+                                  );
+                            }),
                           ],
                         ),
                       ],

@@ -466,6 +466,29 @@
   "menuWebDownload": "Get Material from Web",
   "menuDeviceImport": "Import from Device",
   "menuSettings": "Language Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "basicWords": "Basic Words",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
+  },
+  "basicSentences": "Basic Sentences",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
+  },
+  "selectMaterialSet": "Select Study Material Set",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "sectionWords": "Words",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "sectionSentences": "Sentences",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
   "languageSettingsTitle": "Language Settings",
   "sourceLanguageLabel": "My Language (Source)",
   "targetLanguageLabel": "Study Language (Target)",
