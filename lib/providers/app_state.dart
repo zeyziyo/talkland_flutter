@@ -14,7 +14,7 @@ import '../models/user_library.dart';
 import '../repositories/sentence_repository.dart';
 import '../services/supabase_service.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../l10n/app_localizations.dart';
 
 /// App-wide state management for Talkie
 class AppState extends ChangeNotifier {
