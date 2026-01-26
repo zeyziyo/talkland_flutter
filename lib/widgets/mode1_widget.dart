@@ -5,6 +5,8 @@ import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
 import '../services/usage_service.dart';
+import '../constants/language_constants.dart';
+
 
 /// Mode 1: 검색 모드 - STT → 번역 → TTS
 class Mode1Widget extends StatefulWidget {
@@ -789,7 +791,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                   }).toList(),
                   onChanged: (value) {
                     if (value != null) {
-                      appState.setSourceLanguage(value);
+                      appState.setSourceLang(value);
                     }
                   },
                 ),
@@ -809,7 +811,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                   }).toList(),
                   onChanged: (value) {
                     if (value != null) {
-                      appState.setTargetLanguage(value);
+                      appState.setTargetLang(value);
                     }
                   },
                 ),
