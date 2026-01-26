@@ -1,26 +1,25 @@
 ---
-description: Build and Deployment Instructions
+description: How to Deploy to GitHub Actions
 ---
----
+
 // turbo-all
 
-> [!CAUTION]
-> **STRICT RULE: DO NOT BUILD LOCALLY**
+# 🚀 Deployment Protocol (CI/CD ONLY)
 
-This project uses **GitHub Actions** for all build and deployment processes.
-
-- **NEVER** run `flutter build apk` or `flutter build ios` locally.
-- **ALWAYS** push changes to the `main` branch to trigger a build.
-
-## How to Deploy
-1. Commit your changes:
+1. **Commit Changes**
    ```bash
    git add .
-   git commit -m "Your commit message"
+   git commit -m "chore: release new version"
    ```
-2. Push to GitHub:
+
+2. **Push to Trigger Build**
    ```bash
    git push origin main
    ```
 
-Running local builds will fail or cause synchronization issues. **Violating this rule is strictly forbidden.**
+3. **Verify & Install**
+   - Wait for GitHub Actions to complete.
+   - Download `app-release.apk` from GitHub.
+   - Uninstall old app -> Install new APK.
+
+> **⚠️ WARNING**: NEVER run `flutter build` locally. Local builds are forbidden.
