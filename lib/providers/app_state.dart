@@ -537,11 +537,115 @@ class AppState extends ChangeNotifier {
     }
   }
   
-  /// Save translation to Supabase (New Architecture)
+  /// Helper to save to Supabase (Extracted for Dual Write)
+  Future<void> _saveToSupabase() async {
+      final authorId = SupabaseService.client.auth.currentUser?.id;
+
+      // 1. Handle Source Sentence
+      int groupId;
+      
+      final existingGroupId = await _tryFindExistingGroupId(_sourceText, _sourceLang);
+      
+      if (existingGroupId != null) {
+        groupId = existingGroupId;
+      } else {
+        groupId = DateTime.now().millisecondsSinceEpoch;
+        
+        await _sentenceRepository.addSentence(Sentence(
+          id: 0,
+          groupId: groupId,
+          langCode: _sourceLang,
+          text: _sourceText,
+          authorId: authorId,
+          createdAt: DateTime.now(),
+        ));
+      }
+      
+      // 2. Handle Target Sentence
+      await _sentenceRepository.addSentence(Sentence(
+        id: 0, 
+        groupId: groupId,
+        langCode: _targetLang,
+        text: _translatedText,
+        note: _note.isNotEmpty ? _note : null,
+        authorId: authorId,
+        status: 'approved',
+        createdAt: DateTime.now(),
+      ));
+      
+      // 3. Link to User Library
+      final userId = authorId;
+      if (userId != null) {
+         try {
+          await SupabaseService.client.from('user_library').insert({
+            'user_id': userId,
+            'group_id': groupId,
+            'personal_note': _note.isNotEmpty ? _note : null,
+          });
+        } catch (e) {
+          debugPrint('[AppState] Already in library or insert error: $e');
+        }
+      }
+  }
+
+  /// Save translation (Dual Write: Local DB + Supabase)
   Future<void> saveTranslation() async {
     if (_translatedText.isEmpty) {
       _statusMessage = '저장할 번역이 없습니다';
       notifyListeners();
+      return;
+    }
+    
+    _statusMessage = '저장 중...';
+    notifyListeners();
+
+    try {
+      // 1. Local Save (Primary - for Offline & Mode 2)
+      // Save source text
+      final sourceId = await DatabaseService.insertLanguageRecord(
+        _sourceLang, 
+        _sourceText
+      );
+      
+      // Save target text
+      final targetId = await DatabaseService.insertLanguageRecord(
+        _targetLang, 
+        _translatedText
+      );
+      
+      // Link them in translations table
+      await DatabaseService.saveTranslationLink(
+        sourceLang: _sourceLang,
+        sourceId: sourceId,
+        targetLang: _targetLang,
+        targetId: targetId,
+        materialId: 0, // Default material for now
+        note: _note.isNotEmpty ? _note : null,
+      );
+
+      debugPrint('[AppState] Local save successful');
+      
+      // 2. Supabase Save (Secondary - for Cloud Sync)
+      _saveToSupabase().then((_) {
+        debugPrint('[AppState] Background Cloud Sync finished');
+      }).catchError((e) {
+        debugPrint('[AppState] Background Cloud Sync failed (Offline?): $e');
+      });
+
+      // 3. Update UI Success immediately
+      _statusMessage = '저장 완료!';
+      _isSaved = true; 
+      
+      // Reload Study Records so Mode 2 is updated immediately
+      await loadStudyRecords(); 
+      
+      notifyListeners();
+      return; // Stop here! Old logic below is ignored.
+
+    } catch (e) {
+      _statusMessage = '저장 실패: $e';
+      notifyListeners();
+      debugPrint('[AppState] Error saving translation (Local): $e');
       return;
     }
     
