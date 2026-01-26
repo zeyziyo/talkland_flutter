@@ -509,5 +509,6 @@
   "errorHateSpeech": "Translation cannot be processed due to hate speech.",
   "errorSexualContent": "Translation cannot be processed due to sexual content.",
   "errorOtherSafety": "Translation was blocked by AI safety policy.",
-  "titleFormat": "{type}: {materialName}"
+  "titleFormat": "{type}: {materialName}",
+  "clearAll": "Clear All"
 }
