@@ -559,7 +559,7 @@ class AppState extends ChangeNotifier {
       // If _selectedSourceId is set (from previous SQLite logic), we used to use it.
       // In Supabase, we should check by Text + Lang.
       
-      final existingGroupId = await SupabaseService.findGroupId(_sourceText, _sourceLang);
+      final existingGroupId = await _tryFindExistingGroupId(_sourceText, _sourceLang);
       
       if (existingGroupId != null) {
         groupId = existingGroupId;
@@ -637,6 +637,18 @@ class AppState extends ChangeNotifier {
       _statusMessage = '저장 실패: $e';
       notifyListeners();
       debugPrint('[AppState] Error saving translation: $e');
+    }
+  }
+
+  /// Helper to find existing group ID safely (handles offline/errors)
+  Future<int?> _tryFindExistingGroupId(String text, String lang) async {
+    try {
+      // Check if we are online and supabase is initialized?
+      // For now just try-catch the call
+      return await SupabaseService.findGroupId(text, lang);
+    } catch (e) {
+      debugPrint('[AppState] Supabase findGroupId failed (offline?): $e');
+      return null;
     }
   }
   

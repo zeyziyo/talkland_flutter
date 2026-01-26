@@ -370,45 +370,6 @@ class _Mode1WidgetState extends State<Mode1Widget> {
             if (appState.showDisambiguationDialog)
               _buildDisambiguationDialog(context, appState),
             
-            // Top AppBar Actions
-            Positioned(
-              top: 0,
-              left: 0,
-              right: 0,
-              child: SafeArea(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // Language Settings Button (Left)
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.1),
-                              blurRadius: 4,
-                              offset: const Offset(0, 2),
-                            ),
-                          ],
-                        ),
-                        child: IconButton(
-                          icon: const Icon(Icons.translate_rounded, color: Color(0xFF667eea)), // Visual Marker
-                          tooltip: l10n.languageSettings,
-                          onPressed: () => _showLanguageSettings(context),
-                        ),
-                      ),
-                      // Placeholder for potential right-aligned actions
-                      // For now, it's just a spacer to push the left button to the left.
-                      const SizedBox(width: 48), // Same width as the IconButton to balance
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            
             // Bottom Save Button
             Positioned(
               left: 0, 
@@ -756,71 +717,5 @@ class _Mode1WidgetState extends State<Mode1Widget> {
       ),
     );
   }
-  void _showLanguageSettings(BuildContext context) {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (context) => Consumer<AppState>(
-        builder: (context, appState, _) {
-          return Padding(
-            padding: const EdgeInsets.all(24.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  AppLocalizations.of(context)!.languageSettingsTitle,
-                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 24),
-                // Source Language
-                DropdownButtonFormField<String>(
-                  decoration: InputDecoration(
-                    labelText: AppLocalizations.of(context)!.sourceLanguageLabel,
-                    border: const OutlineInputBorder(),
-                  ),
-                  value: appState.sourceLang,
-                  items: LanguageConstants.supportedLanguages.map((lang) {
-                    return DropdownMenuItem(
-                      value: lang['code'],
-                      child: Text(lang['name']!),
-                    );
-                  }).toList(),
-                  onChanged: (value) {
-                    if (value != null) {
-                      appState.setSourceLang(value);
-                    }
-                  },
-                ),
-                const SizedBox(height: 16),
-                // Target Language
-                DropdownButtonFormField<String>(
-                  decoration: InputDecoration(
-                    labelText: AppLocalizations.of(context)!.targetLanguageLabel,
-                    border: const OutlineInputBorder(),
-                  ),
-                  value: appState.targetLang,
-                  items: LanguageConstants.supportedLanguages.map((lang) {
-                    return DropdownMenuItem(
-                      value: lang['code'],
-                      child: Text(lang['name']!),
-                    );
-                  }).toList(),
-                  onChanged: (value) {
-                    if (value != null) {
-                      appState.setTargetLang(value);
-                    }
-                  },
-                ),
-                const SizedBox(height: 48), // Padding for bottom
-              ],
-            ),
-          );
-        },
-      ),
-    );
-  }
+
 }
