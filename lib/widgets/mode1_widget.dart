@@ -754,4 +754,71 @@ class _Mode1WidgetState extends State<Mode1Widget> {
       ),
     );
   }
+  void _showLanguageSettings(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (context) => Consumer<AppState>(
+        builder: (context, appState, _) {
+          return Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  AppLocalizations.of(context)!.languageSettingsTitle,
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 24),
+                // Source Language
+                DropdownButtonFormField<String>(
+                  decoration: InputDecoration(
+                    labelText: AppLocalizations.of(context)!.sourceLanguageLabel,
+                    border: const OutlineInputBorder(),
+                  ),
+                  value: appState.sourceLang,
+                  items: LanguageConstants.supportedLanguages.map((lang) {
+                    return DropdownMenuItem(
+                      value: lang['code'],
+                      child: Text(lang['name']!),
+                    );
+                  }).toList(),
+                  onChanged: (value) {
+                    if (value != null) {
+                      appState.setSourceLanguage(value);
+                    }
+                  },
+                ),
+                const SizedBox(height: 16),
+                // Target Language
+                DropdownButtonFormField<String>(
+                  decoration: InputDecoration(
+                    labelText: AppLocalizations.of(context)!.targetLanguageLabel,
+                    border: const OutlineInputBorder(),
+                  ),
+                  value: appState.targetLang,
+                  items: LanguageConstants.supportedLanguages.map((lang) {
+                    return DropdownMenuItem(
+                      value: lang['code'],
+                      child: Text(lang['name']!),
+                    );
+                  }).toList(),
+                  onChanged: (value) {
+                    if (value != null) {
+                      appState.setTargetLanguage(value);
+                    }
+                  },
+                ),
+                const SizedBox(height: 48), // Padding for bottom
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
 }
