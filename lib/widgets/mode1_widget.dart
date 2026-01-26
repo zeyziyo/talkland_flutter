@@ -396,6 +396,31 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                               ],
                             ),
                             const SizedBox(height: 8),
+                            
+                            // Context/Note Feedback
+                            if (appState.note.isNotEmpty)
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 8),
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                  decoration: BoxDecoration(
+                                    color: Colors.amber[100],
+                                    borderRadius: BorderRadius.circular(4),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      const Icon(Icons.lightbulb, size: 14, color: Colors.deepOrange),
+                                      const SizedBox(width: 4),
+                                      Text(
+                                        'Context: ${appState.note}', 
+                                        style: TextStyle(fontSize: 12, color: Colors.brown[800], fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+
                             TextField(
                               controller: _translatedTextController,
                               decoration: const InputDecoration(

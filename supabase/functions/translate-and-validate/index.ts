@@ -71,13 +71,16 @@ Deno.serve(async (req: Request) => {
       Also validate the content for profanity, hate speech, or sexual content.
       If the text is sexually explicit, hatespeech, or severe profanity, set isValid to false.
       
+      Check for ambiguity in the source text (polysemy). If the word/phrase has multiple distinct meanings in the context of learning (e.g., 'Date' -> Fruit vs Calendar, 'Spring' -> Season vs Coil), provide a list of brief context tags in 'disambiguationOptions'.
+      If the meaning is clear or generic, 'disambiguationOptions' should be null or empty.
+
       Provide the output in strict JSON format:
       {
         "translatedText": "string",
         "isValid": boolean, 
         "reason": "string (ENUM: 'PROFANITY', 'HATE_SPEECH', 'SEXUAL', 'OTHER' - if valid, null)",
-        "note": "string (context/disambiguation if needed, e.g. for ambiguous words like 'Saw', otherwise null)",
-        "disambiguationOptions": ["string"] 
+        "note": "string (auto-generated context tag if widely applicable, else null)",
+        "disambiguationOptions": ["string", "string"] 
       }
       Text: "${text}"
     `
