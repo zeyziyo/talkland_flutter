@@ -24,12 +24,13 @@ jobs:
       with:
         distribution: 'zulu'
         java-version: '17'
-        
+        cache: 'gradle' # Enable Gradle caching
+
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.38.5'
-        channel: 'stable'
+        channel: 'stable' # Use latest stable version
+        cache: true       # Enable Flutter pub cache
         
     - name: Get dependencies
       run: flutter pub get
@@ -51,24 +52,16 @@ jobs:
     - name: Build APK
       env:
         FLUTTER_ROOT: ${{ env.FLUTTER_ROOT }}
-      run: flutter build apk --release
+      run: flutter build apk --release --verbose
       
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: talkie-release-apk
         path: build/app/outputs/flutter-apk/app-release.apk
-        retention-days: 30
+        retention-days: 7
 
-    - name: Build App Bundle (AAB)
-      env:
-        FLUTTER_ROOT: ${{ env.FLUTTER_ROOT }}
-      run: flutter build appbundle --release
-
-    - name: Upload AAB
-      uses: actions/upload-artifact@v4
-      with:
-        name: talkie-release-aab
-        path: build/app/outputs/bundle/release/app-release.aab
-        retention-days: 30
+    # Skipped AAB to save time for testing
+    # - name: Build App Bundle (AAB)
+    #   run: flutter build appbundle --release
 
