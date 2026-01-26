@@ -7,6 +7,7 @@ import 'screens/home_screen.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'dart:io';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+import 'services/supabase_service.dart';
 
 import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -31,6 +32,13 @@ void main() async {
 
   // Initialize SharedPrefs
   final prefs = await SharedPreferences.getInstance();
+
+  // Initialize Supabase
+  try {
+    await SupabaseService.initialize();
+  } catch (e) {
+    print("Warning: Failed to initialize Supabase: $e");
+  }
 
   runApp(TalkieApp(prefs: prefs));
 }
