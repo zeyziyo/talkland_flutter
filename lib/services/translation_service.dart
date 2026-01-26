@@ -13,14 +13,14 @@ class TranslationService {
   /// - targetLang: Target language code (e.g., 'ja', 'es')
   ///
   /// Returns translated text or throws exception
-  static Future<String> translate({
+  static Future<Map<String, dynamic>> translate({
     required String text,
     required String sourceLang,
     required String targetLang,
   }) async {
     final normalized = text.trim();
     if (normalized.isEmpty) {
-      return '';
+      return {'text': '', 'isValid': true};
     }
 
     final cacheKey = '$sourceLang-$targetLang-$normalized';
@@ -30,7 +30,7 @@ class TranslationService {
       final cached = await DatabaseService.getCachedTranslation(cacheKey);
       if (cached != null) {
         print('[Translation] Cache hit');
-        return cached;
+        return {'text': cached, 'isValid': true};
       }
     } catch (e) {
       print('[Translation] Cache unavailable (web/error)');
@@ -49,29 +49,33 @@ class TranslationService {
       final translatedText = result['translatedText'] as String;
       final isValid = result['isValid'] as bool? ?? false;
       final note = result['note'] as String?;
+      final disambiguationOptions = result['disambiguationOptions'] as List<dynamic>?; // New field
 
       if (!isValid) {
         final reason = result['reason'] ?? 'Unknown reason';
         print('[Translation] Blocked by AI: $reason');
-        return 'Filtered: $reason';
+        return {'text': 'Filtered: $reason', 'isValid': false};
       }
 
       print('[Translation] Success: $translatedText (Note: $note)');
 
-      // 3. Cache the result locally
+      // 3. Cache the result locally (Text only for now)
       try {
         await DatabaseService.cacheTranslation(cacheKey, translatedText);
       } catch (e) {
         print('[Translation] Could not cache locally');
       }
-
-      // TODO: Future - Insert into public 'sentences' table here or in a separate flow
       
-      return translatedText;
+      return {
+        'text': translatedText,
+        'isValid': true,
+        'note': note,
+        'disambiguationOptions': disambiguationOptions?.cast<String>(),
+      };
 
     } catch (e) {
       print('[Translation] Error: $e');
-      return 'Error: $e';
+      return {'text': 'Error: $e', 'isValid': false};
     }
   }
 }

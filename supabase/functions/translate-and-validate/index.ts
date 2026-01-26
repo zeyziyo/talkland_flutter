@@ -39,7 +39,8 @@ Deno.serve(async (req: Request) => {
         "translatedText": "string",
         "isValid": boolean, 
         "reason": "string (if invalid, explain why)",
-        "note": "string (context/disambiguation if needed, e.g. for ambiguous words like 'Saw', otherwise null)"
+        "note": "string (context/disambiguation if needed, e.g. for ambiguous words like 'Saw', otherwise null)",
+        "disambiguationOptions": ["string"] (list of potential contexts if the source text is ambiguous, e.g. ['fruit', 'tech company'] for 'Apple'. Empty if unambiguous.)
       }
 
       Text: "${text}"

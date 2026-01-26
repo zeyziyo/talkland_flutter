@@ -72,6 +72,10 @@ class AppState extends ChangeNotifier {
   bool _showDuplicateDialog = false;
   bool _duplicateCheckTriggered = false; // Flag to prevent repeated checks
   
+  // Disambiguation State
+  List<String> _disambiguationOptions = [];
+  bool _showDisambiguationDialog = false; // Trigger UI dialog
+  
   // Mode 2 (복습) State
   List<Map<String, dynamic>> _studyRecords = [];
   String _selectedReviewLanguage = 'en'; // Filter by target language, default 'en'
@@ -101,6 +105,21 @@ class AppState extends ChangeNotifier {
   int? get selectedSourceId => _selectedSourceId;
   bool get showDuplicateDialog => _showDuplicateDialog;
   String get selectedReviewLanguage => _selectedReviewLanguage;
+  
+  // Disambiguation Getters
+  List<String> get disambiguationOptions => _disambiguationOptions;
+  bool get showDisambiguationDialog => _showDisambiguationDialog;
+
+  void closeDisambiguationDialog() {
+    _showDisambiguationDialog = false;
+    notifyListeners();
+  }
+  
+  void selectDisambiguationOption(String option) {
+    _note = option;
+    _showDisambiguationDialog = false;
+    notifyListeners();
+  }
 
   void setNote(String value) {
     _note = value;
@@ -431,11 +450,32 @@ class AppState extends ChangeNotifier {
       _statusMessage = '번역 중...';
       notifyListeners();
       
-      _translatedText = await TranslationService.translate(
+      final result = await TranslationService.translate(
         text: _sourceText,
         sourceLang: _sourceLang,
         targetLang: _targetLang,
       );
+      
+      _translatedText = result['text'] as String;
+      
+      // Handle Note / Disambiguation
+      final autoNote = result['note'] as String?;
+      final options = result['disambiguationOptions'] as List<String>?;
+      
+      if (options != null && options.isNotEmpty) {
+        // Ambiguous! Store options and show dialog (trigger via flag)
+        _disambiguationOptions = options;
+        _showDisambiguationDialog = true;
+        _note = ''; // Reset note for user selection
+        debugPrint('[AppState] Ambiguity detected: $options');
+      } else {
+        // Unambiguous or simple
+        _disambiguationOptions = [];
+        _showDisambiguationDialog = false;
+        if (autoNote != null) {
+          _note = autoNote;
+        }
+      }
       
       // 4. Increment Usage (NEW)
       await _usageService.incrementUsage();

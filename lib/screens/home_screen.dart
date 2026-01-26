@@ -371,11 +371,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             actions: [
-              IconButton(
-                icon: const Icon(Icons.folder_open),
-                tooltip: l10n.selectMaterialSet,
-                onPressed: () => _showMaterialSelectionDialog(context),
-              ),
+              // Material Selection moved to Mode1Widget
+              
               PopupMenuButton<String>(
                 key: _actionButtonKey,
                 onSelected: (value) {

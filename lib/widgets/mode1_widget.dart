@@ -198,28 +198,60 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                             
                             const Divider(),
                             
-                            const SizedBox(height: 12),
-                            
-                             const SizedBox(height: 12),
-                            // Note Field (Renamed from Context)
-                            TextField(
-                              key: widget.contextFieldKey, // Keep key prop name for tests
-                              controller: _noteController,
-                              onChanged: (value) {
-                                appState.setNote(value);
-                              },
-                              decoration: InputDecoration(
-                                labelText: l10n.contextTagLabel,
-                                hintText: l10n.contextTagHint,
-                                hintStyle: TextStyle(
-                                  color: Colors.grey.shade400,
-                                  fontStyle: FontStyle.italic,
-                                ),
-                                border: const OutlineInputBorder(),
-                                isDense: true,
-                                prefixIcon: const Icon(Icons.note, size: 20), // Changed icon to note
+                            // New: Word/Sentence Toggle & Material Selection
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 8),
+                              child: Row(
+                                children: [
+                                  // Toggle Button (Word/Sentence)
+                                  Expanded(
+                                    child: SegmentedButton<String>(
+                                      segments: [
+                                        ButtonSegment<String>(
+                                          value: 'word',
+                                          label: Text(l10n.tabWord), // "Word"
+                                          icon: const Icon(Icons.text_fields),
+                                        ),
+                                        ButtonSegment<String>(
+                                          value: 'sentence',
+                                          label: Text(l10n.tabSentence), // "Sentence"
+                                          icon: const Icon(Icons.short_text),
+                                        ),
+                                      ],
+                                      selected: {appState.recordTypeFilter},
+                                      onSelectionChanged: (Set<String> newSelection) {
+                                        appState.setRecordTypeFilter(newSelection.first);
+                                        // Reset material selection when type changes?
+                                        // Or just let the dialog filter it next time.
+                                        // Strategy: Keep current material if valid, else reset to Basic.
+                                        appState.selectMaterial(0); // Safest to reset to Basic for now
+                                      },
+                                      style: ButtonStyle(
+                                        padding: MaterialStateProperty.all(EdgeInsets.zero),
+                                        visualDensity: VisualDensity.compact,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  
+                                  // Material Selection Icon (Moved from AppBar)
+                                  Ink(
+                                    decoration: ShapeDecoration(
+                                      color: Colors.blueAccent.withOpacity(0.1),
+                                      shape: const CircleBorder(),
+                                    ),
+                                    child: IconButton(
+                                      key: widget.materialDropdownKey,
+                                      icon: const Icon(Icons.folder_open, color: Colors.blueAccent),
+                                      tooltip: l10n.selectMaterialSet,
+                                      onPressed: () => _showMaterialSelectionDialog(context),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
+                            
+                            const SizedBox(height: 12),
                           ],
                         ),
                       ),
@@ -331,6 +363,10 @@ class _Mode1WidgetState extends State<Mode1Widget> {
             // Duplicate Detection Dialog
             if (appState.showDuplicateDialog)
               _buildDuplicateDialog(context, appState),
+
+            // AI Disambiguation Dialog (New)
+            if (appState.showDisambiguationDialog)
+              _buildDisambiguationDialog(context, appState),
             
             // Bottom Save Button
             Positioned(
@@ -511,6 +547,146 @@ class _Mode1WidgetState extends State<Mode1Widget> {
             },
           ),
         ],
+      ),
+    );
+  }
+  void _showMaterialSelectionDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        final appState = Provider.of<AppState>(context, listen: false);
+        final l10n = AppLocalizations.of(context)!;
+        
+        final materials = appState.studyMaterials;
+        final isWordMode = appState.recordTypeFilter == 'word';
+        
+        // Filter materials based on current Toggle
+        final filteredMaterials = materials.where((m) {
+           if (m['id'] == 0) return true; // Always show Basic
+           final count = m[isWordMode ? 'word_count' : 'sentence_count'] as int? ?? 0;
+           return count > 0;
+        }).toList();
+
+        return AlertDialog(
+          title: Text(isWordMode ? l10n.tabWord : l10n.tabSentence), // "Word" or "Sentence"
+          content: SizedBox(
+            width: double.maxFinite,
+            height: 400,
+            child: ListView(
+              children: [
+                ListTile(
+                  leading: const Icon(Icons.all_inclusive, color: Colors.indigo),
+                  title: Text(l10n.reviewAll),
+                  onTap: () {
+                    // Filter is already set by toggle, so just select -1 (All)
+                    appState.selectMaterial(-1);
+                    Navigator.pop(context);
+                  },
+                ),
+                const Divider(),
+                ...filteredMaterials.map((m) {
+                      String subject = m['subject'] as String;
+                      // Localize Basic
+                      if (m['id'] == 0) {
+                        subject = isWordMode ? l10n.basicWords : l10n.basicSentences;
+                      }
+                      return ListTile(
+                        leading: Icon(
+                          isWordMode ? Icons.book : Icons.article, 
+                          color: isWordMode ? Colors.blueAccent : Colors.deepOrangeAccent
+                        ),
+                        title: Text(subject),
+                        subtitle: Text(
+                          // Show count for current mode only
+                          '${isWordMode ? l10n.wordModeLabel : l10n.labelSentence}: ${m[isWordMode ? 'word_count' : 'sentence_count']}'
+                        ),
+                        onTap: () {
+                           // Filter is already set, just select ID
+                           appState.selectMaterial(m['id'] as int);
+                           Navigator.pop(context);
+                        },
+                      );
+                }),
+              ],
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text(l10n.cancel),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget _buildDisambiguationDialog(BuildContext context, AppState appState) {
+    final l10n = AppLocalizations.of(context)!;
+    
+    return Container(
+      color: Colors.black54,
+      child: Center(
+        child: Card(
+          margin: const EdgeInsets.all(24),
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '의미 선택', // Using hardcoded fallback for new string until l10n update
+                      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.close),
+                      onPressed: () => appState.closeDisambiguationDialog(),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  '어떤 의미로 번역하시겠습니까?', // Fallback
+                  style: const TextStyle(fontSize: 14, color: Colors.grey),
+                ),
+                const SizedBox(height: 16),
+                
+                Flexible(
+                  child: SingleChildScrollView(
+                    child: Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
+                      children: appState.disambiguationOptions.map((option) {
+                        return ActionChip(
+                          label: Text(option),
+                          avatar: const Icon(Icons.check_circle_outline, size: 16),
+                          backgroundColor: Colors.blue[50], 
+                          onPressed: () {
+                             appState.selectDisambiguationOption(option);
+                          },
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                ),
+                
+                const SizedBox(height: 16),
+                
+                SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () => appState.selectDisambiguationOption(''), // Skip
+                    child: Text('건너뛰기'), // Fallback
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
