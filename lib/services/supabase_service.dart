@@ -4,6 +4,10 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 class SupabaseService {
   static bool _initialized = false;
   
+  // Fallback values (used when .env fails to load)
+  static const String _fallbackUrl = 'https://soxdzielqtabyradajle.supabase.co';
+  static const String _fallbackAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNveGR6aWVscXRhYnlyYWRhamxlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkzNzI0NDQsImV4cCI6MjA4NDk0ODQ0NH0.MHLZSXBWJlN6xojyqJR57DLulUWMUg67V458h6Sq2nY';
+  
   /// Get the Supabase client (lazy access after initialization)
   static SupabaseClient get client {
     if (!_initialized) {
@@ -16,9 +20,19 @@ class SupabaseService {
   static Future<void> initialize() async {
     if (_initialized) return; // Prevent double initialization
     
+    // Use .env values if available, otherwise use fallback
+    final url = dotenv.env['SUPABASE_URL']?.isNotEmpty == true 
+        ? dotenv.env['SUPABASE_URL']! 
+        : _fallbackUrl;
+    final anonKey = dotenv.env['SUPABASE_ANON_KEY']?.isNotEmpty == true 
+        ? dotenv.env['SUPABASE_ANON_KEY']! 
+        : _fallbackAnonKey;
+    
+    print('Supabase: Initializing with URL: $url');
+    
     await Supabase.initialize(
-      url: dotenv.env['SUPABASE_URL']!,
-      anonKey: dotenv.env['SUPABASE_ANON_KEY']!,
+      url: url,
+      anonKey: anonKey,
     );
     
     _initialized = true;
