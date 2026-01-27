@@ -45,10 +45,18 @@ class _HomeScreenState extends State<HomeScreen> {
   BannerAd? _bannerAd;
   bool _isBannerAdReady = false;
 
+  // PageController for swipe navigation
+  late PageController _pageController;
+
   @override
   void initState() {
     super.initState();
     _loadBannerAd();
+    
+    // Initialize PageController with current mode
+    final appState = Provider.of<AppState>(context, listen: false);
+    _pageController = PageController(initialPage: appState.currentMode);
+    appState.setPageController(_pageController);
   }
 
   void _loadBannerAd() {
@@ -79,6 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void dispose() {
     _bannerAd?.dispose();
+    _pageController.dispose();
     super.dispose();
   }
 
@@ -342,22 +351,24 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Consumer<AppState>(
           builder: (context, appState, child) {
-                // Get material name
-                String materialName;
-                if (appState.selectedMaterialId == 0) {
-                  materialName = appState.recordTypeFilter == 'word'
-                      ? l10n.basicWords
-                      : l10n.basicSentences;
-                } else {
-                  final material = appState.studyMaterials.firstWhere(
-                    (m) => m['id'] == appState.selectedMaterialId,
-                    orElse: () => {},
-                  );
-                  materialName = material['subject'] as String? ?? l10n.basicWords;
+                // Show Mode Name in Title instead of Material Name
+                String modeName;
+                switch (appState.currentMode) {
+                  case 0:
+                    modeName = l10n.inputModeTitle; // "입력"
+                    break;
+                  case 1:
+                    modeName = l10n.reviewModeTitle; // "복습"
+                    break;
+                  case 2:
+                    modeName = l10n.practiceModeTitle; // "발음 연습"
+                    break;
+                  default:
+                    modeName = l10n.appTitle;
                 }
 
                 return Text(
-                  materialName,
+                  modeName,
                   style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 );
               },
@@ -372,7 +383,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             actions: [
-              // Material Selection moved to Mode1Widget
+              // Universal Material Selection Icon
+              IconButton(
+                icon: const Icon(Icons.library_books),
+                tooltip: l10n.menuSelectMaterialSet,
+                onPressed: () => _showMaterialSelectionDialog(context),
+              ),
               
               PopupMenuButton<String>(
                 key: _actionButtonKey,
@@ -522,30 +538,30 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         children: [
           Expanded(
-            child: Consumer<AppState>(
-              builder: (context, appState, child) {
-                if (appState.currentMode == 0) {
-                  return Mode1Widget(
-                    micButtonKey: _micButtonKey,
-                    translateButtonKey: _translateButtonKey,
-                    swapButtonKey: _swapButtonKey, 
-                    saveButtonKey: _saveButtonKey,
-                    contextFieldKey: _contextFieldKey,
-                    materialDropdownKey: _mode1DropdownKey,
-                  );
-                } else if (appState.currentMode == 1) {
-                  return Mode2Widget(
-                    materialDropdownKey: _mode2DropdownKey,
-                    tutorialListKey: _mode2ListKey,
-                  ); 
-                } else if (appState.currentMode == 2) {
-                  return Mode3Widget(
-                    materialDropdownKey: _mode3DropdownKey,
-                    resetButtonKey: _mode3ResetKey,
-                  );  
-                } 
-                return const SizedBox.shrink();
+            child: PageView(
+              controller: _pageController,
+              onPageChanged: (index) {
+                 final appState = Provider.of<AppState>(context, listen: false);
+                 appState.switchMode(index, fromPage: true);
               },
+              children: [
+                Mode1Widget(
+                  micButtonKey: _micButtonKey,
+                  translateButtonKey: _translateButtonKey,
+                  swapButtonKey: _swapButtonKey, 
+                  saveButtonKey: _saveButtonKey,
+                  contextFieldKey: _contextFieldKey,
+                  materialDropdownKey: _mode1DropdownKey,
+                ),
+                Mode2Widget(
+                  materialDropdownKey: _mode2DropdownKey,
+                  tutorialListKey: _mode2ListKey,
+                ),
+                Mode3Widget(
+                  materialDropdownKey: _mode3DropdownKey,
+                  resetButtonKey: _mode3ResetKey,
+                ),
+              ],
             ),
           ),
           
@@ -774,7 +790,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             const Divider(),
                             ...wordMaterials.map((m) {
                                   String subject = m['subject'] as String;
-                                  if (m['id'] == 0) subject = l10n.basicWords;
+                                  if (m['id'] == 0) subject = "기본 단어 저장소";
                                   return ListTile(
                                     leading: const Icon(Icons.book, color: Colors.blueAccent),
                                     title: Text(subject),
@@ -803,7 +819,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             const Divider(),
                             ...sentenceMaterials.map((m) {
                                   String subject = m['subject'] as String;
-                                  if (m['id'] == 0) subject = l10n.basicSentences;
+                                  if (m['id'] == 0) subject = "기본 문장 저장소";
                                   return ListTile(
                                     leading: const Icon(Icons.article, color: Colors.deepOrangeAccent),
                                     title: Text(subject),

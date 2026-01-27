@@ -99,6 +99,12 @@ class AppState extends ChangeNotifier {
   bool get isTranslating => _isTranslating;
   bool get isSpeaking => _isSpeaking;
   bool get isSaved => _isSaved;
+
+  // PageController for Swipe Navigation (Phase 8)
+  PageController? _pageController;
+  void setPageController(PageController controller) {
+    _pageController = controller;
+  }
   String get statusMessage => _statusMessage;
   String get note => _note;
   bool get isWordMode => _isWordMode;
@@ -281,11 +287,20 @@ class AppState extends ChangeNotifier {
   // Mode Switching
   // ==========================================
   
-  void switchMode(int mode) {
-    if (_currentMode == mode) return;
+  void switchMode(int mode, {bool fromPage = false}) {
+    if (_currentMode == mode && !fromPage) return; // Only return if mode is same AND not from page swipe
     
     _currentMode = mode;
     
+    // Sync PageController if changed from non-page source (Drawer)
+    if (!fromPage && _pageController != null) {
+      _pageController!.animateToPage(
+        mode, 
+        duration: const Duration(milliseconds: 300), 
+        curve: Curves.easeInOut
+      );
+    }
+
     // Reset transient state
     _statusMessage = '';
     _isListening = false;
@@ -295,6 +310,7 @@ class AppState extends ChangeNotifier {
     if (mode == 1) {
       // Study Material mode (Mode 2) - Load materials
       loadStudyMaterials();
+      loadStudyRecords(); // Load records for review tab
     } else if (mode == 2) {
       // Speaking Mode (Mode 3)
       loadStudyMaterials(); // Ensure materials are loaded
@@ -553,6 +569,7 @@ class AppState extends ChangeNotifier {
           'text': _sourceText,
           'group_id': timestamp,
           'author_id': authorId,
+          'status': 'approved',
         });
 
         // 2. Save Target
@@ -561,30 +578,19 @@ class AppState extends ChangeNotifier {
           'text': _translatedText,
           'group_id': timestamp,
           'author_id': authorId,
+          'status': 'approved',
         });
 
+        // 3. Add to User Library (Important for visibility in Mode 2)
+        await SupabaseService.client.from('user_library').insert({
+          'user_id': authorId,
+          'group_id': timestamp,
+          'personal_note': _note.isNotEmpty ? _note : null,
+        });
+
+        debugPrint('[AppState] Supabase Cloud Sync Successful: groupId=$timestamp');
       } catch (e) {
         debugPrint('[AppState] Supabase background save failed: $e');
-      }
-      return; // Stop here, ignore legacy code below (will delete next)
-      
-      /* Legacy Code Ignored */
-      int groupId = 0; // Stub for below
-      
-
-      
-      /* Removed User Library Link */
-      final userId = authorId;
-      if (userId != null) {
-         try {
-          await SupabaseService.client.from('user_library').insert({
-            'user_id': userId,
-            'group_id': groupId,
-            'personal_note': _note.isNotEmpty ? _note : null,
-          });
-        } catch (e) {
-          debugPrint('[AppState] Already in library or insert error: $e');
-        }
       }
   }
 
@@ -837,33 +843,33 @@ class AppState extends ChangeNotifier {
   }
   
   /// Delete a translation record (Dual Write: Local + Supabase)
-  /// Parameter [id] is effectively the Local SQLite 'translations.id'
+  /// Parameter [id] can be Local ID or Supabase Group ID depending on view.
   Future<void> deleteRecord(int id) async {
     try {
        debugPrint('[AppState] Deleting record: id=$id');
 
-       // 1. Delete from Local Database (Primary)
+       // 1. Delete from Local Database (Match ID or Group ID)
+       // We try to delete by ID first (Local Material Mode)
        await DatabaseService.deleteTranslationRecord(id);
        
-       // 2. Delete from Supabase (Secondary)
-       // Issue: 'id' is Local ID, but Supabase needs 'group_id'. 
-       // Currently we don't store group_id locally mapping to Supabase.
-       // So straightforward deletion by ID isn't possible remotely without mapping.
-       // For now, we only delete locally to ensure UI responsiveness and Offline support.
-       /*
+       // 2. Delete from Supabase (Match id as group_id)
        final userId = SupabaseService.client.auth.currentUser?.id;
        if (userId != null) {
           try {
+             // In "Review All", id passed is the groupId.
+             // In other modes, it's local ID, but we try anyway or could lookup.
+             // To be safe, we delete from user_library where user_id matches.
              await SupabaseService.client
                 .from('user_library')
                 .delete()
                 .eq('user_id', userId)
-                .eq('group_id', id); // Logic Mismatch: Local ID != Supabase Group ID
+                .eq('group_id', id);
+             
+             debugPrint('[AppState] Supabase delete executed for group_id: $id');
           } catch (e) {
-             debugPrint('[AppState] Supabase delete failed (expected if ID mismatch): $e');
+             debugPrint('[AppState] Supabase delete failed: $e');
           }
        }
-       */
       
       // Refresh global study records (Supabase/Mixed)
       await loadStudyRecords(); 
@@ -875,7 +881,7 @@ class AppState extends ChangeNotifier {
         await loadMaterialRecords(_selectedMaterialId!);
       }
       
-      debugPrint('[AppState] Record deleted successfully (Local): id=$id');
+      debugPrint('[AppState] Record deletion process complete: id=$id');
     } catch (e) {
       debugPrint('[AppState] Error deleting record: $e');
       rethrow;

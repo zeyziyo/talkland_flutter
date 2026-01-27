@@ -198,7 +198,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                             
                             const Divider(),
                             
-                            // New: Word/Sentence Toggle & Material Selection
+                            // New: Word/Sentence Toggle
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical: 8),
                               child: Row(
@@ -221,30 +221,12 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                       selected: {appState.recordTypeFilter},
                                       onSelectionChanged: (Set<String> newSelection) {
                                         appState.setRecordTypeFilter(newSelection.first);
-                                        // Reset material selection when type changes?
-                                        // Or just let the dialog filter it next time.
-                                        // Strategy: Keep current material if valid, else reset to Basic.
                                         appState.selectMaterial(0); // Safest to reset to Basic for now
                                       },
                                       style: ButtonStyle(
                                         padding: MaterialStateProperty.all(EdgeInsets.zero),
                                         visualDensity: VisualDensity.compact,
                                       ),
-                                    ),
-                                  ),
-                                  const SizedBox(width: 8),
-                                  
-                                  // Material Selection Icon (Moved from AppBar)
-                                  Ink(
-                                    decoration: ShapeDecoration(
-                                      color: Colors.blueAccent.withOpacity(0.1),
-                                      shape: const CircleBorder(),
-                                    ),
-                                    child: IconButton(
-                                      key: widget.materialDropdownKey,
-                                      icon: const Icon(Icons.folder_open, color: Colors.blueAccent),
-                                      tooltip: l10n.selectMaterialSet,
-                                      onPressed: () => _showMaterialSelectionDialog(context),
                                     ),
                                   ),
                                 ],
