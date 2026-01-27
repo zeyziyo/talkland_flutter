@@ -11,6 +11,7 @@ import '../constants/language_constants.dart';
 import '../services/usage_service.dart';
 import '../models/sentence.dart';
 import '../models/user_library.dart';
+import '../models/dialogue_group.dart';
 
 import '../services/supabase_service.dart';
 import 'package:flutter/widgets.dart';
@@ -88,6 +89,12 @@ class AppState extends ChangeNotifier {
   List<Map<String, dynamic>> _materialRecords = []; // Sentences in selected material
   Set<int> _studiedTranslationIds = {}; // Reviewed translations in current session
   String _recordTypeFilter = 'all'; // 'all', 'word', 'sentence'
+
+  // Phase 11: Dialogue / Chat State
+  String? _activeDialogueId;
+  String? _activeDialogueTitle;
+  int _currentDialogueSequence = 0;
+  List<DialogueGroup> _dialogueGroups = [];
   
   // Getters
   int get currentMode => _currentMode;
@@ -140,6 +147,11 @@ class AppState extends ChangeNotifier {
     _recordTypeFilter = value ? 'word' : 'sentence';
     notifyListeners();
   }
+
+  // Phase 11 Getters
+  String? get activeDialogueId => _activeDialogueId;
+  String? get activeDialogueTitle => _activeDialogueTitle;
+  List<DialogueGroup> get dialogueGroups => _dialogueGroups;
   
   /// Search for similar source texts
   Future<void> searchSimilarSources(String text) async {
@@ -300,6 +312,10 @@ class AppState extends ChangeNotifier {
         curve: Curves.easeInOut
       );
     }
+
+    // Phase 11: AI Chat Mode (Mode index 4 - proposed or just a new screen?)
+    // If we are adding a new mode for Chat, we handle it here.
+    // For now, let's assume we might add a drawer item or special button to start chat.
 
     // Reset transient state
     _statusMessage = '';
@@ -555,7 +571,7 @@ class AppState extends ChangeNotifier {
   }
   
   /// Helper to save to Supabase (Extracted for Dual Write)
-  Future<void> _saveToSupabase() async {
+  Future<void> _saveToSupabase({String? dialogueId, String? speaker, int? sequenceOrder}) async {
       final authorId = SupabaseService.client.auth.currentUser?.id;
 
       if (authorId == null) return;
@@ -581,14 +597,17 @@ class AppState extends ChangeNotifier {
           'status': 'approved',
         });
 
-        // 3. Add to User Library (Important for visibility in Mode 2)
+        // 3. Add to User Library (With Dialogue Metadata)
         await SupabaseService.client.from('user_library').insert({
           'user_id': authorId,
           'group_id': timestamp,
           'personal_note': _note.isNotEmpty ? _note : null,
+          'dialogue_id': dialogueId,
+          'speaker': speaker,
+          'sequence_order': sequenceOrder,
         });
 
-        debugPrint('[AppState] Supabase Cloud Sync Successful: groupId=$timestamp');
+        debugPrint('[AppState] Supabase Cloud Sync Successful: groupId=$timestamp, dialogueId=$dialogueId');
       } catch (e) {
         debugPrint('[AppState] Supabase background save failed: $e');
       }
@@ -620,19 +639,26 @@ class AppState extends ChangeNotifier {
       );
       
       // Link them in translations table
-      await DatabaseService.saveTranslationLink(
+      await DatabaseService.saveTranslationLinkWithMaterial(
         sourceLang: _sourceLang,
         sourceId: sourceId,
         targetLang: _targetLang,
         targetId: targetId,
         materialId: 0, // Default material for now
         note: _note.isNotEmpty ? _note : null,
+        dialogueId: _activeDialogueId,
+        speaker: _activeDialogueId != null ? 'User' : null,
+        sequenceOrder: _activeDialogueId != null ? _currentDialogueSequence : null,
       );
 
       debugPrint('[AppState] Local save successful');
       
       // 2. Supabase Save (Secondary - for Cloud Sync)
-      _saveToSupabase().then((_) {
+      _saveToSupabase(
+        dialogueId: _activeDialogueId,
+        speaker: _activeDialogueId != null ? 'User' : null,
+        sequenceOrder: _activeDialogueId != null ? _currentDialogueSequence : null,
+      ).then((_) {
         debugPrint('[AppState] Background Cloud Sync finished');
       }).catchError((e) {
         debugPrint('[AppState] Background Cloud Sync failed (Offline?): $e');
@@ -779,6 +805,9 @@ class AppState extends ChangeNotifier {
           'target_text': targetSentence.text,
           'personal_note': entry.personalNote,
           'created_at': entry.createdAt.toIso8601String(),
+          'dialogue_id': entry.dialogueId,
+          'speaker': entry.speaker,
+          'sequence_order': entry.sequenceOrder,
           // Review stats from JSON B (default 0 if missing)
           'review_count': entry.reviewStats['count'] ?? 0,
           'last_reviewed': entry.reviewStats['last_reviewed'],
@@ -1850,5 +1879,143 @@ class AppState extends ChangeNotifier {
     _isListening = false;
     notifyListeners();
   }
-}
 
+  // ==========================================
+  // Phase 11: AI Dialogue Management
+  // ==========================================
+
+  /// Create a new dialogue and set as active session
+  Future<void> startNewDialogue({String? persona}) async {
+    try {
+      _statusMessage = 'Starting new chat...';
+      notifyListeners();
+
+      // 1. Create on Supabase
+      final dialogueId = await SupabaseService.createDialogueGroup(
+        title: 'New Conversation', // Initial title
+        persona: persona,
+      );
+
+      _activeDialogueId = dialogueId;
+      _activeDialogueTitle = 'New Conversation';
+      _currentDialogueSequence = 1;
+
+      // 2. Save to local SQLite
+      await DatabaseService.insertDialogueGroup(
+        id: dialogueId,
+        title: 'New Conversation',
+        persona: persona,
+        createdAt: DateTime.now().toIso8601String(),
+        userId: SupabaseService.client.auth.currentUser?.id,
+      );
+
+      _statusMessage = 'Chat started';
+      await loadDialogueGroups();
+      notifyListeners();
+    } catch (e) {
+      _statusMessage = 'Failed to start chat: $e';
+      notifyListeners();
+    }
+  }
+
+  /// Load dialogue groups from both cloud and local
+  Future<void> loadDialogueGroups() async {
+    try {
+      final userId = SupabaseService.client.auth.currentUser?.id;
+      if (userId == null) return;
+
+      // 1. Fetch from Supabase
+      final response = await SupabaseService.client
+          .from('dialogue_groups')
+          .select()
+          .eq('user_id', userId)
+          .order('created_at', ascending: false);
+
+      final cloudGroups = (response as List).map((json) {
+        final group = DialogueGroup.fromJson(json);
+        // Sync to local while we are here
+        DatabaseService.insertDialogueGroup(
+          id: group.id,
+          userId: group.userId,
+          title: group.title,
+          persona: group.persona,
+          createdAt: group.createdAt.toIso8601String(),
+        );
+        return group;
+      }).toList();
+
+      _dialogueGroups = cloudGroups;
+      notifyListeners();
+    } catch (e) {
+      debugPrint('[AppState] Error loading dialogues: $e');
+      // Fallback: load from local
+      final localData = await DatabaseService.getDialogueGroups();
+      _dialogueGroups = localData.map((m) => DialogueGroup(
+        id: m['id'] as String,
+        userId: m['user_id'] as String,
+        title: m['title'] as String?,
+        persona: m['persona'] as String?,
+        createdAt: DateTime.parse(m['created_at'] as String),
+      )).toList();
+      notifyListeners();
+    }
+  }
+
+  /// Reset active dialogue session
+  void clearActiveDialogue() {
+    _activeDialogueId = null;
+    _activeDialogueTitle = null;
+    _currentDialogueSequence = 0;
+    notifyListeners();
+  }
+
+  /// Load an existing dialogue into the active session
+  Future<void> loadExistingDialogue(DialogueGroup group) async {
+    _activeDialogueId = group.id;
+    _activeDialogueTitle = group.title;
+    
+    // Get max sequence order from local DB
+    final records = await DatabaseService.getRecordsByDialogueId(group.id);
+    if (records.isNotEmpty) {
+      _currentDialogueSequence = records.map((r) => (r['sequence_order'] as int? ?? 0)).reduce((a, b) => a > b ? a : b);
+    } else {
+      _currentDialogueSequence = 0;
+    }
+    
+    notifyListeners();
+  }
+
+  /// Save AI response to dialogue
+  Future<void> saveAiResponse(String sourceText, String targetText, {String? speaker = 'AI'}) async {
+    if (_activeDialogueId == null) return;
+
+    _currentDialogueSequence++;
+    
+    // Create translation link (Normally AI responses are already translated concepts)
+    // For simplicity, we just insert them as validated items in this dialogue.
+    
+    // Local
+    final sId = await DatabaseService.insertLanguageRecord(_sourceLang, sourceText);
+    final tId = await DatabaseService.insertLanguageRecord(_targetLang, targetText);
+    
+    await DatabaseService.saveTranslationLinkWithMaterial(
+      sourceLang: _sourceLang,
+      sourceId: sId,
+      targetLang: _targetLang,
+      targetId: tId,
+      materialId: 0,
+      dialogueId: _activeDialogueId,
+      speaker: speaker,
+      sequenceOrder: _currentDialogueSequence,
+    );
+
+    // Sync to Supabase
+    // We treat AI response as a concept too. 
+    // Usually AI response doesn't need 'translation' from user, but we store it as a 'hub' for consistency.
+    _saveToSupabase(
+      dialogueId: _activeDialogueId,
+      speaker: speaker,
+      sequenceOrder: _currentDialogueSequence,
+    );
+  }
+}

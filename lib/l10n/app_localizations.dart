@@ -1397,6 +1397,114 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'발음 연습'**
   String get practiceModeTitle;
+
+  /// No description provided for @chatHistoryTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화 기록'**
+  String get chatHistoryTitle;
+
+  /// No description provided for @chatNewChat.
+  ///
+  /// In ko, this message translates to:
+  /// **'새 대화'**
+  String get chatNewChat;
+
+  /// No description provided for @chatChoosePersona.
+  ///
+  /// In ko, this message translates to:
+  /// **'페르소나 선택'**
+  String get chatChoosePersona;
+
+  /// No description provided for @chatEditTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화 제목 수정'**
+  String get chatEditTitle;
+
+  /// No description provided for @chatTypeHint.
+  ///
+  /// In ko, this message translates to:
+  /// **'메시지를 입력하세요...'**
+  String get chatTypeHint;
+
+  /// No description provided for @chatFailed.
+  ///
+  /// In ko, this message translates to:
+  /// **'채팅 실패: {error}'**
+  String chatFailed(Object error);
+
+  /// No description provided for @chatNoConversations.
+  ///
+  /// In ko, this message translates to:
+  /// **'아직 대화가 없습니다'**
+  String get chatNoConversations;
+
+  /// No description provided for @chatStartNewPrompt.
+  ///
+  /// In ko, this message translates to:
+  /// **'연습을 위해 새 대화를 시작해보세요!'**
+  String get chatStartNewPrompt;
+
+  /// No description provided for @chatFromConversation.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화 발췌 ({speaker})'**
+  String chatFromConversation(Object speaker);
+
+  /// No description provided for @personaTeacher.
+  ///
+  /// In ko, this message translates to:
+  /// **'영어 선생님'**
+  String get personaTeacher;
+
+  /// No description provided for @personaGuide.
+  ///
+  /// In ko, this message translates to:
+  /// **'여행 가이드'**
+  String get personaGuide;
+
+  /// No description provided for @personaFriend.
+  ///
+  /// In ko, this message translates to:
+  /// **'현지인 친구'**
+  String get personaFriend;
+
+  /// No description provided for @chatUntitled.
+  ///
+  /// In ko, this message translates to:
+  /// **'제목 없는 대화'**
+  String get chatUntitled;
+
+  /// No description provided for @chatAiChat.
+  ///
+  /// In ko, this message translates to:
+  /// **'AI 채팅'**
+  String get chatAiChat;
+
+  /// No description provided for @helpModeChatDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'AI 페르소나와 대화하며 실전 회화를 연습하고 유용한 문장을 저장하세요.'**
+  String get helpModeChatDesc;
+
+  /// No description provided for @helpModeChatDetails.
+  ///
+  /// In ko, this message translates to:
+  /// **'• 채팅 시작: 상단 메뉴의 말풍선 아이콘 클릭\n• 페르소나 선택: 선생님, 가이드, 친구 중 선택\n• 대화 및 저장: AI 응답은 자동 번역됩니다. 메시지를 클릭하여 복습 모드로 저장하세요\n• 자동 제목: 대화 주제에 따라 AI가 제목을 추천합니다\n• 이력 관리: 과거 대화 내용을 언제든 다시 확인할 수 있습니다'**
+  String get helpModeChatDetails;
+
+  /// No description provided for @tutorialAiChatTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'AI 채팅'**
+  String get tutorialAiChatTitle;
+
+  /// No description provided for @tutorialAiChatDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'AI 페르소나와 실전 대화를 연습해 보세요.'**
+  String get tutorialAiChatDesc;
 }
 
 class _AppLocalizationsDelegate

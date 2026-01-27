@@ -129,6 +129,13 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
                 details: l10n.helpMode3Details,
                 color: Colors.purple[50]!,
               ),
+              _buildModeCard(
+                icon: Icons.chat_bubble,
+                title: '${l10n.chatAiChat} (Chat)',
+                desc: l10n.helpModeChatDesc,
+                details: l10n.helpModeChatDetails,
+                color: Colors.orange[50]!,
+              ),
             ],
           ),
         ),
@@ -138,7 +145,7 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(3, (index) {
+            children: List.generate(4, (index) {
               return Container(
                 margin: const EdgeInsets.symmetric(horizontal: 4),
                 width: 8,

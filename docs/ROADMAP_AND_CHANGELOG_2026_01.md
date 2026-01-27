@@ -51,7 +51,28 @@
     3.  **고득점 (>80점)**: 자동 승인 및 저장 (`approved`).
     4.  **저득점**: 거절(`rejected`) 또는 관리자 확인 대기(`pending`).
 
-## 5. 향후 작업 (Next Steps)
-1.  [ ] **Supabase 설정**: 프로젝트 생성 및 테이블 구축.
-2.  [ ] **Edge Function 구현**: `translate-and-validate` 함수 개발.
-3.  [ ] **Flutter 마이그레이션**: 로컬 SQLite 로직을 Supabase SDK로 교체.
+## 5. 작업 현황 (Status)
+
+### ✅ Phase 1~7: 기반 구축 완료 (Jan 20-25)
+*   [x] **Supabase 설정**: 프로젝트 생성 및 테이블(sentences, user_library) 구축 완료.
+*   [x] **Edge Function 구현**: `translate-and-validate` 함수 개발 및 배포 완료.
+*   [x] **Flutter 마이그레이션**: 로컬 SQLite와 Supabase 실시간 동기화 엔진(Dual-write) 구축 완료.
+
+### ✅ Phase 8: 사용자 경험 혁신 (Jan 26)
+*   [x] **Swipe UI**: 홈 화면에서 모드 간 스와이프 이동 구현.
+*   [x] **Universal Deletion**: 로컬과 서버의 데이터를 동시 삭제하는 통합 로직 구현.
+*   [x] **AppBar Refinement**: 모드명 자동 표시 및 학습 자료 선택 UI 개선.
+
+### ✅ Phase 9: 글로벌 진출 및 안정화 (Jan 27)
+*   [x] **국제화 동기화**: 43개 언어에 대한 ARB 파일(v1.0.4) 최신화 및 AI 번역 동기화.
+*   [x] **배포 준비**: 앱 버전 상향(`1.0.4+8`) 및 구글 플레이 업그레이드 가이드 작성.
+
+### ✅ Phase 11: 대화형 학습 및 AI 채팅 (Jan 27)
+*   [x] **Dialogue Engine**: 대화 그룹화(Dialogue Group) 및 맥락 보존형 데이터 구조 구축 완료.
+*   [x] **Messenger UI**: AI 페르소나 기반 실시간 채팅 인터페이스 구현 완료.
+*   [x] **Auto-Titling**: Gemini 기반 대화 주제 분석 및 제목 자동 생성 기능 도입.
+*   [x] **Help & Tutorial**: AI 채팅 전용 도움말 및 인터랙티브 가이드 전수 업데이트.
+
+### 🚀 Phase 10: AI 기반 학습 추천 (Planned)
+*   [ ] **Recommender**: 사용자 데이터를 분석하여 맞춤형 학습 콘텐츠 제안.
+*   [ ] **Home Widget**: 오늘의 추천 문장을 보여주는 세련된 UI 위젯 추가.

@@ -3,181 +3,156 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 
 /// Configuration
-const String kMasterFile = 'lib/l10n/app_ko.arb'; // Master is Korean
+const String kMasterFile = 'lib/l10n/app_ko.arb';
 const String kL10nDir = 'lib/l10n';
 const String kEnvFile = '.env';
-const String kApiKeyEnvName = 'GOOGLE_CLOUD_API_KEY';
-const String kTranslationApiUrl = 'https://translation.googleapis.com/language/translate/v2';
+const String kGeminiKeyEnv = 'GEMINI_API_KEY';
+const String kGeminiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
 
-/// Main Entry Point
 void main(List<String> args) async {
-  print('🌐 Starting L10n Manager...');
+  print('🚀 Starting High-Speed L10n Manager (Batch Mode)...');
   
-  // 1. Load API Key
-  final apiKey = await _loadApiKey();
-  if (apiKey == null) {
-    print('⚠️  Warning: $kApiKeyEnvName not found in $kEnvFile.');
-    print('   Translation will be skipped, and keys will be added with [TODO] markers.');
-  } else {
-    print('✅ API Key loaded.');
-  }
+  final env = await _loadEnv();
+  final geminiKey = env[kGeminiKeyEnv];
 
-  // 2. Load Master ARB
-  final masterFile = File(kMasterFile);
-  if (!masterFile.existsSync()) {
-    print('❌ Master file not found: $kMasterFile');
+  if (geminiKey == null) {
+    print('❌ Error: $kGeminiKeyEnv not found in $kEnvFile.');
     exit(1);
   }
-  
-  final masterMap = _parseArb(masterFile);
-  print('📦 Master (${masterFile.path}) loaded: ${masterMap.length} keys.');
 
-  // 3. Process All ARB Files
+  final masterFile = File(kMasterFile);
+  final masterMap = _parseArb(masterFile);
+  print('📦 Master loaded: ${masterMap.length} keys.');
+
   final dir = Directory(kL10nDir);
   final files = dir.listSync().whereType<File>().where((f) => f.path.endsWith('.arb')).toList();
+  files.sort((a, b) => a.path.compareTo(b.path));
 
   for (final file in files) {
-    if (file.path == masterFile.path) continue; // Skip master
-    
-    await _processFile(file, masterMap, apiKey);
+    if (file.path == masterFile.path) continue;
+    await _processFileBatch(file, masterMap, geminiKey);
   }
 
-  print('✨ L10n Update Complete.');
+  print('✨ L10n Update Complete. Run "flutter gen-l10n" to apply changes.');
 }
 
-/// Process individual ARB file
-Future<void> _processFile(File file, Map<String, dynamic> masterMap, String? apiKey) async {
+Future<void> _processFileBatch(File file, Map<String, dynamic> masterMap, String apiKey) async {
   final langCode = _extractLangCode(file.path);
   final targetMap = _parseArb(file);
-  bool modified = false;
-  int addedCount = 0;
-
-  print('running process for $langCode...');
   
-  final sortedKeys = masterMap.keys.toList(); // Maintain master order if possible
-  
-  // Create a new map to enforce order (optional, but good for git diffs)
-  // Logic: Iterate master keys. If existing in target, keep. If missing, add.
-  // Note: This might reorder existing files. For safety, let's just append missing ones for now
-  // or insert carefully. Actually, re-creating the map based on Master order is cleaner.
-  
-  final newMap = <String, dynamic>{};
-  
-  // Preserve meta keys first (@@locale etc)
-  if (targetMap.containsKey('@@locale')) newMap['@@locale'] = targetMap['@@locale'];
+  final sortedKeys = masterMap.keys.toList();
+  final batchToTranslate = <String, String>{};
   
   for (final key in sortedKeys) {
-    if (key.startsWith('@')) continue; // Skip metadata keys for now, handle with main key
-    
-    if (targetMap.containsKey(key)) {
-      newMap[key] = targetMap[key];
-      // Also copy metadata if exists
-      if (targetMap.containsKey('@$key')) {
-        newMap['@$key'] = targetMap['@$key'];
-      }
-    } else {
-      // Key Missing!
-      final masterValue = masterMap[key] as String;
-      String translatedValue;
-      
-      if (apiKey != null) {
-        // Auto-Translate
-        print('   Translating "$key" to ($langCode)...');
-        try {
-          translatedValue = await _translate(masterValue, 'ko', langCode, apiKey);
-        } catch (e) {
-          print('   ❌ Translation failed: $e');
-          translatedValue = '$masterValue (TODO: Translate)';
-        }
-      } else {
-        translatedValue = '$masterValue (TODO: Translate)';
-      }
-      
-      newMap[key] = translatedValue;
-      modified = true;
-      addedCount++;
-    }
-  }
-  
-  // Add any extra keys that exist in target but not master? (Obsolete keys)
-  // For strict sync, we might want to keep them or warn. Let's keep them at end.
-  for (final key in targetMap.keys) {
-    if (!newMap.containsKey(key) && !key.startsWith('@')) {
-       newMap[key] = targetMap[key];
+    if (key.startsWith('@')) continue;
+    bool isMissing = !targetMap.containsKey(key);
+    bool needsTranslation = !isMissing && targetMap[key].toString().contains('(TODO: Translate)');
+    if (isMissing || needsTranslation) {
+      batchToTranslate[key] = masterMap[key];
     }
   }
 
-  if (modified) {
+  if (batchToTranslate.isEmpty) {
+    print('✅ $langCode: Up to date.');
+    return;
+  }
+
+  print('🌐 $langCode: Batch translating ${batchToTranslate.length} keys...');
+  
+  try {
+    final translations = await _translateBatch(batchToTranslate, 'Korean', langCode, apiKey);
+    
+    final newMap = <String, dynamic>{};
+    if (targetMap.containsKey('@@locale')) newMap['@@locale'] = targetMap['@@locale'];
+
+    for (final key in sortedKeys) {
+      if (key.startsWith('@')) continue;
+      
+      if (translations.containsKey(key)) {
+        newMap[key] = translations[key];
+      } else if (targetMap.containsKey(key)) {
+        newMap[key] = targetMap[key];
+      } else {
+        newMap[key] = masterMap[key] + ' (TODO: Manual Translate)';
+      }
+
+      if (masterMap.containsKey('@$key')) {
+        newMap['@$key'] = masterMap['@$key'];
+      }
+    }
+
     const encoder = JsonEncoder.withIndent('  ');
     await file.writeAsString(encoder.convert(newMap));
-    print('   📝 Updated ${file.path} (Added $addedCount keys)');
-  }
-}
-
-/// Parse ARB (JSON)
-Map<String, dynamic> _parseArb(File file) {
-  try {
-    return jsonDecode(file.readAsStringSync());
+    print('   📝 Updated ${file.path}');
   } catch (e) {
-    print('❌ Invalid JSON in ${file.path}: $e');
-    return {};
+    print('   ❌ Error batch translating $langCode: $e');
   }
 }
 
-/// Extract language code from filename (app_ko.arb -> ko)
-String _extractLangCode(String path) {
-  final filename = path.split(Platform.pathSeparator).last;
-  final parts = filename.split('_');
-  if (parts.length >= 2) {
-    return parts.sublist(1).join('_').replaceAll('.arb', '');
-  }
-  return 'en';
-}
+Future<Map<String, String>> _translateBatch(Map<String, String> batch, String sourceLang, String targetLang, String apiKey) async {
+  // Normalize target lang for prompt
+  String displayTarget = targetLang;
+  if (targetLang == 'ko') displayTarget = 'Korean';
+  if (targetLang == 'en') displayTarget = 'English';
+  if (targetLang == 'ja') displayTarget = 'Japanese';
 
-/// Load API Key from .env
-Future<String?> _loadApiKey() async {
-  final file = File(kEnvFile);
-  if (!file.existsSync()) return null;
-  
-  final lines = await file.readAsLines();
-  for (final line in lines) {
-    if (line.trim().startsWith(kApiKeyEnvName)) {
-      // Format: KEY=VALUE or KEY="VALUE"
-      final parts = line.split('=');
-      if (parts.length >= 2) {
-        var val = parts.sublist(1).join('=').trim();
-        if (val.startsWith('"') && val.endsWith('"')) {
-          val = val.substring(1, val.length - 1);
-        }
-        return val;
-      }
-    }
-  }
-  return null;
-}
+  final prompt = '''
+Translate the following JSON object values from $sourceLang to $displayTarget (Locale code: $targetLang).
+Return ONLY a valid JSON object with the same keys. 
+Keep the meaning natural and appropriate for a mobile app UI.
 
-/// Call Google Cloud Translation API
-Future<String> _translate(String text, String source, String target, String apiKey) async {
-  // Normalize codes (same logic as app)
-  if (target == 'he') target = 'iw';
-  if (target == 'fil') target = 'tl'; // Google uses 'tl' for Tagalog/Filipino usually, check docs
-  
-  final url = Uri.parse('$kTranslationApiUrl?key=$apiKey');
+Input JSON:
+${jsonEncode(batch)}
+''';
+
   final response = await http.post(
-    url,
+    Uri.parse('$kGeminiUrl?key=$apiKey'),
     headers: {'Content-Type': 'application/json'},
     body: jsonEncode({
-      'q': text,
-      'source': source,
-      'target': target,
-      'format': 'text'
+      'contents': [
+        {
+          'parts': [{'text': prompt}]
+        }
+      ],
+      'generationConfig': {
+        'response_mime_type': 'application/json',
+      }
     }),
   );
 
   if (response.statusCode == 200) {
     final data = jsonDecode(response.body);
-    return data['data']['translations'][0]['translatedText'];
+    final text = data['candidates'][0]['content']['parts'][0]['text'];
+    return Map<String, String>.from(jsonDecode(text));
   } else {
-    throw Exception('API Error: ${response.body}');
+    throw Exception('Gemini Error (${response.statusCode}): ${response.body}');
   }
+}
+
+Map<String, dynamic> _parseArb(File file) {
+  try {
+    return jsonDecode(file.readAsStringSync());
+  } catch (e) {
+    return {};
+  }
+}
+
+String _extractLangCode(String path) {
+  final filename = path.split(Platform.pathSeparator).last;
+  final parts = filename.split('_');
+  return parts.length >= 2 ? parts.sublist(1).join('_').replaceAll('.arb', '') : 'en';
+}
+
+Future<Map<String, String>> _loadEnv() async {
+  final file = File(kEnvFile);
+  if (!file.existsSync()) return {};
+  final env = <String, String>{};
+  for (final line in await file.readAsLines()) {
+    if (line.trim().startsWith('#') || !line.contains('=')) continue;
+    final parts = line.split('=');
+    var val = parts.sublist(1).join('=').trim();
+    if (val.startsWith('"') && val.endsWith('"')) val = val.substring(1, val.length - 1);
+    env[parts[0].trim()] = val;
+  }
+  return env;
 }

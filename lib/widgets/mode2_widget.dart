@@ -480,12 +480,31 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                     ),
                     const SizedBox(width: 8),
                     Expanded(
-                      child: Text(
-                        topText,
-                        style: TextStyle(
-                          fontSize: (record['type'] == 'word') ? 24 : 16,
-                          fontWeight: FontWeight.w500,
-                        ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          if (record['dialogue_id'] != null)
+                             Padding(
+                               padding: const EdgeInsets.only(bottom: 4),
+                               child: Row(
+                                 children: [
+                                   Icon(Icons.chat_bubble_outline, size: 10, color: Colors.blue[300]),
+                                   const SizedBox(width: 4),
+                                   Text(
+                                     l10n.chatFromConversation(record['speaker'] ?? "AI"),
+                                     style: TextStyle(fontSize: 10, color: Colors.blue[300], fontWeight: FontWeight.bold),
+                                   ),
+                                 ],
+                               ),
+                             ),
+                          Text(
+                            topText,
+                            style: TextStyle(
+                              fontSize: (record['type'] == 'word') ? 24 : 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],

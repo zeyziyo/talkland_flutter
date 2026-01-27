@@ -11,6 +11,7 @@ import '../widgets/mode3_widget.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 import '../widgets/help_dialog.dart';
 import '../constants/language_constants.dart';
+import 'chat_history_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -28,6 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _contextFieldKey = GlobalKey();
   final GlobalKey _mode1DropdownKey = GlobalKey(); // Mode 1 Material Dropdown Key
   final GlobalKey _materialIconKey = GlobalKey(); // New: Material Icon Key
+  final GlobalKey _chatIconKey = GlobalKey(); // AI Chat Icon Key
 
   // Mode 2 Keys
   final GlobalKey _mode2DropdownKey = GlobalKey();
@@ -170,11 +172,19 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
 
-       // New: Material Icon in AppBar
        targets.add(_buildTarget(
         _materialIconKey, 
-        l10n.tutorialM2SelectTitle, // "Select Material"
-        l10n.tutorialM2SelectDesc, // "Tap the library icon..."
+        l10n.tutorialM2SelectTitle, 
+        l10n.tutorialM2SelectDesc, 
+        ContentAlign.bottom,
+        radius: 12,
+      ));
+
+      // New: AI Chat Icon Tutorial
+      targets.add(_buildTarget(
+        _chatIconKey, 
+        l10n.tutorialAiChatTitle, 
+        l10n.tutorialAiChatDesc,
         ContentAlign.bottom,
         radius: 12,
       ));
@@ -384,6 +394,19 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             actions: [
+              // AI Chat Button (Phase 11) - Points to History
+              IconButton(
+                key: _chatIconKey,
+                icon: const Icon(Icons.chat_bubble_outline),
+                tooltip: l10n.chatAiChat,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ChatHistoryScreen()),
+                  );
+                },
+              ),
+              
               // Universal Material Selection Icon
               IconButton(
                 key: _materialIconKey,
@@ -504,7 +527,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 ListTile(
                   leading: const Icon(Icons.keyboard),
-                  title: const Text('입력'),
+                  title: Text(l10n.inputModeTitle),
                   selected: appState.currentMode == 0,
                   selectedColor: const Color(0xFF667eea),
                   onTap: () {
@@ -514,7 +537,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 ListTile(
                   leading: const Icon(Icons.auto_stories),
-                  title: const Text('복습'),
+                  title: Text(l10n.reviewModeTitle),
                   selected: appState.currentMode == 1,
                   selectedColor: const Color(0xFF667eea),
                   onTap: () {
@@ -524,12 +547,24 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 ListTile(
                   leading: const Icon(Icons.record_voice_over),
-                  title: const Text('발음 연습'),
+                  title: Text(l10n.practiceModeTitle),
                   selected: appState.currentMode == 2,
                   selectedColor: const Color(0xFF667eea),
                   onTap: () {
                     appState.switchMode(2);
                     Navigator.pop(context);
+                  },
+                ),
+                const Divider(),
+                ListTile(
+                  leading: const Icon(Icons.chat_bubble),
+                  title: Text(l10n.chatAiChat),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ChatHistoryScreen()),
+                    );
                   },
                 ),
               ],

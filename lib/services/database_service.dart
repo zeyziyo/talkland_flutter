@@ -23,12 +23,32 @@ class DatabaseService {
     
     return await openDatabase(
       path,
-      version: 1, // Reset to Version 1 for release
+      version: 2, // Upgraded for Phase 11
       onCreate: (db, version) async {
         await _createBaseTables(db);
         await _ensureDefaultMaterial(db);
       },
-      // No onUpgrade needed since we are resetting to V1 before release
+      onUpgrade: (db, oldVersion, newVersion) async {
+        if (oldVersion < 2) {
+          // Add dialogue_groups table
+          await db.execute('''
+            CREATE TABLE dialogue_groups (
+              id TEXT PRIMARY KEY,
+              user_id TEXT,
+              title TEXT,
+              persona TEXT,
+              created_at TEXT NOT NULL
+            )
+          ''');
+          
+          // Add dialogue columns to translations table
+          await db.execute('ALTER TABLE translations ADD COLUMN dialogue_id TEXT');
+          await db.execute('ALTER TABLE translations ADD COLUMN speaker TEXT');
+          await db.execute('ALTER TABLE translations ADD COLUMN sequence_order INTEGER');
+          
+          print('[DB] Upgraded to version 2: Dialogue support added');
+        }
+      },
     );
   }
   
@@ -45,7 +65,21 @@ class DatabaseService {
         created_at TEXT NOT NULL,
         material_id INTEGER,
         note TEXT,
-        type TEXT DEFAULT 'sentence'
+        type TEXT DEFAULT 'sentence',
+        dialogue_id TEXT,
+        speaker TEXT,
+        sequence_order INTEGER
+      )
+    ''');
+
+    // 대화 그룹 테이블
+    await db.execute('''
+      CREATE TABLE dialogue_groups (
+        id TEXT PRIMARY KEY,
+        user_id TEXT,
+        title TEXT,
+        persona TEXT,
+        created_at TEXT NOT NULL
       )
     ''');
     
@@ -903,6 +937,7 @@ class DatabaseService {
     }
   }
   
+
   static Future<void> saveTranslationLinkWithMaterial({
     required String sourceLang,
     required int sourceId,
@@ -911,12 +946,22 @@ class DatabaseService {
     required int materialId,
     String? note,
     String type = 'sentence',
+    String? dialogueId,
+    String? speaker,
+    int? sequenceOrder,
   }) async {
     final db = await database;
     
     String whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND material_id = ?';
     List<dynamic> whereArgs = [sourceLang, sourceId, targetLang, targetId, materialId];
     
+    if (dialogueId != null) {
+      whereClause += ' AND dialogue_id = ?';
+      whereArgs.add(dialogueId);
+    } else {
+      whereClause += ' AND dialogue_id IS NULL';
+    }
+
     if (note != null) {
       whereClause += ' AND note = ?';
       whereArgs.add(note);
@@ -943,8 +988,11 @@ class DatabaseService {
       'target_lang': targetLang,
       'target_id': targetId,
       'material_id': materialId,
-      'note': note, // Save note
+      'note': note,
       'type': type,
+      'dialogue_id': dialogueId,
+      'speaker': speaker,
+      'sequence_order': sequenceOrder,
       'created_at': DateTime.now().toIso8601String(),
     });
     
@@ -1065,11 +1113,96 @@ class DatabaseService {
           'created_at': translation['created_at'],
           'note': translation['note'],
           'type': translation['type'] ?? 'sentence',
+          'dialogue_id': translation['dialogue_id'],
+          'speaker': translation['speaker'],
+          'sequence_order': translation['sequence_order'],
         });
       }
     }
     
     print('[DB] Retrieved ${results.length} records for material_id=$materialId');
+    return results;
+  }
+
+  // === Dialogue Group Operations (Phase 11) ===
+
+  /// Insert or Update a dialogue group
+  static Future<void> insertDialogueGroup({
+    required String id,
+    String? userId,
+    String? title,
+    String? persona,
+    required String createdAt,
+  }) async {
+    final db = await database;
+    await db.insert(
+      'dialogue_groups',
+      {
+        'id': id,
+        'user_id': userId,
+        'title': title,
+        'persona': persona,
+        'created_at': createdAt,
+      },
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+    print('[DB] Dialogue group saved: $id ($title)');
+  }
+
+  /// Get all dialogue groups for a user
+  static Future<List<Map<String, dynamic>>> getDialogueGroups() async {
+    final db = await database;
+    return await db.query('dialogue_groups', orderBy: 'created_at DESC');
+  }
+
+  /// Update dialogue title
+  static Future<void> updateLocalDialogueTitle(String id, String title) async {
+    final db = await database;
+    await db.update(
+      'dialogue_groups',
+      {'title': title},
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+  }
+
+  /// Get all translations for a specific dialogue
+  static Future<List<Map<String, dynamic>>> getRecordsByDialogueId(String dialogueId) async {
+    final db = await database;
+    
+    final translations = await db.query(
+      'translations',
+      where: 'dialogue_id = ?',
+      whereArgs: [dialogueId],
+      orderBy: 'sequence_order ASC',
+    );
+    
+    List<Map<String, dynamic>> results = [];
+    
+    for (var translation in translations) {
+      final sourceLang = translation['source_lang'] as String;
+      final sourceId = translation['source_id'] as int;
+      final targetLang = translation['target_lang'] as String;
+      final targetId = translation['target_id'] as int;
+      
+      final sourceTableName = 'lang_$sourceLang'.replaceAll('-', '_');
+      final sourceRecords = await db.query(sourceTableName, where: 'id = ?', whereArgs: [sourceId], limit: 1);
+      
+      final targetTableName = 'lang_$targetLang'.replaceAll('-', '_');
+      final targetRecords = await db.query(targetTableName, where: 'id = ?', whereArgs: [targetId], limit: 1);
+      
+      if (sourceRecords.isNotEmpty && targetRecords.isNotEmpty) {
+        results.add({
+          'id': translation['id'],
+          'source_text': sourceRecords.first['text'],
+          'target_text': targetRecords.first['text'],
+          'speaker': translation['speaker'],
+          'sequence_order': translation['sequence_order'],
+          'created_at': translation['created_at'],
+          'note': translation['note'],
+        });
+      }
+    }
     return results;
   }
 }

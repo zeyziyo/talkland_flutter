@@ -48,6 +48,17 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 * **Pronunciation Evaluation**: Accuracy score (0-100) & feedback
 * **Auto-Repeat**: Repeat sentences excluding those fully mastered
 
+### MODE 4: AI 채팅 (AI Chat)
+- 💬 **실시간 대화**: AI 페르소나(교사, 친구 등)와 실전 회화 연습
+- 🤖 **자동 번역 및 저장**: AI 응답을 즉시 번역하고, 클릭 한 번으로 복습 기록에 저장
+- 📑 **대화 이력 관리**: 과거 대화 내용을 불러오고 제목을 수정하여 관리
+- 🧠 **맥락 보존**: 채팅에서 저장한 문장은 복습 모드에서 대화 맥락과 함께 표시
+
+* **Real-time Conversation**: Practice speaking with AI personas (teacher, friend, etc.)
+* **Auto-Translation & Save**: Instantly translate AI responses and save to study records with one tap
+* **History Management**: Revisit past chats & edit titles for better organization
+* **Context Preservation**: Chat-sourced sentences retain their dialogue context in Review Mode
+
 ## 지원 언어 (Supported Languages)
 
 Talkie는 **43개 언어**를 지원합니다:
@@ -127,7 +138,9 @@ lib/
 │   ├── speech_service.dart      # STT/TTS Services
 │   └── translation_service.dart # Translation Service
 ├── screens/
-│   └── home_screen.dart         # Main Screen & Tutorial
+│   ├── home_screen.dart         # Main Screen & Tutorial
+│   ├── chat_screen.dart         # AI Chat Interface
+│   └── chat_history_screen.dart # Conversation History
 ├── widgets/
 │   ├── mode1_widget.dart        # MODE 1: Search UI
 │   ├── mode2_widget.dart        # MODE 2: Study Material & Review UI

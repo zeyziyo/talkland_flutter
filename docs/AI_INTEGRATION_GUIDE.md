@@ -154,6 +154,16 @@ Deno.serve(async (req: Request) => {
 4. 위 코드 붙여넣기
 5. **[Deploy]** 클릭
 
+#### 3.3.4 함수 코드 (process-chat) - Phase 11 추가
+AI와 실시간으로 대화하고 대화의 제목을 자동으로 생성하는 함수입니다.
+
+```typescript
+// process-chat 코드 요약
+// - system_prompt를 통해 페르소나(교사, 친구 등) 설정
+// - 대화 이력을 포함하여 문맥 유지
+// - 응답 시 사용자의 필요에 따라 제목(title) 자동 생성 로직 포함
+```
+
 ---
 
 ### 3.4 Flutter 앱 연동
@@ -259,6 +269,58 @@ Repository → Settings → Secrets and variables → Actions → New repository
 
 ---
 
+### 3.6 AI Chat Edge Function
+
+#### 3.6.1 `process-chat` 함수 배포
+`3.3.4 함수 코드 (process-chat)` 섹션의 코드를 사용하여 Supabase Edge Function으로 배포합니다.
+1. Supabase 대시보드 → **⚡ Edge Functions**
+2. **[Create a new Function]** 클릭
+3. Function slug: `process-chat`
+4. `process-chat` 코드 붙여넣기
+5. **[Deploy]** 클릭
+
+#### 3.6.2 Flutter 앱에서 `process-chat` 호출
+`SupabaseService`에 새로운 메서드를 추가하여 `process-chat` Edge Function을 호출합니다.
+
+```dart
+// SupabaseService 클래스 내부에 추가
+static Future<Map<String, dynamic>> processChat({
+  required List<Map<String, String>> history, // [{role: 'user', parts: 'hello'}, {role: 'model', parts: 'hi'}]
+  required String newMessage,
+  String? systemPrompt, // AI의 페르소나 설정 (예: 'You are a helpful assistant.')
+}) async {
+  final response = await client.functions.invoke(
+    'process-chat',
+    body: {
+      'history': history,
+      'newMessage': newMessage,
+      'systemPrompt': systemPrompt,
+    },
+  );
+  return Map<String, dynamic>.from(response.data);
+}
+```
+
+---
+
+### 3.7 Dialogue Management
+
+AI 챗봇과의 대화 흐름을 관리하고, 대화 기록을 저장하며, 새로운 대화 시작 시 제목을 생성하는 로직을 구현합니다.
+
+#### 3.7.1 대화 기록 저장 (Supabase DB)
+사용자의 대화 기록을 Supabase 데이터베이스에 저장하여 지속적인 대화 문맥을 유지합니다.
+- `chats` 테이블: `id`, `user_id`, `title`, `created_at`
+- `messages` 테이블: `id`, `chat_id`, `role` (`user` or `model`), `content`, `created_at`
+
+#### 3.7.2 대화 제목 자동 생성
+`process-chat` Edge Function은 첫 메시지 또는 중요한 대화 전환 시 대화의 제목을 자동으로 생성하여 반환할 수 있습니다. 이 제목을 `chats` 테이블에 저장하여 사용자에게 대화 목록을 제공합니다.
+
+#### 3.7.3 UI 통합
+- 대화 목록 화면: 저장된 대화 제목을 표시
+- 대화 상세 화면: 선택된 대화의 메시지 기록을 표시하고, 새로운 메시지 입력 필드 제공
+
+---
+
 ## 4. 트러블슈팅
 
 ### 4.1 `LateInitializationError: Field 'client' has not been initialized`
@@ -335,4 +397,4 @@ await fetch(`https://generativelanguage.googleapis.com/v1beta/${modelName}:gener
 
 ---
 
-*마지막 업데이트: 2026-01-26*
+*마지막 업데이트: 2026-01-27 (Phase 11 대화형 AI 통합 완료)*

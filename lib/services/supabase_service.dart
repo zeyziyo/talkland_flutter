@@ -192,7 +192,7 @@ class SupabaseService {
     }
   }
   
-  static Future<void> _addToLibrary(int groupId, String? note) async {
+  static Future<void> _addToLibrary(int groupId, String? note, {String? dialogueId, String? speaker, int? sequenceOrder}) async {
     final userId = client.auth.currentUser?.id;
     if (userId == null) return;
     
@@ -200,14 +200,56 @@ class SupabaseService {
       await client.from('user_library').upsert({
         'user_id': userId,
         'group_id': groupId,
-        // Only update note if provided, otherwise query existing? 
-        // Upsert might overwrite note with null if we aren't careful.
-        // Let's assume we want to preserve existing note if new one is null.
-        // But strict upsert replaces. For simplicity, just upsert.
+        'dialogue_id': dialogueId,
+        'speaker': speaker,
+        'sequence_order': sequenceOrder,
         'personal_note': note,
-      }, onConflict: 'user_id, group_id'); // Ensure uniqueness
+      }, onConflict: 'user_id, group_id, dialogue_id'); // Updated for Phase 11
     } catch (e) {
-      // Ignore
+      print('Supabase: Add to library failed: $e');
+    }
+  }
+
+  // === Dialogue Group Operations (Phase 11) ===
+
+  /// Create a new dialogue group
+  static Future<String> createDialogueGroup({String? title, String? persona}) async {
+    final userId = client.auth.currentUser?.id;
+    if (userId == null) throw Exception('User not authenticated');
+
+    final response = await client.from('dialogue_groups').insert({
+      'user_id': userId,
+      'title': title,
+      'persona': persona,
+    }).select('id').single();
+
+    return response['id'] as String;
+  }
+
+  /// Update dialogue group title
+  static Future<void> updateDialogueTitle(String id, String title) async {
+    await client.from('dialogue_groups').update({'title': title}).eq('id', id);
+  }
+
+  /// Call 'process-chat' Edge Function (Draft for Phase 11)
+  static Future<Map<String, dynamic>> processChat({
+    required String text,
+    required String context, // Dialogue history or Persona
+    required String targetLang,
+  }) async {
+    try {
+      final response = await client.functions.invoke(
+        'process-chat',
+        body: {
+          'text': text,
+          'context': context,
+          'targetLang': targetLang,
+        },
+      );
+      return Map<String, dynamic>.from(response.data);
+    } catch (e) {
+      print('Supabase Chat Function Error: $e');
+      throw Exception('Chat Failed: $e');
     }
   }
 }

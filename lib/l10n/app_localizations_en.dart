@@ -578,10 +578,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuSettings => 'Language Settings';
 
   @override
-  String get basicWords => 'Basic Words';
+  String get basicWords => 'Basic Word Repository';
 
   @override
-  String get basicSentences => 'Basic Sentences';
+  String get basicSentences => 'Basic Sentence Repository';
 
   @override
   String get selectMaterialSet => 'Select Study Material Set';
@@ -674,11 +674,72 @@ class AppLocalizationsEn extends AppLocalizations {
   String get skip => 'Skip';
 
   @override
-  String get inputModeTitle => '입력 (TODO: Translate)';
+  String get inputModeTitle => 'Input';
 
   @override
-  String get reviewModeTitle => '복습 (TODO: Translate)';
+  String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => '발음 연습 (TODO: Translate)';
+  String get practiceModeTitle => 'Practice';
+
+  @override
+  String get chatHistoryTitle => 'Conversation History';
+
+  @override
+  String get chatNewChat => 'New Chat';
+
+  @override
+  String get chatChoosePersona => 'Choose a Persona';
+
+  @override
+  String get chatEditTitle => 'Edit Conversation Title';
+
+  @override
+  String get chatTypeHint => 'Type a message...';
+
+  @override
+  String chatFailed(Object error) {
+    return 'Chat failed: $error';
+  }
+
+  @override
+  String get chatNoConversations => 'No conversations yet';
+
+  @override
+  String get chatStartNewPrompt => 'Start a new chat to practice!';
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'From Conversation ($speaker)';
+  }
+
+  @override
+  String get personaTeacher => 'English Teacher';
+
+  @override
+  String get personaGuide => 'Travel Guide';
+
+  @override
+  String get personaFriend => 'Local Friend';
+
+  @override
+  String get chatUntitled => 'Untitled Conversation';
+
+  @override
+  String get chatAiChat => 'AI Chat';
+
+  @override
+  String get helpModeChatDesc =>
+      'Talk to AI persona to practice real conversation and save useful sentences.';
+
+  @override
+  String get helpModeChatDetails =>
+      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+
+  @override
+  String get tutorialAiChatTitle => 'AI Chat';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'Practice real conversation with AI personas here.';
 }

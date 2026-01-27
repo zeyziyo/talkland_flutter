@@ -467,11 +467,11 @@
   "@menuSettings": {
     "description": "Menu item for language settings"
   },
-  "basicWords": "Basic Words",
+  "basicWords": "Basic Word Repository",
   "@basicWords": {
     "description": "Default name for basic vocabulary material"
   },
-  "basicSentences": "Basic Sentences",
+  "basicSentences": "Basic Sentence Repository",
   "@basicSentences": {
     "description": "Default name for basic sentences material"
   },
@@ -521,9 +521,41 @@
   "@skip": {
     "description": "Skip button"
   },
-  "inputModeTitle": "입력 (TODO: Translate)",
-  "reviewModeTitle": "복습 (TODO: Translate)",
-  "practiceModeTitle": "발음 연습 (TODO: Translate)",
+  "inputModeTitle": "Input",
+  "reviewModeTitle": "Review",
+  "practiceModeTitle": "Practice",
   "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode"
+  "tutorialM1ToggleTitle": "Word/Sentence Mode",
+  "chatHistoryTitle": "Conversation History",
+  "chatNewChat": "New Chat",
+  "chatChoosePersona": "Choose a Persona",
+  "chatEditTitle": "Edit Conversation Title",
+  "chatTypeHint": "Type a message...",
+  "chatFailed": "Chat failed: {error}",
+  "@chatFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "chatNoConversations": "No conversations yet",
+  "chatStartNewPrompt": "Start a new chat to practice!",
+  "chatFromConversation": "From Conversation ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
+  },
+  "personaTeacher": "English Teacher",
+  "personaGuide": "Travel Guide",
+  "personaFriend": "Local Friend",
+  "chatUntitled": "Untitled Conversation",
+  "chatAiChat": "AI Chat",
+  "helpModeChatDesc": "Talk to AI persona to practice real conversation and save useful sentences.",
+  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
+  "tutorialAiChatTitle": "AI Chat",
+  "tutorialAiChatDesc": "Practice real conversation with AI personas here."
 }
