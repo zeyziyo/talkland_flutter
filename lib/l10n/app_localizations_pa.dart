@@ -78,7 +78,8 @@ class AppLocalizationsPa extends AppLocalizations {
   String get deleteRecord => 'ਰਿਕਾਰਡ ਹਟਾਓ';
 
   @override
-  String get confirmDelete => 'ਕੀ ਤੁਸੀਂ ਸੱਚਮੁੱਚ ਇਸ ਰਿਕਾਰਡ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?';
+  String get confirmDelete =>
+      'ਕੀ ਤੁਸੀਂ ਸੱਚਮੁੱਚ ਇਸ ਰਿਕਾਰਡ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?';
 
   @override
   String get recordDeleted => 'ਰਿਕਾਰਡ ਸਫਲਤਾਪੂਰਵਕ ਹਟਾਇਆ ਗਿਆ';
@@ -286,25 +287,31 @@ class AppLocalizationsPa extends AppLocalizations {
   String get helpMode1Desc => 'ਆਵਾਜ਼ ਪਛਾਣੋ, ਅਨੁਵਾਦ ਕਰੋ ਅਤੇ ਨਤੀਜਾ ਸੁਣੋ।';
 
   @override
-  String get helpMode1Details => '• ਆਵਾਜ਼: ਸ਼ੁਰੂ/ਬੰਦ ਕਰਨ ਲਈ ਮਾਈਕ ਦਬਾਓ\n• ਟੈਕਸਟ: ਅਨੁਵਾਦ ਲਈ ਸਿੱਧਾ ਟਾਈਪ ਕਰੋ\n• ਆਟੋ-ਸਰਚ: ਸਮਾਨ ਵਾਕਾਂ ਨੂੰ ਲੱਭਦਾ ਹੈ\n• ਅਨੁਵਾਦ: ਤੁਰੰਤ ਅਨੁਵਾਦ ਦਾ ਬਟਨ\n• ਸੁਣੋ: TTS ਲਈ ਸਪੀਕਰ ਆਈਕਨ\n• ਸੇਵ: ਇਤਿਹਾਸ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰਦਾ ਹੈ\n• ਸਾਫ਼ ਕਰੋ: ਸਭ ਰੀਸੈਟ ਕਰੋ';
+  String get helpMode1Details =>
+      '• ਆਵਾਜ਼: ਸ਼ੁਰੂ/ਬੰਦ ਕਰਨ ਲਈ ਮਾਈਕ ਦਬਾਓ\n• ਟੈਕਸਟ: ਅਨੁਵਾਦ ਲਈ ਸਿੱਧਾ ਟਾਈਪ ਕਰੋ\n• ਆਟੋ-ਸਰਚ: ਸਮਾਨ ਵਾਕਾਂ ਨੂੰ ਲੱਭਦਾ ਹੈ\n• ਅਨੁਵਾਦ: ਤੁਰੰਤ ਅਨੁਵਾਦ ਦਾ ਬਟਨ\n• ਸੁਣੋ: TTS ਲਈ ਸਪੀਕਰ ਆਈਕਨ\n• ਸੇਵ: ਇਤਿਹਾਸ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰਦਾ ਹੈ\n• ਸਾਫ਼ ਕਰੋ: ਸਭ ਰੀਸੈਟ ਕਰੋ';
 
   @override
-  String get helpMode2Desc => 'ਲੁਕੇ ਹੋਏ ਅਨੁਵਾਦ ਨਾਲ ਸੇਵ ਕੀਤੇ ਵਾਕਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰੋ।';
+  String get helpMode2Desc =>
+      'ਲੁਕੇ ਹੋਏ ਅਨੁਵਾਦ ਨਾਲ ਸੇਵ ਕੀਤੇ ਵਾਕਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰੋ।';
 
   @override
-  String get helpMode2Details => '• ਚੁਣੋ: ਸੈੱਟ ਜਾਂ \'ਸਭ ਸਮੀਖਿਆ ਕਰੋ\' ਚੁਣੋ\n• ਪਲਟੋ: ਅਨੁਵਾਦ \'ਦਿਖਾਓ/ਲੁਕਾਓ\'\n• ਸੁਣੋ: ਵਾਕ ਲਈ TTS ਚਲਾਓ\n• ਨਿਸ਼ਾਨ ਲਗਾਓ: ਪੂਰਾ ਹੋਣ ਲਈ ਟਿੱਕ (V)\n• ਹਟਾਓ: ਹਟਾਉਣ ਲਈ ਕਾਰਡ ਨੂੰ ਦਬਾ ਕੇ ਰੱਖੋ\n• ਫਿਲਟਰ: ਸਭ ਦੇਖੋ ਜਾਂ ਸਮੱਗਰੀ ਦੁਆਰਾ';
+  String get helpMode2Details =>
+      '• ਚੁਣੋ: ਸੈੱਟ ਜਾਂ \'ਸਭ ਸਮੀਖਿਆ ਕਰੋ\' ਚੁਣੋ\n• ਪਲਟੋ: ਅਨੁਵਾਦ \'ਦਿਖਾਓ/ਲੁਕਾਓ\'\n• ਸੁਣੋ: ਵਾਕ ਲਈ TTS ਚਲਾਓ\n• ਨਿਸ਼ਾਨ ਲਗਾਓ: ਪੂਰਾ ਹੋਣ ਲਈ ਟਿੱਕ (V)\n• ਹਟਾਓ: ਹਟਾਉਣ ਲਈ ਕਾਰਡ ਨੂੰ ਦਬਾ ਕੇ ਰੱਖੋ\n• ਫਿਲਟਰ: ਸਭ ਦੇਖੋ ਜਾਂ ਸਮੱਗਰੀ ਦੁਆਰਾ';
 
   @override
-  String get helpMode3Desc => 'ਸੁਣ ਕੇ ਅਤੇ ਦੁਹਰਾ ਕੇ ਬੋਲਣ ਦਾ ਅਭਿਆਸ ਕਰੋ (Shadowing)।';
+  String get helpMode3Desc =>
+      'ਸੁਣ ਕੇ ਅਤੇ ਦੁਹਰਾ ਕੇ ਬੋਲਣ ਦਾ ਅਭਿਆਸ ਕਰੋ (Shadowing)।';
 
   @override
-  String get helpMode3Details => '• ਚੁਣੋ: ਪੈਕੇਜ ਚੁਣੋ\n• ਅੰਤਰਾਲ: [-] [+] ਉਡੀਕ ਦਾ ਸਮਾਂ (3ਸਕਿੰਟ-60ਸਕਿੰਟ)\n• ਸ਼ੁਰੂ/ਬੰਦ: ਸੈਸ਼ਨ ਕੰਟਰੋਲ ਕਰੋ\n• ਬੋਲੋ: ਆਡੀਓ ਸੁਣੋ ਅਤੇ ਦੁਹਰਾਓ\n• ਸਕੋਰ: ਸ਼ੁੱਧਤਾ (0-100)\n• ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼: ਜੇ ਆਵਾਜ਼ ਨਹੀਂ ਮਿਲਦੀ ਤਾਂ ਬਟਨ';
+  String get helpMode3Details =>
+      '• ਚੁਣੋ: ਪੈਕੇਜ ਚੁਣੋ\n• ਅੰਤਰਾਲ: [-] [+] ਉਡੀਕ ਦਾ ਸਮਾਂ (3ਸਕਿੰਟ-60ਸਕਿੰਟ)\n• ਸ਼ੁਰੂ/ਬੰਦ: ਸੈਸ਼ਨ ਕੰਟਰੋਲ ਕਰੋ\n• ਬੋਲੋ: ਆਡੀਓ ਸੁਣੋ ਅਤੇ ਦੁਹਰਾਓ\n• ਸਕੋਰ: ਸ਼ੁੱਧਤਾ (0-100)\n• ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼: ਜੇ ਆਵਾਜ਼ ਨਹੀਂ ਮਿਲਦੀ ਤਾਂ ਬਟਨ';
 
   @override
   String get helpJsonDesc => 'ਮੋਡ 3 ਵਿੱਚ ਇੰਪੋਰਟ ਕਰਨ ਲਈ, JSON ਬਣਾਓ:';
 
   @override
-  String get helpTourDesc => 'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
+  String get helpTourDesc =>
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'ਟੂਰ ਸ਼ੁਰੂ ਕਰੋ';
@@ -316,7 +323,8 @@ class AppLocalizationsPa extends AppLocalizations {
   String get tutorialMicDesc => 'ਵੌਇਸ ਇਨਪੁਟ ਲਈ ਮਾਈਕ ਬਟਨ ਦਬਾਓ।';
 
   @override
-  String get tutorialTabDesc => 'ਤੁਸੀਂ ਇੱਥੇ ਆਪਣੀ ਲੋੜੀਂਦੀ ਸਿੱਖਣ ਦੀ ਵਿਧੀ ਚੁਣ ਸਕਦੇ ਹੋ।';
+  String get tutorialTabDesc =>
+      'ਤੁਸੀਂ ਇੱਥੇ ਆਪਣੀ ਲੋੜੀਂਦੀ ਸਿੱਖਣ ਦੀ ਵਿਧੀ ਚੁਣ ਸਕਦੇ ਹੋ।';
 
   @override
   String get tutorialTapToContinue => 'ਜਾਰੀ ਰੱਖਣ ਲਈ ਟੈਪ ਕਰੋ';
@@ -337,13 +345,15 @@ class AppLocalizationsPa extends AppLocalizations {
   String get tutorialM2SelectTitle => 'ਚੁਣੋ ਅਤੇ ਫਿਲਟਰ';
 
   @override
-  String get tutorialM2SelectDesc => 'ਸਮੱਗਰੀ ਚੁਣੋ ਜਾਂ \'ਸਭ ਸਮੀਖਿਆ ਕਰੋ\' \'ਤੇ ਜਾਓ।';
+  String get tutorialM2SelectDesc =>
+      'ਸਮੱਗਰੀ ਚੁਣੋ ਜਾਂ \'ਸਭ ਸਮੀਖਿਆ ਕਰੋ\' \'ਤੇ ਜਾਓ।';
 
   @override
   String get tutorialM2ListTitle => 'ਅਧਿਐਨ ਸੂਚੀ';
 
   @override
-  String get tutorialM2ListDesc => 'ਆਪਣੇ ਕਾਰਡ ਚੈੱਕ ਕਰੋ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਪਲਟੋ। (Long-press to delete)';
+  String get tutorialM2ListDesc =>
+      'ਆਪਣੇ ਕਾਰਡ ਚੈੱਕ ਕਰੋ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਪਲਟੋ। (Long-press to delete)';
 
   @override
   String get tutorialM3SelectTitle => 'ਸਮੱਗਰੀ ਚੁਣੋ';
@@ -355,7 +365,8 @@ class AppLocalizationsPa extends AppLocalizations {
   String get tutorialM3IntervalTitle => 'ਅੰਤਰਾਲ';
 
   @override
-  String get tutorialM3IntervalDesc => 'ਵਾਕਾਂ ਦੇ ਵਿਚਕਾਰ ਉਡੀਕ ਦਾ ਸਮਾਂ ਅਨੁਕੂਲ ਕਰੋ।';
+  String get tutorialM3IntervalDesc =>
+      'ਵਾਕਾਂ ਦੇ ਵਿਚਕਾਰ ਉਡੀਕ ਦਾ ਸਮਾਂ ਅਨੁਕੂਲ ਕਰੋ।';
 
   @override
   String get tutorialM3StartTitle => 'ਸ਼ੁਰੂ';
@@ -397,7 +408,8 @@ class AppLocalizationsPa extends AppLocalizations {
   String get tutorialLangSettingsTitle => 'Language Settings';
 
   @override
-  String get tutorialLangSettingsDesc => 'Configure source and target languages for translation.';
+  String get tutorialLangSettingsDesc =>
+      'Configure source and target languages for translation.';
 
   @override
   String get copy => 'Copy';
@@ -409,7 +421,8 @@ class AppLocalizationsPa extends AppLocalizations {
   String get tutorialContextTitle => 'ਪ੍ਰਸੰਗ ਟੈਗ';
 
   @override
-  String get tutorialContextDesc => 'ਸਮਾਨ ਵਾਕਾਂ ਨੂੰ ਵੱਖਰਾ ਕਰਨ ਲਈ ਪ੍ਰਸੰਗ (ਜਿਵੇਂ: ਸਵੇਰ) ਸ਼ਾਮਲ ਕਰੋ।';
+  String get tutorialContextDesc =>
+      'ਸਮਾਨ ਵਾਕਾਂ ਨੂੰ ਵੱਖਰਾ ਕਰਨ ਲਈ ਪ੍ਰਸੰਗ (ਜਿਵੇਂ: ਸਵੇਰ) ਸ਼ਾਮਲ ਕਰੋ।';
 
   @override
   String get thinkingTimeInterval => 'Thinking Time Interval';
@@ -433,16 +446,15 @@ class AppLocalizationsPa extends AppLocalizations {
   String get wordDefenseTitle => 'Word Defense';
 
   @override
-  String get wordDefenseDesc => 'Defend your base by speaking words correctly before enemies reach you.';
+  String get wordDefenseDesc =>
+      'Defend your base by speaking words correctly before enemies reach you.';
 
   @override
   String get dialogueQuestTitle => 'Dialogue Quest';
 
   @override
-  String get dialogueQuestDesc => 'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get tutorialM1ToggleDesc => 'Switch between Word and Sentence mode here. Words are saved with larger text.';
+  String get dialogueQuestDesc =>
+      'Roleplay in scenarios. Choose the right response and speak it aloud.';
 
   @override
   String get labelType => 'Type:';
@@ -454,16 +466,19 @@ class AppLocalizationsPa extends AppLocalizations {
   String get labelSentence => 'Sentence';
 
   @override
-  String get contextTagLabel => 'Context/Situation (Optional) - Ex: Morning greeting, polite form';
+  String get contextTagLabel =>
+      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
 
   @override
-  String get contextTagHint => 'Describe situation for easier classification later';
+  String get contextTagHint =>
+      'Describe situation for easier classification later';
 
   @override
   String get translationLimitExceeded => 'Translation Limit Exceeded';
 
   @override
-  String get translationLimitMessage => 'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
+  String get translationLimitMessage =>
+      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
 
   @override
   String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
@@ -534,13 +549,11 @@ class AppLocalizationsPa extends AppLocalizations {
   String get basic => 'Basic';
 
   @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
   String get tutorialM3WordsTitle => 'Practice Words';
 
   @override
-  String get tutorialM3WordsDesc => 'Check this to practice only your saved words.';
+  String get tutorialM3WordsDesc =>
+      'Check this to practice only your saved words.';
 
   @override
   String get enterTextHint => 'Enter text to translate';
@@ -561,19 +574,19 @@ class AppLocalizationsPa extends AppLocalizations {
   String get menuSettings => 'Settings';
 
   @override
-  String get basicWords => 'Basic Words';
+  String get basicWords => '기본 단어 저장소 (TODO: Translate)';
 
   @override
-  String get basicSentences => 'Basic Sentences';
+  String get basicSentences => '기본 문장 저장소 (TODO: Translate)';
 
   @override
-  String get selectMaterialSet => 'Select Study Material Set';
+  String get selectMaterialSet => '학습 자료집 선택 (TODO: Translate)';
 
   @override
-  String get sectionWords => 'Words';
+  String get sectionWords => '단어 (TODO: Translate)';
 
   @override
-  String get sectionSentences => 'Sentences';
+  String get sectionSentences => '문장 (TODO: Translate)';
 
   @override
   String get languageSettingsTitle => 'Language Settings';
@@ -597,16 +610,23 @@ class AppLocalizationsPa extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'ਮੈਂ ਆਪਣੀ ਭਾਸ਼ਾ ਨੂੰ ਉਸ ਭਾਸ਼ਾ ਨਾਲ ਬਦਲਦਾ ਹਾਂ ਜੋ ਮੈਂ ਸਿੱਖ ਰਿਹਾ ਹਾਂ।';
+  String get tutorialM3ResetTitle => 'Reset History';
+
+  @override
+  String get tutorialSwapDesc =>
+      'ਮੈਂ ਆਪਣੀ ਭਾਸ਼ਾ ਨੂੰ ਉਸ ਭਾਸ਼ਾ ਨਾਲ ਬਦਲਦਾ ਹਾਂ ਜੋ ਮੈਂ ਸਿੱਖ ਰਿਹਾ ਹਾਂ।';
 
   @override
   String get recognizedText => 'Recognized Text:';
 
   @override
-  String get tutorialM3ResetTitle => 'Reset History';
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
 
   @override
-  String get tutorialM3ResetDesc => 'Clear your progress and accuracy scores to start fresh.';
+  String get tutorialM3ResetDesc =>
+      'Clear your progress and accuracy scores to start fresh.';
 
   @override
   String get menuSelectMaterialSet => 'ਇੱਕ ਅਧਿਐਨ ਸਮੱਗਰੀ ਚੁਣੋ';
@@ -624,19 +644,36 @@ class AppLocalizationsPa extends AppLocalizations {
   String get tabSentence => 'ਵਾਕ';
 
   @override
-  String get errorProfanity => 'Translation cannot be processed due to profanity.';
+  String get errorProfanity => '비속어가 포함되어 있어 번역할 수 없습니다. (TODO: Translate)';
 
   @override
-  String get errorHateSpeech => 'Translation cannot be processed due to hate speech.';
+  String get errorHateSpeech => '혐오 표현이 포함되어 있어 번역할 수 없습니다. (TODO: Translate)';
 
   @override
-  String get errorSexualContent => 'Translation cannot be processed due to sexual content.';
+  String get errorSexualContent =>
+      '선정적인 내용이 포함되어 있어 번역할 수 없습니다. (TODO: Translate)';
 
   @override
-  String get errorOtherSafety => 'Translation was blocked by AI safety policy.';
+  String get errorOtherSafety => 'AI 안전 정책에 의해 번역이 거부되었습니다. (TODO: Translate)';
 
   @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
+  String get clearAll => '모두 지우기 (TODO: Translate)';
+
+  @override
+  String get disambiguationTitle => '의미 선택 (TODO: Translate)';
+
+  @override
+  String get disambiguationPrompt => '어떤 의미로 번역하시겠습니까? (TODO: Translate)';
+
+  @override
+  String get skip => '건너뛰기 (TODO: Translate)';
+
+  @override
+  String get inputModeTitle => '입력 (TODO: Translate)';
+
+  @override
+  String get reviewModeTitle => '복습 (TODO: Translate)';
+
+  @override
+  String get practiceModeTitle => '발음 연습 (TODO: Translate)';
 }

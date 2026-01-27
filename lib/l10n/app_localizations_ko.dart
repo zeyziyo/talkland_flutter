@@ -283,28 +283,33 @@ class AppLocalizationsKo extends AppLocalizations {
   String get helpTabTour => '튜토리얼';
 
   @override
-  String get helpMode1Desc => '음성을 인식하여 번역하고, 결과를 듣습니다. 새로운 표현을 익히기에 좋습니다.';
+  String get helpMode1Desc =>
+      '음성을 인식하여 번역하고, 결과를 듣습니다. 화면을 옆으로 밀어(Swipe) 모드를 전환할 수 있습니다.';
 
   @override
-  String get helpMode1Details => '• 언어 설정: 상단 번역 아이콘으로 언어 변경\n• 도움말: 상단 물음표 아이콘으로 사용법 가이드 확인\n• 음성 입력: 마이크 아이콘을 눌러 말하기/멈추기\n• 텍스트 입력: 직접 타이핑하여 입력 가능\n• 자동 검색: 입력 시 유사한 문장이 있으면 알림\n• 번역하기: \'번역\' 버튼으로 즉시 번역 실행\n• 듣기: 스피커 아이콘으로 원어/번역문 듣기 (TTS)\n• 저장: \'데이터 저장\' 버튼으로 학습 기록 저장\n• 초기화: \'지우기\' 버튼으로 입력 내용 삭제';
+  String get helpMode1Details =>
+      '• 모드 전환: 화면을 옆으로 밀거(Swipe)나 왼쪽 메뉴(Drawer) 이용\n• 상황 설정: 입력창 아래 \'상황/문맥\' 칸에 상황(예: 아침, 식당) 입력\n• 음성 입력: 마이크 아이콘을 눌러 말하기/멈추기\n• 번역 및 저장: \'번역\' 후 하단 \'데이터 저장\' 버튼으로 기록 보관\n• 도움말: 상단 물음표 아이콘으로 가이드 확인';
 
   @override
-  String get helpMode2Desc => '저장된 문장을 복습합니다. 번역을 가리고 확인하며 복습 횟수를 기록하세요.';
+  String get helpMode2Desc => '저장된 문장을 복습합니다. 상단 자료집 아이콘(📚)으로 원하는 자료를 선택하세요.';
 
   @override
-  String get helpMode2Details => '• 자료 선택: 상단 메뉴(점 3개) > \'학습 자료집 선택\'에서 자료 선택\n• 카드 뒤집기: \'보이기/숨기기\' 버튼으로 번역 확인\n• 듣기: \'듣기\' 버튼으로 해당 문장 다시 듣기\n• 학습 체크: 완료된 문장은 체크 표시 (V)\n• 삭제: 카드를 길게 누르면 삭제 다이얼로그 표시\n• 필터: 전체 기록 보기 또는 학습 자료별 정렬';
+  String get helpMode2Details =>
+      '• 자료 선택: 상단 앱바의 자료집 아이콘(📚) 클릭\n• 카드 뒤집기: \'보이기/숨기기\' 버튼으로 번역 확인\n• 학습 체크: 완료된 문장은 체크 표시 (V)\n• 삭제: 카드를 길게 누르면 삭제 가능\n• 자동 재생: 우측 상단 \'자동 재생\'으로 연속 학습 가능';
 
   @override
-  String get helpMode3Desc => '학습 자료의 문장을 듣고 직접 말하는 연습을 합니다.';
+  String get helpMode3Desc => '학습 자료를 원어민 음성으로 고 듣고 shadowing(따라 말하기) 연습을 합니다.';
 
   @override
-  String get helpMode3Details => '• 자료 선택: 상단 메뉴(점 3개) > \'학습 자료집 선택\'에서 연습할 자료 선택\n• 간격 조절: [-] [+] 버튼으로 문장 사이 대기 시간 설정 (3초~60초)\n• 시작/정지: 재생 버튼으로 쉐도잉 세션 제어\n• 말하기: 원어민 음성을 듣고 따라서 말하기\n• 피드백: 발음 정확도 점수(0~100) 및 색상 표시 (초록/주황/빨강)\n• 재시도: 인식 실패 시 재시도 버튼 사용';
+  String get helpMode3Details =>
+      '• 자료 선택: 상단 앱바의 자료집 아이콘(📚) 클릭\n• 시작/정지: 재생 버튼으로 세션 제어\n• 발음 평가: 내 발음을 인식하여 정확도 점수 표시\n• 간격 조절: [-] [+] 버튼으로 대기 시간 설정';
 
   @override
   String get helpJsonDesc => '학습 자료를 가져오려면 다음과 같은 구조의 JSON 파일을 사용하세요:';
 
   @override
-  String get helpTourDesc => '튜토리얼을 시작하면 **하이라이트 원(Circle)**이 주요 기능을 안내해 드립니다.\n(예: 학습 카드를 **하이라이트 원**이 가리킬 때 길게 누르면 삭제할 수 있습니다.)';
+  String get helpTourDesc =>
+      '튜토리얼을 시작하면 **하이라이트 원(Circle)**이 주요 기능을 안내해 드립니다.\n(예: 학습 카드를 **하이라이트 원**이 가리킬 때 길게 누르면 삭제할 수 있습니다.)';
 
   @override
   String get startTutorial => '튜토리얼 시작';
@@ -334,22 +339,23 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tutorialSaveDesc => '번역된 결과를 학습 기록에 저장하세요.';
 
   @override
-  String get tutorialM2SelectTitle => '자료 선택 & 필터';
+  String get tutorialM2SelectTitle => '자료 선택';
 
   @override
-  String get tutorialM2SelectDesc => '상단 메뉴(점 3개)를 눌러 학습할 자료를 선택하세요.';
+  String get tutorialM2SelectDesc => '상단 앱바의 자료집 아이콘(📚)을 눌러 학습할 자료를 선택하세요.';
 
   @override
   String get tutorialM2ListTitle => '학습 목록';
 
   @override
-  String get tutorialM2ListDesc => '이 카드를 길게 누르면(Long Click) 삭제할 수 있습니다. 저장된 문장을 확인하고 뒤집어보세요.';
+  String get tutorialM2ListDesc =>
+      '이 카드를 길게 누르면(Long Click) 삭제할 수 있습니다. 저장된 문장을 확인하고 뒤집어보세요.';
 
   @override
   String get tutorialM3SelectTitle => '자료 선택';
 
   @override
-  String get tutorialM3SelectDesc => '상단 메뉴(점 3개)를 눌러 연습할 자료 세트를 선택하세요.';
+  String get tutorialM3SelectDesc => '상단 앱바의 자료집 아이콘(📚)을 눌러 연습할 자료를 선택하세요.';
 
   @override
   String get tutorialM3IntervalTitle => '간격 설정';
@@ -409,7 +415,8 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tutorialContextTitle => '상황/문맥 태그';
 
   @override
-  String get tutorialContextDesc => '같은 문장이라도 상황(예: 아침, 저녁)을 적어두면 별도로 저장할 수 있어요.';
+  String get tutorialContextDesc =>
+      '같은 문장이라도 상황(예: 아침, 저녁)을 적어두면 별도로 저장할 수 있어요.';
 
   @override
   String get thinkingTimeInterval => '생각 시간 간격';
@@ -442,9 +449,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get dialogueQuestDesc => '상황극을 통해 대화 연습을 하세요. 적절한 답변을 선택하고 말해보세요.';
 
   @override
-  String get tutorialM1ToggleDesc => 'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
   String get labelType => '종류:';
 
   @override
@@ -463,7 +467,8 @@ class AppLocalizationsKo extends AppLocalizations {
   String get translationLimitExceeded => '번역 한도 초과';
 
   @override
-  String get translationLimitMessage => '일일 무료 번역(5회)을 모두 사용했습니다.\\n\\n광고를 보고 5회를 즉시 충전하시겠습니까?';
+  String get translationLimitMessage =>
+      '일일 무료 번역(5회)을 모두 사용했습니다.\\n\\n광고를 보고 5회를 즉시 충전하시겠습니까?';
 
   @override
   String get watchAdAndRefill => '광고 보고 충전 (+5회)';
@@ -534,9 +539,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get basic => '기본';
 
   @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
   String get tutorialM3WordsTitle => '단어 연습';
 
   @override
@@ -561,10 +563,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get menuSettings => '언어 설정';
 
   @override
-  String get basicWords => '기본 단어들';
+  String get basicWords => '기본 단어 저장소';
 
   @override
-  String get basicSentences => '기본 문장들';
+  String get basicSentences => '기본 문장 저장소';
 
   @override
   String get selectMaterialSet => '학습 자료집 선택';
@@ -597,13 +599,18 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mode3TryAgain => '재시도';
 
   @override
+  String get tutorialM3ResetTitle => '기록 초기화';
+
+  @override
   String get tutorialSwapDesc => '내 언어와 학습 언어를 서로 바꿉니다.';
 
   @override
   String get recognizedText => '인식된 발음:';
 
   @override
-  String get tutorialM3ResetTitle => '기록 초기화';
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
 
   @override
   String get tutorialM3ResetDesc => '진행 상황과 정확도 점수를 초기화하여 처음부터 다시 시작합니다.';
@@ -636,7 +643,23 @@ class AppLocalizationsKo extends AppLocalizations {
   String get errorOtherSafety => 'AI 안전 정책에 의해 번역이 거부되었습니다.';
 
   @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
+  String get clearAll => '모두 지우기';
+
+  @override
+  String get disambiguationTitle => '의미 선택';
+
+  @override
+  String get disambiguationPrompt => '어떤 의미로 번역하시겠습니까?';
+
+  @override
+  String get skip => '건너뛰기';
+
+  @override
+  String get inputModeTitle => '입력';
+
+  @override
+  String get reviewModeTitle => '복습';
+
+  @override
+  String get practiceModeTitle => '발음 연습';
 }

@@ -102,7 +102,8 @@ import 'app_localizations_zh.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale)
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -110,7 +111,8 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate =
+      _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -122,7 +124,8 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
     delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
@@ -179,1194 +182,1225 @@ abstract class AppLocalizations {
 
   /// Application title
   ///
-  /// In en, this message translates to:
+  /// In ko, this message translates to:
   /// **'Talkie'**
   String get appTitle;
 
   /// Review tab label with count
   ///
-  /// In en, this message translates to:
-  /// **'Review ({count})'**
+  /// In ko, this message translates to:
+  /// **'복습 ({count})'**
   String tabReview(int count);
 
   /// Study material tab label with count
   ///
-  /// In en, this message translates to:
-  /// **'Study Material ({count})'**
+  /// In ko, this message translates to:
+  /// **'학습 자료 ({count})'**
   String tabStudyMaterial(int count);
 
   /// Mode 2 title for help dialog
   ///
-  /// In en, this message translates to:
-  /// **'Review'**
+  /// In ko, this message translates to:
+  /// **'복습'**
   String get mode2Title;
 
   /// Search mode label
   ///
-  /// In en, this message translates to:
-  /// **'Search'**
+  /// In ko, this message translates to:
+  /// **'검색'**
   String get search;
 
   /// Translate button
   ///
-  /// In en, this message translates to:
-  /// **'Translate'**
+  /// In ko, this message translates to:
+  /// **'번역'**
   String get translate;
 
   /// Listen/TTS button
   ///
-  /// In en, this message translates to:
-  /// **'Listen'**
+  /// In ko, this message translates to:
+  /// **'듣기'**
   String get listen;
 
   /// Save translation button
   ///
-  /// In en, this message translates to:
-  /// **'Save Data'**
+  /// In ko, this message translates to:
+  /// **'데이터 저장'**
   String get saveData;
 
   /// Data saved status
   ///
-  /// In en, this message translates to:
-  /// **'Saved'**
+  /// In ko, this message translates to:
+  /// **'저장 완료'**
   String get saved;
 
   /// Delete button
   ///
-  /// In en, this message translates to:
-  /// **'Delete'**
+  /// In ko, this message translates to:
+  /// **'삭제'**
   String get delete;
 
   /// Title for material metadata section
   ///
-  /// In en, this message translates to:
-  /// **'Material Info'**
+  /// In ko, this message translates to:
+  /// **'자료 정보'**
   String get materialInfo;
 
   /// Cancel button
   ///
-  /// In en, this message translates to:
-  /// **'Cancel'**
+  /// In ko, this message translates to:
+  /// **'취소'**
   String get cancel;
 
   /// Confirm/OK button
   ///
-  /// In en, this message translates to:
-  /// **'OK'**
+  /// In ko, this message translates to:
+  /// **'확인'**
   String get confirm;
 
   /// Refresh button
   ///
-  /// In en, this message translates to:
-  /// **'Refresh'**
+  /// In ko, this message translates to:
+  /// **'새로고침'**
   String get refresh;
 
   /// Study records title with count
   ///
-  /// In en, this message translates to:
-  /// **'Study Records ({count})'**
+  /// In ko, this message translates to:
+  /// **'학습 기록 ({count})'**
   String studyRecords(int count);
 
   /// Language filter label
   ///
-  /// In en, this message translates to:
-  /// **'Target Language Filter:'**
+  /// In ko, this message translates to:
+  /// **'대상 언어 필터:'**
   String get targetLanguageFilter;
 
   /// Empty state message
   ///
-  /// In en, this message translates to:
-  /// **'No study records for selected language'**
+  /// In ko, this message translates to:
+  /// **'선택한 언어의 학습 기록이 없습니다'**
   String get noRecords;
 
   /// Instruction to save data
   ///
-  /// In en, this message translates to:
-  /// **'Save translations from search mode'**
+  /// In ko, this message translates to:
+  /// **'검색 모드에서 번역을 저장해보세요'**
   String get saveTranslationsFromSearch;
 
   /// Show translation button
   ///
-  /// In en, this message translates to:
-  /// **'Show'**
+  /// In ko, this message translates to:
+  /// **'보이기'**
   String get flip;
 
   /// Hide translation button
   ///
-  /// In en, this message translates to:
-  /// **'Hide'**
+  /// In ko, this message translates to:
+  /// **'숨기기'**
   String get hide;
 
   /// Delete record dialog title
   ///
-  /// In en, this message translates to:
-  /// **'Delete Record'**
+  /// In ko, this message translates to:
+  /// **'레코드 삭제'**
   String get deleteRecord;
 
   /// Delete confirmation message
   ///
-  /// In en, this message translates to:
-  /// **'Are you sure you want to delete this study record?'**
+  /// In ko, this message translates to:
+  /// **'이 학습 기록을 삭제하시겠습니까?'**
   String get confirmDelete;
 
   /// Delete success message
   ///
-  /// In en, this message translates to:
-  /// **'Record deleted successfully'**
+  /// In ko, this message translates to:
+  /// **'레코드가 삭제되었습니다'**
   String get recordDeleted;
 
   /// Delete error message
   ///
-  /// In en, this message translates to:
-  /// **'Delete failed: {error}'**
+  /// In ko, this message translates to:
+  /// **'삭제 실패: {error}'**
   String deleteFailed(String error);
 
   /// Import JSON button
   ///
-  /// In en, this message translates to:
-  /// **'Import JSON File'**
+  /// In ko, this message translates to:
+  /// **'JSON 파일 불러오기'**
   String get importJsonFile;
 
   /// Import in progress
   ///
-  /// In en, this message translates to:
-  /// **'Importing...'**
+  /// In ko, this message translates to:
+  /// **'불러오는 중...'**
   String get importing;
 
   /// Import success title
   ///
-  /// In en, this message translates to:
-  /// **'Import Complete'**
+  /// In ko, this message translates to:
+  /// **'불러오기 완료'**
   String get importComplete;
 
   /// Import error title
   ///
-  /// In en, this message translates to:
-  /// **'Import Failed'**
+  /// In ko, this message translates to:
+  /// **'불러오기 실패'**
   String get importFailed;
 
   /// Imported file name
   ///
-  /// In en, this message translates to:
-  /// **'File: {fileName}'**
+  /// In ko, this message translates to:
+  /// **'파일: {fileName}'**
   String importFile(String fileName);
 
   /// Total import count
   ///
-  /// In en, this message translates to:
-  /// **'Total: {count} items'**
+  /// In ko, this message translates to:
+  /// **'전체: {count}개'**
   String importTotal(int count);
 
   /// Successfully imported count
   ///
-  /// In en, this message translates to:
-  /// **'Added: {count} items'**
+  /// In ko, this message translates to:
+  /// **'추가: {count}개'**
   String importAdded(int count);
 
   /// Skipped import count
   ///
-  /// In en, this message translates to:
-  /// **'Skipped: {count} items'**
+  /// In ko, this message translates to:
+  /// **'건너뜀: {count}개'**
   String importSkipped(int count);
 
   /// Error section label
   ///
-  /// In en, this message translates to:
-  /// **'Errors:'**
+  /// In ko, this message translates to:
+  /// **'오류:'**
   String get errors;
 
   /// Error dialog title
   ///
-  /// In en, this message translates to:
-  /// **'Error'**
+  /// In ko, this message translates to:
+  /// **'오류'**
   String get error;
 
   /// Import error message
   ///
-  /// In en, this message translates to:
-  /// **'Failed to import file:\\n{error}'**
+  /// In ko, this message translates to:
+  /// **'파일 불러오기 실패:\\n{error}'**
   String importErrorMessage(String error);
 
   /// Study material selector label
   ///
-  /// In en, this message translates to:
-  /// **'Select Study Material'**
+  /// In ko, this message translates to:
+  /// **'학습 자료 선택'**
   String get selectStudyMaterial;
 
   /// Subject label
   ///
-  /// In en, this message translates to:
-  /// **'Subject:'**
+  /// In ko, this message translates to:
+  /// **'주제:'**
   String get subject;
 
   /// Source label
   ///
-  /// In en, this message translates to:
-  /// **'Source:'**
+  /// In ko, this message translates to:
+  /// **'출처:'**
   String get source;
 
   /// File label
   ///
-  /// In en, this message translates to:
-  /// **'File:'**
+  /// In ko, this message translates to:
+  /// **'파일:'**
   String get file;
 
   /// Progress indicator
   ///
-  /// In en, this message translates to:
-  /// **'Progress: {current} / {total}'**
+  /// In ko, this message translates to:
+  /// **'진행률: {current} / {total}'**
   String progress(int current, int total);
 
   /// Empty state prompt
   ///
-  /// In en, this message translates to:
-  /// **'Please import a JSON file'**
+  /// In ko, this message translates to:
+  /// **'JSON 파일을 불러와주세요'**
   String get importJsonFilePrompt;
 
   /// Selection prompt
   ///
-  /// In en, this message translates to:
-  /// **'Please select a study material'**
+  /// In ko, this message translates to:
+  /// **'학습 자료를 선택하세요'**
   String get selectMaterialPrompt;
 
   /// Study complete button text
   ///
-  /// In en, this message translates to:
-  /// **'Studied'**
+  /// In ko, this message translates to:
+  /// **'학습 완료'**
   String get studyComplete;
 
   /// Mark study button text
   ///
-  /// In en, this message translates to:
-  /// **'Mark as Studied'**
+  /// In ko, this message translates to:
+  /// **'학습 표시'**
   String get markAsStudied;
 
   /// STT listening status
   ///
-  /// In en, this message translates to:
-  /// **'Listening...'**
+  /// In ko, this message translates to:
+  /// **'듣는 중...'**
   String get listening;
 
   /// STT complete status
   ///
-  /// In en, this message translates to:
-  /// **'Recognition complete'**
+  /// In ko, this message translates to:
+  /// **'인식 완료'**
   String get recognized;
 
   /// STT error message
   ///
-  /// In en, this message translates to:
-  /// **'Speech recognition failed: {error}'**
+  /// In ko, this message translates to:
+  /// **'음성 인식 실패: {error}'**
   String recognitionFailed(String error);
 
   /// Checking for duplicates
   ///
-  /// In en, this message translates to:
-  /// **'Checking...'**
+  /// In ko, this message translates to:
+  /// **'확인 중...'**
   String get checking;
 
   /// Translation in progress
   ///
-  /// In en, this message translates to:
-  /// **'Translating...'**
+  /// In ko, this message translates to:
+  /// **'번역 중...'**
   String get translating;
 
   /// Translation done status
   ///
-  /// In en, this message translates to:
-  /// **'Translation complete (save required)'**
+  /// In ko, this message translates to:
+  /// **'번역 완료 (저장 필요)'**
   String get translationComplete;
 
   /// Existing translation loaded
   ///
-  /// In en, this message translates to:
-  /// **'Loaded saved translation'**
+  /// In ko, this message translates to:
+  /// **'저장된 번역 불러옴'**
   String get translationLoaded;
 
   /// Translation error
   ///
-  /// In en, this message translates to:
-  /// **'Translation failed: {error}'**
+  /// In ko, this message translates to:
+  /// **'번역 실패: {error}'**
   String translationFailed(String error);
 
   /// Empty input warning
   ///
-  /// In en, this message translates to:
-  /// **'Please enter text to translate'**
+  /// In ko, this message translates to:
+  /// **'번역할 텍스트를 입력하세요'**
   String get enterTextToTranslate;
 
   /// Save in progress
   ///
-  /// In en, this message translates to:
-  /// **'Saving...'**
+  /// In ko, this message translates to:
+  /// **'저장 중...'**
   String get saving;
 
   /// Save error - no data
   ///
-  /// In en, this message translates to:
-  /// **'No translation to save'**
+  /// In ko, this message translates to:
+  /// **'저장할 번역이 없습니다'**
   String get noTranslationToSave;
 
   /// Save error message
   ///
-  /// In en, this message translates to:
-  /// **'Save failed: {error}'**
+  /// In ko, this message translates to:
+  /// **'저장 실패: {error}'**
   String saveFailed(String error);
 
   /// TTS playing status
   ///
-  /// In en, this message translates to:
-  /// **'Playing...'**
+  /// In ko, this message translates to:
+  /// **'재생 중...'**
   String get playing;
 
   /// TTS error - no text
   ///
-  /// In en, this message translates to:
-  /// **'No text to play'**
+  /// In ko, this message translates to:
+  /// **'재생할 텍스트가 없습니다'**
   String get noTextToPlay;
 
   /// TTS error message
   ///
-  /// In en, this message translates to:
-  /// **'Playback failed: {error}'**
+  /// In ko, this message translates to:
+  /// **'재생 실패: {error}'**
   String playbackFailed(String error);
 
   /// Source language label
   ///
-  /// In en, this message translates to:
-  /// **'Source Language'**
+  /// In ko, this message translates to:
+  /// **'원본 언어'**
   String get sourceLanguage;
 
   /// Target language label
   ///
-  /// In en, this message translates to:
-  /// **'Target Language'**
+  /// In ko, this message translates to:
+  /// **'대상 언어'**
   String get targetLanguage;
 
   /// Duplicate detection title
   ///
-  /// In en, this message translates to:
-  /// **'Similar text found'**
+  /// In ko, this message translates to:
+  /// **'유사한 텍스트 발견'**
   String get similarTextFound;
 
   /// Use existing text button
   ///
-  /// In en, this message translates to:
-  /// **'Use Existing'**
+  /// In ko, this message translates to:
+  /// **'기존 텍스트 사용'**
   String get useExistingText;
 
   /// Create new entry button
   ///
-  /// In en, this message translates to:
-  /// **'Create New Entry'**
+  /// In ko, this message translates to:
+  /// **'새 문장으로 진행'**
   String get createNew;
 
   /// Review count display
   ///
-  /// In en, this message translates to:
-  /// **'Review {count} time(s)'**
+  /// In ko, this message translates to:
+  /// **'복습 {count}회'**
   String reviewCount(int count);
 
   /// No description provided for @tabSpeaking.
   ///
-  /// In en, this message translates to:
-  /// **'Speaking'**
+  /// In ko, this message translates to:
+  /// **'말하기'**
   String get tabSpeaking;
 
   /// No description provided for @speakingPractice.
   ///
-  /// In en, this message translates to:
-  /// **'Speaking Practice'**
+  /// In ko, this message translates to:
+  /// **'말하기 연습'**
   String get speakingPractice;
 
   /// No description provided for @intervalSeconds.
   ///
-  /// In en, this message translates to:
-  /// **'Interval: {seconds}s'**
+  /// In ko, this message translates to:
+  /// **'간격: {seconds}초'**
   String intervalSeconds(int seconds);
 
   /// No description provided for @yourPronunciation.
   ///
-  /// In en, this message translates to:
-  /// **'Your Pronunciation'**
+  /// In ko, this message translates to:
+  /// **'내 발음'**
   String get yourPronunciation;
 
   /// No description provided for @correctAnswer.
   ///
-  /// In en, this message translates to:
-  /// **'Correct Answer'**
+  /// In ko, this message translates to:
+  /// **'정답'**
   String get correctAnswer;
 
   /// No description provided for @score.
   ///
-  /// In en, this message translates to:
-  /// **'Accuracy: {score}%'**
+  /// In ko, this message translates to:
+  /// **'정확도: {score}%'**
   String score(String score);
 
   /// No description provided for @perfect.
   ///
-  /// In en, this message translates to:
-  /// **'Perfect!'**
+  /// In ko, this message translates to:
+  /// **'완벽해요!'**
   String get perfect;
 
   /// No description provided for @good.
   ///
-  /// In en, this message translates to:
-  /// **'Good'**
+  /// In ko, this message translates to:
+  /// **'좋아요'**
   String get good;
 
   /// No description provided for @tryAgain.
   ///
-  /// In en, this message translates to:
-  /// **'Try Again'**
+  /// In ko, this message translates to:
+  /// **'다시 시도'**
   String get tryAgain;
 
   /// No description provided for @startPractice.
   ///
-  /// In en, this message translates to:
-  /// **'Start Practice'**
+  /// In ko, this message translates to:
+  /// **'연습 시작'**
   String get startPractice;
 
   /// No description provided for @stopPractice.
   ///
-  /// In en, this message translates to:
-  /// **'Stop Practice'**
+  /// In ko, this message translates to:
+  /// **'연습 중지'**
   String get stopPractice;
 
   /// No description provided for @helpTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Help & Guide'**
+  /// In ko, this message translates to:
+  /// **'도움말 및 가이드'**
   String get helpTitle;
 
   /// No description provided for @helpTabModes.
   ///
-  /// In en, this message translates to:
-  /// **'Modes'**
+  /// In ko, this message translates to:
+  /// **'기능 소개'**
   String get helpTabModes;
 
   /// No description provided for @helpTabJson.
   ///
-  /// In en, this message translates to:
-  /// **'JSON Format'**
+  /// In ko, this message translates to:
+  /// **'JSON 형식'**
   String get helpTabJson;
 
   /// No description provided for @helpTabTour.
   ///
-  /// In en, this message translates to:
-  /// **'Tour'**
+  /// In ko, this message translates to:
+  /// **'튜토리얼'**
   String get helpTabTour;
 
   /// No description provided for @helpMode1Desc.
   ///
-  /// In en, this message translates to:
-  /// **'Recognize voice, translate to target language, and listen to the result.'**
+  /// In ko, this message translates to:
+  /// **'음성을 인식하여 번역하고, 결과를 듣습니다. 화면을 옆으로 밀어(Swipe) 모드를 전환할 수 있습니다.'**
   String get helpMode1Desc;
 
   /// No description provided for @helpMode1Details.
   ///
-  /// In en, this message translates to:
-  /// **'• Language Settings: Change language via top Translate icon\n• Help: Check guide via top Help icon\n• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: \'Save Data\' adds to history\n• Clear: Reset all inputs'**
+  /// In ko, this message translates to:
+  /// **'• 모드 전환: 화면을 옆으로 밀거(Swipe)나 왼쪽 메뉴(Drawer) 이용\n• 상황 설정: 입력창 아래 \'상황/문맥\' 칸에 상황(예: 아침, 식당) 입력\n• 음성 입력: 마이크 아이콘을 눌러 말하기/멈추기\n• 번역 및 저장: \'번역\' 후 하단 \'데이터 저장\' 버튼으로 기록 보관\n• 도움말: 상단 물음표 아이콘으로 가이드 확인'**
   String get helpMode1Details;
 
   /// No description provided for @helpMode2Desc.
   ///
-  /// In en, this message translates to:
-  /// **'Review saved sentences with auto-hide translations and track your review count.'**
+  /// In ko, this message translates to:
+  /// **'저장된 문장을 복습합니다. 상단 자료집 아이콘(📚)으로 원하는 자료를 선택하세요.'**
   String get helpMode2Desc;
 
   /// No description provided for @helpMode2Details.
   ///
-  /// In en, this message translates to:
-  /// **'• Select Material: Choose specific set or \'Review All\'\n• Flip Card: Use \'Show/Hide\' to check translation\n• Listen: Play TTS for specific sentence\n• Mark Studied: Checkmark (V) for completed items\n• Delete: Long-press card to remove record\n• Filter: View all or filter by material'**
+  /// In ko, this message translates to:
+  /// **'• 자료 선택: 상단 앱바의 자료집 아이콘(📚) 클릭\n• 카드 뒤집기: \'보이기/숨기기\' 버튼으로 번역 확인\n• 학습 체크: 완료된 문장은 체크 표시 (V)\n• 삭제: 카드를 길게 누르면 삭제 가능\n• 자동 재생: 우측 상단 \'자동 재생\'으로 연속 학습 가능'**
   String get helpMode2Details;
 
   /// No description provided for @helpMode3Desc.
   ///
-  /// In en, this message translates to:
-  /// **'Practice speaking by listening to and shadowing sentences.'**
+  /// In ko, this message translates to:
+  /// **'학습 자료를 원어민 음성으로 고 듣고 shadowing(따라 말하기) 연습을 합니다.'**
   String get helpMode3Desc;
 
   /// No description provided for @helpMode3Details.
   ///
-  /// In en, this message translates to:
-  /// **'• Select Material: Choose learning pack\n• Interval: [-] [+] to adjust wait time (3s-60s)\n• Start/Stop: Control shadowing session\n• Speak: Listen to audio and repeat after it\n• Feedback: Accuracy score (0-100) with color code\n• Retry: Use retry button if voice not detected'**
+  /// In ko, this message translates to:
+  /// **'• 자료 선택: 상단 앱바의 자료집 아이콘(📚) 클릭\n• 시작/정지: 재생 버튼으로 세션 제어\n• 발음 평가: 내 발음을 인식하여 정확도 점수 표시\n• 간격 조절: [-] [+] 버튼으로 대기 시간 설정'**
   String get helpMode3Details;
 
   /// No description provided for @helpJsonDesc.
   ///
-  /// In en, this message translates to:
-  /// **'To import study materials in Mode 3, create a JSON file with the following structure:'**
+  /// In ko, this message translates to:
+  /// **'학습 자료를 가져오려면 다음과 같은 구조의 JSON 파일을 사용하세요:'**
   String get helpJsonDesc;
 
   /// No description provided for @helpTourDesc.
   ///
-  /// In en, this message translates to:
-  /// **'The **Highlight Circle** will guide you through the main features.\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)'**
+  /// In ko, this message translates to:
+  /// **'튜토리얼을 시작하면 **하이라이트 원(Circle)**이 주요 기능을 안내해 드립니다.\n(예: 학습 카드를 **하이라이트 원**이 가리킬 때 길게 누르면 삭제할 수 있습니다.)'**
   String get helpTourDesc;
 
   /// No description provided for @startTutorial.
   ///
-  /// In en, this message translates to:
-  /// **'Start Tutorial'**
+  /// In ko, this message translates to:
+  /// **'튜토리얼 시작'**
   String get startTutorial;
 
   /// No description provided for @tutorialMicTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Voice Input'**
+  /// In ko, this message translates to:
+  /// **'음성 입력'**
   String get tutorialMicTitle;
 
   /// No description provided for @tutorialMicDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Tap the mic button to start voice input.'**
+  /// In ko, this message translates to:
+  /// **'마이크 버튼을 눌러 음성으로 입력할 수 있습니다.'**
   String get tutorialMicDesc;
 
   /// No description provided for @tutorialTabDesc.
   ///
-  /// In en, this message translates to:
-  /// **'You can select your desired learning mode here.'**
+  /// In ko, this message translates to:
+  /// **'여기서 원하는 학습 모드를 선택할 수 있습니다.'**
   String get tutorialTabDesc;
 
   /// No description provided for @tutorialTapToContinue.
   ///
-  /// In en, this message translates to:
-  /// **'Tap to continue'**
+  /// In ko, this message translates to:
+  /// **'화면을 탭하여 계속'**
   String get tutorialTapToContinue;
 
   /// No description provided for @tutorialTransTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Translate'**
+  /// In ko, this message translates to:
+  /// **'번역하기'**
   String get tutorialTransTitle;
 
   /// No description provided for @tutorialTransDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Tap here to translate your text.'**
+  /// In ko, this message translates to:
+  /// **'입력한 텍스트를 번역합니다.'**
   String get tutorialTransDesc;
 
   /// No description provided for @tutorialSaveTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Save'**
+  /// In ko, this message translates to:
+  /// **'저장하기'**
   String get tutorialSaveTitle;
 
   /// No description provided for @tutorialSaveDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Save your translation to study records.'**
+  /// In ko, this message translates to:
+  /// **'번역된 결과를 학습 기록에 저장하세요.'**
   String get tutorialSaveDesc;
 
   /// No description provided for @tutorialM2SelectTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Select & Filter'**
+  /// In ko, this message translates to:
+  /// **'자료 선택'**
   String get tutorialM2SelectTitle;
 
   /// No description provided for @tutorialM2SelectDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Choose study materials or switch to \'Review All\'.'**
+  /// In ko, this message translates to:
+  /// **'상단 앱바의 자료집 아이콘(📚)을 눌러 학습할 자료를 선택하세요.'**
   String get tutorialM2SelectDesc;
 
   /// No description provided for @tutorialM2ListTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Study List'**
+  /// In ko, this message translates to:
+  /// **'학습 목록'**
   String get tutorialM2ListTitle;
 
   /// No description provided for @tutorialM2ListDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Long-press this card to delete it. Check your saved sentences and flip them.'**
+  /// In ko, this message translates to:
+  /// **'이 카드를 길게 누르면(Long Click) 삭제할 수 있습니다. 저장된 문장을 확인하고 뒤집어보세요.'**
   String get tutorialM2ListDesc;
 
   /// No description provided for @tutorialM3SelectTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Select Material'**
+  /// In ko, this message translates to:
+  /// **'자료 선택'**
   String get tutorialM3SelectTitle;
 
   /// No description provided for @tutorialM3SelectDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Choose a material set for speaking practice.'**
+  /// In ko, this message translates to:
+  /// **'상단 앱바의 자료집 아이콘(📚)을 눌러 연습할 자료를 선택하세요.'**
   String get tutorialM3SelectDesc;
 
   /// No description provided for @tutorialM3IntervalTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Interval'**
+  /// In ko, this message translates to:
+  /// **'간격 설정'**
   String get tutorialM3IntervalTitle;
 
   /// No description provided for @tutorialM3IntervalDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Adjust the waiting time between sentences.'**
+  /// In ko, this message translates to:
+  /// **'문장 사이의 대기 시간을 조절합니다.'**
   String get tutorialM3IntervalDesc;
 
   /// No description provided for @tutorialM3StartTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Start Practice'**
+  /// In ko, this message translates to:
+  /// **'연습 시작'**
   String get tutorialM3StartTitle;
 
   /// No description provided for @tutorialM3StartDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Tap play to start listening and shadowing.'**
+  /// In ko, this message translates to:
+  /// **'재생 버튼을 눌러 원어민 음성을 듣고 따라하세요.'**
   String get tutorialM3StartDesc;
 
   /// No description provided for @startWarning.
   ///
-  /// In en, this message translates to:
-  /// **'Warning'**
+  /// In ko, this message translates to:
+  /// **'주의'**
   String get startWarning;
 
   /// No description provided for @noVoiceDetected.
   ///
-  /// In en, this message translates to:
-  /// **'No voice detected'**
+  /// In ko, this message translates to:
+  /// **'목소리가 감지되지 않았어요'**
   String get noVoiceDetected;
 
   /// No description provided for @tooltipSearch.
   ///
-  /// In en, this message translates to:
-  /// **'Search'**
+  /// In ko, this message translates to:
+  /// **'검색'**
   String get tooltipSearch;
 
   /// No description provided for @tooltipStudyReview.
   ///
-  /// In en, this message translates to:
-  /// **'Study+Review'**
+  /// In ko, this message translates to:
+  /// **'학습+복습'**
   String get tooltipStudyReview;
 
   /// No description provided for @tooltipSpeaking.
   ///
-  /// In en, this message translates to:
-  /// **'Speaking'**
+  /// In ko, this message translates to:
+  /// **'말하기'**
   String get tooltipSpeaking;
 
   /// No description provided for @tooltipDecrease.
   ///
-  /// In en, this message translates to:
-  /// **'Decrease'**
+  /// In ko, this message translates to:
+  /// **'감소'**
   String get tooltipDecrease;
 
   /// No description provided for @tooltipIncrease.
   ///
-  /// In en, this message translates to:
-  /// **'Increase'**
+  /// In ko, this message translates to:
+  /// **'증가'**
   String get tooltipIncrease;
 
   /// No description provided for @languageSettings.
   ///
-  /// In en, this message translates to:
+  /// In ko, this message translates to:
   /// **'Language Settings'**
   String get languageSettings;
 
   /// No description provided for @tutorialM2DropdownDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Select study materials.'**
+  /// In ko, this message translates to:
+  /// **'상단 메뉴를 통해 학습할 자료를 선택할 수 있습니다.'**
   String get tutorialM2DropdownDesc;
 
   /// No description provided for @tutorialM2ImportDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Import JSON file from device folder.'**
+  /// In ko, this message translates to:
+  /// **'기기의 폴더에서 JSON 파일을 불러옵니다.'**
   String get tutorialM2ImportDesc;
 
   /// No description provided for @tutorialLangSettingsTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Language Settings'**
+  /// In ko, this message translates to:
+  /// **'언어 설정'**
   String get tutorialLangSettingsTitle;
 
   /// No description provided for @tutorialLangSettingsDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Configure source and target languages for translation.'**
+  /// In ko, this message translates to:
+  /// **'번역할 원본 언어와 대상 언어를 설정합니다.'**
   String get tutorialLangSettingsDesc;
 
   /// No description provided for @copy.
   ///
-  /// In en, this message translates to:
-  /// **'Copy'**
+  /// In ko, this message translates to:
+  /// **'복사'**
   String get copy;
 
   /// No description provided for @copiedToClipboard.
   ///
-  /// In en, this message translates to:
-  /// **'Copied to clipboard!'**
+  /// In ko, this message translates to:
+  /// **'클립보드에 복사되었습니다!'**
   String get copiedToClipboard;
 
   /// No description provided for @tutorialContextTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Context Tag'**
+  /// In ko, this message translates to:
+  /// **'상황/문맥 태그'**
   String get tutorialContextTitle;
 
   /// No description provided for @tutorialContextDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Add context (e.g., Morning) to distinguish similar sentences.'**
+  /// In ko, this message translates to:
+  /// **'같은 문장이라도 상황(예: 아침, 저녁)을 적어두면 별도로 저장할 수 있어요.'**
   String get tutorialContextDesc;
 
   /// No description provided for @thinkingTimeInterval.
   ///
-  /// In en, this message translates to:
-  /// **'Thinking Time Interval'**
+  /// In ko, this message translates to:
+  /// **'생각 시간 간격'**
   String get thinkingTimeInterval;
 
   /// No description provided for @thinkingTimeDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Time to think before the answer is revealed.'**
+  /// In ko, this message translates to:
+  /// **'정답이 공개되기 전 생각할 시간입니다.'**
   String get thinkingTimeDesc;
 
   /// No description provided for @autoPlay.
   ///
-  /// In en, this message translates to:
-  /// **'Auto-Play'**
+  /// In ko, this message translates to:
+  /// **'자동 재생'**
   String get autoPlay;
 
   /// No description provided for @timeUp.
   ///
-  /// In en, this message translates to:
-  /// **'Time Up!'**
+  /// In ko, this message translates to:
+  /// **'시간 초과!'**
   String get timeUp;
 
   /// No description provided for @gameModeTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Game Mode'**
+  /// In ko, this message translates to:
+  /// **'게임 모드'**
   String get gameModeTitle;
 
   /// No description provided for @gameModeDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Choose your practice mode'**
+  /// In ko, this message translates to:
+  /// **'연습할 게임 모드를 선택하세요'**
   String get gameModeDesc;
 
   /// No description provided for @wordDefenseTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Word Defense'**
+  /// In ko, this message translates to:
+  /// **'단어 디펜스'**
   String get wordDefenseTitle;
 
   /// No description provided for @wordDefenseDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Defend your base by speaking words correctly before enemies reach you.'**
+  /// In ko, this message translates to:
+  /// **'적이 도착하기 전에 단어를 말해서 기지를 방어하세요.'**
   String get wordDefenseDesc;
 
   /// No description provided for @dialogueQuestTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Dialogue Quest'**
+  /// In ko, this message translates to:
+  /// **'대화 퀘스트'**
   String get dialogueQuestTitle;
 
   /// No description provided for @dialogueQuestDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Roleplay in scenarios. Choose the right response and speak it aloud.'**
+  /// In ko, this message translates to:
+  /// **'상황극을 통해 대화 연습을 하세요. 적절한 답변을 선택하고 말해보세요.'**
   String get dialogueQuestDesc;
-
-  /// No description provided for @tutorialM1ToggleDesc.
-  ///
-  /// In en, this message translates to:
-  /// **'Switch between Word and Sentence mode here. Words are saved with larger text.'**
-  String get tutorialM1ToggleDesc;
 
   /// No description provided for @labelType.
   ///
-  /// In en, this message translates to:
-  /// **'Type:'**
+  /// In ko, this message translates to:
+  /// **'종류:'**
   String get labelType;
 
   /// No description provided for @labelWord.
   ///
-  /// In en, this message translates to:
-  /// **'Word'**
+  /// In ko, this message translates to:
+  /// **'단어'**
   String get labelWord;
 
   /// No description provided for @labelSentence.
   ///
-  /// In en, this message translates to:
-  /// **'Sentence'**
+  /// In ko, this message translates to:
+  /// **'문장'**
   String get labelSentence;
 
   /// No description provided for @contextTagLabel.
   ///
-  /// In en, this message translates to:
-  /// **'Context/Situation (Optional) - Ex: Morning greeting, polite form'**
+  /// In ko, this message translates to:
+  /// **'문맥/상황 (선택사항) - 예: 아침인사, 존댓말'**
   String get contextTagLabel;
 
   /// No description provided for @contextTagHint.
   ///
-  /// In en, this message translates to:
-  /// **'Describe situation for easier classification later'**
+  /// In ko, this message translates to:
+  /// **'나중에 구분하기 쉽도록 상황을 적어주세요'**
   String get contextTagHint;
 
   /// No description provided for @translationLimitExceeded.
   ///
-  /// In en, this message translates to:
-  /// **'Translation Limit Exceeded'**
+  /// In ko, this message translates to:
+  /// **'번역 한도 초과'**
   String get translationLimitExceeded;
 
   /// No description provided for @translationLimitMessage.
   ///
-  /// In en, this message translates to:
-  /// **'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?'**
+  /// In ko, this message translates to:
+  /// **'일일 무료 번역(5회)을 모두 사용했습니다.\\n\\n광고를 보고 5회를 즉시 충전하시겠습니까?'**
   String get translationLimitMessage;
 
   /// No description provided for @watchAdAndRefill.
   ///
-  /// In en, this message translates to:
-  /// **'Watch Ad & Refill (+5)'**
+  /// In ko, this message translates to:
+  /// **'광고 보고 충전 (+5회)'**
   String get watchAdAndRefill;
 
   /// No description provided for @translationRefilled.
   ///
-  /// In en, this message translates to:
-  /// **'Translations refilled by 5!'**
+  /// In ko, this message translates to:
+  /// **'번역 횟수가 5회 충전되었습니다!'**
   String get translationRefilled;
 
   /// No description provided for @adLoading.
   ///
-  /// In en, this message translates to:
-  /// **'Loading ad, please try again in a moment.'**
+  /// In ko, this message translates to:
+  /// **'광고를 불러오는 중입니다. 잠시 후 다시 시도해주세요.'**
   String get adLoading;
 
   /// No description provided for @reviewAll.
   ///
-  /// In en, this message translates to:
-  /// **'Review All'**
+  /// In ko, this message translates to:
+  /// **'전체 복습'**
   String get reviewAll;
 
-  /// No description provided for @totalRecords.
+  /// Total records count
   ///
-  /// In en, this message translates to:
-  /// **'Total {count} records (View All)'**
+  /// In ko, this message translates to:
+  /// **'총 {count}개의 기록 (전체 보기)'**
   String totalRecords(int count);
 
   /// No description provided for @filterAll.
   ///
-  /// In en, this message translates to:
-  /// **'All'**
+  /// In ko, this message translates to:
+  /// **'전체'**
   String get filterAll;
 
   /// No description provided for @practiceWordsOnly.
   ///
-  /// In en, this message translates to:
-  /// **'Practice Words Only'**
+  /// In ko, this message translates to:
+  /// **'단어만 연습 (Words Only)'**
   String get practiceWordsOnly;
 
   /// No description provided for @resetPracticeHistory.
   ///
-  /// In en, this message translates to:
-  /// **'Reset Practice History'**
+  /// In ko, this message translates to:
+  /// **'연습 기록 초기화'**
   String get resetPracticeHistory;
 
   /// No description provided for @retry.
   ///
-  /// In en, this message translates to:
-  /// **'Retry?'**
+  /// In ko, this message translates to:
+  /// **'다시 시도?'**
   String get retry;
 
   /// No description provided for @noStudyMaterial.
   ///
-  /// In en, this message translates to:
-  /// **'No study material found.'**
+  /// In ko, this message translates to:
+  /// **'학습 자료가 없습니다.'**
   String get noStudyMaterial;
 
   /// No description provided for @gameOver.
   ///
-  /// In en, this message translates to:
+  /// In ko, this message translates to:
   /// **'Game Over'**
   String get gameOver;
 
   /// No description provided for @playAgain.
   ///
-  /// In en, this message translates to:
-  /// **'Play Again'**
+  /// In ko, this message translates to:
+  /// **'다시 하기'**
   String get playAgain;
 
   /// No description provided for @speakNow.
   ///
-  /// In en, this message translates to:
-  /// **'Speak now!'**
+  /// In ko, this message translates to:
+  /// **'말하세요! (Speak!)'**
   String get speakNow;
 
   /// No description provided for @scoreLabel.
   ///
-  /// In en, this message translates to:
-  /// **'Score'**
+  /// In ko, this message translates to:
+  /// **'점수'**
   String get scoreLabel;
 
   /// No description provided for @viewOnlineGuide.
   ///
-  /// In en, this message translates to:
-  /// **'View Online User Guide'**
+  /// In ko, this message translates to:
+  /// **'온라인 가이드 보기'**
   String get viewOnlineGuide;
 
   /// No description provided for @getMaterials.
   ///
-  /// In en, this message translates to:
-  /// **'Get Materials'**
+  /// In ko, this message translates to:
+  /// **'자료 받기'**
   String get getMaterials;
 
   /// No description provided for @swapLanguages.
   ///
-  /// In en, this message translates to:
-  /// **'Swap Languages'**
+  /// In ko, this message translates to:
+  /// **'언어 전환'**
   String get swapLanguages;
 
   /// No description provided for @next.
   ///
-  /// In en, this message translates to:
-  /// **'Next'**
+  /// In ko, this message translates to:
+  /// **'다음'**
   String get next;
 
   /// No description provided for @wordModeLabel.
   ///
-  /// In en, this message translates to:
-  /// **'Word Mode'**
+  /// In ko, this message translates to:
+  /// **'단어 모드'**
   String get wordModeLabel;
 
   /// No description provided for @accuracy.
   ///
-  /// In en, this message translates to:
-  /// **'Accuracy'**
+  /// In ko, this message translates to:
+  /// **'정확도'**
   String get accuracy;
 
   /// No description provided for @basicDefault.
   ///
-  /// In en, this message translates to:
-  /// **'Basic (Default)'**
+  /// In ko, this message translates to:
+  /// **'기본 (Default)'**
   String get basicDefault;
 
   /// No description provided for @basic.
   ///
-  /// In en, this message translates to:
-  /// **'Basic'**
+  /// In ko, this message translates to:
+  /// **'기본'**
   String get basic;
-
-  /// No description provided for @tutorialM1ToggleTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Word/Sentence Mode'**
-  String get tutorialM1ToggleTitle;
 
   /// No description provided for @tutorialM3WordsTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Practice Words'**
+  /// In ko, this message translates to:
+  /// **'단어 연습'**
   String get tutorialM3WordsTitle;
 
   /// No description provided for @tutorialM3WordsDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Check this to practice only your saved words.'**
+  /// In ko, this message translates to:
+  /// **'체크하면 저장된 단어만 연습합니다.'**
   String get tutorialM3WordsDesc;
 
   /// No description provided for @enterTextHint.
   ///
-  /// In en, this message translates to:
-  /// **'Enter text to translate'**
+  /// In ko, this message translates to:
+  /// **'번역할 텍스트를 입력하세요'**
   String get enterTextHint;
 
   /// No description provided for @micButtonTooltip.
   ///
-  /// In en, this message translates to:
-  /// **'Start Listening'**
+  /// In ko, this message translates to:
+  /// **'음성 인식 시작'**
   String get micButtonTooltip;
 
   /// No description provided for @menuHelp.
   ///
-  /// In en, this message translates to:
-  /// **'Help'**
+  /// In ko, this message translates to:
+  /// **'도움말'**
   String get menuHelp;
 
   /// No description provided for @menuWebDownload.
   ///
-  /// In en, this message translates to:
-  /// **'Get Material from Web'**
+  /// In ko, this message translates to:
+  /// **'홈페이지에서 자료 받기'**
   String get menuWebDownload;
 
   /// No description provided for @menuDeviceImport.
   ///
-  /// In en, this message translates to:
-  /// **'Import from Device'**
+  /// In ko, this message translates to:
+  /// **'기기에서 자료 가져오기'**
   String get menuDeviceImport;
 
-  /// Menu item for language settings
+  /// No description provided for @menuSettings.
   ///
-  /// In en, this message translates to:
-  /// **'Language Settings'**
+  /// In ko, this message translates to:
+  /// **'언어 설정'**
   String get menuSettings;
 
-  /// Default name for basic vocabulary material
+  /// No description provided for @basicWords.
   ///
-  /// In en, this message translates to:
-  /// **'Basic Words'**
+  /// In ko, this message translates to:
+  /// **'기본 단어 저장소'**
   String get basicWords;
 
-  /// Default name for basic sentences material
+  /// No description provided for @basicSentences.
   ///
-  /// In en, this message translates to:
-  /// **'Basic Sentences'**
+  /// In ko, this message translates to:
+  /// **'기본 문장 저장소'**
   String get basicSentences;
 
-  /// Title for the material selection dialog
+  /// No description provided for @selectMaterialSet.
   ///
-  /// In en, this message translates to:
-  /// **'Select Study Material Set'**
+  /// In ko, this message translates to:
+  /// **'학습 자료집 선택'**
   String get selectMaterialSet;
 
-  /// Header for words section in material selection
+  /// No description provided for @sectionWords.
   ///
-  /// In en, this message translates to:
-  /// **'Words'**
+  /// In ko, this message translates to:
+  /// **'단어'**
   String get sectionWords;
 
-  /// Header for sentences section in material selection
+  /// No description provided for @sectionSentences.
   ///
-  /// In en, this message translates to:
-  /// **'Sentences'**
+  /// In ko, this message translates to:
+  /// **'문장'**
   String get sectionSentences;
 
   /// No description provided for @languageSettingsTitle.
   ///
-  /// In en, this message translates to:
-  /// **'Language Settings'**
+  /// In ko, this message translates to:
+  /// **'언어 설정'**
   String get languageSettingsTitle;
 
   /// No description provided for @sourceLanguageLabel.
   ///
-  /// In en, this message translates to:
-  /// **'My Language (Source)'**
+  /// In ko, this message translates to:
+  /// **'내 언어 (Source)'**
   String get sourceLanguageLabel;
 
   /// No description provided for @targetLanguageLabel.
   ///
-  /// In en, this message translates to:
-  /// **'Study Language (Target)'**
+  /// In ko, this message translates to:
+  /// **'학습 언어 (Target)'**
   String get targetLanguageLabel;
 
   /// No description provided for @mode3Start.
   ///
-  /// In en, this message translates to:
-  /// **'Start'**
+  /// In ko, this message translates to:
+  /// **'시작'**
   String get mode3Start;
 
   /// No description provided for @mode3Stop.
   ///
-  /// In en, this message translates to:
-  /// **'Stop'**
+  /// In ko, this message translates to:
+  /// **'종료'**
   String get mode3Stop;
 
   /// No description provided for @mode3Next.
   ///
-  /// In en, this message translates to:
-  /// **'Next'**
+  /// In ko, this message translates to:
+  /// **'다음'**
   String get mode3Next;
 
   /// No description provided for @mode3TryAgain.
   ///
-  /// In en, this message translates to:
-  /// **'Try Again'**
+  /// In ko, this message translates to:
+  /// **'재시도'**
   String get mode3TryAgain;
+
+  /// No description provided for @tutorialM3ResetTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'기록 초기화'**
+  String get tutorialM3ResetTitle;
 
   /// No description provided for @tutorialSwapDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Switch between source and target languages.'**
+  /// In ko, this message translates to:
+  /// **'내 언어와 학습 언어를 서로 바꿉니다.'**
   String get tutorialSwapDesc;
 
   /// No description provided for @recognizedText.
   ///
-  /// In en, this message translates to:
-  /// **'Recognized Text:'**
+  /// In ko, this message translates to:
+  /// **'인식된 발음:'**
   String get recognizedText;
 
-  /// No description provided for @tutorialM3ResetTitle.
+  /// No description provided for @titleFormat.
   ///
-  /// In en, this message translates to:
-  /// **'Reset History'**
-  String get tutorialM3ResetTitle;
+  /// In ko, this message translates to:
+  /// **'{type}: {materialName}'**
+  String titleFormat(Object materialName, Object type);
 
   /// No description provided for @tutorialM3ResetDesc.
   ///
-  /// In en, this message translates to:
-  /// **'Clear your progress and accuracy scores to start fresh.'**
+  /// In ko, this message translates to:
+  /// **'진행 상황과 정확도 점수를 초기화하여 처음부터 다시 시작합니다.'**
   String get tutorialM3ResetDesc;
 
   /// No description provided for @menuSelectMaterialSet.
   ///
-  /// In en, this message translates to:
-  /// **'Select Study Material Set'**
+  /// In ko, this message translates to:
+  /// **'학습 자료집 선택'**
   String get menuSelectMaterialSet;
 
   /// No description provided for @sectionWord.
   ///
-  /// In en, this message translates to:
-  /// **'Word Section'**
+  /// In ko, this message translates to:
+  /// **'단어 섹션'**
   String get sectionWord;
 
   /// No description provided for @sectionSentence.
   ///
-  /// In en, this message translates to:
-  /// **'Sentence Section'**
+  /// In ko, this message translates to:
+  /// **'문장 섹션'**
   String get sectionSentence;
 
   /// No description provided for @tabWord.
   ///
-  /// In en, this message translates to:
-  /// **'word'**
+  /// In ko, this message translates to:
+  /// **'단어'**
   String get tabWord;
 
   /// No description provided for @tabSentence.
   ///
-  /// In en, this message translates to:
-  /// **'sentence'**
+  /// In ko, this message translates to:
+  /// **'문장'**
   String get tabSentence;
 
   /// No description provided for @errorProfanity.
   ///
-  /// In en, this message translates to:
-  /// **'Translation cannot be processed due to profanity.'**
+  /// In ko, this message translates to:
+  /// **'비속어가 포함되어 있어 번역할 수 없습니다.'**
   String get errorProfanity;
 
   /// No description provided for @errorHateSpeech.
   ///
-  /// In en, this message translates to:
-  /// **'Translation cannot be processed due to hate speech.'**
+  /// In ko, this message translates to:
+  /// **'혐오 표현이 포함되어 있어 번역할 수 없습니다.'**
   String get errorHateSpeech;
 
   /// No description provided for @errorSexualContent.
   ///
-  /// In en, this message translates to:
-  /// **'Translation cannot be processed due to sexual content.'**
+  /// In ko, this message translates to:
+  /// **'선정적인 내용이 포함되어 있어 번역할 수 없습니다.'**
   String get errorSexualContent;
 
   /// No description provided for @errorOtherSafety.
   ///
-  /// In en, this message translates to:
-  /// **'Translation was blocked by AI safety policy.'**
+  /// In ko, this message translates to:
+  /// **'AI 안전 정책에 의해 번역이 거부되었습니다.'**
   String get errorOtherSafety;
 
-  /// No description provided for @titleFormat.
+  /// No description provided for @clearAll.
   ///
-  /// In en, this message translates to:
-  /// **'{type}: {materialName}'**
-  String titleFormat(Object materialName, Object type);
+  /// In ko, this message translates to:
+  /// **'모두 지우기'**
+  String get clearAll;
+
+  /// No description provided for @disambiguationTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'의미 선택'**
+  String get disambiguationTitle;
+
+  /// No description provided for @disambiguationPrompt.
+  ///
+  /// In ko, this message translates to:
+  /// **'어떤 의미로 번역하시겠습니까?'**
+  String get disambiguationPrompt;
+
+  /// No description provided for @skip.
+  ///
+  /// In ko, this message translates to:
+  /// **'건너뛰기'**
+  String get skip;
+
+  /// No description provided for @inputModeTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'입력'**
+  String get inputModeTitle;
+
+  /// No description provided for @reviewModeTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'복습'**
+  String get reviewModeTitle;
+
+  /// No description provided for @practiceModeTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'발음 연습'**
+  String get practiceModeTitle;
 }
 
-class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate
+    extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override
@@ -1375,75 +1409,161 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['af', 'ar', 'bn', 'cs', 'da', 'de', 'el', 'en', 'es', 'fa', 'fi', 'fil', 'fr', 'gu', 'he', 'hi', 'hu', 'id', 'it', 'ja', 'kn', 'ko', 'ml', 'mr', 'ms', 'nl', 'no', 'pa', 'pl', 'pt', 'ro', 'ru', 'sv', 'sw', 'ta', 'te', 'th', 'tr', 'uk', 'ur', 'vi', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>[
+        'af',
+        'ar',
+        'bn',
+        'cs',
+        'da',
+        'de',
+        'el',
+        'en',
+        'es',
+        'fa',
+        'fi',
+        'fil',
+        'fr',
+        'gu',
+        'he',
+        'hi',
+        'hu',
+        'id',
+        'it',
+        'ja',
+        'kn',
+        'ko',
+        'ml',
+        'mr',
+        'ms',
+        'nl',
+        'no',
+        'pa',
+        'pl',
+        'pt',
+        'ro',
+        'ru',
+        'sv',
+        'sw',
+        'ta',
+        'te',
+        'th',
+        'tr',
+        'uk',
+        'ur',
+        'vi',
+        'zh'
+      ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
-
   // Lookup logic when language+country codes are specified.
   switch (locale.languageCode) {
-    case 'zh': {
-  switch (locale.countryCode) {
-    case 'CN': return AppLocalizationsZhCn();
-case 'TW': return AppLocalizationsZhTw();
-   }
-  break;
-   }
+    case 'zh':
+      {
+        switch (locale.countryCode) {
+          case 'CN':
+            return AppLocalizationsZhCn();
+          case 'TW':
+            return AppLocalizationsZhTw();
+        }
+        break;
+      }
   }
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'af': return AppLocalizationsAf();
-    case 'ar': return AppLocalizationsAr();
-    case 'bn': return AppLocalizationsBn();
-    case 'cs': return AppLocalizationsCs();
-    case 'da': return AppLocalizationsDa();
-    case 'de': return AppLocalizationsDe();
-    case 'el': return AppLocalizationsEl();
-    case 'en': return AppLocalizationsEn();
-    case 'es': return AppLocalizationsEs();
-    case 'fa': return AppLocalizationsFa();
-    case 'fi': return AppLocalizationsFi();
-    case 'fil': return AppLocalizationsFil();
-    case 'fr': return AppLocalizationsFr();
-    case 'gu': return AppLocalizationsGu();
-    case 'he': return AppLocalizationsHe();
-    case 'hi': return AppLocalizationsHi();
-    case 'hu': return AppLocalizationsHu();
-    case 'id': return AppLocalizationsId();
-    case 'it': return AppLocalizationsIt();
-    case 'ja': return AppLocalizationsJa();
-    case 'kn': return AppLocalizationsKn();
-    case 'ko': return AppLocalizationsKo();
-    case 'ml': return AppLocalizationsMl();
-    case 'mr': return AppLocalizationsMr();
-    case 'ms': return AppLocalizationsMs();
-    case 'nl': return AppLocalizationsNl();
-    case 'no': return AppLocalizationsNo();
-    case 'pa': return AppLocalizationsPa();
-    case 'pl': return AppLocalizationsPl();
-    case 'pt': return AppLocalizationsPt();
-    case 'ro': return AppLocalizationsRo();
-    case 'ru': return AppLocalizationsRu();
-    case 'sv': return AppLocalizationsSv();
-    case 'sw': return AppLocalizationsSw();
-    case 'ta': return AppLocalizationsTa();
-    case 'te': return AppLocalizationsTe();
-    case 'th': return AppLocalizationsTh();
-    case 'tr': return AppLocalizationsTr();
-    case 'uk': return AppLocalizationsUk();
-    case 'ur': return AppLocalizationsUr();
-    case 'vi': return AppLocalizationsVi();
-    case 'zh': return AppLocalizationsZh();
+    case 'af':
+      return AppLocalizationsAf();
+    case 'ar':
+      return AppLocalizationsAr();
+    case 'bn':
+      return AppLocalizationsBn();
+    case 'cs':
+      return AppLocalizationsCs();
+    case 'da':
+      return AppLocalizationsDa();
+    case 'de':
+      return AppLocalizationsDe();
+    case 'el':
+      return AppLocalizationsEl();
+    case 'en':
+      return AppLocalizationsEn();
+    case 'es':
+      return AppLocalizationsEs();
+    case 'fa':
+      return AppLocalizationsFa();
+    case 'fi':
+      return AppLocalizationsFi();
+    case 'fil':
+      return AppLocalizationsFil();
+    case 'fr':
+      return AppLocalizationsFr();
+    case 'gu':
+      return AppLocalizationsGu();
+    case 'he':
+      return AppLocalizationsHe();
+    case 'hi':
+      return AppLocalizationsHi();
+    case 'hu':
+      return AppLocalizationsHu();
+    case 'id':
+      return AppLocalizationsId();
+    case 'it':
+      return AppLocalizationsIt();
+    case 'ja':
+      return AppLocalizationsJa();
+    case 'kn':
+      return AppLocalizationsKn();
+    case 'ko':
+      return AppLocalizationsKo();
+    case 'ml':
+      return AppLocalizationsMl();
+    case 'mr':
+      return AppLocalizationsMr();
+    case 'ms':
+      return AppLocalizationsMs();
+    case 'nl':
+      return AppLocalizationsNl();
+    case 'no':
+      return AppLocalizationsNo();
+    case 'pa':
+      return AppLocalizationsPa();
+    case 'pl':
+      return AppLocalizationsPl();
+    case 'pt':
+      return AppLocalizationsPt();
+    case 'ro':
+      return AppLocalizationsRo();
+    case 'ru':
+      return AppLocalizationsRu();
+    case 'sv':
+      return AppLocalizationsSv();
+    case 'sw':
+      return AppLocalizationsSw();
+    case 'ta':
+      return AppLocalizationsTa();
+    case 'te':
+      return AppLocalizationsTe();
+    case 'th':
+      return AppLocalizationsTh();
+    case 'tr':
+      return AppLocalizationsTr();
+    case 'uk':
+      return AppLocalizationsUk();
+    case 'ur':
+      return AppLocalizationsUr();
+    case 'vi':
+      return AppLocalizationsVi();
+    case 'zh':
+      return AppLocalizationsZh();
   }
 
   throw FlutterError(
-    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-    'an issue with the localizations generation tool. Please file an issue '
-    'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.'
-  );
+      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
 }

@@ -66,7 +66,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String get noRecords => 'No hay registros para el idioma seleccionado';
 
   @override
-  String get saveTranslationsFromSearch => 'Guarda traducciones en modo búsqueda';
+  String get saveTranslationsFromSearch =>
+      'Guarda traducciones en modo búsqueda';
 
   @override
   String get flip => 'Mostrar';
@@ -283,28 +284,36 @@ class AppLocalizationsEs extends AppLocalizations {
   String get helpTabTour => 'Tour';
 
   @override
-  String get helpMode1Desc => 'Reconoce voz, traduce al idioma destino y escucha el resultado.';
+  String get helpMode1Desc =>
+      'Reconoce voz, traduce al idioma destino y escucha el resultado.';
 
   @override
-  String get helpMode1Details => '• Configuración de idioma: Cambia el idioma mediante el icono de traducir superior\n• Ayuda: Consulta la guía mediante el icono de ayuda superior\n• Entrada de Voz: Toca el icono del micro para empezar/parar\n• Entrada de Texto: Escribe directamente para traducir\n• Auto-Búsqueda: Detecta frases existentes similares\n• Traducir: Toca para traducción instantánea\n• Escuchar: Icono de altavoz para TTS (Original/Traducido)\n• Guardar: \'Guardar\' añade al historial\n• Limpiar: Reinicia todos los campos';
+  String get helpMode1Details =>
+      '• Configuración de idioma: Cambia el idioma mediante el icono de traducir superior\n• Ayuda: Consulta la guía mediante el icono de ayuda superior\n• Entrada de Voz: Toca el icono del micro para empezar/parar\n• Entrada de Texto: Escribe directamente para traducir\n• Auto-Búsqueda: Detecta frases existentes similares\n• Traducir: Toca para traducción instantánea\n• Escuchar: Icono de altavoz para TTS (Original/Traducido)\n• Guardar: \'Guardar\' añade al historial\n• Limpiar: Reinicia todos los campos';
 
   @override
-  String get helpMode2Desc => 'Repasa oraciones guardadas con auto-ocultar traducciones y seguimiento.';
+  String get helpMode2Desc =>
+      'Repasa oraciones guardadas con auto-ocultar traducciones y seguimiento.';
 
   @override
-  String get helpMode2Details => '• Seleccionar Material: Elige set o \'Repasar Todo\'\n• Girar Tarjeta: Usa \'Mostrar/Ocultar\' para ver traducción\n• Escuchar: Reproduce TTS para la oración \n• Marcar Estudiado: Check (V) para ítems completados\n• Eliminar: Mantén presionada la tarjeta\n• Filtro: Ver todo o filtrar por material';
+  String get helpMode2Details =>
+      '• Seleccionar Material: Elige set o \'Repasar Todo\'\n• Girar Tarjeta: Usa \'Mostrar/Ocultar\' para ver traducción\n• Escuchar: Reproduce TTS para la oración \n• Marcar Estudiado: Check (V) para ítems completados\n• Eliminar: Mantén presionada la tarjeta\n• Filtro: Ver todo o filtrar por material';
 
   @override
-  String get helpMode3Desc => 'Practica hablando escuchando y repitiendo oraciones (Shadowing).';
+  String get helpMode3Desc =>
+      'Practica hablando escuchando y repitiendo oraciones (Shadowing).';
 
   @override
-  String get helpMode3Details => '• Seleccionar Material: Elige paquete de aprendizaje\n• Intervalo: [-] [+] ajusta tiempo de espera (3s-60s)\n• Iniciar/Parar: Controla la sesión\n• Hablar: Escucha el audio y repite después\n• Feedback: Puntuación de precisión (0-100) con código de color\n• Reintentar: Usa el botón si no se detecta voz';
+  String get helpMode3Details =>
+      '• Seleccionar Material: Elige paquete de aprendizaje\n• Intervalo: [-] [+] ajusta tiempo de espera (3s-60s)\n• Iniciar/Parar: Controla la sesión\n• Hablar: Escucha el audio y repite después\n• Feedback: Puntuación de precisión (0-100) con código de color\n• Reintentar: Usa el botón si no se detecta voz';
 
   @override
-  String get helpJsonDesc => 'Para importar materiales en Modo 3, crea un archivo JSON con esta estructura:';
+  String get helpJsonDesc =>
+      'Para importar materiales en Modo 3, crea un archivo JSON con esta estructura:';
 
   @override
-  String get helpTourDesc => 'El **Círculo Resaltado** le guiará a través de las funciones principales.\n(p. ej., puede eliminar un registro manteniendo pulsado cuando el **Círculo Resaltado** lo señale.)';
+  String get helpTourDesc =>
+      'El **Círculo Resaltado** le guiará a través de las funciones principales.\n(p. ej., puede eliminar un registro manteniendo pulsado cuando el **Círculo Resaltado** lo señale.)';
 
   @override
   String get startTutorial => 'Iniciar Tutorial';
@@ -313,10 +322,12 @@ class AppLocalizationsEs extends AppLocalizations {
   String get tutorialMicTitle => 'Entrada de Voz';
 
   @override
-  String get tutorialMicDesc => 'Toca el micrófono para iniciar la entrada de voz.';
+  String get tutorialMicDesc =>
+      'Toca el micrófono para iniciar la entrada de voz.';
 
   @override
-  String get tutorialTabDesc => 'Aquí puedes seleccionar el modo de aprendizaje deseado.';
+  String get tutorialTabDesc =>
+      'Aquí puedes seleccionar el modo de aprendizaje deseado.';
 
   @override
   String get tutorialTapToContinue => 'Toca para continuar';
@@ -331,37 +342,43 @@ class AppLocalizationsEs extends AppLocalizations {
   String get tutorialSaveTitle => 'Guardar';
 
   @override
-  String get tutorialSaveDesc => 'Guarda tu traducción en los registros de estudio.';
+  String get tutorialSaveDesc =>
+      'Guarda tu traducción en los registros de estudio.';
 
   @override
   String get tutorialM2SelectTitle => 'Selección y Filtro';
 
   @override
-  String get tutorialM2SelectDesc => 'Elige materiales de estudio o cambia a \'Repasar Todo\'.';
+  String get tutorialM2SelectDesc =>
+      'Elige materiales de estudio o cambia a \'Repasar Todo\'.';
 
   @override
   String get tutorialM2ListTitle => 'Lista de Estudio';
 
   @override
-  String get tutorialM2ListDesc => 'Revisa tus tarjetas guardadas y gíralas para ver respuestas. (Mantén presionado para eliminar)';
+  String get tutorialM2ListDesc =>
+      'Revisa tus tarjetas guardadas y gíralas para ver respuestas. (Mantén presionado para eliminar)';
 
   @override
   String get tutorialM3SelectTitle => 'Seleccionar Material';
 
   @override
-  String get tutorialM3SelectDesc => 'Elige un set de material para practicar habla.';
+  String get tutorialM3SelectDesc =>
+      'Elige un set de material para practicar habla.';
 
   @override
   String get tutorialM3IntervalTitle => 'Intervalo';
 
   @override
-  String get tutorialM3IntervalDesc => 'Ajusta el tiempo de espera entre oraciones.';
+  String get tutorialM3IntervalDesc =>
+      'Ajusta el tiempo de espera entre oraciones.';
 
   @override
   String get tutorialM3StartTitle => 'Iniciar Práctica';
 
   @override
-  String get tutorialM3StartDesc => 'Toca reproducir para empezar a escuchar y repetir.';
+  String get tutorialM3StartDesc =>
+      'Toca reproducir para empezar a escuchar y repetir.';
 
   @override
   String get startWarning => 'Advertencia';
@@ -391,13 +408,15 @@ class AppLocalizationsEs extends AppLocalizations {
   String get tutorialM2DropdownDesc => 'Selecciona materiales de estudio.';
 
   @override
-  String get tutorialM2ImportDesc => 'Importar archivo JSON desde la carpeta del dispositivo.';
+  String get tutorialM2ImportDesc =>
+      'Importar archivo JSON desde la carpeta del dispositivo.';
 
   @override
   String get tutorialLangSettingsTitle => 'Configuración de idioma';
 
   @override
-  String get tutorialLangSettingsDesc => 'Configure los idiomas de origen y destino para la traducción.';
+  String get tutorialLangSettingsDesc =>
+      'Configure los idiomas de origen y destino para la traducción.';
 
   @override
   String get copy => 'Copiar';
@@ -409,7 +428,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String get tutorialContextTitle => 'Etiqueta de contexto';
 
   @override
-  String get tutorialContextDesc => 'Agregue contexto (ej: Mañana) para distinguir oraciones similares.';
+  String get tutorialContextDesc =>
+      'Agregue contexto (ej: Mañana) para distinguir oraciones similares.';
 
   @override
   String get thinkingTimeInterval => 'Thinking Time Interval';
@@ -433,16 +453,15 @@ class AppLocalizationsEs extends AppLocalizations {
   String get wordDefenseTitle => 'Word Defense';
 
   @override
-  String get wordDefenseDesc => 'Defend your base by speaking words correctly before enemies reach you.';
+  String get wordDefenseDesc =>
+      'Defend your base by speaking words correctly before enemies reach you.';
 
   @override
   String get dialogueQuestTitle => 'Dialogue Quest';
 
   @override
-  String get dialogueQuestDesc => 'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get tutorialM1ToggleDesc => 'Switch between Word and Sentence mode here. Words are saved with larger text.';
+  String get dialogueQuestDesc =>
+      'Roleplay in scenarios. Choose the right response and speak it aloud.';
 
   @override
   String get labelType => 'Type:';
@@ -454,16 +473,19 @@ class AppLocalizationsEs extends AppLocalizations {
   String get labelSentence => 'Sentence';
 
   @override
-  String get contextTagLabel => 'Context/Situation (Optional) - Ex: Morning greeting, polite form';
+  String get contextTagLabel =>
+      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
 
   @override
-  String get contextTagHint => 'Describe situation for easier classification later';
+  String get contextTagHint =>
+      'Describe situation for easier classification later';
 
   @override
   String get translationLimitExceeded => 'Translation Limit Exceeded';
 
   @override
-  String get translationLimitMessage => 'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
+  String get translationLimitMessage =>
+      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
 
   @override
   String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
@@ -534,13 +556,11 @@ class AppLocalizationsEs extends AppLocalizations {
   String get basic => 'Basic';
 
   @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
   String get tutorialM3WordsTitle => 'Practice Words';
 
   @override
-  String get tutorialM3WordsDesc => 'Check this to practice only your saved words.';
+  String get tutorialM3WordsDesc =>
+      'Check this to practice only your saved words.';
 
   @override
   String get enterTextHint => 'Enter text to translate';
@@ -561,19 +581,19 @@ class AppLocalizationsEs extends AppLocalizations {
   String get menuSettings => 'Settings';
 
   @override
-  String get basicWords => 'Basic Words';
+  String get basicWords => '기본 단어 저장소 (TODO: Translate)';
 
   @override
-  String get basicSentences => 'Basic Sentences';
+  String get basicSentences => '기본 문장 저장소 (TODO: Translate)';
 
   @override
-  String get selectMaterialSet => 'Select Study Material Set';
+  String get selectMaterialSet => '학습 자료집 선택 (TODO: Translate)';
 
   @override
-  String get sectionWords => 'Words';
+  String get sectionWords => '단어 (TODO: Translate)';
 
   @override
-  String get sectionSentences => 'Sentences';
+  String get sectionSentences => '문장 (TODO: Translate)';
 
   @override
   String get languageSettingsTitle => 'Language Settings';
@@ -597,16 +617,23 @@ class AppLocalizationsEs extends AppLocalizations {
   String get mode3TryAgain => 'Try Again';
 
   @override
-  String get tutorialSwapDesc => 'Intercambio mi idioma con el idioma que estoy aprendiendo.';
+  String get tutorialM3ResetTitle => 'Reset History';
+
+  @override
+  String get tutorialSwapDesc =>
+      'Intercambio mi idioma con el idioma que estoy aprendiendo.';
 
   @override
   String get recognizedText => 'Recognized Text:';
 
   @override
-  String get tutorialM3ResetTitle => 'Reset History';
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
 
   @override
-  String get tutorialM3ResetDesc => 'Restablece tu progreso y puntuación de precisión, comenzando nuevamente desde el principio.';
+  String get tutorialM3ResetDesc =>
+      'Restablece tu progreso y puntuación de precisión, comenzando nuevamente desde el principio.';
 
   @override
   String get menuSelectMaterialSet => 'Seleccione un material de estudio';
@@ -624,19 +651,36 @@ class AppLocalizationsEs extends AppLocalizations {
   String get tabSentence => 'oración';
 
   @override
-  String get errorProfanity => 'Translation cannot be processed due to profanity.';
+  String get errorProfanity => '비속어가 포함되어 있어 번역할 수 없습니다. (TODO: Translate)';
 
   @override
-  String get errorHateSpeech => 'Translation cannot be processed due to hate speech.';
+  String get errorHateSpeech => '혐오 표현이 포함되어 있어 번역할 수 없습니다. (TODO: Translate)';
 
   @override
-  String get errorSexualContent => 'Translation cannot be processed due to sexual content.';
+  String get errorSexualContent =>
+      '선정적인 내용이 포함되어 있어 번역할 수 없습니다. (TODO: Translate)';
 
   @override
-  String get errorOtherSafety => 'Translation was blocked by AI safety policy.';
+  String get errorOtherSafety => 'AI 안전 정책에 의해 번역이 거부되었습니다. (TODO: Translate)';
 
   @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
+  String get clearAll => '모두 지우기 (TODO: Translate)';
+
+  @override
+  String get disambiguationTitle => '의미 선택 (TODO: Translate)';
+
+  @override
+  String get disambiguationPrompt => '어떤 의미로 번역하시겠습니까? (TODO: Translate)';
+
+  @override
+  String get skip => '건너뛰기 (TODO: Translate)';
+
+  @override
+  String get inputModeTitle => '입력 (TODO: Translate)';
+
+  @override
+  String get reviewModeTitle => '복습 (TODO: Translate)';
+
+  @override
+  String get practiceModeTitle => '발음 연습 (TODO: Translate)';
 }
