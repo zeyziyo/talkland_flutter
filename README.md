@@ -6,11 +6,11 @@
 
 **"Talkie" 앱의 주된 목적은 단순한 번역을 넘어, 새로 학습한 문장을 언제 어디서든 자유롭게 복습하는 데 있습니다.** 
 
-특히, 사용자께서 미리 준비한 학습 자료(JSON 파일)를 활용하면 더욱 강력한 학습 도구가 됩니다. 여러분이 익히고 싶은 문장들을 수집하여 AI 모델 등을 통해 미리 번역한 뒤, 이를 파일로 만들어 앱에서 불러오기만 하세요. 이미 검증된 번역 문장들을 무제한으로 반복 청취하고 말하며 연습할 수 있습니다. 여러분의 언어 학습에 큰 도움이 되길 바랍니다.
+화면을 옆으로 밀어(Swipe) 모드를 전환하는 직관적인 UX를 제공하며, 사용자께서 미리 준비한 학습 자료(JSON 파일)를 활용하면 더욱 강력한 학습 도구가 됩니다. 여러분이 익히고 싶은 문장들을 수집하여 AI 모델 등을 통해 미리 번역한 뒤, 이를 파일로 만들어 앱에서 불러오기만 하세요. 이미 검증된 번역 문장들을 무제한으로 반복 청취하고 말하며 연습할 수 있습니다. 여러분의 언어 학습에 큰 도움이 되길 바랍니다.
 
 **The main purpose of "Talkie" goes beyond simple translation; it allows you to freely review newly learned sentences anytime, anywhere.**
 
-In particular, it becomes an even more powerful tool when used with your own study materials (JSON files). Simply collect the sentences you want to learn, translate them using AI models, and save them as a file to import into the app. You can then practice these verified translations with unlimited repetition. We hope this app becomes a valuable asset in your language learning journey.
+It provides an intuitive UX for switching modes by swiping the screen. In particular, it becomes an even more powerful tool when used with your own study materials (JSON files). Simply collect the sentences you want to learn, translate them using AI models, and save them as a file to import into the app. You can then practice these verified translations with unlimited repetition. We hope this app becomes a valuable asset in your language learning journey.
 
 ## 기능 (Features)
 
@@ -25,8 +25,9 @@ In particular, it becomes an even more powerful tool when used with your own stu
 * **TTS**: Listen to translated text
 * **Save**: Save as study records
 
-### MODE 2: 학습 자료 & 복습 (Study Material & Review)
-- 📚 **학습 자료 관리**: JSON 파일로 학습 자료 가져오기
+### MODE 2: 복습 (Review)
+- ↔️ **스와이프 전환**: 화면을 밀어 모드 간 자유로운 이동
+- 📚 **학습 자료 관리**: 상단 앱바의 아이콘(📚)으로 자료 선택 및 JSON 파일 가져오기
 - 📖 **복습 모드**: 저장된 문장 복습 및 카드 뒤집기
 - 🔊 **TTS 재생**: 원문 및 번역문 듣기
 - ✅ **학습 체크**: 복습 횟수 기록 및 학습 완료 표시

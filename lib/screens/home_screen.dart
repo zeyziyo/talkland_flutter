@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _swapButtonKey = GlobalKey(); // New: Swap Button Key
   final GlobalKey _contextFieldKey = GlobalKey();
   final GlobalKey _mode1DropdownKey = GlobalKey(); // Mode 1 Material Dropdown Key
+  final GlobalKey _materialIconKey = GlobalKey(); // New: Material Icon Key
 
   // Mode 2 Keys
   final GlobalKey _mode2DropdownKey = GlobalKey();
@@ -169,11 +170,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
 
-       // New: Mode 1 Dropdown -> Point to Menu
+       // New: Material Icon in AppBar
        targets.add(_buildTarget(
-        _actionButtonKey, // Point to Menu Button
+        _materialIconKey, 
         l10n.tutorialM2SelectTitle, // "Select Material"
-        l10n.tutorialM2DropdownDesc, // "Select materials..."
+        l10n.tutorialM2SelectDesc, // "Tap the library icon..."
         ContentAlign.bottom,
         radius: 12,
       ));
@@ -197,11 +198,11 @@ class _HomeScreenState extends State<HomeScreen> {
       // Mode 2: Toggle
 
 
-      // Mode 2: Dropdown -> Point to Menu
+      // Mode 2: Material Icon
       targets.add(_buildTarget(
-        _actionButtonKey, // Point to Menu
+        _materialIconKey, 
         l10n.tutorialM2SelectTitle, 
-        l10n.tutorialM2DropdownDesc,
+        l10n.tutorialM2SelectDesc,
         ContentAlign.bottom,
         radius: 12,
       ));
@@ -224,9 +225,9 @@ class _HomeScreenState extends State<HomeScreen> {
         radius: 12,
       ));
     } else if (modeIndex == 2) {
-      // Mode 3: Dropdown -> Point to Menu
+      // Mode 3: Material Icon
       targets.add(_buildTarget(
-        _actionButtonKey, // Point to Menu
+        _materialIconKey, 
         l10n.tutorialM3SelectTitle, 
         l10n.tutorialM3SelectDesc,
         ContentAlign.bottom,
@@ -385,6 +386,7 @@ class _HomeScreenState extends State<HomeScreen> {
             actions: [
               // Universal Material Selection Icon
               IconButton(
+                key: _materialIconKey,
                 icon: const Icon(Icons.library_books),
                 tooltip: l10n.menuSelectMaterialSet,
                 onPressed: () => _showMaterialSelectionDialog(context),
