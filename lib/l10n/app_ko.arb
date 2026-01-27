@@ -494,5 +494,8 @@
   "errorHateSpeech": "혐오 표현이 포함되어 있어 번역할 수 없습니다.",
   "errorSexualContent": "선정적인 내용이 포함되어 있어 번역할 수 없습니다.",
   "errorOtherSafety": "AI 안전 정책에 의해 번역이 거부되었습니다.",
-  "clearAll": "모두 지우기"
+  "clearAll": "모두 지우기",
+  "disambiguationTitle": "의미 선택",
+  "disambiguationPrompt": "어떤 의미로 번역하시겠습니까?",
+  "skip": "건너뛰기"
 }

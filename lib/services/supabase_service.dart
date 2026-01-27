@@ -53,6 +53,7 @@ class SupabaseService {
     required String text,
     required String sourceLang,
     required String targetLang,
+    String? note,
   }) async {
     try {
       final response = await client.functions.invoke(
@@ -61,6 +62,7 @@ class SupabaseService {
           'text': text,
           'sourceLang': sourceLang,
           'targetLang': targetLang,
+          'note': note,
         },
       );
 

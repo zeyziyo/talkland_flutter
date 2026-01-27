@@ -17,6 +17,7 @@ class TranslationService {
     required String text,
     required String sourceLang,
     required String targetLang,
+    String? note,
   }) async {
     final normalized = text.trim();
     if (normalized.isEmpty) {
@@ -48,6 +49,7 @@ class TranslationService {
         text: normalized,
         sourceLang: sourceLang,
         targetLang: targetLang,
+        note: note,
       );
 
       final translatedText = result['translatedText'] as String;

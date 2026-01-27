@@ -10,6 +10,7 @@ import '../widgets/mode2_widget.dart';
 import '../widgets/mode3_widget.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 import '../widgets/help_dialog.dart';
+import '../constants/language_constants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -643,13 +644,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   DropdownButtonFormField<String>(
                     initialValue: tempSource,
                     decoration: const InputDecoration(border: OutlineInputBorder()),
-                    items: const [
-                       DropdownMenuItem(value: 'ko', child: Text('한국어 (Korean)')),
-                       DropdownMenuItem(value: 'en', child: Text('English')),
-                       DropdownMenuItem(value: 'ja', child: Text('日本語 (Japanese)')),
-                       DropdownMenuItem(value: 'es', child: Text('Español (Spanish)')),
-                       DropdownMenuItem(value: 'fr', child: Text('Français (French)')),
-                    ],
+                    decoration: const InputDecoration(border: OutlineInputBorder()),
+                    items: LanguageConstants.supportedLanguages.map((lang) {
+                      return DropdownMenuItem<String>(
+                        value: lang['code'],
+                        child: Text(lang['name']!),
+                      );
+                    }).toList(),
                     onChanged: (value) {
                       if (value != null) {
                         setDialogState(() {
@@ -671,13 +672,13 @@ class _HomeScreenState extends State<HomeScreen> {
                    DropdownButtonFormField<String>(
                     initialValue: tempTarget,
                     decoration: const InputDecoration(border: OutlineInputBorder()),
-                     items: const [
-                       DropdownMenuItem(value: 'en', child: Text('English')),
-                       DropdownMenuItem(value: 'ja', child: Text('日本語 (Japanese)')),
-                       DropdownMenuItem(value: 'es', child: Text('Español (Spanish)')),
-                       DropdownMenuItem(value: 'fr', child: Text('Français (French)')),
-                       DropdownMenuItem(value: 'ko', child: Text('한국어 (Korean)')),
-                    ],
+                    decoration: const InputDecoration(border: OutlineInputBorder()),
+                    items: LanguageConstants.supportedLanguages.map((lang) {
+                      return DropdownMenuItem<String>(
+                        value: lang['code'],
+                        child: Text(lang['name']!),
+                      );
+                    }).toList(),
                     onChanged: (value) {
                       if (value != null) {
                         setDialogState(() {

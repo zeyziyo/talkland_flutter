@@ -510,5 +510,17 @@
   "errorSexualContent": "Translation cannot be processed due to sexual content.",
   "errorOtherSafety": "Translation was blocked by AI safety policy.",
   "titleFormat": "{type}: {materialName}",
-  "clearAll": "Clear All"
+  "clearAll": "Clear All",
+  "disambiguationTitle": "Select Meaning",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "disambiguationPrompt": "Which meaning do you intend?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "skip": "Skip",
+  "@skip": {
+    "description": "Skip button"
+  }
 }

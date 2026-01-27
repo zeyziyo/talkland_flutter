@@ -454,6 +454,7 @@ class AppState extends ChangeNotifier {
         text: _sourceText,
         sourceLang: _sourceLang,
         targetLang: _targetLang,
+        note: _note.isNotEmpty ? _note : null,
       );
       
       // Handle Success or Failure
@@ -835,33 +836,46 @@ class AppState extends ChangeNotifier {
     }
   }
   
-  /// Delete a translation record (Supabase)
-  /// Identifies record by Group ID
-  Future<void> deleteRecord(int groupId) async {
+  /// Delete a translation record (Dual Write: Local + Supabase)
+  /// Parameter [id] is effectively the Local SQLite 'translations.id'
+  Future<void> deleteRecord(int id) async {
     try {
-       final userId = SupabaseService.client.auth.currentUser?.id;
-       if (userId == null) return;
+       debugPrint('[AppState] Deleting record: id=$id');
+
+       // 1. Delete from Local Database (Primary)
+       await DatabaseService.deleteTranslationRecord(id);
        
-       // Delete from user_library
-       await SupabaseService.client
-          .from('user_library')
-          .delete()
-          .eq('user_id', userId)
-          .eq('group_id', groupId);
+       // 2. Delete from Supabase (Secondary)
+       // Issue: 'id' is Local ID, but Supabase needs 'group_id'. 
+       // Currently we don't store group_id locally mapping to Supabase.
+       // So straightforward deletion by ID isn't possible remotely without mapping.
+       // For now, we only delete locally to ensure UI responsiveness and Offline support.
+       /*
+       final userId = SupabaseService.client.auth.currentUser?.id;
+       if (userId != null) {
+          try {
+             await SupabaseService.client
+                .from('user_library')
+                .delete()
+                .eq('user_id', userId)
+                .eq('group_id', id); // Logic Mismatch: Local ID != Supabase Group ID
+          } catch (e) {
+             debugPrint('[AppState] Supabase delete failed (expected if ID mismatch): $e');
+          }
+       }
+       */
       
-      // Refresh global study records
+      // Refresh global study records (Supabase/Mixed)
       await loadStudyRecords(); 
       
-      // Refresh Mode 3 list if active
-      if (_currentMode == 1) { // Mode 3 (Index 1)
-        if (_selectedMaterialId == -1) {
-          await loadAllRecordsIntoMaterialView();
-        } else if (_selectedMaterialId != null) {
-          await loadMaterialRecords(_selectedMaterialId!);
-        }
+      // Refresh Local List (Mode 2)
+      if (_selectedMaterialId == -1) {
+        await loadAllRecordsIntoMaterialView();
+      } else if (_selectedMaterialId != null) {
+        await loadMaterialRecords(_selectedMaterialId!);
       }
       
-      debugPrint('[AppState] Record deleted successfully: group=$groupId');
+      debugPrint('[AppState] Record deleted successfully (Local): id=$id');
     } catch (e) {
       debugPrint('[AppState] Error deleting record: $e');
       rethrow;
