@@ -45,7 +45,7 @@ Deno.serve(async (req) => {
       ${note ? `Context/Meaning: "${note}" (Please translate based on this specific meaning)` : ''}
     `
 
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${GEMINI_API_KEY}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -56,8 +56,9 @@ Deno.serve(async (req) => {
         const data = await response.json()
 
         if (!data.candidates || !data.candidates[0] || !data.candidates[0].content) {
-            console.error('Gemini Error:', JSON.stringify(data));
-            throw new Error('Failed to get response from AI');
+            console.error('Gemini Error Response:', JSON.stringify(data));
+            const geminiError = data.error?.message || 'Unknown AI Error';
+            throw new Error(`AI Request Failed: ${geminiError}`);
         }
 
         const rawText = data.candidates[0].content.parts[0].text
@@ -75,8 +76,8 @@ Deno.serve(async (req) => {
             headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         })
 
-    } catch (error) {
-        return new Response(JSON.stringify({ error: error.message }), {
+    } catch (error: any) {
+        return new Response(JSON.stringify({ error: error.message || 'Unknown error' }), {
             status: 400,
             headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         })
