@@ -166,7 +166,6 @@ class _HomeScreenState extends State<HomeScreen> {
         l10n.tutorialContextDesc,
         ContentAlign.top,
         radius: 12,
-        keepWidgetSize: true, // Show full text field
         shape: ShapeLightFocus.RRect,
       ));
 
