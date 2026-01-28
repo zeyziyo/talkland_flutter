@@ -13,6 +13,7 @@
             --text-dark: #121212;
             --text-light: #FFFFFF;
             --bg-light: #F5F5F5;
+            --error-color: #e53935;
         }
 
         body {
@@ -40,7 +41,6 @@
             width: 150px;
             height: 150px;
             border-radius: 24px;
-            /* Play Store style */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             margin-bottom: 1.5rem;
         }
@@ -61,13 +61,9 @@
             background-color: var(--accent-color);
             color: #000;
             padding: 1rem 0;
-            /* Align center */
             width: 280px;
-            /* Fixed equal width */
             margin: 10px;
-            /* General margin for spacing */
             text-align: center;
-            /* Center text */
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
@@ -87,6 +83,127 @@
             margin: 0 auto;
         }
 
+        /* Search & Download Section */
+        .search-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .language-input {
+            padding: 1rem 1.5rem;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 50px;
+            border: 2px solid #ddd;
+            font-size: 1.1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .language-input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .find-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .find-button:hover {
+            background-color: #3700B3;
+        }
+
+        .result-container {
+            display: none; /* Hidden by default */
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .materials-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+             gap: 1.5rem;
+             margin-top: 2rem;
+        }
+
+        .material-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .material-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .download-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .error-message {
+            color: var(--error-color);
+            background-color: #ffebee;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        /* Features Section */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -103,28 +220,7 @@
 
         .feature-icon {
             font-size: 2.5rem;
-            color: var(--primary-color);
             margin-bottom: 1rem;
-        }
-
-        h2 {
-            text-align: center;
-            color: var(--primary-color);
-            margin-bottom: 3rem;
-            font-size: 2rem;
-        }
-
-        .screenshot-gallery {
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 800px;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            margin-top: 2rem;
         }
 
         footer {
@@ -141,70 +237,10 @@
             margin: 0 10px;
         }
 
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
         @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            p.tagline {
-                font-size: 1.2rem;
-            }
-        }
-
-        /* Download Section Styles */
-        .downloads-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .download-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            text-align: left;
-            border-left: 5px solid var(--accent-color);
-            transition: transform 0.2s;
-        }
-
-        .download-card:hover {
-            transform: translateY(-3px);
-        }
-
-        .download-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .download-icon {
-            margin-right: 10px;
-            font-size: 1.5rem;
-        }
-
-        .download-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            border: 1px solid var(--primary-color);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-        }
-
-        .download-link:hover {
-            background-color: var(--primary-color);
-            color: white;
+            h1 { font-size: 2rem; }
+            .input-group { flex-direction: column; }
+            .language-input { max-width: 100%; }
         }
     </style>
 </head>
@@ -216,42 +252,72 @@
             <img src="website_assets/app_icon.png" alt="Talkie App Icon" class="app-logo">
             <h1 translate="no">Talkie</h1>
             <p class="tagline">Speak Confidently with AI</p>
-            <a href="https://play.google.com/store/apps/details?id=com.zeyziyo.talkie" class="cta-button"
-                target="_blank">
+            <a href="https://play.google.com/store/apps/details?id=com.zeyziyo.talkie" class="cta-button" target="_blank">
                 Download on Google Play
             </a>
             <a href="guide.html" class="cta-button" style="background-color: white; color: var(--primary-color);">
                 User Guide
             </a>
             <br>
-            <!-- Hero Image -->
-            <img src="website_assets/hero.jpg" alt="Talkie App Preview" class="hero-image">
+            <img src="website_assets/hero.jpg" alt="Talkie App Preview" class="hero-image" style="width: 100%; max-width: 800px; border-radius: 12px; margin-top: 2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">
         </div>
     </header>
 
-    <!-- Download Section (Dynamic & Expanded) -->
-    <section id="downloads" style="background-color: #fff; padding: 4rem 2rem; max-width: 100%;">
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <h2>Study Materials Library</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">
-                Select your language to download curated JSON study materials.
-                Import them into <strong>Talkie</strong> (Mode 2) to start practicing immediately.
-            </p>
+    <section id="downloads">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">Custom Study Materials</h2>
+        <p style="text-align: center; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Enter your <strong>Mother Tongue</strong> and <strong>Target Language</strong> to generate a customized study file.
+            <br>Download the merged JSON file and import it directly into Talkie (Mode 2/3).
+        </p>
 
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <input type="text" id="languageSearch" placeholder="Search for your language (e.g. Spanish, Hindi...)" 
-                    style="padding: 1rem 1.5rem; width: 100%; max-width: 500px; border-radius: 50px; border: 2px solid var(--primary-color); font-size: 1.1rem; outline: none; box-shadow: 0 4px 15px rgba(98, 0, 238, 0.1);">
+        <div class="search-container">
+            <div class="input-group">
+                <input type="text" id="sourceLang" class="language-input" placeholder="Mother Tongue (e.g. Korean)">
+                <input type="text" id="targetLang" class="language-input" placeholder="Target Language (e.g. English)">
             </div>
+            <button onclick="findMaterials()" class="find-button">Find & Generate Materials</button>
+            <div id="errorBox" class="error-message"></div>
+        </div>
 
-            <div id="materialsGrid" class="downloads-grid">
-                <!-- Javascript will populate this -->
-            </div>
+        <div id="resultsArea" class="result-container">
+            <h3 style="text-align: center;">Available Materials</h3>
+            <p style="text-align: center; color: #666;" id="pairDisplay"></p>
             
-            <div id="noResults" style="display: none; text-align: center; padding: 2rem; color: #666;">
-                <p>No language found. Try another search term!</p>
+            <div class="materials-grid" id="materialsGrid">
+                <!-- Javascript will populate this -->
             </div>
         </div>
     </section>
+
+    <section id="features">
+        <h2>Why <span translate="no">Talkie</span>?</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🎙️</div>
+                <h3>AI Speech Recognition</h3>
+                <p>Practice speaking with advanced AI that listens and corrects your pronunciation in real-time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Instant Translation</h3>
+                <p>Support for 40+ languages. Speak in your native tongue and learn how to say it in your target language instantly.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Smart Study Materials</h3>
+                <p>Import customized JSON files to practice vocabulary and sentences effectively.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:talkie.help@gmail.com">Contact Support</a>
+            <a href="guide.html">User Guide</a>
+            <a href="play_store/privacy_policy_ko.md">Privacy Policy</a>
+        </div>
+        <p>&copy; 2026 Zeyziyo. All rights reserved.</p>
+    </footer>
 
     <script>
         const languages = [
@@ -263,11 +329,14 @@
             "Telugu", "Thai", "Turkish", "Ukrainian", "Urdu", "Vietnamese", "Xhosa", "Zulu"
         ];
 
-        const grid = document.getElementById('materialsGrid');
-        const searchInput = document.getElementById('languageSearch');
-        const noResults = document.getElementById('noResults');
+        const materialsMap = [
+            { id: 'verbs_100', name: 'Basic Verbs (100)', path: 'words/verbs_100.json' },
+            { id: 'nouns_50', name: 'Basic Nouns (50)', path: 'words/nouns_50.json' },
+            { id: 'greetings_50', name: 'Essential Greetings', path: 'sentences/greetings_50.json' },
+            { id: 'first_meeting', name: 'Dialogue: First Meeting', path: 'dialogues/first_meeting.json' }
+        ];
 
-        function getFlag(lang) {
+        const getFlag = (lang) => {
             const flags = {
                 "Afrikaans": "🇿🇦", "Amharic": "🇪🇹", "Arabic": "🇸🇦", "Bengali": "🇧🇩", "Burmese": "🇲🇲",
                 "Chinese (Simplified)": "🇨🇳", "Chinese (Traditional)": "🇹🇼", "Czech": "🇨🇿", "Danish": "🇩🇰",
@@ -282,91 +351,129 @@
                 "Vietnamese": "🇻🇳", "Xhosa": "🇿🇦", "Zulu": "🇿🇦"
             };
             return flags[lang] || "🌐";
-        }
+        };
 
-        function renderLanguages(filter = '') {
-            grid.innerHTML = '';
-            const filtered = languages.filter(l => l.toLowerCase().includes(filter.toLowerCase()));
-            
-            if (filtered.length === 0) {
-                noResults.style.display = 'block';
-            } else {
-                noResults.style.display = 'none';
+        function findMaterials() {
+            const sourceInput = document.getElementById('sourceLang').value.trim();
+            const targetInput = document.getElementById('targetLang').value.trim();
+            const errorBox = document.getElementById('errorBox');
+            const resultsArea = document.getElementById('resultsArea');
+            const materialsGrid = document.getElementById('materialsGrid');
+            const pairDisplay = document.getElementById('pairDisplay');
+
+            // Reset UI
+            errorBox.style.display = 'none';
+            resultsArea.style.display = 'none';
+            materialsGrid.innerHTML = '';
+
+            // Validation
+            if (!sourceInput || !targetInput) {
+                showError("Please enter both Mother Tongue and Target Language.");
+                return;
             }
 
-            filtered.forEach(lang => {
+            const sourceLang = findLanguage(sourceInput);
+            const targetLang = findLanguage(targetInput);
+
+            if (!sourceLang) {
+                showError(`Sorry, "${sourceInput}" is not currently supported.`);
+                return;
+            }
+            if (!targetLang) {
+                showError(`Sorry, "${targetInput}" is not currently supported.`);
+                return;
+            }
+            if (sourceLang === targetLang) {
+                 showError("Mother Tongue and Target Language cannot be the same.");
+                 return;
+            }
+
+            // Success: Render Cards
+            resultsArea.style.display = 'block';
+            pairDisplay.innerHTML = `Generating files for: <strong>${getFlag(sourceLang)} ${sourceLang}</strong> ↔ <strong>${getFlag(targetLang)} ${targetLang}</strong>`;
+
+            materialsMap.forEach(material => {
                 const card = document.createElement('div');
-                card.className = 'download-card';
+                card.className = 'material-card';
                 card.innerHTML = `
-                    <div class="download-title">
-                        <span class="download-icon">${getFlag(lang)}</span> ${lang}
+                    <div class="card-header">
+                        <span class="card-title">${material.name}</span>
+                        <span>📄</span>
                     </div>
-                    <p style="font-size: 0.9rem; color: #666;">Get verbs, nouns, greetings, and first meeting dialogue.</p>
-                    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 8px;">
-                        <a href="materials/${lang}/words/verbs_100.json" class="download-link" download>Verbs (동사)</a>
-                        <a href="materials/${lang}/words/nouns_50.json" class="download-link" download>Nouns (명사)</a>
-                        <a href="materials/${lang}/sentences/greetings_50.json" class="download-link" download>Greetings (생활 문장)</a>
-                        <a href="materials/${lang}/dialogues/first_meeting.json" class="download-link" download>Dialogue (첫 만남 대화)</a>
-                    </div>
+                    <p style="font-size: 0.9rem; color: #666;">Contains source and target text tailored for your language pair.</p>
+                    <button class="download-btn" onclick="generateAndDownload('${sourceLang}', '${targetLang}', '${material.id}', '${material.path}', '${material.name}')">
+                        Download JSON
+                    </button>
                 `;
-                grid.appendChild(card);
+                materialsGrid.appendChild(card);
             });
         }
 
-        searchInput.addEventListener('input', (e) => renderLanguages(e.target.value));
+        function findLanguage(input) {
+            const lowerInput = input.toLowerCase();
+            return languages.find(l => l.toLowerCase() === lowerInput);
+        }
 
-        // Initial render with common languages
-        renderLanguages('');
+        function showError(msg) {
+            const errorBox = document.getElementById('errorBox');
+            errorBox.textContent = msg;
+            errorBox.style.display = 'block';
+        }
+
+        async function generateAndDownload(sourceLang, targetLang, materialId, relativePath, subjectName) {
+            try {
+                // Fetch both files in parallel
+                const [sourceRes, targetRes] = await Promise.all([
+                    fetch(`materials/${sourceLang}/${relativePath}`),
+                    fetch(`materials/${targetLang}/${relativePath}`)
+                ]);
+
+                if (!sourceRes.ok) throw new Error(`Could not load materials for ${sourceLang}`);
+                if (!targetRes.ok) throw new Error(`Could not load materials for ${targetLang}`);
+
+                const sourceData = await sourceRes.json();
+                const targetData = await targetRes.json();
+
+                // Merge Logic
+                const mergedEntries = [];
+                const maxLen = Math.min(sourceData.entries.length, targetData.entries.length);
+
+                for (let i = 0; i < maxLen; i++) {
+                    const s = sourceData.entries[i];
+                    const t = targetData.entries[i];
+                    
+                    mergedEntries.push({
+                        source_text: s.text,
+                        target_text: t.text,
+                        note: t.note || s.note || "", // Prefer target note (often has context), fallback to source
+                        type: 'sentence' // Default type
+                    });
+                }
+
+                // Create Final Object
+                const finalJson = {
+                    subject: `${subjectName} (${sourceLang}-${targetLang})`,
+                    source_language: sourceLang,
+                    target_language: targetLang,
+                    default_type: "sentence",
+                    entries: mergedEntries
+                };
+
+                // Trigger Download
+                const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(finalJson, null, 2));
+                const downloadAnchorNode = document.createElement('a');
+                downloadAnchorNode.setAttribute("href", dataStr);
+                downloadAnchorNode.setAttribute("download", `Talkie_${materialId}_${sourceLang}_${targetLang}.json`);
+                document.body.appendChild(downloadAnchorNode); // required for firefox
+                downloadAnchorNode.click();
+                downloadAnchorNode.remove();
+
+            } catch (e) {
+                alert(`Error generating file: ${e.message}`);
+                console.error(e);
+            }
+        }
     </script>
 
-    <section id="features">
-        <h2>Why <span translate="no">Talkie</span>?</h2>
-        <div class="features">
-            <div class="feature-card">
-                <div class="feature-icon">🎙️</div>
-                <h3>AI Speech Recognition</h3>
-                <p>Practice speaking with advanced AI that listens and corrects your pronunciation in real-time.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🌐</div>
-                <h3>Instant Translation</h3>
-                <p>Support for 40+ languages. Speak in your native tongue and learn how to say it in your target
-                    language instantly.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📚</div>
-                <h3>Smart Study Materials</h3>
-                <p>Import your own study lists or use our curated content to practice vocabulary and sentences
-                    effectively.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">💬</div>
-                <h3>AI Persona Chat</h3>
-                <p>Practice real-world conversations with professional AI tutors and friends to build confidence.</p>
-            </div>
-        </div>
-    </section>
-
-
-
-    <section id="privacy">
-        <h2>Privacy & Support</h2>
-        <p style="text-align: center;">
-            We value your privacy. Your voice data is processed securely and is never stored permanently on our servers.
-            <br><br>
-            <a href="play_store/privacy_policy_ko.md" target="_blank">View Privacy Policy</a>
-        </p>
-    </section>
-
-    <footer>
-        <div class="footer-links">
-            <a href="mailto:talkie.help@gmail.com">Contact Support</a>
-            <a href="guide.html">User Guide</a>
-            <a href="play_store/privacy_policy_ko.md">Privacy Policy</a>
-        </div>
-        <p>&copy; 2026 Zeyziyo. All rights reserved.</p>
-    </footer>
-
 </body>
-
 </html>
