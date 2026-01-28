@@ -5,6 +5,7 @@ import '../models/dialogue_group.dart';
 import '../services/supabase_service.dart';
 import '../services/database_service.dart';
 import '../services/speech_service.dart';
+import '../services/translation_service.dart'; // [New Import]
 import '../l10n/app_localizations.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -20,6 +21,7 @@ class _ChatScreenState extends State<ChatScreen> {
   final ScrollController _scrollController = ScrollController();
   List<Map<String, dynamic>> _messages = [];
   bool _isLoading = false;
+  final SpeechService _speechService = SpeechService(); // Instance for TTS
 
   @override
   void initState() {
@@ -55,18 +57,38 @@ class _ChatScreenState extends State<ChatScreen> {
 
     final appState = Provider.of<AppState>(context, listen: false);
     
+    // 1. Translate User Input (Source -> Target) immediately
+    String userTranslation = '';
+    
     setState(() {
-      _messages.add({
+       _isLoading = true;
+       // Add placeholder message first
+       _messages.add({
         'speaker': 'User',
         'source_text': text,
-        'target_text': '', 
+        'target_text': '', // Will update after translation
       });
-      _isLoading = true;
     });
+    
     _textController.clear();
     _scrollToBottom();
 
     try {
+      // 1.1 Perform Translation
+      final translationResult = await TranslationService.translate(
+        text: text,
+        sourceLang: appState.sourceLang, // e.g. 'ko'
+        targetLang: appState.targetLang, // e.g. 'en'
+      );
+      
+      userTranslation = translationResult['text'] as String? ?? '';
+
+      // Update the last message (User's) with translation
+      setState(() {
+        _messages.last['target_text'] = userTranslation;
+      });
+
+      // 2. Process Chat with AI
       // Build history for context
       final history = _messages.map((msg) {
         return {
@@ -90,14 +112,14 @@ class _ChatScreenState extends State<ChatScreen> {
       
       if (suggestedTitle != null && (appState.activeDialogueTitle == 'New Conversation' || appState.activeDialogueTitle == l10n.chatUntitled)) {
         await SupabaseService.updateDialogueTitle(appState.activeDialogueId!, suggestedTitle);
-        appState.loadDialogueGroups();
+        await appState.loadDialogueGroups();
       }
 
       setState(() {
         _messages.add({
           'speaker': 'AI',
-          'source_text': aiResponse,
-          'target_text': translation,
+          'source_text': aiResponse, // AI replies in Target Language usually
+          'target_text': translation, // Translation in Source Language
         });
         _isLoading = false;
       });
@@ -119,7 +141,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
     return showDialog(
       context: context,
-      builder: (context) => AlertDialog(
+      builder: (dialogContext) => AlertDialog(
         title: Text(l10n.chatEndTitle),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -139,18 +161,32 @@ class _ChatScreenState extends State<ChatScreen> {
         ),
         actions: [
           TextButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () => Navigator.pop(dialogContext),
             child: Text(l10n.cancel),
           ),
           ElevatedButton(
             onPressed: () async {
-              final newTitle = controller.text.trim();
-              if (newTitle.isNotEmpty) {
-                await SupabaseService.updateDialogueTitle(appState.activeDialogueId!, newTitle);
+              try {
+                final newTitle = controller.text.trim();
+                // 1. Update Title if provided (or keep existing/default)
+                if (newTitle.isNotEmpty) {
+                  await SupabaseService.updateDialogueTitle(appState.activeDialogueId!, newTitle);
+                }
+                
+                // 2. Refresh List
                 await appState.loadDialogueGroups();
-                if (mounted) {
-                  Navigator.pop(context); // Close Dialog
-                  Navigator.pop(context); // Exit Chat Screen
+
+                // 3. Close Dialog & Exit Screen
+                if (context.mounted) {
+                   Navigator.of(dialogContext).pop(); // Close Dialog
+                   Navigator.of(context).pop(); // Exit Chat Screen
+                }
+              } catch (e) {
+                // Handle Error
+                if (context.mounted) {
+                   ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Error: $e')),
+                   );
                 }
               }
             },
@@ -198,13 +234,12 @@ class _ChatScreenState extends State<ChatScreen> {
 
   bool _isListening = false;
   Future<void> _startListening(AppLocalizations l10n) async {
-    final speechService = SpeechService();
     final appState = Provider.of<AppState>(context, listen: false);
 
     setState(() => _isListening = true);
 
     try {
-      await speechService.startSTT(
+      await _speechService.startSTT(
         lang: appState.sourceLang == 'ko' ? 'ko-KR' : 'en-US', 
         onResult: (text, isFinal, alternates) {
           setState(() {
@@ -222,6 +257,20 @@ class _ChatScreenState extends State<ChatScreen> {
         SnackBar(content: Text(l10n.recognitionFailed(e.toString()))),
       );
     }
+  }
+  
+  // Helper to Speak Text
+  void _speak(String text, String languageCode) {
+    if (text.isEmpty) return;
+    // Map language code to locale if needed (e.g., 'en' -> 'en-US', 'ko' -> 'ko-KR')
+    String localeId = 'en-US';
+    if (languageCode == 'ko') localeId = 'ko-KR';
+    else if (languageCode == 'en') localeId = 'en-US';
+    else if (languageCode == 'ja') localeId = 'ja-JP';
+    else if (languageCode == 'zh') localeId = 'zh-CN';
+    else localeId = languageCode; // Fallback
+
+    _speechService.speak(text, localeId: localeId);
   }
 
   @override
@@ -256,79 +305,7 @@ class _ChatScreenState extends State<ChatScreen> {
               itemCount: _messages.length,
               itemBuilder: (context, index) {
                 final msg = _messages[index];
-                final isUser = msg['speaker'] == 'User';
-                
-                return Align(
-                  alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
-                  child: Container(
-                    margin: const EdgeInsets.symmetric(vertical: 4),
-                    padding: const EdgeInsets.all(12),
-                    child: Column(
-                      crossAxisAlignment: isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
-                      children: [
-                        // Speaker Name
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 4, left: 4, right: 4),
-                          child: Text(
-                            isUser ? l10n.me : (msg['speaker'] ?? 'AI'),
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold,
-                              color: isUser ? Colors.blue[700] : Colors.grey[600],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: isUser ? Colors.blue[50] : Colors.white,
-                            borderRadius: BorderRadius.circular(16).copyWith(
-                              topRight: isUser ? const Radius.circular(0) : const Radius.circular(16),
-                              topLeft: isUser ? const Radius.circular(16) : const Radius.circular(0),
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withValues(alpha: 0.05),
-                                blurRadius: 2,
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                msg['source_text'] ?? '',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: isUser ? Colors.blue[900] : Colors.black87,
-                                  fontWeight: isUser ? FontWeight.w500 : FontWeight.normal,
-                                ),
-                              ),
-                              if (!isUser && msg['target_text'] != null && msg['target_text'].isNotEmpty)
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 6),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      const Divider(height: 12),
-                                      Text(
-                                        msg['target_text'],
-                                        style: TextStyle(
-                                          fontSize: 14,
-                                          color: Colors.grey[700],
-                                          fontStyle: FontStyle.italic,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
+                return _buildMessageBubble(msg, appState, l10n);
               },
             ),
           ),
@@ -339,6 +316,123 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
           _buildInputArea(appState, l10n),
         ],
+      ),
+    );
+  }
+
+  Widget _buildMessageBubble(Map<String, dynamic> msg, AppState appState, AppLocalizations l10n) {
+    final isUser = msg['speaker'] == 'User';
+    final primaryText = msg['source_text'] ?? '';
+    final secondaryText = msg['target_text'] ?? '';
+    
+    // Determine Languages for TTS
+    // If User: Primary is SourceLang, Secondary is TargetLang
+    // If AI: Primary is TargetLang (usually), Secondary is SourceLang
+    final primaryLang = isUser ? appState.sourceLang : appState.targetLang;
+    final secondaryLang = isUser ? appState.targetLang : appState.sourceLang;
+
+    return Align(
+      alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
+      child: Container(
+        margin: const EdgeInsets.symmetric(vertical: 4),
+        padding: const EdgeInsets.all(12),
+        constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.85),
+        child: Column(
+          crossAxisAlignment: isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+          children: [
+            // Speaker Name
+            Padding(
+              padding: const EdgeInsets.only(bottom: 4, left: 4, right: 4),
+              child: Text(
+                isUser ? l10n.me : (msg['speaker'] ?? 'AI'),
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: isUser ? Colors.blue[700] : Colors.grey[600],
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: isUser ? Colors.blue[50] : Colors.white,
+                borderRadius: BorderRadius.circular(16).copyWith(
+                  topRight: isUser ? const Radius.circular(0) : const Radius.circular(16),
+                  topLeft: isUser ? const Radius.circular(16) : const Radius.circular(0),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.05),
+                    blurRadius: 2,
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Primary Text (and TTS)
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Flexible(
+                        child: Text(
+                          primaryText,
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: isUser ? Colors.blue[900] : Colors.black87,
+                            fontWeight: isUser ? FontWeight.w500 : FontWeight.normal,
+                          ),
+                        ),
+                      ),
+                      if (primaryText.isNotEmpty)
+                        IconButton(
+                          icon: const Icon(Icons.volume_up, size: 20, color: Colors.grey),
+                          onPressed: () => _speak(primaryText, primaryLang),
+                          padding: EdgeInsets.zero,
+                          constraints: const BoxConstraints(),
+                          visualDensity: VisualDensity.compact,
+                        ),
+                    ],
+                  ),
+                  
+                  // Secondary Text (and TTS)
+                  if (secondaryText.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 6),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Divider(height: 12),
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Flexible(
+                                child: Text(
+                                  secondaryText,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.grey[700],
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
+                              ),
+                              IconButton(
+                                icon: const Icon(Icons.volume_up, size: 18, color: Colors.grey),
+                                onPressed: () => _speak(secondaryText, secondaryLang),
+                                padding: EdgeInsets.zero,
+                                constraints: const BoxConstraints(),
+                                visualDensity: VisualDensity.compact,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -364,7 +458,7 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
             onPressed: () {
               if (_isListening) {
-                SpeechService().stopSTT();
+                _speechService.stopSTT();
                 setState(() => _isListening = false);
               } else {
                 _startListening(l10n);
