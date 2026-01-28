@@ -829,6 +829,9 @@ class AppState extends ChangeNotifier {
         // Skip if target doesn't exist in the selected language 
         // (This effectively filters the list, effectively mimicking "WHERE target_lang = ?")
         if (targetSentence.id == -1) continue;
+        
+        // Also skip if source is missing to prevent later errors
+        if (sourceSentence.id == -1) continue;
 
         // Construct Map for UI
         combinedRecords.add({
@@ -1094,8 +1097,9 @@ class AppState extends ChangeNotifier {
       
       // Auto-select first material if none selected
       if (_studyMaterials.isNotEmpty && _selectedMaterialId == null) {
-        _selectedMaterialId = _studyMaterials.first['id'] as int;
-        await loadMaterialRecords(_selectedMaterialId!);
+        final firstId = _studyMaterials.first['id'] as int;
+        _selectedMaterialId = firstId;
+        await loadMaterialRecords(firstId);
       }
       
       notifyListeners();
