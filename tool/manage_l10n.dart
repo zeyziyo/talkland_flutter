@@ -52,7 +52,12 @@ Future<void> _processFileBatch(File file, Map<String, dynamic> masterMap, String
     }
   }
 
-  if (batchToTranslate.isEmpty) {
+  // Check for obsolete keys (keys in target but not in master)
+  final targetKeys = targetMap.keys.where((k) => !k.startsWith('@') && k != '@@locale').toSet();
+  final masterKeys = masterMap.keys.where((k) => !k.startsWith('@')).toSet();
+  final hasObsoleteKeys = targetKeys.difference(masterKeys).isNotEmpty;
+
+  if (batchToTranslate.isEmpty && !hasObsoleteKeys) {
     print('✅ $langCode: Up to date.');
     return;
   }
@@ -122,9 +127,11 @@ ${jsonEncode(batch)}
 
   if (response.statusCode == 200) {
     final data = jsonDecode(response.body);
-    final text = data['candidates'][0]['content']['parts'][0]['text'];
+    var text = data['candidates'][0]['content']['parts'][0]['text'];
+    text = text.replaceAll('```json', '').replaceAll('```', '').trim();
     return Map<String, String>.from(jsonDecode(text));
   } else {
+    // print('Gemini API Error: ${response.statusCode} - ${response.body}');
     throw Exception('Gemini Error (${response.statusCode}): ${response.body}');
   }
 }

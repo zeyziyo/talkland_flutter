@@ -733,4 +733,22 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get tutorialAiChatDesc => 'AI 페르소나와 실전 대화를 연습해 보세요.';
+
+  @override
+  String get me => '나';
+
+  @override
+  String get helpDialogueImportDesc => '완성된 대화문 세트를 JSON 파일로 한 번에 가져올 수 있습니다.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON 구조: `entries` 대신 `dialogues` 배열을 사용합니다.\n• 자동 생성: 대화 제목, 페르소나, 메시지 순서가 자동으로 구성됩니다.\n• 확인 위치: 가져온 대화는 AI 채팅 모드의 \'대화 기록\' 탭에서 확인할 수 있습니다.';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return '현재 선택된 자료집: $name';
+  }
+
+  @override
+  String get errorSelectCategory => '먼저 단어나 문장을 선택하세요!';
 }

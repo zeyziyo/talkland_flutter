@@ -742,4 +742,23 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get tutorialAiChatDesc =>
       'Practice real conversation with AI personas here.';
+
+  @override
+  String get me => 'Me';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Import complete dialogue sets via JSON files.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return 'Current Material Set: $name';
+  }
+
+  @override
+  String get errorSelectCategory => 'Please select word or sentence first!';
 }

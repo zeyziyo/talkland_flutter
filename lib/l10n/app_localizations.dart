@@ -1185,7 +1185,7 @@ abstract class AppLocalizations {
   /// No description provided for @menuWebDownload.
   ///
   /// In ko, this message translates to:
-  /// **'홈페이지에서 자료 받기'**
+  /// **'홈페이지'**
   String get menuWebDownload;
 
   /// No description provided for @menuDeviceImport.
@@ -1505,6 +1505,36 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'AI 페르소나와 실전 대화를 연습해 보세요.'**
   String get tutorialAiChatDesc;
+
+  /// No description provided for @me.
+  ///
+  /// In ko, this message translates to:
+  /// **'나'**
+  String get me;
+
+  /// No description provided for @helpDialogueImportDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'완성된 대화문 세트를 JSON 파일로 한 번에 가져올 수 있습니다.'**
+  String get helpDialogueImportDesc;
+
+  /// No description provided for @helpDialogueImportDetails.
+  ///
+  /// In ko, this message translates to:
+  /// **'• JSON 구조: `entries` 대신 `dialogues` 배열을 사용합니다.\n• 자동 생성: 대화 제목, 페르소나, 메시지 순서가 자동으로 구성됩니다.\n• 확인 위치: 가져온 대화는 AI 채팅 모드의 \'대화 기록\' 탭에서 확인할 수 있습니다.'**
+  String get helpDialogueImportDetails;
+
+  /// No description provided for @mode1SelectedMaterial.
+  ///
+  /// In ko, this message translates to:
+  /// **'현재 선택된 자료집: {name}'**
+  String mode1SelectedMaterial(Object name);
+
+  /// No description provided for @errorSelectCategory.
+  ///
+  /// In ko, this message translates to:
+  /// **'먼저 단어나 문장을 선택하세요!'**
+  String get errorSelectCategory;
 }
 
 class _AppLocalizationsDelegate
