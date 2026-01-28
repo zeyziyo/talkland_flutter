@@ -227,7 +227,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                               padding: const EdgeInsets.only(bottom: 8.0, left: 4.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.folder_shared, size: 16, color: Colors.deepOrange),
+                                  Icon(Icons.folder_shared, size: 16, color: Colors.green[800]),
                                   const SizedBox(width: 8),
                                   Expanded(
                                     child: Builder(
@@ -241,10 +241,10 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                         }
                                         return Text(
                                           l10n.mode1SelectedMaterial(displayName),
-                                          style: const TextStyle(
+                                          style: TextStyle(
                                             fontSize: 13, 
                                             fontWeight: FontWeight.bold,
-                                            color: Colors.deepOrange,
+                                            color: Colors.green[800],
                                           ),
                                           maxLines: 2,
                                           overflow: TextOverflow.ellipsis,

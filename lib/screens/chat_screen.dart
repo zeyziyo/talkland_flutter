@@ -113,6 +113,54 @@ class _ChatScreenState extends State<ChatScreen> {
     }
   }
 
+  Future<void> _endChat(AppLocalizations l10n) async {
+    final appState = Provider.of<AppState>(context, listen: false);
+    final controller = TextEditingController(text: appState.activeDialogueTitle);
+
+    return showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(l10n.chatEndTitle),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(l10n.chatEndMessage),
+            const SizedBox(height: 16),
+            TextField(
+              controller: controller,
+              decoration: InputDecoration(
+                labelText: l10n.contextTagHint, 
+                border: const OutlineInputBorder(),
+              ),
+              autofocus: true,
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(l10n.cancel),
+          ),
+          ElevatedButton(
+            onPressed: () async {
+              final newTitle = controller.text.trim();
+              if (newTitle.isNotEmpty) {
+                await SupabaseService.updateDialogueTitle(appState.activeDialogueId!, newTitle);
+                await appState.loadDialogueGroups();
+                if (mounted) {
+                  Navigator.pop(context); // Close Dialog
+                  Navigator.pop(context); // Exit Chat Screen
+                }
+              }
+            },
+            child: Text(l10n.chatSaveAndExit),
+          ),
+        ],
+      ),
+    );
+  }
+
   Future<void> _showTitleEditDialog(AppLocalizations l10n) async {
     final appState = Provider.of<AppState>(context, listen: false);
     final controller = TextEditingController(text: appState.activeDialogueTitle);
@@ -190,6 +238,12 @@ class _ChatScreenState extends State<ChatScreen> {
           IconButton(
             icon: const Icon(Icons.edit),
             onPressed: () => _showTitleEditDialog(l10n),
+            tooltip: l10n.chatEditTitle,
+          ),
+          IconButton(
+            icon: const Icon(Icons.exit_to_app),
+            onPressed: () => _endChat(l10n),
+            tooltip: l10n.chatSaveAndExit,
           ),
         ],
       ),
