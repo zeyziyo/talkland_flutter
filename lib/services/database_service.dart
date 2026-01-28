@@ -166,8 +166,8 @@ class DatabaseService {
   }
   
   /// 언어 테이블에 텍스트 삽입 (중복 시 기존 ID 반환)
-  static Future<int> insertLanguageRecord(String langCode, String text) async {
-    final db = await database;
+  static Future<int> insertLanguageRecord(String langCode, String text, {Transaction? txn}) async {
+    final db = txn ?? await database;
     final tableName = 'lang_$langCode'.replaceAll('-', '_');
     
     // 테이블이 없으면 생성
@@ -805,6 +805,26 @@ class DatabaseService {
         'errors': errors,
         'material_id': data['processed_material_id'] ?? 0,
       };
+    }); // End Transaction (Wait, original code had transaction block ending at 796, but return was outside? No, return was at 800.)
+    // My snippet in view_file showed:
+    // 796:       });
+    // 797:       
+    // 798:       print...
+    // 800:       return ...
+    // So createStudyMaterial WAS inside transaction. 
+    // BUT createStudyMaterial (Line 744) didn't take txn.
+    // So it deadlocked.
+    // I need to change createStudyMaterial signature first.
+
+      
+      return {
+        'success': true,
+        'imported': importedCount,
+        'skipped': skippedCount,
+        'total': entries.length,
+        'errors': errors,
+        'material_id': data['processed_material_id'] ?? 0,
+      };
     } catch (e) {
       print('[DB] Error importing JSON: $e');
       return {
@@ -829,8 +849,9 @@ class DatabaseService {
     required String targetLanguage,
     String? fileName,
     required String createdAt,
+    Transaction? txn, // Added txn
   }) async {
-    final db = await database;
+    final db = txn ?? await database; // Use txn if provided
     
     // Check for duplicates
     final existing = await db.query(
@@ -884,54 +905,62 @@ class DatabaseService {
       final defaultType = data['default_type'] as String? ?? 'sentence';
       final entries = data['entries'] as List;
       
-      // 1. Create study material metadata
-      final materialId = await createStudyMaterial(
-        subject: subject,
-        source: source,
-        sourceLanguage: sourceLang,
-        targetLanguage: targetLang,
-        fileName: fileName,
-        createdAt: fileCreatedAt,
-      );
+      final db = await database;
       
+      // Use transaction for speed and atomicity
       int importedCount = 0;
       int skippedCount = 0;
       List<String> errors = [];
+      int materialId = 0;
+
+      await db.transaction((txn) async {
+         // 1. Create study material metadata
+         materialId = await createStudyMaterial(
+           subject: subject,
+           source: source,
+           sourceLanguage: sourceLang,
+           targetLanguage: targetLang,
+           fileName: fileName,
+           createdAt: fileCreatedAt,
+           txn: txn, // Pass txn
+         );
       
-      for (var i = 0; i < entries.length; i++) {
-        try {
-          final entry = entries[i] as Map<String, dynamic>;
-          final sourceText = entry['source_text'] as String;
-          final targetText = entry['target_text'] as String;
-          
-          if (sourceText.trim().isEmpty || targetText.trim().isEmpty) {
+        for (var i = 0; i < entries.length; i++) {
+          try {
+            final entry = entries[i] as Map<String, dynamic>;
+            final sourceText = entry['source_text'] as String;
+            final targetText = entry['target_text'] as String;
+            
+            if (sourceText.trim().isEmpty || targetText.trim().isEmpty) {
+              skippedCount++;
+              continue;
+            }
+            
+            // 2. Insert to source language table
+            final sourceId = await insertLanguageRecord(sourceLang, sourceText, txn: txn);
+            
+            // 3. Insert to target language table
+            final targetId = await insertLanguageRecord(targetLang, targetText, txn: txn);
+            
+            // 4. Create translation link with material_id
+            await saveTranslationLinkWithMaterial(
+              sourceLang: sourceLang,
+              sourceId: sourceId,
+              targetLang: targetLang,
+              targetId: targetId,
+              materialId: materialId,
+              note: (entry['note'] ?? entry['context']) as String?, // Import context/note
+              type: entry['type'] as String? ?? defaultType, // Use entry type or default type
+              txn: txn, // Pass txn
+            );
+            
+            importedCount++;
+          } catch (e) {
+            errors.add('Entry ${i + 1}: $e');
             skippedCount++;
-            continue;
           }
-          
-          // 2. Insert to source language table
-          final sourceId = await insertLanguageRecord(sourceLang, sourceText);
-          
-          // 3. Insert to target language table
-          final targetId = await insertLanguageRecord(targetLang, targetText);
-          
-          // 4. Create translation link with material_id
-          await saveTranslationLinkWithMaterial(
-            sourceLang: sourceLang,
-            sourceId: sourceId,
-            targetLang: targetLang,
-            targetId: targetId,
-            materialId: materialId,
-            note: (entry['note'] ?? entry['context']) as String?, // Import context/note
-            type: entry['type'] as String? ?? defaultType, // Use entry type or default type
-          );
-          
-          importedCount++;
-        } catch (e) {
-          errors.add('Entry ${i + 1}: $e');
-          skippedCount++;
         }
-      }
+      }); // End Transaction
       
       print('[DB] Import with metadata complete: $importedCount imported, $skippedCount skipped, material_id=$materialId');
       
@@ -967,8 +996,9 @@ class DatabaseService {
     String? dialogueId,
     String? speaker,
     int? sequenceOrder,
+    Transaction? txn, // Added txn
   }) async {
-    final db = await database;
+    final db = txn ?? await database;
     
     String whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND material_id = ?';
     List<dynamic> whereArgs = [sourceLang, sourceId, targetLang, targetId, materialId];

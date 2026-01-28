@@ -1921,9 +1921,19 @@ class AppState extends ChangeNotifier {
           return {'success': false, 'error': 'File path not found'};
         }
       }
+      // Perform import (Using fast local transaction, ignoring Supabase sync for now as per user request for speed)
+      // The local AppState method 'importJsonWithMetadata' was slow due to row-by-row Supabase inserts.
+      // We switch to DatabaseService.importFromJsonWithMetadata which uses SQLite transaction.
+      _statusMessage = 'Importing Entries...';
+      notifyListeners();
       
-      // Perform import
-      return await importJsonWithMetadata(jsonContent, fileName: fileName);
+      final result = await DatabaseService.importFromJsonWithMetadata(jsonContent, fileName: fileName);
+      
+      _statusMessage = 'Import complete';
+      await loadStudyRecords(); // Reload user library to show new material
+      notifyListeners();
+      
+      return result;
       
     } catch (e) {
       return {'success': false, 'error': e.toString()};
