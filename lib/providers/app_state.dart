@@ -228,7 +228,7 @@ class AppState extends ChangeNotifier {
   
   // Mode 2 Getters
   List<Map<String, dynamic>> get studyMaterials => _studyMaterials;
-  int? get selectedMaterialId => _selectedMaterialId;
+
   List<Map<String, dynamic>> get materialRecords => _materialRecords;
   Set<int> get studiedTranslationIds => _studiedTranslationIds;
   String get recordTypeFilter => _recordTypeFilter;
