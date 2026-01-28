@@ -227,16 +227,27 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                               padding: const EdgeInsets.only(bottom: 8.0, left: 4.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.folder_shared, size: 16, color: Colors.blue[600]),
+                                  Icon(Icons.folder_shared, size: 16, color: Colors.deepOrange),
                                   const SizedBox(width: 8),
                                   Expanded(
-                                    child: Text(
-                                      l10n.mode1SelectedMaterial(appState.selectedMaterialName),
-                                      style: TextStyle(
-                                        fontSize: 13, 
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.blue[600],
-                                      ),
+                                    child: Builder(
+                                      builder: (context) {
+                                        String displayName = appState.selectedMaterialName;
+                                        // "Basic" has ID 0
+                                        if (appState.selectedMaterialId == 0 || displayName == 'Basic') {
+                                          displayName = appState.isWordMode
+                                              ? l10n.basicWordRepository
+                                              : l10n.basicSentenceRepository;
+                                        }
+                                        return Text(
+                                          l10n.mode1SelectedMaterial(displayName),
+                                          style: const TextStyle(
+                                            fontSize: 13, 
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.deepOrange,
+                                          ),
+                                        );
+                                      }
                                     ),
                                   ),
                                 ],

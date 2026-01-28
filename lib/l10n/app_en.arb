@@ -562,5 +562,7 @@
   "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
   "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
+  "basicWordRepository": "Basic Word Repository",
+  "basicSentenceRepository": "Basic Sentence Repository",
   "errorSelectCategory": "Please select word or sentence first!"
 }

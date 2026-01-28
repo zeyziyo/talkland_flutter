@@ -7,7 +7,7 @@ const String kMasterFile = 'lib/l10n/app_ko.arb';
 const String kL10nDir = 'lib/l10n';
 const String kEnvFile = '.env';
 const String kGeminiKeyEnv = 'GEMINI_API_KEY';
-const String kGeminiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
+const String kGeminiUrl = 'https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent';
 
 void main(List<String> args) async {
   print('🚀 Starting High-Speed L10n Manager (Batch Mode)...');
@@ -120,7 +120,7 @@ ${jsonEncode(batch)}
         }
       ],
       'generationConfig': {
-        'response_mime_type': 'application/json',
+        // 'response_mime_type': 'application/json', // Not supported in v1/gemini-pro yet
       }
     }),
   );

@@ -148,6 +148,8 @@ class AppState extends ChangeNotifier {
     _recordTypeFilter = value ? 'word' : 'sentence';
     notifyListeners();
   }
+  
+  int? get selectedMaterialId => _selectedMaterialId;
 
   // Phase 11 Getters
   String? get activeDialogueId => _activeDialogueId;
