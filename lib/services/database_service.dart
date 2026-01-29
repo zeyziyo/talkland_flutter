@@ -169,6 +169,9 @@ class DatabaseService {
       )
     ''');
     
+    // Create Index on text column for fast duplicate checking
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_${tableName}_text ON $tableName(text)');
+    
     print('[DB] Language table created/verified: $tableName');
   }
   
@@ -180,10 +183,11 @@ class DatabaseService {
     // 테이블이 없으면 생성
     await createLanguageTable(langCode);
     
-    // 중복 검사: 동일한 텍스트가 이미 존재하는지 확인 (대소문자 무시)
+    // 중복 검사: 동일한 텍스트가 이미 존재하는지 확인 (Index 활용을 위해 COLLATE NOCASE 사용)
     final existing = await db.query(
       tableName,
-      where: 'LOWER(text) = LOWER(?)',
+      columns: ['id'], // 최적화: id만 가져옴
+      where: 'text = ? COLLATE NOCASE',
       whereArgs: [text],
       limit: 1,
     );

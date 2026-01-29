@@ -158,6 +158,11 @@ class AppState extends ChangeNotifier {
   String? get activeDialogueId => _activeDialogueId;
   String? get activeDialogueTitle => _activeDialogueTitle;
   String? get activePersona => _activePersona;
+  
+  // Usage / Quota Methods
+  Future<void> checkUsageLimit() async => await _usageService.checkLimitOrThrow();
+  Future<void> incrementUsage() async => await _usageService.incrementUsage();
+  Future<int> getRemainingUsage() async => await _usageService.getRemainingCount();
   List<DialogueGroup> get dialogueGroups => _dialogueGroups;
   
   /// Search for similar source texts

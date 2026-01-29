@@ -180,6 +180,174 @@ abstract class AppLocalizations {
     Locale('zh', 'TW')
   ];
 
+  /// No description provided for @helpTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'도움말 및 가이드'**
+  String get helpTitle;
+
+  /// No description provided for @helpTabModes.
+  ///
+  /// In ko, this message translates to:
+  /// **'기능 소개'**
+  String get helpTabModes;
+
+  /// No description provided for @helpTabJson.
+  ///
+  /// In ko, this message translates to:
+  /// **'JSON 형식'**
+  String get helpTabJson;
+
+  /// No description provided for @helpTabTour.
+  ///
+  /// In ko, this message translates to:
+  /// **'튜토리얼'**
+  String get helpTabTour;
+
+  /// No description provided for @helpMode1Desc.
+  ///
+  /// In ko, this message translates to:
+  /// **'음성을 인식하여 번역하고, 결과를 듣습니다. 화면을 옆으로 밀어(Swipe) 모드를 전환할 수 있습니다.'**
+  String get helpMode1Desc;
+
+  /// No description provided for @helpMode1Details.
+  ///
+  /// In ko, this message translates to:
+  /// **'• 모드 전환: 화면을 옆으로 밀거(Swipe)나 왼쪽 메뉴(Drawer) 이용\n• 상황 설정: 입력창 아래 \'상황/문맥\' 칸에 상황(예: 아침, 식당) 입력\n• 음성 입력: 마이크 아이콘을 눌러 말하기/멈추기\n• 번역 및 저장: \'번역\' 후 하단 \'데이터 저장\' 버튼으로 기록 보관\n• 도움말: 상단 물음표 아이콘으로 가이드 확인'**
+  String get helpMode1Details;
+
+  /// No description provided for @helpMode2Desc.
+  ///
+  /// In ko, this message translates to:
+  /// **'저장된 문장을 복습합니다. 상단 자료집 아이콘(📚)으로 원하는 자료를 선택하세요.'**
+  String get helpMode2Desc;
+
+  /// No description provided for @helpMode2Details.
+  ///
+  /// In ko, this message translates to:
+  /// **'• 자료 선택: 상단 앱바의 자료집 아이콘(📚) 클릭\n• 카드 뒤집기: \'보이기/숨기기\' 버튼으로 번역 확인\n• 학습 체크: 완료된 문장은 체크 표시 (V)\n• 삭제: 카드를 길게 누르면 삭제 가능\n• 자동 재생: 우측 상단 \'자동 재생\'으로 연속 학습 가능'**
+  String get helpMode2Details;
+
+  /// No description provided for @helpMode3Desc.
+  ///
+  /// In ko, this message translates to:
+  /// **'학습 자료를 원어민 음성으로 고 듣고 shadowing(따라 말하기) 연습을 합니다.'**
+  String get helpMode3Desc;
+
+  /// No description provided for @helpMode3Details.
+  ///
+  /// In ko, this message translates to:
+  /// **'• 자료 선택: 상단 앱바의 자료집 아이콘(📚) 클릭\n• 시작/정지: 재생 버튼으로 세션 제어\n• 발음 평가: 내 발음을 인식하여 정확도 점수 표시\n• 간격 조절: [-] [+] 버튼으로 대기 시간 설정'**
+  String get helpMode3Details;
+
+  /// No description provided for @helpModeChatDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'AI 페르소나와 대화하며 실전 회화를 연습하고 유용한 문장을 저장하세요.'**
+  String get helpModeChatDesc;
+
+  /// No description provided for @helpModeChatDetails.
+  ///
+  /// In ko, this message translates to:
+  /// **'• 채팅 시작: 상단 메뉴의 말풍선 아이콘 클릭\n• 페르소나 선택: 선생님, 가이드, 친구 중 선택\n• 대화 및 저장: AI 응답은 자동 번역됩니다. 메시지를 클릭하여 복습 모드로 저장하세요\n• 2개 국어 표시: 모든 메시지에 대해 모국어와 학습 언어를 함께 표시합니다\n• 듣기 기능 (TTS): 스피커 아이콘을 눌러 각 언어의 발음을 들어보세요\n• 자동 제목: 대화 주제에 따라 AI가 제목을 추천합니다\n• 이력 관리: 과거 대화 내용을 언제든 다시 확인할 수 있습니다'**
+  String get helpModeChatDetails;
+
+  /// No description provided for @helpJsonDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'학습 자료를 가져오려면 다음과 같은 구조의 JSON 파일을 사용하세요:'**
+  String get helpJsonDesc;
+
+  /// No description provided for @helpDialogueImportDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'완성된 대화문 세트를 JSON 파일로 한 번에 가져올 수 있습니다.'**
+  String get helpDialogueImportDesc;
+
+  /// No description provided for @helpDialogueImportDetails.
+  ///
+  /// In ko, this message translates to:
+  /// **'• JSON 구조: `entries` 대신 `dialogues` 배열을 사용합니다.\n• 자동 생성: 대화 제목, 페르소나, 메시지 순서가 자동으로 구성됩니다.\n• 확인 위치: 가져온 대화는 AI 채팅 모드의 \'대화 기록\' 탭에서 확인할 수 있습니다.'**
+  String get helpDialogueImportDetails;
+
+  /// No description provided for @helpTourDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'튜토리얼을 시작하면 **하이라이트 원(Circle)**이 주요 기능을 안내해 드립니다.\n(예: 학습 카드를 **하이라이트 원**이 가리킬 때 길게 누르면 삭제할 수 있습니다.)'**
+  String get helpTourDesc;
+
+  /// Label for Partner Mode logic
+  ///
+  /// In ko, this message translates to:
+  /// **'파트너 모드'**
+  String get partnerMode;
+
+  /// Label for manual input in Partner Mode
+  ///
+  /// In ko, this message translates to:
+  /// **'수동 입력'**
+  String get manual;
+
+  /// Label for speaker selection
+  ///
+  /// In ko, this message translates to:
+  /// **'화자'**
+  String get speaker;
+
+  /// Tooltip for switching to AI mode
+  ///
+  /// In ko, this message translates to:
+  /// **'AI 모드로 전환'**
+  String get switchToAi;
+
+  /// Tooltip for switching to Partner mode
+  ///
+  /// In ko, this message translates to:
+  /// **'파트너 모드로 전환'**
+  String get switchToPartner;
+
+  /// Label for GPS location
+  ///
+  /// In ko, this message translates to:
+  /// **'현재 위치'**
+  String get currentLocation;
+
+  /// Label for partner speaker
+  ///
+  /// In ko, this message translates to:
+  /// **'파트너'**
+  String get partner;
+
+  /// Label for self speaker
+  ///
+  /// In ko, this message translates to:
+  /// **'나'**
+  String get me;
+
+  /// Banner label for current material
+  ///
+  /// In ko, this message translates to:
+  /// **'현재 선택 자료집:'**
+  String get currentMaterialLabel;
+
+  /// Name for default basic repository
+  ///
+  /// In ko, this message translates to:
+  /// **'기본 문장/단어 저장소'**
+  String get basicMaterialRepository;
+
+  /// Toggle option for Word
+  ///
+  /// In ko, this message translates to:
+  /// **'단어'**
+  String get word;
+
+  /// Toggle option for Sentence
+  ///
+  /// In ko, this message translates to:
+  /// **'문장'**
+  String get sentence;
+
   /// Application title
   ///
   /// In ko, this message translates to:
@@ -635,78 +803,6 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'연습 중지'**
   String get stopPractice;
-
-  /// No description provided for @helpTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'도움말 및 가이드'**
-  String get helpTitle;
-
-  /// No description provided for @helpTabModes.
-  ///
-  /// In ko, this message translates to:
-  /// **'기능 소개'**
-  String get helpTabModes;
-
-  /// No description provided for @helpTabJson.
-  ///
-  /// In ko, this message translates to:
-  /// **'JSON 형식'**
-  String get helpTabJson;
-
-  /// No description provided for @helpTabTour.
-  ///
-  /// In ko, this message translates to:
-  /// **'튜토리얼'**
-  String get helpTabTour;
-
-  /// No description provided for @helpMode1Desc.
-  ///
-  /// In ko, this message translates to:
-  /// **'음성을 인식하여 번역하고, 결과를 듣습니다. 화면을 옆으로 밀어(Swipe) 모드를 전환할 수 있습니다.'**
-  String get helpMode1Desc;
-
-  /// No description provided for @helpMode1Details.
-  ///
-  /// In ko, this message translates to:
-  /// **'• 모드 전환: 화면을 옆으로 밀거(Swipe)나 왼쪽 메뉴(Drawer) 이용\n• 상황 설정: 입력창 아래 \'상황/문맥\' 칸에 상황(예: 아침, 식당) 입력\n• 음성 입력: 마이크 아이콘을 눌러 말하기/멈추기\n• 번역 및 저장: \'번역\' 후 하단 \'데이터 저장\' 버튼으로 기록 보관\n• 도움말: 상단 물음표 아이콘으로 가이드 확인'**
-  String get helpMode1Details;
-
-  /// No description provided for @helpMode2Desc.
-  ///
-  /// In ko, this message translates to:
-  /// **'저장된 문장을 복습합니다. 상단 자료집 아이콘(📚)으로 원하는 자료를 선택하세요.'**
-  String get helpMode2Desc;
-
-  /// No description provided for @helpMode2Details.
-  ///
-  /// In ko, this message translates to:
-  /// **'• 자료 선택: 상단 앱바의 자료집 아이콘(📚) 클릭\n• 카드 뒤집기: \'보이기/숨기기\' 버튼으로 번역 확인\n• 학습 체크: 완료된 문장은 체크 표시 (V)\n• 삭제: 카드를 길게 누르면 삭제 가능\n• 자동 재생: 우측 상단 \'자동 재생\'으로 연속 학습 가능'**
-  String get helpMode2Details;
-
-  /// No description provided for @helpMode3Desc.
-  ///
-  /// In ko, this message translates to:
-  /// **'학습 자료를 원어민 음성으로 고 듣고 shadowing(따라 말하기) 연습을 합니다.'**
-  String get helpMode3Desc;
-
-  /// No description provided for @helpMode3Details.
-  ///
-  /// In ko, this message translates to:
-  /// **'• 자료 선택: 상단 앱바의 자료집 아이콘(📚) 클릭\n• 시작/정지: 재생 버튼으로 세션 제어\n• 발음 평가: 내 발음을 인식하여 정확도 점수 표시\n• 간격 조절: [-] [+] 버튼으로 대기 시간 설정'**
-  String get helpMode3Details;
-
-  /// No description provided for @helpJsonDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'학습 자료를 가져오려면 다음과 같은 구조의 JSON 파일을 사용하세요:'**
-  String get helpJsonDesc;
-
-  /// No description provided for @helpTourDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'튜토리얼을 시작하면 **하이라이트 원(Circle)**이 주요 기능을 안내해 드립니다.\n(예: 학습 카드를 **하이라이트 원**이 가리킬 때 길게 누르면 삭제할 수 있습니다.)'**
-  String get helpTourDesc;
 
   /// No description provided for @startTutorial.
   ///
@@ -1194,37 +1290,37 @@ abstract class AppLocalizations {
   /// **'기기에서 자료 가져오기'**
   String get menuDeviceImport;
 
-  /// No description provided for @menuSettings.
+  /// Menu item for language settings
   ///
   /// In ko, this message translates to:
   /// **'언어 설정'**
   String get menuSettings;
 
-  /// No description provided for @basicWords.
+  /// Default name for basic vocabulary material
   ///
   /// In ko, this message translates to:
   /// **'기본 단어 저장소'**
   String get basicWords;
 
-  /// No description provided for @basicSentences.
+  /// Default name for basic sentences material
   ///
   /// In ko, this message translates to:
   /// **'기본 문장 저장소'**
   String get basicSentences;
 
-  /// No description provided for @selectMaterialSet.
+  /// Title for the material selection dialog
   ///
   /// In ko, this message translates to:
   /// **'학습 자료집 선택'**
   String get selectMaterialSet;
 
-  /// No description provided for @sectionWords.
+  /// Header for words section in material selection
   ///
   /// In ko, this message translates to:
   /// **'단어'**
   String get sectionWords;
 
-  /// No description provided for @sectionSentences.
+  /// Header for sentences section in material selection
   ///
   /// In ko, this message translates to:
   /// **'문장'**
@@ -1362,19 +1458,19 @@ abstract class AppLocalizations {
   /// **'모두 지우기'**
   String get clearAll;
 
-  /// No description provided for @disambiguationTitle.
+  /// Title for disambiguation dialog
   ///
   /// In ko, this message translates to:
   /// **'의미 선택'**
   String get disambiguationTitle;
 
-  /// No description provided for @disambiguationPrompt.
+  /// Prompt for disambiguation dialog
   ///
   /// In ko, this message translates to:
   /// **'어떤 의미로 번역하시겠습니까?'**
   String get disambiguationPrompt;
 
-  /// No description provided for @skip.
+  /// Skip button
   ///
   /// In ko, this message translates to:
   /// **'건너뛰기'**
@@ -1476,18 +1572,6 @@ abstract class AppLocalizations {
   /// **'AI 채팅'**
   String get chatAiChat;
 
-  /// No description provided for @helpModeChatDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'AI 페르소나와 대화하며 실전 회화를 연습하고 유용한 문장을 저장하세요.'**
-  String get helpModeChatDesc;
-
-  /// No description provided for @helpModeChatDetails.
-  ///
-  /// In ko, this message translates to:
-  /// **'• 채팅 시작: 상단 메뉴의 말풍선 아이콘 클릭\n• 페르소나 선택: 선생님, 가이드, 친구 중 선택\n• 대화 및 저장: AI 응답은 자동 번역됩니다. 메시지를 클릭하여 복습 모드로 저장하세요\n• 2개 국어 표시: 모든 메시지에 대해 모국어와 학습 언어를 함께 표시합니다\n• 듣기 기능 (TTS): 스피커 아이콘을 눌러 각 언어의 발음을 들어보세요\n• 자동 제목: 대화 주제에 따라 AI가 제목을 추천합니다\n• 이력 관리: 과거 대화 내용을 언제든 다시 확인할 수 있습니다'**
-  String get helpModeChatDetails;
-
   /// No description provided for @tutorialAiChatTitle.
   ///
   /// In ko, this message translates to:
@@ -1499,24 +1583,6 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'AI 페르소나와 실전 대화를 연습해 보세요.'**
   String get tutorialAiChatDesc;
-
-  /// No description provided for @me.
-  ///
-  /// In ko, this message translates to:
-  /// **'나'**
-  String get me;
-
-  /// No description provided for @helpDialogueImportDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'완성된 대화문 세트를 JSON 파일로 한 번에 가져올 수 있습니다.'**
-  String get helpDialogueImportDesc;
-
-  /// No description provided for @helpDialogueImportDetails.
-  ///
-  /// In ko, this message translates to:
-  /// **'• JSON 구조: `entries` 대신 `dialogues` 배열을 사용합니다.\n• 자동 생성: 대화 제목, 페르소나, 메시지 순서가 자동으로 구성됩니다.\n• 확인 위치: 가져온 대화는 AI 채팅 모드의 \'대화 기록\' 탭에서 확인할 수 있습니다.'**
-  String get helpDialogueImportDetails;
 
   /// No description provided for @mode1SelectedMaterial.
   ///

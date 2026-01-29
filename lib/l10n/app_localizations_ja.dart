@@ -9,6 +9,98 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
+  String get helpTitle => 'ヘルプ＆ガイド';
+
+  @override
+  String get helpTabModes => '機能紹介';
+
+  @override
+  String get helpTabJson => 'JSON形式';
+
+  @override
+  String get helpTabTour => 'ツアー';
+
+  @override
+  String get helpMode1Desc => '音声を認識して翻訳し、結果を聞くことができます。新しい表現を学ぶのに最適です。';
+
+  @override
+  String get helpMode1Details =>
+      '• 言語設定: 上部の翻訳アイコンで言語を変更\n• ヘルプ: 上部のハテナアイコンで使い方ガイドを確認\n• 音声入力: マイクアイコンをタップして会話を開始/停止\n• テキスト入力: 直接入力して翻訳可能\n• 自動検索: 入力時に類似の既存の文章があれば通知\n• 翻訳: 「翻訳」ボタンですぐに翻訳を実行\n• 聞く: スピーカーアイコンで原文/翻訳文を再生 (TTS)\n• 保存: 「保存」ボタンで学習記録に保存\n• クリア: 「削除」ボタンで入力内容を消去';
+
+  @override
+  String get helpMode2Desc => '保存された文章を復習します。翻訳を隠して確認し、復習回数を記録しましょう。';
+
+  @override
+  String get helpMode2Details =>
+      '• 教材選択: 上部メニューから学習教材を選択または「全復習」\n• カード裏返し: 「表示/隠す」ボタンで翻訳を確認\n• 聞く: 「聞く」ボタンで該当する文章を再再生\n• 学習チェック: 完了した文章はチェックマーク (V)\n• 削除: カードを長押しすると削除ダイアログを表示\n• フィルタ: 全記録表示または学習教材別に並べ替え';
+
+  @override
+  String get helpMode3Desc => '学習教材の文章を聞いて、自分で話す練習をします。';
+
+  @override
+  String get helpMode3Details =>
+      '• 教材選択: 学習する教材パックを選択\n• 間隔調整: [-] [+] ボタンで文章間の待機時間を設定 (3秒〜60秒)\n• 開始/停止: 再生ボタンでシャドーイングセッションを制御\n• 話す: ネイティブの音声を聞いて真似て話す\n• フィードバック: 発音の正確さをスコア (0-100) と色で表示 (緑/橙/赤)\n• 再試行: 認識失敗時に再試行ボタンを使用';
+
+  @override
+  String get helpModeChatDesc =>
+      'Talk to AI persona to practice real conversation and save useful sentences.';
+
+  @override
+  String get helpModeChatDetails =>
+      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+
+  @override
+  String get helpJsonDesc => 'モード3等で学習教材をインポートするには、以下の構造のJSONファイルを使用してください:';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Import complete dialogue sets via JSON files.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpTourDesc =>
+      'チュートリアルを開始すると、**ハイライトサークル（円）**が主な機能を案内します。\n(例：学習カードを**ハイライトサークル**が指しているときに長押しすると削除できます。)';
+
+  @override
+  String get partnerMode => 'Partner Mode';
+
+  @override
+  String get manual => 'Manual';
+
+  @override
+  String get speaker => 'Speaker';
+
+  @override
+  String get switchToAi => 'Switch to AI';
+
+  @override
+  String get switchToPartner => 'Switch to Partner';
+
+  @override
+  String get currentLocation => 'Current Location';
+
+  @override
+  String get partner => 'Partner';
+
+  @override
+  String get me => '私';
+
+  @override
+  String get currentMaterialLabel => 'Current Selected Material:';
+
+  @override
+  String get basicMaterialRepository => 'Basic Repository';
+
+  @override
+  String get word => 'Word';
+
+  @override
+  String get sentence => 'Sentence';
+
+  @override
   String get appTitle => 'Talkie';
 
   @override
@@ -269,46 +361,6 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get stopPractice => '練習停止';
-
-  @override
-  String get helpTitle => 'ヘルプ＆ガイド';
-
-  @override
-  String get helpTabModes => '機能紹介';
-
-  @override
-  String get helpTabJson => 'JSON形式';
-
-  @override
-  String get helpTabTour => 'ツアー';
-
-  @override
-  String get helpMode1Desc => '音声を認識して翻訳し、結果を聞くことができます。新しい表現を学ぶのに最適です。';
-
-  @override
-  String get helpMode1Details =>
-      '• 言語設定: 上部の翻訳アイコンで言語を変更\n• ヘルプ: 上部のハテナアイコンで使い方ガイドを確認\n• 音声入力: マイクアイコンをタップして会話を開始/停止\n• テキスト入力: 直接入力して翻訳可能\n• 自動検索: 入力時に類似の既存の文章があれば通知\n• 翻訳: 「翻訳」ボタンですぐに翻訳を実行\n• 聞く: スピーカーアイコンで原文/翻訳文を再生 (TTS)\n• 保存: 「保存」ボタンで学習記録に保存\n• クリア: 「削除」ボタンで入力内容を消去';
-
-  @override
-  String get helpMode2Desc => '保存された文章を復習します。翻訳を隠して確認し、復習回数を記録しましょう。';
-
-  @override
-  String get helpMode2Details =>
-      '• 教材選択: 上部メニューから学習教材を選択または「全復習」\n• カード裏返し: 「表示/隠す」ボタンで翻訳を確認\n• 聞く: 「聞く」ボタンで該当する文章を再再生\n• 学習チェック: 完了した文章はチェックマーク (V)\n• 削除: カードを長押しすると削除ダイアログを表示\n• フィルタ: 全記録表示または学習教材別に並べ替え';
-
-  @override
-  String get helpMode3Desc => '学習教材の文章を聞いて、自分で話す練習をします。';
-
-  @override
-  String get helpMode3Details =>
-      '• 教材選択: 学習する教材パックを選択\n• 間隔調整: [-] [+] ボタンで文章間の待機時間を設定 (3秒〜60秒)\n• 開始/停止: 再生ボタンでシャドーイングセッションを制御\n• 話す: ネイティブの音声を聞いて真似て話す\n• フィードバック: 発音の正確さをスコア (0-100) と色で表示 (緑/橙/赤)\n• 再試行: 認識失敗時に再試行ボタンを使用';
-
-  @override
-  String get helpJsonDesc => 'モード3等で学習教材をインポートするには、以下の構造のJSONファイルを使用してください:';
-
-  @override
-  String get helpTourDesc =>
-      'チュートリアルを開始すると、**ハイライトサークル（円）**が主な機能を案内します。\n(例：学習カードを**ハイライトサークル**が指しているときに長押しすると削除できます。)';
 
   @override
   String get startTutorial => 'チュートリアル開始';
@@ -681,7 +733,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String chatFailed(Object error) {
-    return '채팅 실패: $error';
+    return 'Chat failed: $error';
   }
 
   @override
@@ -692,7 +744,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String chatFromConversation(Object speaker) {
-    return '대화 발췌 ($speaker)';
+    return 'From Conversation ($speaker)';
   }
 
   @override
@@ -705,17 +757,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get personaFriend => '地元の友人';
 
   @override
-  String get chatUntitled => '제목 없는 대화';
+  String get chatUntitled => 'Untitled Conversation';
 
   @override
   String get chatAiChat => 'AIチャット';
-
-  @override
-  String get helpModeChatDesc => 'AI 페르소나와 대화하며 실전 회화를 연습하고 유용한 문장을 저장하세요.';
-
-  @override
-  String get helpModeChatDetails =>
-      '• 채팅 시작: 상단 메뉴의 말풍선 아이콘 클릭\n• 페르소나 선택: 선생님, 가이드, 친구 중 선택\n• 대화 및 저장: AI 응답은 자동 번역됩니다. 메시지를 클릭하여 복습 모드로 저장하세요\n• 2개 국어 표시: 모든 메시지에 대해 모국어와 학습 언어를 함께 표시합니다\n• 듣기 기능 (TTS): 스피커 아이콘을 눌러 각 언어의 발음을 들어보세요\n• 자동 제목: 대화 주제에 따라 AI가 제목을 추천합니다\n• 이력 관리: 과거 대화 내용을 언제든 다시 확인할 수 있습니다';
 
   @override
   String get tutorialAiChatTitle => 'AIチャット';
@@ -724,18 +769,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get tutorialAiChatDesc => 'AIペルソナと実践的な会話を練習しましょう。';
 
   @override
-  String get me => '私';
-
-  @override
-  String get helpDialogueImportDesc => '완성된 대화문 세트를 JSON 파일로 한 번에 가져올 수 있습니다.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON 구조: `entries` 대신 `dialogues` 배열을 사용합니다.\n• 자동 생성: 대화 제목, 페르소나, 메시지 순서가 자동으로 구성됩니다.\n• 확인 위치: 가져온 대화는 AI 채팅 모드의 \'대화 기록\' 탭에서 확인할 수 있습니다.';
-
-  @override
   String mode1SelectedMaterial(Object name) {
-    return '현재 선택된 자료집: $name';
+    return 'Current Material Set: $name';
   }
 
   @override

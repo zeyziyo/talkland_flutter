@@ -9,6 +9,102 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
+  String get helpTitle => 'Help & Guide';
+
+  @override
+  String get helpTabModes => 'Modes';
+
+  @override
+  String get helpTabJson => 'JSON Format';
+
+  @override
+  String get helpTabTour => 'Tour';
+
+  @override
+  String get helpMode1Desc =>
+      'Recognize voice, translate to target language, and listen to the result.';
+
+  @override
+  String get helpMode1Details =>
+      '• Language Settings: Change via top/bottom Translate icon\n• Toggle: Switch between \'Word\' and \'Sentence\' mode\n• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: \'Save Data\' adds to history\n• Clear: Reset all inputs';
+
+  @override
+  String get helpMode2Desc =>
+      'Review saved sentences with auto-hide translations and track your review count.';
+
+  @override
+  String get helpMode2Details =>
+      '• Select Material: Choose specific set or \'Review All\'\n• Flip Card: Use \'Show/Hide\' to check translation\n• Listen: Play TTS for specific sentence\n• Mark Studied: Checkmark (V) for completed items\n• Delete: Long-press card to remove record\n• Filter: View all or filter by material';
+
+  @override
+  String get helpMode3Desc =>
+      'Practice speaking by listening to and shadowing sentences.';
+
+  @override
+  String get helpMode3Details =>
+      '• Select Material: Choose learning pack\n• Interval: [-] [+] to adjust wait time (3s-60s)\n• Start/Stop: Control shadowing session\n• Speak: Listen to audio and repeat after it\n• Feedback: Accuracy score (0-100) with color code\n• Retry: Use retry button if voice not detected';
+
+  @override
+  String get helpModeChatDesc =>
+      'Talk to AI persona to practice real conversation and save useful sentences.';
+
+  @override
+  String get helpModeChatDetails =>
+      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+
+  @override
+  String get helpJsonDesc =>
+      'To import study materials in Mode 3, create a JSON file with the following structure:';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Import complete dialogue sets via JSON files.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpTourDesc =>
+      'The **Highlight Circle** will guide you through the main features.\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
+
+  @override
+  String get partnerMode => 'Partner Mode';
+
+  @override
+  String get manual => 'Manual';
+
+  @override
+  String get speaker => 'Speaker';
+
+  @override
+  String get switchToAi => 'Switch to AI';
+
+  @override
+  String get switchToPartner => 'Switch to Partner';
+
+  @override
+  String get currentLocation => 'Current Location';
+
+  @override
+  String get partner => 'Partner';
+
+  @override
+  String get me => 'Me';
+
+  @override
+  String get currentMaterialLabel => 'Current Selected Material:';
+
+  @override
+  String get basicMaterialRepository => 'Basic Repository';
+
+  @override
+  String get word => 'Word';
+
+  @override
+  String get sentence => 'Sentence';
+
+  @override
   String get appTitle => 'Talkie';
 
   @override
@@ -270,50 +366,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get stopPractice => 'Stop Practice';
-
-  @override
-  String get helpTitle => 'Help & Guide';
-
-  @override
-  String get helpTabModes => 'Modes';
-
-  @override
-  String get helpTabJson => 'JSON Format';
-
-  @override
-  String get helpTabTour => 'Tour';
-
-  @override
-  String get helpMode1Desc =>
-      'Recognize voice, translate to target language, and listen to the result.';
-
-  @override
-  String get helpMode1Details =>
-      '• Language Settings: Change language via top Translate icon\n• Help: Check guide via top Help icon\n• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: \'Save Data\' adds to history\n• Clear: Reset all inputs';
-
-  @override
-  String get helpMode2Desc =>
-      'Review saved sentences with auto-hide translations and track your review count.';
-
-  @override
-  String get helpMode2Details =>
-      '• Select Material: Choose specific set or \'Review All\'\n• Flip Card: Use \'Show/Hide\' to check translation\n• Listen: Play TTS for specific sentence\n• Mark Studied: Checkmark (V) for completed items\n• Delete: Long-press card to remove record\n• Filter: View all or filter by material';
-
-  @override
-  String get helpMode3Desc =>
-      'Practice speaking by listening to and shadowing sentences.';
-
-  @override
-  String get helpMode3Details =>
-      '• Select Material: Choose learning pack\n• Interval: [-] [+] to adjust wait time (3s-60s)\n• Start/Stop: Control shadowing session\n• Speak: Listen to audio and repeat after it\n• Feedback: Accuracy score (0-100) with color code\n• Retry: Use retry button if voice not detected';
-
-  @override
-  String get helpJsonDesc =>
-      'To import study materials in Mode 3, create a JSON file with the following structure:';
-
-  @override
-  String get helpTourDesc =>
-      'The **Highlight Circle** will guide you through the main features.\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'Start Tutorial';
@@ -726,30 +778,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get chatAiChat => 'AI Chat';
 
   @override
-  String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
-
-  @override
-  String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
-
-  @override
   String get tutorialAiChatTitle => 'AI Chat';
 
   @override
   String get tutorialAiChatDesc =>
       'Practice real conversation with AI personas here.';
-
-  @override
-  String get me => 'Me';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
 
   @override
   String mode1SelectedMaterial(Object name) {

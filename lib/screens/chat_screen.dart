@@ -68,7 +68,22 @@ class _ChatScreenState extends State<ChatScreen> {
       
       if (permission == LocationPermission.deniedForever) return '';
 
-      final position = await Geolocator.getCurrentPosition();
+      // 1. Try Last Known Position (Instant)
+      Position? position = await Geolocator.getLastKnownPosition();
+      
+      // 2. If null, try Current Position with Timeout (5s) and Medium Accuracy
+      if (position == null) {
+        try {
+          position = await Geolocator.getCurrentPosition(
+            desiredAccuracy: LocationAccuracy.medium,
+            timeLimit: const Duration(seconds: 5),
+          );
+        } catch (e) {
+          debugPrint('GPS Timeout or Error: $e');
+          return ''; // Fallback to empty if timeout
+        }
+      }
+
       final placemarks = await placemarkFromCoordinates(position.latitude, position.longitude);
       
       if (placemarks.isNotEmpty) {
@@ -101,6 +116,29 @@ class _ChatScreenState extends State<ChatScreen> {
     final inputLang = isPartnerMessage ? appState.targetLang : appState.sourceLang;
     final outputLang = isPartnerMessage ? appState.sourceLang : appState.targetLang;
     
+    
+    // Check Usage Limit first
+    try {
+      await appState.checkUsageLimit();
+    } catch (e) {
+      if (context.mounted) {
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text(l10n.usageLimitTitle ?? 'Limit Reached'),
+            content: Text(e.toString()),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: Text(l10n.confirm ?? 'OK'),
+              ),
+            ],
+          ),
+        );
+      }
+      return;
+    }
+
     String translatedText = '';
     
     setState(() {
@@ -151,6 +189,10 @@ class _ChatScreenState extends State<ChatScreen> {
         // AI Mode: Process Chat with GPS Context
          await _processAiChat(appState, text, translatedText, l10n);
       }
+      
+      
+      // Increment Usage Count (Billable Action)
+      await appState.incrementUsage();
       
       _scrollToBottom();
 

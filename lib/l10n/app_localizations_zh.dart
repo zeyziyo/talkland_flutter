@@ -9,6 +9,97 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
+  String get helpTitle => '帮助与指南';
+
+  @override
+  String get helpTabModes => '模式';
+
+  @override
+  String get helpTabJson => 'JSON 格式';
+
+  @override
+  String get helpTabTour => '新手引导';
+
+  @override
+  String get helpMode1Desc => '语音识别、翻译并收听结果。';
+
+  @override
+  String get helpMode1Details =>
+      '• 语音输入：点击麦克风图标开始/停止聆听\n• 文本输入：直接输入文本进行翻译\n• 自动搜索：检测相似的现有句子\n• 翻译：点击按钮立即翻译\n• 收听：点击扬声器图标收听 TTS（原文/译文）\n• 保存：“保存数据”添加到历史记录\n• 清除：重置所有输入';
+
+  @override
+  String get helpMode2Desc => '复习已保存的句子，自动隐藏译文并跟踪复习次数。';
+
+  @override
+  String get helpMode2Details =>
+      '• 选择资料：选择特定资料集或“复习全部”\n• 翻转卡片：使用“显示/隐藏”查看译文\n• 收听：播放特定句子的 TTS\n• 标记已学：勾选 (V) 已完成的项目\n• 删除：长按卡片删除记录\n• 筛选：查看全部或按资料筛选';
+
+  @override
+  String get helpMode3Desc => '通过聆听和跟读句子练习口语。';
+
+  @override
+  String get helpMode3Details =>
+      '• 选择资料：选择学习包\n• 间隔：使用 [-] [+] 调整等待时间（3秒-60秒）\n• 开始/停止：控制跟读会话\n• 说话：聆听音频并跟读\n• 反馈：准确率评分（0-100）及颜色代码\n• 重试：如果未检测到声音，请使用重试按钮';
+
+  @override
+  String get helpModeChatDesc =>
+      'Talk to AI persona to practice real conversation and save useful sentences.';
+
+  @override
+  String get helpModeChatDetails =>
+      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+
+  @override
+  String get helpJsonDesc => '要在模式 3 中导入学习资料，请创建具有以下结构的 JSON 文件：';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Import complete dialogue sets via JSON files.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpTourDesc => '启动交互式教程以了解主要功能。';
+
+  @override
+  String get partnerMode => 'Partner Mode';
+
+  @override
+  String get manual => 'Manual';
+
+  @override
+  String get speaker => 'Speaker';
+
+  @override
+  String get switchToAi => 'Switch to AI';
+
+  @override
+  String get switchToPartner => 'Switch to Partner';
+
+  @override
+  String get currentLocation => 'Current Location';
+
+  @override
+  String get partner => 'Partner';
+
+  @override
+  String get me => '我';
+
+  @override
+  String get currentMaterialLabel => 'Current Selected Material:';
+
+  @override
+  String get basicMaterialRepository => 'Basic Repository';
+
+  @override
+  String get word => 'Word';
+
+  @override
+  String get sentence => 'Sentence';
+
+  @override
   String get appTitle => 'Talkie';
 
   @override
@@ -269,45 +360,6 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get stopPractice => '停止练习';
-
-  @override
-  String get helpTitle => '帮助与指南';
-
-  @override
-  String get helpTabModes => '模式';
-
-  @override
-  String get helpTabJson => 'JSON 格式';
-
-  @override
-  String get helpTabTour => '新手引导';
-
-  @override
-  String get helpMode1Desc => '语音识别、翻译并收听结果。';
-
-  @override
-  String get helpMode1Details =>
-      '• 语音输入：点击麦克风图标开始/停止聆听\n• 文本输入：直接输入文本进行翻译\n• 自动搜索：检测相似的现有句子\n• 翻译：点击按钮立即翻译\n• 收听：点击扬声器图标收听 TTS（原文/译文）\n• 保存：“保存数据”添加到历史记录\n• 清除：重置所有输入';
-
-  @override
-  String get helpMode2Desc => '复习已保存的句子，自动隐藏译文并跟踪复习次数。';
-
-  @override
-  String get helpMode2Details =>
-      '• 选择资料：选择特定资料集或“复习全部”\n• 翻转卡片：使用“显示/隐藏”查看译文\n• 收听：播放特定句子的 TTS\n• 标记已学：勾选 (V) 已完成的项目\n• 删除：长按卡片删除记录\n• 筛选：查看全部或按资料筛选';
-
-  @override
-  String get helpMode3Desc => '通过聆听和跟读句子练习口语。';
-
-  @override
-  String get helpMode3Details =>
-      '• 选择资料：选择学习包\n• 间隔：使用 [-] [+] 调整等待时间（3秒-60秒）\n• 开始/停止：控制跟读会话\n• 说话：聆听音频并跟读\n• 反馈：准确率评分（0-100）及颜色代码\n• 重试：如果未检测到声音，请使用重试按钮';
-
-  @override
-  String get helpJsonDesc => '要在模式 3 中导入学习资料，请创建具有以下结构的 JSON 文件：';
-
-  @override
-  String get helpTourDesc => '启动交互式教程以了解主要功能。';
 
   @override
   String get startTutorial => '开始教程';
@@ -681,7 +733,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String chatFailed(Object error) {
-    return '채팅 실패: $error';
+    return 'Chat failed: $error';
   }
 
   @override
@@ -692,7 +744,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String chatFromConversation(Object speaker) {
-    return '대화 발췌 ($speaker)';
+    return 'From Conversation ($speaker)';
   }
 
   @override
@@ -705,17 +757,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get personaFriend => '当地朋友';
 
   @override
-  String get chatUntitled => '제목 없는 대화';
+  String get chatUntitled => 'Untitled Conversation';
 
   @override
   String get chatAiChat => 'AI聊天';
-
-  @override
-  String get helpModeChatDesc => 'AI 페르소나와 대화하며 실전 회화를 연습하고 유용한 문장을 저장하세요.';
-
-  @override
-  String get helpModeChatDetails =>
-      '• 채팅 시작: 상단 메뉴의 말풍선 아이콘 클릭\n• 페르소나 선택: 선생님, 가이드, 친구 중 선택\n• 대화 및 저장: AI 응답은 자동 번역됩니다. 메시지를 클릭하여 복습 모드로 저장하세요\n• 2개 국어 표시: 모든 메시지에 대해 모국어와 학습 언어를 함께 표시합니다\n• 듣기 기능 (TTS): 스피커 아이콘을 눌러 각 언어의 발음을 들어보세요\n• 자동 제목: 대화 주제에 따라 AI가 제목을 추천합니다\n• 이력 관리: 과거 대화 내용을 언제든 다시 확인할 수 있습니다';
 
   @override
   String get tutorialAiChatTitle => 'AI聊天';
@@ -724,18 +769,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tutorialAiChatDesc => '在这里与 AI 角色练习实际对话。';
 
   @override
-  String get me => '我';
-
-  @override
-  String get helpDialogueImportDesc => '완성된 대화문 세트를 JSON 파일로 한 번에 가져올 수 있습니다.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON 구조: `entries` 대신 `dialogues` 배열을 사용합니다.\n• 자동 생성: 대화 제목, 페르소나, 메시지 순서가 자동으로 구성됩니다.\n• 확인 위치: 가져온 대화는 AI 채팅 모드의 \'대화 기록\' 탭에서 확인할 수 있습니다.';
-
-  @override
   String mode1SelectedMaterial(Object name) {
-    return '현재 선택된 자료집: $name';
+    return 'Current Material Set: $name';
   }
 
   @override
@@ -766,6 +801,98 @@ class AppLocalizationsZh extends AppLocalizations {
 /// The translations for Chinese, as used in China (`zh_CN`).
 class AppLocalizationsZhCn extends AppLocalizationsZh {
   AppLocalizationsZhCn() : super('zh_CN');
+
+  @override
+  String get helpTitle => '帮助与指南';
+
+  @override
+  String get helpTabModes => '模式';
+
+  @override
+  String get helpTabJson => 'JSON 格式';
+
+  @override
+  String get helpTabTour => '新手引导';
+
+  @override
+  String get helpMode1Desc => '语音识别、翻译并收听结果。';
+
+  @override
+  String get helpMode1Details =>
+      '• 语言设置：通过顶部翻译图标更改语言\n• 帮助：通过顶部帮助图标查看指南\n• 语音输入：点击麦克风图标开始/停止聆听\n• 文本输入：直接输入文本进行翻译\n• 自动搜索：检测相似的现有句子\n• 翻译：点击按钮立即翻译\n• 收听：点击扬声器图标收听 TTS（原文/译文）\n• 保存：“保存数据”添加到历史记录\n• 清除：重置所有输入';
+
+  @override
+  String get helpMode2Desc => '复习已保存的句子，自动隐藏译文并跟踪复习次数。';
+
+  @override
+  String get helpMode2Details =>
+      '• 选择资料：选择特定资料集或“复习全部”\n• 翻转卡片：使用“显示/隐藏”查看译文\n• 收听：播放特定句子的 TTS\n• 标记已学：勾选 (V) 已完成的项目\n• 删除：长按卡片删除记录\n• 筛选：查看全部或按资料筛选';
+
+  @override
+  String get helpMode3Desc => '通过聆听和跟读句子练习口语。';
+
+  @override
+  String get helpMode3Details =>
+      '• 选择资料：选择学习包\n• 间隔：使用 [-] [+] 调整等待时间（3秒-60秒）\n• 开始/停止：控制跟读会话\n• 说话：聆听音频并跟读\n• 反馈：准确率评分（0-100）及颜色代码\n• 重试：如果未检测到声音，请使用重试按钮';
+
+  @override
+  String get helpModeChatDesc =>
+      'Talk to AI persona to practice real conversation and save useful sentences.';
+
+  @override
+  String get helpModeChatDetails =>
+      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+
+  @override
+  String get helpJsonDesc => '要在模式 3 中导入学习资料，请创建具有以下结构的 JSON 文件：';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Import complete dialogue sets via JSON files.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpTourDesc =>
+      '开始教程后，**高亮圆圈**将引导您了解主要功能。\n(例如：当**高亮圆圈**指向学习卡片时，长按可将其删除。)';
+
+  @override
+  String get partnerMode => 'Partner Mode';
+
+  @override
+  String get manual => 'Manual';
+
+  @override
+  String get speaker => 'Speaker';
+
+  @override
+  String get switchToAi => 'Switch to AI';
+
+  @override
+  String get switchToPartner => 'Switch to Partner';
+
+  @override
+  String get currentLocation => 'Current Location';
+
+  @override
+  String get partner => 'Partner';
+
+  @override
+  String get me => 'Me';
+
+  @override
+  String get currentMaterialLabel => 'Current Selected Material:';
+
+  @override
+  String get basicMaterialRepository => 'Basic Repository';
+
+  @override
+  String get word => 'Word';
+
+  @override
+  String get sentence => 'Sentence';
 
   @override
   String get appTitle => 'Talkie';
@@ -1028,46 +1155,6 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get stopPractice => '停止练习';
-
-  @override
-  String get helpTitle => '帮助与指南';
-
-  @override
-  String get helpTabModes => '模式';
-
-  @override
-  String get helpTabJson => 'JSON 格式';
-
-  @override
-  String get helpTabTour => '新手引导';
-
-  @override
-  String get helpMode1Desc => '语音识别、翻译并收听结果。';
-
-  @override
-  String get helpMode1Details =>
-      '• 语言设置：通过顶部翻译图标更改语言\n• 帮助：通过顶部帮助图标查看指南\n• 语音输入：点击麦克风图标开始/停止聆听\n• 文本输入：直接输入文本进行翻译\n• 自动搜索：检测相似的现有句子\n• 翻译：点击按钮立即翻译\n• 收听：点击扬声器图标收听 TTS（原文/译文）\n• 保存：“保存数据”添加到历史记录\n• 清除：重置所有输入';
-
-  @override
-  String get helpMode2Desc => '复习已保存的句子，自动隐藏译文并跟踪复习次数。';
-
-  @override
-  String get helpMode2Details =>
-      '• 选择资料：选择特定资料集或“复习全部”\n• 翻转卡片：使用“显示/隐藏”查看译文\n• 收听：播放特定句子的 TTS\n• 标记已学：勾选 (V) 已完成的项目\n• 删除：长按卡片删除记录\n• 筛选：查看全部或按资料筛选';
-
-  @override
-  String get helpMode3Desc => '通过聆听和跟读句子练习口语。';
-
-  @override
-  String get helpMode3Details =>
-      '• 选择资料：选择学习包\n• 间隔：使用 [-] [+] 调整等待时间（3秒-60秒）\n• 开始/停止：控制跟读会话\n• 说话：聆听音频并跟读\n• 反馈：准确率评分（0-100）及颜色代码\n• 重试：如果未检测到声音，请使用重试按钮';
-
-  @override
-  String get helpJsonDesc => '要在模式 3 中导入学习资料，请创建具有以下结构的 JSON 文件：';
-
-  @override
-  String get helpTourDesc =>
-      '开始教程后，**高亮圆圈**将引导您了解主要功能。\n(例如：当**高亮圆圈**指向学习卡片时，长按可将其删除。)';
 
   @override
   String get startTutorial => '开始教程';
@@ -1439,10 +1526,20 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get chatTypeHint => 'Type a message...';
 
   @override
+  String chatFailed(Object error) {
+    return 'Chat failed: $error';
+  }
+
+  @override
   String get chatNoConversations => 'No conversations yet';
 
   @override
   String get chatStartNewPrompt => 'Start a new chat to practice!';
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'From Conversation ($speaker)';
+  }
 
   @override
   String get personaTeacher => 'English Teacher';
@@ -1452,6 +1549,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get personaFriend => 'Local Friend';
+
+  @override
+  String get chatUntitled => 'Untitled Conversation';
 
   @override
   String get chatAiChat => 'AI Chat';
@@ -1464,7 +1564,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
       'Practice real conversation with AI personas here.';
 
   @override
-  String get me => 'Me';
+  String mode1SelectedMaterial(Object name) {
+    return 'Current Material Set: $name';
+  }
 
   @override
   String get basicWordRepository => '基础词汇库';
@@ -1496,6 +1598,98 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
 class AppLocalizationsZhTw extends AppLocalizationsZh {
   AppLocalizationsZhTw() : super('zh_TW');
+
+  @override
+  String get helpTitle => '幫助與指南';
+
+  @override
+  String get helpTabModes => '模式';
+
+  @override
+  String get helpTabJson => 'JSON 格式';
+
+  @override
+  String get helpTabTour => '導覽';
+
+  @override
+  String get helpMode1Desc => '語音辨識、翻譯並收聽結果。';
+
+  @override
+  String get helpMode1Details =>
+      '• 語言設定：透過頂部翻譯圖示更改語言\n• 幫助：透過頂部幫助圖示查看指南\n• 語音輸入：點擊麥克風圖示開始/停止聆聽\n• 文字輸入：直接輸入文字進行翻譯\n• 自動搜尋：偵測相似的現有句子\n• 翻譯：點擊按鈕立即翻譯\n• 收聽：點擊揚聲器圖示收聽 TTS（原文/譯文）\n• 儲存：「儲存資料」添加到歷史記錄\n• 清除：重設所有輸入';
+
+  @override
+  String get helpMode2Desc => '複習已儲存的句子，自動隱藏譯文並追蹤複習次數。';
+
+  @override
+  String get helpMode2Details =>
+      '• 選擇資料：選擇特定資料集或「複習全部」\n• 翻轉卡片：使用「顯示/隱藏」查看譯文\n• 收聽：播放特定句子的 TTS\n• 標記已學：勾選 (V) 已完成的項目\n• 刪除：長按卡片刪除記錄\n• 篩選：查看全部或按資料篩選';
+
+  @override
+  String get helpMode3Desc => '通過聆聽和跟讀句子練習口說。';
+
+  @override
+  String get helpMode3Details =>
+      '• 選擇資料：選擇學習包\n• 間隔：使用 [-] [+] 調整等待時間（3秒-60秒）\n• 開始/停止：控制跟讀會話\n• 說話：聆聽音訊並跟讀\n• 反饋：準確率評分（0-100）及顏色代碼\n• 重試：如果未偵測到聲音，請使用重試按鈕';
+
+  @override
+  String get helpModeChatDesc =>
+      'Talk to AI persona to practice real conversation and save useful sentences.';
+
+  @override
+  String get helpModeChatDetails =>
+      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+
+  @override
+  String get helpJsonDesc => '要在模式 3 中匯入學習資料，請建立具有以下結構的 JSON 檔案：';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Import complete dialogue sets via JSON files.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpTourDesc =>
+      '開始教學後，**高亮圓圈**將引導您了解主要功能。\n(例如：當**高亮圓圈**指向學習卡片時，長按可將其刪除。)';
+
+  @override
+  String get partnerMode => 'Partner Mode';
+
+  @override
+  String get manual => 'Manual';
+
+  @override
+  String get speaker => 'Speaker';
+
+  @override
+  String get switchToAi => 'Switch to AI';
+
+  @override
+  String get switchToPartner => 'Switch to Partner';
+
+  @override
+  String get currentLocation => 'Current Location';
+
+  @override
+  String get partner => 'Partner';
+
+  @override
+  String get me => 'Me';
+
+  @override
+  String get currentMaterialLabel => 'Current Selected Material:';
+
+  @override
+  String get basicMaterialRepository => 'Basic Repository';
+
+  @override
+  String get word => 'Word';
+
+  @override
+  String get sentence => 'Sentence';
 
   @override
   String get appTitle => 'Talkie';
@@ -1758,46 +1952,6 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get stopPractice => '停止練習';
-
-  @override
-  String get helpTitle => '幫助與指南';
-
-  @override
-  String get helpTabModes => '模式';
-
-  @override
-  String get helpTabJson => 'JSON 格式';
-
-  @override
-  String get helpTabTour => '導覽';
-
-  @override
-  String get helpMode1Desc => '語音辨識、翻譯並收聽結果。';
-
-  @override
-  String get helpMode1Details =>
-      '• 語言設定：透過頂部翻譯圖示更改語言\n• 幫助：透過頂部幫助圖示查看指南\n• 語音輸入：點擊麥克風圖示開始/停止聆聽\n• 文字輸入：直接輸入文字進行翻譯\n• 自動搜尋：偵測相似的現有句子\n• 翻譯：點擊按鈕立即翻譯\n• 收聽：點擊揚聲器圖示收聽 TTS（原文/譯文）\n• 儲存：「儲存資料」添加到歷史記錄\n• 清除：重設所有輸入';
-
-  @override
-  String get helpMode2Desc => '複習已儲存的句子，自動隱藏譯文並追蹤複習次數。';
-
-  @override
-  String get helpMode2Details =>
-      '• 選擇資料：選擇特定資料集或「複習全部」\n• 翻轉卡片：使用「顯示/隱藏」查看譯文\n• 收聽：播放特定句子的 TTS\n• 標記已學：勾選 (V) 已完成的項目\n• 刪除：長按卡片刪除記錄\n• 篩選：查看全部或按資料篩選';
-
-  @override
-  String get helpMode3Desc => '通過聆聽和跟讀句子練習口說。';
-
-  @override
-  String get helpMode3Details =>
-      '• 選擇資料：選擇學習包\n• 間隔：使用 [-] [+] 調整等待時間（3秒-60秒）\n• 開始/停止：控制跟讀會話\n• 說話：聆聽音訊並跟讀\n• 反饋：準確率評分（0-100）及顏色代碼\n• 重試：如果未偵測到聲音，請使用重試按鈕';
-
-  @override
-  String get helpJsonDesc => '要在模式 3 中匯入學習資料，請建立具有以下結構的 JSON 檔案：';
-
-  @override
-  String get helpTourDesc =>
-      '開始教學後，**高亮圓圈**將引導您了解主要功能。\n(例如：當**高亮圓圈**指向學習卡片時，長按可將其刪除。)';
 
   @override
   String get startTutorial => '開始教學';
@@ -2169,10 +2323,20 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get chatTypeHint => 'Type a message...';
 
   @override
+  String chatFailed(Object error) {
+    return 'Chat failed: $error';
+  }
+
+  @override
   String get chatNoConversations => 'No conversations yet';
 
   @override
   String get chatStartNewPrompt => 'Start a new chat to practice!';
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'From Conversation ($speaker)';
+  }
 
   @override
   String get personaTeacher => 'English Teacher';
@@ -2182,6 +2346,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get personaFriend => 'Local Friend';
+
+  @override
+  String get chatUntitled => 'Untitled Conversation';
 
   @override
   String get chatAiChat => 'AI Chat';
@@ -2194,7 +2361,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
       'Practice real conversation with AI personas here.';
 
   @override
-  String get me => 'Me';
+  String mode1SelectedMaterial(Object name) {
+    return 'Current Material Set: $name';
+  }
 
   @override
   String get basicWordRepository => '基礎詞彙庫';

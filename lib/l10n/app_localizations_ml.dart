@@ -9,6 +9,101 @@ class AppLocalizationsMl extends AppLocalizations {
   AppLocalizationsMl([String locale = 'ml']) : super(locale);
 
   @override
+  String get helpTitle => 'സഹായവും വഴികാട്ടിയും';
+
+  @override
+  String get helpTabModes => 'മോഡുകൾ';
+
+  @override
+  String get helpTabJson => 'JSON ഫോർമാറ്റ്';
+
+  @override
+  String get helpTabTour => 'ടൂർ';
+
+  @override
+  String get helpMode1Desc =>
+      'ശബ്ദം തിരിച്ചറിയുക, വിവർത്തനം ചെയ്യുക, ഫലം കേൾക്കുക.';
+
+  @override
+  String get helpMode1Details =>
+      '• ശബ്ദം: ആരംഭിക്കാൻ/നിർത്താൻ മൈക്ക് ടാപ്പ് ചെയ്യുക\n• ടെക്സ്റ്റ്: വിവർത്തനം ചെയ്യാൻ നേരിട്ട് ടൈപ്പ് ചെയ്യുക\n• ഓട്ടോ-സെർച്ച്: സമാനമായ വാക്യങ്ങൾ കണ്ടെത്തുന്നു\n• വിവർത്തനം: പെട്ടെന്നുള്ള വിവർത്തന ബട്ടൺ\n• കേൾക്കുക: TTS-നുള്ള സ്പീക്കർ ഐക്കൺ\n• സേവ്: ചരിത്രത്തിലേക്ക് ചേർക്കുന്നു\n• മായ്ക്കുക: എല്ലാം പുനഃസജ്ജമാക്കുക';
+
+  @override
+  String get helpMode2Desc =>
+      'മറഞ്ഞിരിക്കുന്ന വിവർത്തനം ഉപയോഗിച്ച് സേവ് ചെയ്ത വാക്യങ്ങൾ അവലോകനം ചെയ്യുക.';
+
+  @override
+  String get helpMode2Details =>
+      '• തിരഞ്ഞെടുക്കുക: സെറ്റ് അല്ലെങ്കിൽ \'എല്ലാം അവലോകനം ചെയ്യുക\' തിരഞ്ഞെടുക്കുക\n• മറിക്കുക: വിവർത്തനം \'കാണിക്കുക/മറയ്ക്കുക\'\n• കേൾക്കുക: വാക്യത്തിനായി TTS പ്ലേ ചെയ്യുക\n• അടയാളപ്പെടുത്തുക: പൂർത്തിയായതിന് ടിക്ക് (V)\n• നീക്കം ചെയ്യുക: നീക്കം ചെയ്യാൻ കാർഡ് അമർത്തിപ്പിടിക്കുക\n• ഫിൽട്ടർ: എല്ലാം അല്ലെങ്കിൽ മെറ്റീരിയൽ പ്രകാരം കാണുക';
+
+  @override
+  String get helpMode3Desc =>
+      'കേട്ട് ആവർത്തിച്ച് സംസാരിക്കാൻ പരിശീലിക്കുക (Shadowing).';
+
+  @override
+  String get helpMode3Details =>
+      '• തിരഞ്ഞെടുക്കുക: പാക്കേജ് തിരഞ്ഞെടുക്കുക\n• ഇടവേള: [-] [+] കാത്തിരിപ്പ് സമയം (3സെ-60സെ)\n• ആരംഭിക്കുക/നിർത്തുക: സെഷൻ നിയന്ത്രിക്കുക\n• സംസാരിക്കുക: ഓഡിയോ കേട്ട് ആവർത്തിക്കുക\n• സ്കോർ: കൃത്യത (0-100)\n• വീണ്ടും ശ്രമിക്കുക: ശബ്ദം കണ്ടെത്തിയില്ലെങ്കിൽ ബട്ടൺ';
+
+  @override
+  String get helpModeChatDesc =>
+      'Talk to AI persona to practice real conversation and save useful sentences.';
+
+  @override
+  String get helpModeChatDetails =>
+      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+
+  @override
+  String get helpJsonDesc => 'മോഡ് 3-ൽ ഇറക്കുമതി ചെയ്യാൻ, JSON സൃഷ്ടിക്കുക:';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Import complete dialogue sets via JSON files.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpTourDesc =>
+      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
+
+  @override
+  String get partnerMode => 'Partner Mode';
+
+  @override
+  String get manual => 'Manual';
+
+  @override
+  String get speaker => 'Speaker';
+
+  @override
+  String get switchToAi => 'Switch to AI';
+
+  @override
+  String get switchToPartner => 'Switch to Partner';
+
+  @override
+  String get currentLocation => 'Current Location';
+
+  @override
+  String get partner => 'Partner';
+
+  @override
+  String get me => 'Me';
+
+  @override
+  String get currentMaterialLabel => 'Current Selected Material:';
+
+  @override
+  String get basicMaterialRepository => 'Basic Repository';
+
+  @override
+  String get word => 'Word';
+
+  @override
+  String get sentence => 'Sentence';
+
+  @override
   String get appTitle => 'Talkie';
 
   @override
@@ -270,49 +365,6 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get stopPractice => 'നിർത്തുക';
-
-  @override
-  String get helpTitle => 'സഹായവും വഴികാട്ടിയും';
-
-  @override
-  String get helpTabModes => 'മോഡുകൾ';
-
-  @override
-  String get helpTabJson => 'JSON ഫോർമാറ്റ്';
-
-  @override
-  String get helpTabTour => 'ടൂർ';
-
-  @override
-  String get helpMode1Desc =>
-      'ശബ്ദം തിരിച്ചറിയുക, വിവർത്തനം ചെയ്യുക, ഫലം കേൾക്കുക.';
-
-  @override
-  String get helpMode1Details =>
-      '• ശബ്ദം: ആരംഭിക്കാൻ/നിർത്താൻ മൈക്ക് ടാപ്പ് ചെയ്യുക\n• ടെക്സ്റ്റ്: വിവർത്തനം ചെയ്യാൻ നേരിട്ട് ടൈപ്പ് ചെയ്യുക\n• ഓട്ടോ-സെർച്ച്: സമാനമായ വാക്യങ്ങൾ കണ്ടെത്തുന്നു\n• വിവർത്തനം: പെട്ടെന്നുള്ള വിവർത്തന ബട്ടൺ\n• കേൾക്കുക: TTS-നുള്ള സ്പീക്കർ ഐക്കൺ\n• സേവ്: ചരിത്രത്തിലേക്ക് ചേർക്കുന്നു\n• മായ്ക്കുക: എല്ലാം പുനഃസജ്ജമാക്കുക';
-
-  @override
-  String get helpMode2Desc =>
-      'മറഞ്ഞിരിക്കുന്ന വിവർത്തനം ഉപയോഗിച്ച് സേവ് ചെയ്ത വാക്യങ്ങൾ അവലോകനം ചെയ്യുക.';
-
-  @override
-  String get helpMode2Details =>
-      '• തിരഞ്ഞെടുക്കുക: സെറ്റ് അല്ലെങ്കിൽ \'എല്ലാം അവലോകനം ചെയ്യുക\' തിരഞ്ഞെടുക്കുക\n• മറിക്കുക: വിവർത്തനം \'കാണിക്കുക/മറയ്ക്കുക\'\n• കേൾക്കുക: വാക്യത്തിനായി TTS പ്ലേ ചെയ്യുക\n• അടയാളപ്പെടുത്തുക: പൂർത്തിയായതിന് ടിക്ക് (V)\n• നീക്കം ചെയ്യുക: നീക്കം ചെയ്യാൻ കാർഡ് അമർത്തിപ്പിടിക്കുക\n• ഫിൽട്ടർ: എല്ലാം അല്ലെങ്കിൽ മെറ്റീരിയൽ പ്രകാരം കാണുക';
-
-  @override
-  String get helpMode3Desc =>
-      'കേട്ട് ആവർത്തിച്ച് സംസാരിക്കാൻ പരിശീലിക്കുക (Shadowing).';
-
-  @override
-  String get helpMode3Details =>
-      '• തിരഞ്ഞെടുക്കുക: പാക്കേജ് തിരഞ്ഞെടുക്കുക\n• ഇടവേള: [-] [+] കാത്തിരിപ്പ് സമയം (3സെ-60സെ)\n• ആരംഭിക്കുക/നിർത്തുക: സെഷൻ നിയന്ത്രിക്കുക\n• സംസാരിക്കുക: ഓഡിയോ കേട്ട് ആവർത്തിക്കുക\n• സ്കോർ: കൃത്യത (0-100)\n• വീണ്ടും ശ്രമിക്കുക: ശബ്ദം കണ്ടെത്തിയില്ലെങ്കിൽ ബട്ടൺ';
-
-  @override
-  String get helpJsonDesc => 'മോഡ് 3-ൽ ഇറക്കുമതി ചെയ്യാൻ, JSON സൃഷ്ടിക്കുക:';
-
-  @override
-  String get helpTourDesc =>
-      'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
   String get startTutorial => 'ടൂർ ആരംഭിക്കുക';
@@ -696,7 +748,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String chatFailed(Object error) {
-    return '채팅 실패: $error';
+    return 'Chat failed: $error';
   }
 
   @override
@@ -707,7 +759,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String chatFromConversation(Object speaker) {
-    return '대화 발췌 ($speaker)';
+    return 'From Conversation ($speaker)';
   }
 
   @override
@@ -720,17 +772,10 @@ class AppLocalizationsMl extends AppLocalizations {
   String get personaFriend => 'Local Friend';
 
   @override
-  String get chatUntitled => '제목 없는 대화';
+  String get chatUntitled => 'Untitled Conversation';
 
   @override
   String get chatAiChat => 'AI Chat';
-
-  @override
-  String get helpModeChatDesc => 'AI 페르소나와 대화하며 실전 회화를 연습하고 유용한 문장을 저장하세요.';
-
-  @override
-  String get helpModeChatDetails =>
-      '• 채팅 시작: 상단 메뉴의 말풍선 아이콘 클릭\n• 페르소나 선택: 선생님, 가이드, 친구 중 선택\n• 대화 및 저장: AI 응답은 자동 번역됩니다. 메시지를 클릭하여 복습 모드로 저장하세요\n• 2개 국어 표시: 모든 메시지에 대해 모국어와 학습 언어를 함께 표시합니다\n• 듣기 기능 (TTS): 스피커 아이콘을 눌러 각 언어의 발음을 들어보세요\n• 자동 제목: 대화 주제에 따라 AI가 제목을 추천합니다\n• 이력 관리: 과거 대화 내용을 언제든 다시 확인할 수 있습니다';
 
   @override
   String get tutorialAiChatTitle => 'AI Chat';
@@ -740,18 +785,8 @@ class AppLocalizationsMl extends AppLocalizations {
       'Practice real conversation with AI personas here.';
 
   @override
-  String get me => 'Me';
-
-  @override
-  String get helpDialogueImportDesc => '완성된 대화문 세트를 JSON 파일로 한 번에 가져올 수 있습니다.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON 구조: `entries` 대신 `dialogues` 배열을 사용합니다.\n• 자동 생성: 대화 제목, 페르소나, 메시지 순서가 자동으로 구성됩니다.\n• 확인 위치: 가져온 대화는 AI 채팅 모드의 \'대화 기록\' 탭에서 확인할 수 있습니다.';
-
-  @override
   String mode1SelectedMaterial(Object name) {
-    return '현재 선택된 자료집: $name';
+    return 'Current Material Set: $name';
   }
 
   @override
