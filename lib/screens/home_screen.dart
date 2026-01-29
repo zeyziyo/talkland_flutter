@@ -534,14 +534,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   contextFieldKey: _contextFieldKey,
                   materialDropdownKey: _mode1DropdownKey,
                   toggleButtonKey: _mode1ToggleKey,
+                  onSelectMaterial: () => _showMaterialSelectionDialog(context),
                 ),
                 Mode2Widget(
                   materialDropdownKey: _mode2DropdownKey,
                   tutorialListKey: _mode2ListKey,
+                  onSelectMaterial: () => _showMaterialSelectionDialog(context),
                 ),
                 Mode3Widget(
                   materialDropdownKey: _mode3DropdownKey,
                   resetButtonKey: _mode3ResetKey,
+                  onSelectMaterial: () => _showMaterialSelectionDialog(context),
                 ),
                 ChatHistoryScreen(
                   isWidget: true,
@@ -731,14 +734,16 @@ class _HomeScreenState extends State<HomeScreen> {
         
         final wordMaterials = materials.where((m) {
            if (m['id'] == 0) return true; // Always show Basic
-           final count = m['word_count'] as int? ?? 0;
-           return count > 0;
+           final wCount = m['word_count'] as int? ?? 0;
+           final sCount = m['sentence_count'] as int? ?? 0;
+           return (wCount + sCount) > 0;
         }).toList();
         
         final sentenceMaterials = materials.where((m) {
            if (m['id'] == 0) return true; // Always show Basic
-           final count = m['sentence_count'] as int? ?? 0;
-           return count > 0;
+           final wCount = m['word_count'] as int? ?? 0;
+           final sCount = m['sentence_count'] as int? ?? 0;
+           return (wCount + sCount) > 0;
         }).toList();
 
         final dialogueGroups = appState.dialogueGroups;

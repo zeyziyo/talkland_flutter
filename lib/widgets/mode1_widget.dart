@@ -6,6 +6,7 @@ import '../l10n/app_localizations.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
 import '../services/usage_service.dart';
 import '../constants/language_constants.dart';
+import 'recommendation_widget.dart';
 
 
 /// Mode 1: 검색 모드 - STT → 번역 → TTS
@@ -28,7 +29,10 @@ class Mode1Widget extends StatefulWidget {
     this.contextFieldKey,
     this.materialDropdownKey,
     this.toggleButtonKey,
+    this.onSelectMaterial,
   });
+
+  final VoidCallback? onSelectMaterial;
 
   @override
   State<Mode1Widget> createState() => _Mode1WidgetState();
@@ -39,6 +43,12 @@ class _Mode1WidgetState extends State<Mode1Widget> {
   late TextEditingController _sourceTextController;
   late TextEditingController _translatedTextController;
   late TextEditingController _noteController;
+  late TextEditingController _tagController; // 신규 태그 입력용
+  late TextEditingController _posController; 
+  late TextEditingController _formTypeController;
+  late TextEditingController _rootController;
+  
+  List<String> _currentTags = [];
 
   // Rewarded Ad
   RewardedAd? _rewardedAd;
@@ -52,11 +62,20 @@ class _Mode1WidgetState extends State<Mode1Widget> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final appState = Provider.of<AppState>(context, listen: false);
       appState.loadStudyMaterials();
+      
+      // AI 추천 데이터 로드 (첫 진입 시)
+      if (appState.recommendedItems.isEmpty) {
+        appState.fetchRecommendations();
+      }
     });
 
     _sourceTextController = TextEditingController();
     _translatedTextController = TextEditingController();
     _noteController = TextEditingController();
+    _tagController = TextEditingController();
+    _posController = TextEditingController();
+    _formTypeController = TextEditingController();
+    _rootController = TextEditingController();
   }
 
   void _loadRewardedAd() {
@@ -85,6 +104,10 @@ class _Mode1WidgetState extends State<Mode1Widget> {
     _sourceTextController.dispose();
     _translatedTextController.dispose();
     _noteController.dispose();
+    _tagController.dispose();
+    _posController.dispose();
+    _formTypeController.dispose();
+    _rootController.dispose();
     _rewardedAd?.dispose();
     super.dispose();
   }
@@ -123,10 +146,10 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                 child: Column(
                   children: [
                     // ===================================
-                    // NEW: Type & Material Selectors
+                    // Phase 10: AI Recommendations
                     // ===================================
-                    
-
+                    const RecommendationWidget(),
+                    const SizedBox(height: 12),
                     
                     // Input Card
                     Card(
@@ -211,12 +234,12 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                 ),
                               ),
 
-                            TextField(
+                             TextField(
                               controller: _sourceTextController,
                               minLines: 2,
                               maxLines: null,
                               decoration: InputDecoration(
-                                hintText: l10n.enterTextHint,
+                                hintText: appState.recordTypeFilter == 'word' ? l10n.tabWord : l10n.enterTextHint,
                                 hintStyle: TextStyle(
                                   color: Colors.grey.shade400,
                                   fontStyle: FontStyle.italic,
@@ -228,7 +251,10 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                     if (appState.sourceText.isNotEmpty)
                                       IconButton(
                                         icon: const Icon(Icons.clear, color: Colors.grey),
-                                        onPressed: () => appState.clearTexts(),
+                                        onPressed: () {
+                                          appState.clearTexts();
+                                          setState(() => _currentTags = []);
+                                        },
                                         tooltip: l10n.clearAll,
                                       ),
                                     IconButton(
@@ -252,6 +278,79 @@ class _Mode1WidgetState extends State<Mode1Widget> {
 
                             const SizedBox(height: 12),
                             
+                            // AI 분석 정보 (단어 모드일 때만)
+                            if (appState.recordTypeFilter == 'word' && appState.sourceText.isNotEmpty)
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 12),
+                                child: Wrap(
+                                  spacing: 8,
+                                  children: [
+                                    _buildInfoChip(
+                                      icon: Icons.category_outlined,
+                                      label: appState.sourcePos.isEmpty ? '품사 추가' : appState.sourcePos,
+                                      color: Colors.purple,
+                                      onTap: () => _editInfo('pos', appState.sourcePos, appState),
+                                    ),
+                                    _buildInfoChip(
+                                      icon: Icons.extension_outlined,
+                                      label: appState.sourceFormType.isEmpty ? '형태 추가' : appState.sourceFormType,
+                                      color: Colors.orange,
+                                      onTap: () => _editInfo('formType', appState.sourceFormType, appState),
+                                    ),
+                                    _buildInfoChip(
+                                      icon: Icons.vpn_key_outlined,
+                                      label: appState.sourceRoot.isEmpty ? '원형' : appState.sourceRoot,
+                                      color: Colors.teal,
+                                      onTap: () => _editInfo('root', appState.sourceRoot, appState),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                            // 태그 입력 및 표시
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 8),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Wrap(
+                                    spacing: 8,
+                                    runSpacing: 4,
+                                    children: [
+                                      ..._currentTags.map((tag) => Chip(
+                                        label: Text(tag, style: const TextStyle(fontSize: 12)),
+                                        onDeleted: () => setState(() => _currentTags.remove(tag)),
+                                        visualDensity: VisualDensity.compact,
+                                        backgroundColor: Colors.blue[50],
+                                      )),
+                                      // 기본 태그 추천 (단어/문장 타입 등)
+                                      ActionChip(
+                                        label: Text(appState.recordTypeFilter == 'word' ? '#단어' : '#문장', style: const TextStyle(fontSize: 12)),
+                                        onPressed: () {
+                                          final t = appState.recordTypeFilter == 'word' ? '단어' : '문장';
+                                          if (!_currentTags.contains(t)) setState(() => _currentTags.add(t));
+                                        },
+                                        backgroundColor: Colors.grey[100],
+                                      ),
+                                    ],
+                                  ),
+                                  TextField(
+                                    controller: _tagController,
+                                    decoration: InputDecoration(
+                                      hintText: '태그 입력 (엔터로 추가)',
+                                      isDense: true,
+                                      prefixIcon: const Icon(Icons.tag, size: 20),
+                                      suffixIcon: IconButton(
+                                        icon: const Icon(Icons.add_circle_outline),
+                                        onPressed: _addTag,
+                                      ),
+                                    ),
+                                    onSubmitted: (_) => _addTag(),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            
                             // Context/Note Input
                             TextField(
                               key: widget.contextFieldKey,
@@ -271,34 +370,42 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                             // New: Material Set Selection Notice
                             Padding(
                               padding: const EdgeInsets.only(bottom: 8.0, left: 4.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.folder_shared, size: 16, color: Colors.green[800]),
-                                  const SizedBox(width: 8),
-                                  Expanded(
-                                    child: Builder(
-                                      builder: (context) {
-                                        String displayName = appState.selectedMaterialName;
-                                        // "Basic" has ID 0
-                                        if (appState.selectedMaterialId == 0 || displayName == 'Basic') {
-                                          displayName = appState.isWordMode
-                                              ? l10n.basicWordRepository
-                                              : l10n.basicSentenceRepository;
-                                        }
-                                        return Text(
-                                          l10n.mode1SelectedMaterial(displayName),
-                                          style: TextStyle(
-                                            fontSize: 13, 
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.green[800],
-                                          ),
-                                          maxLines: 2,
-                                          overflow: TextOverflow.ellipsis,
-                                        );
-                                      }
-                                    ),
+                              child: InkWell(
+                                onTap: widget.onSelectMaterial,
+                                borderRadius: BorderRadius.circular(8),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.folder_shared, size: 16, color: Colors.green[800]),
+                                      const SizedBox(width: 8),
+                                      Expanded(
+                                        child: Builder(
+                                          builder: (context) {
+                                            String displayName = appState.selectedMaterialName;
+                                            // "Basic" has ID 0
+                                            if (appState.selectedMaterialId == 0 || displayName == 'Basic') {
+                                              displayName = appState.isWordMode
+                                                  ? l10n.basicWordRepository
+                                                  : l10n.basicSentenceRepository;
+                                            }
+                                            return Text(
+                                              l10n.mode1SelectedMaterial(displayName),
+                                              style: TextStyle(
+                                                fontSize: 13, 
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.green[800],
+                                              ),
+                                              maxLines: 2,
+                                              overflow: TextOverflow.ellipsis,
+                                            );
+                                          }
+                                        ),
+                                      ),
+                                      Icon(Icons.edit, size: 14, color: Colors.green[600]),
+                                    ],
                                   ),
-                                ],
+                                ),
                               ),
                             ),
                             
@@ -515,7 +622,12 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                   appState.translatedText.isEmpty ||
                                   appState.isSaved)
                           ? null
-                          : () => appState.saveTranslation(),
+                          : () {
+                              final allTags = List<String>.from(_currentTags);
+                              // 품사 정보가 있으면 태그에 자동 포함 (옵션)
+                              if (appState.sourcePos.isNotEmpty) allTags.add(appState.sourcePos);
+                              appState.saveTranslation(tags: allTags);
+                            },
                       icon: const Icon(Icons.save),
                       label: Text(
                         appState.isSaved ? l10n.saved : l10n.saveData,
@@ -793,6 +905,61 @@ class _Mode1WidgetState extends State<Mode1Widget> {
             fontSize: 14,
           ),
         ),
+      ),
+    );
+  }
+
+  // 헬퍼: 정보 칩
+  Widget _buildInfoChip({required IconData icon, required String label, required Color color, required VoidCallback onTap}) {
+    return ActionChip(
+      avatar: Icon(icon, size: 16, color: color),
+      label: Text(label),
+      onPressed: onTap,
+      backgroundColor: color.withOpacity(0.05),
+      side: BorderSide(color: color.withOpacity(0.3)),
+    );
+  }
+
+  // 태그 추가 로직
+  void _addTag() {
+    final text = _tagController.text.trim().replaceAll('#', '');
+    if (text.isNotEmpty && !_currentTags.contains(text)) {
+      setState(() {
+        _currentTags.add(text);
+        _tagController.clear();
+      });
+    }
+  }
+
+  // 정보 수정 다이얼로그
+  void _editInfo(String type, String current, AppState appState) {
+    String label = '';
+    if (type == 'pos') label = '품사';
+    if (type == 'formType') label = '문법 형태';
+    if (type == 'root') label = '원형';
+
+    final controller = TextEditingController(text: current);
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('$label 수정'),
+        content: TextField(
+          controller: controller,
+          decoration: InputDecoration(hintText: '$label 입력'),
+          autofocus: true,
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(context), child: const Text('취소')),
+          TextButton(
+            onPressed: () {
+              if (type == 'pos') appState.setSourcePos(controller.text);
+              if (type == 'formType') appState.setSourceFormType(controller.text);
+              if (type == 'root') appState.setSourceRoot(controller.text);
+              Navigator.pop(context);
+            },
+            child: const Text('확인'),
+          ),
+        ],
       ),
     );
   }

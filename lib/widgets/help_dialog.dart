@@ -107,30 +107,28 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
               });
             },
             children: [
-              _buildModeCard(
-                icon: Icons.search,
-                title: '${l10n.search} (Mode 1)',
+                title: l10n.inputModeTitle,
                 desc: l10n.helpMode1Desc,
                 details: l10n.helpMode1Details,
                 color: Colors.blue[50]!,
               ),
               _buildModeCard(
                 icon: Icons.auto_stories,
-                title: '${l10n.mode2Title} (Mode 2)',
+                title: l10n.reviewModeTitle,
                 desc: l10n.helpMode2Desc,
                 details: l10n.helpMode2Details,
                 color: Colors.green[50]!,
               ),
               _buildModeCard(
                 icon: Icons.record_voice_over,
-                title: '${l10n.tabSpeaking} (Mode 3)',
+                title: l10n.practiceModeTitle,
                 desc: l10n.helpMode3Desc,
                 details: l10n.helpMode3Details,
                 color: Colors.purple[50]!,
               ),
               _buildModeCard(
                 icon: Icons.chat_bubble,
-                title: '${l10n.chatAiChat} (Chat)',
+                title: l10n.chatAiChat,
                 desc: l10n.helpModeChatDesc,
                 details: l10n.helpModeChatDetails,
                 color: Colors.orange[50]!,

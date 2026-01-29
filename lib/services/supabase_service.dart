@@ -113,12 +113,11 @@ class SupabaseService {
 
   /// Import a single JSON entry with validation and deduplication
   /// Returns: { success: bool, reason: String? }
-  static Future<Map<String, dynamic>> importJsonEntry({
-    required String sourceText,
-    required String sourceLang,
-    required String targetText,
     required String targetLang,
     String? note,
+    String? pos,
+    String? formType,
+    String? root,
   }) async {
     try {
       // 1. Duplicate Check (Source)
@@ -168,6 +167,9 @@ class SupabaseService {
           'lang_code': sourceLang,
           'text': sourceText,
           'note': note, // Note usually explains the source term in these lists
+          'pos': pos, // Added for Phase 13
+          'form_type': formType, // Added for Phase 13
+          'root': root, // Added for Phase 13
           'author_id': authorId,
           'status': 'approved',
         });
@@ -192,14 +194,12 @@ class SupabaseService {
   }
 
   /// Import a message into a specific dialogue group
-  static Future<Map<String, dynamic>> importDialogueMessage({
-    required String dialogueId,
-    required String sourceText,
-    required String sourceLang,
-    required String targetText,
     required String targetLang,
     required String speaker,
     required int sequenceOrder,
+    String? pos,
+    String? formType,
+    String? root,
   }) async {
     try {
       final userId = client.auth.currentUser?.id;
@@ -215,6 +215,9 @@ class SupabaseService {
           'group_id': groupId,
           'lang_code': sourceLang,
           'text': sourceText,
+          'pos': pos, // Added for Phase 13
+          'form_type': formType, // Added for Phase 13
+          'root': root, // Added for Phase 13
           'status': 'approved',
           'author_id': userId,
         });

@@ -14,7 +14,10 @@ class Mode3Widget extends StatelessWidget {
     super.key,
     this.materialDropdownKey,
     this.resetButtonKey,
+    this.onSelectMaterial,
   });
+
+  final VoidCallback? onSelectMaterial;
 
   @override
   Widget build(BuildContext context) {
@@ -32,42 +35,49 @@ class Mode3Widget extends StatelessWidget {
               // ==========================================
               const SizedBox(height: 16),
 
-              // Material Set & Toggle
+              // 스마트 검색바 & 태그 필터 (Pool 필터링용)
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   children: [
-                    // Material Selection Notice
-                    Row(
-                      children: [
-                        Icon(Icons.folder_shared, size: 16, color: Colors.green[800]),
-                        const SizedBox(width: 8),
-                        Expanded(
-                          child: Builder(
-                            builder: (context) {
-                              String displayName = appState.selectedMaterialName;
-                              // "Basic" has ID 0
-                              if (appState.selectedMaterialId == 0 || displayName == 'Basic') {
-                                final isWord = appState.recordTypeFilter == 'word';
-                                displayName = isWord
-                                    ? l10n.basicWordRepository
-                                    : l10n.basicSentenceRepository;
-                              }
-                              return Text(
-                                l10n.mode1SelectedMaterial(displayName),
-                                style: TextStyle(
-                                  fontSize: 13, 
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.green[800],
-                                ),
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              );
-                            }
-                          ),
-                        ),
-                      ],
+                    SearchBar(
+                      hintText: '연습할 단어/문장 검색...',
+                      prefixIcon: const Icon(Icons.search),
+                      onChanged: (value) {
+                        appState.setSearchQuery(value);
+                        if (appState.mode3SessionActive) appState.startMode3SessionDirectly();
+                      },
+                      padding: WidgetStateProperty.all(const EdgeInsets.symmetric(horizontal: 16)),
+                      elevation: WidgetStateProperty.all(1),
                     ),
+                    const SizedBox(height: 12),
+                    // 태그 필터 칩 목록
+                    if (appState.availableTags.isNotEmpty)
+                      SizedBox(
+                        height: 40,
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: appState.availableTags.length,
+                          itemBuilder: (context, index) {
+                            final tag = appState.availableTags[index];
+                            final isSelected = appState.selectedTags.contains(tag);
+                            return Padding(
+                              padding: const EdgeInsets.only(right: 8),
+                              child: FilterChip(
+                                label: Text(tag),
+                                selected: isSelected,
+                                onSelected: (_) {
+                                  appState.toggleTag(tag);
+                                  if (appState.mode3SessionActive) appState.startMode3SessionDirectly();
+                                },
+                                visualDensity: VisualDensity.compact,
+                                selectedColor: Colors.blue[100],
+                                checkmarkColor: Colors.blue,
+                              ),
+                            );
+                          },
+                        ),
+                      ),
                     
                     const SizedBox(height: 8),
                     
@@ -87,15 +97,16 @@ class Mode3Widget extends StatelessWidget {
                                 label: Text(l10n.tabSentence),
                                 icon: const Icon(Icons.short_text),
                               ),
+                              ButtonSegment<String>(
+                                value: 'all',
+                                label: const Text('전체'),
+                                icon: const Icon(Icons.apps),
+                              ),
                             ],
                             selected: {appState.recordTypeFilter},
                             onSelectionChanged: (Set<String> newSelection) {
-                              final isWord = newSelection.first == 'word';
-                              appState.setWordMode(isWord);
-                              // If Mode 3 is active, refresh to new content type
-                              if (appState.mode3SessionActive) {
-                                appState.startMode3SessionDirectly();
-                              }
+                              appState.setRecordTypeFilter(newSelection.first);
+                              if (appState.mode3SessionActive) appState.startMode3SessionDirectly();
                             },
                             style: ButtonStyle(
                               padding: WidgetStateProperty.all(EdgeInsets.zero),

@@ -36,25 +36,32 @@ Deno.serve(async (req) => {
       
       2. DISAMBIGUATION (BE SELECTIVE):
          Only provide 'disambiguationOptions' if the overall meaning of the text is fundamentally ambiguous and cannot be resolved by context.
-         If the text is a sentence, use the surrounding context to resolve any word-level homonyms before resorting to the disambiguation list.
          If truly ambiguous, provide a list of options in the source language (${sourceLang || 'Korean'}).
-         Example (Source=Korean "남"): ["남 (타인)", "남 (남쪽)"]
          
-      3. SAFETY & REASON:
+      3. LINGUISTIC ANALYSIS:
+         - 'pos' (Part of Speech): Identify the part of speech of the source text. 
+           (e.g., "noun", "verb", "adjective", "adverb", "preposition", "conjunction", "idiom", "sentence")
+         - 'formType' (Grammatical Form): Identify the tense or form. 
+           (e.g., "past", "present", "future", "comparative", "superlative", "plural", "singular", "formal", "informal")
+         - 'root' (Base Word): Provide the dictionary lemma/root form of the word.
+         - For sentences, set 'pos' as "sentence" and 'formType' as the overall formality (formal/informal).
+      
+      4. SAFETY & REASON:
          If the text contains EXPLICIT sexual content, SEVERE profanity, or CLEAR hate speech, set isValid to false.
          In the "reason" field, provide a polite, descriptive sentence in the source language (${sourceLang || 'Korean'}) explaining WHY it was blocked.
-         Example: "이 문장에는 비속어가 포함되어 있어 번역이 제한됩니다."
       
-      4. DO NOT block harmless phrases, common greetings, or standard polite conversation.
+      5. DO NOT block harmless phrases, common greetings, or standard polite conversation.
 
       Provide the output in strict JSON format:
       {
-        "translatedText": "string (the most common translation)",
+        "translatedText": "string",
         "isValid": boolean, 
-        "reason": "string (NATIVE language explanation if invalid, or PROFANITY/HATE_SPEECH/SEXUAL if generic)",
-        "disambiguationOptions": [
-           "string (Context in NATIVE language)"
-        ]
+        "reason": "string",
+        "disambiguationOptions": ["string"],
+        "pos": "noun | verb | adjective | adverb | idiom | sentence | etc",
+        "formType": "past | present | formal | informal | etc",
+        "root": "string (base lemma)",
+        "note": "string (brief explanation or usage tip in Korean)"
       }
 
       Text: "${text}"

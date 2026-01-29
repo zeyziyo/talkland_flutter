@@ -14,7 +14,10 @@ class Mode2Widget extends StatefulWidget {
     super.key,
     this.materialDropdownKey,
     this.tutorialListKey,
+    this.onSelectMaterial,
   });
+
+  final VoidCallback? onSelectMaterial;
 
   @override
   State<Mode2Widget> createState() => _Mode2WidgetState();
@@ -26,10 +29,10 @@ class _Mode2WidgetState extends State<Mode2Widget> {
   @override
   void initState() {
     super.initState();
-    // Load study materials when widget is initialized
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final appState = Provider.of<AppState>(context, listen: false);
-      appState.loadStudyMaterials();
+      appState.loadTags(); // 태그 목록 로드
+      appState.loadRecordsByTags(); // 초기 레코드 로드
     });
   }
   
@@ -71,42 +74,43 @@ class _Mode2WidgetState extends State<Mode2Widget> {
             
             const SizedBox(height: 16),
 
-            // Material Set & Toggle
+            // 스마트 검색바 & 태그 필터
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                 children: [
-                  // Material Selection Notice
-                  Row(
-                    children: [
-                      Icon(Icons.folder_shared, size: 16, color: Colors.green[800]),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Builder(
-                          builder: (context) {
-                            String displayName = appState.selectedMaterialName;
-                            // "Basic" has ID 0
-                            if (appState.selectedMaterialId == 0 || displayName == 'Basic') {
-                              final isWord = appState.recordTypeFilter == 'word';
-                              displayName = isWord
-                                  ? l10n.basicWordRepository
-                                  : l10n.basicSentenceRepository;
-                            }
-                            return Text(
-                              l10n.mode1SelectedMaterial(displayName),
-                              style: TextStyle(
-                                fontSize: 13, 
-                                fontWeight: FontWeight.bold,
-                                color: Colors.green[800],
-                              ),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            );
-                          }
-                        ),
-                      ),
-                    ],
+                  SearchBar(
+                    hintText: '단어 또는 문장 검색...',
+                    prefixIcon: const Icon(Icons.search),
+                    onChanged: (value) => appState.setSearchQuery(value),
+                    padding: WidgetStateProperty.all(const EdgeInsets.symmetric(horizontal: 16)),
+                    elevation: WidgetStateProperty.all(1),
                   ),
+                  const SizedBox(height: 12),
+                  // 태그 필터 칩 목록
+                  if (appState.availableTags.isNotEmpty)
+                    SizedBox(
+                      height: 40,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: appState.availableTags.length,
+                        itemBuilder: (context, index) {
+                          final tag = appState.availableTags[index];
+                          final isSelected = appState.selectedTags.contains(tag);
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: FilterChip(
+                              label: Text(tag),
+                              selected: isSelected,
+                              onSelected: (_) => appState.toggleTag(tag),
+                              visualDensity: VisualDensity.compact,
+                              selectedColor: Colors.blue[100],
+                              checkmarkColor: Colors.blue,
+                            ),
+                          );
+                        },
+                      ),
+                    ),
                   
                   const SizedBox(height: 8),
                   
@@ -126,12 +130,16 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                               label: Text(l10n.tabSentence),
                               icon: const Icon(Icons.short_text),
                             ),
+                            ButtonSegment<String>(
+                              value: 'all',
+                              label: const Text('전체'),
+                              icon: const Icon(Icons.apps),
+                            ),
                           ],
                           selected: {appState.recordTypeFilter},
                           onSelectionChanged: (Set<String> newSelection) {
-                            final isWord = newSelection.first == 'word';
-                            appState.setWordMode(isWord);
-                            appState.selectMaterial(0); // Reset to basic to prevent mismatch
+                            appState.setRecordTypeFilter(newSelection.first);
+                            appState.loadRecordsByTags(); // 재로드
                           },
                           style: ButtonStyle(
                             padding: WidgetStateProperty.all(EdgeInsets.zero),

@@ -23,7 +23,7 @@ class DatabaseService {
     
     return await openDatabase(
       path,
-      version: 4, // Upgraded for Phase 11 Enhancements (Location)
+      version: 6, // Upgraded for Phase 13 (Linguistic Analysis metadata for sentences)
       onCreate: (db, version) async {
         await _createBaseTables(db);
         await _ensureDefaultMaterial(db);
@@ -60,15 +60,31 @@ class DatabaseService {
           await db.execute('ALTER TABLE dialogue_groups ADD COLUMN location TEXT');
           print('[DB] Upgraded to version 4: Location support added');
         }
+
+        if (oldVersion < 5) {
+          // Version 5: New Unified Schema (Words, Sentences, Tags)
+          await _createBaseTables(db);
+          await migrateToUnifiedSchema(db); // 기존 데이터 마이그레이션 실행
+          print('[DB] Upgraded to version 5: New Unified Schema added and data migrated');
+        }
+
+        if (oldVersion < 6) {
+          // Version 6: Add Linguistic Analysis metadata to sentences
+          await db.execute('ALTER TABLE sentences ADD COLUMN pos TEXT');
+          await db.execute('ALTER TABLE sentences ADD COLUMN form_type TEXT');
+          await db.execute('ALTER TABLE sentences ADD COLUMN root TEXT'); // Changed root_id -> root in Phase 13
+          print('[DB] Upgraded to version 6: Sentences metadata added');
+        }
       },
     );
   }
   
-  /// 기본 테이블 생성 (최종 스키마)
+  /// 기본 테이블 및 신규 통합 테이블 생성
   static Future<void> _createBaseTables(Database db) async {
+    // 1. 구버전 테이블 (마이그레이션 및 하위 호환성 위해 유지 - 추후 제거 가능)
     // 번역 관계 테이블
     await db.execute('''
-      CREATE TABLE translations (
+      CREATE TABLE IF NOT EXISTS translations (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         source_lang TEXT NOT NULL,
         source_id INTEGER NOT NULL,
@@ -84,10 +100,83 @@ class DatabaseService {
         is_synced INTEGER DEFAULT 0
       )
     ''');
-
-    // 대화 그룹 테이블
+    
     await db.execute('''
-      CREATE TABLE dialogue_groups (
+      CREATE UNIQUE INDEX IF NOT EXISTS idx_translations_composite 
+      ON translations (source_lang, source_id, target_lang, target_id, material_id, IFNULL(note, ''), IFNULL(dialogue_id, ''))
+    ''');
+
+    // 2. 신규 통합 테이블 (Phase 12)
+    
+    // 통합 단어 테이블
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS words (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        group_id INTEGER,
+        text TEXT NOT NULL,
+        lang_code TEXT NOT NULL,
+        root TEXT,
+        pos TEXT,
+        form_type TEXT,
+        note TEXT,
+        created_at TEXT NOT NULL
+      )
+    ''');
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_words_group_id ON words (group_id)');
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_words_text_lang ON words (text, lang_code)');
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_words_root_id ON words (root_id)');
+    await db.execute('CREATE UNIQUE INDEX IF NOT EXISTS idx_words_unique ON words (text, lang_code, IFNULL(note, ""))');
+
+    // 통합 문장 테이블
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS sentences (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        group_id INTEGER,
+        text TEXT NOT NULL,
+        lang_code TEXT NOT NULL,
+        pos TEXT,
+        form_type TEXT,
+        root TEXT,
+        note TEXT,
+        created_at TEXT NOT NULL
+      )
+    ''');
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_sentences_group_id ON sentences (group_id)');
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_sentences_text_lang ON sentences (text, lang_code)');
+    await db.execute('CREATE UNIQUE INDEX IF NOT EXISTS idx_sentences_unique ON sentences (text, lang_code, IFNULL(note, ""))');
+
+    // 단어 번역 테이블
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS word_translations (
+        source_word_id INTEGER NOT NULL,
+        target_word_id INTEGER NOT NULL,
+        PRIMARY KEY (source_word_id, target_word_id)
+      )
+    ''');
+
+    // 문장 번역 테이블
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS sentence_translations (
+        source_sentence_id INTEGER NOT NULL,
+        target_sentence_id INTEGER NOT NULL,
+        PRIMARY KEY (source_sentence_id, target_sentence_id)
+      )
+    ''');
+
+    // 태그 시스템 테이블
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS item_tags (
+        item_id INTEGER NOT NULL,
+        item_type TEXT NOT NULL,
+        tag TEXT NOT NULL,
+        PRIMARY KEY (item_id, item_type, tag)
+      )
+    ''');
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_item_tags_tag ON item_tags (tag)');
+
+    // 기존 테이블들 (Legacy)
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS dialogue_groups (
         id TEXT PRIMARY KEY,
         user_id TEXT,
         title TEXT,
@@ -97,18 +186,16 @@ class DatabaseService {
       )
     ''');
     
-    // 번역 캐시 테이블
     await db.execute('''
-      CREATE TABLE translation_cache (
+      CREATE TABLE IF NOT EXISTS translation_cache (
         cache_key TEXT PRIMARY KEY,
         translation TEXT NOT NULL,
         timestamp INTEGER NOT NULL
       )
     ''');
     
-    // 학습 자료 메타데이터 테이블
     await db.execute('''
-      CREATE TABLE study_materials (
+      CREATE TABLE IF NOT EXISTS study_materials (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         subject TEXT NOT NULL,
         source TEXT NOT NULL,
@@ -120,7 +207,7 @@ class DatabaseService {
       )
     ''');
     
-    print('[DB] Base tables created successfully');
+    print('[DB] Unified Schema tables created successfully');
   }
 
   /// 기본 학습 자료 보장 (ID=0)
@@ -175,9 +262,9 @@ class DatabaseService {
         review_count INTEGER DEFAULT 0
       )
     ''');
-    
-    // Create Index on text column for fast duplicate checking
-    await db.execute('CREATE INDEX IF NOT EXISTS idx_${tableName}_text ON $tableName(text)');
+
+    // 텍스트 검색 및 중복 방지를 위한 UNIQUE 인덱스 추가
+    await db.execute('CREATE UNIQUE INDEX IF NOT EXISTS idx_${tableName}_text ON $tableName (text COLLATE NOCASE)');
     
     print('[DB] Language table created/verified: $tableName');
   }
@@ -192,31 +279,34 @@ class DatabaseService {
       await createLanguageTable(langCode);
     }
     
-    // 중복 검사: 동일한 텍스트가 이미 존재하는지 확인 (Index 활용을 위해 COLLATE NOCASE 사용)
-    final existing = await db.query(
-      tableName,
-      columns: ['id'], // 최적화: id만 가져옴
-      where: 'text = ? COLLATE NOCASE',
-      whereArgs: [text],
-      limit: 1,
+    // INSERT OR IGNORE를 사용하여 중복 쿼리(SELECT) 제거
+    // 중복 발생 시 id는 0 또는 null이 반환될 수 있으므로, 확실하게 가져오기 위해 처리
+    final id = await db.insert(
+      tableName, 
+      {
+        'text': text,
+        'audio_file': null,
+        'created_at': DateTime.now().toIso8601String(),
+        'last_reviewed': null,
+        'review_count': 0,
+      },
+      conflictAlgorithm: ConflictAlgorithm.ignore,
     );
     
-    if (existing.isNotEmpty) {
-      final existingId = existing.first['id'] as int;
-      print('[DB] Found existing text in $tableName: id=$existingId, text=${text.substring(0, text.length > 20 ? 20 : text.length)}...');
-      return existingId;
+    if (id <= 0) {
+      // 이미 존재하는 경우 ID 조회
+      final existing = await db.query(
+        tableName,
+        columns: ['id'],
+        where: 'text = ? COLLATE NOCASE',
+        whereArgs: [text],
+        limit: 1,
+      );
+      if (existing.isNotEmpty) {
+        return existing.first['id'] as int;
+      }
     }
     
-    // 새 레코드 삽입
-    final id = await db.insert(tableName, {
-      'text': text,
-      'audio_file': null,
-      'created_at': DateTime.now().toIso8601String(),
-      'last_reviewed': null,
-      'review_count': 0,
-    });
-    
-    print('[DB] Inserted into $tableName: id=$id, text=${text.substring(0, text.length > 20 ? 20 : text.length)}...');
     return id;
   }
   
@@ -1050,6 +1140,9 @@ class DatabaseService {
                     sequenceOrder: j,
                     note: (msg['note'] ?? msg['context']) as String?,
                     type: msg['type'] as String? ?? 'sentence',
+                    pos: msg['pos'] as String?,
+                    formType: (msg['form_type'] ?? msg['formType']) as String?,
+                    root: msg['root'] as String?,
                     txn: txn,
                   );
                   importedCount++;
@@ -1104,55 +1197,68 @@ class DatabaseService {
     String? dialogueId,
     String? speaker,
     int? sequenceOrder,
-    Transaction? txn, // Added txn
+    String? pos,
+    String? formType,
+    String? root,
+    Transaction? txn,
   }) async {
-    final db = txn ?? await database;
+    final executor = txn ?? await database;
     
-    String whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND material_id = ?';
-    List<dynamic> whereArgs = [sourceLang, sourceId, targetLang, targetId, materialId];
-    
-    if (dialogueId != null) {
-      whereClause += ' AND dialogue_id = ?';
-      whereArgs.add(dialogueId);
-    } else {
-      whereClause += ' AND dialogue_id IS NULL';
-    }
-
-    if (note != null) {
-      whereClause += ' AND note = ?';
-      whereArgs.add(note);
-    } else {
-       whereClause += ' AND (note IS NULL OR note = "")';
-    }
-
-    final existing = await db.query(
-      'translations',
-      where: whereClause,
-      whereArgs: whereArgs,
-      limit: 1,
+    // 1. Legacy Table Save
+    await executor.insert(
+      'translations', 
+      {
+        'source_lang': sourceLang,
+        'source_id': sourceId,
+        'target_lang': targetLang,
+        'target_id': targetId,
+        'material_id': materialId,
+        'note': note,
+        'type': type,
+        'dialogue_id': dialogueId,
+        'speaker': speaker,
+        'sequence_order': sequenceOrder,
+        'created_at': DateTime.now().toIso8601String(),
+      },
+      conflictAlgorithm: ConflictAlgorithm.ignore,
     );
-    
-    if (existing.isNotEmpty) {
-      print('[DB] Translation link already exists: $sourceLang($sourceId) -> $targetLang($targetId)');
-      return;
+
+    // 2. Unified Schema Save (Phase 12)
+    // Legacy ID를 통해 텍스트를 조회하여 통합 테이블에 저장
+    final sourceText = await _getTextFromLangTableStatic(executor, sourceLang, sourceId);
+    final targetText = await _getTextFromLangTableStatic(executor, targetLang, targetId);
+
+    if (sourceText != null && targetText != null) {
+      final tags = <String>[];
+      if (materialId > 0) {
+        final m = await executor.query('study_materials', columns: ['subject'], where: 'id = ?', whereArgs: [materialId]);
+        if (m.isNotEmpty) tags.add(m.first['subject'] as String);
+      }
+      if (dialogueId != null) tags.add('Dialogue');
+
+      await saveUnifiedRecord(
+        text: sourceText,
+        lang: sourceLang,
+        translation: targetText,
+        targetLang: targetLang,
+        type: type,
+        note: note,
+        pos: pos,
+        formType: formType,
+        root: root,
+        tags: tags,
+        txn: executor is Transaction ? executor : null,
+      );
     }
-    
-    // 새 번역 관계 생성 (material_id 포함)
-    await db.insert('translations', {
-      'source_lang': sourceLang,
-      'source_id': sourceId,
-      'target_lang': targetLang,
-      'target_id': targetId,
-      'material_id': materialId,
-      'note': note,
-      'type': type,
-      'dialogue_id': dialogueId,
-      'speaker': speaker,
-      'sequence_order': sequenceOrder,
-      'created_at': DateTime.now().toIso8601String(),
-    });
-    
-    print('[DB] Translation link with material saved: $sourceLang($sourceId) -> $targetLang($targetId), material_id=$materialId [Type: $type]');
+  }
+
+  static Future<String?> _getTextFromLangTableStatic(dynamic executor, String langCode, int id) async {
+    final tableName = 'lang_$langCode'.replaceAll('-', '_');
+    try {
+      final result = await executor.query(tableName, columns: ['text'], where: 'id = ?', whereArgs: [id]);
+      if (result.isNotEmpty) return result.first['text'] as String;
+    } catch (e) {}
+    return null;
   }
   
   /// Get all study materials with type counts (Includes Dialogue Groups as materials)
@@ -1486,53 +1592,352 @@ class DatabaseService {
 
   /// 언어 이름을 ISO 코드(ko, en 등)로 변환
   static String _mapLanguageToCode(String name) {
+    if (name.isEmpty) return name;
+    
     final lowerName = name.toLowerCase().trim();
-    switch (lowerName) {
-      case 'korean': return 'ko';
-      case 'english': return 'en';
-      case 'japanese': return 'ja';
-      case 'chinese (simplified)': return 'zh-CN';
-      case 'chinese (traditional)': return 'zh-TW';
-      case 'spanish': return 'es';
-      case 'french': return 'fr';
-      case 'german': return 'de';
-      case 'russian': return 'ru';
-      case 'vietnamese': return 'vi';
-      case 'indonesian': return 'id';
-      case 'thai': return 'th';
-      case 'portuguese': return 'pt';
-      case 'italian': return 'it';
-      case 'turkish': return 'tr';
-      case 'arabic': return 'ar';
-      case 'hindi': return 'hi';
-      case 'bengali': return 'bn';
-      case 'urdu': return 'ur';
-      case 'malay': return 'ms';
-      case 'filipino': return 'fil';
-      case 'polish': return 'pl';
-      case 'ukrainian': return 'uk';
-      case 'dutch': return 'nl';
-      case 'swedish': return 'sv';
-      case 'danish': return 'da';
-      case 'finnish': return 'fi';
-      case 'norwegian': return 'no';
-      case 'hungarian': return 'hu';
-      case 'czech': return 'cs';
-      case 'romanian': return 'ro';
-      case 'greek': return 'el';
-      case 'hebrew': return 'he';
-      case 'persian': return 'fa';
-      case 'tamil': return 'ta';
-      case 'telugu': return 'te';
-      case 'marathi': return 'mr';
-      case 'gujarati': return 'gu';
-      case 'kannada': return 'kn';
-      case 'malayalam': return 'ml';
-      case 'punjabi': return 'pa';
-      case 'swahili': return 'sw';
-      case 'afrikaans': return 'af';
-      default: return name; // 이미 코드 형식이거나 알 수 없는 경우 그대로 반환
+    
+    // 이미 2~5자의 코드 형태라면 그대로 반환 (예: ko, en-US)
+    if (lowerName.length >= 2 && lowerName.length <= 5 && !lowerName.contains(' ')) {
+      return lowerName;
     }
+
+    switch (lowerName) {
+      case 'korean':
+      case '한국어':
+        return 'ko';
+      case 'english':
+      case '영어':
+        return 'en';
+      case 'japanese':
+      case '일본어':
+        return 'ja';
+      case 'chinese':
+      case '중국어':
+        return 'zh';
+      case 'simplified chinese':
+      case '중국어(간체)':
+        return 'zh-CN';
+      case 'traditional chinese':
+      case '중국어(번체)':
+        return 'zh-TW';
+      case 'spanish':
+      case '스페인어':
+        return 'es';
+      case 'french':
+      case '프랑스어':
+        return 'fr';
+      case 'german':
+      case '독일어':
+        return 'de';
+      case 'russian':
+      case '러시아어':
+        return 'ru';
+      case 'vietnamese':
+      case '베트남어':
+        return 'vi';
+      case 'indonesian':
+      case '인도네시아어':
+        return 'id';
+      case 'thai':
+      case '태국어':
+        return 'th';
+      case 'portuguese':
+      case '포르투갈어':
+        return 'pt';
+      case 'italian':
+      case '이탈리아어':
+        return 'it';
+      case 'turkish':
+      case '터키어':
+        return 'tr';
+      case 'arabic':
+      case '아랍어':
+        return 'ar';
+      case 'hindi':
+      case '힌디어':
+        return 'hi';
+      case 'bengali':
+      case '뱅골어':
+        return 'bn';
+      case 'urdu':
+      case '우르두어':
+        return 'ur';
+      case 'malay':
+      case '말레이어':
+        return 'ms';
+      case 'filipino':
+      case '필리핀어':
+        return 'fil';
+      case 'polish':
+      case '폴란드어':
+        return 'pl';
+      case 'ukrainian':
+      case '우크라이나어':
+        return 'uk';
+      case 'dutch':
+      case '네덜란드어':
+        return 'nl';
+      case 'swedish':
+      case '스웨덴어':
+        return 'sv';
+      case 'danish':
+      case '덴마크어':
+        return 'da';
+      case 'finnish':
+      case '핀란드어':
+        return 'fi';
+      case 'norwegian':
+      case '노르웨이어':
+        return 'no';
+      case 'hungarian':
+      case '헝가리어':
+        return 'hu';
+      case 'czech':
+      case '체코어':
+        return 'cs';
+      case 'romanian':
+      case '루마니아어':
+        return 'ro';
+      case 'greek':
+      case '그리스어':
+        return 'el';
+      case 'hebrew':
+      case '히브리어':
+        return 'he';
+      case 'persian':
+      case '페르시아어':
+        return 'fa';
+      case 'tamil':
+      case '타밀어':
+        return 'ta';
+      case 'telugu':
+      case '텔루구어':
+        return 'te';
+      case 'marathi':
+      case '마라티어':
+        return 'mr';
+      case 'gujarati':
+      case '구자라트어':
+        return 'gu';
+      case 'kannada':
+      case '칸나다어':
+        return 'kn';
+      case 'malayalam':
+      case '말라얄람어':
+        return 'ml';
+      case 'punjabi':
+      case '펀자브어':
+        return 'pa';
+      case 'swahili':
+      case '스와힐리어':
+        return 'sw';
+      case 'afrikaans':
+      case '아프리칸스어':
+        return 'af';
+      default:
+        return lowerName; // 알 수 없는 경우 소문자 변환 값 반환
+    }
+  }
+
+  /// Legacy 데이터를 신규 통합 스키마로 마이그레이션
+  static Future<void> migrateToUnifiedSchema([Database? dbInstance]) async {
+    final db = dbInstance ?? await database;
+    
+    await db.transaction((txn) async {
+      print('[DB] Starting Migration to Unified Schema...');
+      
+      // 1. 기존 자료집 목록 가져오기 (태그로 변환용)
+      final materials = await txn.query('study_materials');
+      final Map<int, String> materialTags = {
+        for (var m in materials) m['id'] as int: m['subject'] as String
+      };
+
+      // 2. 기존 번역 데이터 가져오기
+      final translations = await txn.query('translations');
+      
+      // 중복 삽입 방지 및 group_id 유지 위한 캐시 (Key: text_lang_note)
+      final Map<String, int> wordCache = {};
+      final Map<String, int> sentenceCache = {};
+      
+      int nextGroupId = DateTime.now().millisecondsSinceEpoch;
+
+      for (var t in translations) {
+        final String type = t['type'] as String? ?? 'sentence';
+        final String sourceLang = t['source_lang'] as String;
+        final int sourceOldId = t['source_id'] as int;
+        final String targetLang = t['target_lang'] as String;
+        final int targetOldId = t['target_id'] as int;
+        final int? materialId = t['material_id'] as int?;
+        final String? note = t['note'] as String?;
+        final String createdAt = t['created_at'] as String? ?? DateTime.now().toIso8601String();
+
+        // 3. 기존 언어 테이블에서 실제 텍스트 조회
+        final sourceText = await _getTextFromLangTable(txn, sourceLang, sourceOldId);
+        final targetText = await _getTextFromLangTable(txn, targetLang, targetOldId);
+
+        if (sourceText == null || targetText == null) continue;
+
+        final currentGroupId = nextGroupId++;
+
+        // 4. 신규 테이블로 이관
+        if (type == 'word') {
+          // 단어 삽입
+          final newSourceId = await _upsertMigrationItem(txn, 'words', sourceText, sourceLang, currentGroupId, note, createdAt, wordCache);
+          final newTargetId = await _upsertMigrationItem(txn, 'words', targetText, targetLang, currentGroupId, null, createdAt, wordCache);
+          
+          // 번역 연결 (단어)
+          await txn.insert('word_translations', {
+            'source_word_id': newSourceId,
+            'target_word_id': newTargetId,
+          }, conflictAlgorithm: ConflictAlgorithm.ignore);
+          
+          // 태그 추가
+          if (materialId != null && materialTags.containsKey(materialId)) {
+            await _addItemTag(txn, newSourceId, 'word', materialTags[materialId]!);
+            await _addItemTag(txn, newTargetId, 'word', materialTags[materialId]!);
+          }
+        } else {
+          // 문장 삽입
+          final newSourceId = await _upsertMigrationItem(txn, 'sentences', sourceText, sourceLang, currentGroupId, note, createdAt, sentenceCache);
+          final newTargetId = await _upsertMigrationItem(txn, 'sentences', targetText, targetLang, currentGroupId, null, createdAt, sentenceCache);
+          
+          // 번역 연결 (문장)
+          await txn.insert('sentence_translations', {
+            'source_sentence_id': newSourceId,
+            'target_sentence_id': newTargetId,
+          }, conflictAlgorithm: ConflictAlgorithm.ignore);
+
+          // 태그 추가
+          if (materialId != null && materialTags.containsKey(materialId)) {
+            await _addItemTag(txn, newSourceId, 'sentence', materialTags[materialId]!);
+            await _addItemTag(txn, newTargetId, 'sentence', materialTags[materialId]!);
+          }
+        }
+      }
+      
+      print('[DB] Migration completed: ${translations.length} items processed.');
+    });
+  }
+
+  /// 마이그레이션용 텍스트 조회 헬퍼
+  static Future<String?> _getTextFromLangTable(Transaction txn, String langCode, int id) async {
+    final tableName = 'lang_$langCode'.replaceAll('-', '_');
+    try {
+      final result = await txn.query(tableName, columns: ['text'], where: 'id = ?', whereArgs: [id]);
+      if (result.isNotEmpty) return result.first['text'] as String;
+    } catch (e) {
+      // 테이블이 없는 경우 등
+    }
+    return null;
+  }
+
+  /// 마이그레이션용 아이템 삽입/조회 헬퍼
+  static Future<int> _upsertMigrationItem(Transaction txn, String table, String text, String lang, int groupId, String? note, String createdAt, Map<String, int> cache) async {
+    final cacheKey = '${text}_${lang}_${note ?? ""}';
+    if (cache.containsKey(cacheKey)) return cache[cacheKey]!;
+    
+    // 중복 확인 (DB 수준)
+    final existing = await txn.query(table, columns: ['id'], where: 'text = ? AND lang_code = ? AND IFNULL(note, "") = ?', whereArgs: [text, lang, note ?? ""]);
+    if (existing.isNotEmpty) {
+      final id = existing.first['id'] as int;
+      cache[cacheKey] = id;
+      return id;
+    }
+    
+    final id = await txn.insert(table, {
+      'group_id': groupId,
+      'text': text,
+      'lang_code': lang,
+      'note': note,
+      'created_at': createdAt,
+    });
+    
+    cache[cacheKey] = id;
+    return id;
+  }
+
+  /// 마이그레이션용 태그 삽입 헬퍼
+  static Future<void> _addItemTag(Transaction txn, int itemId, String itemType, String tag) async {
+    await txn.insert('item_tags', {
+      'item_id': itemId,
+      'item_type': itemType,
+      'tag': tag
+    }, conflictAlgorithm: ConflictAlgorithm.ignore);
+  /// 통합 테이블에 단어/문장 및 번역 연결 저장
+  static Future<void> saveUnifiedRecord({
+    required String text,
+    required String lang,
+    required String translation,
+    required String targetLang,
+    required String type,
+    String? pos,
+    String? formType,
+    String? root,
+    List<String>? tags,
+    Transaction? txn,
+  }) async {
+    final executor = txn ?? await database;
+    final timestamp = DateTime.now().millisecondsSinceEpoch;
+    final createdAt = DateTime.now().toIso8601String();
+    final table = type == 'word' ? 'words' : 'sentences';
+
+    // 1. Source 저장
+    final sourceId = await executor.insert(table, {
+      'group_id': timestamp,
+      'text': text,
+      'lang_code': lang,
+      'pos': pos, // Added Phase 13
+      'form_type': formType, // Added Phase 13
+      'root': root, // Added Phase 13 (as TEXT)
+      'note': note,
+      'created_at': createdAt,
+    }, conflictAlgorithm: ConflictAlgorithm.ignore);
+
+    // 2. Target 저장
+    final targetId = await executor.insert(table, {
+      'group_id': timestamp,
+      'text': translation,
+      'lang_code': targetLang,
+      'created_at': createdAt,
+    }, conflictAlgorithm: ConflictAlgorithm.ignore);
+
+    // 3. 번역 연결
+    if (type == 'word') {
+      await executor.insert('word_translations', {
+        'source_word_id': sourceId > 0 ? sourceId : (await _getUnifiedIdStatic(executor, 'words', text, lang, note)),
+        'target_word_id': targetId > 0 ? targetId : (await _getUnifiedIdStatic(executor, 'words', translation, targetLang, null)),
+      }, conflictAlgorithm: ConflictAlgorithm.ignore);
+    } else {
+      await executor.insert('sentence_translations', {
+        'source_sentence_id': sourceId > 0 ? sourceId : (await _getUnifiedIdStatic(executor, 'sentences', text, lang, note)),
+        'target_sentence_id': targetId > 0 ? targetId : (await _getUnifiedIdStatic(executor, 'sentences', translation, targetLang, null)),
+      }, conflictAlgorithm: ConflictAlgorithm.ignore);
+    }
+
+    // 4. 태그 저장
+    if (tags != null && tags.isNotEmpty) {
+      for (var tag in tags) {
+        await executor.insert('item_tags', {
+          'item_id': sourceId > 0 ? sourceId : (await _getUnifiedIdStatic(executor, table, text, lang, note)),
+          'item_type': type,
+          'tag': tag,
+        }, conflictAlgorithm: ConflictAlgorithm.ignore);
+        
+        await executor.insert('item_tags', {
+          'item_id': targetId > 0 ? targetId : (await _getUnifiedIdStatic(executor, table, translation, targetLang, null)),
+          'item_type': type,
+          'tag': tag,
+        }, conflictAlgorithm: ConflictAlgorithm.ignore);
+      }
+    }
+  }
+
+  static Future<int> _getUnifiedIdStatic(dynamic db, String table, String text, String lang, String? note) async {
+    final results = await db.query(table, columns: ['id'], 
+        where: 'text = ? AND lang_code = ? AND IFNULL(note, "") = ?', 
+        whereArgs: [text, lang, note ?? ""]);
+    if (results.isNotEmpty) return results.first['id'] as int;
+    return 0;
   }
 }
 

@@ -464,6 +464,10 @@
                 const targetData = await targetRes.json();
 
                 // Merge Logic
+                const isDialogue = relativePath.includes('/dialogues/');
+                const isWord = relativePath.includes('/words/');
+                const typeCode = isDialogue ? "dialogue" : (isWord ? "word" : "sentence");
+
                 const mergedEntries = [];
                 const maxLen = Math.min(sourceData.entries.length, targetData.entries.length);
 
@@ -471,13 +475,21 @@
                     const s = sourceData.entries[i];
                     const t = targetData.entries[i];
 
-                    mergedEntries.push({
-                        speaker: s.speaker || t.speaker || (i % 2 === 0 ? "A" : "B"), // Preserve speaker if available
-                        source_text: s.text,
-                        target_text: t.text,
-                        note: t.note || s.note || "",
-                        type: 'sentence'
-                    });
+                    if (isDialogue) {
+                        mergedEntries.push({
+                            speaker: s.speaker || t.speaker || (i % 2 === 0 ? "A" : "B"),
+                            source_text: s.text,
+                            target_text: t.text,
+                            note: t.note || s.note || "",
+                            type: 'sentence'
+                        });
+                    } else {
+                        mergedEntries.push({
+                            source_text: s.text,
+                            target_text: t.text,
+                            note: t.note || s.note || ""
+                        });
+                    }
                 }
 
                 const sCode = languageCodes[sourceLang] || sourceLang;
@@ -488,15 +500,17 @@
                     subject: sourceData.subject || subjectName,
                     source_language: sCode,
                     target_language: tCode,
-                    default_type: "sentence"
+                    default_type: typeCode
                 };
 
                 // Use "dialogues" structure for dialogue files as planned
-                if (relativePath.includes('dialogue')) {
+                if (isDialogue) {
+                    const firstAIspeaker = mergedEntries.length > 1 ? mergedEntries[1].speaker :
+                        (mergedEntries.length > 0 ? mergedEntries[0].speaker : "Partner");
                     finalJson.dialogues = [
                         {
-                            title: sourceData.title || subjectName,
-                            persona: mergedEntries[1].speaker || "Partner",
+                            title: sourceData.subject || subjectName,
+                            persona: firstAIspeaker || "Partner",
                             messages: mergedEntries
                         }
                     ];

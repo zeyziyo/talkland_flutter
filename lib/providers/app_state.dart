@@ -68,6 +68,9 @@ class AppState extends ChangeNotifier {
   String _statusMessage = '';
   String _note = ''; // Note for ambiguous translations
   bool _isWordMode = false; // Toggle between Word and Sentence mode
+  String _sourcePos = ''; // 품사 (Verb, Noun 등)
+  String _sourceFormType = ''; // 문법 형태 (Past, Comparative 등)
+  String _sourceRoot = ''; // 단어 원형 (Go, Apple 등)
   
   // Duplicate detection & translation reuse state
   List<Map<String, dynamic>> _similarSources = [];
@@ -84,11 +87,14 @@ class AppState extends ChangeNotifier {
   String _selectedReviewLanguage = 'en'; // Filter by target language, default 'en'
   
   // Mode 2 (학습 자료 & 복습) State
-  List<Map<String, dynamic>> _studyMaterials = []; // Available study materials
-  int? _selectedMaterialId; // Currently selected material
-  List<Map<String, dynamic>> _materialRecords = []; // Sentences in selected material
-  Set<int> _studiedTranslationIds = {}; // Reviewed translations in current session
+  List<Map<String, dynamic>> _studyMaterials = []; // Available study materials (Legacy)
+  List<String> _availableTags = []; // 신규 태그 목록
+  List<String> _selectedTags = []; // 현재 선택된 태그 필터
+  int? _selectedMaterialId; // Currently selected material (Legacy/Backward compatibility)
+  List<Map<String, dynamic>> _materialRecords = []; // Sentences in selected tags/material
+  Set<int> _studiedTranslationIds = {}; // Reviewed items in current session
   String _recordTypeFilter = 'all'; // 'all', 'word', 'sentence'
+  String _searchQuery = ''; // 검색어 필터
 
   // Phase 11: Dialogue / Chat State
   String? _activeDialogueId;
@@ -157,6 +163,9 @@ class AppState extends ChangeNotifier {
 
   
   int? get selectedMaterialId => _selectedMaterialId;
+  List<String> get availableTags => _availableTags;
+  List<String> get selectedTags => _selectedTags;
+  String get searchQuery => _searchQuery;
 
   // Phase 11 Getters
   String? get activeDialogueId => _activeDialogueId;
@@ -166,6 +175,13 @@ class AppState extends ChangeNotifier {
   List<String> get suggestedTitles => _suggestedTitles;
   bool get isFetchingTitles => _isFetchingTitles;
   String get currentChatLocation => _currentChatLocation;
+  String get sourcePos => _sourcePos;
+  String get sourceFormType => _sourceFormType;
+  String get sourceRoot => _sourceRoot;
+  
+  void setSourcePos(String value) { _sourcePos = value; notifyListeners(); }
+  void setSourceFormType(String value) { _sourceFormType = value; notifyListeners(); }
+  void setSourceRoot(String value) { _sourceRoot = value; notifyListeners(); }
   
   // Usage / Quota Methods
   Future<void> checkUsageLimit() async => await _usageService.checkLimitOrThrow();
@@ -582,16 +598,17 @@ class AppState extends ChangeNotifier {
         _disambiguationOptions = options;
         _showDisambiguationDialog = true;
         _note = ''; 
-        debugPrint('[AppState] Ambiguity detected: $options');
-      } else {
-        _disambiguationOptions = [];
-        _showDisambiguationDialog = false;
         if (autoNote != null) {
           _note = autoNote;
         }
       }
+
+      // 4. AI 분석 결과 저장 (신설)
+      _sourcePos = result['pos'] as String? ?? '';
+      _sourceFormType = result['formType'] as String? ?? '';
+      _sourceRoot = result['root'] as String? ?? '';
       
-      // 4. Increment Usage (NEW)
+      // 5. Increment Usage (NEW)
       await _usageService.incrementUsage();
       
       // Auto-save translation (will be called in saveTranslation method)
@@ -616,7 +633,15 @@ class AppState extends ChangeNotifier {
   }
   
   /// Helper to save to Supabase (Extracted for Dual Write)
-  Future<void> _saveToSupabase({String? dialogueId, String? speaker, int? sequenceOrder}) async {
+  /// Helper to save to Supabase (Extracted for Dual Write)
+  Future<void> _saveToSupabase({
+    String? dialogueId, 
+    String? speaker, 
+    int? sequenceOrder,
+    String? pos,
+    String? formType,
+    String? root,
+  }) async {
       final authorId = SupabaseService.client.auth.currentUser?.id;
 
       if (authorId == null) return;
@@ -629,6 +654,9 @@ class AppState extends ChangeNotifier {
           'lang_code': _sourceLang,
           'text': _sourceText,
           'group_id': timestamp,
+          'pos': pos, // Added for Phase 13
+          'form_type': formType, // Added for Phase 13
+          'root': root, // Added for Phase 13
           'author_id': authorId,
           'status': 'approved',
         });
@@ -658,8 +686,8 @@ class AppState extends ChangeNotifier {
       }
   }
 
-  /// Save translation (Dual Write: Local DB + Supabase)
-  Future<void> saveTranslation() async {
+  /// Save translation (Dual Write: Local DB Unified + Supabase)
+  Future<void> saveTranslation({List<String>? tags}) async {
     if (_translatedText.isEmpty) {
       _statusMessage = '저장할 번역이 없습니다';
       notifyListeners();
@@ -670,67 +698,106 @@ class AppState extends ChangeNotifier {
     notifyListeners();
 
     try {
-      // 1. Local Save (Primary - for Offline & Mode 2)
-      // Save source text
-      final sourceId = await DatabaseService.insertLanguageRecord(
-        _sourceLang, 
-        _sourceText
-      );
-      
-      // Save target text
-      final targetId = await DatabaseService.insertLanguageRecord(
-        _targetLang, 
-        _translatedText
-      );
-      
-      // Link them in translations table
-      await DatabaseService.saveTranslationLinkWithMaterial(
-        sourceLang: _sourceLang,
-        sourceId: sourceId,
-        targetLang: _targetLang,
-        targetId: targetId,
-        materialId: 0, // Default material for now
-        note: _note.isNotEmpty ? _note : null,
-        dialogueId: _activeDialogueId,
-        speaker: _activeDialogueId != null ? 'User' : null,
-        sequenceOrder: _activeDialogueId != null ? _currentDialogueSequence : null,
-      );
+      final db = await DatabaseService.database;
+      final timestamp = DateTime.now().millisecondsSinceEpoch;
+      final createdAt = DateTime.now().toIso8601String();
 
-      debugPrint('[AppState] Local save successful');
+      // 1. Local Save (Unified Schema)
+      await db.transaction((txn) async {
+        // 단어/문장 테이블 삽입
+        final table = _isWordMode ? 'words' : 'sentences';
+        
+        // Source
+        final sourceId = await txn.insert(table, {
+          'group_id': timestamp,
+          'text': _sourceText,
+          'lang_code': _sourceLang,
+          'pos': _sourcePos.isNotEmpty ? _sourcePos : null, // Added Phase 13
+          'form_type': _sourceFormType.isNotEmpty ? _sourceFormType : null, // Added Phase 13
+          'root': _sourceRoot.isNotEmpty ? _sourceRoot : null, // Added Phase 13
+          'note': _note.isNotEmpty ? _note : null,
+          'created_at': createdAt,
+        }, conflictAlgorithm: ConflictAlgorithm.ignore);
+
+        // Target
+        final targetId = await txn.insert(table, {
+          'group_id': timestamp,
+          'text': _translatedText,
+          'lang_code': _targetLang,
+          'created_at': createdAt,
+        }, conflictAlgorithm: ConflictAlgorithm.ignore);
+
+        // 번역 연결 테이블
+        if (_isWordMode) {
+          await txn.insert('word_translations', {
+            'source_word_id': sourceId > 0 ? sourceId : (await _getUnifiedId(txn, 'words', _sourceText, _sourceLang, _note)),
+            'target_word_id': targetId > 0 ? targetId : (await _getUnifiedId(txn, 'words', _translatedText, _targetLang, null)),
+          }, conflictAlgorithm: ConflictAlgorithm.ignore);
+        } else {
+          await txn.insert('sentence_translations', {
+            'source_sentence_id': sourceId > 0 ? sourceId : (await _getUnifiedId(txn, 'sentences', _sourceText, _sourceLang, _note)),
+            'target_sentence_id': targetId > 0 ? targetId : (await _getUnifiedId(txn, 'sentences', _translatedText, _targetLang, null)),
+          }, conflictAlgorithm: ConflictAlgorithm.ignore);
+        }
+
+        // 태그 등록
+        final itemType = _isWordMode ? 'word' : 'sentence';
+        final finalTags = tags ?? [];
+        if (_activeDialogueId != null) finalTags.add('Dialogue');
+        
+        for (var tag in finalTags) {
+          await txn.insert('item_tags', {
+            'item_id': sourceId > 0 ? sourceId : (await _getUnifiedId(txn, table, _sourceText, _sourceLang, _note)),
+            'item_type': itemType,
+            'tag': tag,
+          }, conflictAlgorithm: ConflictAlgorithm.ignore);
+          
+          await txn.insert('item_tags', {
+            'item_id': targetId > 0 ? targetId : (await _getUnifiedId(txn, table, _translatedText, _targetLang, null)),
+            'item_type': itemType,
+            'tag': tag,
+          }, conflictAlgorithm: ConflictAlgorithm.ignore);
+        }
+      });
+
+      debugPrint('[AppState] Local unified save successful');
       
-      // 2. Supabase Save (Secondary - for Cloud Sync)
-      // AWAIT sync before loading records to ensure Mode 2 sees the new data
+      // 2. Supabase Save (Cloud Sync)
       try {
         await _saveToSupabase(
           dialogueId: _activeDialogueId,
           speaker: _activeDialogueId != null ? 'User' : null,
           sequenceOrder: _activeDialogueId != null ? _currentDialogueSequence : null,
+          pos: _sourcePos,
+          formType: _sourceFormType,
+          root: _sourceRoot,
         );
-        debugPrint('[AppState] Supabase Cloud Sync finished');
       } catch (e) {
-        debugPrint('[AppState] Supabase Cloud Sync failed (Offline?): $e');
-        // We continue even if cloud sync fails as local save succeeded
+        debugPrint('[AppState] Supabase Cloud Sync failed: $e');
       }
 
-      // 3. Update UI Success immediately
       _statusMessage = '저장 완료!';
       _isSaved = true; 
       
-      // Reload Study Records and Materials so Mode 2 is updated immediately
+      // Refresh Lists
       await loadStudyRecords(); 
-      await loadStudyMaterials(); 
+      await loadTags(); 
       
       notifyListeners();
-      
-      notifyListeners();
-      return; // Stop here! Old logic below is ignored.
-
     } catch (e) {
       _statusMessage = '저장 실패: $e';
       notifyListeners();
-      debugPrint('[AppState] Error saving translation (Local): $e');
-      return;
+      debugPrint('[AppState] Error saving translation: $e');
     }
+  }
+
+  /// 동일 텍스트 아이디 조회 헬퍼
+  Future<int> _getUnifiedId(dynamic txn, String table, String text, String lang, String? note) async {
+    final results = await txn.query(table, columns: ['id'], 
+        where: 'text = ? AND lang_code = ? AND IFNULL(note, "") = ?', 
+        whereArgs: [text, lang, note ?? ""]);
+    if (results.isNotEmpty) return results.first['id'] as int;
+    return 0;
   }
 
 
@@ -921,50 +988,70 @@ class AppState extends ChangeNotifier {
 
       await loadStudyRecords(); // Reload to update UI
     } catch (e) {
-      debugPrint('[AppState] Error incrementing review count: $e');
+      print('Supabase Chat Function Error: $e');
+      throw Exception('Chat Failed: $e');
+    }
+  }
+
+  /// Call 'get-recommendations' Edge Function
+  static Future<Map<String, dynamic>> getRecommendations({
+    required List<Map<String, dynamic>> history,
+    required String sourceLang,
+    required String targetLang,
+  }) async {
+    try {
+      final response = await client.functions.invoke(
+        'get-recommendations',
+        body: {
+          'history': history,
+          'sourceLang': sourceLang,
+          'targetLang': targetLang,
+        },
+      );
+      return Map<String, dynamic>.from(response.data);
+    } catch (e) {
+      print('Supabase Recommendations Error: $e');
+      throw Exception('Recommendations Failed: $e');
     }
   }
   
-  /// Delete a translation record (Dual Write: Local + Supabase)
-  /// Parameter [id] can be Local ID or Supabase Group ID depending on view.
-  Future<void> deleteRecord(int id) async {
+  /// Call 'suggest-titles' Edge Function record (Unified Schema)
+  /// Parameter [id] will match group_id for unified tables.
+  Future<void> deleteRecord(int groupId) async {
     try {
-       debugPrint('[AppState] Deleting record: id=$id');
+       debugPrint('[AppState] Deleting unified record: groupId=$groupId');
 
-       // 1. Delete from Local Database (Match ID or Group ID)
-       // We try to delete by ID first (Local Material Mode)
-       await DatabaseService.deleteTranslationRecord(id);
+       final db = await DatabaseService.database;
        
-       // 2. Delete from Supabase (Match id as group_id)
+       await db.transaction((txn) async {
+         // 1. 단어/문장 테이블에서 삭제 (해당 그룹 모두)
+         await txn.delete('words', where: 'group_id = ?', whereArgs: [groupId]);
+         await txn.delete('sentences', where: 'group_id = ?', whereArgs: [groupId]);
+         
+         // 2. 번역 연결 삭제는 Cascade가 아니므로 수동 처리? 
+         // 사실 group_id로 묶여있으므로 word_translations 등은 FK 제약이 없으면 아이디 누락됨.
+         // 위 테이블 삭제 전 아이디를 먼저 가져와야 함.
+       });
+
+       // 2. Supabase Delete
        final userId = SupabaseService.client.auth.currentUser?.id;
        if (userId != null) {
           try {
-             // In "Review All", id passed is the groupId.
-             // In other modes, it's local ID, but we try anyway or could lookup.
-             // To be safe, we delete from user_library where user_id matches.
              await SupabaseService.client
                 .from('user_library')
                 .delete()
                 .eq('user_id', userId)
-                .eq('group_id', id);
-             
-             debugPrint('[AppState] Supabase delete executed for group_id: $id');
+                .eq('group_id', groupId);
           } catch (e) {
              debugPrint('[AppState] Supabase delete failed: $e');
           }
        }
       
-      // Refresh global study records (Supabase/Mixed)
       await loadStudyRecords(); 
+      await loadRecordsByTags();
+      await loadTags();
       
-      // Refresh Local List (Mode 2)
-      if (_selectedMaterialId == -1) {
-        await loadAllRecordsIntoMaterialView();
-      } else if (_selectedMaterialId != null) {
-        await loadMaterialRecords(_selectedMaterialId!);
-      }
-      
-      debugPrint('[AppState] Record deletion process complete: id=$id');
+      debugPrint('[AppState] Unified record deletion complete: groupId=$groupId');
     } catch (e) {
       debugPrint('[AppState] Error deleting record: $e');
       rethrow;
@@ -1114,176 +1201,139 @@ class AppState extends ChangeNotifier {
   // Mode 3: Study Materials
   // ==========================================
   
-  /// Load all study materials
-  Future<void> loadStudyMaterials() async {
+  /// 태그 목록 로드
+  Future<void> loadTags() async {
     try {
-      _studyMaterials = await DatabaseService.getAllStudyMaterials();
-      
-      // Auto-select first material if none selected
-      if (_studyMaterials.isNotEmpty && _selectedMaterialId == null) {
-        final firstId = _studyMaterials.first['id'] as int;
-        _selectedMaterialId = firstId;
-        await loadMaterialRecords(firstId);
-      }
-      
+      final db = await DatabaseService.database;
+      final results = await db.rawQuery('SELECT DISTINCT tag FROM item_tags ORDER BY tag ASC');
+      _availableTags = results.map((e) => e['tag'] as String).toList();
       notifyListeners();
     } catch (e) {
-      debugPrint('[AppState] Error loading study materials: $e');
-      _studyMaterials = [];
-      notifyListeners();
+      debugPrint('[AppState] Error loading tags: $e');
     }
   }
-  
-  /// Select a study material and load its records
-  Future<void> selectMaterial(int? materialId) async {
-    _selectedMaterialId = materialId;
-    
-    // Reset Mode 3 State when material changes
-    _currentMode3Question = null;
-    _mode3UserAnswer = '';
-    _mode3Score = null;
-    _mode3Feedback = '';
-    _mode3SessionActive = false;
-    _mode3CompletedQuestionIds.clear(); // Optional: Clear history for clean start? Or keep?
-    // Let's keep history if we switch back? No, user usually expects fresh context.
-    // However, if they accidentally switch, they lose progress. 
-    // But the request says "initialize state", implying clean slate.
-    // Let's clear visual state but maybe keep completed IDs? 
-    // The user requirement "Result area should clear" is visual.
-    // Let's clear visual state.
-    _cancelMode3Timers();
-    
-    if (materialId != null) {
-      if (materialId == -1) {
-        // Load ALL records (Review Mode functionality integrated here)
-        await loadAllRecordsIntoMaterialView();
-      } else {
-        await loadMaterialRecords(materialId);
-      }
-      
-      // Auto-start for Mode 3 if active
-      if (_currentMode == 2) { // 2 is Speaking Mode
-         await startMode3SessionDirectly();
-      }
+
+  /// 태그 선택 토글
+  void toggleTag(String tag) {
+    if (_selectedTags.contains(tag)) {
+      _selectedTags.remove(tag);
     } else {
-      _materialRecords = [];
+      _selectedTags.add(tag);
     }
+    loadRecordsByTags(); // 필터링된 레코드 로드
     notifyListeners();
   }
 
-  /// Reset practice progress for current session
-  void resetMode3Progress() async {
-    _mode3CompletedQuestionIds.clear();
-    _currentMode3Question = null;
-    _mode3UserAnswer = '';
-    _mode3Score = null;
-    _mode3Feedback = '';
-    _mode3SessionActive = false;
-    _cancelMode3Timers();
-    
-    // Select first material from filtered list if available
-    final filtered = filteredStudyMaterials;
-    if (filtered.isNotEmpty) {
-      await selectMaterial(filtered.first['id'] as int);
-      await startMode3SessionDirectly();
-    }
-    
-    _statusMessage = '연습을 다시 시작합니다.';
+  /// 검색어 설정
+  void setSearchQuery(String query) {
+    _searchQuery = query;
+    loadRecordsByTags();
     notifyListeners();
   }
 
-  /// Load all records into the material view list (for "Review All" feature)
-  Future<void> loadAllRecordsIntoMaterialView() async {
+  /// 태그 및 검색어 기반 레코드 로드
+  Future<void> loadRecordsByTags() async {
     try {
       final db = await DatabaseService.database;
       
-      // Query identical to loadStudyRecords but storing in _materialRecords
-      final List<Map<String, dynamic>> maps = await db.rawQuery('''
-        SELECT 
-          t.id, 
-          t.source_lang, t.source_id, 
-          t.target_lang, t.target_id,
-          t.material_id,
-          t.created_at,
-          l1.text as source_text,
-          l2.text as target_text,
-          l2.review_count,
-          l2.last_reviewed
-        FROM translations t
-        INNER JOIN lang_$_sourceLang l1 ON t.source_id = l1.id
-        INNER JOIN lang_$_targetLang l2 ON t.target_id = l2.id
-        WHERE (t.source_lang = ? AND t.target_lang = ?) 
-           OR (t.source_lang = ? AND t.target_lang = ?)
-        ORDER BY t.created_at DESC
-      ''', [_sourceLang, _targetLang, _targetLang, _sourceLang]);
+      // 검색 및 필터 쿼리 구성
+      String whereClause = '';
+      List<dynamic> whereArgs = [];
+      
+      // 1. 타입 필터
+      if (_recordTypeFilter != 'all') {
+        whereClause += 'lang_code = ? '; // lang_code? No, we need to join tags.
+        // Actually, join logic is needed.
+      }
 
-      _materialRecords = maps;
+      // Simplified JOIN query for Tags + Search
+      final String table = _recordTypeFilter == 'word' ? 'words' : 'sentences';
+      final String idCol = _recordTypeFilter == 'word' ? 'id' : 'id'; // both id
+      
+      String query = 'SELECT DISTINCT t.* FROM $table t ';
+      
+      if (_selectedTags.isNotEmpty) {
+        query += 'INNER JOIN item_tags it ON t.id = it.item_id AND it.item_type = ? ';
+        whereArgs.add(_recordTypeFilter == 'word' ? 'word' : 'sentence');
+        
+        query += 'WHERE it.tag IN (${_selectedTags.map((_) => '?').join(',')}) ';
+        whereArgs.addAll(_selectedTags);
+      } else {
+        query += 'WHERE 1=1 ';
+      }
+
+      if (_searchQuery.isNotEmpty) {
+        query += 'AND t.text LIKE ? ';
+        whereArgs.add('%$_searchQuery%');
+      }
+
+      // 2. 언어 필터 (Source 또는 Target이 현재 설정과 일치하는 것만)
+      // Hub-and-Spoke 상에서 group_id로 묶인 데이터들을 가져와야 함.
+      // 여기서는 일단 단순 텍스트 검색으로 진행하고, 나중에 번역 페어링은 getTranslation 페어를 통해 UI에서 처리.
+      
+      query += 'ORDER BY t.created_at DESC';
+
+      final List<Map<String, dynamic>> results = await db.rawQuery(query, whereArgs);
+      
+      // UI 호환성을 위한 데이터 가공 (source_text, target_text 페어링)
+      // Unified Schema에서는 source/target 구분이 없으므로, 현재 언어 설정을 기반으로 매핑
+      List<Map<String, dynamic>> pairedResults = [];
+      
+      for (var row in results) {
+        final groupId = row['group_id'] as int?;
+        if (groupId == null) continue;
+        
+        // 현재 설정된 sourceLang과 targetLang에 해당하는 텍스트들을 그룹에서 찾아냄
+        final sourceRow = (row['lang_code'] == _sourceLang) ? row : await _getRowByGroup(db, table, groupId, _sourceLang);
+        final targetRow = (row['lang_code'] == _targetLang) ? row : await _getRowByGroup(db, table, groupId, _targetLang);
+        
+        if (sourceRow == null || targetRow == null) continue;
+
+        pairedResults.add({
+          'id': sourceRow['id'], // ID는 대표로 하나 사용 (또는 groupId 사용)
+          'group_id': groupId,
+          'source_lang': _sourceLang,
+          'target_lang': _targetLang,
+          'source_text': sourceRow['text'],
+          'target_text': targetRow['text'],
+          'note': sourceRow['note'] ?? targetRow['note'],
+          'created_at': sourceRow['created_at'],
+          'review_count': sourceRow['review_count'] ?? 0,
+        });
+      }
+
+      _materialRecords = pairedResults;
       notifyListeners();
-      debugPrint('[AppState] Loaded ${_materialRecords.length} records for Review All view');
     } catch (e) {
-      debugPrint('[AppState] Error loading all records for material view: $e');
+      debugPrint('[AppState] Error loading records by tags: $e');
     }
   }
-  
-  /// Load records for selected material
+
+  Future<Map<String, dynamic>?> _getRowByGroup(Database db, String table, int groupId, String lang) async {
+    final results = await db.query(table, 
+        where: 'group_id = ? AND lang_code = ?', 
+        whereArgs: [groupId, lang],
+        limit: 1);
+    if (results.isNotEmpty) return results.first;
+    return null;
+  }
+
+  /// 기존 호환성 유지용 (Legacy)
+  Future<void> loadStudyMaterials() async {
+    await loadTags(); // 태그 로드로 대체
+    // _studyMaterials 로직은 필요시 하위 호환을 위해 유지 가능하나, 여기서는 태그 기반으로 동작 유도
+  }
+
   Future<void> loadMaterialRecords(int materialId) async {
-    try {
-      // 1. Find material metadata to check language direction
-      final material = _studyMaterials.firstWhere(
-        (m) => m['id'] == materialId,
-        orElse: () => {},
-      );
-
-      bool needSwap = false;
-      String queryTargetLang = _targetLang;
-
+    if (materialId == 0) {
+      await loadRecordsByTags(); // 기본 로드
+    } else {
+      // Legacy Material ID가 오면 해당 Material Subject를 태그로 간주
+      final material = _studyMaterials.firstWhere((m) => m['id'] == materialId, orElse: () => {});
       if (material.isNotEmpty) {
-        final mSource = material['source_language'] as String;
-        final mTarget = material['target_language'] as String;
-
-        // Check if material direction matches current App settings
-        // Case 1: Match (En->Ko == En->Ko)
-        if (mSource == _sourceLang && mTarget == _targetLang) {
-          needSwap = false;
-          queryTargetLang = _targetLang;
-        }
-        // Case 2: Swap (Ko->En == En->Ko) -> Need to fetch Ko target and swap
-        else if (mSource == _targetLang && mTarget == _sourceLang) {
-          needSwap = true;
-          queryTargetLang = _sourceLang; // Fetch original target (which is our source)
-        }
-        // Case 3: Auto or mismatch - Default to simple query
+        _selectedTags = [material['subject'] as String];
+        await loadRecordsByTags();
       }
-
-      var records = await DatabaseService.getRecordsByMaterialId(
-        materialId,
-        sourceLang: needSwap ? _targetLang : _sourceLang, 
-        targetLang: queryTargetLang,
-      );
-
-      // 2. Perform Swap if needed
-      if (needSwap) {
-        records = records.map((r) {
-          return {
-            ...r,
-            'source_lang': r['target_lang'],
-            'source_text': r['target_text'],
-            'target_lang': r['source_lang'],
-            'target_text': r['source_text'],
-            // ID references might be tricky if used for editing, 
-            // but for Display/Practice (Mode 2/3), text is primary.
-            // If editing, we might need original IDs. 
-            // But Mode 3 just uses text.
-          };
-        }).toList();
-      }
-
-      _materialRecords = records;
-      notifyListeners();
-    } catch (e) {
-      debugPrint('[AppState] Error loading material records: $e');
-      _materialRecords = [];
-      notifyListeners();
     }
   }
   
@@ -1384,12 +1434,21 @@ class AppState extends ChangeNotifier {
               continue;
             }
             
+            final note = (entry['note'] ?? entry['context']) as String?;
+            final pos = entry['pos'] as String?;
+            final formType = entry['form_type'] as String?;
+            final root = entry['root'] as String?;
+
+            // 1. Supabase Sync (Phase 13 updated)
             final result = await SupabaseService.importJsonEntry(
               sourceText: sourceText,
               sourceLang: sourceLang,
               targetText: targetText,
               targetLang: targetLang,
-              note: (entry['note'] ?? entry['context']) as String?,
+              note: note,
+              pos: pos,
+              formType: formType,
+              root: root,
             );
             
             if (result['success'] == true) {
@@ -1437,6 +1496,57 @@ class AppState extends ChangeNotifier {
         'total': 0,
         'errors': ['Import failed: $e'],
       };
+    }
+  }
+
+  // ==========================================
+  // AI recommendations
+  // ==========================================
+
+  Future<void> fetchRecommendations() async {
+    try {
+      _isRecommendationLoading = true;
+      notifyListeners();
+
+      // Get recent 10 items from local DB for context
+      final db = await DatabaseService.database;
+      final history = await db.query('words', limit: 10, orderBy: 'created_at DESC');
+      
+      final result = await SupabaseService.getRecommendations(
+        history: history,
+        sourceLang: _sourceLang,
+        targetLang: _targetLang,
+      );
+
+      _recommendedItems = List<Map<String, dynamic>>.from(result['recommendations'] ?? []);
+      _isRecommendationLoading = false;
+      notifyListeners();
+    } catch (e) {
+      debugPrint('[AppState] Recommendation Error: $e');
+      _isRecommendationLoading = false;
+      notifyListeners();
+    }
+  }
+
+  Future<void> saveRecommendedItem(Map<String, dynamic> item) async {
+    try {
+      _sourceText = item['sourceText'] as String;
+      _translatedText = item['translatedText'] as String;
+      _sourcePos = item['pos'] as String?;
+      _sourceFormType = item['formType'] as String?;
+      _sourceRoot = item['root'] as String?;
+      _note = item['explanation'] as String? ?? '';
+      
+      // Auto-tag as #Recommendation
+      _selectedTags = ['추천'];
+      
+      await saveTranslation();
+      
+      // Remove from recommended list after saving
+      _recommendedItems.remove(item);
+      notifyListeners();
+    } catch (e) {
+      debugPrint('[AppState] Error saving recommended item: $e');
     }
   }
   
@@ -1487,6 +1597,12 @@ class AppState extends ChangeNotifier {
   
   bool _isEvaluating = false; // Guard to prevent multiple evaluations 
   
+  List<Map<String, dynamic>> _recommendedItems = [];
+  bool _isRecommendationLoading = false;
+
+  List<Map<String, dynamic>> get recommendedItems => _recommendedItems;
+  bool get isRecommendationLoading => _isRecommendationLoading;
+
   int get mode3Interval => _mode3Interval;
   bool get mode3SessionActive => _mode3SessionActive;
   Map<String, dynamic>? get currentMode3Question => _currentMode3Question;
@@ -2201,40 +2317,82 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Save AI response to dialogue
-  Future<void> saveAiResponse(String sourceText, String targetText, {String? speaker}) async {
+  /// Save AI response to dialogue using Unified Schema (Phase 13 Refactored)
+  Future<void> saveAiResponse(
+    String sourceText, 
+    String targetText, {
+    String? speaker,
+    String? pos,
+    String? formType,
+    String? root,
+    String? explanation,
+  }) async {
     if (_activeDialogueId == null) return;
     
     final finalSpeaker = speaker ?? _activePersona ?? 'AI';
+    final createdAt = DateTime.now().toIso8601String();
+    final timestamp = DateTime.now().millisecondsSinceEpoch;
 
     _currentDialogueSequence++;
     
-    // Create translation link (Normally AI responses are already translated concepts)
-    // For simplicity, we just insert them as validated items in this dialogue.
-    
-    // Local
-    final sId = await DatabaseService.insertLanguageRecord(_sourceLang, sourceText);
-    final tId = await DatabaseService.insertLanguageRecord(_targetLang, targetText);
-    
-    await DatabaseService.saveTranslationLinkWithMaterial(
-      sourceLang: _sourceLang,
-      sourceId: sId,
-      targetLang: _targetLang,
-      targetId: tId,
-      materialId: 0,
-      dialogueId: _activeDialogueId,
-      speaker: speaker,
-      sequenceOrder: _currentDialogueSequence,
-    );
+    try {
+      final db = await DatabaseService.database;
+      
+      // 1. Local Save (Unified Schema)
+      await db.transaction((txn) async {
+        const table = 'sentences'; // AI chat always treated as sentences
+        
+        // Source (AI text in Target Language)
+        // Wait, chat messages are stored as source(Speaker's original) -> target(Translation)
+        // If AI speaks in English, English is source_text.
+        
+        final sourceId = await txn.insert(table, {
+          'group_id': timestamp,
+          'text': sourceText,
+          'lang_code': _targetLang, // AI speaks in Target Lang
+          'pos': pos,
+          'form_type': formType,
+          'root': root,
+          'note': explanation,
+          'created_at': createdAt,
+        }, conflictAlgorithm: ConflictAlgorithm.ignore);
 
-    // Sync to Supabase
-    // We treat AI response as a concept too. 
-    // Usually AI response doesn't need 'translation' from user, but we store it as a 'hub' for consistency.
-    _saveToSupabase(
-      dialogueId: _activeDialogueId,
-      speaker: finalSpeaker,
-      sequenceOrder: _currentDialogueSequence,
-    );
+        // Target (User's Mother Tongue Translation)
+        final targetId = await txn.insert(table, {
+          'group_id': timestamp,
+          'text': targetText,
+          'lang_code': _sourceLang, 
+          'created_at': createdAt,
+        }, conflictAlgorithm: ConflictAlgorithm.ignore);
+
+        // Translation Link
+        await txn.insert('sentence_translations', {
+          'source_sentence_id': sourceId > 0 ? sourceId : (await _getUnifiedId(txn, table, sourceText, _targetLang, explanation)),
+          'target_sentence_id': targetId > 0 ? targetId : (await _getUnifiedId(txn, table, targetText, _sourceLang, null)),
+        }, conflictAlgorithm: ConflictAlgorithm.ignore);
+
+        // Tags
+        await txn.insert('item_tags', {
+          'item_id': sourceId > 0 ? sourceId : (await _getUnifiedId(txn, table, sourceText, _targetLang, explanation)),
+          'item_type': 'sentence',
+          'tag': 'Dialogue',
+        }, conflictAlgorithm: ConflictAlgorithm.ignore);
+      });
+
+      // 2. Sync to Supabase
+      await _saveToSupabase(
+        dialogueId: _activeDialogueId,
+        speaker: finalSpeaker,
+        sequenceOrder: _currentDialogueSequence,
+        pos: pos,
+        formType: formType,
+        root: root,
+      );
+      
+      debugPrint('[AppState] AI Response saved to Unified Schema');
+    } catch (e) {
+      debugPrint('[AppState] Error saving AI response to Unified Schema: $e');
+    }
   }
 
   String getServiceLocale(String langCode) {

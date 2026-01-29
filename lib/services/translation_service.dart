@@ -73,8 +73,11 @@ class TranslationService {
       return {
         'text': translatedText,
         'isValid': true,
-        'note': note,
+        'note': note ?? result['note'],
         'disambiguationOptions': disambiguationOptions?.cast<String>(),
+        'pos': result['pos'] as String?,
+        'formType': result['formType'] as String?,
+        'root': result['root'] as String?,
       };
 
     } catch (e) {

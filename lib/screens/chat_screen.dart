@@ -253,10 +253,21 @@ class _ChatScreenState extends State<ChatScreen> {
       );
 
       final aiResponse = result['response'] as String? ?? '';
-      final translation = result['translation'] as String? ?? '';
+      final translatedResponse = result['translatedResponse'] as String? ?? ''; // Updated field name
+      final pos = result['pos'] as String?;
+      final formType = result['formType'] as String?;
+      final root = result['root'] as String?;
+      final explanation = result['explanation'] as String?;
       final suggestedTitle = result['title'] as String?;
 
-      await appState.saveAiResponse(aiResponse, translation);
+      await appState.saveAiResponse(
+        aiResponse, 
+        translatedResponse,
+        pos: pos,
+        formType: formType,
+        root: root,
+        explanation: explanation,
+      );
       
       if (suggestedTitle != null && 
           (appState.activeDialogueTitle == 'New Conversation' || appState.activeDialogueTitle == l10n.chatUntitled) &&
@@ -277,7 +288,7 @@ class _ChatScreenState extends State<ChatScreen> {
           _messages.add({
             'speaker': 'AI',
             'source_text': aiResponse, 
-            'target_text': translation,
+            'target_text': translatedResponse,
           });
           _isLoading = false;
         });

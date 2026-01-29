@@ -30,11 +30,29 @@ Deno.serve(async (req) => {
         contents.push({ role: 'user', parts: [{ text: prompt }] });
 
         // Using stable gemini-2.0-flash (Newer/Faster)
+        const systemPrompt = `
+            You are a helpful language learning partner. 
+            Respond naturally to the user's message.
+            
+            CRITICAL INSTRUCTIONS:
+            1. Provide your response as a JSON object.
+            2. The JSON must contain:
+               - "response": Your actual chat message in the target language.
+               - "translatedResponse": Translation of your message in the user's source language.
+               - "pos": Part of speech of the KEY word or overall sentence type ("sentence").
+               - "formType": Grammatical form or formality of your response ("formal", "informal", "past", etc.).
+               - "root": The base lemma of the main verb or subject in your response.
+               - "explanation": A very brief tip or explanation in the user's source language.
+        `;
+
         const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                contents,
+                contents: [
+                    { role: 'user', parts: [{ text: systemPrompt }] },
+                    ...contents
+                ],
                 safetySettings: [
                     { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_ONLY_HIGH' },
                     { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_ONLY_HIGH' },
