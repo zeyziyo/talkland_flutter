@@ -113,6 +113,10 @@ class SupabaseService {
 
   /// Import a single JSON entry with validation and deduplication
   /// Returns: { success: bool, reason: String? }
+  static Future<Map<String, dynamic>> importJsonEntry({
+    required String sourceText,
+    required String sourceLang,
+    required String targetText,
     required String targetLang,
     String? note,
     String? pos,
@@ -194,6 +198,11 @@ class SupabaseService {
   }
 
   /// Import a message into a specific dialogue group
+  static Future<Map<String, dynamic>> importDialogueMessage({
+    required String dialogueId,
+    required String sourceText,
+    required String sourceLang,
+    required String targetText,
     required String targetLang,
     required String speaker,
     required int sequenceOrder,
