@@ -346,4 +346,26 @@ class SupabaseService {
       return []; // Fallback to empty list
     }
   }
+
+  /// Call 'get-recommendations' Edge Function
+  static Future<Map<String, dynamic>> getRecommendations({
+    required List<Map<String, dynamic>> history,
+    required String sourceLang,
+    required String targetLang,
+  }) async {
+    try {
+      final response = await client.functions.invoke(
+        'get-recommendations',
+        body: {
+          'history': history,
+          'sourceLang': sourceLang,
+          'targetLang': targetLang,
+        },
+      );
+      return Map<String, dynamic>.from(response.data);
+    } catch (e) {
+      print('Supabase Recommendations Error: $e');
+      throw Exception('Recommendations Failed: $e');
+    }
+  }
 }

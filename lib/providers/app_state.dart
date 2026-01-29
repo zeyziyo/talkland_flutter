@@ -758,8 +758,8 @@ class AppState extends ChangeNotifier {
       try {
         await _saveToSupabase(
           dialogueId: _activeDialogueId,
-          speaker: _activeDialogueId != null ? 'User' : null,
-          sequenceOrder: _activeDialogueId != null ? _currentDialogueSequence : null,
+          speaker: _activeDialogueId != null ? 'User' : '',
+          sequenceOrder: _activeDialogueId != null ? _currentDialogueSequence : 0,
           pos: _sourcePos,
           formType: _sourceFormType,
           root: _sourceRoot,
@@ -982,28 +982,6 @@ class AppState extends ChangeNotifier {
     } catch (e) {
       print('Supabase Chat Function Error: $e');
       throw Exception('Chat Failed: $e');
-    }
-  }
-
-  /// Call 'get-recommendations' Edge Function
-  static Future<Map<String, dynamic>> getRecommendations({
-    required List<Map<String, dynamic>> history,
-    required String sourceLang,
-    required String targetLang,
-  }) async {
-    try {
-      final response = await client.functions.invoke(
-        'get-recommendations',
-        body: {
-          'history': history,
-          'sourceLang': sourceLang,
-          'targetLang': targetLang,
-        },
-      );
-      return Map<String, dynamic>.from(response.data);
-    } catch (e) {
-      print('Supabase Recommendations Error: $e');
-      throw Exception('Recommendations Failed: $e');
     }
   }
   
@@ -1535,9 +1513,9 @@ class AppState extends ChangeNotifier {
     try {
       _sourceText = item['sourceText'] as String;
       _translatedText = item['translatedText'] as String;
-      _sourcePos = item['pos'] as String?;
-      _sourceFormType = item['formType'] as String?;
-      _sourceRoot = item['root'] as String?;
+      _sourcePos = item['pos'] as String? ?? '';
+      _sourceFormType = item['formType'] as String? ?? '';
+      _sourceRoot = item['root'] as String? ?? '';
       _note = item['explanation'] as String? ?? '';
       
       // Auto-tag as #Recommendation
