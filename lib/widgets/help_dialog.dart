@@ -107,6 +107,8 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
               });
             },
             children: [
+              _buildModeCard(
+                icon: Icons.input,
                 title: l10n.inputModeTitle,
                 desc: l10n.helpMode1Desc,
                 details: l10n.helpMode1Details,

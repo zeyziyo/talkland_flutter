@@ -11,22 +11,19 @@ Write-Host "   🚀 TALKIE RELEASE MANAGER (CI/CD ONLY)" -ForegroundColor Cyan
 Write-Host "==================================================" -ForegroundColor Cyan
 
 # ------------------------------------------------------------------
-# 0. PREFLIGHT GUARD ENFORCEMENT (User's Forced Device)
+# 0. RULE GUARD 및 PROJECT_RULES 검증 (강제 장치)
 # ------------------------------------------------------------------
-Write-Host "🛡️ [SYSTEM] Executing Preflight Guard Protocol..." -ForegroundColor Magenta
+Write-Host "🛡️ [SYSTEM] Verifying Safety Rules..." -ForegroundColor Magenta
 
-# Check for PowerShell Core vs Windows PowerShell argument passing
-if ($PSVersionTable.PSVersion.Major -ge 6) {
-    & .\preflight_guard.ps1 -SilentConfirm:$AutoApprove
-}
-else {
-    # Windows PowerShell compatibility
-    if ($AutoApprove) {
-        & .\preflight_guard.ps1 -SilentConfirm
-    }
-    else {
-        & .\preflight_guard.ps1
-    }
+# 검증할 명령어 조합
+$fullCommand = "git add . && git commit -m 'chore: release update' && git push origin main"
+
+# rule_guard.ps1을 통한 기술적 검증
+powershell -File scripts\rule_guard.ps1 -Command "$fullCommand"
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "🚫 Rule Guard Failed. Release Aborted." -ForegroundColor Red
+    exit 1
 }
 
 if ($LASTEXITCODE -eq 1) {

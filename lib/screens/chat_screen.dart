@@ -353,7 +353,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           padding: const EdgeInsets.only(top: 8),
                           child: Wrap(
                             spacing: 8,
-                            children: state.suggestedTitles.map((suggestion) => ActionChip(
+                            children: state.suggestedTitles.map<Widget>((suggestion) => ActionChip(
                               label: Text(suggestion, style: const TextStyle(fontSize: 12)),
                               onPressed: () {
                                 setDialogState(() {
