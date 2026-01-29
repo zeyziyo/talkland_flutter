@@ -286,8 +286,8 @@
 
         <div class="search-container">
             <div class="input-group">
-                <input type="text" id="sourceLang" class="language-input" placeholder="Mother Tongue (e.g. Korean)">
-                <input type="text" id="targetLang" class="language-input" placeholder="Target Language (e.g. English)">
+                <input type="text" id="sourceLang" class="language-input" placeholder="모국어(예: Korean)">
+                <input type="text" id="targetLang" class="language-input" placeholder="목표 언어 (예: English)">
             </div>
             <button onclick="findMaterials()" class="find-button">Find & Generate Materials</button>
             <div id="errorBox" class="error-message"></div>
@@ -435,6 +435,20 @@
             errorBox.style.display = 'block';
         }
 
+        const languageCodes = {
+            "Afrikaans": "af", "Amharic": "am", "Arabic": "ar", "Bengali": "bn", "Burmese": "my",
+            "Chinese (Simplified)": "zh-CN", "Chinese (Traditional)": "zh-TW", "Czech": "cs",
+            "Danish": "da", "Dutch": "nl", "English": "en", "Filipino": "fil", "Finnish": "fi",
+            "French": "fr", "German": "de", "Greek": "el", "Gujarati": "gu", "Hebrew": "he",
+            "Hindi": "hi", "Hungarian": "hu", "Indonesian": "id", "Italian": "it", "Japanese": "ja",
+            "Kannada": "kn", "Khmer": "km", "Korean": "ko", "Lao": "lo", "Malay": "ms",
+            "Malayalam": "ml", "Marathi": "mr", "Nepali": "ne", "Norwegian": "no", "Persian": "fa",
+            "Polish": "pl", "Portuguese": "pt", "Punjabi": "pa", "Romanian": "ro", "Russian": "ru",
+            "Sinhala": "si", "Slovak": "sk", "Spanish": "es", "Swahili": "sw", "Swedish": "sv",
+            "Tamil": "ta", "Telugu": "te", "Thai": "th", "Turkish": "tr", "Ukrainian": "uk",
+            "Urdu": "ur", "Vietnamese": "vi", "Xhosa": "xh", "Zulu": "zu"
+        };
+
         async function generateAndDownload(sourceLang, targetLang, materialId, relativePath, subjectName) {
             try {
                 // Fetch both files in parallel
@@ -458,28 +472,44 @@
                     const t = targetData.entries[i];
 
                     mergedEntries.push({
+                        speaker: s.speaker || t.speaker || (i % 2 === 0 ? "A" : "B"), // Preserve speaker if available
                         source_text: s.text,
                         target_text: t.text,
-                        note: t.note || s.note || "", // Prefer target note (often has context), fallback to source
-                        type: 'sentence' // Default type
+                        note: t.note || s.note || "",
+                        type: 'sentence'
                     });
                 }
 
+                const sCode = languageCodes[sourceLang] || sourceLang;
+                const tCode = languageCodes[targetLang] || targetLang;
+
                 // Create Final Object
-                const finalJson = {
+                let finalJson = {
                     subject: sourceData.subject || subjectName,
-                    source_language: sourceLang,
-                    target_language: targetLang,
-                    default_type: "sentence",
-                    entries: mergedEntries
+                    source_language: sCode,
+                    target_language: tCode,
+                    default_type: "sentence"
                 };
 
+                // Use "dialogues" structure for dialogue files as planned
+                if (relativePath.includes('dialogue')) {
+                    finalJson.dialogues = [
+                        {
+                            title: sourceData.title || subjectName,
+                            persona: mergedEntries[1].speaker || "Partner",
+                            messages: mergedEntries
+                        }
+                    ];
+                } else {
+                    finalJson.entries = mergedEntries;
+                }
+
                 // Trigger Download
-                const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(finalJson, null, 2));
+                const dataStr = "data:application/json;charset=utf-8," + encodeURIComponent(JSON.stringify(finalJson, null, 2));
                 const downloadAnchorNode = document.createElement('a');
                 downloadAnchorNode.setAttribute("href", dataStr);
-                downloadAnchorNode.setAttribute("download", `Talkie_${materialId}_${sourceLang}_${targetLang}.json`);
-                document.body.appendChild(downloadAnchorNode); // required for firefox
+                downloadAnchorNode.setAttribute("download", `Talkie_${materialId}_${sCode}_${tCode}.json`);
+                document.body.appendChild(downloadAnchorNode);
                 downloadAnchorNode.click();
                 downloadAnchorNode.remove();
 

@@ -880,8 +880,7 @@ class DatabaseService {
     print('[DB] Study material created: id=$id, subject=$subject');
     return id;
   }
-  
-  /// Import study materials from JSON file with metadata
+   /// Import study materials from JSON file with metadata
   static Future<Map<String, dynamic>> importFromJsonWithMetadata(
     String jsonContent,
     {String? fileName}
@@ -895,98 +894,190 @@ class DatabaseService {
       final sourceLang = _mapLanguageToCode(rawSourceLang);
       final targetLang = _mapLanguageToCode(rawTargetLang);
       
-      final subject = data['subject'] as String? ?? 'Unknown';
-      final source = data['source'] as String? ?? 'Unknown';
+      final subject = data['subject'] as String? ?? 'Imported Material';
+      final source = data['source'] as String? ?? 'File Upload';
       final fileCreatedAt = data['created_at'] as String? ?? DateTime.now().toIso8601String();
       final defaultType = data['default_type'] as String? ?? 'sentence';
-      final entries = data['entries'] as List;
+      
+      // Support both 'entries' (standard) and 'dialogues' (for chat records)
+      final entries = data['entries'] as List?;
+      final dialogues = data['dialogues'] as List?;
       
       final db = await database;
       
-      // Return the result directly from the transaction block
       return await db.transaction((txn) async {
          int importedCount = 0;
          int skippedCount = 0;
          List<String> errors = [];
-         int materialId = 0;
          
-         // 1. 테이블 미리 생성 (루프 밖에서 1번만 수행하여 성능 최적화)
+         // 1. 테이블 미리 생성
          await createLanguageTable(sourceLang);
          await createLanguageTable(targetLang);
 
-         // 2. 인메모리 캐시 (파일 내 중복 단어 처리 최적화)
+         // 2. 인메모리 캐시
          final Map<String, int> sourceCache = {};
          final Map<String, int> targetCache = {};
 
-         // 3. Create study material metadata
-         materialId = await createStudyMaterial(
-           subject: subject,
-           source: source,
-           sourceLanguage: sourceLang,
-           targetLanguage: targetLang,
-           fileName: fileName,
-           createdAt: fileCreatedAt,
-           txn: txn, // Pass txn
-         );
-      
-        for (var i = 0; i < entries.length; i++) {
-          try {
-            final entry = entries[i] as Map<String, dynamic>;
-            final sourceText = entry['source_text'] as String;
-            final targetText = entry['target_text'] as String;
-            
-            if (sourceText.trim().isEmpty || targetText.trim().isEmpty) {
-              skippedCount++;
-              continue;
-            }
-            
-            // 4. Insert to source language table (Cache check first)
-            int sourceId;
-            if (sourceCache.containsKey(sourceText)) {
-              sourceId = sourceCache[sourceText]!;
-            } else {
-              sourceId = await insertLanguageRecord(sourceLang, sourceText, txn: txn, skipTableCheck: true);
-              sourceCache[sourceText] = sourceId;
-            }
-            
-            // 5. Insert to target language table (Cache check first)
-            int targetId;
-            if (targetCache.containsKey(targetText)) {
-              targetId = targetCache[targetText]!;
-            } else {
-              targetId = await insertLanguageRecord(targetLang, targetText, txn: txn, skipTableCheck: true);
-              targetCache[targetText] = targetId;
-            }
-            
-            // 6. Create translation link with material_id
-            await saveTranslationLinkWithMaterial(
-              sourceLang: sourceLang,
-              sourceId: sourceId,
-              targetLang: targetLang,
-              targetId: targetId,
-              materialId: materialId,
-              note: (entry['note'] ?? entry['context']) as String?,
-              type: entry['type'] as String? ?? defaultType,
-              txn: txn, // Pass txn
+         // Case A: Standard Entries
+         if (entries != null) {
+            final materialId = await createStudyMaterial(
+              subject: subject,
+              source: source,
+              sourceLanguage: sourceLang,
+              targetLanguage: targetLang,
+              fileName: fileName,
+              createdAt: fileCreatedAt,
+              txn: txn,
             );
+
+            for (var i = 0; i < entries.length; i++) {
+              try {
+                final entry = entries[i] as Map<String, dynamic>;
+                final sourceText = (entry['source_text'] ?? entry['text']) as String?;
+                final targetText = entry['target_text'] as String?;
+                
+                if (sourceText == null || targetText == null || sourceText.trim().isEmpty || targetText.trim().isEmpty) {
+                  skippedCount++;
+                  continue;
+                }
+                
+                // Insert with caching
+                int sourceId;
+                if (sourceCache.containsKey(sourceText)) {
+                  sourceId = sourceCache[sourceText]!;
+                } else {
+                  sourceId = await insertLanguageRecord(sourceLang, sourceText, txn: txn, skipTableCheck: true);
+                  sourceCache[sourceText] = sourceId;
+                }
+                
+                int targetId;
+                if (targetCache.containsKey(targetText)) {
+                  targetId = targetCache[targetText]!;
+                } else {
+                  targetId = await insertLanguageRecord(targetLang, targetText, txn: txn, skipTableCheck: true);
+                  targetCache[targetText] = targetId;
+                }
+                
+                await saveTranslationLinkWithMaterial(
+                  sourceLang: sourceLang,
+                  sourceId: sourceId,
+                  targetLang: targetLang,
+                  targetId: targetId,
+                  materialId: materialId,
+                  note: (entry['note'] ?? entry['context']) as String?,
+                  type: entry['type'] as String? ?? defaultType,
+                  txn: txn,
+                );
+                
+                importedCount++;
+              } catch (e) {
+                errors.add('Entry ${i + 1}: $e');
+                skippedCount++;
+              }
+            }
             
-            importedCount++;
-          } catch (e) {
-            errors.add('Entry ${i + 1}: $e');
-            skippedCount++;
-          }
-        }
-        
-        print('[DB] Import with metadata complete: $importedCount imported, $skippedCount skipped, material_id=$materialId');
-      
-        return {
-          'success': true,
-          'material_id': materialId,
-          'imported': importedCount,
-          'skipped': skippedCount,
-          'total': entries.length,
-          'errors': errors,
-        };
+            return {
+              'success': true,
+              'material_id': materialId,
+              'imported': importedCount,
+              'skipped': skippedCount,
+              'total': entries.length,
+              'errors': errors,
+            };
+         } 
+         
+         // Case B: Dialogues
+         if (dialogues != null) {
+            String lastDialogueId = '';
+            int totalMessages = 0;
+
+            for (var d in dialogues) {
+              final dMap = d as Map<String, dynamic>;
+              final dTitle = dMap['title'] as String? ?? subject;
+              final dPersona = dMap['persona'] as String? ?? 'Partner';
+              final dId = '${DateTime.now().millisecondsSinceEpoch}_${importedCount}';
+              lastDialogueId = dId;
+
+              // Insert Dialogue Group
+              await insertDialogueGroup(
+                id: dId,
+                title: dTitle,
+                persona: dPersona,
+                createdAt: fileCreatedAt,
+                txn: txn,
+              );
+
+              final messages = dMap['messages'] as List? ?? [];
+              totalMessages += messages.length;
+
+              for (var j = 0; j < messages.length; j++) {
+                try {
+                  final msg = messages[j] as Map<String, dynamic>;
+                  final sText = msg['source_text'] as String?;
+                  final tText = msg['target_text'] as String?;
+                  final speaker = msg['speaker'] as String? ?? 'Unknown';
+
+                  if (sText == null || tText == null || sText.trim().isEmpty || tText.trim().isEmpty) {
+                    skippedCount++;
+                    continue;
+                  }
+
+                  // Insert with caching logic
+                  int sId;
+                  if (sourceCache.containsKey(sText)) {
+                    sId = sourceCache[sText]!;
+                  } else {
+                    sId = await insertLanguageRecord(sourceLang, sText, txn: txn, skipTableCheck: true);
+                    sourceCache[sText] = sId;
+                  }
+
+                  int tId;
+                  if (targetCache.containsKey(tText)) {
+                    tId = targetCache[tText]!;
+                  } else {
+                    tId = await insertLanguageRecord(targetLang, tText, txn: txn, skipTableCheck: true);
+                    targetCache[tText] = tId;
+                  }
+
+                  await saveTranslationLinkWithMaterial(
+                    sourceLang: sourceLang,
+                    sourceId: sId,
+                    targetLang: targetLang,
+                    targetId: tId,
+                    materialId: 0, // Dialogue records don't use materialId (stored in dialogue_groups)
+                    dialogueId: dId,
+                    speaker: speaker,
+                    sequenceOrder: j,
+                    note: (msg['note'] ?? msg['context']) as String?,
+                    type: msg['type'] as String? ?? 'sentence',
+                    txn: txn,
+                  );
+                  importedCount++;
+                } catch (e) {
+                   errors.add('Dialogue ${importedCount}: $e');
+                   skippedCount++;
+                }
+              }
+            }
+
+            return {
+              'success': true,
+              'dialogue_id': lastDialogueId,
+              'imported': importedCount,
+              'skipped': skippedCount,
+              'total': totalMessages,
+              'errors': errors,
+            };
+         }
+
+         return {
+           'success': false,
+           'error': 'No entries or dialogues found in JSON',
+           'imported': 0,
+           'skipped': 0,
+           'total': 0,
+           'errors': ['Root keys "entries" or "dialogues" not found.'],
+         };
       });
       
     } catch (e) {
@@ -1231,9 +1322,10 @@ class DatabaseService {
     String? persona,
     String? location,
     required String createdAt,
+    Transaction? txn, // Added txn
   }) async {
-    final db = await database;
-    await db.insert(
+    final executor = txn ?? await database;
+    await executor.insert(
       'dialogue_groups',
       {
         'id': id,

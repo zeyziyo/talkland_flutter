@@ -30,6 +30,84 @@ class Mode3Widget extends StatelessWidget {
               // ==========================================
               // 1. Top Settings Panel
               // ==========================================
+              const SizedBox(height: 16),
+
+              // Material Set & Toggle
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Column(
+                  children: [
+                    // Material Selection Notice
+                    Row(
+                      children: [
+                        Icon(Icons.folder_shared, size: 16, color: Colors.green[800]),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: Builder(
+                            builder: (context) {
+                              String displayName = appState.selectedMaterialName;
+                              // "Basic" has ID 0
+                              if (appState.selectedMaterialId == 0 || displayName == 'Basic') {
+                                final isWord = appState.recordTypeFilter == 'word';
+                                displayName = isWord
+                                    ? l10n.basicWordRepository
+                                    : l10n.basicSentenceRepository;
+                              }
+                              return Text(
+                                l10n.mode1SelectedMaterial(displayName),
+                                style: TextStyle(
+                                  fontSize: 13, 
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.green[800],
+                                ),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              );
+                            }
+                          ),
+                        ),
+                      ],
+                    ),
+                    
+                    const SizedBox(height: 8),
+                    
+                    // Word/Sentence Toggle
+                    Row(
+                      children: [
+                        Expanded(
+                          child: SegmentedButton<String>(
+                            segments: [
+                              ButtonSegment<String>(
+                                value: 'word',
+                                label: Text(l10n.tabWord),
+                                icon: const Icon(Icons.text_fields),
+                              ),
+                              ButtonSegment<String>(
+                                value: 'sentence',
+                                label: Text(l10n.tabSentence),
+                                icon: const Icon(Icons.short_text),
+                              ),
+                            ],
+                            selected: {appState.recordTypeFilter},
+                            onSelectionChanged: (Set<String> newSelection) {
+                              final isWord = newSelection.first == 'word';
+                              appState.setWordMode(isWord);
+                              // If Mode 3 is active, refresh to new content type
+                              if (appState.mode3SessionActive) {
+                                appState.startMode3SessionDirectly();
+                              }
+                            },
+                            style: ButtonStyle(
+                              padding: WidgetStateProperty.all(EdgeInsets.zero),
+                              visualDensity: VisualDensity.compact,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
 
               
               // ==========================================

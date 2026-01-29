@@ -1900,9 +1900,8 @@ class AppState extends ChangeNotifier {
   Future<Map<String, dynamic>?> pickAndImportJson() async {
     try {
       final result = await FilePicker.platform.pickFiles(
-        type: FileType.custom, // Restrict to specific extensions
-        allowedExtensions: ['json'],
-        withData: kIsWeb, // Important for Web
+        type: FileType.any, // Use 'any' to avoid the "disabled" file issue on some platforms
+        withData: kIsWeb, 
       );
       
       if (result == null || result.files.isEmpty) {
@@ -1911,9 +1910,12 @@ class AppState extends ChangeNotifier {
       
       final PlatformFile file = result.files.single;
       
-      // Manual validation for JSON extension
+      // Manual validation for JSON extension (Case-insensitive)
       if (!file.name.toLowerCase().endsWith('.json')) {
-        return {'success': false, 'error': '잘못된 파일 형식입니다. .json 파일을 선택해주세요.'};
+        return {
+          'success': false, 
+          'error': '잘못된 파일 형식입니다. .json 파일을 선택해주세요. (현재 파일: ${file.name})'
+        };
       }
 
       final String fileName = file.name;
