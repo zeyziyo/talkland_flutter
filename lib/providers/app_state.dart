@@ -1641,13 +1641,13 @@ class AppState extends ChangeNotifier {
         // Load First Question Immediately
         _nextMode3Question();
       }
-    } else {
-      // Stop session
-      _cancelMode3Timers(); // Cancel any running timers
-      _speechService.stopSTT();
-      _isListening = false; // Ensure global listening state is reset
-      // _speechService.stopSpeaking(); // Optional: Stop TTS if needed
     }
+  }
+
+  void resetMode3Progress() {
+    _mode3CompletedQuestionIds.clear();
+    _mode3Score = 0.0;
+    _mode3Feedback = '';
     notifyListeners();
   }
   

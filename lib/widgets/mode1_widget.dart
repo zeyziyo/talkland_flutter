@@ -850,7 +850,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                     child: Wrap(
                       spacing: 8,
                       runSpacing: 8,
-                      children: appState.disambiguationOptions.map((option) {
+                      children: appState.disambiguationOptions.map<Widget>((option) {
                         return ActionChip(
                           label: Text(option),
                           avatar: const Icon(Icons.check_circle_outline, size: 16),

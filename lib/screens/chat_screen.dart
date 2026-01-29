@@ -252,13 +252,13 @@ class _ChatScreenState extends State<ChatScreen> {
         history: history,
       );
 
-      final aiResponse = result['response'] as String? ?? '';
-      final translatedResponse = result['translatedResponse'] as String? ?? ''; // Updated field name
-      final pos = result['pos'] as String?;
-      final formType = result['formType'] as String?;
-      final root = result['root'] as String?;
-      final explanation = result['explanation'] as String?;
-      final suggestedTitle = result['title'] as String?;
+      final String aiResponse = result['response'] as String? ?? '';
+      final String translatedResponse = result['translatedResponse'] as String? ?? '';
+      final String? pos = result['pos'] as String?;
+      final String? formType = result['formType'] as String?;
+      final String? root = result['root'] as String?;
+      final String? explanation = result['explanation'] as String?;
+      final String? suggestedTitle = result['title'] as String?;
 
       await appState.saveAiResponse(
         aiResponse, 

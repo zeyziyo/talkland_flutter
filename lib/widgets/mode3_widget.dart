@@ -42,7 +42,6 @@ class Mode3Widget extends StatelessWidget {
                   children: [
                     SearchBar(
                       hintText: '연습할 단어/문장 검색...',
-                      prefixIcon: const Icon(Icons.search),
                       onChanged: (value) {
                         appState.setSearchQuery(value);
                         if (appState.mode3SessionActive) appState.startMode3SessionDirectly();

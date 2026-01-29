@@ -81,7 +81,6 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                 children: [
                   SearchBar(
                     hintText: '단어 또는 문장 검색...',
-                    prefixIcon: const Icon(Icons.search),
                     onChanged: (value) => appState.setSearchQuery(value),
                     padding: WidgetStateProperty.all(const EdgeInsets.symmetric(horizontal: 16)),
                     elevation: WidgetStateProperty.all(1),
