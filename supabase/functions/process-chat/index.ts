@@ -29,8 +29,8 @@ Deno.serve(async (req) => {
         const contents = history || [];
         contents.push({ role: 'user', parts: [{ text: prompt }] });
 
-        // Using stable gemini-1.5-flash-002 (GA) to avoid "Not Found" and quota issues
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-002:generateContent?key=${GEMINI_API_KEY}`, {
+        // Using stable gemini-2.0-flash (Newer/Faster)
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
