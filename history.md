@@ -10,7 +10,7 @@
 - [x] `saveTranslation` 내 로컬 목록(`loadRecordsByTags`) 새로고침 누락 수정
 - [x] 신규 저장 시 `is_memorized=0` 명시적 설정
 - [x] 모드 전환 시 데이터 최신화 보장 로직 검증
-- [x] 전체 기능 검증 및 릴리스 배포
+- [x] 전체 기능 검증 및 릴릴스 배포
 
 ### 📝 워크스루 (Walkthrough Summary)
 - **핵심 조치**: 
