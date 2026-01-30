@@ -29,7 +29,7 @@
 - [x] 태그(Tags) 칩셋 표시 및 언어별 색상 구분 적용 <!-- id: 170 -->
 - [x] 전체 UI 정교화 및 프리미엄 디자인 검증 <!-- id: 171 -->
 
-### 📝 워크스루 (Walkthrough)
+### 📝 워크스루 (Walkthrough) - 원본과 동일
 
 복습(Mode 2) 및 발음 연습(Mode 3) 모드의 카드 UI를 전면 개편하여 학습에 필요한 상세 정보를 한눈에 파악할 수 있도록 고도화했습니다.
 
@@ -63,9 +63,9 @@
 ````
 
 #### 🛠️ 수정된 파일
-- [app_state.dart](file:///c:/FlutterProjects/talkie/lib/providers/app_state.dart)
-- [mode2_widget.dart](file:///c:/FlutterProjects/talkie/lib/widgets/mode2_widget.dart)
-- [mode3_widget.dart](file:///c:/FlutterProjects/talkie/lib/widgets/mode3_widget.dart)
+- [app_state.dart](file:///c:/FlutterProjects/talkie/lib/providers/app_state.dart): 데이터 쿼리 및 세션 제어 로직 수정
+- [mode2_widget.dart](file:///c:/FlutterProjects/talkie/lib/widgets/mode2_widget.dart): 복습 카드 UI 고도화
+- [mode3_widget.dart](file:///c:/FlutterProjects/talkie/lib/widgets/mode3_widget.dart): 연습 모드 리스트 추가 및 UI 개선
 
 #### ✅ 검증 결과
 - 모든 카드가 품사 및 형태 정보를 정확히 표시함 확인
