@@ -249,8 +249,6 @@ class Mode3Widget extends StatelessWidget {
               const SizedBox(height: 16),
               const Divider(height: 1, thickness: 0.5, color: Colors.grey),
               const SizedBox(height: 16),
-              
-              const SizedBox(height: 16),
             ],
           ),
         );
