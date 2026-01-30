@@ -416,25 +416,15 @@ class AppState extends ChangeNotifier {
     _speechService.stopSpeaking();
     
     if (mode == 1) {
-      // Study Material mode (Mode 2) - Load materials
-      loadStudyMaterials();
-      loadStudyRecords(); // Load records for review tab
+      // 복습 모드 (Mode 2) - 통합 리스트 로드
+      loadRecordsByTags(); 
     } else if (mode == 2) {
-      // Speaking Mode (Mode 3)
-      loadStudyMaterials(); // Ensure materials are loaded
-      
-      // Auto-select first material if none selected
-      if (_studyMaterials.isNotEmpty && _selectedMaterialId == null) {
-        selectMaterial(_studyMaterials.first['id'] as int);
-      }
+      // 발음 연습 모드 (Mode 3) - 통합 리스트 로드
+      loadRecordsByTags();
     } else if (mode == 3) {
-      // Game Mode (Mode 4)
-      _recordTypeFilter = 'all'; // Reset filter so all materials are visible
-      loadStudyMaterials();
-       // Auto-select first material
-      if (_studyMaterials.isNotEmpty && _selectedMaterialId == null) {
-        selectMaterial(_studyMaterials.first['id'] as int);
-      }
+      // AI 채팅 모드
+      _recordTypeFilter = 'all';
+      loadStudyMaterials(); // 채팅 목록은 기존 로직 유지
     }
     
     notifyListeners();
@@ -748,8 +738,9 @@ class AppState extends ChangeNotifier {
           'lang_code': _sourceLang,
           'pos': _sourcePos.isNotEmpty ? _sourcePos : null, // Added Phase 13
           'form_type': _sourceFormType.isNotEmpty ? _sourceFormType : null, // Added Phase 13
-          'root': _sourceRoot.isNotEmpty ? _sourceRoot : null, // Added Phase 13
+          'root': _sourceRoot.isNotEmpty ? _sourceRoot : null,
           'note': _note.isNotEmpty ? _note : null,
+          'is_memorized': 0, // 신규 저장 시 학습 미완료로 명시적 설정
           'created_at': createdAt,
         }, conflictAlgorithm: ConflictAlgorithm.ignore);
 
@@ -758,6 +749,7 @@ class AppState extends ChangeNotifier {
           'group_id': timestamp,
           'text': _translatedText,
           'lang_code': _targetLang,
+          'is_memorized': 0, // 신규 저장 시 학습 미완료로 명시적 설정
           'created_at': createdAt,
         }, conflictAlgorithm: ConflictAlgorithm.ignore);
 
@@ -813,9 +805,9 @@ class AppState extends ChangeNotifier {
       _statusMessage = '저장 완료!';
       _isSaved = true; 
       
-      // Refresh Lists
-      await loadStudyRecords(); 
-      await loadTags(); 
+      // Refresh Lists Immediately
+      await loadTags(); // 가용 태그 목록 갱신
+      await loadRecordsByTags(); // 통합 목록(복습/연습 모드 데이터) 즉시 갱신
       
       notifyListeners();
     } catch (e) {
@@ -1287,6 +1279,7 @@ class AppState extends ChangeNotifier {
       // UI 호환성을 위한 데이터 가공 (source_text, target_text 페어링)
       // Unified Schema에서는 source/target 구분이 없으므로, 현재 언어 설정을 기반으로 매핑
       List<Map<String, dynamic>> pairedResults = [];
+      final rowType = _recordTypeFilter == 'word' ? 'word' : 'sentence';
       
       for (var row in results) {
         final groupId = row['group_id'] as int?;
@@ -1298,20 +1291,34 @@ class AppState extends ChangeNotifier {
         
         if (sourceRow == null || targetRow == null) continue;
 
-        // Determine if memorized (use the currently filtered row's status)
-        final isMemorized = (row['is_memorized'] as int? ?? 0) == 1;
+        // 품사, 원형 등 상세 정보 추출 (Source 기준으로 표시)
+        final pos = sourceRow['pos'] as String?;
+        final formType = sourceRow['form_type'] as String?;
+        final root = sourceRow['root'] as String?;
+        
+        // 해당 아이템의 태그들 가져오기
+        final tagResults = await db.query('item_tags', 
+            columns: ['tag'], 
+            where: 'item_id = ? AND item_type = ?', 
+            whereArgs: [sourceRow['id'], rowType]);
+        final tags = tagResults.map((e) => e['tag'] as String).toList();
 
         pairedResults.add({
           'id': sourceRow['id'], 
           'group_id': groupId,
+          'type': rowType, // 단어/문장 구분
           'source_lang': _sourceLang,
           'target_lang': _targetLang,
           'source_text': sourceRow['text'],
           'target_text': targetRow['text'],
           'note': sourceRow['note'] ?? targetRow['note'],
+          'pos': pos,
+          'form_type': formType,
+          'root': root,
+          'tags': tags,
           'created_at': sourceRow['created_at'],
           'review_count': sourceRow['review_count'] ?? 0,
-          'is_memorized': isMemorized, // Pass status to UI
+          'is_memorized': isMemorized,
         });
       }
 
@@ -1832,6 +1839,30 @@ class AppState extends ChangeNotifier {
   // Public wrapper for Next Button
   void skipMode3Question() {
       _nextMode3Question();
+  }
+
+  /// Select specific question for practice (From UI List)
+  Future<void> selectMode3QuestionById(int id) async {
+      await _speechService.stopSTT();
+      _isListening = false;
+      _cancelMode3Timers();
+      
+      final records = _materialRecords;
+      final match = records.firstWhere(
+          (r) => r['id'] == id,
+          orElse: () => <String, dynamic>{}
+      );
+      
+      if (match.isEmpty) return;
+      
+      _currentMode3Question = match;
+      _mode3SessionActive = true;
+      _mode3Score = null;
+      _mode3UserAnswer = '';
+      _showRetryButton = false;
+      
+      notifyListeners();
+      await _startMode3Listening();
   }
 
   Future<void> _nextMode3Question() async {

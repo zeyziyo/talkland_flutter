@@ -636,113 +636,122 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          if (record['dialogue_id'] != null)
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: [
+                           if (record['dialogue_id'] != null)
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 4),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.chat_bubble_outline, size: 10, color: Colors.blue[300]),
+                                    const SizedBox(width: 4),
+                                    Text(
+                                      l10n.chatFromConversation(record['speaker'] ?? "AI"),
+                                      style: TextStyle(fontSize: 10, color: Colors.blue[300], fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                           
+                           // 상세 정보 행 (품사, 형태, 원형)
+                           if (record['type'] == 'word' && (record['pos'] != null || record['form_type'] != null || record['root'] != null))
                              Padding(
-                               padding: const EdgeInsets.only(bottom: 4),
-                               child: Row(
+                               padding: const EdgeInsets.only(bottom: 6),
+                               child: Wrap(
+                                 spacing: 6,
+                                 runSpacing: 4,
+                                 crossAxisAlignment: WrapCrossAlignment.center,
                                  children: [
-                                   Icon(Icons.chat_bubble_outline, size: 10, color: Colors.blue[300]),
-                                   const SizedBox(width: 4),
-                                   Text(
-                                     l10n.chatFromConversation(record['speaker'] ?? "AI"),
-                                     style: TextStyle(fontSize: 10, color: Colors.blue[300], fontWeight: FontWeight.bold),
-                                   ),
+                                   if (record['pos'] != null)
+                                     _buildBadge(record['pos'], Colors.blue[600]!, Colors.blue[50]!),
+                                   if (record['form_type'] != null)
+                                     _buildBadge(record['form_type'], Colors.orange[700]!, Colors.orange[50]!),
+                                   if (record['root'] != null)
+                                      Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          const Icon(Icons.link, size: 12, color: Colors.grey),
+                                          const SizedBox(width: 2),
+                                          Text(
+                                            record['root'],
+                                            style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.bold),
+                                          ),
+                                        ],
+                                      ),
                                  ],
                                ),
                              ),
-                          Text(
-                            topText,
-                            style: TextStyle(
-                              fontSize: (record['type'] == 'word') ? 24 : 16,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
+
+                           Text(
+                             topText,
+                             style: TextStyle(
+                               fontSize: (record['type'] == 'word') ? 22 : 16,
+                               fontWeight: FontWeight.bold,
+                               color: Colors.blackDE,
+                             ),
+                           ),
+                         ],
                       ),
+                    ),
+                    
+                    // 학습 완료 버튼
+                    IconButton(
+                      icon: Icon(
+                        (record['is_memorized'] == true) 
+                            ? Icons.check_circle 
+                            : Icons.check_circle_outline,
+                        color: (record['is_memorized'] == true) 
+                            ? Colors.green 
+                            : Colors.grey[300],
+                        size: 28,
+                      ),
+                      onPressed: () {
+                         appState.toggleMemorizedStatus(
+                             translationId, 
+                             record['is_memorized'] == true
+                         );
+                      },
                     ),
                   ],
                 ),
-                // Toggle Memorized Button
-                IconButton(
-                  icon: Icon(
-                    (record['is_memorized'] == true) 
-                        ? Icons.check_circle 
-                        : Icons.check_circle_outline,
-                    color: (record['is_memorized'] == true) 
-                        ? Colors.green 
-                        : Colors.grey[400],
-                  ),
-                  tooltip: (record['is_memorized'] == true) 
-                      ? '학습 완료 (다시 보이려면 클릭)' 
-                      : '학습 완료 체크',
-                  onPressed: () {
-                     final appState = Provider.of<AppState>(context, listen: false);
-                     // Toggle status logic
-                     appState.toggleMemorizedStatus(
-                         record['id'], 
-                         record['is_memorized'] == true
-                     );
-                  },
-                ),
 
-                // Context Tag & Hint
+                // 주석 (Note) 및 태그 (Tags)
                 Builder(
                   builder: (context) {
-                    final isWord = record['type'] == 'word';
-                    // Show hint only if not expanded (answer hidden)
-                    final showHint = isWord && !isExpanded;
-                    String hintText = '';
+                    final hasNote = record['note'] != null && record['note'].toString().isNotEmpty;
+                    final hasTags = record['tags'] != null && (record['tags'] as List).isNotEmpty;
                     
-                    if (showHint) {
-                      final answer = bottomText; // The hidden text
-                      hintText = answer.split(' ').map((w) {
-                        if (w.isEmpty) return '';
-                        if (w.length <= 1) return w;
-                        return w[0] + '-' * (w.length - 1);
-                      }).join(' ');
-                    }
+                    if (!hasNote && !hasTags) return const SizedBox.shrink();
 
-                    if ((contextTag != null && contextTag.isNotEmpty) || (showHint && hintText.isNotEmpty)) {
-                      return Padding(
-                        padding: const EdgeInsets.only(top: 4),
-                        child: Row(
-                          children: [
-                            const SizedBox(width: 44),
-                            if (contextTag != null && contextTag.isNotEmpty) ...[
-                              Icon(Icons.info_outline, size: 12, color: Colors.grey[600]),
-                              const SizedBox(width: 4),
-                              Flexible( // Use Flexible to avoid overflow
-                                child: Text(
-                                  contextTag,
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.grey[700],
-                                    fontStyle: FontStyle.italic,
+                    return Padding(
+                      padding: const EdgeInsets.only(top: 8, left: 44),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          if (hasNote)
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Icon(Icons.notes, size: 12, color: Colors.grey[500]),
+                                const SizedBox(width: 6),
+                                Expanded(
+                                  child: Text(
+                                    record['note'],
+                                    style: TextStyle(fontSize: 12, color: Colors.grey[700], fontStyle: FontStyle.italic),
                                   ),
-                                  overflow: TextOverflow.ellipsis,
                                 ),
-                              ),
-                              if (showHint && hintText.isNotEmpty) const SizedBox(width: 12),
-                            ],
-                            
-                            if (showHint && hintText.isNotEmpty)
-                              Text(
-                                hintText,
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.red[300],
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 1.5,
-                                  fontFamily: 'monospace', // Ensure dashes align
-                                ),
-                              ),
-                          ],
-                        ),
-                      );
-                    }
-                    return const SizedBox.shrink();
+                              ],
+                            ),
+                          if (hasNote && hasTags) const SizedBox(height: 6),
+                          if (hasTags)
+                            Wrap(
+                              spacing: 4,
+                              runSpacing: 4,
+                              children: (record['tags'] as List).map((t) => _buildTagChip(t.toString())).toList(),
+                            ),
+                        ],
+                      ),
+                    );
                   }
                 ),
                 
@@ -864,6 +873,35 @@ class _Mode2WidgetState extends State<Mode2Widget> {
     ),         // Card
     ),         // Container
     );         // InkWell
+  }
+
+  Widget _buildBadge(String label, Color textColor, Color bgColor) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      decoration: BoxDecoration(
+        color: bgColor,
+        borderRadius: BorderRadius.circular(4),
+      ),
+      child: Text(
+        label,
+        style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: textColor),
+      ),
+    );
+  }
+
+  Widget _buildTagChip(String label) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      decoration: BoxDecoration(
+        color: Colors.grey[100],
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: Colors.grey[300]!, width: 0.5),
+      ),
+      child: Text(
+        '#$label',
+        style: TextStyle(fontSize: 10, color: Colors.grey[600]),
+      ),
+    );
   }
 
   void _showDeleteDialog(BuildContext context, AppState appState, Map<String, dynamic> record, AppLocalizations l10n) {

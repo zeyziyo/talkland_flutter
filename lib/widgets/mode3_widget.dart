@@ -200,297 +200,41 @@ class Mode3Widget extends StatelessWidget {
                 child: Stack(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(24.0),
-                      child: !appState.mode3SessionActive || currentQuestion == null
-                          ? Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                    Text(
-                                      l10n.importJsonFilePrompt, // Just show prompt, no button
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(color: Colors.grey[400], fontSize: 18),
-                                    ),
-                                ],
-                              ),
-                            )
-                        : Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                // Source Text Display (Vertical Layout)
-                                Column(
-                                  children: [
-                                     // 1. Flag + Text (Horizontal)
-                                     Row(
-                                         mainAxisAlignment: MainAxisAlignment.center,
-                                       children: [
-                                         const Text("🇰🇷", style: TextStyle(fontSize: 24)),
-                                         const SizedBox(width: 12),
-                                         Flexible(
-                                           child: Text(
-                                             currentQuestion['source_text'] as String,
-                                             textAlign: TextAlign.center,
-                                             style: const TextStyle(
-                                               fontSize: 26,
-                                               fontWeight: FontWeight.bold,
-                                               color: Colors.black87,
-                                             ),
-                                           ),
-                                         ),
-                                         // Memorized Toggle Button
-                                         IconButton(
-                                           icon: Icon(
-                                             (currentQuestion['is_memorized'] == true) 
-                                                 ? Icons.check_circle 
-                                                 : Icons.check_circle_outline,
-                                             color: (currentQuestion['is_memorized'] == true) 
-                                                 ? Colors.green 
-                                                 : Colors.grey[300],
-                                           ),
-                                           tooltip: '학습 완료 체크',
-                                           onPressed: () {
-                                              // Toggle status logic
-                                              final isMemorized = currentQuestion['is_memorized'] == true;
-                                              appState.toggleMemorizedStatus(
-                                                  currentQuestion['id'] as int, 
-                                                  isMemorized
-                                              );
-                                              // Note: Mode 3 uses _currentMode3Question which is a reference. 
-                                              // toggleMemorizedStatus reloads records, so the UI might update or 
-                                              // we might need to update the local map manually for immediate feedback if reload is async/laggy.
-                                              // But toggleMemorizedStatus calls loadRecordsByTags -> notifyListeners.
-                                              // However, _currentMode3Question might be a defunct reference if list is rebuilt.
-                                              // Let's rely on re-rendering. If the current question disappears from list (filtered out), 
-                                              // Mode 3 logic might need to handle "question no longer in pool".
-                                              // But toggleMemorizedStatus reloads the list. AppState doesn't automatically 
-                                              // change _currentMode3Question unless we tell it to.
-                                              // We'll update the local map in AppState manually to reflect change immediately?
-                                              // Actually, let's keep it simple. If it works in Mode 2, it works here.
-                                              // Just need to handle the case where "currentQuestion" is the one being toggled. 
-                                              // Since `toggleMemorizedStatus` updates DB and reloads list, 
-                                              // the `_currentMode3Question` reference itself won't change its internal value unless we update it.
-                                           },
-                                         ),
-                                       ],
-                                     ),
-                                     
-                                     // 2. Hint (Below)
-                                     if (currentQuestion['note'] != null && (currentQuestion['note'] as String).isNotEmpty) ...[
-                                        const SizedBox(height: 12), // Space between text and hint
-                                        Container(
-                                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                                          decoration: BoxDecoration(
-                                            color: Colors.grey[100],
-                                            borderRadius: BorderRadius.circular(20), // Pill shape
-                                            border: Border.all(color: Colors.grey[300]!),
-                                          ),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: [
-                                              Icon(Icons.lightbulb_outline, size: 14, color: Colors.amber[700]),
-                                              const SizedBox(width: 6),
-                                              Text(
-                                                currentQuestion['note'] as String,
-                                                style: TextStyle(
-                                                  fontStyle: FontStyle.italic,
-                                                  fontSize: 14, // Reduced hint size
-                                                  color: Colors.grey[700],
-                                                ),
-                                              ),
-                                              // First Letter Hint
-                                              const SizedBox(width: 8),
-                                              Container(
-                                                 padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                                 decoration: BoxDecoration(
-                                                   color: Colors.red[50],
-                                                   borderRadius: BorderRadius.circular(4),
-                                                 ),
-                                                 child: Text(
-                                                  _getFirstLetterHint(currentQuestion['target_text'] as String),
-                                                  style: TextStyle(
-                                                    fontSize: 12,
-                                                    color: Colors.red[400],
-                                                    fontWeight: FontWeight.bold,
-                                                    fontFamily: 'monospace',
-                                                  ),
-                                                 ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                     ],
-                                  ],
-                                ),
-                                
-                                const SizedBox(height: 30),
-                                
-                                // Dynamic Content Area (Buttons vs Result)
-                                if (appState.showRetryButton) ...[
-                                   // Result & Score Shown
-                                   const SizedBox(height: 20),
-                                   
-                                   if (appState.mode3Score != null)
-                                      Container(
-                                        padding: const EdgeInsets.all(16),
-                                        width: double.infinity,
-                                        decoration: BoxDecoration(
-                                          color: Colors.grey[100],
-                                          borderRadius: BorderRadius.circular(16),
-                                          border: Border.all(color: Colors.grey.shade300),
-                                        ),
-                                        child: Column(
-                                          children: [
-                                            // Accuracy Score
-                                            Text(
-                                              '${l10n.accuracy}: ${appState.mode3Score!.toStringAsFixed(1)}%',
-                                                style: TextStyle(
-                                                  color: _getScoreColor(appState.mode3Score!),
-                                                  fontWeight: FontWeight.bold, fontSize: 20), // Reduced from 22
-                                            ),
-                                            const SizedBox(height: 12),
-                                            
-                                            // Target Text (Correct Answer)
-                                            Text(
-                                              currentQuestion['target_text'] as String,
-                                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.blueGrey), // Reduced from 18
-                                              textAlign: TextAlign.center,
-                                            ),
-                                            
-                                            const Divider(height: 24),
-                                            
-                                            // User's Spoken Text (Feedback)
-                                            Container(
-                                              padding: const EdgeInsets.symmetric(horizontal: 8),
-                                              child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    "${l10n.recognizedText}: ", 
-                                                    style: const TextStyle(fontSize: 14, color: Colors.grey, fontWeight: FontWeight.bold), // Reduced from 16
-                                                  ),
-                                                  Expanded(
-                                                      child: Text(
-                                                        appState.mode3UserAnswer.isEmpty ? "( ... )" : appState.mode3UserAnswer,
-                                                        style: TextStyle(
-                                                          fontSize: 14, // Reduced from 16
-                                                          fontWeight: FontWeight.w600,
-                                                          fontStyle: FontStyle.italic,
-                                                          color: appState.mode3UserAnswer.isEmpty ? Colors.grey : Colors.black87
-                                                        ),
-                                                        textAlign: TextAlign.left,
-                                                      ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    
-                                    const SizedBox(height: 30),
-                                   
-                                    // Next or Retry Button
-                                    // Next or Retry + Next Logic
-                                    // Next / Reset Row
-                                    Row(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        children: [
+                          if (appState.mode3SessionActive && currentQuestion != null) ...[
+                            // 1. 연습 영역
+                            _buildActivePracticeArea(context, appState, currentQuestion, l10n),
+                            const Divider(height: 32),
+                          ],
+                          
+                          // 2. 카드 목록
+                          Expanded(
+                            child: appState.materialRecords.isEmpty
+                                ? Center(
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
-                                        // Retry Button (if not perfect)
-                                        // Retry Button
-                                        // Retry Button
-                                        Expanded(
-                                          child: ElevatedButton(
-                                            onPressed: () => appState.retryMode3Question(),
-                                            style: ElevatedButton.styleFrom(
-                                              backgroundColor: Colors.orange,
-                                              foregroundColor: Colors.white,
-                                              padding: const EdgeInsets.symmetric(vertical: 12),
-                                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                                            ),
-                                            child: const Icon(Icons.refresh, size: 36),
-                                          ),
-                                        ),
-                                        const SizedBox(width: 8),
-                                        // Next Button
-                                        Expanded(
-                                          child: ElevatedButton(
-                                            onPressed: () => appState.skipMode3Question(),
-                                            style: ElevatedButton.styleFrom(
-                                              backgroundColor: Colors.blue,
-                                              foregroundColor: Colors.white,
-                                              padding: const EdgeInsets.symmetric(vertical: 12),
-                                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                                            ),
-                                            child: const Icon(Icons.arrow_forward, size: 36),
-                                          ),
-                                        ),
-                                        const SizedBox(width: 8),
-                                        // Reset Button
-                                        Expanded(
-                                          child: OutlinedButton(
-                                            onPressed: () => appState.resetMode3Progress(),
-                                            style: OutlinedButton.styleFrom(
-                                              foregroundColor: Colors.grey[700],
-                                              side: BorderSide(color: Colors.grey[400]!),
-                                              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 4),
-                                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                                            ),
-                                            child: const Icon(Icons.history, size: 36),
-                                          ),
-                                        ),
+                                        Icon(Icons.library_books_outlined, size: 64, color: Colors.grey[100]),
+                                        const SizedBox(height: 16),
+                                        Text(l10n.noRecords, style: TextStyle(color: Colors.grey[400])),
                                       ],
                                     ),
-
-                                ] else ...[
-                                   // Recording Controls
-                                   if (appState.isListening)
-                                     Column(
-                                       children: [
-                                          const Text("Listening...", style: TextStyle(color: Colors.red, fontSize: 16)),
-                                          const SizedBox(height: 20),
-                                          ElevatedButton.icon(
-                                            onPressed: () => appState.stopMode3ListeningManual(),
-                                            icon: const Icon(Icons.stop, size: 32),
-                                            label: Text(l10n.mode3Stop, style: const TextStyle(fontSize: 18)),
-                                            style: ElevatedButton.styleFrom(
-                                              backgroundColor: Colors.red,
-                                              foregroundColor: Colors.white,
-                                              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                                            ),
-                                          ),
-                                       ],
-                                     )
-                                   else
-                                     Row(
-                                       mainAxisAlignment: MainAxisAlignment.center,
-                                       children: [
-                                         ElevatedButton.icon(
-                                           onPressed: () => appState.retryMode3Question(),
-                                           icon: const Icon(Icons.mic, size: 32),
-                                           label: Text(l10n.mode3Start, style: const TextStyle(fontSize: 18)),
-                                           style: ElevatedButton.styleFrom(
-                                             backgroundColor: Colors.green,
-                                             foregroundColor: Colors.white,
-                                             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-                                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                                           ),
-                                         ),
-                                         const SizedBox(width: 16),
-                                         OutlinedButton.icon(
-                                           onPressed: () => appState.skipMode3Question(),
-                                           icon: const Icon(Icons.skip_next, size: 24),
-                                           label: Text(l10n.mode3Next, style: const TextStyle(fontSize: 16)),
-                                           style: OutlinedButton.styleFrom(
-                                             foregroundColor: Colors.grey[700],
-                                             side: BorderSide(color: Colors.grey[400]!),
-                                             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-                                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                                           ),
-                                         ),
-                                       ],
-                                     ),
-                                ],
-                                
+                                  )
+                                : ListView.builder(
+                                    padding: const EdgeInsets.only(bottom: 100),
+                                    itemCount: appState.materialRecords.length,
+                                    itemBuilder: (context, index) {
+                                      final record = appState.materialRecords[index];
+                                      return _buildRecordCard(context, appState, record, l10n, index);
+                                    },
+                                  ),
+                          ),
+                        ],
+                      ),
+                    ),
+          
                                 const SizedBox(height: 60),
                               ],
                           ),
@@ -515,18 +259,191 @@ class Mode3Widget extends StatelessWidget {
     );
   }
   
-  // Helper for First Letter Hint
+  Widget _buildActivePracticeArea(BuildContext context, AppState appState, Map<String, dynamic> currentQuestion, AppLocalizations l10n) {
+     return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("🇰🇷", style: TextStyle(fontSize: 24)),
+              const SizedBox(width: 12),
+              Flexible(
+                child: Text(
+                  currentQuestion['source_text'] as String,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: Colors.black87),
+                ),
+              ),
+              IconButton(
+                icon: Icon(
+                  (currentQuestion['is_memorized'] == true) ? Icons.check_circle : Icons.check_circle_outline,
+                  color: (currentQuestion['is_memorized'] == true) ? Colors.green : Colors.grey[300],
+                ),
+                onPressed: () {
+                   appState.toggleMemorizedStatus(currentQuestion['id'] as int, currentQuestion['is_memorized'] == true);
+                },
+              ),
+            ],
+          ),
+          
+          if (currentQuestion['note'] != null && (currentQuestion['note'] as String).isNotEmpty) ...[
+             const SizedBox(height: 12),
+             Container(
+               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+               decoration: BoxDecoration(color: Colors.grey[50], borderRadius: BorderRadius.circular(20), border: Border.all(color: Colors.grey[300]!)),
+               child: Row(
+                 mainAxisSize: MainAxisSize.min,
+                 children: [
+                   Icon(Icons.lightbulb_outline, size: 14, color: Colors.amber[700]),
+                   const SizedBox(width: 6),
+                   Text(currentQuestion['note'] as String, style: TextStyle(fontStyle: FontStyle.italic, fontSize: 14, color: Colors.grey[700])),
+                   const SizedBox(width: 8),
+                   Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                      decoration: BoxDecoration(color: Colors.red[50], borderRadius: BorderRadius.circular(4)),
+                      child: Text(_getFirstLetterHint(currentQuestion['target_text'] as String), style: TextStyle(fontSize: 12, color: Colors.red[400], fontWeight: FontWeight.bold, fontFamily: 'monospace')),
+                   ),
+                 ],
+               ),
+             ),
+          ],
+          
+          const SizedBox(height: 20),
+          
+          if (appState.showRetryButton) ...[
+             if (appState.mode3Score != null)
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  width: double.infinity,
+                  decoration: BoxDecoration(color: Colors.grey[50], borderRadius: BorderRadius.circular(16), border: Border.all(color: Colors.grey.shade300)),
+                  child: Column(
+                    children: [
+                      Text('${l10n.accuracy}: ${appState.mode3Score!.toStringAsFixed(1)}%', style: TextStyle(color: _getScoreColor(appState.mode3Score!), fontWeight: FontWeight.bold, fontSize: 18)),
+                      const SizedBox(height: 6),
+                      Text(currentQuestion['target_text'] as String, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.blueGrey), textAlign: TextAlign.center),
+                      const Divider(height: 12),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("${l10n.recognizedText}: ", style: const TextStyle(fontSize: 13, color: Colors.grey, fontWeight: FontWeight.bold)),
+                          Expanded(child: Text(appState.mode3UserAnswer.isEmpty ? "( ... )" : appState.mode3UserAnswer, style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, fontStyle: FontStyle.italic, color: appState.mode3UserAnswer.isEmpty ? Colors.grey : Colors.black87))),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              const SizedBox(height: 16),
+              Row(
+                children: [
+                  Expanded(child: ElevatedButton(onPressed: () => appState.retryMode3Question(), style: ElevatedButton.styleFrom(backgroundColor: Colors.orange, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))), child: const Icon(Icons.refresh, size: 24))),
+                  const SizedBox(width: 8),
+                  Expanded(child: ElevatedButton(onPressed: () => appState.skipMode3Question(), style: ElevatedButton.styleFrom(backgroundColor: Colors.blue, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))), child: const Icon(Icons.arrow_forward, size: 24))),
+                ],
+              ),
+          ] else ...[
+             if (appState.isListening)
+               Column(
+                 children: [
+                    const Text("Listening...", style: TextStyle(color: Colors.red, fontSize: 14)),
+                    const SizedBox(height: 8),
+                    ElevatedButton.icon(onPressed: () => appState.stopMode3ListeningManual(), icon: const Icon(Icons.stop, size: 20), label: Text(l10n.mode3Stop), style: ElevatedButton.styleFrom(backgroundColor: Colors.red, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))),
+                 ],
+               )
+             else
+               Row(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                   ElevatedButton.icon(onPressed: () => appState.retryMode3Question(), icon: const Icon(Icons.mic, size: 20), label: Text(l10n.mode3Start), style: ElevatedButton.styleFrom(backgroundColor: Colors.green, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))),
+                   const SizedBox(width: 12),
+                   OutlinedButton.icon(onPressed: () => appState.skipMode3Question(), icon: const Icon(Icons.skip_next, size: 18), label: Text(l10n.mode3Next), style: OutlinedButton.styleFrom(foregroundColor: Colors.grey[700], side: BorderSide(color: Colors.grey[400]!), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))),
+                 ],
+               ),
+          ],
+        ],
+     );
+  }
+
+  Widget _buildRecordCard(BuildContext context, AppState appState, Map<String, dynamic> record, AppLocalizations l10n, int index) {
+    final translationId = record['id'] as int;
+    final isSelected = appState.mode3SessionActive && appState.currentMode3Question?['id'] == translationId;
+    
+    return InkWell(
+      onTap: () => appState.selectMode3QuestionById(translationId),
+      child: Container(
+        margin: const EdgeInsets.symmetric(vertical: 4, horizontal: 16),
+        decoration: BoxDecoration(
+          color: isSelected ? Colors.blue[50] : Colors.white,
+          borderRadius: BorderRadius.circular(12),
+          border: isSelected ? Border.all(color: Colors.blue[300]!, width: 2) : Border.all(color: Colors.grey[200]!),
+          boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 2, offset: Offset(0, 1))],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        if (record['type'] == 'word' && (record['pos'] != null || record['form_type'] != null || record['root'] != null))
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 4),
+                            child: Wrap(
+                              spacing: 6,
+                              children: [
+                                if (record['pos'] != null) _buildBadge(record['pos'], Colors.blue[600]!, Colors.blue[50]!),
+                                if (record['form_type'] != null) _buildBadge(record['form_type'], Colors.orange[700]!, Colors.orange[50]!),
+                                if (record['root'] != null) Text(record['root'], style: TextStyle(fontSize: 10, color: Colors.grey[500])),
+                              ],
+                            ),
+                          ),
+                        Text(record['source_text'], style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isSelected ? Colors.blue[800] : Colors.black87)),
+                      ],
+                    ),
+                  ),
+                  Icon(isSelected ? Icons.mic : Icons.play_circle_outline, color: isSelected ? Colors.blue : Colors.grey[400], size: 20),
+                ],
+              ),
+              if (record['tags'] != null && (record['tags'] as List).isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.only(top: 6),
+                  child: Wrap(spacing: 4, children: (record['tags'] as List).map((t) => _buildTagChip(t.toString())).toList()),
+                ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildBadge(String label, Color textColor, Color bgColor) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+      decoration: BoxDecoration(color: bgColor, borderRadius: BorderRadius.circular(4)),
+      child: Text(label, style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: textColor)),
+    );
+  }
+
+  Widget _buildTagChip(String label) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+      decoration: BoxDecoration(color: Colors.grey[50], borderRadius: BorderRadius.circular(8), border: Border.all(color: Colors.grey[200]!)),
+      child: Text('#$label', style: TextStyle(fontSize: 9, color: Colors.grey[500])),
+    );
+  }
+
   String _getFirstLetterHint(String targetText) {
     if (targetText.isEmpty) return "";
     final words = targetText.split(' ');
     if (words.isEmpty) return "";
     final firstWord = words[0];
     if (firstWord.isEmpty) return "";
-    
-    // Example: "Apple" -> "A----"
     return "${firstWord[0]}${'-' * (firstWord.length - 1)}";
   }
-
 
   Color _getScoreColor(double score) {
     if (score >= 100) return Colors.green;
