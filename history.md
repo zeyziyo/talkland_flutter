@@ -10,7 +10,7 @@
 - [x] `saveTranslation` 내 로컬 목록(`loadRecordsByTags`) 새로고침 누락 수정
 - [x] 신규 저장 시 `is_memorized=0` 명시적 설정
 - [x] 모드 전환 시 데이터 최신화 보장 로직 검증
-- [x] 전체 기능 검증 및 릴릴스 배포
+- [x] 전체 기능 검증 및 릴리스 배포
 
 ### 📝 워크스루 (Walkthrough Summary)
 - **핵심 조치**: 
@@ -44,17 +44,15 @@
 
 ## 📸 핵심 UI 갤러리
 
-````carousel
 ![새로운 카드 디자인 컨셉](premium_card_ui_mockup_1769758161732.png)
-<!-- slide -->
+
 ### Mode 2 (복습) 변경 사항
 - 카드 확장 시 타겟 언어 배지(Green)와 TTS 아이콘 배치 최적화
 - 품사/형태 배지 추가로 학습 효율 증대
-<!-- slide -->
+
 ### Mode 3 (연습) 변경 사항
 - 하단 리스트에서 연습할 단어/문장 직접 선택 가능
 - 현재 연습 중인 항목은 파란색 하이라이트 및 마이크 아이콘 표시
-````
 
 ## 🛠️ 수정된 파일
 - [app_state.dart](file:///c:/FlutterProjects/talkie/lib/providers/app_state.dart): 데이터 쿼리 및 세션 제어 로직 수정
