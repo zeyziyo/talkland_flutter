@@ -289,6 +289,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final appState = Provider.of<AppState>(context);
     final l10n = AppLocalizations.of(context)!;
     
     return Scaffold(
@@ -330,6 +331,38 @@ class _HomeScreenState extends State<HomeScreen> {
                 onPressed: () => Scaffold.of(context).openDrawer(),
               ),
             ),
+            bottom: appState.currentMode == 0 
+              ? PreferredSize(
+                  preferredSize: const Size.fromHeight(50.0),
+                  child: Container(
+                    color: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    child: SegmentedButton<String>(
+                      style: SegmentedButton.styleFrom(
+                        visualDensity: VisualDensity.compact,
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      ),
+                      segments: [
+                        ButtonSegment<String>(
+                          value: 'word',
+                          label: Text(l10n.tabWord),
+                          icon: const Icon(Icons.text_fields, size: 18),
+                        ),
+                        ButtonSegment<String>(
+                          value: 'sentence',
+                          label: Text(l10n.tabSentence),
+                          icon: const Icon(Icons.short_text, size: 18),
+                        ),
+                      ],
+                      selected: {appState.recordTypeFilter},
+                      onSelectionChanged: (Set<String> newSelection) {
+                        appState.setRecordTypeFilter(newSelection.first);
+                        appState.selectMaterial(0); // Reset to basic
+                      },
+                    ),
+                  ),
+                )
+              : null,
             actions: [
               
               PopupMenuButton<String>(

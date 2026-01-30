@@ -329,43 +329,6 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                               ],
                             ),
                             
-                             const SizedBox(height: 12),
-                            
-                            // New: Word/Sentence Toggle
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 8),
-                              child: Row(
-                                children: [
-                                  // Toggle Button (Word/Sentence)
-                                  Expanded(
-                                    child: SegmentedButton<String>(
-                                      segments: [
-                                        ButtonSegment<String>(
-                                          value: 'word',
-                                          label: Text(l10n.tabWord), // "Word"
-                                          icon: const Icon(Icons.text_fields),
-                                        ),
-                                        ButtonSegment<String>(
-                                          value: 'sentence',
-                                          label: Text(l10n.tabSentence), // "Sentence"
-                                          icon: const Icon(Icons.short_text),
-                                        ),
-                                      ],
-                                      selected: {appState.recordTypeFilter},
-                                      onSelectionChanged: (Set<String> newSelection) {
-                                        appState.setRecordTypeFilter(newSelection.first);
-                                        appState.selectMaterial(0); // Safest to reset to Basic for now
-                                      },
-                                      style: ButtonStyle(
-                                        padding: MaterialStateProperty.all(EdgeInsets.zero),
-                                        visualDensity: VisualDensity.compact,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            
                             const SizedBox(height: 12),
                           ],
                         ),
