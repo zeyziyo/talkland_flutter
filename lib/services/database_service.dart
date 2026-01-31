@@ -2067,7 +2067,7 @@ class DatabaseService {
     
     final results = await db.query(
       table,
-      columns: ['text'],
+      columns: ['text', 'note'], // 주석 정보도 함께 가져옴
       where: 'text LIKE ?',
       whereArgs: ['$query%'],
       limit: limit,
@@ -2077,6 +2077,7 @@ class DatabaseService {
     
     return results.map((row) => {
       'text': row['text'] as String,
+      'note': (row['note'] as String?) ?? '', // 주석 정보 추가
       'type': type,
     }).toList();
   }

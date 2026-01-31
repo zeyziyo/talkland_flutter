@@ -142,9 +142,11 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                                   itemCount: options.length,
                                   itemBuilder: (BuildContext context, int index) {
                                     final option = options.elementAt(index);
+                                    final String note = option['note'] ?? '';
                                     return ListTile(
                                       leading: const Icon(Icons.search, size: 20, color: Colors.grey),
                                       title: Text(option['text']!),
+                                      subtitle: note.isNotEmpty ? Text(note, style: const TextStyle(fontSize: 12, color: Colors.blue)) : null,
                                       onTap: () => onSelected(option),
                                     );
                                   },
@@ -214,7 +216,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                               ),
                               const SizedBox(width: 2),
                               Text(
-                                appState.selectedTags.isEmpty ? '태그' : '${appState.selectedTags.length}',
+                                appState.selectedTags.isEmpty ? '태그 선택' : '${appState.selectedTags.length}',
                                 style: TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.bold,
@@ -706,9 +708,9 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                                  crossAxisAlignment: WrapCrossAlignment.center,
                                  children: [
                                    if (record['pos'] != null)
-                                     _buildBadge(record['pos'], Colors.blue[600]!, Colors.blue[50]!),
+                                     _buildBadge(_getLocalizedTag(record['pos'], l10n), Colors.blue[600]!, Colors.blue[50]!),
                                    if (record['form_type'] != null)
-                                     _buildBadge(record['form_type'], Colors.orange[700]!, Colors.orange[50]!),
+                                     _buildBadge(_getLocalizedTag(record['form_type'], l10n), Colors.orange[700]!, Colors.orange[50]!),
                                    if (record['root'] != null)
                                       Row(
                                         mainAxisSize: MainAxisSize.min,
@@ -787,10 +789,29 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                             ),
                           if (hasNote && hasTags) const SizedBox(height: 6),
                           if (hasTags)
-                            Wrap(
-                              spacing: 4,
-                              runSpacing: 4,
-                              children: (record['tags'] as List).map((t) => _buildTagChip(t.toString())).toList(),
+                            Builder(
+                              builder: (context) {
+                                // 시스템 태그 필터링 (Phase 32 & 34)
+                                final systemTags = {
+                                  ...AppState.posCategories,
+                                  ...AppState.sentenceCategories,
+                                  ...AppState.verbFormCategories,
+                                  ...AppState.adjectiveFormCategories,
+                                  'word', 'sentence'
+                                };
+                                final filteredTags = (record['tags'] as List)
+                                    .map((t) => t.toString())
+                                    .where((t) => !systemTags.contains(t))
+                                    .toList();
+
+                                if (filteredTags.isEmpty) return const SizedBox.shrink();
+
+                                return Wrap(
+                                  spacing: 4,
+                                  runSpacing: 4,
+                                  children: filteredTags.map((t) => _buildTagChip(t)).toList(),
+                                );
+                              }
                             ),
                         ],
                       ),

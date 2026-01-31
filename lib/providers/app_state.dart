@@ -391,12 +391,23 @@ class AppState extends ChangeNotifier {
     return material['title'] as String? ?? 'Basic';
   }
 
-  /// Get material records filtered by type (Word/Sentence)
+  /// Get material records filtered by type (Word/Sentence) and memorized status
   List<Map<String, dynamic>> get filteredMaterialRecords {
-    if (_recordTypeFilter == 'all') return _materialRecords;
     return _materialRecords.where((r) {
-      final type = r['type'] as String? ?? 'sentence';
-      return type == _recordTypeFilter;
+      // 1. 유형 필터 (Word/Sentence)
+      if (_recordTypeFilter != 'all') {
+        final type = r['type'] as String? ?? 'sentence';
+        if (type != _recordTypeFilter) return false;
+      }
+
+      // 2. 학습 완료(외운 항목) 필터 (Phase 33)
+      // showMemorized가 false(숨김)일 때, 이미 외운 항목은 제외
+      if (!_showMemorized) {
+        final isMemorized = r['is_memorized'] == true;
+        if (isMemorized) return false;
+      }
+
+      return true;
     }).toList();
   }
 
@@ -2028,7 +2039,13 @@ class AppState extends ChangeNotifier {
             (r['type'] as String? ?? 'sentence') == _recordTypeFilter
           ).toList();
       }
-      // Legacy "practiceWordsOnly" is now obsolete and replaced by _recordTypeFilter logic above.
+
+      // Phase 34: Filter by memorized status (Show/Hide)
+      if (!_showMemorized) {
+          candidates = candidates.where((r) => 
+            r['is_memorized'] != true && r['is_memorized'] != 1
+          ).toList();
+      }
       
       if (candidates.isEmpty) return [];
       return candidates.cast<Map<String, Object?>>();

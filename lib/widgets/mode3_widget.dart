@@ -108,9 +108,11 @@ class Mode3Widget extends StatelessWidget {
                                   itemCount: options.length,
                                   itemBuilder: (BuildContext context, int index) {
                                     final option = options.elementAt(index);
+                                    final String note = option['note'] ?? ''; // DatabaseService에서 추가된 note
                                     return ListTile(
                                       leading: const Icon(Icons.search, size: 20, color: Colors.grey),
                                       title: Text(option['text']!),
+                                      subtitle: note.isNotEmpty ? Text(note, style: const TextStyle(fontSize: 12, color: Colors.blue)) : null, // 동음이의어 구분용 주석 표시
                                       onTap: () => onSelected(option),
                                     );
                                   },
@@ -151,37 +153,35 @@ class Mode3Widget extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(width: 16),
-                        // Tag Selection Button
+                        const SizedBox(width: 8),
+                        // 3. Show Memorized Switch (Icon Toggle) - Added in Phase 34
                         InkWell(
-                          onTap: () => _showTagSelectionDialog(context, appState),
+                          onTap: () => appState.setShowMemorized(!appState.showMemorized),
                           borderRadius: BorderRadius.circular(8),
                           child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
                             decoration: BoxDecoration(
-                              color: appState.selectedTags.isNotEmpty ? Colors.blue[50] : Colors.grey[100],
+                              color: appState.showMemorized ? Colors.green[50] : Colors.grey[100],
                               borderRadius: BorderRadius.circular(8),
                               border: Border.all(
-                                color: appState.selectedTags.isNotEmpty ? Colors.blue.shade200 : Colors.grey.shade300,
+                                color: appState.showMemorized ? Colors.green.shade200 : Colors.grey.shade300,
                               ),
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Icon(
-                                  Icons.local_offer_outlined, 
+                                  appState.showMemorized ? Icons.visibility : Icons.visibility_off, 
                                   size: 16, 
-                                  color: appState.selectedTags.isNotEmpty ? Colors.blue.shade700 : Colors.grey.shade600,
+                                  color: appState.showMemorized ? Colors.green.shade700 : Colors.grey.shade600,
                                 ),
                                 const SizedBox(width: 4),
                                 Text(
-                                  appState.selectedTags.isEmpty 
-                                    ? '태그 선택' 
-                                    : '태그 ${appState.selectedTags.length}',
+                                  '외운것',
                                   style: TextStyle(
                                     fontSize: 13,
                                     fontWeight: FontWeight.bold,
-                                    color: appState.selectedTags.isNotEmpty ? Colors.blue.shade800 : Colors.grey.shade700,
+                                    color: appState.showMemorized ? Colors.green.shade800 : Colors.grey.shade700,
                                   ),
                                 ),
                               ],
@@ -213,7 +213,7 @@ class Mode3Widget extends StatelessWidget {
                           
                           // 2. 카드 목록
                           Expanded(
-                            child: appState.materialRecords.isEmpty
+                            child: appState.filteredMaterialRecords.isEmpty
                                 ? Center(
                                     child: Column(
                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -226,9 +226,9 @@ class Mode3Widget extends StatelessWidget {
                                   )
                                 : ListView.builder(
                                     padding: const EdgeInsets.only(bottom: 100),
-                                    itemCount: appState.materialRecords.length,
+                                    itemCount: appState.filteredMaterialRecords.length,
                                     itemBuilder: (context, index) {
-                                      final record = appState.materialRecords[index];
+                                      final record = appState.filteredMaterialRecords[index];
                                       return _buildRecordCard(context, appState, record, l10n, index);
                                     },
                                   ),
@@ -389,8 +389,10 @@ class Mode3Widget extends StatelessWidget {
                             child: Wrap(
                               spacing: 6,
                               children: [
-                                if (record['pos'] != null) _buildBadge(record['pos'], Colors.blue[600]!, Colors.blue[50]!),
-                                if (record['form_type'] != null) _buildBadge(record['form_type'], Colors.orange[700]!, Colors.orange[50]!),
+                                if (record['pos'] != null)
+                                  _buildBadge(_getLocalizedTag(record['pos'], l10n), Colors.blue[600]!, Colors.blue[50]!),
+                                if (record['form_type'] != null)
+                                  _buildBadge(_getLocalizedTag(record['form_type'], l10n), Colors.orange[700]!, Colors.orange[50]!),
                                 if (record['root'] != null) Text(record['root'], style: TextStyle(fontSize: 10, color: Colors.grey[500])),
                               ],
                             ),
@@ -405,7 +407,30 @@ class Mode3Widget extends StatelessWidget {
               if (record['tags'] != null && (record['tags'] as List).isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.only(top: 6),
-                  child: Wrap(spacing: 4, children: (record['tags'] as List).map((t) => _buildTagChip(t.toString())).toList()),
+                  child: Builder(
+                    builder: (context) {
+                      // 시스템 태그 필터링 (Phase 32 & 34: 모든 품사 및 문법 형태 추가)
+                      final systemTags = {
+                        ...AppState.posCategories,
+                        ...AppState.sentenceCategories,
+                        ...AppState.verbFormCategories,
+                        ...AppState.adjectiveFormCategories,
+                        'word', 'sentence'
+                      };
+                      final filteredTags = (record['tags'] as List)
+                          .map((t) => t.toString())
+                          .where((t) => !systemTags.contains(t))
+                          .toList();
+
+                      if (filteredTags.isEmpty) return const SizedBox.shrink();
+
+                      return Wrap(
+                        spacing: 4,
+                        runSpacing: 4,
+                        children: filteredTags.map((t) => _buildTagChip(t)).toList(),
+                      );
+                    }
+                  ),
                 ),
             ],
           ),
@@ -428,6 +453,41 @@ class Mode3Widget extends StatelessWidget {
       decoration: BoxDecoration(color: Colors.grey[50], borderRadius: BorderRadius.circular(8), border: Border.all(color: Colors.grey[200]!)),
       child: Text('#$label', style: TextStyle(fontSize: 9, color: Colors.grey[500])),
     );
+  }
+
+  String _getLocalizedTag(String tag, AppLocalizations l10n) {
+    switch (tag) {
+      // 품사 (Part of Speech)
+      case 'Noun': return l10n.posNoun;
+      case 'Verb': return l10n.posVerb;
+      case 'Adjective': return l10n.posAdjective;
+      case 'Adverb': return l10n.posAdverb;
+      case 'Pronoun': return l10n.posPronoun;
+      case 'Preposition': return l10n.posPreposition;
+      case 'Conjunction': return l10n.posConjunction;
+      case 'Interjection': return l10n.posInterjection;
+      
+      // 문장 종류 (Sentence Types)
+      case 'Statement': return l10n.typeStatement;
+      case 'Question': return l10n.typeQuestion;
+      case 'Exclamation': return l10n.typeExclamation;
+      case 'Imperative': return l10n.typeImperative;
+      
+      // 문법 형태 (Grammar Forms - Conjugations)
+      case 'Infinitive': return l10n.formInfinitive;
+      case 'Past': return l10n.formPast;
+      case 'Past Participle': return l10n.formPastParticiple;
+      case 'Present Participle': return l10n.formPresentParticiple;
+      case '3rd Person Singular': return l10n.formThirdPersonSingular;
+      case 'Plural': return l10n.formPlural;
+      
+      // 형용사/부사 형태 (Adjective/Adverb Forms)
+      case 'Positive': return l10n.formPositive;
+      case 'Comparative': return l10n.formComparative;
+      case 'Superlative': return l10n.formSuperlative;
+      
+      default: return tag; // 일반 태그는 그대로 반환
+    }
   }
 
   String _getFirstLetterHint(String targetText) {
