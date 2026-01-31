@@ -459,8 +459,18 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                           ? null
                           : () {
                               final allTags = List<String>.from(_currentTags);
-                              // 품사 정보가 있으면 태그에 자동 포함 (옵션)
-                              if (appState.sourcePos.isNotEmpty) allTags.add(appState.sourcePos);
+                              
+                              if (appState.isWordMode) {
+                                // 단어 모드: 품사(POS)를 태그로 추가
+                                if (appState.sourcePos.isNotEmpty) allTags.add(appState.sourcePos);
+                              } else {
+                                // 문장 모드: 문법 형태/문장 종류(FormType)를 태그로 추가
+                                if (appState.sourceFormType.isNotEmpty) allTags.add(appState.sourceFormType);
+                              }
+                              
+                              // 시스템 예약어("sentence", "word") 태그 필터링 (Phase 29)
+                              allTags.removeWhere((t) => t.toLowerCase() == 'sentence' || t.toLowerCase() == 'word');
+                              
                               appState.saveTranslation(tags: allTags);
                             },
                       icon: const Icon(Icons.save),

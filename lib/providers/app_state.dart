@@ -1156,10 +1156,14 @@ class AppState extends ChangeNotifier {
     _similarSources = [];
     _showDuplicateDialog = false;
     _duplicateCheckTriggered = false;
-    _showDuplicateDialog = false;
-    _duplicateCheckTriggered = false;
-    _isSaved = false; // Reset save state
+    _isSaved = false;
     _note = '';
+    
+    // 메타데이터 초기화 (Phase 29)
+    _sourcePos = ''; 
+    _sourceFormType = '';
+    _sourceRoot = '';
+    
     notifyListeners();
   }
   

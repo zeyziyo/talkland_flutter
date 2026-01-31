@@ -349,12 +349,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               ButtonSegment<String>(
                                 value: 'word',
                                 label: Text(l10n.tabWord),
-                                icon: const Icon(Icons.text_fields, size: 18),
                               ),
                               ButtonSegment<String>(
                                 value: 'sentence',
                                 label: Text(l10n.tabSentence),
-                                icon: const Icon(Icons.short_text, size: 18),
                               ),
                             ],
                             selected: {appState.recordTypeFilter},
@@ -364,7 +362,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             },
                           ),
                         ),
-                        const SizedBox(width: 8),
+                        const SizedBox(width: 16),
                         // Mini Language Swap Button
                         InkWell(
                           onTap: () => appState.swapLanguages(),

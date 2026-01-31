@@ -171,12 +171,10 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                             ButtonSegment<String>(
                               value: 'word',
                               label: Text(l10n.tabWord, style: const TextStyle(fontSize: 11)),
-                              icon: const Icon(Icons.text_fields, size: 14),
                             ),
                             ButtonSegment<String>(
                               value: 'sentence',
                               label: Text(l10n.tabSentence, style: const TextStyle(fontSize: 11)),
-                              icon: const Icon(Icons.short_text, size: 14),
                             ),
                           ],
                           selected: {appState.recordTypeFilter},
@@ -191,7 +189,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 4),
+                      const SizedBox(width: 12),
                       
                       // 2. Tag Selection Button
                       InkWell(
@@ -227,7 +225,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 4),
+                      const SizedBox(width: 12),
 
                       // 3. Show Memorized Switch (Icon Toggle for space)
                       InkWell(
@@ -923,6 +921,9 @@ class _Mode2WidgetState extends State<Mode2Widget> {
   }
 
   Widget _buildTagChip(String label) {
+    final l10n = AppLocalizations.of(context);
+    final displayLabel = l10n != null ? _getLocalizedTag(label, l10n) : label;
+    
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       decoration: BoxDecoration(
@@ -931,10 +932,45 @@ class _Mode2WidgetState extends State<Mode2Widget> {
         border: Border.all(color: Colors.grey[300]!, width: 0.5),
       ),
       child: Text(
-        '#$label',
+        '#$displayLabel',
         style: TextStyle(fontSize: 10, color: Colors.grey[600]),
       ),
     );
+  }
+
+  String _getLocalizedTag(String tag, AppLocalizations l10n) {
+    switch (tag) {
+      // 품사 (Part of Speech)
+      case 'Noun': return l10n.posNoun;
+      case 'Verb': return l10n.posVerb;
+      case 'Adjective': return l10n.posAdjective;
+      case 'Adverb': return l10n.posAdverb;
+      case 'Pronoun': return l10n.posPronoun;
+      case 'Preposition': return l10n.posPreposition;
+      case 'Conjunction': return l10n.posConjunction;
+      case 'Interjection': return l10n.posInterjection;
+      
+      // 문장 종류 (Sentence Types)
+      case 'Statement': return l10n.typeStatement;
+      case 'Question': return l10n.typeQuestion;
+      case 'Exclamation': return l10n.typeExclamation;
+      case 'Imperative': return l10n.typeImperative;
+      
+      // 문법 형태 (Grammar Forms - Conjugations)
+      case 'Infinitive': return l10n.formInfinitive;
+      case 'Past': return l10n.formPast;
+      case 'Past Participle': return l10n.formPastParticiple;
+      case 'Present Participle': return l10n.formPresentParticiple;
+      case '3rd Person Singular': return l10n.formThirdPersonSingular;
+      case 'Plural': return l10n.formPlural;
+      
+      // 형용사/부사 형태 (Adjective/Adverb Forms)
+      case 'Positive': return l10n.formPositive;
+      case 'Comparative': return l10n.formComparative;
+      case 'Superlative': return l10n.formSuperlative;
+      
+      default: return tag; // 일반 태그는 그대로 반환
+    }
   }
 
   void _showDeleteDialog(BuildContext context, AppState appState, Map<String, dynamic> record, AppLocalizations l10n) {

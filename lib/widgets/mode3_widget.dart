@@ -134,12 +134,10 @@ class Mode3Widget extends StatelessWidget {
                               ButtonSegment<String>(
                                 value: 'word',
                                 label: Text(l10n.tabWord),
-                                icon: const Icon(Icons.text_fields, size: 18),
                               ),
                               ButtonSegment<String>(
                                 value: 'sentence',
                                 label: Text(l10n.tabSentence),
-                                icon: const Icon(Icons.short_text, size: 18),
                               ),
                             ],
                             selected: {appState.recordTypeFilter},
@@ -153,7 +151,7 @@ class Mode3Widget extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(width: 8),
+                        const SizedBox(width: 16),
                         // Tag Selection Button
                         InkWell(
                           onTap: () => _showTagSelectionDialog(context, appState),
