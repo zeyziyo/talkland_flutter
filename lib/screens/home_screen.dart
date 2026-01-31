@@ -621,6 +621,10 @@ class _HomeScreenState extends State<HomeScreen> {
               onPageChanged: (index) {
                  final appState = Provider.of<AppState>(context, listen: false);
                  appState.switchMode(index, fromPage: true);
+                 if (index == 3) {
+                   // Ensure list is loaded for the AppBar Dropdown
+                   appState.loadDialogueGroups();
+                 }
               },
               children: [
                 Mode1Widget(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:talkie/widgets/mode2_card.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
@@ -600,6 +601,59 @@ class _Mode2WidgetState extends State<Mode2Widget> {
     Map<String, dynamic> record,
     Set<int> studiedIds, {
     Key? key,
+    required int index,
+  }) {
+    if (!_itemKeys.containsKey(index)) _itemKeys[index] = GlobalKey();
+    return Mode2Card(
+      appState: appState,
+      record: record,
+      isStudied: studiedIds.contains(record['id']),
+      isExpanded: _expandedCards.contains(record['id']),
+      isPlaying: _isAutoPlaying && _currentPlayingIndex == index,
+      index: index,
+      itemKey: key ?? _itemKeys[index],
+      onToggleExpand: (id) => setState(() => _expandedCards.contains(id) ? _expandedCards.remove(id) : _expandedCards.add(id)),
+    );
+  }
+
+  String _getLocalizedTag(String tag, AppLocalizations l10n) {
+    switch (tag.toLowerCase()) {
+      case 'noun': return l10n.posNoun;
+      case 'verb': return l10n.posVerb;
+      case 'adjective': return l10n.posAdjective;
+      case 'adverb': return l10n.posAdverb;
+      case 'pronoun': return l10n.posPronoun;
+      case 'preposition': return l10n.posPreposition;
+      case 'conjunction': return l10n.posConjunction;
+      case 'interjection': return l10n.posInterjection;
+      case 'statement': return l10n.typeStatement;
+      case 'question': return l10n.typeQuestion;
+      case 'exclamation': return l10n.typeExclamation;
+      case 'imperative': return l10n.typeImperative;
+      case 'infinitive': return l10n.formInfinitive;
+      case 'past': return l10n.formPast;
+      case 'past participle': return l10n.formPastParticiple;
+      case 'present participle': return l10n.formPresentParticiple;
+      case 'present': return l10n.formPresent;
+      case '3rd person singular': return l10n.formThirdPersonSingular;
+      case 'plural': return l10n.formPlural;
+      case 'positive': return l10n.formPositive;
+      case 'comparative': return l10n.formComparative;
+      case 'superlative': return l10n.formSuperlative;
+      case 'subject': return l10n.caseSubject;
+      case 'object': return l10n.caseObject;
+      case 'possessive': return l10n.casePossessive;
+      case 'possessivepronoun': return l10n.casePossessivePronoun;
+      case 'reflexive': return l10n.caseReflexive;
+      default: return tag;
+    }
+  }
+
+  Widget _buildRecordCardOld(
+    AppState appState,
+    Map<String, dynamic> record,
+    Set<int> studiedIds, {
+    Key? key,
     required int index, // Added index
   }) {
     // Register key for auto-scroll
@@ -928,85 +982,6 @@ class _Mode2WidgetState extends State<Mode2Widget> {
     );         // InkWell
   }
 
-  Widget _buildBadge(String label, Color textColor, Color bgColor) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-      decoration: BoxDecoration(
-        color: bgColor,
-        borderRadius: BorderRadius.circular(4),
-      ),
-      child: Text(
-        label,
-        style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: textColor),
-      ),
-    );
-  }
-
-  Widget _buildTagChip(String label) {
-    final l10n = AppLocalizations.of(context);
-    final displayLabel = l10n != null ? _getLocalizedTag(label, l10n) : label;
-    
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-      decoration: BoxDecoration(
-        color: Colors.grey[100],
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: Colors.grey[300]!, width: 0.5),
-      ),
-      child: Text(
-        '#$displayLabel',
-        style: TextStyle(fontSize: 10, color: Colors.grey[600]),
-      ),
-    );
-  }
-
-  String _getLocalizedTag(String tag, AppLocalizations l10n) {
-    switch (tag.toLowerCase()) {
-      // 품사 (Part of Speech)
-      case 'noun': return l10n.posNoun;
-      case 'verb': return l10n.posVerb;
-      case 'adjective': return l10n.posAdjective;
-      case 'adverb': return l10n.posAdverb;
-      case 'pronoun': return l10n.posPronoun;
-      case 'preposition': return l10n.posPreposition;
-      case 'conjunction': return l10n.posConjunction;
-      case 'interjection': return l10n.posInterjection;
-      
-      // 문장 종류 (Sentence Types)
-      case 'statement': return l10n.typeStatement;
-      case 'question': return l10n.typeQuestion;
-      case 'exclamation': return l10n.typeExclamation;
-      case 'imperative': return l10n.typeImperative;
-      
-      // 문법 형태 (Grammar Forms - Conjugations)
-      case 'infinitive': return l10n.formInfinitive;
-      case 'past': return l10n.formPast;
-      case 'past participle': return l10n.formPastParticiple;
-      case 'present participle': return l10n.formPresentParticiple;
-      case 'present': return l10n.formPresent;
-      case '3rd person singular': return l10n.formThirdPersonSingular;
-      case 'plural': return l10n.formPlural;
-      
-      // 형용사/부사 형태 (Adjective/Adverb Forms)
-      case 'positive': return l10n.formPositive;
-      case 'comparative': return l10n.formComparative;
-      case 'superlative': return l10n.formSuperlative;
-      
-
-      // 대명사 격 (Pronoun Cases)
-      case 'subject': return l10n.caseSubject;
-      case 'object': return l10n.caseObject;
-      case 'possessive': return l10n.casePossessive;
-      case 'possessivepronoun': return l10n.casePossessivePronoun;
-      case 'reflexive': return l10n.caseReflexive;
-      
-      default: return tag; // 일반 태그는 그대로 반환
-    }
-  }
-
-  void _showDeleteDialog(BuildContext context, AppState appState, Map<String, dynamic> record, AppLocalizations l10n) {
-    // ... (existing code)
-  }
 
   void _showTagSelectionDialog(BuildContext context, AppState appState) {
     showDialog(

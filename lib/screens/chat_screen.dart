@@ -512,91 +512,22 @@ class _ChatScreenState extends State<ChatScreen> {
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Dialogue Dropdown
+                // Title Only (Dropdown Removed per user request)
                 Consumer<AppState>(
                   builder: (context, state, _) {
-                    final groups = state.dialogueGroups;
-                    final activeId = state.activeDialogueId;
+                    String displayTitle = state.activeDialogueTitle ?? l10n.chatNewChat;
                     
-                    // Truncate title helper
-                    String truncate(String s) => s.length > 20 ? '${s.substring(0, 20)}...' : s;
+                    // Localize temporary title
+                    if (displayTitle == 'New Conversation' || displayTitle == 'AI Chat') {
+                      displayTitle = l10n.chatNewChat;
+                    }
 
-                    // Always show Dropdown (User Request: "Place the dropdown")
-                    // Even if no history, show "New Chat" option.
-                    
-                    // Check if activeId is valid in the current list
-                    final isValidSelection = activeId != null && groups.any((g) => g.id == activeId);
-
-                    return Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withValues(alpha: 0.2), // Translucent background
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: Colors.white30),
-                      ),
-                      child: Theme(
-                        data: Theme.of(context).copyWith(
-                          canvasColor: _isPartnerMode ? Colors.teal : const Color(0xFF667eea),
-                        ),
-                        child: DropdownButtonHideUnderline(
-                          child: DropdownButton<String>(
-                            value: isValidSelection ? activeId : null,
-                            hint: Row(
-                              children: [
-                                const Icon(Icons.history, color: Colors.white70, size: 18),
-                                const SizedBox(width: 8),
-                                Text(
-                                  truncate(state.activeDialogueTitle ?? l10n.chatAiChat), 
-                                  style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)
-                                ),
-                              ],
-                            ),
-                            icon: const Icon(Icons.arrow_drop_down, color: Colors.white),
-                            isExpanded: false,
-                            alignment: Alignment.centerLeft,
-                            dropdownColor: _isPartnerMode ? Colors.teal.shade700 : const Color(0xFF5a6fd6),
-                            style: const TextStyle(color: Colors.white, fontSize: 16),
-                            onChanged: (String? newValue) async {
-                              if (newValue == 'new_chat') {
-                                 await state.startNewDialogue(persona: _isPartnerMode ? 'Partner' : 'AI');
-                                 setState(() { _messages = []; });
-                              } else if (newValue != null) {
-                                 final group = groups.firstWhere((g) => g.id == newValue);
-                                 await state.loadExistingDialogue(group);
-                                 _loadHistory();
-                              }
-                            },
-                            items: [
-                              // New Chat Option
-                              DropdownMenuItem<String>(
-                                value: 'new_chat',
-                                child: Row(
-                                  children: [
-                                    const Icon(Icons.add_circle_outline, color: Colors.white, size: 20),
-                                    const SizedBox(width: 8),
-                                    Text(l10n.chatNewChat, style: const TextStyle(fontWeight: FontWeight.bold)),
-                                  ],
-                                ),
-                              ),
-                              
-                              if (groups.isNotEmpty)
-                                const DropdownMenuItem<String>(
-                                  enabled: false,
-                                  child: Divider(color: Colors.white30),
-                                ),
-
-                              ...groups.map((group) {
-                                return DropdownMenuItem<String>(
-                                  value: group.id,
-                                  child: Text(truncate(group.title ?? 'no title')),
-                                );
-                              }).toList(),
-                            ],
-                          ),
-                        ),
-                      ),
+                    return Text(
+                       displayTitle,
+                       style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                       overflow: TextOverflow.ellipsis,
                     );
-                  },
+                  }
                 ),
                 
                 if (_isPartnerMode)

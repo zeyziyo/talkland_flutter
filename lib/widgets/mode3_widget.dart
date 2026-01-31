@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:talkie/widgets/mode3_card.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
@@ -400,112 +401,17 @@ class Mode3Widget extends StatelessWidget {
     final translationId = record['id'] as int;
     final isSelected = appState.mode3SessionActive && appState.currentMode3Question?['id'] == translationId;
     
-    return InkWell(
-      onTap: () => appState.selectMode3QuestionById(translationId),
-      child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 4, horizontal: 16),
-        decoration: BoxDecoration(
-          color: isSelected ? Colors.blue[50] : Colors.white,
-          borderRadius: BorderRadius.circular(12),
-          border: isSelected ? Border.all(color: Colors.blue[300]!, width: 2) : Border.all(color: Colors.grey[200]!),
-          boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 2, offset: Offset(0, 1))],
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(12),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        if (record['type'] == 'word' && (record['pos'] != null || record['form_type'] != null || record['root'] != null))
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 4),
-                            child: Wrap(
-                              spacing: 6,
-                              children: [
-                                if (record['pos'] != null)
-                                  _buildBadge(_getLocalizedTag(record['pos'], l10n), Colors.blue[600]!, Colors.blue[50]!),
-                                if (record['form_type'] != null)
-                                  _buildBadge(_getLocalizedTag(record['form_type'], l10n), Colors.orange[700]!, Colors.orange[50]!),
-                                if (record['root'] != null) Text(record['root'], style: TextStyle(fontSize: 10, color: Colors.grey[500])),
-                              ],
-                            ),
-                          ),
-                        Text(record['source_text'], style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isSelected ? Colors.blue[800] : Colors.black87)),
-                        // Display note if it exists and is not the same as 'pos'
-                        if (record['note'] != null && record['note'].toString().isNotEmpty && record['note'].toString() != record['pos'].toString())
-                          Padding(
-                            padding: const EdgeInsets.only(top: 4),
-                            child: Text(
-                              _getLocalizedTag(record['note'], l10n),
-                              style: TextStyle(fontSize: 12, color: Colors.grey[700], fontStyle: FontStyle.italic),
-                            ),
-                          ),
-                      ],
-                    ),
-                  ),
-                  Icon(isSelected ? Icons.mic : Icons.play_circle_outline, color: isSelected ? Colors.blue : Colors.grey[400], size: 20),
-                ],
-              ),
-              if (record['tags'] != null && (record['tags'] as List).isNotEmpty)
-                Padding(
-                  padding: const EdgeInsets.only(top: 6),
-                  child: Builder(
-                    builder: (context) {
-                      // 시스템 태그 필터링 (Phase 40: Case-insensitive)
-                      final systemTags = {
-                        ...AppState.posCategories,
-                        ...AppState.sentenceCategories,
-                        ...AppState.verbFormCategories,
-                        ...AppState.adjectiveFormCategories,
-                        'word', 'sentence'
-                      }.map((e) => e.toLowerCase()).toSet();
-
-                      final filteredTags = (record['tags'] as List)
-                          .map((t) => t.toString())
-                          .where((t) => !systemTags.contains(t.toLowerCase()))
-                          .toList();
-
-                      if (filteredTags.isEmpty) return const SizedBox.shrink();
-
-                      return Wrap(
-                        spacing: 4,
-                        runSpacing: 4,
-                        children: filteredTags.map((t) => _buildTagChip(t)).toList(),
-                      );
-                    }
-                  ),
-                ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildBadge(String label, Color textColor, Color bgColor) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
-      decoration: BoxDecoration(color: bgColor, borderRadius: BorderRadius.circular(4)),
-      child: Text(label, style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: textColor)),
-    );
-  }
-
-  Widget _buildTagChip(String label) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
-      decoration: BoxDecoration(color: Colors.grey[50], borderRadius: BorderRadius.circular(8), border: Border.all(color: Colors.grey[200]!)),
-      child: Text('#$label', style: TextStyle(fontSize: 9, color: Colors.grey[500])),
+    return Mode3Card(
+      appState: appState,
+      record: record,
+      isSelected: isSelected,
+      l10n: l10n,
+      onSelect: (id) => appState.selectMode3QuestionById(id),
     );
   }
 
   String _getLocalizedTag(String tag, AppLocalizations l10n) {
     switch (tag.toLowerCase()) {
-      // 품사 (Part of Speech)
       case 'noun': return l10n.posNoun;
       case 'verb': return l10n.posVerb;
       case 'adjective': return l10n.posAdjective;
@@ -514,14 +420,10 @@ class Mode3Widget extends StatelessWidget {
       case 'preposition': return l10n.posPreposition;
       case 'conjunction': return l10n.posConjunction;
       case 'interjection': return l10n.posInterjection;
-      
-      // 문장 종류 (Sentence Types)
       case 'statement': return l10n.typeStatement;
       case 'question': return l10n.typeQuestion;
       case 'exclamation': return l10n.typeExclamation;
       case 'imperative': return l10n.typeImperative;
-      
-      // 문법 형태 (Grammar Forms - Conjugations)
       case 'infinitive': return l10n.formInfinitive;
       case 'past': return l10n.formPast;
       case 'past participle': return l10n.formPastParticiple;
@@ -529,21 +431,15 @@ class Mode3Widget extends StatelessWidget {
       case 'present': return l10n.formPresent;
       case '3rd person singular': return l10n.formThirdPersonSingular;
       case 'plural': return l10n.formPlural;
-      
-      // 형용사/부사 형태 (Adjective/Adverb Forms)
       case 'positive': return l10n.formPositive;
       case 'comparative': return l10n.formComparative;
       case 'superlative': return l10n.formSuperlative;
-      
-
-      // 대명사 격 (Pronoun Cases)
       case 'subject': return l10n.caseSubject;
       case 'object': return l10n.caseObject;
       case 'possessive': return l10n.casePossessive;
       case 'possessivepronoun': return l10n.casePossessivePronoun;
       case 'reflexive': return l10n.caseReflexive;
-      
-      default: return tag; // 일반 태그는 그대로 반환
+      default: return tag;
     }
   }
 
