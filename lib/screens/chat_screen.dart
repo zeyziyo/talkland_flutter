@@ -412,6 +412,9 @@ class _ChatScreenState extends State<ChatScreen> {
                       
                       await state.saveDialogueProgress(finalTitle, finalLocation);
                       
+                      // Refresh list for Mode 4 Dropdown
+                      await state.loadDialogueGroups();
+
                       if (context.mounted) {
                         Navigator.of(dialogContext).pop(); 
                         Navigator.of(context).pop(); 

@@ -272,6 +272,18 @@ class SpeechService {
       await initialize();
     }
     
+    // 1. Language Detection (Fix for Konglish)
+    // If text contains Hangul, FORCE Korean locale (ko-KR)
+    if (RegExp(r'[가-힣]').hasMatch(text)) {
+      lang = 'ko-KR';
+    } 
+    // If text is purely ASCII (English/Numbers/Punctuation) and lang was set to Korean, FORCE English (en-US)
+    else if (RegExp(r'^[a-zA-Z0-9\s.,?!;:()"\-]+$').hasMatch(text)) {
+      if (lang.startsWith('ko')) {
+        lang = 'en-US';
+      }
+    }
+    
     // Retry mechanism: Try up to 2 times
     int attempts = 0;
     bool success = false;

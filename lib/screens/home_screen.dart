@@ -315,6 +315,56 @@ class _HomeScreenState extends State<HomeScreen> {
                     modeName = l10n.appTitle;
                 }
 
+                if (appState.currentMode == 3) {
+                  // Mode 4: AI Chat Dropdown
+                  return Container(
+                    height: 40,
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: DropdownButtonHideUnderline(
+                      child: DropdownButton<String>(
+                        isExpanded: false,
+                        icon: const Icon(Icons.arrow_drop_down, color: Color(0xFF667eea)),
+                        hint: const Text(
+                          '대화 목록', // "Conversation List"
+                          style: TextStyle(
+                            color: Color(0xFF667eea),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                        items: appState.dialogueGroups.map((group) {
+                          return DropdownMenuItem<String>(
+                            value: group.id,
+                            child: Text(
+                              group.title?.isNotEmpty == true ? group.title! : 'No Title',
+                              style: const TextStyle(color: Colors.black87),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          );
+                        }).toList(),
+                        onChanged: (value) async {
+                          if (value != null) {
+                            final group = appState.dialogueGroups.firstWhere((g) => g.id == value);
+                            await appState.loadExistingDialogue(group);
+                            if (context.mounted) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ChatScreen(initialDialogue: group),
+                                ),
+                              );
+                            }
+                          }
+                        },
+                      ),
+                    ),
+                  );
+                }
+
                 return Text(
                   modeName,
                   style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
