@@ -38,6 +38,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
   
   @override
   Widget build(BuildContext context) {
+    final appState = Provider.of<AppState>(context);
     final l10n = AppLocalizations.of(context)!;
     return Consumer<AppState>(
       builder: (context, appState, child) {
@@ -640,12 +641,9 @@ class _Mode2WidgetState extends State<Mode2Widget> {
         decoration: BoxDecoration(
            borderRadius: BorderRadius.circular(12),
            border: isPlaying ? Border.all(color: Colors.blueAccent, width: 3) : null, // Highlight playing
-           boxShadow: [
-             if (isPlaying)
-               BoxShadow(color: Colors.blue.withOpacity(0.3), blurRadius: 10, spreadRadius: 2)
-             else 
-               const BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2))
-           ]
+           boxShadow: isPlaying 
+             ? [BoxShadow(color: Colors.blue.withOpacity(0.3), blurRadius: 10, spreadRadius: 2)]
+             : [const BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2))],
         ),
         child: Card(
           margin: EdgeInsets.zero, // Handle margin in Container
@@ -1012,6 +1010,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
     showDialog(
       context: context,
       builder: (context) {
+        final l10n = AppLocalizations.of(context)!;
         return StatefulBuilder(
           builder: (context, setDialogState) {
             return AlertDialog(

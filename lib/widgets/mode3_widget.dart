@@ -21,6 +21,7 @@ class Mode3Widget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appState = Provider.of<AppState>(context);
     final l10n = AppLocalizations.of(context)!;
     
     return Consumer<AppState>(
@@ -563,22 +564,23 @@ class Mode3Widget extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) {
+        final l10n = AppLocalizations.of(context)!;
         return StatefulBuilder(
           builder: (context, setDialogState) {
             return AlertDialog(
-              title: const Row(
+              title: Row(
                 children: [
-                  Icon(Icons.local_offer_outlined, color: Colors.blue),
-                  SizedBox(width: 8),
+                  const Icon(Icons.local_offer_outlined, color: Colors.blue),
+                  const SizedBox(width: 8),
                   Text(l10n.tagSelection),
                 ],
               ),
               content: SizedBox(
                 width: double.maxFinite,
                 child: appState.availableTags.isEmpty
-                  ? const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 24),
-                      child: Text(l10n.noRecords, textAlign: TextAlign.center, style: TextStyle(color: Colors.grey)),
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 24),
+                      child: Text(l10n.noRecords, textAlign: TextAlign.center, style: const TextStyle(color: Colors.grey)),
                     )
                   : Column(
                       mainAxisSize: MainAxisSize.min,

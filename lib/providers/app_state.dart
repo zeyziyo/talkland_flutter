@@ -1323,12 +1323,8 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// 외운 카드 표시 여부 토글
-  void setShowMemorized(bool value) {
-    _showMemorized = value;
-    loadRecordsByTags();
-    notifyListeners();
-  }
+  // Removed duplicate setShowMemorized from here
+
 
   /// 모든 태그 선택 해제
   void clearSelectedTags() {
@@ -1662,6 +1658,7 @@ class AppState extends ChangeNotifier {
       _recommendedItems = List<Map<String, dynamic>>.from(result['recommendations'] ?? []);
       _isRecommendationLoading = false;
       notifyListeners();
+    } catch (e) {
       debugPrint('[AppState] Recommendation Error: $e');
       _isRecommendationLoading = false;
       notifyListeners();

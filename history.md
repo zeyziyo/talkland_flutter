@@ -4,6 +4,19 @@
 
 ---
 
+## 📅 [2026-01-31 14:15:00] Phase 39: 빌드 오류 긴급 수정 (Hotfix)
+
+### ✅ 태스크 (Task)
+- [x] AppState: 중복 `setShowMemorized` 제거 및 `fetchRecommendations` try-catch 수정
+- [x] Mode2Widget: `l10n` 정의 추가 및 BoxShadow 로직 단순화
+- [x] Mode3Widget: `l10n` 정의 추가 및 `const` 오류 수정
+
+### 📝 워크스루 (Walkthrough)
+- **핵심 조치**: GitHub Actions 빌드 실패를 유발했던 `AppState`의 중복 메서드와 문법 오류, 그리고 `Mode2/3Widget`의 `l10n` 미정의 오류를 긴급 수정했습니다.
+- **결과**: 컴파일 오류가 해소되어 정상적인 빌드가 가능해졌습니다.
+
+---
+
 ## 📅 [2026-01-31 13:45:00] Phase 38.5: AI 채팅 음성 연령 제한 제거
 
 ### ✅ 태스크 (Task)
