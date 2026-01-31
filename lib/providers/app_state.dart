@@ -226,8 +226,72 @@ class AppState extends ChangeNotifier {
   String get sourceRoot => _sourceRoot;
   
   void setSourcePos(String value) { _sourcePos = value; notifyListeners(); }
-  void setSourceFormType(String value) { _sourceFormType = value; notifyListeners(); }
+  void setSourceFormType(String value) { 
+    _sourceFormType = value; 
+    if (!_isWordMode) _applyAutoPunctuation();
+    notifyListeners(); 
+  }
   void setSourceRoot(String value) { _sourceRoot = value; notifyListeners(); }
+
+  /// 언어별/문장종류별 문장 부호 자동 삽입 (Phase 30)
+  void _applyAutoPunctuation() {
+    if (_sourceText.trim().isEmpty) return;
+
+    String text = _sourceText.trim();
+    final lang = _sourceLang.toLowerCase();
+
+    // 1. 기존 문장 부호 제거 (앞/뒤)
+    // 뒤쪽 부호 제거: . ? ! ; 。 ？ ！
+    text = text.replaceFirst(RegExp(r'[.?!;。？！]+$'), '');
+    // 스페인어 전용 앞쪽 부호 제거: ¿ ¡
+    if (lang == 'es') {
+      text = text.replaceFirst(RegExp(r'^[¿¡]+'), '');
+    }
+
+    // 2. 새로운 부호 결정
+    String suffix = '';
+    String prefix = '';
+
+    switch (_sourceFormType) {
+      case 'Statement':
+      case 'Imperative':
+        if (['ja', 'zh-cn', 'zh-tw'].contains(lang)) {
+          suffix = '。';
+        } else {
+          suffix = '.';
+        }
+        break;
+      case 'Question':
+        if (lang == 'es') {
+          prefix = '¿';
+          suffix = '?';
+        } else if (lang == 'el') {
+          suffix = ';'; // 그리스어 물음표
+        } else if (['ja', 'zh-cn', 'zh-tw'].contains(lang)) {
+          suffix = '？'; // 전각 물음표
+        } else if (['ar', 'fa', 'ur'].contains(lang)) {
+          suffix = '؟'; // RTL 물음표
+        } else {
+          suffix = '?';
+        }
+        break;
+      case 'Exclamation':
+        if (lang == 'es') {
+          prefix = '¡';
+          suffix = '!';
+        } else if (['ja', 'zh-cn', 'zh-tw'].contains(lang)) {
+          suffix = '！'; // 전각 느낌표
+        } else {
+          suffix = '!';
+        }
+        break;
+      default:
+        // 처리할 수 없는 종류는 부호 없이 반환
+        return;
+    }
+
+    _sourceText = prefix + text + suffix;
+  }
   
   // Usage / Quota Methods
   Future<void> checkUsageLimit() async => await _usageService.checkLimitOrThrow();
