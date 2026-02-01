@@ -2094,5 +2094,19 @@ class DatabaseService {
       whereArgs: [id]
     );
   }
+
+  /// Toggle Memorized Status by Group ID (Updates both source and target)
+  static Future<void> toggleMemorizedStatusByGroup(int groupId, String type, bool status) async {
+    final db = await database;
+    final String table = type == 'word' ? 'words' : 'sentences';
+    
+    await db.update(
+      table, 
+      {'is_memorized': status ? 1 : 0},
+      where: 'group_id = ?',
+      whereArgs: [groupId]
+    );
+    print('[DB] Toggled is_memorized to $status for group $groupId in table $table');
+  }
 }
 

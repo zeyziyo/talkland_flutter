@@ -28,7 +28,10 @@ class Mode2Card extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final translationId = record['id'] as int;
+    final groupId = record['group_id'] as int;
+    final targetId = record['target_id'] as int; // Added Phase 53
     final recordSourceLang = record['source_lang'] as String;
+
     final recordTargetLang = record['target_lang'] as String;
     
     // Check if we need to swap display based on current AppState settings
@@ -159,7 +162,7 @@ class Mode2Card extends StatelessWidget {
 
                        // Checkbox
                        GestureDetector(
-                          onTap: () => appState.toggleMemorizedStatus(translationId, isStudied),
+                          onTap: () => appState.toggleMemorizedStatus(targetId, isStudied),
                           child: Container(
                             padding: const EdgeInsets.all(4),
                             decoration: BoxDecoration(
@@ -406,7 +409,7 @@ class Mode2Card extends StatelessWidget {
 
     if (confirmed == true) {
       try {
-        await appState.deleteRecord(record['id'] as int);
+        await appState.deleteRecord(record['group_id'] as int);
         if (context.mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text(l10n.recordDeleted)),

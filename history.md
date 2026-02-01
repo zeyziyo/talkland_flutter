@@ -4,6 +4,50 @@
 
 ---
 
+## 📅 [2026-02-01 12:15:00] Phase 54: Mode 3 UI 통합 (UI Unification)
+
+### ✅ 태스크 (Task)
+- [x] **New Widget**: `Mode3PracticeCard` 생성 (Mode 2 디자인 + Mode 3 기능)
+- [x] **Integration**: `Mode3Widget` 연습 영역을 새로운 카드로 교체.
+- [x] **Features**:
+  - 모국어(Source)가 상단에 표시됨.
+  - "완료(Completed)" 체크 가능 (Target ID 기반).
+  - 연습 상태(Listening/Result)에 따라 하단 영역이 동적으로 변화 (마이크, 점수, 리셋/스킵 버튼).
+
+### 📝 워크스루 (Walkthrough)
+- `Mode3PracticeCard.dart`를 신규 생성하여 `Mode2Card`의 프리미엄 그래픽 디자인(Gradient, Shadow)을 적용.
+- `Mode3Widget.dart`에서 기존 `_buildActivePracticeArea`를 `Mode3PracticeCard` 호출로 대체하고 중복 코드 정리.
+
+## 📅 [2026-02-01 11:30:00] Phase 53: '외운것' 용어 변경 및 로직 수정 (Rename & Fix Logic)
+
+### ✅ 태스크 (Task)
+- [x] **UI Text**: "외운것"을 "완료한것"으로 변경 (학습의 종료 의미 강화)
+- [x] **Logic Fix**: 
+  - '완료' 상태가 **학습 언어(Target Language)**에만 적용되도록 수정 (기존: Source 포함 전체 그룹)
+  - `Mode2Card`에서 `target_id`를 사용하여 명확한 대상 지정
+
+### 📝 워크스루 (Walkthrough)
+- **변경 사항**: 
+  - `app_ko.arb`: "외운것" -> "완료한것" (EN: Memorized -> Completed)
+  - `AppState`: `loadRecordsByTags`에서 `record` 맵 생성 시 `target_id` 추가 및 `is_memorized`를 Target Row 기준으로 설정.
+  - `AppState`: `toggleMemorizedStatus`를 단일 ID(`id`) 대상 업데이트로 원복.
+  - `Mode2Card`: 토글 동작 시 `target_id` 사용하도록 변경.
+
+## 📅 [2026-02-01 10:45:00] Phase 52: 카드 삭제 및 외운것 상태 오류 수정 (Fix Deletion & Toggle Logic)
+
+### ✅ 태스크 (Task)
+- [x] **Bug Fix**: 카드가 삭제되어도 화면에 남는 문제 해결
+- [x] **Bug Fix**: '외운것' 체크 아이콘이 반응하지 않거나 상태가 동기화되지 않는 문제 해결
+- [x] **Logic Update**: 
+  - `Mode2Card.dart`에서 개별 Row ID(`id`)가 아닌 통합 Group ID(`group_id`)를 사용하도록 변경
+  - `DatabaseService`에 `toggleMemorizedStatusByGroup` 추가하여 번역 쌍(Source-Target) 전체의 상태 동기화 보장
+
+### 📝 워크스루 (Walkthrough)
+- **원인**: 통합 스키마 도입 후 `AppState.deleteRecord`는 `group_id`를 요구하지만 UI는 기존의 row `id`를 전달하여 삭제가 실패함. 또한 '암기 완료' 토글 시 한쪽 언어(Source)만 업데이트되어 반대쪽 언어나 그룹 전체 상태에 반영되지 않음.
+- **해결**: 
+  - UI(`Mode2Card`)에서 `group_id`를 추출하여 전달하도록 수정.
+  - `DatabaseService` 및 `AppState`가 그룹 단위로 `is_memorized` 상태를 업데이트하도록 로직 강화.
+
 ## 📅 [2026-02-01 10:15:30] Phase 51: Mode 2 UI 및 기능 수정 (Fix Interaction & Styling)
 
 ### ✅ 태스크 (Task)

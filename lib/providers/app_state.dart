@@ -1411,6 +1411,7 @@ class AppState extends ChangeNotifier {
 
         pairedResults.add({
           'id': sourceRow['id'], 
+          'target_id': targetRow['id'], // Added Phase 53
           'group_id': groupId,
           'type': rowType, // 단어/문장 구분
           'source_lang': _sourceLang,
@@ -1424,7 +1425,7 @@ class AppState extends ChangeNotifier {
           'tags': tags,
           'created_at': sourceRow['created_at'],
           'review_count': sourceRow['review_count'] ?? 0,
-          'is_memorized': sourceRow['is_memorized'] == 1,
+          'is_memorized': targetRow['is_memorized'] == 1, // Phase 53: Target status
         });
       }
 
@@ -1442,6 +1443,20 @@ class AppState extends ChangeNotifier {
         limit: 1);
     if (results.isNotEmpty) return results.first;
     return null;
+  }
+
+  /// Toggle is_memorized status (Target Only)
+  Future<void> toggleMemorizedStatus(int id, bool currentStatus) async {
+    final type = _recordTypeFilter == 'word' ? 'word' : 'sentence';
+    // Update only the specific record (Target)
+    await DatabaseService.toggleMemorizedStatus(id, type, !currentStatus);
+    
+    // Sync with Mode 3 current question for immediate UI update (if id matches)
+    // Note: Mode 3 might be using group_id or source_id, need to be careful.
+    // However, Mode 3 usually checks "is_card_memorized" relative to the learned item.
+    
+    // Refresh list to update UI
+    loadRecordsByTags();
   }
 
   /// 기존 호환성 유지용 (Legacy)
@@ -2700,20 +2715,5 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
   
-  /// Toggle is_memorized status
-  Future<void> toggleMemorizedStatus(int id, bool currentStatus) async {
-    final type = _recordTypeFilter == 'word' ? 'word' : 'sentence';
-    await DatabaseService.toggleMemorizedStatus(id, type, !currentStatus);
-    
-    // Sync with Mode 3 current question for immediate UI update
-    if (_currentMode3Question != null && (_currentMode3Question!['id'] as int) == id) {
-       // Since Map is immutable-ish if coming from DB, we might need to recreate it
-       final  newMap = Map<String, dynamic>.from(_currentMode3Question!);
-       newMap['is_memorized'] = !currentStatus;
-       _currentMode3Question = newMap;
-    }
 
-    // Refresh list to update UI (it might disappear if in default view)
-    loadRecordsByTags();
-  }
 }

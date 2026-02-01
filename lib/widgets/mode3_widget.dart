@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:talkie/widgets/mode3_card.dart';
+import 'package:talkie/widgets/mode3_practice_card.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
@@ -293,107 +294,10 @@ class Mode3Widget extends StatelessWidget {
   }
   
   Widget _buildActivePracticeArea(BuildContext context, AppState appState, Map<String, dynamic> currentQuestion, AppLocalizations l10n) {
-     return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text("🇰🇷", style: TextStyle(fontSize: 24)),
-              const SizedBox(width: 12),
-              Flexible(
-                child: Text(
-                  currentQuestion['source_text'] as String,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: Colors.black87),
-                ),
-              ),
-              IconButton(
-                icon: Icon(
-                  (currentQuestion['is_memorized'] == true) ? Icons.check_circle : Icons.check_circle_outline,
-                  color: (currentQuestion['is_memorized'] == true) ? Colors.green : Colors.grey[300],
-                ),
-                onPressed: () {
-                   appState.toggleMemorizedStatus(currentQuestion['id'] as int, currentQuestion['is_memorized'] == true);
-                },
-              ),
-            ],
-          ),
-          
-          if (currentQuestion['note'] != null && (currentQuestion['note'] as String).isNotEmpty) ...[
-             const SizedBox(height: 12),
-             Container(
-               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-               decoration: BoxDecoration(color: Colors.grey[50], borderRadius: BorderRadius.circular(20), border: Border.all(color: Colors.grey[300]!)),
-               child: Row(
-                 mainAxisSize: MainAxisSize.min,
-                 children: [
-                   Icon(Icons.lightbulb_outline, size: 14, color: Colors.amber[700]),
-                   const SizedBox(width: 6),
-                   Text(currentQuestion['note'] as String, style: TextStyle(fontStyle: FontStyle.italic, fontSize: 14, color: Colors.grey[700])),
-                   const SizedBox(width: 8),
-                   Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                      decoration: BoxDecoration(color: Colors.red[50], borderRadius: BorderRadius.circular(4)),
-                      child: Text(_getFirstLetterHint(currentQuestion['target_text'] as String), style: TextStyle(fontSize: 12, color: Colors.red[400], fontWeight: FontWeight.bold, fontFamily: 'monospace')),
-                   ),
-                 ],
-               ),
-             ),
-          ],
-          
-          const SizedBox(height: 20),
-          
-          if (appState.showRetryButton) ...[
-             if (appState.mode3Score != null)
-                Container(
-                  padding: const EdgeInsets.all(12),
-                  width: double.infinity,
-                  decoration: BoxDecoration(color: Colors.grey[50], borderRadius: BorderRadius.circular(16), border: Border.all(color: Colors.grey.shade300)),
-                  child: Column(
-                    children: [
-                      Text('${l10n.accuracy}: ${appState.mode3Score!.toStringAsFixed(1)}%', style: TextStyle(color: _getScoreColor(appState.mode3Score!), fontWeight: FontWeight.bold, fontSize: 18)),
-                      const SizedBox(height: 6),
-                      Text(currentQuestion['target_text'] as String, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.blueGrey), textAlign: TextAlign.center),
-                      const Divider(height: 12),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("${l10n.recognizedText}: ", style: const TextStyle(fontSize: 13, color: Colors.grey, fontWeight: FontWeight.bold)),
-                          Expanded(child: Text(appState.mode3UserAnswer.isEmpty ? "( ... )" : appState.mode3UserAnswer, style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, fontStyle: FontStyle.italic, color: appState.mode3UserAnswer.isEmpty ? Colors.grey : Colors.black87))),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              const SizedBox(height: 16),
-              Row(
-                children: [
-                  Expanded(child: ElevatedButton(onPressed: () => appState.retryMode3Question(), style: ElevatedButton.styleFrom(backgroundColor: Colors.orange, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))), child: const Icon(Icons.refresh, size: 24))),
-                  const SizedBox(width: 8),
-                  Expanded(child: ElevatedButton(onPressed: () => appState.skipMode3Question(), style: ElevatedButton.styleFrom(backgroundColor: Colors.blue, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))), child: const Icon(Icons.arrow_forward, size: 24))),
-                ],
-              ),
-          ] else ...[
-             if (appState.isListening)
-               Column(
-                 children: [
-                    const Text("Listening...", style: TextStyle(color: Colors.red, fontSize: 14)),
-                    const SizedBox(height: 8),
-                    ElevatedButton.icon(onPressed: () => appState.stopMode3ListeningManual(), icon: const Icon(Icons.stop, size: 20), label: Text(l10n.mode3Stop), style: ElevatedButton.styleFrom(backgroundColor: Colors.red, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))),
-                 ],
-               )
-             else
-               Row(
-                 mainAxisAlignment: MainAxisAlignment.center,
-                 children: [
-                   ElevatedButton.icon(onPressed: () => appState.retryMode3Question(), icon: const Icon(Icons.mic, size: 20), label: Text(l10n.mode3Start), style: ElevatedButton.styleFrom(backgroundColor: Colors.green, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))),
-                   const SizedBox(width: 12),
-                   OutlinedButton.icon(onPressed: () => appState.skipMode3Question(), icon: const Icon(Icons.skip_next, size: 18), label: Text(l10n.mode3Next), style: OutlinedButton.styleFrom(foregroundColor: Colors.grey[700], side: BorderSide(color: Colors.grey[400]!), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))),
-                 ],
-               ),
-          ],
-        ],
+     return Mode3PracticeCard(
+       appState: appState,
+       currentQuestion: currentQuestion,
+       l10n: l10n,
      );
   }
 
@@ -443,20 +347,7 @@ class Mode3Widget extends StatelessWidget {
     }
   }
 
-  String _getFirstLetterHint(String targetText) {
-    if (targetText.isEmpty) return "";
-    final words = targetText.split(' ');
-    if (words.isEmpty) return "";
-    final firstWord = words[0];
-    if (firstWord.isEmpty) return "";
-    return "${firstWord[0]}${'-' * (firstWord.length - 1)}";
-  }
 
-  Color _getScoreColor(double score) {
-    if (score >= 100) return Colors.green;
-    if (score >= 80) return Colors.orange;
-    return Colors.red;
-  }
 
   void _showTagSelectionDialog(BuildContext context, AppState appState) {
     showDialog(
