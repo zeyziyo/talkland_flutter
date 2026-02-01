@@ -1451,12 +1451,20 @@ class AppState extends ChangeNotifier {
     // Update only the specific record (Target)
     await DatabaseService.toggleMemorizedStatus(id, type, !currentStatus);
     
-    // Sync with Mode 3 current question for immediate UI update (if id matches)
-    // Note: Mode 3 might be using group_id or source_id, need to be careful.
-    // However, Mode 3 usually checks "is_card_memorized" relative to the learned item.
-    
+    // Sync with Mode 3 current question for immediate UI update
+    if (_currentMode3Question != null) {
+      // Check if the toggled ID matches the current Mode 3 target ID
+      final currentTargetId = _currentMode3Question!['target_id'] as int? ?? _currentMode3Question!['id'] as int;
+      if (currentTargetId == id) {
+         final newMap = Map<String, dynamic>.from(_currentMode3Question!);
+         newMap['is_memorized'] = !currentStatus;
+         _currentMode3Question = newMap;
+         notifyListeners(); 
+      }
+    }
+
     // Refresh list to update UI
-    loadRecordsByTags();
+    await loadRecordsByTags();
   }
 
   /// 기존 호환성 유지용 (Legacy)
@@ -2001,6 +2009,48 @@ class AppState extends ChangeNotifier {
       await _startMode3Listening();
   }
 
+     /// Mode 3: Reset current question practice state
+  void resetMode3Question() {
+    _mode3Score = null;
+    _mode3UserAnswer = '';
+    _showRetryButton = false;
+    _isListening = false;
+    notifyListeners();
+  }
+
+  /// Mode 3: Set current question (Starts new practice session for this item)
+  void setMode3CurrentQuestion(Map<String, dynamic> record) {
+     // If switching cards, stop any ongoing listening
+     if (_isListening) {
+       _speechService.stopListening();
+       _isListening = false;
+     }
+
+    _currentMode3Question = record;
+    _mode3SessionActive = true;
+    _mode3Score = null;
+    _mode3UserAnswer = '';
+    _showRetryButton = false;
+    notifyListeners();
+  }
+  
+  /// Mode 3: Clear current question (Collapses card)
+  void clearMode3CurrentQuestion() {
+     if (_isListening) {
+       _speechService.stopListening();
+       _isListening = false;
+     }
+    _currentMode3Question = null;
+    // _mode3SessionActive = false; // Keep session active? Or false? 
+    // If we collapse, maybe we aren't in "Session" anymore in terms of having an active card.
+    // But list is still there.
+    // Let's keep session active true if it just means "Mode 3 is open". 
+    // But typically session active means "Practicing".
+    // I'll leave _mode3SessionActive as is, or maybe set to false if it implies "Has Active Card".
+    // In Mode3Widget, we check `appState.mode3SessionActive && currentQuestion != null` for some logic.
+    // If I clear question, `currentQuestion` becomes null.
+    notifyListeners();
+  }
   Future<void> _nextMode3Question() async {
     _cancelMode3Timers();
     _speechStatusSubscription?.cancel(); // Critical: Stop listening to old status events

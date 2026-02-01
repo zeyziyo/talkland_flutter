@@ -4,6 +4,21 @@
 
 ---
 
+## 📅 [2026-02-01 13:30:00] Phase 56: Mode 3 리스트 구조 개편 (Refactor List to Include Expandable Cards)
+
+### ✅ 태스크 (Task)
+- [x] **New List Structure**: Mode 3의 상단 고정 플레이어를 제거하고, 리스트 내 카드가 직접 확장되는 방식으로 변경.
+    - 초기 상태: 모국어(Source) 부분만 표시.
+    - 터치 시: 카드가 확장되며 발음 연습 영역(Target, Mic, Controls) 노출.
+- [x] **Add Features**: 확장된 카드 영역에 **초기화(Reset)** 버튼 추가 (학습 상태 초기화).
+- [x] **Code Cleanup**: 사용하지 않는 변수 및 Deprecated 코드(`withOpacity` -> `withValues`) 정리.
+
+## 📅 [2026-02-01 12:45:00] Phase 55: 용어 변경 및 UI 통일 (Terms & UI Consistency)
+
+### ✅ 태스크 (Task)
+- [x] **L10n**: "완료한것" -> **"끝낸것"** (KO), "Completed" -> **"Finished"** (EN) 변경.
+- [x] **UI Unification**: Mode 3의 상단 컨트롤 바(단어/문장 토글, 태그 버튼, "끝낸것" 스위치) 디자인을 Mode 2와 완전히 동일하게 통일 (비율, 색상, 아이콘 크기 등).
+
 ## 📅 [2026-02-01 12:15:00] Phase 54: Mode 3 UI 통합 (UI Unification)
 
 ### ✅ 태스크 (Task)
@@ -13,6 +28,7 @@
   - 모국어(Source)가 상단에 표시됨.
   - "완료(Completed)" 체크 가능 (Target ID 기반).
   - 연습 상태(Listening/Result)에 따라 하단 영역이 동적으로 변화 (마이크, 점수, 리셋/스킵 버튼).
+- [x] **Bugfix**: `toggleMemorizedStatus` 내 `_currentMode3Question` 동기화 코드가 누락되어 UI가 즉시 갱신되지 않는 문제 수정.
 
 ### 📝 워크스루 (Walkthrough)
 - `Mode3PracticeCard.dart`를 신규 생성하여 `Mode2Card`의 프리미엄 그래픽 디자인(Gradient, Shadow)을 적용.

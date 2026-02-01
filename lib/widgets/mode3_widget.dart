@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:talkie/widgets/mode3_card.dart';
+
 import 'package:talkie/widgets/mode3_practice_card.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
@@ -28,7 +28,7 @@ class Mode3Widget extends StatelessWidget {
     
     return Consumer<AppState>(
       builder: (context, appState, child) {
-        final currentQuestion = appState.currentMode3Question;
+        final materialRecords = appState.filteredMaterialRecords;
         
         return SafeArea(
           child: Column(
@@ -129,190 +129,169 @@ class Mode3Widget extends StatelessWidget {
                   ),
                     const SizedBox(height: 8),
                     
-                    // Word/Sentence Toggle + Tag Selection Button
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 3,
-                          child: SegmentedButton<String>(
-                            segments: [
-                              ButtonSegment<String>(
-                                value: 'word',
-                                label: Text(l10n.tabWord),
-                              ),
-                              ButtonSegment<String>(
-                                value: 'sentence',
-                                label: Text(l10n.tabSentence),
-                              ),
-                            ],
-                            selected: {appState.recordTypeFilter},
-                            onSelectionChanged: (Set<String> newSelection) {
-                              appState.setRecordTypeFilter(newSelection.first);
-                              if (appState.mode3SessionActive) appState.startMode3SessionDirectly();
-                            },
-                            style: SegmentedButton.styleFrom(
-                              visualDensity: VisualDensity.compact,
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  // Word/Sentence Toggle + Tag Selection + Show Memorized Switch
+                  Row(
+                    children: [
+                      // 1. Word/Sentence Toggle
+                      Expanded(
+                        flex: 5,
+                        child: SegmentedButton<String>(
+                          segments: [
+                            ButtonSegment<String>(
+                              value: 'word',
+                              label: Text(l10n.tabWord, style: const TextStyle(fontSize: 11)),
                             ),
+                            ButtonSegment<String>(
+                              value: 'sentence',
+                              label: Text(l10n.tabSentence, style: const TextStyle(fontSize: 11)),
+                            ),
+                          ],
+                          selected: {appState.recordTypeFilter},
+                          onSelectionChanged: (Set<String> newSelection) {
+                            appState.setRecordTypeFilter(newSelection.first);
+                            if (appState.mode3SessionActive) appState.startMode3SessionDirectly();
+                          },
+                          style: SegmentedButton.styleFrom(
+                            visualDensity: VisualDensity.compact,
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            padding: EdgeInsets.zero,
                           ),
                         ),
-                        const SizedBox(width: 8),
-                        // 2. Tag Selection Button
-                        InkWell(
-                          onTap: () => _showTagSelectionDialog(context, appState),
-                          borderRadius: BorderRadius.circular(8),
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                            decoration: BoxDecoration(
-                              color: appState.selectedTags.isEmpty ? Colors.grey[100] : Colors.blue[50], // Active Color
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(
-                                color: appState.selectedTags.isEmpty ? Colors.grey.shade300 : Colors.blue.shade200,
-                              ),
+                      ),
+                      const SizedBox(width: 12),
+                      
+                      // 2. Tag Selection Button
+                      InkWell(
+                        onTap: () => _showTagSelectionDialog(context, appState),
+                        borderRadius: BorderRadius.circular(8),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+                          decoration: BoxDecoration(
+                            color: appState.selectedTags.isNotEmpty ? Colors.blue[50] : Colors.grey[100],
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(
+                              color: appState.selectedTags.isNotEmpty ? Colors.blue.shade200 : Colors.grey.shade300,
                             ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Icon(
-                                  Icons.local_offer_outlined, 
-                                  size: 16, 
-                                  color: appState.selectedTags.isEmpty ? Colors.grey.shade600 : Colors.blue.shade700
-                                ),
-                                const SizedBox(width: 4),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                Icons.local_offer_outlined, 
+                                size: 14, 
+                                color: appState.selectedTags.isNotEmpty ? Colors.blue.shade700 : Colors.grey.shade600,
+                              ),
+                              const SizedBox(width: 2),
                                 Text(
-                                  appState.selectedTags.isEmpty 
-                                    ? l10n.tagSelection 
-                                    : '${l10n.tagSelection} (${appState.selectedTags.length})',
+                                  appState.selectedTags.isEmpty ? l10n.tagSelection : '${appState.selectedTags.length}',
                                   style: TextStyle(
-                                    fontSize: 13,
+                                    fontSize: 11,
                                     fontWeight: FontWeight.bold,
-                                    color: appState.selectedTags.isEmpty ? Colors.grey.shade700 : Colors.blue.shade800,
+                                    color: appState.selectedTags.isNotEmpty ? Colors.blue.shade800 : Colors.grey.shade700,
                                   ),
                                 ),
-                              ],
-                            ),
+                            ],
                           ),
                         ),
-                        const SizedBox(width: 8),
-                        // 3. Show Memorized Switch (Icon Toggle) - Added in Phase 34
-                        InkWell(
-                          onTap: () => appState.setShowMemorized(!appState.showMemorized),
-                          borderRadius: BorderRadius.circular(8),
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
-                            decoration: BoxDecoration(
-                              color: appState.showMemorized ? Colors.green[50] : Colors.grey[100],
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(
-                                color: appState.showMemorized ? Colors.green.shade200 : Colors.grey.shade300,
-                              ),
+                      ),
+                      const SizedBox(width: 12),
+
+                      // 3. Show Memorized Switch (Icon Toggle for space)
+                      InkWell(
+                        onTap: () => appState.setShowMemorized(!appState.showMemorized),
+                        borderRadius: BorderRadius.circular(8),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+                          decoration: BoxDecoration(
+                            color: appState.showMemorized ? Colors.green[50] : Colors.grey[100],
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(
+                              color: appState.showMemorized ? Colors.green.shade200 : Colors.grey.shade300,
                             ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Icon(
-                                  appState.showMemorized ? Icons.visibility : Icons.visibility_off, 
-                                  size: 16, 
-                                  color: appState.showMemorized ? Colors.green.shade700 : Colors.grey.shade600,
-                                ),
-                                const SizedBox(width: 4),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                appState.showMemorized ? Icons.visibility : Icons.visibility_off, 
+                                size: 14, 
+                                color: appState.showMemorized ? Colors.green.shade700 : Colors.grey.shade600,
+                              ),
+                              const SizedBox(width: 2),
                                 Text(
                                   l10n.labelShowMemorized,
                                   style: TextStyle(
-                                    fontSize: 13,
+                                    fontSize: 11,
                                     fontWeight: FontWeight.bold,
                                     color: appState.showMemorized ? Colors.green.shade800 : Colors.grey.shade700,
                                   ),
                                 ),
-                              ],
-                            ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
+                  ),
                   ],
                 ),
               ),
 
               
               // ==========================================
-              // 2. Practice Area
+              // 2. Records List (Expandable Cards)
               // ==========================================
               Expanded(
-                child: Stack(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          if (appState.mode3SessionActive && currentQuestion != null) ...[
-                            // 1. 연습 영역
-                            _buildActivePracticeArea(context, appState, currentQuestion, l10n),
-                            const Divider(height: 32),
-                          ],
-                          
-                          // 2. 카드 목록
-                          Expanded(
-                            child: appState.filteredMaterialRecords.isEmpty
-                                ? Center(
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Icon(Icons.library_books_outlined, size: 64, color: Colors.grey[100]),
-                                        const SizedBox(height: 16),
-                                        Text(l10n.noRecords, style: TextStyle(color: Colors.grey[400])),
-                                      ],
-                                    ),
-                                  )
-                                : ListView.builder(
-                                    padding: const EdgeInsets.only(bottom: 100),
-                                    itemCount: appState.filteredMaterialRecords.length,
-                                    itemBuilder: (context, index) {
-                                      final record = appState.filteredMaterialRecords[index];
-                                      return _buildRecordCard(context, appState, record, l10n, index);
-                                    },
-                                  ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 60),
-                  ],
-                ),
-              ),
+                child: materialRecords.isEmpty
+                    ? Center(
+                        child: Text(
+                          materialRecords.isEmpty 
+                              ? l10n.noRecords 
+                              : l10n.selectMaterialPrompt,
+                          style: TextStyle(fontSize: 16, color: Colors.grey[600]),
+                        ),
+                      )
+                    : ListView.builder(
+                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 100),
+                        itemCount: materialRecords.length,
+                        itemBuilder: (context, index) {
+                          final record = materialRecords[index];
+                          // Determine if this card is currently expanded/active
+                          // Check if currentMode3Question matches this record's ID (or Target ID)
+                          final isActive = appState.mode3SessionActive && 
+                                           appState.currentMode3Question != null && 
+                                           (appState.currentMode3Question!['id'] == record['id'] || 
+                                            appState.currentMode3Question!['target_id'] == record['id']);
 
-              // Spacer to ensure separation
-              const SizedBox(height: 16),
-              const Divider(height: 1, thickness: 0.5, color: Colors.grey),
-              const SizedBox(height: 16),
+                          return Mode3PracticeCard(
+                            key: ValueKey(record['id']),
+                            appState: appState,
+                            record: record,
+                            l10n: l10n,
+                            isExpanded: isActive,
+                            onToggleExpand: () {
+                              if (isActive) {
+                                // Collapse? Or do nothing? 
+                                // Usually tapping expanded card collapses it.
+                                // But here it also means "Stopping Practice".
+                                appState.stopMode3ListeningManual(); // Just in case
+                                appState.clearMode3CurrentQuestion(); // Clear active state
+                              } else {
+                                // Expand -> Set as Active
+                                appState.setMode3CurrentQuestion(record);
+                              }
+                            },
+                          );
+                        },
+                      ),
+              ),
             ],
           ),
         );
-
       },
     );
   }
-  
-  Widget _buildActivePracticeArea(BuildContext context, AppState appState, Map<String, dynamic> currentQuestion, AppLocalizations l10n) {
-     return Mode3PracticeCard(
-       appState: appState,
-       currentQuestion: currentQuestion,
-       l10n: l10n,
-     );
-  }
 
-  Widget _buildRecordCard(BuildContext context, AppState appState, Map<String, dynamic> record, AppLocalizations l10n, int index) {
-    final translationId = record['id'] as int;
-    final isSelected = appState.mode3SessionActive && appState.currentMode3Question?['id'] == translationId;
-    
-    return Mode3Card(
-      appState: appState,
-      record: record,
-      isSelected: isSelected,
-      l10n: l10n,
-      onSelect: (id) => appState.selectMode3QuestionById(id),
-    );
-  }
+  // Helper methods like _showTagSelectionDialog remain...
 
   String _getLocalizedTag(String tag, AppLocalizations l10n) {
     switch (tag.toLowerCase()) {
