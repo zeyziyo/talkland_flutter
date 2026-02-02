@@ -212,6 +212,7 @@ The Flet version is preserved at `c:\PythonProjects\talkland_flet`.
 ## 최근 업데이트 (Recent Updates - 2026-01-30)
 
 - **빌드 안정화**: `AppState` 및 `DatabaseService` 내의 모든 중복 정의 및 문법 오류 해결 (Clean Build 보장)
+- **대화 기능 강화 (Feb 2)**: AI 채팅 자동 제목(Chat N), 메모(Note) 기능, 대화 목록 검색 및 날짜 필터, 즉시 반응 UI(Optimistic Update) 적용
 - **글로벌 동기화**: `app_en.arb`의 신규 키(`chatNewChat` 등)를 43개 언어 전체 파일에 자동 동기화
 - **SDK 대응**: `Geolocator` 패키지(v13.0.0+)의 브레이킹 체인지 대응 및 위치 설정 최적화
 

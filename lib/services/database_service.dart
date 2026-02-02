@@ -23,7 +23,7 @@ class DatabaseService {
     
     return await openDatabase(
       path,
-      version: 9, // Upgraded for Phase 62 (Dialogue Note & Features)
+      version: 10, // Upgraded for Hotfix (Missing 'note' column recovery)
       onCreate: (db, version) async {
         await _createBaseTables(db);
         await _ensureDefaultMaterial(db);
@@ -97,6 +97,17 @@ class DatabaseService {
           // Phase 62: Dialogue Notes
           await db.execute('ALTER TABLE dialogue_groups ADD COLUMN note TEXT');
           print('[DB] Upgraded to version 9: Dialogue note added');
+        }
+
+        if (oldVersion < 10) {
+          // Hotfix: Ensure 'note' column exists for users who had fresh installed v9 (which missed it in onCreate)
+          try {
+            await db.execute('ALTER TABLE dialogue_groups ADD COLUMN note TEXT');
+            print('[DB] Upgraded to version 10: Dialogue note column recovered');
+          } catch (e) {
+            // Column already exists (Normal upgrade flow), ignore error
+            print('[DB] Upgraded to version 10: Note column already exists');
+          }
         }
       },
     );
@@ -208,6 +219,7 @@ class DatabaseService {
         title TEXT,
         persona TEXT,
         location TEXT,
+        note TEXT,
         created_at TEXT NOT NULL
       )
     ''');

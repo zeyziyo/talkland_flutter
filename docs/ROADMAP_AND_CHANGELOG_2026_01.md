@@ -81,6 +81,10 @@
 *   [x] **UX/Guide**: Mode 1 '단어/문장' 토글 스위치 및 하이라이트 튜토리얼 적용.
 *   [x] **Stability**: Deprecated 코드 제거 및 Import 트랜잭션 최적화.
 *   [x] **Final Stability (Jan 30)**: `AppState` 중복 필드 제거, `DatabaseService` 문법 오류 수정, `Geolocator` 최신 SDK 대응 및 43개 언어 Localization 전수 동기화 완료 (Build 100% 성공 보장).
+*   [x] **Phase 62: Dialogue Enhancements (Feb 2)**:
+    *   **Auto-Title**: 대화 개수 기반(Chat 1, Chat 2) 제목 자동 생성.
+    *   **Note & Search**: 대화 종료 시 메모(Note) 저장 및 히스토리 검색/필터(날짜) 기능 추가.
+    *   **Optimistic Sync**: 저장 및 대화 시작 시 UI 즉시 갱신(렉 제거).
 
 ### 🚀 Phase 13: 개인화 & 추천 (Planned - Feb)
 *   [ ] **Recommender**: 사용자 데이터를 분석하여 맞춤형 학습 콘텐츠 제안.
