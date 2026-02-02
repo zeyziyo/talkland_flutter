@@ -148,8 +148,7 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
                           ),
                       ],
                     ),
-                      ],
-                    ),
+
                     trailing: IconButton(
                       icon: const Icon(Icons.delete_outline, color: Colors.grey),
                       splashRadius: 20,

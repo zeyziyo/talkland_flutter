@@ -2869,6 +2869,69 @@ class AppState extends ChangeNotifier {
     }
   }
 
+  /// Save User's message to dialogue
+  Future<void> saveUserMessage(String sourceText, String targetText) async {
+    if (_activeDialogueId == null) return;
+
+    final createdAt = DateTime.now().toIso8601String();
+    final timestamp = DateTime.now().millisecondsSinceEpoch;
+    _currentDialogueSequence++;
+
+    try {
+      final db = await DatabaseService.database;
+      await db.transaction((txn) async {
+        const table = 'sentences';
+
+        // 1. User Input (Source Language)
+        final sourceId = await txn.insert(table, {
+          'group_id': timestamp,
+          'text': sourceText,
+          'lang_code': _sourceLang,
+          'created_at': createdAt,
+        }, conflictAlgorithm: ConflictAlgorithm.ignore);
+
+        // 2. Translation (Target Language)
+        final targetId = await txn.insert(table, {
+          'group_id': timestamp,
+          'text': targetText,
+          'lang_code': _targetLang,
+          'created_at': createdAt,
+        }, conflictAlgorithm: ConflictAlgorithm.ignore);
+
+        // 3. Link Translation
+        await txn.insert('sentence_translations', {
+          'source_sentence_id': sourceId,
+          'target_sentence_id': targetId,
+        }, conflictAlgorithm: ConflictAlgorithm.ignore);
+
+        // 4. Chat Message Link
+        await txn.insert('chat_messages', {
+          'dialogue_id': _activeDialogueId,
+          'group_id': timestamp,
+          'speaker': 'user',
+          'sequence_order': _currentDialogueSequence,
+          'created_at': createdAt,
+        });
+      });
+
+      notifyListeners();
+
+      // Background Sync
+      SupabaseService.savePrivateChatMessage(
+        dialogueId: _activeDialogueId!,
+        sourceText: sourceText,
+        targetText: targetText,
+        sourceLang: _sourceLang,
+        targetLang: _targetLang,
+        speaker: 'user',
+        sequenceOrder: _currentDialogueSequence,
+      ).catchError((e) => debugPrint('[AppState] Cloud Sync Error: $e'));
+
+    } catch (e) {
+      debugPrint('[AppState] Error saving user message: $e');
+    }
+  }
+
   /// Save AI response to dialogue using Unified Schema (Phase 13 Refactored)
   Future<void> saveAiResponse(
     String sourceText, 
