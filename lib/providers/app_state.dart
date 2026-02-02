@@ -2582,18 +2582,30 @@ class AppState extends ChangeNotifier {
     }
 
     // 2. Load from Local DB (Single Source of Truth)
+    // 2. Load from Local DB (Single Source of Truth)
     try {
       final localData = await DatabaseService.getDialogueGroups();
-      _dialogueGroups = localData.map((m) => DialogueGroup(
-        id: m['id'] as String,
-        userId: m['user_id'] as String? ?? 'anonymous',
-        title: m['title'] as String?,
-        persona: m['persona'] as String?,
-        location: m['location'] as String?,
-        note: m['note'] as String?, // Phase 62
-        createdAt: DateTime.parse(m['created_at'] as String),
-      )).toList();
       
+      final List<DialogueGroup> loadedGroups = [];
+      for (final m in localData) {
+        try {
+          loadedGroups.add(DialogueGroup(
+            id: m['id'] as String,
+            userId: m['user_id'] as String? ?? 'anonymous',
+            title: m['title'] as String?,
+            persona: m['persona'] as String?,
+            location: m['location'] as String?,
+            note: m['note'] as String?, // Phase 62
+            createdAt: m['created_at'] != null 
+              ? DateTime.tryParse(m['created_at'] as String) ?? DateTime.now() 
+              : DateTime.now(),
+          ));
+        } catch (e) {
+          debugPrint('[AppState] Failed to parse dialogue group ${m['id']}: $e');
+        }
+      }
+      
+      _dialogueGroups = loadedGroups;
       notifyListeners();
     } catch (e) {
        debugPrint('[AppState] Local dialogue load failed: $e');
@@ -2724,7 +2736,7 @@ class AppState extends ChangeNotifier {
       try {
         await SupabaseService.client.from('dialogue_groups').update({
           'location': location,
-          // 'note': note // Supabase schema might need update too if we want cloud sync for note
+          'note': note
         }).eq('id', _activeDialogueId!);
       } catch (e) {
         debugPrint('[AppState] Supabase location sync failed: $e');
