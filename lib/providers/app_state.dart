@@ -1438,44 +1438,55 @@ class AppState extends ChangeNotifier {
       if (_selectedTags.isNotEmpty) {
         query += 'INNER JOIN item_tags it ON t.id = it.item_id AND it.item_type = ? ';
         whereArgs.add(_recordTypeFilter == 'word' ? 'word' : 'sentence');
-        
-        query += 'WHERE it.tag IN (${_selectedTags.map((_) => '?').join(',')}) ';
-        whereArgs.addAll(_selectedTags);
-      } else {
-        query += 'WHERE 1=1 ';
       }
 
+      // WHERE Clause Construction
+      List<String> conditions = [];
+      
+      // 1. Language Filter (Optimization: Only fetch current pair)
+      conditions.add('t.lang_code IN (?, ?)');
+      whereArgs.add(_sourceLang);
+      whereArgs.add(_targetLang);
+      
+      // 2. Tags
+      if (_selectedTags.isNotEmpty) {
+        conditions.add('it.tag IN (${_selectedTags.map((_) => '?').join(',')})');
+        whereArgs.addAll(_selectedTags);
+      }
+      
+      // 3. Search Query
       if (_searchQuery.isNotEmpty) {
-        query += 'AND t.text LIKE ? ';
+        conditions.add('t.text LIKE ?');
         whereArgs.add('%$_searchQuery%');
       }
 
-      // Phase 59: Advanced Filters (StartsWith)
+      // 4. Phase 59: StartsWith
       if (_filterStartsWith != null && _filterStartsWith!.isNotEmpty) {
-        // Case-insensitive prefix search
-        query += 'AND t.text LIKE ? ';
+        conditions.add('t.text LIKE ?');
         whereArgs.add('${_filterStartsWith}%');
       }
 
-      // Phase 27: Filter by memorized status
+      // 5. Memorized Status
       if (!_showMemorized) {
-        query += 'AND (t.is_memorized IS NULL OR t.is_memorized = 0) ';
+        conditions.add('(t.is_memorized IS NULL OR t.is_memorized = 0)');
       }
       
-      // Default Sort: Newest First
+      // Apply WHERE conditions
+      if (conditions.isNotEmpty) {
+         query += 'WHERE ${conditions.join(' AND ')} ';
+      }
+      
+      // 6. GROUP BY (Deduplication)
+      query += 'GROUP BY t.group_id ';
+      
+      // 7. ORDER BY
       query += 'ORDER BY t.created_at DESC ';
 
-      // Phase 59: Advanced Filters (Limit)
+      // 8. LIMIT
       if (_filterLimit != null) {
         query += 'LIMIT ? ';
         whereArgs.add(_filterLimit);
       }
-
-      // 2. 언어 필터 (Source 또는 Target이 현재 설정과 일치하는 것만)
-      
-      // CRITICAL: DEDUPLICATION using GROUP BY group_id
-      query += 'GROUP BY t.group_id ';
-      query += 'ORDER BY t.created_at DESC';
 
       final List<Map<String, dynamic>> results = await db.rawQuery(query, whereArgs);
       
