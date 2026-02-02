@@ -942,8 +942,11 @@ class AppState extends ChangeNotifier {
         final cachedTargetId = await DatabaseService.insertLanguageRecord(_targetLang, _translatedText);
         
         await DatabaseService.saveTranslationLink(
-          sourceId: cachedSourceId, 
-          targetId: cachedTargetId, 
+          sourceLang: _sourceLang,
+          sourceId: cachedSourceId,
+          targetLang: _targetLang,
+          targetId: cachedTargetId,
+          materialId: _selectedMaterialId ?? 0,
           note: _note
         );
         debugPrint('[AppState] Legacy cache backfilled for reuse');
