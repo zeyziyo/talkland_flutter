@@ -14,6 +14,9 @@ class ChatHistoryScreen extends StatefulWidget {
 }
 
 class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
+  final TextEditingController _searchController = TextEditingController();
+  DateTimeRange? _selectedDateRange;
+  
   @override
   void initState() {
     super.initState();
@@ -23,41 +26,144 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
   }
 
   @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  // Filter Logic
+  List<DialogueGroup> _filterDialogues(List<DialogueGroup> allDialogues) {
+    return allDialogues.where((group) {
+      // 1. Search Text
+      if (_searchController.text.isNotEmpty) {
+        final query = _searchController.text.toLowerCase();
+        final titleMatch = group.title?.toLowerCase().contains(query) ?? false;
+        final noteMatch = group.note?.toLowerCase().contains(query) ?? false;
+        final personaMatch = group.persona?.toLowerCase().contains(query) ?? false;
+        
+        if (!titleMatch && !noteMatch && !personaMatch) return false;
+      }
+      
+      // 2. Date Range
+      if (_selectedDateRange != null) {
+        if (group.createdAt.isBefore(_selectedDateRange!.start) ||
+            group.createdAt.isAfter(_selectedDateRange!.end.add(const Duration(days: 1)))) {
+          return false;
+        }
+      }
+      return true;
+    }).toList();
+  }
+  
+  Future<void> _pickDateRange() async {
+    final picked = await showDateRangePicker(
+      context: context,
+      firstDate: DateTime(2025),
+      lastDate: DateTime.now(),
+      initialDateRange: _selectedDateRange,
+    );
+    if (picked != null) {
+      setState(() => _selectedDateRange = picked);
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     final appState = Provider.of<AppState>(context);
     final l10n = AppLocalizations.of(context)!;
-    final dialogues = appState.dialogueGroups;
+    
+    final allDialogues = appState.dialogueGroups;
+    final filteredDialogues = _filterDialogues(allDialogues);
 
-    final content = dialogues.isEmpty
-          ? _buildEmptyState(l10n)
-          : ListView.builder(
-              itemCount: dialogues.length,
-              itemBuilder: (context, index) {
-                final group = dialogues[index];
-                return ListTile(
-                  leading: CircleAvatar(
-                    backgroundColor: Colors.blue[100],
-                    child: const Icon(Icons.chat, color: Colors.blue),
+    final content = Column(
+      children: [
+        // Search & Filter Bar
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  controller: _searchController,
+                  decoration: InputDecoration(
+                    hintText: l10n.search,
+                    prefixIcon: const Icon(Icons.search),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 16),
                   ),
-                  title: Text(group.title ?? l10n.chatUntitled),
-                  subtitle: Text(
-                    '${group.persona ?? "Assistant"} • ${group.createdAt.toString().split('.')[0]}',
-                  ),
-                  onTap: () async {
-                    // Set as active and navigate
-                    await appState.loadExistingDialogue(group);
-                    if (mounted) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ChatScreen(initialDialogue: group),
+                  onChanged: (val) => setState(() {}),
+                ),
+              ),
+              const SizedBox(width: 8),
+              IconButton(
+                icon: Icon(Icons.calendar_today, 
+                  color: _selectedDateRange != null ? const Color(0xFF667eea) : Colors.grey
+                ),
+                onPressed: _pickDateRange,
+                tooltip: 'Filter by Date',
+              ),
+              if (_selectedDateRange != null)
+                IconButton(
+                  icon: const Icon(Icons.close, size: 20),
+                  onPressed: () => setState(() => _selectedDateRange = null),
+                ),
+            ],
+          ),
+        ),
+        
+        // List
+        Expanded(
+          child: filteredDialogues.isEmpty
+            ? _buildEmptyState(l10n)
+            : ListView.builder(
+                itemCount: filteredDialogues.length,
+                itemBuilder: (context, index) {
+                  final group = filteredDialogues[index];
+                  return ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: Colors.blue[100],
+                      child: const Icon(Icons.chat, color: Colors.blue),
+                    ),
+                    title: Text(
+                      group.title ?? l10n.chatUntitled,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '${group.persona ?? "Assistant"} • ${group.createdAt.toString().split('.')[0]}',
+                          style: TextStyle(color: Colors.grey[600], fontSize: 12),
                         ),
-                      );
-                    }
-                  },
-                );
-              },
-            );
+                        if (group.note != null && group.note!.isNotEmpty)
+                          Padding(
+                            padding: const EdgeInsets.only(top: 2),
+                            child: Text(
+                              '${l10n.labelNote}: ${group.note}',
+                              style: TextStyle(color: Colors.grey[800], fontStyle: FontStyle.italic, fontSize: 13),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                      ],
+                    ),
+                    onTap: () async {
+                      await appState.loadExistingDialogue(group);
+                      if (mounted) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ChatScreen(initialDialogue: group),
+                          ),
+                        );
+                      }
+                    },
+                  );
+                },
+              ),
+        ),
+      ],
+    );
 
     if (widget.isWidget) {
       return Scaffold(
@@ -91,6 +197,9 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
   }
 
   Widget _buildEmptyState(AppLocalizations l10n) {
+    // Only show "No Conversations" if truly empty, otherwise "No Matches"
+    final isFiltering = _searchController.text.isNotEmpty || _selectedDateRange != null;
+    
     return Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -98,11 +207,11 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
           Icon(Icons.chat_bubble_outline, size: 64, color: Colors.grey[300]),
           const SizedBox(height: 16),
           Text(
-            l10n.chatNoConversations,
+            isFiltering ? 'No results found' : l10n.chatNoConversations,
             style: TextStyle(color: Colors.grey[500], fontSize: 18),
           ),
           const SizedBox(height: 8),
-          Text(l10n.chatStartNewPrompt),
+          if (!isFiltering) Text(l10n.chatStartNewPrompt),
         ],
       ),
     );

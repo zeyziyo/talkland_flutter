@@ -2531,8 +2531,17 @@ class AppState extends ChangeNotifier {
         userId: SupabaseService.client.auth.currentUser?.id,
       );
 
+      // 3. Optimistic Update (Immediate List Insertion)
+      _dialogueGroups.insert(0, DialogueGroup(
+        id: dialogueId,
+        userId: SupabaseService.client.auth.currentUser?.id ?? 'anonymous',
+        title: 'New Conversation',
+        persona: persona,
+        createdAt: DateTime.now(),
+      ));
+
       _statusMessage = 'Chat started';
-      await loadDialogueGroups();
+      // await loadDialogueGroups(); // Skip full reload
       notifyListeners();
     } catch (e) {
       _statusMessage = 'Failed to start chat: $e';
@@ -2581,6 +2590,7 @@ class AppState extends ChangeNotifier {
         title: m['title'] as String?,
         persona: m['persona'] as String?,
         location: m['location'] as String?,
+        note: m['note'] as String?, // Phase 62
         createdAt: DateTime.parse(m['created_at'] as String),
       )).toList();
       
@@ -2690,8 +2700,8 @@ class AppState extends ChangeNotifier {
     }
   }
 
-  /// Finalize dialogue with user-defined title and location
-  Future<void> saveDialogueProgress(String title, String location) async {
+  /// Finalize dialogue with user-defined title, location, and note
+  Future<void> saveDialogueProgress(String title, String location, String? note) async {
     if (_activeDialogueId == null) return;
     
     _activeDialogueTitle = title;
@@ -2704,46 +2714,46 @@ class AppState extends ChangeNotifier {
         title: title,
         location: location,
         persona: _activePersona,
-        createdAt: DateTime.now().toIso8601String(), // Or keep original
+        note: note,
+        createdAt: DateTime.now().toIso8601String(), // This might reset creation time if not careful, but fine for 'last active'
         userId: SupabaseService.client.auth.currentUser?.id,
       );
       
-      // 2. Update Supabase
+      // 2. Update Supabase (Best effort)
       await SupabaseService.updateDialogueTitle(_activeDialogueId!, title);
-      // Note: location support in Supabase dialogue_groups table should be ensured.
       try {
         await SupabaseService.client.from('dialogue_groups').update({
           'location': location,
+          // 'note': note // Supabase schema might need update too if we want cloud sync for note
         }).eq('id', _activeDialogueId!);
       } catch (e) {
         debugPrint('[AppState] Supabase location sync failed: $e');
       }
       
-      // 3. Optimistic Update of Local List (Fix for Dropdown UI delay)
+      // 3. Optimistic Update of Local List (CRITICAL FIX for UI Lag)
       final index = _dialogueGroups.indexWhere((g) => g.id == _activeDialogueId);
-      if (index != -1) {
-        final old = _dialogueGroups[index];
-        _dialogueGroups[index] = DialogueGroup(
-          id: old.id,
-          userId: old.userId,
-          title: title, // Updated Title
-          persona: old.persona,
-          location: location, // Updated Location
-          createdAt: old.createdAt,
-        );
-      } else {
-        // If not in list (rare), try reload
-        await loadDialogueGroups();
-      }
+      final updatedGroup = DialogueGroup(
+          id: _activeDialogueId!,
+          userId: SupabaseService.client.auth.currentUser?.id ?? 'anonymous',
+          title: title,
+          persona: _activePersona,
+          location: location,
+          note: note,
+          createdAt: index != -1 ? _dialogueGroups[index].createdAt : DateTime.now(),
+      );
 
-      // 4. Refresh lists
+      if (index != -1) {
+        _dialogueGroups[index] = updatedGroup;
+      } else {
+        _dialogueGroups.insert(0, updatedGroup);
+      }
+      notifyListeners(); // Immediate UI Update
+
+      // 4. Refresh lists silently
       await loadStudyMaterials();
-      // await loadDialogueGroups(); // Skip full reload to avoid reverting optimistic update if cloud is slow
       
     } catch (e) {
       debugPrint('[AppState] Error saving dialogue progress: $e');
-    } finally {
-      notifyListeners();
     }
   }
 

@@ -215,7 +215,7 @@
   "@selectStudyMaterial": {
     "description": "Study material selector label"
   },
-  "subject": "Subject:",
+  "subject": "Title:",
   "@subject": {
     "description": "Subject label"
   },

@@ -23,7 +23,7 @@ class DatabaseService {
     
     return await openDatabase(
       path,
-      version: 8, // Upgraded for Phase 21 (Add is_memorized)
+      version: 9, // Upgraded for Phase 62 (Dialogue Note & Features)
       onCreate: (db, version) async {
         await _createBaseTables(db);
         await _ensureDefaultMaterial(db);
@@ -91,6 +91,12 @@ class DatabaseService {
           await db.execute('ALTER TABLE words ADD COLUMN is_memorized INTEGER DEFAULT 0');
           await db.execute('ALTER TABLE sentences ADD COLUMN is_memorized INTEGER DEFAULT 0');
           print('[DB] Upgraded to version 8: Memorized status added');
+        }
+
+        if (oldVersion < 9) {
+          // Phase 62: Dialogue Notes
+          await db.execute('ALTER TABLE dialogue_groups ADD COLUMN note TEXT');
+          print('[DB] Upgraded to version 9: Dialogue note added');
         }
       },
     );
@@ -1516,14 +1522,16 @@ class DatabaseService {
   // === Dialogue Group Operations (Phase 11) ===
 
   /// Insert or Update a dialogue group
+  /// Insert or Update a dialogue group
   static Future<void> insertDialogueGroup({
     required String id,
     String? userId,
     String? title,
     String? persona,
     String? location,
+    String? note, // Phase 62
     required String createdAt,
-    Transaction? txn, // Added txn
+    Transaction? txn, 
   }) async {
     final executor = txn ?? await database;
     await executor.insert(
@@ -1534,11 +1542,19 @@ class DatabaseService {
         'title': title,
         'persona': persona,
         'location': location,
+        'note': note,
         'created_at': createdAt,
       },
       conflictAlgorithm: ConflictAlgorithm.replace,
     );
     print('[DB] Dialogue group saved: $id ($title, Location: $location)');
+  }
+
+  /// Get total count of dialogues (for Auto-Naming "Chat N")
+  static Future<int> getDialogueCount() async {
+    final db = await database;
+    final result = await db.rawQuery('SELECT COUNT(*) as count FROM dialogue_groups');
+    return Sqflite.firstIntValue(result) ?? 0;
   }
 
   /// Get all dialogue groups for a user

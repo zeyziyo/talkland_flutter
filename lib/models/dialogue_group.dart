@@ -4,6 +4,7 @@ class DialogueGroup {
   final String? title;     // AI Auto-generated or User-defined
   final String? persona;   // AI Persona context
   final String? location;  // Added for location tracking
+  final String? note;      // Phase 62: User note
   final DateTime createdAt;
 
   DialogueGroup({
@@ -12,6 +13,7 @@ class DialogueGroup {
     this.title,
     this.persona,
     this.location,
+    this.note,
     required this.createdAt,
   });
 
@@ -22,6 +24,7 @@ class DialogueGroup {
       title: json['title'] as String?,
       persona: json['persona'] as String?,
       location: json['location'] as String?,
+      note: json['note'] as String?,
       createdAt: DateTime.parse(json['created_at'] as String),
     );
   }
@@ -33,6 +36,7 @@ class DialogueGroup {
       'title': title,
       'persona': persona,
       'location': location,
+      'note': note,
       'created_at': createdAt.toIso8601String(),
     };
   }

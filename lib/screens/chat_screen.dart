@@ -306,14 +306,28 @@ class _ChatScreenState extends State<ChatScreen> {
     
     // 1. Prepare Initial Values
     final now = DateTime.now();
-    final dateStr = DateFormat('MM/dd HH:mm').format(now);
+    // final dateStr = DateFormat('MM/dd HH:mm').format(now);
     
-    // Fetch location once for pre-filling
+    // Fetch location for pre-filling
     final detectedLocation = await _getLocationString(l10n);
-    final defaultTitle = detectedLocation.isNotEmpty ? '$detectedLocation ($dateStr)' : 'Chat $dateStr';
     
-    final titleController = TextEditingController(text: appState.activeDialogueTitle ?? defaultTitle);
+    // Auto-generate Title Logic: "Chat N"
+    int count = await DatabaseService.getDialogueCount();
+    // If saving NEW chat, it's count + 1. If updating existing, it's just existing title.
+    // If activeDialogueTitle is user-set (not "New Conversation"), keep it.
+    
+    String defaultTitle;
+    if (appState.activeDialogueTitle != null && 
+        appState.activeDialogueTitle != 'New Conversation' && 
+        appState.activeDialogueTitle != l10n.chatUntitled) {
+      defaultTitle = appState.activeDialogueTitle!;
+    } else {
+      defaultTitle = 'Chat ${count + 1}'; // Ensure unique-ish name
+    }
+    
+    final titleController = TextEditingController(text: defaultTitle);
     final locationController = TextEditingController(text: detectedLocation);
+    final noteController = TextEditingController(); // Phase 62: Note
 
     if (!mounted) return;
 
@@ -341,8 +355,8 @@ class _ChatScreenState extends State<ChatScreen> {
                       TextField(
                         controller: titleController,
                         decoration: InputDecoration(
-                          labelText: l10n.subject,
-                          hintText: l10n.chatUntitled,
+                          labelText: l10n.subject, // Will be "Title" in L10n update
+                          hintText: 'Chat 1',
                           prefixIcon: const Icon(Icons.title),
                           border: const OutlineInputBorder(),
                         ),
@@ -373,23 +387,30 @@ class _ChatScreenState extends State<ChatScreen> {
                         
                       const SizedBox(height: 16),
                       
-                      // Location Input
+                      // Location Input (Read Only)
                       TextField(
                         controller: locationController,
+                        readOnly: true, // User requested Read-Only
                         decoration: InputDecoration(
                           labelText: l10n.location,
                           prefixIcon: const Icon(Icons.location_on),
-                          suffixIcon: IconButton(
-                            icon: const Icon(Icons.my_location),
-                            onPressed: () async {
-                              final loc = await _getLocationString(l10n);
-                              setDialogState(() {
-                                locationController.text = loc;
-                              });
-                            },
-                          ),
+                          filled: true,
+                          fillColor: Colors.grey[100],
                           border: const OutlineInputBorder(),
                         ),
+                      ),
+
+                      const SizedBox(height: 16),
+
+                      // Note Input (New)
+                      TextField(
+                        controller: noteController,
+                        decoration: InputDecoration(
+                          labelText: l10n.labelNote, // Reuse "Note" label
+                          prefixIcon: const Icon(Icons.note),
+                          border: const OutlineInputBorder(),
+                        ),
+                        maxLines: 2,
                       ),
                     ],
                   ),
@@ -407,14 +428,16 @@ class _ChatScreenState extends State<ChatScreen> {
                     onPressed: () async {
                       final finalTitle = titleController.text.trim();
                       final finalLocation = locationController.text.trim();
+                      final finalNote = noteController.text.trim();
                       
                       if (finalTitle.isEmpty) return;
                       
-                      await state.saveDialogueProgress(finalTitle, finalLocation);
+                      await state.saveDialogueProgress(
+                        finalTitle, 
+                        finalLocation,
+                        finalNote.isNotEmpty ? finalNote : null,
+                      );
                       
-                      // Refresh list for Mode 4 Dropdown
-                      await state.loadDialogueGroups();
-
                       if (context.mounted) {
                         Navigator.of(dialogContext).pop(); 
                         Navigator.of(context).pop(); 

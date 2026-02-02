@@ -65,7 +65,7 @@
   "error": "오류",
   "importErrorMessage": "파일 불러오기 실패:\\n{error}",
   "selectStudyMaterial": "학습 자료 선택",
-  "subject": "주제:",
+  "subject": "제목:",
   "source": "출처:",
   "file": "파일:",
   "progress": "진행률: {current} / {total}",
