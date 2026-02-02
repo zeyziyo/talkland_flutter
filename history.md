@@ -4,6 +4,49 @@
 
 ---
 
+## 📅 [2026-02-02 09:00:00] Phase 60: 'Formal' 태그 공식 지원 및 입력 보호 (Formal Tag & User Input Protection)
+
+### ✅ 태스크 (Task)
+- [x] **사용자 입력 보호**: AI 자동 분석이 사용자가 직접 선택한 품사나 문장 종류를 덮어쓰지 않도록 수정 (User Select > AI Auto-fill).
+- [x] **'존댓말' 태그 분리**: AI가 분석한 'Formal' 속성을 문장 종류에 덮어씌우지 않고, 별도의 **"존댓말 (Polite)"** 태그로 자동 추가.
+- [x] **카테고리 추가**: 문장 종류 선택 메뉴에 **"존댓말"** 항목 공식 추가.
+- [x] **UI 수정**: 입력 모드의 "상세 정보" 팝업 타이틀을 **"상세 분류"**로 변경.
+
+### 📝 워크스루 (Walkthrough)
+- **문제**: AI가 한국어 문장의 존댓말 여부를 "Formal"이라고 반환하면서, 사용자가 선택한 "평서문(Statement)" 등의 설정을 강제로 덮어쓰는 문제 발생.
+- **해결**: 
+  - `AppState.translate` 로직을 수정하여, 사용자가 입력한 값이 없을 때만 AI 값을 채워넣도록 변경.
+  - "Formal" 값이 오면 `_sourceFormType`이 아닌 `_aiDetectedTags` 리스트에 저장.
+  - `Mode1Widget`에서 이 리스트를 확인하여 "존댓말" 태그를 칩으로 추가.
+
+## 📅 [2026-02-01 22:45:00] Phase 59: 고급 필터 및 검색 조건 강화 (Advanced Filters)
+
+### ✅ 태스크 (Task)
+- [x] **검색 조건 강화**: 복습(Mode 2) 및 연습(Mode 3) 모드에 **"시작 글자(Starts With)"** 검색 필터 추가 (DB `LIKE 'A%'` 쿼리 최적화).
+- [x] **최근 항목 필터**: **"최근 N개 보기"** (Limit) 기능을 추가하여 최신 학습 데이터만 집중적으로 복습 가능.
+- [x] **UI 개선**: 필터 팝업의 "태그 선택" 버튼을 "검색 조건"으로 변경하고, 내부에서 태그/시작글자/개수제한을 통합 설정하도록 개편.
+- [x] **L10n**: 관련 UI 텍스트(시작 글자, 초기화 등) 국제화 적용.
+
+## 📅 [2026-02-01 19:30:00] Phase 58: Mode 1/2 일관성 및 데이터 무결성 (Consistency & Data Integrity)
+
+### ✅ 태스크 (Task)
+- [x] **저장 로직 조정**: 소스 단어는 "번역" 버튼 클릭 시 즉시 DB에 저장되지 않음.
+- [x] **데이터 무결성**: "저장" 버튼 클릭 시에만 저장되도록 하여 번역 쌍이 항상 완전하게 유지되도록 보장.
+- [x] **중복 방지**: `getLanguageRecordId`를 구현하여 "고아(orphan)" 레코드 삽입 없이 기존 단어 존재 여부 확인.
+- [x] **레거시 백필**: `saveTranslation`에 레거시 테이블 백필 로직을 추가하여 API 재사용 최적화를 유지하면서 데이터 무결성 강화.
+
+## 📅 [2026-02-01 18:55:00] Phase 57: Mode 1 자동 완성 최적화 (Optimize Autocomplete)
+
+### ✅ 태스크 (Task)
+- [x] **Debounce 추가**: `Mode1Widget` 입력창에 `Timer`를 이용한 300ms 디바운스 로직 적용.
+- [x] **Performance**: 불필요한 DB 조회 횟수 감소 및 UI 반응성 향상.
+
+## 📅 [2026-02-01 13:50:00] Hotfix: 빌드 오류 수정 (Fix Build Error)
+
+### ✅ 태스크 (Task)
+- [x] **Fix Error**: `AppState`에서 `SpeechService`의 정의되지 않은 메서드 `stopListening`을 `stopSTT`로 교체하여 빌드 오류 해결.
+- [x] **Cleanup**: `Mode3PracticeCard`의 미사용 변수 정리.
+
 ## 📅 [2026-02-01 13:30:00] Phase 56: Mode 3 리스트 구조 개편 (Refactor List to Include Expandable Cards)
 
 ### ✅ 태스크 (Task)

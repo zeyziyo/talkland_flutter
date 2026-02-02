@@ -101,6 +101,10 @@ class AppState extends ChangeNotifier {
   String _sourceFormType = ''; // 문법 형태 (Past, Comparative 등)
   String _sourceRoot = ''; // 단어 원형 (Go, Apple 등)
   
+  // Phase X: AI Detected Tags
+  List<String> _aiDetectedTags = [];
+  List<String> get aiDetectedTags => _aiDetectedTags;
+  
   // Chat Voice Settings
   String _chatUserGender = 'male'; 
   String _chatAiGender = 'female';
@@ -138,6 +142,13 @@ class AppState extends ChangeNotifier {
   List<Map<String, dynamic>> _studyMaterials = []; // Available study materials (Legacy)
   List<String> _availableTags = []; // 신규 태그 목록
   List<String> _selectedTags = []; // 현재 선택된 태그 필터
+  int? _filterLimit; // Phase 59
+  String? _filterStartsWith; // Phase 59
+
+  // Getters
+  List<String> get selectedTags => _selectedTags;
+  int? get filterLimit => _filterLimit;
+  String? get filterStartsWith => _filterStartsWith;
   int? _selectedMaterialId; // Currently selected material (Legacy/Backward compatibility)
   List<Map<String, dynamic>> _materialRecords = []; // Sentences in selected tags/material
   Set<int> _studiedTranslationIds = {}; // Reviewed items in current session
@@ -616,26 +627,34 @@ class AppState extends ChangeNotifier {
       }
 
       // 1. Save or reuse source text
-      int sourceId;
+      int? sourceId;
       if (_selectedSourceId != null) {
         sourceId = _selectedSourceId!;
         debugPrint('[AppState] Reusing existing source: id=$sourceId');
       } else {
-        sourceId = await DatabaseService.insertLanguageRecord(_sourceLang, _sourceText);
-        _selectedSourceId = sourceId;
-        debugPrint('[AppState] Created new source: id=$sourceId');
+        // Phase 58: Prevent Orphaned Save. Check existence only.
+        // sourceId = await DatabaseService.insertLanguageRecord(_sourceLang, _sourceText);
+        sourceId = await DatabaseService.getLanguageRecordId(_sourceLang, _sourceText);
+        if (sourceId != null) {
+          _selectedSourceId = sourceId;
+          debugPrint('[AppState] Found existing source: id=$sourceId');
+        } else {
+          debugPrint('[AppState] New source text (Not saved yet)');
+        }
       }
       
       // 2. Check if translation already exists
       _statusMessage = '번역 확인 중...';
       notifyListeners();
       
-      final existingTranslation = await DatabaseService.getTranslationIfExists(
-        _sourceLang,
-        sourceId,
-        _targetLang,
-        note: _note
-      );
+      final existingTranslation = (sourceId != null) 
+        ? await DatabaseService.getTranslationIfExists(
+            _sourceLang,
+            sourceId,
+            _targetLang,
+            note: _note
+          ) 
+        : null;
       
       if (existingTranslation != null) {
         final loadedText = existingTranslation['target_text'] as String;
@@ -725,9 +744,36 @@ class AppState extends ChangeNotifier {
       }
 
       // 4. AI 분석 결과 저장 (신설)
-      _sourcePos = result['pos'] as String? ?? '';
-      _sourceFormType = result['formType'] as String? ?? '';
-      _sourceRoot = result['root'] as String? ?? '';
+      // 4. AI 분석 결과 처리 (User Input 검증 및 별도 태그 처리)
+      // Phase X: User Input Priority Logic
+      final rawPos = result['pos'] as String? ?? '';
+      final rawForm = result['formType'] as String? ?? '';
+      final rawRoot = result['root'] as String? ?? '';
+
+      // POS: Only fill if empty AND valid
+      if (_sourcePos.isEmpty && AppState.posCategories.contains(rawPos)) {
+        _sourcePos = rawPos;
+      }
+
+      // FormType: Check validity
+      bool isValidForm = AppState.sentenceCategories.contains(rawForm) ||
+                         AppState.verbFormCategories.contains(rawForm) ||
+                         AppState.adjectiveFormCategories.contains(rawForm) ||
+                         AppState.pronounCaseCategories.contains(rawForm);
+
+      if (_sourceFormType.isEmpty && isValidForm) {
+        _sourceFormType = rawForm;
+      } else if (!isValidForm && rawForm.toLowerCase() == 'formal') {
+        // Special Case: 'formal' -> Add to specialized tags, don't clobber FormType
+        if (!_aiDetectedTags.contains('formal')) {
+          _aiDetectedTags.add('formal');
+        }
+      }
+      
+      // Root: Only fill if empty
+      if (_sourceRoot.isEmpty) {
+        _sourceRoot = rawRoot;
+      }
       
       // 5. Increment Usage (NEW)
       await _usageService.incrementUsage();
@@ -887,6 +933,22 @@ class AppState extends ChangeNotifier {
         );
       } catch (e) {
         debugPrint('[AppState] Supabase Cloud Sync failed: $e');
+      }
+
+      // 3. Phase 58: Backfill Legacy Cache (Since we skipped it in translate)
+      // This ensures 'reuse' works for future 'translate' calls on this word.
+      try {
+        final cachedSourceId = await DatabaseService.insertLanguageRecord(_sourceLang, _sourceText);
+        final cachedTargetId = await DatabaseService.insertLanguageRecord(_targetLang, _translatedText);
+        
+        await DatabaseService.saveTranslationLink(
+          cachedSourceId, 
+          cachedTargetId, 
+          note: _note
+        );
+        debugPrint('[AppState] Legacy cache backfilled for reuse');
+      } catch (e) {
+         debugPrint('[AppState] Legacy cache backfill failed: $e');
       }
 
       _statusMessage = '저장 완료!';
@@ -1326,9 +1388,25 @@ class AppState extends ChangeNotifier {
   // Removed duplicate setShowMemorized from here
 
 
-  /// 모든 태그 선택 해제
-  void clearSelectedTags() {
+  /// 모든 검색 조건 초기화 (태그, 제한, 시작문자)
+  void clearSearchConditions() {
     _selectedTags.clear();
+    _filterLimit = null;
+    _filterStartsWith = null;
+    loadRecordsByTags();
+    notifyListeners();
+  }
+
+  /// Phase 59: 검색 한도 설정
+  void setFilterLimit(int? limit) {
+    _filterLimit = limit;
+    loadRecordsByTags();
+    notifyListeners();
+  }
+
+  /// Phase 59: 시작 문자 설정
+  void setFilterStartsWith(String? text) {
+    _filterStartsWith = text;
     loadRecordsByTags();
     notifyListeners();
   }
@@ -1369,9 +1447,25 @@ class AppState extends ChangeNotifier {
         whereArgs.add('%$_searchQuery%');
       }
 
+      // Phase 59: Advanced Filters (StartsWith)
+      if (_filterStartsWith != null && _filterStartsWith!.isNotEmpty) {
+        // Case-insensitive prefix search
+        query += 'AND t.text LIKE ? ';
+        whereArgs.add('${_filterStartsWith}%');
+      }
+
       // Phase 27: Filter by memorized status
       if (!_showMemorized) {
         query += 'AND (t.is_memorized IS NULL OR t.is_memorized = 0) ';
+      }
+      
+      // Default Sort: Newest First
+      query += 'ORDER BY t.created_at DESC ';
+
+      // Phase 59: Advanced Filters (Limit)
+      if (_filterLimit != null) {
+        query += 'LIMIT ? ';
+        whereArgs.add(_filterLimit);
       }
 
       // 2. 언어 필터 (Source 또는 Target이 현재 설정과 일치하는 것만)

@@ -648,5 +648,9 @@
   "formSingular": "Số ít",
   "formPositive": "Positive",
   "formComparative": "Comparative",
-  "formSuperlative": "Superlative"
+  "formSuperlative": "Superlative",
+  "searchConditions": "Search Conditions",
+  "recentNItems": "Recent {count} items",
+  "startsWith": "Starts with",
+  "reset": "Reset"
 }

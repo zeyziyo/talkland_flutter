@@ -341,6 +341,33 @@ class DatabaseService {
     
     return id;
   }
+
+  /// 언어 테이블에서 텍스트 ID 조회 (저장하지 않음)
+  /// Phase 58: Orphaned Source 방지용
+  static Future<int?> getLanguageRecordId(String langCode, String text) async {
+    final db = await database;
+    final tableName = 'lang_$langCode'.replaceAll('-', '_');
+    
+    // 테이블 존재 확인
+    final tables = await db.rawQuery(
+      "SELECT name FROM sqlite_master WHERE type='table' AND name=?",
+      [tableName]
+    );
+    if (tables.isEmpty) return null;
+
+    final result = await db.query(
+      tableName,
+      columns: ['id'],
+      where: 'text = ? COLLATE NOCASE',
+      whereArgs: [text],
+      limit: 1,
+    );
+    
+    if (result.isNotEmpty) {
+      return result.first['id'] as int;
+    }
+    return null;
+  }
   
   /// 유사 텍스트 검색 (Fuzzy matching using LIKE)
   /// 유사 텍스트 검색 (Stricter: ~1 word difference)

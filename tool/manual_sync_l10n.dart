@@ -7,7 +7,14 @@ const kMasterKeys = [
   'chatNoConversations', 'chatStartNewPrompt', 'personaTeacher', 'personaGuide',
   'personaFriend', 'chatAiChat', 'me', 'chatSaveAndExit', 'errorSelectCategory',
   'basicWordRepository', 'basicSentenceRepository', 'chatEndTitle', 'chatEndMessage',
-  'tutorialAiChatTitle', 'tutorialAiChatDesc', 'tutorialM1ToggleTitle', 'tutorialM1ToggleDesc'
+  'tutorialAiChatTitle', 'tutorialAiChatDesc', 'tutorialM1ToggleTitle', 'tutorialM1ToggleDesc',
+  // Advanced Filtering
+  'searchConditions', 'recentNItems', 'startsWith', 'reset',
+  // Help & Guide
+  'helpTitle', 'helpTabModes', 'helpTabJson', 'helpTabTour', 'helpMode1Desc',
+  'helpMode1Details', 'helpMode2Desc', 'helpMode2Details', 'helpMode3Desc',
+  'helpMode3Details', 'helpModeChatDesc', 'helpModeChatDetails', 'helpJsonDesc',
+  'helpTourDesc', 'helpDialogueImportDesc', 'helpDialogueImportDetails'
 ];
 
 const kTranslations = {

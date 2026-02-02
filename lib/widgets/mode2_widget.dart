@@ -212,17 +212,20 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Icon(
-                                Icons.local_offer_outlined, 
+                                Icons.tune, 
                                 size: 14, 
-                                color: appState.selectedTags.isNotEmpty ? Colors.blue.shade700 : Colors.grey.shade600,
+                                color: appState.selectedTags.isNotEmpty || appState.filterLimit != null || appState.filterStartsWith != null ? Colors.blue.shade700 : Colors.grey.shade600,
                               ),
-                              const SizedBox(width: 2),
+                              const SizedBox(width: 4),
                                 Text(
-                                  appState.selectedTags.isEmpty ? l10n.tagSelection : '${appState.selectedTags.length}',
+                                  // Show count if tags selected, else label
+                                  appState.selectedTags.isEmpty && appState.filterLimit == null && appState.filterStartsWith == null
+                                      ? l10n.searchConditions 
+                                      : '${appState.selectedTags.length + (appState.filterLimit != null ? 1 : 0) + (appState.filterStartsWith != null ? 1 : 0)}',
                                   style: TextStyle(
                                     fontSize: 11,
                                     fontWeight: FontWeight.bold,
-                                    color: appState.selectedTags.isNotEmpty ? Colors.blue.shade800 : Colors.grey.shade700,
+                                    color: appState.selectedTags.isNotEmpty || appState.filterLimit != null || appState.filterStartsWith != null ? Colors.blue.shade800 : Colors.grey.shade700,
                                   ),
                                 ),
                             ],
@@ -992,61 +995,125 @@ class _Mode2WidgetState extends State<Mode2Widget> {
       context: context,
       builder: (context) {
         final l10n = AppLocalizations.of(context)!;
+        final TextEditingController limitController = TextEditingController(
+          text: appState.filterLimit?.toString() ?? ''
+        );
+        final TextEditingController startsWithController = TextEditingController(
+          text: appState.filterStartsWith ?? ''
+        );
+
         return StatefulBuilder(
           builder: (context, setDialogState) {
             return AlertDialog(
               title: Row(
                 children: [
-                  const Icon(Icons.local_offer_outlined, color: Colors.blue),
+                  const Icon(Icons.tune, color: Colors.blue),
                   const SizedBox(width: 8),
-                  Text(l10n.tagSelection),
+                  Text(l10n.searchConditions), // "Search Conditions"
                 ],
               ),
               content: SizedBox(
                 width: double.maxFinite,
-                child: appState.availableTags.isEmpty
-                  ? Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 24),
-                      child: Text(l10n.noRecords, textAlign: TextAlign.center, style: const TextStyle(color: Colors.grey)),
-                    )
-                  : Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Flexible(
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            itemCount: appState.availableTags.length,
-                            itemBuilder: (context, index) {
-                              final tag = appState.availableTags[index];
-                              final isSelected = appState.selectedTags.contains(tag);
-                              return CheckboxListTile(
-                                title: Text(tag),
-                                value: isSelected,
-                                onChanged: (bool? value) {
-                                  appState.toggleTag(tag);
-                                  setDialogState(() {}); // Update local dialog UI
-                                },
-                                controlAffinity: ListTileControlAffinity.leading,
-                                dense: true,
-                                activeColor: Colors.blue,
-                              );
-                            },
-                          ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // 1. Tag Section
+                      Text(l10n.tagSelection, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                      const SizedBox(height: 8),
+                      if (appState.availableTags.isEmpty)
+                        Text(l10n.noRecords, style: const TextStyle(color: Colors.grey, fontSize: 12))
+                      else
+                        Wrap(
+                          spacing: 8.0,
+                          runSpacing: 4.0,
+                          children: appState.availableTags.map((tag) {
+                            final isSelected = appState.selectedTags.contains(tag);
+                            return FilterChip(
+                              label: Text(tag),
+                              selected: isSelected,
+                              onSelected: (bool selected) {
+                                appState.toggleTag(tag);
+                                setDialogState(() {});
+                              },
+                              selectedColor: Colors.blue[100],
+                              checkmarkColor: Colors.blue,
+                            );
+                          }).toList(),
                         ),
-                      ],
-                    ),
+                      
+                      const Divider(height: 32),
+                      
+                      // 2. Recent N Items (Limit)
+                      TextField(
+                        controller: limitController,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          labelText: l10n.recentNItems(10).replaceAll('10', 'N'), // Replace placeholder if needed or just use generic text
+                          hintText: 'e.g. 20',
+                          prefixIcon: const Icon(Icons.history),
+                          border: const OutlineInputBorder(),
+                          isDense: true,
+                        ),
+                      ),
+                      
+                      const SizedBox(height: 16),
+                      
+                      // 3. Starts With (Prefix)
+                      TextField(
+                        controller: startsWithController,
+                        decoration: InputDecoration(
+                          labelText: l10n.startsWith,
+                          hintText: 'e.g. A',
+                          prefixIcon: const Icon(Icons.text_fields),
+                          border: const OutlineInputBorder(),
+                          isDense: true,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
               actions: [
-                if (appState.selectedTags.isNotEmpty)
+                // Reset Button
+                if (appState.selectedTags.isNotEmpty || appState.filterLimit != null || appState.filterStartsWith != null)
                   TextButton(
                     onPressed: () {
-                      appState.clearSelectedTags(); // Need to implement this in AppState or do manual loop
+                      appState.clearSearchConditions();
+                      limitController.clear();
+                      startsWithController.clear();
                       setDialogState(() {});
                     },
-                    child: Text(l10n.refresh, style: const TextStyle(color: Colors.red)),
+                    child: Text(l10n.reset, style: const TextStyle(color: Colors.red)),
                   ),
+                
+                // Cancel Button
                 TextButton(
                   onPressed: () => Navigator.of(context).pop(),
+                  child: Text(l10n.cancel),
+                ),
+                
+                // Apply Button
+                ElevatedButton(
+                  onPressed: () {
+                    // Apply Limit
+                    if (limitController.text.isNotEmpty) {
+                      final limit = int.tryParse(limitController.text);
+                      appState.setFilterLimit(limit);
+                    } else {
+                      appState.setFilterLimit(null);
+                    }
+                    
+                    // Apply StartsWith
+                    if (startsWithController.text.isNotEmpty) {
+                      appState.setFilterStartsWith(startsWithController.text);
+                    } else {
+                      appState.setFilterStartsWith(null);
+                    }
+                    
+                    Navigator.of(context).pop();
+                  },
                   child: Text(l10n.confirm),
                 ),
               ],

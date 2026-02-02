@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:async'; // For Debounce Timer
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
@@ -52,6 +53,9 @@ class _Mode1WidgetState extends State<Mode1Widget> {
 
   // Rewarded Ad
   RewardedAd? _rewardedAd;
+  
+  // Phase 57: Debounce Timer for Autocomplete
+  Timer? _debounceTimer;
   
   @override
   void initState() {
@@ -109,6 +113,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
     _formTypeController.dispose();
     _rootController.dispose();
     _rewardedAd?.dispose();
+    _debounceTimer?.cancel();
     super.dispose();
   }
 
@@ -223,7 +228,12 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                               ),
                               onChanged: (text) {
                                 appState.setSourceText(text);
-                                appState.searchSimilarSources(text); // Phase 31: 실시간 검색 연동
+                                
+                                // Phase 57: Debounce Autocomplete (300ms)
+                                if (_debounceTimer?.isActive ?? false) _debounceTimer!.cancel();
+                                _debounceTimer = Timer(const Duration(milliseconds: 300), () {
+                                  appState.searchSimilarSources(text); 
+                                });
                               },
                             ),
 
@@ -362,6 +372,22 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                       backgroundColor: Colors.orange,
                                     ),
                                   );
+                                }
+
+                                // Phase X: Add AI Detected Tags (e.g. formal -> 존댓말)
+                                if (context.mounted && appState.aiDetectedTags.isNotEmpty) {
+                                  setState(() {
+                                    for (final tag in appState.aiDetectedTags) {
+                                      String tagToAdd = tag;
+                                      // Map 'formal' to localized string
+                                      if (tag == 'formal') {
+                                        tagToAdd = l10n.tagFormal;
+                                      }
+                                      if (!_currentTags.contains(tagToAdd)) {
+                                        _currentTags.add(tagToAdd);
+                                      }
+                                    }
+                                  });
                                 }
                               } catch (e) {
                                 if (e is LimitReachedException && context.mounted) {

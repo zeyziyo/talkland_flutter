@@ -35,22 +35,26 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 - 📖 **복습 모드**: 저장된 문장 복습 및 카드 뒤집기
 - 🔊 **TTS 재생**: 원문 및 번역문 듣기
 - ✅ **학습 체크**: 복습 횟수 기록 및 학습 완료 표시
+- 🔍 **검색 조건**: 태그, 최근 항목, 시작 글자로 정밀 필터링
 
 * **Study Material Management**: Import study materials via JSON files (Transactions applied for speed)
 * **Review Mode**: Review saved sentences & flip cards
 * **TTS Playback**: Listen to original and translated text
 * **Study Check**: Track review counts & mark as completed
+* **Search Conditions**: Filter by Tags, Recent N, Starts With
 
 ### MODE 3: 말하기 연습 (Speaking Practice)
 - 🎙️ **쉐도잉 연습**: 원어민 음성 듣고 따라 말하기
 - ⏱️ **간격 조절**: 3초~60초 사이 대기 시간 설정
 - 📊 **발음 평가**: 정확도 점수 (0-100) 및 피드백
 - 🔄 **자동 반복**: 완벽하게 학습한 문장 제외하고 반복
+- 🔍 **검색 조건**: 학습 대상을 태그 및 조건으로 필터링
 
 * **Shadowing Practice**: Listen to native audio and shadow (repeat)
 * **Interval Control**: Set interval between 3s-60s
 * **Pronunciation Evaluation**: Accuracy score (0-100) & feedback
 * **Auto-Repeat**: Repeat sentences excluding those fully mastered
+* **Search Conditions**: Filter practice targets by Tags/Conditions
 
 ### MODE 4: AI 채팅 (AI Chat)
 - 💬 **실시간 대화**: AI 페르소나(교사, 친구 등)와 실전 회화 연습
