@@ -4,6 +4,21 @@
 
 ---
 
+## 📅 [2026-02-04 23:41:00] Phase 71: JSON 다운로드 타입 버그 수정 (Fix JSON Download Type Bug)
+
+### ✅ 태스크 (Task)
+- [x] **Bug Report**: 홈페이지에서 JSON 다운로드 시 단어를 문장으로 잘못 표시하는 문제 진단.
+- [x] **Root Cause**: `docs/index.html` 487~491줄에서 단어/문장 엔트리 병합 시 `type` 필드를 설정하지 않음.
+- [x] **Fix**: 각 엔트리에 `type: typeCode` 필드를 추가하여 `default_type`과 일치시킴.
+
+### 📝 워크스루 (Walkthrough)
+- **문제**: 사용자가 홈페이지에서 "JSON 다운로드" 버튼을 눌러 언어 쌍을 병합할 때, 단어 자료(`verbs_100.json`, `nouns_50.json`)가 문장(`sentence`)으로 잘못 표시됨.
+- **원인**: `index.html`의 `generateAndDownload` 함수(487~491줄)에서 Dialogue가 아닌 경우(단어/문장) 병합 시, 개별 엔트리에 `type` 필드를 설정하지 않았음. 이로 인해 Import 시 `default_type`만 사용되거나 기본값(`sentence`)이 적용됨.
+- **해결**: 490줄에 `type: typeCode` 필드를 추가하여, 단어 파일은 `"word"`, 문장 파일은 `"sentence"`, 대화 파일은 `"dialogue"`로 정확히 설정되도록 수정.
+- **결과**: 다운로드된 JSON 파일의 모든 엔트리가 올바른 타입을 가지며, 앱에서 Import 시 정확히 분류됨.
+
+---
+
 ## 📅 [2026-02-04 22:57:00] Phase 70: Import 무한 대기 버그 수정 (Fix Import Hang)
 
 ### ✅ 태스크 (Task)

@@ -487,6 +487,7 @@
                         mergedEntries.push({
                             source_text: s.text,
                             target_text: t.text,
+                            type: typeCode,  // FIX: Add type field to match default_type
                             note: t.note || s.note || ""
                         });
                     }
