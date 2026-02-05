@@ -1,0 +1,45 @@
+{
+    "title": "First Meeting",
+    "entries": [
+        {
+            "text": "Živjo! Moje ime je Jordan. Vesel sem te spoznati.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Živjo, Jordan! Jaz sem Minji. Tudi jaz te vesela spoznam.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Si študent?",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Ne, sem pisarniški delavec. Kaj pa ti?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Jaz sem študent. Študiram korejščino.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Vau, to je super! Korejščina je malo težka, kajne?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Da, težka je, a zabavna. Prosim, pomagaj mi veliko.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Seveda! Učimo se skupaj.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Hvala. Se vidimo naslednjič!",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Adijo!",
+            "speaker": "Minji"
+        }
+    ]
+}

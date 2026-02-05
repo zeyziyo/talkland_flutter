@@ -1,5 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter/foundation.dart';
 
 class LimitReachedException implements Exception {
   final String message;
@@ -22,7 +23,7 @@ class UsageService {
   static const String _keyIsPro = 'prefs_is_pro_user';
   
   // AdMob Test ID (Rewarded)
-  // Replace with real ID in production
+  // FIXME: 실제 출시 전 'UsageService.adUnitId'를 실제 운영 ID로 반드시 교체해야 함.
   static const String adUnitId = 'ca-app-pub-3940256099942544/5224354917';
   
   // Constants
@@ -33,7 +34,14 @@ class UsageService {
 
   /// Initialize dependencies
   Future<void> init() async {
-    _prefs ??= await SharedPreferences.getInstance();
+    if (_prefs == null) {
+      _prefs = await SharedPreferences.getInstance();
+      
+      // AdMob 테스트 ID 사용 경고 (디버그 모드에서만 확인용)
+      if (adUnitId.contains('3940256099942544')) {
+        debugPrint('UsageService: [!] WARNING: Using AdMob Test Ad Unit ID ($adUnitId)');
+      }
+    }
   }
 
   /// Check current status and reset if needed

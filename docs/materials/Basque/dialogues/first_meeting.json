@@ -1,0 +1,45 @@
+{
+    "title": "First Meeting",
+    "entries": [
+        {
+            "text": "Kaixo! Jordan dut izena. Pozten nau zu ezagutzeak.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Kaixo Jordan! Minji naiz. Ni ere pozten naiz zu ezagutzeaz.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Ikaslea zara?",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Ez, bulegari bat naiz. Eta zu?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Unibertsitateko ikaslea naiz. Koreera ikasten ari naiz.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "A, zeinen ona! Koreera zaila da, ezta?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Bai, zaila da baina dibertigarria. Mesedez, lagundu iezadazu asko.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Noski! Ikas dezagun gogor elkarrekin.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Eskerrik asko. Hurrengoan arte!",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Agur!",
+            "speaker": "Minji"
+        }
+    ]
+}

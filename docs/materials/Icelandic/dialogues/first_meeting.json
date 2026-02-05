@@ -1,0 +1,45 @@
+{
+    "title": "First Meeting",
+    "entries": [
+        {
+            "text": "Halló! Ég heiti Jordan. Gaman að kynnast þér.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Halló Jordan! Ég er Minji. Gaman að kynnast þér líka.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Ertu nemandi?",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Nei, ég er skrifstofumaður. Hvað með þig?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Ég er háskólanemi. Ég er að læra kóresku.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Vá, það er frábært! Kóreska er svolítið erfið, er það ekki?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Já, hún er erfið en skemmtileg. Vinsamlegast hjálpaðu mér mikið.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Auðvitað! Lærum hart saman.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Takk fyrir. Sjáumst næst!",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Bless!",
+            "speaker": "Minji"
+        }
+    ]
+}

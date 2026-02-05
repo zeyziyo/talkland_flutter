@@ -1,0 +1,45 @@
+{
+    "title": "First Meeting",
+    "entries": [
+        {
+            "text": "Kamusta! Ang pangalan ko ay Jordan. Ikinalulugod kitang makilala.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Kamusta Jordan! Ako si Minji. Ikinalulugod din kitang makilala.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Ikaw ba ay isang estudyante?",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Hindi, ako ay isang empleyado. Ikaw?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Ako ay isang estudyante sa kolehiyo. Nag-aaral ako ng Korean.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Wow, ang galing! Medyo mahirap ang Korean, hindi ba?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Oo, mahirap pero masaya. Tulungan mo ako sana.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Sige! Mag-aral tayong mabuti.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Salamat. Hanggang sa susunod!",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Paalam!",
+            "speaker": "Minji"
+        }
+    ]
+}

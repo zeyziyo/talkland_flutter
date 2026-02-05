@@ -41,6 +41,9 @@
     "description": "Label for GPS location"
   },
   "location": "位置",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
   "partner": "Partner",
   "@partner": {
     "description": "Label for partner speaker"
@@ -580,6 +583,7 @@
   "reviewModeTitle": "复习",
   "practiceModeTitle": "发音练习",
   "chatHistoryTitle": "对话历史",
+  "chatNew": "New Chat",
   "chatNewChat": "新对话",
   "chatChoosePersona": "选择角色",
   "chatTypeHint": "输入消息...",
@@ -617,11 +621,8 @@
   "errorSelectCategory": "请先选择单词或句子！",
   "tutorialM1ToggleTitle": "单词/句子模式",
   "tutorialM1ToggleDesc": "在这里切换单词和句子模式。",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "chatNew": "New Chat",
   "metadataDialogTitle": "Details",
+  "tagFormal": "敬语",
   "selectPOS": "Select POS",
   "selectSentenceType": "Select Sentence Type",
   "metadataRootWord": "Root Word",
@@ -638,29 +639,27 @@
   "typeExclamation": "Exclamation",
   "typeImperative": "Imperative",
   "labelNote": "Note",
+  "labelShowMemorized": "Finished",
+  "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
   "formPast": "Past",
   "formPastParticiple": "Past Participle",
   "formPresentParticiple": "Present Participle",
+  "formPresent": "Present",
   "formThirdPersonSingular": "3rd Person Singular",
   "formPlural": "Plural",
   "formSingular": "单数",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "labelShowMemorized": "Finished",
-  "tagSelection": "Select Tags",
-  "formPresent": "Present",
   "caseSubject": "Subject",
   "caseObject": "Object",
   "casePossessive": "Possessive",
   "casePossessivePronoun": "Possessive Pronoun",
   "caseReflexive": "Reflexive",
+  "formPositive": "Positive",
+  "formComparative": "Comparative",
+  "formSuperlative": "Superlative",
+  "searchConditions": "Search Conditions",
+  "recentNItems": "Recent {count} items",
   "@recentNItems": {
     "placeholders": {
       "count": {
@@ -668,6 +667,8 @@
       }
     }
   },
+  "startsWith": "Starts with",
+  "reset": "Reset",
   "participantRename": "Rename Participant",
   "labelName": "Name",
   "gender": "Gender",

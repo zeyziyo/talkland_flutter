@@ -1,0 +1,405 @@
+{
+    "subject": "Põhilinead tegusõnad 100",
+    "entries": [
+        {
+            "text": "Minema",
+            "note": ""
+        },
+        {
+            "text": "Tulema",
+            "note": ""
+        },
+        {
+            "text": "Sööma",
+            "note": ""
+        },
+        {
+            "text": "Jooma",
+            "note": ""
+        },
+        {
+            "text": "Magama",
+            "note": ""
+        },
+        {
+            "text": "Nägema",
+            "note": ""
+        },
+        {
+            "text": "Ostma",
+            "note": ""
+        },
+        {
+            "text": "Müüma",
+            "note": ""
+        },
+        {
+            "text": "Lugema",
+            "note": ""
+        },
+        {
+            "text": "Kirjutama",
+            "note": "Writing"
+        },
+        {
+            "text": "Kuulama",
+            "note": ""
+        },
+        {
+            "text": "Rääkima",
+            "note": ""
+        },
+        {
+            "text": "Tegema",
+            "note": ""
+        },
+        {
+            "text": "Töötama",
+            "note": ""
+        },
+        {
+            "text": "Õppima",
+            "note": ""
+        },
+        {
+            "text": "Õpetama",
+            "note": ""
+        },
+        {
+            "text": "Õppima",
+            "note": ""
+        },
+        {
+            "text": "Ootama",
+            "note": ""
+        },
+        {
+            "text": "Kohtuma",
+            "note": ""
+        },
+        {
+            "text": "Armastama",
+            "note": ""
+        },
+        {
+            "text": "Meeldima",
+            "note": ""
+        },
+        {
+            "text": "Ei meeldi",
+            "note": ""
+        },
+        {
+            "text": "Naerma",
+            "note": ""
+        },
+        {
+            "text": "Nutma",
+            "note": ""
+        },
+        {
+            "text": "Kõndima",
+            "note": ""
+        },
+        {
+            "text": "Jooksma",
+            "note": "Running"
+        },
+        {
+            "text": "Istuma",
+            "note": ""
+        },
+        {
+            "text": "Seisma",
+            "note": ""
+        },
+        {
+            "text": "Andma",
+            "note": ""
+        },
+        {
+            "text": "Vastu võtma",
+            "note": ""
+        },
+        {
+            "text": "Avama",
+            "note": ""
+        },
+        {
+            "text": "Sulge",
+            "note": ""
+        },
+        {
+            "text": "Mõtlema",
+            "note": ""
+        },
+        {
+            "text": "Teadma",
+            "note": ""
+        },
+        {
+            "text": "Mitte teadma",
+            "note": ""
+        },
+        {
+            "text": "Leidma",
+            "note": ""
+        },
+        {
+            "text": "Kaotama",
+            "note": ""
+        },
+        {
+            "text": "Aitama",
+            "note": ""
+        },
+        {
+            "text": "Pesema",
+            "note": ""
+        },
+        {
+            "text": "Süüa tegema",
+            "note": ""
+        },
+        {
+            "text": "Laulma",
+            "note": ""
+        },
+        {
+            "text": "Tantsima",
+            "note": ""
+        },
+        {
+            "text": "Kasutama",
+            "note": ""
+        },
+        {
+            "text": "Tegema",
+            "note": ""
+        },
+        {
+            "text": "Helistama",
+            "note": "Song / Name"
+        },
+        {
+            "text": "Kinni püüdma / hoidma",
+            "note": ""
+        },
+        {
+            "text": "Panema / jätma",
+            "note": ""
+        },
+        {
+            "text": "Sisenema",
+            "note": ""
+        },
+        {
+            "text": "Välja minema",
+            "note": ""
+        },
+        {
+            "text": "Peale minema",
+            "note": "Boarding"
+        },
+        {
+            "text": "Mahajätma",
+            "note": "Alighting"
+        },
+        {
+            "text": "Saatma",
+            "note": ""
+        },
+        {
+            "text": "Esitama",
+            "note": "Submission"
+        },
+        {
+            "text": "Läbi saama",
+            "note": "Greetings"
+        },
+        {
+            "text": "Alustama",
+            "note": ""
+        },
+        {
+            "text": "Lõpetama",
+            "note": ""
+        },
+        {
+            "text": "Puhkama",
+            "note": "Relax"
+        },
+        {
+            "text": "Küsima",
+            "note": "Question"
+        },
+        {
+            "text": "Vastama",
+            "note": ""
+        },
+        {
+            "text": "Lubama",
+            "note": ""
+        },
+        {
+            "text": "Muretsema",
+            "note": ""
+        },
+        {
+            "text": "Uskuma",
+            "note": ""
+        },
+        {
+            "text": "Kahtlema",
+            "note": ""
+        },
+        {
+            "text": "Soovima / lootma",
+            "note": "Hope"
+        },
+        {
+            "text": "Unenägu nägema",
+            "note": ""
+        },
+        {
+            "text": "Võitlema",
+            "note": ""
+        },
+        {
+            "text": "Võitma",
+            "note": ""
+        },
+        {
+            "text": "Kaotama",
+            "note": "Defeat"
+        },
+        {
+            "text": "Kasvama",
+            "note": "Growth"
+        },
+        {
+            "text": "Elama",
+            "note": ""
+        },
+        {
+            "text": "Surema",
+            "note": ""
+        },
+        {
+            "text": "Üles korjama",
+            "note": ""
+        },
+        {
+            "text": "Ära viskama",
+            "note": ""
+        },
+        {
+            "text": "Peitma",
+            "note": ""
+        },
+        {
+            "text": "Otsima",
+            "note": ""
+        },
+        {
+            "text": "Valima",
+            "note": ""
+        },
+        {
+            "text": "Muutma",
+            "note": ""
+        },
+        {
+            "text": "Tellima",
+            "note": "Buying items"
+        },
+        {
+            "text": "Valmistama",
+            "note": ""
+        },
+        {
+            "text": "Püüdma",
+            "note": ""
+        },
+        {
+            "text": "Viskama",
+            "note": ""
+        },
+        {
+            "text": "Tõmbama",
+            "note": ""
+        },
+        {
+            "text": "Lükkama",
+            "note": ""
+        },
+        {
+            "text": "Parandama",
+            "note": "Repair"
+        },
+        {
+            "text": "Katki tegema",
+            "note": ""
+        },
+        {
+            "text": "Haige / vigastatud olema",
+            "note": ""
+        },
+        {
+            "text": "Ravima",
+            "note": ""
+        },
+        {
+            "text": "Treenima",
+            "note": ""
+        },
+        {
+            "text": "Ujuma",
+            "note": ""
+        },
+        {
+            "text": "Reisima",
+            "note": ""
+        },
+        {
+            "text": "Sõitma",
+            "note": ""
+        },
+        {
+            "text": "Puhastama",
+            "note": ""
+        },
+        {
+            "text": "Nõusid pesema",
+            "note": ""
+        },
+        {
+            "text": "Pesupesemine",
+            "note": ""
+        },
+        {
+            "text": "Duši all käima",
+            "note": ""
+        },
+        {
+            "text": "Hambaid pesema",
+            "note": ""
+        },
+        {
+            "text": "Ärkama",
+            "note": "Wake up"
+        },
+        {
+            "text": "Voodisse minema",
+            "note": "Sleeping"
+        },
+        {
+            "text": "Aru saama",
+            "note": ""
+        },
+        {
+            "text": "Meeles pidama",
+            "note": ""
+        }
+    ]
+}

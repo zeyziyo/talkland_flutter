@@ -1,0 +1,205 @@
+{
+    "subject": "Osnovni pozdravi in vsakodnevni stavki 50",
+    "entries": [
+        {
+            "text": "Živjo.",
+            "note": "Polite greeting"
+        },
+        {
+            "text": "Lepo te je spoznati.",
+            "note": "First meeting"
+        },
+        {
+            "text": "Že dolgo se nisva videla.",
+            "note": "Reunion"
+        },
+        {
+            "text": "Hvala vam.",
+            "note": "Formal"
+        },
+        {
+            "text": "Žal mi je.",
+            "note": "Formal"
+        },
+        {
+            "text": "Oprostite.",
+            "note": "Attention"
+        },
+        {
+            "text": "Kako si?",
+            "note": "Greetings"
+        },
+        {
+            "text": "Dobro sem, hvala.",
+            "note": ""
+        },
+        {
+            "text": "Kako ti je ime?",
+            "note": ""
+        },
+        {
+            "text": "Moje ime je ...",
+            "note": ""
+        },
+        {
+            "text": "Od kod si?",
+            "note": ""
+        },
+        {
+            "text": "Jaz sem iz Amerike.",
+            "note": ""
+        },
+        {
+            "text": "Adijo.",
+            "note": "To someone leaving"
+        },
+        {
+            "text": "Adijo.",
+            "note": "To someone staying"
+        },
+        {
+            "text": "Da.",
+            "note": "Positive"
+        },
+        {
+            "text": "Ne.",
+            "note": "Negative"
+        },
+        {
+            "text": "Morda.",
+            "note": "Guess"
+        },
+        {
+            "text": "Razumem.",
+            "note": ""
+        },
+        {
+            "text": "Ne vem.",
+            "note": ""
+        },
+        {
+            "text": "Prosim, pomagaj mi.",
+            "note": ""
+        },
+        {
+            "text": "Samo trenutek, prosim.",
+            "note": ""
+        },
+        {
+            "text": "Koliko to stane?",
+            "note": "Shopping"
+        },
+        {
+            "text": "Kje je stranišče?",
+            "note": ""
+        },
+        {
+            "text": "Lačen sem.",
+            "note": ""
+        },
+        {
+            "text": "Žejen sem.",
+            "note": ""
+        },
+        {
+            "text": "Okusno je.",
+            "note": ""
+        },
+        {
+            "text": "Všeč mi je.",
+            "note": ""
+        },
+        {
+            "text": "V redu je.",
+            "note": ""
+        },
+        {
+            "text": "Srečno.",
+            "note": ""
+        },
+        {
+            "text": "Koliko je ura?",
+            "note": ""
+        },
+        {
+            "text": "Danes je lepo vreme.",
+            "note": ""
+        },
+        {
+            "text": "Zebe me.",
+            "note": ""
+        },
+        {
+            "text": "Vroče mi je.",
+            "note": ""
+        },
+        {
+            "text": "Utrujen sem.",
+            "note": ""
+        },
+        {
+            "text": "Vesel sem.",
+            "note": ""
+        },
+        {
+            "text": "Čestitam.",
+            "note": ""
+        },
+        {
+            "text": "Vse najboljše za rojstni dan.",
+            "note": ""
+        },
+        {
+            "text": "Imejte lep dan.",
+            "note": ""
+        },
+        {
+            "text": "Se vidimo jutri.",
+            "note": ""
+        },
+        {
+            "text": "Imej se lepo.",
+            "note": ""
+        },
+        {
+            "text": "Ali govorite angleško?",
+            "note": ""
+        },
+        {
+            "text": "Govorim samo malo korejsko.",
+            "note": ""
+        },
+        {
+            "text": "Prosim, govorite počasi.",
+            "note": ""
+        },
+        {
+            "text": "Kaj to pomeni?",
+            "note": ""
+        },
+        {
+            "text": "Kako se temu reče v korejščini?",
+            "note": ""
+        },
+        {
+            "text": "Ljubim te.",
+            "note": ""
+        },
+        {
+            "text": "Prosim, počakajte.",
+            "note": ""
+        },
+        {
+            "text": "Ni za kaj.",
+            "note": ""
+        },
+        {
+            "text": "Ne, v redu je.",
+            "note": ""
+        },
+        {
+            "text": "Imam vprašanje.",
+            "note": ""
+        }
+    ]
+}

@@ -41,6 +41,9 @@
     "description": "Label for GPS location"
   },
   "location": "Emplacement",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
   "partner": "Partner",
   "@partner": {
     "description": "Label for partner speaker"
@@ -580,6 +583,7 @@
   "reviewModeTitle": "Review",
   "practiceModeTitle": "Practice",
   "chatHistoryTitle": "Historique",
+  "chatNew": "New Chat",
   "chatNewChat": "Nouveau chat",
   "chatChoosePersona": "Choisir un personnage",
   "chatTypeHint": "Écrivez ici...",
@@ -617,11 +621,8 @@
   "errorSelectCategory": "Veuillez d'abord choisir mot ou phrase !",
   "tutorialM1ToggleTitle": "Mode Mot/Phrase",
   "tutorialM1ToggleDesc": "Basculez entre le mode mot et phrase ici.",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "chatNew": "New Chat",
   "metadataDialogTitle": "Details",
+  "tagFormal": "Formel",
   "selectPOS": "Select POS",
   "selectSentenceType": "Select Sentence Type",
   "metadataRootWord": "Root Word",
@@ -638,29 +639,27 @@
   "typeExclamation": "Exclamation",
   "typeImperative": "Imperative",
   "labelNote": "Note",
+  "labelShowMemorized": "Finished",
+  "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
   "formPast": "Past",
   "formPastParticiple": "Past Participle",
   "formPresentParticiple": "Present Participle",
+  "formPresent": "Present",
   "formThirdPersonSingular": "3rd Person Singular",
   "formPlural": "Plural",
   "formSingular": "Singulier",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "labelShowMemorized": "Finished",
-  "tagSelection": "Select Tags",
-  "formPresent": "Present",
   "caseSubject": "Subject",
   "caseObject": "Object",
   "casePossessive": "Possessive",
   "casePossessivePronoun": "Possessive Pronoun",
   "caseReflexive": "Reflexive",
+  "formPositive": "Positive",
+  "formComparative": "Comparative",
+  "formSuperlative": "Superlative",
+  "searchConditions": "Search Conditions",
+  "recentNItems": "Recent {count} items",
   "@recentNItems": {
     "placeholders": {
       "count": {
@@ -668,6 +667,8 @@
       }
     }
   },
+  "startsWith": "Starts with",
+  "reset": "Reset",
   "participantRename": "Rename Participant",
   "labelName": "Name",
   "gender": "Gender",

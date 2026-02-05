@@ -1,0 +1,678 @@
+{
+  "@@locale": "et",
+  "helpTitle": "Abi & juhend",
+  "helpTabModes": "Režiimide selgitus",
+  "helpTabJson": "JSON-vorming",
+  "helpTabTour": "Tutvustus",
+  "helpMode1Desc": "Tuvastab häält ja tõlgib selle ning võimaldab tulemusi kuulata.",
+  "helpMode1Details": "• Keele seadistus: keele muutmiseks vajuta ülemisele/alumisele ikoonile\n• Sõna/lause lüliti: režiimi vahetus\n• Häälsisend: alustamiseks/peatamiseks vajuta mikrofoni ikooni\n• Tekstisisestus: tõlkimiseks sisesta otse tekst\n• Automaatne otsing: sarnaste olemasolevate lausete tuvastamine\n• Tõlgi: koheseks tõlkimiseks vajuta tõlkenupule\n• Kuula: TTS taasesitus kõlari ikooniga\n• Salvesta: lisab kirje \"Andmete salvestamisega\"\n• Tühjenda: sisendi lähtestamine",
+  "helpMode2Desc": "Vaata salvestatud lauseid üle ja kontrolli meeldejätmist automaatse peitmise funktsiooniga.",
+  "helpMode2Details": "• Materjali valik: vali konkreetne materjalikogum või \"Kogu kordamine\"\n• Kaardi pööramine: tõlke kontrollimiseks \"Näita/peida\" (automaatne õppimise kontroll)\n• Kuula: lause TTS taasesitus\n• Õppimine lõpetatud: märgi õppimine lõpetatuks linnukesega (V)\n• Kustuta: kirje kustutamiseks hoia kaarti all\n• Otsingutingimused: filtreeri siltide, hiljutiste üksuste või algustähe järgi",
+  "helpMode3Desc": "Harjuta hääldust, kuulates lauseid ja neid korrates (varjutamine).",
+  "helpMode3Details": "• Materjali valik: vali õpitav materjalikogum\n• Intervalli seadistus: reguleeri lausete vahelist ooteaega nuppudega [-] [+], (3 sekundit kuni 60 sekundit)\n• Alusta/peata: varjutamise seansi juhtimine\n• Räägi: kuula häält ja korda seda\n• Tagasiside: täpsusskoor (0–100) ja värviindikaator\n• Otsingutingimused: filtreeri harjutatavaid üksusi siltide, hiljutiste üksuste või algustähe järgi",
+  "helpModeChatDesc": "Harjuta vestlust reaalses elus, vesteldes AI personažiga.",
+  "helpModeChatDetails": "• AI vestlus: harjuta vestlust, rääkides oma keeles\n• Mitu personaži: muuda partneri sugu/keelt/nime kõnemulli kohal asuva menüü kaudu\n• Lisa partner: lisa uusi vestluskaaslasi (võõraid) nupuga +\n• GPS: praegusel asukohal põhinevad situatsioonid\n• Automaatne salvestamine: vestlussisu automaatne tõlkimine ja salvestamine",
+  "helpJsonDesc": "Õppematerjali JSON-failina importimiseks režiimis 3 järgi seda vormingut:",
+  "helpDialogueImportDesc": "Impordi kogu dialoogikomplekt JSON-failina.",
+  "helpDialogueImportDetails": "• JSON-struktuur: kasuta massiivi `dialogues` massiivi `entries` asemel\n• Automaatne taastamine: dialoogi pealkiri, personaž ja sõnumite järjekord taastatakse.\n• Asukoht: imporditud dialoog kuvatakse AI vestlusrežiimi vahekaardil \"Ajalugu\".",
+  "helpTourDesc": "**Esiletõstetud ring** juhendab peamisi funktsioone.\n(Näide: **Esiletõstetud ringi** osutatud kaardi kustutamiseks hoia seda all.)",
+  "partnerMode": "Partnerrežiim",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "manual": "Käsitsi sisestus",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "speaker": "Kõneleja",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "switchToAi": "Lülitu AI-režiimile",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Lülitu partnerrežiimile",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "currentLocation": "Praegune asukoht",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "location": "Asukoht",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "partner": "Partner",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "me": "Mina",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "currentMaterialLabel": "Praegu valitud materjalikogum:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "basicMaterialRepository": "Põhiliste lausete/sõnade hoidla",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
+  },
+  "word": "Sõna",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "sentence": "Lause",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "appTitle": "Talkie",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "tabReview": "Kordamine ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabStudyMaterial": "Õppematerjalid ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mode2Title": "Kordamine",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "search": "Otsing",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "translate": "Tõlgi",
+  "@translate": {
+    "description": "Translate button"
+  },
+  "listen": "Kuula",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "saveData": "Salvesta andmed",
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  "saved": "Salvestamine lõpetatud",
+  "@saved": {
+    "description": "Data saved status"
+  },
+  "delete": "Kustuta",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "materialInfo": "Materjali info",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "cancel": "Tühista",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "confirm": "Kinnita",
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
+  "refresh": "Värskenda",
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  "studyRecords": "Õppimisajalugu ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "targetLanguageFilter": "Sihtkeele filter:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "noRecords": "Valitud keele õppimisajalugu pole",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "saveTranslationsFromSearch": "Proovi tõlkeid otsingurežiimis salvestada",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  "flip": "Näita",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "hide": "Peida",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "deleteRecord": "Kustuta kirje",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  "confirmDelete": "Kas sa oled kindel, et soovid selle õppimiskirje kustutada?",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
+  "recordDeleted": "Kirje on kustutatud",
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
+  "deleteFailed": "Kustutamine ebaõnnestus: {error}",
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "importJsonFile": "Impordi JSON-fail",
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
+  "importing": "Importimine...",
+  "@importing": {
+    "description": "Import in progress"
+  },
+  "importComplete": "Importimine lõpetatud",
+  "@importComplete": {
+    "description": "Import success title"
+  },
+  "importFailed": "Importimine ebaõnnestus",
+  "@importFailed": {
+    "description": "Import error title"
+  },
+  "importFile": "Fail: {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "importTotal": "Kokku: {count} tk",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importAdded": "Lisatud: {count} tk",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importSkipped": "Jäeti vahele: {count} tk",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errors": "Veateated:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "error": "Viga",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "importErrorMessage": "Faili importimine ebaõnnestus:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "selectStudyMaterial": "Vali õppematerjal",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  "subject": "Teema:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "source": "Allikas:",
+  "@source": {
+    "description": "Source label"
+  },
+  "file": "Fail:",
+  "@file": {
+    "description": "File label"
+  },
+  "progress": "Edenemine: {current} / {total}",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importJsonFilePrompt": "Palun impordi JSON-fail",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
+  "selectMaterialPrompt": "Vali õppematerjal",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "studyComplete": "Õppimine lõpetatud",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "markAsStudied": "Märgi õpituks",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "listening": "Kuulan...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "recognized": "Tuvastamine lõpetatud",
+  "@recognized": {
+    "description": "STT complete status"
+  },
+  "recognitionFailed": "Häältuvastus ebaõnnestus: {error}",
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "checking": "Kontrollin...",
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
+  "translating": "Tõlgin...",
+  "@translating": {
+    "description": "Translation in progress"
+  },
+  "translationComplete": "Tõlkimine lõpetatud (vajalik salvestamine)",
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
+  "translationLoaded": "Salvestatud tõlge on laaditud",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
+  "translationFailed": "Tõlkimine ebaõnnestus: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "enterTextToTranslate": "Sisesta tõlgitav tekst",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "saving": "Salvestamine...",
+  "@saving": {
+    "description": "Save in progress"
+  },
+  "noTranslationToSave": "Salvestamiseks pole tõlget",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "saveFailed": "Salvestamine ebaõnnestus: {error}",
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "playing": "Mängin...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  "noTextToPlay": "Taasesitamiseks pole teksti",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "playbackFailed": "Taasesitus ebaõnnestus: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceLanguage": "Lähtekeel",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "targetLanguage": "Sihtkeel",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "similarTextFound": "Leiti sarnane tekst",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "useExistingText": "Kasuta olemasolevat teksti",
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
+  "createNew": "Jätka uue lausega",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "reviewCount": "Korda {count} korda",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSpeaking": "Rääkimine",
+  "speakingPractice": "Rääkimisharjutus",
+  "intervalSeconds": "Intervall: {seconds} s",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "yourPronunciation": "Sinu hääldus",
+  "correctAnswer": "Õige vastus",
+  "score": "Täpsus: {score}%",
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "perfect": "Suurepärane!",
+  "good": "Hea",
+  "tryAgain": "Proovi uuesti",
+  "startPractice": "Alusta harjutamist",
+  "stopPractice": "Lõpeta harjutamine",
+  "startTutorial": "Alusta õpetust",
+  "tutorialMicTitle": "Häälsisend",
+  "tutorialMicDesc": "Hääle sisestamiseks võid vajutada mikrofoni nuppu.",
+  "tutorialTabDesc": "Siin saad valida soovitud õpperežiimi.",
+  "tutorialTapToContinue": "Jätkamiseks puuduta ekraani",
+  "tutorialTransTitle": "Tõlgi",
+  "tutorialTransDesc": "Tõlgi sisestatud tekst.",
+  "tutorialSaveTitle": "Salvesta",
+  "tutorialSaveDesc": "Salvesta tõlgitud tulemus õppimisajalukku.",
+  "tutorialM2SelectTitle": "Materjali valik",
+  "tutorialM2SelectDesc": "Õpitava materjali valimiseks vajuta ülemise rakenduseriba materjalikogumi ikooni (📚).",
+  "tutorialM2ListTitle": "Õppimisnimekiri",
+  "tutorialM2ListDesc": "Selle kustutamiseks hoia seda kaarti all (pikk klõps). Kontrolli salvestatud lauset ja keera see ümber.",
+  "tutorialM3SelectTitle": "Materjali valik",
+  "tutorialM3SelectDesc": "Harjutatava materjali valimiseks vajuta ülemise rakenduseriba materjalikogumi ikooni (📚).",
+  "tutorialM3IntervalTitle": "Intervalli seadistus",
+  "tutorialM3IntervalDesc": "Reguleeri lausete vahelist ooteaega.",
+  "tutorialM3StartTitle": "Alusta harjutamist",
+  "tutorialM3StartDesc": "Kuula emakeelena kõneleja häält ja korda seda, vajutades taasesitusnuppu.",
+  "startWarning": "Hoiatus",
+  "noVoiceDetected": "Häält ei tuvastatud",
+  "tooltipSearch": "Otsing",
+  "tooltipStudyReview": "Õppimine+kordamine",
+  "tooltipSpeaking": "Rääkimine",
+  "tooltipDecrease": "Vähenda",
+  "tooltipIncrease": "Suurenda",
+  "languageSettings": "Keele seaded",
+  "tutorialM2DropdownDesc": "Õpitava materjali saad valida ülemise menüü kaudu.",
+  "tutorialM2ImportDesc": "Impordi JSON-fail seadme kaustast.",
+  "tutorialLangSettingsTitle": "Keele seaded",
+  "tutorialLangSettingsDesc": "Seadista tõlgitav lähtekeel ja sihtkeel.",
+  "copy": "Kopeeri",
+  "copiedToClipboard": "Kopeeritud lõikelauale!",
+  "tutorialContextTitle": "Olukorra/konteksti silt",
+  "tutorialContextDesc": "Isegi kui lause on sama, saad selle eraldi salvestada, märkides olukorra (nt hommik, õhtu).",
+  "thinkingTimeInterval": "Mõtlemisaja intervall",
+  "thinkingTimeDesc": "Aeg, et mõelda enne õige vastuse avaldamist.",
+  "autoPlay": "Automaatne taasesitus",
+  "timeUp": "Aeg on läbi!",
+  "gameModeTitle": "Mängurežiim",
+  "gameModeDesc": "Valige mängurežiim, mida soovite harjutada",
+  "wordDefenseTitle": "Sõnade kaitse",
+  "wordDefenseDesc": "Kaitske oma baasi, öeldes sõnu enne, kui vaenlased kohale jõuavad.",
+  "dialogueQuestTitle": "Dialoogiülesanne",
+  "dialogueQuestDesc": "Harjutage vestlust situatsioonide kaudu. Valige sobiv vastus ja öelge see.",
+  "labelType": "Tüüp:",
+  "labelWord": "Sõna",
+  "labelSentence": "Lause",
+  "contextTagLabel": "Kontekst/olukord (valikuline) - näide: hommikune tervitus, viisakas keel",
+  "contextTagHint": "Kirjuta olukord hiljem lihtsamaks eristamiseks",
+  "usageLimitTitle": "Limiti saavutamine",
+  "translationLimitExceeded": "Tõlkelimiit on ületatud",
+  "translationLimitMessage": "Oled kasutanud kõik oma igapäevased tasuta tõlked (5 korda).\\n\\nKas soovid vaadata reklaami ja saada kohe 5 korda juurde?",
+  "watchAdAndRefill": "Vaata reklaami ja täida (+5 korda)",
+  "translationRefilled": "Tõlgete arv on suurendatud 5 võrra!",
+  "adLoading": "Reklaami laadimine, proovige mõne aja pärast uuesti.",
+  "reviewAll": "Kogu kordamine",
+  "totalRecords": "Kokku {count} kirjet (vaata kõiki)",
+  "@totalRecords": {
+    "description": "Total records count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterAll": "Kõik",
+  "practiceWordsOnly": "Harjuta ainult sõnu",
+  "resetPracticeHistory": "Lähtesta harjutamisajalugu",
+  "retry": "Proovi uuesti?",
+  "noStudyMaterial": "Õppematerjale pole.",
+  "gameOver": "Mäng läbi",
+  "playAgain": "Mängi uuesti",
+  "speakNow": "Räägi nüüd!",
+  "scoreLabel": "Skoor",
+  "viewOnlineGuide": "Vaata veebijuhendit",
+  "getMaterials": "Hangi materjale",
+  "swapLanguages": "Vaheta keeled",
+  "next": "Järgmine",
+  "wordModeLabel": "Sõnarežiim",
+  "accuracy": "Täpsus",
+  "basicDefault": "Põhiline",
+  "basic": "Põhiline",
+  "tutorialM3WordsTitle": "Sõnade harjutamine",
+  "tutorialM3WordsDesc": "Vali see, et harjutada ainult salvestatud sõnu.",
+  "enterTextHint": "Sisesta tõlgitav tekst",
+  "micButtonTooltip": "Alusta hääletuvastust",
+  "menuHelp": "Abi",
+  "menuWebDownload": "Koduleht",
+  "menuDeviceImport": "Impordi materjale seadmest",
+  "menuSettings": "Keele seaded",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "basicWords": "Põhiliste sõnade hoidla",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
+  },
+  "basicSentences": "Põhiliste lausete hoidla",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
+  },
+  "selectMaterialSet": "Vali õppematerjalide kogum",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "sectionWords": "Sõnad",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "sectionSentences": "Laused",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "languageSettingsTitle": "Keele seaded",
+  "sourceLanguageLabel": "Minu keel (Lähtekeel)",
+  "targetLanguageLabel": "Õppimiskeel (Sihtkeel)",
+  "mode3Start": "Alusta",
+  "mode3Stop": "Lõpeta",
+  "mode3Next": "Järgmine",
+  "mode3TryAgain": "Proovi uuesti",
+  "tutorialM3ResetTitle": "Ajaloo lähtestamine",
+  "tutorialSwapDesc": "Vaheta oma keel ja õppimiskeel.",
+  "recognizedText": "Tuvastatud hääldus:",
+  "titleFormat": "{type}: {materialName}",
+  "tutorialM3ResetDesc": "Alustamiseks lähtestage oma edenemine ja täpsusskoor.",
+  "menuSelectMaterialSet": "Vali õppematerjalide kogum",
+  "sectionWord": "Sõnade jaotis",
+  "sectionSentence": "Lausete jaotis",
+  "tabWord": "Sõna",
+  "tabSentence": "Lause",
+  "errorProfanity": "Tõlkimine pole ropu keele tõttu võimalik.",
+  "errorHateSpeech": "Tõlkimine pole vihakõne tõttu võimalik.",
+  "errorSexualContent": "Tõlkimine pole seksuaalse sisu tõttu võimalik.",
+  "errorOtherSafety": "Tõlkimine on AI ohutuspoliitika tõttu keelatud.",
+  "clearAll": "Kustuta kõik",
+  "disambiguationTitle": "Vali tähendus",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "disambiguationPrompt": "Millise tähendusega sa soovid tõlkida?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "skip": "Jäta vahele",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "inputModeTitle": "Sisestus",
+  "reviewModeTitle": "Kordamine",
+  "practiceModeTitle": "Häälduse harjutamine",
+  "chatHistoryTitle": "Vestluste ajalugu",
+  "chatNew": "Uus vestlus",
+  "chatNewChat": "Uus vestlus",
+  "chatChoosePersona": "Vali personaž",
+  "chatTypeHint": "Sisesta sõnum...",
+  "chatFailed": "Vestlus ebaõnnestus: {error}",
+  "@chatFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "chatNoConversations": "Vestlusi pole veel",
+  "chatStartNewPrompt": "Proovige harjutamiseks uut vestlust alustada!",
+  "chatFromConversation": "Vestluse väljavõte ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
+  },
+  "personaTeacher": "Inglise keele õpetaja",
+  "personaGuide": "Reisijuht",
+  "personaFriend": "Kohalik sõber",
+  "chatUntitled": "Pealkirjata vestlus",
+  "chatAiChat": "AI Vestlus",
+  "tutorialAiChatTitle": "AI Vestlus",
+  "tutorialAiChatDesc": "Harjuta AI personažiga reaalset vestlust.",
+  "mode1SelectedMaterial": "Praegu valitud materjalikogum: {name}",
+  "basicWordRepository": "Põhiliste sõnade hoidla",
+  "basicSentenceRepository": "Põhiliste lausete hoidla",
+  "chatEndTitle": "Lõpeta ja salvesta vestlus",
+  "chatEndMessage": "Kas soovid vestluse lõpetada?",
+  "chatSaveAndExit": "Salvesta ja välju",
+  "errorSelectCategory": "Valige kõigepealt sõna või lause!",
+  "tutorialM1ToggleTitle": "Sõna/lause režiim",
+  "tutorialM1ToggleDesc": "Lülitage siin sõna- ja lauserežiimi vahel.",
+  "metadataDialogTitle": "Täpsem klassifikatsioon",
+  "tagFormal": "Vormilik",
+  "selectPOS": "Vali kõneosa",
+  "selectSentenceType": "Vali lause tüüp",
+  "metadataRootWord": "Algvorm (juursõna)",
+  "posNoun": "Nimisõna",
+  "posVerb": "Tegusõna",
+  "posAdjective": "Omadussõna",
+  "posAdverb": "Määrsõna",
+  "posPronoun": "Asesõna",
+  "posPreposition": "Eessõna/kaassõna",
+  "posConjunction": "Sidesõna",
+  "posInterjection": "Hüüdsõna",
+  "typeStatement": "Väitlause",
+  "typeQuestion": "Küsilause",
+  "typeExclamation": "Hüüdlause",
+  "typeImperative": "Käskiv lause",
+  "labelNote": "Märkus",
+  "labelShowMemorized": "Lõpetatud",
+  "tagSelection": "Sildi valik",
+  "metadataFormType": "Grammatiline vorm",
+  "formInfinitive": "Infinitiiv/olevik",
+  "formPast": "Minevik",
+  "formPastParticiple": "Mineviku kesksõna",
+  "formPresentParticiple": "Oleviku kesksõna (-mas)",
+  "formPresent": "Olevik",
+  "formThirdPersonSingular": "Kolmas isik ainsus",
+  "formPlural": "Mitmus",
+  "formSingular": "Ainsus",
+  "caseSubject": "Nimetav kääne",
+  "caseObject": "Sihitiskääne",
+  "casePossessive": "Omastav kääne",
+  "casePossessivePronoun": "Omastav asesõna",
+  "caseReflexive": "Enesekohane asesõna",
+  "formPositive": "Algvõrre",
+  "formComparative": "Keskvõrre",
+  "formSuperlative": "Ülivõrre",
+  "searchConditions": "Otsingutingimused",
+  "recentNItems": "Vaata {count} hiljuti loodud üksust",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "startsWith": "Algustäht",
+  "reset": "Lähtesta",
+  "participantRename": "Muuda osaleja nime",
+  "labelName": "Nimi",
+  "gender": "Sugu",
+  "language": "Keel",
+  "male": "Mees",
+  "female": "Naine"
+}

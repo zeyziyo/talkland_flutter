@@ -1,0 +1,678 @@
+{
+  "@@locale": "mn",
+  "helpTitle": "Тусламж & Заавар",
+  "helpTabModes": "Горим тайлбар",
+  "helpTabJson": "JSON формат",
+  "helpTabTour": "Туршлага хуримтлуулах",
+  "helpMode1Desc": "Дуудлагыг таньж орчуулж, үр дүнг сонсох боломжтой.",
+  "helpMode1Details": "• Хэл тохируулах: Дээд/доод дүрс дээр дарж хэл өөрчлөх\n• Үг/Өгүүлбэр хооронд шилжих: Горим солих\n• Дуут оруулах: Микрофон дүрс дээр дарж сонсож эхлэх/зогсоох\n• Текст оруулах: Шууд бичиж орчуулах\n• Автомат хайлт: Ижил төстэй өгүүлбэрүүдийг илрүүлэх\n• Орчуулах: Орчуулах товчлуур дээр дарж шууд орчуулах\n• Сонсох: Чанга яригч дүрсээр TTS тоглуулах\n• Хадгалах: 'Мэдээлэл хадгалах' руу бичлэг нэмэх\n• Цэвэрлэх: Оруулахыг анхны байдалд оруулах",
+  "helpMode2Desc": "Хадгалсан өгүүлбэрүүдээ давтаж, автомат нуух функцээр цээжилсэн эсэхээ шалгаарай.",
+  "helpMode2Details": "• Материал сонгох: Тодорхой цуглуулга эсвэл 'Бүгдийг давтах' сонгох\n• Карт эргүүлэх: 'Харуулах/Нуух' замаар орчуулгыг шалгах (Автомат сурах шалгах)\n• Сонсох: Өгүүлбэр TTS тоглуулах\n• Суралцаж дуусгах: Чек тэмдэг (V) -ээр суралцаж дуусгах\n• Устгах: Картыг удаан дарснаар бичлэгийг устгах\n• Хайлтын нөхцөл: Таг, саяхны зүйл, эхний үсгээр шүүх",
+  "helpMode3Desc": "Өгүүлбэрийг сонсож дагаж хэлэх (Shadowing) замаар дуудлагаа сайжруулах.",
+  "helpMode3Details": "• Материал сонгох: Сурах материалаа сонгох\n• Завсрын хугацаа тохируулах: [-] [+] товчлуураар өгүүлбэр хоорондын хүлээх хугацааг тохируулах (3 секундээс 60 секунд хүртэл)\n• Эхлүүлэх/Зогсоох: Shadowing сессийг хянах\n• Ярих: Дууг сонсоод дагаж ярих\n• Санал хүсэлт: Нарийвчлалын оноо (0-100) болон өнгөний дэлгэц\n• Хайлтын нөхцөл: Таг, саяхны зүйл, эхний үсгээр дадлага хийх зүйлийг шүүх",
+  "helpModeChatDesc": "AI дүртэй ярилцаж, бодит ярианы дадлага хийгээрэй.",
+  "helpModeChatDetails": "• AI чат: Өөрийн хэлээр ярьж ярианы дадлага хийх\n• Олон дүр: Ярианы бөмбөлөгийн дээрх цэсээр харилцагчийн хүйс/хэл/нэрийг өөрчлөх боломжтой\n• Хамтрагч нэмэх: + товчлуураар шинэ ярилцах хүнтэй (Stranger) нэмэх\n• GPS: Одоогийн байршилд суурилсан драм\n• Автомат хадгалах: Ярианы агуулгыг автоматаар орчуулж хадгалах",
+  "helpJsonDesc": "Mode 3-т ашиглах сургалтын материалыг JSON файлаар импортлохын тулд дараах форматыг баримтална уу:",
+  "helpDialogueImportDesc": "Бүхэл ярианы багцыг JSON файлаар импортлох.",
+  "helpDialogueImportDetails": "• JSON бүтэц: `entries`-ийн оронд `dialogues` массивыг ашиглах\n• Автомат сэргээлт: Ярианы гарчиг, дүр, мессежийн дарааллыг сэргээнэ.\n• Байршил: Импортолсон яриа нь AI чат горимын 'Түүх' таб дээр гарч ирнэ.",
+  "helpTourDesc": "**Тодруулсан хүрээ** нь үндсэн функцийг чиглүүлдэг.\n(Жишээ нь: **Тодруулсан хүрээ** нь зааж буй картыг удаан дарснаар устгах боломжтой.)",
+  "partnerMode": "Хамтрагчийн горим",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "manual": "Гараар оруулах",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "speaker": "Яригч",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "switchToAi": "AI горимд шилжих",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Хамтрагчийн горимд шилжих",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "currentLocation": "Одоогийн байршил",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "location": "Байршил",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "partner": "Хамтрагч",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "me": "Би",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "currentMaterialLabel": "Одоогийн сонгосон материал:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "basicMaterialRepository": "Үндсэн өгүүлбэр/үгсийн сан",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
+  },
+  "word": "Үг",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "sentence": "Өгүүлбэр",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "appTitle": "Talkie",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "tabReview": "Давтах ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabStudyMaterial": "Сурах материал ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mode2Title": "Давтах",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "search": "Хайх",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "translate": "Орчуулах",
+  "@translate": {
+    "description": "Translate button"
+  },
+  "listen": "Сонсох",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "saveData": "Мэдээлэл хадгалах",
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  "saved": "Хадгалж дууслаа",
+  "@saved": {
+    "description": "Data saved status"
+  },
+  "delete": "Устгах",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "materialInfo": "Материалын мэдээлэл",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "cancel": "Цуцлах",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "confirm": "Зөвшөөрөх",
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
+  "refresh": "Шинэчлэх",
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  "studyRecords": "Сурах бичлэг ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "targetLanguageFilter": "Зорилтот хэл шүүх:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "noRecords": "Сонгосон хэлний сурах бичлэг байхгүй байна",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "saveTranslationsFromSearch": "Хайх горимд орчуулгыг хадгалаад үзээрэй",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  "flip": "Харуулах",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "hide": "Нуух",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "deleteRecord": "Бичлэгийг устгах",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  "confirmDelete": "Энэ сургалтын бичлэгийг устгах уу?",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
+  "recordDeleted": "Бичлэгийг устгасан",
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
+  "deleteFailed": "Устгаж чадсангүй: {error}",
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "importJsonFile": "JSON файл оруулах",
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
+  "importing": "Оруулж байна...",
+  "@importing": {
+    "description": "Import in progress"
+  },
+  "importComplete": "Оруулж дууслаа",
+  "@importComplete": {
+    "description": "Import success title"
+  },
+  "importFailed": "Оруулж чадсангүй",
+  "@importFailed": {
+    "description": "Import error title"
+  },
+  "importFile": "Файл: {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "importTotal": "Нийт: {count} ширхэг",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importAdded": "Нэмсэн: {count} ширхэг",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importSkipped": "Алгассан: {count} ширхэг",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errors": "Алдаа:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "error": "Алдаа",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "importErrorMessage": "Файл оруулахад алдаа гарлаа:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "selectStudyMaterial": "Сурах материал сонгох",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  "subject": "Гарчиг:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "source": "Эх сурвалж:",
+  "@source": {
+    "description": "Source label"
+  },
+  "file": "Файл:",
+  "@file": {
+    "description": "File label"
+  },
+  "progress": "Ахиц: {current} / {total}",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importJsonFilePrompt": "JSON файлаа оруулна уу",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
+  "selectMaterialPrompt": "Сурах материалаа сонгоно уу",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "studyComplete": "Суралцаж дууслаа",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "markAsStudied": "Судалсан гэж тэмдэглэх",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "listening": "Сонсож байна...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "recognized": "Танигдаж дууслаа",
+  "@recognized": {
+    "description": "STT complete status"
+  },
+  "recognitionFailed": "Дуу танихгүй байна: {error}",
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "checking": "Шалгаж байна...",
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
+  "translating": "Орчуулж байна...",
+  "@translating": {
+    "description": "Translation in progress"
+  },
+  "translationComplete": "Орчуулж дууслаа (Хадгалах шаардлагатай)",
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
+  "translationLoaded": "Хадгалсан орчуулгыг орууллаа",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
+  "translationFailed": "Орчуулж чадсангүй: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "enterTextToTranslate": "Орчуулах текстийг оруулна уу",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "saving": "Хадгалж байна...",
+  "@saving": {
+    "description": "Save in progress"
+  },
+  "noTranslationToSave": "Хадгалах орчуулга байхгүй байна",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "saveFailed": "Хадгалж чадсангүй: {error}",
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "playing": "Тоглуулж байна...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  "noTextToPlay": "Тоглуулах текст байхгүй байна",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "playbackFailed": "Тоглуулж чадсангүй: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceLanguage": "Эх хэл",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "targetLanguage": "Зорилтот хэл",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "similarTextFound": "Ижил төстэй текст олдлоо",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "useExistingText": "Одоо байгаа текстийг ашиглах",
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
+  "createNew": "Шинэ өгүүлбэрээр үргэлжлүүлэх",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "reviewCount": "{count} удаа давтах",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSpeaking": "Ярих",
+  "speakingPractice": "Ярих дадлага",
+  "intervalSeconds": "Завсар: {seconds} секунд",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "yourPronunciation": "Миний дуудлага",
+  "correctAnswer": "Зөв хариулт",
+  "score": "Нарийвчлал: {score}%",
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "perfect": "Төгс байна!",
+  "good": "Сайн байна",
+  "tryAgain": "Дахин оролдох",
+  "startPractice": "Дадлага эхлүүлэх",
+  "stopPractice": "Дадлага зогсоох",
+  "startTutorial": "Хичээл эхлүүлэх",
+  "tutorialMicTitle": "Дуут оруулах",
+  "tutorialMicDesc": "Микрофон товчлуурыг дарж дуугаар оруулах боломжтой.",
+  "tutorialTabDesc": "Эндээс хүссэн сурах горимоо сонгох боломжтой.",
+  "tutorialTapToContinue": "Дэлгэцийг дарж үргэлжлүүлэх",
+  "tutorialTransTitle": "Орчуулах",
+  "tutorialTransDesc": "Оруулсан текстийг орчуулна.",
+  "tutorialSaveTitle": "Хадгалах",
+  "tutorialSaveDesc": "Орчуулсан үр дүнг сургалтын түүхэнд хадгалаарай.",
+  "tutorialM2SelectTitle": "Материал сонгох",
+  "tutorialM2SelectDesc": "Дээд талын апп баар дээрх цуглуулгын дүрс (📚)-г дарж сурах материалаа сонгоно уу.",
+  "tutorialM2ListTitle": "Сурах жагсаалт",
+  "tutorialM2ListDesc": "Энэ картыг удаан дарснаар (Long Click) устгах боломжтой. Хадгалсан өгүүлбэрийг шалгаж эргүүлж үзээрэй.",
+  "tutorialM3SelectTitle": "Материал сонгох",
+  "tutorialM3SelectDesc": "Дээд талын апп баар дээрх цуглуулгын дүрс (📚)-г дарж дадлага хийх материалаа сонгоно уу.",
+  "tutorialM3IntervalTitle": "Завсар тохируулах",
+  "tutorialM3IntervalDesc": "Өгүүлбэр хоорондын хүлээх хугацааг тохируулна.",
+  "tutorialM3StartTitle": "Дадлага эхлүүлэх",
+  "tutorialM3StartDesc": "Тоглуулах товчлуурыг дарж эх хэлээр ярьж буй дууг сонсоод дагана уу.",
+  "startWarning": "Анхааруулга",
+  "noVoiceDetected": "Дуу хоолой илрээгүй байна",
+  "tooltipSearch": "Хайх",
+  "tooltipStudyReview": "Сурах+Давтах",
+  "tooltipSpeaking": "Ярих",
+  "tooltipDecrease": "Багасгах",
+  "tooltipIncrease": "Нэмэгдүүлэх",
+  "languageSettings": "Хэлний тохиргоо",
+  "tutorialM2DropdownDesc": "Дээд цэсээр дамжуулан сурах материалаа сонгох боломжтой.",
+  "tutorialM2ImportDesc": "Төхөөрөмжийн фолдероос JSON файлыг оруулах.",
+  "tutorialLangSettingsTitle": "Хэлний тохиргоо",
+  "tutorialLangSettingsDesc": "Орчуулах эх хэл болон зорилтот хэлийг тохируулна.",
+  "copy": "Хуулах",
+  "copiedToClipboard": "Санах ойд хуулсан!",
+  "tutorialContextTitle": "Нөхцөл/Утга санааны таг",
+  "tutorialContextDesc": "Ижил өгүүлбэр байсан ч нөхцөл (Жишээ нь: Өглөө, орой) бичсэнээр тусад нь хадгалах боломжтой.",
+  "thinkingTimeInterval": "Бодох хугацааны завсар",
+  "thinkingTimeDesc": "Зөв хариулт гарахын өмнө бодох хугацаа.",
+  "autoPlay": "Автоматаар тоглуулах",
+  "timeUp": "Хугацаа дууслаа!",
+  "gameModeTitle": "Тоглоомын горим",
+  "gameModeDesc": "Дадлага хийх тоглоомын горимоо сонгоно уу",
+  "wordDefenseTitle": "Үг хамгаалах",
+  "wordDefenseDesc": "Дайсан ирэхээс өмнө үгийг хэлж баазыг хамгаалаарай.",
+  "dialogueQuestTitle": "Ярианы даалгавар",
+  "dialogueQuestDesc": "Нөхцөл байдлын жүжгээр ярианы дадлага хийгээрэй. Тохиромжтой хариултыг сонгож хэлээрэй.",
+  "labelType": "Төрөл:",
+  "labelWord": "Үг",
+  "labelSentence": "Өгүүлбэр",
+  "contextTagLabel": "Утга/Нөхцөл (Сонгох) - Жишээ нь: Өглөөний мэнд, Хүндэтгэлийн хэл",
+  "contextTagHint": "Дараа нь ялгахад хялбар болгохын тулд нөхцөлийг бичнэ үү",
+  "usageLimitTitle": "Хязгаарт хүрсэн",
+  "translationLimitExceeded": "Орчуулгын хязгаар хэтэрсэн",
+  "translationLimitMessage": "Өдөрт үнэгүй орчуулга (5 удаа) дууссан байна.\\n\\nЗар үзэж 5 удааг нэн даруй цэнэглэх үү?",
+  "watchAdAndRefill": "Зар үзэж цэнэглэх (+5 удаа)",
+  "translationRefilled": "Орчуулгын тоо 5-аар цэнэглэгдлээ!",
+  "adLoading": "Зар татаж байна. Хэсэг хугацааны дараа дахин оролдоно уу.",
+  "reviewAll": "Бүгдийг давтах",
+  "totalRecords": "Нийт {count} бичлэг (Бүгдийг харах)",
+  "@totalRecords": {
+    "description": "Total records count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterAll": "Бүгд",
+  "practiceWordsOnly": "Зөвхөн үг дадлага хийх",
+  "resetPracticeHistory": "Дадлагын түүхийг анхны байдалд оруулах",
+  "retry": "Дахин оролдох уу?",
+  "noStudyMaterial": "Сурах материал байхгүй байна.",
+  "gameOver": "Game Over",
+  "playAgain": "Дахин тоглох",
+  "speakNow": "Одоо ярина уу!",
+  "scoreLabel": "Оноо",
+  "viewOnlineGuide": "Онлайн гарын авлага үзэх",
+  "getMaterials": "Материал авах",
+  "swapLanguages": "Хэл солих",
+  "next": "Дараах",
+  "wordModeLabel": "Үгийн горим",
+  "accuracy": "Нарийвчлал",
+  "basicDefault": "Үндсэн",
+  "basic": "Үндсэн",
+  "tutorialM3WordsTitle": "Үг дадлага хийх",
+  "tutorialM3WordsDesc": "Чеклэвэл зөвхөн хадгалсан үгсийг дадлага хийнэ.",
+  "enterTextHint": "Орчуулах текстийг оруулна уу",
+  "micButtonTooltip": "Дуу таних эхлүүлэх",
+  "menuHelp": "Тусламж",
+  "menuWebDownload": "Вэб сайт",
+  "menuDeviceImport": "Төхөөрөмжөөс материал оруулах",
+  "menuSettings": "Хэлний тохиргоо",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "basicWords": "Үндсэн үгсийн сан",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
+  },
+  "basicSentences": "Үндсэн өгүүлбэрийн сан",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
+  },
+  "selectMaterialSet": "Сурах материал сонгох",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "sectionWords": "Үг",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "sectionSentences": "Өгүүлбэр",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "languageSettingsTitle": "Хэлний тохиргоо",
+  "sourceLanguageLabel": "Миний хэл (Source)",
+  "targetLanguageLabel": "Сурах хэл (Target)",
+  "mode3Start": "Эхлэх",
+  "mode3Stop": "Зогсоох",
+  "mode3Next": "Дараах",
+  "mode3TryAgain": "Дахин оролдох",
+  "tutorialM3ResetTitle": "Түүхийг анхны байдалд оруулах",
+  "tutorialSwapDesc": "Миний хэл болон сурах хэлийг хооронд нь солино.",
+  "recognizedText": "Танигдсан дуудлага:",
+  "titleFormat": "{type}: {materialName}",
+  "tutorialM3ResetDesc": "Ахиц болон нарийвчлалын оноог анхны байдалд оруулж эхнээс нь дахин эхлүүлнэ.",
+  "menuSelectMaterialSet": "Сурах материал сонгох",
+  "sectionWord": "Үгийн хэсэг",
+  "sectionSentence": "Өгүүлбэрийн хэсэг",
+  "tabWord": "Үг",
+  "tabSentence": "Өгүүлбэр",
+  "errorProfanity": "Ёс бус үг агуулсан тул орчуулах боломжгүй.",
+  "errorHateSpeech": "Үзэн ядах үг агуулсан тул орчуулах боломжгүй.",
+  "errorSexualContent": "Садар самуун агуулга агуулсан тул орчуулах боломжгүй.",
+  "errorOtherSafety": "AI аюулгүй байдлын бодлогын дагуу орчуулгыг хүлээн авахаас татгалзсан.",
+  "clearAll": "Бүгдийг арилгах",
+  "disambiguationTitle": "Утга сонгох",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "disambiguationPrompt": "Ямар утгаар орчуулах вэ?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "skip": "Алгасах",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "inputModeTitle": "Оруулах",
+  "reviewModeTitle": "Давтах",
+  "practiceModeTitle": "Дуудлага дадлага",
+  "chatHistoryTitle": "Ярианы түүх",
+  "chatNew": "Шинэ яриа",
+  "chatNewChat": "Шинэ яриа",
+  "chatChoosePersona": "Дүр сонгох",
+  "chatTypeHint": "Зурвас оруулна уу...",
+  "chatFailed": "Чат хийж чадсангүй: {error}",
+  "@chatFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "chatNoConversations": "Одоогоор яриа байхгүй байна",
+  "chatStartNewPrompt": "Дадлага хийхийн тулд шинэ яриа эхлүүлээд үзээрэй!",
+  "chatFromConversation": "Ярианаас иш татах ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
+  },
+  "personaTeacher": "Англи хэлний багш",
+  "personaGuide": "Аялал жуулчлалын хөтөч",
+  "personaFriend": "Орон нутгийн найз",
+  "chatUntitled": "Гарчиггүй яриа",
+  "chatAiChat": "AI чат",
+  "tutorialAiChatTitle": "AI чат",
+  "tutorialAiChatDesc": "AI дүртэй бодит ярианы дадлага хийж үзээрэй.",
+  "mode1SelectedMaterial": "Одоогоор сонгогдсон материал: {name}",
+  "basicWordRepository": "Үндсэн үгсийн сан",
+  "basicSentenceRepository": "Үндсэн өгүүлбэрийн сан",
+  "chatEndTitle": "Яриаг дуусгаж хадгалах",
+  "chatEndMessage": "Яриагаа дуусгах уу?",
+  "chatSaveAndExit": "Хадгалж гараад гарах",
+  "errorSelectCategory": "Эхлээд үг эсвэл өгүүлбэр сонгоно уу!",
+  "tutorialM1ToggleTitle": "Үг/Өгүүлбэр горим",
+  "tutorialM1ToggleDesc": "Үг болон өгүүлбэр горимыг эндээс сольж болно.",
+  "metadataDialogTitle": "Дэлгэрэнгүй ангилал",
+  "tagFormal": "Хүндэтгэлийн хэл",
+  "selectPOS": "Үгийн төрөл сонгох",
+  "selectSentenceType": "Өгүүлбэрийн төрөл сонгох",
+  "metadataRootWord": "Үндсэн үг (Root Word)",
+  "posNoun": "Нэр үг",
+  "posVerb": "Үйл үг",
+  "posAdjective": "Тэмдэг нэр",
+  "posAdverb": "Дайвар үг",
+  "posPronoun": "Орлуун үг",
+  "posPreposition": "Орхигдох эгшиг/Төлөөний үг",
+  "posConjunction": "Холбох үг",
+  "posInterjection": "Ам барьцаалах үг",
+  "typeStatement": "Мэдэгдэл",
+  "typeQuestion": "Асуулт",
+  "typeExclamation": "Уулга алдах",
+  "typeImperative": "Тушаах үг",
+  "labelNote": "Тайлбар",
+  "labelShowMemorized": "Дууссан",
+  "tagSelection": "Таг сонгох",
+  "metadataFormType": "Дүрмийн хэлбэр",
+  "formInfinitive": "Үндсэн/Одоо цаг",
+  "formPast": "Өнгөрсөн цаг",
+  "formPastParticiple": "Өнгөрсөн цагийн оролцоо",
+  "formPresentParticiple": "Одоо цагийн оролцоо (ing)",
+  "formPresent": "Одоо цаг",
+  "formThirdPersonSingular": "3-р хүн ганц тоо",
+  "formPlural": "Олон тоо",
+  "formSingular": "Ганц тоо",
+  "caseSubject": "Гол тохиолдол",
+  "caseObject": "Зорилгын тохиолдол",
+  "casePossessive": "Эзэмших тохиолдол",
+  "casePossessivePronoun": "Эзэмших орлуун үг",
+  "caseReflexive": "Өөртөө тусах орлуун үг",
+  "formPositive": "Эерэг",
+  "formComparative": "Харьцуулсан",
+  "formSuperlative": "Хамгийн дээд зэрэг",
+  "searchConditions": "Хайлтын нөхцөл",
+  "recentNItems": "Саяхан үүсгэсэн {count} зүйлийг харах",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "startsWith": "Эхний үсэг",
+  "reset": "Анхны байдалд оруулах",
+  "participantRename": "Оролцогчийн нэрийг өөрчлөх",
+  "labelName": "Нэр",
+  "gender": "Хүйс",
+  "language": "Хэл",
+  "male": "Эрэгтэй",
+  "female": "Эмэгтэй"
+}

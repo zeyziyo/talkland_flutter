@@ -41,6 +41,9 @@
     "description": "Label for GPS location"
   },
   "location": "Ubicación",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
   "partner": "Partner",
   "@partner": {
     "description": "Label for partner speaker"
@@ -580,6 +583,7 @@
   "reviewModeTitle": "Repaso",
   "practiceModeTitle": "Práctica",
   "chatHistoryTitle": "Historial",
+  "chatNew": "New Chat",
   "chatNewChat": "Nuevo chat",
   "chatChoosePersona": "Elige personaje",
   "chatTypeHint": "Escribe aquí...",
@@ -617,11 +621,8 @@
   "errorSelectCategory": "¡Selecciona palabra o frase primero!",
   "tutorialM1ToggleTitle": "Modo Palabra/Frase",
   "tutorialM1ToggleDesc": "Cambia entre modo palabra y frase aquí.",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "chatNew": "New Chat",
   "metadataDialogTitle": "Details",
+  "tagFormal": "Formal",
   "selectPOS": "Select POS",
   "selectSentenceType": "Select Sentence Type",
   "metadataRootWord": "Root Word",
@@ -638,29 +639,27 @@
   "typeExclamation": "Exclamation",
   "typeImperative": "Imperative",
   "labelNote": "Note",
+  "labelShowMemorized": "Finished",
+  "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
   "formPast": "Past",
   "formPastParticiple": "Past Participle",
   "formPresentParticiple": "Present Participle",
+  "formPresent": "Present",
   "formThirdPersonSingular": "3rd Person Singular",
   "formPlural": "Plural",
   "formSingular": "Singular",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "labelShowMemorized": "Finished",
-  "tagSelection": "Select Tags",
-  "formPresent": "Present",
   "caseSubject": "Subject",
   "caseObject": "Object",
   "casePossessive": "Possessive",
   "casePossessivePronoun": "Possessive Pronoun",
   "caseReflexive": "Reflexive",
+  "formPositive": "Positive",
+  "formComparative": "Comparative",
+  "formSuperlative": "Superlative",
+  "searchConditions": "Search Conditions",
+  "recentNItems": "Recent {count} items",
   "@recentNItems": {
     "placeholders": {
       "count": {
@@ -668,6 +667,8 @@
       }
     }
   },
+  "startsWith": "Starts with",
+  "reset": "Reset",
   "participantRename": "Rename Participant",
   "labelName": "Name",
   "gender": "Gender",

@@ -88,9 +88,33 @@
 *   [x] **Phase 65: Help Section & Tutorial Consistency (Focus: UI/Help Sync)**:
     *   **Accurate Targeting**: 튜토리얼 하이라이트가 실제 UI 요소(마이크, 번역 버튼 등)를 정확히 가리키도록 `GlobalKey` 바인딩 수정.
     *   **JSON Guide**: 도움말 내 JSON 예제를 최신 스키마(Phase 64 반영)로 현행화.
-*   [x] **Phase 66: Example Materials Update (Focus: JSON Schema Alignment)**
-*   [ ] **Phase 67: Import Logic Update (Focus: Parsing new JSON schema)**
+### ✅ Phase 67: 문서 및 이력 정비 (Documentation & History)
+*   [x] `history.md` 및 `task.md` 한글화 및 유실된 항목 복구.
 
-### 🚀 Phase 13: 개인화 & 추천 (Planned - Feb)
+### ✅ Phase 68: 가져오기 로직 업데이트 (Import Logic Update)
+*   [x] 최신 JSON 스키마(v66)에 맞춰 `DatabaseService.importFromJsonWithMetadata` 전면 수정.
+*   [x] 메타데이터(`meta`), 참여자(`participants`), 확장 필드(`pos`, `root` 등) 파싱 지원.
+
+### ✅ Phase 69: 프로세스 강화 (Process Hardening)
+*   [x] `scripts/rule_guard.ps1`을 통한 문서 업데이트 강제화.
+*   [x] `commit` SKILL에 룰 가드 통합.
+
+### ✅ Phase 70: 가져오기 데드락 수정 (Fix Import deadlock)
+*   [x] 트랜잭션 내부에서 테이블 생성 호출 시 발생하던 데드락 해결.
+
+### ✅ Phase 71: JSON 다운로드 타입 버그 수정 (Fix JSON Download Bug)
+*   [x] 홈페이지 JSON 병합 다운로드 시 `type` 필드가 누락되어 단어가 문장으로 표시되는 버그 수정.
+
+### ✅ Phase 72: 홈페이지 언어 선택 UI 개선 (Enhance Homepage UI)
+*   [x] 언어 코드를 직접 사용하도록 드롭다운 및 데이터 구조 최적화 (ko, en 등).
+
+### ✅ Phase 73: 알림 시스템 교체 (Notification Overhaul)
+*   [x] 상단 오버레이 알림을 `showDialog` 및 `SnackBar`로 교체하여 UI 일관성 및 안정성 확보.
+
+### ✅ Phase 74: 홈페이지 학습 자료 대량 생성 (Homepage Materials Generation)
+*   [x] Gemini 2.0 Flash (v1beta) 기반 자동 번역 스크립트 구축.
+*   [x] 지원하는 모든 79개 언어에 대해 학습 자료(JSON 4종) 생성 완료. (총 316개 파일)
+
+## 🚀 Phase 75: 개인화 & 추천 (Planned - Feb)
 *   [ ] **Recommender**: 사용자 데이터를 분석하여 맞춤형 학습 콘텐츠 제안.
 *   [ ] **Home Widget**: 오늘의 추천 문장을 보여주는 세련된 UI 위젯 추가.

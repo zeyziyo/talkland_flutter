@@ -241,7 +241,7 @@ class Mode3PracticeCard extends StatelessWidget {
              // Reset Button (New)
              _buildActionButton(
                icon: Icons.restore, // Reset icon
-               label: "", // Icon only? Or Text? Space is limited.
+               label: l10n.reset, 
                color: Colors.white12,
                onPressed: () => appState.resetMode3Question(),
              ),
@@ -324,6 +324,17 @@ class Mode3PracticeCard extends StatelessWidget {
                     text: record['target_text'] as String,
                     lang: record['target_lang'] as String,
                  ),
+               ),
+               
+               const SizedBox(width: 20),
+               
+               // Reset Button (Idle)
+               _buildCircleButton(
+                 icon: Icons.restore,
+                 color: Colors.white24,
+                 size: 40,
+                 iconSize: 20,
+                 onPressed: () => appState.resetMode3Question(),
                ),
             ],
           ),
@@ -409,4 +420,3 @@ class Mode3PracticeCard extends StatelessWidget {
     return "${firstWord[0]}${'-' * (firstWord.length - 1)}";
   }
 }
-

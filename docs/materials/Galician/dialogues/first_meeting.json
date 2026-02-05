@@ -1,0 +1,45 @@
+{
+    "title": "First Meeting",
+    "entries": [
+        {
+            "text": "Ola! Chámome Jordan. Encantado de coñecerte.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Ola Jordan! Son Minji. Encantada de coñecerte tamén.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Es estudante?",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Non, son oficinista. E ti?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Son estudante universitario. Estou estudando coreano.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Vaia, que ben! O coreano é un pouco difícil, non?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Si, é difícil pero divertido. Por favor, axúdame moito.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Claro! Imos estudar moito xuntos.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Grazas. Vémonos a próxima vez!",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Adeus!",
+            "speaker": "Minji"
+        }
+    ]
+}

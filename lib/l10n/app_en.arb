@@ -1,31 +1,73 @@
 {
   "@@locale": "en",
+  "helpTitle": "Help & Guide",
+  "helpTabModes": "Modes",
+  "helpTabJson": "JSON Format",
+  "helpTabTour": "Tour",
+  "helpMode1Desc": "Recognize voice, translate to target language, and listen to the result.",
+  "helpMode1Details": "• Language Settings: Change via top/bottom Translate icon\n• Toggle: Switch between 'Word' and 'Sentence' mode\n• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: 'Save Data' adds to history\n• Clear: Reset all inputs",
+  "helpMode2Desc": "Review saved sentences with auto-hide translations and track your review count.",
+  "helpMode2Details": "• Select Material: Choose specific set or 'Review All'\n• Flip Card: Use 'Show/Hide' to check translation\n• Listen: Play TTS for specific sentence\n• Mark Studied: Checkmark (V) for completed items\n• Delete: Long-press card to remove record\n• Search Conditions: Filter by Tags, Recent N items, or Start character",
+  "helpMode3Desc": "Practice speaking by listening to and shadowing sentences.",
+  "helpMode3Details": "• Select Material: Choose learning pack\n• Interval: [-] [+] to adjust wait time (3s-60s)\n• Start/Stop: Control shadowing session\n• Speak: Listen to audio and repeat after it\n• Feedback: Accuracy score (0-100) with color code\n• Search Conditions: Filter practice targets by Tags, Recent N, or Start char",
+  "helpModeChatDesc": "Talk to AI persona to practice real conversation and save useful sentences.",
+  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
+  "helpJsonDesc": "To import study materials in Mode 3, create a JSON file with the following structure:",
+  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "partnerMode": "Partner Mode",
-  "@partnerMode": {"description": "Label for Partner Mode logic"},
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
   "manual": "Manual",
-  "@manual": {"description": "Label for manual input in Partner Mode"},
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
   "speaker": "Speaker",
-  "@speaker": {"description": "Label for speaker selection"},
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
   "switchToAi": "Switch to AI",
-  "@switchToAi": {"description": "Tooltip for switching to AI mode"},
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
   "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {"description": "Tooltip for switching to Partner mode"},
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
   "currentLocation": "Current Location",
-  "@currentLocation": {"description": "Label for GPS location"},
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
   "location": "Location",
-  "@location": {"description": "Label for location field in chat save dialog"},
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
   "partner": "Partner",
-  "@partner": {"description": "Label for partner speaker"},
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
   "me": "Me",
-  "@me": {"description": "Label for self speaker"},
+  "@me": {
+    "description": "Label for self speaker"
+  },
   "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {"description": "Banner label for current material"},
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
   "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {"description": "Name for default basic repository"},
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
+  },
   "word": "Word",
-  "@word": {"description": "Toggle option for Word"},
+  "@word": {
+    "description": "Toggle option for Word"
+  },
   "sentence": "Sentence",
-  "@sentence": {"description": "Toggle option for Sentence"},
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
@@ -389,20 +431,6 @@
   "tryAgain": "Try Again",
   "startPractice": "Start Practice",
   "stopPractice": "Stop Practice",
-  "helpTitle": "Help & Guide",
-  "helpTabModes": "Modes",
-  "helpTabJson": "JSON Format",
-  "helpTabTour": "Tour",
-  "helpMode1Desc": "Recognize voice, translate to target language, and listen to the result.",
-  "helpMode1Details": "• Language Settings: Change via top/bottom Translate icon\n• Toggle: Switch between 'Word' and 'Sentence' mode\n• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: 'Save Data' adds to history\n• Clear: Reset all inputs",
-  "helpMode2Desc": "Review saved sentences with auto-hide translations and track your review count.",
-  "helpMode2Details": "• Select Material: Choose specific set or 'Review All'\n• Flip Card: Use 'Show/Hide' to check translation\n• Listen: Play TTS for specific sentence\n• Mark Studied: Checkmark (V) for completed items\n• Delete: Long-press card to remove record\n• Search Conditions: Filter by Tags, Recent N items, or Start character",
-  "helpMode3Desc": "Practice speaking by listening to and shadowing sentences.",
-  "helpMode3Details": "• Select Material: Choose learning pack\n• Interval: [-] [+] to adjust wait time (3s-60s)\n• Start/Stop: Control shadowing session\n• Speak: Listen to audio and repeat after it\n• Feedback: Accuracy score (0-100) with color code\n• Search Conditions: Filter practice targets by Tags, Recent N, or Start char",
-  "helpModeChatDesc": "Chat with AI to practice conversation. Includes Partner Mode and Location Awareness.",
-  "helpModeChatDetails": "• AI Chat: Practice conversation in your source language\n• Multi-Persona: Change gender/lang/name via bubble menu\n• Add Partner: Use + to add new participants (Strangers)\n• GPS: Context-aware roleplay\n• Auto-Save: Chats are translated & saved automatically",
-  "helpJsonDesc": "To import study materials in Mode 3, create a JSON file with the following structure:",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
   "startTutorial": "Start Tutorial",
   "tutorialMicTitle": "Voice Input",
   "tutorialMicDesc": "Tap the mic button to start voice input.",
@@ -462,6 +490,7 @@
   "reviewAll": "Review All",
   "totalRecords": "Total {count} records (View All)",
   "@totalRecords": {
+    "description": "Total records count",
     "placeholders": {
       "count": {
         "type": "int"
@@ -553,13 +582,10 @@
   "inputModeTitle": "Input",
   "reviewModeTitle": "Review",
   "practiceModeTitle": "Practice",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "chatNew": "New Chat",
   "chatHistoryTitle": "Conversation History",
+  "chatNew": "New Chat",
   "chatNewChat": "New Chat",
   "chatChoosePersona": "Choose a Persona",
-
   "chatTypeHint": "Type a message...",
   "chatFailed": "Chat failed: {error}",
   "@chatFailed": {
@@ -584,13 +610,12 @@
   "personaFriend": "Local Friend",
   "chatUntitled": "Untitled Conversation",
   "chatAiChat": "AI Chat",
-  "helpModeChatDesc": "Talk to AI persona to practice real conversation and save useful sentences.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
   "tutorialAiChatTitle": "AI Chat",
   "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "me": "Me",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "tutorialM2ListTitle": "Practice List",
+  "tutorialM2ListDesc": "You can see your saved words and sentences here. Tap to practice or edit.",
+  "tutorialM3ResetTitle": "Reset Progress",
+  "tutorialM3ResetDesc": "You can reset your practice history for this material anytime.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
   "basicWordRepository": "Basic Word Repository",
   "basicSentenceRepository": "Basic Sentence Repository",
@@ -598,7 +623,10 @@
   "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
   "chatSaveAndExit": "Save & Exit",
   "errorSelectCategory": "Please select word or sentence first!",
+  "tutorialM1ToggleTitle": "Word/Sentence Mode",
+  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
   "metadataDialogTitle": "Details",
+  "tagFormal": "Formal",
   "selectPOS": "Select POS",
   "selectSentenceType": "Select Sentence Type",
   "metadataRootWord": "Root Word",
@@ -613,7 +641,6 @@
   "typeStatement": "Statement",
   "typeQuestion": "Question",
   "typeExclamation": "Exclamation",
-
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",

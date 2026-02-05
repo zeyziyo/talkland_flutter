@@ -1,0 +1,45 @@
+{
+    "title": "First Meeting",
+    "entries": [
+        {
+            "text": "Helo! Jordan ydy fy enw i. Braf cwrdd â chi.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Helo Jordan! Minji ydw i. Braf cwrdd â chi hefyd.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Ydych chi'n fyfyriwr?",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Nac ydw, rwy'n gweithiwr swyddfa. Beth amdanoch chi?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Myfyriwr coleg ydw i. Rwy'n astudio Coreeg.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Wow, mae hynny'n wych! Mae Coreeg ychydig yn anodd, onid ydyw?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Ydy, mae'n anodd ond yn hwyl. Plîs helpwch fi llawer.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Siŵr! Gadewch i ni astudio'n galed gyda'n gilydd.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Diolch. Welwn ni chi tro nesaf!",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Hwyl fawr!",
+            "speaker": "Minji"
+        }
+    ]
+}

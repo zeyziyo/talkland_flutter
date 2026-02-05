@@ -1,0 +1,678 @@
+{
+  "@@locale": "kk",
+  "helpTitle": "Анықтама & Нұсқаулық",
+  "helpTabModes": "Режимдерді түсіндіру",
+  "helpTabJson": "JSON форматы",
+  "helpTabTour": "Тәжірибе жасау",
+  "helpMode1Desc": "Дауысты танып, аударып, нәтижесін тыңдай аласыз.",
+  "helpMode1Details": "• Тілді орнату: тілді өзгерту үшін жоғарғы/төменгі белгішені басыңыз\n• Сөз/сөйлем ауыстырып қосқышы: режимді ауыстыру\n• Дауыс енгізу: тыңдауды бастау/тоқтату үшін микрофон белгішесін басыңыз\n• Мәтін енгізу: аудару үшін тікелей теріңіз\n• Автоматты іздеу: ұқсас бар сөйлемді анықтау\n• Аударма: бірден аудару үшін аудару батырмасын басыңыз\n• Тыңдау: TTS ойнату үшін динамик белгішесін пайдаланыңыз\n• Сақтау: 'Деректерді сақтау' арқылы жазба қосыңыз\n• Тазалау: енгізуді бастапқы күйге келтіру",
+  "helpMode2Desc": "Сақталған сөйлемдерді қарап шығып, автоматты жасыру функциясы арқылы есте сақтау туралы біліңіз.",
+  "helpMode2Details": "• Материалды таңдау: нақты материалды немесе 'Толық қарауды' таңдаңыз\n• Картаны аудару: аударманы 'Көрсету/Жасыру' арқылы тексеріңіз (автоматты оқытуды тексеру)\n• Тыңдау: сөйлемді TTS ойнату\n• Оқыту аяқталды: оқытуды аяқтау үшін құсбелгіні (V) пайдаланыңыз\n• Жою: жазбаны жою үшін картаны ұзақ басып тұрыңыз\n• Іздеу шарттары: тегтер, соңғы элементтер, басталатын әріптер арқылы сүзгілеу",
+  "helpMode3Desc": "Сөйлемдерді тыңдап, қайталап айту (Shadowing) арқылы айтылуды жаттықтырыңыз.",
+  "helpMode3Details": "• Материалды таңдау: оқуға арналған материалды таңдау\n• Аралықты орнату: сөйлемдер арасындағы күту уақытын реттеу үшін [-] [+] батырмаларын пайдаланыңыз (3 секундтан 60 секундқа дейін)\n• Бастау/Тоқтату: Shadowing сеансын басқару\n• Сөйлеу: дауысты тыңдап, қайталап айтыңыз\n• Кері байланыс: дәлдік көрсеткіші (0-100) және түс дисплейі\n• Іздеу шарттары: тегтер, соңғы элементтер, басталатын әріптер арқылы жаттығу мақсатын сүзгілеу",
+  "helpModeChatDesc": "AI Persona-мен сөйлесіп, нақты өмірлік сөйлесуді жаттықтырыңыз.",
+  "helpModeChatDetails": "• AI чаты: сөйлесуді жаттықтыру үшін өз тіліңізде сөйлеңіз\n• Бірнеше Persona: сөйлесу көпіршігіндегі мәзір арқылы қарсыластың жынысын/тілін/атын өзгертуге болады\n• Серіктес қосу: жаңа сөйлесу серіктесін (+ батырмасы) қосу\n• GPS: ағымдағы орналасу негізіндегі жағдай\n• Автоматты сақтау: сөйлесу мазмұнын автоматты түрде аудару және сақтау",
+  "helpJsonDesc": "Mode 3-те пайдалану үшін оқу материалын JSON файлы ретінде импорттау үшін келесі форматты орындаңыз:",
+  "helpDialogueImportDesc": "Бүкіл диалогтар жинағын JSON файлы ретінде импорттау.",
+  "helpDialogueImportDetails": "• JSON құрылымы: `entries` орнына `dialogues` массивін пайдаланыңыз\n• Автоматты қалпына келтіру: диалог атауы, Persona, хабар реті қалпына келтіріледі.\n• Орналасуы: импортталған диалогтар AI Chat режимінің 'Тарих' қойындысында пайда болады.",
+  "helpTourDesc": "**Ерекшеленген шеңбер** негізгі функцияларды көрсетеді.\n(Мысалы: **Ерекшеленген шеңбер** көрсеткен картаны жою үшін ұзақ басып тұруға болады.)",
+  "partnerMode": "Серіктес режимі",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "manual": "Қолмен енгізу",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "speaker": "Дыбыстаушы",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "switchToAi": "AI режиміне ауысу",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Серіктес режиміне ауысу",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "currentLocation": "Ағымдағы орналасу",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "location": "Орналасу",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "partner": "Серіктес",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "me": "Мен",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "currentMaterialLabel": "Ағымдағы таңдалған материал:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "basicMaterialRepository": "Негізгі сөйлем/сөз сақтау орны",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
+  },
+  "word": "Сөз",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "sentence": "Сөйлем",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "appTitle": "Talkie",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "tabReview": "Қайталау ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabStudyMaterial": "Оқу материалы ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mode2Title": "Қайталау",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "search": "Іздеу",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "translate": "Аудару",
+  "@translate": {
+    "description": "Translate button"
+  },
+  "listen": "Тыңдау",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "saveData": "Деректерді сақтау",
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  "saved": "Сақтау аяқталды",
+  "@saved": {
+    "description": "Data saved status"
+  },
+  "delete": "Жою",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "materialInfo": "Материал туралы ақпарат",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "cancel": "Болдырмау",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "confirm": "Растау",
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
+  "refresh": "Жаңарту",
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  "studyRecords": "Оқу жазбалары ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "targetLanguageFilter": "Мақсатты тіл сүзгісі:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "noRecords": "Таңдалған тілде оқу жазбалары жоқ",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "saveTranslationsFromSearch": "Іздеу режимінде аудармаларды сақтап көріңіз",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  "flip": "Көрсету",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "hide": "Жасыру",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "deleteRecord": "Жазбаны жою",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  "confirmDelete": "Бұл оқу жазбасын жойғыңыз келе ме?",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
+  "recordDeleted": "Жазба жойылды",
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
+  "deleteFailed": "Жою сәтсіз аяқталды: {error}",
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "importJsonFile": "JSON файлын импорттау",
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
+  "importing": "Импорттау...",
+  "@importing": {
+    "description": "Import in progress"
+  },
+  "importComplete": "Импорттау аяқталды",
+  "@importComplete": {
+    "description": "Import success title"
+  },
+  "importFailed": "Импорттау сәтсіз аяқталды",
+  "@importFailed": {
+    "description": "Import error title"
+  },
+  "importFile": "Файл: {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "importTotal": "Барлығы: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importAdded": "Қосылды: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importSkipped": "Өткізіп жіберілді: {count}",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errors": "Қателер:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "error": "Қате",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "importErrorMessage": "Файлды импорттау сәтсіз аяқталды:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "selectStudyMaterial": "Оқу материалын таңдау",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  "subject": "Тақырып:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "source": "Дереккөз:",
+  "@source": {
+    "description": "Source label"
+  },
+  "file": "Файл:",
+  "@file": {
+    "description": "File label"
+  },
+  "progress": "Прогресс: {current} / {total}",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importJsonFilePrompt": "JSON файлын импорттаңыз",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
+  "selectMaterialPrompt": "Оқу материалын таңдаңыз",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "studyComplete": "Оқу аяқталды",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "markAsStudied": "Оқу белгісі",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "listening": "Тыңдау...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "recognized": "Танылды",
+  "@recognized": {
+    "description": "STT complete status"
+  },
+  "recognitionFailed": "Дауысты тану сәтсіз аяқталды: {error}",
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "checking": "Тексеру...",
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
+  "translating": "Аудару...",
+  "@translating": {
+    "description": "Translation in progress"
+  },
+  "translationComplete": "Аударма аяқталды (сақтау керек)",
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
+  "translationLoaded": "Сақталған аударма жүктелді",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
+  "translationFailed": "Аударма сәтсіз аяқталды: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "enterTextToTranslate": "Аударылатын мәтінді енгізіңіз",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "saving": "Сақтау...",
+  "@saving": {
+    "description": "Save in progress"
+  },
+  "noTranslationToSave": "Сақтайтын аударма жоқ",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "saveFailed": "Сақтау сәтсіз аяқталды: {error}",
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "playing": "Ойнату...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  "noTextToPlay": "Ойнататын мәтін жоқ",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "playbackFailed": "Ойнату сәтсіз аяқталды: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceLanguage": "Бастапқы тіл",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "targetLanguage": "Мақсатты тіл",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "similarTextFound": "Ұқсас мәтін табылды",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "useExistingText": "Бар мәтінді пайдалану",
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
+  "createNew": "Жаңа сөйлеммен жалғастыру",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "reviewCount": "{count} рет қайталау",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSpeaking": "Сөйлеу",
+  "speakingPractice": "Сөйлеу жаттығуы",
+  "intervalSeconds": "Аралық: {seconds} секунд",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "yourPronunciation": "Сіздің айтылуыңыз",
+  "correctAnswer": "Дұрыс жауап",
+  "score": "Дәлдік: {score}%",
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "perfect": "Керемет!",
+  "good": "Жақсы",
+  "tryAgain": "Қайтадан көріңіз",
+  "startPractice": "Жаттығуды бастау",
+  "stopPractice": "Жаттығуды тоқтату",
+  "startTutorial": "Оқулықты бастау",
+  "tutorialMicTitle": "Дауысты енгізу",
+  "tutorialMicDesc": "Дауыспен енгізу үшін микрофон батырмасын басуға болады.",
+  "tutorialTabDesc": "Мұнда қалаған оқу режимін таңдауға болады.",
+  "tutorialTapToContinue": "Жалғастыру үшін экранды түртіңіз",
+  "tutorialTransTitle": "Аудару",
+  "tutorialTransDesc": "Енгізілген мәтінді аударады.",
+  "tutorialSaveTitle": "Сақтау",
+  "tutorialSaveDesc": "Аударылған нәтижені оқу жазбасына сақтаңыз.",
+  "tutorialM2SelectTitle": "Материалды таңдау",
+  "tutorialM2SelectDesc": "Оқуға арналған материалды таңдау үшін жоғарғы қолданбалы тақтадағы материал белгішесін (📚) басыңыз.",
+  "tutorialM2ListTitle": "Оқу тізімі",
+  "tutorialM2ListDesc": "Егер осы картаны ұзақ басып тұрсаңыз (Ұзақ басу), оны жоюға болады. Сақталған сөйлемді тексеріп, аударыңыз.",
+  "tutorialM3SelectTitle": "Материалды таңдау",
+  "tutorialM3SelectDesc": "Жаттығуға арналған материалды таңдау үшін жоғарғы қолданбалы тақтадағы материал белгішесін (📚) басыңыз.",
+  "tutorialM3IntervalTitle": "Аралықты орнату",
+  "tutorialM3IntervalDesc": "Сөйлемдер арасындағы күту уақытын реттейді.",
+  "tutorialM3StartTitle": "Жаттығуды бастау",
+  "tutorialM3StartDesc": "Түпнұсқа тілде дыбысты тыңдау және қайталау үшін ойнату батырмасын басыңыз.",
+  "startWarning": "Ескерту",
+  "noVoiceDetected": "Дауыс анықталмады",
+  "tooltipSearch": "Іздеу",
+  "tooltipStudyReview": "Оқу+Қайталау",
+  "tooltipSpeaking": "Сөйлеу",
+  "tooltipDecrease": "Төмендету",
+  "tooltipIncrease": "Арттыру",
+  "languageSettings": "Тілдік параметрлер",
+  "tutorialM2DropdownDesc": "Жоғарғы мәзір арқылы оқуға арналған материалды таңдауға болады.",
+  "tutorialM2ImportDesc": "Құрылғы қалтасынан JSON файлын импорттайды.",
+  "tutorialLangSettingsTitle": "Тілдік параметрлер",
+  "tutorialLangSettingsDesc": "Аударылатын бастапқы тіл мен мақсатты тілді орнатады.",
+  "copy": "Көшіру",
+  "copiedToClipboard": "Буферге көшірілді!",
+  "tutorialContextTitle": "Жағдай/Мәтін мәні тегі",
+  "tutorialContextDesc": "Егер бір сөйлемнің өзінде жағдайды жазсаңыз (мысалы, таңертең, кешке), оны бөлек сақтауға болады.",
+  "thinkingTimeInterval": "Ойлау уақыты аралығы",
+  "thinkingTimeDesc": "Жауап жарияланғанға дейін ойлану уақыты.",
+  "autoPlay": "Автоматты ойнату",
+  "timeUp": "Уақыт бітті!",
+  "gameModeTitle": "Ойын режимі",
+  "gameModeDesc": "Жаттығуға арналған ойын режимін таңдаңыз",
+  "wordDefenseTitle": "Сөзді қорғау",
+  "wordDefenseDesc": "Жау келмес бұрын сөзді айтып, базаны қорғаңыз.",
+  "dialogueQuestTitle": "Диалог квесті",
+  "dialogueQuestDesc": "Жағдайды көрсету арқылы диалогты жаттықтырыңыз. Тиісті жауапты таңдап, айтыңыз.",
+  "labelType": "Түрі:",
+  "labelWord": "Сөз",
+  "labelSentence": "Сөйлем",
+  "contextTagLabel": "Мәтін мәні/Жағдай (міндетті емес) - Мысалы: таңғы сәлемдесу, сыпайы сөз",
+  "contextTagHint": "Кейін ажырату оңай болу үшін жағдайды жазыңыз",
+  "usageLimitTitle": "Шекке жетті",
+  "translationLimitExceeded": "Аударма шегінен асып кетті",
+  "translationLimitMessage": "Күнделікті тегін аударманы (5 рет) толығымен пайдаландыңыз.\\n\\nЖарнаманы көріп, 5 рет тез арада толтырғыңыз келе ме?",
+  "watchAdAndRefill": "Жарнаманы көріп толтыру (+5 рет)",
+  "translationRefilled": "Аударма саны 5 ретке толтырылды!",
+  "adLoading": "Жарнама жүктелуде. Бірнеше секундтан кейін қайталап көріңіз.",
+  "reviewAll": "Толық қайталау",
+  "totalRecords": "Барлығы {count} жазба (толық көру)",
+  "@totalRecords": {
+    "description": "Total records count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterAll": "Барлығы",
+  "practiceWordsOnly": "Тек сөздерді жаттықтыру",
+  "resetPracticeHistory": "Жаттығу тарихын қалпына келтіру",
+  "retry": "Қайтадан көру?",
+  "noStudyMaterial": "Оқу материалы жоқ.",
+  "gameOver": "Ойын аяқталды",
+  "playAgain": "Қайтадан ойнау",
+  "speakNow": "Қазір сөйлеңіз!",
+  "scoreLabel": "Ұпай",
+  "viewOnlineGuide": "Онлайн нұсқауды көру",
+  "getMaterials": "Материалдарды алу",
+  "swapLanguages": "Тілдерді ауыстыру",
+  "next": "Келесі",
+  "wordModeLabel": "Сөз режимі",
+  "accuracy": "Дәлдік",
+  "basicDefault": "Негізгі",
+  "basic": "Негізгі",
+  "tutorialM3WordsTitle": "Сөздерді жаттықтыру",
+  "tutorialM3WordsDesc": "Егер белгілесеңіз, сақталған сөздерді ғана жаттықтырасыз.",
+  "enterTextHint": "Аударылатын мәтінді енгізіңіз",
+  "micButtonTooltip": "Дауысты тануды бастау",
+  "menuHelp": "Анықтама",
+  "menuWebDownload": "Веб-сайт",
+  "menuDeviceImport": "Құрылғыдан материалды импорттау",
+  "menuSettings": "Тілдік параметрлер",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "basicWords": "Негізгі сөз сақтау орны",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
+  },
+  "basicSentences": "Негізгі сөйлем сақтау орны",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
+  },
+  "selectMaterialSet": "Оқу материалдарының жинағын таңдау",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "sectionWords": "Сөздер",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "sectionSentences": "Сөйлемдер",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "languageSettingsTitle": "Тілдік параметрлер",
+  "sourceLanguageLabel": "Менің тілім (Source)",
+  "targetLanguageLabel": "Оқылатын тіл (Target)",
+  "mode3Start": "Бастау",
+  "mode3Stop": "Тоқтату",
+  "mode3Next": "Келесі",
+  "mode3TryAgain": "Қайта көру",
+  "tutorialM3ResetTitle": "Тарихты қалпына келтіру",
+  "tutorialSwapDesc": "Менің тілім мен оқылатын тілді ауыстырады.",
+  "recognizedText": "Танылған айтылу:",
+  "titleFormat": "{type}: {materialName}",
+  "tutorialM3ResetDesc": "Прогресс пен дәлдік көрсеткішін қалпына келтіріп, басынан бастаңыз.",
+  "menuSelectMaterialSet": "Оқу материалдарының жинағын таңдау",
+  "sectionWord": "Сөз бөлімі",
+  "sectionSentence": "Сөйлем бөлімі",
+  "tabWord": "Сөз",
+  "tabSentence": "Сөйлем",
+  "errorProfanity": "Балағат сөздер бар болғандықтан аудару мүмкін емес.",
+  "errorHateSpeech": "Өшпенділік білдіретін сөздер бар болғандықтан аудару мүмкін емес.",
+  "errorSexualContent": "Жалаңаштайтын мазмұны бар болғандықтан аудару мүмкін емес.",
+  "errorOtherSafety": "AI қауіпсіздік саясатына байланысты аударуға рұқсат етілмеді.",
+  "clearAll": "Барлығын тазалау",
+  "disambiguationTitle": "Мағынаны таңдау",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "disambiguationPrompt": "Қандай мағынада аударғыңыз келеді?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "skip": "Өткізіп жіберу",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "inputModeTitle": "Енгізу",
+  "reviewModeTitle": "Қайталау",
+  "practiceModeTitle": "Айтылу жаттығуы",
+  "chatHistoryTitle": "Сөйлесу тарихы",
+  "chatNew": "Жаңа сөйлесу",
+  "chatNewChat": "Жаңа сөйлесу",
+  "chatChoosePersona": "Persona таңдау",
+  "chatTypeHint": "Хабарламаны енгізіңіз...",
+  "chatFailed": "Чат сәтсіз аяқталды: {error}",
+  "@chatFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "chatNoConversations": "Әлі сөйлесулер жоқ",
+  "chatStartNewPrompt": "Жаттығу үшін жаңа сөйлесуді бастап көріңіз!",
+  "chatFromConversation": "Сөйлесуден үзінді ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
+  },
+  "personaTeacher": "Ағылшын тілі мұғалімі",
+  "personaGuide": "Саяхат нұсқаушысы",
+  "personaFriend": "Жергілікті дос",
+  "chatUntitled": "Атаусыз сөйлесу",
+  "chatAiChat": "AI чат",
+  "tutorialAiChatTitle": "AI чат",
+  "tutorialAiChatDesc": "AI Persona-мен нақты өмірлік сөйлесуді жаттықтырып көріңіз.",
+  "mode1SelectedMaterial": "Қазір таңдалған материал: {name}",
+  "basicWordRepository": "Негізгі сөз сақтау орны",
+  "basicSentenceRepository": "Негізгі сөйлем сақтау орны",
+  "chatEndTitle": "Сөйлесуді аяқтау және сақтау",
+  "chatEndMessage": "Сөйлесуді аяқтағыңыз келе ме?",
+  "chatSaveAndExit": "Сақтап шығу",
+  "errorSelectCategory": "Алдымен сөзді немесе сөйлемді таңдаңыз!",
+  "tutorialM1ToggleTitle": "Сөз/Сөйлем режимі",
+  "tutorialM1ToggleDesc": "Сөз бен сөйлем режимдерін мұнда ауыстырыңыз.",
+  "metadataDialogTitle": "Толық жіктеу",
+  "tagFormal": "Сыпайы сөз",
+  "selectPOS": "Сөз таптарын таңдау",
+  "selectSentenceType": "Сөйлем түрін таңдау",
+  "metadataRootWord": "Түбір (Root Word)",
+  "posNoun": "Зат есім",
+  "posVerb": "Етістік",
+  "posAdjective": "Сын есім",
+  "posAdverb": "Үстеу",
+  "posPronoun": "Есімдік",
+  "posPreposition": "Предлог/Жалғау",
+  "posConjunction": "Жалғаулық",
+  "posInterjection": "Одағай",
+  "typeStatement": "Хабарлы сөйлем",
+  "typeQuestion": "Сұраулы сөйлем",
+  "typeExclamation": "Лепті сөйлем",
+  "typeImperative": "Бұйрықты сөйлем",
+  "labelNote": "Ескертпе",
+  "labelShowMemorized": "Аяқталған",
+  "tagSelection": "Тегті таңдау",
+  "metadataFormType": "Грамматикалық форма",
+  "formInfinitive": "Негізгі/Нақ осы шақ",
+  "formPast": "Өткен шақ",
+  "formPastParticiple": "Есімше",
+  "formPresentParticiple": "Ауыспалы осы шақ (ing)",
+  "formPresent": "Нақ осы шақ",
+  "formThirdPersonSingular": "3-жақ, жекеше",
+  "formPlural": "Көпше",
+  "formSingular": "Жекеше",
+  "caseSubject": "Атау септік",
+  "caseObject": "Барыс септік",
+  "casePossessive": "Ілік септік",
+  "casePossessivePronoun": "Тәуелдік есімдік",
+  "caseReflexive": "Өздік есімдік",
+  "formPositive": "Жай шырай",
+  "formComparative": "Салыстырмалы шырай",
+  "formSuperlative": "Күшейтпелі шырай",
+  "searchConditions": "Іздеу шарттары",
+  "recentNItems": "Жақында жасалған {count} элементті көру",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "startsWith": "Басталатын әріптер",
+  "reset": "Қалпына келтіру",
+  "participantRename": "Қатысушының атын өзгерту",
+  "labelName": "Аты",
+  "gender": "Жынысы",
+  "language": "Тілі",
+  "male": "Еркек",
+  "female": "Әйел"
+}

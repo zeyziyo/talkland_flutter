@@ -100,7 +100,6 @@ class AppState extends ChangeNotifier {
   bool _isTranslating = false;
   bool _isSpeaking = false;
   bool _isSaved = false; // Track if current translation is saved
-  String _statusMessage = '';
   String _note = ''; // Note for ambiguous translations
   bool _isWordMode = true; // Toggle between Word and Sentence mode (Default: Word)
   String _sourcePos = ''; // 품사 (Verb, Noun 등)
@@ -193,7 +192,6 @@ class AppState extends ChangeNotifier {
   void setPageController(PageController controller) {
     _pageController = controller;
   }
-  String get statusMessage => _statusMessage;
   String get note => _note;
   bool get isWordMode => _isWordMode;
   List<Map<String, dynamic>> get studyRecords => _studyRecords;
@@ -1736,18 +1734,6 @@ class AppState extends ChangeNotifier {
               }
             }
             
-            if (i % 5 == 0) {
-              _statusMessage = 'Importing Entries... ($importedCount/${entries.length})';
-              notifyListeners();
-            }
-          } catch (e) {
-            errors.add('Entry ${i + 1}: $e');
-            skippedCount++;
-          }
-        }
-      }
-      
-      _statusMessage = 'Import complete';
       await loadStudyRecords(); // Reload user library
       notifyListeners();
       
@@ -1920,7 +1906,6 @@ class AppState extends ChangeNotifier {
     if (_mode3SessionActive) {
       // Start session
       if (_materialRecords.isEmpty) {
-        _statusMessage = '먼저 학습 자료를 선택하세요';
         _mode3SessionActive = false;
       } else {
         // Clear Score History
@@ -2132,6 +2117,18 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Mode 3: Reset entire practice progress (Clear completed IDs)
+  void resetMode3Progress() {
+    _mode3CompletedQuestionIds.clear();
+    _currentMode3Question = null;
+    _mode3Score = null;
+    _mode3UserAnswer = '';
+    _showRetryButton = false;
+    _isListening = false;
+    _mode3SessionActive = false;
+    notifyListeners();
+  }
+
   /// Mode 3: Set current question (Starts new practice session for this item)
   void setMode3CurrentQuestion(Map<String, dynamic> record) {
      // If switching cards, stop any ongoing listening
@@ -2191,7 +2188,6 @@ class AppState extends ChangeNotifier {
     final availableQuestions = _getAvailableQuestions();
      if (availableQuestions.isEmpty) {
       _mode3SessionActive = false;
-      _statusMessage = 'All questions completed!';
       notifyListeners();
       return;
     }
@@ -2432,12 +2428,9 @@ class AppState extends ChangeNotifier {
       // Perform import (Using fast local transaction, ignoring Supabase sync for now as per user request for speed)
       // The local AppState method 'importJsonWithMetadata' was slow due to row-by-row Supabase inserts.
       // We switch to DatabaseService.importFromJsonWithMetadata which uses SQLite transaction.
-      _statusMessage = 'Importing Entries...';
-      notifyListeners();
-      
+      // Perform import
       final importResult = await DatabaseService.importFromJsonWithMetadata(jsonContent, fileName: fileName);
       
-      _statusMessage = 'Import complete';
       // Refresh Local Study Materials (Dropdown)
       await loadStudyMaterials();
       // Also refresh Supabase list (Review List) - though it might be empty until sync

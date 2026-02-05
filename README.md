@@ -17,13 +17,13 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 ## 기능 (Features)
 
 ### MODE 1: 검색 (Search)
-- 🎤 **음성 인식**: 모국어로 말하기 (43개 언어 지원)
+- 🎤 **음성 인식**: 모국어로 말하기 (80개 언어 지원)
 - 🔄 **번역**: 실시간 번역 및 중복 감지
 - 🔀 **모드 전환**: **단어 / 문장** 토글을 통한 입력 모드 변경
 - 🔊 **TTS**: 번역된 텍스트 듣기
 - 💾 **저장**: 학습 기록으로 저장
 
-* **Voice Recognition**: Speak in your native language (supports 43 languages)
+* **Voice Recognition**: Speak in your native language (supports 80 languages)
 * **Translation**: Real-time translation & duplicate detection
 * **Toggle Mode**: Switch between **Word / Sentence** input modes
 * **TTS**: Listen to translated text
@@ -77,6 +77,12 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 * **Smart Save**: Auto-save chats with "Location (Date)" titles
 * **History Management**: Revisit past chats & edit titles
 
+## 최근 업데이트 (Recent Updates - 2026-02-05)
+
+- **공지 시스템 교체 (Phase 73)**: 상단 오버레이 알림(`_statusMessage`)을 제거하고 다이얼로그(`showDialog`) 및 스낵바(`SnackBar`) 기반의 표준 알림 시스템으로 전면 교체하여 안정성 및 UI 일관성 확보.
+- **연습 모드 초기화 기능**: Mode 3(발음 연습) 카드의 대기 및 결과 화면에 '초기화(Reset)' 버튼을 추가하여 연습 상태를 즉시 리셋할 수 있도록 개선.
+- **가져오기(Import) 알림 개선**: JSON 파일 가져오기 실패 시 상세 에러 내용을 다이얼로그로 표시하여 문제 진단을 용이하게 함.
+
 ## 최근 업데이트 (Recent Updates - 2026-02-03)
 
 - **멀티 페르소나 시스템 (Multi-Persona)**: 대화방 내 참가자의 신원(언어, 성별, 이름)을 즉시 변경하고 재번역하는 기능 추가. (Phase 64)
@@ -112,15 +118,19 @@ You can import both individual sentences (`entries`) and complete conversation s
 
 ## 지원 언어 (Supported Languages)
 
-Talkie는 **43개 언어**를 지원합니다:
-Talkie supports **43 languages**:
+Talkie는 이제 **전 세계 80개 언어**를 완벽하게 지원합니다:
+Talkie now fully supports **80 languages** worldwide:
 
 - **동아시아 (East Asia, 4)**: Korean, Japanese, Chinese (Simplified), Chinese (Traditional)
-- **유럽 (Europe, 17)**: English, Spanish, French, German, Italian, Portuguese, Russian, Polish, Ukrainian, Dutch, Greek, Czech, Romanian, Swedish, Danish, Finnish, Norwegian, Hungarian
-- **남아시아 (South Asia, 10)**: Hindi, Bengali, Tamil, Telugu, Marathi, Urdu, Gujarati, Kannada, Malayalam, Punjabi
-- **동남아시아 (Southeast Asia, 5)**: Indonesian, Vietnamese, Thai, Filipino, Malay
-- **중동 (Middle East, 4)**: Arabic, Turkish, Persian, Hebrew
-- **아프리카 (Africa, 2)**: Swahili, Afrikaans
+- **유럽 (Europe, 25)**: English, Spanish, French, German, Italian, Portuguese, Russian, Polish, Ukrainian, Dutch, Greek, Czech, Romanian, Swedish, Danish, Finnish, Norwegian, Hungarian, **Albanian, Armenian, Basque, Belarusian, Bosnian, Bulgarian, Catalan, Croatian, Estonian, Galician, Icelandic, Latvian, Lithuanian, Macedonian, Serbian, Slovak, Slovenian, Welsh**
+- **남아시아 (South Asia, 12)**: Hindi, Bengali, Tamil, Telugu, Marathi, Urdu, Gujarati, Kannada, Malayalam, Punjabi, **Assamese, Odia, Sinhala**
+- **동남아시아 (Southeast Asia, 8)**: Indonesian, Vietnamese, Thai, Filipino, Malay, **Burmese, Khmer, Lao**
+- **중동 및 중앙아시아 (Middle East & Central Asia, 10)**: Arabic, Turkish, Persian, Hebrew, **Azerbaijani, Georgian, Kazakh, Kyrgyz, Tibetan, Uzbek**
+- **아프리카 (Africa, 4)**: Swahili, Afrikaans, **Xhosa, Zulu**
+- **기타 (Others)**: **Amharic, Nepali, Pashto... (and more)**
+
+> [!TIP]
+> 홈페이지(` Zeyziyo/talkie`)에서 위 모든 언어에 대한 고품질 학습 자료(JSON)를 무료로 다운로드하여 앱에 가져올 수 있습니다.
 
 ## 기술 스택 (Tech Stack)
 
@@ -199,7 +209,7 @@ lib/
 │   ├── mode2_widget.dart        # MODE 2: Study Material & Review UI
 │   ├── mode3_widget.dart        # MODE 3: Speaking Practice UI
 │   └── help_dialog.dart         # Help Dialog
-└── l10n/                        # Internationalization (43 languages)
+└── l10n/                        # Internationalization (80 languages)
     ├── app_ko.arb               # Korean
     ├── app_en.arb               # English
 
@@ -226,7 +236,7 @@ The Flet version is preserved at `c:\PythonProjects\talkland_flet`.
 
 - **빌드 안정화**: `AppState` 및 `DatabaseService` 내의 모든 중복 정의 및 문법 오류 해결 (Clean Build 보장)
 - **대화 기능 강화 (Feb 2)**: AI 채팅 자동 제목(Chat N), 메모(Note) 기능, 대화 목록 검색 및 날짜 필터, 즉시 반응 UI(Optimistic Update) 적용
-- **글로벌 동기화**: `app_en.arb`의 신규 키(`chatNewChat` 등)를 43개 언어 전체 파일에 자동 동기화
+- **글로벌 동기화**: `app_en.arb`의 신규 키(`chatNewChat` 등)를 80개 언어 전체 파일에 자동 동기화
 - **SDK 대응**: `Geolocator` 패키지(v13.0.0+)의 브레이킹 체인지 대응 및 위치 설정 최적화
 
 ## 라이선스 (License)

@@ -1,0 +1,45 @@
+{
+    "title": "First Meeting",
+    "entries": [
+        {
+            "text": "Tere! Minu nimi on Jordan. Meeldiv tutvuda.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Tere, Jordan! Mina olen Minji. Ka meeldiv tutvuda.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Kas sa oled üliõpilane?",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Ei, ma olen kontoritöötaja. Aga sina?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Ma olen kolledži tudeng. Ma õpin korea keelt.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Vau, see on suurepärane! Korea keel on natuke raske, kas pole?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Jah, see on raske, aga lõbus. Palun aidake mind palju.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Muidugi! Õpime koos kõvasti.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Aitäh. Näeme järgmine kord!",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Head aega!",
+            "speaker": "Minji"
+        }
+    ]
+}

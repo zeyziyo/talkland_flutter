@@ -1,0 +1,678 @@
+{
+  "@@locale": "ca",
+  "helpTitle": "Ajuda i guia",
+  "helpTabModes": "Descripció dels modes",
+  "helpTabJson": "Format JSON",
+  "helpTabTour": "Fer un recorregut",
+  "helpMode1Desc": "Reconeix la veu per traduir i escolta els resultats.",
+  "helpMode1Details": "• Configuració de l'idioma: Canvia l'idioma prement les icones superior/inferior\n• Commutador de paraules/frases: Canvia de mode\n• Entrada de veu: Prem la icona del micròfon per començar/aturar l'escolta\n• Entrada de text: Introdueix text directament per traduir\n• Cerca automàtica: Detecta frases existents similars\n• Traducció: Prem el botó de traducció per traduir immediatament\n• Escolta: Reprodueix TTS amb la icona de l'altaveu\n• Desa: Afegeix enregistraments amb 'Desa les dades'\n• Esborra: Inicialitza l'entrada",
+  "helpMode2Desc": "Repassa les frases desades i comprova si les recordes amb la funció d'ocultació automàtica.",
+  "helpMode2Details": "• Selecció de materials: Selecciona una col·lecció de materials específica o 'Repàs complet'\n• Gira la targeta: Comprova la traducció amb 'Mostra/Amaga' (comprovació d'aprenentatge automàtic)\n• Escolta: Reprodueix TTS de la frase\n• Aprenentatge complet: Marca com a complet amb una marca de verificació (V)\n• Suprimeix: Mantén premuda la targeta per suprimir l'enregistrament\n• Criteris de cerca: Filtra per etiqueta, element recent o lletra inicial",
+  "helpMode3Desc": "Practica la pronunciació escoltant i repetint les frases (Shadowing).",
+  "helpMode3Details": "• Selecció de materials: Selecciona la col·lecció de materials que vols estudiar\n• Configuració de l'interval: Ajusta el temps d'espera entre frases amb els botons [-] [+](3 segons ~ 60 segons)\n• Comença/Atura: Controla la sessió de shadowing\n• Parla: Escolta la veu i repeteix\n• Comentaris: Puntuació de precisió (0-100) i visualització del color\n• Criteris de cerca: Filtra l'objectiu de la pràctica per etiqueta, element recent o lletra inicial",
+  "helpModeChatDesc": "Practica la conversa real xerrant amb una persona d'IA.",
+  "helpModeChatDetails": "• Xat amb IA: Practica la conversa parlant en el teu idioma\n• Persona múltiple: Canvia el gènere/idioma/nom de l'altra persona amb el menú de sobre la bombolla de diàleg\n• Afegeix un soci: Afegeix una nova persona amb qui parlar (desconegut) amb el botó +\n• GPS: Obra de situació basada en la ubicació actual\n• Desa automàticament: Tradueix i desa automàticament el contingut de la conversa",
+  "helpJsonDesc": "Segueix aquest format per importar material d'aprenentatge en fitxers JSON que s'utilitzaran al Mode 3:",
+  "helpDialogueImportDesc": "Importa conjunts de diàlegs complets amb fitxers JSON.",
+  "helpDialogueImportDetails": "• Estructura JSON: Utilitza l'array `dialogues` en comptes d'`entries`\n• Recuperació automàtica: Es restauren el títol del diàleg, la persona i l'ordre dels missatges.\n• Ubicació: Els diàlegs importats apareixen a la pestanya 'Historial' del mode de xat amb IA.",
+  "helpTourDesc": "El **cercle de ressalt** et guiarà per les funcions principals.\n(Per exemple: pots suprimir les targetes mantenint premuda la targeta que indica el **cercle de ressalt**).",
+  "partnerMode": "Mode soci",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "manual": "Entrada manual",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "speaker": "Parlant",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "switchToAi": "Canvia al mode IA",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Canvia al mode soci",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "currentLocation": "Ubicació actual",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "location": "Ubicació",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "partner": "Soci",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "me": "Jo",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "currentMaterialLabel": "Col·lecció de material seleccionada actualment:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "basicMaterialRepository": "Repositori bàsic de frases/paraules",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
+  },
+  "word": "Paraula",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "sentence": "Frase",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "appTitle": "Talkie",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "tabReview": "Repàs ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabStudyMaterial": "Material d'estudi ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mode2Title": "Repàs",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "search": "Cerca",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "translate": "Tradueix",
+  "@translate": {
+    "description": "Translate button"
+  },
+  "listen": "Escolta",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "saveData": "Desa les dades",
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  "saved": "S'ha desat",
+  "@saved": {
+    "description": "Data saved status"
+  },
+  "delete": "Suprimeix",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "materialInfo": "Informació del material",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "cancel": "Cancel·la",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "confirm": "Confirma",
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
+  "refresh": "Actualitza",
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  "studyRecords": "Enregistraments d'estudi ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "targetLanguageFilter": "Filtre d'idioma de destinació:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "noRecords": "No hi ha cap enregistrament d'estudi per a l'idioma seleccionat",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "saveTranslationsFromSearch": "Prova de desar traduccions des del mode de cerca",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  "flip": "Mostra",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "hide": "Amaga",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "deleteRecord": "Suprimeix l'enregistrament",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  "confirmDelete": "Vols suprimir aquest enregistrament d'estudi?",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
+  "recordDeleted": "S'ha suprimit l'enregistrament",
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
+  "deleteFailed": "Error al suprimir: {error}",
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "importJsonFile": "Importa el fitxer JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
+  "importing": "S'està important...",
+  "@importing": {
+    "description": "Import in progress"
+  },
+  "importComplete": "S'ha completat la importació",
+  "@importComplete": {
+    "description": "Import success title"
+  },
+  "importFailed": "Error d'importació",
+  "@importFailed": {
+    "description": "Import error title"
+  },
+  "importFile": "Fitxer: {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "importTotal": "Total: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importAdded": "S'ha afegit: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importSkipped": "S'ha omès: {count}",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errors": "Errors:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "error": "Error",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "importErrorMessage": "Error al carregar el fitxer:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "selectStudyMaterial": "Selecciona el material d'estudi",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  "subject": "Assumpte:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "source": "Font:",
+  "@source": {
+    "description": "Source label"
+  },
+  "file": "Fitxer:",
+  "@file": {
+    "description": "File label"
+  },
+  "progress": "Progrés: {current} / {total}",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importJsonFilePrompt": "Carrega un fitxer JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
+  "selectMaterialPrompt": "Selecciona el material d'estudi",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "studyComplete": "S'ha completat l'estudi",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "markAsStudied": "Marca com a estudiat",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "listening": "S'està escoltant...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "recognized": "S'ha reconegut",
+  "@recognized": {
+    "description": "STT complete status"
+  },
+  "recognitionFailed": "Error al reconèixer la veu: {error}",
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "checking": "S'està comprovant...",
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
+  "translating": "S'està traduint...",
+  "@translating": {
+    "description": "Translation in progress"
+  },
+  "translationComplete": "S'ha completat la traducció (cal desar)",
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
+  "translationLoaded": "S'ha carregat la traducció desada",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
+  "translationFailed": "Error de traducció: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "enterTextToTranslate": "Introdueix el text que vols traduir",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "saving": "S'està desant...",
+  "@saving": {
+    "description": "Save in progress"
+  },
+  "noTranslationToSave": "No hi ha cap traducció per desar",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "saveFailed": "Error al desar: {error}",
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "playing": "S'està reproduint...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  "noTextToPlay": "No hi ha cap text per reproduir",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "playbackFailed": "Error de reproducció: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceLanguage": "Idioma original",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "targetLanguage": "Idioma de destinació",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "similarTextFound": "S'ha trobat un text similar",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "useExistingText": "Utilitza el text existent",
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
+  "createNew": "Continua amb una frase nova",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "reviewCount": "Repàs {count} vegades",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSpeaking": "Parla",
+  "speakingPractice": "Pràctica de parla",
+  "intervalSeconds": "Interval: {seconds} s",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "yourPronunciation": "La teva pronunciació",
+  "correctAnswer": "Resposta correcta",
+  "score": "Precisió: {score}%",
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "perfect": "Perfecte!",
+  "good": "Bé",
+  "tryAgain": "Torna-ho a provar",
+  "startPractice": "Comença la pràctica",
+  "stopPractice": "Atura la pràctica",
+  "startTutorial": "Inicia el tutorial",
+  "tutorialMicTitle": "Entrada de veu",
+  "tutorialMicDesc": "Prem el botó del micròfon per introduir la veu.",
+  "tutorialTabDesc": "Aquí pots seleccionar el mode d'aprenentatge que vulguis.",
+  "tutorialTapToContinue": "Toca la pantalla per continuar",
+  "tutorialTransTitle": "Tradueix",
+  "tutorialTransDesc": "Tradueix el text que has introduït.",
+  "tutorialSaveTitle": "Desa",
+  "tutorialSaveDesc": "Desa els resultats traduïts a l'historial d'aprenentatge.",
+  "tutorialM2SelectTitle": "Selecciona el material",
+  "tutorialM2SelectDesc": "Prem la icona de la col·lecció de material (📚) a la barra d'aplicacions superior per seleccionar el material que vols estudiar.",
+  "tutorialM2ListTitle": "Llista d'aprenentatge",
+  "tutorialM2ListDesc": "Pots suprimir aquesta targeta mantenint-la premuda (clic llarg). Comprova i gira les frases desades.",
+  "tutorialM3SelectTitle": "Selecciona el material",
+  "tutorialM3SelectDesc": "Prem la icona de la col·lecció de material (📚) a la barra d'aplicacions superior per seleccionar el material que vols practicar.",
+  "tutorialM3IntervalTitle": "Configura l'interval",
+  "tutorialM3IntervalDesc": "Ajusta el temps d'espera entre frases.",
+  "tutorialM3StartTitle": "Comença la pràctica",
+  "tutorialM3StartDesc": "Prem el botó de reproducció per escoltar la veu d'un parlant natiu i repetir.",
+  "startWarning": "Atenció",
+  "noVoiceDetected": "No s'ha detectat cap veu",
+  "tooltipSearch": "Cerca",
+  "tooltipStudyReview": "Estudi+Repàs",
+  "tooltipSpeaking": "Parla",
+  "tooltipDecrease": "Redueix",
+  "tooltipIncrease": "Augmenta",
+  "languageSettings": "Configuració de l'idioma",
+  "tutorialM2DropdownDesc": "Pots seleccionar el material que vols estudiar mitjançant el menú superior.",
+  "tutorialM2ImportDesc": "Importa un fitxer JSON des de la carpeta del dispositiu.",
+  "tutorialLangSettingsTitle": "Configuració de l'idioma",
+  "tutorialLangSettingsDesc": "Configura l'idioma original i l'idioma de destinació que vols traduir.",
+  "copy": "Copia",
+  "copiedToClipboard": "S'ha copiat al porta-retalls!",
+  "tutorialContextTitle": "Etiqueta de situació/context",
+  "tutorialContextDesc": "Pots desar la mateixa frase per separat si anotes la situació (per exemple, matí, vespre).",
+  "thinkingTimeInterval": "Interval de temps de reflexió",
+  "thinkingTimeDesc": "Temps per pensar abans que es reveli la resposta.",
+  "autoPlay": "Reproducció automàtica",
+  "timeUp": "S'ha acabat el temps!",
+  "gameModeTitle": "Mode de joc",
+  "gameModeDesc": "Selecciona el mode de joc que vols practicar",
+  "wordDefenseTitle": "Defensa de paraules",
+  "wordDefenseDesc": "Digues la paraula abans que l'enemic arribi per defensar la base.",
+  "dialogueQuestTitle": "Cerca de diàlegs",
+  "dialogueQuestDesc": "Practica la conversa mitjançant una obra de situació. Selecciona la resposta adequada i digues-la.",
+  "labelType": "Tipus:",
+  "labelWord": "Paraula",
+  "labelSentence": "Frase",
+  "contextTagLabel": "Context/Situació (opcional) - Per exemple: Salutació del matí, Formal",
+  "contextTagHint": "Anota la situació per facilitar la distinció més endavant",
+  "usageLimitTitle": "S'ha arribat al límit",
+  "translationLimitExceeded": "S'ha superat el límit de traducció",
+  "translationLimitMessage": "Has utilitzat totes les traduccions gratuïtes diàries (5 vegades).\\n\\nVols veure un anunci per recarregar 5 vegades immediatament?",
+  "watchAdAndRefill": "Mira l'anunci i recarrega (+5 vegades)",
+  "translationRefilled": "S'han recarregat 5 traduccions!",
+  "adLoading": "S'està carregant l'anunci. Torna-ho a provar més tard.",
+  "reviewAll": "Repàs complet",
+  "totalRecords": "Un total de {count} enregistraments (Visualització completa)",
+  "@totalRecords": {
+    "description": "Total records count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterAll": "Tot",
+  "practiceWordsOnly": "Practica només les paraules",
+  "resetPracticeHistory": "Restableix l'historial de pràctiques",
+  "retry": "Torna-ho a provar?",
+  "noStudyMaterial": "No hi ha material d'estudi.",
+  "gameOver": "S'ha acabat el joc",
+  "playAgain": "Torna a jugar",
+  "speakNow": "Parla ara!",
+  "scoreLabel": "Puntuació",
+  "viewOnlineGuide": "Consulta la guia en línia",
+  "getMaterials": "Aconsegueix materials",
+  "swapLanguages": "Canvia d'idioma",
+  "next": "Següent",
+  "wordModeLabel": "Mode de paraules",
+  "accuracy": "Precisió",
+  "basicDefault": "Bàsic",
+  "basic": "Bàsic",
+  "tutorialM3WordsTitle": "Pràctica de paraules",
+  "tutorialM3WordsDesc": "Marca-ho per practicar només les paraules desades.",
+  "enterTextHint": "Introdueix el text que vols traduir",
+  "micButtonTooltip": "Inicia el reconeixement de veu",
+  "menuHelp": "Ajuda",
+  "menuWebDownload": "Pàgina web",
+  "menuDeviceImport": "Importa material des del dispositiu",
+  "menuSettings": "Configuració de l'idioma",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "basicWords": "Repositori bàsic de paraules",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
+  },
+  "basicSentences": "Repositori bàsic de frases",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
+  },
+  "selectMaterialSet": "Selecciona la col·lecció de material d'estudi",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "sectionWords": "Paraules",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "sectionSentences": "Frases",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "languageSettingsTitle": "Configuració de l'idioma",
+  "sourceLanguageLabel": "El meu idioma (Source)",
+  "targetLanguageLabel": "Idioma d'aprenentatge (Target)",
+  "mode3Start": "Comença",
+  "mode3Stop": "Atura",
+  "mode3Next": "Següent",
+  "mode3TryAgain": "Torna-ho a provar",
+  "tutorialM3ResetTitle": "Restableix l'historial",
+  "tutorialSwapDesc": "Canvia el meu idioma i l'idioma d'aprenentatge.",
+  "recognizedText": "Pronunciació reconeguda:",
+  "titleFormat": "{type}: {materialName}",
+  "tutorialM3ResetDesc": "Restableix el progrés i la puntuació de precisió per tornar a començar des del principi.",
+  "menuSelectMaterialSet": "Selecciona la col·lecció de material d'estudi",
+  "sectionWord": "Secció de paraules",
+  "sectionSentence": "Secció de frases",
+  "tabWord": "Paraula",
+  "tabSentence": "Frase",
+  "errorProfanity": "No es pot traduir perquè conté blasfèmies.",
+  "errorHateSpeech": "No es pot traduir perquè conté incitació a l'odi.",
+  "errorSexualContent": "No es pot traduir perquè conté contingut sexual.",
+  "errorOtherSafety": "La traducció s'ha denegat a causa de la política de seguretat d'IA.",
+  "clearAll": "Esborra-ho tot",
+  "disambiguationTitle": "Selecciona el significat",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "disambiguationPrompt": "Amb quin significat vols traduir?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "skip": "Omet",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "inputModeTitle": "Entrada",
+  "reviewModeTitle": "Repàs",
+  "practiceModeTitle": "Pràctica de pronunciació",
+  "chatHistoryTitle": "Historial de xat",
+  "chatNew": "Xat nou",
+  "chatNewChat": "Xat nou",
+  "chatChoosePersona": "Selecciona una persona",
+  "chatTypeHint": "Escriu un missatge...",
+  "chatFailed": "Error al xerrar: {error}",
+  "@chatFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "chatNoConversations": "Encara no hi ha cap conversa",
+  "chatStartNewPrompt": "Comença una conversa nova per practicar!",
+  "chatFromConversation": "Extret de la conversa ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
+  },
+  "personaTeacher": "Professor d'anglès",
+  "personaGuide": "Guia turístic",
+  "personaFriend": "Amic local",
+  "chatUntitled": "Xat sense títol",
+  "chatAiChat": "Xat amb IA",
+  "tutorialAiChatTitle": "Xat amb IA",
+  "tutorialAiChatDesc": "Practica la conversa real amb una persona d'IA.",
+  "mode1SelectedMaterial": "Col·lecció de material seleccionada actualment: {name}",
+  "basicWordRepository": "Repositori bàsic de paraules",
+  "basicSentenceRepository": "Repositori bàsic de frases",
+  "chatEndTitle": "Finalitza i desa la conversa",
+  "chatEndMessage": "Vols finalitzar la conversa?",
+  "chatSaveAndExit": "Desa i surt",
+  "errorSelectCategory": "Selecciona primer una paraula o una frase!",
+  "tutorialM1ToggleTitle": "Mode de paraules/frases",
+  "tutorialM1ToggleDesc": "Canvia entre els modes de paraules i frases aquí.",
+  "metadataDialogTitle": "Classificació detallada",
+  "tagFormal": "Formal",
+  "selectPOS": "Selecciona una categoria",
+  "selectSentenceType": "Selecciona un tipus de frase",
+  "metadataRootWord": "Arrel (Root Word)",
+  "posNoun": "Substantiu",
+  "posVerb": "Verb",
+  "posAdjective": "Adjectiu",
+  "posAdverb": "Adverbi",
+  "posPronoun": "Pronom",
+  "posPreposition": "Preposició",
+  "posConjunction": "Conjunció",
+  "posInterjection": "Interjecció",
+  "typeStatement": "Afirmació",
+  "typeQuestion": "Pregunta",
+  "typeExclamation": "Exclamació",
+  "typeImperative": "Imperatiu",
+  "labelNote": "Nota",
+  "labelShowMemorized": "Fet",
+  "tagSelection": "Selecció d'etiquetes",
+  "metadataFormType": "Tipus de formulari",
+  "formInfinitive": "Infinitiu/Present",
+  "formPast": "Passat",
+  "formPastParticiple": "Participi passat",
+  "formPresentParticiple": "Participi present (-ing)",
+  "formPresent": "Present",
+  "formThirdPersonSingular": "Tercera persona del singular",
+  "formPlural": "Plural",
+  "formSingular": "Singular",
+  "caseSubject": "Nominatiu",
+  "caseObject": "Objecte",
+  "casePossessive": "Possessiu",
+  "casePossessivePronoun": "Pronom possessiu",
+  "caseReflexive": "Reflexiu",
+  "formPositive": "Positiu",
+  "formComparative": "Comparatiu",
+  "formSuperlative": "Superlatiu",
+  "searchConditions": "Condicions de cerca",
+  "recentNItems": "Mostra {count} elements creats recentment",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "startsWith": "Comença amb",
+  "reset": "Restableix",
+  "participantRename": "Canvia el nom del participant",
+  "labelName": "Nom",
+  "gender": "Gènere",
+  "language": "Idioma",
+  "male": "Home",
+  "female": "Dona"
+}

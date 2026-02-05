@@ -1,0 +1,678 @@
+{
+  "@@locale": "az",
+  "helpTitle": "Kömək & Bələdçi",
+  "helpTabModes": "Rejim Açıqlaması",
+  "helpTabJson": "JSON Formatı",
+  "helpTabTour": "Sınaqdan Keç",
+  "helpMode1Desc": "Səsi tanıyaraq tərcümə edin və nəticələrə qulaq asa bilərsiniz.",
+  "helpMode1Details": "• Dil seçimi: Yuxarı/aşağı işarələrə basaraq dili dəyişdirin\n• Söz/cümlə keçidi: Rejimi dəyişdirin\n• Səsli giriş: Dinləməyə başlamaq/dayandırmaq üçün mikrofon işarəsinə basın\n• Mətn girişi: Birbaşa daxil edərək tərcümə edin\n• Avtomatik axtarış: Bənzər mövcud cümlələri aşkar edin\n• Tərcümə: Dərhal tərcümə etmək üçün tərcümə düyməsinə basın\n• Dinləmə: TTS-i səsləndirmək üçün dinamik işarəsi\n• Saxlama: 'Məlumatları Saxla' ilə qeyd əlavə edin\n• Təmizləmə: Girişi sıfırlayın",
+  "helpMode2Desc": "Saxlanılan cümlələri nəzərdən keçirin və avtomatik gizlətmə funksiyası ilə əzbərləməyi yoxlayın.",
+  "helpMode2Details": "• Material seçimi: Müəyyən material toplusunu və ya 'Bütün təkrar'ı seçin\n• Kartı çevirin: Tərcüməni yoxlamaq üçün 'Göstər/Gizlət' (avtomatik öyrənmə yoxlaması)\n• Dinləmə: Cümlə TTS səsləndirməsi\n• Öyrənmə tamamlandı: İşarə ilə (V) öyrənməni tamamlayın\n• Silmə: Qeydləri silmək üçün karta uzun müddət basın\n• Axtarış şərtləri: Etiket, son elementlər, başlanğıc hərflərlə filtrləyin",
+  "helpMode3Desc": "Cümlələrə qulaq asaraq və təkrarlayaraq (Kölgə) tələffüzünüzü məşq edin.",
+  "helpMode3Details": "• Material seçimi: Öyrənmək üçün material toplusunu seçin\n• İnterval təyin edin: [-] [+] düymələri ilə cümlələr arasındakı gözləmə müddətini tənzimləyin (3 saniyə ~ 60 saniyə)\n• Başlat/Dayandır: Kölgələmə seansını idarə edin\n• Danışmaq: Səsi dinləyin və təkrarlayın\n• Rəy: Dəqiqlik balı (0-100) və rəngli ekran\n• Axtarış şərtləri: Etiket, son elementlər, başlanğıc hərflərlə məşq hədəfini filtrləyin",
+  "helpModeChatDesc": "Süni intellekt personajları ilə söhbət edərək real söhbət bacarıqlarınızı məşq edin.",
+  "helpModeChatDetails": "• AI Söhbət: Dilinizdə danışaraq söhbət bacarıqlarınızı məşq edin\n• Çoxlu personaj: Nitq balonunun yuxarısındakı menyu ilə qarşı tərəfin cinsini/dilini/adını dəyişdirə bilərsiniz\n• Tərəfdaş əlavə edin: + düyməsi ilə yeni söhbət ortağı (Yad) əlavə edin\n• GPS: Mövcud yerə əsaslanan teatrlaşdırılmış vəziyyət\n• Avtomatik saxla: Söhbət məzmununun avtomatik tərcüməsi və saxlanılması",
+  "helpJsonDesc": "3-cü Rejimdə istifadə etmək üçün öyrənmə materiallarını JSON faylı kimi idxal etmək üçün aşağıdakı formata əməl edin:",
+  "helpDialogueImportDesc": "Bütün dialoq dəstlərini JSON faylı olaraq idxal edin.",
+  "helpDialogueImportDetails": "• JSON strukturu: `Girişlər` əvəzinə `dialoqlar` massivindən istifadə edin\n• Avtomatik bərpa: Dialoq başlığı, persona, mesaj ardıcıllığı bərpa edilir.\n• Yer: İdxal olunan dialoqlar Süni İntellekt Söhbət rejiminin 'Qeydlər' sekmesinde görünür.",
+  "helpTourDesc": "**Vurğulanan dairə** əsas funksiyaları göstərir.\n(Məsələn, **vurğulanan dairənin** göstərdiyi kartı silmək üçün uzun müddət basın.)",
+  "partnerMode": "Tərəfdaş rejimi",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "manual": "Əl ilə giriş",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "speaker": "Danışan",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "switchToAi": "AI Rejiminə Keç",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Tərəfdaş Rejiminə Keç",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "currentLocation": "Hazırkı Yer",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "location": "Yer",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "partner": "Tərəfdaş",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "me": "Mən",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "currentMaterialLabel": "Cari Seçilmiş Material Toplusu:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "basicMaterialRepository": "Əsas Cümlə/Söz Deposu",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
+  },
+  "word": "Söz",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "sentence": "Cümlə",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "appTitle": "Talkie",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "tabReview": "Təkrar ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabStudyMaterial": "Öyrənmə Materialı ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mode2Title": "Təkrar",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "search": "Axtar",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "translate": "Tərcümə Et",
+  "@translate": {
+    "description": "Translate button"
+  },
+  "listen": "Dinlə",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "saveData": "Məlumatları Saxla",
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  "saved": "Saxlama Tamamlandı",
+  "@saved": {
+    "description": "Data saved status"
+  },
+  "delete": "Sil",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "materialInfo": "Material Məlumatları",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "cancel": "Ləğv Et",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "confirm": "Təsdiq Et",
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
+  "refresh": "Yenilə",
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  "studyRecords": "Öyrənmə Qeydləri ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "targetLanguageFilter": "Hədəf Dil Filtrini:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "noRecords": "Seçilmiş dildə öyrənmə qeydləri yoxdur",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "saveTranslationsFromSearch": "Axtarış rejimindən tərcümələri saxlayın",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  "flip": "Göstər",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "hide": "Gizlət",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "deleteRecord": "Qeydi Sil",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  "confirmDelete": "Bu öyrənmə qeydini silmək istəyirsiniz?",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
+  "recordDeleted": "Qeyd Silindi",
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
+  "deleteFailed": "Silmə Uğursuz oldu: {error}",
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "importJsonFile": "JSON Faylını İdxal Et",
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
+  "importing": "İdxal Edilir...",
+  "@importing": {
+    "description": "Import in progress"
+  },
+  "importComplete": "İdxal Tamamlandı",
+  "@importComplete": {
+    "description": "Import success title"
+  },
+  "importFailed": "İdxal Uğursuz oldu",
+  "@importFailed": {
+    "description": "Import error title"
+  },
+  "importFile": "Fayl: {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "importTotal": "Ümumi: {count} ədəd",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importAdded": "Əlavə Edildi: {count} ədəd",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importSkipped": "Buraxıldı: {count} ədəd",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errors": "Səhvlər:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "error": "Səhv",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "importErrorMessage": "Faylın idxalı uğursuz oldu:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "selectStudyMaterial": "Öyrənmə Materialını Seçin",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  "subject": "Başlıq:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "source": "Mənbə:",
+  "@source": {
+    "description": "Source label"
+  },
+  "file": "Fayl:",
+  "@file": {
+    "description": "File label"
+  },
+  "progress": "Gedişat: {current} / {total}",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importJsonFilePrompt": "JSON faylını idxal edin",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
+  "selectMaterialPrompt": "Öyrənmə materialını seçin",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "studyComplete": "Öyrənmə Tamamlandı",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "markAsStudied": "Öyrənilmiş kimi qeyd edin",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "listening": "Dinlənilir...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "recognized": "Tanınma Tamamlandı",
+  "@recognized": {
+    "description": "STT complete status"
+  },
+  "recognitionFailed": "Səsin Tanınması Uğursuz oldu: {error}",
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "checking": "Yoxlanılır...",
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
+  "translating": "Tərcümə Edilir...",
+  "@translating": {
+    "description": "Translation in progress"
+  },
+  "translationComplete": "Tərcümə Tamamlandı (Saxlama Tələb Olunur)",
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
+  "translationLoaded": "Saxlanılan tərcümə yükləndi",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
+  "translationFailed": "Tərcümə Uğursuz oldu: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "enterTextToTranslate": "Tərcümə etmək üçün mətn daxil edin",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "saving": "Saxlanılır...",
+  "@saving": {
+    "description": "Save in progress"
+  },
+  "noTranslationToSave": "Saxlamaq üçün tərcümə yoxdur",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "saveFailed": "Saxlama Uğursuz oldu: {error}",
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "playing": "Səsləndirilir...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  "noTextToPlay": "Səsləndirmək üçün mətn yoxdur",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "playbackFailed": "Səsləndirmə Uğursuz oldu: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceLanguage": "Mənbə Dili",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "targetLanguage": "Hədəf Dili",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "similarTextFound": "Bənzər mətn tapıldı",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "useExistingText": "Mövcud mətndən istifadə edin",
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
+  "createNew": "Yeni cümlə ilə davam edin",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "reviewCount": "Təkrar {count} dəfə",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSpeaking": "Danışmaq",
+  "speakingPractice": "Danışıq Məşqi",
+  "intervalSeconds": "İnterval: {seconds} saniyə",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "yourPronunciation": "Mənim Tələffüzüm",
+  "correctAnswer": "Düzgün Cavab",
+  "score": "Dəqiqlik: {score}%",
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "perfect": "Mükəmməldir!",
+  "good": "Yaxşıdır",
+  "tryAgain": "Yenidən Cəhd Edin",
+  "startPractice": "Məşqə Başlayın",
+  "stopPractice": "Məşqi Dayandırın",
+  "startTutorial": "Təlimata Başlayın",
+  "tutorialMicTitle": "Səs Girişi",
+  "tutorialMicDesc": "Səsli giriş üçün mikrofon düyməsinə toxuna bilərsiniz.",
+  "tutorialTabDesc": "Burada istədiyiniz öyrənmə rejimini seçə bilərsiniz.",
+  "tutorialTapToContinue": "Davam Etmək Üçün Ekrana Toxunun",
+  "tutorialTransTitle": "Tərcümə Et",
+  "tutorialTransDesc": "Daxil edilmiş mətni tərcümə edin.",
+  "tutorialSaveTitle": "Saxla",
+  "tutorialSaveDesc": "Tərcümə edilmiş nəticələri öyrənmə qeydlərinizə saxlayın.",
+  "tutorialM2SelectTitle": "Material Seçimi",
+  "tutorialM2SelectDesc": "Öyrənmək üçün material seçmək üçün yuxarıdakı proqram çubuğundakı material toplusu işarəsinə (📚) toxunun.",
+  "tutorialM2ListTitle": "Öyrənmə Siyahısı",
+  "tutorialM2ListDesc": "Saxlanılan cümlələri yoxlamaq və çevirmək üçün bu karta uzun müddət (Uzun Klik) toxunun. Onu silmək üçün.",
+  "tutorialM3SelectTitle": "Material Seçimi",
+  "tutorialM3SelectDesc": "Məşq etmək üçün material seçmək üçün yuxarıdakı proqram çubuğundakı material toplusu işarəsinə (📚) toxunun.",
+  "tutorialM3IntervalTitle": "İnterval Təyin Edin",
+  "tutorialM3IntervalDesc": "Cümlələr arasındakı gözləmə müddətini tənzimləyin.",
+  "tutorialM3StartTitle": "Məşqə Başlayın",
+  "tutorialM3StartDesc": "Ana dilində danışanın səsini dinləmək və təkrar etmək üçün səsləndirmə düyməsinə toxunun.",
+  "startWarning": "Diqqət",
+  "noVoiceDetected": "Səs aşkarlanmadı",
+  "tooltipSearch": "Axtarış",
+  "tooltipStudyReview": "Öyrənmə + Təkrar",
+  "tooltipSpeaking": "Danışmaq",
+  "tooltipDecrease": "Azalt",
+  "tooltipIncrease": "Artır",
+  "languageSettings": "Dil Parametrləri",
+  "tutorialM2DropdownDesc": "Yuxarıdakı menyu vasitəsilə öyrənmək üçün material seçə bilərsiniz.",
+  "tutorialM2ImportDesc": "JSON faylını cihazınızın qovluğundan idxal edin.",
+  "tutorialLangSettingsTitle": "Dil Parametrləri",
+  "tutorialLangSettingsDesc": "Tərcümə etmək üçün mənbə və hədəf dilləri təyin edin.",
+  "copy": "Kopyala",
+  "copiedToClipboard": "Panoya kopyalandı!",
+  "tutorialContextTitle": "Vəziyyət/Məzmun Etiketi",
+  "tutorialContextDesc": "Eyni cümlə olsa belə, vəziyyəti (məsələn, səhər, axşam) qeyd etsəniz, onu ayrı saxlayabilirsiniz.",
+  "thinkingTimeInterval": "Düşünmə Vaxtı İntervalı",
+  "thinkingTimeDesc": "Düzgün cavab açıqlanmazdan əvvəl düşünmək üçün vaxt.",
+  "autoPlay": "Avtomatik Səsləndirmə",
+  "timeUp": "Vaxt Bitdi!",
+  "gameModeTitle": "Oyun Rejimi",
+  "gameModeDesc": "Məşq etmək üçün oyun rejimini seçin",
+  "wordDefenseTitle": "Söz Müdafiəsi",
+  "wordDefenseDesc": "Düşmənlər gəlmədən sözləri deyərək bazanı müdafiə edin.",
+  "dialogueQuestTitle": "Dialoq Tapşırığı",
+  "dialogueQuestDesc": "Teatrlaşdırılmış vəziyyət vasitəsilə dialoq məşqi edin. Müvafiq cavabları seçin və deyin.",
+  "labelType": "Növü:",
+  "labelWord": "Söz",
+  "labelSentence": "Cümlə",
+  "contextTagLabel": "Məzmun/Vəziyyət (İsteğe bağlı) - Məsələn: Səhər Salamı, Rəsmi",
+  "contextTagHint": "Daha sonra ayırd etmək üçün vəziyyəti qeyd edin",
+  "usageLimitTitle": "Limitə Çatdı",
+  "translationLimitExceeded": "Tərcümə limiti aşıldı",
+  "translationLimitMessage": "Gündəlik pulsuz tərcümələrinizdən (5 dəfə) istifadə etdiniz.\\n\\nReklama baxaraq dərhal 5 dəfə doldurmaq istəyirsiniz?",
+  "watchAdAndRefill": "Reklama baxaraq doldurun (+5 dəfə)",
+  "translationRefilled": "Tərcümə sayı 5 dəfə dolduruldu!",
+  "adLoading": "Reklam yüklənir. Zəhmət olmasa, bir az sonra yenidən cəhd edin.",
+  "reviewAll": "Bütün Təkrar",
+  "totalRecords": "Cəmi {count} qeyd (Hamısına Bax)",
+  "@totalRecords": {
+    "description": "Total records count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterAll": "Hamısı",
+  "practiceWordsOnly": "Yalnız Sözləri Məşq Edin",
+  "resetPracticeHistory": "Məşq Tarixini Sıfırla",
+  "retry": "Yenidən cəhd edilsin?",
+  "noStudyMaterial": "Öyrənmə materialı yoxdur.",
+  "gameOver": "Oyun Bitdi",
+  "playAgain": "Yenidən Oyna",
+  "speakNow": "İndi Danış!",
+  "scoreLabel": "Bal",
+  "viewOnlineGuide": "Onlayn Bələdçiyə Bax",
+  "getMaterials": "Materialları Əldə Edin",
+  "swapLanguages": "Dilləri Dəyişdir",
+  "next": "Sonrakı",
+  "wordModeLabel": "Söz Rejimi",
+  "accuracy": "Dəqiqlik",
+  "basicDefault": "Əsas",
+  "basic": "Əsas",
+  "tutorialM3WordsTitle": "Söz Məşqi",
+  "tutorialM3WordsDesc": "Yoxlanılıbsa, yalnız saxlanılan sözləri məşq edin.",
+  "enterTextHint": "Tərcümə etmək üçün mətn daxil edin",
+  "micButtonTooltip": "Səsin Tanınmasına Başla",
+  "menuHelp": "Kömək",
+  "menuWebDownload": "Ana Səhifə",
+  "menuDeviceImport": "Cihazdan Material İdxal Et",
+  "menuSettings": "Dil Parametrləri",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "basicWords": "Əsas Söz Deposu",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
+  },
+  "basicSentences": "Əsas Cümlə Deposu",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
+  },
+  "selectMaterialSet": "Öyrənmə Materialı Toplusunu Seçin",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "sectionWords": "Sözlər",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "sectionSentences": "Cümlələr",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "languageSettingsTitle": "Dil Parametrləri",
+  "sourceLanguageLabel": "Mənim Dilim (Mənbə)",
+  "targetLanguageLabel": "Öyrənmə Dili (Hədəf)",
+  "mode3Start": "Başla",
+  "mode3Stop": "Dayandır",
+  "mode3Next": "Sonrakı",
+  "mode3TryAgain": "Yenidən Cəhd Et",
+  "tutorialM3ResetTitle": "Tarixi Sıfırla",
+  "tutorialSwapDesc": "Mənim dilimi və öyrənmə dilini dəyişdirir.",
+  "recognizedText": "Tanınan Tələffüz:",
+  "titleFormat": "{type}: {materialName}",
+  "tutorialM3ResetDesc": "Gedişatı və dəqiqlik balını sıfırlayaraq yenidən başlayın.",
+  "menuSelectMaterialSet": "Öyrənmə Materialı Toplusunu Seçin",
+  "sectionWord": "Söz Bölməsi",
+  "sectionSentence": "Cümlə Bölməsi",
+  "tabWord": "Söz",
+  "tabSentence": "Cümlə",
+  "errorProfanity": "Təhqiramiz ifadələr ehtiva etdiyi üçün tərcümə edilə bilməz.",
+  "errorHateSpeech": "Nifrət nitqi ehtiva etdiyi üçün tərcümə edilə bilməz.",
+  "errorSexualContent": "Cinsi məzmun ehtiva etdiyi üçün tərcümə edilə bilməz.",
+  "errorOtherSafety": "Süni intellekt təhlükəsizlik siyasəti səbəbi ilə tərcümə rədd edildi.",
+  "clearAll": "Hamısını Təmizlə",
+  "disambiguationTitle": "Məna Seçimi",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "disambiguationPrompt": "Hansı mənada tərcümə etmək istərdiniz?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "skip": "Burax",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "inputModeTitle": "Giriş",
+  "reviewModeTitle": "Təkrar",
+  "practiceModeTitle": "Tələffüz Məşqi",
+  "chatHistoryTitle": "Söhbət Tarixi",
+  "chatNew": "Yeni Söhbət",
+  "chatNewChat": "Yeni Söhbət",
+  "chatChoosePersona": "Personaj Seçin",
+  "chatTypeHint": "Mesajınızı yazın...",
+  "chatFailed": "Söhbət Uğursuz oldu: {error}",
+  "@chatFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "chatNoConversations": "Hələ heç bir söhbət yoxdur",
+  "chatStartNewPrompt": "Məşq üçün yeni söhbətə başlayın!",
+  "chatFromConversation": "Söhbətdən Çıxarış ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
+  },
+  "personaTeacher": "İngilis Dili Müəllimi",
+  "personaGuide": "Səyahət Bələdçisi",
+  "personaFriend": "Yerli Dost",
+  "chatUntitled": "Başlıqsız Söhbət",
+  "chatAiChat": "Süni İntellekt Söhbəti",
+  "tutorialAiChatTitle": "Süni İntellekt Söhbəti",
+  "tutorialAiChatDesc": "Süni intellekt personajları ilə real söhbət bacarıqlarınızı məşq edin.",
+  "mode1SelectedMaterial": "Cari seçilmiş material toplusu: {name}",
+  "basicWordRepository": "Əsas Söz Deposu",
+  "basicSentenceRepository": "Əsas Cümlə Deposu",
+  "chatEndTitle": "Söhbəti Bitirin və Saxlayın",
+  "chatEndMessage": "Söhbəti bitirmək istəyirsiniz?",
+  "chatSaveAndExit": "Saxlayın və Çıxın",
+  "errorSelectCategory": "Əvvəlcə söz və ya cümlə seçin!",
+  "tutorialM1ToggleTitle": "Söz/Cümlə Rejimi",
+  "tutorialM1ToggleDesc": "Söz və cümlə rejimlərini burada dəyişdirin.",
+  "metadataDialogTitle": "Ətraflı Təsnifat",
+  "tagFormal": "Rəsmi",
+  "selectPOS": "Nitq Hissəsini Seçin",
+  "selectSentenceType": "Cümlə Növünü Seçin",
+  "metadataRootWord": "Kök Söz",
+  "posNoun": "İsim",
+  "posVerb": "Fiil",
+  "posAdjective": "Sıfat",
+  "posAdverb": "Zərf",
+  "posPronoun": "Əvəzlik",
+  "posPreposition": "Ön söz",
+  "posConjunction": "Bağlayıcı",
+  "posInterjection": "Nida",
+  "typeStatement": "Bildiriş",
+  "typeQuestion": "Sual",
+  "typeExclamation": "Nida",
+  "typeImperative": "Əmr",
+  "labelNote": "Qeyd",
+  "labelShowMemorized": "Bitirildi",
+  "tagSelection": "Etiket Seçimi",
+  "metadataFormType": "Qrammatik Forma",
+  "formInfinitive": "İnfinitive/İndiki Zaman",
+  "formPast": "Keçmiş Zaman",
+  "formPastParticiple": "Keçmiş Feli Sifət",
+  "formPresentParticiple": "İndiki Feli Sifət (ing)",
+  "formPresent": "İndiki Zaman",
+  "formThirdPersonSingular": "Üçüncü Şəxs Tək",
+  "formPlural": "Cəm",
+  "formSingular": "Tək",
+  "caseSubject": "Subyekt",
+  "caseObject": "Obyekt",
+  "casePossessive": "Yiyəlik",
+  "casePossessivePronoun": "Yiyəlik Əvəzlik",
+  "caseReflexive": "Qayıdış Əvəzlik",
+  "formPositive": "Müsbət",
+  "formComparative": "Müqayisəli",
+  "formSuperlative": "Üstün",
+  "searchConditions": "Axtarış Şərtləri",
+  "recentNItems": "Son {count} ədədə baxın",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "startsWith": "Başlayan Hərflər",
+  "reset": "Sıfırla",
+  "participantRename": "İştirakçının Adını Dəyişdirin",
+  "labelName": "Ad",
+  "gender": "Cins",
+  "language": "Dil",
+  "male": "Kişi",
+  "female": "Qadın"
+}

@@ -1,0 +1,45 @@
+{
+    "title": "First Meeting",
+    "entries": [
+        {
+            "text": "Përshëndetje! Unë quhem Jordan. Më vjen mirë që u takuam.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Përshëndetje Jordan! Unë jam Minji. Më vjen mirë që u takuam gjithashtu.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "A je student?",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Jo, unë jam punonjës zyre. Po ti?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Unë jam student kolegji. Po studioj koreanishten.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Uau, kjo është e mrekullueshme! Koreanishtja është pak e vështirë, apo jo?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Po, është e vështirë por argëtuese. Ju lutem më ndihmoni shumë.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Sigurisht! Le të studiojmë shumë së bashku.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Faleminderit. Shihemi herën tjetër!",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Mirupafshim!",
+            "speaker": "Minji"
+        }
+    ]
+}

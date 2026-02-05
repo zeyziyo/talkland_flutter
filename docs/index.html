@@ -280,14 +280,16 @@
             Enter your <strong>Mother Tongue</strong> and <strong>Target Language</strong> to generate a customized
             study file.
             <br>Download the merged JSON file and import it directly into Talkie (Mode 2/3).
-            <br><span style="color: #667eea; font-weight: bold; font-size: 0.9em;">Please search in English (e.g.
-                "Korean", NOT "한국어").</span>
         </p>
 
         <div class="search-container">
             <div class="input-group">
-                <input type="text" id="sourceLang" class="language-input" placeholder="모국어(예: Korean)">
-                <input type="text" id="targetLang" class="language-input" placeholder="목표 언어 (예: English)">
+                <select id="sourceLang" class="language-input">
+                    <option value="">모국어 선택 (Mother Tongue)</option>
+                </select>
+                <select id="targetLang" class="language-input">
+                    <option value="">목표 언어 선택 (Target Language)</option>
+                </select>
             </div>
             <button onclick="findMaterials()" class="find-button">Find & Generate Materials</button>
             <div id="errorBox" class="error-message"></div>
@@ -335,14 +337,104 @@
     </footer>
 
     <script>
-        const languages = [
-            "Afrikaans", "Amharic", "Arabic", "Bengali", "Burmese", "Chinese (Simplified)", "Chinese (Traditional)",
-            "Czech", "Danish", "Dutch", "English", "Filipino", "Finnish", "French", "German", "Greek", "Gujarati",
-            "Hebrew", "Hindi", "Hungarian", "Indonesian", "Italian", "Japanese", "Kannada", "Khmer", "Korean",
-            "Lao", "Malay", "Malayalam", "Marathi", "Nepali", "Norwegian", "Persian", "Polish", "Portuguese",
-            "Punjabi", "Romanian", "Russian", "Sinhala", "Slovak", "Spanish", "Swahili", "Swedish", "Tamil",
-            "Telugu", "Thai", "Turkish", "Ukrainian", "Urdu", "Vietnamese", "Xhosa", "Zulu"
+        const languageData = [
+            { name: "Afrikaans", code: "af", flag: "🇿🇦" },
+            { name: "Albanian", code: "sq", flag: "🇦🇱" },
+            { name: "Amharic", code: "am", flag: "🇪🇹" },
+            { name: "Arabic", code: "ar", flag: "🇸🇦" },
+            { name: "Armenian", code: "hy", flag: "🇦🇲" },
+            { name: "Assamese", code: "as", flag: "🇮🇳" },
+            { name: "Azerbaijani", code: "az", flag: "🇦🇿" },
+            { name: "Basque", code: "eu", flag: "🇪🇸" },
+            { name: "Belarusian", code: "be", flag: "🇧🇾" },
+            { name: "Bengali", code: "bn", flag: "🇧🇩" },
+            { name: "Bosnian", code: "bs", flag: "🇧🇦" },
+            { name: "Bulgarian", code: "bg", flag: "🇧🇬" },
+            { name: "Burmese", code: "my", flag: "🇲🇲" },
+            { name: "Catalan", code: "ca", flag: "🇪🇸" },
+            { name: "Chinese (Simplified)", code: "zh-CN", flag: "🇨🇳" },
+            { name: "Chinese (Traditional)", code: "zh-TW", flag: "🇹🇼" },
+            { name: "Croatian", code: "hr", flag: "🇭🇷" },
+            { name: "Czech", code: "cs", flag: "🇨🇿" },
+            { name: "Danish", code: "da", flag: "🇩🇰" },
+            { name: "Dutch", code: "nl", flag: "🇳🇱" },
+            { name: "English", code: "en", flag: "🇺🇸" },
+            { name: "Estonian", code: "et", flag: "🇪🇪" },
+            { name: "Filipino", code: "fil", flag: "🇵🇭" },
+            { name: "Finnish", code: "fi", flag: "🇫🇮" },
+            { name: "French", code: "fr", flag: "🇫🇷" },
+            { name: "Galician", code: "gl", flag: "🇪🇸" },
+            { name: "Georgian", code: "ka", flag: "🇬🇪" },
+            { name: "German", code: "de", flag: "🇩🇪" },
+            { name: "Greek", code: "el", flag: "🇬🇷" },
+            { name: "Gujarati", code: "gu", flag: "🇮🇳" },
+            { name: "Hebrew", code: "he", flag: "🇮🇱" },
+            { name: "Hindi", code: "hi", flag: "🇮🇳" },
+            { name: "Hungarian", code: "hu", flag: "🇭🇺" },
+            { name: "Icelandic", code: "is", flag: "🇮🇸" },
+            { name: "Indonesian", code: "id", flag: "🇮🇩" },
+            { name: "Italian", code: "it", flag: "🇮🇹" },
+            { name: "Japanese", code: "ja", flag: "🇯🇵" },
+            { name: "Kannada", code: "kn", flag: "🇮🇳" },
+            { name: "Kazakh", code: "kk", flag: "🇰🇿" },
+            { name: "Khmer", code: "km", flag: "🇰🇭" },
+            { name: "Korean", code: "ko", flag: "🇰🇷" },
+            { name: "Kyrgyz", code: "ky", flag: "🇰🇬" },
+            { name: "Lao", code: "lo", flag: "🇱🇦" },
+            { name: "Latvian", code: "lv", flag: "🇱🇻" },
+            { name: "Lithuanian", code: "lt", flag: "🇱🇹" },
+            { name: "Macedonian", code: "mk", flag: "🇲🇰" },
+            { name: "Malay", code: "ms", flag: "🇲🇾" },
+            { name: "Malayalam", code: "ml", flag: "🇮🇳" },
+            { name: "Marathi", code: "mr", flag: "🇮🇳" },
+            { name: "Mongolian", code: "mn", flag: "🇲🇳" },
+            { name: "Nepali", code: "ne", flag: "🇳🇵" },
+            { name: "Norwegian", code: "no", flag: "🇳🇴" },
+            { name: "Odia", code: "or", flag: "🇮🇳" },
+            { name: "Persian", code: "fa", flag: "🇮🇷" },
+            { name: "Polish", code: "pl", flag: "🇵🇱" },
+            { name: "Portuguese", code: "pt", flag: "🇵🇹" },
+            { name: "Punjabi", code: "pa", flag: "🇮🇳" },
+            { name: "Romanian", code: "ro", flag: "🇷🇴" },
+            { name: "Russian", code: "ru", flag: "🇷🇺" },
+            { name: "Serbian", code: "sr", flag: "🇷🇸" },
+            { name: "Sinhala", code: "si", flag: "🇱🇰" },
+            { name: "Slovak", code: "sk", flag: "🇸🇰" },
+            { name: "Slovenian", code: "sl", flag: "🇸🇮" },
+            { name: "Spanish", code: "es", flag: "🇪🇸" },
+            { name: "Swahili", code: "sw", flag: "🇰🇪" },
+            { name: "Swedish", code: "sv", flag: "🇸🇪" },
+            { name: "Tagalog", code: "tl", flag: "🇵🇭" },
+            { name: "Tamil", code: "ta", flag: "🇮🇳" },
+            { name: "Telugu", code: "te", flag: "🇮🇳" },
+            { name: "Thai", code: "th", flag: "🇹🇭" },
+            { name: "Tibetan", code: "bo", flag: "🇨🇳" },
+            { name: "Turkish", code: "tr", flag: "🇹🇷" },
+            { name: "Ukrainian", code: "uk", flag: "🇺🇦" },
+            { name: "Urdu", code: "ur", flag: "🇵🇰" },
+            { name: "Uzbek", code: "uz", flag: "🇺🇿" },
+            { name: "Vietnamese", code: "vi", flag: "🇻🇳" },
+            { name: "Welsh", code: "cy", flag: "🇬🇧" },
+            { name: "Xhosa", code: "xh", flag: "🇿🇦" },
+            { name: "Zulu", code: "zu", flag: "🇿🇦" }
         ];
+
+        // Populate selects
+        window.onload = () => {
+            const sourceSelect = document.getElementById('sourceLang');
+            const targetSelect = document.getElementById('targetLang');
+
+            languageData.forEach(lang => {
+                const opt1 = new Option(`${lang.flag} ${lang.name}`, lang.code);
+                const opt2 = new Option(`${lang.flag} ${lang.name}`, lang.code);
+                sourceSelect.add(opt1);
+                targetSelect.add(opt2);
+            });
+
+            // Default selection: Korean -> English
+            sourceSelect.value = "ko";
+            targetSelect.value = "en";
+        };
 
         const materialsMap = [
             { id: 'verbs_100', name: 'Basic Verbs (100)', path: 'words/verbs_100.json' },
@@ -351,26 +443,19 @@
             { id: 'first_meeting', name: 'Dialogue: First Meeting', path: 'dialogues/first_meeting.json' }
         ];
 
-        const getFlag = (lang) => {
-            const flags = {
-                "Afrikaans": "🇿🇦", "Amharic": "🇪🇹", "Arabic": "🇸🇦", "Bengali": "🇧🇩", "Burmese": "🇲🇲",
-                "Chinese (Simplified)": "🇨🇳", "Chinese (Traditional)": "🇹🇼", "Czech": "🇨🇿", "Danish": "🇩🇰",
-                "Dutch": "🇳🇱", "English": "🇺🇸", "Filipino": "🇵🇭", "Finnish": "🇫🇮", "French": "🇫🇷",
-                "German": "🇩🇪", "Greek": "🇬🇷", "Gujarati": "🇮🇳", "Hebrew": "🇮🇱", "Hindi": "🇮🇳",
-                "Hungarian": "🇭🇺", "Indonesian": "🇮🇩", "Italian": "🇮🇹", "Japanese": "🇯🇵", "Kannada": "🇮🇳",
-                "Khmer": "🇰🇭", "Korean": "🇰🇷", "Lao": "🇱🇦", "Malay": "🇲🇾", "Malayalam": "🇮🇳",
-                "Marathi": "🇮🇳", "Nepali": "🇳🇵", "Norwegian": "🇳🇴", "Persian": "🇮🇷", "Polish": "🇵🇱",
-                "Portuguese": "🇵🇹", "Punjabi": "🇮🇳", "Romanian": "🇷🇴", "Russian": "🇷🇺", "Sinhala": "🇱🇰",
-                "Slovak": "🇸🇰", "Spanish": "🇪🇸", "Swahili": "🇰🇪", "Swedish": "🇸🇪", "Tamil": "🇮🇳",
-                "Telugu": "🇮🇳", "Thai": "🇹🇭", "Turkish": "🇹🇷", "Ukrainian": "🇺🇦", "Urdu": "🇵🇰",
-                "Vietnamese": "🇻🇳", "Xhosa": "🇿🇦", "Zulu": "🇿🇦"
-            };
-            return flags[lang] || "🌐";
+        const getFlag = (langCode) => {
+            const lang = languageData.find(l => l.code === langCode);
+            return lang ? lang.flag : "🌐";
+        };
+
+        const getLangName = (langCode) => {
+            const lang = languageData.find(l => l.code === langCode);
+            return lang ? lang.name : langCode;
         };
 
         function findMaterials() {
-            const sourceInput = document.getElementById('sourceLang').value.trim();
-            const targetInput = document.getElementById('targetLang').value.trim();
+            const sourceLang = document.getElementById('sourceLang').value;
+            const targetLang = document.getElementById('targetLang').value;
             const errorBox = document.getElementById('errorBox');
             const resultsArea = document.getElementById('resultsArea');
             const materialsGrid = document.getElementById('materialsGrid');
@@ -382,22 +467,11 @@
             materialsGrid.innerHTML = '';
 
             // Validation
-            if (!sourceInput || !targetInput) {
-                showError("Please enter both Mother Tongue and Target Language.");
+            if (!sourceLang || !targetLang) {
+                showError("Please select both Mother Tongue and Target Language.");
                 return;
             }
 
-            const sourceLang = findLanguage(sourceInput);
-            const targetLang = findLanguage(targetInput);
-
-            if (!sourceLang) {
-                showError(`Sorry, "${sourceInput}" is not currently supported.`);
-                return;
-            }
-            if (!targetLang) {
-                showError(`Sorry, "${targetInput}" is not currently supported.`);
-                return;
-            }
             if (sourceLang === targetLang) {
                 showError("Mother Tongue and Target Language cannot be the same.");
                 return;
@@ -405,7 +479,7 @@
 
             // Success: Render Cards
             resultsArea.style.display = 'block';
-            pairDisplay.innerHTML = `Generating files for: <strong>${getFlag(sourceLang)} ${sourceLang}</strong> ↔ <strong>${getFlag(targetLang)} ${targetLang}</strong>`;
+            pairDisplay.innerHTML = `Generating files for: <strong>${getFlag(sourceLang)} ${getLangName(sourceLang)}</strong> ↔ <strong>${getFlag(targetLang)} ${getLangName(targetLang)}</strong>`;
 
             materialsMap.forEach(material => {
                 const card = document.createElement('div');
@@ -424,37 +498,22 @@
             });
         }
 
-        function findLanguage(input) {
-            const lowerInput = input.toLowerCase();
-            return languages.find(l => l.toLowerCase() === lowerInput);
-        }
-
         function showError(msg) {
             const errorBox = document.getElementById('errorBox');
             errorBox.textContent = msg;
             errorBox.style.display = 'block';
         }
 
-        const languageCodes = {
-            "Afrikaans": "af", "Amharic": "am", "Arabic": "ar", "Bengali": "bn", "Burmese": "my",
-            "Chinese (Simplified)": "zh-CN", "Chinese (Traditional)": "zh-TW", "Czech": "cs",
-            "Danish": "da", "Dutch": "nl", "English": "en", "Filipino": "fil", "Finnish": "fi",
-            "French": "fr", "German": "de", "Greek": "el", "Gujarati": "gu", "Hebrew": "he",
-            "Hindi": "hi", "Hungarian": "hu", "Indonesian": "id", "Italian": "it", "Japanese": "ja",
-            "Kannada": "kn", "Khmer": "km", "Korean": "ko", "Lao": "lo", "Malay": "ms",
-            "Malayalam": "ml", "Marathi": "mr", "Nepali": "ne", "Norwegian": "no", "Persian": "fa",
-            "Polish": "pl", "Portuguese": "pt", "Punjabi": "pa", "Romanian": "ro", "Russian": "ru",
-            "Sinhala": "si", "Slovak": "sk", "Spanish": "es", "Swahili": "sw", "Swedish": "sv",
-            "Tamil": "ta", "Telugu": "te", "Thai": "th", "Turkish": "tr", "Ukrainian": "uk",
-            "Urdu": "ur", "Vietnamese": "vi", "Xhosa": "xh", "Zulu": "zu"
-        };
 
         async function generateAndDownload(sourceLang, targetLang, materialId, relativePath, subjectName) {
             try {
                 // Fetch both files in parallel
+                const sName = getLangName(sourceLang);
+                const tName = getLangName(targetLang);
+
                 const [sourceRes, targetRes] = await Promise.all([
-                    fetch(`materials/${sourceLang}/${relativePath}`),
-                    fetch(`materials/${targetLang}/${relativePath}`)
+                    fetch(`materials/${sName}/${relativePath}`),
+                    fetch(`materials/${tName}/${relativePath}`)
                 ]);
 
                 if (!sourceRes.ok) throw new Error(`Could not load materials for ${sourceLang}`);
@@ -464,8 +523,9 @@
                 const targetData = await targetRes.json();
 
                 // Merge Logic
-                const isDialogue = relativePath.includes('/dialogues/');
-                const isWord = relativePath.includes('/words/');
+                const path = relativePath.toLowerCase();
+                const isDialogue = path.includes('dialogues/');
+                const isWord = path.includes('words/');
                 const typeCode = isDialogue ? "dialogue" : (isWord ? "word" : "sentence");
 
                 const mergedEntries = [];
@@ -493,8 +553,8 @@
                     }
                 }
 
-                const sCode = languageCodes[sourceLang] || sourceLang;
-                const tCode = languageCodes[targetLang] || targetLang;
+                const sCode = sourceLang;
+                const tCode = targetLang;
 
                 // Create Final Object
                 let finalJson = {

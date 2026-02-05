@@ -1,0 +1,405 @@
+{
+    "subject": "Əsas Fellər 100",
+    "entries": [
+        {
+            "text": "Getmək",
+            "note": ""
+        },
+        {
+            "text": "Gəlmək",
+            "note": ""
+        },
+        {
+            "text": "Yemək",
+            "note": ""
+        },
+        {
+            "text": "İçmək",
+            "note": ""
+        },
+        {
+            "text": "Yatmaq",
+            "note": ""
+        },
+        {
+            "text": "Görmək",
+            "note": ""
+        },
+        {
+            "text": "Almaq",
+            "note": ""
+        },
+        {
+            "text": "Satmaq",
+            "note": ""
+        },
+        {
+            "text": "Oxumaq",
+            "note": ""
+        },
+        {
+            "text": "Yazmaq",
+            "note": "Writing"
+        },
+        {
+            "text": "Dinləmək",
+            "note": ""
+        },
+        {
+            "text": "Danışmaq",
+            "note": ""
+        },
+        {
+            "text": "Etmək",
+            "note": ""
+        },
+        {
+            "text": "İşləmək",
+            "note": ""
+        },
+        {
+            "text": "Oxumaq",
+            "note": ""
+        },
+        {
+            "text": "Öyrətmək",
+            "note": ""
+        },
+        {
+            "text": "Öyrənmək",
+            "note": ""
+        },
+        {
+            "text": "Gözləmək",
+            "note": ""
+        },
+        {
+            "text": "Görüşmək",
+            "note": ""
+        },
+        {
+            "text": "Sevmək",
+            "note": ""
+        },
+        {
+            "text": "Xoşlamaq",
+            "note": ""
+        },
+        {
+            "text": "Sevməmək",
+            "note": ""
+        },
+        {
+            "text": "Gülmək",
+            "note": ""
+        },
+        {
+            "text": "Ağlamaq",
+            "note": ""
+        },
+        {
+            "text": "Yerimək",
+            "note": ""
+        },
+        {
+            "text": "Qaçmaq",
+            "note": "Running"
+        },
+        {
+            "text": "Oturmaq",
+            "note": ""
+        },
+        {
+            "text": "Ayaqda durmaq",
+            "note": ""
+        },
+        {
+            "text": "Vermək",
+            "note": ""
+        },
+        {
+            "text": "Qəbul etmək",
+            "note": ""
+        },
+        {
+            "text": "Açmaq",
+            "note": ""
+        },
+        {
+            "text": "Bağlamaq",
+            "note": ""
+        },
+        {
+            "text": "Düşünmək",
+            "note": ""
+        },
+        {
+            "text": "Bilmək",
+            "note": ""
+        },
+        {
+            "text": "Bilməmək",
+            "note": ""
+        },
+        {
+            "text": "Tapmaq",
+            "note": ""
+        },
+        {
+            "text": "İtirmək",
+            "note": ""
+        },
+        {
+            "text": "Kömək etmək",
+            "note": ""
+        },
+        {
+            "text": "Yumaq",
+            "note": ""
+        },
+        {
+            "text": "Bişirmək",
+            "note": ""
+        },
+        {
+            "text": "Oxumaq",
+            "note": ""
+        },
+        {
+            "text": "Rəqs etmək",
+            "note": ""
+        },
+        {
+            "text": "İstifadə etmək",
+            "note": ""
+        },
+        {
+            "text": "Hazırlamaq",
+            "note": ""
+        },
+        {
+            "text": "Zəng etmək",
+            "note": "Song / Name"
+        },
+        {
+            "text": "Tutmaq / saxlamaq",
+            "note": ""
+        },
+        {
+            "text": "Qoymaq / tərk etmək",
+            "note": ""
+        },
+        {
+            "text": "Daxil olmaq",
+            "note": ""
+        },
+        {
+            "text": "Çıxmaq",
+            "note": ""
+        },
+        {
+            "text": "Minmək",
+            "note": "Boarding"
+        },
+        {
+            "text": "Düşmək",
+            "note": "Alighting"
+        },
+        {
+            "text": "Göndərmək",
+            "note": ""
+        },
+        {
+            "text": "Təqdim etmək",
+            "note": "Submission"
+        },
+        {
+            "text": "Yola getmək",
+            "note": "Greetings"
+        },
+        {
+            "text": "Başlamaq",
+            "note": ""
+        },
+        {
+            "text": "Bitirmək",
+            "note": ""
+        },
+        {
+            "text": "Dincəlmək",
+            "note": "Relax"
+        },
+        {
+            "text": "Soruşmaq",
+            "note": "Question"
+        },
+        {
+            "text": "Cavab vermək",
+            "note": ""
+        },
+        {
+            "text": "Söz vermək",
+            "note": ""
+        },
+        {
+            "text": "Narahat olmaq",
+            "note": ""
+        },
+        {
+            "text": "İnanmaq",
+            "note": ""
+        },
+        {
+            "text": "Şübhələnmək",
+            "note": ""
+        },
+        {
+            "text": "Arzulamaq / ümid etmək",
+            "note": "Hope"
+        },
+        {
+            "text": "Xəyal etmək",
+            "note": ""
+        },
+        {
+            "text": "Döyüşmək",
+            "note": ""
+        },
+        {
+            "text": "Qazanmaq",
+            "note": ""
+        },
+        {
+            "text": "Uduzmaq",
+            "note": "Defeat"
+        },
+        {
+            "text": "Böyümək",
+            "note": "Growth"
+        },
+        {
+            "text": "Yaşamaq",
+            "note": ""
+        },
+        {
+            "text": "Ölmək",
+            "note": ""
+        },
+        {
+            "text": "Götürmək",
+            "note": ""
+        },
+        {
+            "text": "Atmaq",
+            "note": ""
+        },
+        {
+            "text": "Gizlətmək",
+            "note": ""
+        },
+        {
+            "text": "Axtarmaq",
+            "note": ""
+        },
+        {
+            "text": "Seçmək",
+            "note": ""
+        },
+        {
+            "text": "Dəyişmək",
+            "note": ""
+        },
+        {
+            "text": "Sifariş vermək",
+            "note": "Buying items"
+        },
+        {
+            "text": "Hazırlamaq",
+            "note": ""
+        },
+        {
+            "text": "Tutmaq",
+            "note": ""
+        },
+        {
+            "text": "Atmaq",
+            "note": ""
+        },
+        {
+            "text": "Çəkmək",
+            "note": ""
+        },
+        {
+            "text": "İtmələmək",
+            "note": ""
+        },
+        {
+            "text": "Düzəltmək / təmir etmək",
+            "note": "Repair"
+        },
+        {
+            "text": "Sındırmaq",
+            "note": ""
+        },
+        {
+            "text": "Xəstələnmək / zədələnmək",
+            "note": ""
+        },
+        {
+            "text": "Müalicə etmək",
+            "note": ""
+        },
+        {
+            "text": "İdman etmək",
+            "note": ""
+        },
+        {
+            "text": "Üzmək",
+            "note": ""
+        },
+        {
+            "text": "Səyahət etmək",
+            "note": ""
+        },
+        {
+            "text": "Sürmək",
+            "note": ""
+        },
+        {
+            "text": "Təmizləmək",
+            "note": ""
+        },
+        {
+            "text": "Qabları yumaq",
+            "note": ""
+        },
+        {
+            "text": "Paltar yumaq",
+            "note": ""
+        },
+        {
+            "text": "Duş qəbul etmək",
+            "note": ""
+        },
+        {
+            "text": "Dişləri fırçalamaq",
+            "note": ""
+        },
+        {
+            "text": "Oyanmaq",
+            "note": "Wake up"
+        },
+        {
+            "text": "Yatağa getmək",
+            "note": "Sleeping"
+        },
+        {
+            "text": "Başa düşmək",
+            "note": ""
+        },
+        {
+            "text": "Xatırlamaq",
+            "note": ""
+        }
+    ]
+}

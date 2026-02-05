@@ -1,0 +1,678 @@
+{
+  "@@locale": "lt",
+  "helpTitle": "Pagalba ir gidai",
+  "helpTabModes": "Režimų paaiškinimas",
+  "helpTabJson": "JSON formatas",
+  "helpTabTour": "Apžiūrėti",
+  "helpMode1Desc": "Atpažįsta jūsų balsą, verčia ir leidžia klausytis rezultatų.",
+  "helpMode1Details": "• Kalbos nustatymas: pakeiskite kalbą spustelėdami viršutines/apatinės piktogramas\n• Žodžių / sakinių perjungimas: perjungti režimus\n• Įvestis balsu: spustelėkite mikrofono piktogramą, kad pradėtumėte / sustabdytumėte klausymąsi\n• Teksto įvestis: įveskite tiesiogiai, kad išverstumėte\n• Automatinė paieška: aptikite panašius esamus sakinius\n• Vertimas: spustelėkite vertimo mygtuką, kad išverstumėte iš karto\n• Klausymas: TTS atkūrimas naudojant garsiakalbio piktogramą\n• Išsaugoti: pridėkite įrašą su „Duomenų įrašymas“\n• Išvalyti: atkurkite pradinę įvestį",
+  "helpMode2Desc": "Peržiūrėkite išsaugotus sakinius ir patikrinkite, ar jie įsiminti, naudodami automatinio slėpimo funkciją.",
+  "helpMode2Details": "• Medžiagos pasirinkimas: pasirinkite konkretų rinkinį arba „Visos apžvalgos“\n• Kortelės apvertimas: patikrinkite vertimą naudodami „Rodyti / slėpti“ (automatinis mokymosi patikrinimas)\n• Klausymas: sakinio TTS atkūrimas\n• Mokymasis baigtas: pažymėkite varnelę (V), kad mokymasis būtų baigtas\n• Ištrinti: ilgai paspauskite kortelę, kad ištrintumėte įrašą\n• Paieškos sąlygos: filtruokite pagal žymą, naujausius elementus, pradžios raidę",
+  "helpMode3Desc": "Klausykitės sakinių ir kartokite (Shadowing), kad praktikuotumėte tarimą.",
+  "helpMode3Details": "• Medžiagos pasirinkimas: pasirinkite medžiagų rinkinį, kurį norite studijuoti\n• Intervalo nustatymas: reguliuokite laukimo laiką tarp sakinių naudodami mygtukus [-] [+]. (3–60 sekundžių)\n• Pradėti / sustabdyti: šešėliavimo sesijos valdymas\n• Kalbėjimas: klausykitės ir kartokite balsą\n• Atsiliepimas: tikslumo balas (0–100) ir spalvų ekranas\n• Paieškos sąlygos: filtruokite praktikos taikinius pagal žymą, naujausius elementus, pradžios raidę",
+  "helpModeChatDesc": "Praktikuokite pokalbius realiame gyvenime kalbėdamiesi su AI personažu.",
+  "helpModeChatDetails": "• AI pokalbiai: praktikuokite pokalbius kalbėdami savo kalba\n• Keli personažai: galima pakeisti oponento lytį / kalbą / vardą meniu virš baliono\n• Pridėti partnerį: pridėkite naują pašnekovą (Nepažįstamąjį) naudodami mygtuką +\n• GPS: situacijos komedija pagal dabartinę vietą\n• Automatinis išsaugojimas: automatinis pokalbio turinio vertimas ir išsaugojimas",
+  "helpJsonDesc": "Jei norite importuoti mokymosi medžiagą, kuri bus naudojama 3 režime, kaip JSON failą, vadovaukitės šiuo formatu:",
+  "helpDialogueImportDesc": "Importuokite visą pokalbių rinkinį kaip JSON failą.",
+  "helpDialogueImportDetails": "• JSON struktūra: naudokite `dialogues` masyvą vietoj `entries`\n• Automatinis atkūrimas: atkuriamas pokalbio pavadinimas, personažas, pranešimų tvarka.\n• Vieta: importuoti pokalbiai rodomi AI pokalbių režimo skirtuke „Istorija“.",
+  "helpTourDesc": "**Paryškintas apskritimas** nurodo pagrindines funkcijas.\n(Pavyzdžiui, **Paryškintas apskritimas** rodo, kad galite ištrinti ilgai paspausdami kortelę.)",
+  "partnerMode": "Partnerio režimas",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "manual": "Rankinis įvedimas",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "speaker": "Kalbėtojas",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "switchToAi": "Perjungti į AI režimą",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Perjungti į partnerio režimą",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "currentLocation": "Dabartinė vieta",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "location": "Vieta",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "partner": "Partneris",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "me": "Aš",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "currentMaterialLabel": "Šiuo metu pasirinkta medžiaga:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "basicMaterialRepository": "Pagrindinė sakinių / žodžių saugykla",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
+  },
+  "word": "Žodis",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "sentence": "Sakinys",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "appTitle": "Talkie",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "tabReview": "Apžvalga ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabStudyMaterial": "Mokymosi medžiaga ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mode2Title": "Apžvalga",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "search": "Paieška",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "translate": "Versti",
+  "@translate": {
+    "description": "Translate button"
+  },
+  "listen": "Klausytis",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "saveData": "Išsaugoti duomenis",
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  "saved": "Išsaugota",
+  "@saved": {
+    "description": "Data saved status"
+  },
+  "delete": "Ištrinti",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "materialInfo": "Informacija apie medžiagą",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "cancel": "Atšaukti",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "confirm": "Patvirtinti",
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
+  "refresh": "Atnaujinti",
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  "studyRecords": "Mokymosi įrašai ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "targetLanguageFilter": "Tikslinės kalbos filtras:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "noRecords": "Šiai kalbai pasirinktų mokymosi įrašų nėra",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "saveTranslationsFromSearch": "Pabandykite išsaugoti vertimus iš paieškos režimo",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  "flip": "Rodyti",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "hide": "Slėpti",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "deleteRecord": "Ištrinti įrašą",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  "confirmDelete": "Ar tikrai norite ištrinti šį mokymosi įrašą?",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
+  "recordDeleted": "Įrašas ištrintas",
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
+  "deleteFailed": "Ištrinti nepavyko: {error}",
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "importJsonFile": "Importuoti JSON failą",
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
+  "importing": "Importuojama...",
+  "@importing": {
+    "description": "Import in progress"
+  },
+  "importComplete": "Importavimas baigtas",
+  "@importComplete": {
+    "description": "Import success title"
+  },
+  "importFailed": "Importuoti nepavyko",
+  "@importFailed": {
+    "description": "Import error title"
+  },
+  "importFile": "Failas: {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "importTotal": "Iš viso: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importAdded": "Pridėta: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importSkipped": "Praleista: {count}",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errors": "Klaidos:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "error": "Klaida",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "importErrorMessage": "Nepavyko importuoti failo:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "selectStudyMaterial": "Pasirinkite mokymosi medžiagą",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  "subject": "Tema:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "source": "Šaltinis:",
+  "@source": {
+    "description": "Source label"
+  },
+  "file": "Failas:",
+  "@file": {
+    "description": "File label"
+  },
+  "progress": "Eiga: {current} / {total}",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importJsonFilePrompt": "Importuokite JSON failą",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
+  "selectMaterialPrompt": "Pasirinkite mokymosi medžiagą",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "studyComplete": "Mokymasis baigtas",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "markAsStudied": "Pažymėti kaip išmoktą",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "listening": "Klausoma...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "recognized": "Atpažinta",
+  "@recognized": {
+    "description": "STT complete status"
+  },
+  "recognitionFailed": "Nepavyko atpažinti balso: {error}",
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "checking": "Tikrinama...",
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
+  "translating": "Verčiama...",
+  "@translating": {
+    "description": "Translation in progress"
+  },
+  "translationComplete": "Vertimas baigtas (reikia išsaugoti)",
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
+  "translationLoaded": "Įkeltas išsaugotas vertimas",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
+  "translationFailed": "Nepavyko išversti: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "enterTextToTranslate": "Įveskite tekstą, kurį norite išversti",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "saving": "Išsaugoma...",
+  "@saving": {
+    "description": "Save in progress"
+  },
+  "noTranslationToSave": "Nėra vertimo, kurį būtų galima išsaugoti",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "saveFailed": "Nepavyko išsaugoti: {error}",
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "playing": "Atkuriama...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  "noTextToPlay": "Nėra teksto, kurį būtų galima atkurti",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "playbackFailed": "Nepavyko atkurti: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceLanguage": "Pradinė kalba",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "targetLanguage": "Tikslinė kalba",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "similarTextFound": "Rastas panašus tekstas",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "useExistingText": "Naudoti esamą tekstą",
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
+  "createNew": "Tęsti su nauju sakiniu",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "reviewCount": "Apžvalga {count} kartų",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSpeaking": "Kalbėjimas",
+  "speakingPractice": "Kalbėjimo praktika",
+  "intervalSeconds": "Intervalas: {seconds} sek.",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "yourPronunciation": "Jūsų tarimas",
+  "correctAnswer": "Teisingas atsakymas",
+  "score": "Tikslumas: {score}%",
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "perfect": "Puiku!",
+  "good": "Gerai",
+  "tryAgain": "Pabandykite dar kartą",
+  "startPractice": "Pradėti praktiką",
+  "stopPractice": "Sustabdyti praktiką",
+  "startTutorial": "Pradėti mokymą",
+  "tutorialMicTitle": "Įvestis balsu",
+  "tutorialMicDesc": "Galite įvesti balsu spustelėdami mikrofono mygtuką.",
+  "tutorialTabDesc": "Čia galite pasirinkti norimą mokymosi režimą.",
+  "tutorialTapToContinue": "Bakstelėkite ekraną, kad tęstumėte",
+  "tutorialTransTitle": "Versti",
+  "tutorialTransDesc": "Išverčia įvestą tekstą.",
+  "tutorialSaveTitle": "Išsaugoti",
+  "tutorialSaveDesc": "Išsaugokite išverstą rezultatą savo mokymosi įrašuose.",
+  "tutorialM2SelectTitle": "Medžiagos pasirinkimas",
+  "tutorialM2SelectDesc": "Spustelėkite medžiagų rinkinio piktogramą (📚) viršutinėje programos juostoje, kad pasirinktumėte medžiagą, kurią norite studijuoti.",
+  "tutorialM2ListTitle": "Mokymosi sąrašas",
+  "tutorialM2ListDesc": "Galite ištrinti ilgai paspausdami šią kortelę. Patikrinkite išsaugotus sakinius ir apverskite juos.",
+  "tutorialM3SelectTitle": "Medžiagos pasirinkimas",
+  "tutorialM3SelectDesc": "Spustelėkite medžiagų rinkinio piktogramą (📚) viršutinėje programos juostoje, kad pasirinktumėte medžiagą, kurią norite praktikuoti.",
+  "tutorialM3IntervalTitle": "Intervalo nustatymas",
+  "tutorialM3IntervalDesc": "Sureguliuoja laukimo laiką tarp sakinių.",
+  "tutorialM3StartTitle": "Pradėti praktiką",
+  "tutorialM3StartDesc": "Spustelėkite atkūrimo mygtuką, kad klausytumėtės gimtakalbio kalbėtojo balso ir kartotumėte.",
+  "startWarning": "Įspėjimas",
+  "noVoiceDetected": "Balsas neaptiktas",
+  "tooltipSearch": "Paieška",
+  "tooltipStudyReview": "Mokymasis + apžvalga",
+  "tooltipSpeaking": "Kalbėjimas",
+  "tooltipDecrease": "Sumažinti",
+  "tooltipIncrease": "Padidinti",
+  "languageSettings": "Kalbos nustatymai",
+  "tutorialM2DropdownDesc": "Galite pasirinkti medžiagą, kurią norite studijuoti, naudodami viršutinį meniu.",
+  "tutorialM2ImportDesc": "Importuoja JSON failą iš įrenginio aplanko.",
+  "tutorialLangSettingsTitle": "Kalbos nustatymai",
+  "tutorialLangSettingsDesc": "Nustato pradinę ir tikslinę kalbas, kurias norite versti.",
+  "copy": "Kopijuoti",
+  "copiedToClipboard": "Nukopijuota į iškarpinę!",
+  "tutorialContextTitle": "Situacijos / konteksto žymė",
+  "tutorialContextDesc": "Net jei tai tas pats sakinys, galite jį išsaugoti atskirai parašydami situaciją (pvz., rytą, vakarą).",
+  "thinkingTimeInterval": "Mąstymo laiko intervalas",
+  "thinkingTimeDesc": "Tai laikas, skirtas pagalvoti prieš atskleidžiant teisingą atsakymą.",
+  "autoPlay": "Automatinis atkūrimas",
+  "timeUp": "Laikas baigėsi!",
+  "gameModeTitle": "Žaidimo režimas",
+  "gameModeDesc": "Pasirinkite žaidimo režimą, kurį norite praktikuoti",
+  "wordDefenseTitle": "Žodžių gynyba",
+  "wordDefenseDesc": "Apginkite savo bazę sakydami žodžius prieš atvykstant priešui.",
+  "dialogueQuestTitle": "Dialogo užduotis",
+  "dialogueQuestDesc": "Praktikuokite pokalbius per situacijų komediją. Pasirinkite tinkamą atsakymą ir pasakykite.",
+  "labelType": "Tipas:",
+  "labelWord": "Žodis",
+  "labelSentence": "Sakinys",
+  "contextTagLabel": "Kontekstas / situacija (neprivaloma) – pvz., Labas rytas, Mandagus",
+  "contextTagHint": "Parašykite situaciją, kad būtų lengviau atskirti vėliau",
+  "usageLimitTitle": "Pasiektas limitas",
+  "translationLimitExceeded": "Viršytas vertimo limitas",
+  "translationLimitMessage": "Išnaudojote visus nemokamus dienos vertimus (5 kartus).\\n\\nAr norite peržiūrėti skelbimą ir iš karto papildyti 5 kartus?",
+  "watchAdAndRefill": "Žiūrėti skelbimą ir papildyti (+5 kartus)",
+  "translationRefilled": "Vertimų skaičius papildytas 5 kartus!",
+  "adLoading": "Įkeliamas skelbimas. Bandykite dar kartą po kurio laiko.",
+  "reviewAll": "Visos apžvalgos",
+  "totalRecords": "Iš viso {count} įrašų (peržiūrėti visus)",
+  "@totalRecords": {
+    "description": "Total records count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterAll": "Viskas",
+  "practiceWordsOnly": "Praktikuoti tik žodžius",
+  "resetPracticeHistory": "Išvalyti praktikos istoriją",
+  "retry": "Bandyti dar kartą?",
+  "noStudyMaterial": "Nėra mokymosi medžiagos.",
+  "gameOver": "Žaidimas baigtas",
+  "playAgain": "Žaisti iš naujo",
+  "speakNow": "Kalbėkite dabar!",
+  "scoreLabel": "Taškai",
+  "viewOnlineGuide": "Peržiūrėti internetinį gidą",
+  "getMaterials": "Gauti medžiagų",
+  "swapLanguages": "Sukeisti kalbas",
+  "next": "Kitas",
+  "wordModeLabel": "Žodžių režimas",
+  "accuracy": "Tikslumas",
+  "basicDefault": "Pagrindinis",
+  "basic": "Pagrindinis",
+  "tutorialM3WordsTitle": "Žodžių praktika",
+  "tutorialM3WordsDesc": "Jei pažymėta, praktikuokite tik išsaugotus žodžius.",
+  "enterTextHint": "Įveskite tekstą, kurį norite išversti",
+  "micButtonTooltip": "Pradėti balso atpažinimą",
+  "menuHelp": "Pagalba",
+  "menuWebDownload": "Pagrindinis puslapis",
+  "menuDeviceImport": "Importuoti medžiagą iš įrenginio",
+  "menuSettings": "Kalbos nustatymai",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "basicWords": "Pagrindinė žodžių saugykla",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
+  },
+  "basicSentences": "Pagrindinė sakinių saugykla",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
+  },
+  "selectMaterialSet": "Pasirinkite mokymosi medžiagų rinkinį",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "sectionWords": "Žodžiai",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "sectionSentences": "Sakiniai",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "languageSettingsTitle": "Kalbos nustatymai",
+  "sourceLanguageLabel": "Mano kalba (Šaltinis)",
+  "targetLanguageLabel": "Mokymosi kalba (Tikslinė)",
+  "mode3Start": "Pradėti",
+  "mode3Stop": "Sustabdyti",
+  "mode3Next": "Kitas",
+  "mode3TryAgain": "Bandyti dar kartą",
+  "tutorialM3ResetTitle": "Išvalyti istoriją",
+  "tutorialSwapDesc": "Apkeiskite savo ir mokymosi kalbas.",
+  "recognizedText": "Atpažintas tarimas:",
+  "titleFormat": "{type}: {materialName}",
+  "tutorialM3ResetDesc": "Išvalykite pažangos būseną ir tikslumo balus, kad pradėtumėte iš naujo.",
+  "menuSelectMaterialSet": "Pasirinkite mokymosi medžiagų rinkinį",
+  "sectionWord": "Žodžio skiltis",
+  "sectionSentence": "Sakinių skiltis",
+  "tabWord": "Žodis",
+  "tabSentence": "Sakinys",
+  "errorProfanity": "Negalima išversti, nes yra necenzūrinių žodžių.",
+  "errorHateSpeech": "Negalima išversti, nes yra neapykantą kurstančių kalbų.",
+  "errorSexualContent": "Negalima išversti, nes yra seksualinio turinio.",
+  "errorOtherSafety": "Vertimas atsisakytas dėl AI saugos politikos.",
+  "clearAll": "Išvalyti viską",
+  "disambiguationTitle": "Pasirinkite reikšmę",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "disambiguationPrompt": "Kaip norite išversti?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "skip": "Praleisti",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "inputModeTitle": "Įvestis",
+  "reviewModeTitle": "Apžvalga",
+  "practiceModeTitle": "Tarimo praktika",
+  "chatHistoryTitle": "Pokalbių istorija",
+  "chatNew": "Naujas pokalbis",
+  "chatNewChat": "Naujas pokalbis",
+  "chatChoosePersona": "Pasirinkite personažą",
+  "chatTypeHint": "Įveskite pranešimą...",
+  "chatFailed": "Nepavyko kalbėtis: {error}",
+  "@chatFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "chatNoConversations": "Dar nėra pokalbių",
+  "chatStartNewPrompt": "Pradėkite naują pokalbį praktikai!",
+  "chatFromConversation": "Pokalbio ištrauka ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
+  },
+  "personaTeacher": "Anglų kalbos mokytojas",
+  "personaGuide": "Kelionių vadovas",
+  "personaFriend": "Vietinis draugas",
+  "chatUntitled": "Pokalbis be pavadinimo",
+  "chatAiChat": "AI pokalbiai",
+  "tutorialAiChatTitle": "AI pokalbiai",
+  "tutorialAiChatDesc": "Praktikuokite realius pokalbius su AI personažu.",
+  "mode1SelectedMaterial": "Šiuo metu pasirinkta medžiaga: {name}",
+  "basicWordRepository": "Pagrindinė žodžių saugykla",
+  "basicSentenceRepository": "Pagrindinė sakinių saugykla",
+  "chatEndTitle": "Baigti ir išsaugoti pokalbį",
+  "chatEndMessage": "Ar norite baigti pokalbį?",
+  "chatSaveAndExit": "Išsaugoti ir išeiti",
+  "errorSelectCategory": "Pirmiausia pasirinkite žodį ar sakinį!",
+  "tutorialM1ToggleTitle": "Žodžių / sakinių režimas",
+  "tutorialM1ToggleDesc": "Perjunkite žodžių ir sakinių režimus čia.",
+  "metadataDialogTitle": "Išsamus klasifikavimas",
+  "tagFormal": "Mandagus",
+  "selectPOS": "Pasirinkite kalbos dalį",
+  "selectSentenceType": "Pasirinkite sakinio tipą",
+  "metadataRootWord": "Šakninis žodis",
+  "posNoun": "Daiktavardis",
+  "posVerb": "Veiksmažodis",
+  "posAdjective": "Būdvardis",
+  "posAdverb": "Prieveiksmis",
+  "posPronoun": "Įvardis",
+  "posPreposition": "Prielinksnis/dalelytė",
+  "posConjunction": "Jungtukas",
+  "posInterjection": "Šauktukas",
+  "typeStatement": "Teiginys",
+  "typeQuestion": "Klausimas",
+  "typeExclamation": "Šauktukas",
+  "typeImperative": "Įsakymas",
+  "labelNote": "Pastaba",
+  "labelShowMemorized": "Baigta",
+  "tagSelection": "Žymos pasirinkimas",
+  "metadataFormType": "Gramatinė forma",
+  "formInfinitive": "Bendratis/Esamasis laikas",
+  "formPast": "Būtasis laikas",
+  "formPastParticiple": "Būtasis dalyvis",
+  "formPresentParticiple": "Esamasis dalyvis (ing)",
+  "formPresent": "Esamasis laikas",
+  "formThirdPersonSingular": "Trečiasis asmuo vienaskaita",
+  "formPlural": "Daugiskaita",
+  "formSingular": "Vienaskaita",
+  "caseSubject": "Vardininkas",
+  "caseObject": "Galima",
+  "casePossessive": "Giminininkas",
+  "casePossessivePronoun": "Savybinis įvardis",
+  "caseReflexive": "Sangrąžinis",
+  "formPositive": "Teigiamas",
+  "formComparative": "Lyginamasis laipsnis",
+  "formSuperlative": "Aukščiausiasis laipsnis",
+  "searchConditions": "Paieškos sąlygos",
+  "recentNItems": "Rodyti {count} neseniai sukurtus elementus",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "startsWith": "Pradedama raide",
+  "reset": "Atkurti",
+  "participantRename": "Pervardyti dalyvį",
+  "labelName": "Vardas",
+  "gender": "Lytis",
+  "language": "Kalba",
+  "male": "Vyras",
+  "female": "Moteris"
+}

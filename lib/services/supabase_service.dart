@@ -1,10 +1,12 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter/foundation.dart';
 
 class SupabaseService {
   static bool _initialized = false;
   
-  // Fallback values (used when .env fails to load)
+  // Fallback values (운영 환경에서는 .env 사용 권장)
+  // WARNING: _fallbackAnonKey는 로컬 테스트용이며, 실제 배포 시에는 보안을 위해 .env를 통해서만 공급되어야 함.
   static const String _fallbackUrl = 'https://soxdzielqtabyradajle.supabase.co';
   static const String _fallbackAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNveGR6aWVscXRhYnlyYWRhamxlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkzNzI0NDQsImV4cCI6MjA4NDk0ODQ0NH0.MHLZSXBWJlN6xojyqJR57DLulUWMUg67V458h6Sq2nY';
   
@@ -21,12 +23,17 @@ class SupabaseService {
     if (_initialized) return; // Prevent double initialization
     
     // Use .env values if available, otherwise use fallback
-    final url = dotenv.env['SUPABASE_URL']?.isNotEmpty == true 
-        ? dotenv.env['SUPABASE_URL']! 
-        : _fallbackUrl;
-    final anonKey = dotenv.env['SUPABASE_ANON_KEY']?.isNotEmpty == true 
-        ? dotenv.env['SUPABASE_ANON_KEY']! 
-        : _fallbackAnonKey;
+    final envUrl = dotenv.env['SUPABASE_URL'];
+    final envKey = dotenv.env['SUPABASE_ANON_KEY'];
+
+    if (kReleaseMode && (envUrl == null || envKey == null)) {
+      // 운영 빌드에서는 반드시 .env가 유효해야 함
+      print('CRITICAL: Supabase environment variables missing in Release Mode!');
+      // throw Exception('Production Error: Supabase credentials not found in environment.');
+    }
+
+    final url = envUrl?.isNotEmpty == true ? envUrl! : _fallbackUrl;
+    final anonKey = envKey?.isNotEmpty == true ? envKey! : _fallbackAnonKey;
     
     print('Supabase: Initializing with URL: $url');
     

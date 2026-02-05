@@ -1,0 +1,678 @@
+{
+  "@@locale": "sl",
+  "helpTitle": "Pomoč in vodniki",
+  "helpTabModes": "Razlaga načinov",
+  "helpTabJson": "Format JSON",
+  "helpTabTour": "Vodeni ogled",
+  "helpMode1Desc": "Prepoznajte govor, ga prevedite in poslušajte rezultate.",
+  "helpMode1Details": "• Nastavitev jezika: spremenite jezik s pritiskom na ikone zgoraj/spodaj\n• Preklop med besedami/stavki: preklop načina\n• Glasovni vnos: pritisnite ikono mikrofona za začetek/ustavitev poslušanja\n• Vnos besedila: ročni vnos besedila za prevajanje\n• Samodejno iskanje: zaznavanje podobnih obstoječih stavkov\n• Prevajanje: takojšnje prevajanje s pritiskom na gumb za prevajanje\n• Poslušanje: predvajanje TTS z ikono zvočnika\n• Shranjevanje: dodajanje zapisa s »Shrani podatke«\n• Brisanje: ponastavitev vnosa",
+  "helpMode2Desc": "Ponovite shranjene stavke in s funkcijo samodejnega skrivanja preverite, ali si jih zapomnite.",
+  "helpMode2Details": "• Izbira gradiva: izbira določene zbirke gradiv ali »Celotno ponavljanje«\n• Obračanje kartic: preverjanje prevoda z »Pokaži/Skrij« (samodejna kontrola učenja)\n• Poslušanje: predvajanje TTS stavka\n• Učenje končano: obdelava zaključka učenja z oznako (V)\n• Brisanje: dolg pritisk na kartico za brisanje zapisa\n• Pogoji iskanja: filtriranje po oznakah, nedavnih elementih, začetnih črkah",
+  "helpMode3Desc": "Vadite izgovorjavo s poslušanjem in ponavljanjem stavkov (senčenje).",
+  "helpMode3Details": "• Izbira gradiva: izbira zbirke gradiv za učenje\n• Nastavitev intervala: prilagajanje časa čakanja med stavki z gumboma [-] [+](3 sekunde ~ 60 sekund)\n• Začetek/ustavitev: nadzor nad sejo senčenja\n• Govorjenje: poslušanje zvoka in ponavljanje\n• Povratne informacije: prikaz ocene točnosti (0–100) in barve\n• Pogoji iskanja: filtriranje cilja vadbe po oznakah, nedavnih elementih, začetnih črkah",
+  "helpModeChatDesc": "Vadite pogovor v resničnem življenju s pogovorom z osebnostjo AI.",
+  "helpModeChatDetails": "• Klepet AI: vadite pogovor s pogovorom v mojem jeziku\n• Več osebnosti: spremenite spol/jezik/ime sogovornika z menijem nad oblački\n• Dodajanje partnerja: dodajanje novega sogovornika (Neznanec) z gumbom +\n• GPS: Situacijska komedija na podlagi trenutne lokacije\n• Samodejno shranjevanje: samodejno prevajanje in shranjevanje pogovorov",
+  "helpJsonDesc": "Za uvoz učnega gradiva, ki se uporablja v načinu 3, kot datoteko JSON, upoštevajte naslednjo obliko:",
+  "helpDialogueImportDesc": "Uvozi celoten nabor pogovorov kot datoteko JSON.",
+  "helpDialogueImportDetails": "• Struktura JSON: uporabite niz `dialogues` namesto `entries`\n• Samodejna obnovitev: obnovljeni so naslov pogovora, osebnost in vrstni red sporočil.\n• Lokacija: uvoženi pogovori se prikažejo na zavihku »Zgodovina« načina klepeta AI.",
+  "helpTourDesc": "**Poudarjeni krogi** vas vodijo skozi ključne funkcije.\n(Primer: **Poudarjeni krog**, ki kaže na kartico, lahko izbrišete z dolgim pritiskom.)",
+  "partnerMode": "Način za dva",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "manual": "Ročni vnos",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "speaker": "Govornik",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "switchToAi": "Preklop v način AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Preklop v način za dva",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "currentLocation": "Trenutna lokacija",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "location": "Lokacija",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "partner": "Partner",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "me": "Jaz",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "currentMaterialLabel": "Trenutno izbrana zbirka gradiv:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "basicMaterialRepository": "Osnovno skladišče stavkov/besed",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
+  },
+  "word": "Beseda",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "sentence": "Stavek",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "appTitle": "Talkie",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "tabReview": "Ponovitev ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabStudyMaterial": "Učno gradivo ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mode2Title": "Ponovitev",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "search": "Iskanje",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "translate": "Prevedi",
+  "@translate": {
+    "description": "Translate button"
+  },
+  "listen": "Poslušaj",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "saveData": "Shrani podatke",
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  "saved": "Shranjevanje končano",
+  "@saved": {
+    "description": "Data saved status"
+  },
+  "delete": "Izbriši",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "materialInfo": "Informacije o gradivu",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "cancel": "Prekliči",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "confirm": "Potrdi",
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
+  "refresh": "Osveži",
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  "studyRecords": "Zapisi učenja ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "targetLanguageFilter": "Filter ciljnega jezika:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "noRecords": "Ni zapisov učenja za izbrani jezik",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "saveTranslationsFromSearch": "Poskusite shraniti prevode iz načina iskanja",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  "flip": "Pokaži",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "hide": "Skrij",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "deleteRecord": "Izbriši zapis",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  "confirmDelete": "Ali želite izbrisati ta zapis učenja?",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
+  "recordDeleted": "Zapis je izbrisan",
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
+  "deleteFailed": "Brisanje ni uspelo: {error}",
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "importJsonFile": "Uvozi datoteko JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
+  "importing": "Uvažam ...",
+  "@importing": {
+    "description": "Import in progress"
+  },
+  "importComplete": "Uvoz končan",
+  "@importComplete": {
+    "description": "Import success title"
+  },
+  "importFailed": "Uvoz ni uspel",
+  "@importFailed": {
+    "description": "Import error title"
+  },
+  "importFile": "Datoteka: {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "importTotal": "Skupaj: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importAdded": "Dodano: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importSkipped": "Preskočeno: {count}",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errors": "Napake:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "error": "Napaka",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "importErrorMessage": "Uvoz datoteke ni uspel:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "selectStudyMaterial": "Izberite učno gradivo",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  "subject": "Zadeva:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "source": "Vir:",
+  "@source": {
+    "description": "Source label"
+  },
+  "file": "Datoteka:",
+  "@file": {
+    "description": "File label"
+  },
+  "progress": "Napredek: {current} / {total}",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importJsonFilePrompt": "Uvozite datoteko JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
+  "selectMaterialPrompt": "Izberite učno gradivo",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "studyComplete": "Učenje končano",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "markAsStudied": "Označi kot preučeno",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "listening": "Poslušam ...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "recognized": "Prepoznano",
+  "@recognized": {
+    "description": "STT complete status"
+  },
+  "recognitionFailed": "Prepoznavanje govora ni uspelo: {error}",
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "checking": "Preverjam ...",
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
+  "translating": "Prevajam ...",
+  "@translating": {
+    "description": "Translation in progress"
+  },
+  "translationComplete": "Prevod končan (potrebno shranjevanje)",
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
+  "translationLoaded": "Naložen shranjen prevod",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
+  "translationFailed": "Prevod ni uspel: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "enterTextToTranslate": "Vnesite besedilo za prevajanje",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "saving": "Shranjujem ...",
+  "@saving": {
+    "description": "Save in progress"
+  },
+  "noTranslationToSave": "Ni prevoda za shranjevanje",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "saveFailed": "Shranjevanje ni uspelo: {error}",
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "playing": "Predvajam ...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  "noTextToPlay": "Ni besedila za predvajanje",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "playbackFailed": "Predvajanje ni uspelo: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceLanguage": "Izvorni jezik",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "targetLanguage": "Ciljni jezik",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "similarTextFound": "Najdeno podobno besedilo",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "useExistingText": "Uporabi obstoječe besedilo",
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
+  "createNew": "Nadaljuj z novim stavkom",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "reviewCount": "Ponovitev {count}-krat",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSpeaking": "Govor",
+  "speakingPractice": "Vaja govora",
+  "intervalSeconds": "Interval: {seconds} s",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "yourPronunciation": "Moja izgovorjava",
+  "correctAnswer": "Pravilen odgovor",
+  "score": "Točnost: {score} %",
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "perfect": "Popolno!",
+  "good": "Dobro",
+  "tryAgain": "Poskusite znova",
+  "startPractice": "Začni z vajo",
+  "stopPractice": "Ustavi vajo",
+  "startTutorial": "Začni vadnico",
+  "tutorialMicTitle": "Glasovni vnos",
+  "tutorialMicDesc": "Za vnos z glasom lahko pritisnete gumb mikrofona.",
+  "tutorialTabDesc": "Tukaj lahko izberete želeni način učenja.",
+  "tutorialTapToContinue": "Dotaknite se zaslona za nadaljevanje",
+  "tutorialTransTitle": "Prevedi",
+  "tutorialTransDesc": "Prevede vneseno besedilo.",
+  "tutorialSaveTitle": "Shrani",
+  "tutorialSaveDesc": "Shranite prevedene rezultate v zapise učenja.",
+  "tutorialM2SelectTitle": "Izbira gradiva",
+  "tutorialM2SelectDesc": "Izberite gradivo za učenje s pritiskom na ikono zbirke gradiv (📚) na zgornji vrstici aplikacije.",
+  "tutorialM2ListTitle": "Seznam za učenje",
+  "tutorialM2ListDesc": "To kartico lahko izbrišete z dolgim pritiskom (dolgi klik). Preverite shranjene stavke in jih obrnite.",
+  "tutorialM3SelectTitle": "Izbira gradiva",
+  "tutorialM3SelectDesc": "Izberite gradivo za vadbo s pritiskom na ikono zbirke gradiv (📚) na zgornji vrstici aplikacije.",
+  "tutorialM3IntervalTitle": "Nastavitev intervala",
+  "tutorialM3IntervalDesc": "Prilagodite čas čakanja med stavki.",
+  "tutorialM3StartTitle": "Začni z vajo",
+  "tutorialM3StartDesc": "Pritisnite gumb za predvajanje, da poslušate govor maternega govorca in ga ponovite.",
+  "startWarning": "Opozorilo",
+  "noVoiceDetected": "Glas ni zaznan",
+  "tooltipSearch": "Iskanje",
+  "tooltipStudyReview": "Učenje + ponovitev",
+  "tooltipSpeaking": "Govor",
+  "tooltipDecrease": "Zmanjšaj",
+  "tooltipIncrease": "Povečaj",
+  "languageSettings": "Nastavitve jezika",
+  "tutorialM2DropdownDesc": "Gradivo za učenje lahko izberete v zgornjem meniju.",
+  "tutorialM2ImportDesc": "Uvozi datoteko JSON iz mape v napravi.",
+  "tutorialLangSettingsTitle": "Nastavitve jezika",
+  "tutorialLangSettingsDesc": "Nastavite izvorni in ciljni jezik za prevajanje.",
+  "copy": "Kopiraj",
+  "copiedToClipboard": "Kopirano v odložišče!",
+  "tutorialContextTitle": "Situacija/kontekstne oznake",
+  "tutorialContextDesc": "Isti stavek lahko shranite ločeno, če zapišete situacijo (npr. jutro, večer).",
+  "thinkingTimeInterval": "Interval časa za razmišljanje",
+  "thinkingTimeDesc": "Čas za razmišljanje, preden se razkrije pravilen odgovor.",
+  "autoPlay": "Samodejno predvajanje",
+  "timeUp": "Čas je potekel!",
+  "gameModeTitle": "Način igre",
+  "gameModeDesc": "Izberite način igre za vadbo",
+  "wordDefenseTitle": "Besedna obramba",
+  "wordDefenseDesc": "Branite bazo tako, da izgovorite besede, preden prispejo sovražniki.",
+  "dialogueQuestTitle": "Dialogna naloga",
+  "dialogueQuestDesc": "Vadite pogovor s situacijsko komedijo. Izberite ustrezen odgovor in ga izgovorite.",
+  "labelType": "Vrsta:",
+  "labelWord": "Beseda",
+  "labelSentence": "Stavek",
+  "contextTagLabel": "Kontekst/situacija (neobvezno) – Primer: jutranji pozdrav, vljudnost",
+  "contextTagHint": "Zapišite situacijo, da jo boste lažje prepoznali pozneje",
+  "usageLimitTitle": "Dosežena omejitev",
+  "translationLimitExceeded": "Prekoračena omejitev prevajanja",
+  "translationLimitMessage": "Porabili ste vseh 5 brezplačnih dnevnih prevodov.\\n\\nAli želite takoj napolniti 5 s ogledom oglasa?",
+  "watchAdAndRefill": "Oglejte si oglas in napolnite (+5)",
+  "translationRefilled": "Število prevodov je bilo napolnjeno na 5!",
+  "adLoading": "Oglas se nalaga. Poskusite znova pozneje.",
+  "reviewAll": "Celotna ponovitev",
+  "totalRecords": "Skupaj {count} zapisov (prikaži vse)",
+  "@totalRecords": {
+    "description": "Total records count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterAll": "Vse",
+  "practiceWordsOnly": "Vadite samo besede",
+  "resetPracticeHistory": "Ponastavi zgodovino vadbe",
+  "retry": "Poskusite znova?",
+  "noStudyMaterial": "Ni učnega gradiva.",
+  "gameOver": "Igre je konec",
+  "playAgain": "Igraj znova",
+  "speakNow": "Govorite zdaj!",
+  "scoreLabel": "Rezultat",
+  "viewOnlineGuide": "Oglejte si spletni vodnik",
+  "getMaterials": "Pridobi gradivo",
+  "swapLanguages": "Zamenjaj jezike",
+  "next": "Naprej",
+  "wordModeLabel": "Besedni način",
+  "accuracy": "Točnost",
+  "basicDefault": "Osnovno",
+  "basic": "Osnovno",
+  "tutorialM3WordsTitle": "Besedna vaja",
+  "tutorialM3WordsDesc": "Če je označeno, vadite samo shranjene besede.",
+  "enterTextHint": "Vnesite besedilo za prevajanje",
+  "micButtonTooltip": "Začni prepoznavanje glasu",
+  "menuHelp": "Pomoč",
+  "menuWebDownload": "Domača stran",
+  "menuDeviceImport": "Uvozi gradivo iz naprave",
+  "menuSettings": "Nastavitve jezika",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "basicWords": "Osnovno skladišče besed",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
+  },
+  "basicSentences": "Osnovno skladišče stavkov",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
+  },
+  "selectMaterialSet": "Izberite zbirko učnega gradiva",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "sectionWords": "Besede",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "sectionSentences": "Stavki",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "languageSettingsTitle": "Nastavitve jezika",
+  "sourceLanguageLabel": "Moj jezik (izvorni)",
+  "targetLanguageLabel": "Jezik učenja (ciljni)",
+  "mode3Start": "Začni",
+  "mode3Stop": "Ustavi",
+  "mode3Next": "Naprej",
+  "mode3TryAgain": "Poskusite znova",
+  "tutorialM3ResetTitle": "Ponastavitev zgodovine",
+  "tutorialSwapDesc": "Zamenja moj jezik in jezik učenja.",
+  "recognizedText": "Prepoznana izgovorjava:",
+  "titleFormat": "{type}: {materialName}",
+  "tutorialM3ResetDesc": "Ponastavi napredek in oceno točnosti za ponovni začetek iz nič.",
+  "menuSelectMaterialSet": "Izberite zbirko učnega gradiva",
+  "sectionWord": "Besedni odsek",
+  "sectionSentence": "Stavni odsek",
+  "tabWord": "Beseda",
+  "tabSentence": "Stavek",
+  "errorProfanity": "Ne morem prevesti, ker vsebuje kletvice.",
+  "errorHateSpeech": "Ne morem prevesti, ker vsebuje sovražni govor.",
+  "errorSexualContent": "Ne morem prevesti, ker vsebuje seksualno vsebino.",
+  "errorOtherSafety": "Prevajanje je bilo zavrnjeno s strani varnostnega pravilnika AI.",
+  "clearAll": "Počisti vse",
+  "disambiguationTitle": "Izbira pomena",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "disambiguationPrompt": "Kateri pomen želite prevesti?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "skip": "Preskoči",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "inputModeTitle": "Vnos",
+  "reviewModeTitle": "Ponovitev",
+  "practiceModeTitle": "Vaja izgovorjave",
+  "chatHistoryTitle": "Zgodovina pogovorov",
+  "chatNew": "Nov pogovor",
+  "chatNewChat": "Nov pogovor",
+  "chatChoosePersona": "Izberite osebnost",
+  "chatTypeHint": "Vnesite sporočilo ...",
+  "chatFailed": "Klepet ni uspel: {error}",
+  "@chatFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "chatNoConversations": "Še nimate pogovorov",
+  "chatStartNewPrompt": "Začnite nov pogovor za vadbo!",
+  "chatFromConversation": "Izvleček pogovora ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
+  },
+  "personaTeacher": "Učitelj angleščine",
+  "personaGuide": "Turistični vodnik",
+  "personaFriend": "Lokalni prijatelj",
+  "chatUntitled": "Pogovor brez naslova",
+  "chatAiChat": "Klepet z AI",
+  "tutorialAiChatTitle": "Klepet z AI",
+  "tutorialAiChatDesc": "Vadite pogovor v resničnem življenju z AI osebnostjo.",
+  "mode1SelectedMaterial": "Trenutno izbrano gradivo: {name}",
+  "basicWordRepository": "Osnovno skladišče besed",
+  "basicSentenceRepository": "Osnovno skladišče stavkov",
+  "chatEndTitle": "Končaj in shrani pogovor",
+  "chatEndMessage": "Ali želite končati pogovor?",
+  "chatSaveAndExit": "Shrani in izstopi",
+  "errorSelectCategory": "Najprej izberite besedo ali stavek!",
+  "tutorialM1ToggleTitle": "Način besede/stavka",
+  "tutorialM1ToggleDesc": "Tukaj preklopite med načinom besede in stavka.",
+  "metadataDialogTitle": "Podrobna klasifikacija",
+  "tagFormal": "Formalno",
+  "selectPOS": "Izberite vrsto besede",
+  "selectSentenceType": "Izberite vrsto stavka",
+  "metadataRootWord": "Koren (Root Word)",
+  "posNoun": "Samostalnik",
+  "posVerb": "Glagol",
+  "posAdjective": "Pridevnik",
+  "posAdverb": "Prislov",
+  "posPronoun": "Zaimek",
+  "posPreposition": "Predlog/veznik",
+  "posConjunction": "Veznik",
+  "posInterjection": "Medmet",
+  "typeStatement": "Poved",
+  "typeQuestion": "Vprašanje",
+  "typeExclamation": "Klicaj",
+  "typeImperative": "Ukaz",
+  "labelNote": "Opomba",
+  "labelShowMemorized": "Končano",
+  "tagSelection": "Izbira oznake",
+  "metadataFormType": "Oblika slovnice",
+  "formInfinitive": "Nedoločnik/sedanjik",
+  "formPast": "Preteklik",
+  "formPastParticiple": "Deležnik preteklika",
+  "formPresentParticiple": "Deležnik sedanjika (ing)",
+  "formPresent": "Sedanjik",
+  "formThirdPersonSingular": "3. oseba ednine",
+  "formPlural": "Množina",
+  "formSingular": "Ednina",
+  "caseSubject": "Imenovalnik",
+  "caseObject": "Tožilnik",
+  "casePossessive": "Lastnik",
+  "casePossessivePronoun": "Lastnilni zaimek",
+  "caseReflexive": "Povratni zaimek",
+  "formPositive": "Pozitiv",
+  "formComparative": "Primerjalnik",
+  "formSuperlative": "Superlativ",
+  "searchConditions": "Pogoji iskanja",
+  "recentNItems": "Prikaži zadnjih {count} ustvarjenih elementov",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "startsWith": "Začne se s črko",
+  "reset": "Ponastavi",
+  "participantRename": "Preimenuj udeleženca",
+  "labelName": "Ime",
+  "gender": "Spol",
+  "language": "Jezik",
+  "male": "Moški",
+  "female": "Ženska"
+}

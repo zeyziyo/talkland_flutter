@@ -1,0 +1,678 @@
+{
+  "@@locale": "eu",
+  "helpTitle": "Laguntza eta Gidak",
+  "helpTabModes": "Moduen azalpena",
+  "helpTabJson": "JSON formatua",
+  "helpTabTour": "Esperimentatu",
+  "helpMode1Desc": "Ahotsa ezagutuz itzultzen du eta emaitzak entzun ditzakezu.",
+  "helpMode1Details": "• Hizkuntza ezarpena: aldatu hizkuntza goiko/beheko ikonoak sakatuta\n• Hitz/Esaldia txandakatu: aldatu modua\n• Ahots sarrera: sakatu mikrofonoaren ikonoa entzuten hasteko/gelditzeko\n• Testu sarrera: idatzi zuzenean itzultzeko\n• Bilaketa automatikoa: antzeko esaldiak detektatu\n• Itzulpena: sakatu itzultzeko botoia berehala itzultzeko\n• Entzun: TTS erreprodukzioa bozgorailuaren ikonoarekin\n• Gorde: gehitu erregistro bat 'Datuak gorde'rekin\n• Garbitu: hasieratu sarrera",
+  "helpMode2Desc": "Berrikusi gordetako esaldiak eta egiaztatu memorizatu duzun ala ez ezkutatzeko funtzio automatikoarekin.",
+  "helpMode2Details": "• Materiala hautatu: hautatu datu-multzo zehatz bat edo 'Berrikuspen osoa'\n• Txartela irauli: egiaztatu itzulpena 'Erakutsi/Ezkutatu' erabiliz (ikaskuntza automatikoa egiaztatu)\n• Entzun: esaldiaren TTS erreprodukzioa\n• Ikaskuntza osatua: markatu ikaskuntza osatutzat (V)\n• Ezabatu: luze sakatu txartela erregistroa ezabatzeko\n• Bilaketa-baldintzak: etiketak, azken elementuak, hasierako letrarekin iragazi",
+  "helpMode3Desc": "Praktikatu ahoskera esaldiak entzunez eta errepikatuz (itzal eginez).",
+  "helpMode3Details": "• Materiala hautatu: ikasteko datu-multzoa hautatu\n• Tartea ezarri: doitu esaldien arteko itxaron-denbora [-] [+] botoiekin (3s-60s)\n• Hasi/Gelditu: itzal saioa kontrolatu\n• Hitz egin: entzun ahotsa eta errepikatu\n• Iradokizunak: zehaztasun puntuazioa (0-100) eta kolore-adierazpena\n• Bilaketa-baldintzak: etiketak, azken elementuak, hasierako letrarekin iragazi",
+  "helpModeChatDesc": "Praktikatu elkarrizketa errealak AI pertsonaia batekin hitz eginez.",
+  "helpModeChatDetails": "• AI txata: praktikatu elkarrizketa zure hizkuntzan hitz eginez\n• Pertsonaia anitz: aldatu beste pertsonaren generoa/hizkuntza/izena goiko menuarekin\n• Bazkidea gehitu: gehitu solaskide berri bat (+) botoiarekin (Ezezaguna)\n• GPS: uneko kokapenean oinarritutako antzezpena\n• Automatikoki gorde: elkarrizketa automatikoki itzuli eta gorde",
+  "helpJsonDesc": "3. Moduan erabiliko den ikaskuntza-materiala JSON fitxategi gisa inportatzeko, jarraitu formatu hau:",
+  "helpDialogueImportDesc": "Inportatu elkarrizketa-sorta oso bat JSON fitxategi gisa.",
+  "helpDialogueImportDetails": "• JSON egitura: erabili `dialogues` array `entries` ordez\n• Berreskuratze automatikoa: elkarrizketaren izenburua, pertsonaia eta mezu-ordena berreskuratzen dira.\n• Kokapena: inportatutako elkarrizketak AI txat moduaren 'Historia' fitxan agertzen dira.",
+  "helpTourDesc": "**Nabarmendutako zirkuluak** funtzio nagusiak gidatzen ditu.\n(Adibidez: **Nabarmendutako zirkuluak** seinalatzen duen txartela luze sakatuta ezaba dezakezu.)",
+  "partnerMode": "Bazkide modua",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "manual": "Eskuzko sarrera",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "speaker": "Hizlaria",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "switchToAi": "AI modura aldatu",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Bazkide modura aldatu",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "currentLocation": "Uneko kokapena",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "location": "Kokapena",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "partner": "Bazkidea",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "me": "Ni",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "currentMaterialLabel": "Hautatutako datu-multzoa:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "basicMaterialRepository": "Oinarrizko esaldi/hitz biltegia",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
+  },
+  "word": "Hitza",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "sentence": "Esaldi",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "appTitle": "Talkie",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "tabReview": "Berrikusi ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabStudyMaterial": "Ikasketa-materiala ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mode2Title": "Berrikusi",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "search": "Bilatu",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "translate": "Itzuli",
+  "@translate": {
+    "description": "Translate button"
+  },
+  "listen": "Entzun",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "saveData": "Datuak gorde",
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  "saved": "Gordeta",
+  "@saved": {
+    "description": "Data saved status"
+  },
+  "delete": "Ezabatu",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "materialInfo": "Materialaren informazioa",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "cancel": "Ezeztatu",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "confirm": "Egiaztatu",
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
+  "refresh": "Freskatu",
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  "studyRecords": "Ikasketa-erregistroak ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "targetLanguageFilter": "Helburuko hizkuntzaren iragazkia:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "noRecords": "Ez dago hautatutako hizkuntzaren ikasketa-erregistrorik",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "saveTranslationsFromSearch": "Saiatu itzulpenak bilaketa moduan gordetzen",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  "flip": "Erakutsi",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "hide": "Ezkutatu",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "deleteRecord": "Erregistroa ezabatu",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  "confirmDelete": "Ikasketa-erregistro hau ezabatu nahi duzu?",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
+  "recordDeleted": "Erregistroa ezabatu da",
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
+  "deleteFailed": "Ezabatu egin da: {error}",
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "importJsonFile": "JSON fitxategia inportatu",
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
+  "importing": "Inportatzen...",
+  "@importing": {
+    "description": "Import in progress"
+  },
+  "importComplete": "Inportatzea amaitu da",
+  "@importComplete": {
+    "description": "Import success title"
+  },
+  "importFailed": "Inportatzeak huts egin du",
+  "@importFailed": {
+    "description": "Import error title"
+  },
+  "importFile": "Fitxategia: {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "importTotal": "Guztira: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importAdded": "Gehituta: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importSkipped": "Saltatuta: {count}",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errors": "Erroreak:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "error": "Errorea",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "importErrorMessage": "Fitxategia inportatzeak huts egin du:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "selectStudyMaterial": "Ikasketa-materiala hautatu",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  "subject": "Gaia:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "source": "Iturria:",
+  "@source": {
+    "description": "Source label"
+  },
+  "file": "Fitxategia:",
+  "@file": {
+    "description": "File label"
+  },
+  "progress": "Aurrerapena: {current} / {total}",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importJsonFilePrompt": "Mesedez, inportatu JSON fitxategi bat",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
+  "selectMaterialPrompt": "Mesedez, hautatu ikasketa-materiala",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "studyComplete": "Ikaskuntza amaitu da",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "markAsStudied": "Ikasketa markatu",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "listening": "Entzuten...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "recognized": "Ezagututa",
+  "@recognized": {
+    "description": "STT complete status"
+  },
+  "recognitionFailed": "Ahots ezagutzeak huts egin du: {error}",
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "checking": "Egiaztatzen...",
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
+  "translating": "Itzultzen...",
+  "@translating": {
+    "description": "Translation in progress"
+  },
+  "translationComplete": "Itzulpena amaitu da (gorde behar da)",
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
+  "translationLoaded": "Gordetako itzulpena kargatu da",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
+  "translationFailed": "Itzulpenak huts egin du: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "enterTextToTranslate": "Idatzi itzuli nahi duzun testua",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "saving": "Gordetzen...",
+  "@saving": {
+    "description": "Save in progress"
+  },
+  "noTranslationToSave": "Ez dago gordetzeko itzulpenik",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "saveFailed": "Gordetzeak huts egin du: {error}",
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "playing": "Erreproduzitzen...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  "noTextToPlay": "Ez dago erreproduzitzeko testurik",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "playbackFailed": "Erreprodukzioak huts egin du: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceLanguage": "Jatorrizko hizkuntza",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "targetLanguage": "Helburuko hizkuntza",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "similarTextFound": "Antzeko testua aurkitu da",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "useExistingText": "Erabili lehendik dagoen testua",
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
+  "createNew": "Sortu esaldi berri bat",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "reviewCount": "Berrikusi {count} aldiz",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSpeaking": "Hitz egin",
+  "speakingPractice": "Hitz egiteko praktika",
+  "intervalSeconds": "Tartea: {seconds}s",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "yourPronunciation": "Zure ahoskera",
+  "correctAnswer": "Erantzun zuzena",
+  "score": "Zehaztasuna: {score}%",
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "perfect": "Ezin hobea!",
+  "good": "Ona",
+  "tryAgain": "Saiatu berriro",
+  "startPractice": "Praktika hasi",
+  "stopPractice": "Praktika gelditu",
+  "startTutorial": "Tutoriala hasi",
+  "tutorialMicTitle": "Ahots sarrera",
+  "tutorialMicDesc": "Mikrofonoaren botoia sakatuta ahots bidez idatz dezakezu.",
+  "tutorialTabDesc": "Hemen nahi duzun ikasketa-modua hauta dezakezu.",
+  "tutorialTapToContinue": "Sakatu pantaila jarraitzeko",
+  "tutorialTransTitle": "Itzuli",
+  "tutorialTransDesc": "Idatzitako testua itzultzen du.",
+  "tutorialSaveTitle": "Gorde",
+  "tutorialSaveDesc": "Gorde itzulitako emaitzak ikasketa-erregistroan.",
+  "tutorialM2SelectTitle": "Materiala hautatu",
+  "tutorialM2SelectDesc": "Sakatu datu-multzoaren ikonoa (📚) goiko aplikazio-barran ikasi nahi duzun materiala hautatzeko.",
+  "tutorialM2ListTitle": "Ikasketa-zerrenda",
+  "tutorialM2ListDesc": "Txartel hau luze sakatuta (Sakatu luzea) ezaba dezakezu. Egiaztatu eta irauli gordetako esaldiak.",
+  "tutorialM3SelectTitle": "Materiala hautatu",
+  "tutorialM3SelectDesc": "Sakatu datu-multzoaren ikonoa (📚) goiko aplikazio-barran praktikatu nahi duzun materiala hautatzeko.",
+  "tutorialM3IntervalTitle": "Tartea ezarri",
+  "tutorialM3IntervalDesc": "Doitu esaldien arteko itxaron-denbora.",
+  "tutorialM3StartTitle": "Praktika hasi",
+  "tutorialM3StartDesc": "Sakatu erreproduzitzeko botoia jatorrizko hiztunaren ahotsa entzun eta jarraitzeko.",
+  "startWarning": "Abisua",
+  "noVoiceDetected": "Ez da ahotsik detektatu",
+  "tooltipSearch": "Bilatu",
+  "tooltipStudyReview": "Ikasi+Berrikusi",
+  "tooltipSpeaking": "Hitz egin",
+  "tooltipDecrease": "Murriztu",
+  "tooltipIncrease": "Handitu",
+  "languageSettings": "Hizkuntza-ezarpenak",
+  "tutorialM2DropdownDesc": "Goiko menuaren bidez ikasi nahi duzun materiala hauta dezakezu.",
+  "tutorialM2ImportDesc": "Inportatu JSON fitxategi bat zure gailuko karpetatik.",
+  "tutorialLangSettingsTitle": "Hizkuntza-ezarpenak",
+  "tutorialLangSettingsDesc": "Ezarri itzuli nahi duzun jatorrizko hizkuntza eta helburuko hizkuntza.",
+  "copy": "Kopiatu",
+  "copiedToClipboard": "Arbelera kopiatu da!",
+  "tutorialContextTitle": "Egoera/Testuinguru etiketa",
+  "tutorialContextDesc": "Esaldi bera bada ere, egoera (adibidez, goiza, arratsaldea) idatziz gero, bereizita gorde dezakezu.",
+  "thinkingTimeInterval": "Pentsatzeko denbora-tartea",
+  "thinkingTimeDesc": "Erantzuna argitaratu aurretik pentsatzeko denbora.",
+  "autoPlay": "Automatikoki erreproduzitu",
+  "timeUp": "Denbora agortu da!",
+  "gameModeTitle": "Joko modua",
+  "gameModeDesc": "Hautatu praktikatu nahi duzun joko modua",
+  "wordDefenseTitle": "Hitzen defentsa",
+  "wordDefenseDesc": "Hitz egin hitzak etsaiak iritsi baino lehen oinarria defendatzeko.",
+  "dialogueQuestTitle": "Elkarrizketa bilaketa",
+  "dialogueQuestDesc": "Praktikatu elkarrizketa egoera baten bidez. Hautatu erantzun egoki bat eta hitz egin.",
+  "labelType": "Mota:",
+  "labelWord": "Hitza",
+  "labelSentence": "Esaldi",
+  "contextTagLabel": "Testuingurua/Egoera (aukerakoa) - Adibidez: goizeko agurra, tratamendu formala",
+  "contextTagHint": "Idatzi egoera geroago bereiztea errazteko",
+  "usageLimitTitle": "Mugara iritsi da",
+  "translationLimitExceeded": "Itzulpen-muga gainditu da",
+  "translationLimitMessage": "Doako eguneroko itzulpen guztiak (5) erabili dituzu.\\n\\nIragarki bat ikusi nahi duzu 5 gehiago berehala betetzeko?",
+  "watchAdAndRefill": "Iragarkia ikusi eta bete (+5)",
+  "translationRefilled": "Itzulpenen kopurua 5era bete da!",
+  "adLoading": "Iragarkia kargatzen ari da. Mesedez, saiatu berriro geroago.",
+  "reviewAll": "Berrikuspen osoa",
+  "totalRecords": "Guztira {count} erregistro (ikusi guztiak)",
+  "@totalRecords": {
+    "description": "Total records count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterAll": "Guztiak",
+  "practiceWordsOnly": "Hitzak bakarrik praktikatu",
+  "resetPracticeHistory": "Praktikaren historia berrezarri",
+  "retry": "Saiatu berriro?",
+  "noStudyMaterial": "Ez dago ikasketa-materialik.",
+  "gameOver": "Game Over",
+  "playAgain": "Berriro jokatu",
+  "speakNow": "Hitz egin orain!",
+  "scoreLabel": "Puntuazioa",
+  "viewOnlineGuide": "Ikusi online gida",
+  "getMaterials": "Materialak lortu",
+  "swapLanguages": "Hizkuntzak trukatu",
+  "next": "Hurrengoa",
+  "wordModeLabel": "Hitzen modua",
+  "accuracy": "Zehaztasuna",
+  "basicDefault": "Oinarrizkoa",
+  "basic": "Oinarrizkoa",
+  "tutorialM3WordsTitle": "Hitzen praktika",
+  "tutorialM3WordsDesc": "Markatuta badago, gordetako hitzak bakarrik praktikatuko dira.",
+  "enterTextHint": "Idatzi itzuli nahi duzun testua",
+  "micButtonTooltip": "Ahots ezagutzea hasi",
+  "menuHelp": "Laguntza",
+  "menuWebDownload": "Webgunea",
+  "menuDeviceImport": "Materiala gailutik inportatu",
+  "menuSettings": "Hizkuntza-ezarpenak",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "basicWords": "Oinarrizko hitz biltegia",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
+  },
+  "basicSentences": "Oinarrizko esaldi biltegia",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
+  },
+  "selectMaterialSet": "Ikasketa-datu-multzoa hautatu",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "sectionWords": "Hitzak",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "sectionSentences": "Esaldiak",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "languageSettingsTitle": "Hizkuntza-ezarpenak",
+  "sourceLanguageLabel": "Nire hizkuntza (Iturria)",
+  "targetLanguageLabel": "Ikasketa-hizkuntza (Helburua)",
+  "mode3Start": "Hasi",
+  "mode3Stop": "Gelditu",
+  "mode3Next": "Hurrengoa",
+  "mode3TryAgain": "Saiatu berriro",
+  "tutorialM3ResetTitle": "Historia berrezarri",
+  "tutorialSwapDesc": "Trukatu nire hizkuntza eta ikasketa-hizkuntza.",
+  "recognizedText": "Ezagututako ahoskera:",
+  "titleFormat": "{type}: {materialName}",
+  "tutorialM3ResetDesc": "Berrezarri aurrerapena eta zehaztasun puntuazioa hutsetik hasteko.",
+  "menuSelectMaterialSet": "Ikasketa-datu-multzoa hautatu",
+  "sectionWord": "Hitz atala",
+  "sectionSentence": "Esaldi atala",
+  "tabWord": "Hitza",
+  "tabSentence": "Esaldi",
+  "errorProfanity": "Ezin da itzuli profanotasuna duelako.",
+  "errorHateSpeech": "Ezin da itzuli gorroto-diskurtsoa duelako.",
+  "errorSexualContent": "Ezin da itzuli eduki sexuala duelako.",
+  "errorOtherSafety": "AI segurtasun politikak itzulpena ukatu du.",
+  "clearAll": "Guztia garbitu",
+  "disambiguationTitle": "Esanahia hautatu",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "disambiguationPrompt": "Zein esanahirekin itzuli nahi duzu?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "skip": "Saltatu",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "inputModeTitle": "Sarrera",
+  "reviewModeTitle": "Berrikusi",
+  "practiceModeTitle": "Ahoskera praktika",
+  "chatHistoryTitle": "Elkarrizketaren historia",
+  "chatNew": "Elkarrizketa berria",
+  "chatNewChat": "Elkarrizketa berria",
+  "chatChoosePersona": "Pertsonaia hautatu",
+  "chatTypeHint": "Idatzi mezu bat...",
+  "chatFailed": "Txatak huts egin du: {error}",
+  "@chatFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "chatNoConversations": "Oraindik ez dago elkarrizketarik",
+  "chatStartNewPrompt": "Hasi elkarrizketa berri bat praktikatzeko!",
+  "chatFromConversation": "Elkarrizketatik ateratakoa ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
+  },
+  "personaTeacher": "Ingeleseko irakaslea",
+  "personaGuide": "Bidaia gida",
+  "personaFriend": "Bertako laguna",
+  "chatUntitled": "Izenik gabeko elkarrizketa",
+  "chatAiChat": "AI txata",
+  "tutorialAiChatTitle": "AI txata",
+  "tutorialAiChatDesc": "Praktikatu elkarrizketa errealak AI pertsonaia batekin.",
+  "mode1SelectedMaterial": "Uneko hautatutako datu-multzoa: {name}",
+  "basicWordRepository": "Oinarrizko hitz biltegia",
+  "basicSentenceRepository": "Oinarrizko esaldi biltegia",
+  "chatEndTitle": "Elkarrizketa amaitu eta gorde",
+  "chatEndMessage": "Elkarrizketa amaitu nahi duzu?",
+  "chatSaveAndExit": "Gorde eta irten",
+  "errorSelectCategory": "Hautatu lehenik hitz bat edo esaldi bat!",
+  "tutorialM1ToggleTitle": "Hitza/Esaldi modua",
+  "tutorialM1ToggleDesc": "Aldatu hitz eta esaldi moduak hemen.",
+  "metadataDialogTitle": "Sailkapen zehatza",
+  "tagFormal": "Tratamendu formala",
+  "selectPOS": "Hautatu adiera-kategoria",
+  "selectSentenceType": "Hautatu esaldi mota",
+  "metadataRootWord": "Jatorrizko forma (Root Word)",
+  "posNoun": "Izena",
+  "posVerb": "Aditza",
+  "posAdjective": "Adjektiboa",
+  "posAdverb": "Adberbioa",
+  "posPronoun": "Izenordaina",
+  "posPreposition": "Preposizioa/Postposizioa",
+  "posConjunction": "Lokailua",
+  "posInterjection": "Harridura-hitza",
+  "typeStatement": "Baieztapena",
+  "typeQuestion": "Galdera",
+  "typeExclamation": "Harridura",
+  "typeImperative": "Agindua",
+  "labelNote": "Oharra",
+  "labelShowMemorized": "Amaituta",
+  "tagSelection": "Etiketa hautatu",
+  "metadataFormType": "Forma gramatikala",
+  "formInfinitive": "Infinitive/Orainaldia",
+  "formPast": "Iraganaldia",
+  "formPastParticiple": "Iraganeko partizipioa",
+  "formPresentParticiple": "Oraingo partizipioa (ing)",
+  "formPresent": "Orainaldia",
+  "formThirdPersonSingular": "Hirugarren pertsona singularra",
+  "formPlural": "Plurala",
+  "formSingular": "Singularra",
+  "caseSubject": "Subjektua",
+  "caseObject": "Objektua",
+  "casePossessive": "Jabetza",
+  "casePossessivePronoun": "Jabetza-izenordaina",
+  "caseReflexive": "Erreflexiboa",
+  "formPositive": "Gradu positiboa",
+  "formComparative": "Gradu konparatiboa",
+  "formSuperlative": "Gradu superlatiboa",
+  "searchConditions": "Bilaketa-baldintzak",
+  "recentNItems": "Ikusi berriki sortutako {count} elementu",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "startsWith": "Hasierako letra",
+  "reset": "Berrezarri",
+  "participantRename": "Parte-hartzailearen izena aldatu",
+  "labelName": "Izena",
+  "gender": "Generoa",
+  "language": "Hizkuntza",
+  "male": "Gizonezkoa",
+  "female": "Emakumezkoa"
+}

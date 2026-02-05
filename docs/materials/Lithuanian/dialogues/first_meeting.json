@@ -1,0 +1,45 @@
+{
+    "title": "First Meeting",
+    "entries": [
+        {
+            "text": "Sveiki! Mano vardas Jordanas. Malonu susipažinti.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Sveikas, Jordanai! Aš esu Minji. Man taip pat malonu susipažinti.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Ar tu studentas?",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Ne, aš esu biuro darbuotojas. O tu?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Aš esu koledžo studentas. Studijuoju korėjiečių kalbą.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Oho, puiku! Korėjiečių kalba yra šiek tiek sunki, ar ne?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Taip, sunku, bet smagu. Prašau, labai man padėkite.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Žinoma! Mokykisime kartu.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Ačiū. Iki pasimatymo kitą kartą!",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Viso gero!",
+            "speaker": "Minji"
+        }
+    ]
+}

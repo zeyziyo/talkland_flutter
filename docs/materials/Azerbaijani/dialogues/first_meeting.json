@@ -1,0 +1,45 @@
+{
+    "title": "First Meeting",
+    "entries": [
+        {
+            "text": "Salam! Mənim adım Jordandır. Sizinlə tanış olmağıma çox şadam.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Salam Jordan! Mən Minjiyəm. Mən də səninlə tanış olmağıma çox şadam.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Sən tələbəsən?",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Xeyr, mən ofis işçisiyəm. Bəs sən?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Mən kollec tələbəsiyəm. Koreya dilini öyrənirəm.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Vau, bu əladır! Koreya dili bir az çətindir, elə deyilmi?",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Bəli, çətindir, amma əyləncəlidir. Zəhmət olmasa, mənə çox kömək edin.",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Əlbəttə! Gəlin birlikdə çox çalışaq.",
+            "speaker": "Minji"
+        },
+        {
+            "text": "Çox sağol. Gələn dəfə görüşərik!",
+            "speaker": "Jordan"
+        },
+        {
+            "text": "Sağol!",
+            "speaker": "Minji"
+        }
+    ]
+}

@@ -1,0 +1,678 @@
+{
+  "@@locale": "km",
+  "helpTitle": "ជំនួយ & មគ្គុទ្ទេសក៍",
+  "helpTabModes": "ការពិពណ៌នាអំពីរបៀប",
+  "helpTabJson": "ទម្រង់ JSON",
+  "helpTabTour": "សាកល្បង",
+  "helpMode1Desc": "ស្គាល់សំឡេង បកប្រែ និងស្តាប់លទ្ធផល។",
+  "helpMode1Details": "• ការកំណត់ភាសា៖ ចុចរូបតំណាងខាងលើ/ខាងក្រោមដើម្បីផ្លាស់ប្ដូរភាសា\n• បិទ/បើកពាក្យ/ប្រយោគ៖ ផ្លាស់ប្ដូររបៀប\n• ការបញ្ចូលសំឡេង៖ ចុចរូបតំណាងមីក្រូហ្វូនដើម្បីចាប់ផ្ដើម/បញ្ឈប់ការស្ដាប់\n• ការបញ្ចូលអត្ថបទ៖ បញ្ចូលដោយផ្ទាល់ដើម្បីបកប្រែ\n• ការស្វែងរកដោយស្វ័យប្រវត្តិ៖ រកមើលប្រយោគដែលមានស្រាប់ស្រដៀងគ្នា\n• ការបកប្រែ៖ ចុចប៊ូតុងបកប្រែដើម្បីបកប្រែភ្លាមៗ\n• ស្ដាប់៖ ចាក់សារ TTS ជាមួយរូបតំណាងឧបករណ៍បំពងសំឡេង\n• រក្សាទុក៖ បន្ថែមកំណត់ត្រាជាមួយ 'រក្សាទុកទិន្នន័យ'\n• សម្អាត៖ សម្អាតការបញ្ចូល",
+  "helpMode2Desc": "ពិនិត្យមើលប្រយោគដែលបានរក្សាទុក និងពិនិត្យមើលថាតើអ្នកទន្ទេញចាំវាឬអត់ ជាមួយនឹងមុខងារលាក់ដោយស្វ័យប្រវត្តិ។",
+  "helpMode2Details": "• ជ្រើសរើសសម្ភារៈ៖ ជ្រើសរើសបណ្ណាល័យជាក់លាក់មួយ ឬ 'ពិនិត្យឡើងវិញទាំងអស់'\n• បង្វិលកាត៖ ពិនិត្យមើលការបកប្រែជាមួយ 'បង្ហាញ/លាក់' (ពិនិត្យការរៀនសូត្រដោយស្វ័យប្រវត្តិ)\n• ស្ដាប់៖ ចាក់សារ TTS នៃប្រយោគ\n• ការរៀនសូត្របានបញ្ចប់៖ សម្គាល់ថាជាបានបញ្ចប់ការរៀនសូត្រដោយសញ្ញាធីក (V)\n• លុប៖ ចុចឱ្យជាប់លើកាតដើម្បីលុបកំណត់ត្រា\n• លក្ខខណ្ឌស្វែងរក៖ ត្រងតាមស្លាក សារធាតុថ្មីៗ ពាក្យចាប់ផ្ដើម",
+  "helpMode3Desc": "ស្ដាប់ប្រយោគ និងអនុវត្តការបញ្ចេញសំឡេងដោយនិយាយឡើងវិញ (Shadowing)។",
+  "helpMode3Details": "• ជ្រើសរើសសម្ភារៈ៖ ជ្រើសរើសបណ្ណាល័យដែលត្រូវរៀន\n• កំណត់ចន្លោះពេល៖ លៃតម្រូវពេលវេលារង់ចាំរវាងប្រយោគជាមួយប៊ូតុង [-] [+] (3 វិនាទី ដល់ 60 វិនាទី)\n• ចាប់ផ្ដើម/បញ្ឈប់៖ គ្រប់គ្រងវគ្គ Shadowing\n• និយាយ៖ ស្ដាប់សំឡេង និងនិយាយឡើងវិញ\n• មតិកែលម្អ៖ ពិន្ទុភាពត្រឹមត្រូវ (0-100) និងការបង្ហាញពណ៌\n• លក្ខខណ្ឌស្វែងរក៖ ត្រងគោលដៅអនុវត្តតាមស្លាក សារធាតុថ្មីៗ ពាក្យចាប់ផ្ដើម",
+  "helpModeChatDesc": "អនុវត្តការសន្ទនាក្នុងជីវិតជាក់ស្ដែងដោយសន្ទនាជាមួយ AI Persona ។",
+  "helpModeChatDetails": "• AI Chat៖ និយាយជាភាសារបស់អ្នកដើម្បីអនុវត្តការសន្ទនា\n• Multi Persona៖ ផ្លាស់ប្ដូរភេទ/ភាសា/ឈ្មោះរបស់ភាគីម្ខាងទៀតជាមួយម៉ឺនុយខាងលើពពុះសន្ទនា\n• បន្ថែមដៃគូ៖ បន្ថែម Stranger ថ្មីជាមួយប៊ូតុង + \n• GPS៖ ធ្វើសេណារីយ៉ូដោយផ្អែកលើទីតាំងបច្ចុប្បន្ន\n• រក្សាទុកដោយស្វ័យប្រវត្តិ៖ បកប្រែ និងរក្សាទុកខ្លឹមសារសន្ទនាដោយស្វ័យប្រវត្តិ",
+  "helpJsonDesc": "ដើម្បីនាំចូលសម្ភារៈសិក្សាទៅជាឯកសារ JSON សម្រាប់ប្រើក្នុងរបៀប 3 សូមអនុវត្តតាមទម្រង់ខាងក្រោម៖",
+  "helpDialogueImportDesc": "នាំចូលសំណុំការសន្ទនាទាំងមូលជាឯកសារ JSON ។",
+  "helpDialogueImportDetails": "• រចនាសម្ព័ន្ធ JSON៖ ប្រើអារេ `dialogues` ជំនួសឱ្យ `entries`\n• ការស្ដារឡើងវិញដោយស្វ័យប្រវត្តិ៖ ចំណងជើងនៃការសន្ទនា Persona និងលំដាប់សារត្រូវបានស្ដារឡើងវិញ។\n• ទីតាំង៖ ការសន្ទនាដែលបាននាំចូលនឹងបង្ហាញនៅក្នុងផ្ទាំង 'កំណត់ត្រា' នៃរបៀប AI Chat ។",
+  "helpTourDesc": "**រង្វង់​គូស​បញ្ជាក់** ណែនាំ​អ្នក​អំពី​មុខងារ​សំខាន់ៗ។\n(ឧទាហរណ៍៖ អ្នក​អាច​ចុច​ឱ្យ​ជាប់​លើ​កាត​ដែល​**រង្វង់​គូស​បញ្ជាក់** ចង្អុល​បង្ហាញ​ដើម្បី​លុប​វា​ចោល។)",
+  "partnerMode": "របៀបដៃគូ",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "manual": "បញ្ចូលដោយដៃ",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "speaker": "វាគ្មិន",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "switchToAi": "ប្តូរទៅរបៀប AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "ប្តូរទៅរបៀបដៃគូ",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "currentLocation": "ទីតាំងបច្ចុប្បន្ន",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "location": "ទីតាំង",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "partner": "ដៃគូ",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "me": "ខ្ញុំ",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "currentMaterialLabel": "បណ្ណាល័យដែលបានជ្រើសរើសនាពេលបច្ចុប្បន្ន៖",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "basicMaterialRepository": "ឃ្លាំងផ្ទុកប្រយោគ/ពាក្យជាមូលដ្ឋាន",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
+  },
+  "word": "ពាក្យ",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "sentence": "ប្រយោគ",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "appTitle": "Talkie",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "tabReview": "ពិនិត្យ ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabStudyMaterial": "សម្ភារៈសិក្សា ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mode2Title": "ពិនិត្យ",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "search": "ស្វែងរក",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "translate": "បកប្រែ",
+  "@translate": {
+    "description": "Translate button"
+  },
+  "listen": "ស្ដាប់",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "saveData": "រក្សាទុកទិន្នន័យ",
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  "saved": "បានរក្សាទុក",
+  "@saved": {
+    "description": "Data saved status"
+  },
+  "delete": "លុប",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "materialInfo": "ព័ត៌មានសម្ភារៈ",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "cancel": "បោះបង់",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "confirm": "យល់ព្រម",
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
+  "refresh": "ធ្វើឱ្យស្រស់",
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  "studyRecords": "កំណត់ត្រាសិក្សា ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "targetLanguageFilter": "ត្រងតាមភាសាគោលដៅ៖",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "noRecords": "មិនមានកំណត់ត្រាសិក្សាសម្រាប់ភាសាដែលបានជ្រើសរើសទេ",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "saveTranslationsFromSearch": "ព្យាយាមរក្សាទុកការបកប្រែពីរបៀបស្វែងរក",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  "flip": "បង្ហាញ",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "hide": "លាក់",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "deleteRecord": "លុបកំណត់ត្រា",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  "confirmDelete": "តើអ្នកប្រាកដថាចង់លុបកំណត់ត្រាសិក្សានេះទេ?",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
+  "recordDeleted": "កំណត់ត្រាត្រូវបានលុប",
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
+  "deleteFailed": "ការលុបបានបរាជ័យ៖ {error}",
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "importJsonFile": "នាំចូលឯកសារ JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
+  "importing": "កំពុងនាំចូល...",
+  "@importing": {
+    "description": "Import in progress"
+  },
+  "importComplete": "ការនាំចូលបានបញ្ចប់",
+  "@importComplete": {
+    "description": "Import success title"
+  },
+  "importFailed": "ការនាំចូលបានបរាជ័យ",
+  "@importFailed": {
+    "description": "Import error title"
+  },
+  "importFile": "ឯកសារ៖ {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "importTotal": "សរុប៖ {count}ធាតុ",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importAdded": "បានបន្ថែម៖ {count}ធាតុ",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importSkipped": "បានរំលង៖ {count}ធាតុ",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errors": "កំហុស៖",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "error": "កំហុស",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "importErrorMessage": "ការនាំចូលឯកសារបានបរាជ័យ៖\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "selectStudyMaterial": "ជ្រើសរើសសម្ភារៈសិក្សា",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  "subject": "ប្រធានបទ៖",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "source": "ប្រភព៖",
+  "@source": {
+    "description": "Source label"
+  },
+  "file": "ឯកសារ៖",
+  "@file": {
+    "description": "File label"
+  },
+  "progress": "វឌ្ឍនភាព៖ {current} / {total}",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importJsonFilePrompt": "សូមនាំចូលឯកសារ JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
+  "selectMaterialPrompt": "សូមជ្រើសរើសសម្ភារៈសិក្សា",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "studyComplete": "ការសិក្សាបានបញ្ចប់",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "markAsStudied": "សម្គាល់ថាបានសិក្សា",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "listening": "កំពុងស្ដាប់...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "recognized": "ស្គាល់រួចរាល់",
+  "@recognized": {
+    "description": "STT complete status"
+  },
+  "recognitionFailed": "ការស្គាល់សំឡេងបានបរាជ័យ៖ {error}",
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "checking": "កំពុងពិនិត្យ...",
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
+  "translating": "កំពុងបកប្រែ...",
+  "@translating": {
+    "description": "Translation in progress"
+  },
+  "translationComplete": "ការបកប្រែបានបញ្ចប់ (ចាំបាច់ត្រូវរក្សាទុក)",
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
+  "translationLoaded": "បានផ្ទុកការបកប្រែដែលបានរក្សាទុក",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
+  "translationFailed": "ការបកប្រែបានបរាជ័យ៖ {error}",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "enterTextToTranslate": "បញ្ចូលអត្ថបទដែលត្រូវបកប្រែ",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "saving": "កំពុងរក្សាទុក...",
+  "@saving": {
+    "description": "Save in progress"
+  },
+  "noTranslationToSave": "មិនមានការបកប្រែដើម្បីរក្សាទុកទេ",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "saveFailed": "ការរក្សាទុកបានបរាជ័យ៖ {error}",
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "playing": "កំពុងចាក់...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  "noTextToPlay": "មិនមានអត្ថបទសម្រាប់ចាក់ទេ",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "playbackFailed": "ការចាក់សារបានបរាជ័យ៖ {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceLanguage": "ភាសាដើម",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "targetLanguage": "ភាសាគោលដៅ",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "similarTextFound": "បានរកឃើញអត្ថបទស្រដៀងគ្នា",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "useExistingText": "ប្រើអត្ថបទដែលមានស្រាប់",
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
+  "createNew": "បន្តជាមួយប្រយោគថ្មី",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "reviewCount": "ពិនិត្យ {count}ដង",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSpeaking": "និយាយ",
+  "speakingPractice": "អនុវត្តការនិយាយ",
+  "intervalSeconds": "ចន្លោះពេល៖ {seconds}វិនាទី",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "yourPronunciation": "ការបញ្ចេញសំឡេងរបស់អ្នក",
+  "correctAnswer": "ចម្លើយត្រឹមត្រូវ",
+  "score": "ភាពត្រឹមត្រូវ៖ {score}%",
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "perfect": "ល្អឥតខ្ចោះ!",
+  "good": "ល្អ",
+  "tryAgain": "ព្យាយាមម្ដងទៀត",
+  "startPractice": "ចាប់ផ្ដើមអនុវត្ត",
+  "stopPractice": "បញ្ឈប់ការអនុវត្ត",
+  "startTutorial": "ចាប់ផ្ដើមមេរៀនណែនាំ",
+  "tutorialMicTitle": "ការបញ្ចូលសំឡេង",
+  "tutorialMicDesc": "អ្នកអាចបញ្ចូលសំឡេងដោយចុចប៊ូតុងមីក្រូហ្វូន។",
+  "tutorialTabDesc": "អ្នកអាចជ្រើសរើសរបៀបសិក្សាដែលអ្នកចង់បាននៅទីនេះ។",
+  "tutorialTapToContinue": "ប៉ះអេក្រង់ដើម្បីបន្ត",
+  "tutorialTransTitle": "បកប្រែ",
+  "tutorialTransDesc": "បកប្រែអត្ថបទដែលអ្នកបានបញ្ចូល។",
+  "tutorialSaveTitle": "រក្សាទុក",
+  "tutorialSaveDesc": "រក្សាទុកលទ្ធផលដែលបានបកប្រែទៅក្នុងកំណត់ត្រាសិក្សារបស់អ្នក។",
+  "tutorialM2SelectTitle": "ជ្រើសរើសសម្ភារៈ",
+  "tutorialM2SelectDesc": "ចុចរូបតំណាងបណ្ណាល័យ (📚) នៅលើរបារកម្មវិធីខាងលើ ដើម្បីជ្រើសរើសសម្ភារៈដែលត្រូវសិក្សា។",
+  "tutorialM2ListTitle": "បញ្ជីសិក្សា",
+  "tutorialM2ListDesc": "អ្នកអាចលុបកាតនេះដោយចុចឱ្យជាប់ (Long Click)។ ពិនិត្យមើលប្រយោគដែលបានរក្សាទុក ហើយបង្វិលវា។",
+  "tutorialM3SelectTitle": "ជ្រើសរើសសម្ភារៈ",
+  "tutorialM3SelectDesc": "ចុចរូបតំណាងបណ្ណាល័យ (📚) នៅលើរបារកម្មវិធីខាងលើ ដើម្បីជ្រើសរើសសម្ភារៈដែលត្រូវអនុវត្ត។",
+  "tutorialM3IntervalTitle": "កំណត់ចន្លោះពេល",
+  "tutorialM3IntervalDesc": "លៃតម្រូវពេលវេលារង់ចាំរវាងប្រយោគ។",
+  "tutorialM3StartTitle": "ចាប់ផ្ដើមអនុវត្ត",
+  "tutorialM3StartDesc": "ចុចប៊ូតុងចាក់សារឡើងវិញដើម្បីស្តាប់សំឡេងរបស់វាគ្មិនដើម ហើយធ្វើតាម។",
+  "startWarning": "ការព្រមាន",
+  "noVoiceDetected": "មិនមានសំឡេងត្រូវបានរកឃើញទេ។",
+  "tooltipSearch": "ស្វែងរក",
+  "tooltipStudyReview": "សិក្សា+ពិនិត្យ",
+  "tooltipSpeaking": "និយាយ",
+  "tooltipDecrease": "បន្ថយ",
+  "tooltipIncrease": "បង្កើន",
+  "languageSettings": "ការកំណត់ភាសា",
+  "tutorialM2DropdownDesc": "អ្នកអាចជ្រើសរើសសម្ភារៈដែលត្រូវសិក្សា តាមរយៈម៉ឺនុយខាងលើ។",
+  "tutorialM2ImportDesc": "នាំចូលឯកសារ JSON ពីថតឯកសារនៃឧបករណ៍របស់អ្នក។",
+  "tutorialLangSettingsTitle": "ការកំណត់ភាសា",
+  "tutorialLangSettingsDesc": "កំណត់ភាសាដើម និងភាសាគោលដៅដែលត្រូវបកប្រែ។",
+  "copy": "ចម្លង",
+  "copiedToClipboard": "បានចម្លងទៅឃ្លីបបត!",
+  "tutorialContextTitle": "ស្លាកបរិបទ/សភាពការណ៍",
+  "tutorialContextDesc": "សូម្បីតែប្រយោគដូចគ្នា អ្នកអាចរក្សាទុកវដាច់ដោយឡែកពីគ្នាដោយសរសេរបរិបទ (ឧទាហរណ៍៖ ពេលព្រឹក ពេលល្ងាច)។",
+  "thinkingTimeInterval": "ចន្លោះពេលគិត",
+  "thinkingTimeDesc": "ពេលវេលាដើម្បីគិត មុនពេលចម្លើយត្រូវបានបង្ហាញ។",
+  "autoPlay": "ចាក់សារឡើងវិញដោយស្វ័យប្រវត្តិ",
+  "timeUp": "អស់ពេល!",
+  "gameModeTitle": "របៀបលេងហ្គេម",
+  "gameModeDesc": "ជ្រើសរើសរបៀបលេងហ្គេមដែលត្រូវអនុវត្ត",
+  "wordDefenseTitle": "ការពារពាក្យ",
+  "wordDefenseDesc": "ការពារមូលដ្ឋានដោយនិយាយពាក្យ មុនពេលសត្រូវមកដល់។",
+  "dialogueQuestTitle": "ដំណើរស្វែងរកការសន្ទនា",
+  "dialogueQuestDesc": "អនុវត្តការសន្ទនា តាមរយៈការធ្វើសេណារីយ៉ូ។ ជ្រើសរើស និងនិយាយចម្លើយសមស្រប។",
+  "labelType": "ប្រភេទ៖",
+  "labelWord": "ពាក្យ",
+  "labelSentence": "ប្រយោគ",
+  "contextTagLabel": "បរិបទ/សភាពការណ៍ (ស្រេចចិត្ត) - ឧទាហរណ៍៖ ជំរាបសួរពេលព្រឹក ភាសាគួរសម",
+  "contextTagHint": "សរសេរសភាពការណ៍ ដើម្បីឱ្យងាយស្រួលបែងចែកនៅពេលក្រោយ",
+  "usageLimitTitle": "ឈានដល់កម្រិតកំណត់",
+  "translationLimitExceeded": "លើសពីកម្រិតកំណត់នៃការបកប្រែ",
+  "translationLimitMessage": "អ្នកបានប្រើការបកប្រែឥតគិតថ្លៃប្រចាំថ្ងៃ (5 ដង) របស់អ្នកទាំងអស់ហើយ។\\n\\nតើអ្នកចង់មើលការផ្សាយពាណិជ្ជកម្ម និងបញ្ចូលទឹកប្រាក់ 5 ដងភ្លាមៗទេ?",
+  "watchAdAndRefill": "មើលការផ្សាយពាណិជ្ជកម្ម និងបញ្ចូលទឹកប្រាក់ (+5 ដង)",
+  "translationRefilled": "ចំនួននៃការបកប្រែត្រូវបានបញ្ចូលទឹកប្រាក់ 5 ដង!",
+  "adLoading": "កំពុងផ្ទុកការផ្សាយពាណិជ្ជកម្ម។ សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ។",
+  "reviewAll": "ពិនិត្យទាំងអស់",
+  "totalRecords": "កំណត់ត្រាសរុប {count} (មើលទាំងអស់)",
+  "@totalRecords": {
+    "description": "Total records count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterAll": "ទាំងអស់",
+  "practiceWordsOnly": "អនុវត្តតែពាក្យ",
+  "resetPracticeHistory": "កំណត់ឡើងវិញនូវប្រវត្តិអនុវត្ត",
+  "retry": "ព្យាយាម​ម្ដង​ទៀត?",
+  "noStudyMaterial": "មិនមានសម្ភារៈសិក្សាទេ។",
+  "gameOver": "Game Over",
+  "playAgain": "លេងម្ដងទៀត",
+  "speakNow": "និយាយឥឡូវនេះ!",
+  "scoreLabel": "ពិន្ទុ",
+  "viewOnlineGuide": "មើលមគ្គុទ្ទេសក៍តាមអ៊ីនធឺណិត",
+  "getMaterials": "ទទួលសម្ភារៈ",
+  "swapLanguages": "ប្តូរភាសា",
+  "next": "បន្ទាប់",
+  "wordModeLabel": "របៀបពាក្យ",
+  "accuracy": "ភាពត្រឹមត្រូវ",
+  "basicDefault": "មូលដ្ឋាន",
+  "basic": "មូលដ្ឋាន",
+  "tutorialM3WordsTitle": "ការអនុវត្តពាក្យ",
+  "tutorialM3WordsDesc": "ពិនិត្យមើលដើម្បីអនុវត្តតែពាក្យដែលបានរក្សាទុកប៉ុណ្ណោះ។",
+  "enterTextHint": "បញ្ចូលអត្ថបទដែលត្រូវបកប្រែ",
+  "micButtonTooltip": "ចាប់ផ្ដើមស្គាល់សំឡេង",
+  "menuHelp": "ជំនួយ",
+  "menuWebDownload": "គេហទំព័រ",
+  "menuDeviceImport": "នាំចូលសម្ភារៈពីឧបករណ៍",
+  "menuSettings": "ការកំណត់ភាសា",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "basicWords": "ឃ្លាំងផ្ទុកពាក្យជាមូលដ្ឋាន",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
+  },
+  "basicSentences": "ឃ្លាំងផ្ទុកប្រយោគជាមូលដ្ឋាន",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
+  },
+  "selectMaterialSet": "ជ្រើសរើសបណ្ណាល័យសម្ភារៈសិក្សា",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "sectionWords": "ពាក្យ",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "sectionSentences": "ប្រយោគ",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "languageSettingsTitle": "ការកំណត់ភាសា",
+  "sourceLanguageLabel": "ភាសារបស់ខ្ញុំ (Source)",
+  "targetLanguageLabel": "ភាសាសិក្សា (Target)",
+  "mode3Start": "ចាប់ផ្ដើម",
+  "mode3Stop": "បញ្ឈប់",
+  "mode3Next": "បន្ទាប់",
+  "mode3TryAgain": "ព្យាយាមម្ដងទៀត",
+  "tutorialM3ResetTitle": "កំណត់ឡើងវិញនូវកំណត់ត្រា",
+  "tutorialSwapDesc": "ប្តូរភាសារបស់ខ្ញុំ និងភាសាសិក្សា។",
+  "recognizedText": "ការបញ្ចេញសំឡេងដែលត្រូវបានស្គាល់៖",
+  "titleFormat": "{type}: {materialName}",
+  "tutorialM3ResetDesc": "កំណត់ឡើងវិញនូវវឌ្ឍនភាព និងពិន្ទុភាពត្រឹមត្រូវ ដើម្បីចាប់ផ្ដើមម្ដងទៀតពីដំបូង។",
+  "menuSelectMaterialSet": "ជ្រើសរើសបណ្ណាល័យសម្ភារៈសិក្សា",
+  "sectionWord": "ផ្នែកពាក្យ",
+  "sectionSentence": "ផ្នែកប្រយោគ",
+  "tabWord": "ពាក្យ",
+  "tabSentence": "ប្រយោគ",
+  "errorProfanity": "មិនអាចបកប្រែបានទេ ព្រោះវាមានពាក្យប្រមាថ។",
+  "errorHateSpeech": "មិនអាចបកប្រែបានទេ ព្រោះវាមានការនិយាយស្អប់ខ្ពើម។",
+  "errorSexualContent": "មិនអាចបកប្រែបានទេ ព្រោះវាមានខ្លឹមសារអាសអាភាស។",
+  "errorOtherSafety": "ការបកប្រែត្រូវបានបដិសេធដោយគោលការណ៍សុវត្ថិភាព AI ។",
+  "clearAll": "សម្អាតទាំងអស់",
+  "disambiguationTitle": "ជ្រើសរើសអត្ថន័យ",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "disambiguationPrompt": "តើអ្នកចង់បកប្រែជាអត្ថន័យអ្វី?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "skip": "រំលង",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "inputModeTitle": "បញ្ចូល",
+  "reviewModeTitle": "ពិនិត្យ",
+  "practiceModeTitle": "ការអនុវត្តការបញ្ចេញសំឡេង",
+  "chatHistoryTitle": "ប្រវត្តិជជែក",
+  "chatNew": "ជជែកថ្មី",
+  "chatNewChat": "ជជែកថ្មី",
+  "chatChoosePersona": "ជ្រើសរើស Persona",
+  "chatTypeHint": "បញ្ចូលសារ...",
+  "chatFailed": "ការជជែកបានបរាជ័យ៖ {error}",
+  "@chatFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "chatNoConversations": "មិនទាន់មានការសន្ទនា",
+  "chatStartNewPrompt": "ចាប់ផ្ដើមការសន្ទនាថ្មីដើម្បីអនុវត្ត!",
+  "chatFromConversation": "ដកស្រង់ចេញពីការសន្ទនា ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
+  },
+  "personaTeacher": "គ្រូបង្រៀនភាសាអង់គ្លេស",
+  "personaGuide": "មគ្គុទ្ទេសក៍ទេសចរណ៍",
+  "personaFriend": "មិត្តភក្ដិក្នុងស្រុក",
+  "chatUntitled": "ការសន្ទនាគ្មានចំណងជើង",
+  "chatAiChat": "ការជជែក AI",
+  "tutorialAiChatTitle": "ការជជែក AI",
+  "tutorialAiChatDesc": "អនុវត្តការសន្ទនាក្នុងជីវិតជាក់ស្ដែងជាមួយ AI Persona ។",
+  "mode1SelectedMaterial": "បណ្ណាល័យដែលបានជ្រើសរើសនាពេលបច្ចុប្បន្ន៖ {name}",
+  "basicWordRepository": "ឃ្លាំងផ្ទុកពាក្យជាមូលដ្ឋាន",
+  "basicSentenceRepository": "ឃ្លាំងផ្ទុកប្រយោគជាមូលដ្ឋាន",
+  "chatEndTitle": "បញ្ចប់ និងរក្សាទុកការសន្ទនា",
+  "chatEndMessage": "តើអ្នកប្រាកដថាចង់បញ្ចប់ការសន្ទនា?",
+  "chatSaveAndExit": "រក្សាទុក និងចាកចេញ",
+  "errorSelectCategory": "សូមជ្រើសរើសពាក្យ ឬប្រយោគជាមុនសិន!",
+  "tutorialM1ToggleTitle": "របៀបពាក្យ/ប្រយោគ",
+  "tutorialM1ToggleDesc": "ប្តូររវាងរបៀបពាក្យ និងប្រយោគនៅទីនេះ។",
+  "metadataDialogTitle": "ការចាត់ថ្នាក់លម្អិត",
+  "tagFormal": "ភាសាគួរសម",
+  "selectPOS": "ជ្រើសរើសផ្នែកនៃសុន្ទរកថា",
+  "selectSentenceType": "ជ្រើសរើសប្រភេទប្រយោគ",
+  "metadataRootWord": "ពាក្យដើម (Root Word)",
+  "posNoun": "នាម",
+  "posVerb": "កិរិយាសព្ទ",
+  "posAdjective": "គុណនាម",
+  "posAdverb": "កិរិយាវិសេសន៍",
+  "posPronoun": "សព្វនាម",
+  "posPreposition": "បុព្វបទ/ធ្នាក់",
+  "posConjunction": "សន្ធាន",
+  "posInterjection": "ឧទានសព្ទ",
+  "typeStatement": "ប្រយោគបញ្ជាក់",
+  "typeQuestion": "ប្រយោគសួរ",
+  "typeExclamation": "ប្រយោគឧទាន",
+  "typeImperative": "ប្រយោគបង្គាប់",
+  "labelNote": "កំណត់ចំណាំ",
+  "labelShowMemorized": "បានបញ្ចប់",
+  "tagSelection": "ការជ្រើសរើសស្លាក",
+  "metadataFormType": "ទម្រង់វេយ្យាករណ៍",
+  "formInfinitive": "Infinitive/បច្ចុប្បន្នកាល",
+  "formPast": "អតីតកាល",
+  "formPastParticiple": "Past Participle",
+  "formPresentParticiple": "Present Participle (ing)",
+  "formPresent": "បច្ចុប្បន្នកាល",
+  "formThirdPersonSingular": "ឯកវចនៈបុរសទី 3",
+  "formPlural": "ពហុវចនៈ",
+  "formSingular": "ឯកវចនៈ",
+  "caseSubject": "Subjective",
+  "caseObject": "Objective",
+  "casePossessive": "Possessive",
+  "casePossessivePronoun": "Possessive Pronoun",
+  "caseReflexive": "Reflexive",
+  "formPositive": "Positive",
+  "formComparative": "Comparative",
+  "formSuperlative": "Superlative",
+  "searchConditions": "លក្ខខណ្ឌស្វែងរក",
+  "recentNItems": "បង្ហាញធាតុ {count} ដែលបានបង្កើតថ្មីៗ",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "startsWith": "ពាក្យចាប់ផ្ដើម",
+  "reset": "កំណត់ឡើងវិញ",
+  "participantRename": "ប្តូរឈ្មោះអ្នកចូលរួម",
+  "labelName": "ឈ្មោះ",
+  "gender": "ភេទ",
+  "language": "ភាសា",
+  "male": "ប្រុស",
+  "female": "ស្រី"
+}

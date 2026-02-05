@@ -246,6 +246,5 @@
             "root": "맛있다",
             "form_type": "polite"
         }
-        // ... (truncated for brevity, real implementation would include all 50)
     ]
 }
