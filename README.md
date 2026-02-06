@@ -66,6 +66,7 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 - 🔊 **TTS 발음 듣기**: 성별에 맞는 정확한 TTS 발음 (Heuristic 적용)
 - 🤖 **자동 번역 및 저장**: 즉시 번역 및 "지역명 (시간)" 기반 자동 제목 저장
 - 📑 **대화 이력 관리**: 과거 대화 내용을 불러오고 제목을 수정하여 관리
+- 🔍 **대화 필터링 (New!)**: 주제(Note)별 드롭다운 필터 및 검색 기능으로 수많은 대화 손쉽게 관리
 
 * **Multi-Persona**: Change Gender/Lang/Name on the fly via bubble menu (New!)
 * **Auto-Retranslation**: Context stays intact when changing partner's language
@@ -76,6 +77,10 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 * **TTS Pronunciation**: Gender-aware TTS playback
 * **Smart Save**: Auto-save chats with "Location (Date)" titles
 * **History Management**: Revisit past chats & edit titles
+
+- **AI 채팅 고도화 (Phase 5)**: 대화 목록 상단에 '주제별 드롭다운 필터'를 추가하여 대량의 대화를 효율적으로 관리 가능. 또한 로컬 DB 조회 시 `user_id` 연동을 강화하여 개인화 보안 고도화.
+- **임포트 동기화 개선**: 대화 자료 JSON 임포트 완료 즉시 목록이 자동으로 갱신되도록 상태 동기화 로직 보강.
+- **학습 자료 병합 도구**: `scripts/merge_materials.ps1`을 통해 여러 언어쌍의 자료를 하나의 JSON으로 병합하고 `style`(어조) 필드를 지원하도록 DB 확장.
 
 ## 최근 업데이트 (Recent Updates - 2026-02-05)
 
