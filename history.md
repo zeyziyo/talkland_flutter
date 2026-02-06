@@ -10,12 +10,14 @@
 - [x] **AI 채팅 드롭다운 추가**: `ChatHistoryScreen` 상단에 대화 주제(Note)별 필터링용 드롭다운 배치
 - [x] **DB 개인화 연동**: 로컬 DB 조회(`getDialogueGroups`) 및 임포트 시 현재 `user_id` 강제 필터링 및 연동
 - [x] **임포트 동기화**: `AppState`에서 자료 임포트 완료 즉시 `loadDialogueGroups()`를 호출하여 목록 자동 갱신
+- [x] **빌드 에러 수정**: `ChatHistoryScreen` 내 Null Safety 관련 `String?` → `String` 타입 불일치 버그 해결
 - [x] **학습 자료 병합 지원**: `database_service.dart` 스키마 마이그레이션(`style` 필드 추가) 및 병합 스택(`merge_materials.ps1`) 구축
 
 ### 📝 워크스루 (Walkthrough)
 - **개선**: 임포트된 대화가 목록에 즉시 나타나지 않던 버그를 상태 구독(Notify) 로직 보강으로 해결.
 - **UI**: 주제별 필터링 UI 도입으로 대화 관리 편의성 증대.
 - **보안**: 로컬/서버 DB 간 `user_id` 정합성을 보장하여 개인화된 데이터 환경 구축.
+- **버그**: GitHub Actions 빌드 중 발생한 CI/CD 수준의 타입 불일치(Null Safety) 오류 수정.
 
 ---
 

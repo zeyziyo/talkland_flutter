@@ -84,7 +84,8 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
     // Get Unique Subjects for Dropdown
     final allSubjects = allDialogues
         .map((g) => g.note)
-        .where((n) => n != null && n.isNotEmpty)
+        .whereType<String>()
+        .where((n) => n.isNotEmpty)
         .toSet()
         .toList();
 
