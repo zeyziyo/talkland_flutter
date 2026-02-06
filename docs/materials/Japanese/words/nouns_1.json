@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "名詞 1",
+  "pos": "名詞",
+  "entries": [
+    {
+      "text": "人",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "水",
+      "note": "飲料水",
+      "tags": []
+    },
+    {
+      "text": "ご飯",
+      "note": "食事",
+      "tags": []
+    },
+    {
+      "text": "パン",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "りんご",
+      "note": "果物",
+      "tags": []
+    },
+    {
+      "text": "牛乳",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "肉",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "服",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "家",
+      "note": "住宅",
+      "tags": []
+    },
+    {
+      "text": "部屋",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "窓",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "門",
+      "note": "入り口",
+      "tags": []
+    },
+    {
+      "text": "机",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "椅子",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "コンピューター",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "電話",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "本",
+      "note": "図書",
+      "tags": []
+    },
+    {
+      "text": "鉛筆",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "紙",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "鞄",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "学校",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "会社",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "病院",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "薬局",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "식당",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "市場",
+      "note": "市場",
+      "tags": []
+    },
+    {
+      "text": "地下鉄",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "バス",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "タクシー",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "飛行機",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "電車",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "自転車",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "道",
+      "note": "道路",
+      "tags": []
+    },
+    {
+      "text": "山",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "海",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "川",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "空",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "太陽 / 年",
+      "note": "太陽",
+      "tags": []
+    },
+    {
+      "text": "月",
+      "note": "衛星",
+      "tags": []
+    },
+    {
+      "text": "星",
+      "note": "天体",
+      "tags": []
+    },
+    {
+      "text": "木",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "花",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "子犬",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "猫",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "お金",
+      "note": "現金",
+      "tags": []
+    },
+    {
+      "text": "時間",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "今日",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "明日",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "昨日",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "友達",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Chào hỏi 1",
+  "entries": [
+    {
+      "text": "Xin chào.",
+      "note": "Chào hỏi lịch sự",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rất vui được gặp bạn.",
+      "note": "Lần đầu gặp mặt",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lâu rồi không gặp.",
+      "note": "Gặp lại",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Xin cảm ơn rất nhiều.",
+      "note": "Trang trọng",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi xin lỗi.",
+      "note": "Trang trọng",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Xin lỗi / Cho hỏi.",
+      "note": "Gây sự chú ý",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bạn có khỏe không?",
+      "note": "Chào hỏi",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi khỏe, cảm ơn bạn.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tên bạn là gì?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tên tôi là ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bạn đến từ đâu?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi đến từ Mỹ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Chào tạm biệt.",
+      "note": "Dành cho người đi",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bạn ở lại nhé / Tạm biệt.",
+      "note": "Dành cho người ở lại",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vâng / Có.",
+      "note": "Khẳng định",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Không.",
+      "note": "Phủ định",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Có lẽ.",
+      "note": "Dự đoán",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi hiểu rồi.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi không biết.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Làm ơn giúp tôi với.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Làm ơn đợi một lát.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cái này giá bao nhiêu?",
+      "note": "Mua sắm",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nhà vệ sinh ở đâu?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi đói quá.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi khát quá.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cái này ngon quá.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi thích cái này.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Không sao đâu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Chúc may mắn.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bây giờ là mấy giờ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Thời tiết hôm nay đẹp nhỉ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lạnh quá.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nóng quá.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi mệt quá.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi đang vui.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Xin chúc mừng.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Chúc mừng sinh nhật.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Chúc một ngày tốt lành.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hẹn gặp lại vào ngày mai.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Giữ gìn sức khỏe nhé.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bạn có nói tiếng Anh không?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi chỉ nói được một chút tiếng Hàn.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Làm ơn nói chậm lại.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cái này có nghĩa là gì?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cái này tiếng Hàn gọi là gì?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi yêu bạn.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vui lòng chờ đợi.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Không có gì / Được rồi.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Không, cảm ơn.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi có một câu hỏi.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

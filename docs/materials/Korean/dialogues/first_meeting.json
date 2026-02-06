@@ -1,101 +1,140 @@
 {
-    "default_type": "dialogue",
-    "meta": {
-        "title": "첫 만남 인사",
-        "level": "beginner",
-        "tags": [
-            "greeting",
-            "introduction",
-            "polite"
-        ],
-        "location": "Cafe/Street",
-        "description": "처음 만난 사람끼리 나누는 기본적인 인사와 통성명 대화"
+  "default_type": "dialogue",
+  "subject": "첫 만남",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "조단",
+      "role": "사용자",
+      "gender": "남성",
+      "lang_code": "en-US"
     },
-    "participants": [
-        {
-            "id": "p1",
-            "name": "조단",
-            "role": "user",
-            "gender": "male",
-            "lang_code": "en-US"
-        },
-        {
-            "id": "p2",
-            "name": "민지",
-            "role": "ai",
-            "gender": "female",
-            "lang_code": "ko-KR"
-        }
-    ],
-    "entries": [
-        {
-            "speaker": "조단",
-            "text": "안녕하세요! 제 이름은 조단입니다. 만나서 반가워요.",
-            "sequence_order": 1,
-            "note": "Initial greeting",
-            "tags": [
-                "greeting"
-            ]
-        },
-        {
-            "speaker": "민지",
-            "text": "안녕하세요 조단 씨! 저는 민지예요. 저도 만나서 반가워요.",
-            "sequence_order": 2,
-            "note": "Response to greeting"
-        },
-        {
-            "speaker": "조단",
-            "text": "학생이세요?",
-            "sequence_order": 3,
-            "note": "Polite question asking for occupation"
-        },
-        {
-            "speaker": "민지",
-            "text": "아니요, 저는 회사원이에요. 조단 씨는요?",
-            "sequence_order": 4,
-            "note": "Answering and asking back"
-        },
-        {
-            "speaker": "조단",
-            "text": "저는 대학생이에요. 한국어를 공부하고 있어요.",
-            "sequence_order": 5,
-            "note": "Self introduction"
-        },
-        {
-            "speaker": "민지",
-            "text": "와, 대단하네요! 한국어는 좀 어렵지 않나요?",
-            "sequence_order": 6,
-            "note": "Compliment and small talk"
-        },
-        {
-            "speaker": "조단",
-            "text": "네, 어렵지만 재미있어요. 많이 도와주세요.",
-            "sequence_order": 7,
-            "note": "Expressing difficulty and asking for help"
-        },
-        {
-            "speaker": "민지",
-            "text": "물론이죠! 우리 같이 열심히 공부해요.",
-            "sequence_order": 8,
-            "note": "Agreement and encouragement",
-            "tags": [
-                "exclamation"
-            ]
-        },
-        {
-            "speaker": "조단",
-            "text": "감사합니다. 다음에 또 봐요!",
-            "sequence_order": 9,
-            "note": "Closing"
-        },
-        {
-            "speaker": "민지",
-            "text": "안녕히 가세요!",
-            "sequence_order": 10,
-            "note": "Farewell",
-            "tags": [
-                "farewell"
-            ]
-        }
-    ]
+    {
+      "id": "p2",
+      "name": "민지",
+      "role": "AI",
+      "gender": "여성",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "speaker": "조단",
+      "text": "안녕하세요! 제 이름은 조단입니다. 만나서 반가워요.",
+      "sequence_order": 1,
+      "note": "초면 인사 및 자기소개",
+      "form_type": "평서문",
+      "style": "높임말",
+      "tags": [
+        "인사",
+        "소개"
+      ]
+    },
+    {
+      "speaker": "민지",
+      "text": "안녕하세요 조단 씨! 저는 민지예요. 저도 만나서 반가워요.",
+      "sequence_order": 2,
+      "note": "인사 및 소개 답변",
+      "form_type": "평서문",
+      "style": "높임말",
+      "tags": [
+        "인사",
+        "소개"
+      ]
+    },
+    {
+      "speaker": "조단",
+      "text": "학생이세요?",
+      "sequence_order": 3,
+      "note": "직업 확인",
+      "form_type": "의문문",
+      "style": "높임말",
+      "tags": [
+        "질문"
+      ]
+    },
+    {
+      "speaker": "민지",
+      "text": "아니요, 저는 회사원이에요. 조단 씨는요?",
+      "sequence_order": 4,
+      "note": "답변 및 되묻기",
+      "form_type": "평서문",
+      "style": "높임말",
+      "tags": [
+        "소개",
+        "답변"
+      ]
+    },
+    {
+      "speaker": "조단",
+      "text": "저는 대학생이에요. 한국어를 공부하고 있어요.",
+      "sequence_order": 5,
+      "note": "현재 상황 설명",
+      "form_type": "평서문",
+      "style": "높임말",
+      "tags": [
+        "소개",
+        "학습"
+      ]
+    },
+    {
+      "speaker": "민지",
+      "text": "와, 대단하네요! 한국어는 좀 어렵지 않나요?",
+      "sequence_order": 6,
+      "note": "격려 및 의견 묻기",
+      "form_type": "의문문",
+      "style": "높임말",
+      "tags": [
+        "대화",
+        "격려"
+      ]
+    },
+    {
+      "speaker": "조단",
+      "text": "네, 어렵지만 재미있어요. 많이 도와주세요.",
+      "sequence_order": 7,
+      "note": "어려움 표현 및 도움 요청",
+      "form_type": "명령문",
+      "style": "높임말",
+      "tags": [
+        "감정",
+        "요청"
+      ]
+    },
+    {
+      "speaker": "민지",
+      "text": "물론이죠! 우리 같이 열심히 공부해요.",
+      "sequence_order": 8,
+      "note": "동의 및 응원",
+      "form_type": "청유문",
+      "style": "높임말",
+      "tags": [
+        "격려",
+        "학습"
+      ]
+    },
+    {
+      "speaker": "조단",
+      "text": "감사합니다. 다음에 또 봐요!",
+      "sequence_order": 9,
+      "note": "마무리 인사",
+      "form_type": "평서문",
+      "style": "높임말",
+      "tags": [
+        "감사",
+        "작별"
+      ]
+    },
+    {
+      "speaker": "민지",
+      "text": "안녕히 가세요!",
+      "sequence_order": 10,
+      "note": "작별 인사",
+      "form_type": "명령문",
+      "style": "높임말",
+      "tags": [
+        "작별"
+      ]
+    }
+  ]
 }

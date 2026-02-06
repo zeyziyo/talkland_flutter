@@ -1,37 +1,86 @@
 {
-    "title": "Unang Pagkikita",
-    "entries": [
-        {
-            "text": "Kumusta!",
-            "speaker": "A"
-        },
-        {
-            "text": "Kumusta. Ikinagagalak kitang makilala.",
-            "speaker": "B"
-        },
-        {
-            "text": "Ano ang iyong pangalan?",
-            "speaker": "A"
-        },
-        {
-            "text": "Ang pangalan ko ay [Pangalan]. At ikaw?",
-            "speaker": "B"
-        },
-        {
-            "text": "Ang pangalan ko ay [Pangalan]. Taga-saan ka?",
-            "speaker": "A"
-        },
-        {
-            "text": "Taga-Amerika ako. At ikaw?",
-            "speaker": "B"
-        },
-        {
-            "text": "Taga-Korea ako. Ikinagagalak kitang makilala.",
-            "speaker": "A"
-        },
-        {
-            "text": "Ako rin. Paalam.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Kumusta!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kumusta. Ikinagagalak kitang makilala.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ano ang iyong pangalan?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ang pangalan ko ay [Pangalan]. At ikaw?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ang pangalan ko ay [Pangalan]. Taga-saan ka?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Taga-Amerika ako. At ikaw?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Taga-Korea ako. Ikinagagalak kitang makilala.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ako rin. Paalam.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

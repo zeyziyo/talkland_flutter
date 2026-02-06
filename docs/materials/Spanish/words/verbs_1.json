@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Verbos 1",
+  "pos": "Verbo",
+  "entries": [
+    {
+      "text": "Ir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Venir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Comer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Beber",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dormir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ver",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Comprar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vender",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Leer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Escribir",
+      "note": "Escritura",
+      "tags": []
+    },
+    {
+      "text": "Escuchar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hablar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hacer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Trabajar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Estudiar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Enseñar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aprender",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Esperar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Conocer / Encontrarse",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Amar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gustar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Odiar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Reír",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Llorar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Caminar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Correr",
+      "note": "Correr",
+      "tags": []
+    },
+    {
+      "text": "Sentarse",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Estar de pie",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Recibir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Abrir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cerrar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pensar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Saber",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "No saber",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Buscar / Encontrar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Perder",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ayudar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lavar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cocinar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cantar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bailar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Usar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hacer / Crear",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Llamar / Cantar",
+      "note": "Canción / Nombre",
+      "tags": []
+    },
+    {
+      "text": "Atrapar / Agarrar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Poner / Dejar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Entrar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Salir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Subir",
+      "note": "Subir a un vehículo",
+      "tags": []
+    },
+    {
+      "text": "Bajar",
+      "note": "Bajar de un vehículo",
+      "tags": []
+    },
+    {
+      "text": "Enviar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Entregar / Pagar",
+      "note": "Entrega",
+      "tags": []
+    },
+    {
+      "text": "Estar / Pasar",
+      "note": "Saludos",
+      "tags": []
+    },
+    {
+      "text": "Empezar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Terminar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Descansar",
+      "note": "Reposar",
+      "tags": []
+    },
+    {
+      "text": "Preguntar",
+      "note": "Pregunta",
+      "tags": []
+    },
+    {
+      "text": "Responder",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prometer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Preocuparse",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Creer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dudar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Desear / Esperar",
+      "note": "Esperanza",
+      "tags": []
+    },
+    {
+      "text": "Soñar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pelear",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ganar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Perder",
+      "note": "Derrota",
+      "tags": []
+    },
+    {
+      "text": "Crecer",
+      "note": "Crecimiento",
+      "tags": []
+    },
+    {
+      "text": "Vivir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Morir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Recoger",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tirar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Esconder",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Buscar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Elegir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cambiar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pedir",
+      "note": "Compra de productos",
+      "tags": []
+    },
+    {
+      "text": "Preparar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Atrapar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lanzar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tirar / Jalar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Empujar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Reparar",
+      "note": "Reparación",
+      "tags": []
+    },
+    {
+      "text": "Romper",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Estar enfermo / Doler",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Curar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hacer ejercicio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nadar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Viajar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Conducir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Limpiar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lavar los platos",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lavar la ropa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ducharse",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cepillarse los dientes",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Despertarse / Levantarse",
+      "note": "Despertar",
+      "tags": []
+    },
+    {
+      "text": "Acostarse",
+      "note": "Dormir",
+      "tags": []
+    },
+    {
+      "text": "Entender",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Recordar",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

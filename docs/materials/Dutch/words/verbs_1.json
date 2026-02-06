@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Basiswerkwoorden 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Gaan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Komen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Eten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Drinken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Slapen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zien",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kopen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Verkopen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lezen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Schrijven",
+      "note": "Schrift",
+      "tags": []
+    },
+    {
+      "text": "Luisteren",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Spreken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Doen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Werken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Studeren",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Onderwijzen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Leren",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wachten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ontmoeten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Liefhebben",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Houden van",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Haten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lachen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Huilen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lopen / Wandelen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rennen",
+      "note": "Rennen",
+      "tags": []
+    },
+    {
+      "text": "Zitten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Staan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Geven",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ontvangen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Openen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sluiten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Denken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Weten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Niet weten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zoeken / Vinden",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Verliezen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Helpen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wassen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Koken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zingen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dansen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gebruiken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Roepen / Zingen",
+      "note": "Lied / Naam",
+      "tags": []
+    },
+    {
+      "text": "Vangen / Vasthouden",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Leggen / Laten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Binnengaan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Naar buiten gaan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Instappen",
+      "note": "In een voertuig",
+      "tags": []
+    },
+    {
+      "text": "Uitstappen",
+      "note": "Uit een voertuig",
+      "tags": []
+    },
+    {
+      "text": "Sturen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Indienen",
+      "note": "Indiening",
+      "tags": []
+    },
+    {
+      "text": "Gaan",
+      "note": "Groet",
+      "tags": []
+    },
+    {
+      "text": "Beginnen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Beëindigen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rusten",
+      "note": "Rust",
+      "tags": []
+    },
+    {
+      "text": "Vragen",
+      "note": "Vraag",
+      "tags": []
+    },
+    {
+      "text": "Antwoorden",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Beloven",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zich zorgen maken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Geloven",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Twijfelen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wensen / Hopen",
+      "note": "Hoop",
+      "tags": []
+    },
+    {
+      "text": "Dromen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vechten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Winnen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Verliezen",
+      "note": "Nederlaag",
+      "tags": []
+    },
+    {
+      "text": "Groeien",
+      "note": "Groei",
+      "tags": []
+    },
+    {
+      "text": "Leven / Wonen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sterven",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Oprapen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Weggooien",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Verbergen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zoeken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Selecteren",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Veranderen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bestellen",
+      "note": "Aankoop van artikelen",
+      "tags": []
+    },
+    {
+      "text": "Voorbereiden",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vangen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gooien",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Trekken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Duwen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Herstellen",
+      "note": "Reparatie",
+      "tags": []
+    },
+    {
+      "text": "Breken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ziek zijn / Pijn doen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Behandelen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sporten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zwemmen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Reizen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rijden",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Schoonmaken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "De afwas doen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "De was doen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Douchen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tanden poetsen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Opstaan",
+      "note": "Ontwaken",
+      "tags": []
+    },
+    {
+      "text": "Naar bed gaan",
+      "note": "Slaap",
+      "tags": []
+    },
+    {
+      "text": "Begrijpen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Onthouden",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

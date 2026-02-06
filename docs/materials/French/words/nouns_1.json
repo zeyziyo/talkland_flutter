@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Noms 1",
+  "pos": "Nom",
+  "entries": [
+    {
+      "text": "Personne",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Eau",
+      "note": "Eau potable",
+      "tags": []
+    },
+    {
+      "text": "Repas / Riz",
+      "note": "Repas",
+      "tags": []
+    },
+    {
+      "text": "Pain",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pomme",
+      "note": "Fruit",
+      "tags": []
+    },
+    {
+      "text": "Lait",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Viande",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vêtements",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maison",
+      "note": "Habitation",
+      "tags": []
+    },
+    {
+      "text": "Chambre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fenêtre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Porte",
+      "note": "Entrée",
+      "tags": []
+    },
+    {
+      "text": "Bureau",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chaise",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ordinateur",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Téléphone",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Livre",
+      "note": "Livre",
+      "tags": []
+    },
+    {
+      "text": "Crayon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Papier",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sac",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "École",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Entreprise",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hôpital",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pharmacie",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Restaurant",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Marché",
+      "note": "Marché",
+      "tags": []
+    },
+    {
+      "text": "Métro",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taxi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Avion",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Train",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vélo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chemin",
+      "note": "Route",
+      "tags": []
+    },
+    {
+      "text": "Montagne",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rivière",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ciel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Soleil / An",
+      "note": "Soleil / An",
+      "tags": []
+    },
+    {
+      "text": "Lune",
+      "note": "Satellite",
+      "tags": []
+    },
+    {
+      "text": "Étoile",
+      "note": "Corps céleste",
+      "tags": []
+    },
+    {
+      "text": "Arbre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fleur",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chiot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Argent",
+      "note": "Espèces",
+      "tags": []
+    },
+    {
+      "text": "Temps",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aujourd'hui",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Demain",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hier",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ami",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Osnovni pozdravi i dnevne rečenice 50",
+  "entries": [
+    {
+      "text": "Zdravo.",
+      "note": "Polite greeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Drago mi je.",
+      "note": "First meeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dugo se nismo vidjeli.",
+      "note": "Reunion",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hvala vam.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Žao mi je.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Oprostite.",
+      "note": "Attention",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kako ste?",
+      "note": "Greetings",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dobro sam, hvala.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kako se zovete?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Zovem se ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Odakle ste?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ja sam iz Amerike.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Doviđenja.",
+      "note": "To someone leaving",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Doviđenja.",
+      "note": "To someone staying",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Da.",
+      "note": "Positive",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ne.",
+      "note": "Negative",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Možda.",
+      "note": "Guess",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Razumijem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ne znam.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Molim vas, pomozite mi.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Samo trenutak, molim.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Koliko ovo košta?",
+      "note": "Shopping",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gdje je kupaonica?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gladan sam.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Žedan sam.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ukusno je.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sviđa mi se.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "U redu je.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sretno.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Koliko je sati sada?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vrijeme je danas dobro.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hladno je.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vruće je.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Umoran sam.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sretan sam.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Čestitam.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sretan rođendan.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ugodan dan.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vidimo se sutra.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Čuvajte se.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Govorite li engleski?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Govorim samo malo korejski.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Molim vas, govorite polako.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Što to znači?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kako se to kaže na korejskom?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Volim te.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Molim vas, pričekajte.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nema na čemu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ne, u redu je.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Imam pitanje.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

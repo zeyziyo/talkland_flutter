@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Základné výrazy a každodenné vety 50",
+  "entries": [
+    {
+      "text": "Dobrý deň / Ahoj.",
+      "note": "Zdvorilý pozdrav",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rád vás spoznávam.",
+      "note": "Prvé stretnutie",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dlho sme sa nevideli.",
+      "note": "Opätovné stretnutie",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ďakujem veľmi pekne.",
+      "note": "Formálne",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ospravedlňujem sa.",
+      "note": "Formálne",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "S dovolením.",
+      "note": "Upútanie pozornosti",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ako sa máte?",
+      "note": "Pozdrav",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dobre, ďakujem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ako sa voláte?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Volám sa ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Odkiaľ ste?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Som z Ameriky.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dovidenia.",
+      "note": "Tomu, kto odchádza",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Majte sa pekne.",
+      "note": "Tomu, kto zostáva",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Áno.",
+      "note": "Kladne",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nie.",
+      "note": "Záporne",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Možno.",
+      "note": "Domnienka",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rozumiem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Neviem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pomôžte mi, prosím.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Počkajte chvíľu, prosím.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Koľko to stojí?",
+      "note": "Nakupovanie",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kde je toaleta?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Som hladný.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Som smädný.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je to chutné.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Páči sa mi to.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je to v poriadku.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Veľa šťastia.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Koľko je teraz hodín?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dnes je pekné počasie.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je zima.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je horúco.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Som unavený.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Som šťastný.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gratulujem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Všetko najlepšie k narodeninám.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pekný deň.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Uvidíme sa zajtra.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Opatrujte sa.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hovoríte po anglicky?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hovorím len trochu po kórejsky.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hovorte pomaly, prosím.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Čo to znamená?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ako sa to povie po kórejsky?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Milujem ťa.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Počkajte, prosím.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Niet za čo.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nie, ďakujem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mám otázku.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

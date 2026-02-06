@@ -1,0 +1,502 @@
+{
+  "default_type": "word",
+  "subject": "Osnovni Glagoli 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Ići",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Doći",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jesti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Piti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Spavati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Videti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kupiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prodati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Čitati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pisati",
+      "note": "Writing",
+      "tags": []
+    },
+    {
+      "text": "Slušati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Govoriti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Raditi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Učiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Predavati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Naučiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Čekati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sresti se",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Voleti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sviđati se",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ne voleti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Smejati se",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Plakati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Šetati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Trčati",
+      "note": "Running",
+      "tags": []
+    },
+    {
+      "text": "Sedeti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stajati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Primiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Otvoriti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zatvoriti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Misliti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Znati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ne znati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Naći",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Izgubiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pomoći",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kuvati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pevati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Plesati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Koristiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Napraviti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pozvati",
+      "note": "Song / Name",
+      "tags": []
+    },
+    {
+      "text": "Uhvatiti / držati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Staviti / ostaviti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ući",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Izaći",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ući u",
+      "note": "Boarding",
+      "tags": []
+    },
+    {
+      "text": "Izaći iz",
+      "note": "Alighting",
+      "tags": []
+    },
+    {
+      "text": "Poslati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Predati",
+      "note": "Submission",
+      "tags": []
+    },
+    {
+      "text": "Slagati se",
+      "note": "Greetings",
+      "tags": []
+    },
+    {
+      "text": "Početi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Završiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Odmoriti se",
+      "note": "Relax",
+      "tags": []
+    },
+    {
+      "text": "Pitati",
+      "note": "Question",
+      "tags": []
+    },
+    {
+      "text": "Odgovoriti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Obećati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Brinuti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Verovati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sumnjati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Želeti / nadati se",
+      "note": "Hope",
+      "tags": []
+    },
+    {
+      "text": "Sanjati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Boriti se",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pobediti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Izgubiti",
+      "note": "Defeat",
+      "tags": []
+    },
+    {
+      "text": "Rasti",
+      "note": "Growth",
+      "tags": []
+    },
+    {
+      "text": "Živeti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Umreti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pokupiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Baciti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sakriti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tražiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Odabrati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Promeniti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Naručiti",
+      "note": "Buying items",
+      "tags": []
+    },
+    {
+      "text": "Pripremiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uhvatiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Baciti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Povući",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gurati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Popraviti",
+      "note": "Repair",
+      "tags": []
+    },
+    {
+      "text": "Slomiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Biti bolestan / povređen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lečiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vežbati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Plivati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Putovati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Voziti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Čistiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prati sudove",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prati veš",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tuširati se",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prati zube",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Probuditi se",
+      "note": "Wake up",
+      "tags": []
+    },
+    {
+      "text": "Ići u krevet",
+      "note": "Sleeping",
+      "tags": []
+    },
+    {
+      "text": "Razumeti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zapamtiti",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

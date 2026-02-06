@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "名词 1",
+  "pos": "名词",
+  "entries": [
+    {
+      "text": "人",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "水",
+      "note": "饮用水",
+      "tags": []
+    },
+    {
+      "text": "饭",
+      "note": "正餐",
+      "tags": []
+    },
+    {
+      "text": "面包",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "苹果",
+      "note": "水果",
+      "tags": []
+    },
+    {
+      "text": "牛奶",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "肉",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "衣服",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "家",
+      "note": "住房",
+      "tags": []
+    },
+    {
+      "text": "房间",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "窗户",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "门",
+      "note": "入口",
+      "tags": []
+    },
+    {
+      "text": "桌子",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "椅子",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "电脑",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "电话",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "书",
+      "note": "图书",
+      "tags": []
+    },
+    {
+      "text": "铅笔",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "纸",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "包",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "学校",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "公司",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "医院",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "药店",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "餐馆",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "市场",
+      "note": "老市场",
+      "tags": []
+    },
+    {
+      "text": "地铁",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "公交车",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "出租车",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "飞机",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "火车",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "自行车",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "路",
+      "note": "道路",
+      "tags": []
+    },
+    {
+      "text": "山",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "海",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "河",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "天空",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "太阳",
+      "note": "恒星",
+      "tags": []
+    },
+    {
+      "text": "月亮",
+      "note": "卫星",
+      "tags": []
+    },
+    {
+      "text": "星星",
+      "note": "天体",
+      "tags": []
+    },
+    {
+      "text": "树",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "花",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "小狗",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "小猫",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "钱",
+      "note": "现金",
+      "tags": []
+    },
+    {
+      "text": "时间",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "今天",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "明天",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "昨天",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "朋友",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Pamata sveicieni un ikdienas teikumi 50",
+  "entries": [
+    {
+      "text": "Sveiki.",
+      "note": "Polite greeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Priecājos iepazīties.",
+      "note": "First meeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sen neesam redzējušies.",
+      "note": "Reunion",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Paldies.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Atvainojiet.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Atvainojiet.",
+      "note": "Attention",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kā tev iet?",
+      "note": "Greetings",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Man labi, paldies.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kā tevi sauc?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mani sauc ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "No kurienes tu esi?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Esmu no Amerikas.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Atā.",
+      "note": "To someone leaving",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Visu labu.",
+      "note": "To someone staying",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jā.",
+      "note": "Positive",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nē.",
+      "note": "Negative",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Varbūt.",
+      "note": "Guess",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Es saprotu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Es nezinu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lūdzu, palīdziet man.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lūdzu, mirklīti.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cik tas maksā?",
+      "note": "Shopping",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kur ir tualete?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Man ir izsalcis.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Man slāpst.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tas ir garšīgi.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Man tas patīk.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Viss ir kārtībā.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Veiksmi.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cik ir pulkstenis?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Šodien ir labs laiks.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ir auksti.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ir karsts.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Esmu noguris.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Esmu laimīgs.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Apsveicu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Daudz laimes dzimšanas dienā.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lai jauka diena.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Uz redzēšanos rīt.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Esi uzmanīgs.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vai tu runā angliski?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Es varu runāt tikai nedaudz korejiski.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lūdzu, runājiet lēnām.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ko tas nozīmē?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kā to saka korejiski?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Es tevi mīlu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lūdzu, pagaidiet.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lūdzu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nē, viss ir kārtībā.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Man ir jautājums.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

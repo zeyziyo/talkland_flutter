@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Nomen 1",
+  "pos": "Nomen",
+  "entries": [
+    {
+      "text": "Person / Mensch",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wasser",
+      "note": "Trinkwasser",
+      "tags": []
+    },
+    {
+      "text": "Essen / Reis",
+      "note": "Mahlzeit",
+      "tags": []
+    },
+    {
+      "text": "Brot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Apfel",
+      "note": "Obst",
+      "tags": []
+    },
+    {
+      "text": "Milch",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fleisch",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kleidung",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Haus",
+      "note": "Wohnung",
+      "tags": []
+    },
+    {
+      "text": "Zimmer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fenster",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tür",
+      "note": "Eingang",
+      "tags": []
+    },
+    {
+      "text": "Schreibtisch",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stuhl",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Computer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Telefon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Buch",
+      "note": "Buch",
+      "tags": []
+    },
+    {
+      "text": "Bleistift",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Papier",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tasche",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Schule",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Firma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Krankenhaus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Apotheke",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Restaurant",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Markt",
+      "note": "Marktplatz",
+      "tags": []
+    },
+    {
+      "text": "U-Bahn",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taxi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Flugzeug",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zug",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fahrrad",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Weg",
+      "note": "Straße",
+      "tags": []
+    },
+    {
+      "text": "Berg",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Meer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fluss",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Himmel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sonne / Jahr",
+      "note": "Sonne / Jahr",
+      "tags": []
+    },
+    {
+      "text": "Mond",
+      "note": "Satellit",
+      "tags": []
+    },
+    {
+      "text": "Stern",
+      "note": "Himmelskörper",
+      "tags": []
+    },
+    {
+      "text": "Baum",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Blume",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Welpe",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Katze",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Geld",
+      "note": "Bargeld",
+      "tags": []
+    },
+    {
+      "text": "Zeit",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Heute",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Morgen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gestern",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Freund",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

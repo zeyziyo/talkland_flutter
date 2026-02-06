@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Sustantivos 1",
+  "pos": "Sustantivo",
+  "entries": [
+    {
+      "text": "Persona",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Agua",
+      "note": "Agua potable",
+      "tags": []
+    },
+    {
+      "text": "Comida / Arroz",
+      "note": "Comida",
+      "tags": []
+    },
+    {
+      "text": "Pan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Manzana",
+      "note": "Fruta",
+      "tags": []
+    },
+    {
+      "text": "Leche",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Carne",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ropa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Casa",
+      "note": "Vivienda",
+      "tags": []
+    },
+    {
+      "text": "Habitación",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ventana",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Puerta",
+      "note": "Entrada",
+      "tags": []
+    },
+    {
+      "text": "Escritorio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Silla",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Computadora",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Teléfono",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Libro",
+      "note": "Libro",
+      "tags": []
+    },
+    {
+      "text": "Lápiz",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Papel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bolso / Mochila",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Escuela",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Empresa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hospital",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Farmacia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Restaurante",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mercado",
+      "note": "Mercado",
+      "tags": []
+    },
+    {
+      "text": "Metro",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Autobús",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taxi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Avión",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tren",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bicicleta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Camino",
+      "note": "Carretera",
+      "tags": []
+    },
+    {
+      "text": "Montaña",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Río",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cielo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sol / Año",
+      "note": "Sol / Año",
+      "tags": []
+    },
+    {
+      "text": "Luna",
+      "note": "Satélite",
+      "tags": []
+    },
+    {
+      "text": "Estrella",
+      "note": "Cuerpo celeste",
+      "tags": []
+    },
+    {
+      "text": "Árbol",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Flor",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cachorro",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gato",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dinero",
+      "note": "Efectivo",
+      "tags": []
+    },
+    {
+      "text": "Tiempo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hoy",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mañana",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ayer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Amigo",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Põhilised nimisõnad 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Inimene",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vesi",
+      "note": "Drinking water",
+      "tags": []
+    },
+    {
+      "text": "Riis / Söök",
+      "note": "Meal",
+      "tags": []
+    },
+    {
+      "text": "Leib",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Õun",
+      "note": "Fruit",
+      "tags": []
+    },
+    {
+      "text": "Piim",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Liha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Riided",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maja",
+      "note": "Housing",
+      "tags": []
+    },
+    {
+      "text": "Tuba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uks",
+      "note": "Entrance",
+      "tags": []
+    },
+    {
+      "text": "Laud",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tool",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Arvuti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Telefon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Raamat",
+      "note": "Library",
+      "tags": []
+    },
+    {
+      "text": "Pliiats",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Paber",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kott",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kool",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ettevõte",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Haigla",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Apteek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Restoran",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Turg",
+      "note": "Marketplace",
+      "tags": []
+    },
+    {
+      "text": "Metroo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Buss",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Takso",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lennuk",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rong",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jalgratas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tee",
+      "note": "Road",
+      "tags": []
+    },
+    {
+      "text": "Mägi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Meri",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jõgi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taevas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Päike / Aasta",
+      "note": "Sun / Year",
+      "tags": []
+    },
+    {
+      "text": "Kuu",
+      "note": "Satellite",
+      "tags": []
+    },
+    {
+      "text": "Täht",
+      "note": "Celestial Body",
+      "tags": []
+    },
+    {
+      "text": "Puu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lill",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kutsikas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kass",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Raha",
+      "note": "Cash",
+      "tags": []
+    },
+    {
+      "text": "Aeg",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Täna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Homme",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Eile",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sõber",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

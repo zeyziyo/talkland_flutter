@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "ମୌଳିକ ଅଭିବାଦନ ଏବଂ ଦୈନନ୍ଦିନ ବାକ୍ୟ 50",
+  "entries": [
+    {
+      "text": "ନମସ୍କାର।",
+      "note": "Polite greeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଆପଣଙ୍କୁ ଭେଟି ମୁଁ ଖୁସି।",
+      "note": "First meeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ବହୁତ ଦିନ ପରେ ଦେଖାହେଲା।",
+      "note": "Reunion",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଧନ୍ୟବାଦ।",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୁଁ ଦୁଃଖିତ।",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଶୁଣନ୍ତୁ।",
+      "note": "Attention",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଆପଣ କେମିତି ଅଛନ୍ତି?",
+      "note": "Greetings",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୁଁ ଭଲ ଅଛି, ଧନ୍ୟବାଦ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ତୁମର ନାମ କ’ଣ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୋର ନାମ ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଆପଣ କେଉଁଠାରୁ ଆସିଛନ୍ତି?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୁଁ ଆମେରିକାରୁ ଆସିଛି।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ବିଦାୟ।",
+      "note": "To someone leaving",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ବିଦାୟ।",
+      "note": "To someone staying",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ହଁ।",
+      "note": "Positive",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ନା।",
+      "note": "Negative",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ହୋଇପାରେ।",
+      "note": "Guess",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୁଁ ବୁଝିପାରୁଛି।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୁଁ ଜାଣେ ନାହିଁ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଦୟାକରି ମୋତେ ସାହାଯ୍ୟ କରନ୍ତୁ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଦୟାକରି ଅଳ୍ପ ସମୟ ଅପେକ୍ଷା କରନ୍ତୁ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଏହାର ମୂଲ୍ୟ କେତେ?",
+      "note": "Shopping",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ବାଥରୁମ କେଉଁଠାରେ ଅଛି?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୋତେ ଭୋକ ଲାଗୁଛି।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୋତେ ଶୋଷ ଲାଗୁଛି।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଏହା ସୁସ୍ୱାଦୁ ଅଟେ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୁଁ ଏହାକୁ ପସନ୍ଦ କରେ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଏହା ଠିକ୍ ଅଛି।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଶୁଭକାମନା।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଏବେ କେତେ ବାଜିଛି?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଆଜି ପାଗ ଭଲ ଅଛି।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଥଣ୍ଡା ଲାଗୁଛି।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଗରମ ଲାଗୁଛି।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୁଁ କ୍ଳାନ୍ତ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୁଁ ଖୁସି।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଅଭିନନ୍ଦନ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଜନ୍ମଦିନର ଶୁଭେଚ୍ଛା।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଆପଣଙ୍କ ଦିନଟି ଶୁଭ ହେଉ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଆସନ୍ତାକାଲି ଦେଖାହେବ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ନିଜର ଯତ୍ନ ନିଅନ୍ତୁ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଆପଣ ଇଂରାଜୀ କହିପାରିବେ କି?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୁଁ କେବଳ ଅଳ୍ପ କୋରିଆନ୍ କହିପାରେ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଦୟାକରି ଧୀରେ କୁହନ୍ତୁ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଏହାର ଅର୍ଥ କ’ଣ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଏହାକୁ କୋରିଆନ୍ରେ କିପରି କୁହାଯାଏ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୁଁ ତୁମକୁ ଭଲପାଏ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଦୟାକରି ଅପେକ୍ଷା କରନ୍ତୁ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ତୁମକୁ ସ୍ୱାଗତ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ନା, ଏହା ଠିକ୍ ଅଛି।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୋର ଏକ ପ୍ରଶ୍ନ ଅଛି।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

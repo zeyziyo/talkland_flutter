@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Izenzo Ezili-100 Ezisisiseko",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "ukuya",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukutya",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukusela",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukulala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukubona / ukubukela",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuthenga",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuthengisa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukufunda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukubhala",
+      "note": "ukubhala",
+      "tags": []
+    },
+    {
+      "text": "ukuva / ukumamela",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuthetha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukwenza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukusebenza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukufunda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukufundisa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukufunda (Study)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukulinda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukudibana",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuthanda (Love)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuthanda (Like)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuthiya",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuhleka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukulila",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuhamba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukubaleka",
+      "note": "ukubaleka",
+      "tags": []
+    },
+    {
+      "text": "ukuhlala phantsi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukunika",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukwamkela",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuvula",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuvala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukucinga",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukwazi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukungazi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukufuna / ukufumana",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukulahlekelwa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukunceda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuhlamba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukupheka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukucula",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukudanisa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukusebenzisa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukwenza / ukudala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukubiza / ukucula",
+      "note": "iculo / igama",
+      "tags": []
+    },
+    {
+      "text": "ukubamba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukubeka / ukushiya",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukungena",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuphuma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukukhwela",
+      "note": "imoto",
+      "tags": []
+    },
+    {
+      "text": "ukuhla",
+      "note": "imoto",
+      "tags": []
+    },
+    {
+      "text": "ukuthumela",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukungenisa",
+      "note": "ukungenisa",
+      "tags": []
+    },
+    {
+      "text": "ukuphila / ukubulisa",
+      "note": "isibuliso",
+      "tags": []
+    },
+    {
+      "text": "ukuqala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuqula",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuphumla",
+      "note": "ukuphumla",
+      "tags": []
+    },
+    {
+      "text": "ukubuza",
+      "note": "umbuzo",
+      "tags": []
+    },
+    {
+      "text": "ukuphendula",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuthembisa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukunxunguphala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukukholwa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukukrokrela",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuthemba",
+      "note": "ithemba",
+      "tags": []
+    },
+    {
+      "text": "ukuphupha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukulwa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuwina",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukwoyiswa",
+      "note": "ukwoyiswa",
+      "tags": []
+    },
+    {
+      "text": "ukukhula",
+      "note": "ukukhula",
+      "tags": []
+    },
+    {
+      "text": "ukuphila",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukufa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuthatha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukulahla",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuzimela",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukufuna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukukhetha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukutshintsha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "uku-oda",
+      "note": "ukuthenga",
+      "tags": []
+    },
+    {
+      "text": "ukulungiselela",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukubamba (Catch)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuphosa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukutsala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukutyhala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukulungisa",
+      "note": "ukulungisa",
+      "tags": []
+    },
+    {
+      "text": "ukwaphuka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuva intlungu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukunyanga",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuzilolonga",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukudada",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuhamba uhambo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuqhuba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukucoca",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuhlamba izitya",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuhlamba iimpahla",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuhlamba umzimba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuxubha amazinyo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukuvuka",
+      "note": "ukuvuka",
+      "tags": []
+    },
+    {
+      "text": "ukulala",
+      "note": "ubuthongo",
+      "tags": []
+    },
+    {
+      "text": "ukuqonda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ukukhumbula",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

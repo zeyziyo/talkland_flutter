@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Basisuatrykk og Daglige Setninger 50",
+  "entries": [
+    {
+      "text": "Hallo / God dag.",
+      "note": "Høflig hilsen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hyggelig å møte deg.",
+      "note": "Første møte",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lenge siden sist.",
+      "note": "Gjensyn",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tusen takk.",
+      "note": "Formelt",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg beklager.",
+      "note": "Formelt",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Unnskyld meg.",
+      "note": "Tiltrekke oppmerksomhet",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hvordan har du det?",
+      "note": "Hilsener",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bra, takk.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hva heter du?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mitt navn er ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hvor kommer du fra?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg kommer fra Amerika.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Farvel.",
+      "note": "Til en som går",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ha det bra / Adjø.",
+      "note": "Til en som blir",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ja.",
+      "note": "Positivt",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nei.",
+      "note": "Negativt",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kanskje.",
+      "note": "Gjetning",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg forstår.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg vet ikke.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vennligst hjelp meg.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vennligst vent et øyeblikk.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hvor mye koster dette?",
+      "note": "Shopping",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hvor er toalettet?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg er sulten.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg er tørst.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Det er deilig.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg liker det.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Det er greit.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lykke til.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hva er klokken nå?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Været er fint i dag.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Det er kaldt.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Det est varmt.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg er trøtt.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg er lykkelig.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gratulerer.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gratulerer med dagen.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ha en fin dag.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vi ses i morgen.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ta vare på deg selv.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Snakker du engelsk?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg snakker bare litt koreansk.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vennligst snakk sakte.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hva betyr dette?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hvordan sier man det på koreansk?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg elsker deg.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vennligst vent.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bare hyggelig / Ingen årsak.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nei takk.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg har et spørsmål.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

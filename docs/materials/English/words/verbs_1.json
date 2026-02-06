@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Verbs 1",
+  "pos": "Verb",
+  "entries": [
+    {
+      "text": "To go",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To come",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To eat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To drink",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To sleep",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To see",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To buy",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To sell",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To read",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To write",
+      "note": "Writing",
+      "tags": []
+    },
+    {
+      "text": "To listen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To speak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To do",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To work",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To study",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To teach",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To learn",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To wait",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To meet",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To love",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To like",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To dislike",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To laugh",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To cry",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To walk",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To run",
+      "note": "Running",
+      "tags": []
+    },
+    {
+      "text": "To sit",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To stand",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To give",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To receive",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To open",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To close",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To think",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To know",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To not know",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To find",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To lose",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To help",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To wash",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To cook",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To sing",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To dance",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To use",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To make",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To call",
+      "note": "Song / Name",
+      "tags": []
+    },
+    {
+      "text": "To catch / hold",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To put / leave",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To enter",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To exit",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To get on",
+      "note": "Boarding",
+      "tags": []
+    },
+    {
+      "text": "To get off",
+      "note": "Alighting",
+      "tags": []
+    },
+    {
+      "text": "To send",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To submit",
+      "note": "Submission",
+      "tags": []
+    },
+    {
+      "text": "To get along",
+      "note": "Greetings",
+      "tags": []
+    },
+    {
+      "text": "To start",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To end",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To rest",
+      "note": "Relax",
+      "tags": []
+    },
+    {
+      "text": "To ask",
+      "note": "Question",
+      "tags": []
+    },
+    {
+      "text": "To answer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To promise",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To worry",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To believe",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To doubt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To wish / hope",
+      "note": "Hope",
+      "tags": []
+    },
+    {
+      "text": "To dream",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To fight",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To win",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To lose",
+      "note": "Defeat",
+      "tags": []
+    },
+    {
+      "text": "To grow",
+      "note": "Growth",
+      "tags": []
+    },
+    {
+      "text": "To live",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To die",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To pick up",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To throw away",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To hide",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To search",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To select",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To change",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To order",
+      "note": "Buying items",
+      "tags": []
+    },
+    {
+      "text": "To prepare",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To catch",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To throw",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To pull",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To push",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To fix / repair",
+      "note": "Repair",
+      "tags": []
+    },
+    {
+      "text": "To break",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To be sick / hurt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To treat / cure",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To exercise",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To swim",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To travel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To drive",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To clean",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To wash dishes",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To do laundry",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To take a shower",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To brush teeth",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To wake up",
+      "note": "Wake up",
+      "tags": []
+    },
+    {
+      "text": "To go to bed",
+      "note": "Sleeping",
+      "tags": []
+    },
+    {
+      "text": "To understand",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "To remember",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

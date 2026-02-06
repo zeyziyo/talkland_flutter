@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Ungkapan Dasar dan Kalimat Sehari-hari 50",
+  "entries": [
+    {
+      "text": "Halo / Selamat siang.",
+      "note": "Salam sopan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Senang bertemu dengan Anda.",
+      "note": "Pertemuan pertama",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lama tidak bertemu.",
+      "note": "Bertemu kembali",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Terima kasih banyak.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mohon maaf.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Permisi.",
+      "note": "Menarik perhatian",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Apa kabar?",
+      "note": "Salam",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kabar baik, terima kasih.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Siapa nama Anda?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nama saya ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Anda berasal dari mana?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya berasal dari Amerika.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Selamat jalan.",
+      "note": "Kepada yang pergi",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Selamat tinggal.",
+      "note": "Kepada yang tinggal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ya.",
+      "note": "Positif",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tidak.",
+      "note": "Negatif",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mungkin.",
+      "note": "Dugaan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya mengerti.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya tidak tahu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tolong bantu saya.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tolong tunggu sebentar.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Berapa harganya?",
+      "note": "Belanja",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Di mana toiletnya?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya lapar.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya haus.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ini lezat.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya suka ini.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tidak apa-apa.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Semoga berhasil.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jam berapa sekarang?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cuaca hari ini bagus.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dingin.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Panas.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya lelah.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya senang.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Selamat.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Selamat ulang tahun.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Semoga hari Anda menyenangkan.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sampai jumpa besok.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jaga diri baik-baik.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Apakah Anda bisa bahasa Inggris?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya hanya bisa sedikit bahasa Korea.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tolong bicara pelan-pelan.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Apa artinya ini?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Apa sebutannya dalam bahasa Korea?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Aku mencintaimu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mohon tunggu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sama-sama / Tidak apa-apa.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tidak, terima kasih.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya punya pertanyaan.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

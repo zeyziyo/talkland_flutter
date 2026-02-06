@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Сәлем! Менің атым - Джордан. Сізбен танысқаныма қуаныштымын.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Сәлем, Джордан! Менің атым - Минджи. Мен де сізбен танысқаныма қуаныштымын.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Сіз студентсіз бе?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Жоқ, мен кеңсе қызметкерімін. Ал сіз?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Мен колледж студентімін. Мен корей тілін оқып жатырмын.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Уау, керемет! Корей тілі біраз қиын, солай емес пе?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Иә, қиын, бірақ қызықты. Маған көп көмектесіңіз.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Әрине! Бірге тырысып оқиық.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Рақмет. Келесі жолы кездескенше!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Сау болыңыз!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Сәлем! Менің атым - Джордан. Сізбен танысқаныма қуаныштымын.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сәлем, Джордан! Менің атым - Минджи. Мен де сізбен танысқаныма қуаныштымын.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сіз студентсіз бе?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Жоқ, мен кеңсе қызметкерімін. Ал сіз?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мен колледж студентімін. Мен корей тілін оқып жатырмын.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Уау, керемет! Корей тілі біраз қиын, солай емес пе?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Иә, қиын, бірақ қызықты. Маған көп көмектесіңіз.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Әрине! Бірге тырысып оқиық.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Рақмет. Келесі жолы кездескенше!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сау болыңыз!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

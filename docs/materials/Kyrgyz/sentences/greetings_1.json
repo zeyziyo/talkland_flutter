@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Негизги саламдашуулар жана күнүмдүк сүйлөмдөр 50",
+  "entries": [
+    {
+      "text": "Саламатсызбы.",
+      "note": "Polite greeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сиз менен таанышканыма кубанычтамын.",
+      "note": "First meeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Көптөн бери көрүшпөдүк.",
+      "note": "Reunion",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Рахмат.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Кечиресиз.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Кечиресиз.",
+      "note": "Attention",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Кандайсыз?",
+      "note": "Greetings",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Жакшымын, рахмат.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сиздин атыңыз ким?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Менин атым ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сиз кайдансыз?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мен Америкаданмын.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Кош болуңуз.",
+      "note": "To someone leaving",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Кош болуңуз.",
+      "note": "To someone staying",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ооба.",
+      "note": "Positive",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Жок.",
+      "note": "Negative",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Балким.",
+      "note": "Guess",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мен түшүндүм.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мен билбейм.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мага жардам бериңизчи.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Бир аз күтө туруңузчу.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Бул канча турат?",
+      "note": "Shopping",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Даараткана кайда?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мен ачкамын.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мен суусадым.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Бул абдан даамдуу.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мага жагат.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Макул.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ийгилик.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Азыр саат канча болду?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Бүгүн аба ырайы жакшы.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Салкын.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ысык.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мен чарчадым.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мен бактылуумун.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Куттуктайм.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Туулган күнүңүз менен.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Жакшы күн каалайм.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Эртең көрүшкөнчө.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сак болуңуз.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сиз англисче сүйлөй аласызбы?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мен бир аз гана корейче сүйлөй алам.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Жай сүйлөсөңүз.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Бул эмнени билдирет?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Корейче кантип айтылат?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мен сени сүйөм.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Күтө туруңуз.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Кош келиңиз.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Жок, баары жакшы.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Менин суроом бар.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

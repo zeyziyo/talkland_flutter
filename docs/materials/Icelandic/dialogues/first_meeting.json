@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Halló! Ég heiti Jordan. Gaman að kynnast þér.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Halló Jordan! Ég er Minji. Gaman að kynnast þér líka.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ertu nemandi?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Nei, ég er skrifstofumaður. Hvað með þig?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ég er háskólanemi. Ég er að læra kóresku.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Vá, það er frábært! Kóreska er svolítið erfið, er það ekki?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Já, hún er erfið en skemmtileg. Vinsamlegast hjálpaðu mér mikið.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Auðvitað! Lærum hart saman.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Takk fyrir. Sjáumst næst!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Bless!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Halló! Ég heiti Jordan. Gaman að kynnast þér.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Halló Jordan! Ég er Minji. Gaman að kynnast þér líka.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ertu nemandi?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nei, ég er skrifstofumaður. Hvað með þig?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ég er háskólanemi. Ég er að læra kóresku.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vá, það er frábært! Kóreska er svolítið erfið, er það ekki?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Já, hún er erfið en skemmtileg. Vinsamlegast hjálpaðu mér mikið.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Auðvitað! Lærum hart saman.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Takk fyrir. Sjáumst næst!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bless!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

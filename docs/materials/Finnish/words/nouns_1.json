@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Perussubstantiivit 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Henkilö",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vesi",
+      "note": "Juomavesi",
+      "tags": []
+    },
+    {
+      "text": "Ateria / Riisi",
+      "note": "Ateria",
+      "tags": []
+    },
+    {
+      "text": "Leipä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Omena",
+      "note": "Hedelmä",
+      "tags": []
+    },
+    {
+      "text": "Maito",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Liha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vaatteet",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Talo",
+      "note": "Asunto",
+      "tags": []
+    },
+    {
+      "text": "Huone",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ikkuna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ovi",
+      "note": "Sisäänkäynti",
+      "tags": []
+    },
+    {
+      "text": "Työpöytä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tuoli",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tietokone",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Puhelin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kirja",
+      "note": "Kirja",
+      "tags": []
+    },
+    {
+      "text": "Lyijykynä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Paperi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Laukku",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Koulu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yritys",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sairaala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Apteekki",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ravintola",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tori",
+      "note": "Markkinat",
+      "tags": []
+    },
+    {
+      "text": "Metro",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bussi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taksi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lentokone",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Juna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Polkupyörä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tie",
+      "note": "Tie",
+      "tags": []
+    },
+    {
+      "text": "Vuori",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Meri",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Joki",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taivas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aurinko / Vuosi",
+      "note": "Aurinko / Vuosi",
+      "tags": []
+    },
+    {
+      "text": "Kuu",
+      "note": "Satelliitti",
+      "tags": []
+    },
+    {
+      "text": "Tähti",
+      "note": "Taivaankappale",
+      "tags": []
+    },
+    {
+      "text": "Puu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kukka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pentu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kissa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Raha",
+      "note": "Käteinen",
+      "tags": []
+    },
+    {
+      "text": "Aika",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tänään",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Huomenna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Eilen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ystävä",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

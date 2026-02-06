@@ -1,37 +1,86 @@
 {
-    "title": "Prvé stretnutie",
-    "entries": [
-        {
-            "text": "Dobrý den!",
-            "speaker": "A"
-        },
-        {
-            "text": "Dobrý den. Rád vás spoznávam.",
-            "speaker": "B"
-        },
-        {
-            "text": "Ako sa voláte?",
-            "speaker": "A"
-        },
-        {
-            "text": "Volám sa [Meno]. A vy?",
-            "speaker": "B"
-        },
-        {
-            "text": "Volám sa [Meno]. Odkiaľ ste?",
-            "speaker": "A"
-        },
-        {
-            "text": "Som z Ameriky. A vy?",
-            "speaker": "B"
-        },
-        {
-            "text": "Som z Kórey. Bolo mi potešením vás spoznať.",
-            "speaker": "A"
-        },
-        {
-            "text": "Mne tiež. Dovidenia.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Dobrý den!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dobrý den. Rád vás spoznávam.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ako sa voláte?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Volám sa [Meno]. A vy?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Volám sa [Meno]. Odkiaľ ste?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Som z Ameriky. A vy?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Som z Kórey. Bolo mi potešením vás spoznať.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mne tiež. Dovidenia.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

@@ -1,37 +1,86 @@
 {
-    "title": "Πρώτη συνάντηση",
-    "entries": [
-        {
-            "text": "Γεια σας!",
-            "speaker": "A"
-        },
-        {
-            "text": "Γεια σας. Χάρηκα για τη γνωριμία.",
-            "speaker": "B"
-        },
-        {
-            "text": "Πώς σας λένε;",
-            "speaker": "A"
-        },
-        {
-            "text": "Το όνομά μου είναι [Όνομα]. Εσάς;",
-            "speaker": "B"
-        },
-        {
-            "text": "Το όνομά μου είναι [Όνομα]. Από πού είστε;",
-            "speaker": "A"
-        },
-        {
-            "text": "Είμαι από την Αμερική. Εσείς;",
-            "speaker": "B"
-        },
-        {
-            "text": "Είμαι από την Κορέα. Χάρηκα πολύ που σας γνώρισα.",
-            "speaker": "A"
-        },
-        {
-            "text": "Κι εγώ επίσης. Στο επανιδείν.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Γεια σας!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Γεια σας. Χάρηκα για τη γνωριμία.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Πώς σας λένε;",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Το όνομά μου είναι [Όνομα]. Εσάς;",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Το όνομά μου είναι [Όνομα]. Από πού είστε;",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Είμαι από την Αμερική. Εσείς;",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Είμαι από την Κορέα. Χάρηκα πολύ που σας γνώρισα.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Κι εγώ επίσης. Στο επανιδείν.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Прывітанне! Мяне завуць Джордан. Прыемна пазнаёміцца.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Прывітанне, Джордан! Я Мінджы. Мне таксама прыемна пазнаёміцца.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Вы студэнт?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Не, я офісны работнік. А вы?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Я студэнт каледжа. Я вывучаю карэйскую мову.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Вау, гэта выдатна! Карэйская мова крыху складаная, ці не так?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Так, гэта складана, але весела. Калі ласка, дапамажыце мне.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Вядома! Давайце разам добра вучыцца.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Дзякуй. Да сустрэчы!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Да пабачэння!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Прывітанне! Мяне завуць Джордан. Прыемна пазнаёміцца.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Прывітанне, Джордан! Я Мінджы. Мне таксама прыемна пазнаёміцца.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Вы студэнт?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Не, я офісны работнік. А вы?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я студэнт каледжа. Я вывучаю карэйскую мову.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Вау, гэта выдатна! Карэйская мова крыху складаная, ці не так?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Так, гэта складана, але весела. Калі ласка, дапамажыце мне.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Вядома! Давайце разам добра вучыцца.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Дзякуй. Да сустрэчы!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Да пабачэння!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

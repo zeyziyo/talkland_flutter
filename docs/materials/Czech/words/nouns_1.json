@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Základní podstatná jména 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Osoba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Voda",
+      "note": "Pitná voda",
+      "tags": []
+    },
+    {
+      "text": "Jídlo / Rýže",
+      "note": "Jídlo",
+      "tags": []
+    },
+    {
+      "text": "Chléb",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jablko",
+      "note": "Ovoce",
+      "tags": []
+    },
+    {
+      "text": "Mléko",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maso",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Oblečení",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dům",
+      "note": "Bydlení",
+      "tags": []
+    },
+    {
+      "text": "Pokoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Okno",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dveře",
+      "note": "Vchod",
+      "tags": []
+    },
+    {
+      "text": "Psací stůl",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Židle",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Počítač",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Telefon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kniha",
+      "note": "Kniha",
+      "tags": []
+    },
+    {
+      "text": "Tužka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Papír",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taška",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Škola",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Firma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nemocnice",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lékárna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Restaurace",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Trh",
+      "note": "Tržiště",
+      "tags": []
+    },
+    {
+      "text": "Metro",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Autobus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taxi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Letadlo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vlak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kolo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cesta",
+      "note": "Silnice",
+      "tags": []
+    },
+    {
+      "text": "Hora",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Moře",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Řeka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nebe",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Slunce / Rok",
+      "note": "Slunce / Rok",
+      "tags": []
+    },
+    {
+      "text": "Měsíc",
+      "note": "Satelit",
+      "tags": []
+    },
+    {
+      "text": "Hvězda",
+      "note": "Nebeské těleso",
+      "tags": []
+    },
+    {
+      "text": "Strom",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Květina",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Štěně",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kočka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Peníze",
+      "note": "Hotovost",
+      "tags": []
+    },
+    {
+      "text": "Čas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dnes",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zítra",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Včera",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Přítel",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Foljet Themelore 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Të shkoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të vij",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të ha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të pi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të fle",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të shoh",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të blej",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të shes",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të lexoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të shkruaj",
+      "note": "Writing",
+      "tags": []
+    },
+    {
+      "text": "Të dëgjoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të flas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të bëj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të punoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të studioj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të mësoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të mësohem",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të pres",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të takohem",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të dashuroj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të pëlqej",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të mos pëlqej",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të qesh",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të qaj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të ec",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të vrapoj",
+      "note": "Running",
+      "tags": []
+    },
+    {
+      "text": "Të ulem",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të qëndroj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të jap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të marr",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të hap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të mbyll",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të mendoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të di",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të mos di",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të gjej",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të humbas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të ndihmoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të laj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të gatuaj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të këndoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të vallëzoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të përdor",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të bëj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të thërras",
+      "note": "Song / Name",
+      "tags": []
+    },
+    {
+      "text": "Të kap / mbaj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të vë / lë",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të hyj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të dal",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të hip",
+      "note": "Boarding",
+      "tags": []
+    },
+    {
+      "text": "Të zbres",
+      "note": "Alighting",
+      "tags": []
+    },
+    {
+      "text": "Të dërgoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të dorëzoj",
+      "note": "Submission",
+      "tags": []
+    },
+    {
+      "text": "Të shkoj mirë",
+      "note": "Greetings",
+      "tags": []
+    },
+    {
+      "text": "Të filloj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të mbaroj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të pushoj",
+      "note": "Relax",
+      "tags": []
+    },
+    {
+      "text": "Të pyes",
+      "note": "Question",
+      "tags": []
+    },
+    {
+      "text": "Të përgjigjem",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të premtoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të shqetësohem",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të besoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të dyshoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të uroj / shpresoj",
+      "note": "Hope",
+      "tags": []
+    },
+    {
+      "text": "Të ëndërroj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të luftoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të fitoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të humbas",
+      "note": "Defeat",
+      "tags": []
+    },
+    {
+      "text": "Të rritem",
+      "note": "Growth",
+      "tags": []
+    },
+    {
+      "text": "Të jetoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të vdes",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të marr",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të hedh tutje",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të fshihem",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të kërkoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të zgjedh",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të ndryshoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të porosis",
+      "note": "Buying items",
+      "tags": []
+    },
+    {
+      "text": "Të përgatis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të kap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të hedh",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të tërheq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të shtyj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të rregulloj / riparoj",
+      "note": "Repair",
+      "tags": []
+    },
+    {
+      "text": "Të thyej",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të jem sëmurë / lënduar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të trajtoj / shëroj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të ushtroj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të notoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të udhëtoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të ngas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të pastroj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të laj enët",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të laj rrobat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të bëj një dush",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të laj dhëmbët",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të zgjohem",
+      "note": "Wake up",
+      "tags": []
+    },
+    {
+      "text": "Të shkoj në shtrat",
+      "note": "Sleeping",
+      "tags": []
+    },
+    {
+      "text": "Të kuptoj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Të kujtoj",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

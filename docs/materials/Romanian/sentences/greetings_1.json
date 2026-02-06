@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Expresii de Bază și Fraze Uzuale 50",
+  "entries": [
+    {
+      "text": "Bună ziua / Salut.",
+      "note": "Salut politicos",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Încântat de cunoștință.",
+      "note": "Prima întâlnire",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nu ne-am văzut de mult.",
+      "note": "Revedere",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mulțumesc mult.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Îmi pare rău.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Scuzați-mă.",
+      "note": "Atrage atenția",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ce mai faceți ?",
+      "note": "Salut",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bine, mulțumesc.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cum vă numiți ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Numele meu este ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "De unde sunteți ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sunt din America.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "La revedere.",
+      "note": "Cui pleacă",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rămâneți cu bine / La revedere.",
+      "note": "Cui rămâne",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Da.",
+      "note": "Pozitiv",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nu.",
+      "note": "Negativ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Poate.",
+      "note": "Presupunere",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Înțeleg.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nu știu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ajutați-mă, vă rog.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Așteptați un moment, vă rog.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cât costă acesta ?",
+      "note": "Cumpărături",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Unde este toaleta ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mi-e foame.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mi-e sete.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Este gustos.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Îmi place.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "E în regulă.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mult noroc.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cât este ceasul acum ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vremea este frumoasă astăzi.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Este frig.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Este cald.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sunt obosit.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sunt fericit.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Felicitări.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "La mulți ani.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Să aveți o zi bună.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pe mâine.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Aveți grijă de dumneavoastră.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vorbiți engleza ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vorbesc doar puțină coreeană.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vorbiți rar, vă rog.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ce înseamnă aceasta ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cum se spune în coreeană ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Te iubesc.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Așteptați, vă rog.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cu plăcere / Pentru nimic.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nu, mulțumesc.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Am o întrebare.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

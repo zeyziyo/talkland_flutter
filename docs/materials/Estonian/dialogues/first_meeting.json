@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Tere! Minu nimi on Jordan. Meeldiv tutvuda.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Tere, Jordan! Mina olen Minji. Ka meeldiv tutvuda.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Kas sa oled üliõpilane?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Ei, ma olen kontoritöötaja. Aga sina?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ma olen kolledži tudeng. Ma õpin korea keelt.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Vau, see on suurepärane! Korea keel on natuke raske, kas pole?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Jah, see on raske, aga lõbus. Palun aidake mind palju.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Muidugi! Õpime koos kõvasti.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Aitäh. Näeme järgmine kord!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Head aega!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Tere! Minu nimi on Jordan. Meeldiv tutvuda.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tere, Jordan! Mina olen Minji. Ka meeldiv tutvuda.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kas sa oled üliõpilane?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ei, ma olen kontoritöötaja. Aga sina?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ma olen kolledži tudeng. Ma õpin korea keelt.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vau, see on suurepärane! Korea keel on natuke raske, kas pole?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jah, see on raske, aga lõbus. Palun aidake mind palju.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Muidugi! Õpime koos kõvasti.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Aitäh. Näeme järgmine kord!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Head aega!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

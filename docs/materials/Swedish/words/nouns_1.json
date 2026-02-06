@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Basnamn 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Person",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vatten",
+      "note": "Dricksvatten",
+      "tags": []
+    },
+    {
+      "text": "Mat / Ris",
+      "note": "Måltid",
+      "tags": []
+    },
+    {
+      "text": "Bröd",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Äpple",
+      "note": "Frukt",
+      "tags": []
+    },
+    {
+      "text": "Mjölk",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kött",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kläder",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hus",
+      "note": "Bostad",
+      "tags": []
+    },
+    {
+      "text": "Rum",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fönster",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dörr",
+      "note": "Ingång",
+      "tags": []
+    },
+    {
+      "text": "Skrivbord",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stol",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dator",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Telefon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bok",
+      "note": "Bok",
+      "tags": []
+    },
+    {
+      "text": "Penna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Papper",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Väska",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Skola",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Företag",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sjukhus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Apotek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Restaurang",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Marknad",
+      "note": "Marknad",
+      "tags": []
+    },
+    {
+      "text": "Tunnelbana",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Buss",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taxi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Flygplan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tåg",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cykel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Väg",
+      "note": "Väg",
+      "tags": []
+    },
+    {
+      "text": "Berg",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hav",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Flod",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Himmel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sol / År",
+      "note": "Sol / År",
+      "tags": []
+    },
+    {
+      "text": "Måne",
+      "note": "Satellit",
+      "tags": []
+    },
+    {
+      "text": "Stjärna",
+      "note": "Himmelskropp",
+      "tags": []
+    },
+    {
+      "text": "Träd",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Blomma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Valp",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Katt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pengar",
+      "note": "Kontanter",
+      "tags": []
+    },
+    {
+      "text": "Tid",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Idag",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Imorgon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Igår",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vän",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

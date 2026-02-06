@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Cyfarchion Sylfaenol a Brawddegau Dyddiol 50",
+  "entries": [
+    {
+      "text": "Helo.",
+      "note": "Polite greeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Braf cwrdd â chi.",
+      "note": "First meeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Amser maith ers gweld chi.",
+      "note": "Reunion",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Diolch yn fawr.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mae'n ddrwg gen i.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Esgusodwch fi.",
+      "note": "Attention",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sut wyt ti?",
+      "note": "Greetings",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rwy'n iawn, diolch.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Beth yw dy enw?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Fy enw i yw ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "O ble wyt ti'n dod?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rwy'n dod o America.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hwyl fawr.",
+      "note": "To someone leaving",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hwyl fawr.",
+      "note": "To someone staying",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ie.",
+      "note": "Positive",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Na.",
+      "note": "Negative",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Efallai.",
+      "note": "Guess",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rwy'n deall.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dw i ddim yn gwybod.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tafwch helpu fi.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Eiliad, os gwelwch yn dda.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Faint mae hwn yn ei gostio?",
+      "note": "Shopping",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ble mae'r ystafell ymolchi?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dw i'n llwglyd.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mae syched arna i.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mae'n flasus.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dw i'n hoffi e.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mae'n iawn.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pob lwc.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Faint o'r gloch yw hi nawr?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mae'r tywydd yn braf heddiw.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mae'n oer.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mae'n boeth.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dw i wedi blino.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dw i'n hapus.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Llongyfarchiadau.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Penblwydd hapus.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cael diwrnod da.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Welwn ni yfory.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cymerwch ofal.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Allwch chi siarad Saesneg?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dim ond ychydig o Coreeg alla i ei siarad.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Siaradwch yn araf, os gwelwch yn dda.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Beth mae hyn yn ei olygu?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sut ydych chi'n dweud hynny yn Coreeg?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rwy'n dy garu di.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Arhoswch, os gwelwch yn dda.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Croeso.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Na, mae'n iawn.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mae gen i gwestiwn.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

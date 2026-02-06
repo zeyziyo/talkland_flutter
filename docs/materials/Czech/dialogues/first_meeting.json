@@ -1,37 +1,86 @@
 {
-    "title": "První setkání",
-    "entries": [
-        {
-            "text": "Dobrý den!",
-            "speaker": "A"
-        },
-        {
-            "text": "Dobrý den. Rád vás poznávám.",
-            "speaker": "B"
-        },
-        {
-            "text": "Jak se jmenujete?",
-            "speaker": "A"
-        },
-        {
-            "text": "Jmenuji se [Jméno]. A vy?",
-            "speaker": "B"
-        },
-        {
-            "text": "Jmenuji se [Jméno]. Odkud jste?",
-            "speaker": "A"
-        },
-        {
-            "text": "Jsem z Ameriky. A vy?",
-            "speaker": "B"
-        },
-        {
-            "text": "Jsem z Koreje. Bylo mi potěšením vás poznat.",
-            "speaker": "A"
-        },
-        {
-            "text": "Mně také. Na shledanou.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Dobrý den!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dobrý den. Rád vás poznávám.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jak se jmenujete?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jmenuji se [Jméno]. A vy?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jmenuji se [Jméno]. Odkud jste?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jsem z Ameriky. A vy?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jsem z Koreje. Bylo mi potěšením vás poznat.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mně také. Na shledanou.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

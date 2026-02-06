@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "મૂળભૂત અભિવ્યક્તિઓ અને દૈનિક વાક્યો 50",
+  "entries": [
+    {
+      "text": "નમસ્તે / નમસ્કાર.",
+      "note": "વિનમ્ર અભિવાદન",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "તમને મળીને આનંદ થયો.",
+      "note": "પ્રથમ મુલાકાત",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ઘણા સમય પછી મળ્યા.",
+      "note": "પુનર્મિલન",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ખૂબ ખૂબ આભાર.",
+      "note": "ઔપચારિક",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "મને માફ કરશો.",
+      "note": "ઔપચારિક",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ક્ષમા કરજો / સાંભળો.",
+      "note": "ધ્યાન ખેંચવા માટે",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "તમે કેમ છો?",
+      "note": "અભિવાદન",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "હું મજામાં છું, આભાર.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "તમારું નામ શું છે?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "મારું નામ ... છે.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "તમે ક્યાંથી છો?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "હું અમેરિકાથી છું.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "આવજો / નમસ્તે.",
+      "note": "જનાર વ્યક્તિ માટે",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ધ્યાન રાખજો / આવજો.",
+      "note": "રહેનાર વ્યક્તિ માટે",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "હા.",
+      "note": "હકારાત્મક",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ના.",
+      "note": "નકારાત્મક",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "કદાચ.",
+      "note": "અનુમાન",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "હું સમજું છું.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "મને ખબર નથી.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "કૃપા કરીને મને મદદ કરો.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "કૃપા કરીને એક ક્ષણ રાહ જુઓ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "આ કેટલાનું છે?",
+      "note": "ખરીદી",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "શૌચાલય ક્યાં છે?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "મને ભૂખ લાગી છે.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "મને તરસ લાગી છે.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "આ સ્વાદિષ્ટ છે.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "મને આ ગમે છે.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "વાંધો નહીં / ઠીક છે.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "શુભેચ્છાઓ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "અત્યારે શું સમય થયો છે?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "આજે હવામાન સારું છે.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ઠંડી છે.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ગરમી છે.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "હું થાકી ગયો છું.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "હું ખુશ છું.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "અભિનંદન.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "જન્મદિવસ મુબારક.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "તમારો દિવસ શુભ રહે.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "કાલે મળીએ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "પોતાનું ધ્યાન રાખજો.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "શું તમે અંગ્રેજી બોલો છો?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "હું માત્ર થોડું કોરિયન બોલું છું.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "કૃપા કરીને ધીમેથી બોલો.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "આનો અર્થ શું છે?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "કોરિયનમાં આને શું કહેવાય?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "હું તને પ્રેમ કરું છું.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "કૃપા કરીને રાહ જુઓ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ભલે / વાંધો નહીં.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ના, આભાર.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "મારે એક પ્રશ્ન છે.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

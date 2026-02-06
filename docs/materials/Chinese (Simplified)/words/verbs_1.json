@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "动词 1",
+  "pos": "动词",
+  "entries": [
+    {
+      "text": "去",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "来",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "吃",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "喝",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "睡觉",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "看",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "买",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "卖",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "读",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "写",
+      "note": "写字",
+      "tags": []
+    },
+    {
+      "text": "听",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "说",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "做",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "工作",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "学习",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "教",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "学",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "等",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "见",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "爱",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "喜欢",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "讨厌",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "笑",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "哭",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "走",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "跑",
+      "note": "跑步",
+      "tags": []
+    },
+    {
+      "text": "坐",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "站",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "给",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "收",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "开",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "关",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "想",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "知道",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "不知道",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "找",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "丢",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "帮",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "洗",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "做饭",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "唱歌",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "跳舞",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "用",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "做",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "叫",
+      "note": "歌曲 / 名字",
+      "tags": []
+    },
+    {
+      "text": "抓",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "放",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "进",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "出",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "乘",
+      "note": "乘车",
+      "tags": []
+    },
+    {
+      "text": "下",
+      "note": "下车",
+      "tags": []
+    },
+    {
+      "text": "送",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "付",
+      "note": "提交",
+      "tags": []
+    },
+    {
+      "text": "过",
+      "note": "问候",
+      "tags": []
+    },
+    {
+      "text": "开始",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "结束",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "歇",
+      "note": "休息",
+      "tags": []
+    },
+    {
+      "text": "问",
+      "note": "语言提问",
+      "tags": []
+    },
+    {
+      "text": "答",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "约",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "愁",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "信",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "疑",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "愿 / 望",
+      "note": "希望",
+      "tags": []
+    },
+    {
+      "text": "梦",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "吵",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "赢",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "输",
+      "note": "失败",
+      "tags": []
+    },
+    {
+      "text": "长",
+      "note": "成长",
+      "tags": []
+    },
+    {
+      "text": "活 / 住",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "死",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "捡",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "扔",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "藏",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "搜",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "选",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "换",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "订",
+      "note": "购买物品",
+      "tags": []
+    },
+    {
+      "text": "准",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "抓",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "扔",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "拉",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "推",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "修",
+      "note": "修理",
+      "tags": []
+    },
+    {
+      "text": "坏",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "疼 / 病",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "治",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "运",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "泳",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "旅",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "开",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "扫",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "洗",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "洗",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "洗",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "刷",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "起",
+      "note": "起床",
+      "tags": []
+    },
+    {
+      "text": "睡",
+      "note": "就寝",
+      "tags": []
+    },
+    {
+      "text": "懂",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "记",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

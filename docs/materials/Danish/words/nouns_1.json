@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Basisnavneord 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Person",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vand",
+      "note": "Drikkevand",
+      "tags": []
+    },
+    {
+      "text": "Mad / Ris",
+      "note": "Måltid",
+      "tags": []
+    },
+    {
+      "text": "Brød",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Æble",
+      "note": "Frugt",
+      "tags": []
+    },
+    {
+      "text": "Mælk",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kød",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tøj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hus",
+      "note": "Bolig",
+      "tags": []
+    },
+    {
+      "text": "Rum",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vindue",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dør",
+      "note": "Indgang",
+      "tags": []
+    },
+    {
+      "text": "Skrivebord",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stol",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Computer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Telefon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bog",
+      "note": "Bog",
+      "tags": []
+    },
+    {
+      "text": "Blyant",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Papir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taske",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Skole",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Virksomhed",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hospital",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Apotek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Restaurant",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Marked",
+      "note": "Marked",
+      "tags": []
+    },
+    {
+      "text": "Metro",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taxa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Flyvemaskine",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tog",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cykel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vej",
+      "note": "Vej",
+      "tags": []
+    },
+    {
+      "text": "Bjerg",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hav",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Flod",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Himmel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sol / År",
+      "note": "Sol / År",
+      "tags": []
+    },
+    {
+      "text": "Måne",
+      "note": "Satellit",
+      "tags": []
+    },
+    {
+      "text": "Stjerne",
+      "note": "Himmelskrop",
+      "tags": []
+    },
+    {
+      "text": "Træ",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Blomst",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hvalp",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Penge",
+      "note": "Kontanter",
+      "tags": []
+    },
+    {
+      "text": "Tid",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "I dag",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "I morgen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "I går",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ven",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

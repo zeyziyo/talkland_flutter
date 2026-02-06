@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Basiese Uitdrukkings en Daaglikse Sinne 50",
+  "entries": [
+    {
+      "text": "Hallo.",
+      "note": "Beleefde groet",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Aangename kennis.",
+      "note": "Eerste ontmoeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lanklaas gesien.",
+      "note": "Weer ontmoeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Baie dankie.",
+      "note": "Formeel",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ek is jammer.",
+      "note": "Formeel",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Verskoon my.",
+      "note": "Om aandag te trek",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hoe gaan dit?",
+      "note": "Groet",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Goed, dankie.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wat is jou naam?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "My naam is ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Waarvandaan kom jy?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ek kom van Amerika.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mooi loop.",
+      "note": "Vir iemand wat gaan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mooi bly / Totsiens.",
+      "note": "Vir iemand wat bly",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ja.",
+      "note": "Positief",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nee.",
+      "note": "Negatief",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Miskien.",
+      "note": "Raai",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ek verstaan.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ek weet nie.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Help my asseblief.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wag asseblief 'n oomblik.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hoeveel kos dit?",
+      "note": "Inkopies",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Waar is die toilet?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ek is honger.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ek is dors.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dit is lekker.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ek hou hiervan.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dit is reg / Geen probleem nie.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Voorspoed.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hoe laat is dit nou?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Die weer is vandag lekker.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dit is koud.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dit is warm.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ek is moeg.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ek is gelukkig.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Baie geluk.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gelukkige verjaarsdag.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lekker dag.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sien jou môre.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pas jouself op.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Praat jy Engels?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ek praat net 'n bietjie Koreaans.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Praat asseblief stadig.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wat beteken dit?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wat noem mens dit in Koreaans?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ek is lief vir jou.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wag asseblief.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jy is welkom.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nee, dankie.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ek het 'n vraag.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

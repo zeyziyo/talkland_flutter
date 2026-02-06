@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "100 Temel Fiil",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "gitmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gelmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "yemek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "içmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "uyumak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "görmek / izlemek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "satın almak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "satmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "okumak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "yazmak",
+      "note": "yazma",
+      "tags": []
+    },
+    {
+      "text": "duymak / dinlemek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "konuşmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "yapmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "çalışmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "öğrenmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "öğretmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "çalışmak (ders)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "beklemek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "buluşmak / görüşmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "sevmek (aşk)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "hoşlanmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "nefret etmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gülmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ağlamak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "yürümek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "koşmak",
+      "note": "koşu",
+      "tags": []
+    },
+    {
+      "text": "oturmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ayakta durmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "vermek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "almak (teslim)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "açmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kapatmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "düşünmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bilmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bilmemek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "aramak / bulmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kaybetmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "yardım etmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "yıkamak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "yemek pişirmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "şarkı söylemek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "dans etmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kullanmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "yapmak / üretmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "çağırmak / söylemek",
+      "note": "şarkı / isim",
+      "tags": []
+    },
+    {
+      "text": "tutmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "koymak / bırakmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "girmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "çıkmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "binmek",
+      "note": "araç",
+      "tags": []
+    },
+    {
+      "text": "inmek",
+      "note": "araç",
+      "tags": []
+    },
+    {
+      "text": "göndermek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "sunmak / teslim etmek",
+      "note": "teslim",
+      "tags": []
+    },
+    {
+      "text": "yaşamak / vakit geçirmek",
+      "note": "selam",
+      "tags": []
+    },
+    {
+      "text": "başlamak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bitirmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "dinlenmek",
+      "note": "istirahat",
+      "tags": []
+    },
+    {
+      "text": "sormak",
+      "note": "soru",
+      "tags": []
+    },
+    {
+      "text": "cevaplamak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "söz vermek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "endişelenmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "inanmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "şüphelenmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ummak / dilemek",
+      "note": "umut",
+      "tags": []
+    },
+    {
+      "text": "rüya görmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kavga etmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kazanmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kaybetmek",
+      "note": "yenilgi",
+      "tags": []
+    },
+    {
+      "text": "büyümek",
+      "note": "gelişim",
+      "tags": []
+    },
+    {
+      "text": "yaşamak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ölmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "almak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "atmak / kurtulmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "saklanmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "aramak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "seçmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "değiştirmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "sipariş vermek",
+      "note": "ürün alımı",
+      "tags": []
+    },
+    {
+      "text": "hazırlanmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "yakalamak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "fırlatmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "çekmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "itmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tamir etmek",
+      "note": "onarım",
+      "tags": []
+    },
+    {
+      "text": "kırılmak / bozulmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "acımak / hastalanmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tedavi etmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "spor yapmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "yüzmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "seyahat etmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "araba sürmek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "temizlemek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bulaşık yıkamak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "çamaşır yıkamak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "banyo yapmak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "diş fırçalamak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "uyanmak",
+      "note": "uyanış",
+      "tags": []
+    },
+    {
+      "text": "uyumak (yatağa gitmek)",
+      "note": "uyku",
+      "tags": []
+    },
+    {
+      "text": "anlamak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "hatırlamak",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

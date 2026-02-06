@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "मूलभूत अभिव्यक्ती आणि दैनिक वाक्ये ५०",
+  "entries": [
+    {
+      "text": "नमस्ते / नमस्कार.",
+      "note": "नम्र अभिवादन",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "तुम्हाला भेटून आनंद झाला.",
+      "note": "पहिली भेट",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "खूप दिवसांनी भेटलो.",
+      "note": "पुनर्भेट",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "खूप खूप धन्यवाद.",
+      "note": "औपचारिक",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "क्षमस्व.",
+      "note": "औपचारिक",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "माफ करा.",
+      "note": "लक्ष वेधून घेणे",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कसे आहात?",
+      "note": "अभिवादन",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मी ठीक आहे, धन्यवाद.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "तुमचे नाव काय आहे?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "माझे नाव ... आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "तुम्ही कुठून आहात?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मी अमेरिकेहून आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "येतो मी / निरोप.",
+      "note": "जाणाऱ्यासाठी",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "काळजी घ्या / निरोप.",
+      "note": "राहणाऱ्यासाठी",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "हो.",
+      "note": "सकारात्मक",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "नाही.",
+      "note": "नकारात्मक",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कदाचित.",
+      "note": "अंदाज",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मला समजते.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मला माहित नाही.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कृपया मला मदत करा.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कृपया एक क्षण थांबा.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "याची किंमत किती आहे?",
+      "note": "खरेदी",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "शौचालय कुठे आहे?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मला भूक लागली आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मला तहान लागली आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "हे चविष्ट आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मला हे आवडते.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ठीक आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "शुभेच्छा.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "आता वेळ काय झाली आहे?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "आज हवामान चांगले आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "थंडी आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "उन्हाळा / गरम आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मी थकलो आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मी आनंदी आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "अभिनंदन.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "वाढदिवसाच्या शुभेच्छा.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "तुमचा दिवस शुभ असो.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "उद्या भेटू.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "स्वतःची काळजी घ्या.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "तुम्ही इंग्रजी बोलता का?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मला फक्त थोडी कोरियन बोलता येते.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कृपया हळू बोला.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "याचा अर्थ काय आहे?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कोरियनमध्ये याला काय म्हणतात?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "माझे तुझ्यावर प्रेम आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कृपया थांबा.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "स्वागत आहे / काही हरकत नाही.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "नको, धन्यवाद.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मला एक प्रश्न आहे.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

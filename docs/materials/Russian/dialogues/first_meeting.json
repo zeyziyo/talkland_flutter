@@ -1,37 +1,86 @@
 {
-    "title": "Первая встреча",
-    "entries": [
-        {
-            "text": "Здравствуйте!",
-            "speaker": "A"
-        },
-        {
-            "text": "Здравствуйте. Рад встрече.",
-            "speaker": "B"
-        },
-        {
-            "text": "Как вас зовут?",
-            "speaker": "A"
-        },
-        {
-            "text": "Меня зовут [Имя]. А вас?",
-            "speaker": "B"
-        },
-        {
-            "text": "Меня зовут [Имя]. Откуда вы?",
-            "speaker": "A"
-        },
-        {
-            "text": "Я из Америки. А вы?",
-            "speaker": "B"
-        },
-        {
-            "text": "Я из Кореи. Рад был познакомиться.",
-            "speaker": "A"
-        },
-        {
-            "text": "Я тоже. До свидания.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Здравствуйте!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Здравствуйте. Рад встрече.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Как вас зовут?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Меня зовут [Имя]. А вас?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Меня зовут [Имя]. Откуда вы?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я из Америки. А вы?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я из Кореи. Рад был познакомиться.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я тоже. До свидания.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

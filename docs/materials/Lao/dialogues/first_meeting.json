@@ -1,37 +1,86 @@
 {
-    "title": "ການພົບກັນຄັ້ງທຳອິດ",
-    "entries": [
-        {
-            "text": "ສະບາຍດີ!",
-            "speaker": "A"
-        },
-        {
-            "text": "ສະບາຍດີ. ຍິນດີທີ່ໄດ້ພົບເຈົ້າ.",
-            "speaker": "B"
-        },
-        {
-            "text": "ເຈົ້າຊື່ຫຍັງ?",
-            "speaker": "A"
-        },
-        {
-            "text": "ຂ້ອຍຊື່ [ຊື່]. ແລ້ວເຈົ້າເດ?",
-            "speaker": "B"
-        },
-        {
-            "text": "ຂ້ອຍຊື່ [ຊື່]. ເຈົ້າມາຈາກໃສ?",
-            "speaker": "A"
-        },
-        {
-            "text": "ຂ້ອຍມາຈາກອາເມລິກາ. ແລ້ວເຈົ້າເດ?",
-            "speaker": "B"
-        },
-        {
-            "text": "ຂ້ອຍມາຈາກເກົາຫຼີ. ຍິນດີທີ່ໄດ້ຮູ້ຈັກກັບເຈົ້າ.",
-            "speaker": "A"
-        },
-        {
-            "text": "ຂ້ອຍຄືກັນ. ລາກ່ອນ.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "ສະບາຍດີ!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ສະບາຍດີ. ຍິນດີທີ່ໄດ້ພົບເຈົ້າ.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ເຈົ້າຊື່ຫຍັງ?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍຊື່ [ຊື່]. ແລ້ວເຈົ້າເດ?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍຊື່ [ຊື່]. ເຈົ້າມາຈາກໃສ?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍມາຈາກອາເມລິກາ. ແລ້ວເຈົ້າເດ?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍມາຈາກເກົາຫຼີ. ຍິນດີທີ່ໄດ້ຮູ້ຈັກກັບເຈົ້າ.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍຄືກັນ. ລາກ່ອນ.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

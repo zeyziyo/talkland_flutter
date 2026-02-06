@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Verbes 1",
+  "pos": "Verbe",
+  "entries": [
+    {
+      "text": "Aller",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Venir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Manger",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Boire",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dormir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Voir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Acheter",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vendre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lire",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Écrire",
+      "note": "Écriture",
+      "tags": []
+    },
+    {
+      "text": "Écouter",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Parler",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Faire",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Travailler",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Étudier",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Enseigner",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Apprendre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Attendre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rencontrer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aimer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aimer / Apprécier",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Détester",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rire",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pleurer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Marcher",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Courir",
+      "note": "Course",
+      "tags": []
+    },
+    {
+      "text": "S'asseoir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Se tenir debout",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Donner",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Recevoir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ouvrir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fermer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Penser",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Savoir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ne pas savoir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chercher / Trouver",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Perdre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aider",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Laver",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cuisiner",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chanter",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Danser",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Utiliser",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Faire / Créer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Appeler / Chanter",
+      "note": "Chanson / Nom",
+      "tags": []
+    },
+    {
+      "text": "Attraper / Saisir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Poser / Laisser",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Entrer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sortir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Monter",
+      "note": "Dans un véhicule",
+      "tags": []
+    },
+    {
+      "text": "Descendre",
+      "note": "D'un véhicule",
+      "tags": []
+    },
+    {
+      "text": "Envoyer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Remettre",
+      "note": "Soumission",
+      "tags": []
+    },
+    {
+      "text": "Aller / Se passer",
+      "note": "Salutations",
+      "tags": []
+    },
+    {
+      "text": "Commencer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Finir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Se reposer",
+      "note": "Repos",
+      "tags": []
+    },
+    {
+      "text": "Demander",
+      "note": "Question",
+      "tags": []
+    },
+    {
+      "text": "Répondre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Promettre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "S'inquiéter",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Croire",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Douter",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Désirer / Espérer",
+      "note": "Espoir",
+      "tags": []
+    },
+    {
+      "text": "Rêver",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Se battre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gagner",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Perdre",
+      "note": "Défaite",
+      "tags": []
+    },
+    {
+      "text": "Grandir",
+      "note": "Croissance",
+      "tags": []
+    },
+    {
+      "text": "Vivre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mourir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ramasser",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jeter",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cacher",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chercher",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Choisir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Changer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Commander",
+      "note": "Achat d'articles",
+      "tags": []
+    },
+    {
+      "text": "Préparer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Attraper",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lancer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tirer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pousser",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Réparer",
+      "note": "Réparation",
+      "tags": []
+    },
+    {
+      "text": "Casser",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Être malade / Avoir mal",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Soigner",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Faire de l'exercice",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nager",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Voyager",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Conduire",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nettoyer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Faire la vaisselle",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Faire la lessive",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Se doucher",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Se brosser les dents",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Se réveiller / Se lever",
+      "note": "Réveil",
+      "tags": []
+    },
+    {
+      "text": "Se coucher",
+      "note": "Sommeil",
+      "tags": []
+    },
+    {
+      "text": "Comprendre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Se souvenir",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

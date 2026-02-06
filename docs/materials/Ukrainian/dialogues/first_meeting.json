@@ -1,37 +1,86 @@
 {
-    "title": "Перша зустріч",
-    "entries": [
-        {
-            "text": "Вітаю!",
-            "speaker": "A"
-        },
-        {
-            "text": "Вітаю. Радий зустрічі.",
-            "speaker": "B"
-        },
-        {
-            "text": "Як вас звати?",
-            "speaker": "A"
-        },
-        {
-            "text": "Мене звати [Ім'я]. А вас?",
-            "speaker": "B"
-        },
-        {
-            "text": "Мене звати [Ім'я]. Звідки ви?",
-            "speaker": "A"
-        },
-        {
-            "text": "Я з Америки. А ви?",
-            "speaker": "B"
-        },
-        {
-            "text": "Я з Кореї. Радий був познайомитися.",
-            "speaker": "A"
-        },
-        {
-            "text": "Я також. До побачення.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Вітаю!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Вітаю. Радий зустрічі.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Як вас звати?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мене звати [Ім'я]. А вас?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мене звати [Ім'я]. Звідки ви?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я з Америки. А ви?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я з Кореї. Радий був познайомитися.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я також. До побачення.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

@@ -1,37 +1,86 @@
 {
-    "title": "اللقاء الأول",
-    "entries": [
-        {
-            "text": "مرحباً!",
-            "speaker": "A"
-        },
-        {
-            "text": "مرحباً. تشرفت بلقائك.",
-            "speaker": "B"
-        },
-        {
-            "text": "ما اسمك؟",
-            "speaker": "A"
-        },
-        {
-            "text": "اسمي [الاسم]. وأنت؟",
-            "speaker": "B"
-        },
-        {
-            "text": "اسمي [الاسم]. من أين أنت؟",
-            "speaker": "A"
-        },
-        {
-            "text": "أنا من أمريكا. وأنت؟",
-            "speaker": "B"
-        },
-        {
-            "text": "أنا من كوريا. تشرفت بمعرفتك.",
-            "speaker": "A"
-        },
-        {
-            "text": "وأنا أيضاً. مع السلامة.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "مرحباً!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "مرحباً. تشرفت بلقائك.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ما اسمك؟",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "اسمي [الاسم]. وأنت؟",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "اسمي [الاسم]. من أين أنت؟",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أنا من أمريكا. وأنت؟",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أنا من كوريا. تشرفت بمعرفتك.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "وأنا أيضاً. مع السلامة.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

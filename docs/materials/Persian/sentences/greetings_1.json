@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "اصطلاحات پایه و جملات روزمره ۵۰",
+  "entries": [
+    {
+      "text": "سلام.",
+      "note": "احوالپرسی محترمانه",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "از ملاقات شما خوشبختم.",
+      "note": "اولین ملاقات",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "خیلی وقت است که ندیدمتان.",
+      "note": "ملاقات مجدد",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "خیلی ممنونم.",
+      "note": "رسمی",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "متاسفم.",
+      "note": "رسمی",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ببخشید.",
+      "note": "جلب توجه",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "حالتان چطور است؟",
+      "note": "احوالپرسی",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "خوبم، ممنون.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "نام شما چیست؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "نام من ... است.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "اهل کجا هستید؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "من اهل آمریکا هستم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "به سلامت.",
+      "note": "به کسی که می‌رود",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "خدا نگهدار.",
+      "note": "به کسی که می‌ماند",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "بله.",
+      "note": "مثبت",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "خیر / نه.",
+      "note": "منفی",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "شاید.",
+      "note": "حدس",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "فهمیدم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "نمی‌دانم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "لطفا به من کمک کنید.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "لطفا یک لحظه صبر کنید.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "قیمت این چند است؟",
+      "note": "خرید",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "دستشویی کجاست؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "گرسنه هستم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "تشنه هستم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "این خوشمزه است.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "این را دوست دارم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "اشکالی ندارد.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "موفق باشید.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ساعت چند است؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "امروز هوا خوب است.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "سرد است.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "گرم است.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "خسته هستم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "خوشحال هستم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "تبریک می‌گویم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "تولدت مبارک.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "روز خوبی داشته باشید.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "فردا می‌بینمت.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "مراقب خودت باش.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "آیا انگلیسی صحبت می‌کنید؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "من فقط کمی کره ای بلد هستم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "لطفا آرام صحبت کنید.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "این به چه معناست؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "در کره ای به این چه می‌گویند؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "دوستت دارم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "لطفا منتظر بمانید.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "خواهش می‌کنم / مشکلی نیست.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "نه، متشکرم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "یک سوال دارم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "ନମସ୍କାର! ମୋର ନାମ ଜୋର୍ଡାନ। ଆପଣଙ୍କୁ ଭେଟି ମୁଁ ଖୁସି।",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "ନମସ୍କାର ଜୋର୍ଡାନ! ମୁଁ ମିଞ୍ଜି। ଆପଣଙ୍କୁ ଭେଟି ମୁଁ ମଧ୍ୟ ଖୁସି।",
-            "speaker": "Minji"
-        },
-        {
-            "text": "ଆପଣ ଜଣେ ଛାତ୍ର କି?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "ନା, ମୁଁ ଜଣେ ଅଫିସ କର୍ମଚାରୀ। ଆପଣଙ୍କ ବିଷୟରେ କ'ଣ?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "ମୁଁ ଜଣେ କଲେଜ ଛାତ୍ର। ମୁଁ କୋରିଆନ୍ ଅଧ୍ୟୟନ କରୁଛି।",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "ବାଃ, ତାହା ବହୁତ ଭଲ! କୋରିଆନ୍ ଟିକେ କଷ୍ଟକର, ନୁହେଁ କି?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "ହଁ, ଏହା କଷ୍ଟକର କିନ୍ତୁ ମଜାଦାର୍। ଦୟାକରି ମୋତେ ଅନେକ ସାହାଯ୍ୟ କରନ୍ତୁ।",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "ନିଶ୍ଚିତ! ଆସନ୍ତୁ ଏକାଠି କଠିନ ଅଧ୍ୟୟନ କରିବା।",
-            "speaker": "Minji"
-        },
-        {
-            "text": "ଧନ୍ୟବାଦ। ପୁଣି ଦେଖାହେବ!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "ବିଦାୟ!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "ନମସ୍କାର! ମୋର ନାମ ଜୋର୍ଡାନ। ଆପଣଙ୍କୁ ଭେଟି ମୁଁ ଖୁସି।",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ନମସ୍କାର ଜୋର୍ଡାନ! ମୁଁ ମିଞ୍ଜି। ଆପଣଙ୍କୁ ଭେଟି ମୁଁ ମଧ୍ୟ ଖୁସି।",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଆପଣ ଜଣେ ଛାତ୍ର କି?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ନା, ମୁଁ ଜଣେ ଅଫିସ କର୍ମଚାରୀ। ଆପଣଙ୍କ ବିଷୟରେ କ'ଣ?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ମୁଁ ଜଣେ କଲେଜ ଛାତ୍ର। ମୁଁ କୋରିଆନ୍ ଅଧ୍ୟୟନ କରୁଛି।",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ବାଃ, ତାହା ବହୁତ ଭଲ! କୋରିଆନ୍ ଟିକେ କଷ୍ଟକର, ନୁହେଁ କି?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ହଁ, ଏହା କଷ୍ଟକର କିନ୍ତୁ ମଜାଦାର୍। ଦୟାକରି ମୋତେ ଅନେକ ସାହାଯ୍ୟ କରନ୍ତୁ।",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ନିଶ୍ଚିତ! ଆସନ୍ତୁ ଏକାଠି କଠିନ ଅଧ୍ୟୟନ କରିବା।",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ଧନ୍ୟବାଦ। ପୁଣି ଦେଖାହେବ!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ବିଦାୟ!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Kaixo! Jordan dut izena. Pozten nau zu ezagutzeak.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Kaixo Jordan! Minji naiz. Ni ere pozten naiz zu ezagutzeaz.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ikaslea zara?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Ez, bulegari bat naiz. Eta zu?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Unibertsitateko ikaslea naiz. Koreera ikasten ari naiz.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "A, zeinen ona! Koreera zaila da, ezta?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Bai, zaila da baina dibertigarria. Mesedez, lagundu iezadazu asko.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Noski! Ikas dezagun gogor elkarrekin.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Eskerrik asko. Hurrengoan arte!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Agur!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Kaixo! Jordan dut izena. Pozten nau zu ezagutzeak.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kaixo Jordan! Minji naiz. Ni ere pozten naiz zu ezagutzeaz.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ikaslea zara?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ez, bulegari bat naiz. Eta zu?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Unibertsitateko ikaslea naiz. Koreera ikasten ari naiz.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "A, zeinen ona! Koreera zaila da, ezta?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bai, zaila da baina dibertigarria. Mesedez, lagundu iezadazu asko.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Noski! Ikas dezagun gogor elkarrekin.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Eskerrik asko. Hurrengoan arte!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Agur!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

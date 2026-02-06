@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Basuttryck och Dagliga Meningar 50",
+  "entries": [
+    {
+      "text": "Hej / God dag.",
+      "note": "Hövlig hälsning",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Trevligt att träffas.",
+      "note": "Första mötet",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Länge sen sist.",
+      "note": "Återseende",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tack så mycket.",
+      "note": "Formellt",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag är ledsen.",
+      "note": "Formellt",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ursäkta mig.",
+      "note": "Dra till sig uppmärksamhet",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hur mår du?",
+      "note": "Hälsningar",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bra, tack.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vad heter du?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag heter ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Varifrån kommer du?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag kommer från Amerika.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Adjö.",
+      "note": "Till någon som går",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hej då / Adjö.",
+      "note": "Till någon som stannar",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ja.",
+      "note": "Positivt",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nej.",
+      "note": "Negativt",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kanske.",
+      "note": "Gissning",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag förstår.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag vet inte.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hjälp mig, snälla.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vänta lite, snälla.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hur mycket kostar det här?",
+      "note": "Shopping",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Var finns toaletten?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag är hungrig.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag är törstig.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Det är gott.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag gillar det.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Det är okej.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lycka till.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vad är klockan nu?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vädret är fint idag.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Det är kallt.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Det är varmt.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag är trött.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag är lycklig.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Grattis.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Grattis på födelsedagen.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ha en bra dag.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vi ses imorgon.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ta hand om dig.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Talar du engelska?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag talar bara lite koreanska.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tala långsamt, tack.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vad betyder det här?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hur säger man det på koreanska?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag älskar dig.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vänta, snälla.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "För all del / Ingen orsak.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nej tack.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag har en fråga.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

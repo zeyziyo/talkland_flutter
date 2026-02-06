@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Perusilmaukset ja Päivittäiset Lauseet 50",
+  "entries": [
+    {
+      "text": "Hei / Hyvää päivää.",
+      "note": "Kohtelias tervehdys",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hauska tavata.",
+      "note": "Ensitapaaminen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pitkästä aikaa.",
+      "note": "Jälleennäkeminen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kiitos paljon.",
+      "note": "Muodollinen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Olen pahoillani.",
+      "note": "Muodollinen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Anteeksi.",
+      "note": "Huomion herättäminen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mitä kuuluu?",
+      "note": "Tervehdys",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hyvää, kiitos.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mikä nimesi on?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nimeni on ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mistä olet kotoisin?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Olen kotoisin Amerikasta.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Näkemiin.",
+      "note": "Lähtevälle",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hei hei / Näkemiin.",
+      "note": "Jäävälle",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kyllä.",
+      "note": "Myönteinen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ei.",
+      "note": "Kielteinen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ehkä.",
+      "note": "Arvaus",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ymmärrän.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "En tiedä.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Auta minua, kiitos.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Odota hetki, kiitos.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Paljonko tämä maksaa?",
+      "note": "Ostokset",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Missä on vessa?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Minulla on nälkä.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Minulla on jano.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tämä on herkullista.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pidän tästä.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Se on okei.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Onnea.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mitä kello on nyt?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tänään on kaunis sää.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "On kylmä.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "On kuuma.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Olen väsynyt.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Olen onnellinen.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Onnea.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hyvää syntymäpäivää.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hyvää päivänjatkoa.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nähdään huomenna.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pidä huolta itsestäsi.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Puhutko englantia?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Puhun vain vähän koreaa.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Puhu hitaasti, kiitos.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mitä tämä tarkoittaa?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Miten se sanotaan koreaksi?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rakastan sinua.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Odota, kiitos.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ole hyvä / Eipä kestä.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ei kiitos.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Minulla on kysymys.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

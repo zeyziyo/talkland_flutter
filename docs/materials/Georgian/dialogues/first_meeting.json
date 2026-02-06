@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "გამარჯობა! მე ჯორდანი ვარ. სასიამოვნოა თქვენი გაცნობა.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "გამარჯობა ჯორდან! მე მინჯი ვარ. მეც სასიამოვნოა შენი გაცნობა.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "სტუდენტი ხარ?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "არა, საოფისე თანამშრომელი ვარ. შენ?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "მე კოლეჯის სტუდენტი ვარ. კორეულს ვსწავლობ.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "ვაუ, მშვენიერია! კორეული ცოტა რთულია, არა?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "კი, რთულია, მაგრამ სახალისო. გთხოვთ, ძალიან დამეხმარეთ.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "რა თქმა უნდა! ერთად ვიმეცადინოთ.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "გმადლობთ. მომავალ შეხვედრამდე!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "ნახვამდის!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "გამარჯობა! მე ჯორდანი ვარ. სასიამოვნოა თქვენი გაცნობა.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "გამარჯობა ჯორდან! მე მინჯი ვარ. მეც სასიამოვნოა შენი გაცნობა.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "სტუდენტი ხარ?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "არა, საოფისე თანამშრომელი ვარ. შენ?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "მე კოლეჯის სტუდენტი ვარ. კორეულს ვსწავლობ.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ვაუ, მშვენიერია! კორეული ცოტა რთულია, არა?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "კი, რთულია, მაგრამ სახალისო. გთხოვთ, ძალიან დამეხმარეთ.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "რა თქმა უნდა! ერთად ვიმეცადინოთ.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "გმადლობთ. მომავალ შეხვედრამდე!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ნახვამდის!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Pamata darbības vārdi 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Iet",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nākt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ēst",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dzert",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gulēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Redzēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pirkt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pārdot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lasīt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rakstīt",
+      "note": "Writing",
+      "tags": []
+    },
+    {
+      "text": "Klausīties",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Runāt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Darīt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Strādāt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mācīties",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mācīt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Apgūt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gaidīt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Satikties",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mīlēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Patikt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nepatikt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Smieties",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Raudāt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Iet",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Skriet",
+      "note": "Running",
+      "tags": []
+    },
+    {
+      "text": "Sēdēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stāvēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Saņemt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Atvērt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aizvērt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Domāt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zināt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nezināt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Atrast",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pazaudēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Palīdzēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mazgāt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gatavot ēst",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dziedāt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dejot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lietot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ražot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zvanīt",
+      "note": "Song / Name",
+      "tags": []
+    },
+    {
+      "text": "Noķert / turēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ielikt / atstāt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ieiet",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Iziet",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Iekāpt",
+      "note": "Boarding",
+      "tags": []
+    },
+    {
+      "text": "Izskāpt",
+      "note": "Alighting",
+      "tags": []
+    },
+    {
+      "text": "Sūtīt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Iesniegt",
+      "note": "Submission",
+      "tags": []
+    },
+    {
+      "text": "Satikt",
+      "note": "Greetings",
+      "tags": []
+    },
+    {
+      "text": "Sākt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Beigt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Atpūsties",
+      "note": "Relax",
+      "tags": []
+    },
+    {
+      "text": "Jautāt",
+      "note": "Question",
+      "tags": []
+    },
+    {
+      "text": "Atbildēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Solīt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uztraukties",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ticēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Šaubīties",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vēlēties / cerēt",
+      "note": "Hope",
+      "tags": []
+    },
+    {
+      "text": "Sapņot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cīnīties",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uzvarēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zaudēt",
+      "note": "Defeat",
+      "tags": []
+    },
+    {
+      "text": "Augt",
+      "note": "Growth",
+      "tags": []
+    },
+    {
+      "text": "Dzīvot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mirt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pacelt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Izmest",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Slēpt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Meklēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Izvēlēties",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mainīt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pasūtīt",
+      "note": "Buying items",
+      "tags": []
+    },
+    {
+      "text": "Sagatavot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Noķert",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mest",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vilkt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Grūst",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Salabot / labot",
+      "note": "Repair",
+      "tags": []
+    },
+    {
+      "text": "Salauzt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Slimot / sāpēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ārstēt / dziedēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vingrot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Peldēt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ceļot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vadīt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tīrīt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mazgāt traukus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mazgāt veļu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Iet dušā",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tīrīt zobus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pamosties",
+      "note": "Wake up",
+      "tags": []
+    },
+    {
+      "text": "Iet gulēt",
+      "note": "Sleeping",
+      "tags": []
+    },
+    {
+      "text": "Saprast",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Atcerēties",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

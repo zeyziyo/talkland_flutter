@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Basisuitdrukkingen en Dagelijkse Zinnen 50",
+  "entries": [
+    {
+      "text": "Hallo / Goedendag.",
+      "note": "Beleefde groet",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Leuk u te ontmoeten.",
+      "note": "Eerste ontmoeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lange tijd niet gezien.",
+      "note": "Weerzien",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dank u wel.",
+      "note": "Formeel",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Het spijt me.",
+      "note": "Formeel",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pardon.",
+      "note": "Aandacht trekken",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hoe gaat het met u?",
+      "note": "Groet",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Goed, dank u.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wat is uw naam?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mijn naam is ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Waar komt u vandaan?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik kom uit Amerika.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tot ziens.",
+      "note": "Aan iemand die weggaat",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dag / Tot ziens.",
+      "note": "Aan iemand die blijft",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ja.",
+      "note": "Positief",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nee.",
+      "note": "Negatief",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Misschien.",
+      "note": "Vermoeden",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik begrijp het.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik weet het niet.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Help me alstublieft.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Een moment alstublieft.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hoeveel kost dit?",
+      "note": "Winkelen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Waar is het toilet?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik heb honger.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik heb dorst.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Het is lekker.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik vind het leuk.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Het is oké.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Veel succes.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hoe laat is het nu?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Het weer is goed vandaag.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Het is koud.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Het is warm.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik ben moe.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik ben gelukkig.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gefeliciteerd.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gefeliciteerd met je verjaardag.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Fijne dag nog.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tot morgen.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pas goed op uzelf.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Spreekt u Engels?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik spreek maar een beetje Koreaans.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Spreek langzaam alstublieft.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wat betekent dit?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hoe zeg je dat in het Koreaans?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik hou van je.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wacht alstublieft.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Graag gedaan / Geen dank.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nee, dank u.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik heb een vraag.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

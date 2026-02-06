@@ -1,37 +1,86 @@
 {
-    "title": "פגישה ראשונה",
-    "entries": [
-        {
-            "text": "שלום!",
-            "speaker": "A"
-        },
-        {
-            "text": "שלום. נעים להכיר.",
-            "speaker": "B"
-        },
-        {
-            "text": "מה שמך?",
-            "speaker": "A"
-        },
-        {
-            "text": "שמי [שם]. ושלך?",
-            "speaker": "B"
-        },
-        {
-            "text": "שמי [שם]. מאיפה אתה?",
-            "speaker": "A"
-        },
-        {
-            "text": "אני מאמריקה. ואתה?",
-            "speaker": "B"
-        },
-        {
-            "text": "אני מקוריאה. נעים להכיר אותך.",
-            "speaker": "A"
-        },
-        {
-            "text": "גם אותי. להתראות.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "שלום!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "שלום. נעים להכיר.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "מה שמך?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "שמי [שם]. ושלך?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "שמי [שם]. מאיפה אתה?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אני מאמריקה. ואתה?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אני מקוריאה. נעים להכיר אותך.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "גם אותי. להתראות.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

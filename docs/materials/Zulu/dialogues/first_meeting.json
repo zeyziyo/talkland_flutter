@@ -1,37 +1,86 @@
 {
-    "title": "Ukuhlangana Kokuqala",
-    "entries": [
-        {
-            "text": "Sawubona!",
-            "speaker": "A"
-        },
-        {
-            "text": "Sawubona. Ngiyajabula ukukwazisa.",
-            "speaker": "B"
-        },
-        {
-            "text": "Ubani igama lakho?",
-            "speaker": "A"
-        },
-        {
-            "text": "Igama lami ngingu [Igama]. Wena?",
-            "speaker": "B"
-        },
-        {
-            "text": "Igama lami ngingu [Igama]. Umuphi?",
-            "speaker": "A"
-        },
-        {
-            "text": "Ngingowase-Amerika. Wena?",
-            "speaker": "B"
-        },
-        {
-            "text": "Ngingowase-Korea. Ngiyakujabulela ukukwazi.",
-            "speaker": "A"
-        },
-        {
-            "text": "Nami futhi. Hamba kahle.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Sawubona!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sawubona. Ngiyajabula ukukwazisa.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ubani igama lakho?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Igama lami ngingu [Igama]. Wena?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Igama lami ngingu [Igama]. Umuphi?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ngingowase-Amerika. Wena?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ngingowase-Korea. Ngiyakujabulela ukukwazi.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nami futhi. Hamba kahle.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

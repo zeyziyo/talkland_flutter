@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Berfau Sylfaenol 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Mynd",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dod",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bwyta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yfed",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cysgu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gweld",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prynu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gwerthu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Darllen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ysgrifennu",
+      "note": "Writing",
+      "tags": []
+    },
+    {
+      "text": "Gwrando",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Siarad",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gwneud",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gweithio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Astudio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Addysgu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dysgu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aros",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cwrdd",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Caru",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hoffi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Casáu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chwerthin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Crio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cerdded",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rhedeg",
+      "note": "Running",
+      "tags": []
+    },
+    {
+      "text": "Eistedd",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sefyll",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rhoi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Derbyn",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Agor",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cau",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Meddwl",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gwybod",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Peidio â gwybod",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Canfod",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Colli",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Helpu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Golchi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Coginio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Canu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dawnsio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Defnyddio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gwneud",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ffônio",
+      "note": "Song / Name",
+      "tags": []
+    },
+    {
+      "text": "Dal / gafael",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rhoi / gadael",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mynd i mewn",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gadael",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bachu ar",
+      "note": "Boarding",
+      "tags": []
+    },
+    {
+      "text": "Disgyn",
+      "note": "Alighting",
+      "tags": []
+    },
+    {
+      "text": "Anfon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cyflwyno",
+      "note": "Submission",
+      "tags": []
+    },
+    {
+      "text": "Dod ymlaen",
+      "note": "Greetings",
+      "tags": []
+    },
+    {
+      "text": "Dechrau",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gorffen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gorffwys",
+      "note": "Relax",
+      "tags": []
+    },
+    {
+      "text": "Gofyn",
+      "note": "Question",
+      "tags": []
+    },
+    {
+      "text": "Ateb",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Addo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Poeni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Credu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Amau",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dymuno / gobeithio",
+      "note": "Hope",
+      "tags": []
+    },
+    {
+      "text": "Breuddwydio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ymladd",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ennill",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Colli",
+      "note": "Defeat",
+      "tags": []
+    },
+    {
+      "text": "Tyfu",
+      "note": "Growth",
+      "tags": []
+    },
+    {
+      "text": "Byw",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Marw",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Codi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taflu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cuddio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chwilio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dewis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Newid",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Archebu",
+      "note": "Buying items",
+      "tags": []
+    },
+    {
+      "text": "Paratoi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dalfal",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taflu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tynnu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gwthio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Trwsio / atgyweirio",
+      "note": "Repair",
+      "tags": []
+    },
+    {
+      "text": "Torri",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bod yn sâl / brifo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Trin / gwella",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ymarfer corff",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nofio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Teithio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gyrru",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Glanhau",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Golchi llestri",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Golchi dillad",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cymryd cawod",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Brwsio dannedd",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Deffro",
+      "note": "Wake up",
+      "tags": []
+    },
+    {
+      "text": "Mynd i'r gwely",
+      "note": "Sleeping",
+      "tags": []
+    },
+    {
+      "text": "Deall",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cofio",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

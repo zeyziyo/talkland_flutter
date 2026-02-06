@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Substantivos Básicos 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Pessoa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Água",
+      "note": "Água potável",
+      "tags": []
+    },
+    {
+      "text": "Comida / Arroz",
+      "note": "Refeição",
+      "tags": []
+    },
+    {
+      "text": "Pão",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maçã",
+      "note": "Fruta",
+      "tags": []
+    },
+    {
+      "text": "Leite",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Carne",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Roupa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Casa",
+      "note": "Moradia",
+      "tags": []
+    },
+    {
+      "text": "Quarto",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Janela",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Porta",
+      "note": "Entrada",
+      "tags": []
+    },
+    {
+      "text": "Escrivaninha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cadeira",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Computador",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Telefone",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Livro",
+      "note": "Livro",
+      "tags": []
+    },
+    {
+      "text": "Lápis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Papel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bolsa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Escola",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Empresa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hospital",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Farmácia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Restaurante",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mercado",
+      "note": "Mercado",
+      "tags": []
+    },
+    {
+      "text": "Metrô",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ônibus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Táxi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Avião",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Trem",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bicicleta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Caminho",
+      "note": "Estrada",
+      "tags": []
+    },
+    {
+      "text": "Montanha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rio",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Céu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sol / Ano",
+      "note": "Sol / Ano",
+      "tags": []
+    },
+    {
+      "text": "Lua",
+      "note": "Satélite",
+      "tags": []
+    },
+    {
+      "text": "Estrela",
+      "note": "Corpo celeste",
+      "tags": []
+    },
+    {
+      "text": "Árvore",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Flor",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Filhote",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gato",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dinheiro",
+      "note": "Dinheiro vivo",
+      "tags": []
+    },
+    {
+      "text": "Tempo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hoje",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Amanhã",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ontem",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Amigo",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Здравей! Казвам се Джордан. Приятно ми е да се запознаем.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Здравей, Джордан! Аз съм Минджи. И на мен ми е приятно да се запознаем.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Студент ли си?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Не, аз съм офис служител. А ти?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Аз съм студент. Уча корейски.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Уау, това е страхотно! Корейският е малко труден, нали?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Да, труден е, но е забавен. Моля, помогнете ми много.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Разбира се! Да учим усилено заедно.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Благодаря ти. До скоро!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Довиждане!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Здравей! Казвам се Джордан. Приятно ми е да се запознаем.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Здравей, Джордан! Аз съм Минджи. И на мен ми е приятно да се запознаем.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Студент ли си?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Не, аз съм офис служител. А ти?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Аз съм студент. Уча корейски.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Уау, това е страхотно! Корейският е малко труден, нали?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Да, труден е, но е забавен. Моля, помогнете ми много.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Разбира се! Да учим усилено заедно.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Благодаря ти. До скоро!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Довиждане!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

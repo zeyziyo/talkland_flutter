@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "ສຳນວນພື້ນຖານ ແລະ ປະໂຫຍກປະຈຳວັນ 50",
+  "entries": [
+    {
+      "text": "ສະບາຍດີ.",
+      "note": "ຄຳທັກທາຍທີ່ສຸພາບ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຍິນດີທີ່ໄດ້ພົບເຈົ້າ.",
+      "note": "ການພົບກັນຄັ້ງທຳອິດ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ບໍ່ໄດ້ພົບກັນດົນແລ້ວນໍ.",
+      "note": "ການພົບກັນອີກຄັ້ງ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂອບໃຈຫຼາຍໆ.",
+      "note": "ທາງການ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍຂໍໂທດ.",
+      "note": "ທາງການ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂໍໂທດເດີ.",
+      "note": "ການຮຽກຮ້ອງຄວາມສົນໃຈ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ສະບາຍດີບໍ່?",
+      "note": "ການທັກທາຍ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ສະບາຍດີ, ຂອບໃຈ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ເຈົ້າຊື່ຫຍັງ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍຊື່ ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ເຈົ້າມາຈາກໃສ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍມາຈາກອາເມລິກາ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ລາກ່ອນ.",
+      "note": "ສຳລັບຜູ້ທີ່ຈະໄປ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຢູ່ດີມີແຮງເດີ / ລາກ່ອນ.",
+      "note": "ສຳລັບຜູ້ທີ່ຈະຢູ່",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ເຈົ້າ / ແມ່ນ.",
+      "note": "ການຕອບຮັບ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ບໍ່ / ບໍ່ແມ່ນ.",
+      "note": "ການປະຕິເສດ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ບາງທີ.",
+      "note": "ການຄາດເດົາ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍເຂົ້າໃຈແລ້ວ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍບໍ່ຮູ້.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ກະລຸນາຊ່ວຍຂ້ອຍແດ່.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ກະລຸນາລໍຖ້າບຶດໜຶ່ງ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ລາຄາເທົ່າໃດ?",
+      "note": "ຊື້ເຄື່ອງ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຫ້ອງນ້ຳຢູ່ໃສ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍຫິວເຂົ້າ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍຫິວນ້ຳ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ອັນນີ້ແຊບຫຼາຍ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍມັກອັນນີ້.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ບໍ່ເປັນຫຍັງ / ຕົກລົງ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ໂຊກດີເດີ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຕອນນີ້ຈັກໂມງແລ້ວ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ມື້ນີ້ອາກາດດີນໍ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ໜາວຫຼາຍ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຮ້ອນຫຼາຍ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍເມື່ອຍຫຼາຍ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍມີຄວາມສຸກຫຼາຍ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂໍສະແດງຄວາມຍິນດີ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ສຸກສັນວັນເກີດ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂໍໃຫ້ເປັນມື້ທີ່ດີເດີ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ພົບກັນມື້ອື່ນເດີ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ເບິ່ງແຍງຕົວເອງແດ່ເດີ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ເຈົ້າເວົ້າພາສາອັງກິດໄດ້ບໍ່?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍເວົ້າພາສາເກົາຫຼີໄດ້ໜ້ອຍດຽວ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ກະລຸນາເວົ້າຊ້າໆແດ່.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ອັນນີ້ໝາຍຄວາມວ່າແນວໃດ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ພາສາເກົາຫຼີເອີ້ນວ່າແນວໃດ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍຮັກເຈົ້າ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ກະລຸນາລໍຖ້າ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຍິນດີຕ້ອນຮັບ / ບໍ່ເປັນຫຍັງ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ບໍ່, ຂອບໃຈ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ຂ້ອຍມີຄຳຖາມ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

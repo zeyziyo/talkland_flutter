@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "སྐད་རbasic་གཞི་རྩའི་འཚམས་འདྲི་དང་ཉིན་རེའི་ཐ་ཚིག་ ༥༠",
+  "entries": [
+    {
+      "text": "བཀྲ་ཤིས་བདེ་ལེགས།",
+      "note": "Polite greeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཐུག་པར་དགའ་པོ་བྱུང་།",
+      "note": "First meeting",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཡུན་རིང་མ་ཐུག",
+      "note": "Reunion",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཐུགས་རྗེ་ཆེ།",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "དགོངས་དག",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "དགོངས་འགལ་མེད་པར་ཞུ།",
+      "note": "Attention",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཁྱེད་རང་སྐུ་གཇི་ལྟར་འདུག",
+      "note": "Greetings",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་བདེ་པོ་ཡོད། ཐུགས་རྗེ་ཆེ།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཁྱེད་ཀྱི་མཚན་ལ་ཅི་ཟེར།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ངའི་མིང་ལ་...ཟེར།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཁྱེད་རང་གང་ནས་ཡིན།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་ཨ་མི་རི་ཀ་ནས་ཡིན།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཕེབས་དང་།",
+      "note": "To someone leaving",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "བཞུགས་དང་།",
+      "note": "To someone staying",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཡོད།",
+      "note": "Positive",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "མེད།",
+      "note": "Negative",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཡིན་ཡང་སྲིད།",
+      "note": "Guess",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་ལ་ཧ་གོ་བྱུང་།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་མི་ཤེས།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་ལ་རོགས་རམ་གནང་རོགས།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "སྐད་ཅིག་ཙམ་སྒུག་དང་།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "འདི་ག་ཚོད་རེད།",
+      "note": "Shopping",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "གསང་སྤྱོད་ཁང་གང་དུ་ཡོད།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་ལ་བཀྲེས་སོང་།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་སྐོམ་སོང་།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཞིམ་པོ་འདུག",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་དགའ་པོ་བྱུང་།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "འགྲིག་གི་འདུག",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "བཀྲ་ཤིས་བདེ་ལེགས།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ད་ལྟ་ཆུ་ཚོད་ག་ཚོད་རེད།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "དེ་རིང་གནམ་གཤིས་ཡག་པོ་འདུག",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "གྲང་མོ་འདུག",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཚ་པོ་འདུག",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་ངལ་དུབ་འདུག",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་སྤྲོ་སྣང་འདུག",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "འཚམས་འདྲི་ཞུ།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "སྐྱེས་སྐར་བཀྲ་ཤིས་བདེ་ལེགས།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཉིན་གུང་བདེ་ལེགས།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "སང་ཉིན་ཐུག་གི་ཡིན།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "དོ་གཟབ་གནང་།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཁྱེད་རང་གིས་དབྱིན་ཇི་སྐད་བཤད་ཐུབ་བམ།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་ལ་ཀོ་རི་ཡའི་སྐད་ཅུང་ཙམ་མ་གཏོགས་བཤད་མི་ཐུབ།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ངPlease་བཀྲོལ་ནས་གསུང་རོགས།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "འདིའི་དོན་ག་རེ་རེད།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཀོ་རི་ཡའི་སྐད་དུ་ག་རེ་ཟེར།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་ཁྱེད་ལ་དགའ།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "སྒུག་དང་།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ཕེབས་དང་།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ལགས་སོ། འགྲིག་གི་འདུག",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ང་ལ་དྲི་བ་ཞིག་ཡོད།",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Βασικές Εκφράσεις και Καθημερινές Φράσεις 50",
+  "entries": [
+    {
+      "text": "Γεια σας / Χαίρετε.",
+      "note": "Ευγενικός χαιρετισμός",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Χάρηκα για τη γνωριμία.",
+      "note": "Πρώτη συνάντηση",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Καιρό έχουμε να τα πούμε.",
+      "note": "Επανασύνδεση",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ευχαριστώ πολύ.",
+      "note": "Επίσημο",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Λυπάμαι.",
+      "note": "Επίσημο",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Με συγχωρείτε.",
+      "note": "Προσέλκυση προσοχής",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Πώς είστε;",
+      "note": "Χαιρετισμός",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Καλά, ευχαριστώ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Πώς σας λένε;",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Το όνομά μου είναι ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Από πού είστε;",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Είμαι από την Αμερική.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Στο επανιδείν.",
+      "note": "Σε αυτόν που φεύγει",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Στο καλό / Γεια σας.",
+      "note": "Σε αυτόν που μένει",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ναι.",
+      "note": "Θετικά",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Όχι.",
+      "note": "Αρνητικά",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ίσως.",
+      "note": "Υπόθεση",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Καταλαβαίνω.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Δεν ξέρω.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Βοηθήστε με, παρακαλώ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Περιμένετε ένα λεπτό, παρακαλώ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Πόσο κοστίζει αυτό;",
+      "note": "Ψώνια",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Πού είναι η τουαλέτα;",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Πεινάω.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Διψάω.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Είναι νόστιμο.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Μου αρέσει.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Είναι εντάξει.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Καλή τύχη.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Τι ώρα είναι τώρα;",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Σήμερα ο καιρός είναι καλός.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Κάνει κρύο.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Κάνει ζέστη.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Είμαι κουρασμένος.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Είμαι ευτυχισμένος.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Συγχαρητήρια.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Χρόνια πολλά.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Να έχετε μια καλή μέρα.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Θα τα πούμε αύριο.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Να προσέχετε.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Μιλάτε αγγλικά;",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Μιλάω μόνο λίγα κορεάτικα.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Μιλάτε αργά, παρακαλώ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Τι σημαίνει αυτό;",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Πώς το λένε στα κορεάτικα;",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Σ' αγαπώ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Περιμένετε, παρακαλώ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Παρακαλώ / Τίποτα.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Όχι, ευχαριστώ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Έχω μια ερώτηση.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Nouns 1",
+  "pos": "Noun",
+  "entries": [
+    {
+      "text": "Person",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Water",
+      "note": "Drinking water",
+      "tags": []
+    },
+    {
+      "text": "Rice / Meal",
+      "note": "Meal",
+      "tags": []
+    },
+    {
+      "text": "Bread",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Apple",
+      "note": "Fruit",
+      "tags": []
+    },
+    {
+      "text": "Milk",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Meat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Clothes",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "House",
+      "note": "Housing",
+      "tags": []
+    },
+    {
+      "text": "Room",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Window",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Door",
+      "note": "Entrance",
+      "tags": []
+    },
+    {
+      "text": "Desk",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chair",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Computer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Phone",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Book",
+      "note": "Library",
+      "tags": []
+    },
+    {
+      "text": "Pencil",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Paper",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bag",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "School",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Company",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hospital",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pharmacy",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Restaurant",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Market",
+      "note": "Marketplace",
+      "tags": []
+    },
+    {
+      "text": "Subway",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taxi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Airplane",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Train",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bicycle",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Road",
+      "note": "Road",
+      "tags": []
+    },
+    {
+      "text": "Mountain",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sea",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "River",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sky",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sun / Year",
+      "note": "Sun / Year",
+      "tags": []
+    },
+    {
+      "text": "Moon",
+      "note": "Satellite",
+      "tags": []
+    },
+    {
+      "text": "Star",
+      "note": "Celestial Body",
+      "tags": []
+    },
+    {
+      "text": "Tree",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Flower",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Puppy",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Money",
+      "note": "Cash",
+      "tags": []
+    },
+    {
+      "text": "Time",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Today",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tomorrow",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yesterday",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Friend",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Saúdos básicos e frases diarias 50",
+  "entries": [
+    {
+      "text": "Ola.",
+      "note": "Saúdo educado",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Encantado de coñecerte.",
+      "note": "Primeira reunión",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Canto tempo sen verte.",
+      "note": "Reunión",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Grazas.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Síntoo.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Perdoa.",
+      "note": "Atención",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Como estás?",
+      "note": "Saúdos",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Estou ben, grazas.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Como te chamas?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Chámome ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "De onde es?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Son de América.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Adeus.",
+      "note": "A alguén que se vai",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Adeus.",
+      "note": "A alguén que queda",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Si.",
+      "note": "Positivo",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Non.",
+      "note": "Negativo",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Quizais.",
+      "note": "Adiviña",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Entendo.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Non o sei.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Por favor, axúdame.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Só un momento, por favor.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Canto custa isto?",
+      "note": "Compras",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Onde está o baño?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Teño fame.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Teño sede.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Está delicioso.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gústame.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Está ben.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Boa sorte.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Que hora é agora?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hoxe fai bo tempo.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Fai frío.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Fai calor.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Estou canso.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Estou feliz.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Parabéns.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Feliz aniversario.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Que teñas un bo día.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vémonos mañá.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Coidate.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Podes falar inglés?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Só podo falar un pouco de coreano.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Por favor, fala amodo.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Que quere dicir isto?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Como se di en coreano?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Quérote.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Por favor, agarda.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "De nada.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Non, está ben.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Teño unha pregunta.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,37 +1,86 @@
 {
-    "title": "पहिलो भेट",
-    "entries": [
-        {
-            "text": "नमस्ते!",
-            "speaker": "A"
-        },
-        {
-            "text": "नमस्ते। तपाईंलाई भेटेर खुसी लाग्यो।",
-            "speaker": "B"
-        },
-        {
-            "text": "तपाईंको नाम के हो?",
-            "speaker": "A"
-        },
-        {
-            "text": "मेरो नाम [नाम] हो। अनि तपाईंको?",
-            "speaker": "B"
-        },
-        {
-            "text": "मेरो नाम [नाम] हो। तपाईं कहाँबाट आउनुभएको हो?",
-            "speaker": "A"
-        },
-        {
-            "text": "म अमेरिकाबाट आएको हुँ। अनि तपाईं?",
-            "speaker": "B"
-        },
-        {
-            "text": "म कोरियाबाट आएको हुँ। तपाईंलाई भेटेर एकदमै खुसी लाग्यो।",
-            "speaker": "A"
-        },
-        {
-            "text": "मलाई पनि। बिदा।",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "नमस्ते!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "नमस्ते। तपाईंलाई भेटेर खुसी लाग्यो।",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "तपाईंको नाम के हो?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मेरो नाम [नाम] हो। अनि तपाईंको?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मेरो नाम [नाम] हो। तपाईं कहाँबाट आउनुभएको हो?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "म अमेरिकाबाट आएको हुँ। अनि तपाईं?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "म कोरियाबाट आएको हुँ। तपाईंलाई भेटेर एकदमै खुसी लाग्यो।",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मलाई पनि। बिदा।",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

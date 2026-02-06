@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Semi za Msingi na Sentensi za Kila Siku 50",
+  "entries": [
+    {
+      "text": "Jambo / Habari.",
+      "note": "Salamu ya adabu",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nimefurahi kukutana nawe.",
+      "note": "Mkutano wa kwanza",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Muda mrefu bila kuonana.",
+      "note": "Kukutana tena",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Asante sana.",
+      "note": "Rasmi",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Samahani.",
+      "note": "Rasmi",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Samahani / Nielekeze.",
+      "note": "Kuvuta umakini",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Habari yako?",
+      "note": "Salamu",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nzuri, asante.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jina lako nani?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jina langu ni ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Unatoka wapi?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Natoka Amerika.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Safari njema.",
+      "note": "Kwa anayeenda",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Baki salama / Kwa heri.",
+      "note": "Kwa anayebaki",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ndiyo.",
+      "note": "Chanya",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hapana.",
+      "note": "Hasi",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Labda.",
+      "note": "Kudhania",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nimeelewa.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sijui.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tafadhali nisaidie.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tafadhali ngoja kidogo.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hii ni bei gani?",
+      "note": "Ununuzi",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Choo kiko wapi?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nina njaa.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nina kiu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hii ni tamu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Naipenda hii.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sawa / Hakuna tatizo.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kila la kheri.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ni saa ngapi sasa?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hali ya hewa ni nzuri leo.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kuna baridi.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kuna joto.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nimechoka.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nina furaha.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hongera.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Heri ya siku ya kuzaliwa.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kuwa na siku njema.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tutaonana kesho.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jitunze.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je, unazungumza Kiingereza?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Najua Kikorea kidogo tu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tafadhali zungumza polepole.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hii inamaanisha nini?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hii inaitwaje kwa Kikorea?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nakupenda.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tafadhali subiri.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Karibu / Sawa.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hapana, asante.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nina swali.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

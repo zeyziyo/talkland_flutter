@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Põhilinead tegusõnad 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Minema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tulema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sööma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jooma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nägema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ostma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Müüma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lugema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kirjutama",
+      "note": "Writing",
+      "tags": []
+    },
+    {
+      "text": "Kuulama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rääkima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tegema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Töötama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Õppima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Õpetama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Õppima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ootama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kohtuma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Armastama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Meeldima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ei meeldi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Naerma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nutma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kõndima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jooksma",
+      "note": "Running",
+      "tags": []
+    },
+    {
+      "text": "Istuma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Seisma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Andma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vastu võtma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Avama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sulge",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mõtlema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Teadma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mitte teadma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Leidma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kaotama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aitama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pesema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Süüa tegema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Laulma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tantsima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kasutama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tegema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Helistama",
+      "note": "Song / Name",
+      "tags": []
+    },
+    {
+      "text": "Kinni püüdma / hoidma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Panema / jätma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sisenema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Välja minema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Peale minema",
+      "note": "Boarding",
+      "tags": []
+    },
+    {
+      "text": "Mahajätma",
+      "note": "Alighting",
+      "tags": []
+    },
+    {
+      "text": "Saatma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Esitama",
+      "note": "Submission",
+      "tags": []
+    },
+    {
+      "text": "Läbi saama",
+      "note": "Greetings",
+      "tags": []
+    },
+    {
+      "text": "Alustama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lõpetama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Puhkama",
+      "note": "Relax",
+      "tags": []
+    },
+    {
+      "text": "Küsima",
+      "note": "Question",
+      "tags": []
+    },
+    {
+      "text": "Vastama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lubama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Muretsema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uskuma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kahtlema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Soovima / lootma",
+      "note": "Hope",
+      "tags": []
+    },
+    {
+      "text": "Unenägu nägema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Võitlema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Võitma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kaotama",
+      "note": "Defeat",
+      "tags": []
+    },
+    {
+      "text": "Kasvama",
+      "note": "Growth",
+      "tags": []
+    },
+    {
+      "text": "Elama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Surema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Üles korjama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ära viskama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Peitma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Otsima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Valima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Muutma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tellima",
+      "note": "Buying items",
+      "tags": []
+    },
+    {
+      "text": "Valmistama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Püüdma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Viskama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tõmbama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lükkama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Parandama",
+      "note": "Repair",
+      "tags": []
+    },
+    {
+      "text": "Katki tegema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Haige / vigastatud olema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ravima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Treenima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ujuma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Reisima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sõitma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Puhastama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nõusid pesema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pesupesemine",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Duši all käima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hambaid pesema",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ärkama",
+      "note": "Wake up",
+      "tags": []
+    },
+    {
+      "text": "Voodisse minema",
+      "note": "Sleeping",
+      "tags": []
+    },
+    {
+      "text": "Aru saama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Meeles pidama",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

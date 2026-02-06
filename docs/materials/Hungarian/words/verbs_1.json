@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Alapigék 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Menni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jönni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Enni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Inni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aludni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Látni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Venni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Eladni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Olvasni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Írni",
+      "note": "Írás",
+      "tags": []
+    },
+    {
+      "text": "Hallgatni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Beszélni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Csinálni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dolgozni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tanulni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tanítani",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tanulni / Elsajátítani",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Várni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Találkozni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Szeretni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kedvelni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Utálni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nevetni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sírni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gyalogolni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Futni",
+      "note": "Futás",
+      "tags": []
+    },
+    {
+      "text": "Ülni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Állni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Adni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kapni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kinyitni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bezárni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gondolni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tudni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nem tudni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Keresni / Találni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Elveszíteni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Segíteni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mosni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Főzni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Énekelni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Táncolni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Használni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Készíteni / Alkotni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hívni / Énekelni",
+      "note": "Dal / Név",
+      "tags": []
+    },
+    {
+      "text": "Elkapni / Tartani",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tenni / Hagyni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bemenni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kimenni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Beszállni",
+      "note": "Járműbe",
+      "tags": []
+    },
+    {
+      "text": "Kiszállni",
+      "note": "Járműből",
+      "tags": []
+    },
+    {
+      "text": "Küldeni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Benyújtani",
+      "note": "Benyújtás",
+      "tags": []
+    },
+    {
+      "text": "Lenni",
+      "note": "Üdvözlet",
+      "tags": []
+    },
+    {
+      "text": "Elkezdeni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Befejezni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pihenni",
+      "note": "Pihenés",
+      "tags": []
+    },
+    {
+      "text": "Kérdezni",
+      "note": "Kérdés",
+      "tags": []
+    },
+    {
+      "text": "Válaszolni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Megígérni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aggódni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hinni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kételkedni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kívánni / Remélni",
+      "note": "Remény",
+      "tags": []
+    },
+    {
+      "text": "Álmodni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Veszekedni / Harcolni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Győzni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Veszíteni",
+      "note": "Vereség",
+      "tags": []
+    },
+    {
+      "text": "Nőni",
+      "note": "Növekedés",
+      "tags": []
+    },
+    {
+      "text": "Élni / Lakni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Meghalni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Felvenni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Eldobni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Elrejteni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Keresni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Választani",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Változtatni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rendelni",
+      "note": "Áruvásárlás",
+      "tags": []
+    },
+    {
+      "text": "Előkészíteni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Megfogni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dobni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Húzni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tolni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Megjavítani",
+      "note": "Javítás",
+      "tags": []
+    },
+    {
+      "text": "Eltörni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Betegnek lenni / Fájni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gyógyítani",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Edzeni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Úszni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Utazni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vezetni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Takarítani",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mosogatni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mosni (ruhát)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zuhanyozni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fogat mosni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Felkelni",
+      "note": "Ébredés",
+      "tags": []
+    },
+    {
+      "text": "Lefeküdni",
+      "note": "Alvás",
+      "tags": []
+    },
+    {
+      "text": "Megérteni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Emlékezni",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

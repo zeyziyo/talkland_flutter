@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Hello! My name is Jordan. Nice to meet you.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Hello Jordan! I'm Minji. Nice to meet you too.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Are you a student?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "No, I'm an office worker. What about you?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "I am a college student. I'm studying Korean.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Wow, that's great! Korean is a bit difficult, isn't it?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Yes, it's difficult but fun. Please help me a lot.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Sure! Let's study hard together.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Thank you. See you next time!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Goodbye!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "First Meeting",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Hello! My name is Jordan. Nice to meet you.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hello Jordan! I'm Minji. Nice to meet you too.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Are you a student?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "No, I'm an office worker. What about you?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "I am a college student. I'm studying Korean.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wow, that's great! Korean is a bit difficult, isn't it?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Yes, it's difficult but fun. Please help me a lot.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sure! Let's study hard together.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Thank you. See you next time!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Goodbye!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

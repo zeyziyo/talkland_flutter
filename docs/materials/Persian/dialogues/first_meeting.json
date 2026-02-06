@@ -1,37 +1,86 @@
 {
-    "title": "اولین ملاقات",
-    "entries": [
-        {
-            "text": "سلام!",
-            "speaker": "A"
-        },
-        {
-            "text": "سلام. از ملاقات شما خوشبختم.",
-            "speaker": "B"
-        },
-        {
-            "text": "نام شما چیست؟",
-            "speaker": "A"
-        },
-        {
-            "text": "نام من [نام] است. و شما؟",
-            "speaker": "B"
-        },
-        {
-            "text": "نام من [نام] است. اهل کجا هستید؟",
-            "speaker": "A"
-        },
-        {
-            "text": "من اهل آمریکا هستم. و شما؟",
-            "speaker": "B"
-        },
-        {
-            "text": "من اهل کره هستم. از آشنایی با شما خوشبختم.",
-            "speaker": "A"
-        },
-        {
-            "text": "من هم همین‌طور. خداحافظ.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "سلام!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "سلام. از ملاقات شما خوشبختم.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "نام شما چیست؟",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "نام من [نام] است. و شما؟",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "نام من [نام] است. اهل کجا هستید؟",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "من اهل آمریکا هستم. و شما؟",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "من اهل کره هستم. از آشنایی با شما خوشبختم.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "من هم همین‌طور. خداحافظ.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

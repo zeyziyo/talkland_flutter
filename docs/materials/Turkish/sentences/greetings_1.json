@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Temel İfadeler ve Günlük Cümleler 50",
+  "entries": [
+    {
+      "text": "Merhaba.",
+      "note": "Kibar selamlama",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tanıştığımıza memnun oldum.",
+      "note": "İlk karşılaşma",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Görüşmeyeli uzun zaman oldu.",
+      "note": "Tekrar görüşme",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Çok teşekkür ederim.",
+      "note": "Resmi",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Özür dilerim.",
+      "note": "Resmi",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Affedersiniz.",
+      "note": "Dikkat çekmek için",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nasılsınız?",
+      "note": "Selamlama",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "İyiyim, teşekkürler.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Adınız nedir?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Benim adım ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nerelisiniz?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Amerikalıyım.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Güle güle.",
+      "note": "Gidena söylenir",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hoşça kalın.",
+      "note": "Kalana söylenir",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Evet.",
+      "note": "Olumlu",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hayır.",
+      "note": "Olumsuz",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Belki.",
+      "note": "Tahmin",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Anladım.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bilmiyorum.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lütfen bana yardım edin.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lütfen biraz bekleyin.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bu ne kadar?",
+      "note": "Alışveriş",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tuvalet nerede?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Acıktım.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Susadım.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bu lezzetli.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Buna bayıldım.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sorun değil / Rica ederim.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Başarılar dilerim.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saat kaç?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bugün hava çok güzel.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Soğuk.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sıcak.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Yorgunum.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mutluyum.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tebrikler.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Doğum günün kutlu olsun.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "İyi günler dilerim.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Yarın görüşürüz.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kendine iyi bak.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "İngilizce biliyor musunuz?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sadece biraz Korece biliyorum.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lütfen yavaş konuşun.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bu ne demek?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Buna Korece'de ne denir?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Seni seviyorum.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lütfen bekleyin.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rica ederim / Sorun değil.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hayır, teşekkürler.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bir sorum var.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

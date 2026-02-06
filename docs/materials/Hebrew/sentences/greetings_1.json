@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "ביטויים בסיסיים ומשפטים יומיומיים 50",
+  "entries": [
+    {
+      "text": "שלום.",
+      "note": "ברכה מנומסת",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "נעים להכיר.",
+      "note": "פגישה ראשונה",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "זמן רב לא התראינו.",
+      "note": "פגישה מחודשת",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "תודה רבה.",
+      "note": "רשמי",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אני מצטער / סליחה.",
+      "note": "רשמי",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "סליחה.",
+      "note": "למשוך תשומת לב",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "מה שלומך?",
+      "note": "ברכת שלום",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "טוב, תודה.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "מה שמך?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "שמי ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "מאיפה אתה?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אני מאמריקה.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "לך לשלום.",
+      "note": "למי שעוזב",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "הישאר בשלום / להתראות.",
+      "note": "למי שנשאר",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "כן.",
+      "note": "חיובי",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "לא.",
+      "note": "שלילי",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אולי.",
+      "note": "השערה",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "הבנתי.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אני לא יודע.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "בבקשה עזור לי.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "בבקשה חכה רגע.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "כמה זה עולה?",
+      "note": "קניות",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "איפה השירותים?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אני רעב.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אני צמא.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "זה טעים.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אני אוהב את זה.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "זה בסדר.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "בהצלחה.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "מה השעה עכשיו?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "מזג האוויר今天 נעים.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "קר.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "חם.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אני עייף.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אני שמח.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "מזל טוב.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "יום הולדת שמח.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "שיהיה לך יום טוב.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "נתראה מחר.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "שמור על עצמך.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "האם אתה מדבר אנגלית?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אני מדבר רק קצת קוריאנית.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "בבקשה דבר לאט.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "מה זה אומר?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "איך אומרים את זה בקוריאנית?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "אני אוהב אותך.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "בבקשה המתן.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "בבקשה / זה בסדר.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "לא, תודה.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "יש לי שאלה.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

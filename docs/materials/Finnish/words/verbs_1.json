@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Perusverbit 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Mennä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tulla",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Syödä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Juoda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nukkua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nähdä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ostaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Myydä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lukea",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kirjoittaa",
+      "note": "Kirjoitus",
+      "tags": []
+    },
+    {
+      "text": "Kuunnella",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Puhua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tehdä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Työskennellä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Opiskella",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Opettaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Oppia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Odottaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tavata",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rakastaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pitää",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Inhota",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Naurattaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Itkeä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kävellä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Juosta",
+      "note": "Juoksu",
+      "tags": []
+    },
+    {
+      "text": "Istua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Seistä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Antaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Saada",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Avata",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sulkea",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ajatella",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tiedää",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ei tiedä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Etsiä / Löytää",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kadottaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Auttaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pestä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kokata",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Laulaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tanssia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Käyttää",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tehdä / Luoda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kutsua / Laulaa",
+      "note": "Laulu / Nimi",
+      "tags": []
+    },
+    {
+      "text": "Ottaa kiinni / Pidellä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Asettaa / Jättää",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mennä sisään",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mennä ulos",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nousta",
+      "note": "Kulkuneuvoon",
+      "tags": []
+    },
+    {
+      "text": "Poistua",
+      "note": "Kulkuneuvosta",
+      "tags": []
+    },
+    {
+      "text": "Lähettää",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jättää",
+      "note": "Jättäminen",
+      "tags": []
+    },
+    {
+      "text": "Voida",
+      "note": "Tervehdys",
+      "tags": []
+    },
+    {
+      "text": "Aloittaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lopettaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Levätä",
+      "note": "Lepo",
+      "tags": []
+    },
+    {
+      "text": "Kysyä",
+      "note": "Kysymys",
+      "tags": []
+    },
+    {
+      "text": "Vastata",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Luvata",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Murehtia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uskoa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Epäillä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Toivoa",
+      "note": "Toivo",
+      "tags": []
+    },
+    {
+      "text": "Unelmoida",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tapella",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Voittaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hävitä",
+      "note": "Tappio",
+      "tags": []
+    },
+    {
+      "text": "Kasvaa",
+      "note": "Kasvu",
+      "tags": []
+    },
+    {
+      "text": "Elää / Asua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kuolla",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Poimia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Heittää pois",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Piilottaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Etsiä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Valita",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Muuttaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tilata",
+      "note": "Tavaroiden osto",
+      "tags": []
+    },
+    {
+      "text": "Valmistella",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Napata",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Heittää",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vetää",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Työntää",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Korjata",
+      "note": "Korjaus",
+      "tags": []
+    },
+    {
+      "text": "Rikkoja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Olla sairas / Sattua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hoitaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kuntoilla",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uida",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Matkustaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ajaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Siivota",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tiskata",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pestä pyykkiä",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Käydä suihkussa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Harjata hampaat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Herätä",
+      "note": "Herätys",
+      "tags": []
+    },
+    {
+      "text": "Mennä nukkumaan",
+      "note": "Uni",
+      "tags": []
+    },
+    {
+      "text": "Ymmärtää",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Muistaa",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

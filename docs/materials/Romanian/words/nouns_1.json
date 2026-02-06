@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Substantive de Bază 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Persoană",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Apă",
+      "note": "Apă potabilă",
+      "tags": []
+    },
+    {
+      "text": "Masă / Orez",
+      "note": "Masă",
+      "tags": []
+    },
+    {
+      "text": "Pâine",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Măr",
+      "note": "Fruct",
+      "tags": []
+    },
+    {
+      "text": "Lapte",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Carne",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Haine",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Casă",
+      "note": "Locuință",
+      "tags": []
+    },
+    {
+      "text": "Cameră",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fereastră",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ușă",
+      "note": "Intrare",
+      "tags": []
+    },
+    {
+      "text": "Birou",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Scaun",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Calculator",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Telefon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Carte",
+      "note": "Carte",
+      "tags": []
+    },
+    {
+      "text": "Creion",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hârtie",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Geantă",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Școală",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Companie",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Spital",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Farmacie",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Restaurant",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Piață",
+      "note": "Piață",
+      "tags": []
+    },
+    {
+      "text": "Metrou",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Autobuz",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taxi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Avion",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tren",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bicicletă",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cale",
+      "note": "Drum",
+      "tags": []
+    },
+    {
+      "text": "Munte",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mare",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Râu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Soare / An",
+      "note": "Soare / An",
+      "tags": []
+    },
+    {
+      "text": "Lună",
+      "note": "Satelit",
+      "tags": []
+    },
+    {
+      "text": "Stea",
+      "note": "Corp ceresc",
+      "tags": []
+    },
+    {
+      "text": "Copac",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Floare",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cățeluș",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pisică",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bani",
+      "note": "Numerar",
+      "tags": []
+    },
+    {
+      "text": "Timp",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Astăzi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mâine",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ieri",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prieten",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

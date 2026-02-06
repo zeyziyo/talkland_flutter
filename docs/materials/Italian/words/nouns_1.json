@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Sostantivi di Base 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Persona",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Acqua",
+      "note": "Acqua potabile",
+      "tags": []
+    },
+    {
+      "text": "Cibo / Riso",
+      "note": "Pasto",
+      "tags": []
+    },
+    {
+      "text": "Pane",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mela",
+      "note": "Frutta",
+      "tags": []
+    },
+    {
+      "text": "Latte",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Carne",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vestiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Casa",
+      "note": "Abitazione",
+      "tags": []
+    },
+    {
+      "text": "Stanza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Finestra",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Porta",
+      "note": "Ingresso",
+      "tags": []
+    },
+    {
+      "text": "Scrivania",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sedia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Computer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Telefono",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Libro",
+      "note": "Libro",
+      "tags": []
+    },
+    {
+      "text": "Matita",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Carta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Borsa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Scuola",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Azienda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ospedale",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Farmacia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ristorante",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mercato",
+      "note": "Mercato",
+      "tags": []
+    },
+    {
+      "text": "Metropolitana",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Autobus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taxi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aereo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Treno",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bicicletta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Strada",
+      "note": "Strada",
+      "tags": []
+    },
+    {
+      "text": "Montagna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mare",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fiume",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cielo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sole / Anno",
+      "note": "Sole / Anno",
+      "tags": []
+    },
+    {
+      "text": "Luna",
+      "note": "Satellite",
+      "tags": []
+    },
+    {
+      "text": "Stella",
+      "note": "Corpo celeste",
+      "tags": []
+    },
+    {
+      "text": "Albero",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fiore",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cucciolo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gatto",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Soldi",
+      "note": "Contanti",
+      "tags": []
+    },
+    {
+      "text": "Tempo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Oggi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Domani",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ieri",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Amico",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

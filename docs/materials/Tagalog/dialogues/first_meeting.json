@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Kamusta! Ang pangalan ko ay Jordan. Ikinalulugod kitang makilala.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Kamusta Jordan! Ako si Minji. Ikinalulugod din kitang makilala.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ikaw ba ay isang estudyante?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Hindi, ako ay isang empleyado. Ikaw?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ako ay isang estudyante sa kolehiyo. Nag-aaral ako ng Korean.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Wow, ang galing! Medyo mahirap ang Korean, hindi ba?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Oo, mahirap pero masaya. Tulungan mo ako sana.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Sige! Mag-aral tayong mabuti.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Salamat. Hanggang sa susunod!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Paalam!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Kamusta! Ang pangalan ko ay Jordan. Ikinalulugod kitang makilala.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kamusta Jordan! Ako si Minji. Ikinalulugod din kitang makilala.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ikaw ba ay isang estudyante?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hindi, ako ay isang empleyado. Ikaw?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ako ay isang estudyante sa kolehiyo. Nag-aaral ako ng Korean.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wow, ang galing! Medyo mahirap ang Korean, hindi ba?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Oo, mahirap pero masaya. Tulungan mo ako sana.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sige! Mag-aral tayong mabuti.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Salamat. Hanggang sa susunod!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Paalam!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

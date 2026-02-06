@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Verbs bàsics 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Anar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Venir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Menjar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Beure",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dormir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Veure",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Comprar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vendre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Llegir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Escriure",
+      "note": "Writing",
+      "tags": []
+    },
+    {
+      "text": "Escoltar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Parlar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Treballar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Estudiar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ensenyar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aprendre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Esperar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Reunir-se",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Estimar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Agradar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Desagradar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Riure",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Plorar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Caminar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Córrer",
+      "note": "Running",
+      "tags": []
+    },
+    {
+      "text": "Seure",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aixecar-se",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Donar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rebre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Obrir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tancar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pensar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Saber",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "No saber",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Trobar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Perdre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ajudar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rentar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cuinar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cantar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ballar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Utilitzar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cridar / Anomenar",
+      "note": "Song / Name",
+      "tags": []
+    },
+    {
+      "text": "Agafar / Sostenir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Posar / Deixar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Entrar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sortir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pujar",
+      "note": "Boarding",
+      "tags": []
+    },
+    {
+      "text": "Baixar",
+      "note": "Alighting",
+      "tags": []
+    },
+    {
+      "text": "Enviar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Presentar",
+      "note": "Submission",
+      "tags": []
+    },
+    {
+      "text": "Avenir-se",
+      "note": "Greetings",
+      "tags": []
+    },
+    {
+      "text": "Començar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Acabar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Descansar",
+      "note": "Relax",
+      "tags": []
+    },
+    {
+      "text": "Preguntar",
+      "note": "Question",
+      "tags": []
+    },
+    {
+      "text": "Respondre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prometre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Preocupar-se",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Creure",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dubtar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Desitjar / Esperar",
+      "note": "Hope",
+      "tags": []
+    },
+    {
+      "text": "Somiar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Luitar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Guanyar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Perdre",
+      "note": "Defeat",
+      "tags": []
+    },
+    {
+      "text": "Créixer",
+      "note": "Growth",
+      "tags": []
+    },
+    {
+      "text": "Viure",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Morir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Recollir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Llençar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Amagar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Buscar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Seleccionar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Canviar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Demanar",
+      "note": "Buying items",
+      "tags": []
+    },
+    {
+      "text": "Preparar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Agafar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Llançar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Estirar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Empènyer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Arreglar / Reparar",
+      "note": "Repair",
+      "tags": []
+    },
+    {
+      "text": "Trencar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Estar malalt / Fer-se mal",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tractar / Curar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fer exercici",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nedar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Viatjar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Conduir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Netejar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rentar els plats",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rentar la roba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dutxar-se",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rentar-se les dents",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Despertar-se",
+      "note": "Wake up",
+      "tags": []
+    },
+    {
+      "text": "Anar a dormir",
+      "note": "Sleeping",
+      "tags": []
+    },
+    {
+      "text": "Entendre",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Recordar",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

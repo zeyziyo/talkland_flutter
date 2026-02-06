@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Základní výrazy a každodenní věty 50",
+  "entries": [
+    {
+      "text": "Dobrý den / Ahoj.",
+      "note": "Zdvořilý pozdrav",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rád vás poznávám.",
+      "note": "První setkání",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dlouho jsme se neviděli.",
+      "note": "Opětovné setkání",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Děkuji mockrát.",
+      "note": "Formálně",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Omlouvám se.",
+      "note": "Formálně",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "S dovolením.",
+      "note": "Upoutání pozornosti",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jak se máte?",
+      "note": "Pozdrav",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dobře, děkuji.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jak se jmenujete?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jmenuji se ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Odkud jste?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jsem z Ameriky.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Na shledanou.",
+      "note": "Tomu, kdo odchází",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mějte se hezky.",
+      "note": "Tomu, kdo zůstává",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ano.",
+      "note": "Kladně",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ne.",
+      "note": "Záporně",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Možná.",
+      "note": "Domněnka",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rozumím.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nevím.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pomozte mi, prosím.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Počkejte chvíli, prosím.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kolik to stojí?",
+      "note": "Nakupování",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kde je toaleta?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mám hlad.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mám žízeň.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je to chutné.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Líbí se mi to.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je to v pořádku.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hodně štěstí.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kolik je teď hodin?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dnes je hezké počasí.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je zima.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je horko.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jsem unavený.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jsem šťastný.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gratuluji.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Všechno nejlepší k narozeninám.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hezký den.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Uvidíme se zítra.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Opatrujte se.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mluvíte anglicky?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mluvím jen trochu korejsky.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mluvte pomalu, prosím.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Co to znamená?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jak se to řekne korejsky?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Miluji tě.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Počkejte, prosím.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Není zač.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ne, děkuji.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mám otázku.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

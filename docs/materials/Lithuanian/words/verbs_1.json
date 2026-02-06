@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Pagrindiniai veiksmažodžiai 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Eiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ateiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Valgyti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gerti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Miegoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Matyti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pirkti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Parduoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Skaityti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rašyti",
+      "note": "Writing",
+      "tags": []
+    },
+    {
+      "text": "Klausytis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kalbėti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Daryti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dirbti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Studijuoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mokyti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mokytis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Laukti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Susitikti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mylėti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mėgti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nemėgti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Juoktis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Verkti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vaikščioti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bėgti",
+      "note": "Running",
+      "tags": []
+    },
+    {
+      "text": "Sėdėti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stovėti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Duoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gauti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Atidaryti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uždaryti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Galvoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Žinoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nežinoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rasti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pamesti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Padėti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Plovyti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gaminti maistą",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dainuoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Šokti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Naudoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gaminti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Šaukti",
+      "note": "Song / Name",
+      "tags": []
+    },
+    {
+      "text": "Sugauti / laikyti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Padėti / palikti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Įeiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Išeiti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Įlipti",
+      "note": "Boarding",
+      "tags": []
+    },
+    {
+      "text": "Išlipti",
+      "note": "Alighting",
+      "tags": []
+    },
+    {
+      "text": "Siųsti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pateikti",
+      "note": "Submission",
+      "tags": []
+    },
+    {
+      "text": "Sutarti",
+      "note": "Greetings",
+      "tags": []
+    },
+    {
+      "text": "Pradėti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Baigti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ilsėtis",
+      "note": "Relax",
+      "tags": []
+    },
+    {
+      "text": "Klausti",
+      "note": "Question",
+      "tags": []
+    },
+    {
+      "text": "Atsakyti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Žadėti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nerimauti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tikėti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Abejonių",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Linkėti / tikėtis",
+      "note": "Hope",
+      "tags": []
+    },
+    {
+      "text": "Svajoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kovoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Laimėti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prarasti",
+      "note": "Defeat",
+      "tags": []
+    },
+    {
+      "text": "Augti",
+      "note": "Growth",
+      "tags": []
+    },
+    {
+      "text": "Gyventi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mirti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pasiimti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Išmesti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Slėpti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ieškoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pasirinkti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pakeisti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Užsisakyti",
+      "note": "Buying items",
+      "tags": []
+    },
+    {
+      "text": "Paruošti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sugauti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mesti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Traukti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stumti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pataisyti / remontuoti",
+      "note": "Repair",
+      "tags": []
+    },
+    {
+      "text": "Sulaužyti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sirgti / susižeisti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gydyti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mankštintis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Plaukti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Keliauti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vairuoti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Valyti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Plovėti indus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Skalbti drabužius",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Atsiprausti po dušu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Valytis dantis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pabusti",
+      "note": "Wake up",
+      "tags": []
+    },
+    {
+      "text": "Eiti miegoti",
+      "note": "Sleeping",
+      "tags": []
+    },
+    {
+      "text": "Suprasti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prisiminti",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

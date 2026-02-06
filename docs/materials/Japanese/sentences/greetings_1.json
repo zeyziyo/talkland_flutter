@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "挨拶 1",
+  "entries": [
+    {
+      "text": "こんにちは。",
+      "note": "丁寧な挨拶",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "お会いできて嬉しいです。",
+      "note": "初対面",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "お久しぶりです。",
+      "note": "再会",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ありがとうございます。",
+      "note": "丁寧",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "すみません。",
+      "note": "丁寧",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "失礼します。",
+      "note": "注意喚起",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "お元気ですか？",
+      "note": "安否",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "元気です、ありがとうございます。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "お名前は何ですか？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "私の名前は...です。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "どこから来ましたか？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "アメリカから来ました。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "さようなら。",
+      "note": "去る人に",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "お元気で / さようなら。",
+      "note": "残る人に",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "はい。",
+      "note": "肯定",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "いいえ。",
+      "note": "否定",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "たぶん。",
+      "note": "推測",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "わかります。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "わかりません。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "助けてください。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ちょっと待ってください。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "これはいくらですか？",
+      "note": "買い物",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "トイレはどこですか？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "お腹が空きました。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "喉が渇きました。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "美味しいです。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "好きです。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "大丈夫です。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "頑張ってください / 幸運を。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "今、何時ですか？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "今日は天気がいいですね。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "寒いです。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "暑いです。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "疲れました。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "幸せです。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "おめでとうございます。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "お誕生日おめでとう。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "良い一日を。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "また明日。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "お大事に / 気をつけて。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "英語が話せますか？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "韓国語は少ししか話せません。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ゆっくり話してください。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "これはどういう意味ですか？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "韓国語で何と言いますか？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "愛しています。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "待ってください。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "どういたしまして。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "いいえ、結構です。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "質問があります。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,37 +1,86 @@
 {
-    "title": "Ensitapaaminen",
-    "entries": [
-        {
-            "text": "Hei!",
-            "speaker": "A"
-        },
-        {
-            "text": "Hei. Hauska tavata.",
-            "speaker": "B"
-        },
-        {
-            "text": "Mikä nimesi on?",
-            "speaker": "A"
-        },
-        {
-            "text": "Nimeni on [Nimi]. Entä sinun?",
-            "speaker": "B"
-        },
-        {
-            "text": "Nimeni on [Nimi]. Mistä olet kotoisin?",
-            "speaker": "A"
-        },
-        {
-            "text": "Olen kotoisin Amerikasta. Entä sinä?",
-            "speaker": "B"
-        },
-        {
-            "text": "Olen kotoisin Koreasta. Oli hauska tavata.",
-            "speaker": "A"
-        },
-        {
-            "text": "Samoin. Hei hei.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Hei!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hei. Hauska tavata.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mikä nimesi on?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nimeni on [Nimi]. Entä sinun?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nimeni on [Nimi]. Mistä olet kotoisin?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Olen kotoisin Amerikasta. Entä sinä?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Olen kotoisin Koreasta. Oli hauska tavata.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Samoin. Hei hei.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

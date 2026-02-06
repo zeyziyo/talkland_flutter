@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Hola! Em dic Jordan. Encantat de conèixer-te.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Hola Jordan! Sóc la Minji. Encantada de conèixer-te també.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ets estudiant?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "No, sóc oficinista. I tu?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Sóc estudiant universitari. Estic estudiant coreà.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Ostres, això és genial! El coreà és una mica difícil, oi?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Sí, és difícil però divertit. Si us plau, ajuda'm molt.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "És clar! Estudiem molt junts.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Gràcies. Ens veiem la propera vegada!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Adéu!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Hola! Em dic Jordan. Encantat de conèixer-te.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hola Jordan! Sóc la Minji. Encantada de conèixer-te també.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ets estudiant?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "No, sóc oficinista. I tu?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sóc estudiant universitari. Estic estudiant coreà.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ostres, això és genial! El coreà és una mica difícil, oi?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sí, és difícil però divertit. Si us plau, ajuda'm molt.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "És clar! Estudiem molt junts.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gràcies. Ens veiem la propera vegada!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Adéu!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

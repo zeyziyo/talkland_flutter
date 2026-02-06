@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Grunnatriði sagnir 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Að fara",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að koma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að borða",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að drekka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að sofa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að sjá",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að kaupa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að selja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að lesa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að skrifa",
+      "note": "Writing",
+      "tags": []
+    },
+    {
+      "text": "Að hlusta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að tala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að gera",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að vinna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að læra",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að kenna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að læra",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að bíða",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að hittast",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að elska",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að fíla",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að mislíka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að hlæja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að gráta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að ganga",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að hlaupa",
+      "note": "Running",
+      "tags": []
+    },
+    {
+      "text": "Að sitja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að standa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að gefa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að fá",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að opna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að loka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að hugsa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að vita",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að vita ekki",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að finna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að tapa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að hjálpa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að þvo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að elda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að syngja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að dansa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að nota",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að búa til",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að hringja",
+      "note": "Song / Name",
+      "tags": []
+    },
+    {
+      "text": "Að grípa / halda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að setja / skilja eftir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að fara inn",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að fara út",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að fara í",
+      "note": "Boarding",
+      "tags": []
+    },
+    {
+      "text": "Að fara úr",
+      "note": "Alighting",
+      "tags": []
+    },
+    {
+      "text": "Að senda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að senda inn",
+      "note": "Submission",
+      "tags": []
+    },
+    {
+      "text": "Að komast af",
+      "note": "Greetings",
+      "tags": []
+    },
+    {
+      "text": "Að byrja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að enda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að hvílast",
+      "note": "Relax",
+      "tags": []
+    },
+    {
+      "text": "Að spyrja",
+      "note": "Question",
+      "tags": []
+    },
+    {
+      "text": "Að svara",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að lofa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að hafa áhyggjur",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að trúa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að efast",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að vona",
+      "note": "Hope",
+      "tags": []
+    },
+    {
+      "text": "Að dreyma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að berjast",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að vinna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að tapa",
+      "note": "Defeat",
+      "tags": []
+    },
+    {
+      "text": "Að vaxa",
+      "note": "Growth",
+      "tags": []
+    },
+    {
+      "text": "Að lifa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að deyja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að taka upp",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að henda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að fela",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að leita",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að velja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að breyta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að panta",
+      "note": "Buying items",
+      "tags": []
+    },
+    {
+      "text": "Að undirbúa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að ná",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að kasta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að toga",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að ýta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að laga",
+      "note": "Repair",
+      "tags": []
+    },
+    {
+      "text": "Að brjóta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að vera veikur / slasaður",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að meðhöndla / lækna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að æfa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að synda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að ferðast",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að keyra",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að þrífa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að vaska upp",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að þvo þvott",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að fara í sturtu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að bursta tennur",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að vakna",
+      "note": "Wake up",
+      "tags": []
+    },
+    {
+      "text": "Að fara að sofa",
+      "note": "Sleeping",
+      "tags": []
+    },
+    {
+      "text": "Að skilja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Að muna",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

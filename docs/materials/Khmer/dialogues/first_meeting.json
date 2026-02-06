@@ -1,37 +1,86 @@
 {
-    "title": "ការជួបគ្នាលើកដំបូង",
-    "entries": [
-        {
-            "text": "ជំរាបសួរ!",
-            "speaker": "A"
-        },
-        {
-            "text": "ជំរាបសួរ។ រីករាយដែលបានជួបអ្នក។",
-            "speaker": "B"
-        },
-        {
-            "text": "តើអ្នកឈ្មោះអ្វី?",
-            "speaker": "A"
-        },
-        {
-            "text": "ខ្ញុំឈ្មោះ [ឈ្មោះ]។ ចុះអ្នកវិញ?",
-            "speaker": "B"
-        },
-        {
-            "text": "ខ្ញុំឈ្មោះ [ឈ្មោះ]។ តើអ្នកមកពីណា?",
-            "speaker": "A"
-        },
-        {
-            "text": "ខ្ញុំមកពីអាមេរិក។ ចុះអ្នកវិញ?",
-            "speaker": "B"
-        },
-        {
-            "text": "ខ្ញុំមកពីកូរ៉េ។ រីករាយដែលបានស្គាល់អ្នក។",
-            "speaker": "A"
-        },
-        {
-            "text": "ខ្ញុំក៏ដូចគ្នាដែរ។ ជំរាបលា។",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "ជំរាបសួរ!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ជំរាបសួរ។ រីករាយដែលបានជួបអ្នក។",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "តើអ្នកឈ្មោះអ្វី?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ខ្ញុំឈ្មោះ [ឈ្មោះ]។ ចុះអ្នកវិញ?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ខ្ញុំឈ្មោះ [ឈ្មោះ]។ តើអ្នកមកពីណា?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ខ្ញុំមកពីអាមេរិក។ ចុះអ្នកវិញ?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ខ្ញុំមកពីកូរ៉េ។ រីករាយដែលបានស្គាល់អ្នក។",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ខ្ញុំក៏ដូចគ្នាដែរ។ ជំរាបលា។",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

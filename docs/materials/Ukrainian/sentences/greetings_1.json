@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Основні вирази та повсякденні фрази 50",
+  "entries": [
+    {
+      "text": "Вітаю.",
+      "note": "Ввічливе вітання",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Радий зустрічі.",
+      "note": "Перша зустріч",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Давно не бачилися.",
+      "note": "Возз'єднання",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Дякую.",
+      "note": "Формально",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Вибачте.",
+      "note": "Формально",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Перепрошую.",
+      "note": "Привернення уваги",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Як поживаєте?",
+      "note": "Вітання",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Добре, дякую.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Як вас звати?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мене звати ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Звідки ви?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я з Америки.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "До побачення.",
+      "note": "Тому, хто йде",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Щасливо залишатися.",
+      "note": "Тому, хто залишається",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Так.",
+      "note": "Позитивно",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ні.",
+      "note": "Негативно",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Можливо.",
+      "note": "Припущення",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я розумію.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я не знаю.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Допоможіть мені, будь ласка.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Почекайте хвилинку, будь ласка.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Скільки це коштує?",
+      "note": "Покупки",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Де знаходиться туалет?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я хочу їсти.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я хочу пити.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Це смачно.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мені подобається.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Все гаразд.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Успіху.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Котра зараз година?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сьогодні гарна погода.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Холодно.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Жарко.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я втомився.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я щасливий.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Вітаю.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "З днем народження.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Гарного дня.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "До завтра.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Бережіть себе.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ви розмовляєте англійською?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я лише трохи розмовляю корейською.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Розмовляйте повільніше, будь ласка.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Що це означає?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Як це буде корейською?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я тебе кохаю.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Почекайте, будь ласка.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Нема за що.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ні, дякую.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "У мене є питання.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

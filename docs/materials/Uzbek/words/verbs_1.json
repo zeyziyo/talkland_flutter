@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Asosiy fe'llar 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Borish",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kelish",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yemoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ichmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uxlash",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ko'rmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sotib olmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sotmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "O'qimoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yozmoq",
+      "note": "Writing",
+      "tags": []
+    },
+    {
+      "text": "Tinglamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gapirmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Qilmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ishlamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "O'qimoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "O'rgatmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "O'rganmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kutmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uchrashmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sevmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yoqtirmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yoqtirmaslik",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kulmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yig'lamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yurmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yugurmoq",
+      "note": "Running",
+      "tags": []
+    },
+    {
+      "text": "O'tirmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Turmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bermoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Olmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ochmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yopmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "O'ylamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bilmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bilmaslik",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Topmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yo'qotmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yordam bermoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yuvmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ovqat pishirmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Qo'shiq aytmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Raqsga tushmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Foydalanmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yasamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Qo'ng'iroq qilmoq",
+      "note": "Song / Name",
+      "tags": []
+    },
+    {
+      "text": "Ushlamoq / ushlab turmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Qo'ymoq / tashlab ketmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kirmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chiqmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Minmoq",
+      "note": "Boarding",
+      "tags": []
+    },
+    {
+      "text": "Tushmoq",
+      "note": "Alighting",
+      "tags": []
+    },
+    {
+      "text": "Yubormoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": " topshirmoq",
+      "note": "Submission",
+      "tags": []
+    },
+    {
+      "text": "Ahil bo'lmoq",
+      "note": "Greetings",
+      "tags": []
+    },
+    {
+      "text": "Boshlamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tugatmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dam olmoq",
+      "note": "Relax",
+      "tags": []
+    },
+    {
+      "text": "So'ramoq",
+      "note": "Question",
+      "tags": []
+    },
+    {
+      "text": "Javob bermoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Va'da bermoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Xavotirlanmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ishonmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Shubhalanmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Orzu qilmoq / umid qilmoq",
+      "note": "Hope",
+      "tags": []
+    },
+    {
+      "text": "Tush ko'rmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Urushmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yutmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yutqazmoq",
+      "note": "Defeat",
+      "tags": []
+    },
+    {
+      "text": "O'smoq",
+      "note": "Growth",
+      "tags": []
+    },
+    {
+      "text": "Yashamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "O'lmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ko'tarmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Axlatga tashlamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Yashirinmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Qidirmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tanlamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "O'zgartirmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Buyurtma bermoq",
+      "note": "Buying items",
+      "tags": []
+    },
+    {
+      "text": "Tayyorlamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tutmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Otmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tortmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Itarmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sozlamoq / tuzatmoq",
+      "note": "Repair",
+      "tags": []
+    },
+    {
+      "text": "Sindirmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kasal bo'lmoq / jarohat olmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Davolamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mashq qilmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Suzmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sayohat qilmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Haydamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tozalamoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Idishlarni yuvmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kir yuvmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dush qabul qilmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tishlarni yuvmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uyg'onmoq",
+      "note": "Wake up",
+      "tags": []
+    },
+    {
+      "text": "Yotishga bormoq",
+      "note": "Sleeping",
+      "tags": []
+    },
+    {
+      "text": "Tushunmoq",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Eslamoq",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

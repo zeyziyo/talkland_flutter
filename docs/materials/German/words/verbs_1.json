@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Verben 1",
+  "pos": "Verb",
+  "entries": [
+    {
+      "text": "Gehen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kommen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Essen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Trinken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Schlafen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sehen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kaufen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Verkaufen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lesen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Schreiben",
+      "note": "Handgeschrieben",
+      "tags": []
+    },
+    {
+      "text": "Hören",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sprechen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tun",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Arbeiten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Studieren / Lernen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lehren",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lernen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Warten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Treffen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lieben",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mögen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hassen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lachen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Weinen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gehen / Laufen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rennen",
+      "note": "Laufen",
+      "tags": []
+    },
+    {
+      "text": "Sitzen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stehen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Geben",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Erhalten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Öffnen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Schließen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Denken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wissen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nicht wissen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Suchen / Finden",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Verlieren",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Helfen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Waschen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kochen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Singen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tanzen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Benutzen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Machen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rufen / Singen",
+      "note": "Lied / Name",
+      "tags": []
+    },
+    {
+      "text": "Fangen / Halten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Legen / Lassen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Eintreten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hinausgehen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Einsteigen",
+      "note": "In ein Fahrzeug",
+      "tags": []
+    },
+    {
+      "text": "Aussteigen",
+      "note": "Aus einem Fahrzeug",
+      "tags": []
+    },
+    {
+      "text": "Senden",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Einreichen",
+      "note": "Abgabe",
+      "tags": []
+    },
+    {
+      "text": "Gehen",
+      "note": "Befinden",
+      "tags": []
+    },
+    {
+      "text": "Beginnen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Beenden",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ausruhen",
+      "note": "Ruhe",
+      "tags": []
+    },
+    {
+      "text": "Fragen",
+      "note": "Frage",
+      "tags": []
+    },
+    {
+      "text": "Antworten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Versprechen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sich Sorgen machen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Glauben",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zweifeln",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wünschen / Hoffen",
+      "note": "Hoffnung",
+      "tags": []
+    },
+    {
+      "text": "Träumen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kämpfen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gewinnen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Verlieren",
+      "note": "Niederlage",
+      "tags": []
+    },
+    {
+      "text": "Wachsen",
+      "note": "Wachstum",
+      "tags": []
+    },
+    {
+      "text": "Leben / Wohnen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sterben",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aufheben",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wegwerfen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Verstecken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Suchen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wählen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ändern",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bestellen",
+      "note": "Warenkauf",
+      "tags": []
+    },
+    {
+      "text": "Vorbereiten",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fangen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Werfen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ziehen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Drücken",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Reparieren",
+      "note": "Reparatur",
+      "tags": []
+    },
+    {
+      "text": "Zerbrechen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Krank sein / Weh tun",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Behandeln",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sport treiben",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Schwimmen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Reisen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Fahren",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Putzen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Geschirr spülen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wäsche waschen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Duschen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zähne putzen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Aufwachen / Aufstehen",
+      "note": "Erwachen",
+      "tags": []
+    },
+    {
+      "text": "Schlafen gehen",
+      "note": "Nachtruhe",
+      "tags": []
+    },
+    {
+      "text": "Verstehen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sich erinnern",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

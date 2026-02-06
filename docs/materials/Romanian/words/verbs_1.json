@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Verbe de Bază 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "A merge",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A veni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A mânca",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A bea",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A dormi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A vedea",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A cumpăra",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A vinde",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A citi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A scrie",
+      "note": "Scriere",
+      "tags": []
+    },
+    {
+      "text": "A asculta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A vorbi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A face",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A lucra",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A studia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A preda / A învăța pe alții",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A învăța",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A aștepta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A întâlni",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A iubi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A-i plăcea",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A urî",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A râde",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A plânge",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A merge (pe jos)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A alerga",
+      "note": "Alergare",
+      "tags": []
+    },
+    {
+      "text": "A sta jos",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A sta în picioare",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A da",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A primi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A deschide",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A închide",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A gândi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A ști",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A nu ști",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A căuta / A găsi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A pierde",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A ajuta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A spăla",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A găti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A cânta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A dansa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A folosi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A face / A crea",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A chema / A cânta",
+      "note": "Cântec / Nume",
+      "tags": []
+    },
+    {
+      "text": "A prinde / A ține",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A pune / A lăsa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A intra",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A ieși",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A urca",
+      "note": "În vehicul",
+      "tags": []
+    },
+    {
+      "text": "A coborî",
+      "note": "Din vehicul",
+      "tags": []
+    },
+    {
+      "text": "A trimite",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A preda",
+      "note": "Predare",
+      "tags": []
+    },
+    {
+      "text": "A o duce",
+      "note": "Salut",
+      "tags": []
+    },
+    {
+      "text": "A începe",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A termina",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A se odihni",
+      "note": "Odihnă",
+      "tags": []
+    },
+    {
+      "text": "A întreba",
+      "note": "Întrebare",
+      "tags": []
+    },
+    {
+      "text": "A răspunde",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A promite",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A se îngrijora",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A crede",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A se îndoi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A dori / A spera",
+      "note": "Speranță",
+      "tags": []
+    },
+    {
+      "text": "A visa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A se lupta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A câștiga",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A pierde",
+      "note": "Înfrângere",
+      "tags": []
+    },
+    {
+      "text": "A crește",
+      "note": "Creștere",
+      "tags": []
+    },
+    {
+      "text": "A trăi / A locui",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A muri",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A ridica",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A arunca",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A ascunde",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A căuta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A alege",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A schimba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A comanda",
+      "note": "Cumpărarea de articole",
+      "tags": []
+    },
+    {
+      "text": "A pregăti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A prinde",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A arunca",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A trage",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A împinge",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A repara",
+      "note": "Reparație",
+      "tags": []
+    },
+    {
+      "text": "A sparge",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A fi bolnav / A durea",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A trata",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A face sport",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A înota",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A călători",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A conduce",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A face curățenie",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A spăla vasele",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A spăla hainele",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A face duș",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A se spăla pe dinți",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A se trezi / A se ridica",
+      "note": "Trezie",
+      "tags": []
+    },
+    {
+      "text": "A se culca",
+      "note": "Somn",
+      "tags": []
+    },
+    {
+      "text": "A înțelege",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "A-și aminti",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Osnovni samostalniki 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Oseba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Voda",
+      "note": "Drinking water",
+      "tags": []
+    },
+    {
+      "text": "Riž / Obrok",
+      "note": "Meal",
+      "tags": []
+    },
+    {
+      "text": "Kruh",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jabolko",
+      "note": "Fruit",
+      "tags": []
+    },
+    {
+      "text": "Mleko",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Meso",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Oblačila",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hiša",
+      "note": "Housing",
+      "tags": []
+    },
+    {
+      "text": "Soba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Okno",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vrata",
+      "note": "Entrance",
+      "tags": []
+    },
+    {
+      "text": "Miza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stol",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Računalnik",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Telefon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Knjiga",
+      "note": "Library",
+      "tags": []
+    },
+    {
+      "text": "Svinčnik",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Papir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Torba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Šola",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Podjetje",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bolnišnica",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lekarna",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Restavracija",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tržnica",
+      "note": "Marketplace",
+      "tags": []
+    },
+    {
+      "text": "Podzemna železnica",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Avtobus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taxi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Letalo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vlak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kolo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cesta",
+      "note": "Road",
+      "tags": []
+    },
+    {
+      "text": "Gora",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Morje",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Reka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nebo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sonce / Leto",
+      "note": "Sun / Year",
+      "tags": []
+    },
+    {
+      "text": "Luna",
+      "note": "Satellite",
+      "tags": []
+    },
+    {
+      "text": "Zvezda",
+      "note": "Celestial Body",
+      "tags": []
+    },
+    {
+      "text": "Drevo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cvet",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Psiček",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mačka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Denar",
+      "note": "Cash",
+      "tags": []
+    },
+    {
+      "text": "Čas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Danes",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jutri",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Včeraj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prijatelj",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

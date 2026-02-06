@@ -24,7 +24,7 @@ class DatabaseService {
     
     return await openDatabase(
       path,
-      version: 10, // Upgraded for Hotfix (Missing 'note' column recovery)
+      version: 11, // Phase 79: Style field support
       onCreate: (db, version) async {
         await _createBaseTables(db);
         await _ensureDefaultMaterial(db);
@@ -110,6 +110,17 @@ class DatabaseService {
             print('[DB] Upgraded to version 10: Note column already exists');
           }
         }
+
+        if (oldVersion < 11) {
+          // Phase 79: Style field for Sentence/Word
+          try {
+            await db.execute('ALTER TABLE words ADD COLUMN style TEXT');
+            await db.execute('ALTER TABLE sentences ADD COLUMN style TEXT');
+            print('[DB] Upgraded to version 11: Style field added');
+          } catch (e) {
+            print('[DB] Upgraded to version 11: Style column already exists or error: $e');
+          }
+        }
       },
     );
   }
@@ -154,6 +165,7 @@ class DatabaseService {
         root TEXT,
         pos TEXT,
         form_type TEXT,
+        style TEXT,
         note TEXT,
         created_at TEXT NOT NULL,
         is_memorized INTEGER DEFAULT 0
@@ -173,6 +185,7 @@ class DatabaseService {
         lang_code TEXT NOT NULL,
         pos TEXT,
         form_type TEXT,
+        style TEXT,
         root TEXT,
         note TEXT,
         created_at TEXT NOT NULL,
@@ -1104,9 +1117,10 @@ class DatabaseService {
   /// Import study materials from JSON file with metadata
   /// Import study materials from JSON file with metadata
   static Future<Map<String, dynamic>> importFromJsonWithMetadata(
-    String jsonContent,
-    {String? fileName}
-  ) async {
+    String jsonContent, {
+    String? fileName,
+    String? userId,
+  }) async {
     try {
       final data = json.decode(jsonContent) as Map<String, dynamic>;
       
@@ -1201,6 +1215,7 @@ class DatabaseService {
                   pos: (entry['pos'] ?? entryMeta['pos']) as String?,
                   root: (entry['root'] ?? entryMeta['root']) as String?,
                   formType: (entry['form_type'] ?? entryMeta['form_type']) as String?,
+                  style: (entry['style'] ?? entryMeta['style']) as String?,
                   note: (entry['note'] ?? entryMeta['note'] ?? entry['context']) as String?,
                   tags: allTags.isNotEmpty ? allTags : null,
                   txn: txn,
@@ -1245,6 +1260,7 @@ class DatabaseService {
               // Insert Dialogue Group
               await insertDialogueGroup(
                 id: dId,
+                userId: userId, // Pass incoming userId
                 title: dTitle,
                 persona: dPersona,
                 note: dTopic, // Map topic to note if available
@@ -1313,6 +1329,7 @@ class DatabaseService {
                     type: msg['type'] as String? ?? 'sentence',
                     pos: msg['pos'] as String?,
                     formType: (msg['form_type'] ?? msg['formType']) as String?,
+                    style: msg['style'] as String?,
                     root: msg['root'] as String?,
                     note: (msg['note'] ?? msg['context']) as String?,
                     tags: ['Dialogue', ...fileTags], // Tag as Dialogue
@@ -1357,11 +1374,11 @@ class DatabaseService {
                     type: msg['type'] as String? ?? 'sentence',
                     pos: msg['pos'] as String?,
                     formType: (msg['form_type'] ?? msg['formType']) as String?,
+                    style: msg['style'] as String?,
                     root: msg['root'] as String?,
                     note: (msg['note'] ?? msg['context']) as String?,
                     tags: ['Dialogue', ...fileTags], // Tag as Dialogue
                     txn: txn,
-                    // ERROR: I can't override group_id in `saveUnifiedRecord`.
                   );
                   
                   // WAIT. `saveUnifiedRecord` generates a NEW group_id every call.
@@ -1383,6 +1400,7 @@ class DatabaseService {
                     'lang_code': sourceLang,
                     'pos': msg['pos'] as String?,
                     'form_type': (msg['form_type'] ?? msg['formType']) as String?,
+                    'style': msg['style'] as String?,
                     'root': msg['root'] as String?,
                     'note': (msg['note'] ?? msg['context']) as String?,
                     'created_at': createdAt,
@@ -1789,8 +1807,16 @@ class DatabaseService {
   }
 
   /// Get all dialogue groups for a user
-  static Future<List<Map<String, dynamic>>> getDialogueGroups() async {
+  static Future<List<Map<String, dynamic>>> getDialogueGroups({String? userId}) async {
     final db = await database;
+    if (userId != null && userId.isNotEmpty) {
+      return await db.query(
+        'dialogue_groups', 
+        where: 'user_id = ? OR user_id IS NULL OR user_id = ?',
+        whereArgs: [userId, 'anonymous'],
+        orderBy: 'created_at DESC'
+      );
+    }
     return await db.query('dialogue_groups', orderBy: 'created_at DESC');
   }
 
@@ -2236,6 +2262,7 @@ class DatabaseService {
     required String type,
     String? pos,
     String? formType,
+    String? style,
     String? root,
     String? note,
     List<String>? tags,
@@ -2253,6 +2280,7 @@ class DatabaseService {
       'lang_code': lang,
       'pos': pos, // Added Phase 13
       'form_type': formType, // Added Phase 13
+      'style': style,
       'root': root, // Added Phase 13 (as TEXT)
       'note': note,
       'created_at': createdAt,

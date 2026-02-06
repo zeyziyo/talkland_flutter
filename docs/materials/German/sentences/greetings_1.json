@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Grüße 1",
+  "entries": [
+    {
+      "text": "Guten Tag / Hallo.",
+      "note": "Höfliche Begrüßung",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Schön, Sie kennenzulernen.",
+      "note": "Erstes Treffen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lange nicht gesehen.",
+      "note": "Wiedersehen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vielen Dank.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Es tut mir leid.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Entschuldigung.",
+      "note": "Aufmerksamkeit erregen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wie geht es Ihnen?",
+      "note": "Begrüßung",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mir geht es gut, danke.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wie heißen Sie?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mein Name ist ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Woher kommen Sie?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ich komme aus Amerika.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Auf Wiedersehen.",
+      "note": "Zu jemandem, der geht",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Auf Wiedersehen / Tschüss.",
+      "note": "Zu jemandem, der bleibt",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ja.",
+      "note": "Positiv",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nein.",
+      "note": "Negativ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vielleicht.",
+      "note": "Vermutung",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ich verstehe.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ich weiß es nicht.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Helfen Sie mir bitte.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Einen Moment bitte.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wie viel kostet das?",
+      "note": "Einkaufen",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wo ist die Toilette?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ich habe Hunger.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ich habe Durst.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Es ist lecker.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ich mag es.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Es ist okay.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Viel Glück.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wie spät ist es jetzt?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Das Wetter heute ist gut.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Es ist kalt.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Es ist heiß.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ich bin müde.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ich bin glücklich.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Herzlichen Glückwunsch.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Alles Gute zum Geburtstag.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Einen schönen Tag noch.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bis morgen.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Passen Sie auf sich auf.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sprechen Sie Englisch?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ich spreche nur ein wenig Koreanisch.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bitte sprechen Sie langsam.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Was bedeutet das?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wie sagt man das auf Koreanisch?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ich liebe dich.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bitte warten Sie.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gern geschehen / Keine Ursache.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nein, danke.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ich habe eine Frage.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

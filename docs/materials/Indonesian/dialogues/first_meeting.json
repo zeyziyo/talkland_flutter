@@ -1,37 +1,86 @@
 {
-    "title": "Pertemuan Pertama",
-    "entries": [
-        {
-            "text": "Halo!",
-            "speaker": "A"
-        },
-        {
-            "text": "Halo. Senang bertemu dengan Anda.",
-            "speaker": "B"
-        },
-        {
-            "text": "Siapa nama Anda?",
-            "speaker": "A"
-        },
-        {
-            "text": "Nama saya [Nama]. Dan Anda?",
-            "speaker": "B"
-        },
-        {
-            "text": "Nama saya [Nama]. Anda berasal dari mana?",
-            "speaker": "A"
-        },
-        {
-            "text": "Saya berasal dari Amerika. Dan Anda?",
-            "speaker": "B"
-        },
-        {
-            "text": "Saya berasal dari Korea. Senang berkenalan dengan Anda.",
-            "speaker": "A"
-        },
-        {
-            "text": "Saya juga. Sampai jumpa.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Halo!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Halo. Senang bertemu dengan Anda.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Siapa nama Anda?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nama saya [Nama]. Dan Anda?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nama saya [Nama]. Anda berasal dari mana?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya berasal dari Amerika. Dan Anda?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya berasal dari Korea. Senang berkenalan dengan Anda.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Saya juga. Sampai jumpa.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

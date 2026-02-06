@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "መሠረታዊ አገላለጾችና የዕለት ተዕለት ዓረፍተ ነገሮች 50",
+  "entries": [
+    {
+      "text": "ሰላም.",
+      "note": "ትህትና የተሞላበት ሰላምታ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ስለተገናኘን ደስ ብሎኛል.",
+      "note": "የመጀመሪያ ግንኙነት",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ካልተገናኘን ቆይተናል.",
+      "note": "ዳግም ግንኙነት",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "በጣም አመሰግናለሁ.",
+      "note": "ይፋዊ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ይቅርታ እጠይቃለሁ.",
+      "note": "ይፋዊ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ይቅርታ.",
+      "note": "ትኩረት ለመሳብ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "እንዴት ነህ / ነሽ?",
+      "note": "ሰላምታ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ደህና ነኝ፣ አመሰግናለሁ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ስምህ / ስምሽ ማን ነው?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ስሜ ... ነው.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ከየት ነህ / ነሽ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ከአሜሪካ ነኝ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "በሰላም ሂድ / ሂጂ.",
+      "note": "ለሚሄድ ሰው",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ደህና ሰንብት / ሰንብቺ.",
+      "note": "ለሚቆይ ሰው",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "አዎ.",
+      "note": "አዎንታዊ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "አይ.",
+      "note": "አሉታዊ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ምናልባት.",
+      "note": "ግምት",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ገብቶኛል.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "አላውቅም.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "እባክህ / እባክሽ እርዳኝ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "እባክህ / እባክሽ ትንሽ ጠብቅ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ዋጋው ስንት ነው?",
+      "note": "ግዢ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "መጸዳጃ ቤት የት ነው?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ርቦኛል.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ጠምቶኛል.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ይህ ጣፋጭ ነው.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ይህንን ወድጄዋለሁ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ችግር የለም.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "መልካም ዕድል.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "አሁን ሰዓት ስንት ነው?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ዛሬ አየሩ ጥሩ ነው.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "በርዷል.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ሙቋል.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ደክሞኛል.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ደስተኛ ነኝ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "እንኳን ደስ አለህ / አለሽ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "መልካም ልደት.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "መልካም ቀን ይሁንልህ / ይሁንልሽ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ነገ እንገናኝ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ራስህን ጠብቅ / ራስሽን ጠብቂ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "እንግሊዝኛ ትናገራለህ / ትናገሪያለሽ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ትንሽ ኮሪያኛ ብቻ ነው የምናገረው.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "እባክህ / እባክሽ ቀስ ብለህ ተናገር.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ይህ ምን ማለት ነው?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ይህ በኮሪያኛ ምን ይባላል?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "እወድሃለሁ / እወድሻለሁ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "እባክህ / እባክሽ ጠብቅ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "እንኳን ደህና መጣህ / መጣሽ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "አይ፣ አመሰግናለሁ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ጥያቄ አለኝ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

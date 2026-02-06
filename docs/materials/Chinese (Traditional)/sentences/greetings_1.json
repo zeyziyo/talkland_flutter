@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "問候 1",
+  "entries": [
+    {
+      "text": "您好。",
+      "note": "禮貌問候",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "見到您很高興。",
+      "note": "初次見面",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "好久不見。",
+      "note": "重逢",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "謝謝。",
+      "note": "正式",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "對不起。",
+      "note": "正式",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "打擾一下。",
+      "note": "引起注意",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "您好嗎？",
+      "note": "問安",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我很好，謝謝。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "您叫什麼名字？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我叫...。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "您從哪裡來？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我從美國來。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "再見。",
+      "note": "對離開的人",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "請慢走 / 再見。",
+      "note": "對留下的人",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "是 / 對。",
+      "note": "肯定",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "不 / 不是。",
+      "note": "否定",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "也許吧。",
+      "note": "猜測",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我明白了。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我不知道。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "請幫幫我。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "請稍等。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "這個多少錢？",
+      "note": "購物",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "洗手間在哪裡？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我餓了。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我渴了。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "很好吃。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我喜歡。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "沒關係。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "祝你好運。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "現在幾點？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "今天天氣很好。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "很冷。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "很熱。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我累了。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我很幸福。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "恭喜。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "生日快樂。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "祝你度過愉快的一天。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "明天見。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "保重。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "你會說英語嗎？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我只會說一點韓語。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "請慢慢說。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "這是有什麼意思？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "用韓語怎麼說？",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我愛你。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "請等一下。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "不客氣。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "不，不用了。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "我有一個問題。",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

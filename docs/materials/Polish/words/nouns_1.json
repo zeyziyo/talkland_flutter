@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Podstawowe rzeczowniki 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Osoba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Woda",
+      "note": "Woda pitna",
+      "tags": []
+    },
+    {
+      "text": "Posiłek / Ryż",
+      "note": "Posiłek",
+      "tags": []
+    },
+    {
+      "text": "Chleb",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jabłko",
+      "note": "Owoc",
+      "tags": []
+    },
+    {
+      "text": "Mleko",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mięso",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ubranie",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dom",
+      "note": "Mieszkanie",
+      "tags": []
+    },
+    {
+      "text": "Pokój",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Okno",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Drzwi",
+      "note": "Wejście",
+      "tags": []
+    },
+    {
+      "text": "Biurko",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Krzesło",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Komputer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Telefon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Książka",
+      "note": "Książka",
+      "tags": []
+    },
+    {
+      "text": "Ołówek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Papier",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Torba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Szkoła",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Firma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Szpital",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Apteka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Restauracja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Targ / Rynki",
+      "note": "Rynek",
+      "tags": []
+    },
+    {
+      "text": "Metro",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Autobus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taksówka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Samolot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pociąg",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rower",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Droga",
+      "note": "Jezdnia",
+      "tags": []
+    },
+    {
+      "text": "Góra",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Morze",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rzeka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Niebo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Słońce / Rok",
+      "note": "Słońce / Rok",
+      "tags": []
+    },
+    {
+      "text": "Księżyc",
+      "note": "Satelita",
+      "tags": []
+    },
+    {
+      "text": "Gwiazda",
+      "note": "Ciało niebieskie",
+      "tags": []
+    },
+    {
+      "text": "Drzewo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kwiat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Szczeniak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pieniądze",
+      "note": "Gotówka",
+      "tags": []
+    },
+    {
+      "text": "Czas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dzisiaj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jutro",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wczoraj",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Przyjaciel",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

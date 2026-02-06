@@ -1,37 +1,86 @@
 {
-    "title": "Eerste ontmoeting",
-    "entries": [
-        {
-            "text": "Hallo!",
-            "speaker": "A"
-        },
-        {
-            "text": "Hallo. Leuk u te ontmoeten.",
-            "speaker": "B"
-        },
-        {
-            "text": "Wat is uw naam?",
-            "speaker": "A"
-        },
-        {
-            "text": "Mijn naam is [Naam]. En die van u?",
-            "speaker": "B"
-        },
-        {
-            "text": "Mijn naam is [Naam]. Waar komt u vandaan?",
-            "speaker": "A"
-        },
-        {
-            "text": "Ik kom uit Amerika. En u?",
-            "speaker": "B"
-        },
-        {
-            "text": "Ik kom uit Korea. Het was leuk u te ontmoeten.",
-            "speaker": "A"
-        },
-        {
-            "text": "Insgelijks. Tot ziens.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Hallo!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hallo. Leuk u te ontmoeten.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wat is uw naam?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mijn naam is [Naam]. En die van u?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mijn naam is [Naam]. Waar komt u vandaan?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik kom uit Amerika. En u?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ik kom uit Korea. Het was leuk u te ontmoeten.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Insgelijks. Tot ziens.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

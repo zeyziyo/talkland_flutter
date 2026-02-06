@@ -1,45 +1,102 @@
 {
-    "title": "Erstes Treffen",
-    "entries": [
-        {
-            "text": "Hallo! Mein Name ist Jordan. Schön, Sie kennenzulernen.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Hallo Jordan! Ich bin Minji. Schön, Sie auch kennenzulernen.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Sind Sie Student?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Nein, ich bin Büroangestellte. Und Sie, Jordan?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ich bin Universitätsstudent. Ich lerne Koreanisch.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Wow, das ist toll! Koreanisch ist ein bisschen schwierig, oder?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ja, es ist schwierig, aber es macht Spaß. Bitte helfen Sie mir viel.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Natürlich! Lassen Sie uns zusammen fleißig lernen.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Danke. Bis zum nächsten Mal!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Auf Wiedersehen!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Erste Begegnung",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "Benutzer",
+      "gender": "Männlich",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "KI",
+      "gender": "Weiblich",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Hallo! Mein Name ist Jordan. Schön, Sie kennenzulernen.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hallo Jordan! Ich bin Minji. Schön, Sie auch kennenzulernen.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sind Sie Student?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nein, ich bin Büroangestellte. Und Sie, Jordan?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ich bin Universitätsstudent. Ich lerne Koreanisch.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wow, das ist toll! Koreanisch ist ein bisschen schwierig, oder?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ja, es ist schwierig, aber es macht Spaß. Bitte helfen Sie mir viel.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Natürlich! Lassen Sie uns zusammen fleißig lernen.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Danke. Bis zum nächsten Mal!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Auf Wiedersehen!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

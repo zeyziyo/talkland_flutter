@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "بنیادی اصطلاحات اور روزمرہ جملے 50",
+  "entries": [
+    {
+      "text": "سلام / آداب۔",
+      "note": "شائستہ سلام",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "آپ سے مل کر خوشی ہوئی۔",
+      "note": "پہلی ملاقات",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "بڑے عرصے بعد ملے۔",
+      "note": "دوبارہ ملاقات",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "بہت شکریہ۔",
+      "note": "رسمی",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "مجھے افسوس ہے۔",
+      "note": "رسمی",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "معاف کیجیے گا۔",
+      "note": "توجہ حاصل کرنے کے لیے",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "آپ کیسے ہیں؟",
+      "note": "حال چال",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "میں ٹھیک ہوں، شکریہ۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "آپ کا نام کیا ہے؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "میرا نام ... ہے۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "آپ کہاں سے ہیں؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "میں امریکہ سے ہوں۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "فی امان اللہ / اللہ حافظ۔",
+      "note": "جانے والے کے لیے",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "خدا حافظ۔",
+      "note": "رہنے والے کے لیے",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "جی ہاں۔",
+      "note": "اثبات",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "جی نہیں۔",
+      "note": "نفی",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "شاید۔",
+      "note": "قیاس",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "میں سمجھ گیا۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "مجھے نہیں معلوم۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "براہ کرم میری مدد کریں۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "براہ کرم ایک لمحہ انتظار کریں۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "یہ کتنے کا ہے؟",
+      "note": "خریداری",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "باتھ روم کہاں ہے؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "مجھے بھوک لگی ہے۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "مجھے پیاس لگی ہے۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "یہ لذیذ ہے۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "مجھے یہ پسند ہے۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "کوئی بات نہیں / ٹھیک ہے۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "نیک تمنائیں / گڈ لک۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "اب کیا وقت ہوا ہے؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "آج موسم اچھا ہے۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "سردی ہے۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "گرمی ہے۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "میں تھک گیا ہوں۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "میں خوش ہوں۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "مبارک ہو۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "سالگرہ مبارک۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "آپ کا دن اچھا گزرے۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "کل ملیں گے۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "اپنا خیال رکھنا۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "کیا آپ انگریزی بولتے ہیں؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "میں صرف تھوڑی سی کوریائی بولتا ہوں۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "براہ کرم آہستہ بولیں۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "اس کا کیا مطلب ہے؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "اسے کوریائی میں کیا کہتے ہیں؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "میں آپ سے محبت کرتا ہوں۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "براہ کرم انتظار کریں۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "خوش آمدید / کوئی بات نہیں۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "جی نہیں، شکریہ۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "میرا ایک سوال ہے۔",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

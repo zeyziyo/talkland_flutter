@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Салам! Менин атым Джордан. Сиз менен таанышканыма кубанычтамын.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Салам Джордан! Менин атым Минжи. Мен дагы сиз менен таанышканыма кубанычтамын.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Сиз студентсизби?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Жок, мен кеңсе кызматкеримин. Сиз жөнүндө эмне айтууга болот?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Мен колледждин студентимин. Мен корей тилин үйрөнүп жатам.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Оо, бул сонун! Корей тили бир аз кыйын, туурабы?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ооба, бул кыйын, бирок кызыктуу. Мага көп жардам бериңиз.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Албетте! Келиңиз, чогуу катуу окуйбуз.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Рахмат. Кийинки жолу көрүшкөнчө!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Кош болуңуз!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Салам! Менин атым Джордан. Сиз менен таанышканыма кубанычтамын.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Салам Джордан! Менин атым Минжи. Мен дагы сиз менен таанышканыма кубанычтамын.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сиз студентсизби?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Жок, мен кеңсе кызматкеримин. Сиз жөнүндө эмне айтууга болот?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мен колледждин студентимин. Мен корей тилин үйрөнүп жатам.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Оо, бул сонун! Корей тили бир аз кыйын, туурабы?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ооба, бул кыйын, бирок кызыктуу. Мага көп жардам бериңиз.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Албетте! Келиңиз, чогуу катуу окуйбуз.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Рахмат. Кийинки жолу көрүшкөнчө!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Кош болуңуз!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

@@ -1,37 +1,86 @@
 {
-    "title": "Första mötet",
-    "entries": [
-        {
-            "text": "Hej!",
-            "speaker": "A"
-        },
-        {
-            "text": "Hej. Trevligt att träffas.",
-            "speaker": "B"
-        },
-        {
-            "text": "Vad heter du?",
-            "speaker": "A"
-        },
-        {
-            "text": "Jag heter [Namn]. Och du?",
-            "speaker": "B"
-        },
-        {
-            "text": "Jag heter [Namn]. Varifrån kommer du?",
-            "speaker": "A"
-        },
-        {
-            "text": "Jag kommer från Amerika. Och du?",
-            "speaker": "B"
-        },
-        {
-            "text": "Jag kommer från Korea. Det var trevligt att träffas.",
-            "speaker": "A"
-        },
-        {
-            "text": "Detsamma. Hej då.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Hej!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hej. Trevligt att träffas.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vad heter du?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag heter [Namn]. Och du?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag heter [Namn]. Varifrån kommer du?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag kommer från Amerika. Och du?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jag kommer från Korea. Det var trevligt att träffas.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Detsamma. Hej då.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

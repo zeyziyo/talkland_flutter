@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Helo! Jordan ydy fy enw i. Braf cwrdd â chi.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Helo Jordan! Minji ydw i. Braf cwrdd â chi hefyd.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ydych chi'n fyfyriwr?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Nac ydw, rwy'n gweithiwr swyddfa. Beth amdanoch chi?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Myfyriwr coleg ydw i. Rwy'n astudio Coreeg.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Wow, mae hynny'n wych! Mae Coreeg ychydig yn anodd, onid ydyw?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ydy, mae'n anodd ond yn hwyl. Plîs helpwch fi llawer.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Siŵr! Gadewch i ni astudio'n galed gyda'n gilydd.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Diolch. Welwn ni chi tro nesaf!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Hwyl fawr!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Helo! Jordan ydy fy enw i. Braf cwrdd â chi.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Helo Jordan! Minji ydw i. Braf cwrdd â chi hefyd.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ydych chi'n fyfyriwr?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nac ydw, rwy'n gweithiwr swyddfa. Beth amdanoch chi?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Myfyriwr coleg ydw i. Rwy'n astudio Coreeg.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wow, mae hynny'n wych! Mae Coreeg ychydig yn anodd, onid ydyw?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ydy, mae'n anodd ond yn hwyl. Plîs helpwch fi llawer.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Siŵr! Gadewch i ni astudio'n galed gyda'n gilydd.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Diolch. Welwn ni chi tro nesaf!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hwyl fawr!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

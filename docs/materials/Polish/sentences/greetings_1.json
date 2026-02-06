@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Podstawowe zwroty i codzienne zdania 50",
+  "entries": [
+    {
+      "text": "Dzień dobry / Cześć.",
+      "note": "Uprzejme powitanie",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Miło cię poznać.",
+      "note": "Pierwsze spotkanie",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dawno się nie widzieliśmy.",
+      "note": "Ponowne spotkanie",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dziękuję.",
+      "note": "Formalnie",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Przepraszam.",
+      "note": "Formalnie",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Przepraszam / Chwileczkę.",
+      "note": "Przyciąganie uwagi",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jak się masz?",
+      "note": "Powitanie",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dobrze, dziękuję.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jak masz na imię?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nazywam się ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Skąd pochodzisz?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pochodzę z Ameryki.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Do widzenia.",
+      "note": "Do osoby odchodzącej",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Do zobaczenia.",
+      "note": "Do osoby zostającej",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tak.",
+      "note": "Twierdząco",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nie.",
+      "note": "Przecząco",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Może.",
+      "note": "Przypuszczenie",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rozumiem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nie wiem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Proszę mi pomóc.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Proszę chwilę poczekać.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ile to kosztuje?",
+      "note": "Zakupy",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gdzie jest toaleta?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jestem głodny.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Chce mi się pić.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "To jest pyszne.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Lubię to.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "W porządku.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Powodzenia.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Która jest teraz godzina?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dzisiaj jest ładna pogoda.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jest zimno.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jest gorąco.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jestem zmęczony.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jestem szczęśliwy.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gratulacje.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wszystkiego najlepszego z okazji urodzin.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Miłego dnia.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Do jutra.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Uważaj na siebie.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Czy mówisz po angielsku?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mówię tylko trochę po koreańsku.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Proszę mówić wolniej.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Co to znaczy?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jak to się mówi po koreańsku?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kocham cię.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Proszę poczekać.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nie ma za co / Proszę bardzo.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nie, dziękuję.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mam pytanie.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

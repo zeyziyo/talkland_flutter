@@ -1,37 +1,86 @@
 {
-    "title": "පළමු හමුවීම",
-    "entries": [
-        {
-            "text": "ආයුබෝවන්!",
-            "speaker": "A"
-        },
-        {
-            "text": "ආයුබෝවන්. ඔබව හමුවීම සතුටක්.",
-            "speaker": "B"
-        },
-        {
-            "text": "ඔබේ නම මොකක්ද?",
-            "speaker": "A"
-        },
-        {
-            "text": "මගේ නම [නම]. ඔබේ නම?",
-            "speaker": "B"
-        },
-        {
-            "text": "මගේ නම [නම]. ඔබ කොහේ ඉඳලද එන්නේ?",
-            "speaker": "A"
-        },
-        {
-            "text": "මම පැමිණෙන්නේ ඇමරිකාවේ සිටයි. ඔබ?",
-            "speaker": "B"
-        },
-        {
-            "text": "මම පැමිණෙන්නේ කොරියාවේ සිටයි. ඔබව හමුවීම ගැන ගොඩක් සතුටුයි.",
-            "speaker": "A"
-        },
-        {
-            "text": "මටත් එසේමයි. ගිහින් එන්නම්.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "ආයුබෝවන්!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ආයුබෝවන්. ඔබව හමුවීම සතුටක්.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ඔබේ නම මොකක්ද?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "මගේ නම [නම]. ඔබේ නම?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "මගේ නම [නම]. ඔබ කොහේ ඉඳලද එන්නේ?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "මම පැමිණෙන්නේ ඇමරිකාවේ සිටයි. ඔබ?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "මම පැමිණෙන්නේ කොරියාවේ සිටයි. ඔබව හමුවීම ගැන ගොඩක් සතුටුයි.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "මටත් එසේමයි. ගිහින් එන්නම්.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

@@ -1,37 +1,86 @@
 {
-    "title": "Første møte",
-    "entries": [
-        {
-            "text": "Hallo!",
-            "speaker": "A"
-        },
-        {
-            "text": "Hallo. Hyggelig å møte deg.",
-            "speaker": "B"
-        },
-        {
-            "text": "Hva heter du?",
-            "speaker": "A"
-        },
-        {
-            "text": "Jeg heter [Navn]. Og du?",
-            "speaker": "B"
-        },
-        {
-            "text": "Jeg heter [Navn]. Hvor kommer du fra?",
-            "speaker": "A"
-        },
-        {
-            "text": "Jeg kommer fra Amerika. Og du?",
-            "speaker": "B"
-        },
-        {
-            "text": "Jeg kommer fra Korea. Det var hyggelig å møte deg.",
-            "speaker": "A"
-        },
-        {
-            "text": "I like måte. Ha det bra.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Hallo!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hallo. Hyggelig å møte deg.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hva heter du?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg heter [Navn]. Og du?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg heter [Navn]. Hvor kommer du fra?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg kommer fra Amerika. Og du?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg kommer fra Korea. Det var hyggelig å møte deg.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "I like måte. Ha det bra.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

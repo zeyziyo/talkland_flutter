@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Основные выражения и повседневные фразы 50",
+  "entries": [
+    {
+      "text": "Здравствуйте.",
+      "note": "Вежливое приветствие",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Рад встрече.",
+      "note": "Первая встреча",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Давно не виделись.",
+      "note": "Воссоединение",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Спасибо.",
+      "note": "Формально",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Извините.",
+      "note": "Формально",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Простите.",
+      "note": "Привлечение внимания",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Как поживаете?",
+      "note": "Приветствие",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Хорошо, спасибо.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Как вас зовут?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Меня зовут ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Откуда вы?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я из Америки.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "До свидания.",
+      "note": "Тому, кто уходит",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Счастливо оставаться.",
+      "note": "Тому, кто остается",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Да.",
+      "note": "Положительно",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Нет.",
+      "note": "Отрицательно",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Может быть.",
+      "note": "Предположение",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я понимаю.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я не знаю.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Помогите мне, пожалуйста.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Подождите минутку, пожалуйста.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сколько это стоит?",
+      "note": "Покупки",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Где находится туалет?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я хочу есть.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я хочу пить.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Это вкусно.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мне нравится.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Все в порядке.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Удачи.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Который сейчас час?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сегодня хорошая погода.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Холодно.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Жарко.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я устал.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я счастлив.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Поздравляю.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "С днем рождения.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Хорошего дня.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "До завтра.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Берегите себя.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Вы говорите по-английски?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я только немного говорю по-корейски.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Говорите медленнее, пожалуйста.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Что это значит?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Как это будет по-корейски?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Я тебя люблю.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Подождите, пожалуйста.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Не за что.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Нет, спасибо.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "У меня есть вопрос.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

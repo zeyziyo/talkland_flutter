@@ -1,37 +1,86 @@
 {
-    "title": "మొదటి పరిచయం",
-    "entries": [
-        {
-            "text": "నమస్కారం!",
-            "speaker": "A"
-        },
-        {
-            "text": "నమస్కారం. మిమ్మల్ని కలిసినందుకు సంతోషం.",
-            "speaker": "B"
-        },
-        {
-            "text": "మీ పేరు ఏమిటి?",
-            "speaker": "A"
-        },
-        {
-            "text": "నా పేరు [పేరు]. మరి మీది?",
-            "speaker": "B"
-        },
-        {
-            "text": "నా పేరు [పేరు]. మీరు ఎక్కడి నుండి వచ్చారు?",
-            "speaker": "A"
-        },
-        {
-            "text": "నేను అమెరికా నుండి వచ్చాను. మరి మీరు?",
-            "speaker": "B"
-        },
-        {
-            "text": "నేను కొరియా నుండి వచ్చాను. మిమ్మల్ని కలిసినందుకు చాలా సంతోషంగా ఉంది.",
-            "speaker": "A"
-        },
-        {
-            "text": "నాకు కూడా. వెళ్లివస్తాను.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "నమస్కారం!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "నమస్కారం. మిమ్మల్ని కలిసినందుకు సంతోషం.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "మీ పేరు ఏమిటి?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "నా పేరు [పేరు]. మరి మీది?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "నా పేరు [పేరు]. మీరు ఎక్కడి నుండి వచ్చారు?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "నేను అమెరికా నుండి వచ్చాను. మరి మీరు?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "నేను కొరియా నుండి వచ్చాను. మిమ్మల్ని కలిసినందుకు చాలా సంతోషంగా ఉంది.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "నాకు కూడా. వెళ్లివస్తాను.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

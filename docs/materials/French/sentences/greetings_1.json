@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Salutations 1",
+  "entries": [
+    {
+      "text": "Bonjour.",
+      "note": "Salutation polie",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Enchanté(e).",
+      "note": "Première rencontre",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ça fait longtemps.",
+      "note": "Retrouvailles",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Merci.",
+      "note": "Formel",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je suis désolé(e).",
+      "note": "Formel",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Excusez-moi.",
+      "note": "Attirer l'attention",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Comment allez-vous ?",
+      "note": "Salutations",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je vais bien, merci.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Comment vous appelez-vous ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je m'appelle ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "D'où venez-vous ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je viens des États-Unis.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Au revoir.",
+      "note": "À quelqu'un qui part",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Adieu / Bonne continuation.",
+      "note": "À quelqu'un qui reste",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Oui.",
+      "note": "Positif",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Non.",
+      "note": "Négatif",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Peut-être.",
+      "note": "Hypothèse",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je comprends.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je ne sais pas.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Aidez-moi, s'il vous plaît.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Un instant, s'il vous plaît.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "C'est combien ?",
+      "note": "Achats",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Où sont les toilettes ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "J'ai faim.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "J'ai soif.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "C'est délicieux.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "J'aime bien.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "C'est bon / Ça va.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bonne chance.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Quelle heure est-il ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Il fait beau aujourd'hui.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Il fait froid.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Il fait chaud.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je suis fatigué(e).",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je suis heureux/heureuse.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Félicitations.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Joyeux anniversaire.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bonne journée.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "À demain.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Prenez soin de vous.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Parlez-vous anglais ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je ne parle qu'un peu le coréen.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Parlez lentement, s'il vous plaît.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Qu'est-ce que ça veut dire ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Comment dit-on en coréen ?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je t'aime.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Attendez, s'il vous plaît.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Je vous en prie / De rien.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Non, merci.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "J'ai une question.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

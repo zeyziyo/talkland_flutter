@@ -1,37 +1,86 @@
 {
-    "title": "Pierwsze spotkanie",
-    "entries": [
-        {
-            "text": "Dzień dobry!",
-            "speaker": "A"
-        },
-        {
-            "text": "Dzień dobry. Miło cię poznać.",
-            "speaker": "B"
-        },
-        {
-            "text": "Jak masz na imię?",
-            "speaker": "A"
-        },
-        {
-            "text": "Nazywam się [Imię]. A ty?",
-            "speaker": "B"
-        },
-        {
-            "text": "Nazywam się [Imię]. Skąd pochodzisz?",
-            "speaker": "A"
-        },
-        {
-            "text": "Pochodzę z Ameryki. A ty?",
-            "speaker": "B"
-        },
-        {
-            "text": "Pochodzę z Korei. Miło było cię poznać.",
-            "speaker": "A"
-        },
-        {
-            "text": "Mnie również. Do widzenia.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Dzień dobry!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Dzień dobry. Miło cię poznać.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jak masz na imię?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nazywam się [Imię]. A ty?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nazywam się [Imię]. Skąd pochodzisz?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pochodzę z Ameryki. A ty?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pochodzę z Korei. Miło było cię poznać.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mnie również. Do widzenia.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

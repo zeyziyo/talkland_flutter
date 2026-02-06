@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Podstawowe czasowniki 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Iść",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Przychodzić",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jeść",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pić",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Spać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Widzieć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kupować",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sprzedawać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Czytać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pisać",
+      "note": "Pismo",
+      "tags": []
+    },
+    {
+      "text": "Słuchać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mówić",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Robić",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pracować",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uczyć się",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uczyć / Nauczać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uczyć się",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Czekać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Spotykać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kochać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lubić",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nienawidzić",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Śmiać się",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Płakać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Spacerować",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Biegać",
+      "note": "Bieg",
+      "tags": []
+    },
+    {
+      "text": "Siedzieć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dawać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Otrzymywać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Otwierać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zamykać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Myśleć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wiedzieć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nie wiedzieć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Szukać / Znaleźć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tracić",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pomagać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Myć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gotować",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Śpiewać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tańczyć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Używać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Robić",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wołać / Śpiewać",
+      "note": "Pieśń / Imię",
+      "tags": []
+    },
+    {
+      "text": "Łapać / Trzymać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kłaść / Zostawiać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wchodzić",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wychodzić",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wsiadać",
+      "note": "Do pojazdu",
+      "tags": []
+    },
+    {
+      "text": "Wysiadać",
+      "note": "Z pojazdu",
+      "tags": []
+    },
+    {
+      "text": "Wysyłać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Składać",
+      "note": "Złożenie",
+      "tags": []
+    },
+    {
+      "text": "Miewać się",
+      "note": "Pozdrowienia",
+      "tags": []
+    },
+    {
+      "text": "Zaczynać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kończyć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Odpoczywać",
+      "note": "Odpoczynek",
+      "tags": []
+    },
+    {
+      "text": "Pytać",
+      "note": "Pytanie",
+      "tags": []
+    },
+    {
+      "text": "Odpowiadać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Obiecywać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Martwić się",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wierzyć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wątpić",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pragnąć / Mieć nadzieję",
+      "note": "Nadzieja",
+      "tags": []
+    },
+    {
+      "text": "Śnić / Marzyć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Walczyć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wygrywać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Przegrywać",
+      "note": "Porażka",
+      "tags": []
+    },
+    {
+      "text": "Rosnąć",
+      "note": "Wzrost",
+      "tags": []
+    },
+    {
+      "text": "Żyć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Umierać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zbierać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wyrzucać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chować",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Szukać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Wybierać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zmieniać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zamawiać",
+      "note": "Zakup towarów",
+      "tags": []
+    },
+    {
+      "text": "Przygotowywać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Łapać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rzucać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ciągnąć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pchać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Naprawiać",
+      "note": "Naprawa",
+      "tags": []
+    },
+    {
+      "text": "Niszczyć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chorować / Boleć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Leczyć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ćwiczyć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pływać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Podróżować",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prowadzić",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sprzątać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zmywać naczynia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prać",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Brać prysznic",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Myć zęby",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Budzić się",
+      "note": "Pobudka",
+      "tags": []
+    },
+    {
+      "text": "Kłaść się spać",
+      "note": "Sen",
+      "tags": []
+    },
+    {
+      "text": "Rozumieć",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pamiętać",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

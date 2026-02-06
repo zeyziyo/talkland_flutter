@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Sveiki! Mani sauc Džordans. Prieks iepazīties.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Sveiks, Džordan! Esmu Mindži. Arī man prieks iepazīties.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Vai tu esi students?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Nē, esmu biroja darbinieks. Bet tu?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Esmu koledžas students. Es studēju korejiešu valodu.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Oho, tas ir lieliski! Korejiešu valoda ir nedaudz grūta, vai ne?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Jā, tā ir grūta, bet jautra. Lūdzu, palīdzi man daudz.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Protams! Mācīsimies kopā.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Paldies. Uz redzēšanos nākamreiz!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Atā!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Sveiki! Mani sauc Džordans. Prieks iepazīties.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sveiks, Džordan! Esmu Mindži. Arī man prieks iepazīties.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vai tu esi students?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nē, esmu biroja darbinieks. Bet tu?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Esmu koledžas students. Es studēju korejiešu valodu.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Oho, tas ir lieliski! Korejiešu valoda ir nedaudz grūta, vai ne?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jā, tā ir grūta, bet jautra. Lūdzu, palīdzi man daudz.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Protams! Mācīsimies kopā.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Paldies. Uz redzēšanos nākamreiz!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Atā!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

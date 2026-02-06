@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Động từ 1",
+  "pos": "Động từ",
+  "entries": [
+    {
+      "text": "đi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "đến",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ăn",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "uống",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ngủ",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "xem / nhìn",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bán",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "đọc",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "viết",
+      "note": "viết lách",
+      "tags": []
+    },
+    {
+      "text": "nghe",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "nói",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "làm",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "làm việc",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "học tập",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "dạy",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "học",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "chờ đợi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gặp gỡ",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "yêu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "thích",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ghét",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "cười",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "khóc",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "đi bộ",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "chạy",
+      "note": "chạy bộ",
+      "tags": []
+    },
+    {
+      "text": "ngồi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "đứng",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "cho / tặng",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "nhận",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mở",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "đóng",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "suy nghĩ",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "biết",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "không biết",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tìm / thấy",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mất",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "giúp đỡ",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "rửa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "nấu ăn",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "hát",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "nhảy múa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "sử dụng",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "làm ra / chế biến",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gọi / hát",
+      "note": "bài hát / tên",
+      "tags": []
+    },
+    {
+      "text": "cầm / giữ",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "để / bỏ qua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "vào",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ra",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "lên",
+      "note": "phương tiện",
+      "tags": []
+    },
+    {
+      "text": "xuống",
+      "note": "phương tiện",
+      "tags": []
+    },
+    {
+      "text": "gửi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "nộp / trả",
+      "note": "tiền / hồ sơ",
+      "tags": []
+    },
+    {
+      "text": "sống / trải qua",
+      "note": "lời chào",
+      "tags": []
+    },
+    {
+      "text": "bắt đầu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kết thúc",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "nghỉ ngơi",
+      "note": "nghỉ ngơi",
+      "tags": []
+    },
+    {
+      "text": "hỏi",
+      "note": "câu hỏi",
+      "tags": []
+    },
+    {
+      "text": "trả lời",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "hứa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "lo lắng",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tin tưởng",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "nghi ngờ",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "hy vọng",
+      "note": "hy vọng",
+      "tags": []
+    },
+    {
+      "text": "mơ",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "đánh nhau / cãi nhau",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "thắng",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "thua",
+      "note": "thất bại",
+      "tags": []
+    },
+    {
+      "text": "phát triển",
+      "note": "tăng trưởng",
+      "tags": []
+    },
+    {
+      "text": "sống",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "chết",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "cầm lên",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "vứt bỏ",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "giấu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tìm kiếm",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "chọn / tuyển",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "thay đổi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "đặt hàng",
+      "note": "mua hàng",
+      "tags": []
+    },
+    {
+      "text": "chuẩn bị",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bắt lấy",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ném",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kéo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "đẩy",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "sửa chữa",
+      "note": "sửa chữa",
+      "tags": []
+    },
+    {
+      "text": "hỏng / vỡ",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "đau / ốm",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "điều trị",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tập thể dục",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bơi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "du lịch",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "lái xe",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "dọn dẹp",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "rửa bát",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "giặt đồ",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tắm",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "đánh răng",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "thức dậy",
+      "note": "tỉnh giấc",
+      "tags": []
+    },
+    {
+      "text": "đi ngủ",
+      "note": "ngủ",
+      "tags": []
+    },
+    {
+      "text": "hiểu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "nhớ",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

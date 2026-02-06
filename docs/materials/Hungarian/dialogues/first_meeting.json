@@ -1,37 +1,86 @@
 {
-    "title": "Első találkozás",
-    "entries": [
-        {
-            "text": "Jó napot!",
-            "speaker": "A"
-        },
-        {
-            "text": "Jó napot. Örülök, hogy megismertem.",
-            "speaker": "B"
-        },
-        {
-            "text": "Mi a neve?",
-            "speaker": "A"
-        },
-        {
-            "text": "A nevem [Név]. És öné?",
-            "speaker": "B"
-        },
-        {
-            "text": "A nevem [Név]. Hová valósi?",
-            "speaker": "A"
-        },
-        {
-            "text": "Amerikából jöttem. És ön?",
-            "speaker": "B"
-        },
-        {
-            "text": "Koreából jöttem. Örültem a találkozásnak.",
-            "speaker": "A"
-        },
-        {
-            "text": "Én is. Viszontlátásra.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Jó napot!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jó napot. Örülök, hogy megismertem.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mi a neve?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "A nevem [Név]. És öné?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "A nevem [Név]. Hová valósi?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Amerikából jöttem. És ön?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Koreából jöttem. Örültem a találkozásnak.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Én is. Viszontlátásra.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

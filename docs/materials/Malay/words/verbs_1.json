@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "100 Kata Kerja Asas",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "pergi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "datang",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "makan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "minum",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tidur",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "melihat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "membeli",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menjual",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "membaca",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menulis",
+      "note": "menulis",
+      "tags": []
+    },
+    {
+      "text": "mendengar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bercakap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "melakukan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bekerja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "belajar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mengajar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mempelajari",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menunggu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "berjumpa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mencintai",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menyukai",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "membenci",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ketawa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menangis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "berjalan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "berlari",
+      "note": "berlari",
+      "tags": []
+    },
+    {
+      "text": "duduk",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "berdiri",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "memberi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menerima",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "membuka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menutup",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "berfikir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tahu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tidak tahu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mencari / jumpa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kehilangan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "membantu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mencuci",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "memasak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bernyanyi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menari",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menggunakan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "membuat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "memanggil / bernyanyi",
+      "note": "lagu / nama",
+      "tags": []
+    },
+    {
+      "text": "memegang",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "meletakkan / melepaskan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "masuk",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "keluar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "naik",
+      "note": "kenderaan",
+      "tags": []
+    },
+    {
+      "text": "turun",
+      "note": "kenderaan",
+      "tags": []
+    },
+    {
+      "text": "menghantar",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menyerahkan",
+      "note": "serahan",
+      "tags": []
+    },
+    {
+      "text": "khabar",
+      "note": "salam",
+      "tags": []
+    },
+    {
+      "text": "bermula",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "berakhir",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "berehat",
+      "note": "rehat",
+      "tags": []
+    },
+    {
+      "text": "bertanya",
+      "note": "soalan",
+      "tags": []
+    },
+    {
+      "text": "menjawab",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "berjanji",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "risau",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "percaya",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ragu-ragu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "berharap",
+      "note": "harapan",
+      "tags": []
+    },
+    {
+      "text": "bermimpi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "berkelahi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menang",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kalah",
+      "note": "kekalahan",
+      "tags": []
+    },
+    {
+      "text": "tumbuh",
+      "note": "pertumbuhan",
+      "tags": []
+    },
+    {
+      "text": "hidup / tinggal",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mati",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mengambil",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "membuang",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bersembunyi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mencari",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "memilih",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mengubah",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "memesan",
+      "note": "pembelian barang",
+      "tags": []
+    },
+    {
+      "text": "bersiap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menangkap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "membaling",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menarik",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "menolak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "membaiki",
+      "note": "pembaikan",
+      "tags": []
+    },
+    {
+      "text": "rosak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "sakit",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "merawat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bersukan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "berenang",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mengembara",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "memandu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "membersihkan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mencuci pinggan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mencuci baju",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mandi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "berus gigi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bangun",
+      "note": "terjaga",
+      "tags": []
+    },
+    {
+      "text": "tidur",
+      "note": "tidur",
+      "tags": []
+    },
+    {
+      "text": "faham",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ingat",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

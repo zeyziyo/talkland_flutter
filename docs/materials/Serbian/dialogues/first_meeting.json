@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Zdravo! Moje ime je Jordan. Drago mi je.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Zdravo Jordane! Ja sam Minji. Takođe mi je drago.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Da li si student?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Ne, ja sam kancelarijski radnik. A ti?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ja sam student. Studiram korejski.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Vau, to je sjajno! Korejski je malo težak, zar ne?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Da, teško je, ali zabavno. Molim te, pomozi mi puno.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Naravno! Hajde da zajedno učimo vredno.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Hvala ti. Vidimo se sledeći put!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Doviđenja!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Zdravo! Moje ime je Jordan. Drago mi je.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Zdravo Jordane! Ja sam Minji. Takođe mi je drago.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Da li si student?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ne, ja sam kancelarijski radnik. A ti?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ja sam student. Studiram korejski.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vau, to je sjajno! Korejski je malo težak, zar ne?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Da, teško je, ali zabavno. Molim te, pomozi mi puno.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Naravno! Hajde da zajedno učimo vredno.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hvala ti. Vidimo se sledeći put!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Doviđenja!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

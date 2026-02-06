@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Alapfőnevek 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Személy",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Víz",
+      "note": "Ivóvíz",
+      "tags": []
+    },
+    {
+      "text": "Étkezés / Rizs",
+      "note": "Étkezés",
+      "tags": []
+    },
+    {
+      "text": "Kenyér",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Alma",
+      "note": "Gyümölcs",
+      "tags": []
+    },
+    {
+      "text": "Tej",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hús",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ruha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ház",
+      "note": "Lakás",
+      "tags": []
+    },
+    {
+      "text": "Szoba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ablak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ajtó",
+      "note": "Bejárat",
+      "tags": []
+    },
+    {
+      "text": "Íróasztal",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Szék",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Számítógép",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Telefon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Könyv",
+      "note": "Könyv",
+      "tags": []
+    },
+    {
+      "text": "Ceruza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Papír",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Táska",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Iskola",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cég",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kórház",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gyógyszertár",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Étterem",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Piac",
+      "note": "Piac",
+      "tags": []
+    },
+    {
+      "text": "Metró",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Busz",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taxi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Repülőgép",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vonat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kerékpár",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Út",
+      "note": "Út",
+      "tags": []
+    },
+    {
+      "text": "Hegy",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tenger",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Folyó",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Égbolt",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nap / Év",
+      "note": "Nap / Év",
+      "tags": []
+    },
+    {
+      "text": "Hold",
+      "note": "Hold",
+      "tags": []
+    },
+    {
+      "text": "Csillag",
+      "note": "Égitest",
+      "tags": []
+    },
+    {
+      "text": "Fa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Virág",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kiskutya",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Macska",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pénz",
+      "note": "Készpénz",
+      "tags": []
+    },
+    {
+      "text": "Idő",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Holnap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tegnap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Barát",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

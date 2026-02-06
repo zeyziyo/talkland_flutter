@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Salutacions bàsiques i frases diàries 50",
+  "entries": [
+    {
+      "text": "Hola.",
+      "note": "Salutació educada",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Encantat/ada de conèixer-te.",
+      "note": "Primer encuentro",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Quant temps sense veure'ns.",
+      "note": "Reunió",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gràcies.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ho sento.",
+      "note": "Formal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Perdó.",
+      "note": "Atenció",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Com estàs?",
+      "note": "Salutacions",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Estic bé, gràcies.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Com et dius?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Em dic ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "D'on ets?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sóc d'Amèrica.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Adéu.",
+      "note": "A algú que marxa",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Adéu.",
+      "note": "A algú que es queda",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sí.",
+      "note": "Positiu",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "No.",
+      "note": "Negatiu",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Potser.",
+      "note": "Suposició",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ho entenc.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "No ho sé.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Si us plau, ajuda'm.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Un moment, si us plau.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Quant val això?",
+      "note": "Compres",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "On és el bany?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tinc gana.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tinc set.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "És deliciós.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "M'agrada.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Està bé.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Bona sort.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Quina hora és?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Avui fa bon temps.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Fa fred.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Fa calor.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Estic cansat/da.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Estic content/a.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Felicitats.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Feliç aniversari.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Que tingueu un bon dia.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Fins demà.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Cuida't.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pots parlar anglès?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Només sé parlar una mica de coreà.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Si us plau, parla a poc a poc.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Què vol dir això?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Com es diu en coreà?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "T'estimo.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Si us plau, espereu.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "De res.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "No, està bé.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tinc una pregunta.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Mga Batayang Pandiwa 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Pumunta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pumarito",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kumain",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Uminom",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Matulog",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Makita",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bumili",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magbenta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magbasa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sumulat",
+      "note": "Writing",
+      "tags": []
+    },
+    {
+      "text": "Makinig",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magsalita",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gawin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magtrabaho",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mag-aral",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magturo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Matuto",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maghintay",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magkita",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mahalin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magustuhan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Di magustuhan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tumawa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Umiyak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maglakad",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tumakbo",
+      "note": "Running",
+      "tags": []
+    },
+    {
+      "text": "Umupo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tumayo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magbigay",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tumanggap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bumukas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magsara",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mag-isip",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Malaman",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Di malaman",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hanapin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mawala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tumulong",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maghugas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magluto",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Umawit",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sumayaw",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gumamit",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gumawa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tumawag",
+      "note": "Song / Name",
+      "tags": []
+    },
+    {
+      "text": "Hulihin / Hawakan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ilagay / Iwanan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pumasok",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lumabas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sumakay",
+      "note": "Boarding",
+      "tags": []
+    },
+    {
+      "text": "Bumaba",
+      "note": "Alighting",
+      "tags": []
+    },
+    {
+      "text": "Magpadala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magsumite",
+      "note": "Submission",
+      "tags": []
+    },
+    {
+      "text": "Makisama",
+      "note": "Greetings",
+      "tags": []
+    },
+    {
+      "text": "Magsimula",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magtapos",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magpahinga",
+      "note": "Relax",
+      "tags": []
+    },
+    {
+      "text": "Magtanong",
+      "note": "Question",
+      "tags": []
+    },
+    {
+      "text": "Sumagot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mangako",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mag-alala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maniwala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magduda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Umasa",
+      "note": "Hope",
+      "tags": []
+    },
+    {
+      "text": "Managinip",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lumaban",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Manalo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Matatalo",
+      "note": "Defeat",
+      "tags": []
+    },
+    {
+      "text": "Lumaki",
+      "note": "Growth",
+      "tags": []
+    },
+    {
+      "text": "Mabuhay",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mamatay",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pumulot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Itapon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magtago",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maghanap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pumili",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magbago",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Umorder",
+      "note": "Buying items",
+      "tags": []
+    },
+    {
+      "text": "Maghanda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hulihin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maghagis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hilahin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Itulak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ayusin",
+      "note": "Repair",
+      "tags": []
+    },
+    {
+      "text": "Bumagsak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magkasakit / Masaktan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gamutin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mag-ehersisyo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lumangoy",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maglakbay",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magmaneho",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maglinis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maghugas ng pinggan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maglaba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Maligo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Magsipilyo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Gumising",
+      "note": "Wake up",
+      "tags": []
+    },
+    {
+      "text": "Matulog",
+      "note": "Sleeping",
+      "tags": []
+    },
+    {
+      "text": "Umintindi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tandaan",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

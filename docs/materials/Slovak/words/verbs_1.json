@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Základné slovesá 100",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "Ísť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prísť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jesť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Piť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Spať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vidieť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kúpiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Predať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Čítať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Písať",
+      "note": "Písmo",
+      "tags": []
+    },
+    {
+      "text": "Počuť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hovoriť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Robiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pracovať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Učiť sa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Učiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Učiť sa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Čakať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stretnúť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Milovať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mať rád",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nenávidieť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Smiať sa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Plakať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chodiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Behať",
+      "note": "Beh",
+      "tags": []
+    },
+    {
+      "text": "Sedieť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stáť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dostať / Prijať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Otvoriť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zatvoriť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Myslieť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vedieť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nevedieť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hľadať / Nájsť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stratiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pomôcť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Umývať sa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Variť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Spievať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tancovať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Používať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Robiť / Vytvoriť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Volať / Spievať",
+      "note": "Pieseň / Meno",
+      "tags": []
+    },
+    {
+      "text": "Chytiť / Držať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Položiť / Nechať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vstúpiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Odísť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nastúpiť",
+      "note": "Do vozidla",
+      "tags": []
+    },
+    {
+      "text": "Vystúpiť",
+      "note": "Z vozidla",
+      "tags": []
+    },
+    {
+      "text": "Poslať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Odovzdať",
+      "note": "Odovzdanie",
+      "tags": []
+    },
+    {
+      "text": "Mať sa",
+      "note": "Pozdrav",
+      "tags": []
+    },
+    {
+      "text": "Začať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Skončiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Odpočívať",
+      "note": "Odpočinok",
+      "tags": []
+    },
+    {
+      "text": "Pýtať sa",
+      "note": "Otázka",
+      "tags": []
+    },
+    {
+      "text": "Odpovedať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sľúbiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Robiť si starosti",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Veriť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pochybovať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Priať si / Dúfať",
+      "note": "Nádej",
+      "tags": []
+    },
+    {
+      "text": "Snívať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bojovať / Hádať sa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vyhrať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prehrať",
+      "note": "Porážka",
+      "tags": []
+    },
+    {
+      "text": "Rásť",
+      "note": "Rast",
+      "tags": []
+    },
+    {
+      "text": "Žiť / Bývať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zomrieť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zobrať / Zodvihnúť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": " vyhodiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Schovať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hľadať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vybrať si",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zmeniť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Objednať si",
+      "note": "Nákup tovaru",
+      "tags": []
+    },
+    {
+      "text": "Pripraviť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Chytiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Hodiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ťahať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Tlačiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Opraviť",
+      "note": "Oprava",
+      "tags": []
+    },
+    {
+      "text": "Rozbiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Byť chorý / Bolieť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Liečiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cvičiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Plávať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cestovať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Riadiť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Upratovať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Umývať riad",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Prať",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Sprchovať sa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Čistiť si zuby",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zobudiť sa / Vstať",
+      "note": "Prebudenie",
+      "tags": []
+    },
+    {
+      "text": "Ísť spať",
+      "note": "Spánok",
+      "tags": []
+    },
+    {
+      "text": "Rozumieť",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Pamätať si",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

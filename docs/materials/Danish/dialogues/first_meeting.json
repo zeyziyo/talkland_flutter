@@ -1,37 +1,86 @@
 {
-    "title": "Første møde",
-    "entries": [
-        {
-            "text": "Hej!",
-            "speaker": "A"
-        },
-        {
-            "text": "Hej. Hyggeligt at møde dig.",
-            "speaker": "B"
-        },
-        {
-            "text": "Hvad hedder du?",
-            "speaker": "A"
-        },
-        {
-            "text": "Mit navn er [Navn]. Og dit?",
-            "speaker": "B"
-        },
-        {
-            "text": "Mit navn er [Navn]. Hvor kommer du fra?",
-            "speaker": "A"
-        },
-        {
-            "text": "Jeg kommer fra Amerika. Og du?",
-            "speaker": "B"
-        },
-        {
-            "text": "Jeg kommer fra Korea. Det var hyggeligt at møde dig.",
-            "speaker": "A"
-        },
-        {
-            "text": "I lige måde. Farvel.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Hej!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hej. Hyggeligt at møde dig.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hvad hedder du?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mit navn er [Navn]. Og dit?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mit navn er [Navn]. Hvor kommer du fra?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg kommer fra Amerika. Og du?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jeg kommer fra Korea. Det var hyggeligt at møde dig.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "I lige måde. Farvel.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

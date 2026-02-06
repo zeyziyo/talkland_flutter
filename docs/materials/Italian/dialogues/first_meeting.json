@@ -1,45 +1,102 @@
 {
-    "title": "Primo Incontro",
-    "entries": [
-        {
-            "text": "Ciao! Mi chiamo Jordan. Piacere di conoscerti.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Ciao Jordan! Io sono Minji. Piacere anche mio.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Sei uno studente?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "No, sono un impiegato. E tu, Jordan?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Sono uno studente universitario. Sto studiando il coreano.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Wow, fantastico! Il coreano è un po' difficile, vero?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Sì, è difficile ma divertente. Per favore, aiutami molto.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Certamente! Studiamo sodo insieme.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Grazie. Alla prossima!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Arrivederci!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "Utente",
+      "gender": "Maschio",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "IA",
+      "gender": "Femmina",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Ciao! Mi chiamo Jordan. Piacere di conoscerti.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ciao Jordan! Io sono Minji. Piacere anche mio.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sei uno studente?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "No, sono un impiegato. E tu, Jordan?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sono uno studente universitario. Sto studiando il coreano.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Wow, fantastico! Il coreano è un po' difficile, vero?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sì, è difficile ma divertente. Per favore, aiutami molto.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Certamente! Studiamo sodo insieme.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Grazie. Alla prossima!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Arrivederci!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

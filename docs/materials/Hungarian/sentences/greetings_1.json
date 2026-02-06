@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Alapvető kifejezések és Mindennapi Mondatok 50",
+  "entries": [
+    {
+      "text": "Jó napot / Szia.",
+      "note": "Udvarias üdvözlés",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Örülök, hogy megismertem.",
+      "note": "Első találkozás",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rég láttuk egymást.",
+      "note": "Újbóli találkozás",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Köszönöm szépen.",
+      "note": "Formális",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sajnálom.",
+      "note": "Formális",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Elnézést.",
+      "note": "Figyelemfelkeltés",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hogy van?",
+      "note": "Üdvözlés",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jól vagyok, köszönöm.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mi a neve?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "A nevem ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hová valósi?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Amerikából jöttem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Viszontlátásra.",
+      "note": "Távozónak",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Minden jót / Viszlát.",
+      "note": "Maradónak",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Igen.",
+      "note": "Pozitív",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nem.",
+      "note": "Negatív",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Talán.",
+      "note": "Feltételezés",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Értem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nem tudom.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Segítsen kérem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Várjon egy pillanatot kérem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mennyibe kerül ez?",
+      "note": "Vásárlás",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Merre van a mosdó?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Éhes vagyok.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Szomjas vagyok.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Finom.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Szeretem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rendben van.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sok szerencsét.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mennyi az idő most?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jó idő van ma.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hideg van.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Meleg van.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Fáradt vagyok.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Boldog vagyok.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gratulálok.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Boldog születésnapot.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Szép napot.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Holnap találkozunk.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Vigyázzon magára.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Beszél angolul?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Csak egy kicsit beszélek koreaiul.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kérem, beszéljen lassan.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ez mit jelent?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hogy mondják koreaiul?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Szeretlek.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kérem, várjon.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Szívesen / Nincs mit.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nem, köszönöm.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Van egy kérdésem.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

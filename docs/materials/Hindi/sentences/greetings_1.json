@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "बुनियादी बातें और दैनिक वाक्य 50",
+  "entries": [
+    {
+      "text": "नमस्ते / नमस्कार।",
+      "note": "विनम्र अभिवादन",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "आपसे मिलकर अच्छा लगा।",
+      "note": "पहली मुलाकात",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "बहुत समय बाद मिले।",
+      "note": "पुनर्मिलन",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "बहुत बहुत धन्यवाद।",
+      "note": "मर्यादापूर्ण",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मुझे क्षमा करें।",
+      "note": "मर्यादापूर्ण",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "सुनिए / क्षमा करें।",
+      "note": "ध्यान आकर्षित करना",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "आप कैसे हैं?",
+      "note": "हाल-चाल",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मैं ठीक हूँ, धन्यवाद।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "आपका नाम क्या है?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मेरा नाम ... है।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "आप कहाँ से हैं?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मैं अमेरिका से हूँ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "नमस्ते / अलविदा।",
+      "note": "जाने वाले को",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "नमस्ते / फिर मिलेंगे।",
+      "note": "रहने वाले को",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "हाँ।",
+      "note": "सकारात्मक",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "नहीं।",
+      "note": "नकारात्मक",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "शायद।",
+      "note": "अनुमान",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मैं समझता हूँ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मुझे नहीं पता।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कृपया मेरी मदद करें।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कृपया एक पल रुकिए।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "यह कितने का है?",
+      "note": "खरीदारी",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "शौचालय कहाँ है?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मुझे भूख लगी है।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मुझे प्यास लगी है।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "यह स्वादिष्ट है।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मुझे यह पसंद है।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कोई बात नहीं / ठीक है।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "शुभकामनाएं।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "अभी क्या समय हुआ है?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "आज मौसम अच्छा है।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ठंड है।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "गर्मी है।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मैं थक गया हूँ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मैं खुश हूँ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "बधाई हो।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "जन्मदिन मुबारक हो।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "आपका दिन शुभ हो।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कल मिलते हैं।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "अपना ख्याल रखना।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "क्या आप अंग्रेजी बोलते हैं?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मैं केवल थोड़ी कोरियाई बोलता हूँ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कृपया धीरे बोलें।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "इसका क्या मतलब है?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कोरियाई में इसे क्या कहते हैं?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मैं आपसे प्यार करता हूँ।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "कृपया प्रतीक्षा करें।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "आपका स्वागत है / कोई बात नहीं।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "जी नहीं, धन्यवाद।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "मेरा एक प्रश्न है।",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

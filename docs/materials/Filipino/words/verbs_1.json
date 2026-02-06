@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "100 Batayang Pandiwa",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "pumunta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "pumarito / dumating",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kumain",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "uminom",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "matulog",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "manood / tingnan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bumili",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magbenta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magbasa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magsulat",
+      "note": "pagsulat",
+      "tags": []
+    },
+    {
+      "text": "makinig",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magsalita",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gumawa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magtrabaho",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mag-aral",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magturo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "pag-aralan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "maghintay",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "makipagkita",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magmahal",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magustuhan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magalit / kamuhian",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tumawa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "umiyak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "maglakad",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tumakbo",
+      "note": "pagtakbo",
+      "tags": []
+    },
+    {
+      "text": "umuupo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tumayo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magbigay",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tumanggap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "buksan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "isara",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mag-isip",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "alam",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "hindi alam",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "hanapin / hanapin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mawalan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tumulong",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "maghugas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magluto",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kumanta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "sumayaw",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gamitin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gumawa / lumikha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tumawag / kumanta",
+      "note": "kanta / pangalan",
+      "tags": []
+    },
+    {
+      "text": "hawakan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ilagay / bitawan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "pumasok",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "lumabas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "sumakay",
+      "note": "sasakyan",
+      "tags": []
+    },
+    {
+      "text": "bumaba",
+      "note": "sasakyan",
+      "tags": []
+    },
+    {
+      "text": "magpadala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "isumite / magbayad",
+      "note": "pagsusumite",
+      "tags": []
+    },
+    {
+      "text": "kumusta",
+      "note": "pagbati",
+      "tags": []
+    },
+    {
+      "text": "magsimula",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tapusin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magpahinga",
+      "note": "pagpahinga",
+      "tags": []
+    },
+    {
+      "text": "magtanong",
+      "note": "tanong",
+      "tags": []
+    },
+    {
+      "text": "sumagot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mangako",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mag-alala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "maniwala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magduda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "umasa",
+      "note": "pag-asa",
+      "tags": []
+    },
+    {
+      "text": "managinip",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "makipag-away",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "manalo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "matalo",
+      "note": "pagkatalo",
+      "tags": []
+    },
+    {
+      "text": "lumaki",
+      "note": "paglaki",
+      "tags": []
+    },
+    {
+      "text": "mabuhay / tumira",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mamatay",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kumuha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "itapon",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magtago",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "maghanap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "pumili",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "baguhin / palitan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mag-order",
+      "note": "pagbili ng gamit",
+      "tags": []
+    },
+    {
+      "text": "maghanda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "hulihin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ihagis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "hilahin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "itulak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ayusin",
+      "note": "pag-aayos",
+      "tags": []
+    },
+    {
+      "text": "masira",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magkasakit / masaktan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gamutin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "mag-ehersisyo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "lumangoy",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "maglakbay",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magmaneho",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "maglinis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "maghugas ng pinggan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "maglaba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "maligo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "magsipilyo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gumising",
+      "note": "pagkamulat",
+      "tags": []
+    },
+    {
+      "text": "matulog",
+      "note": "pagtulog",
+      "tags": []
+    },
+    {
+      "text": "maintindihan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "maalala",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

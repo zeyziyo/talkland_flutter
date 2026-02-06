@@ -1,37 +1,86 @@
 {
-    "title": "ਪਹਿਲੀ ਮੁਲਾਕਾਤ",
-    "entries": [
-        {
-            "text": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ!",
-            "speaker": "A"
-        },
-        {
-            "text": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ। ਤੁਹਾਨੂੰ ਮਿਲ ਕੇ ਖੁਸ਼ੀ ਹੋਈ।",
-            "speaker": "B"
-        },
-        {
-            "text": "ਤੁਹਾਡਾ ਨਾਂ ਕੀ ਹੈ?",
-            "speaker": "A"
-        },
-        {
-            "text": "ਮੇਰਾ ਨਾਂ [ਨਾਂ] ਹੈ। ਅਤੇ ਤੁਹਾਡਾ?",
-            "speaker": "B"
-        },
-        {
-            "text": "ਮੇਰਾ ਨਾਂ [ਨਾਂ] ਹੈ। ਤੁਸੀਂ ਕਿੱਥੋਂ ਦੇ ਹੋ?",
-            "speaker": "A"
-        },
-        {
-            "text": "ਮੈਂ ਅਮਰੀਕਾ ਤੋਂ ਹਾਂ। ਅਤੇ ਤੁਸੀਂ?",
-            "speaker": "B"
-        },
-        {
-            "text": "ਮੈਂ ਕੋਰੀਆ ਤੋਂ ਹਾਂ। ਤੁਹਾਨੂੰ ਮਿਲ ਕੇ ਬਹੁਤ ਚੰਗਾ ਲੱਗਿਆ।",
-            "speaker": "A"
-        },
-        {
-            "text": "ਮੈਨੂੰ ਵੀ। ਅਲਵਿਦਾ।",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ। ਤੁਹਾਨੂੰ ਮਿਲ ਕੇ ਖੁਸ਼ੀ ਹੋਈ।",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ਤੁਹਾਡਾ ਨਾਂ ਕੀ ਹੈ?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ਮੇਰਾ ਨਾਂ [ਨਾਂ] ਹੈ। ਅਤੇ ਤੁਹਾਡਾ?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ਮੇਰਾ ਨਾਂ [ਨਾਂ] ਹੈ। ਤੁਸੀਂ ਕਿੱਥੋਂ ਦੇ ਹੋ?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ਮੈਂ ਅਮਰੀਕਾ ਤੋਂ ਹਾਂ। ਅਤੇ ਤੁਸੀਂ?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ਮੈਂ ਕੋਰੀਆ ਤੋਂ ਹਾਂ। ਤੁਹਾਨੂੰ ਮਿਲ ਕੇ ਬਹੁਤ ਚੰਗਾ ਲੱਗਿਆ।",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ਮੈਨੂੰ ਵੀ। ਅਲਵਿਦਾ।",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

@@ -1,45 +1,102 @@
 {
-    "title": "初対面の挨拶",
-    "entries": [
-        {
-            "text": "こんにちは！ジョダンと言います. お会いできて嬉しいです。",
-            "speaker": "ジョダン"
-        },
-        {
-            "text": "こんにちはジョダンさん！私はミンジです。私もお会いできて嬉しいです。",
-            "speaker": "ミンジ"
-        },
-        {
-            "text": "学生ですか？",
-            "speaker": "ジョダン"
-        },
-        {
-            "text": "いいえ、会社員です。ジョダンさんは？",
-            "speaker": "ミンジ"
-        },
-        {
-            "text": "私は大学生です。韓国語を勉強しています。",
-            "speaker": "ジョダン"
-        },
-        {
-            "text": "わあ、すごいですね！韓国語は少し難しいですよね？",
-            "speaker": "ミンジ"
-        },
-        {
-            "text": "はい、難しいですが楽しいです。たくさん助けてください。",
-            "speaker": "ジョダン"
-        },
-        {
-            "text": "もちろんです！一緒に一生懸命勉強しましょう。",
-            "speaker": "ミンジ"
-        },
-        {
-            "text": "ありがとうございます。また会いましょう！",
-            "speaker": "ジョダン"
-        },
-        {
-            "text": "さようなら！",
-            "speaker": "ミンジ"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "初対面",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "ユーザー",
+      "gender": "男性",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "女性",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "こんにちは！ジョダンと言います. お会いできて嬉しいです。",
+      "note": "",
+      "speaker": "ジョダン",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "こんにちはジョダンさん！私はミンジです。私もお会いできて嬉しいです。",
+      "note": "",
+      "speaker": "ミンジ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "学生ですか？",
+      "note": "",
+      "speaker": "ジョダン",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "いいえ、会社員です。ジョダンさんは？",
+      "note": "",
+      "speaker": "ミンジ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "私は大学生です。韓国語を勉強しています。",
+      "note": "",
+      "speaker": "ジョダン",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "わあ、すごいですね！韓国語は少し難しいですよね？",
+      "note": "",
+      "speaker": "ミンジ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "はい、難しいですが楽しいです。たくさん助けてください。",
+      "note": "",
+      "speaker": "ジョダン",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "もちろんです！一緒に一生懸命勉強しましょう。",
+      "note": "",
+      "speaker": "ミンジ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ありがとうございます。また会いましょう！",
+      "note": "",
+      "speaker": "ジョダン",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "さようなら！",
+      "note": "",
+      "speaker": "ミンジ",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

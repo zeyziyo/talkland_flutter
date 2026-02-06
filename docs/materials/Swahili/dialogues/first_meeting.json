@@ -1,37 +1,86 @@
 {
-    "title": "Mkutano wa Kwanza",
-    "entries": [
-        {
-            "text": "Jambo!",
-            "speaker": "A"
-        },
-        {
-            "text": "Jambo. Nimefurahi kukutana nawe.",
-            "speaker": "B"
-        },
-        {
-            "text": "Jina lako nani?",
-            "speaker": "A"
-        },
-        {
-            "text": "Jina langu ni [Jina]. Na wewe?",
-            "speaker": "B"
-        },
-        {
-            "text": "Jina langu ni [Jina]. Unatoka wapi?",
-            "speaker": "A"
-        },
-        {
-            "text": "Natoka Amerika. Na wewe?",
-            "speaker": "B"
-        },
-        {
-            "text": "Natoka Korea. Nimefurahi kukufahamu.",
-            "speaker": "A"
-        },
-        {
-            "text": "Mimi pia. Kwa heri.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Jambo!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jambo. Nimefurahi kukutana nawe.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jina lako nani?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jina langu ni [Jina]. Na wewe?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Jina langu ni [Jina]. Unatoka wapi?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Natoka Amerika. Na wewe?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Natoka Korea. Nimefurahi kukufahamu.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mimi pia. Kwa heri.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

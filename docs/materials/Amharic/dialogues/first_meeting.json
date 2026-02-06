@@ -1,37 +1,86 @@
 {
-    "title": "የመጀመሪያ ግንኙነት",
-    "entries": [
-        {
-            "text": "ሰላም!",
-            "speaker": "A"
-        },
-        {
-            "text": "ሰላም. ስለተገናኘን ደስ ብሎኛል.",
-            "speaker": "B"
-        },
-        {
-            "text": "ስምህ / ስምሽ ማን ነው?",
-            "speaker": "A"
-        },
-        {
-            "text": "ስሜ [ስም] ነው. የአንተስ / የአንቺስ?",
-            "speaker": "B"
-        },
-        {
-            "text": "ስሜ [ስም] ነው. ከየት ነው የመጣኸው / የመጣሽው?",
-            "speaker": "A"
-        },
-        {
-            "text": "የመጣሁት ከአሜሪካ ነው. አንተስ / አንቺስ?",
-            "speaker": "B"
-        },
-        {
-            "text": "የመጣሁት ከኮሪያ ነው. ስላወቅኩህ / ስላወቅኩሽ ደስ ብሎኛል.",
-            "speaker": "A"
-        },
-        {
-            "text": "እኔም. ደህና ሁን / ሁኚ.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "ሰላም!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ሰላም. ስለተገናኘን ደስ ብሎኛል.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ስምህ / ስምሽ ማን ነው?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ስሜ [ስም] ነው. የአንተስ / የአንቺስ?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ስሜ [ስም] ነው. ከየት ነው የመጣኸው / የመጣሽው?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "የመጣሁት ከአሜሪካ ነው. አንተስ / አንቺስ?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "የመጣሁት ከኮሪያ ነው. ስላወቅኩህ / ስላወቅኩሽ ደስ ብሎኛል.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "እኔም. ደህና ሁን / ሁኚ.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

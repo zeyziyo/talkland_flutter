@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Salom! Mening ismim Jordan. Tanishganimdan xursandman.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Salom Jordan! Men Minjiman. Men ham tanishganimdan xursandman.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Siz talabamisiz?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Yo'q, men ofis xodimiman. Sizchi?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Men kollej talabasiman. Men koreys tilini o'rganyapman.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Voy, ajoyib! Koreys tili biroz qiyin, shunday emasmi?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Ha, qiyin, lekin qiziqarli. Iltimos, menga yordam bering.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Albatta! Keling, birgalikda qattiq o'qiylik.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Rahmat. Keyingi safar ko'rishguncha!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Xayr!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Salom! Mening ismim Jordan. Tanishganimdan xursandman.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Salom Jordan! Men Minjiman. Men ham tanishganimdan xursandman.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Siz talabamisiz?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Yo'q, men ofis xodimiman. Sizchi?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Men kollej talabasiman. Men koreys tilini o'rganyapman.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Voy, ajoyib! Koreys tili biroz qiyin, shunday emasmi?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ha, qiyin, lekin qiziqarli. Iltimos, menga yordam bering.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Albatta! Keling, birgalikda qattiq o'qiylik.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Rahmat. Keyingi safar ko'rishguncha!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Xayr!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

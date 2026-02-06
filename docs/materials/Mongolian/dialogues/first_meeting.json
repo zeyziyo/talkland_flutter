@@ -1,45 +1,102 @@
 {
-    "title": "First Meeting",
-    "entries": [
-        {
-            "text": "Сайн байна уу! Намайг Жордан гэдэг. Уулзсандаа таатай байна.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Сайн байна уу Жордан! Намайг Минжи гэдэг. Би бас уулзсандаа таатай байна.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Та оюутан уу?",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Үгүй ээ, би албан хаагч. Чи юу вэ?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Би коллежийн оюутан. Би Солонгос хэл сурч байгаа.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Ваав, үнэхээр гайхалтай! Солонгос хэл жаахан хэцүү, тийм үү?",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Тийм ээ, хэцүү ч гэсэн хөгжилтэй. Надад их туслаарай.",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Мэдээж! Хамтдаа хичээнгүйлэн суралцъя.",
-            "speaker": "Minji"
-        },
-        {
-            "text": "Баярлалаа. Дараа уулзъя!",
-            "speaker": "Jordan"
-        },
-        {
-            "text": "Баяртай!",
-            "speaker": "Minji"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Untitled",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "User",
+      "gender": "Male",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Female",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Сайн байна уу! Намайг Жордан гэдэг. Уулзсандаа таатай байна.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Сайн байна уу Жордан! Намайг Минжи гэдэг. Би бас уулзсандаа таатай байна.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Та оюутан уу?",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Үгүй ээ, би албан хаагч. Чи юу вэ?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Би коллежийн оюутан. Би Солонгос хэл сурч байгаа.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ваав, үнэхээр гайхалтай! Солонгос хэл жаахан хэцүү, тийм үү?",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Тийм ээ, хэцүү ч гэсэн хөгжилтэй. Надад их туслаарай.",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Мэдээж! Хамтдаа хичээнгүйлэн суралцъя.",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Баярлалаа. Дараа уулзъя!",
+      "note": "",
+      "speaker": "Jordan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Баяртай!",
+      "note": "",
+      "speaker": "Minji",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

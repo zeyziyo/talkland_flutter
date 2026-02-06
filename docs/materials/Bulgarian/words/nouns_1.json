@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Основни съществителни имена 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Човек",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Вода",
+      "note": "Drinking water",
+      "tags": []
+    },
+    {
+      "text": "Ориз / Храна",
+      "note": "Meal",
+      "tags": []
+    },
+    {
+      "text": "Хляб",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ябълка",
+      "note": "Fruit",
+      "tags": []
+    },
+    {
+      "text": "Мляко",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Месо",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Дрехи",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Къща",
+      "note": "Housing",
+      "tags": []
+    },
+    {
+      "text": "Стая",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Прозорец",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Врата",
+      "note": "Entrance",
+      "tags": []
+    },
+    {
+      "text": "Бюро",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Стол",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Компютър",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Телефон",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Книга",
+      "note": "Library",
+      "tags": []
+    },
+    {
+      "text": "Молив",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Хартия",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Чанта",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Училище",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Компания",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Болница",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Аптека",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Ресторант",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Пазар",
+      "note": "Marketplace",
+      "tags": []
+    },
+    {
+      "text": "Метро",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Автобус",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Такси",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Самолет",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Влак",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Колоездене",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Път",
+      "note": "Road",
+      "tags": []
+    },
+    {
+      "text": "Планина",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Море",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Река",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Небе",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Слънце / Година",
+      "note": "Sun / Year",
+      "tags": []
+    },
+    {
+      "text": "Луна",
+      "note": "Satellite",
+      "tags": []
+    },
+    {
+      "text": "Звезда",
+      "note": "Celestial Body",
+      "tags": []
+    },
+    {
+      "text": "Дърво",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Цвете",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Кученце",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Котка",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Пари",
+      "note": "Cash",
+      "tags": []
+    },
+    {
+      "text": "Време",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Днес",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Утре",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Вчера",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Приятел",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

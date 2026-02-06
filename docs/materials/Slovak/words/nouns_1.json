@@ -1,0 +1,257 @@
+{
+  "default_type": "word",
+  "subject": "Základné podstatné mená 50",
+  "pos": "noun",
+  "entries": [
+    {
+      "text": "Osoba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Voda",
+      "note": "Pitná voda",
+      "tags": []
+    },
+    {
+      "text": "Jedlo / Ryža",
+      "note": "Jedlo",
+      "tags": []
+    },
+    {
+      "text": "Chlieb",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Jablko",
+      "note": "Ovoce",
+      "tags": []
+    },
+    {
+      "text": "Mlieko",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mäso",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Oblečenie",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dom",
+      "note": "Bývanie",
+      "tags": []
+    },
+    {
+      "text": "Izba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Okno",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dvere",
+      "note": "Vchod",
+      "tags": []
+    },
+    {
+      "text": "Písací stôl",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Stolička",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Počítač",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Telefón",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kniha",
+      "note": "Kniha",
+      "tags": []
+    },
+    {
+      "text": "Ceruzka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Papier",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taška",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Škola",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Firma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nemocnica",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lekáreň",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Reštaurácia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Trh",
+      "note": "Trhovisko",
+      "tags": []
+    },
+    {
+      "text": "Metro",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Autobus",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Taxi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Lietadlo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Vlak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Bicykel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Cesta",
+      "note": "Cesta",
+      "tags": []
+    },
+    {
+      "text": "Hora",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "More",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Rieka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Nebo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Slnko / Rok",
+      "note": "Slnko / Rok",
+      "tags": []
+    },
+    {
+      "text": "Mesiac",
+      "note": "Satelit",
+      "tags": []
+    },
+    {
+      "text": "Hviezda",
+      "note": "Nebeské teleso",
+      "tags": []
+    },
+    {
+      "text": "Strom",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Kvet",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Šteňa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Mačka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Peniaze",
+      "note": "Hotovosť",
+      "tags": []
+    },
+    {
+      "text": "Čas",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Dnes",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Zajtra",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Včera",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "Priateľ",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

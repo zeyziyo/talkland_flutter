@@ -1,37 +1,86 @@
 {
-    "title": "Lần đầu gặp mặt",
-    "entries": [
-        {
-            "text": "Xin chào!",
-            "speaker": "A"
-        },
-        {
-            "text": "Xin chào. Rất vui được gặp bạn.",
-            "speaker": "B"
-        },
-        {
-            "text": "Tên bạn là gì?",
-            "speaker": "A"
-        },
-        {
-            "text": "Tên tôi là [Tên]. Còn bạn?",
-            "speaker": "B"
-        },
-        {
-            "text": "Tên tôi là [Tên]. Bạn đến từ đâu?",
-            "speaker": "A"
-        },
-        {
-            "text": "Tôi đến từ Mỹ. Còn bạn?",
-            "speaker": "B"
-        },
-        {
-            "text": "Tôi đến từ Hàn Quốc. Rất vui được quen biết bạn.",
-            "speaker": "A"
-        },
-        {
-            "text": "Tôi cũng vậy. Tạm biệt.",
-            "speaker": "B"
-        }
-    ]
+  "default_type": "dialogue",
+  "subject": "Gặp mặt lần đầu",
+  "participants": [
+    {
+      "id": "p1",
+      "name": "Jordan",
+      "role": "Người dùng",
+      "gender": "Nam",
+      "lang_code": "en-US"
+    },
+    {
+      "id": "p2",
+      "name": "Minji",
+      "role": "AI",
+      "gender": "Nữ",
+      "lang_code": "ko-KR"
+    }
+  ],
+  "entries": [
+    {
+      "text": "Xin chào!",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Xin chào. Rất vui được gặp bạn.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tên bạn là gì?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tên tôi là [Tên]. Còn bạn?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tên tôi là [Tên]. Bạn đến từ đâu?",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi đến từ Mỹ. Còn bạn?",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi đến từ Hàn Quốc. Rất vui được quen biết bạn.",
+      "note": "",
+      "speaker": "A",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tôi cũng vậy. Tạm biệt.",
+      "note": "",
+      "speaker": "B",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
 }

@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "Vitenzi 100 vya Msingi",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "kwenda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kula",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kunywa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kulala",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuona / kutazama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kununua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuuza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kusoma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuandika",
+      "note": "uandishi",
+      "tags": []
+    },
+    {
+      "text": "kusikia / kusikiliza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuzungumza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kufanya",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kufanya kazi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kujifunza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kufundisha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kusoma (masomo)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kungoja",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kukutana",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kupenda (mapenzi)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kupenda / kuvutiwa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuchukia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kucheka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kulia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutembea",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kukimbia",
+      "note": "ukimbiaji",
+      "tags": []
+    },
+    {
+      "text": "kuketi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kusimama",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutoa / kupeana",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kupokea",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kufungua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kufunga",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kufikiri",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kujua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutojua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutafuta / kupata",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kupoteza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kusaidia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kunawa / kufua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kupika",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuimba",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kucheza dansi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutumia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutengeneza / kuunda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuita / kuimba",
+      "note": "wimbo / jina",
+      "tags": []
+    },
+    {
+      "text": "kushika",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuweka / kuacha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuingia",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutoka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kupanda",
+      "note": "chombo cha usafiri",
+      "tags": []
+    },
+    {
+      "text": "kushuka",
+      "note": "chombo cha usafiri",
+      "tags": []
+    },
+    {
+      "text": "kutuma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuwasilisha",
+      "note": "uwasilishaji",
+      "tags": []
+    },
+    {
+      "text": "kuishi / kujali",
+      "note": "salamu",
+      "tags": []
+    },
+    {
+      "text": "kuanza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kumaliza",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kupumzika",
+      "note": "pumziko",
+      "tags": []
+    },
+    {
+      "text": "kuuliza",
+      "note": "swali",
+      "tags": []
+    },
+    {
+      "text": "kujibu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuahidi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuhofia / kutingwa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuamini",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutilia shaka",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutumaini",
+      "note": "tumaini",
+      "tags": []
+    },
+    {
+      "text": "kuota ndoto",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kupigana",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kushinda",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kushindwa",
+      "note": "shinde",
+      "tags": []
+    },
+    {
+      "text": "kukua",
+      "note": "ukuzi",
+      "tags": []
+    },
+    {
+      "text": "kuishi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kufa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuchukua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutupa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kujificha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutafuta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuchagua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kubadilisha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuagiza",
+      "note": "uagizaji bidhaa",
+      "tags": []
+    },
+    {
+      "text": "kujiandaa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kukamata",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kurusha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuvuta",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kusukuma",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutengeneza",
+      "note": "matengenezo",
+      "tags": []
+    },
+    {
+      "text": "kuvunjika",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuumia / kuugua",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kutibu",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kufanya mazoezi",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuogelea",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kusafiri",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuendesha gari",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kusafisha",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuosha vyombo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kufua nguo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuoga",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kupiga mswaki",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kuamka",
+      "note": "kuamka",
+      "tags": []
+    },
+    {
+      "text": "kwenda kulala",
+      "note": "usingizi",
+      "tags": []
+    },
+    {
+      "text": "kuelewa",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kukumbuka",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

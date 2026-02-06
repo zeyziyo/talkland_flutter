@@ -1,0 +1,507 @@
+{
+  "default_type": "word",
+  "subject": "100 Basiese Werkwoorde",
+  "pos": "verb",
+  "entries": [
+    {
+      "text": "gaan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kom",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "eet",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "drink",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "slaap",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "sien / kyk",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "koop",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "verkoop",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "lees",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "skryf",
+      "note": "skryfwerk",
+      "tags": []
+    },
+    {
+      "text": "hoor / luister",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "praat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "doen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "werk",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "leer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "onderrig / leer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "studeer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "wag",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ontmoet",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "liefhê (liefde)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "hou van",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "haat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "lag",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "huil",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "loop",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "hardloop",
+      "note": "hardloop",
+      "tags": []
+    },
+    {
+      "text": "sit",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "staan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gee",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ontvang",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "oopmaak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "toemaak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "dink",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "weet",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "nie weet nie",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "soek / vind",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "verloor",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "help",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "was",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kook",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "sing",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "dans",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gebruik",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "maak / skep",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "roep / sing",
+      "note": "liedjie / naam",
+      "tags": []
+    },
+    {
+      "text": "hou",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "sit / laat",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "ingaan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "uitgaan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "klim / ry",
+      "note": "voertuig",
+      "tags": []
+    },
+    {
+      "text": "afklim",
+      "note": "voertuig",
+      "tags": []
+    },
+    {
+      "text": "stuur",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "indien",
+      "note": "indiening",
+      "tags": []
+    },
+    {
+      "text": "leef / groet",
+      "note": "groet",
+      "tags": []
+    },
+    {
+      "text": "begin",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "eindig",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "rus",
+      "note": "rus",
+      "tags": []
+    },
+    {
+      "text": "vra",
+      "note": "vraag",
+      "tags": []
+    },
+    {
+      "text": "antwoord",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "belowe",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bekommer",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "glo",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "twyfel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "hoop",
+      "note": "hoop",
+      "tags": []
+    },
+    {
+      "text": "droom",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "baklei",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "wen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "verloor (nederlaag)",
+      "note": "nederlaag",
+      "tags": []
+    },
+    {
+      "text": "groei",
+      "note": "groei",
+      "tags": []
+    },
+    {
+      "text": "leef",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "sterf",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "neem",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gooi / ontslae raak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "wegkruip",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "soek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "kies",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "verander",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bestel",
+      "note": "koop van goedere",
+      "tags": []
+    },
+    {
+      "text": "voorberei",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "vang",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "gooi (werp)",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "trek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "stoot",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "herstel",
+      "note": "herstel",
+      "tags": []
+    },
+    {
+      "text": "breek",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "seer wees / siek word",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "behandel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "oefen",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "swem",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "reis",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bestuur",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "skoonmaak",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "skottelgoed was",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "wasgoed was",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "bad",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "tande borsel",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "wakker word",
+      "note": "wakker",
+      "tags": []
+    },
+    {
+      "text": "gaan slaap",
+      "note": "slaap",
+      "tags": []
+    },
+    {
+      "text": "verstaan",
+      "note": "",
+      "tags": []
+    },
+    {
+      "text": "onthou",
+      "note": "",
+      "tags": []
+    }
+  ]
+}

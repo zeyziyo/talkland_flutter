@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "تعبيرات أساسية وجمل يومية 50",
+  "entries": [
+    {
+      "text": "مرحباً / سلام.",
+      "note": "تحية مهذبة",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "تشرفت بلقائك.",
+      "note": "اللقاء الأول",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "لم نلتقِ منذ فترة طويلة.",
+      "note": "لقاء مجدد",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "شكراً جزيلاً.",
+      "note": "رسمي",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أنا آسف.",
+      "note": "رسمي",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "معذرة.",
+      "note": "لجذب الانتباه",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "كيف حالك؟",
+      "note": "تحية",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "بخير، شكراً.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ما اسمك؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "اسمي ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "من أين أنت؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أنا من أمريكا.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "رافقتك السلامة.",
+      "note": "للذاهب",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ابقَ بخير / مع السلامة.",
+      "note": "للباقي",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "نعم.",
+      "note": "إيجاب",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "لا.",
+      "note": "سلب",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ربما.",
+      "note": "تخمين",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "فهمتُ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "لا أعرف.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ساعدني من فضلك.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "انتظر لحظة من فضلك.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "بكم هذا؟",
+      "note": "تسوق",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أين المرحاض؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أنا جائع.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أنا عطشان.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "هذا لذيذ.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أحب هذا.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "لا بأس / لا مشكلة.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "بالتوفيق.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "كم الساعة الآن؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "الطقس جميل اليوم.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "جو بارد.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "جو حار.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أنا متعب.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أنا سعيد.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "تهانينا.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "عيد ميلاد سعيد.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أتمنى لك يوماً سعيداً.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أراك غداً.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "اعتنِ بنفسك.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "هل تتحدث الإنجليزية؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أتحدث القليل من الكورية فقط.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "تحدث ببطء من فضلك.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ما معنى هذا؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "ماذا يسمى هذا بالكورية؟",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "أحبك.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "انتظر من فضلك.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "عفواً / لا بأس.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "لا، شكراً.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "لدي سؤال.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}

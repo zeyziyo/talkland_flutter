@@ -1,0 +1,356 @@
+{
+  "default_type": "sentence",
+  "subject": "Mga Batayang Pahayag at Pang-araw-araw na Pangungusap 50",
+  "entries": [
+    {
+      "text": "Kumusta.",
+      "note": "Magalang na pagbati",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ikinagagalak kitang makilala.",
+      "note": "Unang pagkikita",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Matagal tayong hindi nagkita.",
+      "note": "Muling pagkikita",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Maraming salamat.",
+      "note": "Pormal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Paumanhin po.",
+      "note": "Pormal",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pasintabi po / Eskus me.",
+      "note": "Pagkuha ng atensyon",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Kumusta ka?",
+      "note": "Pagbati",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mabuti naman, salamat.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ano ang iyong pangalan?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ang pangalan ko ay ...",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Taga-saan ka?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Taga-Amerika ako.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Paalam.",
+      "note": "Para sa aalis",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Ingat / Paalam.",
+      "note": "Para sa maiiwan",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Oo.",
+      "note": "Positibo",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hindi.",
+      "note": "Negatibo",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Siguro.",
+      "note": "Hinuha",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Naiintindihan ko.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hindi ko alam.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Tulungan mo ako, pakiusap.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Maghintay lang ng sandali, pakiusap.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Magkano ito?",
+      "note": "Pamimili",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nasaan ang banyo?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gutom na ako.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Uhaw na ako.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Masarap ito.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Gusto ko ito.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Walang anuman / Ayos lang.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Sana ay magtagumpay ka.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Anong oras na?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Maganda ang panahon ngayon.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Malamig.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mainit.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pagod ako.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Masaya ako.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pagbati!",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Maligayang kaarawan.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Magkaroon ka ng magandang araw.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Magkita tayo bukas.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mag-ingat ka lagi.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Nagsasalita ka ba ng Ingles?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Konting Korean lang ang alam ko.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Pakibagalan ang pagsasalita.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Anong ibig sabihin nito?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Anong tawag dito sa Korean?",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mahal kita.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Maghintay po lamang.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Walang anuman / Ayos lang.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Hindi na, salamat.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    },
+    {
+      "text": "Mayroon akong katanungan.",
+      "note": "",
+      "form_type": "",
+      "style": "",
+      "tags": []
+    }
+  ]
+}
