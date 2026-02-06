@@ -17,6 +17,7 @@ class ChatHistoryScreen extends StatefulWidget {
 class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
   final TextEditingController _searchController = TextEditingController();
   DateTimeRange? _selectedDateRange;
+  String? _selectedSubject; // Added for filtering by subject/material
   
   @override
   void initState() {
@@ -45,7 +46,12 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
         if (!titleMatch && !noteMatch && !personaMatch) return false;
       }
       
-      // 2. Date Range
+      // 2. Subject Filter
+      if (_selectedSubject != null && _selectedSubject != 'All') {
+        if (group.note != _selectedSubject) return false;
+      }
+      
+      // 3. Date Range
       if (_selectedDateRange != null) {
         if (group.createdAt.isBefore(_selectedDateRange!.start) ||
             group.createdAt.isAfter(_selectedDateRange!.end.add(const Duration(days: 1)))) {
@@ -74,6 +80,14 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
     final l10n = AppLocalizations.of(context)!;
     
     final allDialogues = appState.dialogueGroups;
+    
+    // Get Unique Subjects for Dropdown
+    final allSubjects = allDialogues
+        .map((g) => g.note)
+        .where((n) => n != null && n.isNotEmpty)
+        .toSet()
+        .toList();
+
     final filteredDialogues = _filterDialogues(allDialogues);
 
     final content = Column(
@@ -81,33 +95,62 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
         // Search & Filter Bar
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Row(
+          child: Column(
             children: [
-              Expanded(
-                child: TextField(
-                  controller: _searchController,
-                  decoration: InputDecoration(
-                    hintText: l10n.search,
-                    prefixIcon: const Icon(Icons.search),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 16),
+              Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      controller: _searchController,
+                      decoration: InputDecoration(
+                        hintText: l10n.search,
+                        prefixIcon: const Icon(Icons.search),
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                        contentPadding: const EdgeInsets.symmetric(horizontal: 16),
+                      ),
+                      onChanged: (val) => setState(() {}),
+                    ),
                   ),
-                  onChanged: (val) => setState(() {}),
+                  const SizedBox(width: 8),
+                  IconButton(
+                    icon: Icon(Icons.calendar_today, 
+                      color: _selectedDateRange != null ? const Color(0xFF667eea) : Colors.grey
+                    ),
+                    onPressed: _pickDateRange,
+                    tooltip: 'Filter by Date',
+                  ),
+                  if (_selectedDateRange != null)
+                    IconButton(
+                      icon: const Icon(Icons.close, size: 20),
+                      onPressed: () => setState(() => _selectedDateRange = null),
+                    ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              // Subject Dropdown
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey.shade300),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: DropdownButtonHideUnderline(
+                  child: DropdownButton<String>(
+                    value: _selectedSubject ?? 'All',
+                    isExpanded: true,
+                    items: [
+                      const DropdownMenuItem(value: 'All', child: Text('All Conversations')),
+                      ...allSubjects.map((s) => DropdownMenuItem(value: s, child: Text(s))),
+                    ],
+                    onChanged: (val) {
+                      setState(() {
+                         _selectedSubject = (val == 'All') ? null : val;
+                      });
+                    },
+                  ),
                 ),
               ),
-              const SizedBox(width: 8),
-              IconButton(
-                icon: Icon(Icons.calendar_today, 
-                  color: _selectedDateRange != null ? const Color(0xFF667eea) : Colors.grey
-                ),
-                onPressed: _pickDateRange,
-                tooltip: 'Filter by Date',
-              ),
-              if (_selectedDateRange != null)
-                IconButton(
-                  icon: const Icon(Icons.close, size: 20),
-                  onPressed: () => setState(() => _selectedDateRange = null),
-                ),
             ],
           ),
         ),

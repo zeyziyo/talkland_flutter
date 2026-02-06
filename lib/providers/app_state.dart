@@ -2453,10 +2453,18 @@ class AppState extends ChangeNotifier {
       // The local AppState method 'importJsonWithMetadata' was slow due to row-by-row Supabase inserts.
       // We switch to DatabaseService.importFromJsonWithMetadata which uses SQLite transaction.
       // Perform import
-      final importResult = await DatabaseService.importFromJsonWithMetadata(jsonContent, fileName: fileName);
+      final userId = SupabaseService.client.auth.currentUser?.id;
+      final importResult = await DatabaseService.importFromJsonWithMetadata(
+        jsonContent, 
+        fileName: fileName,
+        userId: userId,
+      );
       
       // Refresh Local Study Materials (Dropdown)
       await loadStudyMaterials();
+      // Refresh Dialogue Groups for AI Chat
+      await loadDialogueGroups();
+      
       // Supabase sync (loadStudyRecords) is handled by BackgroundSyncService
       // FIX: Load local SQLite records immediately for Mode 2/3 display
       await loadRecordsByTags();
@@ -2680,9 +2688,9 @@ class AppState extends ChangeNotifier {
     }
 
     // 2. Load from Local DB (Single Source of Truth)
-    // 2. Load from Local DB (Single Source of Truth)
     try {
-      final localData = await DatabaseService.getDialogueGroups();
+      final userId = SupabaseService.client.auth.currentUser?.id;
+      final localData = await DatabaseService.getDialogueGroups(userId: userId);
       
       final List<DialogueGroup> loadedGroups = [];
       for (final m in localData) {
