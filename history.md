@@ -15,15 +15,22 @@
 
 ---
 
-### [Phase 75.9] Cleanup: Removed Legacy Merging Logic (2026-02-07 19:10)
-- **Problem**: Persistent "merged files" and legacy merge scripts caused user confusion and project bloat.
-- **Action Taken**:
-    - **Deleted** `scripts/merge_materials.ps1` and `docs/merges` folder.
-    - **Refactored** `docs/index.html`: Removed browser-side JSON merging/downloading. Redesigned the UI to guide users to "Direct Online Import" within the app.
-    - **Refactored** `lib/services/database_service.dart`: Renamed `Smart Merge` logs to `Smart Sync` to avoid terminological confusion. **Fixed critical build error** by restoring `dId` as `String` and providing the required `id` parameter to `insertDialogueGroup`.
-- **UI Improvements**: Replaced "Import from Device" in AppBar menu with **"Online Library"**, allowing direct access to the online materials tab.
-    - **Updated** `README.md`: Clarified that materials are imported directly from the app, not downloaded as merged files.
-- **Result**: Simplified project architecture and eliminated unintended file creation, ensuring the "Direct Online Import" is the primary and only data flow.
+## 📅 [2026-02-07 19:10:00] Phase 75.9: 레거시 병합 로직 제거 및 UI 개선 (Legacy Cleanup & UI Polish)
+
+### ✅ 태스크 (Task)
+- [x] **레거시 제거**: 혼란을 주던 `scripts/merge_materials.ps1` 및 `docs/merges` 폴더 삭제.
+- [x] **홈페이지 개편**: `docs/index.html`에서 병합 다운로드 기능을 제거하고, 앱 내 '직접 임포트'를 안내하도록 UI 수정.
+- [x] **용어 정제**: `database_service.dart`의 로그를 `Smart Merge`에서 `Smart Sync`로 변경하여 혼선 방지.
+- [x] **빌드 오류 수정**: `insertDialogueGroup` 호출 시 `dId` 타입 불일치 및 필수 인자 누락 문제를 해결하여 CI/CD 안정화.
+- [x] **UI 개선**: 앱바 메뉴의 '기기에서 가져오기'를 **'온라인 자료실'**로 교체하여 접근성 강화.
+
+### 📝 워크스루 (Walkthrough)
+- **문제**: 구시대적인 파일 병합 스크립트와 문서들이 남아있어 사용자에게 혼란을 주고 프로젝트 관리가 복잡했습니다. 또한 `DatabaseService`의 타입 에러로 빌드가 실패하는 문제가 있었습니다.
+- **조치**:
+    - 불필요한 파일 병합 로직을 완전히 들어내고, '앱 내 직접 임포트' 단일 경로로 통일했습니다.
+    - 앱바 메뉴에서 잘 쓰이지 않는 '기기 가져오기' 대신 사용 빈도가 높은 **'온라인 자료실'**로 바로 이동하는 메뉴를 배치했습니다.
+    - `dId` 변수를 `String`으로 올바르게 처리하고 필수 파라미터를 복구하여 빌드 오류를 해결했습니다.
+- **결과**: 프로젝트 아키텍처가 단순해지고, 사용자는 더 직관적으로 온라인 자료를 이용할 수 있게 되었습니다.
 
 ---
 
