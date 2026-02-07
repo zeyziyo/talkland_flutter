@@ -78,7 +78,8 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 * **Smart Save**: Auto-save chats with "Location (Date)" titles
 * **History Management**: Revisit past chats & edit titles
 
-- **온라인 직접 임포트 고도화 (Phase 75.9)**: 서버 인덱스(`materials_v3.json`)를 통해 최신 학습 자료를 앱 내에서 직접 실시간 임포트하는 체계를 구축했습니다. 과거의 복잡한 오프라인 병합 과정 없이도 다국어 파일이 지능적으로 통합되며, 화자 메타데이터 보완 로직으로 '콩글리쉬' 발음 문제를 근본적으로 해결했습니다. (2026-02-07)
+- **온라인 자료 관리 자동화 (Phase 75.9 Automation)**: 사용자가 `docs/materials`에 파일만 업로드하면 GitHub Actions가 인덱스(`materials_v3.json`)를 자동으로 갱신하는 체계를 구축했습니다. (2026-02-07)
+- **온라인 직접 임포트 고도화 (Phase 75.9)**: 서버 인덱스를 통해 최신 학습 자료를 앱 내에서 직접 실시간 임포트하는 체계를 구축했습니다. 과거의 복잡한 오프라인 병합 과정 없이도 다국어 파일이 지능적으로 통합되며, 화자 메타데이터 보완 로직으로 '콩글리쉬' 발음 문제를 근본적으로 해결했습니다. (2026-02-07)
 - **공지 시스템 교체 (Phase 73)**: 상단 오버레이 알림(`_statusMessage`)을 제거하고 다이얼로그(`showDialog`) 및 스낵바(`SnackBar`) 기반의 표준 알림 시스템으로 전면 교체하여 안정성 및 UI 일관성 확보.
 - **공지 시스템 교체 (Phase 73)**: 상단 오버레이 알림(`_statusMessage`)을 제거하고 다이얼로그(`showDialog`) 및 스낵바(`SnackBar`) 기반의 표준 알림 시스템으로 전면 교체하여 안정성 및 UI 일관성 확보.
 - **연습 모드 초기화 기능**: Mode 3(발음 연습) 카드의 대기 및 결과 화면에 '초기화(Reset)' 버튼을 추가하여 연습 상태를 즉시 리셋할 수 있도록 개선.

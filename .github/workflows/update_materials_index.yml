@@ -1,0 +1,26 @@
+name: Update Online Materials Index
+
+on:
+  push:
+    paths:
+      - 'docs/materials/**'
+    branches:
+      - main
+
+jobs:
+  update-index:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Generate Materials Index
+        shell: pwsh
+        run: ./scripts/generate_materials_index.ps1
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.name "github-actions[bot]@users.noreply.github.com"
+          git add docs/materials_v3.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update online materials index" && git push)
