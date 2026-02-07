@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
@@ -12,8 +13,6 @@ import '../constants/language_constants.dart';
 import '../services/usage_service.dart';
 import '../models/sentence.dart';
 import '../models/user_library.dart';
-import '../models/sentence.dart';
-import '../models/user_library.dart';
 import '../models/dialogue_group.dart';
 import '../models/chat_participant.dart'; // Phase 70
 import 'package:uuid/uuid.dart'; // Phase 70
@@ -21,7 +20,6 @@ import 'dart:math'; // Phase 70
 import 'package:flutter/material.dart'; // For Colors
 
 import '../services/supabase_service.dart';
-import 'package:flutter/widgets.dart';
 import '../l10n/app_localizations.dart';
 
 /// App-wide state management for Talkie
@@ -2511,7 +2509,7 @@ class AppState extends ChangeNotifier {
       final tName = _getLanguageFullName(_targetLang);
       final baseUrl = 'https://zeyziyo.github.io/talkie/materials';
       
-      final results = await Future.wait([
+      final results = await Future.wait<http.Response>([
         http.get(Uri.parse('$baseUrl/$sName/$mPath')).timeout(const Duration(seconds: 15)),
         http.get(Uri.parse('$baseUrl/$tName/$mPath')).timeout(const Duration(seconds: 15)),
       ]);

@@ -2,6 +2,19 @@
 
 ---
 
+## 📅 [2026-02-07 18:40:00] CI/CD 빌드 오류 수정 (Fix CI/CD Build Errors)
+
+### ✅ 태스크 (Task)
+- [x] **http 패키지 임포트 누락 수정**: `app_state.dart`에 `http` 임포트 추가.
+- [x] **Future.wait 타입 오류 해결**: `results` 리스트에 `http.Response` 타입을 명시하여 런타임/빌드 타입 불일치 제거.
+- [x] **코드 최적화**: `app_state.dart` 내 중복 임포트 및 불용 패키지 참조 제거.
+
+### 📝 워크스루 (Walkthrough)
+- **원인**: 온라인 임포트 기능을 구현하면서 `http` 패키지 호출 코드를 작성했으나, 실제 파일 상단에 임포트 구문이 누락되어 GitHub Actions 빌드 시 Compilation Error가 발생했습니다.
+- **조치**: 임포트 구문을 추가하고 `Future.wait`의 제네릭 타입을 명확히 지정하여 빌드 안정성을 확보했습니다.
+
+---
+
 ## 📅 [2026-02-07 18:30:00] 온라인 자료 인덱스 자동화 (Management Automation)
 
 ### ✅ 태스크 (Task)
