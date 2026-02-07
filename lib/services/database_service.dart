@@ -1296,7 +1296,7 @@ class DatabaseService {
                 for (var p in existingParticipants) (p['name'] as String): (p['id'] as String)
               };
 
-              if (dParticipants is List) {
+              if (dParticipants is List && dParticipants.isNotEmpty) {
                 for (var pRef in dParticipants) {
                   Map<String, dynamic>? pData;
                   if (pRef is String) {
@@ -1330,6 +1330,41 @@ class DatabaseService {
                       });
                     }
                   }
+                }
+              } else {
+                // Phase 75.9: Fallback for missing participants - Auto-create from Persona
+                if (!existingNameToId.containsKey(dPersona)) {
+                  final pId = const Uuid().v4();
+                  nameToIdMap[dPersona] = pId;
+                  await txn.insert('dialogue_participants', {
+                    'id': pId,
+                    'dialogue_id': dId,
+                    'name': dPersona,
+                    'role': 'ai',
+                    'gender': 'female', // Default to female for AI if unknown
+                    'lang_code': targetLang, // Assume AI speaks target language
+                    'created_at': DateTime.now().toIso8601String(),
+                  });
+                } else {
+                  nameToIdMap[dPersona] = existingNameToId[dPersona]!;
+                }
+
+                // Also ensure a 'User' participant exists for legacy compatibility
+                const uName = 'User';
+                if (!existingNameToId.containsKey(uName) && !nameToIdMap.containsKey(uName)) {
+                  final uId = const Uuid().v4();
+                  nameToIdMap[uName] = uId;
+                  await txn.insert('dialogue_participants', {
+                    'id': uId,
+                    'dialogue_id': dId,
+                    'name': uName,
+                    'role': 'user',
+                    'gender': 'male',
+                    'lang_code': sourceLang,
+                    'created_at': DateTime.now().toIso8601String(),
+                  });
+                } else if (existingNameToId.containsKey(uName)) {
+                  nameToIdMap[uName] = existingNameToId[uName]!;
                 }
               }
 

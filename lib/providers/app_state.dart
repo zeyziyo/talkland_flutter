@@ -148,6 +148,12 @@ class AppState extends ChangeNotifier {
   List<Map<String, dynamic>> _studyRecords = [];
   String _selectedReviewLanguage = 'en'; // Filter by target language, default 'en'
   
+  // Online Materials State (Phase 75.9 Polish)
+  List<Map<String, dynamic>> _onlineMaterials = [];
+  bool _isLoadingOnlineMaterials = false;
+  List<Map<String, dynamic>> get onlineMaterials => _onlineMaterials;
+  bool get isLoadingOnlineMaterials => _isLoadingOnlineMaterials;
+  
   // Mode 2 (학습 자료 & 복습) State
   List<Map<String, dynamic>> _studyMaterials = []; // Available study materials (Legacy)
   List<String> _availableTags = []; // 신규 태그 목록
@@ -2451,9 +2457,6 @@ class AppState extends ChangeNotifier {
           return {'success': false, 'error': 'File path not found'};
         }
       }
-      // Perform import (Using fast local transaction, ignoring Supabase sync for now as per user request for speed)
-      // The local AppState method 'importJsonWithMetadata' was slow due to row-by-row Supabase inserts.
-      // We switch to DatabaseService.importFromJsonWithMetadata which uses SQLite transaction.
       // Perform import
       final userId = SupabaseService.client.auth.currentUser?.id;
       final importResult = await DatabaseService.importFromJsonWithMetadata(
@@ -2462,13 +2465,9 @@ class AppState extends ChangeNotifier {
         userId: userId,
       );
       
-      // Refresh Local Study Materials (Dropdown)
+      // Refresh UI states
       await loadStudyMaterials();
-      // Refresh Dialogue Groups for AI Chat
       await loadDialogueGroups();
-      
-      // Supabase sync (loadStudyRecords) is handled by BackgroundSyncService
-      // FIX: Load local SQLite records immediately for Mode 2/3 display
       await loadRecordsByTags();
       notifyListeners();
       
@@ -2477,6 +2476,89 @@ class AppState extends ChangeNotifier {
     } catch (e) {
       return {'success': false, 'error': e.toString()};
     }
+  }
+
+  // Phase 75.9 Polish: Online Direct Import Logic
+  Future<void> fetchOnlineMaterialsList() async {
+    _isLoadingOnlineMaterials = true;
+    notifyListeners();
+    try {
+      final response = await http.get(Uri.parse('https://zeyziyo.github.io/talkie/materials_v3.json'));
+      if (response.statusCode == 200) {
+        final data = json.decode(utf8.decode(response.bodyBytes));
+        _onlineMaterials = List<Map<String, dynamic>>.from(data['materials'] ?? []);
+        print('[Online] Found ${_onlineMaterials.length} materials.');
+      }
+    } catch (e) {
+      print('[Online] Index Error: $e');
+    } finally {
+      _isLoadingOnlineMaterials = false;
+      notifyListeners();
+    }
+  }
+
+  Future<Map<String, dynamic>> importRemoteMaterial(Map<String, dynamic> material) async {
+    final mId = material['id'];
+    final mPath = material['path'];
+    final mName = material['name'];
+    
+    _isTranslating = true; 
+    _statusMessage = 'Fetching online data: $mName...';
+    notifyListeners();
+
+    try {
+      final sName = _getLanguageFullName(_sourceLang);
+      final tName = _getLanguageFullName(_targetLang);
+      final baseUrl = 'https://zeyziyo.github.io/talkie/materials';
+      
+      final results = await Future.wait([
+        http.get(Uri.parse('$baseUrl/$sName/$mPath')).timeout(const Duration(seconds: 15)),
+        http.get(Uri.parse('$baseUrl/$tName/$mPath')).timeout(const Duration(seconds: 15)),
+      ]);
+
+      if (results[0].statusCode != 200 || results[1].statusCode != 200) {
+        throw Exception('Server data not found for $sName/$tName pair.');
+      }
+
+      final sJson = utf8.decode(results[0].bodyBytes);
+      final tJson = utf8.decode(results[1].bodyBytes);
+
+      // Sequentially import both languages
+      // The DatabaseService handles smart updates/mapping internally by subject/id.
+      _statusMessage = 'Importing $mName ($sName)...';
+      notifyListeners();
+      await DatabaseService.importFromJsonWithMetadata(
+        sJson, fileName: 'remote_${mId}_$_sourceLang.json'
+      );
+
+      _statusMessage = 'Importing $mName ($tName)...';
+      notifyListeners();
+      final importResult = await DatabaseService.importFromJsonWithMetadata(
+        tJson, fileName: 'remote_${mId}_$_targetLang.json'
+      );
+
+      await loadDialogueGroups();
+      await loadStudyMaterials();
+      await loadRecordsByTags();
+      
+      _statusMessage = '$mName Imported Successfully';
+      notifyListeners();
+      return importResult;
+    } catch (e) {
+      _statusMessage = 'Import Failed: $e';
+      notifyListeners();
+      return {'success': false, 'error': e.toString()};
+    } finally {
+      _isTranslating = false;
+      notifyListeners();
+    }
+  }
+
+  String _getLanguageFullName(String code) {
+    final lang = LanguageConstants.supportedLanguages.firstWhere(
+      (l) => l['code'] == code, orElse: () => {'name': code}
+    );
+    return lang['name']!;
   }
 
 

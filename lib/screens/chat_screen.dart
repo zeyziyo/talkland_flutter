@@ -672,9 +672,9 @@ class _ChatScreenState extends State<ChatScreen> {
     final topText = msg['source_text'] ?? '';
     final bottomText = msg['target_text'] ?? '';
     
-    // Lang Logic for TTS
-    final topLang = isUser ? appState.sourceLang : participant.langCode;
-    final bottomLang = isUser ? appState.targetLang : appState.sourceLang;
+    // Lang Logic for TTS (Phase 75.9 Polish: Use explicit DB meta if available)
+    final topLang = msg['source_lang'] ?? (isUser ? appState.sourceLang : participant.langCode);
+    final bottomLang = msg['target_lang'] ?? (isUser ? appState.targetLang : appState.sourceLang);
 
     return Align(
       alignment: alignment,

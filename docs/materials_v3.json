@@ -1,0 +1,34 @@
+{
+    "version": "3.0",
+    "updated_at": "2026-02-07",
+    "materials": [
+        {
+            "id": "first_meeting",
+            "name": "첫 만남 (First Meeting)",
+            "description": "자기소개와 직업 묻고 답하기 (Basic Introductions)",
+            "category": "Dialogue",
+            "path": "dialogues/first_meeting.json"
+        },
+        {
+            "id": "verbs_1",
+            "name": "기초 동사 100 (Basic Verbs 100)",
+            "description": "가장 많이 쓰이는 행동 동사 학습 (Most common action verbs)",
+            "category": "Words",
+            "path": "words/verbs_1.json"
+        },
+        {
+            "id": "nouns_1",
+            "name": "기초 명사 50 (Basic Nouns 50)",
+            "description": "일상 생활의 핵심 사물 단어 (Essential everyday nouns)",
+            "category": "Words",
+            "path": "words/nouns_1.json"
+        },
+        {
+            "id": "greetings_1",
+            "name": "필수 인사말 (Essential Greetings)",
+            "description": "상황별 정중한 인사와 작별 (Polite greetings/farewells)",
+            "category": "Sentences",
+            "path": "sentences/greetings_1.json"
+        }
+    ]
+}

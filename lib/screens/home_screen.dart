@@ -780,6 +780,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
   void _showMaterialSelectionDialog(BuildContext context) {
+    final appState = Provider.of<AppState>(context, listen: false);
+    appState.fetchOnlineMaterialsList(); // Proactively fetch online materials
+    
     showDialog(
       context: context,
       builder: (context) {
@@ -818,7 +821,7 @@ class _HomeScreenState extends State<HomeScreen> {
         }
 
         return DefaultTabController(
-          length: 3,
+          length: 4,
           initialIndex: initialTab,
           child: AlertDialog(
             title: Text(appState.currentMode == 3 ? l10n.chatAiChat : l10n.menuSelectMaterialSet),
@@ -830,16 +833,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   TabBar(
                     labelColor: Colors.blueAccent,
                     unselectedLabelColor: Colors.grey,
+                    isScrollable: true,
                     tabs: [
                       Tab(text: l10n.tabWord),
                       Tab(text: l10n.tabSentence),
+                      Tab(text: '온라인 (Online)'),
                       Tab(text: l10n.chatHistoryTitle),
                     ],
                   ),
                   Expanded(
                     child: TabBarView(
                       children: [
-                        // Word Tab
+                        // 1. Word Tab
                         ListView(
                           children: [
                             ListTile(
@@ -868,7 +873,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             }),
                           ],
                         ),
-                        // Sentence Tab
+                        // 2. Sentence Tab
                         ListView(
                           children: [
                             ListTile(
@@ -897,7 +902,52 @@ class _HomeScreenState extends State<HomeScreen> {
                             }),
                           ],
                         ),
-                        // Dialogues Tab (Phase 11 Update)
+                        // 3. Online Materials Tab (New!)
+                        Consumer<AppState>(
+                          builder: (context, state, _) {
+                            if (state.isLoadingOnlineMaterials) {
+                              return const Center(child: CircularProgressIndicator());
+                            }
+                            if (state.onlineMaterials.isEmpty) {
+                              return Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Text('온라인 자료를 불러올 수 없습니다.'),
+                                    TextButton(
+                                      onPressed: () => state.fetchOnlineMaterialsList(),
+                                      child: const Text('다시 시도'),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            }
+                            return ListView.builder(
+                              itemCount: state.onlineMaterials.length,
+                              itemBuilder: (context, idx) {
+                                final material = state.onlineMaterials[idx];
+                                return ListTile(
+                                  leading: const Icon(Icons.cloud_download, color: Colors.green),
+                                  title: Text(material['name'] ?? ''),
+                                  subtitle: Text(material['description'] ?? ''),
+                                  onTap: () async {
+                                    // Start import
+                                    final result = await state.importRemoteMaterial(material);
+                                    if (context.mounted) {
+                                      ScaffoldMessenger.of(context).showSnackBar(
+                                        SnackBar(content: Text(state.statusMessage)),
+                                      );
+                                      if (result['success'] == true) {
+                                        Navigator.pop(context);
+                                      }
+                                    }
+                                  },
+                                );
+                              },
+                            );
+                          },
+                        ),
+                        // 4. Dialogues Tab
                         ListView(
                           children: [
                             if (dialogueGroups.isEmpty)
