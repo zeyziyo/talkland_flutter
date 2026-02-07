@@ -1269,25 +1269,26 @@ class DatabaseService {
               );
 
               // Phase 66: Insert Participants for this Dialogue
-              // "participants": ["jisoo", "minsu"] (List of IDs) OR full objects
               final dParticipants = dMap['participants'];
+              final Map<String, String> nameToIdMap = {}; // Local map to link messages to generated IDs
               if (dParticipants is List) {
                 for (var pRef in dParticipants) {
                   Map<String, dynamic>? pData;
                   if (pRef is String) {
-                    // ID Reference
                     pData = participantMap[pRef];
                   } else if (pRef is Map<String, dynamic>) {
-                    // Inline Definition
                     pData = pRef;
                   }
                   
                   if (pData != null) {
-                    // Insert into dialogue_participants
+                    final pId = const Uuid().v4();
+                    final pName = pData['name'] ?? 'Unknown';
+                    nameToIdMap[pName] = pId; // Store mapping
+
                     await txn.insert('dialogue_participants', {
-                      'id': const Uuid().v4(),
+                      'id': pId,
                       'dialogue_id': dId,
-                      'name': pData['name'] ?? 'Unknown',
+                      'name': pName,
                       'role': pData['role'] ?? 'user',
                       'gender': pData['gender'],
                       'lang_code': pData['lang_code'],
@@ -1305,14 +1306,18 @@ class DatabaseService {
                   final msg = messages[j] as Map<String, dynamic>;
                   final sText = msg['source_text'] as String?;
                   final tText = msg['target_text'] as String?;
-                  // Parse full speaker object or simple name
+                  
                   String speakerName = 'Unknown';
+                  String? participantId;
+                  
                   if (msg['speaker'] is String) {
                     speakerName = msg['speaker'];
                     // Try to resolve name from ID if it matches a participant
-                     if (participantMap.containsKey(speakerName)) {
-                       speakerName = participantMap[speakerName]!['name'];
-                     }
+                    if (participantMap.containsKey(speakerName)) {
+                      speakerName = participantMap[speakerName]!['name'];
+                    }
+                    // Link to generated participant ID
+                    participantId = nameToIdMap[speakerName];
                   }
 
                   if (sText == null || tText == null || sText.trim().isEmpty || tText.trim().isEmpty) {
@@ -1320,7 +1325,6 @@ class DatabaseService {
                     continue;
                   }
 
-                  // Use saveUnifiedRecord to save the sentence pair and get the group_id
                   final groupId = await saveUnifiedRecord(
                     text: sText,
                     lang: sourceLang,
@@ -1332,16 +1336,15 @@ class DatabaseService {
                     style: msg['style'] as String?,
                     root: msg['root'] as String?,
                     note: (msg['note'] ?? msg['context']) as String?,
-                    tags: ['Dialogue', ...fileTags], // Tag as Dialogue
+                    tags: ['Dialogue', ...fileTags],
                     txn: txn,
                   );
                   
-                  // Insert into chat_messages (Required for Chat UI)
-                  // Use the SAME groupId we just got from saveUnifiedRecord
                   await txn.insert('chat_messages', {
                     'dialogue_id': dId,
                     'group_id': groupId,
                     'speaker': speakerName,
+                    'participant_id': participantId, // Correctly link the ID
                     'sequence_order': j,
                     'created_at': DateTime.now().toIso8601String(),
                   });
@@ -1660,8 +1663,15 @@ class DatabaseService {
         where: 'dialogue_id = ?',
         whereArgs: [id],
       );
+
+      // 2. Delete Participants (Phase 75.6)
+      await txn.delete(
+        'dialogue_participants',
+        where: 'dialogue_id = ?',
+        whereArgs: [id],
+      );
       
-      // 2. Delete Group
+      // 3. Delete Group
       await txn.delete(
         'dialogue_groups',
         where: 'id = ?',
@@ -1739,14 +1749,14 @@ class DatabaseService {
   static Future<List<Map<String, dynamic>>> getRecordsByDialogueId(String dialogueId) async {
     final db = await database;
     
-    // Join chat_messages with sentences using group_id
-    // We need to retrieve the PAIR of messages (Source and Target) for each chat_message structural entry.
-    final List<Map<String, dynamic>> messages = await db.query(
-      'chat_messages',
-      where: 'dialogue_id = ?',
-      whereArgs: [dialogueId],
-      orderBy: 'sequence_order ASC',
-    );
+    // Join chat_messages with dialogue_participants to get metadata (gender, lang_code)
+    final List<Map<String, dynamic>> messages = await db.rawQuery('''
+      SELECT m.*, p.gender, p.lang_code as participant_lang
+      FROM chat_messages m
+      LEFT JOIN dialogue_participants p ON m.participant_id = p.id
+      WHERE m.dialogue_id = ?
+      ORDER BY m.sequence_order ASC
+    ''', [dialogueId]);
     
     List<Map<String, dynamic>> results = [];
     
@@ -1774,7 +1784,10 @@ class DatabaseService {
           'group_id': groupId,
           'source_text': source['text'],
           'target_text': target['text'],
-          'speaker': msg['speaker'],
+           'speaker': msg['speaker'],
+          'participant_id': msg['participant_id'],
+          'gender': msg['gender'], // Added from JOIN
+          'participant_lang': msg['participant_lang'], // Added from JOIN
           'sequence_order': msg['sequence_order'],
           'created_at': msg['created_at'],
           'note': source['note'],

@@ -2727,10 +2727,19 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Delete a dialogue group (Phase 62)
+  /// Delete a dialogue group (Phase 75.6)
   Future<void> deleteDialogue(String id) async {
     try {
+      // 1. Delete from Local DB
       await DatabaseService.deleteDialogueGroup(id);
+      
+      // 2. Delete from Cloud (Supabase) - Added Phase 75.6
+      try {
+        await SupabaseService.deleteDialogueGroup(id);
+      } catch (cloudError) {
+        debugPrint('[AppState] Cloud delete failed (but local succeeded): $cloudError');
+        // We don't rethrow here because the dialogue is already gone from local UI
+      }
       
       // Update Local List
       _dialogueGroups.removeWhere((g) => g.id == id);

@@ -472,6 +472,27 @@ class SupabaseService {
     await client.from('dialogue_groups').update({'title': title}).eq('id', id);
   }
 
+  /// Delete a dialogue group and related personal links (Phase 75.6)
+  static Future<void> deleteDialogueGroup(String id) async {
+    final userId = client.auth.currentUser?.id;
+    if (userId == null) return;
+
+    try {
+      // 1. Delete from dialogue_groups (Cloud)
+      // Note: If cascading is set up on the DB, user_library might be deleted automatically.
+      // But we'll be explicit for safety.
+      await client.from('dialogue_groups').delete().eq('id', id).eq('user_id', userId);
+      
+      // 2. Delete from user_library (Personal links)
+      await client.from('user_library').delete().eq('dialogue_id', id).eq('user_id', userId);
+      
+      print('Supabase: Dialogue group $id deleted from cloud.');
+    } catch (e) {
+      print('Supabase: Failed to delete dialogue group $id: $e');
+      rethrow;
+    }
+  }
+
   /// Call 'process-chat' Edge Function (Draft for Phase 11)
   static Future<Map<String, dynamic>> processChat({
     required String text,

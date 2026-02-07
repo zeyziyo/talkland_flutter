@@ -538,15 +538,16 @@ class _ChatScreenState extends State<ChatScreen> {
   void _speak(String text, String languageCode, {bool isUser = true, String? gender}) {
     if (text.isEmpty) return;
     
-    // Use AppState's locale helper for consistency
-    final appState = Provider.of<AppState>(context, listen: false);
-    final localeId = appState.getServiceLocale(languageCode);
-
-    // Clean text
-    String cleanText = text.replaceAll(RegExp(r'[\*\_#\`]'), '');
-    cleanText = cleanText.replaceAllMapped(RegExp(r'\[([^\]]+)\]\([^\)]+\)'), (match) {
+    // Determine the actual locale to use
+    // Priority: 1. Explicit languageCode, 2. Text-based detection (done inside SpeechService)
+    String localeId = languageCode;
+    
+    // Clean text (remove brackets/metadata)
+    final cleanText = text.replaceAllMapped(RegExp(r'\[([^\]]+)\]'), (match) {
       return match.group(1) ?? '';
     });
+    
+    final appState = Provider.of<AppState>(context, listen: false);
     
     // Determine Gender (Use provided gender or fallback to AppState)
     final resolvedGender = gender ?? (isUser ? appState.chatUserGender : appState.chatAiGender);
