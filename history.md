@@ -26,7 +26,10 @@
 - **개선**: 온라인 자료실 다이얼로그를 단어, 문장, 대화 탭으로 명확히 구분하여 사용자가 원하는 자료 유형을 쉽게 찾을 수 있도록 했습니다.
 - **결과**: `materials_v3.json`의 `category` 필드를 활용한 필터링 기능으로 자료 탐색 효율성을 높였으며, 임포트 후 자동 모드 전환으로 사용자 편의성을 극대화했습니다.
 
-## 📅 [2026-02-08 01:15:00] Hotfix: HomeScreen 빌드 오류 수정 (Fix Build Logic)
+## 📅 2026-02-08: Hotfix - HomeScreen Build Failure (Refactor Regression)
+
+## 📅 2026-02-08: Hotfix - Build Error Resolution (빌드 오류 수정)
+ (Fix Build Logic)
 
 ### ✅ 태스크 (Task)
 - [x] **전체 언어 동기화**: `update_arbs.dart` 스크립트를 실행하여 80개국 언어 파일(ARB)에 누락된 `menuOnlineLibrary`, `startTutorial` 키 자동 추가.

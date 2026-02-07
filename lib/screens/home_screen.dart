@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import '../l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:talkie/models/dialogue_group.dart';
 import '../providers/app_state.dart';
 import '../widgets/mode1_widget.dart';
 import '../widgets/mode2_widget.dart';
@@ -425,7 +426,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       appState.loadStudyMaterials();
                       break;
                     case 'online_library':
-                      _showMaterialSelectionDialog(context, initialTabIndex: 2); // Open Online Tab
+                      _showOnlineLibraryDialog(context); // Open Online Tab
                       break;
                     case 'help':
                       showDialog(
@@ -594,17 +595,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   contextFieldKey: _contextFieldKey,
                   materialDropdownKey: _mode1DropdownKey,
                   toggleButtonKey: _mode1ToggleKey,
-                  onSelectMaterial: () => _showMaterialSelectionDialog(context),
+                  onSelectMaterial: () => _showOnlineLibraryDialog(context),
                 ),
                 Mode2Widget(
                   materialDropdownKey: _mode2DropdownKey,
                   tutorialListKey: _mode2ListKey,
-                  onSelectMaterial: () => _showMaterialSelectionDialog(context),
+                  onSelectMaterial: () => _showOnlineLibraryDialog(context),
                 ),
                 Mode3Widget(
                   materialDropdownKey: _mode3DropdownKey,
                   settingsKey: _mode3SettingsKey,
-                  onSelectMaterial: () => _showMaterialSelectionDialog(context),
+                  onSelectMaterial: () => _showOnlineLibraryDialog(context),
                 ),
                 ChatHistoryScreen(
                   isWidget: true,
