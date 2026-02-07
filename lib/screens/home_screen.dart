@@ -887,7 +887,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     if (dId != null) {
                        final group = state.dialogueGroups.firstWhere(
                          (g) => g.id == dId, 
-                         orElse: () => DialogueGroup(id: dId!, title: material['name'], createdAt: DateTime.now())
+                         orElse: () => DialogueGroup(id: dId!, userId: 'user', title: material['name'], createdAt: DateTime.now())
                        );
                        await state.loadExistingDialogue(group);
                        state.switchMode(3);

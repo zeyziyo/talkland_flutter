@@ -27,6 +27,8 @@
 - **결과**: `materials_v3.json`의 `category` 필드를 활용한 필터링 기능으로 자료 탐색 효율성을 높였으며, 임포트 후 자동 모드 전환으로 사용자 편의성을 극대화했습니다.
 
 ## 📅 2026-02-08: Hotfix - HomeScreen Build Failure (Refactor Regression)
+- **Fix**: `_showOnlineLibraryDialog` replacing calling deprecated method.
+- **Fix**: `DialogueGroup` import added & missing `userId` parameter supplied.
 
 ## 📅 2026-02-08: Hotfix - Build Error Resolution (빌드 오류 수정)
  (Fix Build Logic)
