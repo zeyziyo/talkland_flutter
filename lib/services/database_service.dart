@@ -1257,18 +1257,22 @@ class DatabaseService {
               final existingGroup = await txn.query(
                 'dialogue_groups',
                 where: 'title = ? AND user_id = ?',
-                whereArgs: [dTitle, userId], // Assuming userId is currentUserId
+                whereArgs: [dTitle, userId],
                 limit: 1,
               );
 
-              int? dId;
+              String? dId;
               if (existingGroup.isNotEmpty) {
-                dId = existingGroup.first['id'] as int;
-                lastDialogueId = dId.toString(); // Keep lastDialogueId as String for return type
+                dId = existingGroup.first['id'] as String;
+                lastDialogueId = dId;
                 print('[DB] Smart Sync: Found existing dialogue group "$dTitle" (ID: $dId)');
               } else {
                 // Generate new ID if not found
-                dId = await insertDialogueGroup(
+                dId = '${DateTime.now().millisecondsSinceEpoch}_${importedCount}';
+                lastDialogueId = dId;
+
+                await insertDialogueGroup(
+                  id: dId,
                   userId: userId, 
                   title: dTitle,
                   persona: dPersona,
@@ -1276,7 +1280,6 @@ class DatabaseService {
                   createdAt: fileCreatedAt,
                   txn: txn,
                 );
-                lastDialogueId = dId.toString();
               }
 
               // Phase 66/75.9: Insert or Link Participants
@@ -1417,7 +1420,7 @@ class DatabaseService {
                       txn: txn,
                     );
                     
-                    // Also handle target_text if provided (Smart Merge of translations)
+                    // Also handle target_text if provided (Smart Sync of translations)
                     if (sText != null && tText != null && sText != tText) {
                       await _addLanguageToUnifiedRecord(
                         groupId: groupId,
