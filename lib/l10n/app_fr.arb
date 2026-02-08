@@ -675,10 +675,5 @@
   "confirmDeleteConversation": "Êtes-vous sûr de vouloir supprimer cette conversation ?\nElle ne pourra pas être récupérée.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation",
-  "practiceModeTitle": "Pratique",
-  "chatAiChat": "Chat",
-  "tutorialAiChatTitle": "Chat",
-  "helpMode3Desc": "Pratiquez en écoutant et en répétant.",
-  "helpModeChatDesc": "Parlez à des personnages pour pratiquer la conversation réelle."
+  "tabConversation": "Conversation"
 }
