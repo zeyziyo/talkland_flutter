@@ -2526,10 +2526,20 @@ class AppState extends ChangeNotifier {
       final tName = _getLanguageFullName(_targetLang);
       final baseUrl = 'https://zeyziyo.github.io/talkie/materials';
       
-      final results = await Future.wait<http.Response>([
+      // Prepare requests
+      List<Future<http.Response>> requests = [
         http.get(Uri.parse('$baseUrl/$sName/$mPath')).timeout(const Duration(seconds: 15)),
         http.get(Uri.parse('$baseUrl/$tName/$mPath')).timeout(const Duration(seconds: 15)),
-      ]);
+      ];
+
+      // Phase 77: Auto-download Pivot Language (English)
+      // If neither source nor target is English, fetch English version for linking
+      bool fetchPivot = (_sourceLang != 'en' && _targetLang != 'en');
+      if (fetchPivot) {
+        requests.add(http.get(Uri.parse('$baseUrl/English/$mPath')).timeout(const Duration(seconds: 15)));
+      }
+      
+      final results = await Future.wait<http.Response>(requests);
 
       if (results[0].statusCode != 200 || results[1].statusCode != 200) {
         throw Exception('Server data not found for $sName/$tName pair.');
@@ -2539,7 +2549,6 @@ class AppState extends ChangeNotifier {
       final tJson = utf8.decode(results[1].bodyBytes);
 
       // Sequentially import both languages
-      // The DatabaseService handles smart updates/mapping internally by subject/id.
       _statusMessage = 'Importing $mName ($sName)...';
       notifyListeners();
       await DatabaseService.importFromJsonWithMetadata(
@@ -2551,6 +2560,16 @@ class AppState extends ChangeNotifier {
       final importResult = await DatabaseService.importFromJsonWithMetadata(
         tJson, fileName: 'remote_${mId}_$_targetLang.json'
       );
+
+      // Import Pivot (English) if fetched
+      if (fetchPivot && results.length > 2 && results[2].statusCode == 200) {
+        _statusMessage = 'Linking with English Pivot...';
+        notifyListeners();
+        final eJson = utf8.decode(results[2].bodyBytes);
+        await DatabaseService.importFromJsonWithMetadata(
+          eJson, fileName: 'remote_${mId}_en.json'
+        );
+      }
 
       await loadDialogueGroups();
       await loadStudyMaterials();

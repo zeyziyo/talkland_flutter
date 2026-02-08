@@ -32,6 +32,7 @@
 - **Fix**: Restored `loadStudyMaterials` logic to fix empty content bug in Mode 2.
 - **Fix**: Implemented **Pivot Strategy (Smart Sync)** in `saveUnifiedRecord` to link independent language imports by Subject/Sequence.
 - **Fix**: Implemented **Manual Input Pivot Logic** in `saveTranslation` (matches existing English group).
+- **Feat**: Implemented **Auto-Download English Pivot** in `importRemoteMaterial` (ensure shared connectivity).
 
 ## 📅 2026-02-08: Hotfix - Build Error Resolution (빌드 오류 수정)
  (Fix Build Logic)
