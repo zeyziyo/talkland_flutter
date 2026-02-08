@@ -36,16 +36,14 @@ class AppLocalizationsAs extends AppLocalizations {
       '• সামগ্ৰী নিৰ্বাচন: এটা নিৰ্দিষ্ট সামগ্ৰী সংকলন বা ‘সকলোবোৰ পুনৰীক্ষণ কৰক’ নিৰ্বাচন কৰক\n• কাৰ্ড ফ্লিপ কৰা: অনুবাদ পৰীক্ষা কৰিবলৈ ‘দেখুৱাওক/লুকুৱাওক’ (স্বয়ংক্ৰিয় শিক্ষা পৰীক্ষা)\n• শ্ৰৱণ: বাক্য TTS প্লেবেক\n• শিকা সম্পূৰ্ণ: এটা চেকেৰে (V) শিকা সম্পূৰ্ণ হিচাপে চিহ্নিত কৰক\n• মচি পেলোৱা: ৰেকৰ্ড মচি পেলোৱাৰ বাবে কাৰ্ডখন টিপি ধৰি ৰাখক\n• সন্ধানৰ চৰ্তসমূহ: টেগ, শেহতীয়া আইটেম, আৰম্ভণিৰ আখৰৰ দ্বাৰা ফিল্টাৰ কৰা';
 
   @override
-  String get helpMode3Desc =>
-      'বাক্যবোৰ শুনক আৰু পুনৰাবৃত্তি কৰক (শ্বেড’ইং) আৰু উচ্চাৰণৰ অনুশীলন কৰক।';
+  String get helpMode3Desc => 'শুনি আৰু অনুকৰণ কৰি চৰ্চা কৰক।';
 
   @override
   String get helpMode3Details =>
       '• সামগ্ৰী নিৰ্বাচন: শিকিবলৈ এটা সামগ্ৰী সংকলন নিৰ্বাচন কৰক\n• সময় নিৰ্ধাৰণ: বাক্যৰ মাজত অপেক্ষাৰ সময় এডজাষ্ট কৰিবলৈ [-] [+] বুটাম (3 চেকেণ্ড – 60 চেকেণ্ড)\n• আৰম্ভ/বন্ধ: শ্বেড’ইং ছেচন নিয়ন্ত্ৰণ কৰক\n• কোৱা: কথাবোৰ শুনক আৰু পুনৰাবৃত্তি কৰক\n• ফীডবেক: সঠিকতাৰ নম্বৰ (0-100) আৰু ৰং প্ৰদৰ্শন\n• সন্ধানৰ চৰ্তসমূহ: টেগ, শেহতীয়া আইটেম, আৰম্ভণিৰ আখৰৰ দ্বাৰা অনুশীলন লক্ষ্য ফিল্টাৰ কৰা';
 
   @override
-  String get helpModeChatDesc =>
-      'এটা এআই ব্যক্তিৰ সৈতে বাৰ্তালাপ কৰি বাস্তৱিক জীৱনৰ কথোপকথনৰ অনুশীলন কৰক।';
+  String get helpModeChatDesc => 'প্ৰকৃত কথোপকথন চৰ্চা কৰিবলৈ চাট কৰক।';
 
   @override
   String get helpModeChatDetails =>
@@ -744,7 +742,7 @@ class AppLocalizationsAs extends AppLocalizations {
   String get reviewModeTitle => 'পুনৰীক্ষণ';
 
   @override
-  String get practiceModeTitle => 'উচ্চাৰণৰ অনুশীলন';
+  String get practiceModeTitle => 'চৰ্চা';
 
   @override
   String get chatHistoryTitle => 'চেটৰ ইতিহাস';
@@ -791,10 +789,10 @@ class AppLocalizationsAs extends AppLocalizations {
   String get chatUntitled => 'শিৰোনামবিহীন বাৰ্তালাপ';
 
   @override
-  String get chatAiChat => 'এআই চেট';
+  String get chatAiChat => 'চাট';
 
   @override
-  String get tutorialAiChatTitle => 'এআই চেট';
+  String get tutorialAiChatTitle => 'চাট';
 
   @override
   String get tutorialAiChatDesc =>
@@ -977,6 +975,9 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'সকলো কথোপকথন';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

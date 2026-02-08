@@ -37,16 +37,14 @@ class AppLocalizationsSi extends AppLocalizations {
       '• ද්‍රව්‍ය තේරීම: නිශ්චිත ද්‍රව්‍ය එකතුවක් හෝ \'සම්පූර්ණ සමාලෝචනය\' තෝරන්න\n• කාඩ්පත පෙරළන්න: පරිවර්තනය පරීක්ෂා කිරීමට \'පෙන්වන්න/සඟවන්න\' (ස්වයංක්‍රීය ඉගෙනුම් පිරික්සුම)\n• සවන්දීම: වාක්‍ය TTS වාදනය\n• ඉගෙනීම සම්පූර්ණයි: ඉගෙනීම සම්පූර්ණ වූ බව සලකුණු කිරීමට පිරික්සුම් ලකුණ (V)\n• මකන්න: වාර්තා මකා දැමීමට කාඩ්පත දිගු වේලාවක් ඔබාගෙන සිටින්න\n• සෙවුම් කොන්දේසි: ටැග්, මෑත අයිතම, ආරම්භක අකුරුවලින් පෙරහන් කරන්න';
 
   @override
-  String get helpMode3Desc =>
-      'වාක්‍යවලට සවන් දෙමින් ඒවා නැවත නැවත කියමින් (Shadowing) උච්චාරණය පුහුණු වන්න.';
+  String get helpMode3Desc => 'සවන් දී නැවත පැවසීමෙන් පුහුණු වන්න.';
 
   @override
   String get helpMode3Details =>
       '• ද්‍රව්‍ය තේරීම: ඉගෙනීමට ද්‍රව්‍ය එකතුවක් තෝරන්න\n• පරතරය සකසන්න: [-] [+] බොත්තම් සමඟ වාක්‍ය අතර රැඳී සිටීමේ කාලය සකසන්න (තත්පර 3-60)\n• ආරම්භ කරන්න/නැවැත්වන්න: ෂැඩෝවිං සැසිය පාලනය කරන්න\n• කථා කිරීම: ශබ්දයට සවන් දී එය නැවත කරන්න\n• ප්‍රතිපෝෂණය: නිරවද්‍යතා ලකුණු (0-100) සහ වර්ණ සංදර්ශකය\n• සෙවුම් කොන්දේසි: ටැග්, මෑත අයිතම, ආරම්භක අකුරුවලින් පුහුණු ඉලක්ක පෙරහන් කරන්න';
 
   @override
-  String get helpModeChatDesc =>
-      'AI පෞරුෂයක් සමඟ කතා කරමින් සැබෑ සංවාදයක් පුහුණු වන්න.';
+  String get helpModeChatDesc => 'සැබෑ සංවාද සඳහා චරිත සමඟ කතා කරන්න.';
 
   @override
   String get helpModeChatDetails =>
@@ -747,7 +745,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get reviewModeTitle => 'සමාලෝචනය';
 
   @override
-  String get practiceModeTitle => 'උච්චාරණ පුහුණුව';
+  String get practiceModeTitle => 'පුහුණුව';
 
   @override
   String get chatHistoryTitle => 'කතාබස් ඉතිහාසය';
@@ -794,10 +792,10 @@ class AppLocalizationsSi extends AppLocalizations {
   String get chatUntitled => 'මාතෘකාවක් නැති සංවාදය';
 
   @override
-  String get chatAiChat => 'AI කතාබස්';
+  String get chatAiChat => 'චැට්';
 
   @override
-  String get tutorialAiChatTitle => 'AI කතාබස්';
+  String get tutorialAiChatTitle => 'චැට්';
 
   @override
   String get tutorialAiChatDesc => 'AI පෞරුෂයක් සමඟ සැබෑ සංවාදයක් පුහුණු වන්න.';
@@ -979,6 +977,9 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'සියලු සංවාද';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

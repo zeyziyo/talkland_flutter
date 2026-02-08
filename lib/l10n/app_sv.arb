@@ -8,9 +8,7 @@
   "helpMode1Details": "• Röst: Tryck mikrofon för start/stopp\n• Text: Skriv direkt för översättning\n• Auto-Sök: Hittar liknande meningar\n• Översätt: Knapp för direktöversättning\n• Lyssna: Ikon för TTS\n• Spara: Lägger till i historik\n• Rensa: Återställ allt",
   "helpMode2Desc": "Repetera sparade meningar med dold översättning.",
   "helpMode2Details": "• Välj: Välj set eller 'Alla'\n• Vänd: 'Visa/Dölj' översättning\n• Lyssna: Spela TTS för mening\n• Markera: Kryssa (V) för klara\n• Ta bort: Långtryck för att ta bort\n• Filter: Visa alla eller per material",
-  "helpMode3Desc": "Öva tala genom att lyssna och upprepa (Shadowing).",
   "helpMode3Details": "• Välj: Välj paket\n• Intervall: [-] [+] väntetid (3s-60s)\n• Start/Stopp: Kontrollera session\n• Tala: Lyssna och upprepa\n• Poäng: Noggrannhet (0-100)\n• Försök: Knapp om röst ej hittas",
-  "helpModeChatDesc": "Talk to AI persona to practice real conversation and save useful sentences.",
   "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
   "helpJsonDesc": "För import i Läge 3, skapa JSON:",
   "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Input",
   "reviewModeTitle": "Review",
-  "practiceModeTitle": "Practice",
   "chatHistoryTitle": "Conversation History",
   "chatNew": "New Chat",
   "chatNewChat": "New Chat",
@@ -609,8 +606,6 @@
   "personaGuide": "Travel Guide",
   "personaFriend": "Local Friend",
   "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "AI Chat",
-  "tutorialAiChatTitle": "AI Chat",
   "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
   "basicWordRepository": "Grundläggande ordlista",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "Vill du radera den här konversationen?\nRaderade konversationer kan inte återställas.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "Övning",
+  "chatAiChat": "Chatt",
+  "tutorialAiChatTitle": "Chatt",
+  "helpMode3Desc": "Öva genom att lyssna och repetera.",
+  "helpModeChatDesc": "Prata med karaktärer för att öva på riktiga samtal."
 }

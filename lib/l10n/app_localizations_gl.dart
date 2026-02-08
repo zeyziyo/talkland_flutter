@@ -37,8 +37,7 @@ class AppLocalizationsGl extends AppLocalizations {
       '• Selección de material: selecciona un libro de traballo específico ou «Repaso completo»\n• Dar a volta á tarxeta: comproba a tradución con «Mostrar/Ocultar» (marca de comprobación de aprendizaxe automática)\n• Escoitar: reprodución de TTS da frase\n• Aprendizaxe completa: marca de verificación (V) para marcar como aprendizaxe completa\n• Eliminar: mantén pulsada a tarxeta para eliminar o rexistro\n• Criterios de busca: filtrar por etiquetas, elementos recentes, letra inicial';
 
   @override
-  String get helpMode3Desc =>
-      'Escoita e repite as frases (Shadowing) para practicar a pronuncia.';
+  String get helpMode3Desc => 'Practica escoitando e repetindo.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Practica a conversa real falando cunha persoa da IA.';
+      'Fala con personaxes para practicar conversas reais.';
 
   @override
   String get helpModeChatDetails =>
@@ -752,7 +751,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get reviewModeTitle => 'Repaso';
 
   @override
-  String get practiceModeTitle => 'Práctica de pronuncia';
+  String get practiceModeTitle => 'Práctica';
 
   @override
   String get chatHistoryTitle => 'Historial de chat';
@@ -798,10 +797,10 @@ class AppLocalizationsGl extends AppLocalizations {
   String get chatUntitled => 'Conversa sen título';
 
   @override
-  String get chatAiChat => 'Chat de IA';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'Chat de IA';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -986,6 +985,9 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Todas as conversas';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

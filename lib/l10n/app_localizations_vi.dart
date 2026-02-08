@@ -37,8 +37,7 @@ class AppLocalizationsVi extends AppLocalizations {
       '• Chọn tài liệu: Chọn bộ cụ thể hoặc \'Ôn tập tất cả\'\n• Lật thẻ: Sử dụng \'Hiện/Ẩn\' để xem bản dịch\n• Nghe: Phát TTS cho câu cụ thể\n• Đánh dấu đã học: Chọn (V) cho các mục đã hoàn thành\n• Xóa: Nhấn giữ thẻ để xóa bản ghi\n• Lọc: Xem tất cả hoặc lọc theo tài liệu';
 
   @override
-  String get helpMode3Desc =>
-      'Luyện nói bằng cách nghe và nhại lại câu (Shadowing).';
+  String get helpMode3Desc => 'Luyện tập bằng cách nghe và lặp lại.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'Nói chuyện với nhân vật để luyện hội thoại thực tế.';
 
   @override
   String get helpModeChatDetails =>
@@ -739,7 +738,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'Luyện tập';
 
   @override
   String get chatHistoryTitle => 'Lịch sử trò chuyện';
@@ -785,10 +784,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'Trò chuyện AI';
+  String get chatAiChat => 'Trò chuyện';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'Trò chuyện';
 
   @override
   String get tutorialAiChatDesc =>
@@ -973,6 +972,9 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Toàn bộ hội thoại';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

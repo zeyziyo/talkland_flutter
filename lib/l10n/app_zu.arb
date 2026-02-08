@@ -8,9 +8,7 @@
   "helpMode1Details": "• Izilungiselelo Zolimi: Shintsha ulimi ngokuthepha izithonjana ezingaphezulu/ezansi\n• Ukuguqula Igama/Umusho: Shintsha izindlela\n• Okokufaka Kwezwi: Thepha isithonjana semakrofoni ukuze uqale/umise ukulalela\n• Okokufaka Kombhalo: Faka ngokuqondile ukuze uhumushe\n• Ukusesha Okuzenzakalelayo: Thola imisho ekhona efanayo\n• Humusha: Thepha inkinobho yokuhumusha ukuze uhumushe ngokushesha\n• Lalela: Dlala i-TTS ngesithonjana sesipika\n• Londoloza: Engeza amarekhodi 'ngokulondoloza idatha'\n• Sula: Qalisa kabusha okokufaka",
   "helpMode2Desc": "Bukeza imisho elondoloziwe, bese uhlola ukuthi ukhumbule nge-auto-hide.",
   "helpMode2Details": "• Khetha Izinto Zokwakha: Khetha iqoqo lezinto ezithile noma 'Konke Ukubuyekeza'\n• Phendula Ikhadi: Hlola ukuhumusha 'ngokubonisa/ukufihla' (ukuhlola ukufunda okuzenzakalelayo)\n• Lalela: Dlala umusho we-TTS\n• Ukufunda Kuqediwe: Phatha ukufunda njengokuqediwe ngophawu lokuhlola (V)\n• Susa: Cindezela isikhathi eside ikhadi ukuze ususe amarekhodi\n• Izimo Zokusesha: Hlunga ngamathegi, izinto zamuva, izinhlamvu zokuqala",
-  "helpMode3Desc": "Prakthiza ukuphinyiselwa ngokulalela nokukhuluma ngemuva komusho (Shadowing).",
   "helpMode3Details": "• Khetha Izinto Zokwakha: Khetha iqoqo lezinto zokufunda\n• Setha Isikhawu: Lungisa isikhathi sokulinda phakathi kwemisho ngezinkinobho [-] [+] (3 imizuzwana - 60 imizuzwana)\n• Qala/Misa: Lawula iseshini ye-shadowing\n• Khuluma: Lalela izwi bese ukhuluma ngemuva\n• Impendulo: Amamaki okunemba (0-100) nokuboniswa kombala\n• Izimo Zokusesha: Hlunga izinto ezingapheli ngamathegi, izinto zamuva, izinhlamvu zokuqala",
-  "helpModeChatDesc": "Prakthiza ingxoxo yempilo yangempela ngokuxoxa nobungcweti be-AI.",
   "helpModeChatDetails": "• Ingxoxo ye-AI: Khuluma ngolimi lwakho ukuze uzilolonge ingxoxo\n• Ubuningi Bezimo: Ungashintsha ubulili/ulimi/igama lomuntu okhuluma naye ngemenyu engaphezu kwebhamuza lenkulumo\n• Engeza Umlingani: Engeza umuntu omusha (Ongamazi) ngenkinobho +\n• I-GPS: Isimo esisekelwe endaweni yamanje\n• Ukulondolozwa Okuzenzakalelayo: Ukuhumusha okuzenzakalelayo nokulondolozwa kokuqukethwe kwengxoxo",
   "helpJsonDesc": "Ukuze ungenise izinto zokwakha zokufunda njengefayela le-JSON ongazisebenzisa kumodi 3, landela ifomethi elandelayo:",
   "helpDialogueImportDesc": "Ngenisa isethi yonke yezingxoxo njengefayela le-JSON.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Okokufaka",
   "reviewModeTitle": "Buyekeza",
-  "practiceModeTitle": "Prakthiza Ukuphinyiselwa",
   "chatHistoryTitle": "Umlando Wengxoxo",
   "chatNew": "Ingxoxo Entsha",
   "chatNewChat": "Ingxoxo Entsha",
@@ -609,8 +606,6 @@
   "personaGuide": "Umqondisi Wokuvakasha",
   "personaFriend": "Umthengisi Wendawo",
   "chatUntitled": "Ingxoxo Engenasiihloko",
-  "chatAiChat": "Ingxoxo Ye-AI",
-  "tutorialAiChatTitle": "Ingxoxo Ye-AI",
   "tutorialAiChatDesc": "Prakthiza izingxoxo zempilo yangempela nezinhlamvu ze-AI.",
   "mode1SelectedMaterial": "Iqoqo lezinto zokwakha elikhethiwe njengamanje: {name}",
   "basicWordRepository": "Inqolobane Yamagama Ayisisekelo",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "Uqinisekile ukuthi ufuna ukususa le ngxoxo?\nAyikwazi ukubuyiselwa emuva uma isisusiwe.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "Ukuzijwayeza",
+  "chatAiChat": "Ingxoxo",
+  "tutorialAiChatTitle": "Ingxoxo",
+  "helpMode3Desc": "Zijwayeze ngokulalela nokuphinda.",
+  "helpModeChatDesc": "Khuluma nabalingiswa ukuze uzijwayeze ingxoxo."
 }

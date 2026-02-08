@@ -37,8 +37,7 @@ class AppLocalizationsEs extends AppLocalizations {
       '• Seleccionar Material: Elige set o \'Repasar Todo\'\n• Girar Tarjeta: Usa \'Mostrar/Ocultar\' para ver traducción\n• Escuchar: Reproduce TTS para la oración \n• Marcar Estudiado: Check (V) para ítems completados\n• Eliminar: Mantén presionada la tarjeta\n• Filtro: Ver todo o filtrar por material';
 
   @override
-  String get helpMode3Desc =>
-      'Practica hablando escuchando y repitiendo oraciones (Shadowing).';
+  String get helpMode3Desc => 'Practica escuchando y repitiendo.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'Habla con personajes para practicar conversaciones reales.';
 
   @override
   String get helpModeChatDetails =>
@@ -796,10 +795,10 @@ class AppLocalizationsEs extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'Chat de IA';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'Chat de IA';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -982,6 +981,9 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Todas las conversaciones';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

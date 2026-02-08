@@ -8,9 +8,7 @@
   "helpMode1Details": "• Input Suara: Ketuk ikon mikrofon untuk mulai/berhenti\n• Input Teks: Ketik langsung untuk menerjemahkan\n• Cari Otomatis: Mendeteksi kalimat serupa yang ada\n• Terjemahkan: Ketuk tombol untuk terjemahan instan\n• Dengar: Ikon speaker untuk TTS\n• Simpan: 'Simpan Data' menambahkan ke riwayat\n• Hapus: Atur ulang semua input",
   "helpMode2Desc": "Ulas kalimat tersimpan dengan terjemahan sembunyi otomatis.",
   "helpMode2Details": "• Pilih Materi: Pilih set atau 'Ulas Semua'\n• Balik Kartu: Gunakan 'Tampil/Sembunyi' untuk melihat terjemahan\n• Dengar: Mainkan TTS untuk kalimat\n• Tandai: Centang (V) untuk item selesai\n• Hapus: Tekan lama kartu untuk menghapus\n• Filter: Lihat semua atau filter berdasarkan materi",
-  "helpMode3Desc": "Latihan bicara dengan mendengar dan menirukan (Shadowing).",
   "helpMode3Details": "• Pilih Materi: Pilih paket belajar\n• Interval: [-] [+] atur waktu tunggu (3d-60d)\n• Mulai/Berhenti: Kontrol sesi\n• Bicara: Dengar audio dan ulangi\n• Umpan Balik: Skor akurasi (0-100)\n• Coba Lagi: Gunakan tombol coba lagi jika suara tidak terdeteksi",
-  "helpModeChatDesc": "Talk to AI persona to practice real conversation and save useful sentences.",
   "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
   "helpJsonDesc": "Untuk mengimpor materi belajar di Mode 3, buat file JSON dengan struktur berikut:",
   "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Input",
   "reviewModeTitle": "Review",
-  "practiceModeTitle": "Practice",
   "chatHistoryTitle": "Riwayat Obrolan",
   "chatNew": "New Chat",
   "chatNewChat": "Obrolan Baru",
@@ -609,8 +606,6 @@
   "personaGuide": "Travel Guide",
   "personaFriend": "Local Friend",
   "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "Obrolan AI",
-  "tutorialAiChatTitle": "AI Chat",
   "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
   "basicWordRepository": "Repositori Kata Dasar",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "Anda yakin ingin menghapus percakapan ini?\nPercakapan yang dihapus tidak dapat dipulihkan.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "Latihan",
+  "chatAiChat": "Obrolan",
+  "tutorialAiChatTitle": "Obrolan",
+  "helpMode3Desc": "Berlatih dengan mendengarkan dan mengulang.",
+  "helpModeChatDesc": "Bicara dengan persona untuk melatih percakapan nyata."
 }

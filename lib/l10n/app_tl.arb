@@ -8,9 +8,7 @@
   "helpMode1Details": "• Mga Setting ng Wika: Pindutin ang icon sa itaas/ibaba para baguhin ang wika\n• Toggle ng Salita/Pangungusap: Lumipat ng mode\n• Input ng Boses: Pindutin ang icon ng mikropono para magsimula/huminto sa pakikinig\n• Input ng Teksto: Direktang mag-type para magsalin\n• Awtomatikong Paghahanap: Tukuyin ang magkatulad na umiiral na mga pangungusap\n• Isalin: Pindutin ang button na Isalin para agad na magsalin\n• Pakinggan: TTS playback gamit ang icon ng speaker\n• I-save: Magdagdag ng mga tala sa 'I-save ang Data'\n• I-clear: I-reset ang input",
   "helpMode2Desc": "Pag-aralan ang mga naka-save na pangungusap at suriin kung kabisado mo na ang mga ito gamit ang awtomatikong feature na pagtatago.",
   "helpMode2Details": "• Pumili ng Materyal: Pumili ng partikular na set ng materyal o 'Buong Pag-aaral'\n• I-flip ang Card: Suriin ang pagsasalin gamit ang 'Ipakita/Itago' (awtomatikong pagsusuri sa pag-aaral)\n• Pakinggan: TTS playback ng pangungusap\n• Tapos na sa Pag-aaral: Ipahiwatig na tapos na ang pag-aaral gamit ang checkmark (V)\n• I-delete: Pindutin nang matagal ang card para i-delete ang tala\n• Mga Kundisyon sa Paghahanap: I-filter ayon sa tag, kamakailang item, panimulang titik",
-  "helpMode3Desc": "Magsanay sa pagbigkas sa pamamagitan ng pakikinig at pag-uulit ng mga pangungusap (Shadowing).",
   "helpMode3Details": "• Pumili ng Materyal: Pumili ng set ng materyal na pag-aaralan\n• Itakda ang Interval: Ayusin ang oras ng paghihintay sa pagitan ng mga pangungusap gamit ang mga button na [-] [+]. (3 segundo hanggang 60 segundo)\n• Simulan/Hinto: Kontrolin ang sesyon ng shadowing\n• Magsalita: Makinig at ulitin pagkatapos ng boses\n• Feedback: Ipinapakita ang score ng accuracy (0-100) at kulay\n• Mga Kundisyon sa Paghahanap: I-filter ang target ng pagsasanay ayon sa tag, kamakailang item, panimulang titik",
-  "helpModeChatDesc": "Magsanay sa pag-uusap sa totoong buhay sa pamamagitan ng pakikipag-chat sa isang AI persona.",
   "helpModeChatDetails": "• AI Chat: Magsalita sa aking wika para magsanay sa pag-uusap\n• Multi Persona: Maaaring baguhin ang kasarian/wika/pangalan ng kabilang panig gamit ang menu sa ibabaw ng speech bubble\n• Magdagdag ng Partner: Magdagdag ng bagong kausap (Stranger) gamit ang button na +\n• GPS: Pagsasadula batay sa kasalukuyang lokasyon\n• Awtomatikong I-save: Awtomatikong isalin at i-save ang nilalaman ng pag-uusap",
   "helpJsonDesc": "Para mag-import ng materyal sa pag-aaral sa Mode 3 bilang isang JSON file, sundin ang format na ito:",
   "helpDialogueImportDesc": "Mag-import ng buong set ng pag-uusap bilang JSON file.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Input",
   "reviewModeTitle": "Pag-aaral",
-  "practiceModeTitle": "Pagsasanay sa Pagbigkas",
   "chatHistoryTitle": "Kasaysayan ng Pag-uusap",
   "chatNew": "Bagong Pag-uusap",
   "chatNewChat": "Bagong Chat",
@@ -609,8 +606,6 @@
   "personaGuide": "Travel Guide",
   "personaFriend": "Kaibigan na Lokal",
   "chatUntitled": "Pag-uusap na Walang Pamagat",
-  "chatAiChat": "AI Chat",
-  "tutorialAiChatTitle": "AI Chat",
   "tutorialAiChatDesc": "Magsanay sa pag-uusap sa totoong buhay sa pamamagitan ng AI persona.",
   "mode1SelectedMaterial": "Kasalukuyang napiling set ng materyal: {name}",
   "basicWordRepository": "Basic na Imbakan ng Salita",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "Sigurado ka bang gusto mong burahin ang usapang ito?\n Hindi na ito maibabalik pa.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "Pagsasanay",
+  "chatAiChat": "Chat",
+  "tutorialAiChatTitle": "Chat",
+  "helpMode3Desc": "Magsanay sa pamamagitan ng pakikinig at pag-uulit.",
+  "helpModeChatDesc": "Makipag-usap sa mga persona para sa tunay na usapan."
 }

@@ -37,8 +37,7 @@ class AppLocalizationsBo extends AppLocalizations {
       '• Select Material: Choose specific set or \'Review All\'\n• Flip Card: Use \'Show/Hide\' to check translation\n• Listen: Play TTS for specific sentence\n• Mark Studied: Checkmark (V) for completed items\n• Delete: Long-press card to remove record\n• Search Conditions: Filter by Tags, Recent N items, or Start character';
 
   @override
-  String get helpMode3Desc =>
-      'Practice speaking by listening to and shadowing sentences.';
+  String get helpMode3Desc => 'ཉན་པ་དང་ལད་མོ་བྱས་ནས་སྦྱོང་བརྡར་བྱེད།';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsBo extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'དངོས་ཡོད་ཁ་བརྡ་སྦྱོང་བརྡར་བྱེད་པར་ཁ་བརྡ་བྱེད།';
 
   @override
   String get helpModeChatDetails =>
@@ -744,7 +743,7 @@ class AppLocalizationsBo extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'སྦྱོང་བརྡར།';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -790,10 +789,10 @@ class AppLocalizationsBo extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'ཁ་བརྡ།';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'ཁ་བརྡ།';
 
   @override
   String get tutorialAiChatDesc =>
@@ -978,6 +977,9 @@ class AppLocalizationsBo extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'གླེང་མོལ་ཡོངས་རྫོགས།';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

@@ -8,9 +8,7 @@
   "helpMode1Details": "• Hang: Érintse meg a mikrofont az indításhoz/leállításhoz\n• Szöveg: Írjon közvetlenül a fordításhoz\n• Auto-Keresés: Hasonló mondatokat keres\n• Fordítás: Gomb az azonnali fordításhoz\n• Hallgatás: Hangszóró ikon a TTS-hez\n• Mentés: Hozzáadja az előzményekhez\n• Törlés: Összes visszaállítása",
   "helpMode2Desc": "Mentett mondatok áttekintése rejtett fordítással.",
   "helpMode2Details": "• Kiválasztás: Válasszon készletet vagy 'Összes'\n• Fordítás: 'Mutat/Rejt' fordítás megtekintése\n• Hallgatás: Mondat TTS lejátszása\n• Jelölés: Pipa (V) a kész elemekhez\n• Törlés: Hosszan nyomja meg a kártyát\n• Szűrő: Összes vagy anyag szerint",
-  "helpMode3Desc": "Beszédgyakorlás hallgatással és ismétléssel (Shadowing).",
   "helpMode3Details": "• Kiválasztás: Válasszon csomagot\n• Időköz: [-] [+] várakozás (3mp-60mp)\n• Start/Stop: Munkamenet vezérlése\n• Beszéd: Hallgassa és ismételje\n• Pontszám: Pontosság (0-100)\n• Újra: Gomb ha a hang nem észlelhető",
-  "helpModeChatDesc": "Talk to AI persona to practice real conversation and save useful sentences.",
   "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
   "helpJsonDesc": "3. Mód importhoz hozzon létre JSON-t:",
   "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Input",
   "reviewModeTitle": "Review",
-  "practiceModeTitle": "Practice",
   "chatHistoryTitle": "Conversation History",
   "chatNew": "New Chat",
   "chatNewChat": "New Chat",
@@ -609,8 +606,6 @@
   "personaGuide": "Travel Guide",
   "personaFriend": "Local Friend",
   "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "AI Chat",
-  "tutorialAiChatTitle": "AI Chat",
   "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
   "basicWordRepository": "Alapvető Szótár",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "Törli ezt a beszélgetést?\nA törölt beszélgetések nem állíthatók vissza.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "Gyakorlás",
+  "chatAiChat": "Chat",
+  "tutorialAiChatTitle": "Chat",
+  "helpMode3Desc": "Gyakoroljon hallás és ismétlés után.",
+  "helpModeChatDesc": "Beszéljen karakterekkel a valódi társalgás gyakorlásához."
 }

@@ -8,9 +8,7 @@
   "helpMode1Details": "• Dil seçimi: Yuxarı/aşağı işarələrə basaraq dili dəyişdirin\n• Söz/cümlə keçidi: Rejimi dəyişdirin\n• Səsli giriş: Dinləməyə başlamaq/dayandırmaq üçün mikrofon işarəsinə basın\n• Mətn girişi: Birbaşa daxil edərək tərcümə edin\n• Avtomatik axtarış: Bənzər mövcud cümlələri aşkar edin\n• Tərcümə: Dərhal tərcümə etmək üçün tərcümə düyməsinə basın\n• Dinləmə: TTS-i səsləndirmək üçün dinamik işarəsi\n• Saxlama: 'Məlumatları Saxla' ilə qeyd əlavə edin\n• Təmizləmə: Girişi sıfırlayın",
   "helpMode2Desc": "Saxlanılan cümlələri nəzərdən keçirin və avtomatik gizlətmə funksiyası ilə əzbərləməyi yoxlayın.",
   "helpMode2Details": "• Material seçimi: Müəyyən material toplusunu və ya 'Bütün təkrar'ı seçin\n• Kartı çevirin: Tərcüməni yoxlamaq üçün 'Göstər/Gizlət' (avtomatik öyrənmə yoxlaması)\n• Dinləmə: Cümlə TTS səsləndirməsi\n• Öyrənmə tamamlandı: İşarə ilə (V) öyrənməni tamamlayın\n• Silmə: Qeydləri silmək üçün karta uzun müddət basın\n• Axtarış şərtləri: Etiket, son elementlər, başlanğıc hərflərlə filtrləyin",
-  "helpMode3Desc": "Cümlələrə qulaq asaraq və təkrarlayaraq (Kölgə) tələffüzünüzü məşq edin.",
   "helpMode3Details": "• Material seçimi: Öyrənmək üçün material toplusunu seçin\n• İnterval təyin edin: [-] [+] düymələri ilə cümlələr arasındakı gözləmə müddətini tənzimləyin (3 saniyə ~ 60 saniyə)\n• Başlat/Dayandır: Kölgələmə seansını idarə edin\n• Danışmaq: Səsi dinləyin və təkrarlayın\n• Rəy: Dəqiqlik balı (0-100) və rəngli ekran\n• Axtarış şərtləri: Etiket, son elementlər, başlanğıc hərflərlə məşq hədəfini filtrləyin",
-  "helpModeChatDesc": "Süni intellekt personajları ilə söhbət edərək real söhbət bacarıqlarınızı məşq edin.",
   "helpModeChatDetails": "• AI Söhbət: Dilinizdə danışaraq söhbət bacarıqlarınızı məşq edin\n• Çoxlu personaj: Nitq balonunun yuxarısındakı menyu ilə qarşı tərəfin cinsini/dilini/adını dəyişdirə bilərsiniz\n• Tərəfdaş əlavə edin: + düyməsi ilə yeni söhbət ortağı (Yad) əlavə edin\n• GPS: Mövcud yerə əsaslanan teatrlaşdırılmış vəziyyət\n• Avtomatik saxla: Söhbət məzmununun avtomatik tərcüməsi və saxlanılması",
   "helpJsonDesc": "3-cü Rejimdə istifadə etmək üçün öyrənmə materiallarını JSON faylı kimi idxal etmək üçün aşağıdakı formata əməl edin:",
   "helpDialogueImportDesc": "Bütün dialoq dəstlərini JSON faylı olaraq idxal edin.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Giriş",
   "reviewModeTitle": "Təkrar",
-  "practiceModeTitle": "Tələffüz Məşqi",
   "chatHistoryTitle": "Söhbət Tarixi",
   "chatNew": "Yeni Söhbət",
   "chatNewChat": "Yeni Söhbət",
@@ -609,8 +606,6 @@
   "personaGuide": "Səyahət Bələdçisi",
   "personaFriend": "Yerli Dost",
   "chatUntitled": "Başlıqsız Söhbət",
-  "chatAiChat": "Süni İntellekt Söhbəti",
-  "tutorialAiChatTitle": "Süni İntellekt Söhbəti",
   "tutorialAiChatDesc": "Süni intellekt personajları ilə real söhbət bacarıqlarınızı məşq edin.",
   "mode1SelectedMaterial": "Cari seçilmiş material toplusu: {name}",
   "basicWordRepository": "Əsas Söz Deposu",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "Bu söhbəti silmək istədiyinizə əminsinizmi?\nSilinmiş söhbətləri geri qaytarmaq mümkün deyil.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "Məşq",
+  "chatAiChat": "Çat",
+  "tutorialAiChatTitle": "Çat",
+  "helpMode3Desc": "Dinləyərək və təkrarlayaraq məşq edin.",
+  "helpModeChatDesc": "Real söhbət məşqi etmək üçün personajlarla danışın."
 }

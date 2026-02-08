@@ -37,8 +37,7 @@ class AppLocalizationsZu extends AppLocalizations {
       '• Khetha Izinto Zokwakha: Khetha iqoqo lezinto ezithile noma \'Konke Ukubuyekeza\'\n• Phendula Ikhadi: Hlola ukuhumusha \'ngokubonisa/ukufihla\' (ukuhlola ukufunda okuzenzakalelayo)\n• Lalela: Dlala umusho we-TTS\n• Ukufunda Kuqediwe: Phatha ukufunda njengokuqediwe ngophawu lokuhlola (V)\n• Susa: Cindezela isikhathi eside ikhadi ukuze ususe amarekhodi\n• Izimo Zokusesha: Hlunga ngamathegi, izinto zamuva, izinhlamvu zokuqala';
 
   @override
-  String get helpMode3Desc =>
-      'Prakthiza ukuphinyiselwa ngokulalela nokukhuluma ngemuva komusho (Shadowing).';
+  String get helpMode3Desc => 'Zijwayeze ngokulalela nokuphinda.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Prakthiza ingxoxo yempilo yangempela ngokuxoxa nobungcweti be-AI.';
+      'Khuluma nabalingiswa ukuze uzijwayeze ingxoxo.';
 
   @override
   String get helpModeChatDetails =>
@@ -755,7 +754,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get reviewModeTitle => 'Buyekeza';
 
   @override
-  String get practiceModeTitle => 'Prakthiza Ukuphinyiselwa';
+  String get practiceModeTitle => 'Ukuzijwayeza';
 
   @override
   String get chatHistoryTitle => 'Umlando Wengxoxo';
@@ -801,10 +800,10 @@ class AppLocalizationsZu extends AppLocalizations {
   String get chatUntitled => 'Ingxoxo Engenasiihloko';
 
   @override
-  String get chatAiChat => 'Ingxoxo Ye-AI';
+  String get chatAiChat => 'Ingxoxo';
 
   @override
-  String get tutorialAiChatTitle => 'Ingxoxo Ye-AI';
+  String get tutorialAiChatTitle => 'Ingxoxo';
 
   @override
   String get tutorialAiChatDesc =>
@@ -988,6 +987,9 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Zonke izingxoxo';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

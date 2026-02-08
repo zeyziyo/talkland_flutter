@@ -35,15 +35,14 @@ class AppLocalizationsZh extends AppLocalizations {
       '• 选择资料：选择特定资料集或“复习全部”\n• 翻转卡片：使用“显示/隐藏”查看译文\n• 收听：播放特定句子的 TTS\n• 标记已学：勾选 (V) 已完成的项目\n• 删除：长按卡片删除记录\n• 筛选：查看全部或按资料筛选';
 
   @override
-  String get helpMode3Desc => '通过聆听和跟读句子练习口语。';
+  String get helpMode3Desc => '通过听和跟读进行练习。';
 
   @override
   String get helpMode3Details =>
       '• 选择资料：选择学习包\n• 间隔：使用 [-] [+] 调整等待时间（3秒-60秒）\n• 开始/停止：控制跟读会话\n• 说话：聆听音频并跟读\n• 反馈：准确率评分（0-100）及颜色代码\n• 重试：如果未检测到声音，请使用重试按钮';
 
   @override
-  String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+  String get helpModeChatDesc => '与角色对话练习实战会话。';
 
   @override
   String get helpModeChatDetails =>
@@ -728,7 +727,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get reviewModeTitle => '复习';
 
   @override
-  String get practiceModeTitle => '发音练习';
+  String get practiceModeTitle => '练习';
 
   @override
   String get chatHistoryTitle => '对话历史';
@@ -774,10 +773,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI聊天';
+  String get chatAiChat => '聊天';
 
   @override
-  String get tutorialAiChatTitle => 'AI聊天';
+  String get tutorialAiChatTitle => '聊天';
 
   @override
   String get tutorialAiChatDesc => '在这里与 AI 角色练习实际对话。';
@@ -961,6 +960,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatAllConversations => '所有对话';
 
   @override
+  String get tabConversation => 'Conversation';
+
+  @override
   String get confirmDeleteConversation => '确定要删除此对话吗？\n删除后将无法恢复。';
 }
 
@@ -995,15 +997,14 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
       '• 选择资料：选择特定资料集或“复习全部”\n• 翻转卡片：使用“显示/隐藏”查看译文\n• 收听：播放特定句子的 TTS\n• 标记已学：勾选 (V) 已完成的项目\n• 删除：长按卡片删除记录\n• 筛选：查看全部或按资料筛选';
 
   @override
-  String get helpMode3Desc => '通过聆听和跟读句子练习口语。';
+  String get helpMode3Desc => '通过听和跟读进行练习。';
 
   @override
   String get helpMode3Details =>
       '• 选择资料：选择学习包\n• 间隔：使用 [-] [+] 调整等待时间（3秒-60秒）\n• 开始/停止：控制跟读会话\n• 说话：聆听音频并跟读\n• 反馈：准确率评分（0-100）及颜色代码\n• 重试：如果未检测到声音，请使用重试按钮';
 
   @override
-  String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+  String get helpModeChatDesc => '与角色对话练习实战会话。';
 
   @override
   String get helpModeChatDetails =>
@@ -1688,7 +1689,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => '练习';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -1734,10 +1735,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => '聊天';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => '聊天';
 
   @override
   String get tutorialAiChatDesc =>
@@ -1924,6 +1925,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get chatAllConversations => '所有对话';
 
   @override
+  String get tabConversation => 'Conversation';
+
+  @override
   String get confirmDeleteConversation => '确定要删除此对话吗？\n删除后将无法恢复。';
 }
 
@@ -1958,15 +1962,14 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
       '• 選擇資料：選擇特定資料集或「複習全部」\n• 翻轉卡片：使用「顯示/隱藏」查看譯文\n• 收聽：播放特定句子的 TTS\n• 標記已學：勾選 (V) 已完成的項目\n• 刪除：長按卡片刪除記錄\n• 篩選：查看全部或按資料篩選';
 
   @override
-  String get helpMode3Desc => '通過聆聽和跟讀句子練習口說。';
+  String get helpMode3Desc => '透過聽和跟讀進行練習。';
 
   @override
   String get helpMode3Details =>
       '• 選擇資料：選擇學習包\n• 間隔：使用 [-] [+] 調整等待時間（3秒-60秒）\n• 開始/停止：控制跟讀會話\n• 說話：聆聽音訊並跟讀\n• 反饋：準確率評分（0-100）及顏色代碼\n• 重試：如果未偵測到聲音，請使用重試按鈕';
 
   @override
-  String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+  String get helpModeChatDesc => '與角色對話練習實戰會話。';
 
   @override
   String get helpModeChatDetails =>
@@ -2651,7 +2654,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => '練習';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -2697,10 +2700,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => '聊天';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => '聊天';
 
   @override
   String get tutorialAiChatDesc =>
@@ -2885,6 +2888,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get chatAllConversations => '所有對話';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation => '您確定要刪除此對話嗎？\n刪除的對話將無法復原。';

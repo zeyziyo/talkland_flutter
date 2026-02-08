@@ -37,8 +37,7 @@ class AppLocalizationsHu extends AppLocalizations {
       '• Kiválasztás: Válasszon készletet vagy \'Összes\'\n• Fordítás: \'Mutat/Rejt\' fordítás megtekintése\n• Hallgatás: Mondat TTS lejátszása\n• Jelölés: Pipa (V) a kész elemekhez\n• Törlés: Hosszan nyomja meg a kártyát\n• Szűrő: Összes vagy anyag szerint';
 
   @override
-  String get helpMode3Desc =>
-      'Beszédgyakorlás hallgatással és ismétléssel (Shadowing).';
+  String get helpMode3Desc => 'Gyakoroljon hallás és ismétlés után.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'Beszéljen karakterekkel a valódi társalgás gyakorlásához.';
 
   @override
   String get helpModeChatDetails =>
@@ -740,7 +739,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'Gyakorlás';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -786,10 +785,10 @@ class AppLocalizationsHu extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -974,6 +973,9 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Összes beszélgetés';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

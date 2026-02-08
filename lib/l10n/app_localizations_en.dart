@@ -38,7 +38,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpMode3Desc =>
-      'Practice speaking by listening to and shadowing sentences.';
+      'Practice by listening to and shadowing sentences.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +46,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'Talk to personas to practice real conversation and save useful sentences.';
 
   @override
   String get helpModeChatDetails =>
@@ -790,10 +790,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -978,6 +978,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'All Conversations';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

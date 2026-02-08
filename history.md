@@ -23,6 +23,12 @@
 
 ## 📅 최근 주요 변경 로그 (Recent Changelog)
 
+### [2026-02-08] UX 및 튜토리얼 일관성 강화 (Phase 75)
+- **UI**: Mode 1, 2, 3 위젯에 '자료 선택' 버튼 추가 및 GlobalKey 바인딩 완료.
+- **Tutorial**: 각 모드별 튜토리얼 시나리오에 '자료 선택' 안내 단계 추가.
+- **Terminology**: 용어 "입력/복습/연습/채팅"으로 전면 개편 및 ARB 동기화.
+- **Help**: 도움말 JSON 예제를 최신 v66 스키마(dialogues 권장)로 교체.
+
 ### [2026-02-08] Documentation Refactor
 - **Action**: `history.md` 분리 및 `docs/PROJECT_RULES.md` 생성.
 - **Goal**: 문서 관리 효율화 및 "Single Source of Truth" 확립.

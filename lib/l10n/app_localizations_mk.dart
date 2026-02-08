@@ -37,16 +37,14 @@ class AppLocalizationsMk extends AppLocalizations {
       '• Избор на материјали: изберете одредена збирка материјали или „Целосен преглед“\n• Превртување картичка: проверете го преводот со „Прикажи/Сокриј“ (автоматска проверка на учењето)\n• Слушање: репродукција на реченица TTS\n• Учење завршено: завршете го учењето со ознаката за проверка (V)\n• Бришење: долго притиснете на картичката за да го избришете записот\n• Услови за пребарување: филтрирајте по ознаки, неодамнешни ставки, почетни букви';
 
   @override
-  String get helpMode3Desc =>
-      'Вежбајте го вашиот изговор слушајќи и повторувајќи ги речениците (Shadowing).';
+  String get helpMode3Desc => 'Вежбајте со слушање и повторување.';
 
   @override
   String get helpMode3Details =>
       '• Избор на материјал: изберете збирка материјали за учење\n• Поставување интервал: прилагодете го времето на чекање помеѓу речениците со копчињата [-] [+ ] (3 секунди ~ 60 секунди)\n• Почеток/Стоп: контрола на сесијата за следење\n• Зборување: слушајте го гласот и повторувајте\n• Повратни информации: приказ на резултатот за точност (0-100) и боја\n• Услови за пребарување: филтрирајте ги целите за вежбање по ознаки, неодамнешни ставки, почетни букви';
 
   @override
-  String get helpModeChatDesc =>
-      'Вежбајте разговор во реалниот живот со разговор со AI лик.';
+  String get helpModeChatDesc => 'Зборувајте со ликови за вистинска практика.';
 
   @override
   String get helpModeChatDetails =>
@@ -752,7 +750,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get reviewModeTitle => 'Преглед';
 
   @override
-  String get practiceModeTitle => 'Вежбање изговор';
+  String get practiceModeTitle => 'Практика';
 
   @override
   String get chatHistoryTitle => 'Историја на разговор';
@@ -798,10 +796,10 @@ class AppLocalizationsMk extends AppLocalizations {
   String get chatUntitled => 'Разговор без наслов';
 
   @override
-  String get chatAiChat => 'AI разговор';
+  String get chatAiChat => 'Чат';
 
   @override
-  String get tutorialAiChatTitle => 'AI разговор';
+  String get tutorialAiChatTitle => 'Чат';
 
   @override
   String get tutorialAiChatDesc =>
@@ -985,6 +983,9 @@ class AppLocalizationsMk extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Сите разговори';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

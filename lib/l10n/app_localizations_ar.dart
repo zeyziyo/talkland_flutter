@@ -37,15 +37,14 @@ class AppLocalizationsAr extends AppLocalizations {
       '• اختيار المادة: اختر مجموعة أو \'مراجعة الكل\'\n• قلب البطاقة: \'ظهار/إخفاء\' للترجمة\n• استماع: تشغيل النطق للجملة\n• تحديد كمدروس: علامة (V) للمكتمل\n• حذف: ضغطة مطولة للحذف\n• تصفية: عرض الكل أو حسب المادة';
 
   @override
-  String get helpMode3Desc => 'تدرب على التحدث بالاستماع والترديد (Shadowing).';
+  String get helpMode3Desc => 'تدرب من خلال الاستماع والترديد.';
 
   @override
   String get helpMode3Details =>
       '• اختيار المادة: اختر حزمة تعلم\n• الفاصل: [-] [+] وقت الانتظار (3-60 ثانية)\n• بدء/إيقاف: التحكم بالجلسة\n• تحدث: استمع للصوت وردد\n• الملاحظات: درجة الدقة (0-100)\n• إعادة المحاولة: زر إعادة المحاولة إذا لم يتم اكتشاف الصوت';
 
   @override
-  String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+  String get helpModeChatDesc => 'تحدث مع الشخصيات لممارسة المحادثة الحقيقية.';
 
   @override
   String get helpModeChatDetails =>
@@ -735,7 +734,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get reviewModeTitle => '복습';
 
   @override
-  String get practiceModeTitle => '발음 연습';
+  String get practiceModeTitle => 'ممارسة';
 
   @override
   String get chatHistoryTitle => 'سجل الدردشة';
@@ -781,10 +780,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'دردشة الذكاء الاصطناعي';
+  String get chatAiChat => 'دردشة';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'دردشة';
 
   @override
   String get tutorialAiChatDesc =>
@@ -969,6 +968,9 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'جميع المحادثات';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

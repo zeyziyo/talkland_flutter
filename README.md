@@ -16,7 +16,7 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 
 ## 기능 (Features)
 
-### MODE 1: 검색 (Search)
+### MODE 1: 입력 (Input)
 - 🎤 **음성 인식**: 모국어로 말하기 (80개 언어 지원)
 - 🔄 **번역**: 실시간 번역 및 중복 감지
 - 🔀 **모드 전환**: **단어 / 문장** 토글을 통한 입력 모드 변경
@@ -43,7 +43,7 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 * **Study Check**: Track review counts & mark as completed
 * **Search Conditions**: Filter by Tags, Recent N, Starts With
 
-### MODE 3: 말하기 연습 (Speaking Practice)
+### MODE 3: 연습 (Practice)
 - 🎙️ **쉐도잉 연습**: 원어민 음성 듣고 따라 말하기
 - ⏱️ **간격 조절**: 3초~60초 사이 대기 시간 설정
 - 📊 **발음 평가**: 정확도 점수 (0-100) 및 피드백
@@ -56,7 +56,7 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 * **Auto-Repeat**: Repeat sentences excluding those fully mastered
 * **Search Conditions**: Filter practice targets by Tags/Conditions
 
-### MODE 4: AI 채팅 (AI Chat) - Multi-Persona
+### MODE 4: 채팅 (Chat) - Multi-Persona
 - 🎭 **멀티 페르소나 (Multi-Persona)**: 말풍선 탭으로 상대방의 **성별, 이름, 언어**를 즉시 변경 (New!)
 - 🔄 **자동 재번역**: 대화 상대의 언어를 바꾸면 기존 메시지도 자동으로 재번역되어 문맥 유지
 - 💬 **실시간 대화**: AI 페르소나(교사, 친구 등)와 실전 회화 연습
@@ -99,12 +99,7 @@ You can import both individual sentences (`entries`) and complete conversation s
 ```json
 {
   "subject": "첫 만남 (First Meeting)",
-  "default_type": "dialogue",
-  "participants": [
-    { "id": "p1", "name": "조단", "role": "사용자", "gender": "남성", "lang_code": "en-US" },
-    { "id": "p2", "name": "민지", "role": "AI", "gender": "여성", "lang_code": "ko-KR" }
-  ],
-  "entries": [
+  "dialogues": [
     {
       "speaker": "조단",
       "text": "안녕하세요! 제 이름은 조단입니다.",
@@ -112,6 +107,10 @@ You can import both individual sentences (`entries`) and complete conversation s
       "style": "높임말",
       "tags": ["인사", "소개"]
     }
+  ],
+  "participants": [
+    { "id": "p1", "name": "조단", "role": "사용자", "gender": "남성", "lang_code": "en-US" },
+    { "id": "p2", "name": "민지", "role": "AI", "gender": "여성", "lang_code": "ko-KR" }
   ]
 }
 ```

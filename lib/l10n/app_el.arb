@@ -8,9 +8,7 @@
   "helpMode1Details": "• Φωνή: Πατήστε μικρόφωνο για έναρξη/διακοπή\n• Κείμενο: Πληκτρολογήστε για μετάφραση\n• Auto-Search: Εντοπίζει παρόμοιες προτάσεις\n• Μετάφραση: Κουμπί για άμεση μετάφραση\n• Ακρόαση: Εικονίδιο ηχείου για TTS\n• Αποθήκευση: Προσθήκη στο ιστορικό\n• Καθαρισμός: Επαναφορά όλων",
   "helpMode2Desc": "Επανάληψη αποθηκευμένων προτάσεων με απόκρυψη μετάφρασης.",
   "helpMode2Details": "• Επιλογή: Διαλέξτε σετ ή 'Όλα'\n• Γύρισμα: 'Εμφάνιση/Απόκρυψη' μετάφρασης\n• Ακρόαση: Αναπαραγωγή TTS\n• Σήμανση: Τικ (V) για ολοκληρωμένα\n• Διαγραφή: Παρατεταμένο πάτημα κάρτας\n• Φίλτρο: Προβολή όλων ή ανά υλικό",
-  "helpMode3Desc": "Πρακτική ομιλίας μέσω ακρόασης και επανάληψης (Shadowing).",
   "helpMode3Details": "• Επιλογή: Διαλέξτε πακέτο\n• Διάστημα: [-] [+] χρόνος αναμονής (3δ-60δ)\n• Start/Stop: Έλεγχος συνεδρίας\n• Ομιλία: Ακούστε και επαναλάβετε\n• Βαθμολογία: Ακρίβεια (0-100)\n• Επανάληψη: Κουμπί δοκιμής ξανά",
-  "helpModeChatDesc": "Talk to AI persona to practice real conversation and save useful sentences.",
   "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
   "helpJsonDesc": "Για εισαγωγή υλικού στη Λειτουργία 3, δημιουργήστε JSON:",
   "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "입력",
   "reviewModeTitle": "복습",
-  "practiceModeTitle": "발음 연습",
   "chatHistoryTitle": "Conversation History",
   "chatNew": "New Chat",
   "chatNewChat": "New Chat",
@@ -609,8 +606,6 @@
   "personaGuide": "Travel Guide",
   "personaFriend": "Local Friend",
   "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "AI Chat",
-  "tutorialAiChatTitle": "AI Chat",
   "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
   "basicWordRepository": "Βασικό Αποθετήριο Λέξεων",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "Θέλετε να διαγράψετε αυτήν τη συνομιλία;\nΔεν θα μπορείτε να την επαναφέρετε.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "Εξάσκηση",
+  "chatAiChat": "Συνομιλία",
+  "tutorialAiChatTitle": "Συνομιλία",
+  "helpMode3Desc": "Εξασκηθείτε ακούγοντας και επαναλαμβάνοντας.",
+  "helpModeChatDesc": "Μιλήστε με χαρακτήρες για πραγματική εξάσκηση."
 }

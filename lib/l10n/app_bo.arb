@@ -8,9 +8,7 @@
   "helpMode1Details": "• Language Settings: Change via top/bottom Translate icon\n• Toggle: Switch between 'Word' and 'Sentence' mode\n• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: 'Save Data' adds to history\n• Clear: Reset all inputs",
   "helpMode2Desc": "Review saved sentences with auto-hide translations and track your review count.",
   "helpMode2Details": "• Select Material: Choose specific set or 'Review All'\n• Flip Card: Use 'Show/Hide' to check translation\n• Listen: Play TTS for specific sentence\n• Mark Studied: Checkmark (V) for completed items\n• Delete: Long-press card to remove record\n• Search Conditions: Filter by Tags, Recent N items, or Start character",
-  "helpMode3Desc": "Practice speaking by listening to and shadowing sentences.",
   "helpMode3Details": "• Select Material: Choose learning pack\n• Interval: [-] [+] to adjust wait time (3s-60s)\n• Start/Stop: Control shadowing session\n• Speak: Listen to audio and repeat after it\n• Feedback: Accuracy score (0-100) with color code\n• Search Conditions: Filter practice targets by Tags, Recent N, or Start char",
-  "helpModeChatDesc": "Talk to AI persona to practice real conversation and save useful sentences.",
   "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
   "helpJsonDesc": "To import study materials in Mode 3, create a JSON file with the following structure:",
   "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Input",
   "reviewModeTitle": "Review",
-  "practiceModeTitle": "Practice",
   "chatHistoryTitle": "Conversation History",
   "chatNew": "New Chat",
   "chatNewChat": "New Chat",
@@ -609,8 +606,6 @@
   "personaGuide": "Travel Guide",
   "personaFriend": "Local Friend",
   "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "AI Chat",
-  "tutorialAiChatTitle": "AI Chat",
   "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
   "basicWordRepository": "Basic Word Repository",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "ཁྱེད་ཀྱིས་གླེང་མོལ་འདི་དོར་འདོད་དམ།\nགླེང་མོལ་བསུབས་པ་ཕྱིར་སློག་བྱེད་མི་ཐུབ།",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "སྦྱོང་བརྡར།",
+  "chatAiChat": "ཁ་བརྡ།",
+  "tutorialAiChatTitle": "ཁ་བརྡ།",
+  "helpMode3Desc": "ཉན་པ་དང་ལད་མོ་བྱས་ནས་སྦྱོང་བརྡར་བྱེད།",
+  "helpModeChatDesc": "དངོས་ཡོད་ཁ་བརྡ་སྦྱོང་བརྡར་བྱེད་པར་ཁ་བརྡ་བྱེད།"
 }

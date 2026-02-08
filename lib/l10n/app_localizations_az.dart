@@ -37,8 +37,7 @@ class AppLocalizationsAz extends AppLocalizations {
       '• Material seçimi: Müəyyən material toplusunu və ya \'Bütün təkrar\'ı seçin\n• Kartı çevirin: Tərcüməni yoxlamaq üçün \'Göstər/Gizlət\' (avtomatik öyrənmə yoxlaması)\n• Dinləmə: Cümlə TTS səsləndirməsi\n• Öyrənmə tamamlandı: İşarə ilə (V) öyrənməni tamamlayın\n• Silmə: Qeydləri silmək üçün karta uzun müddət basın\n• Axtarış şərtləri: Etiket, son elementlər, başlanğıc hərflərlə filtrləyin';
 
   @override
-  String get helpMode3Desc =>
-      'Cümlələrə qulaq asaraq və təkrarlayaraq (Kölgə) tələffüzünüzü məşq edin.';
+  String get helpMode3Desc => 'Dinləyərək və təkrarlayaraq məşq edin.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Süni intellekt personajları ilə söhbət edərək real söhbət bacarıqlarınızı məşq edin.';
+      'Real söhbət məşqi etmək üçün personajlarla danışın.';
 
   @override
   String get helpModeChatDetails =>
@@ -751,7 +750,7 @@ class AppLocalizationsAz extends AppLocalizations {
   String get reviewModeTitle => 'Təkrar';
 
   @override
-  String get practiceModeTitle => 'Tələffüz Məşqi';
+  String get practiceModeTitle => 'Məşq';
 
   @override
   String get chatHistoryTitle => 'Söhbət Tarixi';
@@ -797,10 +796,10 @@ class AppLocalizationsAz extends AppLocalizations {
   String get chatUntitled => 'Başlıqsız Söhbət';
 
   @override
-  String get chatAiChat => 'Süni İntellekt Söhbəti';
+  String get chatAiChat => 'Çat';
 
   @override
-  String get tutorialAiChatTitle => 'Süni İntellekt Söhbəti';
+  String get tutorialAiChatTitle => 'Çat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -984,6 +983,9 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Bütün söhbətlər';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

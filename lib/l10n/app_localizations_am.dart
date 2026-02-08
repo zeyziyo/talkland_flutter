@@ -36,15 +36,14 @@ class AppLocalizationsAm extends AppLocalizations {
       '• የውሂብ ምርጫ: የተወሰነ የውሂብ ስብስብ ወይም \'ሁሉንም ክለሳ\' የሚለውን ይምረጡ\n• ካርድ ይገለብጡ: ትርጉምን በ\'አሳይ/ደብቅ\' ያረጋግጡ (ራስ-ሰር የመማር ምልክት)\n• ማዳመጥ: የዓረፍተ ነገሩን TTS ያጫውቱ\n• ትምህርት ተጠናቋል: ቼክ ምልክት (V) በማድረግ ትምህርቱን እንደተጠናቀቀ ምልክት ያድርጉበት\n• ሰርዝ: መዝገቡን ለመሰረዝ ካርዱን በረጅሙ ይጫኑ\n• የፍለጋ ሁኔታዎች: በመለያዎች፣ በቅርብ ጊዜ ዕቃዎች ወይም በሚጀምሩ ፊደላት ያጣሩ';
 
   @override
-  String get helpMode3Desc =>
-      'ዓረፍተ ነገሮችን በማዳመጥ እና በመድገም (Shadowing) አጠራርዎን ይለማመዱ።';
+  String get helpMode3Desc => 'በማዳመጥ እና በመድገም ይለማመዱ።';
 
   @override
   String get helpMode3Details =>
       '• የውሂብ ምርጫ: ለማጥናት የውሂብ ስብስብ ይምረጡ\n• ክፍተት ማቀናበር: የዓረፍተ ነገር የቆይታ ጊዜን በ [-] [+] ቁልፎች ያስተካክሉ (ከ3 ሰከንድ እስከ 60 ሰከንድ)\n• ጀምር/አቁም: የጥላ ክፍለ ጊዜን ይቆጣጠሩ\n• መናገር: ድምጽን ያዳምጡ እና ይድገሙ\n• ግብረመልስ: ትክክለኛነት ነጥብ (0-100) እና የቀለም ምልክት\n• የፍለጋ ሁኔታዎች: በመለያዎች፣ በቅርብ ጊዜ ዕቃዎች ወይም በሚጀምሩ ፊደላት ያጣሩ';
 
   @override
-  String get helpModeChatDesc => 'ከ AI ሰው ጋር በመነጋገር የንግግር ልምምድ ያድርጉ።';
+  String get helpModeChatDesc => 'ከባለሙያዎች ጋር በመነጋገር እውነተኛ ውይይትን ይለማመዱ።';
 
   @override
   String get helpModeChatDetails =>
@@ -731,7 +730,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get reviewModeTitle => 'ግምገማ';
 
   @override
-  String get practiceModeTitle => 'የአጠራር ልምምድ';
+  String get practiceModeTitle => 'ልምምድ';
 
   @override
   String get chatHistoryTitle => 'የውይይት ታሪክ';
@@ -777,10 +776,10 @@ class AppLocalizationsAm extends AppLocalizations {
   String get chatUntitled => 'ርዕስ የሌለው ውይይት';
 
   @override
-  String get chatAiChat => 'AI ውይይት';
+  String get chatAiChat => 'ውይይት';
 
   @override
-  String get tutorialAiChatTitle => 'AI ውይይት';
+  String get tutorialAiChatTitle => 'ውይይት';
 
   @override
   String get tutorialAiChatDesc => 'ከ AI ሰው ጋር እውነተኛ ውይይቶችን ይለማመዱ።';
@@ -962,6 +961,9 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'ሁሉም ንግግሮች';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

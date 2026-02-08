@@ -231,12 +231,7 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
     const jsonExample = '''
 {
   "subject": "첫 만남 (First Meeting)",
-  "default_type": "dialogue",
-  "participants": [
-    { "id": "p1", "name": "조단", "role": "사용자", "gender": "남성", "lang_code": "en-US" },
-    { "id": "p2", "name": "민지", "role": "AI", "gender": "여성", "lang_code": "ko-KR" }
-  ],
-  "entries": [
+  "dialogues": [
     {
       "speaker": "조단",
       "text": "안녕하세요! 제 이름은 조단입니다.",
@@ -244,6 +239,10 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
       "style": "높임말",
       "tags": ["인사", "소개"]
     }
+  ],
+  "participants": [
+    { "id": "p1", "name": "조단", "role": "사용자", "gender": "남성", "lang_code": "en-US" },
+    { "id": "p2", "name": "민지", "role": "AI", "gender": "여성", "lang_code": "ko-KR" }
   ]
 }''';
 

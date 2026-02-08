@@ -176,7 +176,15 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      const SizedBox(width: 8),
+                      IconButton(
+                        key: widget.materialDropdownKey,
+                        icon: const Icon(Icons.library_books, color: Colors.blueAccent),
+                        onPressed: widget.onSelectMaterial,
+                        tooltip: l10n.selectStudyMaterial,
+                        visualDensity: VisualDensity.compact,
+                      ),
+                      const SizedBox(width: 4),
                       
                       // 2. Tag Selection Button
                       InkWell(

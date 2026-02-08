@@ -37,8 +37,7 @@ class AppLocalizationsEu extends AppLocalizations {
       '• Materiala hautatu: hautatu datu-multzo zehatz bat edo \'Berrikuspen osoa\'\n• Txartela irauli: egiaztatu itzulpena \'Erakutsi/Ezkutatu\' erabiliz (ikaskuntza automatikoa egiaztatu)\n• Entzun: esaldiaren TTS erreprodukzioa\n• Ikaskuntza osatua: markatu ikaskuntza osatutzat (V)\n• Ezabatu: luze sakatu txartela erregistroa ezabatzeko\n• Bilaketa-baldintzak: etiketak, azken elementuak, hasierako letrarekin iragazi';
 
   @override
-  String get helpMode3Desc =>
-      'Praktikatu ahoskera esaldiak entzunez eta errepikatuz (itzal eginez).';
+  String get helpMode3Desc => 'Praktikatu entzunez eta errepikatuz.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Praktikatu elkarrizketa errealak AI pertsonaia batekin hitz eginez.';
+      'Pertsonaiekin hitz egin benetako elkarrizketa praktikatzeko.';
 
   @override
   String get helpModeChatDetails =>
@@ -747,7 +746,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get reviewModeTitle => 'Berrikusi';
 
   @override
-  String get practiceModeTitle => 'Ahoskera praktika';
+  String get practiceModeTitle => 'Praktika';
 
   @override
   String get chatHistoryTitle => 'Elkarrizketaren historia';
@@ -793,10 +792,10 @@ class AppLocalizationsEu extends AppLocalizations {
   String get chatUntitled => 'Izenik gabeko elkarrizketa';
 
   @override
-  String get chatAiChat => 'AI txata';
+  String get chatAiChat => 'Txat';
 
   @override
-  String get tutorialAiChatTitle => 'AI txata';
+  String get tutorialAiChatTitle => 'Txat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -979,6 +978,9 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Elkarrizketa guztiak';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

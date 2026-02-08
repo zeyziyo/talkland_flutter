@@ -35,15 +35,14 @@ class AppLocalizationsJa extends AppLocalizations {
       '• 教材選択: 上部メニューから学習教材を選択または「全復習」\n• カード裏返し: 「表示/隠す」ボタンで翻訳を確認\n• 聞く: 「聞く」ボタンで該当する文章を再再生\n• 学習チェック: 完了した文章はチェックマーク (V)\n• 削除: カードを長押しすると削除ダイアログを表示\n• フィルタ: 全記録表示または学習教材別に並べ替え';
 
   @override
-  String get helpMode3Desc => '学習教材の文章を聞いて、自分で話す練習をします。';
+  String get helpMode3Desc => '聞いてシャドーイングすることで練習します。';
 
   @override
   String get helpMode3Details =>
       '• 教材選択: 学習する教材パックを選択\n• 間隔調整: [-] [+] ボタンで文章間の待機時間を設定 (3秒〜60秒)\n• 開始/停止: 再生ボタンでシャドーイングセッションを制御\n• 話す: ネイティブの音声を聞いて真似て話す\n• フィードバック: 発音の正確さをスコア (0-100) と色で表示 (緑/橙/赤)\n• 再試行: 認識失敗時に再試行ボタンを使用';
 
   @override
-  String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+  String get helpModeChatDesc => 'ペルソナと対話して実戦会話を練習します。';
 
   @override
   String get helpModeChatDetails =>
@@ -728,7 +727,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get reviewModeTitle => '復習';
 
   @override
-  String get practiceModeTitle => '発음練習';
+  String get practiceModeTitle => '練習';
 
   @override
   String get chatHistoryTitle => '会話履歴';
@@ -774,10 +773,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AIチャット';
+  String get chatAiChat => 'チャット';
 
   @override
-  String get tutorialAiChatTitle => 'AIチャット';
+  String get tutorialAiChatTitle => 'チャット';
 
   @override
   String get tutorialAiChatDesc => 'AIペルソナと実践的な会話を練習しましょう。';
@@ -959,6 +958,9 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'すべての会話';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation => 'この会話を削除しますか？\n削除した会話は復元できません。';

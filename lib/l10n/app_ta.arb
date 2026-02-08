@@ -8,9 +8,7 @@
   "helpMode1Details": "• குரல்: தொடங்க/நிறுத்த மைக்கைத் தட்டவும்\n• உரை: மொழிபெயர்க்க நேரடியாக தட்டச்சு செய்யவும்\n• தானியங்கி தேடல்: ஒத்த வாக்கியங்களைக் கண்டறிகிறது\n• மொழிபெயர்: உடனடி மொழிபெயர்ப்பு பொத்தான்\n• கேள்: TTSக்கான ஸ்பீக்கர் ஐகான்\n• சேமி: வரலாற்றில் சேர்க்கிறது\n• அழி: அனைத்தையும் மீட்டமை",
   "helpMode2Desc": "மறைக்கப்பட்ட மொழிபெயர்ப்புடன் சேமிக்கப்பட்ட வாக்கியங்களை மதிப்பாய்வு செய்யவும்.",
   "helpMode2Details": "• தேர்ந்தெடு: தொகுப்பு அல்லது 'அனைத்தையும் மதிப்பாய்வு செய்'\n• திருப்பு: மொழிபெயர்ப்பை 'காட்டு/மறை'\n• கேள்: வாக்கியத்திற்கு TTS இயக்கவும்\n• குறி: முடிந்ததற்கு டிக் (V)\n• நீக்கு: நீக்க கார்டை நீண்ட நேரம் அழுத்தவும்\n• வடிகட்டி: அனைத்தையும் அல்லது பொருள் வாரியாகப் பார்க்கவும்",
-  "helpMode3Desc": "கேட்டு மற்றும் திரும்பச் சொல்லி பேச்சுப் பயிற்சி செய்தல் (Shadowing).",
   "helpMode3Details": "• தேர்ந்தெடு: தொகுப்பைத் தேர்ந்தெடு\n• இடைவேளை: [-] [+] காத்திருப்பு நேரம் (3வி-60வி)\n• தொடங்கு/நிறுத்து: அமர்வைக் கட்டுப்படுத்தவும்\n• பேசு: ஆடியோவைக் கேட்டு திரும்பச் சொல்லவும்\n• மதிப்பெண்: துல்லியம் (0-100)\n• மீண்டும் முயற்சி: குரல் கண்டறியப்படவில்லை என்றால் பொத்தான்",
-  "helpModeChatDesc": "Talk to AI persona to practice real conversation and save useful sentences.",
   "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
   "helpJsonDesc": "பயன்முறை 3 இல் இறக்குமதி செய்ய, JSON உருவாக்கவும்:",
   "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Input",
   "reviewModeTitle": "Review",
-  "practiceModeTitle": "Practice",
   "chatHistoryTitle": "Conversation History",
   "chatNew": "New Chat",
   "chatNewChat": "New Chat",
@@ -609,8 +606,6 @@
   "personaGuide": "Travel Guide",
   "personaFriend": "Local Friend",
   "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "AI Chat",
-  "tutorialAiChatTitle": "AI Chat",
   "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
   "basicWordRepository": "அடிப்படை சொல் களஞ்சியம்",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "இந்த உரையாடலை நீக்கவா?\nநீக்கப்பட்ட உரையாடலை மீட்டெடுக்க முடியாது.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "பயிற்சி",
+  "chatAiChat": "அரட்டை",
+  "tutorialAiChatTitle": "அரட்டை",
+  "helpMode3Desc": "கேட்டுத் திரும்பக் கூறிப் பயிற்சி செய்யுங்கள்.",
+  "helpModeChatDesc": "உண்மை உரையாடலுக்குப் பாத்திரங்களுடன் பேசுங்கள்."
 }

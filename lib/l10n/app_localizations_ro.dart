@@ -37,8 +37,7 @@ class AppLocalizationsRo extends AppLocalizations {
       '• Selectare: Alege set sau \'Tot\'\n• Întoarce: \'Arată/Ascunde\' traducerea\n• Ascultă: Redă TTS propoziție\n• Studiat: Bifează (V) pentru completat\n• Șterge: Apăsare lungă pentru ștergere\n• Filtru: Toate sau după material';
 
   @override
-  String get helpMode3Desc =>
-      'Practică vorbire prin ascultare și repetare (Shadowing).';
+  String get helpMode3Desc => 'Exersează ascultând și repetând.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'Vorbește cu personaje pentru a exersa conversația.';
 
   @override
   String get helpModeChatDetails =>
@@ -741,7 +740,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'Practică';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -787,10 +786,10 @@ class AppLocalizationsRo extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -975,6 +974,9 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Toate conversațiile';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

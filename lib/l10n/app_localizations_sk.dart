@@ -37,8 +37,7 @@ class AppLocalizationsSk extends AppLocalizations {
       '• Výber materiálu: výber konkrétnej zbierky materiálov alebo \'Celé opakovanie\'\n• Otočenie karty: overenie prekladu pomocou \'Zobraziť/Skryť\' (automatická kontrola učenia)\n• Počúvanie: prehrávanie TTS vety\n• Učenie dokončené: spracovanie učenia ako dokončeného pomocou zaškrtnutia (V)\n• Odstránenie: odstránenie záznamu dlhým stlačením karty\n• Podmienky vyhľadávania: filtrovanie pomocou značiek, posledných položiek, počiatočných písmen';
 
   @override
-  String get helpMode3Desc =>
-      'Precvičte si výslovnosť počúvaním a opakovaním (Shadowing) viet.';
+  String get helpMode3Desc => 'Precvičujte počúvaním a opakovaním.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Precvičte si konverzáciu v reálnom čase rozhovorom s AI osobou.';
+      'Hovorte s postavami pre nácvik skutočnej konverzácie.';
 
   @override
   String get helpModeChatDetails =>
@@ -747,7 +746,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get reviewModeTitle => 'Opakovanie';
 
   @override
-  String get practiceModeTitle => 'Cvičenie výslovnosti';
+  String get practiceModeTitle => 'Prax';
 
   @override
   String get chatHistoryTitle => 'História konverzácií';
@@ -793,10 +792,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get chatUntitled => 'Konverzácia bez názvu';
 
   @override
-  String get chatAiChat => 'Rozhovor s AI';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'Rozhovor s AI';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -979,6 +978,9 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Všetky konverzácie';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

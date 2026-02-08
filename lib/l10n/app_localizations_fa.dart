@@ -35,8 +35,7 @@ class AppLocalizationsFa extends AppLocalizations {
       '• انتخاب: مجموعه یا \'همه\' را انتخاب کنید\n• چرخاندن: \'نمایش/مخفی کردن\' ترجمه\n• گوش دادن: پخش TTS برای جمله\n• علامت‌گذاری: تیک (V) برای تکمیل شده‌ها\n• حذف: لمس طولانی کارت برای حذف\n• فیلتر: نمایش همه یا بر اساس مطلب';
 
   @override
-  String get helpMode3Desc =>
-      'تمرین صحبت کردن با گوش دادن و تکرار (Shadowing).';
+  String get helpMode3Desc => 'با گوش دادن و تکرار تمرین کنید.';
 
   @override
   String get helpMode3Details =>
@@ -44,7 +43,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'برای تمرین مکالمه واقعی با شخصیت‌ها صحبت کنید.';
 
   @override
   String get helpModeChatDetails =>
@@ -740,7 +739,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'تمرین';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -786,10 +785,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'چت';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'چت';
 
   @override
   String get tutorialAiChatDesc =>
@@ -974,6 +973,9 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'همه گفتگوها';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

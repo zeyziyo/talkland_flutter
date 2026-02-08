@@ -36,15 +36,14 @@ class AppLocalizationsLo extends AppLocalizations {
       '• ເລືອກເອກະສານ: ເລືອກຊຸດເອກະສານສະເພາະ ຫຼື \'ທົບທວນທັງໝົດ\'\n• ປີ້ນບັດ: ກວດສອບການແປດ້ວຍ \'ສະແດງ/ເຊື່ອງ\' (ກວດສອບການຮຽນຮູ້ອັດຕະໂນມັດ)\n• ຟັງ: ຫຼິ້ນ TTS ປະໂຫຍກ\n• ສຳເລັດການຮຽນຮູ້: ໝາຍດ້ວຍເຄື່ອງໝາຍກວດກາ (V) ເພື່ອປະມວນຜົນວ່າຮຽນຮູ້ສຳເລັດແລ້ວ\n• ລຶບ: ກົດຄ້າງໄວ້ທີ່ບັດເພື່ອລຶບບັນທຶກ\n• ເງື່ອນໄຂການຄົ້ນຫາ: ກັ່ນຕອງດ້ວຍແທັກ, ລາຍການຫຼ້າສຸດ, ຕົວອັກສອນເລີ່ມຕົ້ນ';
 
   @override
-  String get helpMode3Desc =>
-      'ຟັງປະໂຫຍກ ແລະເວົ້າຕາມ (Shadowing) ເພື່ອຝຶກອອກສຽງ.';
+  String get helpMode3Desc => 'ຝຶກຊ້ອມໂດຍການຟັງ ແລະ ເວົ້າຕາມ.';
 
   @override
   String get helpMode3Details =>
       '• ເລືອກເອກະສານ: ເລືອກຊຸດເອກະສານທີ່ຈະຮຽນຮູ້\n• ຕັ້ງຄ່າໄລຍະຫ່າງ: ປັບເວລາລໍຖ້າລະຫວ່າງປະໂຫຍກດ້ວຍປຸ່ມ [-] [+](3 ວິນາທີ ~ 60 ວິນາທີ)\n• ເລີ່ມ/ຢຸດ: ຄວບຄຸມເຊດຊັນ Shadowing\n• ເວົ້າ: ຟັງສຽງແລ້ວເວົ້າຕາມ\n• ຄຳຕິຊົມ: ສະແດງຄະແນນຄວາມຖືກຕ້ອງ (0-100) ແລະສີ\n• ເງື່ອນໄຂການຄົ້ນຫາ: ກັ່ນຕອງເປົ້າໝາຍການຝຶກດ້ວຍແທັກ, ລາຍການຫຼ້າສຸດ, ຕົວອັກສອນເລີ່ມຕົ້ນ';
 
   @override
-  String get helpModeChatDesc => 'ສົນທະນາກັບ AI Persona ເພື່ອຝຶກສົນທະນາຕົວຈິງ.';
+  String get helpModeChatDesc => 'ລົມກັບຕົວລະຄອນເພື່ອຝຶກສົນທະນາຕົວຈິງ.';
 
   @override
   String get helpModeChatDetails =>
@@ -741,7 +740,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get reviewModeTitle => 'ທົບທວນ';
 
   @override
-  String get practiceModeTitle => 'ຝຶກອອກສຽງ';
+  String get practiceModeTitle => 'ການຝຶກຊ້ອມ';
 
   @override
   String get chatHistoryTitle => 'ປະຫວັດການສົນທະນາ';
@@ -787,10 +786,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get chatUntitled => 'ບໍ່ມີຊື່ການສົນທະນາ';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'ແຊັດ';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'ແຊັດ';
 
   @override
   String get tutorialAiChatDesc => 'ປະຕິບັດການສົນທະນາທີ່ແທ້ຈິງກັບ AI Personas.';
@@ -973,6 +972,9 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'ສົນທະນາທັງໝົດ';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

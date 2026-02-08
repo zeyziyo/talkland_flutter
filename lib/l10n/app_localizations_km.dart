@@ -36,16 +36,14 @@ class AppLocalizationsKm extends AppLocalizations {
       '• ជ្រើសរើសសម្ភារៈ៖ ជ្រើសរើសបណ្ណាល័យជាក់លាក់មួយ ឬ \'ពិនិត្យឡើងវិញទាំងអស់\'\n• បង្វិលកាត៖ ពិនិត្យមើលការបកប្រែជាមួយ \'បង្ហាញ/លាក់\' (ពិនិត្យការរៀនសូត្រដោយស្វ័យប្រវត្តិ)\n• ស្ដាប់៖ ចាក់សារ TTS នៃប្រយោគ\n• ការរៀនសូត្របានបញ្ចប់៖ សម្គាល់ថាជាបានបញ្ចប់ការរៀនសូត្រដោយសញ្ញាធីក (V)\n• លុប៖ ចុចឱ្យជាប់លើកាតដើម្បីលុបកំណត់ត្រា\n• លក្ខខណ្ឌស្វែងរក៖ ត្រងតាមស្លាក សារធាតុថ្មីៗ ពាក្យចាប់ផ្ដើម';
 
   @override
-  String get helpMode3Desc =>
-      'ស្ដាប់ប្រយោគ និងអនុវត្តការបញ្ចេញសំឡេងដោយនិយាយឡើងវិញ (Shadowing)។';
+  String get helpMode3Desc => 'អនុវត្តដោយស្តាប់ និងនិយាយតាម។';
 
   @override
   String get helpMode3Details =>
       '• ជ្រើសរើសសម្ភារៈ៖ ជ្រើសរើសបណ្ណាល័យដែលត្រូវរៀន\n• កំណត់ចន្លោះពេល៖ លៃតម្រូវពេលវេលារង់ចាំរវាងប្រយោគជាមួយប៊ូតុង [-] [+] (3 វិនាទី ដល់ 60 វិនាទី)\n• ចាប់ផ្ដើម/បញ្ឈប់៖ គ្រប់គ្រងវគ្គ Shadowing\n• និយាយ៖ ស្ដាប់សំឡេង និងនិយាយឡើងវិញ\n• មតិកែលម្អ៖ ពិន្ទុភាពត្រឹមត្រូវ (0-100) និងការបង្ហាញពណ៌\n• លក្ខខណ្ឌស្វែងរក៖ ត្រងគោលដៅអនុវត្តតាមស្លាក សារធាតុថ្មីៗ ពាក្យចាប់ផ្ដើម';
 
   @override
-  String get helpModeChatDesc =>
-      'អនុវត្តការសន្ទនាក្នុងជីវិតជាក់ស្ដែងដោយសន្ទនាជាមួយ AI Persona ។';
+  String get helpModeChatDesc => 'ជជែកជាមួយតួអង្គដើម្បីអនុវត្តការសន្ទនាពិត។';
 
   @override
   String get helpModeChatDetails =>
@@ -748,7 +746,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get reviewModeTitle => 'ពិនិត្យ';
 
   @override
-  String get practiceModeTitle => 'ការអនុវត្តការបញ្ចេញសំឡេង';
+  String get practiceModeTitle => 'ការអនុវត្ត';
 
   @override
   String get chatHistoryTitle => 'ប្រវត្តិជជែក';
@@ -794,10 +792,10 @@ class AppLocalizationsKm extends AppLocalizations {
   String get chatUntitled => 'ការសន្ទនាគ្មានចំណងជើង';
 
   @override
-  String get chatAiChat => 'ការជជែក AI';
+  String get chatAiChat => 'ជជែក';
 
   @override
-  String get tutorialAiChatTitle => 'ការជជែក AI';
+  String get tutorialAiChatTitle => 'ជជែក';
 
   @override
   String get tutorialAiChatDesc =>
@@ -980,6 +978,9 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'ការសន្ទនាទាំងអស់';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

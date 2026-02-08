@@ -37,16 +37,14 @@ class AppLocalizationsMn extends AppLocalizations {
       '• Материал сонгох: Тодорхой цуглуулга эсвэл \'Бүгдийг давтах\' сонгох\n• Карт эргүүлэх: \'Харуулах/Нуух\' замаар орчуулгыг шалгах (Автомат сурах шалгах)\n• Сонсох: Өгүүлбэр TTS тоглуулах\n• Суралцаж дуусгах: Чек тэмдэг (V) -ээр суралцаж дуусгах\n• Устгах: Картыг удаан дарснаар бичлэгийг устгах\n• Хайлтын нөхцөл: Таг, саяхны зүйл, эхний үсгээр шүүх';
 
   @override
-  String get helpMode3Desc =>
-      'Өгүүлбэрийг сонсож дагаж хэлэх (Shadowing) замаар дуудлагаа сайжруулах.';
+  String get helpMode3Desc => 'Сонсож давтах замаар дасгал хийх.';
 
   @override
   String get helpMode3Details =>
       '• Материал сонгох: Сурах материалаа сонгох\n• Завсрын хугацаа тохируулах: [-] [+] товчлуураар өгүүлбэр хоорондын хүлээх хугацааг тохируулах (3 секундээс 60 секунд хүртэл)\n• Эхлүүлэх/Зогсоох: Shadowing сессийг хянах\n• Ярих: Дууг сонсоод дагаж ярих\n• Санал хүсэлт: Нарийвчлалын оноо (0-100) болон өнгөний дэлгэц\n• Хайлтын нөхцөл: Таг, саяхны зүйл, эхний үсгээр дадлага хийх зүйлийг шүүх';
 
   @override
-  String get helpModeChatDesc =>
-      'AI дүртэй ярилцаж, бодит ярианы дадлага хийгээрэй.';
+  String get helpModeChatDesc => 'Бодит ярианы дасгал хийхээр дүрүүдтэй ярилц.';
 
   @override
   String get helpModeChatDetails =>
@@ -748,7 +746,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get reviewModeTitle => 'Давтах';
 
   @override
-  String get practiceModeTitle => 'Дуудлага дадлага';
+  String get practiceModeTitle => 'Дасгал';
 
   @override
   String get chatHistoryTitle => 'Ярианы түүх';
@@ -795,10 +793,10 @@ class AppLocalizationsMn extends AppLocalizations {
   String get chatUntitled => 'Гарчиггүй яриа';
 
   @override
-  String get chatAiChat => 'AI чат';
+  String get chatAiChat => 'Чат';
 
   @override
-  String get tutorialAiChatTitle => 'AI чат';
+  String get tutorialAiChatTitle => 'Чат';
 
   @override
   String get tutorialAiChatDesc =>
@@ -982,6 +980,9 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Бүх яриа';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

@@ -37,16 +37,14 @@ class AppLocalizationsLv extends AppLocalizations {
       '• Materiālu izvēle: atlasiet noteiktu materiālu kopumu vai \'Visu pārskatīšana\'\n• Kartītes apgriešana: pārbaudiet tulkojumu ar \'Rādīt/Slēpt\' (automātiska mācību pārbaude)\n• Klausīšanās: teikuma TTS atskaņošana\n• Mācīšanās pabeigta: atzīmējiet ar atzīmi (V), lai atzīmētu, ka mācīšanās ir pabeigta\n• Dzēšana: ilgi nospiediet kartīti, lai dzēstu ierakstu\n• Meklēšanas nosacījumi: filtrēšana pēc atzīmēm, jaunākajiem vienumiem, sākuma burtiem';
 
   @override
-  String get helpMode3Desc =>
-      'Klausieties teikumus un atkārtojiet tos (ēnojot), lai praktizētu izrunu.';
+  String get helpMode3Desc => 'Praktizējieties klausoties un atkārtojot.';
 
   @override
   String get helpMode3Details =>
       '• Materiālu izvēle: atlasiet materiālu kopumu, ko mācīties\n• Intervāla iestatīšana: pielāgojiet gaidīšanas laiku starp teikumiem ar pogām [-] [+](3 s ~ 60 s)\n• Sākums/Pārtraukums: ēnošanas sesijas kontrole\n• Runāšana: klausieties un atkārtojiet balsi\n• Atsauksmes: precizitātes rādītājs (0–100) un krāsu displejs\n• Meklēšanas nosacījumi: filtrēšanas mērķi pēc atzīmēm, jaunākajiem vienumiem, sākuma burtiem';
 
   @override
-  String get helpModeChatDesc =>
-      'Praktizējiet reālās dzīves sarunas, sarunājoties ar AI personu.';
+  String get helpModeChatDesc => 'Runājiet ar personāžiem īstai sarunai.';
 
   @override
   String get helpModeChatDetails =>
@@ -748,7 +746,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get reviewModeTitle => 'Pārskats';
 
   @override
-  String get practiceModeTitle => 'Izrunas praktizēšana';
+  String get practiceModeTitle => 'Prakse';
 
   @override
   String get chatHistoryTitle => 'Sarunu vēsture';
@@ -794,10 +792,10 @@ class AppLocalizationsLv extends AppLocalizations {
   String get chatUntitled => 'Saruna bez nosaukuma';
 
   @override
-  String get chatAiChat => 'AI tērzēšana';
+  String get chatAiChat => 'Tērzēšana';
 
   @override
-  String get tutorialAiChatTitle => 'AI tērzēšana';
+  String get tutorialAiChatTitle => 'Tērzēšana';
 
   @override
   String get tutorialAiChatDesc =>
@@ -981,6 +979,9 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Visas sarunas';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

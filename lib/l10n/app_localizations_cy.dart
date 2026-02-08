@@ -37,8 +37,7 @@ class AppLocalizationsCy extends AppLocalizations {
       '• Dewis Deunydd: dewiswch gasgliad deunydd penodol neu \'Adolygu Popeth\'\n• Fflipio Cerdyn: gwiriwch y cyfieithiad gyda \'Dangos/Cuddio\' (gwiriad dysgu awtomatig)\n• Gwrando: chwarae TTS brawddegau\n• Dysgu wedi\'i Gwblhau: prosesu wedi\'i gwblhau gyda marc gwirio (V)\n• Dileu: daliwch y cerdyn i lawr i ddileu cofnodion\n• Amodau Chwilio: hidlo yn ôl tagiau, eitemau diweddar, a llythrennau cyntaf';
 
   @override
-  String get helpMode3Desc =>
-      'Ymarfer ynganu trwy wrando ar frawddegau ac ailadrodd (Cysgodi).';
+  String get helpMode3Desc => 'Ymarferwch drwy wrando ac ailadrodd.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Ymarfer sgiliau sgwrsio go iawn trwy sgwrsio ag AI Persona.';
+      'Siaradwch â phersonas i ymarfer sgwrs go iawn.';
 
   @override
   String get helpModeChatDetails =>
@@ -754,7 +753,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get reviewModeTitle => 'Adolygu';
 
   @override
-  String get practiceModeTitle => 'Ymarfer ynganu';
+  String get practiceModeTitle => 'Ymarfer';
 
   @override
   String get chatHistoryTitle => 'Hanes Sgwrs';
@@ -800,10 +799,10 @@ class AppLocalizationsCy extends AppLocalizations {
   String get chatUntitled => 'Sgwrs ddi-deitl';
 
   @override
-  String get chatAiChat => 'Sgwrs AI';
+  String get chatAiChat => 'Sgwrs';
 
   @override
-  String get tutorialAiChatTitle => 'Sgwrs AI';
+  String get tutorialAiChatTitle => 'Sgwrs';
 
   @override
   String get tutorialAiChatDesc => 'Ymarfer sgyrsiau go iawn gyda AI Persona.';
@@ -986,6 +985,9 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Pob sgwrs';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

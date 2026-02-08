@@ -1587,7 +1587,7 @@ abstract class AppLocalizations {
   /// No description provided for @practiceModeTitle.
   ///
   /// In ko, this message translates to:
-  /// **'발음 연습'**
+  /// **'연습'**
   String get practiceModeTitle;
 
   /// No description provided for @chatHistoryTitle.
@@ -1671,7 +1671,7 @@ abstract class AppLocalizations {
   /// No description provided for @chatAiChat.
   ///
   /// In ko, this message translates to:
-  /// **'AI 채팅'**
+  /// **'채팅'**
   String get chatAiChat;
 
   /// No description provided for @tutorialAiChatTitle.
@@ -2033,6 +2033,12 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'전체 대화'**
   String get chatAllConversations;
+
+  /// No description provided for @tabConversation.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화'**
+  String get tabConversation;
 
   /// No description provided for @confirmDeleteConversation.
   ///

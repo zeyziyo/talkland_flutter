@@ -53,3 +53,8 @@ keystore-base64.txt
 
 # Credentials
 .env
+
+# Backups & Temporary Files
+backups/
+backup/
+*.bak

@@ -35,15 +35,14 @@ class AppLocalizationsTh extends AppLocalizations {
       '• เลือกสื่อ: เลือกชุดหรือ \'ทบทวนทั้งหมด\'\n• พลิกการ์ด: ใช้ \'แสดง/ซ่อน\' เพื่อดูคำแปล\n• ฟัง: เล่น TTS สำหรับประโยคนั้น\n• ทำเครื่องหมาย: ติ๊ก (V) สำหรับรายการที่เสร็จแล้ว\n• ลบ: กดค้างที่การ์ดเพื่อลบ\n• ตัวกรอง: ดูทั้งหมดหรือกรองตามสื่อ';
 
   @override
-  String get helpMode3Desc => 'ฝึกพูดโดยการฟังและพูดตาม (Shadowing)';
+  String get helpMode3Desc => 'ฝึกฝนโดยการฟังและพูดตาม';
 
   @override
   String get helpMode3Details =>
       '• เลือกสื่อ: เลือกแพ็คเกจการเรียนรู้\n• ระยะห่าง: [-] [+] ปรับเวลารอ (3วิ-60วิ)\n• เริ่ม/หยุด: ควบคุมเซสชัน\n• พูด: ฟังเสียงและพูดตาม\n• ผลตอบรับ: คะแนนความแม่นยำ (0-100)\n• ลองใหม่: ใช้ปุ่มลองใหม่หากไม่พบเสียง';
 
   @override
-  String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+  String get helpModeChatDesc => 'คุยกับตัวละครเพื่อฝึกสนทนาจริง';
 
   @override
   String get helpModeChatDetails =>
@@ -736,7 +735,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'ฝึกฝน';
 
   @override
   String get chatHistoryTitle => 'ประวัติการสนทนา';
@@ -782,10 +781,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'แชท AI';
+  String get chatAiChat => 'แชท';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'แชท';
 
   @override
   String get tutorialAiChatDesc =>
@@ -970,6 +969,9 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'การสนทนาทั้งหมด';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

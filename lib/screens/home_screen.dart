@@ -175,6 +175,13 @@ class _HomeScreenState extends State<HomeScreen> {
         radius: 12,
       ));
       targets.add(_buildTarget(
+        _mode1DropdownKey, 
+        l10n.menuSelectMaterialSet, 
+        l10n.tutorialM2DropdownDesc,
+        ContentAlign.top,
+        radius: 12,
+      ));
+      targets.add(_buildTarget(
         _actionButtonKey, 
         l10n.tutorialLangSettingsTitle, 
         l10n.tutorialLangSettingsDesc,
@@ -182,6 +189,13 @@ class _HomeScreenState extends State<HomeScreen> {
         radius: 12,
       ));
     } else if (modeIndex == 1) {
+      targets.add(_buildTarget(
+        _mode2DropdownKey, 
+        l10n.menuSelectMaterialSet, 
+        l10n.tutorialM2DropdownDesc,
+        ContentAlign.top,
+        radius: 12,
+      ));
       targets.add(_buildTarget(
         _mode2ListKey, 
         l10n.tutorialM2ListTitle, 
@@ -199,6 +213,13 @@ class _HomeScreenState extends State<HomeScreen> {
         paddingFocus: 4,
       ));
     } else if (modeIndex == 2) {
+      targets.add(_buildTarget(
+        _mode3DropdownKey, 
+        l10n.menuSelectMaterialSet, 
+        l10n.tutorialM3SelectDesc,
+        ContentAlign.top,
+        radius: 12,
+      ));
       targets.add(_buildTarget(
         _mode3SettingsKey, 
         l10n.tutorialM3ResetTitle, 

@@ -36,16 +36,14 @@ class AppLocalizationsKa extends AppLocalizations {
       '• მასალის არჩევა: აირჩიეთ კონკრეტული კრებული ან „ყველა გამეორება“.\n• ბარათების გადაბრუნება: შეამოწმეთ თარგმანი „ჩვენება/დამალვით“ (ავტომატური სწავლის შემოწმება).\n• მოსმენა: წინადადების TTS დაკვრა\n• სწავლის დასრულება: მონიშნეთ (V) დასრულებულად\n• წაშლა: ხანგრძლივად დააჭირეთ ბარათს ჩანაწერის წასაშლელად.\n• საძიებო პირობები: გაფილტრეთ ტეგებით, უახლესი ელემენტებით ან საწყისი ასოებით';
 
   @override
-  String get helpMode3Desc =>
-      'ივარჯიშეთ გამოთქმა წინადადებების მოსმენით და გამეორებით (Shadowing).';
+  String get helpMode3Desc => 'ივარჯიშეთ მოსმენით და გამეორებით.';
 
   @override
   String get helpMode3Details =>
       '• მასალის არჩევა: აირჩიეთ მასალა სასწავლად.\n• ინტერვალის დაყენება: დაარეგულირეთ ლოდინის დრო წინადადებებს შორის [-] [+] ღილაკებით (3 წმ-დან 60 წმ-მდე)\n• დაწყება/შეჩერება: დაჩრდილვის სესიის კონტროლი\n• საუბარი: მოუსმინეთ და გაიმეორეთ ხმა\n• გამოხმაურება: სიზუსტის ქულა (0-100) და ფერის ჩვენება\n• საძიებო პირობები: გაფილტრეთ სავარჯიშო მიზნები ტეგებით, ბოლო ელემენტებით ან საწყისი ასოებით';
 
   @override
-  String get helpModeChatDesc =>
-      'ივარჯიშეთ რეალურ საუბრებში AI პერსონებთან ჩატის დროს.';
+  String get helpModeChatDesc => 'ესაუბრეთ პერსონაჟებს რეალური საუბრისთვის.';
 
   @override
   String get helpModeChatDetails =>
@@ -749,7 +747,7 @@ class AppLocalizationsKa extends AppLocalizations {
   String get reviewModeTitle => 'გამეორება';
 
   @override
-  String get practiceModeTitle => 'გამოთქმის პრაქტიკა';
+  String get practiceModeTitle => 'პრაქტიკა';
 
   @override
   String get chatHistoryTitle => 'საუბრის ისტორია';
@@ -795,10 +793,10 @@ class AppLocalizationsKa extends AppLocalizations {
   String get chatUntitled => 'უსათაურო საუბარი';
 
   @override
-  String get chatAiChat => 'AI ჩეთი';
+  String get chatAiChat => 'ჩატი';
 
   @override
-  String get tutorialAiChatTitle => 'AI ჩეთი';
+  String get tutorialAiChatTitle => 'ჩატი';
 
   @override
   String get tutorialAiChatDesc =>
@@ -982,6 +980,9 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'ყველა საუბარი';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

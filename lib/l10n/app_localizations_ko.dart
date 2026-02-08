@@ -723,7 +723,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get reviewModeTitle => '복습';
 
   @override
-  String get practiceModeTitle => '발음 연습';
+  String get practiceModeTitle => '연습';
 
   @override
   String get chatHistoryTitle => '대화 기록';
@@ -769,7 +769,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get chatUntitled => '제목 없는 대화';
 
   @override
-  String get chatAiChat => 'AI 채팅';
+  String get chatAiChat => '채팅';
 
   @override
   String get tutorialAiChatTitle => 'AI 채팅';
@@ -954,6 +954,9 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get chatAllConversations => '전체 대화';
+
+  @override
+  String get tabConversation => '대화';
 
   @override
   String get confirmDeleteConversation =>

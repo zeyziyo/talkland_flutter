@@ -37,16 +37,14 @@ class AppLocalizationsSq extends AppLocalizations {
       '• Zgjidhni materialin: Zgjidhni një libër burim specifik ose \'Rishikim të plotë\'\n• Kthejeni kartën: Kontrolloni përkthimin me \'Shfaq/Fshih\' (kontrolli automatik i mësimit)\n• Dëgjimi: Luaj TTS të fjalive\n• Mësimi i përfunduar: Përfundoni mësimin me një shenjë tik (V)\n• Fshirja: Fshini regjistrimet duke shtypur gjatë kartën\n• Kushtet e kërkimit: Filtro sipas etiketave, artikujve të fundit ose shkronjave fillestare';
 
   @override
-  String get helpMode3Desc =>
-      'Ushtroni shqiptimin duke dëgjuar dhe duke përsëritur fjalitë (Hijezimi).';
+  String get helpMode3Desc => 'Praktikoni duke dëgjuar dhe përsëritur.';
 
   @override
   String get helpMode3Details =>
       '• Zgjidhni materialin: Zgjidhni librin e burimeve për të studiuar\n• Vendosni intervalin: Rregulloni kohën e pritjes midis fjalive me butonat [-] [+](3 sekonda deri në 60 sekonda)\n• Fillimi/Ndalo: Kontrolloni seancën e hijezimit\n• Të folurit: Dëgjoni zërin dhe përsëriteni\n• Reagimet: Shfaqni rezultatin e saktësisë (0-100) dhe ngjyrat\n• Kushtet e kërkimit: Filtro objektivat e praktikës sipas etiketës, artikujve të fundit ose shkronjave fillestare';
 
   @override
-  String get helpModeChatDesc =>
-      'Ushtroni bisedat e jetës reale duke biseduar me një personazh AI.';
+  String get helpModeChatDesc => 'Falisni me personazhe për praktikë reale.';
 
   @override
   String get helpModeChatDetails =>
@@ -754,7 +752,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get reviewModeTitle => 'Rishikim';
 
   @override
-  String get practiceModeTitle => 'Ushtrim i shqiptimit';
+  String get practiceModeTitle => 'Praktikë';
 
   @override
   String get chatHistoryTitle => 'Historia e bisedës';
@@ -800,10 +798,10 @@ class AppLocalizationsSq extends AppLocalizations {
   String get chatUntitled => 'Bisedë pa titull';
 
   @override
-  String get chatAiChat => 'Bisedë AI';
+  String get chatAiChat => 'Bisedë';
 
   @override
-  String get tutorialAiChatTitle => 'Bisedë AI';
+  String get tutorialAiChatTitle => 'Bisedë';
 
   @override
   String get tutorialAiChatDesc =>
@@ -989,6 +987,9 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Të gjitha bisedat';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

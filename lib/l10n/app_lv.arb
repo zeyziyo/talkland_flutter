@@ -8,9 +8,7 @@
   "helpMode1Details": "• Valodas iestatījumi: mainiet valodu, nospiežot ikonas augšā/apakšā\n• Vārdu/teikumu pārslēgšana: režīmu pārslēgšana\n• Balss ievade: nospiediet mikrofona ikonu, lai sāktu/pārtrauktu klausīšanos\n• Teksta ievade: ievadiet tekstu manuāli tulkošanai\n• Automātiska meklēšana: atrod līdzīgus esošus teikumus\n• Tulkošana: nospiediet pogu Tulkot, lai nekavējoties tulkotu\n• Klausīšanās: atskaņojiet TTS ar skaļruņa ikonu\n• Saglabāšana: pievienojiet ierakstus ar 'Datu saglabāšana'\n• Notīrīšana: atiestatiet ievadi",
   "helpMode2Desc": "Pārskatiet saglabātos teikumus un pārbaudiet, vai atceraties, izmantojot automātiskās slēpšanas funkciju.",
   "helpMode2Details": "• Materiālu izvēle: atlasiet noteiktu materiālu kopumu vai 'Visu pārskatīšana'\n• Kartītes apgriešana: pārbaudiet tulkojumu ar 'Rādīt/Slēpt' (automātiska mācību pārbaude)\n• Klausīšanās: teikuma TTS atskaņošana\n• Mācīšanās pabeigta: atzīmējiet ar atzīmi (V), lai atzīmētu, ka mācīšanās ir pabeigta\n• Dzēšana: ilgi nospiediet kartīti, lai dzēstu ierakstu\n• Meklēšanas nosacījumi: filtrēšana pēc atzīmēm, jaunākajiem vienumiem, sākuma burtiem",
-  "helpMode3Desc": "Klausieties teikumus un atkārtojiet tos (ēnojot), lai praktizētu izrunu.",
   "helpMode3Details": "• Materiālu izvēle: atlasiet materiālu kopumu, ko mācīties\n• Intervāla iestatīšana: pielāgojiet gaidīšanas laiku starp teikumiem ar pogām [-] [+](3 s ~ 60 s)\n• Sākums/Pārtraukums: ēnošanas sesijas kontrole\n• Runāšana: klausieties un atkārtojiet balsi\n• Atsauksmes: precizitātes rādītājs (0–100) un krāsu displejs\n• Meklēšanas nosacījumi: filtrēšanas mērķi pēc atzīmēm, jaunākajiem vienumiem, sākuma burtiem",
-  "helpModeChatDesc": "Praktizējiet reālās dzīves sarunas, sarunājoties ar AI personu.",
   "helpModeChatDetails": "• AI tērzēšana: runājiet savā valodā, lai praktizētu sarunu\n• Vairākas personas: mainiet otras puses dzimumu/valodu/vārdu ar izvēlni virs runas burbuļa\n• Partnera pievienošana: pievienojiet jaunu sarunu partneri (Svešinieku) ar pogu +\n• GPS: uz atrašanās vietu balstīti scenāriji\n• Automātiska saglabāšana: automātiska sarunu satura tulkošana un saglabāšana",
   "helpJsonDesc": "Lai importētu mācību materiālus, kas jāizmanto 3. režīmā, kā JSON failu, ievērojiet šo formātu:",
   "helpDialogueImportDesc": "Importējiet veselu dialogu kopumu kā JSON failu.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Ievade",
   "reviewModeTitle": "Pārskats",
-  "practiceModeTitle": "Izrunas praktizēšana",
   "chatHistoryTitle": "Sarunu vēsture",
   "chatNew": "Jauna saruna",
   "chatNewChat": "Jauna saruna",
@@ -609,8 +606,6 @@
   "personaGuide": "Ceļvedis",
   "personaFriend": "Vietējais draugs",
   "chatUntitled": "Saruna bez nosaukuma",
-  "chatAiChat": "AI tērzēšana",
-  "tutorialAiChatTitle": "AI tērzēšana",
   "tutorialAiChatDesc": "Praktizējiet sarunas reālajā dzīvē ar AI personu.",
   "mode1SelectedMaterial": "Pašlaik atlasīts materiālu kopums: {name}",
   "basicWordRepository": "Pamata vārdu repozitorijs",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "Vai vēlaties izdzēst šo sarunu?\nIzdzēstās sarunas nevar atgūt.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "Prakse",
+  "chatAiChat": "Tērzēšana",
+  "tutorialAiChatTitle": "Tērzēšana",
+  "helpMode3Desc": "Praktizējieties klausoties un atkārtojot.",
+  "helpModeChatDesc": "Runājiet ar personāžiem īstai sarunai."
 }

@@ -8,9 +8,7 @@
   "helpMode1Details": "• إدخال صوتي: اضغط الميكروفون للبدء/الإيقاف\n• نصوص: اكتب مباشرة للترجمة\n• بحث تلقائي: يكشف الجمل المشابهة\n• ترجمة: زر للترجمة الفورية\n• استماع: أيقونة مكبر الصوت للنطق\n• حفظ: يضيف للسجل\n• مسح: إعادة تعيين المدخلات",
   "helpMode2Desc": "مراجعة الجمل المحفوظة مع إخفاء الترجمة تلقائياً.",
   "helpMode2Details": "• اختيار المادة: اختر مجموعة أو 'مراجعة الكل'\n• قلب البطاقة: 'ظهار/إخفاء' للترجمة\n• استماع: تشغيل النطق للجملة\n• تحديد كمدروس: علامة (V) للمكتمل\n• حذف: ضغطة مطولة للحذف\n• تصفية: عرض الكل أو حسب المادة",
-  "helpMode3Desc": "تدرب على التحدث بالاستماع والترديد (Shadowing).",
   "helpMode3Details": "• اختيار المادة: اختر حزمة تعلم\n• الفاصل: [-] [+] وقت الانتظار (3-60 ثانية)\n• بدء/إيقاف: التحكم بالجلسة\n• تحدث: استمع للصوت وردد\n• الملاحظات: درجة الدقة (0-100)\n• إعادة المحاولة: زر إعادة المحاولة إذا لم يتم اكتشاف الصوت",
-  "helpModeChatDesc": "Talk to AI persona to practice real conversation and save useful sentences.",
   "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
   "helpJsonDesc": "لاستيراد مواد الدراسة في الوضع 3، قم بإنشاء ملف JSON بالهيكل التالي:",
   "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "입력",
   "reviewModeTitle": "복습",
-  "practiceModeTitle": "발음 연습",
   "chatHistoryTitle": "سجل الدردشة",
   "chatNew": "New Chat",
   "chatNewChat": "دردشة جديدة",
@@ -609,8 +606,6 @@
   "personaGuide": "Travel Guide",
   "personaFriend": "Local Friend",
   "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "دردشة الذكاء الاصطناعي",
-  "tutorialAiChatTitle": "AI Chat",
   "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
   "basicWordRepository": "مستودع الكلمات الأساسية",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "هل أنت متأكد أنك تريد حذف هذه المحادثة؟\nلا يمكنك استعادة المحادثات المحذوفة.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "ممارسة",
+  "chatAiChat": "دردشة",
+  "tutorialAiChatTitle": "دردشة",
+  "helpMode3Desc": "تدرب من خلال الاستماع والترديد.",
+  "helpModeChatDesc": "تحدث مع الشخصيات لممارسة المحادثة الحقيقية."
 }

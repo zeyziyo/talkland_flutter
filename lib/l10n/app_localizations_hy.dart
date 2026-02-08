@@ -37,16 +37,14 @@ class AppLocalizationsHy extends AppLocalizations {
       '• Նյութի ընտրություն՝ ընտրեք որոշակի նյութերի հավաքածու կամ «Ամբողջական վերանայում»\n• Քարտի շրջում՝ ստուգեք թարգմանությունը «Ցույց տալ/թաքցնել»-ով (ավտոմատ ուսուցման ստուգում)\n• Լսել՝ նախադասության TTS նվագարկում\n• Ուսուցումն ավարտված է՝ նշեք որպես ուսուցումն ավարտված՝ ստուգման նշանով (V)\n• Ջնջել՝ երկար սեղմեք քարտը՝ գրառումը ջնջելու համար\n• Որոնման պայմաններ՝ զտեք ըստ թեգերի, վերջին տարրերի, սկսվող տառերի';
 
   @override
-  String get helpMode3Desc =>
-      'Լսեք և կրկնեք նախադասությունները (Shadowing) ձեր արտասանությունը մարզելու համար:';
+  String get helpMode3Desc => 'Պրակտիկա արեք լսելով և կրկնելով:';
 
   @override
   String get helpMode3Details =>
       '• Նյութի ընտրություն՝ ընտրեք ուսումնասիրելու նյութերի հավաքածուն\n• Միջակայքի կարգավորում՝ կարգավորեք նախադասությունների միջև սպասման ժամանակը [-] [+] կոճակներով (3 վրկ-ից 60 վրկ)\n• Սկսել/Դադարեցնել՝ վերահսկեք ստվերային նիստը\n• Խոսել՝ լսեք ձայնը և կրկնեք\n• Հետադարձ կապ՝ ճշգրտության միավոր (0-100) և գույնի ցուցադրում\n• Որոնման պայմաններ՝ զտեք մարզումների թիրախը ըստ թեգերի, վերջին տարրերի, սկսվող տառերի';
 
   @override
-  String get helpModeChatDesc =>
-      'Մարզեք իրական խոսակցական լեզուն AI անձի հետ զրուցելով:';
+  String get helpModeChatDesc => 'Խոսեք կերպարների հետ իրական զրույցի համար:';
 
   @override
   String get helpModeChatDetails =>
@@ -754,7 +752,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get reviewModeTitle => 'Վերանայում';
 
   @override
-  String get practiceModeTitle => 'Արտասանության մարզում';
+  String get practiceModeTitle => 'Պրակտիկա';
 
   @override
   String get chatHistoryTitle => 'Զրույցի պատմություն';
@@ -800,10 +798,10 @@ class AppLocalizationsHy extends AppLocalizations {
   String get chatUntitled => 'Անանուն զրույց';
 
   @override
-  String get chatAiChat => 'AI Զրույց';
+  String get chatAiChat => 'Չատ';
 
   @override
-  String get tutorialAiChatTitle => 'AI Զրույց';
+  String get tutorialAiChatTitle => 'Չատ';
 
   @override
   String get tutorialAiChatDesc => 'Մարզեք իրական զրույցներ AI անձի հետ:';
@@ -986,6 +984,9 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Բոլոր զրույցները';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

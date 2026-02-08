@@ -37,8 +37,7 @@ class AppLocalizationsKk extends AppLocalizations {
       '• Материалды таңдау: нақты материалды немесе \'Толық қарауды\' таңдаңыз\n• Картаны аудару: аударманы \'Көрсету/Жасыру\' арқылы тексеріңіз (автоматты оқытуды тексеру)\n• Тыңдау: сөйлемді TTS ойнату\n• Оқыту аяқталды: оқытуды аяқтау үшін құсбелгіні (V) пайдаланыңыз\n• Жою: жазбаны жою үшін картаны ұзақ басып тұрыңыз\n• Іздеу шарттары: тегтер, соңғы элементтер, басталатын әріптер арқылы сүзгілеу';
 
   @override
-  String get helpMode3Desc =>
-      'Сөйлемдерді тыңдап, қайталап айту (Shadowing) арқылы айтылуды жаттықтырыңыз.';
+  String get helpMode3Desc => 'Тыңдау және қайталау арқылы жаттығыңыз.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'AI Persona-мен сөйлесіп, нақты өмірлік сөйлесуді жаттықтырыңыз.';
+      'Нағыз сөйлесуді үйрену үшін кейіпкерлермен сөйлесіңіз.';
 
   @override
   String get helpModeChatDetails =>
@@ -747,7 +746,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get reviewModeTitle => 'Қайталау';
 
   @override
-  String get practiceModeTitle => 'Айтылу жаттығуы';
+  String get practiceModeTitle => 'Тәжірибе';
 
   @override
   String get chatHistoryTitle => 'Сөйлесу тарихы';
@@ -794,10 +793,10 @@ class AppLocalizationsKk extends AppLocalizations {
   String get chatUntitled => 'Атаусыз сөйлесу';
 
   @override
-  String get chatAiChat => 'AI чат';
+  String get chatAiChat => 'Чат';
 
   @override
-  String get tutorialAiChatTitle => 'AI чат';
+  String get tutorialAiChatTitle => 'Чат';
 
   @override
   String get tutorialAiChatDesc =>
@@ -981,6 +980,9 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Барлық сұхбаттар';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

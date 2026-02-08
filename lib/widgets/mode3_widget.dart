@@ -158,7 +158,15 @@ class Mode3Widget extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      const SizedBox(width: 8),
+                      IconButton(
+                        key: materialDropdownKey,
+                        icon: const Icon(Icons.library_books, color: Colors.blueAccent),
+                        onPressed: onSelectMaterial,
+                        tooltip: l10n.selectStudyMaterial,
+                        visualDensity: VisualDensity.compact,
+                      ),
+                      const SizedBox(width: 4),
                       
                       // 2. Tag Selection Button
                       InkWell(

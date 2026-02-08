@@ -37,8 +37,7 @@ class AppLocalizationsUz extends AppLocalizations {
       '• Ma\'lumotlarni tanlash: ma\'lum ma\'lumotlar to\'plamini yoki \'To\'liq ko\'rib chiqish\'ni tanlang\n• Kartani aylantirish: \'Ko\'rsatish/yashirish\' orqali tarjimani tekshiring (avtomatik o\'rganish tekshiruvi)\n• Tinglash: jumlani TTS orqali ijro eting\n• O\'rganish yakunlandi: belgi (V) bilan o\'rganish yakunlanganligini ko\'rsating\n• O\'chirish: yozuvni o\'chirish uchun kartani uzoq bosing\n• Qidiruv shartlari: teglarga, so\'nggi elementlarga, bosh harflarga qarab filtrlash';
 
   @override
-  String get helpMode3Desc =>
-      'Jumlalarni tinglang va takrorlang (Shadowing) va talaffuzni mashq qiling.';
+  String get helpMode3Desc => 'Eshitib va takrorlab mashq qiling.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'AI persona bilan suhbatlashib, amaliy suhbatni mashq qiling.';
+      'Haqiqiy suhbat uchun personajlar bilan gaplashing.';
 
   @override
   String get helpModeChatDetails =>
@@ -752,7 +751,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get reviewModeTitle => 'Ko\'rib chiqish';
 
   @override
-  String get practiceModeTitle => 'Talaffuz mashqi';
+  String get practiceModeTitle => 'Mashq';
 
   @override
   String get chatHistoryTitle => 'Suhbatlar tarixi';
@@ -799,10 +798,10 @@ class AppLocalizationsUz extends AppLocalizations {
   String get chatUntitled => 'Sarlavhasiz suhbat';
 
   @override
-  String get chatAiChat => 'AI chat';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'AI chat';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -986,6 +985,9 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Barcha suhbatlar';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

@@ -36,8 +36,7 @@ class AppLocalizationsSw extends AppLocalizations {
       '• Chagua: Chagua seti au \'Pitia Zote\'\n• Geuza: \'Onyesha/Ficha\' tafsiri\n• Sikiliza: Cheza TTS kwa sentensi\n• Weka alama: Tiki (V) kwa zilizokamilika\n• Futa: Bonyeza kwa muda mrefu kufuta\n• Kichujio: Tazama zote au kwa nyenzo';
 
   @override
-  String get helpMode3Desc =>
-      'Fanya mazoezi ya kuzungumza kwa kusikiliza na kurudia (Shadowing).';
+  String get helpMode3Desc => 'Fanya mazoezi kwa kusikiliza na kurudia.';
 
   @override
   String get helpMode3Details =>
@@ -45,7 +44,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'Zungumza na wahusika kufanya mazoezi ya mazungumzo.';
 
   @override
   String get helpModeChatDetails =>
@@ -740,7 +739,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'Mazoezi';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -786,10 +785,10 @@ class AppLocalizationsSw extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'Gumzo';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'Gumzo';
 
   @override
   String get tutorialAiChatDesc =>
@@ -974,6 +973,9 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Mazungumzo Yote';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

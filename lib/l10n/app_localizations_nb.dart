@@ -37,16 +37,14 @@ class AppLocalizationsNb extends AppLocalizations {
       '• Velg materiale: Velg et bestemt materiale eller \'Gjennomgå alt\'\n• Vend kort: Sjekk oversettelsen med \'Vis/Skjul\' (automatisk læringsmerke)\n• Lytt: Setnings-TTS-avspilling\n• Læring fullført: Behandle læringen som fullført med en hake (V)\n• Slett: Slett poster ved å trykke lenge på kortet\n• Søkekriterier: Filtrer etter tagger, nylige elementer, startbokstaver';
 
   @override
-  String get helpMode3Desc =>
-      'Øv på uttale ved å lytte og gjenta setninger (Shadowing).';
+  String get helpMode3Desc => 'Øv ved å lytte og gjenta.';
 
   @override
   String get helpMode3Details =>
       '• Velg materiale: Velg materialet du vil studere\n• Angi intervall: Juster ventetiden mellom setningene med [-] [+] (3 sekunder til 60 sekunder)\n• Start/Stopp: Kontroller skyggeøkten\n• Snakk: Lytt til stemmen og gjenta\n• Tilbakemelding: Nøyaktighetsskår (0-100) og fargedisplay\n• Søkekriterier: Filtrer øvelsesmål etter tagger, nylige elementer, startbokstaver';
 
   @override
-  String get helpModeChatDesc =>
-      'Øv på samtaler i den virkelige verden ved å snakke med AI-personligheter.';
+  String get helpModeChatDesc => 'Snakk med personaer for å øve på samtale.';
 
   @override
   String get helpModeChatDetails =>
@@ -747,7 +745,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get reviewModeTitle => 'Repetisjon';
 
   @override
-  String get practiceModeTitle => 'Uttaleøvelse';
+  String get practiceModeTitle => 'Øvelse';
 
   @override
   String get chatHistoryTitle => 'Chattehistorikk';
@@ -793,10 +791,10 @@ class AppLocalizationsNb extends AppLocalizations {
   String get chatUntitled => 'Samtale uten navn';
 
   @override
-  String get chatAiChat => 'AI-chat';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'AI-chat';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc => 'Øv på samtaler med en AI-personlighet.';
@@ -978,6 +976,9 @@ class AppLocalizationsNb extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Alle samtaler';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

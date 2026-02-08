@@ -35,8 +35,7 @@ class AppLocalizationsTr extends AppLocalizations {
       '• Materyal Seç: Set veya \'Tümünü Tekrarla\' seç\n• Kart Çevir: Çeviri için \'Göster/Gizle\'\n• Dinle: Cümle için TTS oynat\n• İşaretle: Tamamlananlar için tik (V)\n• Sil: Karta uzun basarak sil\n• Filtre: Tümünü gör veya materyale göre filtrele';
 
   @override
-  String get helpMode3Desc =>
-      'Dinleyip tekrarlayarak konuşma pratiği yap (Shadowing).';
+  String get helpMode3Desc => 'Dinleyerek ve tekrarlayarak pratik yapın.';
 
   @override
   String get helpMode3Details =>
@@ -44,7 +43,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'Gerçek konuşma pratiği için karakterlerle konuşun.';
 
   @override
   String get helpModeChatDetails =>
@@ -741,7 +740,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'Pratik';
 
   @override
   String get chatHistoryTitle => 'Sohbet Geçmişi';
@@ -787,10 +786,10 @@ class AppLocalizationsTr extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'Yapay Zeka Sohbeti';
+  String get chatAiChat => 'Sohbet';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'Sohbet';
 
   @override
   String get tutorialAiChatDesc =>
@@ -975,6 +974,9 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Tüm Sohbetler';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

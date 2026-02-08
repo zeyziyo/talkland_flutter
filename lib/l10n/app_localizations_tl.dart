@@ -38,7 +38,7 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String get helpMode3Desc =>
-      'Magsanay sa pagbigkas sa pamamagitan ng pakikinig at pag-uulit ng mga pangungusap (Shadowing).';
+      'Magsanay sa pamamagitan ng pakikinig at pag-uulit.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +46,7 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Magsanay sa pag-uusap sa totoong buhay sa pamamagitan ng pakikipag-chat sa isang AI persona.';
+      'Makipag-usap sa mga persona para sa tunay na usapan.';
 
   @override
   String get helpModeChatDetails =>
@@ -755,7 +755,7 @@ class AppLocalizationsTl extends AppLocalizations {
   String get reviewModeTitle => 'Pag-aaral';
 
   @override
-  String get practiceModeTitle => 'Pagsasanay sa Pagbigkas';
+  String get practiceModeTitle => 'Pagsasanay';
 
   @override
   String get chatHistoryTitle => 'Kasaysayan ng Pag-uusap';
@@ -802,10 +802,10 @@ class AppLocalizationsTl extends AppLocalizations {
   String get chatUntitled => 'Pag-uusap na Walang Pamagat';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -989,6 +989,9 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Lahat ng Usapan';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

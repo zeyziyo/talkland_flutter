@@ -8,9 +8,7 @@
   "helpMode1Details": "• Podešavanje jezika: Promijenite jezik pritiskom na ikone gore/dolje\n• Prebacivanje između riječi/rečenica: Promjena načina rada\n• Glasovni unos: Pritisnite ikonu mikrofona za početak/zaustavljanje slušanja\n• Unos teksta: Unesite direktno za prijevod\n• Automatsko pretraživanje: Detektuje slične postojeće rečenice\n• Prijevod: Pritisnite tipku za prijevod za trenutni prijevod\n• Slušanje: Reprodukcija teksta u govor pomoću ikone zvučnika\n• Spremanje: Dodavanje zapisa putem 'Spremanje podataka'\n• Brisanje: Resetovanje unosa",
   "helpMode2Desc": "Pregledajte spremljene rečenice i provjerite jeste li ih zapamtili pomoću funkcije automatskog sakrivanja.",
   "helpMode2Details": "• Odabir materijala: Odaberite određenu zbirku materijala ili 'Cjelokupni pregled'\n• Preokretanje kartice: Provjerite prijevod pomoću 'Prikaži/Sakrij' (automatska provjera učenja)\n• Slušanje: Reprodukcija teksta u govor za rečenicu\n• Završeno učenje: Označite kvačicom (V) za obradu dovršenog učenja\n• Brisanje: Dugo pritisnite karticu za brisanje zapisa\n• Uvjeti pretraživanja: Filtrirajte po oznakama, nedavnim stavkama, početnom slovu",
-  "helpMode3Desc": "Vježbajte izgovor slušajući rečenice i ponavljajući ih (Shadowing).",
   "helpMode3Details": "• Odabir materijala: Odaberite zbirku materijala za učenje\n• Podešavanje intervala: Podesite vrijeme čekanja između rečenica tipkama [-] [+] (3 sekunde ~ 60 sekundi)\n• Pokreni/Zaustavi: Kontrola sesije osjenčanja\n• Govor: Slušajte glas i ponavljajte\n• Povratne informacije: Prikaz ocjene tačnosti (0-100) i boje\n• Uvjeti pretraživanja: Filtrirajte cilj vježbe po oznakama, nedavnim stavkama, početnom slovu",
-  "helpModeChatDesc": "Vježbajte konverzaciju u stvarnom životu razgovarajući s AI personom.",
   "helpModeChatDetails": "• AI Chat: Vježbajte razgovor govoreći na svom jeziku\n• Više persona: Možete promijeniti spol/jezik/ime druge osobe putem izbornika iznad oblačića za govor\n• Dodavanje partnera: Dodajte novog partnera za razgovor (Stranac) pomoću tipke +\n• GPS: Igranje uloga na temelju trenutne lokacije\n• Automatsko spremanje: Automatski prijevod i spremanje sadržaja razgovora",
   "helpJsonDesc": "Slijedite ovaj format da biste uvezli materijale za učenje kao JSON datoteku za korištenje u načinu rada 3:",
   "helpDialogueImportDesc": "Uvezite cijeli set dijaloga kao JSON datoteku.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Unos",
   "reviewModeTitle": "Pregled",
-  "practiceModeTitle": "Vježbanje izgovora",
   "chatHistoryTitle": "Historija razgovora",
   "chatNew": "Novi razgovor",
   "chatNewChat": "Novi razgovor",
@@ -609,8 +606,6 @@
   "personaGuide": "Turistički vodič",
   "personaFriend": "Lokalni prijatelj",
   "chatUntitled": "Razgovor bez naslova",
-  "chatAiChat": "AI Razgovor",
-  "tutorialAiChatTitle": "AI Razgovor",
   "tutorialAiChatDesc": "Vježbajte konverzacije u stvarnom životu s AI personama.",
   "mode1SelectedMaterial": "Trenutno odabrani materijal: {name}",
   "basicWordRepository": "Osnovno spremište riječi",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "Želite li izbrisati ovaj razgovor?\nIzbrisani razgovori se ne mogu vratiti.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "Vježba",
+  "chatAiChat": "Chat",
+  "tutorialAiChatTitle": "Chat",
+  "helpMode3Desc": "Vježbajte slušajući i ponavljajući.",
+  "helpModeChatDesc": "Razgovarajte sa personama za vježbu stvarnog razgovora."
 }

@@ -8,9 +8,7 @@
   "helpMode1Details": "• Input Vocale: Tocca microfono per iniziare/fermare\n• Input Testo: Scrivi direttamente per tradurre\n• Auto-Cerca: Rileva frasi simili esistenti\n• Traduci: Tocca pulsante per traduzione istantanea\n• Ascolta: Icona altoparlante per TTS\n• Salva: 'Salva Dati' aggiunge alla cronologia\n• Pulisci: Resetta tutti gli input",
   "helpMode2Desc": "Ripassa frasi salvate con traduzioni nascoste automaticamente.",
   "helpMode2Details": "• Seleziona Materiale: Scegli set o 'Ripassa Tutto'\n• Gira Carta: Usa 'Mostra/Nascondi' per vedere traduzione\n• Ascolta: Riproduci TTS per la frase\n• Segna Studiato: Spunta (V) per elementi completati\n• Elimina: Premi a lungo carta per rimuovere\n• Filtro: Vedi tutto o filtra per materiale",
-  "helpMode3Desc": "Pratica il parlato ascoltando e ripetendo (Shadowing).",
   "helpMode3Details": "• Seleziona Materiale: Scegli pacchetto studio\n• Intervallo: [-] [+] regola attesa (3s-60s)\n• Start/Stop: Controlla sessione\n• Parla: Ascolta audio e ripeti\n• Feedback: Punteggio precisione (0-100)\n• Riprova: Usa pulsante riprova se voce non rilevata",
-  "helpModeChatDesc": "Talk to AI persona to practice real conversation and save useful sentences.",
   "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
   "helpJsonDesc": "Per importare materiali di studio in Modalità 3, crea file JSON con questa struttura:",
   "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Input",
   "reviewModeTitle": "Review",
-  "practiceModeTitle": "Practice",
   "chatHistoryTitle": "Cronologia",
   "chatNew": "New Chat",
   "chatNewChat": "Nuova chat",
@@ -609,8 +606,6 @@
   "personaGuide": "Guida turistica",
   "personaFriend": "Amico locale",
   "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "Chat IA",
-  "tutorialAiChatTitle": "AI Chat",
   "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
   "basicWordRepository": "Archivio parole base",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "Vuoi eliminare questa conversazione?\nNon sarà possibile recuperarla.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "Pratica",
+  "chatAiChat": "Chat",
+  "tutorialAiChatTitle": "Chat",
+  "helpMode3Desc": "Pratica ascoltando e ripetendo.",
+  "helpModeChatDesc": "Parla con i personaggi per praticare conversazioni reali."
 }

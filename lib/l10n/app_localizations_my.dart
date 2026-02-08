@@ -37,8 +37,7 @@ class AppLocalizationsMy extends AppLocalizations {
       '• အချက်အလက် ရွေးချယ်ခြင်း- သတ်မှတ် အချက်အလက်များ စုစည်းထားသော စာအုပ် သို့မဟုတ် \'အားလုံး ပြန်လည်သုံးသပ်ရန်\' ရွေးပါ\n• ကတ်ကို လှန်ခြင်း- \'ပြရန်/ဖျောက်ရန်\' ဖြင့် ဘာသာပြန်ခြင်းကို စစ်ဆေးပါ (အလိုအလျောက် သင်ယူခြင်းကို အမှတ်ခြစ်ပါ)\n• နားထောင်ခြင်း- စာကြောင်း TTS ပြန်ဖွင့်ခြင်း\n• သင်ယူခြင်း ပြီးစီးခြင်း- အမှတ်ခြစ် (V) ဖြင့် သင်ယူခြင်း ပြီးစီးကြောင်း ပြပါ\n• ဖျက်ခြင်း- ကတ်ကို ဖိထားပြီး မှတ်တမ်းကို ဖျက်ပါ\n• ရှာဖွေရန် အခြေအနေ- တဂ်၊ နောက်ဆုံးအကြောင်းအရာ၊ စာလုံးအစဖြင့် စစ်ထုတ်ခြင်း';
 
   @override
-  String get helpMode3Desc =>
-      'စာကြောင်းကို နားထောင်ပြီး လိုက်ပြောခြင်း (Shadowing) ဖြင့် အသံထွက်ကို လေ့ကျင့်ပါ။';
+  String get helpMode3Desc => 'နားထောင်ပြီး လိုက်ပြောခြင်းဖြင့် လေ့ကျင့်ပါ။';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'AI ပုံစံနှင့် စကားပြောပြီး လက်တွေ့ စကားပြောဆိုမှုကို လေ့ကျင့်ပါ။';
+      'တကယ်ပြောဆိုရန် ဇာတ်ကောင်များနှင့် စကားပြောပါ။';
 
   @override
   String get helpModeChatDetails =>
@@ -759,7 +758,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get reviewModeTitle => 'ပြန်လည်သုံးသပ်ခြင်း';
 
   @override
-  String get practiceModeTitle => 'အသံထွက် လေ့ကျင့်ခြင်း';
+  String get practiceModeTitle => 'လေ့ကျင့်ခန်း';
 
   @override
   String get chatHistoryTitle => 'စကားပြော မှတ်တမ်း';
@@ -806,10 +805,10 @@ class AppLocalizationsMy extends AppLocalizations {
   String get chatUntitled => 'ခေါင်းစဉ်မဲ့ စကားပြော';
 
   @override
-  String get chatAiChat => 'AI စကားပြော';
+  String get chatAiChat => 'ချက်';
 
   @override
-  String get tutorialAiChatTitle => 'AI စကားပြော';
+  String get tutorialAiChatTitle => 'ချက်';
 
   @override
   String get tutorialAiChatDesc =>
@@ -994,6 +993,9 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'စကားပြောအားလုံး';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

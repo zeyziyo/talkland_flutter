@@ -37,8 +37,7 @@ class AppLocalizationsEt extends AppLocalizations {
       '• Materjali valik: vali konkreetne materjalikogum või \"Kogu kordamine\"\n• Kaardi pööramine: tõlke kontrollimiseks \"Näita/peida\" (automaatne õppimise kontroll)\n• Kuula: lause TTS taasesitus\n• Õppimine lõpetatud: märgi õppimine lõpetatuks linnukesega (V)\n• Kustuta: kirje kustutamiseks hoia kaarti all\n• Otsingutingimused: filtreeri siltide, hiljutiste üksuste või algustähe järgi';
 
   @override
-  String get helpMode3Desc =>
-      'Harjuta hääldust, kuulates lauseid ja neid korrates (varjutamine).';
+  String get helpMode3Desc => 'Harjutage kuulates ja korrates.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Harjuta vestlust reaalses elus, vesteldes AI personažiga.';
+      'Rääkige personadega tõelise vestluse harjutamiseks.';
 
   @override
   String get helpModeChatDetails =>
@@ -745,7 +744,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get reviewModeTitle => 'Kordamine';
 
   @override
-  String get practiceModeTitle => 'Häälduse harjutamine';
+  String get practiceModeTitle => 'Harjutamine';
 
   @override
   String get chatHistoryTitle => 'Vestluste ajalugu';
@@ -792,10 +791,10 @@ class AppLocalizationsEt extends AppLocalizations {
   String get chatUntitled => 'Pealkirjata vestlus';
 
   @override
-  String get chatAiChat => 'AI Vestlus';
+  String get chatAiChat => 'Vestlus';
 
   @override
-  String get tutorialAiChatTitle => 'AI Vestlus';
+  String get tutorialAiChatTitle => 'Vestlus';
 
   @override
   String get tutorialAiChatDesc => 'Harjuta AI personažiga reaalset vestlust.';
@@ -978,6 +977,9 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Kõik vestlused';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

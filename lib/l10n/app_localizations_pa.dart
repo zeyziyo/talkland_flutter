@@ -36,16 +36,14 @@ class AppLocalizationsPa extends AppLocalizations {
       '• ਚੁਣੋ: ਸੈੱਟ ਜਾਂ \'ਸਭ ਸਮੀਖਿਆ ਕਰੋ\' ਚੁਣੋ\n• ਪਲਟੋ: ਅਨੁਵਾਦ \'ਦਿਖਾਓ/ਲੁਕਾਓ\'\n• ਸੁਣੋ: ਵਾਕ ਲਈ TTS ਚਲਾਓ\n• ਨਿਸ਼ਾਨ ਲਗਾਓ: ਪੂਰਾ ਹੋਣ ਲਈ ਟਿੱਕ (V)\n• ਹਟਾਓ: ਹਟਾਉਣ ਲਈ ਕਾਰਡ ਨੂੰ ਦਬਾ ਕੇ ਰੱਖੋ\n• ਫਿਲਟਰ: ਸਭ ਦੇਖੋ ਜਾਂ ਸਮੱਗਰੀ ਦੁਆਰਾ';
 
   @override
-  String get helpMode3Desc =>
-      'ਸੁਣ ਕੇ ਅਤੇ ਦੁਹਰਾ ਕੇ ਬੋਲਣ ਦਾ ਅਭਿਆਸ ਕਰੋ (Shadowing)।';
+  String get helpMode3Desc => 'ਸੁਣ ਕੇ ਅਤੇ ਦੁਹਰਾ ਕੇ ਅਭਿਆਸ ਕਰੋ।';
 
   @override
   String get helpMode3Details =>
       '• ਚੁਣੋ: ਪੈਕੇਜ ਚੁਣੋ\n• ਅੰਤਰਾਲ: [-] [+] ਉਡੀਕ ਦਾ ਸਮਾਂ (3ਸਕਿੰਟ-60ਸਕਿੰਟ)\n• ਸ਼ੁਰੂ/ਬੰਦ: ਸੈਸ਼ਨ ਕੰਟਰੋਲ ਕਰੋ\n• ਬੋਲੋ: ਆਡੀਓ ਸੁਣੋ ਅਤੇ ਦੁਹਰਾਓ\n• ਸਕੋਰ: ਸ਼ੁੱਧਤਾ (0-100)\n• ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼: ਜੇ ਆਵਾਜ਼ ਨਹੀਂ ਮਿਲਦੀ ਤਾਂ ਬਟਨ';
 
   @override
-  String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+  String get helpModeChatDesc => 'ਅਸਲੀ ਗੱਲਬਾਤ ਲਈ ਪਾਤਰਾਂ ਨਾਲ ਗੱਲ ਕਰੋ।';
 
   @override
   String get helpModeChatDetails =>
@@ -743,7 +741,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'ਅਭਿਆਸ';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -789,10 +787,10 @@ class AppLocalizationsPa extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'ਚੈਟ';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'ਚੈਟ';
 
   @override
   String get tutorialAiChatDesc =>
@@ -977,6 +975,9 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'ਸਾਰੀਆਂ ਗੱਲਬਾਤਾਂ';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

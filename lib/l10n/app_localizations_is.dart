@@ -36,8 +36,7 @@ class AppLocalizationsIs extends AppLocalizations {
       '• Efnisval: Veldu ákveðið efnissett eða \'Yfirfara allt\'\n• Snúa korti við: Athugaðu þýðingu með \'Sýna/fela\' (sjálfvirk námsathugun)\n• Hlustun: Spilaðu setningu TTS\n• Nám lokið: Merktu sem lokið með hakmerki(V)\n• Eyða: Haltu korti inni til að eyða færslu\n• Leitarskilyrði: Síaðu eftir merki, nýlegum hlutum eða upphafsstöfum';
 
   @override
-  String get helpMode3Desc =>
-      'Æfðu framburð með því að hlusta á setningar og endurtaka þær (skugga).';
+  String get helpMode3Desc => 'Æfðu þig með því að hlusta og endurtaka.';
 
   @override
   String get helpMode3Details =>
@@ -45,7 +44,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Æfðu raunverulegar samræður með því að spjalla við gervigreindarpersónu.';
+      'Talaðu við persónur til að æfa raunveruleg samtöl.';
 
   @override
   String get helpModeChatDetails =>
@@ -747,7 +746,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get reviewModeTitle => 'Endurskoðun';
 
   @override
-  String get practiceModeTitle => 'Framburðaræfing';
+  String get practiceModeTitle => 'Æfing';
 
   @override
   String get chatHistoryTitle => 'Samtalasaga';
@@ -793,10 +792,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get chatUntitled => 'Ónefnt samtal';
 
   @override
-  String get chatAiChat => 'Gervigreindarspjall';
+  String get chatAiChat => 'Spjall';
 
   @override
-  String get tutorialAiChatTitle => 'Gervigreindarspjall';
+  String get tutorialAiChatTitle => 'Spjall';
 
   @override
   String get tutorialAiChatDesc =>
@@ -981,6 +980,9 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Öll samtöl';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

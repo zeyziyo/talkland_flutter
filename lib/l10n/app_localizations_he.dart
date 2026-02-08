@@ -35,15 +35,14 @@ class AppLocalizationsHe extends AppLocalizations {
       '• בחר: בחר סט או \'חזור על הכל\'\n• הפוך: \'הצג/הסתר\' תרגום\n• האזן: נגן TTS למשפט\n• סמן: וי (V) להושלם\n• מחק: לחיצה ארוכה למחיקה\n• מסנן: הצג הכל או לפי חומר';
 
   @override
-  String get helpMode3Desc => 'תרגל דיבור על ידי האזנה וחזרה (Shadowing).';
+  String get helpMode3Desc => 'תרגלו באמצעות האזנה וחזרה.';
 
   @override
   String get helpMode3Details =>
       '• בחר: בחר חבילה\n• מרווח: [-] [+] זמן המתנה (3ש\'-60ש\')\n• התחל/עצור: שליטה בסשן\n• דבר: האזן וחזור\n• ניקוד: דיוק (0-100)\n• נסה שוב: כפתור אם קול לא מזוהה';
 
   @override
-  String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+  String get helpModeChatDesc => 'דברו עם דמויות לתרגול שיחה אמיתית.';
 
   @override
   String get helpModeChatDetails =>
@@ -731,7 +730,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'תרגול';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -777,10 +776,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'צ\'אט';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'צ\'אט';
 
   @override
   String get tutorialAiChatDesc =>
@@ -965,6 +964,9 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'כל השיחות';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

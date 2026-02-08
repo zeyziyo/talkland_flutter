@@ -37,8 +37,7 @@ class AppLocalizationsNl extends AppLocalizations {
       '• Selecteer Materiaal: Kies set of \'Alles Herhalen\'\n• Kaart Draaien: Gebruik \'Toon/Verberg\' voor vertaling\n• Luister: Speel TTS voor zin\n• Markeer Bestudeerd: Vinkje (V) voor voltooide items\n• Verwijder: Lang drukken op kaart om te verwijderen\n• Filter: Bekijk alles of filter op materiaal';
 
   @override
-  String get helpMode3Desc =>
-      'Oefen spreken door te luisteren en na te zeggen (Shadowing).';
+  String get helpMode3Desc => 'Oefen door te luisteren en na te spreken.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'Spreek met personages om echte gesprekken te oefenen.';
 
   @override
   String get helpModeChatDetails =>
@@ -741,7 +740,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'Oefening';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -787,10 +786,10 @@ class AppLocalizationsNl extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -975,6 +974,9 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Alle gesprekken';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

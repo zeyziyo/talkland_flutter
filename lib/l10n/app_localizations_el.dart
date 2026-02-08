@@ -37,8 +37,7 @@ class AppLocalizationsEl extends AppLocalizations {
       '• Επιλογή: Διαλέξτε σετ ή \'Όλα\'\n• Γύρισμα: \'Εμφάνιση/Απόκρυψη\' μετάφρασης\n• Ακρόαση: Αναπαραγωγή TTS\n• Σήμανση: Τικ (V) για ολοκληρωμένα\n• Διαγραφή: Παρατεταμένο πάτημα κάρτας\n• Φίλτρο: Προβολή όλων ή ανά υλικό';
 
   @override
-  String get helpMode3Desc =>
-      'Πρακτική ομιλίας μέσω ακρόασης και επανάληψης (Shadowing).';
+  String get helpMode3Desc => 'Εξασκηθείτε ακούγοντας και επαναλαμβάνοντας.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'Μιλήστε με χαρακτήρες για πραγματική εξάσκηση.';
 
   @override
   String get helpModeChatDetails =>
@@ -740,7 +739,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get reviewModeTitle => '복습';
 
   @override
-  String get practiceModeTitle => '발음 연습';
+  String get practiceModeTitle => 'Εξάσκηση';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -786,10 +785,10 @@ class AppLocalizationsEl extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'Συνομιλία';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'Συνομιλία';
 
   @override
   String get tutorialAiChatDesc =>
@@ -974,6 +973,9 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Όλες οι συνομιλίες';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

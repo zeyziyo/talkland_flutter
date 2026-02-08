@@ -37,16 +37,14 @@ class AppLocalizationsSl extends AppLocalizations {
       '• Izbira gradiva: izbira določene zbirke gradiv ali »Celotno ponavljanje«\n• Obračanje kartic: preverjanje prevoda z »Pokaži/Skrij« (samodejna kontrola učenja)\n• Poslušanje: predvajanje TTS stavka\n• Učenje končano: obdelava zaključka učenja z oznako (V)\n• Brisanje: dolg pritisk na kartico za brisanje zapisa\n• Pogoji iskanja: filtriranje po oznakah, nedavnih elementih, začetnih črkah';
 
   @override
-  String get helpMode3Desc =>
-      'Vadite izgovorjavo s poslušanjem in ponavljanjem stavkov (senčenje).';
+  String get helpMode3Desc => 'Vadite s poslušanjem in ponavljanjem.';
 
   @override
   String get helpMode3Details =>
       '• Izbira gradiva: izbira zbirke gradiv za učenje\n• Nastavitev intervala: prilagajanje časa čakanja med stavki z gumboma [-] [+](3 sekunde ~ 60 sekund)\n• Začetek/ustavitev: nadzor nad sejo senčenja\n• Govorjenje: poslušanje zvoka in ponavljanje\n• Povratne informacije: prikaz ocene točnosti (0–100) in barve\n• Pogoji iskanja: filtriranje cilja vadbe po oznakah, nedavnih elementih, začetnih črkah';
 
   @override
-  String get helpModeChatDesc =>
-      'Vadite pogovor v resničnem življenju s pogovorom z osebnostjo AI.';
+  String get helpModeChatDesc => 'Govorite z osebami za vajo pravega pogovora.';
 
   @override
   String get helpModeChatDetails =>
@@ -746,7 +744,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get reviewModeTitle => 'Ponovitev';
 
   @override
-  String get practiceModeTitle => 'Vaja izgovorjave';
+  String get practiceModeTitle => 'Vaja';
 
   @override
   String get chatHistoryTitle => 'Zgodovina pogovorov';
@@ -792,10 +790,10 @@ class AppLocalizationsSl extends AppLocalizations {
   String get chatUntitled => 'Pogovor brez naslova';
 
   @override
-  String get chatAiChat => 'Klepet z AI';
+  String get chatAiChat => 'Klepet';
 
   @override
-  String get tutorialAiChatTitle => 'Klepet z AI';
+  String get tutorialAiChatTitle => 'Klepet';
 
   @override
   String get tutorialAiChatDesc =>
@@ -979,6 +977,9 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Vsi pogovori';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

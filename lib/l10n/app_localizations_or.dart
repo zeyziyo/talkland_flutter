@@ -37,8 +37,7 @@ class AppLocalizationsOr extends AppLocalizations {
       '• ଉପାଦାନ ଚୟନ: ନିର୍ଦ୍ଦିଷ୍ଟ ଉପାଦାନ ସଂଗ୍ରହ କିମ୍ବା \'ସମସ୍ତ ପୁନର୍ବିଚାର\' ଚୟନ କରନ୍ତୁ\n• କାର୍ଡ ଫ୍ଲିପ୍: ଅନୁବାଦ ଯାଞ୍ଚ କରିବାକୁ \'ଦେଖାନ୍ତୁ/ଲୁଚାନ୍ତୁ\' (ସ୍ୱୟଂଚାଳିତ ଶିକ୍ଷଣ ଯାଞ୍ଚ)\n• ଶୁଣନ୍ତୁ: ବାକ୍ୟ TTS ପ୍ଲେ କରନ୍ତୁ\n• ଶିକ୍ଷଣ ସମାପ୍ତ: ଚେକ୍ ମାର୍କ (V) ସହିତ ଶିକ୍ଷଣ ସମାପ୍ତି ଭାବରେ ଚିହ୍ନିତ କରନ୍ତୁ\n• ଡିଲିଟ୍: ରେକର୍ଡ ଡିଲିଟ୍ କରିବାକୁ କାର୍ଡକୁ ଦୀର୍ଘ ସମୟ ପର୍ଯ୍ୟନ୍ତ ଦବାନ୍ତୁ\n• ସର୍ଚ୍ଚ ସର୍ତ୍ତ: ଟ୍ୟାଗ୍, ସାମ୍ପ୍ରତିକ ଆଇଟମ୍, ଆରମ୍ଭ ଅକ୍ଷର ଦ୍ୱାରା ଫିଲ୍ଟର୍ କରନ୍ତୁ';
 
   @override
-  String get helpMode3Desc =>
-      'ବାକ୍ୟ ଶୁଣନ୍ତୁ ଏବଂ ପୁନରାବୃତ୍ତି କରନ୍ତୁ (ଛାୟା କରିବା) ଏବଂ ଉଚ୍ଚାରଣ ଅଭ୍ୟାସ କରନ୍ତୁ।';
+  String get helpMode3Desc => 'ଶୁଣି ଏବଂ ଦୋହରାଇ ଅଭ୍ୟାସ କରନ୍ତୁ।';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'AI ପର୍ସୋନା ସହିତ କଥାବାର୍ତ୍ତା କରି ବାସ୍ତବିକ କଥାବାର୍ତ୍ତା ଅଭ୍ୟାସ କରନ୍ତୁ।';
+      'ପ୍ରକୃତ କଥାବାର୍ତ୍ତା ପାଇଁ ପାତ୍ରମାନଙ୍କ ସହ କଥା ହୁଅନ୍ତୁ।';
 
   @override
   String get helpModeChatDetails =>
@@ -753,7 +752,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get reviewModeTitle => 'ପୁନର୍ବିଚାର';
 
   @override
-  String get practiceModeTitle => 'ଉଚ୍ଚାରଣ ଅଭ୍ୟାସ';
+  String get practiceModeTitle => 'ଅଭ୍ୟାସ';
 
   @override
   String get chatHistoryTitle => 'କଥାବାର୍ତ୍ତା ଇତିହାସ';
@@ -801,10 +800,10 @@ class AppLocalizationsOr extends AppLocalizations {
   String get chatUntitled => 'ଶୀର୍ଷକହୀନ କଥାବାର୍ତ୍ତା';
 
   @override
-  String get chatAiChat => 'AI ଚାଟିଂ';
+  String get chatAiChat => 'ଚାଟ୍';
 
   @override
-  String get tutorialAiChatTitle => 'AI ଚାଟିଂ';
+  String get tutorialAiChatTitle => 'ଚାଟ୍';
 
   @override
   String get tutorialAiChatDesc =>
@@ -988,6 +987,9 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'ସମସ୍ତ ବାର୍ତ୍ତାଳାପ';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

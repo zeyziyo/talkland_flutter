@@ -8,9 +8,7 @@
   "helpMode1Details": "• Configuració de l'idioma: Canvia l'idioma prement les icones superior/inferior\n• Commutador de paraules/frases: Canvia de mode\n• Entrada de veu: Prem la icona del micròfon per començar/aturar l'escolta\n• Entrada de text: Introdueix text directament per traduir\n• Cerca automàtica: Detecta frases existents similars\n• Traducció: Prem el botó de traducció per traduir immediatament\n• Escolta: Reprodueix TTS amb la icona de l'altaveu\n• Desa: Afegeix enregistraments amb 'Desa les dades'\n• Esborra: Inicialitza l'entrada",
   "helpMode2Desc": "Repassa les frases desades i comprova si les recordes amb la funció d'ocultació automàtica.",
   "helpMode2Details": "• Selecció de materials: Selecciona una col·lecció de materials específica o 'Repàs complet'\n• Gira la targeta: Comprova la traducció amb 'Mostra/Amaga' (comprovació d'aprenentatge automàtic)\n• Escolta: Reprodueix TTS de la frase\n• Aprenentatge complet: Marca com a complet amb una marca de verificació (V)\n• Suprimeix: Mantén premuda la targeta per suprimir l'enregistrament\n• Criteris de cerca: Filtra per etiqueta, element recent o lletra inicial",
-  "helpMode3Desc": "Practica la pronunciació escoltant i repetint les frases (Shadowing).",
   "helpMode3Details": "• Selecció de materials: Selecciona la col·lecció de materials que vols estudiar\n• Configuració de l'interval: Ajusta el temps d'espera entre frases amb els botons [-] [+](3 segons ~ 60 segons)\n• Comença/Atura: Controla la sessió de shadowing\n• Parla: Escolta la veu i repeteix\n• Comentaris: Puntuació de precisió (0-100) i visualització del color\n• Criteris de cerca: Filtra l'objectiu de la pràctica per etiqueta, element recent o lletra inicial",
-  "helpModeChatDesc": "Practica la conversa real xerrant amb una persona d'IA.",
   "helpModeChatDetails": "• Xat amb IA: Practica la conversa parlant en el teu idioma\n• Persona múltiple: Canvia el gènere/idioma/nom de l'altra persona amb el menú de sobre la bombolla de diàleg\n• Afegeix un soci: Afegeix una nova persona amb qui parlar (desconegut) amb el botó +\n• GPS: Obra de situació basada en la ubicació actual\n• Desa automàticament: Tradueix i desa automàticament el contingut de la conversa",
   "helpJsonDesc": "Segueix aquest format per importar material d'aprenentatge en fitxers JSON que s'utilitzaran al Mode 3:",
   "helpDialogueImportDesc": "Importa conjunts de diàlegs complets amb fitxers JSON.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Entrada",
   "reviewModeTitle": "Repàs",
-  "practiceModeTitle": "Pràctica de pronunciació",
   "chatHistoryTitle": "Historial de xat",
   "chatNew": "Xat nou",
   "chatNewChat": "Xat nou",
@@ -609,8 +606,6 @@
   "personaGuide": "Guia turístic",
   "personaFriend": "Amic local",
   "chatUntitled": "Xat sense títol",
-  "chatAiChat": "Xat amb IA",
-  "tutorialAiChatTitle": "Xat amb IA",
   "tutorialAiChatDesc": "Practica la conversa real amb una persona d'IA.",
   "mode1SelectedMaterial": "Col·lecció de material seleccionada actualment: {name}",
   "basicWordRepository": "Repositori bàsic de paraules",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "Vols suprimir aquesta conversa?\nNo podràs recuperar-la.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "Pràctica",
+  "chatAiChat": "Xat",
+  "tutorialAiChatTitle": "Xat",
+  "helpMode3Desc": "Practica escoltant i repetint.",
+  "helpModeChatDesc": "Parla amb personatges per practicar la conversa real."
 }

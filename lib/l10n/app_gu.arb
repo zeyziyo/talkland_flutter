@@ -8,9 +8,7 @@
   "helpMode1Details": "• અવાજ: શરૂ/બંધ કરવા માટે માઇક ટેપ કરો\n• લખાણ: અનુવાદ માટે સીધું ટાઇપ કરો\n• ઓટો-સર્ચ: સમાન વાક્યો શોધે છે\n• અનુવાદ: ત્વરિત અનુવાદ માટે બટન\n• સાંભળો: TTS માટે સ્પીકર ચિહ્ન\n• સાચવો: ઇતિહાસમાં ઉમેરે છે\n• સાફ કરો: બધું રીસેટ કરો",
   "helpMode2Desc": "છુપાયેલા અનુવાદ સાથે સાચવેલા વાક્યોની સમીક્ષા કરો.",
   "helpMode2Details": "• પસંદ કરો: સેટ અથવા 'બધું સમીક્ષા કરો' પસંદ કરો\n• ફેરવો: અનુવાદ 'બતાવો/છુપાવો'\n• સાંભળો: વાક્ય માટે TTS વગાડો\n• ચિહ્નિત કરો: પૂર્ણ માટે ટિક (V)\n• કાઢી નાખો: કાઢી નાખવા માટે કાર્ડ દબાવી રાખો\n• ફિલ્ટર: બધું અથવા સામગ્રી દ્વારા જુઓ",
-  "helpMode3Desc": "સાંભળીને અને પુનરાવર્તન કરીને બોલવાની પ્રેક્ટિસ કરો (Shadowing).",
   "helpMode3Details": "• પસંદ કરો: પેકેજ પસંદ કરો\n• અંતરાલ: [-] [+] પ્રતીક્ષા સમય (3સે-60સે)\n• શરૂ/બંધ: સત્ર નિયંત્રિત કરો\n• બોલો: ઓડિયો સાંભળો અને પુનરાવર્તન કરો\n• સ્કોર: ચોકસાઈ (0-100)\n• ફરી પ્રયાસ: જો અવાજ ન મળે તો બટન",
-  "helpModeChatDesc": "Talk to AI persona to practice real conversation and save useful sentences.",
   "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
   "helpJsonDesc": "મોડ 3 માં આયાત કરવા માટે, JSON બનાવો:",
   "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Input",
   "reviewModeTitle": "Review",
-  "practiceModeTitle": "Practice",
   "chatHistoryTitle": "Conversation History",
   "chatNew": "New Chat",
   "chatNewChat": "New Chat",
@@ -609,8 +606,6 @@
   "personaGuide": "Travel Guide",
   "personaFriend": "Local Friend",
   "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "AI Chat",
-  "tutorialAiChatTitle": "AI Chat",
   "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
   "basicWordRepository": "મૂળભૂત શબ્દ ભંડાર",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "શું તમે આ વાતચીત કાઢી નાખવા માંગો છો?\nકાઢી નાખેલી વાતચીત પુનઃપ્રાપ્ત કરી શકાતી નથી.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "અભ્યાસ",
+  "chatAiChat": "ચેટ",
+  "tutorialAiChatTitle": "ચેટ",
+  "helpMode3Desc": "સાંભળીને અને રિપીટ કરીને અભ્યાસ કરો.",
+  "helpModeChatDesc": "અસલી વાતચીત માટે પાત્રો સાથે વાત કરો."
 }

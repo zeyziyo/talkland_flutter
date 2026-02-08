@@ -37,8 +37,7 @@ class AppLocalizationsBs extends AppLocalizations {
       '• Odabir materijala: Odaberite određenu zbirku materijala ili \'Cjelokupni pregled\'\n• Preokretanje kartice: Provjerite prijevod pomoću \'Prikaži/Sakrij\' (automatska provjera učenja)\n• Slušanje: Reprodukcija teksta u govor za rečenicu\n• Završeno učenje: Označite kvačicom (V) za obradu dovršenog učenja\n• Brisanje: Dugo pritisnite karticu za brisanje zapisa\n• Uvjeti pretraživanja: Filtrirajte po oznakama, nedavnim stavkama, početnom slovu';
 
   @override
-  String get helpMode3Desc =>
-      'Vježbajte izgovor slušajući rečenice i ponavljajući ih (Shadowing).';
+  String get helpMode3Desc => 'Vježbajte slušajući i ponavljajući.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Vježbajte konverzaciju u stvarnom životu razgovarajući s AI personom.';
+      'Razgovarajte sa personama za vježbu stvarnog razgovora.';
 
   @override
   String get helpModeChatDetails =>
@@ -747,7 +746,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get reviewModeTitle => 'Pregled';
 
   @override
-  String get practiceModeTitle => 'Vježbanje izgovora';
+  String get practiceModeTitle => 'Vježba';
 
   @override
   String get chatHistoryTitle => 'Historija razgovora';
@@ -793,10 +792,10 @@ class AppLocalizationsBs extends AppLocalizations {
   String get chatUntitled => 'Razgovor bez naslova';
 
   @override
-  String get chatAiChat => 'AI Razgovor';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'AI Razgovor';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -980,6 +979,9 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Svi razgovori';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

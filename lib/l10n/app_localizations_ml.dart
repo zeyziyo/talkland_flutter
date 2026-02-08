@@ -37,8 +37,7 @@ class AppLocalizationsMl extends AppLocalizations {
       '• തിരഞ്ഞെടുക്കുക: സെറ്റ് അല്ലെങ്കിൽ \'എല്ലാം അവലോകനം ചെയ്യുക\' തിരഞ്ഞെടുക്കുക\n• മറിക്കുക: വിവർത്തനം \'കാണിക്കുക/മറയ്ക്കുക\'\n• കേൾക്കുക: വാക്യത്തിനായി TTS പ്ലേ ചെയ്യുക\n• അടയാളപ്പെടുത്തുക: പൂർത്തിയായതിന് ടിക്ക് (V)\n• നീക്കം ചെയ്യുക: നീക്കം ചെയ്യാൻ കാർഡ് അമർത്തിപ്പിടിക്കുക\n• ഫിൽട്ടർ: എല്ലാം അല്ലെങ്കിൽ മെറ്റീരിയൽ പ്രകാരം കാണുക';
 
   @override
-  String get helpMode3Desc =>
-      'കേട്ട് ആവർത്തിച്ച് സംസാരിക്കാൻ പരിശീലിക്കുക (Shadowing).';
+  String get helpMode3Desc => 'ശ്രദ്ധിച്ചും ആവർത്തിച്ചും പരിശീലിക്കുക.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'യഥാർത്ഥ സംഭാഷണത്തിനായി കഥാപാത്രങ്ങളോട് സംസാരിക്കുക.';
 
   @override
   String get helpModeChatDetails =>
@@ -747,7 +746,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'പരിശീലനം';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -793,10 +792,10 @@ class AppLocalizationsMl extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'ചാറ്റ്';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'ചാറ്റ്';
 
   @override
   String get tutorialAiChatDesc =>
@@ -981,6 +980,9 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'എല്ലാ സംഭാഷണങ്ങളും';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

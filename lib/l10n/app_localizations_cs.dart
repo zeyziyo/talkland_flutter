@@ -35,8 +35,7 @@ class AppLocalizationsCs extends AppLocalizations {
       '• Výběr: Zvolte sadu nebo \'Vše\'\n• Karta: \'Zobrazit/Skrýt\' překlad\n• Poslech: Přehrát TTS věty\n• Nastudováno: Zaškrtnout (V) pro hotové\n• Smazat: Dlouhý stisk pro smazání\n• Filtr: Zobrazit vše nebo dle materiálu';
 
   @override
-  String get helpMode3Desc =>
-      'Cvičení mluvení poslechem a opakováním (Shadowing).';
+  String get helpMode3Desc => 'Procvičujte poslechem a opakováním.';
 
   @override
   String get helpMode3Details =>
@@ -44,7 +43,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'Mluvte s personami pro nácvik skutečné konverzace.';
 
   @override
   String get helpModeChatDetails =>
@@ -734,7 +733,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get reviewModeTitle => '복습';
 
   @override
-  String get practiceModeTitle => '발음 연습';
+  String get practiceModeTitle => 'Praxe';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -780,10 +779,10 @@ class AppLocalizationsCs extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -968,6 +967,9 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Všechny konverzace';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

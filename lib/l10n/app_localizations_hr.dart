@@ -37,8 +37,7 @@ class AppLocalizationsHr extends AppLocalizations {
       '• Odabir materijala: Odaberite određenu zbirku materijala ili \'Cjelokupni pregled\'\n• Okretanje kartice: Provjerite prijevod pomoću \'Prikaži/Sakrij\' (automatska provjera učenja)\n• Slušanje: Reprodukcija TTS-a rečenice\n• Završeno učenje: Označite kvačicom (V) kao završeno učenje\n• Brisanje: Dugo pritisnite karticu za brisanje zapisa\n• Uvjeti pretraživanja: Filtriranje prema oznaci, nedavnim stavkama, početnom slovu';
 
   @override
-  String get helpMode3Desc =>
-      'Vježbajte izgovor slušajući rečenice i ponavljajući ih (Shadowing).';
+  String get helpMode3Desc => 'Vježbajte slušajući i ponavljajući.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Vježbajte razgovor u stvarnom životu razgovarajući s AI personom.';
+      'Razgovarajte s personama za vježbu stvarnog razgovora.';
 
   @override
   String get helpModeChatDetails =>
@@ -746,7 +745,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get reviewModeTitle => 'Pregled';
 
   @override
-  String get practiceModeTitle => 'Vježbanje izgovora';
+  String get practiceModeTitle => 'Vježba';
 
   @override
   String get chatHistoryTitle => 'Povijest razgovora';
@@ -792,10 +791,10 @@ class AppLocalizationsHr extends AppLocalizations {
   String get chatUntitled => 'Razgovor bez naslova';
 
   @override
-  String get chatAiChat => 'AI razgovor';
+  String get chatAiChat => 'Chat';
 
   @override
-  String get tutorialAiChatTitle => 'AI razgovor';
+  String get tutorialAiChatTitle => 'Chat';
 
   @override
   String get tutorialAiChatDesc => 'Vježbajte stvarni razgovor s AI personom.';
@@ -978,6 +977,9 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Svi razgovori';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

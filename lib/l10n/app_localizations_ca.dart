@@ -37,8 +37,7 @@ class AppLocalizationsCa extends AppLocalizations {
       '• Selecció de materials: Selecciona una col·lecció de materials específica o \'Repàs complet\'\n• Gira la targeta: Comprova la traducció amb \'Mostra/Amaga\' (comprovació d\'aprenentatge automàtic)\n• Escolta: Reprodueix TTS de la frase\n• Aprenentatge complet: Marca com a complet amb una marca de verificació (V)\n• Suprimeix: Mantén premuda la targeta per suprimir l\'enregistrament\n• Criteris de cerca: Filtra per etiqueta, element recent o lletra inicial';
 
   @override
-  String get helpMode3Desc =>
-      'Practica la pronunciació escoltant i repetint les frases (Shadowing).';
+  String get helpMode3Desc => 'Practica escoltant i repetint.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Practica la conversa real xerrant amb una persona d\'IA.';
+      'Parla amb personatges per practicar la conversa real.';
 
   @override
   String get helpModeChatDetails =>
@@ -755,7 +754,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get reviewModeTitle => 'Repàs';
 
   @override
-  String get practiceModeTitle => 'Pràctica de pronunciació';
+  String get practiceModeTitle => 'Pràctica';
 
   @override
   String get chatHistoryTitle => 'Historial de xat';
@@ -801,10 +800,10 @@ class AppLocalizationsCa extends AppLocalizations {
   String get chatUntitled => 'Xat sense títol';
 
   @override
-  String get chatAiChat => 'Xat amb IA';
+  String get chatAiChat => 'Xat';
 
   @override
-  String get tutorialAiChatTitle => 'Xat amb IA';
+  String get tutorialAiChatTitle => 'Xat';
 
   @override
   String get tutorialAiChatDesc =>
@@ -989,6 +988,9 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Totes les converses';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

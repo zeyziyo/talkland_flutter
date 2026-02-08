@@ -8,9 +8,7 @@
   "helpMode1Details": "• Cilësimet e gjuhës: Ndryshoni gjuhën duke shtypur ikonat lart/poshtë\n• Ndërroni Fjalë/Fjali: Ndërroni modalitetin\n• Hyrja zanore: Shtypni ikonën e mikrofonit për të filluar/ndaluar dëgjimin\n• Hyrja e tekstit: Shkruani drejtpërdrejt për të përkthyer\n• Kërkimi automatik: Zbuloni fjali ekzistuese të ngjashme\n• Përkthimi: Përktheni menjëherë duke shtypur butonin e përkthimit\n• Dëgjimi: Luaj me TTS përmes ikonës së altoparlantit\n• Ruajtja: Shto një rekord me 'Ruaj të dhënat'\n• Fshirja: Rivendosni hyrjen",
   "helpMode2Desc": "Rishikoni fjalitë e ruajtura dhe kontrolloni nëse i mbani mend me funksionin e fshehjes automatike.",
   "helpMode2Details": "• Zgjidhni materialin: Zgjidhni një libër burim specifik ose 'Rishikim të plotë'\n• Kthejeni kartën: Kontrolloni përkthimin me 'Shfaq/Fshih' (kontrolli automatik i mësimit)\n• Dëgjimi: Luaj TTS të fjalive\n• Mësimi i përfunduar: Përfundoni mësimin me një shenjë tik (V)\n• Fshirja: Fshini regjistrimet duke shtypur gjatë kartën\n• Kushtet e kërkimit: Filtro sipas etiketave, artikujve të fundit ose shkronjave fillestare",
-  "helpMode3Desc": "Ushtroni shqiptimin duke dëgjuar dhe duke përsëritur fjalitë (Hijezimi).",
   "helpMode3Details": "• Zgjidhni materialin: Zgjidhni librin e burimeve për të studiuar\n• Vendosni intervalin: Rregulloni kohën e pritjes midis fjalive me butonat [-] [+](3 sekonda deri në 60 sekonda)\n• Fillimi/Ndalo: Kontrolloni seancën e hijezimit\n• Të folurit: Dëgjoni zërin dhe përsëriteni\n• Reagimet: Shfaqni rezultatin e saktësisë (0-100) dhe ngjyrat\n• Kushtet e kërkimit: Filtro objektivat e praktikës sipas etiketës, artikujve të fundit ose shkronjave fillestare",
-  "helpModeChatDesc": "Ushtroni bisedat e jetës reale duke biseduar me një personazh AI.",
   "helpModeChatDetails": "• Biseda AI: Ushtroni bisedën duke folur në gjuhën tuaj\n• Multi-Personazh: Ndryshoni gjininë/gjuhën/emrin e palës tjetër me menunë mbi flluskën e të folurit\n• Shto partner: Shto një bashkëbisedues të ri (i panjohur) me butonin +\n• GPS: Sitcom i bazuar në vendndodhjen aktuale\n• Ruajtja automatike: Përkthimi dhe ruajtja automatike e përmbajtjes së bisedës",
   "helpJsonDesc": "Për të importuar materialet e studimit për t'u përdorur në Modalitetin 3 si një skedar JSON, ndiqni formatin e mëposhtëm:",
   "helpDialogueImportDesc": "Importoni një grup të tërë dialogësh si një skedar JSON.",
@@ -581,7 +579,6 @@
   },
   "inputModeTitle": "Hyrje",
   "reviewModeTitle": "Rishikim",
-  "practiceModeTitle": "Ushtrim i shqiptimit",
   "chatHistoryTitle": "Historia e bisedës",
   "chatNew": "Bisedë e re",
   "chatNewChat": "Bisedë e re",
@@ -609,8 +606,6 @@
   "personaGuide": "Guida turistike",
   "personaFriend": "Shok vendas",
   "chatUntitled": "Bisedë pa titull",
-  "chatAiChat": "Bisedë AI",
-  "tutorialAiChatTitle": "Bisedë AI",
   "tutorialAiChatDesc": "Ushtroni bisedat e jetës reale me personazhet AI.",
   "mode1SelectedMaterial": "Libri burim aktual i zgjedhur: {name}",
   "basicWordRepository": "Depo bazë e fjalëve",
@@ -680,5 +675,10 @@
   "confirmDeleteConversation": "A jeni i sigurt që dëshironi ta fshini këtë bisedë?\nBisedat e fshira nuk mund të rikthehen.",
   "menuOnlineLibrary": "Online Library",
   "menuTutorial": "Tutorial",
-  "tabConversation": "Conversation"
+  "tabConversation": "Conversation",
+  "practiceModeTitle": "Praktikë",
+  "chatAiChat": "Bisedë",
+  "tutorialAiChatTitle": "Bisedë",
+  "helpMode3Desc": "Praktikoni duke dëgjuar dhe përsëritur.",
+  "helpModeChatDesc": "Falisni me personazhe për praktikë reale."
 }

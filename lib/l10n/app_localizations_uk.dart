@@ -37,8 +37,7 @@ class AppLocalizationsUk extends AppLocalizations {
       '• Вибір: Виберіть набір або \'Все\'\n• Картка: \'Показати/Сховати\' переклад\n• Слухати: Озвучити речення\n• Вивчено: Галочка (V) для завершених\n• Видалити: Довгий натиск для видалення\n• Фільтр: Всі або за матеріалом';
 
   @override
-  String get helpMode3Desc =>
-      'Практика мови через слухання та повторення (Shadowing).';
+  String get helpMode3Desc => 'Практикуйтеся, слухаючи та повторюючи.';
 
   @override
   String get helpMode3Details =>
@@ -46,7 +45,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+      'Спілкуйтеся з персонажами для практики реальної розмови.';
 
   @override
   String get helpModeChatDetails =>
@@ -739,7 +738,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'Практика';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -785,10 +784,10 @@ class AppLocalizationsUk extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'Чат';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'Чат';
 
   @override
   String get tutorialAiChatDesc =>
@@ -973,6 +972,9 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'Всі розмови';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>

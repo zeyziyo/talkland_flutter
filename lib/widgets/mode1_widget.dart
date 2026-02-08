@@ -316,6 +316,13 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                   ),
                                 ),
                                 const SizedBox(width: 8),
+                                IconButton(
+                                  key: widget.materialDropdownKey,
+                                  icon: const Icon(Icons.library_books, color: Colors.blueAccent),
+                                  onPressed: widget.onSelectMaterial,
+                                  tooltip: l10n.selectStudyMaterial,
+                                ),
+                                const SizedBox(width: 4),
                                 ElevatedButton.icon(
                                   key: widget.contextFieldKey,
                                   onPressed: () => _showMetadataDialog(context, appState),

@@ -37,16 +37,14 @@ class AppLocalizationsTe extends AppLocalizations {
       '• ఎంచుకోండి: సెట్ లేదా \'అన్నీ సమీక్షించు\' ఎంచుకోండి\n• తిప్పు: అనువాదం \'చూపు/దాచు\'\n• వినండి: వాక్యానికి TTS ప్లే చేయండి\n• గుర్తించు: పూర్తయిన వాటికి టిక్ (V)\n• తొలగించు: తొలగించడానికి కార్డును గట్టిగా నొక్కండి\n• ఫిల్టర్: అన్నీ లేదా మెటీరియల్ వారీగా చూడండి';
 
   @override
-  String get helpMode3Desc =>
-      'విని మరియు పునరావృతం చేస్తూ మాట్లాడటం సాధన చేయండి (Shadowing).';
+  String get helpMode3Desc => 'వింటూ మరియు తిరిగి చెబుతూ అభ్యాసం చేయండి.';
 
   @override
   String get helpMode3Details =>
       '• ఎంచుకోండి: ప్యాకేజీని ఎంచుకోండి\n• విరామం: [-] [+] వేచి ఉండే సమయం (3సె-60సె)\n• ప్రారంభించు/ఆపు: సెషన్‌ను నియంత్రించండి\n• మాట్లాడు: ఆడియో వినండి మరియు పునరావృతం చేయండి\n• స్కోర్: ఖచ్చితత్వం (0-100)\n• మళ్ళీ ప్రయత్నించు: వాయిస్ గుర్తించబడకపోతే బటన్';
 
   @override
-  String get helpModeChatDesc =>
-      'Talk to AI persona to practice real conversation and save useful sentences.';
+  String get helpModeChatDesc => 'నిజమైన సంభాషణ కోసం పాత్రలతో మాట్లాడండి.';
 
   @override
   String get helpModeChatDetails =>
@@ -742,7 +740,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get reviewModeTitle => 'Review';
 
   @override
-  String get practiceModeTitle => 'Practice';
+  String get practiceModeTitle => 'అభ్యాసం';
 
   @override
   String get chatHistoryTitle => 'Conversation History';
@@ -788,10 +786,10 @@ class AppLocalizationsTe extends AppLocalizations {
   String get chatUntitled => 'Untitled Conversation';
 
   @override
-  String get chatAiChat => 'AI Chat';
+  String get chatAiChat => 'చాట్';
 
   @override
-  String get tutorialAiChatTitle => 'AI Chat';
+  String get tutorialAiChatTitle => 'చాట్';
 
   @override
   String get tutorialAiChatDesc =>
@@ -976,6 +974,9 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get chatAllConversations => 'అన్ని సంభాషణలు';
+
+  @override
+  String get tabConversation => 'Conversation';
 
   @override
   String get confirmDeleteConversation =>
