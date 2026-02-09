@@ -59,26 +59,44 @@ class _Mode2WidgetState extends State<Mode2Widget> {
           children: [
 
 
-
-
-            title: Text(l10n.mode2Title),
-            actions: [
-               // Online Library Button
-               IconButton(
-                icon: const Icon(Icons.cloud_download),
-                onPressed: () => _showOnlineLibraryDialog(context),
-                tooltip: l10n.menuOnlineLibrary,
+            // Custom Header Row (mimicking AppBar)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                   Text(
+                    l10n.mode2Title,
+                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  Row(
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.cloud_download),
+                        onPressed: () => _showOnlineLibraryDialog(context),
+                        tooltip: l10n.menuOnlineLibrary,
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.help_outline),
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) => HelpDialog(initialTab: HelpTab.mode2),
+                          );
+                        },
+                      ),
+                       // Tune Button (Search Filter)
+                       IconButton(
+                        icon: const Icon(Icons.tune),
+                        onPressed: () => _showMetadataDialog(context),
+                        tooltip: l10n.searchConditions,
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              IconButton(
-                icon: const Icon(Icons.help_outline),
-                onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (context) => HelpDialog(initialTab: HelpTab.mode2),
-                  );
-                },
-              ),
-            ],
+            ),
+
 
             // 스마트 검색바 & 태그 필터
             Padding(

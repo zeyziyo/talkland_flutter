@@ -58,6 +58,7 @@
 - **UX**: 'Metadata Dialog' 내 '전체 태그(자료집 제목)' 드롭다운 상시 노출로 변경.
 - **Fix**: Mode 1 튜토리얼 하이라이트가 작동하지 않던 문제 해결 (`materialDropdownKey` 바인딩 추가).
 - **Cleanup**: 위젯 내 불필요한 `onOpenLibrary` 콜백 및 import 제거.
+- **HOTFIX**: Fixed build errors (Mode2 syntax, Mode3 import, SearchFilterDialog logic).
 - **Logic**: `AppState.importRemoteMaterial`에서 Pivot Subject(영어 제목) 강제 로직을 제거, 각 언어별 원본 제목(Native Subject)을 태그로 사용하도록 변경.
 - **UI**: Mode 2 및 Mode 3 태그 선택 다이얼로그(`_showTagSelectionDialog`)에서 현재 소스 언어와 일치하는 자료집 태그만 필터링하여 노출.
 

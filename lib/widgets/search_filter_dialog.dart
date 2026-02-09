@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../l10n/app_localizations.dart';
 import '../providers/app_state.dart';
 
 class SearchFilterDialog extends StatefulWidget {
@@ -18,6 +18,7 @@ class SearchFilterDialog extends StatefulWidget {
 class _SearchFilterDialogState extends State<SearchFilterDialog> {
   late TextEditingController _limitController;
   late TextEditingController _startsWithController;
+  List<String> _localSelectedTags = [];
 
   @override
   void initState() {

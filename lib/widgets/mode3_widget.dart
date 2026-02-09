@@ -6,6 +6,7 @@ import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
 import 'package:talkie/widgets/search_filter_dialog.dart';
 import 'package:talkie/widgets/online_library_dialog.dart';
+import 'package:talkie/widgets/help_dialog.dart';
 
 
 /// Mode 3: 말하기 모드

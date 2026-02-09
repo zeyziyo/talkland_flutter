@@ -16,6 +16,11 @@
 
 - [ ] **Project Rules Update**: "승인 우선 원칙" 강화 (연속 작업 승인 불필요 관행 타파).
 
+- [x] **Build Fixes**: `flutter build apk` 오류 수정.
+    - [x] **Mode2Widget**: Syntax error (unexpected `title` argument).
+    - [x] **Mode3Widget**: Missing `HelpDialog` import.
+    - [x] **SearchFilterDialog**: Undefined `_localSelectedTags` and `AppLocalizations`.
+
 - [x] **Project Rules Overhaul**: 규칙 전면 개정 (3대 원칙: 한글, 승인, 80개국어 동기화).
 
 - [x] Phase 77.5: UX/Naming Revert & Feature Restoration (UX/명칭 원복 및 기능 복구)
