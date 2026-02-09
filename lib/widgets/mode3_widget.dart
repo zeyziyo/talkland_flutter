@@ -61,7 +61,12 @@ class Mode3Widget extends StatelessWidget {
                           onPressed: () {
                             showDialog(
                               context: context,
-                              builder: (context) => HelpDialog(initialTab: HelpTab.mode3),
+                              builder: (context) => HelpDialog(
+                                initialModeIndex: 2,
+                                onStartTutorial: () {
+                                  // TODO: Implement tutorial start for Mode 3
+                                },
+                              ),
                             );
                           },
                         ),

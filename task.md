@@ -20,6 +20,8 @@
     - [x] **Mode2Widget**: Syntax error (unexpected `title` argument).
     - [x] **Mode3Widget**: Missing `HelpDialog` import.
     - [x] **SearchFilterDialog**: Undefined `_localSelectedTags` and `AppLocalizations`.
+    - [x] **HelpDialog Usage**: Fixed invalid `HelpTab` usage and missing `onStartTutorial` callback.
+    - [x] **Method Signature**: Fixed `_showMetadataDialog` argument mismatch.
 
 - [x] **Project Rules Overhaul**: 규칙 전면 개정 (3대 원칙: 한글, 승인, 80개국어 동기화).
 

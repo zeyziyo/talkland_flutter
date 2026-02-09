@@ -6,6 +6,7 @@ import '../l10n/app_localizations.dart';
 
 import 'package:talkie/widgets/search_filter_dialog.dart';
 import 'package:talkie/widgets/online_library_dialog.dart';
+import 'package:talkie/widgets/help_dialog.dart';
 
 
 /// Mode 2: 학습 자료 및 복습 모드
@@ -81,14 +82,19 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                         onPressed: () {
                           showDialog(
                             context: context,
-                            builder: (context) => HelpDialog(initialTab: HelpTab.mode2),
+                            builder: (context) => HelpDialog(
+                              initialModeIndex: 1,
+                              onStartTutorial: () {
+                                // TODO: Implement tutorial start for Mode 2
+                              },
+                            ),
                           );
                         },
                       ),
                        // Tune Button (Search Filter)
                        IconButton(
                         icon: const Icon(Icons.tune),
-                        onPressed: () => _showMetadataDialog(context),
+                        onPressed: () => _showMetadataDialog(context, appState),
                         tooltip: l10n.searchConditions,
                       ),
                     ],
