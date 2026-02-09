@@ -403,11 +403,10 @@ class Mode3Widget extends StatelessWidget {
                         Wrap(
                           spacing: 8.0,
                           runSpacing: 4.0,
-                          children: appState.availableTags.map((tag) {
+                          children: appState.availableTags.map<Widget>((tag) {
                             final isSelected = appState.selectedTags.contains(tag);
                             return FilterChip(
                               label: Text(tag),
-                              onPressed: () => _showMetadataDialog(context, appState),
                               selected: isSelected,
                               onSelected: (bool selected) {
                                 appState.toggleTag(tag);

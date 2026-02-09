@@ -19,6 +19,7 @@ class Mode1Widget extends StatefulWidget {
   final Key? saveButtonKey;
 
   final Key? contextFieldKey;
+  final Key? materialDropdownKey; 
   final Key? toggleButtonKey;
 
   const Mode1Widget({
@@ -28,9 +29,12 @@ class Mode1Widget extends StatefulWidget {
     this.swapButtonKey,
     this.saveButtonKey,
     this.contextFieldKey,
-    this.contextFieldKey,
+    this.materialDropdownKey,
     this.toggleButtonKey,
+    this.onSelectMaterial,
   });
+
+  final VoidCallback? onSelectMaterial;
 
 
   @override
@@ -834,7 +838,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
       case 'Question': return l10n.typeQuestion;
       case 'Exclamation': return l10n.typeExclamation;
       case 'Imperative': return l10n.typeImperative;
-      case 'Imperative': return l10n.typeImperative;
+
       case 'Infinitive': return l10n.formInfinitive;
       case 'Past': return l10n.formPast;
       case 'Past Participle': return l10n.formPastParticiple;

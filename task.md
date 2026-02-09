@@ -61,6 +61,7 @@
         - [x] `README.md` 기능 설명 업데이트 (UI 변경 반영)
         - [x] `l10n/app_ko.arb` 및 다국어 튜토리얼 문구 동기화
         - [x] 한국어 소통 원칙 재확인
+        - [x] 긴급 빌드 오류 수정 (Syntax & References)
 
 - [/] Phase 75: Pre-deployment Quality Assurance (출시 전 품질 검증)
     - [x] `docs/PRE_DEPLOYMENT_CHECKLIST.md` 생성 및 보안 점검 결과/계획 통합

@@ -14,6 +14,7 @@ import '../widgets/help_dialog.dart';
 import '../constants/language_constants.dart';
 import 'chat_history_screen.dart';
 import 'chat_screen.dart';
+import '../widgets/online_library_dialog.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -447,7 +448,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       appState.loadStudyMaterials();
                       break;
                     case 'online_library':
-                      _showOnlineLibraryDialog(context); // Open Online Tab
+                      OnlineLibraryDialog.show(context); // Open Online Tab
                       break;
                     case 'help':
                       showDialog(
@@ -606,17 +607,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   contextFieldKey: _contextFieldKey,
                   materialDropdownKey: _mode1DropdownKey,
                   toggleButtonKey: _mode1ToggleKey,
-                  onSelectMaterial: () => _showOnlineLibraryDialog(context),
+                  onSelectMaterial: () => OnlineLibraryDialog.show(context),
                 ),
                 Mode2Widget(
                   materialDropdownKey: _mode2DropdownKey,
                   tutorialListKey: _mode2ListKey,
-                  onSelectMaterial: () => _showOnlineLibraryDialog(context),
+                  onSelectMaterial: () => OnlineLibraryDialog.show(context),
                 ),
                 Mode3Widget(
                   materialDropdownKey: _mode3DropdownKey,
                   settingsKey: _mode3SettingsKey,
-                  onSelectMaterial: () => _showOnlineLibraryDialog(context),
+                  onSelectMaterial: () => OnlineLibraryDialog.show(context),
                 ),
                 ChatHistoryScreen(
                   isWidget: true,
@@ -794,3 +795,4 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
 // Methods removed. See lib/widgets/online_library_dialog.dart
+}

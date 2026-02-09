@@ -42,6 +42,10 @@
 - **Tag Integration**: `Library`에서 가져온 파일명을 태그로 자동 등록 및 `MetadataDialog`에서 필터링 지원.
 - **Code Cleanup**: 중복된 `Online Library` 아이콘 제거 및 위젯 구조 최적화.
 
+### [2026-02-09] Build Fixes & Polish (Phase 76.5)
+- **Fix**: 호환성 문제 해결을 위해 `home_screen.dart`, `mode1_widget.dart`, `mode3_widget.dart`의 모든 빌드 오류 수정.
+- **Syntax**: 괄호 누락, 중복 case 문, 잘못된 파라미터 등 문법 오류 전수 조사 및 수정 완료.
+
 ---
 
 > **Note**: 과거의 시행착오(Trial & Error) 로그는 삭제되었으며, 각 파일에는 **"최종 구현된 결과(Finalized Features)"** 위주로 기록됩니다.
