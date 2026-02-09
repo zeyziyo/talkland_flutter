@@ -51,6 +51,16 @@
         - [x] Word/Sentence: `material_id` 기반 `selectMaterial`
         - [x] Dialogue: `dialogue_id` 기반 `switchMode(3)`
         - [x] 완료 메시지 형식: `"{Material Name} Imported Successfully"` 확인
+    - [x] 각 모드 'Online Library' 아이콘 제거 및 'Metadata Dialog' 통합
+        - [x] `MetadataDialog`에 'Online Library' 버튼 추가
+        - [x] Mode 1/2/3 위젯에서 `MetadataDialog` 호출로 변경
+        - [x] 'Total Tags' 드롭다운 추가 (Implemented in MetadataDialog)
+        - [x] 데이터 일관성 및 자동 태깅(Source Subject) 로직 확인 (DatabaseService.dart)
+    - [x] **규칙 준수 조치 (Rule Compliance Fixes)**
+        - [x] `history.md` 현행화 (Phase 76.5)
+        - [x] `README.md` 기능 설명 업데이트 (UI 변경 반영)
+        - [x] `l10n/app_ko.arb` 및 다국어 튜토리얼 문구 동기화
+        - [x] 한국어 소통 원칙 재확인
 
 - [/] Phase 75: Pre-deployment Quality Assurance (출시 전 품질 검증)
     - [x] `docs/PRE_DEPLOYMENT_CHECKLIST.md` 생성 및 보안 점검 결과/계획 통합

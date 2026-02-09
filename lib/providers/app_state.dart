@@ -1409,13 +1409,8 @@ class AppState extends ChangeNotifier {
   /// 태그 목록 로드
   Future<void> loadTags() async {
     try {
-      final db = await DatabaseService.database;
-      final results = await db.rawQuery('SELECT DISTINCT tag FROM item_tags ORDER BY tag ASC');
-      // Filter out system tags 'word' and 'sentence'
-      _availableTags = results
-        .map((e) => e['tag'] as String)
-        .where((tag) => tag != 'word' && tag != 'sentence')
-        .toList();
+      // Phase 76.8: Use centralized method (Standard for Dropdowns)
+      _availableTags = await DatabaseService.getAllTags();
       notifyListeners();
     } catch (e) {
       debugPrint('[AppState] Error loading tags: $e');
@@ -1430,6 +1425,14 @@ class AppState extends ChangeNotifier {
       _selectedTags.add(tag);
     }
     loadRecordsByTags(); // 필터링된 레코드 로드
+    notifyListeners();
+  }
+
+  /// 태그 목록 일괄 업데이트 (MetadataDialog 연동)
+  void updateSelectedTags(List<String> tags) {
+    _selectedTags.clear();
+    _selectedTags.addAll(tags);
+    loadRecordsByTags();
     notifyListeners();
   }
 
@@ -2607,6 +2610,7 @@ class AppState extends ChangeNotifier {
 
       await loadDialogueGroups();
       await loadStudyMaterials();
+      await loadTags(); // Added: Refresh tags immediately after import
       await loadRecordsByTags();
       
       _statusMessage = '$mName Imported Successfully';

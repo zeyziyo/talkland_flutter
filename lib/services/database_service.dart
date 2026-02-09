@@ -2555,5 +2555,17 @@ class DatabaseService {
       print('[DB] Smart Sync: Added "$lang" version to group $groupId');
     }
   }
+
+  /// Phase 76.8: 모든 고유 태그 조회
+  static Future<List<String>> getAllTags() async {
+    final db = await database;
+    try {
+      final results = await db.rawQuery('SELECT DISTINCT tag FROM item_tags ORDER BY tag ASC');
+      return results.map((row) => row['tag'] as String).toList();
+    } catch (e) {
+      print('[DB] Error fetching tags: $e');
+      return [];
+    }
+  }
 }
 

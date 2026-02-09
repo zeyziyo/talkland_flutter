@@ -37,6 +37,11 @@
 - **Feature**: 영어(English) 데이터를 기준으로 다국어 자료 자동 그룹핑.
 - **Fix**: 서로 다른 파일명을 가진 자료들도 "English Title"로 통합 관리.
 
+### [2026-02-08] Online Library Refactor (Phase 76.5)
+- **UI Enhancement**: `OnlineLibrary` 접근성을 `MetadataDialog`로 통합하여 일관성 확보.
+- **Tag Integration**: `Library`에서 가져온 파일명을 태그로 자동 등록 및 `MetadataDialog`에서 필터링 지원.
+- **Code Cleanup**: 중복된 `Online Library` 아이콘 제거 및 위젯 구조 최적화.
+
 ---
 
 > **Note**: 과거의 시행착오(Trial & Error) 로그는 삭제되었으며, 각 파일에는 **"최종 구현된 결과(Finalized Features)"** 위주로 기록됩니다.

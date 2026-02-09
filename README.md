@@ -31,13 +31,13 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 
 ### MODE 2: 복습 (Review)
 - ↔️ **스와이프 전환**: 화면을 밀어 모드 간 자유로운 이동
-- 📚 **학습 자료 관리**: 상단 앱바의 아이콘(📚)으로 **온라인 자료실(단어/문장/대화 탭)**에서 검증된 학습 세트를 즉시 추가
+- 📚 **학습 자료 관리**: 상단 앱바의 **상세 설정(Tune) 아이콘 > 온라인 자료실**에서 검증된 학습 세트를 즉시 추가
 - 📖 **복습 모드**: 저장된 문장 복습 및 카드 뒤집기
 - 🔊 **TTS 재생**: 원문 및 번역문 듣기
 - ✅ **학습 체크**: 복습 횟수 기록 및 학습 완료 표시
 - 🔍 **검색 조건**: 태그, 최근 항목, 시작 글자로 정밀 필터링
 
-* **Study Material Management**: Import study materials via JSON files (Transactions applied for speed)
+* **Study Material Management**: Import study materials via Detailed Settings (Tune Icon) > Online Library
 * **Review Mode**: Review saved sentences & flip cards
 * **TTS Playback**: Listen to original and translated text
 * **Study Check**: Track review counts & mark as completed
@@ -48,13 +48,13 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 - ⏱️ **간격 조절**: 3초~60초 사이 대기 시간 설정
 - 📊 **발음 평가**: 정확도 점수 (0-100) 및 피드백
 - 🔄 **자동 반복**: 완벽하게 학습한 문장 제외하고 반복
-- 🔍 **검색 조건**: 학습 대상을 태그 및 조건으로 필터링
+- 🔍 **검색 조건**: 학습 대상을 태그 및 조건으로 필터링 (상세 설정 아이콘)
 
 * **Shadowing Practice**: Listen to native audio and shadow (repeat)
 * **Interval Control**: Set interval between 3s-60s
 * **Pronunciation Evaluation**: Accuracy score (0-100) & feedback
 * **Auto-Repeat**: Repeat sentences excluding those fully mastered
-* **Search Conditions**: Filter practice targets by Tags/Conditions
+* **Search Conditions**: Filter practice targets by Tags/Conditions (Tune Icon)
 
 ### MODE 4: 채팅 (Chat) - Multi-Persona
 - 🎭 **멀티 페르소나 (Multi-Persona)**: 말풍선 탭으로 상대방의 **성별, 이름, 언어**를 즉시 변경 (New!)
@@ -89,6 +89,7 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 - **TTS 엔진 최적화**: Google TTS 엔진에서 성별 인식이 안 될 경우를 대비한 스마트 추측 로직 적용
 - **데이터베이스 확장**: `dialogue_participants` 테이블 추가로 인물별 설정 영구 저장 지원
 - **대화 기능 강화 (Feb 2)**: AI 채팅 자동 제목(Chat N), 메모(Note) 기능, 대화 목록 검색 및 날짜 필터, 즉시 반응 UI(Optimistic Update) 적용
+- **온라인 자료실 통합 (Feb 8)**: `Online Library` 팝업을 `Metadata Dialog`로 통합하여 접근성 개선 및 가져온 자료 자동 태깅/필터링 지원 (Phase 76.5)
 
 
 ### JSON 파일 구조 (JSON Structure)

@@ -4,6 +4,8 @@ import 'package:talkie/widgets/mode3_practice_card.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
+import 'package:talkie/widgets/metadata_dialog.dart';
+import 'package:talkie/widgets/online_library_dialog.dart';
 
 /// Mode 3: 말하기 모드
 /// - 선택한 학습 자료 또는 전체 문장을 바탕으로 발음 연습
@@ -161,9 +163,9 @@ class Mode3Widget extends StatelessWidget {
                       const SizedBox(width: 8),
                       IconButton(
                         key: materialDropdownKey,
-                        icon: const Icon(Icons.library_books, color: Colors.blueAccent),
-                        onPressed: onSelectMaterial,
-                        tooltip: l10n.selectStudyMaterial,
+                        icon: const Icon(Icons.tune),
+                        onPressed: () => _showMetadataDialog(context, appState),
+                        tooltip: l10n.metadataDialogTitle,
                         visualDensity: VisualDensity.compact,
                       ),
                       const SizedBox(width: 4),
@@ -305,6 +307,29 @@ class Mode3Widget extends StatelessWidget {
 
   // Helper methods like _showTagSelectionDialog remain...
 
+
+  void _showMetadataDialog(BuildContext context, AppState appState) {
+    showDialog(
+      context: context,
+      builder: (context) => MetadataDialog(
+        currentTags: appState.selectedTags.toList(),
+        onTagsChanged: (newTags) {
+          appState.updateSelectedTags(newTags);
+          // Mode 3: Refresh session if active
+          if (appState.mode3SessionActive) {
+            appState.startMode3SessionDirectly();
+          }
+        },
+        onOpenLibrary: () {
+          showDialog(
+            context: context,
+            builder: (context) => const OnlineLibraryDialog(),
+          );
+        },
+      ),
+    );
+  }
+
   String _getLocalizedTag(String tag, AppLocalizations l10n) {
     switch (tag.toLowerCase()) {
       case 'noun': return l10n.posNoun;
@@ -382,6 +407,7 @@ class Mode3Widget extends StatelessWidget {
                             final isSelected = appState.selectedTags.contains(tag);
                             return FilterChip(
                               label: Text(tag),
+                              onPressed: () => _showMetadataDialog(context, appState),
                               selected: isSelected,
                               onSelected: (bool selected) {
                                 appState.toggleTag(tag);

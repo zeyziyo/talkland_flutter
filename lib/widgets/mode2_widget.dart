@@ -3,6 +3,8 @@ import 'package:talkie/widgets/mode2_card.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
+import 'package:talkie/widgets/metadata_dialog.dart';
+import 'package:talkie/widgets/online_library_dialog.dart';
 
 /// Mode 2: 학습 자료 및 복습 모드
 /// - 기본적으로 학습 자료를 선택하여 학습
@@ -177,12 +179,20 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                         ),
                       ),
                       const SizedBox(width: 8),
-                      IconButton(
+                      TextButton.icon(
                         key: widget.materialDropdownKey,
-                        icon: const Icon(Icons.library_books, color: Colors.blueAccent),
-                        onPressed: widget.onSelectMaterial,
-                        tooltip: l10n.selectStudyMaterial,
-                        visualDensity: VisualDensity.compact,
+                        onPressed: () => _showMetadataDialog(context, appState),
+                        icon: const Icon(Icons.tune, size: 16),
+                        label: Text(
+                          l10n.metadataDialogTitle,
+                          style: const TextStyle(fontSize: 12),
+                        ),
+                        style: TextButton.styleFrom(
+                          foregroundColor: Colors.blueAccent,
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                          minimumSize: Size.zero,
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        ),
                       ),
                       const SizedBox(width: 4),
                       
@@ -611,6 +621,25 @@ class _Mode2WidgetState extends State<Mode2Widget> {
   }
 
 
+
+
+  void _showMetadataDialog(BuildContext context, AppState appState) {
+    showDialog(
+      context: context,
+      builder: (context) => MetadataDialog(
+        currentTags: appState.selectedTags.toList(),
+        onTagsChanged: (newTags) {
+          appState.updateSelectedTags(newTags);
+        },
+        onOpenLibrary: () {
+          showDialog(
+            context: context,
+            builder: (context) => const OnlineLibraryDialog(),
+          );
+        },
+      ),
+    );
+  }
 
   String _getLocalizedTag(String tag, AppLocalizations l10n) {
     switch (tag.toLowerCase()) {

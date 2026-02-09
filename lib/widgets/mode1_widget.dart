@@ -8,7 +8,8 @@ import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
 import '../services/usage_service.dart';
 import '../constants/language_constants.dart';
 import 'recommendation_widget.dart';
-
+import 'package:talkie/widgets/metadata_dialog.dart';
+import 'package:talkie/widgets/online_library_dialog.dart';
 
 /// Mode 1: 검색 모드 - STT → 번역 → TTS
 class Mode1Widget extends StatefulWidget {
@@ -18,7 +19,6 @@ class Mode1Widget extends StatefulWidget {
   final Key? saveButtonKey;
 
   final Key? contextFieldKey;
-  final Key? materialDropdownKey;
   final Key? toggleButtonKey;
 
   const Mode1Widget({
@@ -28,12 +28,10 @@ class Mode1Widget extends StatefulWidget {
     this.swapButtonKey,
     this.saveButtonKey,
     this.contextFieldKey,
-    this.materialDropdownKey,
+    this.contextFieldKey,
     this.toggleButtonKey,
-    this.onSelectMaterial,
   });
 
-  final VoidCallback? onSelectMaterial;
 
   @override
   State<Mode1Widget> createState() => _Mode1WidgetState();
@@ -316,13 +314,6 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                   ),
                                 ),
                                 const SizedBox(width: 8),
-                                IconButton(
-                                  key: widget.materialDropdownKey,
-                                  icon: const Icon(Icons.library_books, color: Colors.blueAccent),
-                                  onPressed: widget.onSelectMaterial,
-                                  tooltip: l10n.selectStudyMaterial,
-                                ),
-                                const SizedBox(width: 4),
                                 ElevatedButton.icon(
                                   key: widget.contextFieldKey,
                                   onPressed: () => _showMetadataDialog(context, appState),
@@ -810,199 +801,21 @@ class _Mode1WidgetState extends State<Mode1Widget> {
 
   // 상세 정보 팝업
   void _showMetadataDialog(BuildContext context, AppState appState) {
-    final l10n = AppLocalizations.of(context)!;
-    _rootController.text = appState.sourceRoot;
-    _noteController.text = appState.note;
-
     showDialog(
       context: context,
-      builder: (context) => StatefulBuilder(
-        builder: (context, setDialogState) => AlertDialog(
-          title: Text(l10n.metadataDialogTitle),
-          content: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Tags Section
-                Text('Tags', style: Theme.of(context).textTheme.labelLarge),
-                const SizedBox(height: 4),
-                Wrap(
-                  spacing: 4,
-                  children: _currentTags.map((tag) => Chip(
-                    label: Text(tag, style: const TextStyle(fontSize: 11)),
-                    onDeleted: () => setState(() {
-                      _currentTags.remove(tag);
-                      setDialogState(() {});
-                    }),
-                    visualDensity: VisualDensity.compact,
-                  )).toList(),
-                ),
-                TextField(
-                  controller: _tagController,
-                  decoration: InputDecoration(
-                    hintText: '태그 입력',
-                    suffixIcon: IconButton(
-                      icon: const Icon(Icons.add),
-                      onPressed: () {
-                        final t = _tagController.text.trim();
-                        if (t.isNotEmpty && !_currentTags.contains(t)) {
-                          setState(() => _currentTags.add(t));
-                          setDialogState(() {});
-                          _tagController.clear();
-                        }
-                      },
-                    ),
-                  ),
-                  onSubmitted: (val) {
-                    final t = val.trim();
-                    if (t.isNotEmpty && !_currentTags.contains(t)) {
-                      setState(() => _currentTags.add(t));
-                      setDialogState(() {});
-                      _tagController.clear();
-                    }
-                  },
-                ),
-                const SizedBox(height: 16),
-                
-                // Note Section
-                TextField(
-                  controller: _noteController,
-                  decoration: InputDecoration(
-                    labelText: l10n.labelNote, // CHANGED from tutorialContextTitle
-                    hintText: l10n.tutorialContextDesc, // Keep hint? User said "Situation/Context tag" text is confusing with "Tag Input". labelNote is "주석". Hint text can remain "나중에 구분하기..." or similar.
-                    border: const OutlineInputBorder(),
-                  ),
-                  onChanged: (val) => appState.setNote(val),
-                ),
-                const SizedBox(height: 16),
-
-                // Root Word Section (Smart Autocomplete)
-                // Logic: Show ONLY if (Verb AND Not Infinitive) OR (Adj/Adv AND Not Positive)
-                Builder(
-                  builder: (context) {
-                    bool showRootField = false;
-                    if (appState.recordTypeFilter == 'word') {
-                       if (appState.sourcePos == 'Verb' && appState.sourceFormType != 'Infinitive' && appState.sourceFormType.isNotEmpty) {
-                         showRootField = true;
-                       } else if ((appState.sourcePos == 'Adjective' || appState.sourcePos == 'Adverb') && 
-                                  appState.sourceFormType != 'Positive' && appState.sourceFormType.isNotEmpty) {
-                         showRootField = true;
-                       }
-                    }
-
-                    if (!showRootField) return const SizedBox.shrink();
-
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Autocomplete<String>(
-                          optionsBuilder: (TextEditingValue textEditingValue) {
-                            if (textEditingValue.text.isEmpty) {
-                              return const Iterable<String>.empty();
-                            }
-                            return appState.searchMatchingRoots(textEditingValue.text);
-                          },
-                          onSelected: (String selection) {
-                           appState.setSourceRoot(selection);
-                          },
-                          fieldViewBuilder: (context, textEditingController, focusNode, onFieldSubmitted) {
-                            // Sync initial value if any
-                            if (textEditingController.text.isEmpty && appState.sourceRoot.isNotEmpty) {
-                              textEditingController.text = appState.sourceRoot;
-                            }
-                            // Listen to changes for Manual Input support
-                            textEditingController.addListener(() {
-                               appState.setSourceRoot(textEditingController.text);
-                            });
-
-                            return TextField(
-                              controller: textEditingController,
-                              focusNode: focusNode,
-                              decoration: InputDecoration(
-                                labelText: l10n.metadataRootWord,
-                                border: const OutlineInputBorder(),
-                                suffixIcon: const Icon(Icons.search),
-                              ),
-                            );
-                          },
-                          optionsViewBuilder: (context, onSelected, options) {
-                            return Align(
-                              alignment: Alignment.topLeft,
-                              child: Material(
-                                elevation: 4.0,
-                                child: SizedBox(
-                                  width: 250, // Constrain width
-                                  child: ListView.builder(
-                                    padding: EdgeInsets.zero,
-                                    shrinkWrap: true,
-                                    itemCount: options.length,
-                                    itemBuilder: (BuildContext context, int index) {
-                                      final String option = options.elementAt(index);
-                                      return ListTile(
-                                        title: Text(option),
-                                        onTap: () {
-                                          onSelected(option);
-                                        },
-                                      );
-                                    },
-                                  ),
-                                ),
-                              ),
-                            );
-                          },
-                        ),
-                        const SizedBox(height: 16),
-                      ],
-                    );
-                  },
-                ),
-
-                // Form Type Section (Dynamic based on POS)
-                  Builder(
-                    builder: (context) {
-                      List<String> categories = [];
-                      if (appState.sourcePos == 'Verb') {
-                        categories = AppState.verbFormCategories;
-                      } else if (appState.sourcePos == 'Adjective' || appState.sourcePos == 'Adverb') {
-                        categories = AppState.adjectiveFormCategories;
-                      } else if (appState.sourcePos == 'Pronoun') { 
-                        categories = AppState.pronounCaseCategories;
-                      }
-
-                      if (categories.isEmpty) return const SizedBox.shrink();
-
-                      return DropdownButtonFormField<String>(
-                        value: categories.contains(appState.sourceFormType) ? appState.sourceFormType : null,
-                        decoration: InputDecoration(
-                          labelText: l10n.metadataFormType,
-                          border: const OutlineInputBorder(),
-                        ),
-                        items: categories.map((cat) {
-                          return DropdownMenuItem(
-                            value: cat,
-                            child: Text(_getLocalizedCategory(cat, l10n)),
-                          );
-                        }).toList(),
-                        onChanged: (val) {
-                          if (val != null) {
-                            appState.setSourceFormType(val);
-                            setDialogState(() {});
-                          }
-                        },
-                      );
-                    },
-                  ),
-              ],
-            ),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: Text(l10n.confirm),
-            ),
-          ],
-        ),
+      builder: (context) => MetadataDialog(
+        currentTags: _currentTags,
+        onTagsChanged: (newTags) {
+          setState(() {
+            _currentTags = newTags;
+          });
+        },
+        onOpenLibrary: () {
+          showDialog(
+            context: context,
+            builder: (context) => const OnlineLibraryDialog(),
+          );
+        },
       ),
     );
   }
