@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Uložte preložené výsledky do záznamu o učení.",
   "tutorialM2SelectTitle": "Výber materiálu",
   "tutorialM2SelectDesc": "Stlačením ikony zbierky materiálov (📚) na hornom paneli aplikácie vyberte materiál na učenie.",
+  "tutorialM3SelectDesc": "Stlačením ikony zbierky materiálov (📚) na hornom paneli aplikácie vyberte materiál na precvičovanie.",
   "tutorialM2ListTitle": "Zoznam učenia",
   "tutorialM2ListDesc": "Túto kartu môžete odstrániť dlhým stlačením (dlhé kliknutie). Skontrolujte uloženú vetu a otočte ju.",
   "tutorialM3SelectTitle": "Výber materiálu",
-  "tutorialM3SelectDesc": "Stlačením ikony zbierky materiálov (📚) na hornom paneli aplikácie vyberte materiál na precvičovanie.",
   "tutorialM3IntervalTitle": "Nastavenie intervalu",
   "tutorialM3IntervalDesc": "Upravte čakaciu dobu medzi vetami.",
   "tutorialM3StartTitle": "Začať cvičiť",
@@ -642,6 +642,8 @@
   "typeImperative": "Rozkaz",
   "labelNote": "Poznámka",
   "labelShowMemorized": "Hotovo",
+  "titleTagSelection": "Výber značky nadpisu (zošit)",
+  "generalTags": "Všeobecné značky",
   "tagSelection": "Výber značky",
   "metadataFormType": "Gramatický tvar",
   "formInfinitive": "Infinitív/prítomný čas",
@@ -680,5 +682,6 @@
   "neutral": "Neutrálny",
   "chatAllConversations": "Všetky konverzácie",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Naozaj chcete zmazať túto konverzáciu?\nZmazané konverzácie sa nedajú obnoviť."
+  "confirmDeleteConversation": "Naozaj chcete zmazať túto konverzáciu?\nZmazané konverzácie sa nedajú obnoviť.",
+  "notSelected": "- Nevybrané -"
 }

@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Save your translation to study records.",
   "tutorialM2SelectTitle": "Select & Filter",
   "tutorialM2SelectDesc": "Choose study materials or switch to 'Review All'.",
+  "tutorialM3SelectDesc": "Choose a material set for speaking practice.",
   "tutorialM2ListTitle": "Study List",
   "tutorialM2ListDesc": "Long-press this card to delete it. Check your saved sentences and flip them.",
   "tutorialM3SelectTitle": "Select Material",
-  "tutorialM3SelectDesc": "Choose a material set for speaking practice.",
   "tutorialM3IntervalTitle": "Interval",
   "tutorialM3IntervalDesc": "Adjust the waiting time between sentences.",
   "tutorialM3StartTitle": "Start Practice",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "མགོ་བརྗོད་ཀྱི་རྟགས།(ཡིག་ཚགས།)",
+  "generalTags": "སྤྱིར་བཏང་གི་རྟགས།",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "ཕྱོགས་གཏོགས་མེད།",
   "chatAllConversations": "གླེང་མོལ་ཡོངས་རྫོགས།",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "ཁྱེད་ཀྱིས་གླེང་མོལ་འདི་དོར་འདོད་དམ།\nགླེང་མོལ་བསུབས་པ་ཕྱིར་སློག་བྱེད་མི་ཐུབ།"
+  "confirmDeleteConversation": "ཁྱེད་ཀྱིས་གླེང་མོལ་འདི་དོར་འདོད་དམ།\nགླེང་མོལ་བསུབས་པ་ཕྱིར་སློག་བྱེད་མི་ཐུབ།",
+  "notSelected": "- གདམ་ག་བྱས་མེད། -"
 }

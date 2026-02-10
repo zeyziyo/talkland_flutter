@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Αποθηκεύστε τη μετάφραση.",
   "tutorialM2SelectTitle": "Επιλογή & Φίλτρο",
   "tutorialM2SelectDesc": "Επιλέξτε υλικό ή 'Επανάληψη Όλων'.",
+  "tutorialM3SelectDesc": "Επιλέξτε σετ για πρακτική ομιλίας.",
   "tutorialM2ListTitle": "Λίστα Μελέτης",
   "tutorialM2ListDesc": "Ελέγξτε τις κάρτες και γυρίστε τις. (Long-press to delete)",
   "tutorialM3SelectTitle": "Επιλογή Υλικού",
-  "tutorialM3SelectDesc": "Επιλέξτε σετ για πρακτική ομιλίας.",
   "tutorialM3IntervalTitle": "Διάστημα",
   "tutorialM3IntervalDesc": "Ρυθμίστε το χρόνο αναμονής.",
   "tutorialM3StartTitle": "Έναρξη",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Ετικέτα τίτλου (Συλλογή)",
+  "generalTags": "Γενικές ετικέτες",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Ουδέτερο",
   "chatAllConversations": "Όλες οι συνομιλίες",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Θέλετε να διαγράψετε αυτήν τη συνομιλία;\nΔεν θα μπορείτε να την επαναφέρετε."
+  "confirmDeleteConversation": "Θέλετε να διαγράψετε αυτήν τη συνομιλία;\nΔεν θα μπορείτε να την επαναφέρετε.",
+  "notSelected": "- Δεν έχει επιλεγεί -"
 }

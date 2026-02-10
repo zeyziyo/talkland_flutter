@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Ruajeni rezultatin e përkthyer në regjistrin e studimit.",
   "tutorialM2SelectTitle": "Zgjidhni Materialin",
   "tutorialM2SelectDesc": "Shtypni ikonën e librit burim (📚) në shiritin e aplikacionit të sipërm për të zgjedhur materialin për të studiuar.",
+  "tutorialM3SelectDesc": "Shtypni ikonën e librit burim (📚) në shiritin e aplikacionit të sipërm për të zgjedhur materialin për të ushtruar.",
   "tutorialM2ListTitle": "Lista e Studimit",
   "tutorialM2ListDesc": "Ju mund ta fshini këtë kartë duke e shtypur gjatë (Shtypni Gjatë). Kontrolloni dhe ktheni fjalinë e ruajtur.",
   "tutorialM3SelectTitle": "Zgjidhni Materialin",
-  "tutorialM3SelectDesc": "Shtypni ikonën e librit burim (📚) në shiritin e aplikacionit të sipërm për të zgjedhur materialin për të ushtruar.",
   "tutorialM3IntervalTitle": "Vendosni Intervalin",
   "tutorialM3IntervalDesc": "Rregulloni kohën e pritjes midis fjalive.",
   "tutorialM3StartTitle": "Fillo Praktikën",
@@ -642,6 +642,8 @@
   "typeImperative": "Urdhërore",
   "labelNote": "Shënim",
   "labelShowMemorized": "Mbaruar",
+  "titleTagSelection": "Etiketa e titullit (Set burimesh)",
+  "generalTags": "Etiketa të përgjithshme",
   "tagSelection": "Zgjedhja e etiketës",
   "metadataFormType": "Forma gramatikore",
   "formInfinitive": "Forma bazë/E tashme",
@@ -680,5 +682,6 @@
   "neutral": "Asnjëanës",
   "chatAllConversations": "Të gjitha bisedat",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "A jeni i sigurt që dëshironi ta fshini këtë bisedë?\nBisedat e fshira nuk mund të rikthehen."
+  "confirmDeleteConversation": "A jeni i sigurt që dëshironi ta fshini këtë bisedë?\nBisedat e fshira nuk mund të rikthehen.",
+  "notSelected": "- Nuk është zgjedhur -"
 }

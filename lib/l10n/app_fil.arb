@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "I-save ang iyong pagsasalin sa mga tala ng pag-aaral.",
   "tutorialM2SelectTitle": "Pumili at Mag-filter",
   "tutorialM2SelectDesc": "Pumili ng materyales o lumipat sa 'Balik-aralan Lahat'.",
+  "tutorialM3SelectDesc": "Pumili ng set para sa pagsasanay sa pagsasalita.",
   "tutorialM2ListTitle": "Listahan ng Pag-aaral",
   "tutorialM2ListDesc": "Suriin ang iyong mga na-save na card at i-flip ang mga ito. (Long-press to delete)",
   "tutorialM3SelectTitle": "Pumili ng Materyales",
-  "tutorialM3SelectDesc": "Pumili ng set para sa pagsasanay sa pagsasalita.",
   "tutorialM3IntervalTitle": "Agwat",
   "tutorialM3IntervalDesc": "Ayusin ang oras ng paghihintay sa pagitan ng mga pangungusap.",
   "tutorialM3StartTitle": "Simulan",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Tag ng Pamagat (Collection)",
+  "generalTags": "Pangkalahatang mga Tag",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Neutral",
   "chatAllConversations": "Lahat ng Usapan",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Sigurado ka bang gusto mong burahin ang usapang ito?\nHindi na ito mababawi pa."
+  "confirmDeleteConversation": "Sigurado ka bang gusto mong burahin ang usapang ito?\nHindi na ito mababawi pa.",
+  "notSelected": "- Walang Napili -"
 }

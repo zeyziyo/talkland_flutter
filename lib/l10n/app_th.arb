@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "บันทึกคำแปลของคุณลงในบันทึกการเรียนรู้",
   "tutorialM2SelectTitle": "เลือก & กรอง",
   "tutorialM2SelectDesc": "เลือกสื่อการเรียนรู้หรือสลับไปที่ 'ทบทวนทั้งหมด'",
+  "tutorialM3SelectDesc": "เลือกชุดสื่อสำหรับการฝึกพูด",
   "tutorialM2ListTitle": "รายการเรียนรู้",
   "tutorialM2ListDesc": "ตรวจสอบการ์ดที่บันทึกไว้และพลิกดูคำตอบ (Long-press to delete)",
   "tutorialM3SelectTitle": "เลือกสื่อ",
-  "tutorialM3SelectDesc": "เลือกชุดสื่อสำหรับการฝึกพูด",
   "tutorialM3IntervalTitle": "ระยะห่าง",
   "tutorialM3IntervalDesc": "ปรับเวลารอระหว่างประโยค",
   "tutorialM3StartTitle": "เริ่มฝึก",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "แท็กชื่อเรื่อง (คอลเลกชัน)",
+  "generalTags": "แท็กทั่วไป",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "เป็นกลาง",
   "chatAllConversations": "การสนทนาทั้งหมด",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "คุณต้องการลบการสนทนานี้หรือไม่\nการสนทนาที่ถูกลบจะไม่สามารถกู้คืนได้"
+  "confirmDeleteConversation": "คุณต้องการลบการสนทนานี้หรือไม่\nการสนทนาที่ถูกลบจะไม่สามารถกู้คืนได้",
+  "notSelected": "- ไม่ได้เลือก -"
 }

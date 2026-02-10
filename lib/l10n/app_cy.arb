@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Cadwch y canlyniadau cyfieithiedig i'ch cofnod astudio.",
   "tutorialM2SelectTitle": "Dewis Deunydd",
   "tutorialM2SelectDesc": "Pwyswch yr eicon casgliad deunydd (📚) ar far app uchaf i ddewis y deunydd i'w astudio.",
+  "tutorialM3SelectDesc": "Pwyswch yr eicon casgliad deunydd (📚) ar far app uchaf i ddewis y deunydd i'w ymarfer.",
   "tutorialM2ListTitle": "Rhestr Astudio",
   "tutorialM2ListDesc": "Gallwch ei ddileu trwy wasgu a dal y cerdyn hwn (Clic Hir). Gwiriwch a throwch y brawddegau sydd wedi'u cadw drosodd.",
   "tutorialM3SelectTitle": "Dewis Deunydd",
-  "tutorialM3SelectDesc": "Pwyswch yr eicon casgliad deunydd (📚) ar far app uchaf i ddewis y deunydd i'w ymarfer.",
   "tutorialM3IntervalTitle": "Gosod Cyfwng",
   "tutorialM3IntervalDesc": "Addaswch yr amser aros rhwng brawddegau.",
   "tutorialM3StartTitle": "Dechrau Ymarfer",
@@ -642,6 +642,8 @@
   "typeImperative": "Gorchymyn",
   "labelNote": "Nodyn",
   "labelShowMemorized": "Gorffennwyd",
+  "titleTagSelection": "Tag Teitl (Casgliad)",
+  "generalTags": "Tagiau Cyffredinol",
   "tagSelection": "Dewis Tag",
   "metadataFormType": "Math o Ffurf Gramadeg",
   "formInfinitive": "Anterfyn/Amser Presennol",
@@ -680,5 +682,6 @@
   "neutral": "Niwtral",
   "chatAllConversations": "Pob sgwrs",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Ydych chi'n siŵr eich bod am ddileu'r sgwrs hon?\nNi ellir adfer sgyrsiau sydd wedi'u dileu."
+  "confirmDeleteConversation": "Ydych chi'n siŵr eich bod am ddileu'r sgwrs hon?\nNi ellir adfer sgyrsiau sydd wedi'u dileu.",
+  "notSelected": "- Heb ei Ddewis -"
 }

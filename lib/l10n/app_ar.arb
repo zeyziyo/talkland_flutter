@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "احفظ ترجمتك في سجلات الدراسة.",
   "tutorialM2SelectTitle": "اختر وقيّم",
   "tutorialM2SelectDesc": "اختر مواد للدراسة أو بدل إلى 'مراجعة الكل'.",
+  "tutorialM3SelectDesc": "اختر مجموعة لممارسة التحدث.",
   "tutorialM2ListTitle": "قائمة الدراسة",
   "tutorialM2ListDesc": "تفقد بطاقاتك المحفوظة واقلبها لرؤية الإجابات. (Long-press to delete)",
   "tutorialM3SelectTitle": "اختر مادة",
-  "tutorialM3SelectDesc": "اختر مجموعة لممارسة التحدث.",
   "tutorialM3IntervalTitle": "الفاصل",
   "tutorialM3IntervalDesc": "اضبط وقت الانتظار بين الجمل.",
   "tutorialM3StartTitle": "بدء الممارسة",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "علامة تبويب العنوان (مجموعة المواد)",
+  "generalTags": "علامات عامة",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "محايد",
   "chatAllConversations": "جميع المحادثات",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "هل أنت متأكد أنك تريد حذف هذه المحادثة؟\nلا يمكنك استعادة المحادثات المحذوفة."
+  "confirmDeleteConversation": "هل أنت متأكد أنك تريد حذف هذه المحادثة؟\nلا يمكنك استعادة المحادثات المحذوفة.",
+  "notSelected": "- لم يتم الاختيار -"
 }

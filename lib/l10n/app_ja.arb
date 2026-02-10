@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "翻訳結果を学習記録に保存します。",
   "tutorialM2SelectTitle": "選択とフィルタ",
   "tutorialM2SelectDesc": "学習する教材を選択するか、全復習モードに切り替えます。",
+  "tutorialM3SelectDesc": "スピーキング練習を行う教材セットを選択してください。",
   "tutorialM2ListTitle": "学習リスト",
   "tutorialM2ListDesc": "保存されたカードを確認し、裏返して正解を確認します。(長押しで削除)",
   "tutorialM3SelectTitle": "教材選択",
-  "tutorialM3SelectDesc": "スピーキング練習を行う教材セットを選択してください。",
   "tutorialM3IntervalTitle": "間隔設定",
   "tutorialM3IntervalDesc": "文章間の待機時間を調整します。",
   "tutorialM3StartTitle": "練習開始",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "タイトルのタグ（資料集）",
+  "generalTags": "一般タグ",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "中性",
   "chatAllConversations": "すべての会話",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "この会話を削除しますか？\n削除した会話は復元できません。"
+  "confirmDeleteConversation": "この会話を削除しますか？\n削除した会話は復元できません。",
+  "notSelected": "ー選択されていませんー"
 }

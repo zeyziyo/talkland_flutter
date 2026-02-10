@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Çevirini çalışma kayıtlarına kaydet.",
   "tutorialM2SelectTitle": "Seç & Filtrele",
   "tutorialM2SelectDesc": "Materyal seç veya 'Tümünü Tekrarla'ya geç.",
+  "tutorialM3SelectDesc": "Konuşma pratiği için bir set seç.",
   "tutorialM2ListTitle": "Çalışma Listesi",
   "tutorialM2ListDesc": "Kayıtlı kartlarını kontrol et ve cevapları gör. (Long-press to delete)",
   "tutorialM3SelectTitle": "Materyal Seç",
-  "tutorialM3SelectDesc": "Konuşma pratiği için bir set seç.",
   "tutorialM3IntervalTitle": "Aralık",
   "tutorialM3IntervalDesc": "Cümleler arası bekleme süresini ayarla.",
   "tutorialM3StartTitle": "Pratiği Başlat",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Başlık Etiketi (Koleksiyon)",
+  "generalTags": "Genel Etiketler",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Nötr",
   "chatAllConversations": "Tüm Sohbetler",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Bu konuşmayı silmek istediğinizden emin misiniz?\nSilinen konuşmalar geri alınamaz."
+  "confirmDeleteConversation": "Bu konuşmayı silmek istediğinizden emin misiniz?\nSilinen konuşmalar geri alınamaz.",
+  "notSelected": "- Seçilmedi -"
 }

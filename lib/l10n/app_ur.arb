@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "اپنا ترجمہ محفوظ کریں۔",
   "tutorialM2SelectTitle": "منتخب اور فلٹر",
   "tutorialM2SelectDesc": "مواد منتخب کریں یا 'سب کا جائزہ لیں'۔",
+  "tutorialM3SelectDesc": "بولنے کی مشق کے لیے سیٹ منتخب کریں۔",
   "tutorialM2ListTitle": "مطالعہ کی فہرست",
   "tutorialM2ListDesc": "اپنے کارڈز چیک کریں اور انہیں پلٹیں۔ (Long-press to delete)",
   "tutorialM3SelectTitle": "مواد منتخب کریں",
-  "tutorialM3SelectDesc": "بولنے کی مشق کے لیے سیٹ منتخب کریں۔",
   "tutorialM3IntervalTitle": "وقفہ",
   "tutorialM3IntervalDesc": "جملوں کے درمیان انتظار کا وقت ایڈجسٹ کریں۔",
   "tutorialM3StartTitle": "شروع",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "عنوان ٹیگ (محفوظ شدہ دستاویزات)",
+  "generalTags": "عمومی ٹیگز",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "غیر جانبدار",
   "chatAllConversations": "تمام گفتگوئیں",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "کیا آپ اس گفتگو کو حذف کرنا چاہتے ہیں؟ حذف شدہ گفتگو کو بازیافت نہیں کیا جا سکتا۔"
+  "confirmDeleteConversation": "کیا آپ اس گفتگو کو حذف کرنا چاہتے ہیں؟ حذف شدہ گفتگو کو بازیافت نہیں کیا جا سکتا۔",
+  "notSelected": "- منتخب نہیں - "
 }

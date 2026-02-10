@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Londoloza imiphumela ehunyushiwe kumarekhodi akho okufunda.",
   "tutorialM2SelectTitle": "Khetha Izinto Zokwakha",
   "tutorialM2SelectDesc": "Cindezela isithonjana seqoqo lezinto zokwakha (📚) kubha yohlelo lokusebenza engenhla ukuze ukhethe izinto zokwakha ozofunda.",
+  "tutorialM3SelectDesc": "Cindezela isithonjana seqoqo lezinto zokwakha (📚) kubha yohlelo lokusebenza engenhla ukuze ukhethe izinto zokwakha ozozijwayeza.",
   "tutorialM2ListTitle": "Uhlu Lokufunda",
   "tutorialM2ListDesc": "Ungalicindezela isikhathi eside (Long Click) leli khadi ukuze ulisuse. Bheka imisho elondoloziwe bese uyayiphendula.",
   "tutorialM3SelectTitle": "Khetha Izinto Zokwakha",
-  "tutorialM3SelectDesc": "Cindezela isithonjana seqoqo lezinto zokwakha (📚) kubha yohlelo lokusebenza engenhla ukuze ukhethe izinto zokwakha ozozijwayeza.",
   "tutorialM3IntervalTitle": "Setha Isikhawu",
   "tutorialM3IntervalDesc": "Lungisa isikhathi sokulinda phakathi kwemisho.",
   "tutorialM3StartTitle": "Qala Ukuzijwayeza",
@@ -642,6 +642,8 @@
   "typeImperative": "Isiyalezo",
   "labelNote": "Inothi",
   "labelShowMemorized": "Kuqediwe",
+  "titleTagSelection": "Ithegi yesihloko (Iqoqo Ledatha)",
+  "generalTags": "Amathegi ajwayelekile",
   "tagSelection": "Ukukhethwa Kwethegi",
   "metadataFormType": "Uhlobo Lwegrama",
   "formInfinitive": "Okungapheli/Okwamanje",
@@ -680,5 +682,6 @@
   "neutral": "Ukungathathi hlangothi",
   "chatAllConversations": "Zonke izingxoxo",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Uqinisekile ukuthi ufuna ukususa le ngxoxo?\nAyikwazi ukubuyiselwa emuva uma isisusiwe."
+  "confirmDeleteConversation": "Uqinisekile ukuthi ufuna ukususa le ngxoxo?\nAyikwazi ukubuyiselwa emuva uma isisusiwe.",
+  "notSelected": "- Akukhethiwe - "
 }

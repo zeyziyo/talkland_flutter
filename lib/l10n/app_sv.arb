@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Spara din översättning.",
   "tutorialM2SelectTitle": "Välj & Filter",
   "tutorialM2SelectDesc": "Välj material eller 'Repetera Alla'.",
+  "tutorialM3SelectDesc": "Välj set för talövning.",
   "tutorialM2ListTitle": "Studielista",
   "tutorialM2ListDesc": "Kolla kort och vänd dem. (Long-press to delete)",
   "tutorialM3SelectTitle": "Välj Material",
-  "tutorialM3SelectDesc": "Välj set för talövning.",
   "tutorialM3IntervalTitle": "Intervall",
   "tutorialM3IntervalDesc": "Justera väntetid mellan meningar.",
   "tutorialM3StartTitle": "Starta",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Rubriktagg (Samling)",
+  "generalTags": "Allmänna taggar",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Neutral",
   "chatAllConversations": "Alla konversationer",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Vill du radera den här konversationen?\nRaderade konversationer kan inte återställas."
+  "confirmDeleteConversation": "Vill du radera den här konversationen?\nRaderade konversationer kan inte återställas.",
+  "notSelected": "- Inget valt -"
 }

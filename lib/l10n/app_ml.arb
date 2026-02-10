@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "നിങ്ങളുടെ വിവർത്തനം സേവ് ചെയ്യുക.",
   "tutorialM2SelectTitle": "തിരഞ്ഞെടുക്കുക & ഫിൽട്ടർ",
   "tutorialM2SelectDesc": "മെറ്റീരിയലുകൾ തിരഞ്ഞെടുക്കുക അല്ലെങ്കിൽ 'എല്ലാം അവലോകനം ചെയ്യുക' എന്നതിലേക്ക് മാറുക.",
+  "tutorialM3SelectDesc": "സംസാര പരിശീലനത്തിനായി സെറ്റ് തിരഞ്ഞെടുക്കുക.",
   "tutorialM2ListTitle": "പഠന ലിസ്റ്റ്",
   "tutorialM2ListDesc": "നിങ്ങളുടെ കാർഡുകൾ പരിശോധിച്ച് അവ മറിക്കുക. (Long-press to delete)",
   "tutorialM3SelectTitle": "മെറ്റീരിയൽ തിരഞ്ഞെടുക്കുക",
-  "tutorialM3SelectDesc": "സംസാര പരിശീലനത്തിനായി സെറ്റ് തിരഞ്ഞെടുക്കുക.",
   "tutorialM3IntervalTitle": "ഇടവേള",
   "tutorialM3IntervalDesc": "വാക്യങ്ങൾക്കിടയിലുള്ള കാത്തിരിപ്പ് സമയം ക്രമീകരിക്കുക.",
   "tutorialM3StartTitle": "ആരംഭിക്കുക",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "ശീർഷക ടാഗ് (മെറ്റീരിയൽ)",
+  "generalTags": "പൊതുവായ ടാഗുകൾ",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "തಟസ്ഥം",
   "chatAllConversations": "എല്ലാ സംഭാഷണങ്ങളും",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "നിങ്ങൾക്ക് ഈ സംഭാഷണം ഇല്ലാതാക്കണോ?\nഇല്ലാതാക്കിയ സംഭാഷണം വീണ്ടെടുക്കാൻ കഴിയില്ല."
+  "confirmDeleteConversation": "നിങ്ങൾക്ക് ഈ സംഭാഷണം ഇല്ലാതാക്കണോ?\nഇല്ലാതാക്കിയ സംഭാഷണം വീണ്ടെടുക്കാൻ കഴിയില്ല.",
+  "notSelected": "-ഒന്നും തിരഞ്ഞെടുത്തിട്ടില്ല-"
 }

@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "તમારો અનુવાદ સાચવો.",
   "tutorialM2SelectTitle": "પસંદ કરો અને ફિલ્ટર",
   "tutorialM2SelectDesc": "સામગ્રી પસંદ કરો અથવા 'બધું સમીક્ષા કરો' પર જાઓ.",
+  "tutorialM3SelectDesc": "બોલવાની પ્રેક્ટિસ માટે સેટ પસંદ કરો.",
   "tutorialM2ListTitle": "અભ્યાસ યાદી",
   "tutorialM2ListDesc": "તમારા કાર્ડ્સ તપાસો અને તેમને ફેરવો. (Long-press to delete)",
   "tutorialM3SelectTitle": "સામગ્રી પસંદ કરો",
-  "tutorialM3SelectDesc": "બોલવાની પ્રેક્ટિસ માટે સેટ પસંદ કરો.",
   "tutorialM3IntervalTitle": "અંતરાલ",
   "tutorialM3IntervalDesc": "વાક્યો વચ્ચેનો પ્રતીક્ષા સમય સમાયોજિત કરો.",
   "tutorialM3StartTitle": "શરૂ કરો",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "શીર્ષક ટૅગ (સંગ્રહ)",
+  "generalTags": "સામાન્ય ટૅગ",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "તટસ્થ",
   "chatAllConversations": "બધી વાતચીત",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "શું તમે આ વાતચીત કાઢી નાખવા માંગો છો?\nકાઢી નાખેલી વાતચીત પુનઃપ્રાપ્ત કરી શકાતી નથી."
+  "confirmDeleteConversation": "શું તમે આ વાતચીત કાઢી નાખવા માંગો છો?\nકાઢી નાખેલી વાતચીત પુનઃપ્રાપ્ત કરી શકાતી નથી.",
+  "notSelected": "- કોઈ પસંદગી નથી -"
 }

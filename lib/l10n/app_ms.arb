@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Simpan terjemahan anda ke rekod kajian.",
   "tutorialM2SelectTitle": "Pilih & Penapis",
   "tutorialM2SelectDesc": "Pilih bahan atau tukar ke 'Ulas Semua'.",
+  "tutorialM3SelectDesc": "Pilih set untuk latihan bercakap.",
   "tutorialM2ListTitle": "Senarai Kajian",
   "tutorialM2ListDesc": "Semak kad disimpan anda dan terbalikkan. (Long-press to delete)",
   "tutorialM3SelectTitle": "Pilih Bahan",
-  "tutorialM3SelectDesc": "Pilih set untuk latihan bercakap.",
   "tutorialM3IntervalTitle": "Selang",
   "tutorialM3IntervalDesc": "Laraskan masa menunggu antara ayat.",
   "tutorialM3StartTitle": "Mula",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Tag Tajuk (Koleksi)",
+  "generalTags": "Tag Umum",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Neutral",
   "chatAllConversations": "Semua Perbualan",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Adakah anda pasti mahu memadam perbualan ini?\nPerbualan yang dipadam tidak dapat dipulihkan."
+  "confirmDeleteConversation": "Adakah anda pasti mahu memadam perbualan ini?\nPerbualan yang dipadam tidak dapat dipulihkan.",
+  "notSelected": "- Tiada Pilihan -"
 }

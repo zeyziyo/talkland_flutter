@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "រក្សាទុកលទ្ធផលដែលបានបកប្រែទៅក្នុងកំណត់ត្រាសិក្សារបស់អ្នក។",
   "tutorialM2SelectTitle": "ជ្រើសរើសសម្ភារៈ",
   "tutorialM2SelectDesc": "ចុចរូបតំណាងបណ្ណាល័យ (📚) នៅលើរបារកម្មវិធីខាងលើ ដើម្បីជ្រើសរើសសម្ភារៈដែលត្រូវសិក្សា។",
+  "tutorialM3SelectDesc": "ចុចរូបតំណាងបណ្ណាល័យ (📚) នៅលើរបារកម្មវិធីខាងលើ ដើម្បីជ្រើសរើសសម្ភារៈដែលត្រូវអនុវត្ត។",
   "tutorialM2ListTitle": "បញ្ជីសិក្សា",
   "tutorialM2ListDesc": "អ្នកអាចលុបកាតនេះដោយចុចឱ្យជាប់ (Long Click)។ ពិនិត្យមើលប្រយោគដែលបានរក្សាទុក ហើយបង្វិលវា។",
   "tutorialM3SelectTitle": "ជ្រើសរើសសម្ភារៈ",
-  "tutorialM3SelectDesc": "ចុចរូបតំណាងបណ្ណាល័យ (📚) នៅលើរបារកម្មវិធីខាងលើ ដើម្បីជ្រើសរើសសម្ភារៈដែលត្រូវអនុវត្ត។",
   "tutorialM3IntervalTitle": "កំណត់ចន្លោះពេល",
   "tutorialM3IntervalDesc": "លៃតម្រូវពេលវេលារង់ចាំរវាងប្រយោគ។",
   "tutorialM3StartTitle": "ចាប់ផ្ដើមអនុវត្ត",
@@ -642,6 +642,8 @@
   "typeImperative": "ប្រយោគបង្គាប់",
   "labelNote": "កំណត់ចំណាំ",
   "labelShowMemorized": "បានបញ្ចប់",
+  "titleTagSelection": "ស្លាកចំណងជើង (សៀវភៅ)",
+  "generalTags": "ស្លាកទូទៅ",
   "tagSelection": "ការជ្រើសរើសស្លាក",
   "metadataFormType": "ទម្រង់វេយ្យាករណ៍",
   "formInfinitive": "Infinitive/បច្ចុប្បន្នកាល",
@@ -680,5 +682,6 @@
   "neutral": "អព្យាក្រឹត",
   "chatAllConversations": "ការសន្ទនាទាំងអស់",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "តើ​អ្នក​ប្រាកដ​ថា​អ្នក​ចង់​លុប​ការ​សន្ទនា​នេះ​?\nអ្នក​នឹង​មិន​អាច​យក​វា​មក​វិញ​បាន​ទេ។"
+  "confirmDeleteConversation": "តើ​អ្នក​ប្រាកដ​ថា​អ្នក​ចង់​លុប​ការ​សន្ទនា​នេះ​?\nអ្នក​នឹង​មិន​អាច​យក​វា​មក​វិញ​បាន​ទេ។",
+  "notSelected": "- មិនបានជ្រើសរើស -"
 }

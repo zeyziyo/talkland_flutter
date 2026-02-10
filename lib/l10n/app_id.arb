@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Simpan terjemahan Anda ke catatan belajar.",
   "tutorialM2SelectTitle": "Pilih & Filter",
   "tutorialM2SelectDesc": "Pilih materi belajar atau beralih ke 'Ulas Semua'.",
+  "tutorialM3SelectDesc": "Pilih set materi untuk latihan bicara.",
   "tutorialM2ListTitle": "Daftar Belajar",
   "tutorialM2ListDesc": "Periksa kartu tersimpan Anda dan balik untuk melihat jawaban. (Long-press to delete)",
   "tutorialM3SelectTitle": "Pilih Materi",
-  "tutorialM3SelectDesc": "Pilih set materi untuk latihan bicara.",
   "tutorialM3IntervalTitle": "Interval",
   "tutorialM3IntervalDesc": "Atur waktu tunggu antar kalimat.",
   "tutorialM3StartTitle": "Mulai Latihan",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Tag Judul (Kliping)",
+  "generalTags": "Tag Umum",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Netral",
   "chatAllConversations": "Semua percakapan",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Anda yakin ingin menghapus percakapan ini?\nPercakapan yang dihapus tidak dapat dipulihkan."
+  "confirmDeleteConversation": "Anda yakin ingin menghapus percakapan ini?\nPercakapan yang dihapus tidak dapat dipulihkan.",
+  "notSelected": "- Tidak Dipilih -"
 }

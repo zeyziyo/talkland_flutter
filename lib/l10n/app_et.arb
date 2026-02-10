@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Salvesta tõlgitud tulemus õppimisajalukku.",
   "tutorialM2SelectTitle": "Materjali valik",
   "tutorialM2SelectDesc": "Õpitava materjali valimiseks vajuta ülemise rakenduseriba materjalikogumi ikooni (📚).",
+  "tutorialM3SelectDesc": "Harjutatava materjali valimiseks vajuta ülemise rakenduseriba materjalikogumi ikooni (📚).",
   "tutorialM2ListTitle": "Õppimisnimekiri",
   "tutorialM2ListDesc": "Selle kustutamiseks hoia seda kaarti all (pikk klõps). Kontrolli salvestatud lauset ja keera see ümber.",
   "tutorialM3SelectTitle": "Materjali valik",
-  "tutorialM3SelectDesc": "Harjutatava materjali valimiseks vajuta ülemise rakenduseriba materjalikogumi ikooni (📚).",
   "tutorialM3IntervalTitle": "Intervalli seadistus",
   "tutorialM3IntervalDesc": "Reguleeri lausete vahelist ooteaega.",
   "tutorialM3StartTitle": "Alusta harjutamist",
@@ -642,6 +642,8 @@
   "typeImperative": "Käskiv lause",
   "labelNote": "Märkus",
   "labelShowMemorized": "Lõpetatud",
+  "titleTagSelection": "Pealkirjasilt (arhiiv)",
+  "generalTags": "Üldised sildid",
   "tagSelection": "Sildi valik",
   "metadataFormType": "Grammatiline vorm",
   "formInfinitive": "Infinitiiv/olevik",
@@ -680,5 +682,6 @@
   "neutral": "Neutraalne",
   "chatAllConversations": "Kõik vestlused",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Kas sa oled kindel, et soovid selle vestluse kustutada?\nKustutatud vestlust ei saa taastada."
+  "confirmDeleteConversation": "Kas sa oled kindel, et soovid selle vestluse kustutada?\nKustutatud vestlust ei saa taastada.",
+  "notSelected": "- Pole valitud -"
 }

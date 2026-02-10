@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Balises de titre (Recueil)",
+  "generalTags": "Balises générales",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Neutre",
   "chatAllConversations": "Toutes les conversations",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Êtes-vous sûr de vouloir supprimer cette conversation ?\nElle ne pourra pas être récupérée."
+  "confirmDeleteConversation": "Êtes-vous sûr de vouloir supprimer cette conversation ?\nElle ne pourra pas être récupérée.",
+  "notSelected": "- Non sélectionné -"
 }

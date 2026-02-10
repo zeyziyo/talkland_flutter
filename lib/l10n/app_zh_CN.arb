@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "将翻译保存到学习记录。",
   "tutorialM2SelectTitle": "选择与筛选",
   "tutorialM2SelectDesc": "选择学习资料或切换到“复习全部”。",
+  "tutorialM3SelectDesc": "选择用于口语练习的资料集。",
   "tutorialM2ListTitle": "学习列表",
   "tutorialM2ListDesc": "查看已保存的卡片并翻转查看答案。(长按删除)",
   "tutorialM3SelectTitle": "选择资料",
-  "tutorialM3SelectDesc": "选择用于口语练习的资料集。",
   "tutorialM3IntervalTitle": "间隔",
   "tutorialM3IntervalDesc": "调整句子之间的等待时间。",
   "tutorialM3StartTitle": "开始练习",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "标题标签（资料集）",
+  "generalTags": "通用标签",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "中性",
   "chatAllConversations": "所有对话",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "确定要删除此对话吗？\n删除后将无法恢复。"
+  "confirmDeleteConversation": "确定要删除此对话吗？\n删除后将无法恢复。",
+  "notSelected": "- 未选择 -"
 }

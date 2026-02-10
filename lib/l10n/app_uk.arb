@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Збережіть переклад у навчальні записи.",
   "tutorialM2SelectTitle": "Вибір та Фільтр",
   "tutorialM2SelectDesc": "Виберіть матеріали або 'Огляд всього'.",
+  "tutorialM3SelectDesc": "Виберіть набір для практики.",
   "tutorialM2ListTitle": "Список",
   "tutorialM2ListDesc": "Переглядайте картки та перевертайте їх. (Long-press to delete)",
   "tutorialM3SelectTitle": "Вибір матеріалу",
-  "tutorialM3SelectDesc": "Виберіть набір для практики.",
   "tutorialM3IntervalTitle": "Інтервал",
   "tutorialM3IntervalDesc": "Налаштуйте час очікування.",
   "tutorialM3StartTitle": "Почати",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Тег заголовка (матеріали)",
+  "generalTags": "Загальні теги",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Нейтральний",
   "chatAllConversations": "Всі розмови",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Ви впевнені, що хочете видалити цю розмову?\nВи не зможете відновити її."
+  "confirmDeleteConversation": "Ви впевнені, що хочете видалити цю розмову?\nВи не зможете відновити її.",
+  "notSelected": "- Не вибрано -"
 }

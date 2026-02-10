@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "ترجمه خود را ذخیره کنید.",
   "tutorialM2SelectTitle": "انتخاب و فیلتر",
   "tutorialM2SelectDesc": "مطالب را انتخاب کنید یا به 'مرور همه' بروید.",
+  "tutorialM3SelectDesc": "یک مجموعه برای تمرین صحبت کردن انتخاب کنید.",
   "tutorialM2ListTitle": "لیست مطالعه",
   "tutorialM2ListDesc": "کارت‌های خود را بررسی کرده و برگردانید. (Long-press to delete)",
   "tutorialM3SelectTitle": "انتخاب مطلب",
-  "tutorialM3SelectDesc": "یک مجموعه برای تمرین صحبت کردن انتخاب کنید.",
   "tutorialM3IntervalTitle": "فاصله",
   "tutorialM3IntervalDesc": "زمان انتظار بین جملات را تنظیم کنید.",
   "tutorialM3StartTitle": "شروع",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "برچسب عنوان (پوشه)",
+  "generalTags": "برچسب های عمومی",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "خنثی",
   "chatAllConversations": "همه گفتگوها",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "آیا می خواهید این مکالمه را حذف کنید؟\nمکالمات حذف شده قابل بازیابی نیستند."
+  "confirmDeleteConversation": "آیا می خواهید این مکالمه را حذف کنید؟\nمکالمات حذف شده قابل بازیابی نیستند.",
+  "notSelected": "- انتخاب نشده -"
 }

@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Išsaugokite išverstą rezultatą savo mokymosi įrašuose.",
   "tutorialM2SelectTitle": "Medžiagos pasirinkimas",
   "tutorialM2SelectDesc": "Spustelėkite medžiagų rinkinio piktogramą (📚) viršutinėje programos juostoje, kad pasirinktumėte medžiagą, kurią norite studijuoti.",
+  "tutorialM3SelectDesc": "Spustelėkite medžiagų rinkinio piktogramą (📚) viršutinėje programos juostoje, kad pasirinktumėte medžiagą, kurią norite praktikuoti.",
   "tutorialM2ListTitle": "Mokymosi sąrašas",
   "tutorialM2ListDesc": "Galite ištrinti ilgai paspausdami šią kortelę. Patikrinkite išsaugotus sakinius ir apverskite juos.",
   "tutorialM3SelectTitle": "Medžiagos pasirinkimas",
-  "tutorialM3SelectDesc": "Spustelėkite medžiagų rinkinio piktogramą (📚) viršutinėje programos juostoje, kad pasirinktumėte medžiagą, kurią norite praktikuoti.",
   "tutorialM3IntervalTitle": "Intervalo nustatymas",
   "tutorialM3IntervalDesc": "Sureguliuoja laukimo laiką tarp sakinių.",
   "tutorialM3StartTitle": "Pradėti praktiką",
@@ -642,6 +642,8 @@
   "typeImperative": "Įsakymas",
   "labelNote": "Pastaba",
   "labelShowMemorized": "Baigta",
+  "titleTagSelection": "Pavadinimo žyma (archyvas)",
+  "generalTags": "Bendrosios žymos",
   "tagSelection": "Žymos pasirinkimas",
   "metadataFormType": "Gramatinė forma",
   "formInfinitive": "Bendratis/Esamasis laikas",
@@ -680,5 +682,6 @@
   "neutral": "Neutralus",
   "chatAllConversations": "Visi pokalbiai",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Ar tikrai norite ištrinti šį pokalbį?\nIštrintų pokalbių atkurti negalima."
+  "confirmDeleteConversation": "Ar tikrai norite ištrinti šį pokalbį?\nIštrintų pokalbių atkurti negalima.",
+  "notSelected": "- Nepasirinkta -"
 }

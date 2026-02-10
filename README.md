@@ -35,13 +35,13 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 - 📖 **복습 모드**: 저장된 문장 복습 및 카드 뒤집기
 - 🔊 **TTS 재생**: 원문 및 번역문 듣기
 - ✅ **학습 체크**: 복습 횟수 기록 및 학습 완료 표시
-- 🔍 **검색 조건**: **설정(Tune) 아이콘**으로 태그, 최근 항목, 시작 글자 필터링 (Search Filter Dialog)
+- 🔍 **검색 조건**: **설정(Tune) 아이콘**으로 자료집 제목(Title Tag), 상세 태그(3개), 최근 항목, 시작 글자 필터링 (4개 드롭다운 지원)
 
 * **Study Material Management**: Manage study materials via **Cloud Icon** on AppBar (Online Library)
 * **Review Mode**: Review saved sentences & flip cards
 * **TTS Playback**: Listen to original and translated text
 * **Study Check**: Track review counts & mark as completed
-* **Search Conditions**: Filter by Tags, Recent N, Starts With via **Tune Icon** (Search Filter Dialog)
+* **Search Conditions**: Filter by Material Title (Title Tag), General Tags (up to 3), Recent N, and Starts With via **Tune Icon** (4 Dropdowns supported)
 
 ### MODE 3: 발음 연습 (Speaking Practice)
 - 🎙️ **쉐도잉 연습**: 원어민 음성 듣고 따라 말하기
@@ -54,7 +54,7 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 * **Interval Control**: Set interval between 3s-60s
 * **Pronunciation Evaluation**: Accuracy score (0-100) & feedback
 * **Auto-Repeat**: Repeat sentences excluding those fully mastered
-* **Search Conditions**: Filter practice targets by Tags/Conditions (Tune Icon)
+* **Search Conditions**: Filter targets by Material Titles/Tags/Conditions via **Tune Icon** (4 Dropdowns supported)
 
 ### MODE 4: 채팅 (Chat) - Multi-Persona
 - 🎭 **멀티 페르소나 (Multi-Persona)**: 말풍선 탭으로 상대방의 **성별, 이름, 언어**를 즉시 변경 (New!)
@@ -91,6 +91,7 @@ It provides an intuitive UX for switching modes by swiping the screen. In partic
 - **대화 기능 강화 (Feb 2)**: AI 채팅 자동 제목(Chat N), 메모(Note) 기능, 대화 목록 검색 및 날짜 필터, 즉시 반응 UI(Optimistic Update) 적용
 - **온라인 자료실 통합 (Feb 8)**: `Online Library` 팝업을 `Metadata Dialog`로 통합하여 접근성 개선 및 가져온 자료 자동 태깅 (`Native Tag Strategy`) 지원 (Phase 76.5)
 - **UI 필터링 고도화 (Feb 9)**: 리뷰 모드에서 현재 학습 언어에 맞는 태그(예: "명사 1" vs "Nouns 1")만 지능적으로 필터링하여 사용자 혼란 방지 (Phase 77)
+- **필터 UI 및 데이터 가시성 해결 (Feb 10)**: 자료 임포트 시 내부 키 대신 모국어 제목을 태그로 사용하여 검색 불일치 해결 및 4개 드롭다운 상시 노출 강화 (Phase 79.2)
 
 
 

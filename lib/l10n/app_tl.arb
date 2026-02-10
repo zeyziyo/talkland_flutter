@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "I-save ang isinalin na resulta sa iyong tala sa pag-aaral.",
   "tutorialM2SelectTitle": "Pumili ng Materyal",
   "tutorialM2SelectDesc": "Pindutin ang icon ng set ng materyal (📚) sa itaas na app bar para pumili ng materyal na pag-aaralan.",
+  "tutorialM3SelectDesc": "Pindutin ang icon ng set ng materyal (📚) sa itaas na app bar para pumili ng materyal na pagsasanayan.",
   "tutorialM2ListTitle": "Listahan ng Pag-aaral",
   "tutorialM2ListDesc": "Maaari mong i-delete ang card na ito sa pamamagitan ng pagpindot nang matagal dito (Long Click). Suriin ang mga naka-save na pangungusap at i-flip ang mga ito.",
   "tutorialM3SelectTitle": "Pumili ng Materyal",
-  "tutorialM3SelectDesc": "Pindutin ang icon ng set ng materyal (📚) sa itaas na app bar para pumili ng materyal na pagsasanayan.",
   "tutorialM3IntervalTitle": "Itakda ang Interval",
   "tutorialM3IntervalDesc": "Inaayos ang oras ng paghihintay sa pagitan ng mga pangungusap.",
   "tutorialM3StartTitle": "Simulan ang Pagsasanay",
@@ -642,6 +642,8 @@
   "typeImperative": "Pautos",
   "labelNote": "Tala",
   "labelShowMemorized": "Tapos na",
+  "titleTagSelection": "Tag ng Pamagat (Sarbey)",
+  "generalTags": "Pangkalahatang mga Tag",
   "tagSelection": "Pagpili ng Tag",
   "metadataFormType": "Uri ng Gramatika",
   "formInfinitive": "Infinitive/Kasalukuyan",
@@ -680,5 +682,6 @@
   "neutral": "Neutral",
   "chatAllConversations": "Lahat ng Usapan",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Sigurado ka bang gusto mong burahin ang usapang ito?\n Hindi na ito maibabalik pa."
+  "confirmDeleteConversation": "Sigurado ka bang gusto mong burahin ang usapang ito?\n Hindi na ito maibabalik pa.",
+  "notSelected": "- Walang Napili -"
 }

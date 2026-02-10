@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Lagre de oversatte resultatene i læringsposten.",
   "tutorialM2SelectTitle": "Velg materiale",
   "tutorialM2SelectDesc": "Trykk på materiellikonet (📚) på den øverste applinjen for å velge materialet du vil studere.",
+  "tutorialM3SelectDesc": "Trykk på materiellikonet (📚) på den øverste applinjen for å velge materialet du vil øve på.",
   "tutorialM2ListTitle": "Læringsliste",
   "tutorialM2ListDesc": "Du kan slette dette kortet ved å trykke lenge på det. Sjekk og vend de lagrede setningene.",
   "tutorialM3SelectTitle": "Velg materiale",
-  "tutorialM3SelectDesc": "Trykk på materiellikonet (📚) på den øverste applinjen for å velge materialet du vil øve på.",
   "tutorialM3IntervalTitle": "Angi intervall",
   "tutorialM3IntervalDesc": "Juster ventetiden mellom setningene.",
   "tutorialM3StartTitle": "Start øvelse",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperativ",
   "labelNote": "Notat",
   "labelShowMemorized": "Ferdig",
+  "titleTagSelection": "Titteltagger (ressurs)",
+  "generalTags": "Generelle tagger",
   "tagSelection": "Velg tagg",
   "metadataFormType": "Grammatisk form",
   "formInfinitive": "Infinitiv/Presens",
@@ -680,5 +682,6 @@
   "neutral": "Nøytral",
   "chatAllConversations": "Alle samtaler",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Vil du slette denne samtalen?\nDu kan ikke gjenopprette slettede samtaler."
+  "confirmDeleteConversation": "Vil du slette denne samtalen?\nDu kan ikke gjenopprette slettede samtaler.",
+  "notSelected": "- Ikke valgt -"
 }

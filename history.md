@@ -49,10 +49,12 @@
 ### [2026-02-09] Metadata Dialog Redesign & Mode 1 Fixes (Phase 77)
 - **Refactor**: 'Metadata Dialog'에서 'Online Library' 아이콘 제거 (역할 분리 명확화).
 
-### [2026-02-10] EMERGENCY: Filter UI & Visibility Refinement (Phase 79.2)
+### [2026-02-10] Filter UI & Visibility Refinement (Phase 79.2)
 - **Fix**: 자료 임포트 시 `overrideSubject`에 내부 키(syncKey) 대신 모국어 제목(mName)을 사용하여 필터 불일치 해결.
-- **UI**: `SearchFilterDialog`에서 태그 로딩 여부와 상관없이 내 자료집 제목을 드롭다운에 상시 노출.
+- **UI**: `SearchFilterDialog`에서 태그 로딩 여부와 상관없이 내 자료집 제목을 드롭다운에 상시 노출 (4개 드롭다운 고정).
 - **Logic**: `DatabaseService.importFromJsonWithMetadata`에 `syncKey` 인자를 추가하여 보이지 않는 곳에서의 동기화와 보이는 곳에서의 제목을 분리 관리.
+- **Build**: `DatabaseService.saveUnifiedRecord` 파라미터 불일치(`subject` vs `syncSubject`)로 인한 빌드 오류 수정.
+- **L10n**: 필터 UI 관련 신규 키(`generalTags`, `notSelected` 등) 80개 언어 전체 자동 번역 및 동기화 완료. Michigan.
 
 ### [2026-02-10] EMERGENCY: Build Failure Resolution (Phase 79.1)
 - **Fix**: `DatabaseService` 내 `getStudyMaterials` 중복 선언 제거.

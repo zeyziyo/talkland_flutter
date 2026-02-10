@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Salvează traducerea în înregistrări.",
   "tutorialM2SelectTitle": "Selectare & Filtru",
   "tutorialM2SelectDesc": "Alege materiale sau 'Recapitulare Tot'.",
+  "tutorialM3SelectDesc": "Alege un set pentru practică.",
   "tutorialM2ListTitle": "Listă Studiu",
   "tutorialM2ListDesc": "Verifică cardurile și întoarce-le. (Long-press to delete)",
   "tutorialM3SelectTitle": "Selectare Material",
-  "tutorialM3SelectDesc": "Alege un set pentru practică.",
   "tutorialM3IntervalTitle": "Interval",
   "tutorialM3IntervalDesc": "Reglează timpul de așteptare",
   "tutorialM3StartTitle": "Start",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Etichetă titlu (culegere)",
+  "generalTags": "Etichete generale",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Neutru",
   "chatAllConversations": "Toate conversațiile",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Sigur dorești să ștergi această conversație?\nConversațiile șterse nu pot fi recuperate."
+  "confirmDeleteConversation": "Sigur dorești să ștergi această conversație?\nConversațiile șterse nu pot fi recuperate.",
+  "notSelected": "- Neselectat -"
 }

@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "अपनी अनुवाद को अध्ययन रिकॉर्ड में सहेजें.",
   "tutorialM2SelectTitle": "चुनें और फ़िल्टर करें",
   "tutorialM2SelectDesc": "अध्ययन सामग्री चुनें या 'समीक्षा सभी' पर स्विच करें.",
+  "tutorialM3SelectDesc": "बोलने के अभ्यास के लिए सामग्री सेट चुनें.",
   "tutorialM2ListTitle": "अध्ययन सूची",
   "tutorialM2ListDesc": "अपने सहेजे गए कार्ड देखें और उत्तर देखने के लिए उन्हें पलटें. (Long-press to delete)",
   "tutorialM3SelectTitle": "सामग्री चुनें",
-  "tutorialM3SelectDesc": "बोलने के अभ्यास के लिए सामग्री सेट चुनें.",
   "tutorialM3IntervalTitle": "अंतराल",
   "tutorialM3IntervalDesc": "वाक्यों के बीच प्रतीक्षा समय समायोजित करें.",
   "tutorialM3StartTitle": "अभ्यास शुरू करें",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "शीर्षक टैग (संग्रह)",
+  "generalTags": "सामान्य टैग",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "तटस्थ",
   "chatAllConversations": "सभी वार्तालाप",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "क्या आप इस वार्तालाप को हटाना चाहते हैं?\nहटाए गए वार्तालाप को पुनर्प्राप्त नहीं किया जा सकता."
+  "confirmDeleteConversation": "क्या आप इस वार्तालाप को हटाना चाहते हैं?\nहटाए गए वार्तालाप को पुनर्प्राप्त नहीं किया जा सकता.",
+  "notSelected": "- कोई चयन नहीं -"
 }

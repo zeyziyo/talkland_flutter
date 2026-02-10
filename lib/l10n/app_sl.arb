@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Shranite prevedene rezultate v zapise učenja.",
   "tutorialM2SelectTitle": "Izbira gradiva",
   "tutorialM2SelectDesc": "Izberite gradivo za učenje s pritiskom na ikono zbirke gradiv (📚) na zgornji vrstici aplikacije.",
+  "tutorialM3SelectDesc": "Izberite gradivo za vadbo s pritiskom na ikono zbirke gradiv (📚) na zgornji vrstici aplikacije.",
   "tutorialM2ListTitle": "Seznam za učenje",
   "tutorialM2ListDesc": "To kartico lahko izbrišete z dolgim pritiskom (dolgi klik). Preverite shranjene stavke in jih obrnite.",
   "tutorialM3SelectTitle": "Izbira gradiva",
-  "tutorialM3SelectDesc": "Izberite gradivo za vadbo s pritiskom na ikono zbirke gradiv (📚) na zgornji vrstici aplikacije.",
   "tutorialM3IntervalTitle": "Nastavitev intervala",
   "tutorialM3IntervalDesc": "Prilagodite čas čakanja med stavki.",
   "tutorialM3StartTitle": "Začni z vajo",
@@ -642,6 +642,8 @@
   "typeImperative": "Ukaz",
   "labelNote": "Opomba",
   "labelShowMemorized": "Končano",
+  "titleTagSelection": "Oznaka naslova (Zbirka podatkov)",
+  "generalTags": "Splošne oznake",
   "tagSelection": "Izbira oznake",
   "metadataFormType": "Oblika slovnice",
   "formInfinitive": "Nedoločnik/sedanjik",
@@ -680,5 +682,6 @@
   "neutral": "Nevtralno",
   "chatAllConversations": "Vsi pogovori",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Želite izbrisati ta pogovor?\nIzbrisanih pogovorov ni mogoče obnoviti."
+  "confirmDeleteConversation": "Želite izbrisati ta pogovor?\nIzbrisanih pogovorov ni mogoče obnoviti.",
+  "notSelected": "- Ni izbrano -"
 }

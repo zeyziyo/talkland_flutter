@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Vistaðu þýddar niðurstöður í námsferilinn þinn.",
   "tutorialM2SelectTitle": "Efnisval",
   "tutorialM2SelectDesc": "Ýttu á efnissettstáknið (📚) á efsta appbarnum til að velja efni til að læra.",
+  "tutorialM3SelectDesc": "Ýttu á efnissettstáknið (📚) á efsta appbarnum til að velja efni til að æfa.",
   "tutorialM2ListTitle": "Námslisti",
   "tutorialM2ListDesc": "Þú getur eytt þessu korti með því að halda því inni (Langa smelltu). Athugaðu vistaðar setningar og snúðu þeim við.",
   "tutorialM3SelectTitle": "Efnisval",
-  "tutorialM3SelectDesc": "Ýttu á efnissettstáknið (📚) á efsta appbarnum til að velja efni til að æfa.",
   "tutorialM3IntervalTitle": "Millibilsstilling",
   "tutorialM3IntervalDesc": "Stilltu biðtímann á milli setninga.",
   "tutorialM3StartTitle": "Hefja æfingu",
@@ -642,6 +642,8 @@
   "typeImperative": "Skipun",
   "labelNote": "Athugasemd",
   "labelShowMemorized": "Búið",
+  "titleTagSelection": "Titilmerki (safn)",
+  "generalTags": "Almenn merki",
   "tagSelection": "Merkjaval",
   "metadataFormType": "Málfræðilegt form",
   "formInfinitive": "Grunnmynd/nútíð",
@@ -680,5 +682,6 @@
   "neutral": "Hlutlaust",
   "chatAllConversations": "Öll samtöl",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Viltu eyða þessu samtali?\nEydd samtöl er ekki hægt að endurheimta."
+  "confirmDeleteConversation": "Viltu eyða þessu samtali?\nEydd samtöl er ekki hægt að endurheimta.",
+  "notSelected": "- Enginn valinn -"
 }

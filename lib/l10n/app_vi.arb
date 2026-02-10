@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Lưu bản dịch của bạn vào hồ sơ học tập.",
   "tutorialM2SelectTitle": "Chọn & Lọc",
   "tutorialM2SelectDesc": "Chọn tài liệu học hoặc chuyển sang 'Ôn tập tất cả'.",
+  "tutorialM3SelectDesc": "Chọn bộ tài liệu để luyện nói.",
   "tutorialM2ListTitle": "Danh sách học",
   "tutorialM2ListDesc": "Kiểm tra các thẻ đã lưu và lật chúng để xem câu trả lời. (Long-press to delete)",
   "tutorialM3SelectTitle": "Chọn tài liệu",
-  "tutorialM3SelectDesc": "Chọn bộ tài liệu để luyện nói.",
   "tutorialM3IntervalTitle": "Khoảng cách",
   "tutorialM3IntervalDesc": "Điều chỉnh thời gian chờ giữa các câu.",
   "tutorialM3StartTitle": "Bắt đầu luyện tập",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Thẻ tiêu đề (tuyển tập)",
+  "generalTags": "Thẻ chung",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Trung tính",
   "chatAllConversations": "Toàn bộ hội thoại",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Bạn có chắc chắn muốn xóa hội thoại này?\nHội thoại đã xóa không thể khôi phục."
+  "confirmDeleteConversation": "Bạn có chắc chắn muốn xóa hội thoại này?\nHội thoại đã xóa không thể khôi phục.",
+  "notSelected": "- Không chọn -"
 }

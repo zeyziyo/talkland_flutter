@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Zapisz tłumaczenie w historii nauki.",
   "tutorialM2SelectTitle": "Wybierz i Filtruj",
   "tutorialM2SelectDesc": "Wybierz materiały lub przełącz na 'Wszystko'.",
+  "tutorialM3SelectDesc": "Wybierz zestaw do ćwiczeń mówienia.",
   "tutorialM2ListTitle": "Lista Nauki",
   "tutorialM2ListDesc": "Sprawdź zapisane karty i odwracaj je. (Long-press to delete)",
   "tutorialM3SelectTitle": "Wybierz Materiał",
-  "tutorialM3SelectDesc": "Wybierz zestaw do ćwiczeń mówienia.",
   "tutorialM3IntervalTitle": "Interwał",
   "tutorialM3IntervalDesc": "Dostosuj czas oczekiwania między zdaniami.",
   "tutorialM3StartTitle": "Start",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Tag tytułu (Materiały)",
+  "generalTags": "Tagi ogólne",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Neutralny",
   "chatAllConversations": "Wszystkie rozmowy",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Czy na pewno chcesz usunąć tę konwersację?\nUsuniętej konwersacji nie będzie można odzyskać."
+  "confirmDeleteConversation": "Czy na pewno chcesz usunąć tę konwersację?\nUsuniętej konwersacji nie będzie można odzyskać.",
+  "notSelected": "- Nie wybrano -"
 }

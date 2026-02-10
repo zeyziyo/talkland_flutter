@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Gorde itzulitako emaitzak ikasketa-erregistroan.",
   "tutorialM2SelectTitle": "Materiala hautatu",
   "tutorialM2SelectDesc": "Sakatu datu-multzoaren ikonoa (📚) goiko aplikazio-barran ikasi nahi duzun materiala hautatzeko.",
+  "tutorialM3SelectDesc": "Sakatu datu-multzoaren ikonoa (📚) goiko aplikazio-barran praktikatu nahi duzun materiala hautatzeko.",
   "tutorialM2ListTitle": "Ikasketa-zerrenda",
   "tutorialM2ListDesc": "Txartel hau luze sakatuta (Sakatu luzea) ezaba dezakezu. Egiaztatu eta irauli gordetako esaldiak.",
   "tutorialM3SelectTitle": "Materiala hautatu",
-  "tutorialM3SelectDesc": "Sakatu datu-multzoaren ikonoa (📚) goiko aplikazio-barran praktikatu nahi duzun materiala hautatzeko.",
   "tutorialM3IntervalTitle": "Tartea ezarri",
   "tutorialM3IntervalDesc": "Doitu esaldien arteko itxaron-denbora.",
   "tutorialM3StartTitle": "Praktika hasi",
@@ -642,6 +642,8 @@
   "typeImperative": "Agindua",
   "labelNote": "Oharra",
   "labelShowMemorized": "Amaituta",
+  "titleTagSelection": "Izenburu-etiketa (Bilduma)",
+  "generalTags": "Etiketa orokorrak",
   "tagSelection": "Etiketa hautatu",
   "metadataFormType": "Forma gramatikala",
   "formInfinitive": "Infinitive/Orainaldia",
@@ -680,5 +682,6 @@
   "neutral": "neutroa",
   "chatAllConversations": "Elkarrizketa guztiak",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Elkarrizketa hau ezabatu nahi duzu?\nEzabatu ondoren ezin da berreskuratu."
+  "confirmDeleteConversation": "Elkarrizketa hau ezabatu nahi duzu?\nEzabatu ondoren ezin da berreskuratu.",
+  "notSelected": "- Ez dago hautatuta -"
 }

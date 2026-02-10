@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Saglabājiet tulkotos rezultātus mācību ierakstos.",
   "tutorialM2SelectTitle": "Materiāla izvēle",
   "tutorialM2SelectDesc": "Nospiediet materiālu kopuma ikonu (📚) augšējā lietotnes joslā, lai izvēlētos materiālu, ko mācīties.",
+  "tutorialM3SelectDesc": "Nospiediet materiālu kopuma ikonu (📚) augšējā lietotnes joslā, lai izvēlētos materiālu, ko praktizēt.",
   "tutorialM2ListTitle": "Mācību saraksts",
   "tutorialM2ListDesc": "Varat ilgi nospiest šo kartīti, lai to izdzēstu. Pārbaudiet saglabātos teikumus un apgrieziet tos.",
   "tutorialM3SelectTitle": "Materiāla izvēle",
-  "tutorialM3SelectDesc": "Nospiediet materiālu kopuma ikonu (📚) augšējā lietotnes joslā, lai izvēlētos materiālu, ko praktizēt.",
   "tutorialM3IntervalTitle": "Intervāla iestatīšana",
   "tutorialM3IntervalDesc": "Pielāgojiet gaidīšanas laiku starp teikumiem.",
   "tutorialM3StartTitle": "Sākt praktizēties",
@@ -642,6 +642,8 @@
   "typeImperative": "Pavēles teikums",
   "labelNote": "Piezīme",
   "labelShowMemorized": "Pabeigts",
+  "titleTagSelection": "Virsraksta atzīme (materiāli)",
+  "generalTags": "Vispārīgās atzīmes",
   "tagSelection": "Atzīmju atlase",
   "metadataFormType": "Gramatiskā forma",
   "formInfinitive": "Infinitīvs/Tagadne",
@@ -680,5 +682,6 @@
   "neutral": "Neitrāls",
   "chatAllConversations": "Visas sarunas",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Vai vēlaties izdzēst šo sarunu?\nIzdzēstās sarunas nevar atgūt."
+  "confirmDeleteConversation": "Vai vēlaties izdzēst šo sarunu?\nIzdzēstās sarunas nevar atgūt.",
+  "notSelected": "- Nav atlasīts -"
 }

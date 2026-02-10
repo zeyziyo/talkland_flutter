@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Gem din oversættelse.",
   "tutorialM2SelectTitle": "Vælg & Filter",
   "tutorialM2SelectDesc": "Vælg materiale eller 'Gennemgå Alle'.",
+  "tutorialM3SelectDesc": "Vælg sæt til taleøvelse.",
   "tutorialM2ListTitle": "Studieliste",
   "tutorialM2ListDesc": "Tjek kort og vend dem. (Long-press to delete)",
   "tutorialM3SelectTitle": "Vælg Materiale",
-  "tutorialM3SelectDesc": "Vælg sæt til taleøvelse.",
   "tutorialM3IntervalTitle": "Interval",
   "tutorialM3IntervalDesc": "Juster ventetid mellem sætninger.",
   "tutorialM3StartTitle": "Start",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Titel-tag (samling)",
+  "generalTags": "Generelle tags",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Neutral",
   "chatAllConversations": "Alle samtaler",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Er du sikker på, at du vil slette denne samtale?\nSlettede samtaler kan ikke gendannes."
+  "confirmDeleteConversation": "Er du sikker på, at du vil slette denne samtale?\nSlettede samtaler kan ikke gendannes.",
+  "notSelected": "- Ikke valgt -"
 }

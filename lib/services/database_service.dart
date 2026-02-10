@@ -1230,7 +1230,7 @@ class DatabaseService {
                   tags: allTags.isNotEmpty ? allTags : null,
                   txn: txn,
                   // Phase 77: Pivot Strategy Params
-                  subject: syncSubject,
+                  syncSubject: syncSubject,
                   sequenceOrder: i, 
                   );
                 
@@ -2320,8 +2320,8 @@ class DatabaseService {
     String? note,
     List<String>? tags,
     Transaction? txn,
-    // Phase 77: Pivot Strategy (Smart Sync)
-    String? subject,
+    // Phase 77/79: Pivot Strategy (Smart Sync) - internal stable key
+    String? syncSubject,
     int? sequenceOrder,
   }) async {
     final executor = txn ?? await database;
@@ -2330,7 +2330,7 @@ class DatabaseService {
     // 0. Determine Group ID (Pivot Strategy)
     int groupId = DateTime.now().millisecondsSinceEpoch;
     
-    if (subject != null && sequenceOrder != null) {
+    if (syncSubject != null && sequenceOrder != null) {
       // Check for existing group ID for this Subject + Sequence (from any language)
       // Implicitly, the first imported language sets the ID.
       try {
@@ -2341,7 +2341,7 @@ class DatabaseService {
           WHERE t.tag = ? 
           ORDER BY w.created_at ASC 
           LIMIT 1 OFFSET ?
-        ''', [subject, sequenceOrder]);
+        ''', [syncSubject, sequenceOrder]);
         
         if (existing.isNotEmpty) {
            final foundId = existing.first['group_id'] as int;

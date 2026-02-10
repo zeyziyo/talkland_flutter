@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Uložte překlad do záznamů.",
   "tutorialM2SelectTitle": "Výběr a Filtr",
   "tutorialM2SelectDesc": "Vyberte materiály nebo 'Opakovat vše'.",
+  "tutorialM3SelectDesc": "Vyberte sadu pro mluvení.",
   "tutorialM2ListTitle": "Seznam",
   "tutorialM2ListDesc": "Prohlížejte karty a otáčejte je. (Long-press to delete)",
   "tutorialM3SelectTitle": "Výběr materiálu",
-  "tutorialM3SelectDesc": "Vyberte sadu pro mluvení.",
   "tutorialM3IntervalTitle": "Interval",
   "tutorialM3IntervalDesc": "Nastavte čas mezi větami.",
   "tutorialM3StartTitle": "Start",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Štítky názvu (sbírka)",
+  "generalTags": "Obecné štítky",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Neutrální",
   "chatAllConversations": "Všechny konverzace",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Opravdu chcete smazat tuto konverzaci?\nSmazané konverzace nelze obnovit."
+  "confirmDeleteConversation": "Opravdu chcete smazat tuto konverzaci?\nSmazané konverzace nelze obnovit.",
+  "notSelected": "- Nevybráno -"
 }

@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "ನಿಮ್ಮ ಅನುವಾದವನ್ನು ಉಳಿಸಿ.",
   "tutorialM2SelectTitle": "ಆಯ್ಕೆ ಮತ್ತು ಫಿಲ್ಟರ್",
   "tutorialM2SelectDesc": "ವಸ್ತುಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ ಅಥವಾ 'ಎಲ್ಲಾ ಪರಿಶೀಲಿಸಿ' ಗೆ ಬದಲಿಸಿ.",
+  "tutorialM3SelectDesc": "ಮಾತನಾಡುವ ಅಭ್ಯಾಸಕ್ಕಾಗಿ ಸೆಟ್ ಆಯ್ಕೆಮಾಡಿ.",
   "tutorialM2ListTitle": "ಅಧ್ಯಯನ ಪಟ್ಟಿ",
   "tutorialM2ListDesc": "ನಿಮ್ಮ ಕಾರ್ಡ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಅವುಗಳನ್ನು ತಿರುಗಿಸಿ. (Long-press to delete)",
   "tutorialM3SelectTitle": "ವಸ್ತು ಆಯ್ಕೆಮಾಡಿ",
-  "tutorialM3SelectDesc": "ಮಾತನಾಡುವ ಅಭ್ಯಾಸಕ್ಕಾಗಿ ಸೆಟ್ ಆಯ್ಕೆಮಾಡಿ.",
   "tutorialM3IntervalTitle": "ಅಂತರ",
   "tutorialM3IntervalDesc": "ವಾಕ್ಯಗಳ ನಡುವಿನ ಕಾಯುವ ಸಮಯವನ್ನು ಹೊಂದಿಸಿ.",
   "tutorialM3StartTitle": "ಪ್ರಾರಂಭಿಸಿ",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "ಶೀರ್ಷಿಕೆ ಟ್ಯಾಗ್ (ದಾಖಲೆಗಳು)",
+  "generalTags": "ಸಾಮಾನ್ಯ ಟ್ಯಾಗ್‌ಗಳು",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "ತಟಸ್ಥ",
   "chatAllConversations": "ಎಲ್ಲಾ ಸಂಭಾಷಣೆಗಳು",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "ನೀವು ಈ ಸಂಭಾಷಣೆಯನ್ನು ಅಳಿಸಲು ಬಯಸುತ್ತೀರಾ?\nಅಳಿಸಲಾದ ಸಂಭಾಷಣೆಯನ್ನು ಮರುಪಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
+  "confirmDeleteConversation": "ನೀವು ಈ ಸಂಭಾಷಣೆಯನ್ನು ಅಳಿಸಲು ಬಯಸುತ್ತೀರಾ?\nಅಳಿಸಲಾದ ಸಂಭಾಷಣೆಯನ್ನು ಮರುಪಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ.",
+  "notSelected": "- ಆಯ್ಕೆ ಮಾಡಲಾಗಿಲ್ಲ -"
 }

@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Tarjima qilingan natijani o'rganish yozuviga saqlang.",
   "tutorialM2SelectTitle": "Ma'lumotlarni tanlash",
   "tutorialM2SelectDesc": "Yuqori ilova panelidagi ma'lumotlar to'plami belgisini (📚) bosib, o'rganmoqchi bo'lgan ma'lumotlarni tanlang.",
+  "tutorialM3SelectDesc": "Yuqori ilova panelidagi ma'lumotlar to'plami belgisini (📚) bosib, mashq qilmoqchi bo'lgan ma'lumotlarni tanlang.",
   "tutorialM2ListTitle": "O'rganish ro'yxati",
   "tutorialM2ListDesc": "Ushbu kartani uzoq bosish (Long Click) orqali o'chirishingiz mumkin. Saqlangan jumlalarni tekshiring va aylantirib ko'ring.",
   "tutorialM3SelectTitle": "Ma'lumotlarni tanlash",
-  "tutorialM3SelectDesc": "Yuqori ilova panelidagi ma'lumotlar to'plami belgisini (📚) bosib, mashq qilmoqchi bo'lgan ma'lumotlarni tanlang.",
   "tutorialM3IntervalTitle": "Intervalni sozlash",
   "tutorialM3IntervalDesc": "Jumlalar orasidagi kutish vaqtini sozlang.",
   "tutorialM3StartTitle": "Mashqni boshlash",
@@ -642,6 +642,8 @@
   "typeImperative": "Buyruq gap",
   "labelNote": "Izoh",
   "labelShowMemorized": "Tugatilgan",
+  "titleTagSelection": "Sarlavha teglari (kitob)",
+  "generalTags": "Umumiy teglar",
   "tagSelection": "Teg tanlash",
   "metadataFormType": "Grammatik shakl",
   "formInfinitive": "Asl/hozirgi shakl",
@@ -680,5 +682,6 @@
   "neutral": "neytral",
   "chatAllConversations": "Barcha suhbatlar",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Bu suhbatni oʻchirishni xohlaysizmi?\nOʻchirilgan suhbatni qayta tiklab boʻlmaydi."
+  "confirmDeleteConversation": "Bu suhbatni oʻchirishni xohlaysizmi?\nOʻchirilgan suhbatni qayta tiklab boʻlmaydi.",
+  "notSelected": "- Tanlanmagan -"
 }

@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Tərcümə edilmiş nəticələri öyrənmə qeydlərinizə saxlayın.",
   "tutorialM2SelectTitle": "Material Seçimi",
   "tutorialM2SelectDesc": "Öyrənmək üçün material seçmək üçün yuxarıdakı proqram çubuğundakı material toplusu işarəsinə (📚) toxunun.",
+  "tutorialM3SelectDesc": "Məşq etmək üçün material seçmək üçün yuxarıdakı proqram çubuğundakı material toplusu işarəsinə (📚) toxunun.",
   "tutorialM2ListTitle": "Öyrənmə Siyahısı",
   "tutorialM2ListDesc": "Saxlanılan cümlələri yoxlamaq və çevirmək üçün bu karta uzun müddət (Uzun Klik) toxunun. Onu silmək üçün.",
   "tutorialM3SelectTitle": "Material Seçimi",
-  "tutorialM3SelectDesc": "Məşq etmək üçün material seçmək üçün yuxarıdakı proqram çubuğundakı material toplusu işarəsinə (📚) toxunun.",
   "tutorialM3IntervalTitle": "İnterval Təyin Edin",
   "tutorialM3IntervalDesc": "Cümlələr arasındakı gözləmə müddətini tənzimləyin.",
   "tutorialM3StartTitle": "Məşqə Başlayın",
@@ -642,6 +642,8 @@
   "typeImperative": "Əmr",
   "labelNote": "Qeyd",
   "labelShowMemorized": "Bitirildi",
+  "titleTagSelection": "Başlıq etiketi (Kitabxana)",
+  "generalTags": "Ümumi etiketlər",
   "tagSelection": "Etiket Seçimi",
   "metadataFormType": "Qrammatik Forma",
   "formInfinitive": "İnfinitive/İndiki Zaman",
@@ -680,5 +682,6 @@
   "neutral": "neytral",
   "chatAllConversations": "Bütün söhbətlər",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Bu söhbəti silmək istədiyinizə əminsinizmi?\nSilinmiş söhbətləri geri qaytarmaq mümkün deyil."
+  "confirmDeleteConversation": "Bu söhbəti silmək istədiyinizə əminsinizmi?\nSilinmiş söhbətləri geri qaytarmaq mümkün deyil.",
+  "notSelected": "- Seçilməyib -"
 }

@@ -642,6 +642,8 @@
   "typeImperative": "Imperatiu",
   "labelNote": "Nota",
   "labelShowMemorized": "Fet",
+  "titleTagSelection": "Etiquetes de títol (col·lecció)",
+  "generalTags": "Etiquetes generals",
   "tagSelection": "Selecció d'etiquetes",
   "metadataFormType": "Tipus de formulari",
   "formInfinitive": "Infinitiu/Present",
@@ -680,5 +682,6 @@
   "neutral": "Neutre",
   "chatAllConversations": "Totes les converses",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Vols suprimir aquesta conversa?\nNo podràs recuperar-la."
+  "confirmDeleteConversation": "Vols suprimir aquesta conversa?\nNo podràs recuperar-la.",
+  "notSelected": "- Sense seleccionar -"
 }

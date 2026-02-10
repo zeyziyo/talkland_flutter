@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Tallenna käännös tietueisiin.",
   "tutorialM2SelectTitle": "Valitse & Suodata",
   "tutorialM2SelectDesc": "Valitse materiaali tai 'Kertaa Kaikki'.",
+  "tutorialM3SelectDesc": "Valitse setti puheharjoitukseen.",
   "tutorialM2ListTitle": "Opiskelulista",
   "tutorialM2ListDesc": "Tarkista kortit ja käännä ne. (Long-press to delete)",
   "tutorialM3SelectTitle": "Valitse Materiaali",
-  "tutorialM3SelectDesc": "Valitse setti puheharjoitukseen.",
   "tutorialM3IntervalTitle": "Aikaväli",
   "tutorialM3IntervalDesc": "Säädä odotusaika lauseiden välillä.",
   "tutorialM3StartTitle": "Aloita",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Otsikkotunniste (aineistokirjasto)",
+  "generalTags": "Yleiset tunnisteet",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Neutraali",
   "chatAllConversations": "Kaikki keskustelut",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Haluatko varmasti poistaa tämän keskustelun?\nPoistettuja keskusteluja ei voi palauttaa."
+  "confirmDeleteConversation": "Haluatko varmasti poistaa tämän keskustelun?\nPoistettuja keskusteluja ei voi palauttaa.",
+  "notSelected": "- Ei valittu -"
 }

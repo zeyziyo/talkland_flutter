@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "שמור את התרגום שלך.",
   "tutorialM2SelectTitle": "בחר ומסנן",
   "tutorialM2SelectDesc": "בחר חומרים או 'חזור על הכל'.",
+  "tutorialM3SelectDesc": "בחר סט לתרגול דיבור.",
   "tutorialM2ListTitle": "רשימת לימוד",
   "tutorialM2ListDesc": "בדוק את הכרטיסים והפוך אותם. (Long-press to delete)",
   "tutorialM3SelectTitle": "בחר חומר",
-  "tutorialM3SelectDesc": "בחר סט לתרגול דיבור.",
   "tutorialM3IntervalTitle": "מרווח",
   "tutorialM3IntervalDesc": "כוון את זמן ההמתנה.",
   "tutorialM3StartTitle": "התחל",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "תג כותרת (קובץ עזר)",
+  "generalTags": "תגים כלליים",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "ניטרלי",
   "chatAllConversations": "כל השיחות",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "האם למחוק שיחה זו?\nלא ניתן יהיה לשחזר שיחה שנמחקה."
+  "confirmDeleteConversation": "האם למחוק שיחה זו?\nלא ניתן יהיה לשחזר שיחה שנמחקה.",
+  "notSelected": "- לא נבחר -"
 }

@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Garda os resultados traducidos no teu rexistro de aprendizaxe.",
   "tutorialM2SelectTitle": "Selección de material",
   "tutorialM2SelectDesc": "Toca a icona do libro de traballo (📚) na barra de aplicacións superior para seleccionar o material que queres estudar.",
+  "tutorialM3SelectDesc": "Toca a icona do libro de traballo (📚) na barra de aplicacións superior para seleccionar o material que queres practicar.",
   "tutorialM2ListTitle": "Lista de aprendizaxe",
   "tutorialM2ListDesc": "Podes eliminar esta tarxeta manténdoa pulsada (clic longo). Comproba e dá a volta á frase gardada.",
   "tutorialM3SelectTitle": "Selección de material",
-  "tutorialM3SelectDesc": "Toca a icona do libro de traballo (📚) na barra de aplicacións superior para seleccionar o material que queres practicar.",
   "tutorialM3IntervalTitle": "Axuste de intervalo",
   "tutorialM3IntervalDesc": "Axusta o tempo de espera entre frases.",
   "tutorialM3StartTitle": "Comezar a practicar",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperativo",
   "labelNote": "Nota",
   "labelShowMemorized": "Rematado",
+  "titleTagSelection": "Etiquetas do título (colección)",
+  "generalTags": "Etiquetas xerais",
   "tagSelection": "Selección de etiquetas",
   "metadataFormType": "Tipo de forma gramatical",
   "formInfinitive": "Infinitivo/Presente",
@@ -680,5 +682,6 @@
   "neutral": "Neutro",
   "chatAllConversations": "Todas as conversas",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Queres eliminar esta conversa?\nNon poderás recuperala."
+  "confirmDeleteConversation": "Queres eliminar esta conversa?\nNon poderás recuperala.",
+  "notSelected": "- Sen seleccionar -"
 }

@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Spremite prevedene rezultate u zapise učenja.",
   "tutorialM2SelectTitle": "Odabir materijala",
   "tutorialM2SelectDesc": "Odaberite materijal za učenje pritiskom na ikonu zbirke materijala (📚) na gornjoj traci aplikacije.",
+  "tutorialM3SelectDesc": "Odaberite materijal za vježbanje pritiskom na ikonu zbirke materijala (📚) na gornjoj traci aplikacije.",
   "tutorialM2ListTitle": "Lista za učenje",
   "tutorialM2ListDesc": "Možete ga obrisati dugim pritiskom (dugi klik) na ovu karticu. Provjerite i okrenite spremljenu rečenicu.",
   "tutorialM3SelectTitle": "Odabir materijala",
-  "tutorialM3SelectDesc": "Odaberite materijal za vježbanje pritiskom na ikonu zbirke materijala (📚) na gornjoj traci aplikacije.",
   "tutorialM3IntervalTitle": "Podešavanje intervala",
   "tutorialM3IntervalDesc": "Podesite vrijeme čekanja između rečenica.",
   "tutorialM3StartTitle": "Započni vježbu",
@@ -642,6 +642,8 @@
   "typeImperative": "Zapovjedna",
   "labelNote": "Bilješka",
   "labelShowMemorized": "Završeno",
+  "titleTagSelection": "Naslovna oznaka (Kolekcija)",
+  "generalTags": "Opće oznake",
   "tagSelection": "Odabir oznake",
   "metadataFormType": "Gramatički oblik",
   "formInfinitive": "Infinitiv/Sadašnje vrijeme",
@@ -680,5 +682,6 @@
   "neutral": "Neutralno",
   "chatAllConversations": "Svi razgovori",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Želite li izbrisati ovaj razgovor?\nIzbrisani razgovori se ne mogu vratiti."
+  "confirmDeleteConversation": "Želite li izbrisati ovaj razgovor?\nIzbrisani razgovori se ne mogu vratiti.",
+  "notSelected": "- Nije odabrano -"
 }

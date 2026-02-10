@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Stoor jou vertaling.",
   "tutorialM2SelectTitle": "Kies & Filter",
   "tutorialM2SelectDesc": "Kies materiaal of 'Hersien Alles'.",
+  "tutorialM3SelectDesc": "Kies stel vir praatoefening.",
   "tutorialM2ListTitle": "Studielys",
   "tutorialM2ListDesc": "Gaan jou kaarte na en draai hulle om. (Long-press to delete)",
   "tutorialM3SelectTitle": "Kies Materiaal",
-  "tutorialM3SelectDesc": "Kies stel vir praatoefening.",
   "tutorialM3IntervalTitle": "Interval",
   "tutorialM3IntervalDesc": "Pas wagtyd tussen sinne aan.",
   "tutorialM3StartTitle": "Begin",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Titelmerker (Versameling)",
+  "generalTags": "Algemene merkers",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Neutraal",
   "chatAllConversations": "Alle gesprekke",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Wil jy hierdie gesprek uitvee?\nJy sal nie die uitgeveede gesprek kan herstel nie."
+  "confirmDeleteConversation": "Wil jy hierdie gesprek uitvee?\nJy sal nie die uitgeveede gesprek kan herstel nie.",
+  "notSelected": "- Nie gekies nie -"
 }

@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Salve sua tradução nos registros de estudo.",
   "tutorialM2SelectTitle": "Selecionar & Filtrar",
   "tutorialM2SelectDesc": "Escolha materiais de estudo ou mude para 'Revisar Tudo'.",
+  "tutorialM3SelectDesc": "Escolha um conjunto de material para prática de fala.",
   "tutorialM2ListTitle": "Lista de Estudo",
   "tutorialM2ListDesc": "Verifique seus cartões salvos e vire-os para ver as respostas. (Long-press to delete)",
   "tutorialM3SelectTitle": "Selecionar Material",
-  "tutorialM3SelectDesc": "Escolha um conjunto de material para prática de fala.",
   "tutorialM3IntervalTitle": "Intervalo",
   "tutorialM3IntervalDesc": "Ajuste o tempo de espera entre frases.",
   "tutorialM3StartTitle": "Iniciar Prática",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Tag de título (Coleção)",
+  "generalTags": "Tags gerais",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Neutro",
   "chatAllConversations": "Todas as conversas",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Tem certeza que deseja excluir esta conversa?\nAs conversas excluídas não podem ser recuperadas."
+  "confirmDeleteConversation": "Tem certeza que deseja excluir esta conversa?\nAs conversas excluídas não podem ser recuperadas.",
+  "notSelected": "- Não selecionado -"
 }

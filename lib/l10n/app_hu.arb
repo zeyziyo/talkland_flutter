@@ -444,10 +444,10 @@
   "tutorialSaveDesc": "Mentse el a fordítást.",
   "tutorialM2SelectTitle": "Kiválasztás és Szűrő",
   "tutorialM2SelectDesc": "Válasszon anyagot vagy 'Összes áttekintése'.",
+  "tutorialM3SelectDesc": "Válasszon készletet beszédgyakorláshoz.",
   "tutorialM2ListTitle": "Tanulólista",
   "tutorialM2ListDesc": "Ellenőrizze a kártyákat és fordítsa meg őket. (Long-press to delete)",
   "tutorialM3SelectTitle": "Anyag Kiválasztása",
-  "tutorialM3SelectDesc": "Válasszon készletet beszédgyakorláshoz.",
   "tutorialM3IntervalTitle": "Időköz",
   "tutorialM3IntervalDesc": "Állítsa be a mondatok közötti időt.",
   "tutorialM3StartTitle": "Indítás",
@@ -642,6 +642,8 @@
   "typeImperative": "Imperative",
   "labelNote": "Note",
   "labelShowMemorized": "Finished",
+  "titleTagSelection": "Címke kiválasztása (adatlap)",
+  "generalTags": "Általános címkék",
   "tagSelection": "Select Tags",
   "metadataFormType": "Form Type",
   "formInfinitive": "Infinitive/Present",
@@ -680,5 +682,6 @@
   "neutral": "Semleges",
   "chatAllConversations": "Összes beszélgetés",
   "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Törli ezt a beszélgetést?\nA törölt beszélgetések nem állíthatók vissza."
+  "confirmDeleteConversation": "Törli ezt a beszélgetést?\nA törölt beszélgetések nem állíthatók vissza.",
+  "notSelected": "- Nincs kiválasztva -"
 }
