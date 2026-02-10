@@ -1413,8 +1413,8 @@ class AppState extends ChangeNotifier {
   /// 태그 목록 로드
   Future<void> loadTags() async {
     try {
-      // Phase 76.8: Use centralized method (Standard for Dropdowns)
-      _availableTags = await DatabaseService.getAllTags();
+      // Phase 79: Use language-filtered tags (Source Language only)
+      _availableTags = await DatabaseService.getAllTagsForLanguage(_sourceLang);
       notifyListeners();
     } catch (e) {
       debugPrint('[AppState] Error loading tags: $e');
@@ -1495,10 +1495,9 @@ class AppState extends ChangeNotifier {
       // WHERE Clause Construction
       List<String> conditions = [];
       
-      // 1. Language Filter (Optimization: Only fetch current pair)
-      conditions.add('t.lang_code IN (?, ?)');
+      // 1. Source Language Filter (Primary)
+      conditions.add('t.lang_code = ?');
       whereArgs.add(_sourceLang);
-      whereArgs.add(_targetLang);
       
       // 2. Tags
       if (_selectedTags.isNotEmpty) {
@@ -1552,10 +1551,11 @@ class AppState extends ChangeNotifier {
         if (groupId == null) continue;
         
         // 현재 설정된 sourceLang과 targetLang에 해당하는 텍스트들을 그룹에서 찾아냄
+        // Source는 위 쿼리 조건에 의해 보장됨. Target은 존재하지 않을 수도 있음.
         final sourceRow = (row['lang_code'] == _sourceLang) ? row : await _getRowByGroup(db, table, groupId, _sourceLang);
         final targetRow = (row['lang_code'] == _targetLang) ? row : await _getRowByGroup(db, table, groupId, _targetLang);
         
-        if (sourceRow == null || targetRow == null) continue;
+        if (sourceRow == null) continue; // Source가 없으면 표시 불가
 
         // 품사, 원형 등 상세 정보 추출 (Source 기준으로 표시)
         final pos = sourceRow['pos'] as String?;
@@ -1577,7 +1577,7 @@ class AppState extends ChangeNotifier {
           'source_lang': _sourceLang,
           'target_lang': _targetLang,
           'source_text': sourceRow['text'],
-          'target_text': targetRow['text'],
+          'target_text': targetRow != null ? targetRow['text'] : '', // Target 없어도 Source는 보여줌
           'note': sourceRow['note'] ?? targetRow['note'],
           'pos': pos,
           'form_type': formType,
@@ -1585,7 +1585,7 @@ class AppState extends ChangeNotifier {
           'tags': tags,
           'created_at': sourceRow['created_at'],
           'review_count': sourceRow['review_count'] ?? 0,
-          'is_memorized': targetRow['is_memorized'] == 1, // Phase 53: Target status
+          'is_memorized': (targetRow != null ? targetRow['is_memorized'] : sourceRow['is_memorized']) == 1, 
         });
       }
 

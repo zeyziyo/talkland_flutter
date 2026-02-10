@@ -46,10 +46,12 @@
     - [x] **L10n 동기화**: 전체 언어 ARB 파일 동기화 완료
     - [x] `history.md` 및 `task.md` 현행화
 
-- [ ] **Data Sync Fix (최종: 파일명 기반 동기화)**
+- [x] **Data Sync Fix (최종: 파일명 기반 동기화)**
     - [x] **Online Library**: 파일 이름을 동기화 키(Sync Pivot)로 사용하도록 수정.
     - [x] **Native Tag**: 원어 제목을 태그로 보존하여 필터링 지원.
     - [x] **UI**: '제목 태그' 전용 드롭다운 구현.
+    - [x] **Hotfix**: 단일 언어 자료집 가져오기 오류 수정 및 자동 화면 갱신 적용.
+    - [x] **Emergency**: CI 빌드 오류(변수 누락) 긴급 수정 완료.
 
 - [x] **Documentation: Core Design Strategy**
     - [x] **docs/STRATEGY.md**: 핵심 설계 원칙(Native Tag Strategy, Smart Sync 등) 문서화.

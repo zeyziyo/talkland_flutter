@@ -52,10 +52,11 @@
 ### [2026-02-10] EMERGENCY: Build Fix (Phase 78.2)
 - **Fix**: Accidental deletion of `sourceText` and `targetText` in `lib/services/database_service.dart` causing CI build failure.
 
-### [2026-02-10] Hotfix: Online Library Import & UI Refresh (Phase 78.1)
-- **Fix**: 번역(Translation)이 없는 단일 언어 자료집 가져오기 시 항목 누락 오류 수정.
-- **UX**: 자료 가져오기 성공 시 목록 자동 새로고침 로직 추가.
-- **Stability**: `saveUnifiedRecord` 내 단일 언어 데이터 처리 예외 상황 방어 로직 강화.
+### [2026-02-10] Data Visibility & Filter UI Redesign (Phase 79)
+- **Fix**: 모국어 중심 데이터 로딩 로직으로 목표어 번역이 없는 자료의 노출 문제 해결.
+- **UI**: 검색 필터 다이얼로그 4단 드롭다운(제목1 + 태그3)으로 개편.
+- **Optimization**: 현재 선택된 모국어와 연관된 태그들만 필터링해서 보여주는 로직 추가.
+- **Stability**: `DatabaseService.getAllStudyMaterials`를 `getStudyMaterials`로 통합/정리.
 
 ### [2026-02-10] File-Name-Based Smart Sync & Tag UI (Phase 78)
 - **Sync Strategy**: 자료집 동기화 키를 영어 제목에서 **파일 이름**(예: `nouns_1.json` -> `nouns_1`)으로 변경하여 안정성 극대화.

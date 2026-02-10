@@ -38,36 +38,25 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final allAvailableTags = widget.appState.availableTags.where((tag) {
-      if (_localSelectedTags.contains(tag)) return true;
-      for (var m in widget.appState.studyMaterials) {
-        if (m['subject'] == tag) {
-          if (m['source_language'] == widget.appState.sourceLanguage || 
-              m['source_language'] == 'auto') {
-            return true;
-          }
-          return false;
-        }
-      }
-      return true;
-    }).toList();
-
+    
     // Separate Title Tags (Materials) from General Tags
     final materialSubjects = widget.appState.studyMaterials.map((m) => m['subject'] as String).toSet();
+    final List<String> allAvailableTags = widget.appState.availableTags;
+    
     final List<String> titleTags = [];
     final List<String> generalTags = [];
 
-    // Filter out internal sync keys (English names) if they are not the display title
     for (var tag in allAvailableTags) {
       if (materialSubjects.contains(tag)) {
         titleTags.add(tag);
       } else {
-        // Exclude English sync keys from general tags to keep UI clean
-        // We assume sync keys are tags that aren't native subjects but are English mNames.
-        // For now, let's just keep everything else as general tags.
         generalTags.add(tag);
       }
     }
+
+    // Identify currently selected title tag and general tags
+    String selectedTitle = _localSelectedTags.firstWhere((t) => titleTags.contains(t), orElse: () => '');
+    List<String> selectedGeneral = _localSelectedTags.where((t) => generalTags.contains(t)).toList();
 
     return AlertDialog(
       title: Row(
@@ -84,66 +73,62 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // 1. Title Tag Section (Dropdown)
-              Text(l10n.titleTagSelection, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-              const SizedBox(height: 8),
-              DropdownButtonFormField<String>(
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  isDense: true,
-                  contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                ),
-                isExpanded: true,
-                hint: Text(l10n.selectMaterialPrompt),
-                // Current selection among Title Tags
-                value: _localSelectedTags.firstWhere((t) => titleTags.contains(t), orElse: () => ''),
+              // 1. Title Tag Dropdown
+              _buildDropdown(
+                label: l10n.titleTagSelection,
+                value: selectedTitle,
+                items: titleTags,
                 onChanged: (val) {
                   setState(() {
-                    // Remove old title tags, add new one
                     _localSelectedTags.removeWhere((t) => titleTags.contains(t));
-                    if (val != null && val.isNotEmpty) {
-                      _localSelectedTags.add(val);
-                    }
+                    if (val != null && val.isNotEmpty) _localSelectedTags.add(val);
                   });
                 },
-                items: [
-                  DropdownMenuItem(value: '', child: Text(l10n.filterAll)),
-                  ...titleTags.map((t) => DropdownMenuItem(value: t, child: Text(t))).toList(),
-                ],
+              ),
+
+              const SizedBox(height: 16),
+              const Divider(),
+              const SizedBox(height: 16),
+
+              // 2. General Tag Dropdown 1
+              _buildDropdown(
+                label: '${l10n.generalTags} 1',
+                value: selectedGeneral.isNotEmpty ? selectedGeneral[0] : '',
+                items: generalTags,
+                onChanged: (val) {
+                  _updateGeneralTag(0, val, selectedGeneral, generalTags);
+                },
+              ),
+
+              const SizedBox(height: 12),
+
+              // 3. General Tag Dropdown 2
+              _buildDropdown(
+                label: '${l10n.generalTags} 2',
+                value: selectedGeneral.length > 1 ? selectedGeneral[1] : '',
+                items: generalTags,
+                onChanged: (val) {
+                  _updateGeneralTag(1, val, selectedGeneral, generalTags);
+                },
+              ),
+
+              const SizedBox(height: 12),
+
+              // 4. General Tag Dropdown 3
+              _buildDropdown(
+                label: '${l10n.generalTags} 3',
+                value: selectedGeneral.length > 2 ? selectedGeneral[2] : '',
+                items: generalTags,
+                onChanged: (val) {
+                  _updateGeneralTag(2, val, selectedGeneral, generalTags);
+                },
               ),
 
               const SizedBox(height: 24),
-
-              // 2. General Tags Section (Chips)
-              Text(l10n.generalTags, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-              const SizedBox(height: 8),
-              if (generalTags.isEmpty)
-                Text(l10n.noRecords, style: const TextStyle(color: Colors.grey, fontSize: 12))
-              else
-                Wrap(
-                  spacing: 8.0,
-                  runSpacing: 4.0,
-                  children: generalTags.map((tag) {
-                    final isSelected = _localSelectedTags.contains(tag);
-                    return FilterChip(
-                      label: Text(tag),
-                      selected: isSelected,
-                      onSelected: (bool selected) {
-                        setState(() {
-                          if (selected) {
-                            _localSelectedTags.add(tag);
-                          } else {
-                            _localSelectedTags.remove(tag);
-                          }
-                        });
-                      },
-                    );
-                  }).toList(),
-                ),
+              const Divider(),
+              const SizedBox(height: 16),
               
-              const Divider(height: 32),
-              
-              // 2. Recent N Items (Limit)
+              // Recent N Items (Limit)
               TextField(
                 controller: _limitController,
                 keyboardType: TextInputType.number,
@@ -158,7 +143,7 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
               
               const SizedBox(height: 16),
               
-              // 3. Starts With (Prefix)
+              // Starts With (Prefix)
               TextField(
                 controller: _startsWithController,
                 decoration: InputDecoration(
@@ -174,7 +159,6 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
         ),
       ),
       actions: [
-        // Reset Button
         if (_localSelectedTags.isNotEmpty || _limitController.text.isNotEmpty || _startsWithController.text.isNotEmpty)
           TextButton(
             onPressed: () {
@@ -193,29 +177,79 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
         ),
         ElevatedButton(
           onPressed: () {
-            // Apply changes
             widget.appState.updateSelectedTags(_localSelectedTags);
-            
-            // Apply Limit
             if (_limitController.text.isNotEmpty) {
-              final limit = int.tryParse(_limitController.text);
-              widget.appState.setFilterLimit(limit);
+              widget.appState.setFilterLimit(int.tryParse(_limitController.text));
             } else {
               widget.appState.setFilterLimit(null);
             }
-            
-            // Apply StartsWith
-            if (_startsWithController.text.isNotEmpty) {
-              widget.appState.setFilterStartsWith(_startsWithController.text);
-            } else {
-              widget.appState.setFilterStartsWith(null);
-            }
-
+            widget.appState.setFilterStartsWith(_startsWithController.text.isNotEmpty ? _startsWithController.text : null);
             Navigator.pop(context);
           },
           child: Text(l10n.confirm),
         ),
       ],
     );
+  }
+
+  Widget _buildDropdown({
+    required String label,
+    required String value,
+    required List<String> items,
+    required ValueChanged<String?> onChanged,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(label, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.blueGrey)),
+        const SizedBox(height: 4),
+        DropdownButtonFormField<String>(
+          decoration: const InputDecoration(
+            border: OutlineInputBorder(),
+            isDense: true,
+            contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+          ),
+          isExpanded: true,
+          value: items.contains(value) ? value : '',
+          onChanged: onChanged,
+          items: [
+            DropdownMenuItem(value: '', child: Text(l10n.notSelected, style: const TextStyle(color: Colors.grey))),
+            ...items.map((t) => DropdownMenuItem(value: t, child: Text(t, overflow: TextOverflow.ellipsis))).toList(),
+          ],
+        ),
+      ],
+    );
+  }
+
+  void _updateGeneralTag(int index, String? val, List<String> currentGeneral, List<String> allGeneral) {
+    setState(() {
+      // Create a copy of current general tags
+      List<String> newGeneral = List.from(currentGeneral);
+      
+      if (val == null || val.isEmpty) {
+        // Remove at index if exists
+        if (index < newGeneral.length) {
+          newGeneral.removeAt(index);
+        }
+      } else {
+        // Update at index or add if it matches index
+        if (index < newGeneral.length) {
+          newGeneral[index] = val;
+        } else {
+          // Fill gaps if necessary (unlikely given index logic, but safe)
+          while (newGeneral.length < index) {
+            newGeneral.add(''); // Placeholder if needed
+          }
+          newGeneral.add(val);
+        }
+      }
+
+      // Re-construct _localSelectedTags: [TitleTag (if any)] + [General Tags]
+      String titleTag = _localSelectedTags.firstWhere((t) => !allGeneral.contains(t) && t.isNotEmpty, orElse: () => '');
+      _localSelectedTags = [
+        if (titleTag.isNotEmpty) titleTag,
+        ...newGeneral.where((t) => t.isNotEmpty),
+      ];
+    });
   }
 }

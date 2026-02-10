@@ -1592,7 +1592,7 @@ class DatabaseService {
   }
   
   /// Get all study materials with type counts (Includes Dialogue Groups as materials)
-  static Future<List<Map<String, dynamic>>> getAllStudyMaterials() async {
+  static Future<List<Map<String, dynamic>>> getStudyMaterials() async {
     final db = await database;
     
     // 1. Get Regular Study Materials
@@ -2579,6 +2579,26 @@ class DatabaseService {
       return results.map((row) => row['tag'] as String).toList();
     } catch (e) {
       print('[DB] Error fetching tags: $e');
+      return [];
+    }
+  }
+
+  /// Phase 79: 특정 언어와 연관된 고유 태그 조회 (UI 리뉴얼용)
+  static Future<List<String>> getAllTagsForLanguage(String langCode) async {
+    final db = await database;
+    try {
+      // words와 sentences 테이블 모두에서 해당 언어의 아이템에 붙은 태그들을 가져옴
+      final results = await db.rawQuery('''
+        SELECT DISTINCT it.tag 
+        FROM item_tags it
+        LEFT JOIN words w ON it.item_id = w.id AND it.item_type = 'word'
+        LEFT JOIN sentences s ON it.item_id = s.id AND it.item_type = 'sentence'
+        WHERE w.lang_code = ? OR s.lang_code = ?
+        ORDER BY it.tag ASC
+      ''', [langCode, langCode]);
+      return results.map((row) => row['tag'] as String).toList();
+    } catch (e) {
+      print('[DB] Error fetching language filtered tags: $e');
       return [];
     }
   }

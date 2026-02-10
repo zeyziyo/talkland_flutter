@@ -683,5 +683,6 @@
   "neutral": "중성",
   "chatAllConversations": "전체 대화",
   "tabConversation": "대화",
-  "confirmDeleteConversation": "이 대화를 삭제하시겠습니까?\n삭제된 대화는 복구할 수 없습니다."
+  "confirmDeleteConversation": "이 대화를 삭제하시겠습니까?\n삭제된 대화는 복구할 수 없습니다.",
+  "notSelected": "- 선택 안함 -"
 }

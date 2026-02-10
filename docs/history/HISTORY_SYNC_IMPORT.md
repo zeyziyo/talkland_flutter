@@ -5,6 +5,13 @@
 
 ## ✅ 구현 완료 기능 (Finalized Features)
 
+### 2026-02-10: 데이터 노출 및 필터 UI 리뉴얼 (Phase 79)
+- **문제 (Problem)**: 목표 언어 번역 파일이 아직 준비되지 않은 자료집의 경우, 모국어 로딩 시 건너뛰게 되어 화면에 아무것도 나타나지 않는 현상 발생.
+- **해결 (Solution)**:
+    - `loadRecordsByTags`를 모국어(Source) 중심으로 개편하여 목표어 없이도 즉시 노출되도록 수정.
+    - 선택된 모국어와 실제 연관된 태그들만 추출하는 `getAllTagsForLanguage` 도입.
+    - 검색 필터 UI를 **제목 태그 1개 + 일반 태그 3개**의 드롭다운 방식으로 개편하여 가독성 강화.
+
 ### 2026-02-10: 온라인 자료실 가져오기 오류 수정 (Online Library Import Hotfix)
 - **문제 (Problem)**: "온라인 자료실"에서 번역이 없는 단일 언어 자료집 가져오기 시 항목이 저장되지 않는 문제.
 - **해결 (Solution)**: `importFromJsonWithMetadata`에서 번역 필드 필수 체크를 완화하고, `saveUnifiedRecord`에서 단일 언어 저장을 지원하도록 수정.
