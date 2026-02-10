@@ -1571,14 +1571,14 @@ class AppState extends ChangeNotifier {
 
         pairedResults.add({
           'id': sourceRow['id'], 
-          'target_id': targetRow['id'], // Added Phase 53
+          'target_id': targetRow?['id'], // Added Phase 53
           'group_id': groupId,
           'type': rowType, // 단어/문장 구분
           'source_lang': _sourceLang,
           'target_lang': _targetLang,
           'source_text': sourceRow['text'],
           'target_text': targetRow != null ? targetRow['text'] : '', // Target 없어도 Source는 보여줌
-          'note': sourceRow['note'] ?? targetRow['note'],
+          'note': sourceRow['note'] ?? targetRow?['note'],
           'pos': pos,
           'form_type': formType,
           'root': root,

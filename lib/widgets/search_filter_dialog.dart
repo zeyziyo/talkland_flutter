@@ -78,6 +78,7 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
                 label: l10n.titleTagSelection,
                 value: selectedTitle,
                 items: titleTags,
+                l10n: l10n,
                 onChanged: (val) {
                   setState(() {
                     _localSelectedTags.removeWhere((t) => titleTags.contains(t));
@@ -95,6 +96,7 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
                 label: '${l10n.generalTags} 1',
                 value: selectedGeneral.isNotEmpty ? selectedGeneral[0] : '',
                 items: generalTags,
+                l10n: l10n,
                 onChanged: (val) {
                   _updateGeneralTag(0, val, selectedGeneral, generalTags);
                 },
@@ -107,6 +109,7 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
                 label: '${l10n.generalTags} 2',
                 value: selectedGeneral.length > 1 ? selectedGeneral[1] : '',
                 items: generalTags,
+                l10n: l10n,
                 onChanged: (val) {
                   _updateGeneralTag(1, val, selectedGeneral, generalTags);
                 },
@@ -119,6 +122,7 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
                 label: '${l10n.generalTags} 3',
                 value: selectedGeneral.length > 2 ? selectedGeneral[2] : '',
                 items: generalTags,
+                l10n: l10n,
                 onChanged: (val) {
                   _updateGeneralTag(2, val, selectedGeneral, generalTags);
                 },
@@ -196,6 +200,7 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
     required String label,
     required String value,
     required List<String> items,
+    required AppLocalizations l10n,
     required ValueChanged<String?> onChanged,
   }) {
     return Column(

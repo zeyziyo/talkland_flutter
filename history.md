@@ -49,6 +49,11 @@
 ### [2026-02-09] Metadata Dialog Redesign & Mode 1 Fixes (Phase 77)
 - **Refactor**: 'Metadata Dialog'에서 'Online Library' 아이콘 제거 (역할 분리 명확화).
 
+### [2026-02-10] EMERGENCY: Build Failure Resolution (Phase 79.1)
+- **Fix**: `DatabaseService` 내 `getStudyMaterials` 중복 선언 제거.
+- **Fix**: `AppState.loadRecordsByTags` 내 `targetRow`에 대한 Null Safety 보완 (`targetRow?['id']`).
+- **Fix**: `SearchFilterDialog` 내 `_buildDropdown` 함수에 `l10n` 객체를 명시적으로 전달하여 스코프 오류 해결.
+
 ### [2026-02-10] EMERGENCY: Build Fix (Phase 78.2)
 - **Fix**: Accidental deletion of `sourceText` and `targetText` in `lib/services/database_service.dart` causing CI build failure.
 
