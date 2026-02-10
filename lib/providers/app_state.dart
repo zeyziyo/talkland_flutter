@@ -167,7 +167,6 @@ class AppState extends ChangeNotifier {
   String? get filterStartsWith => _filterStartsWith;
   int? _selectedMaterialId; // Currently selected material (Legacy/Backward compatibility)
   List<Map<String, dynamic>> _materialRecords = []; // Sentences in selected tags/material
-  Set<int> _studiedTranslationIds = {}; // Reviewed items in current session
   String _recordTypeFilter = 'word'; // Default: Word, 'all' removed for standard modes
   String _searchQuery = ''; // 검색어 필터
   bool _showMemorized = false; // 외운 카드 포함 여부 (기본: 숨김)
@@ -1505,9 +1504,9 @@ class AppState extends ChangeNotifier {
         whereArgs.addAll(_selectedTags);
       }
       
-      // 3. Search Query
+      // 3. Search Query (Updated Phase 79.3: Search in any language within the group)
       if (_searchQuery.isNotEmpty) {
-        conditions.add('t.text LIKE ?');
+        conditions.add('t.group_id IN (SELECT DISTINCT group_id FROM $table WHERE text LIKE ?)');
         whereArgs.add('%$_searchQuery%');
       }
 
@@ -1879,11 +1878,6 @@ class AppState extends ChangeNotifier {
     }
   }
   
-  /// Mark translation as studied in current session
-  void markTranslationAsStudied(int translationId) {
-    _studiedTranslationIds.add(translationId);
-    notifyListeners();
-  }
   
   /// Play TTS for material record (source or target)
   Future<void> playMaterialTts({

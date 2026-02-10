@@ -24,7 +24,7 @@ class DatabaseService {
     
     return await openDatabase(
       path,
-      version: 11, // Phase 79: Style field support
+      version: 12, // Phase 79.4: Legacy cleanup
       onCreate: (db, version) async {
         await _createBaseTables(db);
         await _ensureDefaultMaterial(db);
@@ -60,10 +60,9 @@ class DatabaseService {
         }
 
         if (oldVersion < 5) {
-          await _createBaseTables(db);
-          await migrateToUnifiedSchema(db); 
-          print('[DB] Upgraded to version 5: New Unified Schema added and data migrated');
-        }
+        // Legacy migration removed in Phase 79.4 (Unified Schema is now default)
+        print('[DB] Version 5 upgrade: Unified Schema is now the primary structure');
+      }
 
         if (oldVersion < 6) {
           await db.execute('ALTER TABLE sentences ADD COLUMN pos TEXT');
@@ -121,39 +120,25 @@ class DatabaseService {
             print('[DB] Upgraded to version 11: Style column already exists or error: $e');
           }
         }
+
+        if (oldVersion < 12) {
+        // Phase 79.4: Final Legacy Drop
+        try {
+          await db.execute('DROP TABLE IF EXISTS translations');
+          await db.execute('DROP TABLE IF EXISTS word_translations');
+          await db.execute('DROP TABLE IF EXISTS sentence_translations');
+          print('[DB] Upgraded to version 12: Dropped legacy and duplicate mapping tables');
+        } catch (e) {
+          print('[DB] Error dropping legacy tables: $e');
+        }
+      }
       },
     );
   }
   
   /// 기본 테이블 및 신규 통합 테이블 생성
   static Future<void> _createBaseTables(Database db) async {
-    // ... (Legacy tables skipped for brevity in diff, assume unchanged)
-    // 1. 구버전 테이블 (마이그레이션 및 하위 호환성 위해 유지 - 추후 제거 가능)
-    // 번역 관계 테이블
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS translations (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        source_lang TEXT NOT NULL,
-        source_id INTEGER NOT NULL,
-        target_lang TEXT NOT NULL,
-        target_id INTEGER NOT NULL,
-        created_at TEXT NOT NULL,
-        material_id INTEGER,
-        note TEXT,
-        type TEXT DEFAULT 'sentence',
-        dialogue_id TEXT,
-        speaker TEXT,
-        sequence_order INTEGER,
-        is_synced INTEGER DEFAULT 0
-      )
-    ''');
-    
-    await db.execute('''
-      CREATE UNIQUE INDEX IF NOT EXISTS idx_translations_composite 
-      ON translations (source_lang, source_id, target_lang, target_id, material_id, IFNULL(note, ''), IFNULL(dialogue_id, ''))
-    ''');
-
-    // 2. 신규 통합 테이블 (Phase 12)
+    // 1. 신규 통합 테이블 (Phase 12)
     
     // 통합 단어 테이블
     await db.execute('''
@@ -196,25 +181,7 @@ class DatabaseService {
     await db.execute('CREATE INDEX IF NOT EXISTS idx_sentences_text_lang ON sentences (text, lang_code)');
     await db.execute('CREATE UNIQUE INDEX IF NOT EXISTS idx_sentences_unique ON sentences (text, lang_code, IFNULL(note, ""))');
 
-    // 단어 번역 테이블
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS word_translations (
-        source_word_id INTEGER NOT NULL,
-        target_word_id INTEGER NOT NULL,
-        PRIMARY KEY (source_word_id, target_word_id)
-      )
-    ''');
-
-    // 문장 번역 테이블
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS sentence_translations (
-        source_sentence_id INTEGER NOT NULL,
-        target_sentence_id INTEGER NOT NULL,
-        PRIMARY KEY (source_sentence_id, target_sentence_id)
-      )
-    ''');
-
-    // 태그 시스템 테이블
+    // 3. 태그 시스템 테이블
     await db.execute('''
       CREATE TABLE IF NOT EXISTS item_tags (
         item_id INTEGER NOT NULL,
@@ -589,54 +556,6 @@ class DatabaseService {
     };
   }
   
-  /// 번역 관계 저장
-  static Future<void> saveTranslationLink({
-    required String sourceLang,
-    required int sourceId,
-    required String targetLang,
-    required int targetId,
-    required int materialId,
-    String? note,
-    String type = 'sentence',
-  }) async {
-    final db = await database;
-    
-    String whereClause;
-    List<dynamic> whereArgs;
-
-    if (note == null) {
-      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND note IS NULL';
-      whereArgs = [sourceLang, sourceId, targetLang, targetId];
-    } else {
-      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND target_id = ? AND note = ?';
-      whereArgs = [sourceLang, sourceId, targetLang, targetId, note];
-    }
-    
-    final existing = await db.query(
-      'translations',
-      where: whereClause,
-      whereArgs: whereArgs,
-      limit: 1,
-    );
-    
-    if (existing.isNotEmpty) {
-      print('[DB] Translation link already exists: $sourceLang($sourceId) -> $targetLang($targetId) [Note: $note]');
-      return;
-    }
-    
-    await db.insert('translations', {
-      'source_lang': sourceLang,
-      'source_id': sourceId,
-      'target_lang': targetLang,
-      'target_id': targetId,
-      'created_at': DateTime.now().toIso8601String(),
-      'material_id': materialId,
-      'note': note,
-      'type': type,
-    });
-    
-    print('[DB] Translation link saved: $sourceLang($sourceId) -> $targetLang($targetId) [Material: $materialId] [Type: $type]');
-  }
 
   /// 오디오 파일 저장
   static Future<void> saveAudioFile(
@@ -677,226 +596,7 @@ class DatabaseService {
     return records.first['audio_file'] as Uint8List;
   }
 
-  /// 특정 대상 언어로 번역된 모든 레코드 가져오기
-  static Future<List<Map<String, dynamic>>> getRecordsByTargetLanguage(
-    String targetLang,
-  ) async {
-    final db = await database;
-    
-    final translations = await db.query(
-      'translations',
-      where: 'target_lang = ?',
-      whereArgs: [targetLang],
-      orderBy: 'created_at DESC',
-    );
-    
-    List<Map<String, dynamic>> results = [];
-    
-    for (var translation in translations) {
-       final sourceLang = translation['source_lang'] as String;
-      final sourceId = translation['source_id'] as int;
-      final targetId = translation['target_id'] as int;
-      
-      final sourceTableName = 'lang_$sourceLang'.replaceAll('-', '_');
-      final sourceRecords = await db.query(
-        sourceTableName,
-        where: 'id = ?',
-        whereArgs: [sourceId],
-        limit: 1,
-      );
-      
-      final targetTableName = 'lang_$targetLang'.replaceAll('-', '_');
-      final targetRecords = await db.query(
-        targetTableName,
-        where: 'id = ?',
-        whereArgs: [targetId],
-        limit: 1,
-      );
-      
-      if (sourceRecords.isNotEmpty && targetRecords.isNotEmpty) {
-        results.add({
-          'id': translation['id'],
-          'source_lang': sourceLang,
-          'source_id': sourceId,
-          'source_text': sourceRecords.first['text'],
-          'target_lang': targetLang,
-          'target_id': targetId,
-          'target_text': targetRecords.first['text'],
-          'translated_text': targetRecords.first['text'],
-          'date': translation['created_at'],
-          'created_at': translation['created_at'],
-          'review_count': targetRecords.first['review_count'] ?? 0,
-          'last_reviewed': targetRecords.first['last_reviewed'],
-          'note': translation['note'],
-          'type': translation['type'] ?? 'sentence',
-        });
-      }
-    }
-    
-    print('[DB] Retrieved ${results.length} records for target language: $targetLang');
-    return results;
-  }
   
-  /// 모든 학습 기록 조회 (하위 호환성 유지)
-  static Future<List<Map<String, dynamic>>> getAllStudyRecords() async {
-    final db = await database;
-    
-    // 모든 번역 관계 가져오기
-    final translations = await db.query(
-      'translations',
-      orderBy: 'created_at DESC',
-    );
-    
-    List<Map<String, dynamic>> results = [];
-    
-    for (var translation in translations) {
-      final sourceLang = translation['source_lang'] as String;
-      final sourceId = translation['source_id'] as int;
-      final targetLang = translation['target_lang'] as String;
-      final targetId = translation['target_id'] as int;
-      
-      // 소스 텍스트 가져오기
-      final sourceTableName = 'lang_$sourceLang'.replaceAll('-', '_');
-      final sourceRecords = await db.query(
-        sourceTableName,
-        where: 'id = ?',
-        whereArgs: [sourceId],
-        limit: 1,
-      );
-      
-      // 대상 텍스트 가져오기
-      final targetTableName = 'lang_$targetLang'.replaceAll('-', '_');
-      final targetRecords = await db.query(
-        targetTableName,
-        where: 'id = ?',
-        whereArgs: [targetId],
-        limit: 1,
-      );
-      
-      if (sourceRecords.isNotEmpty && targetRecords.isNotEmpty) {
-        results.add({
-          'id': translation['id'],
-          'source_lang': sourceLang,
-          'source_id': sourceId,
-          'source_text': sourceRecords.first['text'],
-          'target_lang': targetLang,
-          'target_id': targetId,
-          'translated_text': targetRecords.first['text'],
-          'date': translation['created_at'],
-          'review_count': targetRecords.first['review_count'] ?? 0,
-          'last_reviewed': targetRecords.first['last_reviewed'],
-          'note': translation['note'],
-          'type': translation['type'] ?? 'sentence',
-        });
-      }
-    }
-    
-    print('[DB] Retrieved ${results.length} study records');
-    return results;
-  }
-  
-  /// 복습 횟수 증가 (하위 호환성 유지)
-  static Future<void> incrementReviewCount(int translationId) async {
-    final db = await database;
-    
-    // translation ID로 대상 레코드 찾기
-    final translations = await db.query(
-      'translations',
-      where: 'id = ?',
-      whereArgs: [translationId],
-      limit: 1,
-    );
-    
-    if (translations.isEmpty) return;
-    
-    final targetLang = translations.first['target_lang'] as String;
-    final targetId = translations.first['target_id'] as int;
-    final targetTableName = 'lang_$targetLang'.replaceAll('-', '_');
-    
-    await db.rawUpdate('''
-      UPDATE $targetTableName 
-      SET review_count = review_count + 1,
-          last_reviewed = ?
-      WHERE id = ?
-    ''', [DateTime.now().toIso8601String(), targetId]);
-    
-    print('[DB] Incremented review count for $targetTableName($targetId)');
-  }
-  
-  /// 번역 레코드 삭제 (참조 무결성 유지)
-  static Future<void> deleteTranslationRecord(int translationId) async {
-    final db = await database;
-    
-    try {
-      // 1. translation 레코드 찾기
-      final translations = await db.query(
-        'translations',
-        where: 'id = ?',
-        whereArgs: [translationId],
-        limit: 1,
-      );
-      
-      if (translations.isEmpty) {
-        print('[DB] Translation record not found: id=$translationId');
-        return;
-      }
-      
-      final translation = translations.first;
-      final sourceLang = translation['source_lang'] as String;
-      final sourceId = translation['source_id'] as int;
-      final targetLang = translation['target_lang'] as String;
-      final targetId = translation['target_id'] as int;
-      
-      // 2. translations 테이블에서 번역 관계 삭제
-      await db.delete(
-        'translations',
-        where: 'id = ?',
-        whereArgs: [translationId],
-      );
-      print('[DB] Deleted translation link: id=$translationId');
-      
-      // 3. 소스 텍스트 참조 카운트 확인
-      final sourceReferences = await db.query(
-        'translations',
-        where: 'source_lang = ? AND source_id = ?',
-        whereArgs: [sourceLang, sourceId],
-      );
-      
-      // 소스 텍스트가 다른 번역에서 사용되지 않으면 삭제
-      if (sourceReferences.isEmpty) {
-        final sourceTableName = 'lang_$sourceLang'.replaceAll('-', '_');
-        await db.delete(
-          sourceTableName,
-          where: 'id = ?',
-          whereArgs: [sourceId],
-        );
-        print('[DB] Deleted unused source text: $sourceTableName($sourceId)');
-      }
-      
-      // 4. 대상 텍스트 참조 카운트 확인
-      final targetReferences = await db.query(
-        'translations',
-        where: 'target_lang = ? AND target_id = ?',
-        whereArgs: [targetLang, targetId],
-      );
-      
-      // 대상 텍스트가 다른 번역에서 사용되지 않으면 삭제
-      if (targetReferences.isEmpty) {
-        final targetTableName = 'lang_$targetLang'.replaceAll('-', '_');
-        await db.delete(
-          targetTableName,
-          where: 'id = ?',
-          whereArgs: [targetId],
-        );
-        print('[DB] Deleted unused target text: $targetTableName($targetId)');
-      }
-      
-      print('[DB] Successfully deleted translation record: id=$translationId');
-    } catch (e) {
-      print('[DB] Error deleting translation record: $e');
-      rethrow;
-    }
-  }
   
   // ==========================================
   // 번역 캐시 (기존 유지)
@@ -1513,100 +1213,33 @@ class DatabaseService {
   }
 
   
-
-  static Future<void> saveTranslationLinkWithMaterial({
-    required String sourceLang,
-    required int sourceId,
-    required String targetLang,
-    required int targetId,
-    required int materialId,
-    String? note,
-    String type = 'sentence',
-    String? dialogueId,
-    String? speaker,
-    int? sequenceOrder,
-    String? pos,
-    String? formType,
-    String? root,
-    Transaction? txn,
-  }) async {
-    final executor = txn ?? await database;
-    
-    // 1. Legacy Table Save
-    await executor.insert(
-      'translations', 
-      {
-        'source_lang': sourceLang,
-        'source_id': sourceId,
-        'target_lang': targetLang,
-        'target_id': targetId,
-        'material_id': materialId,
-        'note': note,
-        'type': type,
-        'dialogue_id': dialogueId,
-        'speaker': speaker,
-        'sequence_order': sequenceOrder,
-        'created_at': DateTime.now().toIso8601String(),
-      },
-      conflictAlgorithm: ConflictAlgorithm.ignore,
-    );
-
-    // 2. Unified Schema Save (Phase 12)
-    // Legacy ID를 통해 텍스트를 조회하여 통합 테이블에 저장
-    final sourceText = await _getTextFromLangTableStatic(executor, sourceLang, sourceId);
-    final targetText = await _getTextFromLangTableStatic(executor, targetLang, targetId);
-
-    if (sourceText != null && targetText != null) {
-      final tags = <String>[];
-      if (materialId > 0) {
-        final m = await executor.query('study_materials', columns: ['subject'], where: 'id = ?', whereArgs: [materialId]);
-        if (m.isNotEmpty) tags.add(m.first['subject'] as String);
-      }
-      if (dialogueId != null) tags.add('Dialogue');
-
-      await saveUnifiedRecord(
-        text: sourceText,
-        lang: sourceLang,
-        translation: targetText,
-        targetLang: targetLang,
-        type: type,
-        note: note,
-        pos: pos,
-        formType: formType,
-        root: root,
-        tags: tags,
-        txn: executor is Transaction ? executor : null,
-      );
-    }
-  }
-
-  static Future<String?> _getTextFromLangTableStatic(dynamic executor, String langCode, int id) async {
-    final tableName = 'lang_$langCode'.replaceAll('-', '_');
-    try {
-      final result = await executor.query(tableName, columns: ['text'], where: 'id = ?', whereArgs: [id]);
-      if (result.isNotEmpty) return result.first['text'] as String;
-    } catch (e) {}
-    return null;
-  }
-  
   /// Get all study materials with type counts (Includes Dialogue Groups as materials)
   static Future<List<Map<String, dynamic>>> getStudyMaterials() async {
     final db = await database;
     
-    // 1. Get Regular Study Materials
+    // 1. Get Regular Study Materials (Updated Phase 79.3: Count via Unified Schema)
     final materials = await db.rawQuery('''
       SELECT m.*, 
-        (SELECT COUNT(*) FROM translations t WHERE t.material_id = m.id AND (t.type = 'word' OR t.type IS NULL)) as word_count,
-        (SELECT COUNT(*) FROM translations t WHERE t.material_id = m.id AND t.type = 'sentence') as sentence_count
+        (SELECT COUNT(DISTINCT it.item_id) FROM item_tags it 
+         JOIN words w ON it.item_id = w.id AND it.item_type = 'word'
+         WHERE it.tag = m.subject) as word_count,
+        (SELECT COUNT(DISTINCT it.item_id) FROM item_tags it
+         JOIN sentences s ON it.item_id = s.id AND it.item_type = 'sentence'
+         WHERE it.tag = m.subject) as sentence_count
       FROM study_materials m 
       ORDER BY m.imported_at DESC
     ''');
     
-    // 2. Get Dialogue Groups
+    // 2. Get Dialogue Groups (Updated Phase 79.3: Count via Unified Schema)
+    // Note: Dialogue messages also use group_id and tags (dialogue title is the tag)
     final dialogues = await db.rawQuery('''
       SELECT d.*,
-        (SELECT COUNT(*) FROM translations t WHERE t.dialogue_id = d.id AND (t.type = 'word' OR t.type IS NULL)) as word_count,
-        (SELECT COUNT(*) FROM translations t WHERE t.dialogue_id = d.id AND t.type = 'sentence') as sentence_count
+        (SELECT COUNT(DISTINCT it.item_id) FROM item_tags it 
+         JOIN words w ON it.item_id = w.id AND it.item_type = 'word'
+         WHERE it.tag = d.title) as word_count,
+        (SELECT COUNT(DISTINCT it.item_id) FROM item_tags it
+         JOIN sentences s ON it.item_id = s.id AND it.item_type = 'sentence'
+         WHERE it.tag = d.title) as sentence_count
       FROM dialogue_groups d
       ORDER BY d.created_at DESC
     ''');
@@ -1652,99 +1285,6 @@ class DatabaseService {
     return materials.first;
   }
   
-  /// Get all translations for a specific study material (Supports both int Material ID and String Dialogue ID)
-  static Future<List<Map<String, dynamic>>> getRecordsByMaterialId(
-    dynamic materialId, {
-    String? sourceLang,
-    String? targetLang,
-  }) async {
-    if (materialId is String) {
-      // It's a dialogue ID
-      return getRecordsByDialogueId(materialId);
-    }
-    // Else it's a regular material ID
-    final db = await database;
-    
-    // Build query with optional language filters
-    String whereClause = 'material_id = ?';
-    List<dynamic> whereArgs = [materialId];
-    
-    // If both languages provided, check for bidirectional match
-    if (sourceLang != null && targetLang != null) {
-      whereClause += ' AND ((source_lang = ? AND target_lang = ?) OR (source_lang = ? AND target_lang = ?))';
-      whereArgs.addAll([sourceLang, targetLang, targetLang, sourceLang]);
-    } else {
-      // Single language filtering
-      if (sourceLang != null) {
-        whereClause += ' AND source_lang = ?';
-        whereArgs.add(sourceLang);
-      }
-      
-      if (targetLang != null) {
-        whereClause += ' AND target_lang = ?';
-        whereArgs.add(targetLang);
-      }
-    }
-    
-    // translations 테이블에서 필터링
-    final translations = await db.query(
-      'translations',
-      where: whereClause,
-      whereArgs: whereArgs,
-      orderBy: 'created_at ASC',
-    );
-    
-    List<Map<String, dynamic>> results = [];
-    
-    for (var translation in translations) {
-      final sourceLang = translation['source_lang'] as String;
-      final sourceId = translation['source_id'] as int;
-      final targetLang = translation['target_lang'] as String;
-      final targetId = translation['target_id'] as int;
-      
-      // 소스 텍스트 가져오기
-      final sourceTableName = 'lang_$sourceLang'.replaceAll('-', '_');
-      final sourceRecords = await db.query(
-        sourceTableName,
-        where: 'id = ?',
-        whereArgs: [sourceId],
-        limit: 1,
-      );
-      
-      // 대상 텍스트 가져오기
-      final targetTableName = 'lang_$targetLang'.replaceAll('-', '_');
-      final targetRecords = await db.query(
-        targetTableName,
-        where: 'id = ?',
-        whereArgs: [targetId],
-        limit: 1,
-      );
-      
-      if (sourceRecords.isNotEmpty && targetRecords.isNotEmpty) {
-        results.add({
-          'id': translation['id'],
-          'source_lang': sourceLang,
-          'source_id': sourceId,
-          'source_text': sourceRecords.first['text'],
-          'source_audio': sourceRecords.first['audio_file'],
-          'target_lang': targetLang,
-          'target_id': targetId,
-          'target_text': targetRecords.first['text'],
-          'target_audio': targetRecords.first['audio_file'],
-          'material_id': materialId,
-          'created_at': translation['created_at'],
-          'note': translation['note'],
-          'type': translation['type'] ?? 'sentence',
-          'dialogue_id': translation['dialogue_id'],
-          'speaker': translation['speaker'],
-          'sequence_order': translation['sequence_order'],
-        });
-      }
-    }
-    
-    print('[DB] Retrieved ${results.length} records for material_id=$materialId');
-    return results;
-  }
 
   // === Dialogue Group Operations (Phase 11) ===
 
@@ -1933,109 +1473,12 @@ class DatabaseService {
       }
     }
     
-    // Fallback: Check legacy translations table for old data migration support
-    if (results.isEmpty) {
-        final legacyTranslations = await db.query(
-          'translations',
-          where: 'dialogue_id = ?',
-          whereArgs: [dialogueId],
-          orderBy: 'sequence_order ASC',
-        );
-        for (var t in legacyTranslations) {
-           // ... legacy logic skipped for brevity as we use Unified primarily
-        }
-    }
-
     return results;
   }
   // ==========================================
   // Background Sync Helpers
   // ==========================================
   
-  /// Get list of translations that have not been synced (is_synced = 0)
-  /// Returns a joined list with source and target text.
-  static Future<List<Map<String, dynamic>>> getUnsyncedTranslations({int limit = 20}) async {
-    final db = await database;
-    
-    // Join translations with source and target language tables to get the actual text
-    // Note: We need to dynamically join based on lang code, but SQL doesn't support dynamic join table names easily in one go.
-    // However, since we store 'source_lang' and 'target_lang', we can't join in a single static SQL if languages vary.
-    // BUT, we can just fetch the 'translations' rows first, and then fetch texts.
-    // Given the volume (limit 20), this N+1 query is acceptable and safer than complex dynamic SQL.
-    
-    final rows = await db.query(
-      'translations',
-      where: 'is_synced = 0',
-      limit: limit,
-    );
-    
-    if (rows.isEmpty) return [];
-    
-    List<Map<String, dynamic>> results = [];
-    
-    for (var row in rows) {
-      try {
-        final sourceLang = row['source_lang'] as String;
-        final sourceId = row['source_id'] as int;
-        final targetLang = row['target_lang'] as String;
-        final targetId = row['target_id'] as int;
-        
-        // Fetch Source Text
-        final sourceRow = await db.query(
-          'lang_${sourceLang.replaceAll('-', '_')}',
-          columns: ['text'],
-          where: 'id = ?',
-          whereArgs: [sourceId],
-          limit: 1,
-        );
-        
-        // Fetch Target Text
-        final targetRow = await db.query(
-          'lang_${targetLang.replaceAll('-', '_')}',
-          columns: ['text'],
-          where: 'id = ?',
-          whereArgs: [targetId],
-          limit: 1,
-        );
-        
-        if (sourceRow.isNotEmpty && targetRow.isNotEmpty) {
-           results.add({
-             'id': row['id'], // Translation ID (link)
-             'source_lang': sourceLang,
-             'source_text': sourceRow.first['text'],
-             'target_lang': targetLang,
-             'target_text': targetRow.first['text'],
-             'note': row['note'],
-             'dialogue_id': row['dialogue_id'],
-             'speaker': row['speaker'],
-             'sequence_order': row['sequence_order'],
-           });
-        }
-      } catch (e) {
-        print('[DB] Error fetching details for sync row ${row['id']}: $e');
-      }
-    }
-    
-    return results;
-  }
-
-  /// Mark a list of translation IDs as synced
-  static Future<void> markTranslationsAsSynced(List<int> ids) async {
-    final db = await database;
-    
-    await db.transaction((txn) async {
-       for (var id in ids) {
-         await txn.update(
-           'translations',
-           {'is_synced': 1},
-           where: 'id = ?',
-           whereArgs: [id],
-         );
-       }
-    });
-    print('[DB] Marked ${ids.length} records as synced.');
-  }
-
   /// 언어 이름을 ISO 코드(ko, en 등)로 변환
   static String _mapLanguageToCode(String name) {
     if (name.isEmpty) return name;
@@ -2180,132 +1623,6 @@ class DatabaseService {
     }
   }
 
-  /// Legacy 데이터를 신규 통합 스키마로 마이그레이션
-  static Future<void> migrateToUnifiedSchema([Database? dbInstance]) async {
-    final db = dbInstance ?? await database;
-    
-    await db.transaction((txn) async {
-      print('[DB] Starting Migration to Unified Schema...');
-      
-      // 1. 기존 자료집 목록 가져오기 (태그로 변환용)
-      final materials = await txn.query('study_materials');
-      final Map<int, String> materialTags = {
-        for (var m in materials) m['id'] as int: m['subject'] as String
-      };
-
-      // 2. 기존 번역 데이터 가져오기
-      final translations = await txn.query('translations');
-      
-      // 중복 삽입 방지 및 group_id 유지 위한 캐시 (Key: text_lang_note)
-      final Map<String, int> wordCache = {};
-      final Map<String, int> sentenceCache = {};
-      
-      int nextGroupId = DateTime.now().millisecondsSinceEpoch;
-
-      for (var t in translations) {
-        final String type = t['type'] as String? ?? 'sentence';
-        final String sourceLang = t['source_lang'] as String;
-        final int sourceOldId = t['source_id'] as int;
-        final String targetLang = t['target_lang'] as String;
-        final int targetOldId = t['target_id'] as int;
-        final int? materialId = t['material_id'] as int?;
-        final String? note = t['note'] as String?;
-        final String createdAt = t['created_at'] as String? ?? DateTime.now().toIso8601String();
-
-        // 3. 기존 언어 테이블에서 실제 텍스트 조회
-        final sourceText = await _getTextFromLangTable(txn, sourceLang, sourceOldId);
-        final targetText = await _getTextFromLangTable(txn, targetLang, targetOldId);
-
-        if (sourceText == null || targetText == null) continue;
-
-        final currentGroupId = nextGroupId++;
-
-        // 4. 신규 테이블로 이관
-        if (type == 'word') {
-          // 단어 삽입
-          final newSourceId = await _upsertMigrationItem(txn, 'words', sourceText, sourceLang, currentGroupId, note, createdAt, wordCache);
-          final newTargetId = await _upsertMigrationItem(txn, 'words', targetText, targetLang, currentGroupId, null, createdAt, wordCache);
-          
-          // 번역 연결 (단어)
-          await txn.insert('word_translations', {
-            'source_word_id': newSourceId,
-            'target_word_id': newTargetId,
-          }, conflictAlgorithm: ConflictAlgorithm.ignore);
-          
-          // 태그 추가
-          if (materialId != null && materialTags.containsKey(materialId)) {
-            await _addItemTag(txn, newSourceId, 'word', materialTags[materialId]!);
-            await _addItemTag(txn, newTargetId, 'word', materialTags[materialId]!);
-          }
-        } else {
-          // 문장 삽입
-          final newSourceId = await _upsertMigrationItem(txn, 'sentences', sourceText, sourceLang, currentGroupId, note, createdAt, sentenceCache);
-          final newTargetId = await _upsertMigrationItem(txn, 'sentences', targetText, targetLang, currentGroupId, null, createdAt, sentenceCache);
-          
-          // 번역 연결 (문장)
-          await txn.insert('sentence_translations', {
-            'source_sentence_id': newSourceId,
-            'target_sentence_id': newTargetId,
-          }, conflictAlgorithm: ConflictAlgorithm.ignore);
-
-          // 태그 추가
-          if (materialId != null && materialTags.containsKey(materialId)) {
-            await _addItemTag(txn, newSourceId, 'sentence', materialTags[materialId]!);
-            await _addItemTag(txn, newTargetId, 'sentence', materialTags[materialId]!);
-          }
-        }
-      }
-      
-      print('[DB] Migration completed: ${translations.length} items processed.');
-    });
-  }
-
-  /// 마이그레이션용 텍스트 조회 헬퍼
-  static Future<String?> _getTextFromLangTable(Transaction txn, String langCode, int id) async {
-    final tableName = 'lang_$langCode'.replaceAll('-', '_');
-    try {
-      final result = await txn.query(tableName, columns: ['text'], where: 'id = ?', whereArgs: [id]);
-      if (result.isNotEmpty) return result.first['text'] as String;
-    } catch (e) {
-      // 테이블이 없는 경우 등
-    }
-    return null;
-  }
-
-  /// 마이그레이션용 아이템 삽입/조회 헬퍼
-  static Future<int> _upsertMigrationItem(Transaction txn, String table, String text, String lang, int groupId, String? note, String createdAt, Map<String, int> cache) async {
-    final cacheKey = '${text}_${lang}_${note ?? ""}';
-    if (cache.containsKey(cacheKey)) return cache[cacheKey]!;
-    
-    // 중복 확인 (DB 수준)
-    final existing = await txn.query(table, columns: ['id'], where: 'text = ? AND lang_code = ? AND IFNULL(note, "") = ?', whereArgs: [text, lang, note ?? ""]);
-    if (existing.isNotEmpty) {
-      final id = existing.first['id'] as int;
-      cache[cacheKey] = id;
-      return id;
-    }
-    
-    final id = await txn.insert(table, {
-      'group_id': groupId,
-      'text': text,
-      'lang_code': lang,
-      'note': note,
-      'created_at': createdAt,
-    });
-    
-    cache[cacheKey] = id;
-    return id;
-  }
-
-  /// 마이그레이션용 태그 삽입 헬퍼
-  static Future<void> _addItemTag(Transaction txn, int itemId, String itemType, String tag) async {
-    await txn.insert('item_tags', {
-      'item_id': itemId,
-      'item_type': itemType,
-      'tag': tag
-    }, conflictAlgorithm: ConflictAlgorithm.ignore);
-  }
-
   /// 통합 테이블에 단어/문장 및 번역 연결 저장
   static Future<int> saveUnifiedRecord({
     required String text,
@@ -2384,22 +1701,7 @@ class DatabaseService {
       }, conflictAlgorithm: ConflictAlgorithm.ignore);
     }
 
-    // 3. 번역 연결
-    if (sourceId > 0 && targetId > 0) {
-      if (type == 'word') {
-        await executor.insert('word_translations', {
-          'source_word_id': sourceId,
-          'target_word_id': targetId,
-        }, conflictAlgorithm: ConflictAlgorithm.ignore);
-      } else {
-        await executor.insert('sentence_translations', {
-          'source_sentence_id': sourceId,
-          'target_sentence_id': targetId,
-        }, conflictAlgorithm: ConflictAlgorithm.ignore);
-      }
-    }
-
-    // 4. 태그 저장
+    // 3. 태그 저장
     if (tags != null && tags.isNotEmpty) {
       for (var tag in tags) {
         await executor.insert('item_tags', {

@@ -49,6 +49,16 @@
 ### [2026-02-09] Metadata Dialog Redesign & Mode 1 Fixes (Phase 77)
 - **Refactor**: 'Metadata Dialog'에서 'Online Library' 아이콘 제거 (역할 분리 명확화).
 
+- **Phase 79.3: Unified Schema Integration & Visibility Fix** (2026-02-10)
+    - Updated `getStudyMaterials` to count words/sentences via Unified Schema.
+    - Modified `loadRecordsByTags` to use group-id subquery for cross-language search.
+    - Fixed empty filters in `SearchFilterDialog`. [f85bd2e9-884e-484d-92c4-6ce3d1216e75]
+- **Phase 79.4: Legacy Table Removal & DB Cleanup** (2026-02-10)
+    - Removed legacy `translations` table and redundant `word_translations`, `sentence_translations`.
+    - Upgraded DB version to 12 with physical DROP TABLE cleanup.
+    - Cleaned up 10+ legacy methods and migration tools in `DatabaseService`.
+    - Maintained full UI search/filter integrity. [f85bd2e9-884e-484d-92c4-6ce3d1216e75]
+
 ### [2026-02-10] Filter UI & Visibility Refinement (Phase 79.2)
 - **Fix**: 자료 임포트 시 `overrideSubject`에 내부 키(syncKey) 대신 모국어 제목(mName)을 사용하여 필터 불일치 해결.
 - **UI**: `SearchFilterDialog`에서 태그 로딩 여부와 상관없이 내 자료집 제목을 드롭다운에 상시 노출 (4개 드롭다운 고정).
