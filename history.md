@@ -49,6 +49,9 @@
 ### [2026-02-09] Metadata Dialog Redesign & Mode 1 Fixes (Phase 77)
 - **Refactor**: 'Metadata Dialog'에서 'Online Library' 아이콘 제거 (역할 분리 명확화).
 
+### [2026-02-10] EMERGENCY: Build Fix (Phase 78.2)
+- **Fix**: Accidental deletion of `sourceText` and `targetText` in `lib/services/database_service.dart` causing CI build failure.
+
 ### [2026-02-10] Hotfix: Online Library Import & UI Refresh (Phase 78.1)
 - **Fix**: 번역(Translation)이 없는 단일 언어 자료집 가져오기 시 항목 누락 오류 수정.
 - **UX**: 자료 가져오기 성공 시 목록 자동 새로고침 로직 추가.

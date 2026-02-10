@@ -1194,6 +1194,9 @@ class DatabaseService {
                 // Phase 66: Entry-level Meta priority
                 final entryMeta = entry['meta'] as Map<String, dynamic>? ?? {};
                 
+                 final sourceText = (entry['source_text'] ?? entry['text']) as String?;
+                final targetText = (entry['target_text'] ?? entry['translation']) as String?;
+                
                 if (sourceText == null || sourceText.trim().isEmpty) {
                   skippedCount++;
                   continue;
