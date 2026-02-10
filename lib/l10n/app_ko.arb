@@ -640,6 +640,8 @@
   "typeImperative": "명령문",
   "labelNote": "주석",
   "labelShowMemorized": "끝낸것",
+  "titleTagSelection": "제목 태그 (자료집)",
+  "generalTags": "일반 태그",
   "tagSelection": "태그 선택",
   "metadataFormType": "문법 형태",
   "formInfinitive": "원형/현재형",

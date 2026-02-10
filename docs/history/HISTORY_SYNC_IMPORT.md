@@ -5,6 +5,12 @@
 
 ## ✅ 구현 완료 기능 (Finalized Features)
 
+### 2026-02-10: 파일명 기반 스마트 동기화 (File-Name-Based Smart Sync)
+- **변경 (Change)**: 동기화 피벗(Sync Pivot)을 영문 제목(`mName`)에서 **파일 이름**(`nouns_1`)으로 전환.
+- **사유 (Reason)**: 영문 제목은 수정될 가능성이 있으나, 파일 이름은 URL 경로로써 불변성이 높아 훨씬 안정적인 동기화가 가능함.
+- **적용 (Scope)**: 단어, 문장뿐만 아니라 **대화(Dialogue)** 가져오기 로직에도 동일하게 적용.
+- **Native Tag**: 파일명 동기화와 별개로, 현지어 제목을 태그로 보존하여 사용자 필터링 지원 (`Native Tag Strategy`).
+
 ### 2026-02-08: 피벗 언어 동기화 (Pivot Language Synchronization)
 - **문제 (Problem)**: 다국어 자료(한/영/스)가 각각 다른 그룹 ID로 저장되어 서로 연결되지 않음.
 - **해결 (Solution)**:

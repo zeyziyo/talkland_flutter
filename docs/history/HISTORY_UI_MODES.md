@@ -9,6 +9,11 @@
 
 ## ✅ 구현 완료 기능 (Finalized Features)
 
+### 2026-02-10: 제목 태그 전용 드롭다운 (Title Tag Dropdown)
+- **문제 (Problem)**: 자료집 제목이 일반 태그(품사 등)와 섞여 있어 필터링 시 자료집 선택이 불편함.
+- **해결 (Solution)**: `SearchFilterDialog` 내에 자료집 제목만 따로 모은 **전용 드롭다운** 구현.
+- **디자인 (Design)**: 본래의 일반 태그들은 하단에 칩(Chip) 형태로 유지하여 계층적 필터링 경험 제공.
+
 ### 2026-02-08: Mode 3 튜토리얼 수정 (Mode 3 Tutorial Fix)
 - **문제 (Problem)**: 튜토리얼 하이라이트가 엉뚱한 위치를 가리킴.
 - **해결 (Solution)**: `GlobalKey` 바인딩을 `HomeScreen`에서 `Mode3Widget`까지 올바르게 전달하여 타겟 위젯(설정 버튼 등)을 정확히 조준하도록 수정.

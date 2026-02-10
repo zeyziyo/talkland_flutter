@@ -49,6 +49,12 @@
 ### [2026-02-09] Metadata Dialog Redesign & Mode 1 Fixes (Phase 77)
 - **Refactor**: 'Metadata Dialog'에서 'Online Library' 아이콘 제거 (역할 분리 명확화).
 
+### [2026-02-10] File-Name-Based Smart Sync & Tag UI (Phase 78)
+- **Sync Strategy**: 자료집 동기화 키를 영어 제목에서 **파일 이름**(예: `nouns_1.json` -> `nouns_1`)으로 변경하여 안정성 극대화.
+- **Native Tag**: 현지어 제목(예: "명사 1")을 태그로 자동 저장하여 사용자 가독성 및 필터링 편의성 제공.
+- **UI/UX**: `SearchFilterDialog` 내에 **'제목 태그' 전용 드롭다운** 신규 배치 및 일반 태그(품사 등)와 시각적 분리.
+- **Dialogue**: 대화(Dialogue) 가져오기 시에도 파일명 기반 동기화 로직 전면 적용.
+
 ### [2026-02-09] UX 복구 및 기능 재배치 (Phase 77.5)
 - **Revert**: 사용자의 강력한 요청으로 Mode 3 명칭을 "Practice"에서 "**발음 연습 (Speaking Practice)**"으로 원복.
 - **New Feature**: `SearchFilterDialog` 위젯 신규 생성 (태그 필터, 최근 N개 제한, 시작 문자 검색).

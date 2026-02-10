@@ -46,8 +46,13 @@
     - [x] **L10n 동기화**: 전체 언어 ARB 파일 동기화 완료
     - [x] `history.md` 및 `task.md` 현행화
 
-- [x] 긴급 수정: 온라인 가져오기 노출 문제 (Hotfix: Online Import Visibility)
-    - [x] `subject` 정렬을 통한 **그룹 ID 연결** 수정 (Source/Target/Pivot)
+- [ ] **Data Sync Fix (최종: 파일명 기반 동기화)**
+    - [x] **Online Library**: 파일 이름을 동기화 키(Sync Pivot)로 사용하도록 수정.
+    - [x] **Native Tag**: 원어 제목을 태그로 보존하여 필터링 지원.
+    - [x] **UI**: '제목 태그' 전용 드롭다운 구현.
+
+- [x] **Documentation: Core Design Strategy**
+    - [x] **docs/STRATEGY.md**: 핵심 설계 원칙(Native Tag Strategy, Smart Sync 등) 문서화.
 
 - [x] **UI Revert & Cleanup (사용자 지시 이행)**
     - [x] **HomeScreen**: App Bar 메뉴에 '온라인 자료실' 항목 추가.
@@ -55,7 +60,6 @@
     - [x] **Mode 2**: '상세 분류' (Metadata Dialog) 버튼 삭제.
     - [x] **Mode 3**: 임의 추가된 헤더(타이틀, 구름, 도움말) 삭제.
     - [x] **Mode 3**: '상세 분류' (Metadata Dialog) 버튼 삭제.
-    - [x] **개선**: 피벗 언어(영어) 주제를 기준(Ground Truth)으로 사용
     - [x] `userId: 'user'` 명시적 전달로 **대화 노출** 수정
     - [x] `importFromJsonWithMetadata` 시그니처 및 사용법 업데이트
 

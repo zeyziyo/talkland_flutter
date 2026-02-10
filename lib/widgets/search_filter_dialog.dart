@@ -38,7 +38,7 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final availableTags = widget.appState.availableTags.where((tag) {
+    final allAvailableTags = widget.appState.availableTags.where((tag) {
       if (_localSelectedTags.contains(tag)) return true;
       for (var m in widget.appState.studyMaterials) {
         if (m['subject'] == tag) {
@@ -51,6 +51,23 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
       }
       return true;
     }).toList();
+
+    // Separate Title Tags (Materials) from General Tags
+    final materialSubjects = widget.appState.studyMaterials.map((m) => m['subject'] as String).toSet();
+    final List<String> titleTags = [];
+    final List<String> generalTags = [];
+
+    // Filter out internal sync keys (English names) if they are not the display title
+    for (var tag in allAvailableTags) {
+      if (materialSubjects.contains(tag)) {
+        titleTags.add(tag);
+      } else {
+        // Exclude English sync keys from general tags to keep UI clean
+        // We assume sync keys are tags that aren't native subjects but are English mNames.
+        // For now, let's just keep everything else as general tags.
+        generalTags.add(tag);
+      }
+    }
 
     return AlertDialog(
       title: Row(
@@ -67,16 +84,46 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // 1. Tag Section
-              Text(l10n.tagSelection, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+              // 1. Title Tag Section (Dropdown)
+              Text(l10n.titleTagSelection, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
               const SizedBox(height: 8),
-              if (availableTags.isEmpty)
+              DropdownButtonFormField<String>(
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  isDense: true,
+                  contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                ),
+                isExpanded: true,
+                hint: Text(l10n.selectMaterialPrompt),
+                // Current selection among Title Tags
+                value: _localSelectedTags.firstWhere((t) => titleTags.contains(t), orElse: () => ''),
+                onChanged: (val) {
+                  setState(() {
+                    // Remove old title tags, add new one
+                    _localSelectedTags.removeWhere((t) => titleTags.contains(t));
+                    if (val != null && val.isNotEmpty) {
+                      _localSelectedTags.add(val);
+                    }
+                  });
+                },
+                items: [
+                  DropdownMenuItem(value: '', child: Text(l10n.filterAll)),
+                  ...titleTags.map((t) => DropdownMenuItem(value: t, child: Text(t))).toList(),
+                ],
+              ),
+
+              const SizedBox(height: 24),
+
+              // 2. General Tags Section (Chips)
+              Text(l10n.generalTags, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+              const SizedBox(height: 8),
+              if (generalTags.isEmpty)
                 Text(l10n.noRecords, style: const TextStyle(color: Colors.grey, fontSize: 12))
               else
                 Wrap(
                   spacing: 8.0,
                   runSpacing: 4.0,
-                  children: availableTags.map((tag) {
+                  children: generalTags.map((tag) {
                     final isSelected = _localSelectedTags.contains(tag);
                     return FilterChip(
                       label: Text(tag),

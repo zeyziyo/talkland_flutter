@@ -2559,36 +2559,39 @@ class AppState extends ChangeNotifier {
       // removed pivotSubject logic
 
 
-      _statusMessage = 'Importing $mName ($sName)...';
+    // Use filename (without extension) as the stable synchronization key
+    final syncKey = mPath.split('/').last.replaceAll('.json', '');
+
+    _statusMessage = 'Importing $mName ($sName)...';
+    notifyListeners();
+    await DatabaseService.importFromJsonWithMetadata(
+      sJson, 
+      fileName: 'remote_${mId}_$_sourceLang.json',
+      overrideSubject: syncKey, 
+      userId: 'user', 
+    );
+
+    _statusMessage = 'Importing $mName ($tName)...';
+    notifyListeners();
+    final importResult = await DatabaseService.importFromJsonWithMetadata(
+      tJson, 
+      fileName: 'remote_${mId}_$_targetLang.json',
+      overrideSubject: syncKey, 
+      userId: 'user', 
+    );
+
+    // Import Pivot (English) if fetched
+    if (fetchPivot && results.length > 2 && results[2].statusCode == 200) {
+      _statusMessage = 'Linking with English Pivot...';
       notifyListeners();
+      final eJson = utf8.decode(results[2].bodyBytes);
       await DatabaseService.importFromJsonWithMetadata(
-        sJson, 
-        fileName: 'remote_${mId}_$_sourceLang.json',
-        // overrideSubject: finalSubject, // Removed: Use Native Subject
-        userId: 'user', 
+        eJson, 
+        fileName: 'remote_${mId}_en.json',
+        overrideSubject: syncKey, 
+        userId: 'user', // Ensure visible to default user
       );
-
-      _statusMessage = 'Importing $mName ($tName)...';
-      notifyListeners();
-      final importResult = await DatabaseService.importFromJsonWithMetadata(
-        tJson, 
-        fileName: 'remote_${mId}_$_targetLang.json',
-        // overrideSubject: finalSubject, // Removed: Use Native Subject
-        userId: 'user', 
-      );
-
-      // Import Pivot (English) if fetched
-      if (fetchPivot && results.length > 2 && results[2].statusCode == 200) {
-        _statusMessage = 'Linking with English Pivot...';
-        notifyListeners();
-        final eJson = utf8.decode(results[2].bodyBytes);
-        await DatabaseService.importFromJsonWithMetadata(
-          eJson, 
-          fileName: 'remote_${mId}_en.json',
-          // overrideSubject: mName, // Removed
-          userId: 'user', // Ensure visible to default user
-        );
-      }
+    }
 
       await loadDialogueGroups();
       await loadStudyMaterials();

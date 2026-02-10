@@ -1134,7 +1134,8 @@ class DatabaseService {
       final sourceLang = _mapLanguageToCode(rawSourceLang);
       final targetLang = _mapLanguageToCode(rawTargetLang);
       
-      final subject = overrideSubject ?? (meta['title'] ?? data['subject']) as String? ?? fileName ?? 'Imported Material';
+      final nativeSubject = (meta['title'] ?? data['subject']) as String?;
+      final syncSubject = overrideSubject ?? nativeSubject ?? fileName ?? 'Imported Material';
       final source = (meta['source'] ?? data['source']) as String? ?? 'File Upload';
       final fileCreatedAt = (meta['created_at'] ?? data['created_at']) as String? ?? DateTime.now().toIso8601String();
       final defaultType = (data['default_type'] ?? meta['default_type']) as String? ?? 'sentence';
@@ -1178,7 +1179,7 @@ class DatabaseService {
             // Note: createStudyMaterial writes to `study_materials` table which IS used by UI dropdowns (Legacy table but used by AppState).
             // We KEEP this. The *content* (sentences) uses Unified Schema.
             final materialId = await createStudyMaterial(
-              subject: subject,
+              subject: nativeSubject ?? syncSubject,
               source: source,
               sourceLanguage: sourceLang,
               targetLanguage: targetLang,
@@ -1201,10 +1202,14 @@ class DatabaseService {
                   continue;
                 }
                 
-                // Collect Tags (File + Entry) (+ Material Title as Tag)
+                // Collect Tags (File + Entry + Local Native Subject + Pivot Sync Subject)
                 final entryTags = (entry['tags'] as List?)?.map((e) => e.toString()).toList() ?? [];
-                // Add subject as tag to help filtering in generic views
-                final List<String> allTags = [...fileTags, ...entryTags, subject]; 
+                final List<String> allTags = [
+                  ...fileTags, 
+                  ...entryTags,
+                  if (nativeSubject != null) nativeSubject, // For localized UI filtering
+                  syncSubject // For group ID matching across languages
+                ]; 
                 
                 await saveUnifiedRecord(
                   text: sourceText,
@@ -1221,7 +1226,7 @@ class DatabaseService {
                   tags: allTags.isNotEmpty ? allTags : null,
                   txn: txn,
                   // Phase 77: Pivot Strategy Params
-                  subject: subject,
+                  subject: syncSubject,
                   sequenceOrder: i, 
                   );
                 
@@ -1253,15 +1258,16 @@ class DatabaseService {
               final dMap = d as Map<String, dynamic>;
               final dMeta = dMap['meta'] as Map<String, dynamic>? ?? {}; // Dialogue-level meta
               
-              final dTitle = (dMap['title'] ?? dMeta['title']) as String? ?? subject;
+              final dTitle = (dMap['title'] ?? dMeta['title']) as String? ?? nativeSubject ?? syncSubject;
               final dPersona = (dMap['persona'] ?? dMeta['persona']) as String? ?? 'Partner';
               final dTopic = (dMap['topic'] ?? dMeta['topic']) as String?;
               
-              // Phase 75.9: Smart Sync - Find existing dialogue group by title
+              // Phase 77: Pivot Sync for Dialogues - Use syncSubject (File Name) if available
+              // Find existing group by syncSubject (Stable key) or title
               final existingGroup = await txn.query(
                 'dialogue_groups',
-                where: 'title = ? AND user_id = ?',
-                whereArgs: [dTitle, userId],
+                where: '(title = ? OR note = ?) AND user_id = ?', // Leveraging 'note' for syncKey storage lookup if needed, but for now title/subject
+                whereArgs: [syncSubject, syncSubject, userId],
                 limit: 1,
               );
 
@@ -1280,7 +1286,7 @@ class DatabaseService {
                   userId: userId, 
                   title: dTitle,
                   persona: dPersona,
-                  note: dTopic,
+                  note: syncSubject, // Store syncSubject (File Name) in note field for stable linking
                   createdAt: fileCreatedAt,
                   txn: txn,
                 );
