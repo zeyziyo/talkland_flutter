@@ -644,20 +644,9 @@ class AppState extends ChangeNotifier {
       }
 
       // 1. Save or reuse source text
-      int? sourceId;
-      if (_selectedSourceId != null) {
-        sourceId = _selectedSourceId!;
+      int? sourceId = _selectedSourceId;
+      if (sourceId != null) {
         debugPrint('[AppState] Reusing existing source: id=$sourceId');
-      } else {
-        // Phase 58: Prevent Orphaned Save. Check existence only.
-        // sourceId = await DatabaseService.insertLanguageRecord(_sourceLang, _sourceText);
-        sourceId = await DatabaseService.getLanguageRecordId(_sourceLang, _sourceText);
-        if (sourceId != null) {
-          _selectedSourceId = sourceId;
-          debugPrint('[AppState] Found existing source: id=$sourceId');
-        } else {
-          debugPrint('[AppState] New source text (Not saved yet)');
-        }
       }
       
       // 2. Check if translation already exists
@@ -1212,10 +1201,6 @@ class AppState extends ChangeNotifier {
          // 1. 단어/문장 테이블에서 삭제 (해당 그룹 모두)
          await txn.delete('words', where: 'group_id = ?', whereArgs: [groupId]);
          await txn.delete('sentences', where: 'group_id = ?', whereArgs: [groupId]);
-         
-         // 2. 번역 연결 삭제는 Cascade가 아니므로 수동 처리? 
-         // 사실 group_id로 묶여있으므로 word_translations 등은 FK 제약이 없으면 아이디 누락됨.
-         // 위 테이블 삭제 전 아이디를 먼저 가져와야 함.
        });
 
        // 2. Supabase Delete

@@ -24,7 +24,7 @@ class DatabaseService {
     
     return await openDatabase(
       path,
-      version: 12, // Phase 79.4: Legacy cleanup
+    version: 13, // Phase 81.1: Sync support for Unified Schema
       onCreate: (db, version) async {
         await _createBaseTables(db);
         await _ensureDefaultMaterial(db);
@@ -121,17 +121,16 @@ class DatabaseService {
           }
         }
 
-        if (oldVersion < 12) {
-        // Phase 79.4: Final Legacy Drop
-        try {
-          await db.execute('DROP TABLE IF EXISTS translations');
-          await db.execute('DROP TABLE IF EXISTS word_translations');
-          await db.execute('DROP TABLE IF EXISTS sentence_translations');
-          print('[DB] Upgraded to version 12: Dropped legacy and duplicate mapping tables');
-        } catch (e) {
-          print('[DB] Error dropping legacy tables: $e');
+        if (oldVersion < 13) {
+          // Phase 81.1: Add sync status for Unified Schema
+          try {
+            await db.execute('ALTER TABLE words ADD COLUMN is_synced INTEGER DEFAULT 0');
+            await db.execute('ALTER TABLE sentences ADD COLUMN is_synced INTEGER DEFAULT 0');
+            print('[DB] Upgraded to version 13: is_synced columns added to unified tables');
+          } catch (e) {
+            print('[DB] Upgraded to version 13: Columns might exist or error: $e');
+          }
         }
-      }
       },
     );
   }
@@ -153,7 +152,8 @@ class DatabaseService {
         style TEXT,
         note TEXT,
         created_at TEXT NOT NULL,
-        is_memorized INTEGER DEFAULT 0
+        is_memorized INTEGER DEFAULT 0,
+        is_synced INTEGER DEFAULT 0 -- Added Phase 81.1
       )
     ''');
     await db.execute('CREATE INDEX IF NOT EXISTS idx_words_group_id ON words (group_id)');
@@ -174,7 +174,8 @@ class DatabaseService {
         root TEXT,
         note TEXT,
         created_at TEXT NOT NULL,
-        is_memorized INTEGER DEFAULT 0
+        is_memorized INTEGER DEFAULT 0,
+        is_synced INTEGER DEFAULT 0 -- Added Phase 81.1
       )
     ''');
     await db.execute('CREATE INDEX IF NOT EXISTS idx_sentences_group_id ON sentences (group_id)');
@@ -653,7 +654,7 @@ class DatabaseService {
               targetLang: targetLang,
               type: entry['type'] as String? ?? defaultType,
               note: (entry['note'] ?? entry['context']) as String?,
-              tags: [material['subject'] as String],
+              tags: [subject],
               txn: txn,
             );
             
@@ -1826,6 +1827,77 @@ class DatabaseService {
     } catch (e) {
       print('[DB] Error fetching language filtered tags: $e');
       return [];
+  }
+
+  // ==========================================
+  // Phase 81.1: Unified Schema Sync Support
+  // ==========================================
+
+  /// 동기화되지 않은 아이템(words, sentences)이 있는 고유 group_id 목록 조회
+  static Future<List<int>> getUnsyncedGroupIds({int limit = 50}) async {
+    final db = await database;
+    try {
+      final results = await db.rawQuery('''
+        SELECT DISTINCT group_id FROM words WHERE is_synced = 0
+        UNION
+        SELECT DISTINCT group_id FROM sentences WHERE is_synced = 0
+        LIMIT ?
+      ''', [limit]);
+      
+      return results.map((row) => row['group_id'] as int).toList();
+    } catch (e) {
+      print('[DB] Error getting unsynced group IDs: $e');
+      return [];
+    }
+  }
+
+  /// 특정 group_id에 속한 모든 데이터(words, sentences, tags) 조회
+  static Future<Map<String, dynamic>?> fetchGroupSyncData(int groupId) async {
+    final db = await database;
+    try {
+      // 1. Words 조회
+      final words = await db.query('words', where: 'group_id = ?', whereArgs: [groupId]);
+      // 2. Sentences 조회
+      final sentences = await db.query('sentences', where: 'group_id = ?', whereArgs: [groupId]);
+      
+      if (words.isEmpty && sentences.isEmpty) return null;
+
+      // 3. Tags 조회 (동기화 단위인 그룹의 태그 수집)
+      // item_id가 여러 개일 수 있으므로 group 내 첫 번째 아이템 기반으로 태그 수집 (통상 그룹 내 공유)
+      final firstItemId = words.isNotEmpty ? words.first['id'] : sentences.first['id'];
+      final firstType = words.isNotEmpty ? 'word' : 'sentence';
+
+      final tagResults = await db.query(
+        'item_tags', 
+        columns: ['tag'], 
+        where: 'item_id = ? AND item_type = ?', 
+        whereArgs: [firstItemId, firstType]
+      );
+      final tags = tagResults.map((row) => row['tag'] as String).toList();
+
+      return {
+        'group_id': groupId,
+        'words': words,
+        'sentences': sentences,
+        'tags': tags,
+      };
+    } catch (e) {
+      print('[DB] Error fetching group sync data: $e');
+      return null;
+    }
+  }
+
+  /// 특정 그룹 내의 모든 아이템을 동기화 완료 상태로 업데이트
+  static Future<void> markGroupAsSynced(int groupId) async {
+    final db = await database;
+    try {
+      await db.transaction((txn) async {
+        await txn.update('words', {'is_synced': 1}, where: 'group_id = ?', whereArgs: [groupId]);
+        await txn.update('sentences', {'is_synced': 1}, where: 'group_id = ?', whereArgs: [groupId]);
+      });
+      print('[DB] Group $groupId marked as synced');
+    } catch (e) {
+      print('[DB] Error marking group as synced: $e');
     }
   }
 }
