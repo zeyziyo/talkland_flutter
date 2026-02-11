@@ -994,17 +994,20 @@ class AppLocalizationsAr extends AppLocalizations {
   String get mySentenceCollection => 'مجموعتي من الجمل';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'اسم جديد للمجموعة/الجمل';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'أدخل اسمًا جديدًا';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'إضافة اسم جديد';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'اختيار اسم موجود';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'إضافة علامة...';
+
+  @override
+  String get save => 'حفظ';
 }

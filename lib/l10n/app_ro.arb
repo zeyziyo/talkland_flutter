@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Introduceți titlul nou",
   "addNewSubject": "Adăugați titlu nou",
   "selectExistingSubject": "Selectați titlu existent",
-  "addTagHint": "Adăugați etichetă..."
+  "addTagHint": "Adăugați etichetă...",
+  "save": "Salvare"
 }

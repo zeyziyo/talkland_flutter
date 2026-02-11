@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Введіть нову назву",
   "addNewSubject": "Додати нову назву",
   "selectExistingSubject": "Виберіть існуючу назву",
-  "addTagHint": "Додати тег..."
+  "addTagHint": "Додати тег...",
+  "save": "Зберегти"
 }

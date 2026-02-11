@@ -1006,4 +1006,7 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get addTagHint => 'Voeg merker by...';
+
+  @override
+  String get save => 'Stoor';
 }

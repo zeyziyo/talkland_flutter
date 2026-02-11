@@ -1006,17 +1006,21 @@ class AppLocalizationsKa extends AppLocalizations {
   String get mySentenceCollection => 'ჩემი წინადადებების კრებული';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName =>
+      'ახალი თემატური ლექსიკონის/ფრაზების კრებულის სათაური';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'ახალი სათაურის შეყვანა';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'ახალი სათაურის დამატება';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'არსებული სათაურის არჩევა';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'ტეგის დამატება...';
+
+  @override
+  String get save => 'შენახვა';
 }

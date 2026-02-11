@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Yeni Başlık Girin",
   "addNewSubject": "Yeni Başlık Ekle",
   "selectExistingSubject": "Mevcut Başlığı Seç",
-  "addTagHint": "Etiket ekle..."
+  "addTagHint": "Etiket ekle...",
+  "save": "Kaydet"
 }

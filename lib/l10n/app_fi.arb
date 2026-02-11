@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Kirjoita uusi nimi",
   "addNewSubject": "Lisää uusi nimi",
   "selectExistingSubject": "Valitse olemassa oleva nimi",
-  "addTagHint": "Lisää tagi..."
+  "addTagHint": "Lisää tagi...",
+  "save": "Tallenna"
 }

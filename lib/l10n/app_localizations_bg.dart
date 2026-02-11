@@ -1008,17 +1008,20 @@ class AppLocalizationsBg extends AppLocalizations {
   String get mySentenceCollection => 'Моята колекция от изречения';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Заглавие на нов речник/фрази';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Въведете ново заглавие';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Добавяне на ново заглавие';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Избор на съществуващо заглавие';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Добавяне на етикет...';
+
+  @override
+  String get save => 'Запазване';
 }

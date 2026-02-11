@@ -690,5 +690,6 @@
   "enterNewSubjectName": "ახალი სათაურის შეყვანა",
   "addNewSubject": "ახალი სათაურის დამატება",
   "selectExistingSubject": "არსებული სათაურის არჩევა",
-  "addTagHint": "ტეგის დამატება..."
+  "addTagHint": "ტეგის დამატება...",
+  "save": "შენახვა"
 }

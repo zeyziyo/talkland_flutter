@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Ange nytt namn",
   "addNewSubject": "Lägg till nytt namn",
   "selectExistingSubject": "Välj befintligt namn",
-  "addTagHint": "Lägg till tagg..."
+  "addTagHint": "Lägg till tagg...",
+  "save": "Spara"
 }

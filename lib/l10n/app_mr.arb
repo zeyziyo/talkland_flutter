@@ -690,5 +690,6 @@
   "enterNewSubjectName": "नवीन शीर्षक प्रविष्ट करा",
   "addNewSubject": "नवीन शीर्षक जोडा",
   "selectExistingSubject": "विद्यमान शीर्षक निवडा",
-  "addTagHint": "टॅग जोडा..."
+  "addTagHint": "टॅग जोडा...",
+  "save": "सेव्ह करा"
 }

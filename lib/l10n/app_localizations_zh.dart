@@ -981,19 +981,22 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mySentenceCollection => '我的句子集';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => '新词汇/句子集标题';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => '输入新标题';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => '添加新标题';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => '选择现有标题';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => '添加标签...';
+
+  @override
+  String get save => '保存';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -1974,6 +1977,24 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get mySentenceCollection => '我的句子集';
+
+  @override
+  String get newSubjectName => '新建词汇本/句子集标题';
+
+  @override
+  String get enterNewSubjectName => '输入新标题';
+
+  @override
+  String get addNewSubject => '添加新标题';
+
+  @override
+  String get selectExistingSubject => '选择现有标题';
+
+  @override
+  String get addTagHint => '添加标签...';
+
+  @override
+  String get save => '保存';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -2954,4 +2975,22 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get mySentenceCollection => '我的句子收藏';
+
+  @override
+  String get newSubjectName => '新增字彙本/句子集標題';
+
+  @override
+  String get enterNewSubjectName => '輸入新標題';
+
+  @override
+  String get addNewSubject => '新增標題';
+
+  @override
+  String get selectExistingSubject => '選擇現有標題';
+
+  @override
+  String get addTagHint => '新增標籤...';
+
+  @override
+  String get save => '儲存';
 }

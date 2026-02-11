@@ -690,5 +690,6 @@
   "enterNewSubjectName": "ປ້ອນຊື່ຫົວຂໍ້ໃໝ່",
   "addNewSubject": "ເພີ່ມຫົວຂໍ້ໃໝ່",
   "selectExistingSubject": "ເລືອກຫົວຂໍ້ທີ່ມີຢູ່",
-  "addTagHint": "ເພີ່ມແທັກ..."
+  "addTagHint": "ເພີ່ມແທັກ...",
+  "save": "ບັນທຶກ"
 }

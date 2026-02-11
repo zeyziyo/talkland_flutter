@@ -1010,17 +1010,20 @@ class AppLocalizationsGl extends AppLocalizations {
   String get mySentenceCollection => 'A miña colección de frases';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Novo título de tema/colección de frases';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Introduce un título novo';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Engadir título novo';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Seleccionar título existente';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Engadir etiqueta...';
+
+  @override
+  String get save => 'Gardar';
 }

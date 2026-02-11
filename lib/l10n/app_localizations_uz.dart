@@ -1010,17 +1010,20 @@ class AppLocalizationsUz extends AppLocalizations {
   String get mySentenceCollection => 'Mening gaplar to\'plamim';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Yangi lug\'at/ibora nomi';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Yangi nom kiriting';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Yangi nom qo\'shish';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Mavjud nomni tanlang';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Teg qo\'shish...';
+
+  @override
+  String get save => 'Saqlash';
 }

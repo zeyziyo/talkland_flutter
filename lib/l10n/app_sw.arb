@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Ingiza jina jipya",
   "addNewSubject": "Ongeza jina jipya",
   "selectExistingSubject": "Chagua jina lililopo",
-  "addTagHint": "Ongeza lebo..."
+  "addTagHint": "Ongeza lebo...",
+  "save": "Hifadhi"
 }

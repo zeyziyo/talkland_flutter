@@ -690,5 +690,6 @@
   "enterNewSubjectName": "ಹೊಸ ಹೆಸರನ್ನು ನಮೂದಿಸಿ",
   "addNewSubject": "ಹೊಸ ಹೆಸರನ್ನು ಸೇರಿಸಿ",
   "selectExistingSubject": "ಈಗಿರುವ ಹೆಸರನ್ನು ಆಯ್ಕೆಮಾಡಿ",
-  "addTagHint": "ಟ್ಯಾಗ್ ಸೇರಿಸಿ..."
+  "addTagHint": "ಟ್ಯಾಗ್ ಸೇರಿಸಿ...",
+  "save": "ಉಳಿಸು"
 }

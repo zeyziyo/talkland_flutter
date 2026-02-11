@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Zadajte nový názov",
   "addNewSubject": "Pridať nový názov",
   "selectExistingSubject": "Vybrať existujúci názov",
-  "addTagHint": "Pridať tag..."
+  "addTagHint": "Pridať tag...",
+  "save": "Uložiť"
 }

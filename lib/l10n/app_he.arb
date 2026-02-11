@@ -690,5 +690,6 @@
   "enterNewSubjectName": "הזן כותרת חדשה",
   "addNewSubject": "הוסף כותרת חדשה",
   "selectExistingSubject": "בחר כותרת קיימת",
-  "addTagHint": "הוסף תג..."
+  "addTagHint": "הוסף תג...",
+  "save": "שמור"
 }

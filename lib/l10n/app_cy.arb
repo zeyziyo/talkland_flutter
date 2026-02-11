@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Rhowch deitl newydd",
   "addNewSubject": "Ychwanegu teitl newydd",
   "selectExistingSubject": "Dewis teitl presennol",
-  "addTagHint": "Ychwanegu tag..."
+  "addTagHint": "Ychwanegu tag...",
+  "save": "Cadw"
 }

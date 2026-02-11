@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Унесите нови наслов",
   "addNewSubject": "Додај нови наслов",
   "selectExistingSubject": "Изабери постојећи наслов",
-  "addTagHint": "Додај ознаку..."
+  "addTagHint": "Додај ознаку...",
+  "save": "Сачувај"
 }

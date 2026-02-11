@@ -992,4 +992,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get addTagHint => '태그 추가...';
+
+  @override
+  String get save => '저장';
 }

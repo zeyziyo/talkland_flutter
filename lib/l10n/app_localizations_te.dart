@@ -1000,17 +1000,20 @@ class AppLocalizationsTe extends AppLocalizations {
   String get mySentenceCollection => 'నా వాక్యాల సేకరణ';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'కొత్త పదజాలం/వాక్యాల సేకరణ పేరు';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'కొత్త పేరును నమోదు చేయండి';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'కొత్త పేరును జోడించు';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'ఉన్న పేరును ఎంచుకోండి';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'ట్యాగ్‌ను జోడించు...';
+
+  @override
+  String get save => 'భద్రపరచు';
 }

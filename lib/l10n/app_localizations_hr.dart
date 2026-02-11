@@ -1002,17 +1002,20 @@ class AppLocalizationsHr extends AppLocalizations {
   String get mySentenceCollection => 'Moja zbirka rečenica';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Novi naslov rječnika/zbirke rečenica';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Unesite novi naslov';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Dodaj novi naslov';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Odaberite postojeći naslov';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Dodaj oznaku...';
+
+  @override
+  String get save => 'Spremi';
 }

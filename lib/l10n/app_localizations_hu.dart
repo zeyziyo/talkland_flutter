@@ -998,17 +998,20 @@ class AppLocalizationsHu extends AppLocalizations {
   String get mySentenceCollection => 'Mondatgyűjteményem';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Új téma/mondatgyűjtemény neve';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Új név megadása';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Új név hozzáadása';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Meglévő téma kiválasztása';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Címke hozzáadása...';
+
+  @override
+  String get save => 'Mentés';
 }

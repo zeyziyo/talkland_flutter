@@ -690,5 +690,6 @@
   "enterNewSubjectName": "නව මාතෘකාවක් ඇතුළත් කරන්න",
   "addNewSubject": "නව මාතෘකාවක් එක් කරන්න",
   "selectExistingSubject": "පවතින මාතෘකාවක් තෝරන්න",
-  "addTagHint": "ටැගය එක් කරන්න..."
+  "addTagHint": "ටැගය එක් කරන්න...",
+  "save": "සුරකින්න"
 }

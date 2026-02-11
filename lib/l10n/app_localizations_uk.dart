@@ -997,17 +997,20 @@ class AppLocalizationsUk extends AppLocalizations {
   String get mySentenceCollection => 'Мій збірник речень';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Нова назва словника/збірки фраз';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Введіть нову назву';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Додати нову назву';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Виберіть існуючу назву';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Додати тег...';
+
+  @override
+  String get save => 'Зберегти';
 }

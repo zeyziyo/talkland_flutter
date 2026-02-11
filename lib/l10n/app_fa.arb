@@ -690,5 +690,6 @@
   "enterNewSubjectName": "عنوان جدید را وارد کنید",
   "addNewSubject": "اضافه کردن عنوان جدید",
   "selectExistingSubject": "انتخاب عنوان موجود",
-  "addTagHint": "اضافه کردن برچسب..."
+  "addTagHint": "اضافه کردن برچسب...",
+  "save": "ذخیره"
 }

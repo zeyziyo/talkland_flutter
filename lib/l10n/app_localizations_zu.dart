@@ -1012,17 +1012,20 @@ class AppLocalizationsZu extends AppLocalizations {
   String get mySentenceCollection => 'Iqoqo lemisho yami';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Isihloko Esisha Seqoqo Lamagama/Imisho';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Faka isihloko esisha';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Engeza Isihloko Esisha';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Khetha Isihloko Esikhona';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Engeza ithegi...';
+
+  @override
+  String get save => 'Londoloza';
 }

@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Введите новое название",
   "addNewSubject": "Добавить новое название",
   "selectExistingSubject": "Выберите существующее название",
-  "addTagHint": "Добавить тег..."
+  "addTagHint": "Добавить тег...",
+  "save": "Сохранить"
 }

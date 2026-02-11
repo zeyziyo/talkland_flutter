@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Introduce un título novo",
   "addNewSubject": "Engadir título novo",
   "selectExistingSubject": "Seleccionar título existente",
-  "addTagHint": "Engadir etiqueta..."
+  "addTagHint": "Engadir etiqueta...",
+  "save": "Gardar"
 }

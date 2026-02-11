@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Faka isihloko esisha",
   "addNewSubject": "Engeza Isihloko Esisha",
   "selectExistingSubject": "Khetha Isihloko Esikhona",
-  "addTagHint": "Engeza ithegi..."
+  "addTagHint": "Engeza ithegi...",
+  "save": "Londoloza"
 }

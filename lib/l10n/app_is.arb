@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Sláðu inn nýtt nafn",
   "addNewSubject": "Bæta við nýju nafni",
   "selectExistingSubject": "Veldu núverandi nafn",
-  "addTagHint": "Bættu við merki..."
+  "addTagHint": "Bættu við merki...",
+  "save": "Vista"
 }

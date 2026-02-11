@@ -690,5 +690,6 @@
   "enterNewSubjectName": "ခေါင်းစဥ်အသစ်ထည့်ပါ",
   "addNewSubject": "ထည့်ရန်",
   "selectExistingSubject": "ရွေးရန်",
-  "addTagHint": "အမှတ်အသားထည့်ရန်..."
+  "addTagHint": "အမှတ်အသားထည့်ရန်...",
+  "save": "သိမ်းမည်"
 }

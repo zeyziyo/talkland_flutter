@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Жаңа атауды енгізіңіз",
   "addNewSubject": "Жаңа атауды қосу",
   "selectExistingSubject": "Бар атауды таңдау",
-  "addTagHint": "Тег қосу..."
+  "addTagHint": "Тег қосу...",
+  "save": "Сақтау"
 }

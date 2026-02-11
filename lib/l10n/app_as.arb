@@ -690,5 +690,6 @@
   "enterNewSubjectName": "নতুন নাম লিখক",
   "addNewSubject": "নতুন নাম যোগ কৰক",
   "selectExistingSubject": "পূৰ্বৰ নাম বাছক",
-  "addTagHint": "টেগ যোগ কৰক..."
+  "addTagHint": "টেগ যোগ কৰক...",
+  "save": "সংৰক্ষণ কৰক"
 }

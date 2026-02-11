@@ -690,5 +690,6 @@
   "enterNewSubjectName": "नयाँ नाम प्रविष्ट गर्नुहोस्",
   "addNewSubject": "नयाँ नाम थप्नुहोस्",
   "selectExistingSubject": "अवस्थित नाम छान्नुहोस्",
-  "addTagHint": "ट्याग थप्नुहोस्..."
+  "addTagHint": "ट्याग थप्नुहोस्...",
+  "save": "सुरक्षित गर्नुहोस्"
 }

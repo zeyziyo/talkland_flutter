@@ -691,5 +691,6 @@
   "enterNewSubjectName": "새 제목 입력",
   "addNewSubject": "새 제목 추가",
   "selectExistingSubject": "기존 제목 선택",
-  "addTagHint": "태그 추가..."
+  "addTagHint": "태그 추가...",
+  "save": "저장"
 }

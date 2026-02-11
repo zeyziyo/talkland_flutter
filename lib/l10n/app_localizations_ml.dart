@@ -1005,17 +1005,20 @@ class AppLocalizationsMl extends AppLocalizations {
   String get mySentenceCollection => 'എൻ്റെ വാക്യ ശേഖരം';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'പുതിയ പദാവലി/വാക്യ ശേഖരത്തിന്റെ പേര്';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'പുതിയ പേര് നൽകുക';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'പുതിയ പേര് ചേർക്കുക';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'നിലവിലുള്ള പേര് തിരഞ്ഞെടുക്കുക';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'ടാഗ് ചേർക്കുക...';
+
+  @override
+  String get save => 'സംരക്ഷിക്കുക';
 }

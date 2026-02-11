@@ -1003,17 +1003,20 @@ class AppLocalizationsKn extends AppLocalizations {
   String get mySentenceCollection => 'ನನ್ನ ವಾಕ್ಯ ಸಂಗ್ರಹ';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'ಹೊಸ ವಿಷಯದ ಹೆಸರು';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'ಹೊಸ ಹೆಸರನ್ನು ನಮೂದಿಸಿ';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'ಹೊಸ ಹೆಸರನ್ನು ಸೇರಿಸಿ';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'ಈಗಿರುವ ಹೆಸರನ್ನು ಆಯ್ಕೆಮಾಡಿ';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'ಟ್ಯಾಗ್ ಸೇರಿಸಿ...';
+
+  @override
+  String get save => 'ಉಳಿಸು';
 }

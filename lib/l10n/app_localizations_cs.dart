@@ -991,17 +991,20 @@ class AppLocalizationsCs extends AppLocalizations {
   String get mySentenceCollection => 'Moje sbírka vět';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Nový název sbírky';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Zadejte nový název';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Přidat nový název';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Vybrat existující název';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Přidat štítek...';
+
+  @override
+  String get save => 'Uložit';
 }

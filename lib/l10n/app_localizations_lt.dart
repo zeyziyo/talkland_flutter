@@ -1007,17 +1007,20 @@ class AppLocalizationsLt extends AppLocalizations {
   String get mySentenceCollection => 'Mano sakinių rinkinys';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Naujas žodyno/frazyno pavadinimas';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Įveskite naują pavadinimą';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Pridėti naują pavadinimą';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Pasirinkti esamą pavadinimą';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Pridėti žymę...';
+
+  @override
+  String get save => 'Išsaugoti';
 }

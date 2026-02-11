@@ -1015,4 +1015,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get addTagHint => 'Add Tag...';
+
+  @override
+  String get save => 'Save';
 }

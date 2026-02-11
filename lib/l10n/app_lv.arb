@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Ievadiet jaunu nosaukumu",
   "addNewSubject": "Pievienot jaunu nosaukumu",
   "selectExistingSubject": "Izvēlieties esošu nosaukumu",
-  "addTagHint": "Pievienot tagu..."
+  "addTagHint": "Pievienot tagu...",
+  "save": "Saglabāt"
 }

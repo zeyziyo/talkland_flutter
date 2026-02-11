@@ -690,5 +690,6 @@
   "enterNewSubjectName": "కొత్త పేరును నమోదు చేయండి",
   "addNewSubject": "కొత్త పేరును జోడించు",
   "selectExistingSubject": "ఉన్న పేరును ఎంచుకోండి",
-  "addTagHint": "ట్యాగ్‌ను జోడించు..."
+  "addTagHint": "ట్యాగ్‌ను జోడించు...",
+  "save": "భద్రపరచు"
 }

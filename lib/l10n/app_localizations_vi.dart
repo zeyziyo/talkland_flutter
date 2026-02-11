@@ -997,17 +997,20 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mySentenceCollection => 'Tuyển tập câu của tôi';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Tên Sổ từ/Câu mới';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Nhập tên mới';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Thêm tên mới';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Chọn tên hiện có';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Thêm thẻ...';
+
+  @override
+  String get save => 'Lưu';
 }

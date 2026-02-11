@@ -690,5 +690,6 @@
   "enterNewSubjectName": "输入新标题",
   "addNewSubject": "添加新标题",
   "selectExistingSubject": "选择现有标题",
-  "addTagHint": "添加标签..."
+  "addTagHint": "添加标签...",
+  "save": "保存"
 }

@@ -995,17 +995,20 @@ class AppLocalizationsMr extends AppLocalizations {
   String get mySentenceCollection => 'माझे वाक्य संग्रह';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'नवीन शब्दसंग्रह/वाक्यसंग्रह शीर्षक';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'नवीन शीर्षक प्रविष्ट करा';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'नवीन शीर्षक जोडा';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'विद्यमान शीर्षक निवडा';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'टॅग जोडा...';
+
+  @override
+  String get save => 'सेव्ह करा';
 }

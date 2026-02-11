@@ -998,17 +998,20 @@ class AppLocalizationsMs extends AppLocalizations {
   String get mySentenceCollection => 'Koleksi Ayat Saya';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Tajuk Buku/Frasa baharu';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Masukkan Tajuk baharu';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Tambah Tajuk baharu';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Pilih Tajuk Sedia Ada';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Tambah tag...';
+
+  @override
+  String get save => 'Simpan';
 }

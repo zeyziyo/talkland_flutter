@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Digite o novo nome",
   "addNewSubject": "Adicionar novo nome",
   "selectExistingSubject": "Selecionar nome existente",
-  "addTagHint": "Adicionar etiqueta..."
+  "addTagHint": "Adicionar etiqueta...",
+  "save": "Salvar"
 }

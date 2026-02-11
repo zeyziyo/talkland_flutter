@@ -997,17 +997,20 @@ class AppLocalizationsUr extends AppLocalizations {
   String get mySentenceCollection => 'میرے جملوں کا مجموعہ';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'نیا عنوان';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'نیا عنوان درج کریں';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'نیا عنوان شامل کریں';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'موجودہ عنوان منتخب کریں';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'ٹیگ شامل کریں...';
+
+  @override
+  String get save => 'محفوظ کریں';
 }

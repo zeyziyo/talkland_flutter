@@ -1003,17 +1003,20 @@ class AppLocalizationsSl extends AppLocalizations {
   String get mySentenceCollection => 'Moja zbirka stavkov';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Novo ime sklopa besed/stavkov';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Vnesite novo ime';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Dodaj novo ime';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Izberite obstoječe ime';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Dodaj oznako...';
+
+  @override
+  String get save => 'Shrani';
 }

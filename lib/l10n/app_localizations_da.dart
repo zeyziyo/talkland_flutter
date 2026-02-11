@@ -993,17 +993,20 @@ class AppLocalizationsDa extends AppLocalizations {
   String get mySentenceCollection => 'Min sætningssamling';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Nyt emneoverskrift';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Indtast ny overskrift';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Tilføj ny overskrift';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Vælg eksisterende overskrift';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Tilføj tag...';
+
+  @override
+  String get save => 'Gem';
 }

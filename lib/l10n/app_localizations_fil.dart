@@ -1006,17 +1006,20 @@ class AppLocalizationsFil extends AppLocalizations {
   String get mySentenceCollection => 'Aking Pangungusap';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Bagong Pamagat ng Aralin/Pangungusap';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Ilagay ang bagong pamagat';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Idagdag ang bagong pamagat';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Pumili ng kasalukuyang pamagat';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Magdagdag ng tag...';
+
+  @override
+  String get save => 'I-save';
 }

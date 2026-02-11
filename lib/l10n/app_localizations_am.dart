@@ -999,4 +999,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get addTagHint => 'መለያ ያክሉ...';
+
+  @override
+  String get save => 'አስቀምጥ';
 }

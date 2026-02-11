@@ -999,17 +999,20 @@ class AppLocalizationsRo extends AppLocalizations {
   String get mySentenceCollection => 'Colecția mea de fraze';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Titlu nou caiet/colecție';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Introduceți titlul nou';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Adăugați titlu nou';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Selectați titlu existent';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Adăugați etichetă...';
+
+  @override
+  String get save => 'Salvare';
 }

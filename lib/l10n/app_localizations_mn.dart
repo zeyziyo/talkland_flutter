@@ -1006,17 +1006,20 @@ class AppLocalizationsMn extends AppLocalizations {
   String get mySentenceCollection => 'Миний өгүүлбэрийн цуглуулга';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Шинэ нэр томьёоны сангийн нэр';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Шинэ нэр оруулна уу';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Шинэ нэр нэмэх';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Одоо байгаа нэрийг сонгох';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Тэмдэг нэмэх...';
+
+  @override
+  String get save => 'Хадгалах';
 }

@@ -1000,17 +1000,20 @@ class AppLocalizationsRu extends AppLocalizations {
   String get mySentenceCollection => 'Моя коллекция предложений';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Новое название темы/набора';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Введите новое название';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Добавить новое название';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Выберите существующее название';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Добавить тег...';
+
+  @override
+  String get save => 'Сохранить';
 }

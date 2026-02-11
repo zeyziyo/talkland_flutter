@@ -993,17 +993,20 @@ class AppLocalizationsTh extends AppLocalizations {
   String get mySentenceCollection => 'คลังประโยคของฉัน';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'ชื่อชุดคำศัพท์/วลีใหม่';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'ใส่ชื่อใหม่';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'เพิ่มชื่อใหม่';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'เลือกชื่อที่มีอยู่';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'เพิ่มแท็ก...';
+
+  @override
+  String get save => 'บันทึก';
 }

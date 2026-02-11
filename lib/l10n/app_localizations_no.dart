@@ -998,17 +998,20 @@ class AppLocalizationsNo extends AppLocalizations {
   String get mySentenceCollection => 'Mine setninger';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Nytt emnenavn/setningssamling';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Skriv inn nytt navn';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Legg til nytt navn';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Velg eksisterende navn';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Legg til tagg...';
+
+  @override
+  String get save => 'Lagre';
 }

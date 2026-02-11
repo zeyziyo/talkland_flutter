@@ -998,17 +998,20 @@ class AppLocalizationsSw extends AppLocalizations {
   String get mySentenceCollection => 'Mkusanyiko Wangu wa Sentensi';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Jina jipya la mada/sentensi';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Ingiza jina jipya';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Ongeza jina jipya';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Chagua jina lililopo';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Ongeza lebo...';
+
+  @override
+  String get save => 'Hifadhi';
 }

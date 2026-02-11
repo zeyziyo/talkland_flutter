@@ -1013,17 +1013,20 @@ class AppLocalizationsCa extends AppLocalizations {
   String get mySentenceCollection => 'La meva col·lecció de frases';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Nou títol de la llista de vocabulari/frases';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Introdueix un títol nou';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Afegeix un títol nou';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Selecciona un títol existent';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Afegeix una etiqueta...';
+
+  @override
+  String get save => 'Desa';
 }

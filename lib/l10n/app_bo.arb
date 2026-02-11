@@ -690,5 +690,6 @@
   "enterNewSubjectName": "མིང་གསརཔ་བཙུགས།",
   "addNewSubject": "མིང་གསརཔ་བསྣོན།",
   "selectExistingSubject": "ཡོད་པའི་མིང་འདེམས།",
-  "addTagHint": "ཚད་རྟགས་ཁ་སྣོན།..."
+  "addTagHint": "ཚད་རྟགས་ཁ་སྣོན།...",
+  "save": "བསྲུང་"
 }

@@ -1012,17 +1012,20 @@ class AppLocalizationsOr extends AppLocalizations {
   String get mySentenceCollection => 'ମୋ ବାକ୍ୟ ସଂଗ୍ରହ';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'ନୂଆ ବିଷୟ ନାମ';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'ନୂଆ ନାମ ଦିଅନ୍ତୁ';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'ନୂଆ ନାମ ଯୋଡନ୍ତୁ';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'ପୂର୍ବରୁ ଥିବା ନାମ ବାଛନ୍ତୁ';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'ଟ୍ୟାଗ୍ ଯୋଡନ୍ତୁ...';
+
+  @override
+  String get save => 'ସଞ୍ଚୟ କରନ୍ତୁ';
 }

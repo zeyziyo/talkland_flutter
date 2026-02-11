@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Skriv inn nytt navn",
   "addNewSubject": "Legg til nytt navn",
   "selectExistingSubject": "Velg eksisterende navn",
-  "addTagHint": "Legg til tagg..."
+  "addTagHint": "Legg til tagg...",
+  "save": "Lagre"
 }

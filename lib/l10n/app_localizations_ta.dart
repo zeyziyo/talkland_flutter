@@ -1008,17 +1008,21 @@ class AppLocalizationsTa extends AppLocalizations {
   String get mySentenceCollection => 'என் வாக்கியத் தொகுப்பு';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'புதிய தலைப்பு';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'புதிய தலைப்பை உள்ளிடவும்';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'புதிய தலைப்பைச் சேர்க்கவும்';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject =>
+      'ஏற்கனவே உள்ள தலைப்பைத் தேர்ந்தெடுக்கவும்';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'குறிச்சொற்களைச் சேர்க்கவும்...';
+
+  @override
+  String get save => 'சேமி';
 }

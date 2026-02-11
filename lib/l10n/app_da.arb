@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Indtast ny overskrift",
   "addNewSubject": "Tilføj ny overskrift",
   "selectExistingSubject": "Vælg eksisterende overskrift",
-  "addTagHint": "Tilføj tag..."
+  "addTagHint": "Tilføj tag...",
+  "save": "Gem"
 }

@@ -1001,17 +1001,20 @@ class AppLocalizationsAs extends AppLocalizations {
   String get mySentenceCollection => 'মোৰ বাক্য সংগ্ৰহ';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'নতুন শব্দভাণ্ডাৰ/বাক্যাংশৰ সংগ্ৰহৰ নাম';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'নতুন নাম লিখক';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'নতুন নাম যোগ কৰক';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'পূৰ্বৰ নাম বাছক';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'টেগ যোগ কৰক...';
+
+  @override
+  String get save => 'সংৰক্ষণ কৰক';
 }

@@ -1003,17 +1003,20 @@ class AppLocalizationsSi extends AppLocalizations {
   String get mySentenceCollection => 'මගේ වාක්‍ය එකතුව';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'නව වචන මාලාව/වාක්‍ය මාලාවේ මාතෘකාව';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'නව මාතෘකාවක් ඇතුළත් කරන්න';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'නව මාතෘකාවක් එක් කරන්න';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'පවතින මාතෘකාවක් තෝරන්න';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'ටැගය එක් කරන්න...';
+
+  @override
+  String get save => 'සුරකින්න';
 }

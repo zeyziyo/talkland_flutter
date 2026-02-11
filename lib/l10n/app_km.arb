@@ -690,5 +690,6 @@
   "enterNewSubjectName": "បញ្ចូលឈ្មោះថ្មី",
   "addNewSubject": "បន្ថែមឈ្មោះថ្មី",
   "selectExistingSubject": "ជ្រើសរើសឈ្មោះដែលមានស្រាប់",
-  "addTagHint": "បន្ថែមស្លាក..."
+  "addTagHint": "បន្ថែមស្លាក...",
+  "save": "រក្សាទុក"
 }

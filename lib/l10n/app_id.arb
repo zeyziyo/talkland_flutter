@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Masukkan Judul Baru",
   "addNewSubject": "Tambahkan Judul Baru",
   "selectExistingSubject": "Pilih Judul yang Ada",
-  "addTagHint": "Tambahkan tag..."
+  "addTagHint": "Tambahkan tag...",
+  "save": "Simpan"
 }

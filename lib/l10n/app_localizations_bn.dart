@@ -998,17 +998,20 @@ class AppLocalizationsBn extends AppLocalizations {
   String get mySentenceCollection => 'আমার বাক্য সংগ্রহ';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'নতুন শব্দভাণ্ডার/বাক্য সংগ্রহ শিরোনাম';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'নতুন শিরোনাম লিখুন';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'নতুন শিরোনাম যোগ করুন';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'বিদ্যমান শিরোনাম নির্বাচন করুন';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'ট্যাগ যোগ করুন...';
+
+  @override
+  String get save => 'সংরক্ষণ করুন';
 }

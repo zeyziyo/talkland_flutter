@@ -998,17 +998,20 @@ class AppLocalizationsEl extends AppLocalizations {
   String get mySentenceCollection => 'Η συλλογή μου από προτάσεις';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Νέος τίτλος Λεξιλογίου/Φράσεων';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Εισαγωγή νέου τίτλου';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Προσθήκη νέου τίτλου';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Επιλογή υπάρχοντος τίτλου';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Προσθήκη ετικέτας...';
+
+  @override
+  String get save => 'Αποθήκευση';
 }

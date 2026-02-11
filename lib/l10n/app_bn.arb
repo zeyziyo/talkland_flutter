@@ -690,5 +690,6 @@
   "enterNewSubjectName": "নতুন শিরোনাম লিখুন",
   "addNewSubject": "নতুন শিরোনাম যোগ করুন",
   "selectExistingSubject": "বিদ্যমান শিরোনাম নির্বাচন করুন",
-  "addTagHint": "ট্যাগ যোগ করুন..."
+  "addTagHint": "ট্যাগ যোগ করুন...",
+  "save": "সংরক্ষণ করুন"
 }

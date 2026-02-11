@@ -1005,17 +1005,20 @@ class AppLocalizationsIs extends AppLocalizations {
   String get mySentenceCollection => 'Setningasafnið mitt';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Nýtt nafn á orðaforða/setningasafn';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Sláðu inn nýtt nafn';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Bæta við nýju nafni';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Veldu núverandi nafn';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Bættu við merki...';
+
+  @override
+  String get save => 'Vista';
 }

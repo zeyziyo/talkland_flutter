@@ -981,17 +981,20 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mySentenceCollection => 'マイ例文集';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => '新しい単語帳/文章集のタイトル';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => '新しいタイトルを入力';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => '新しいタイトルを追加';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => '既存のタイトルを選択';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'タグを追加...';
+
+  @override
+  String get save => '保存';
 }

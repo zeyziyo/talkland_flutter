@@ -1002,17 +1002,20 @@ class AppLocalizationsEt extends AppLocalizations {
   String get mySentenceCollection => 'Minu lausete kogu';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Uue teemakogumi nimi';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Sisesta uus nimi';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Lisa uus nimi';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Vali olemasolev nimi';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Lisa silt...';
+
+  @override
+  String get save => 'Salvesta';
 }

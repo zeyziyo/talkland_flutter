@@ -1005,17 +1005,20 @@ class AppLocalizationsKk extends AppLocalizations {
   String get mySentenceCollection => 'меӊіӊ сөйлемдер жинағым';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Жаңа тақырыптың атауы';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Жаңа атауды енгізіңіз';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Жаңа атауды қосу';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Бар атауды таңдау';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Тег қосу...';
+
+  @override
+  String get save => 'Сақтау';
 }

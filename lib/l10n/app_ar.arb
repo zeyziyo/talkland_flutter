@@ -690,5 +690,6 @@
   "enterNewSubjectName": "أدخل اسمًا جديدًا",
   "addNewSubject": "إضافة اسم جديد",
   "selectExistingSubject": "اختيار اسم موجود",
-  "addTagHint": "إضافة علامة..."
+  "addTagHint": "إضافة علامة...",
+  "save": "حفظ"
 }

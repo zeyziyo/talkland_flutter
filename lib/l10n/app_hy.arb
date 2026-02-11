@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Մուտքագրեք նոր վերնագիր",
   "addNewSubject": "Ավելացնել նոր վերնագիր",
   "selectExistingSubject": "Ընտրել առկա վերնագիրը",
-  "addTagHint": "Ավելացնել թեգ..."
+  "addTagHint": "Ավելացնել թեգ...",
+  "save": "Պահպանել"
 }

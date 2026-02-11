@@ -1001,17 +1001,20 @@ class AppLocalizationsPa extends AppLocalizations {
   String get mySentenceCollection => 'ਮੇਰਾ ਵਾਕ ਸੰਗ੍ਰਹਿ';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'ਨਵਾਂ ਵਿਸ਼ਾ ਨਾਮ';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'ਨਵਾਂ ਨਾਮ ਦਰਜ ਕਰੋ';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'ਨਵਾਂ ਨਾਮ ਸ਼ਾਮਲ ਕਰੋ';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'ਮੌਜੂਦਾ ਨਾਮ ਚੁਣੋ';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'ਟੈਗ ਸ਼ਾਮਲ ਕਰੋ...';
+
+  @override
+  String get save => 'ਸੁਰੱਖਿਅਤ ਕਰੋ';
 }

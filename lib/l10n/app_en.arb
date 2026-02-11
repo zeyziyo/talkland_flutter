@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Enter new subject name",
   "addNewSubject": "Add New Subject",
   "selectExistingSubject": "Select Existing Subject",
-  "addTagHint": "Add Tag..."
+  "addTagHint": "Add Tag...",
+  "save": "Save"
 }

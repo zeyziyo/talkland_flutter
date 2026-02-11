@@ -998,17 +998,20 @@ class AppLocalizationsFa extends AppLocalizations {
   String get mySentenceCollection => 'مجموعه جملات من';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'عنوان جدید دفترچه لغات/عبارات';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'عنوان جدید را وارد کنید';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'اضافه کردن عنوان جدید';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'انتخاب عنوان موجود';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'اضافه کردن برچسب...';
+
+  @override
+  String get save => 'ذخیره';
 }

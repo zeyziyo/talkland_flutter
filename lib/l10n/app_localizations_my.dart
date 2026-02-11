@@ -1018,17 +1018,20 @@ class AppLocalizationsMy extends AppLocalizations {
   String get mySentenceCollection => 'ကျွန်ုပ်၏ စာကြောင်းစုစည်းမှု';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'ခေါင်းစဥ်အသစ်';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'ခေါင်းစဥ်အသစ်ထည့်ပါ';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'ထည့်ရန်';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'ရွေးရန်';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'အမှတ်အသားထည့်ရန်...';
+
+  @override
+  String get save => 'သိမ်းမည်';
 }

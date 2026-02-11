@@ -1002,17 +1002,20 @@ class AppLocalizationsPl extends AppLocalizations {
   String get mySentenceCollection => 'Mój zbiór zdań';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Nowy tytuł zestawu słówek/zdań';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Wprowadź nowy tytuł';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Dodaj nowy tytuł';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Wybierz istniejący tytuł';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Dodaj tag...';
+
+  @override
+  String get save => 'Zapisz';
 }

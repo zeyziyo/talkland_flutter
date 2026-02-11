@@ -1008,17 +1008,20 @@ class AppLocalizationsAz extends AppLocalizations {
   String get mySentenceCollection => 'Mənim Cümlə Kolleksiyam';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Yeni Mövzu Adı';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Yeni ad daxil edin';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Yeni ad əlavə edin';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Mövcud adı seçin';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Etiket əlavə edin...';
+
+  @override
+  String get save => 'Saxla';
 }

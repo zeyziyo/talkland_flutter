@@ -690,5 +690,6 @@
   "enterNewSubjectName": "ନୂଆ ନାମ ଦିଅନ୍ତୁ",
   "addNewSubject": "ନୂଆ ନାମ ଯୋଡନ୍ତୁ",
   "selectExistingSubject": "ପୂର୍ବରୁ ଥିବା ନାମ ବାଛନ୍ତୁ",
-  "addTagHint": "ଟ୍ୟାଗ୍ ଯୋଡନ୍ତୁ..."
+  "addTagHint": "ଟ୍ୟାଗ୍ ଯୋଡନ୍ତୁ...",
+  "save": "ସଞ୍ଚୟ କରନ୍ତୁ"
 }

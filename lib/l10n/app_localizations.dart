@@ -2105,6 +2105,12 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'태그 추가...'**
   String get addTagHint;
+
+  /// No description provided for @save.
+  ///
+  /// In ko, this message translates to:
+  /// **'저장'**
+  String get save;
 }
 
 class _AppLocalizationsDelegate

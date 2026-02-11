@@ -690,5 +690,6 @@
   "enterNewSubjectName": "新しいタイトルを入力",
   "addNewSubject": "新しいタイトルを追加",
   "selectExistingSubject": "既存のタイトルを選択",
-  "addTagHint": "タグを追加..."
+  "addTagHint": "タグを追加...",
+  "save": "保存"
 }

@@ -989,17 +989,20 @@ class AppLocalizationsHe extends AppLocalizations {
   String get mySentenceCollection => 'אוסף המשפטים שלי';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'כותרת מחברת/אוסף חדש';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'הזן כותרת חדשה';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'הוסף כותרת חדשה';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'בחר כותרת קיימת';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'הוסף תג...';
+
+  @override
+  String get save => 'שמור';
 }

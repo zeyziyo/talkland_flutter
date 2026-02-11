@@ -1004,17 +1004,20 @@ class AppLocalizationsKm extends AppLocalizations {
   String get mySentenceCollection => 'បណ្តុំ​ប្រយោគ​របស់​ខ្ញុំ';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'ឈ្មោះប្រធានបទ/ប្រយោគថ្មី';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'បញ្ចូលឈ្មោះថ្មី';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'បន្ថែមឈ្មោះថ្មី';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'ជ្រើសរើសឈ្មោះដែលមានស្រាប់';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'បន្ថែមស្លាក...';
+
+  @override
+  String get save => 'រក្សាទុក';
 }

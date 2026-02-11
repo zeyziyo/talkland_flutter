@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Voer nuwe naam in",
   "addNewSubject": "Voeg nuwe naam by",
   "selectExistingSubject": "Kies bestaande naam",
-  "addTagHint": "Voeg merker by..."
+  "addTagHint": "Voeg merker by...",
+  "save": "Stoor"
 }

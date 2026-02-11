@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Yeni ad daxil edin",
   "addNewSubject": "Yeni ad əlavə edin",
   "selectExistingSubject": "Mövcud adı seçin",
-  "addTagHint": "Etiket əlavə edin..."
+  "addTagHint": "Etiket əlavə edin...",
+  "save": "Saxla"
 }

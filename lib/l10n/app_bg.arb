@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Въведете ново заглавие",
   "addNewSubject": "Добавяне на ново заглавие",
   "selectExistingSubject": "Избор на съществуващо заглавие",
-  "addTagHint": "Добавяне на етикет..."
+  "addTagHint": "Добавяне на етикет...",
+  "save": "Запазване"
 }

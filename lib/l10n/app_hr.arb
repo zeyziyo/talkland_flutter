@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Unesite novi naslov",
   "addNewSubject": "Dodaj novi naslov",
   "selectExistingSubject": "Odaberite postojeći naslov",
-  "addTagHint": "Dodaj oznaku..."
+  "addTagHint": "Dodaj oznaku...",
+  "save": "Spremi"
 }

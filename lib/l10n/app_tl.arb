@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Ipasok ang bagong pamagat",
   "addNewSubject": "Magdagdag ng bagong pamagat",
   "selectExistingSubject": "Pumili ng kasalukuyang pamagat",
-  "addTagHint": "Magdagdag ng tag..."
+  "addTagHint": "Magdagdag ng tag...",
+  "save": "I-save"
 }

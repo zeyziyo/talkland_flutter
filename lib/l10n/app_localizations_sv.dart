@@ -997,17 +997,20 @@ class AppLocalizationsSv extends AppLocalizations {
   String get mySentenceCollection => 'Min frasbok';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Nytt ämnesnamn/meningssamling';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Ange nytt namn';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Lägg till nytt namn';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Välj befintligt namn';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Lägg till tagg...';
+
+  @override
+  String get save => 'Spara';
 }

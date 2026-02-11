@@ -690,5 +690,6 @@
   "enterNewSubjectName": "Új név megadása",
   "addNewSubject": "Új név hozzáadása",
   "selectExistingSubject": "Meglévő téma kiválasztása",
-  "addTagHint": "Címke hozzáadása..."
+  "addTagHint": "Címke hozzáadása...",
+  "save": "Mentés"
 }

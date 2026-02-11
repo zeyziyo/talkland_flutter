@@ -999,17 +999,20 @@ class AppLocalizationsTr extends AppLocalizations {
   String get mySentenceCollection => 'Cümle Koleksiyonum';
 
   @override
-  String get newSubjectName => '새 단어장/문장집 제목';
+  String get newSubjectName => 'Yeni Kelime Defteri/Cümle Koleksiyonu Başlığı';
 
   @override
-  String get enterNewSubjectName => '새 제목 입력';
+  String get enterNewSubjectName => 'Yeni Başlık Girin';
 
   @override
-  String get addNewSubject => '새 제목 추가';
+  String get addNewSubject => 'Yeni Başlık Ekle';
 
   @override
-  String get selectExistingSubject => '기존 제목 선택';
+  String get selectExistingSubject => 'Mevcut Başlığı Seç';
 
   @override
-  String get addTagHint => '태그 추가...';
+  String get addTagHint => 'Etiket ekle...';
+
+  @override
+  String get save => 'Kaydet';
 }
