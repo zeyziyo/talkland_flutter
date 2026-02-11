@@ -23,6 +23,13 @@
 
 ## 📅 최근 주요 변경 로그 (Recent Changelog)
 
+### [2026-02-11] Mode 1 UI Renewal & Root Detection (Phase 83-84)
+- **UI**: Mode 1 입력 화면을 Row 기반의 프리미엄 레이레이아웃으로 리뉴얼 (상단 바, 액션 라인 최적화).
+- **Feature**: AI 번역 시 어근(Root) 자동 감지 및 결과창 🌱 배지 표시 기능 구현.
+- **Repair**: `mode1_widget.dart` 내 중첩 괄호 누락으로 인한 빌드 오류 및 품사 번역(`l110n`) 오타 긴급 수정 완료.
+- **Metadata**: 상세분류 다이얼로그(`MetadataDialog`)를 학습 효율 중심(태그/주석 분리)으로 재설계.
+- **Docs**: Markdown 기반 통합 마인드맵(`system_flow_mindmap.md`) 생성 및 불필요한 HTML 문서 제거.
+
 ### [2026-02-10] Critical Build Repair & L10n Expansion (Phase 82)
 - **Fix**: `AppState.dart` 파일의 중괄호 구조 손상으로 인한 대규모 컴파일 에러를 전수 조사하여 복구 완료.
 - **Sync**: `Mode1Widget` 등에서의 메서드 호출 명칭을 `fetchAiRecommendations`, `refillUsage`로 신규 규격에 맞춰 전면 동기화.

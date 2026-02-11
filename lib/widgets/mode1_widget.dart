@@ -439,6 +439,10 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                               ),
                             ),
+                          ],
+                        ),
+                      ),
+                    ),
                     
                     const SizedBox(height: 16),
                     
@@ -899,7 +903,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
       case 'Verb': return l10n.posVerb;
       case 'Adjective': return l10n.posAdjective;
       case 'Adverb': return l10n.posAdverb;
-      case 'Pronoun': return l110n.posPronoun;
+      case 'Pronoun': return l10n.posPronoun;
       case 'Preposition': return l10n.posPreposition;
       case 'Conjunction': return l10n.posConjunction;
       case 'Interjection': return l10n.posInterjection;
