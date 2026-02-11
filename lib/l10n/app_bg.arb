@@ -468,7 +468,7 @@
   "copiedToClipboard": "Копирано в клипборда!",
   "tutorialContextTitle": "Таг за ситуация/контекст",
   "tutorialContextDesc": "Можете да го запазите отделно, като запишете ситуацията (напр. сутрин, вечер) дори за едно и също изречение.",
-  "thinkingTimeInterval": "Интервал за време за размисъл",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Време за размисъл преди разкриване на верния отговор.",
   "autoPlay": "Автоматично пускане",
   "timeUp": "Времето изтече!",

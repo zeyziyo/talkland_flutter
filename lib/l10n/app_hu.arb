@@ -468,7 +468,7 @@
   "copiedToClipboard": "Copied to clipboard!",
   "tutorialContextTitle": "Kontextus címke",
   "tutorialContextDesc": "Adjon hozzá kontextust (pl. Reggel) a hasonló mondatok megkülönböztetéséhez.",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

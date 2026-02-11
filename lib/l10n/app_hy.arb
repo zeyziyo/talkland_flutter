@@ -468,7 +468,7 @@
   "copiedToClipboard": "Պատճենվել է հոսքատախտակին!",
   "tutorialContextTitle": "Իրավիճակ/կոնտեքստ թեգ",
   "tutorialContextDesc": "Դուք կարող եք այն առանձին պահպանել՝ գրելով նույնիսկ նույն նախադասության իրավիճակը (օրինակ՝ առավոտ, երեկո)։",
-  "thinkingTimeInterval": "Մտածելու ժամանակի միջակայք",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Ժամանակն է մտածելու, նախքան պատասխանը բացահայտելը:",
   "autoPlay": "Ավտոմատ նվագարկում",
   "timeUp": "Ժամանակը սպառվեց!",

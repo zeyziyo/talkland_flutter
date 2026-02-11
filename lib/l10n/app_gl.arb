@@ -468,7 +468,7 @@
   "copiedToClipboard": "Copiado no portapapeis!",
   "tutorialContextTitle": "Etiqueta de situación/contexto",
   "tutorialContextDesc": "Podes gardar a mesma frase por separado se anotas a situación (por exemplo, mañá, noite).",
-  "thinkingTimeInterval": "Intervalo de tempo de reflexión",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Este é o tempo para pensar antes de que se revele a resposta correcta.",
   "autoPlay": "Reprodución automática",
   "timeUp": "Rematou o tempo!",

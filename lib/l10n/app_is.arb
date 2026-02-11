@@ -468,7 +468,7 @@
   "copiedToClipboard": "Afritað á klemmuspjald!",
   "tutorialContextTitle": "Aðstæður/samhengismerki",
   "tutorialContextDesc": "Jafnvel þótt það sé sama setningin geturðu vistað hana sérstaklega með því að skrifa aðstæður (td morgun, kvöld).",
-  "thinkingTimeInterval": "Hugsunartímabil",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Tími til að hugsa áður en svarið er gefið upp.",
   "autoPlay": "Sjálfvirk spilun",
   "timeUp": "Tíminn er liðinn!",

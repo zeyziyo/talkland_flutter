@@ -468,7 +468,7 @@
   "copiedToClipboard": "ສຳເນົາໃສ່ clipboard ແລ້ວ!",
   "tutorialContextTitle": "ແທັກສະພາບການ/ບໍລິບົດ",
   "tutorialContextDesc": "ເຖິງແມ່ນວ່າຈະເປັນປະໂຫຍກດຽວກັນ, ຖ້າທ່ານຂຽນສະຖານະການ (ຕົວຢ່າງ: ເຊົ້າ, ແລງ) ທ່ານສາມາດບັນທຶກແຍກຕ່າງຫາກໄດ້.",
-  "thinkingTimeInterval": "ໄລຍະເວລາໃນການຄິດ",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "ເວລາກ່ອນທີ່ຄໍາຕອບຈະຖືກເປີດເຜີຍ.",
   "autoPlay": "ຫຼິ້ນອັດຕະໂນມັດ",
   "timeUp": "ໝົດເວລາ!",

@@ -468,7 +468,7 @@
   "copiedToClipboard": "Copied to clipboard!",
   "tutorialContextTitle": "แท็กบริบท",
   "tutorialContextDesc": "เพิ่มบริบท (เช่น ตอนเช้า) เพื่อแยกแยะประโยคที่คล้ายกัน",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "ความล่าช้าในการเล่น",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

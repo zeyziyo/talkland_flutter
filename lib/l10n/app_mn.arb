@@ -468,7 +468,7 @@
   "copiedToClipboard": "Санах ойд хуулсан!",
   "tutorialContextTitle": "Нөхцөл/Утга санааны таг",
   "tutorialContextDesc": "Ижил өгүүлбэр байсан ч нөхцөл (Жишээ нь: Өглөө, орой) бичсэнээр тусад нь хадгалах боломжтой.",
-  "thinkingTimeInterval": "Бодох хугацааны завсар",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Зөв хариулт гарахын өмнө бодох хугацаа.",
   "autoPlay": "Автоматаар тоглуулах",
   "timeUp": "Хугацаа дууслаа!",

@@ -468,7 +468,7 @@
   "copiedToClipboard": "S'ha copiat al porta-retalls!",
   "tutorialContextTitle": "Etiqueta de situació/context",
   "tutorialContextDesc": "Pots desar la mateixa frase per separat si anotes la situació (per exemple, matí, vespre).",
-  "thinkingTimeInterval": "Interval de temps de reflexió",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Temps per pensar abans que es reveli la resposta.",
   "autoPlay": "Reproducció automàtica",
   "timeUp": "S'ha acabat el temps!",

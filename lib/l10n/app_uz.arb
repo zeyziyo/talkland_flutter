@@ -468,7 +468,7 @@
   "copiedToClipboard": "Buferga nusxalandi!",
   "tutorialContextTitle": "Vaziyat/kontekst teg",
   "tutorialContextDesc": "Xuddi shu jumla bo'lsa ham, vaziyatni (masalan, ertalab, kechqurun) yozsangiz, uni alohida saqlashingiz mumkin.",
-  "thinkingTimeInterval": "O'ylash vaqti oralig'i",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "To'g'ri javob e'lon qilinishidan oldin o'ylash vaqti.",
   "autoPlay": "Avtomatik ijro etish",
   "timeUp": "Vaqt tugadi!",

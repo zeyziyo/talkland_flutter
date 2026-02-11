@@ -468,7 +468,7 @@
   "copiedToClipboard": "Panoya kopyalandı!",
   "tutorialContextTitle": "Vəziyyət/Məzmun Etiketi",
   "tutorialContextDesc": "Eyni cümlə olsa belə, vəziyyəti (məsələn, səhər, axşam) qeyd etsəniz, onu ayrı saxlayabilirsiniz.",
-  "thinkingTimeInterval": "Düşünmə Vaxtı İntervalı",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Düzgün cavab açıqlanmazdan əvvəl düşünmək üçün vaxt.",
   "autoPlay": "Avtomatik Səsləndirmə",
   "timeUp": "Vaxt Bitdi!",

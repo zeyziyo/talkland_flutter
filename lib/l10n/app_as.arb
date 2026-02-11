@@ -468,7 +468,7 @@
   "copiedToClipboard": "ক্লিপবৰ্ডত কপি কৰা হ’ল!",
   "tutorialContextTitle": "পৰিস্থিতি/প্ৰসংগ টেগ",
   "tutorialContextDesc": "একেটা বাক্য হ’লেও পৰিস্থিতি (যেনে: ৰাতিপুৱা, গধূলি) লিখিলে সুকীয়াভাৱে সংৰক্ষণ কৰিব পাৰি।",
-  "thinkingTimeInterval": "ভাবিবলৈ সময়ৰ ব্যৱধান",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "সঠিক উত্তৰ প্ৰকাশ কৰাৰ আগতে ভাবিবলৈ সময়।",
   "autoPlay": "স্বয়ংক্ৰিয় প্লে’",
   "timeUp": "সময় শেষ!",

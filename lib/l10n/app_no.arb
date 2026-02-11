@@ -468,7 +468,7 @@
   "copiedToClipboard": "Copied to clipboard!",
   "tutorialContextTitle": "Kontekstmerke",
   "tutorialContextDesc": "Legg til kontekst (f.eks. Morgen) for å skille lignende setninger.",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

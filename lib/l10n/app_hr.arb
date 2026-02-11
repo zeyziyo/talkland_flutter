@@ -468,7 +468,7 @@
   "copiedToClipboard": "Kopirano u međuspremnik!",
   "tutorialContextTitle": "Oznaka situacije/konteksta",
   "tutorialContextDesc": "Možete ga spremiti zasebno ako zapišete situaciju (npr. jutro, večer), čak i ako je ista rečenica.",
-  "thinkingTimeInterval": "Interval vremena razmišljanja",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Vrijeme za razmišljanje prije otkrivanja točnog odgovora.",
   "autoPlay": "Automatska reprodukcija",
   "timeUp": "Vrijeme je isteklo!",

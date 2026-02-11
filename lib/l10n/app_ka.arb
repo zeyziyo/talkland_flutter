@@ -468,7 +468,7 @@
   "copiedToClipboard": "დაკოპირებულია ბუფერში!",
   "tutorialContextTitle": "კონტექსტური ტეგი",
   "tutorialContextDesc": "ერთი და იგივე წინადადებაც კი შეიძლება ცალკე შენახული იყოს სიტუაციის მითითებით (მაგ. დილა, საღამო).",
-  "thinkingTimeInterval": "ფიქრის დროის ინტერვალი",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "დრო, რომ იფიქროთ პასუხის გამოვლენამდე.",
   "autoPlay": "ავტომატური დაკვრა",
   "timeUp": "დრო ამოიწურა!",

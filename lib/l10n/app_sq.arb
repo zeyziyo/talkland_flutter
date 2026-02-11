@@ -468,7 +468,7 @@
   "copiedToClipboard": "U kopjua në kujtesën e shkurtër!",
   "tutorialContextTitle": "Etiketa e situatës/kontekstit",
   "tutorialContextDesc": "Edhe nëse është e njëjta fjali, mund ta ruani veçmas duke shkruar situatën (p.sh. mëngjes, mbrëmje).",
-  "thinkingTimeInterval": "Intervali i kohës së mendimit",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Koha për të menduar përpara se të zbulohet përgjigja.",
   "autoPlay": "Luaj automatikisht",
   "timeUp": "Koha ka mbaruar!",

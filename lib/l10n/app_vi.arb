@@ -468,7 +468,7 @@
   "copiedToClipboard": "Đã sao chép vào bộ nhớ tạm!",
   "tutorialContextTitle": "Thẻ ngữ cảnh",
   "tutorialContextDesc": "Thêm ngữ cảnh (ví dụ: Buổi sáng) để phân biệt các câu tương tự.",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "Độ trễ phát lại",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

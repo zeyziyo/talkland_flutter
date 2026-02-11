@@ -468,7 +468,7 @@
   "copiedToClipboard": "Copié dans le presse-papier!",
   "tutorialContextTitle": "Balise de contexte",
   "tutorialContextDesc": "Ajoutez un contexte (ex: Matin) pour distinguer des phrases similaires.",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "Délai de lecture",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

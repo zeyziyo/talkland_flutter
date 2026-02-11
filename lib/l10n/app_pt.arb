@@ -468,7 +468,7 @@
   "copiedToClipboard": "Copied to clipboard!",
   "tutorialContextTitle": "Etiqueta de contexto",
   "tutorialContextDesc": "Adicione contexto (ex: Manhã) para distinguir frases semelhantes.",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "Atraso de reprodução",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

@@ -289,7 +289,7 @@ class AppState extends ChangeNotifier {
     _aiDetectedTags = [];
     _sourcePos = '';
     _sourceFormType = '';
-    _sourceRoot = '';
+    _note = '';
     notify();
   }
 

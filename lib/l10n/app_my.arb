@@ -468,7 +468,7 @@
   "copiedToClipboard": "ကလစ်ဘုတ်ထဲသို့ ကူးယူပြီးပါပြီ!",
   "tutorialContextTitle": "အခြေအနေ/စာသား၏ အဓိပ္ပာယ် တဂ်",
   "tutorialContextDesc": "အတူတူ စာကြောင်းဖြစ်သော်လည်း အခြေအနေ (ဥပမာ- မနက်၊ ည)ကို ရေးထားလျှင် သီးခြား သိမ်းဆည်းနိုင်သည်။",
-  "thinkingTimeInterval": "စဉ်းစားချိန် ကြားကာလ",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "အဖြေမှန် မဖော်ပြခင် စဉ်းစားရန် အချိန်ဖြစ်သည်။",
   "autoPlay": "အလိုအလျောက် ပြန်ဖွင့်",
   "timeUp": "အချိန်ကုန်သွားပြီ!",

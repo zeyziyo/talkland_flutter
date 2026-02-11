@@ -468,7 +468,7 @@
   "copiedToClipboard": "Kopirano v odložišče!",
   "tutorialContextTitle": "Situacija/kontekstne oznake",
   "tutorialContextDesc": "Isti stavek lahko shranite ločeno, če zapišete situacijo (npr. jutro, večer).",
-  "thinkingTimeInterval": "Interval časa za razmišljanje",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Čas za razmišljanje, preden se razkrije pravilen odgovor.",
   "autoPlay": "Samodejno predvajanje",
   "timeUp": "Čas je potekel!",

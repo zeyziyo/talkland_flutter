@@ -468,7 +468,7 @@
   "copiedToClipboard": "Copied to clipboard!",
   "tutorialContextTitle": "وسم السياق",
   "tutorialContextDesc": "أضف سياقًا (مثلاً: الصباح) لتمييز الجمل المتشابهة.",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "تأخير التشغيل",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

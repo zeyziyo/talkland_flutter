@@ -468,7 +468,7 @@
   "copiedToClipboard": "បានចម្លងទៅឃ្លីបបត!",
   "tutorialContextTitle": "ស្លាកបរិបទ/សភាពការណ៍",
   "tutorialContextDesc": "សូម្បីតែប្រយោគដូចគ្នា អ្នកអាចរក្សាទុកវដាច់ដោយឡែកពីគ្នាដោយសរសេរបរិបទ (ឧទាហរណ៍៖ ពេលព្រឹក ពេលល្ងាច)។",
-  "thinkingTimeInterval": "ចន្លោះពេលគិត",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "ពេលវេលាដើម្បីគិត មុនពេលចម្លើយត្រូវបានបង្ហាញ។",
   "autoPlay": "ចាក់សារឡើងវិញដោយស្វ័យប្រវត្តិ",
   "timeUp": "អស់ពេល!",

@@ -468,7 +468,7 @@
   "copiedToClipboard": "Copied to clipboard!",
   "tutorialContextTitle": "சூழல் குறிச்சொல்",
   "tutorialContextDesc": "ஒரே மாதிரியான வாக்கியங்களை வேறுபடுத்த சூழலை (எ.கா. காலை)ச் சேர்க்கவும்.",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

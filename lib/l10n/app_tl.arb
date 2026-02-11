@@ -468,7 +468,7 @@
   "copiedToClipboard": "Kinopya sa clipboard!",
   "tutorialContextTitle": "Tag ng Sitwasyon/Konteksto",
   "tutorialContextDesc": "Kahit na pareho ang pangungusap, maaari mo itong i-save nang hiwalay kung isusulat mo ang sitwasyon (hal. Umaga, Gabi).",
-  "thinkingTimeInterval": "Interval ng Oras ng Pag-iisip",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Ang oras para mag-isip bago ipakita ang tamang sagot.",
   "autoPlay": "Awtomatikong Mag-play",
   "timeUp": "Tapos na ang Oras!",

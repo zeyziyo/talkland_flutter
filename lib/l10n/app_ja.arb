@@ -468,7 +468,7 @@
   "copiedToClipboard": "クリップボードにコピーしました！",
   "tutorialContextTitle": "文脈タグ",
   "tutorialContextDesc": "同じ文章でも状況（例：朝、夜）を追加して区別できます。",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "再生時差",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

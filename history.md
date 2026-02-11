@@ -23,6 +23,13 @@
 
 ## 📅 최근 주요 변경 로그 (Recent Changelog)
 
+### [2026-02-12] UI Refinement & Mode 1 Reset Fix (Phase 94)
+- **Repair**: Mode 1(입력) 초기화(X) 버튼 클릭 시 입력란뿐만 아니라 '상세 분류'의 주석(Note) 필드도 함께 초기화되도록 `AppState.clearTexts` 로직 수정.
+- **UI/UX**: Mode 2(복습) 상단의 4가지 주요 컨트롤(검색 조건, 끝낸것, 자동 재생, 재생 시차)을 가로 한 줄로 재정렬하고 `SingleChildScrollView`를 적용하여 공간 효율성 극대화.
+- **Terminology**: "생각 시간 간격" 용어를 더 직관적인 "**재생 시차** (Playback Delay)"로 변경하고 80개 언어 전체 동기화.
+- **Card Design**: `Mode2Card`에서 중복 노출되던 원형(Root Word) 표시를 제거하고, 태그와 주석을 첫 번째 줄(품사 뒤)로 통합 배치하여 학습 카드의 세로 높이 축소 및 시인성 개선.
+- **Stable**: `AppStateAuth.dart`의 온라인 자료실 다운로드 URL 구성 시 ISO 코드를 서버 디렉토리명으로 변환하는 `getLangDir` 로직의 안정성 재검증 및 `importing` 메시지 지역화 처리.
+
 ### [2026-02-11] Mode 1 UI Aesthetics & Emoji Removal (Phase 84.5)
 - **UI**: `HomeScreen` 앱바 하단에 커스텀 단어/문장 토글(글자 크기 16px)을 배치하고, `Mode1Widget` 내부의 중복된 토글 행을 삭제하여 레이아웃 최적화.
 - **Rules**: 모든 Mode 1 UI(주석, 상세 분류, 번역 실행, 언어 배지, 어근 배지, 저장 버튼 등)에서 이모지를 전면 제거하여 전문적인 프리미엄 디자인 완성. 하드코딩된 한국어 문자열을 `l10n` 키로 전면 교체하여 80개 언어 지원 규격 준수.

@@ -468,7 +468,7 @@
   "copiedToClipboard": "Копирано у клипборд!",
   "tutorialContextTitle": "Ознака ситуације/контекста",
   "tutorialContextDesc": "Можете да сачувате исту реченицу одвојено ако забележите ситуацију (нпр. јутро, вече).",
-  "thinkingTimeInterval": "Интервал времена размишљања",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Време за размишљање пре откривања тачног одговора.",
   "autoPlay": "Аутоматска репродукција",
   "timeUp": "Време је истекло!",

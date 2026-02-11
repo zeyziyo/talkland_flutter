@@ -468,7 +468,7 @@
   "copiedToClipboard": "පිටපත් කර පසුරු පුවරුවට එක් කරන ලදී!",
   "tutorialContextTitle": "සන්දර්භය/සන්දර්භ ටැගය",
   "tutorialContextDesc": "එකම වාක්‍යයක් වුවද, තත්වය (උදා: උදෑසන, සවස) සටහන් කර ඇත්නම් එය වෙන වෙනම සුරැකිය හැක.",
-  "thinkingTimeInterval": "කල්පනාකාරී කාල පරතරය",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "පිළිතුර හෙළි කිරීමට පෙර කල්පනා කිරීමට කාලයයි.",
   "autoPlay": "ස්වයංක්‍රීයව වාදනය කිරීම",
   "timeUp": "කාලය ඉවරයි!",

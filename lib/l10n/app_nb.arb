@@ -468,7 +468,7 @@
   "copiedToClipboard": "Kopiert til utklippstavlen!",
   "tutorialContextTitle": "Situasjons-/konteksttag",
   "tutorialContextDesc": "Selv om det er samme setning, kan du lagre den separat ved å skrive ned situasjonen (f.eks. morgen, kveld).",
-  "thinkingTimeInterval": "Tenketidsintervall",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Dette er tiden du har til å tenke før svaret avsløres.",
   "autoPlay": "Autospill",
   "timeUp": "Tiden er ute!",

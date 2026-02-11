@@ -107,59 +107,64 @@ class Mode2Card extends StatelessWidget {
                        ),
                        const SizedBox(width: 8),
                        
-                       // Metadata Badges
+                       // Metadata Badges (Phase 94: Unified Row 1)
                        Expanded(
-                         child: Column(
-                           crossAxisAlignment: CrossAxisAlignment.start,
-                           children: [
-                              // Chat Origin
-                              if (record['dialogue_id'] != null)
-                                Padding(
-                                  padding: const EdgeInsets.only(bottom: 4),
-                                  child: Row(
-                                    children: [
-                                      const Icon(Icons.chat_bubble_outline, size: 10, color: Colors.white70),
-                                      const SizedBox(width: 4),
-                                      Text(
-                                        l10n.chatFromConversation(record['speaker'] ?? "AI"),
-                                        style: const TextStyle(fontSize: 10, color: Colors.white70, fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
+                         child: Padding(
+                           padding: const EdgeInsets.symmetric(horizontal: 8),
+                           child: Wrap(
+                             spacing: 6,
+                             runSpacing: 4,
+                             crossAxisAlignment: WrapCrossAlignment.center,
+                             children: [
+                               // 1. POS Badge
+                               if (record['pos'] != null)
+                                  _buildBadge(_getLocalizedTag(record['pos'], l10n), Colors.white, Colors.white24),
+                               
+                               // 2. Note (Context Tag) - Moved to row 1
+                               if (contextTag != null && contextTag.isNotEmpty && contextTag != record['pos'])
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white12,
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: Text(
+                                      _getLocalizedTag(contextTag, l10n),
+                                      style: const TextStyle(fontSize: 10, color: Colors.white70, fontStyle: FontStyle.italic),
+                                    ),
                                   ),
-                                ),
-                              
-                              // Word Details
-                               if (record['type'] == 'word' && (record['pos'] != null || record['form_type'] != null || record['root'] != null))
-                                 Padding(
-                                   padding: const EdgeInsets.only(bottom: 6),
-                                   child: Wrap(
-                                     spacing: 6,
-                                     runSpacing: 4,
-                                     crossAxisAlignment: WrapCrossAlignment.center,
-                                     children: [
-                                       if (record['pos'] != null)
-                                         _buildBadge(_getLocalizedTag(record['pos'], l10n), Colors.white, Colors.white24),
-                                       if (record['form_type'] != null)
-                                         _buildBadge(_getLocalizedTag(record['form_type'], l10n), Colors.white, Colors.white12),
-                                       if (record['root'] != null)
-                                          Row(
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: [
-                                              const Icon(Icons.link, size: 12, color: Colors.white60),
-                                              const SizedBox(width: 2),
-                                              Text(
-                                                record['root'],
-                                                style: const TextStyle(fontSize: 12, color: Colors.white60, fontWeight: FontWeight.bold),
-                                              ),
-                                            ],
-                                          ),
-                                     ],
-                                   ),
-                                 ),
-                           ],
+
+                               // 3. User Tags - Moved to row 1
+                               if (record['tags'] != null && (record['tags'] as List).isNotEmpty)
+                                 ...(() {
+                                    final systemTags = {
+                                      ...AppState.posCategories,
+                                      ...AppState.sentenceCategories,
+                                      ...AppState.verbFormCategories,
+                                      ...AppState.adjectiveFormCategories,
+                                      'word', 'sentence'
+                                    }.map((e) => e.toLowerCase()).toSet();
+
+                                    final filteredTags = (record['tags'] as List)
+                                        .map((t) => t.toString())
+                                        .where((t) => !systemTags.contains(t.toLowerCase()))
+                                        .toList();
+
+                                    return filteredTags.map((t) => Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white10,
+                                        borderRadius: BorderRadius.circular(4),
+                                        border: Border.all(color: Colors.white12),
+                                      ),
+                                      child: Text('#$t', style: const TextStyle(fontSize: 9, color: Colors.white60)),
+                                    ));
+                                 })(),
+                             ],
+                           ),
                          ),
                        ),
-
+                       
                        // Checkbox
                        GestureDetector(
                           onTap: () => appState.toggleMemorizedStatus(targetId, isStudied),
@@ -180,74 +185,18 @@ class Mode2Card extends StatelessWidget {
                     ],
                   ),
                   
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 8),
                   
                   // Main Source Text
                   Text(
                     topText,
                     style: TextStyle(
-                      fontSize: (record['type'] == 'word') ? 24 : 18,
+                      fontSize: (record['type'] == 'word') ? 22 : 17,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
-                      height: 1.4,
-                      decoration: null,
-                      decorationColor: Colors.white70,
+                      height: 1.3,
                     ),
                   ),
-                  
-                  // Note / Context Tag
-                  if (contextTag != null && contextTag.isNotEmpty && contextTag != record['pos'])
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8),
-                      child: Row(
-                        children: [
-                          const Icon(Icons.label_outline, size: 14, color: Colors.white70),
-                          const SizedBox(width: 4),
-                          Text(
-                            _getLocalizedTag(contextTag, l10n),
-                            style: const TextStyle(fontSize: 13, color: Colors.white70, fontStyle: FontStyle.italic),
-                          ),
-                        ],
-                      ),
-                    ),
-                    
-                   // Tags (Filtered)
-                   if (record['tags'] != null && (record['tags'] as List).isNotEmpty)
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8),
-                      child: Builder(
-                        builder: (context) {
-                          final systemTags = {
-                            ...AppState.posCategories,
-                            ...AppState.sentenceCategories,
-                            ...AppState.verbFormCategories,
-                            ...AppState.adjectiveFormCategories,
-                            'word', 'sentence'
-                          }.map((e) => e.toLowerCase()).toSet();
-
-                          final filteredTags = (record['tags'] as List)
-                              .map((t) => t.toString())
-                              .where((t) => !systemTags.contains(t.toLowerCase()))
-                              .toList();
-
-                          if (filteredTags.isEmpty) return const SizedBox.shrink();
-
-                          return Wrap(
-                            spacing: 4,
-                            runSpacing: 4,
-                            children: filteredTags.map((t) => Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                              decoration: BoxDecoration(
-                                color: Colors.white10,
-                                borderRadius: BorderRadius.circular(4),
-                                border: Border.all(color: Colors.white12),
-                              ),
-                              child: Text(t, style: const TextStyle(fontSize: 10, color: Colors.white70)),
-                            )).toList(),
-                          );
-                        }
-                      ),
-                    ),
                 ],
               ),
             ),

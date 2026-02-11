@@ -468,7 +468,7 @@
   "copiedToClipboard": "Буферге көшірілді!",
   "tutorialContextTitle": "Жағдай/Мәтін мәні тегі",
   "tutorialContextDesc": "Егер бір сөйлемнің өзінде жағдайды жазсаңыз (мысалы, таңертең, кешке), оны бөлек сақтауға болады.",
-  "thinkingTimeInterval": "Ойлау уақыты аралығы",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Жауап жарияланғанға дейін ойлану уақыты.",
   "autoPlay": "Автоматты ойнату",
   "timeUp": "Уақыт бітті!",

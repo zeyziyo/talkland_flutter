@@ -468,7 +468,7 @@
   "copiedToClipboard": "Copied to clipboard!",
   "tutorialContextTitle": "Bağlam Etiketi",
   "tutorialContextDesc": "Benzer cümleleri ayırt etmek için bağlam (örn. Sabah) ekleyin.",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "Oynatma Gecikmesi",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

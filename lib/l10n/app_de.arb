@@ -468,7 +468,7 @@
   "copiedToClipboard": "In die Zwischenablage kopiert!",
   "tutorialContextTitle": "Kontext-Tag",
   "tutorialContextDesc": "Fügen Sie Kontext hinzu (z. B. Morgen), um ähnliche Sätze zu unterscheiden.",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "Wiedergabeverzögerung",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

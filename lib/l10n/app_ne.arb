@@ -468,7 +468,7 @@
   "copiedToClipboard": "क्लिपबोर्डमा प्रतिलिपि गरियो!",
   "tutorialContextTitle": "स्थिति/सन्दर्भ ट्याग",
   "tutorialContextDesc": "एउटै वाक्य भए पनि स्थिति (उदाहरण: बिहान, बेलुका) लेखेर छुट्टै सुरक्षित गर्न सकिन्छ।",
-  "thinkingTimeInterval": "सोच्ने समय अन्तराल",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "सही उत्तर सार्वजनिक हुनु अघि सोच्ने समय हो।",
   "autoPlay": "स्वतः प्ले",
   "timeUp": "समय सकियो!",

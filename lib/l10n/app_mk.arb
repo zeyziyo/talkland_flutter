@@ -468,7 +468,7 @@
   "copiedToClipboard": "Копирано во таблата со исечоци!",
   "tutorialContextTitle": "Ознака за ситуација/контекст",
   "tutorialContextDesc": "Можете да ја зачувате истата реченица посебно ако ја запишете ситуацијата (на пример, утро, вечер).",
-  "thinkingTimeInterval": "Интервал на време за размислување",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Време за размислување пред да се открие точниот одговор.",
   "autoPlay": "Автоматска репродукција",
   "timeUp": "Времето истече!",

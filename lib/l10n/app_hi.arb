@@ -468,7 +468,7 @@
   "copiedToClipboard": "क्लिपबोर्ड पर कॉपी किया गया!",
   "tutorialContextTitle": "संदर्भ टैग",
   "tutorialContextDesc": "समान वाक्यों में अंतर करने के लिए संदर्भ (जैसे: सुबह) जोड़ें।",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "प्लेबैक विलंब",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

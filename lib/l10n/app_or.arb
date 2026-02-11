@@ -468,7 +468,7 @@
   "copiedToClipboard": "କ୍ଲିପବୋର୍ଡରେ କପି କରାଯାଇଛି!",
   "tutorialContextTitle": "ପରିସ୍ଥିତି/ପ୍ରସଙ୍ଗ ଟ୍ୟାଗ୍",
   "tutorialContextDesc": "ଯଦି ଏହା ସମାନ ବାକ୍ୟ, ତେବେ ମଧ୍ୟ ଆପଣ ଏହାକୁ ପୃଥକ ଭାବରେ ସେଭ୍ କରିପାରିବେ ଯଦି ଆପଣ ଏକ ପରିସ୍ଥିତି (ଉଦାହରଣ ସ୍ୱରୂପ: ସକାଳ, ସନ୍ଧ୍ୟା) ଲେଖନ୍ତି |",
-  "thinkingTimeInterval": "ଚିନ୍ତା କରିବା ସମୟ ବ୍ୟବଧାନ",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "ସଠିକ୍ ଉତ୍ତର ପ୍ରକାଶିତ ହେବା ପୂର୍ବରୁ ଚିନ୍ତା କରିବାକୁ ଏହା ଏକ ସମୟ।",
   "autoPlay": "ସ୍ୱୟଂଚାଳିତ ପ୍ଲେ",
   "timeUp": "ସମୟ ସରୀଗଲା!",

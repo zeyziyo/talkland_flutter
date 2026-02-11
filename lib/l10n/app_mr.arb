@@ -468,7 +468,7 @@
   "copiedToClipboard": "Copied to clipboard!",
   "tutorialContextTitle": "संदर्भ टॅग",
   "tutorialContextDesc": "समान वाक्ये वेगळी करण्यासाठी संदर्भ (उदा. सकाळ) जोडा.",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

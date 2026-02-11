@@ -468,7 +468,7 @@
   "copiedToClipboard": "Nukopijuota į iškarpinę!",
   "tutorialContextTitle": "Situacijos / konteksto žymė",
   "tutorialContextDesc": "Net jei tai tas pats sakinys, galite jį išsaugoti atskirai parašydami situaciją (pvz., rytą, vakarą).",
-  "thinkingTimeInterval": "Mąstymo laiko intervalas",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Tai laikas, skirtas pagalvoti prieš atskleidžiant teisingą atsakymą.",
   "autoPlay": "Automatinis atkūrimas",
   "timeUp": "Laikas baigėsi!",

@@ -468,7 +468,7 @@
   "copiedToClipboard": "Arbelera kopiatu da!",
   "tutorialContextTitle": "Egoera/Testuinguru etiketa",
   "tutorialContextDesc": "Esaldi bera bada ere, egoera (adibidez, goiza, arratsaldea) idatziz gero, bereizita gorde dezakezu.",
-  "thinkingTimeInterval": "Pentsatzeko denbora-tartea",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Erantzuna argitaratu aurretik pentsatzeko denbora.",
   "autoPlay": "Automatikoki erreproduzitu",
   "timeUp": "Denbora agortu da!",

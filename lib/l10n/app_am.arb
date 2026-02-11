@@ -468,7 +468,7 @@
   "copiedToClipboard": "ወደ ቅንጥብ ሰሌዳ ተገልብጧል!",
   "tutorialContextTitle": "ሁኔታ/አውድ መለያ",
   "tutorialContextDesc": "ምንም እንኳን ተመሳሳይ ዓረፍተ ነገር ቢሆንም እንደ ሁኔታው (ለምሳሌ ጠዋት፣ ምሽት) በመፃፍ በተናጠል ማስቀመጥ ይችላሉ።",
-  "thinkingTimeInterval": "የማሰብ ጊዜ ክፍተት",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "መልሱ ከመገለጹ በፊት ለማሰብ ጊዜው አሁን ነው።",
   "autoPlay": "ራስ-አጫውት",
   "timeUp": "ጊዜው አልቋል!",

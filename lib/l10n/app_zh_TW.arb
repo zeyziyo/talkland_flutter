@@ -468,7 +468,7 @@
   "copiedToClipboard": "已複製到剪貼板！",
   "tutorialContextTitle": "上下文標籤",
   "tutorialContextDesc": "添加上下文（例如：早上）以區分相似的句子。",
-  "thinkingTimeInterval": "Thinking Time Interval",
+  "thinkingTimeInterval": "播放延遲",
   "thinkingTimeDesc": "Time to think before the answer is revealed.",
   "autoPlay": "Auto-Play",
   "timeUp": "Time Up!",

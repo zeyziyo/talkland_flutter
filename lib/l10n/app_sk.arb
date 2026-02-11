@@ -468,7 +468,7 @@
   "copiedToClipboard": "Skopírované do schránky!",
   "tutorialContextTitle": "Situácia/kontextové značky",
   "tutorialContextDesc": "Ak si zapíšete situáciu (napr. ráno, večer) aj pre tú istú vetu, môžete si ju uložiť samostatne.",
-  "thinkingTimeInterval": "Interval času na premýšľanie",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Čas na premýšľanie pred odhalením správnej odpovede.",
   "autoPlay": "Automatické prehrávanie",
   "timeUp": "Čas vypršal!",

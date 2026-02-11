@@ -148,137 +148,134 @@ class _Mode2WidgetState extends State<Mode2Widget> {
 
                     }
                   ),
-                  const SizedBox(height: 12),
+                  // Phase 94: Combined row for 4 controls
                   const SizedBox(height: 8),
-                  
-                  // Word/Sentence Toggle + Tag Selection + Show Memorized Switch
-                  Row(
-                    children: [
-                      // 1. Tag Selection Button
-                      InkWell(
-                        onTap: () => showDialog(
-                          context: context,
-                          builder: (context) => SearchFilterDialog(appState: appState),
-                        ),
-                        borderRadius: BorderRadius.circular(8),
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
-                          decoration: BoxDecoration(
-                            color: appState.selectedTags.isNotEmpty ? Colors.blue[50] : Colors.grey[100],
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(
-                              color: appState.selectedTags.isNotEmpty ? Colors.blue.shade200 : Colors.grey.shade300,
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        // 1. Tag Selection Button (Search Conditions)
+                        InkWell(
+                          onTap: () => showDialog(
+                            context: context,
+                            builder: (context) => SearchFilterDialog(appState: appState),
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+                            decoration: BoxDecoration(
+                              color: appState.selectedTags.isNotEmpty ? Colors.blue[50] : Colors.grey[100],
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                color: appState.selectedTags.isNotEmpty ? Colors.blue.shade200 : Colors.grey.shade300,
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(
+                                  Icons.tune, 
+                                  size: 14, 
+                                  color: appState.selectedTags.isNotEmpty || appState.filterLimit != null || appState.filterStartsWith != null ? Colors.blue.shade700 : Colors.grey.shade600,
+                                ),
+                                const SizedBox(width: 4),
+                                  Text(
+                                    appState.selectedTags.isEmpty && appState.filterLimit == null && appState.filterStartsWith == null
+                                        ? l10n.searchConditions 
+                                        : '${appState.selectedTags.length + (appState.filterLimit != null ? 1 : 0) + (appState.filterStartsWith != null ? 1 : 0)}',
+                                    style: TextStyle(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.bold,
+                                      color: appState.selectedTags.isNotEmpty || appState.filterLimit != null || appState.filterStartsWith != null ? Colors.blue.shade800 : Colors.grey.shade700,
+                                    ),
+                                  ),
+                              ],
                             ),
                           ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Icon(
-                                Icons.tune, 
-                                size: 14, 
-                                color: appState.selectedTags.isNotEmpty || appState.filterLimit != null || appState.filterStartsWith != null ? Colors.blue.shade700 : Colors.grey.shade600,
-                              ),
-                              const SizedBox(width: 4),
-                                Text(
-                                  // Show count if tags selected, else label
-                                  appState.selectedTags.isEmpty && appState.filterLimit == null && appState.filterStartsWith == null
-                                      ? l10n.searchConditions 
-                                      : '${appState.selectedTags.length + (appState.filterLimit != null ? 1 : 0) + (appState.filterStartsWith != null ? 1 : 0)}',
-                                  style: TextStyle(
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.bold,
-                                    color: appState.selectedTags.isNotEmpty || appState.filterLimit != null || appState.filterStartsWith != null ? Colors.blue.shade800 : Colors.grey.shade700,
-                                  ),
-                                ),
-                            ],
-                          ),
                         ),
-                      ),
-                      const SizedBox(width: 12),
+                        const SizedBox(width: 8),
 
-                      // 3. Show Memorized Switch (Icon Toggle for space)
-                      InkWell(
-                        onTap: () => appState.setShowMemorized(!appState.showMemorized),
-                        borderRadius: BorderRadius.circular(8),
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
-                          decoration: BoxDecoration(
-                            color: appState.showMemorized ? Colors.green[50] : Colors.grey[100],
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(
-                              color: appState.showMemorized ? Colors.green.shade200 : Colors.grey.shade300,
+                        // 2. Show Memorized Switch (Finished)
+                        InkWell(
+                          onTap: () => appState.setShowMemorized(!appState.showMemorized),
+                          borderRadius: BorderRadius.circular(8),
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+                            decoration: BoxDecoration(
+                              color: appState.showMemorized ? Colors.green[50] : Colors.grey[100],
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                color: appState.showMemorized ? Colors.green.shade200 : Colors.grey.shade300,
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(
+                                  appState.showMemorized ? Icons.visibility : Icons.visibility_off, 
+                                  size: 14, 
+                                  color: appState.showMemorized ? Colors.green.shade700 : Colors.grey.shade600,
+                                ),
+                                const SizedBox(width: 2),
+                                  Text(
+                                    l10n.labelShowMemorized,
+                                    style: TextStyle(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.bold,
+                                      color: appState.showMemorized ? Colors.green.shade800 : Colors.grey.shade700,
+                                    ),
+                                  ),
+                              ],
                             ),
                           ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Icon(
-                                appState.showMemorized ? Icons.visibility : Icons.visibility_off, 
-                                size: 14, 
-                                color: appState.showMemorized ? Colors.green.shade700 : Colors.grey.shade600,
-                              ),
-                              const SizedBox(width: 2),
-                                Text(
-                                  l10n.labelShowMemorized,
-                                  style: TextStyle(
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.bold,
-                                    color: appState.showMemorized ? Colors.green.shade800 : Colors.grey.shade700,
-                                  ),
-                                ),
-                            ],
+                        ),
+                        const SizedBox(width: 8),
+
+                        // 3. Auto Play Button
+                        TextButton.icon(
+                          onPressed: () {
+                            if (_isAutoPlaying) {
+                              _stopAutoPlay();
+                            } else {
+                              final appState = Provider.of<AppState>(context, listen: false);
+                              _startAutoPlay(appState);
+                            }
+                          },
+                          icon: Icon(_isAutoPlaying ? Icons.stop_circle_outlined : Icons.play_circle_outline, size: 14),
+                          label: Text(
+                            _isAutoPlaying ? l10n.stopPractice : l10n.autoPlay,
+                            style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
+                          ),
+                          style: TextButton.styleFrom(
+                            foregroundColor: _isAutoPlaying ? Colors.red : Colors.green[700],
+                            backgroundColor: Colors.grey[100],
+                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                            minimumSize: Size.zero,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+                        const SizedBox(width: 8),
 
-            const SizedBox(height: 16),
-
-            // Thinking Time Settings
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                   // Auto Play Button
-                   TextButton.icon(
-                    onPressed: () {
-                      if (_isAutoPlaying) {
-                        _stopAutoPlay();
-                      } else {
-                        final appState = Provider.of<AppState>(context, listen: false);
-                        _startAutoPlay(appState);
-                      }
-                    },
-                    icon: Icon(_isAutoPlaying ? Icons.stop_circle_outlined : Icons.play_circle_outline, size: 16),
-                    label: Text(
-                      _isAutoPlaying ? l10n.stopPractice : l10n.autoPlay,
-                      style: const TextStyle(fontSize: 12),
-                    ),
-                    style: TextButton.styleFrom(
-                      foregroundColor: _isAutoPlaying ? Colors.red : Colors.green[700],
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                      minimumSize: Size.zero,
-                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    ),
-                  ),
-                  const SizedBox(width: 16),
-                   TextButton.icon(
-                    onPressed: () => _showThinkingTimeSettings(context),
-                    icon: const Icon(Icons.timer_outlined, size: 16),
-                    label: Text(
-                      '${l10n.thinkingTimeInterval}: ${_thinkingInterval}s',
-                       style: const TextStyle(fontSize: 12),
-                    ),
-                    style: TextButton.styleFrom(
-                      foregroundColor: Colors.grey[600],
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                      minimumSize: Size.zero,
-                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        // 4. Playback Delay (Thinking Time)
+                        TextButton.icon(
+                          onPressed: () => _showThinkingTimeSettings(context),
+                          icon: const Icon(Icons.timer_outlined, size: 14),
+                          label: Text(
+                            '${l10n.thinkingTimeInterval}: ${_thinkingInterval}s',
+                            style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
+                          ),
+                          style: TextButton.styleFrom(
+                            foregroundColor: Colors.grey[700],
+                            backgroundColor: Colors.grey[100],
+                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                            minimumSize: Size.zero,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],

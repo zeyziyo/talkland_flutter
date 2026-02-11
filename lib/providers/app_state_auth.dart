@@ -218,6 +218,9 @@ extension AppStateAuth on AppState {
       return importResult;
       
     } catch (e) {
+      debugPrint('[RemoteImport] Error: $e');
+      _statusMessage = 'L10N:statusImportFailed|$e';
+      notify();
       return {'success': false, 'error': e.toString()};
     }
   }
@@ -246,14 +249,27 @@ extension AppStateAuth on AppState {
     String? tPath = material['target_url'] as String?;
     String? pPath = material['pivot_url'] as String?;
     
-    // Phase 92: Fallback to path-based construction if URLs are missing
+    // Phase 93: Map ISO code to server directory name (e.g., 'ko' -> 'Korean')
+    String getLangDir(String code) {
+      try {
+        final lang = LanguageConstants.supportedLanguages.firstWhere(
+          (e) => e['code'] == code,
+          orElse: () => {'code': code, 'name': code == 'en' ? 'English' : code},
+        );
+        return lang['name']!;
+      } catch (_) {
+        return code == 'en' ? 'English' : code;
+      }
+    }
+
+    // Phase 92/93: Fallback to path-based construction if URLs are missing
     if (sPath == null || tPath == null) {
       final String? relativePath = material['path'] as String?;
       if (relativePath != null) {
         final String baseRepoUrl = 'https://zeyziyo.github.io/talkie/docs/materials';
-        sPath = '$baseRepoUrl/$_sourceLang/$relativePath';
-        tPath = '$baseRepoUrl/$_targetLang/$relativePath';
-        pPath = '$baseRepoUrl/en/$relativePath';
+        sPath = '$baseRepoUrl/${Uri.encodeComponent(getLangDir(_sourceLang))}/$relativePath';
+        tPath = '$baseRepoUrl/${Uri.encodeComponent(getLangDir(_targetLang))}/$relativePath';
+        pPath = '$baseRepoUrl/English/$relativePath';
       }
     }
 
@@ -262,7 +278,8 @@ extension AppStateAuth on AppState {
     }
 
     _isTranslating = true;
-    _statusMessage = 'Downloading $mName...';
+    // UI will recognize 'L10N:' prefix and translate it
+    _statusMessage = 'L10N:statusDownloading|$mName';
     notify();
 
     try {
@@ -283,7 +300,7 @@ extension AppStateAuth on AppState {
 
       final syncKey = sPath.split('/').last.replaceAll('.json', '');
 
-      _statusMessage = 'Importing...';
+      _statusMessage = 'L10N:importing';
       notify();
       await DatabaseService.importFromJsonWithMetadata(
         sJson, 
@@ -320,11 +337,12 @@ extension AppStateAuth on AppState {
       await loadTags(); 
       await loadRecordsByTags(); 
       
-      _statusMessage = '$mName Imported Successfully';
+      _statusMessage = 'L10N:statusImportSuccess|$mName';
       notify();
-      return {'success': true};
+      // Ensure material_id is returned for auto-selection in UI
+      return {'success': true, 'material_id': material['material_id'] ?? material['id']};
     } catch (e) {
-      _statusMessage = 'Import Failed: $e';
+      _statusMessage = 'L10N:statusImportFailed|$e';
       notify();
       return {'success': false, 'error': e.toString()};
     } finally {

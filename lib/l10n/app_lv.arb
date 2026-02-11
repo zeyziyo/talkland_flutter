@@ -468,7 +468,7 @@
   "copiedToClipboard": "Nokopēts starpliktuvē!",
   "tutorialContextTitle": "Situācijas/konteksta atzīme",
   "tutorialContextDesc": "Varat to saglabāt atsevišķi, ja pierakstāt situāciju (piemēram, rīts, vakars), pat ja tas ir tas pats teikums.",
-  "thinkingTimeInterval": "Domāšanas laika intervāls",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Laiks, kas jāpārdomā pirms atbildes atklāšanas.",
   "autoPlay": "Automātiska atskaņošana",
   "timeUp": "Laiks ir beidzies!",

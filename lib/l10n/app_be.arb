@@ -468,7 +468,7 @@
   "copiedToClipboard": "Скапіявана ў буфер абмену!",
   "tutorialContextTitle": "Тэг сітуацыі/кантэксту",
   "tutorialContextDesc": "Вы можаце захаваць адну і тую ж фразу асобна, запісаўшы сітуацыю (напрыклад, раніца, вечар).",
-  "thinkingTimeInterval": "Інтэрвал часу абдумвання",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Час для абдумвання перад тым, як будзе паказаны правільны адказ.",
   "autoPlay": "Аўтапрайграванне",
   "timeUp": "Час выйшаў!",

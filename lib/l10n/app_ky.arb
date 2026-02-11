@@ -468,7 +468,7 @@
   "copiedToClipboard": "Буферге көчүрүлдү!",
   "tutorialContextTitle": "Кырдаал/Контекст тэг",
   "tutorialContextDesc": "Ошол эле сүйлөм болсо дагы, кырдаалды (мисалы, эртең менен, кечинде) жазып койсоңуз, өзүнчө сактоого болот.",
-  "thinkingTimeInterval": "Ойлонуу убакыт аралыгы",
+  "thinkingTimeInterval": "Playback Delay",
   "thinkingTimeDesc": "Жооп жарыяланганга чейин ойлонууга убакыт.",
   "autoPlay": "Автоматтык ойнотуу",
   "timeUp": "Убакыт бүттү!",
