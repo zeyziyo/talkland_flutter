@@ -23,7 +23,10 @@ class TranslationService {
       return {'text': '', 'isValid': true};
     }
 
-    final cacheKey = '$sourceLang-$targetLang-$normalized';
+    // Include note in cache key to avoid context-free cache hits
+    final cacheKey = note != null && note.isNotEmpty 
+        ? '$sourceLang-$targetLang-$normalized-$note'
+        : '$sourceLang-$targetLang-$normalized';
 
     // 1. Check local cache first
     try {

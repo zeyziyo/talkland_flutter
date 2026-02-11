@@ -19,8 +19,8 @@ graph LR
     Main --- View2
 
     %% 상대 경로 사용: 미리보기 세션 유지를 위해 최적화
-    click View1 href "./main_view_flow.md"
-    click View2 href "./metadata_dialog_flow.md"
+    click View1 href "./docs/flows/app_flow_main.md"
+    click View2 href "./docs/flows/app_flow_metadata.md"
 
     linkStyle default stroke-width:0px,stroke:none
     
@@ -32,8 +32,8 @@ graph LR
 ---
 
 ## 📂 마인드맵 파일 구성
-- [🏠 메인 번역 화면 상세 보기 (Main View)](./main_view_flow.md)
-- [⚙️ 상세 분류 설정 상세 보기 (Metadata Dialog)](./metadata_dialog_flow.md)
+- [🏠 메인 번역 화면 상세 보기 (Main View)](./docs/flows/app_flow_main.md)
+- [⚙️ 상세 분류 설정 상세 보기 (Metadata Dialog)](./docs/flows/app_flow_metadata.md)
 
 ---
 

@@ -5,8 +5,6 @@ import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
 
 import 'package:talkie/widgets/search_filter_dialog.dart';
-import 'package:talkie/widgets/online_library_dialog.dart';
-import 'package:talkie/widgets/help_dialog.dart';
 
 
 /// Mode 2: 학습 자료 및 복습 모드
@@ -633,21 +631,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
 
 
 
-  void _showMetadataDialog(BuildContext context, AppState appState) {
-    showDialog(
-      context: context,
-      builder: (context) => SearchFilterDialog(
-        appState: appState,
-      ),
-    );
-  }
-
-  void _showOnlineLibraryDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (context) => const OnlineLibraryDialog(),
-    );
-  }
+  // Unused dialog methods removed
 
   String _getLocalizedTag(String tag, AppLocalizations l10n) {
     switch (tag.toLowerCase()) {

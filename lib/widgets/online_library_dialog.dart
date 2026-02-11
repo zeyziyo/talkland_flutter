@@ -140,7 +140,7 @@ class OnlineLibraryDialog extends StatelessWidget {
                         state.selectMaterial(mId);
                       }
                   }
-                  Navigator.pop(context); // Close dialog on success
+                  if (context.mounted) Navigator.pop(context); // Close dialog on success
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(content: Text('Error: ${result['error']}')),

@@ -63,6 +63,7 @@ class SupabaseService {
     String? note,
   }) async {
     try {
+      print('[Supabase] Invoking translate-and-validate for "$text" (Note: $note)');
       final response = await client.functions.invoke(
         'translate-and-validate',
         body: {

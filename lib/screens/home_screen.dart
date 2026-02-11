@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import '../l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
-import 'package:talkie/models/dialogue_group.dart';
 import '../providers/app_state.dart';
 import '../widgets/mode1_widget.dart';
 import '../widgets/mode2_widget.dart';
@@ -13,7 +12,6 @@ import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 import '../widgets/help_dialog.dart';
 import '../constants/language_constants.dart';
 import 'chat_history_screen.dart';
-import 'chat_screen.dart';
 import '../widgets/online_library_dialog.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -148,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ));
       targets.add(_buildTarget(
         _mode1ToggleKey, 
-        l10n.word ?? 'Word/Sentence', 
+        l10n.word, 
         l10n.helpMode1Details.split('\n').firstWhere((l) => l.contains('Toggle'), orElse: () => 'Toggle Word/Sentence'),
         ContentAlign.bottom,
         radius: 8,
@@ -664,48 +662,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
 
-  Future<void> _handleImport(BuildContext context) async {
-    final appState = Provider.of<AppState>(context, listen: false);
-    final l10n = AppLocalizations.of(context)!;
-    
-    final importResult = await appState.pickAndImportJson();
-    
-    if (importResult == null) return; // Canceled
-    
-    if (!context.mounted) return;
-    
-    if (importResult['success'] == true) {
-      // Immediate Transition Logic
-      final materialId = importResult['material_id'] as int? ?? 0;
-      
-      // 2. Select the new material
-      await appState.selectMaterial(materialId);
-      
-      // Removed auto-switch to Mode 3 based on user feedback.
-      // appState.switchMode(2); 
-
-      // 3. Show non-blocking feedback
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(l10n.importAdded(importResult['imported'] as int)),
-          backgroundColor: Colors.green,
-          duration: const Duration(seconds: 2),
-        ),
-      );
-      
-    } else {
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: Text('❌ ${l10n.error}'),
-          content: Text(l10n.importErrorMessage(importResult['error'] ?? 'Unknown error')),
-          actions: [
-            TextButton(onPressed: () => Navigator.pop(context), child: Text(l10n.confirm)),
-          ],
-        ),
-      );
-    }
-  }
+  // Unused _handleImport removed
   Future<void> _launchURL(String urlString) async {
     final Uri url = Uri.parse(urlString);
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
@@ -754,8 +711,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           tempSource = value;
                           // If source and target are same, try to swap or reset target
                           if (tempSource == tempTarget) {
-                             if (tempSource == 'ko') tempTarget = 'en';
-                             else tempTarget = 'ko';
+                            if (tempSource == 'ko') {
+                              tempTarget = 'en';
+                            } else {
+                              tempTarget = 'ko';
+                            }
                           }
                         });
                       }
@@ -780,8 +740,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         setDialogState(() {
                           tempTarget = value;
                            if (tempSource == tempTarget) {
-                             if (tempTarget == 'ko') tempSource = 'en';
-                             else tempSource = 'ko';
+                             if (tempTarget == 'ko') {
+                               tempSource = 'en';
+                             } else {
+                               tempSource = 'ko';
+                             }
                           }
                         });
                       }

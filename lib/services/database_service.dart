@@ -1,6 +1,6 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
-import 'dart:typed_data';
+import 'package:flutter/foundation.dart';
 import 'dart:convert';
 import 'package:uuid/uuid.dart';
 
@@ -24,7 +24,7 @@ class DatabaseService {
     
     return await openDatabase(
       path,
-    version: 13, // Phase 81.1: Sync support for Unified Schema
+    version: 14, // Phase 87: Unified Audio & Review columns
       onCreate: (db, version) async {
         await _createBaseTables(db);
         await _ensureDefaultMaterial(db);
@@ -131,6 +131,20 @@ class DatabaseService {
             print('[DB] Upgraded to version 13: Columns might exist or error: $e');
           }
         }
+
+        if (oldVersion < 14) {
+          // Phase 87: Unified Audio & Review columns
+          try {
+            for (var table in ['words', 'sentences']) {
+              await db.execute('ALTER TABLE $table ADD COLUMN audio_file BLOB');
+              await db.execute('ALTER TABLE $table ADD COLUMN last_reviewed TEXT');
+              await db.execute('ALTER TABLE $table ADD COLUMN review_count INTEGER DEFAULT 0');
+            }
+            print('[DB] Upgraded to version 14: Unified Audio & Review columns added');
+          } catch (e) {
+            print('[DB] Upgraded to version 14: Error adding columns: $e');
+          }
+        }
       },
     );
   }
@@ -153,7 +167,10 @@ class DatabaseService {
         note TEXT,
         created_at TEXT NOT NULL,
         is_memorized INTEGER DEFAULT 0,
-        is_synced INTEGER DEFAULT 0 -- Added Phase 81.1
+        is_synced INTEGER DEFAULT 0, -- Phase 81.1
+        audio_file BLOB,             -- Phase 87
+        last_reviewed TEXT,           -- Phase 87
+        review_count INTEGER DEFAULT 0 -- Phase 87
       )
     ''');
     await db.execute('CREATE INDEX IF NOT EXISTS idx_words_group_id ON words (group_id)');
@@ -175,7 +192,10 @@ class DatabaseService {
         note TEXT,
         created_at TEXT NOT NULL,
         is_memorized INTEGER DEFAULT 0,
-        is_synced INTEGER DEFAULT 0 -- Added Phase 81.1
+        is_synced INTEGER DEFAULT 0, -- Phase 81.1
+        audio_file BLOB,             -- Phase 87
+        last_reviewed TEXT,           -- Phase 87
+        review_count INTEGER DEFAULT 0 -- Phase 87
       )
     ''');
     await db.execute('CREATE INDEX IF NOT EXISTS idx_sentences_group_id ON sentences (group_id)');
@@ -295,104 +315,62 @@ class DatabaseService {
   // 언어별 테이블 관리
   // ==========================================
   
-  /// 언어별 테이블 생성 (이미 존재하면 무시)
+  /// 언어별 테이블 생성 (Legacy - v14부터 No-op)
   static Future<void> createLanguageTable(String langCode) async {
-    final db = await database;
-    final tableName = 'lang_$langCode'.replaceAll('-', '_');
-    
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS $tableName (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        text TEXT NOT NULL,
-        audio_file BLOB,
-        created_at TEXT NOT NULL,
-        last_reviewed TEXT,
-        review_count INTEGER DEFAULT 0
-      )
-    ''');
-
-    // 텍스트 검색 및 중복 방지를 위한 UNIQUE 인덱스 추가
-    await db.execute('CREATE UNIQUE INDEX IF NOT EXISTS idx_${tableName}_text ON $tableName (text COLLATE NOCASE)');
-    
-    print('[DB] Language table created/verified: $tableName');
+    // 모든 데이터는 이제 words, sentences 테이블로 통합되었습니다.
+    debugPrint('[DB] createLanguageTable called for $langCode (No-op in Unified v14)');
   }
   
-  /// 유사 텍스트 검색 (Fuzzy matching using LIKE)
-  /// 유사 텍스트 검색 (Stricter: ~1 word difference)
+  /// 유사 텍스트 검색 (Unified Schema v14)
   static Future<List<Map<String, dynamic>>> searchSimilarText(
     String langCode,
     String text,
   ) async {
     final db = await database;
-    final tableName = 'lang_$langCode'.replaceAll('-', '_');
-    
-    // 테이블이 없으면 빈 리스트 반환
-    final tables = await db.rawQuery(
-      "SELECT name FROM sqlite_master WHERE type='table' AND name=?",
-      [tableName]
-    );
-    
-    if (tables.isEmpty) {
-      return [];
-    }
     
     // 공백으로 단어 분리 및 소문자 정규화
     final inputWords = text.trim().toLowerCase().split(RegExp(r'\s+'));
     if (inputWords.isEmpty) return [];
     
-    // 1. Broad Search: 입력된 단어 중 하나라도 포함된 레코드 가져오기 (후보군 선정)
-    // LIKE 패턴 생성
+    // 1. Broad Search: 'words'와 'sentences' 테이블에서 통합 검색
     String whereClause = '';
-    List<String> whereArgs = [];
+    List<dynamic> whereArgs = [];
     
     for (int i = 0; i < inputWords.length; i++) {
-      if (inputWords[i].length < 2) continue; // 너무 짧은 단어 제외
-      if (i > 0 && whereClause.isNotEmpty) whereClause += ' OR ';
+      if (inputWords[i].length < 2) continue;
+      if (whereClause.isNotEmpty) whereClause += ' OR ';
       whereClause += 'text LIKE ?';
       whereArgs.add('%${inputWords[i]}%');
     }
     
-    // 검색할 단어가 없으면 빈 리스트 반환
     if (whereClause.isEmpty) return [];
+
+    // 최종 쿼리 조합 (언어 필터 포함)
+    final finalWhereClause = '($whereClause) AND lang_code = ?';
+    final finalWhereArgs = [...whereArgs, langCode];
+
+    final wordCandidates = await db.query('words', where: finalWhereClause, whereArgs: finalWhereArgs, limit: 25);
+    final sentenceCandidates = await db.query('sentences', where: finalWhereClause, whereArgs: finalWhereArgs, limit: 25);
     
-    final candidates = await db.query(
-      tableName,
-      where: whereClause,
-      whereArgs: whereArgs,
-      limit: 50, // 후보군 최대 50개
-    );
+    final List<Map<String, dynamic>> candidates = [...wordCandidates, ...sentenceCandidates];
     
-    // 2. Strict Filter: 단어 집합 차이가 2 이하인 경우만 선택 (Insertion, Deletion, Substitution of 1 word)
+    // 2. Strict Filter (Symmetric Difference Size <= 2)
     final inputSet = inputWords.toSet();
     
     final results = candidates.map((record) {
       final recordText = record['text'] as String;
       final recordWords = recordText.trim().toLowerCase().split(RegExp(r'\s+'));
       final recordSet = recordWords.toSet();
-      
-      // 교집합 계산
       final intersection = inputSet.intersection(recordSet).length;
-      
-      // 차집합 크기 합 (Symmetric Difference Size)
-      // (A - B) + (B - A)
-      // = (A.size - inter) + (B.size - inter)
       final diff = (inputSet.length - intersection) + (recordSet.length - intersection);
-      
       return {'record': record, 'diff': diff};
-    }).where((item) {
-      // 차이가 2 이하인 경우만 허용 (단어 1개 변경/추가/삭제 허용)
-      // 단, 완전히 똑같은 경우(diff=0)는 제외 (이미 중복 체크 insertLanguage에서 걸러짐, 하지만 여기서도 포함해서 보여주는게 나을수도?)
-      // 사용자가 "완전 끝난 후"라고 했으므로 0도 포함하여 알림
-      return (item['diff'] as int) <= 2; 
-    }).toList();
+    }).where((item) => (item['diff'] as int) <= 2).toList();
     
-    // 차이가 적은 순으로 정렬
     results.sort((a, b) => (a['diff'] as int).compareTo(b['diff'] as int));
     
-    // 상위 3개만 반환
     final topResults = results.take(3).map((item) => item['record'] as Map<String, dynamic>).toList();
     
-    print('[DB] Found ${topResults.length} similar texts (strict) in $tableName');
+    print('[DB] Found ${topResults.length} similar texts in unified tables for lang=$langCode');
     return topResults;
   }
 
@@ -432,8 +410,7 @@ class DatabaseService {
     return results;
   }
 
-  /// 번역이 이미 존재하는지 확인
-  /// note가 주어진 경우 해당 note와 정확히 일치하는지 확인
+  /// 번역이 이미 존재하는지 확인 (Unified Schema v14 리팩토링)
   static Future<Map<String, dynamic>?> getTranslationIfExists(
     String sourceLang,
     int sourceId,
@@ -442,91 +419,91 @@ class DatabaseService {
   }) async {
     final db = await database;
     
+    // 1. Determine which table the sourceId belongs to and get its group_id
+    // We check 'words' first, then 'sentences'
+    int? groupId;
+    String table = 'words';
+    
+    var res = await db.query('words', columns: ['group_id'], where: 'id = ? AND lang_code = ?', whereArgs: [sourceId, sourceLang]);
+    if (res.isNotEmpty) {
+      groupId = res.first['group_id'] as int;
+    } else {
+      res = await db.query('sentences', columns: ['group_id'], where: 'id = ? AND lang_code = ?', whereArgs: [sourceId, sourceLang]);
+      if (res.isNotEmpty) {
+        groupId = res.first['group_id'] as int;
+        table = 'sentences';
+      }
+    }
+
+    if (groupId == null) return null;
+
+    // 2. Find target record in the same group and language
     String whereClause;
     List<dynamic> whereArgs;
     
     if (note == null || note.isEmpty) {
-      // If filtering by "no note", strictly find records with NULL or EMPTY note
-      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND (note IS NULL OR note = "")';
-      whereArgs = [sourceLang, sourceId, targetLang];
+      whereClause = 'group_id = ? AND lang_code = ? AND (note IS NULL OR note = "")';
+      whereArgs = [groupId, targetLang];
     } else {
-      whereClause = 'source_lang = ? AND source_id = ? AND target_lang = ? AND note = ?';
-      whereArgs = [sourceLang, sourceId, targetLang, note];
+      whereClause = 'group_id = ? AND lang_code = ? AND note = ?';
+      whereArgs = [groupId, targetLang, note];
     }
     
-    final translations = await db.query(
-      'translations',
+    final targets = await db.query(
+      table,
       where: whereClause,
       whereArgs: whereArgs,
       limit: 1,
     );
     
-    if (translations.isEmpty) {
-      return null;
-    }
+    if (targets.isEmpty) return null;
     
-    final translation = translations.first;
-    final targetId = translation['target_id'] as int;
+    final target = targets.first;
+    final targetId = target['id'] as int;
     
-    final targetTableName = 'lang_$targetLang'.replaceAll('-', '_');
-    final targetRecords = await db.query(
-      targetTableName,
-      where: 'id = ?',
-      whereArgs: [targetId],
-      limit: 1,
-    );
+    print('[DB] Found existing unified translation: $sourceLang($sourceId) -> $targetLang($targetId) [Group: $groupId, Note: ${target['note']}]');
     
-    if (targetRecords.isEmpty) {
-      return null;
-    }
-    
-    print('[DB] Found existing translation: $sourceLang($sourceId) -> $targetLang($targetId) [Note: ${translation['note']}]');
     return {
       'target_id': targetId,
-      'target_text': targetRecords.first['text'] as String,
-      'audio_file': targetRecords.first['audio_file'],
-      'note': translation['note'],
+      'target_text': target['text'] as String,
+      'audio_file': target['audio_file'],
+      'note': target['note'],
     };
   }
   
 
-  /// 오디오 파일 저장
+  /// 오디오 파일 저장 (Unified Schema v14)
   static Future<void> saveAudioFile(
     String langCode,
     int recordId,
     Uint8List audioData,
   ) async {
     final db = await database;
-    final tableName = 'lang_$langCode'.replaceAll('-', '_');
     
-    await db.update(
-      tableName,
-      {'audio_file': audioData},
-      where: 'id = ?',
-      whereArgs: [recordId],
-    );
-    
-    print('[DB] Audio file saved for $tableName($recordId), size=${audioData.length} bytes');
-  }
-  
-  /// 오디오 파일 가져오기
-  static Future<Uint8List?> getAudioFile(String langCode, int recordId) async {
-    final db = await database;
-    final tableName = 'lang_$langCode'.replaceAll('-', '_');
-    
-    final records = await db.query(
-      tableName,
-      columns: ['audio_file'],
-      where: 'id = ?',
-      whereArgs: [recordId],
-      limit: 1,
-    );
-    
-    if (records.isEmpty || records.first['audio_file'] == null) {
-      return null;
+    // Update both tables (IDs are globally unique per type session usually, but checking both is safe)
+    int count = await db.update('words', {'audio_file': audioData}, where: 'id = ? AND lang_code = ?', whereArgs: [recordId, langCode]);
+    if (count == 0) {
+      count = await db.update('sentences', {'audio_file': audioData}, where: 'id = ? AND lang_code = ?', whereArgs: [recordId, langCode]);
     }
     
-    return records.first['audio_file'] as Uint8List;
+    print('[DB] Audio file saved for record $recordId ($langCode), updated=$count');
+  }
+  
+  /// 오디오 파일 가져오기 (Unified Schema v14)
+  static Future<Uint8List?> getAudioFile(String langCode, int recordId) async {
+    final db = await database;
+    
+    var res = await db.query('words', columns: ['audio_file'], where: 'id = ? AND lang_code = ?', whereArgs: [recordId, langCode]);
+    if (res.isNotEmpty && res.first['audio_file'] != null) {
+      return res.first['audio_file'] as Uint8List;
+    }
+    
+    res = await db.query('sentences', columns: ['audio_file'], where: 'id = ? AND lang_code = ?', whereArgs: [recordId, langCode]);
+    if (res.isNotEmpty && res.first['audio_file'] != null) {
+      return res.first['audio_file'] as Uint8List;
+    }
+    
+    return null;
   }
 
   
@@ -802,9 +779,6 @@ class DatabaseService {
          int skippedCount = 0;
          List<String> errors = [];
 
-         // 2. 인메모리 캐시
-         final Map<String, int> sourceCache = {};
-         final Map<String, int> targetCache = {};
 
          // Case A: Standard Entries
          if (entries != null) {
@@ -895,7 +869,6 @@ class DatabaseService {
               
               final dTitle = (dMap['title'] ?? dMeta['title']) as String? ?? nativeSubject ?? syncSubject;
               final dPersona = (dMap['persona'] ?? dMeta['persona']) as String? ?? 'Partner';
-              final dTopic = (dMap['topic'] ?? dMeta['topic']) as String?;
               
               // Phase 77: Pivot Sync for Dialogues - Use syncSubject (File Name) if available
               // Find existing group by syncSubject (Stable key) or title
@@ -913,7 +886,7 @@ class DatabaseService {
                 print('[DB] Smart Sync: Found existing dialogue group "$dTitle" (ID: $dId)');
               } else {
                 // Generate new ID if not found
-                dId = '${DateTime.now().millisecondsSinceEpoch}_${importedCount}';
+                dId = '${DateTime.now().millisecondsSinceEpoch}_$importedCount';
                 lastDialogueId = dId;
 
                 await insertDialogueGroup(

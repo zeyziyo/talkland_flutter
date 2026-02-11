@@ -22,9 +22,10 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(() => 
-      Provider.of<AppState>(context, listen: false).loadDialogueGroups()
-    );
+    Future.microtask(() {
+      if (!mounted) return;
+      Provider.of<AppState>(context, listen: false).loadDialogueGroups();
+    });
   }
 
   @override
@@ -200,7 +201,7 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
                          showDialog(
                            context: context,
                            builder: (context) => AlertDialog(
-                             title: Text(l10n.delete + '?'), 
+                             title: Text('${l10n.delete}?'), 
                              content: Text(l10n.confirmDeleteConversation),
                              actions: [
                                TextButton(
@@ -226,15 +227,13 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
                       },
                     ),
                     onTap: () async {
+                      final navigator = Navigator.of(context);
                       await appState.loadExistingDialogue(group);
-                      if (mounted) {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ChatScreen(initialDialogue: group),
-                          ),
-                        );
-                      }
+                      navigator.push(
+                        MaterialPageRoute(
+                          builder: (context) => ChatScreen(initialDialogue: group),
+                        ),
+                      );
                     },
                   );
                 },

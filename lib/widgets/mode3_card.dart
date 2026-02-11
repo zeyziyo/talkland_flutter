@@ -10,13 +10,13 @@ class Mode3Card extends StatelessWidget {
   final AppLocalizations l10n;
 
   const Mode3Card({
-    Key? key,
+    super.key,
     required this.appState,
     required this.record,
     required this.isSelected,
     required this.onSelect,
     required this.l10n,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -38,14 +38,14 @@ class Mode3Card extends StatelessWidget {
         boxShadow: isSelected 
           ? [
               BoxShadow(
-                color: const Color(0xFF764ba2).withOpacity(0.4),
+                color: const Color(0xFF764ba2).withValues(alpha: 0.4),
                 blurRadius: 12,
                 offset: const Offset(0, 4),
               )
             ]
           : [
               BoxShadow(
-                color: Colors.black.withOpacity(0.05),
+                color: Colors.black.withValues(alpha: 0.05),
                 blurRadius: 4,
                 offset: const Offset(0, 2),
               )

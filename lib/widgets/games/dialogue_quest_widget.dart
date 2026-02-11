@@ -273,7 +273,7 @@ class _DialogueQuestWidgetState extends State<DialogueQuestWidget> {
                            style: const TextStyle(fontSize: 18, color: Colors.indigo),
                            textAlign: TextAlign.center,
                          ),
-                       )).toList(),
+                       )),
                        
                        const SizedBox(height: 20),
                        

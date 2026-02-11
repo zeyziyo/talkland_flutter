@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import '../l10n/app_localizations.dart';
 import '../providers/app_state.dart';
 
@@ -7,12 +6,12 @@ class SearchFilterDialog extends StatefulWidget {
   final AppState appState;
 
   const SearchFilterDialog({
-    Key? key,
+    super.key,
     required this.appState,
-  }) : super(key: key);
+  });
 
   @override
-  _SearchFilterDialogState createState() => _SearchFilterDialogState();
+  State<SearchFilterDialog> createState() => _SearchFilterDialogState();
 }
 
 class _SearchFilterDialogState extends State<SearchFilterDialog> {
@@ -221,17 +220,17 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
             isDense: true,
             contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-            fillColor: isTitle ? Colors.blue[50]?.withOpacity(0.3) : Colors.grey[50]?.withOpacity(0.3),
+            fillColor: isTitle ? Colors.blue[50]?.withValues(alpha: 0.3) : Colors.grey[50]?.withValues(alpha: 0.3),
             filled: true,
           ),
           isExpanded: true,
-          value: items.contains(value) ? value : '',
+          initialValue: items.contains(value) ? value : '',
           onChanged: onChanged,
           icon: Icon(Icons.arrow_drop_down_circle_outlined, size: 18, color: isTitle ? Colors.blue[400] : Colors.grey[400]),
           borderRadius: BorderRadius.circular(12),
           items: [
             DropdownMenuItem(value: '', child: Text(l10n.notSelected, style: const TextStyle(color: Colors.grey, fontSize: 13))),
-            ...items.map((t) => DropdownMenuItem(value: t, child: Text(t, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 13)))).toList(),
+            ...items.map((t) => DropdownMenuItem(value: t, child: Text(t, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 13)))),
           ],
         ),
       ],
@@ -258,7 +257,7 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
       String? activeTitle = _localSelectedTags.firstWhere((t) => titleTags.contains(t), orElse: () => '');
       
       _localSelectedTags = [
-        if (activeTitle != null && activeTitle.isNotEmpty) activeTitle,
+        if (activeTitle.isNotEmpty) activeTitle,
         ...newGeneral.where((t) => t.isNotEmpty),
       ];
     });

@@ -32,6 +32,22 @@
 - **Misc**: `RecommendationWidget` 등의 보조 위젯에서도 불필요한 이모지(✨)를 삭제하여 일관성 유지.
 - **Hotfix (CI/Build)**: `mode1_widget.dart`의 하위 위젯 중첩 시 발생한 초과 괄호(Syntax Error)를 제거하고 미사용 메서드(`_buildToggleButton`)를 정리하여 GitHub Actions 빌드 정상화 완료. `withOpacity` 경고 사항을 최신 `withValues`로 일괄 교체.
 
+### [2026-02-11] 앱 흐름도(App Flow Diagram) 전용 폴더 및 고도화 (Phase 85)
+- **Structure**: 설계 문서 관리 효율화를 위해 `docs/flows/` 전용 폴더 생성 및 기존 흐름도 파일(`.md`) 이동.
+- **Interactive Flow**: 단순 화면 설명을 넘어, UI 요소 옆에 로직 마커(`[n]`)를 배치하고 하단에 실제 코드(클래스, 함수명)를 매핑한 **'로직 명세(Logic Reference)'** 섹션 신규 구현.
+- **Navigation**: 위젯 설계도 간 상호 이동 링크(`app_flow_main.md` <-> `app_flow_metadata.md`)를 구축하여 문서 간 연결성 강화.
+- **Sync**: 파일 이동에 맞추어 `system_flow_mindmap.md` 대시보드 내 Mermaid 클릭 링크 및 목록 최신화.
+
+### [2026-02-11] 데이터베이스 레거시 전수 제거 및 v14 통합 (Phase 87)
+- **Fix**: 번역 재사용 시 발생하던 `DatabaseException(no such table: translations)` 결함을 해결하고, `translations` 레거시 테이블 참조를 현재의 통합 스키마(`group_id` 연결)로 전면 리팩토링.
+- **Migration**: DB 버전을 14로 격상하고, 기존의 언어별 동적 테이블(`lang_xx`)을 폐쇄(No-op)한 뒤 오디오 데이터 및 리뷰 통계 컬럼을 통합 테이블(`words`, `sentences`)로 일원화.
+- **Refactor**: 오디오 저장(`saveAudioFile`), 로드(`getAudioFile`), 유사도 검색(`searchSimilarText`) 로직을 통합 스키마 기반으로 현대화하여 시스템의 무결성과 성능을 확보.
+
+### [2026-02-11] 동음이의어 팝업 억제 및 캐시 무결성 개선 (Phase 86)
+- **UX**: 사용자가 이미 주석(Context Note)을 입력한 경우 (예: "사과" + 과일), 불필요한 동음이의어 선택 팝업을 억제하고 즉시 번역 결과를 표시하도록 개선.
+- **Bug Fix (Phase 86.5)**: `TranslationService`의 로컬 캐시 키에 주석(`note`)이 포함되지 않아, 서로 다른 문맥의 단어가 잘못 캐싱되는 결함 수정. 이제 주석별로 개별 캐시가 적용됩니다.
+- **Logging**: `SupabaseService`에 AI 호출 시 주석 포함 여부를 명시적으로 출력하는 디버그 로그 추가.
+
 ### [2026-02-11] Mode 1 UI Renewal & Root Detection (Phase 83-84)
 - **UI**: Mode 1 입력 화면을 Row 기반의 프리미엄 레이레이아웃으로 리뉴얼 (상단 바, 액션 라인 최적화).
 - **Feature**: AI 번역 시 어근(Root) 자동 감지 및 결과창 🌱 배지 표시 기능 구현.

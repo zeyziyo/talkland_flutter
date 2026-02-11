@@ -10,13 +10,13 @@ class Mode3PracticeCard extends StatelessWidget {
   final VoidCallback? onToggleExpand;
 
   const Mode3PracticeCard({
-    Key? key,
+    super.key,
     required this.appState,
     required this.record,
     required this.l10n,
     this.isExpanded = false,
     this.onToggleExpand,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

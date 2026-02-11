@@ -13,7 +13,7 @@ class Mode2Card extends StatelessWidget {
   final Function(int) onToggleExpand;
 
   const Mode2Card({
-    Key? key,
+    super.key,
     required this.appState,
     required this.record,
     required this.isStudied,
@@ -22,13 +22,13 @@ class Mode2Card extends StatelessWidget {
     required this.index,
     required this.onToggleExpand,
     this.itemKey,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final translationId = record['id'] as int;
-    final groupId = record['group_id'] as int;
+    // final groupId = record['group_id'] as int;
     final targetId = record['target_id'] as int; // Added Phase 53
     final recordSourceLang = record['source_lang'] as String;
 
@@ -66,7 +66,7 @@ class Mode2Card extends StatelessWidget {
         border: isPlaying ? Border.all(color: Colors.white, width: 3) : null,
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF764ba2).withOpacity(0.4),
+            color: const Color(0xFF764ba2).withValues(alpha: 0.4),
             blurRadius: 12,
             offset: const Offset(0, 6),
           ),
@@ -253,7 +253,7 @@ class Mode2Card extends StatelessWidget {
             ),
             
             // --- Divider (White) ---
-            Divider(height: 1, color: Colors.white.withOpacity(0.1)),
+            Divider(height: 1, color: Colors.white.withValues(alpha: 0.1)),
             
             // --- BOTTOM SECTION (Expandable) ---
             if (isExpanded)

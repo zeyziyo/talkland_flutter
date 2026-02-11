@@ -48,7 +48,7 @@ class _WordDefenseWidgetState extends State<WordDefenseWidget> with TickerProvid
   int _lives = 5;
   int _wave = 1;
   
-  List<DefenseEnemy> _enemies = [];
+  final List<DefenseEnemy> _enemies = [];
   DefenseEnemy? _currentTarget; // The enemy currently being attacked
   
   Timer? _gameLoopTimer;
@@ -303,7 +303,7 @@ class _WordDefenseWidgetState extends State<WordDefenseWidget> with TickerProvid
               ),
             ),
           ),
-        )).toList(),
+        )),
 
         // Battle Box (Target Display)
         if (_currentTarget != null)

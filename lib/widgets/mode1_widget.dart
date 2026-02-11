@@ -296,7 +296,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                   flex: 3,
                                   child: DropdownButtonFormField<String>(
                                     key: widget.materialDropdownKey,
-                                    value: appState.recordTypeFilter == 'word' 
+                                    initialValue: appState.recordTypeFilter == 'word' 
                                         ? (AppState.posCategories.contains(appState.sourcePos) ? appState.sourcePos : null)
                                         : (AppState.sentenceCategories.contains(appState.sourceFormType) ? appState.sourceFormType : null),
                                     decoration: InputDecoration(
@@ -596,7 +596,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                             subtitle: Text('ID: $id'),
                             trailing: const Icon(Icons.arrow_forward),
                             onTap: () {
-                              appState.selectExistingSource(id, text);
+                              appState.selectExistingSource(id);
                             },
                           ),
                         );
@@ -663,6 +663,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                     }
                     if (appState.sourceText.trim().isNotEmpty) {
                       // Pass context and handle error
+                      if (!context.mounted) return;
                       final error = await appState.translate(context: context);
                       if (error != null && context.mounted) {
                          // Show Error Dialog for Safety Violations
@@ -681,10 +682,11 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                          );
                       }
                     } else {
-                      // Empty check logic passed to state or handled here
-                      ScaffoldMessenger.of(context).showSnackBar(
-                         SnackBar(content: Text(AppLocalizations.of(context)!.enterTextToTranslate)),
-                      );
+                      if (context.mounted) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                           SnackBar(content: Text(AppLocalizations.of(context)!.enterTextToTranslate)),
+                        );
+                      }
                     }
                     // Load next ad
                     _loadRewardedAd();

@@ -11,7 +11,6 @@ import '../services/database_service.dart';
 import '../services/translation_service.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
-import 'package:intl/intl.dart';
 
 class ChatScreen extends StatefulWidget {
   final DialogueGroup? initialDialogue;
@@ -155,10 +154,10 @@ class _ChatScreenState extends State<ChatScreen> {
     try {
       await appState.checkUsageLimit();
     } catch (e) {
-      if (context.mounted) {
-        showDialog(
-          context: context,
-          builder: (context) => AlertDialog(
+      if (!mounted) return;
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
             title: Text(l10n.usageLimitTitle),
             content: Text(e.toString()),
             actions: [
@@ -168,8 +167,7 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
             ],
           ),
-        );
-      }
+      );
       return;
     }
 
@@ -237,6 +235,7 @@ class _ChatScreenState extends State<ChatScreen> {
       _scrollToBottom();
 
     } catch (e) {
+      if (!mounted) return;
       setState(() => _isLoading = false);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(l10n.chatFailed(e.toString()))),
@@ -332,7 +331,6 @@ class _ChatScreenState extends State<ChatScreen> {
     final appState = Provider.of<AppState>(context, listen: false);
     
     // 1. Prepare Initial Values
-    final now = DateTime.now();
     // final dateStr = DateFormat('MM/dd HH:mm').format(now);
     
     // Fetch location for pre-filling
@@ -526,6 +524,7 @@ class _ChatScreenState extends State<ChatScreen> {
         },
       );
     } catch (e) {
+      if (!mounted) return;
       setState(() => _isLoading = false);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(l10n.recognitionFailed(e.toString()))),
@@ -768,7 +767,7 @@ class _ChatScreenState extends State<ChatScreen> {
                children: [
                  CircleAvatar(
                    radius: 10,
-                   backgroundColor: Color(participant.avatarColor ?? Colors.grey.value),
+                   backgroundColor: Color(participant.avatarColor ?? Colors.grey.toARGB32()),
                    child: Text(participant.name[0], style: const TextStyle(fontSize: 10, color: Colors.white)),
                  ),
                  const SizedBox(width: 4),
@@ -902,7 +901,7 @@ class _ChatScreenState extends State<ChatScreen> {
      setState(() => _isLoading = true);
 
      // 1. Update Participant
-     await appState.updateParticipant(p.id, langCode: newLang);
+     await appState.updateParticipant(p.id, languageCode: newLang);
      
      // 2. Retranslate (Source Text -> New Lang)
      // User asked to retranslate content.
@@ -930,6 +929,7 @@ class _ChatScreenState extends State<ChatScreen> {
           _speak(newForeignText, newLang, isUser: false, gender: p.gender);
        }
      } catch (e) {
+       if (!mounted) return;
        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Translation failed')));
      } finally {
        setState(() => _isLoading = false);
@@ -961,7 +961,7 @@ class _ChatScreenState extends State<ChatScreen> {
                    Text(l10n.speaker),
                    Switch(
                      value: _isPartnerTurn,
-                     activeColor: Colors.teal,
+                     activeThumbColor: Colors.teal,
                      onChanged: (val) {
                        setState(() => _isPartnerTurn = val);
                      },
@@ -1023,74 +1023,6 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
         ],
       ),
-    );
-  }
-  // Voice Settings Dialog
-  void _showVoiceSettingsDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (context) {
-        final appState = Provider.of<AppState>(context);
-        return AlertDialog(
-          title: const Text('Voice Settings'),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text('Select preferred voice gender.'),
-              const SizedBox(height: 16),
-              
-              const Text('My Voice (User)', style: TextStyle(fontWeight: FontWeight.bold)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                   ChoiceChip(
-                     label: const Text('Male'),
-                     selected: appState.chatUserGender == 'male',
-                     onSelected: (selected) {
-                       if (selected) appState.setChatUserGender('male');
-                     },
-                   ),
-                   ChoiceChip(
-                     label: const Text('Female'),
-                     selected: appState.chatUserGender == 'female',
-                     onSelected: (selected) {
-                       if (selected) appState.setChatUserGender('female');
-                     },
-                   ),
-                ],
-              ),
-              const SizedBox(height: 16),
-              
-              const Text('Partner Voice (AI)', style: TextStyle(fontWeight: FontWeight.bold)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                   ChoiceChip(
-                     label: const Text('Male'),
-                     selected: appState.chatAiGender == 'male',
-                     onSelected: (selected) {
-                       if (selected) appState.setChatAiGender('male');
-                     },
-                   ),
-                   ChoiceChip(
-                     label: const Text('Female'),
-                     selected: appState.chatAiGender == 'female',
-                     onSelected: (selected) {
-                       if (selected) appState.setChatAiGender('female');
-                     },
-                   ),
-                ],
-              ),
-            ],
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('Close'),
-            ),
-          ],
-        );
-      },
     );
   }
 }

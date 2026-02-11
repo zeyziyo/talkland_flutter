@@ -2,7 +2,6 @@ import 'dart:io';
 
 void main() {
   final dir = Directory('lib');
-  final slash = Platform.isWindows ? '\\' : '/';
   
   dir.listSync(recursive: true).forEach((file) {
     if (file is File && file.path.endsWith('.dart')) {

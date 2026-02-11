@@ -5,8 +5,6 @@ import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../l10n/app_localizations.dart';
 import 'package:talkie/widgets/search_filter_dialog.dart';
-import 'package:talkie/widgets/online_library_dialog.dart';
-import 'package:talkie/widgets/help_dialog.dart';
 
 
 /// Mode 3: 말하기 모드
@@ -315,17 +313,7 @@ class Mode3Widget extends StatelessWidget {
   // Helper methods like _showTagSelectionDialog remain...
 
 
-  void _showMetadataDialog(BuildContext context, AppState appState) {
-    // Redirect to SearchFilterDialog
-    _showTagSelectionDialog(context, appState);
-  }
-
-  void _showOnlineLibraryDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (context) => const OnlineLibraryDialog(),
-    );
-  }
+  // Unused dialog methods removed
 
   String _getLocalizedTag(String tag, AppLocalizations l10n) {
     switch (tag.toLowerCase()) {

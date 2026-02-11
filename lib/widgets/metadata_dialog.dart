@@ -146,7 +146,7 @@ class _MetadataDialogState extends State<MetadataDialog> {
             Text(l10n.titleTagSelection, style: Theme.of(context).textTheme.labelMedium),
             const SizedBox(height: 4),
             DropdownButtonFormField<String>(
-              value: _selectedTitleTag,
+              initialValue: _selectedTitleTag,
               decoration: const InputDecoration(
                 isDense: true,
                 border: OutlineInputBorder(),
@@ -339,7 +339,7 @@ class _MetadataDialogState extends State<MetadataDialog> {
                        Text(l10n.metadataFormType, style: Theme.of(context).textTheme.labelMedium),
                        const SizedBox(height: 4),
                        DropdownButtonFormField<String>(
-                        value: categories.contains(appState.sourceFormType) ? appState.sourceFormType : null,
+                        initialValue: categories.contains(appState.sourceFormType) ? appState.sourceFormType : null,
                         decoration: const InputDecoration(
                           isDense: true,
                           border: OutlineInputBorder(),
