@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "ဘာသာပြန်ရန် စာသားကို ရိုက်ထည့်ပါ",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

@@ -292,6 +292,9 @@ class AppLocalizationsKk extends AppLocalizations {
   String get enterTextToTranslate => 'Аударылатын мәтінді енгізіңіз';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Сақтау...';
 
   @override
@@ -492,7 +495,7 @@ class AppLocalizationsKk extends AppLocalizations {
       'Егер бір сөйлемнің өзінде жағдайды жазсаңыз (мысалы, таңертең, кешке), оны бөлек сақтауға болады.';
 
   @override
-  String get thinkingTimeInterval => 'Ойлау уақыты аралығы';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'Жауап жарияланғанға дейін ойлану уақыты.';
@@ -1021,4 +1024,19 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get save => 'Сақтау';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

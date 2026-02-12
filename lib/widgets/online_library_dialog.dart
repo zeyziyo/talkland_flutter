@@ -83,6 +83,7 @@ class OnlineLibraryDialog extends StatelessWidget {
   }
 
   Widget _buildMaterialList(BuildContext context, AppState state, List<Map<String, dynamic>> materials, String type) {
+    final l10n = AppLocalizations.of(context)!;
     if (materials.isEmpty) {
       return const Center(child: Text("자료가 없습니다."));
     }
@@ -104,17 +105,16 @@ class OnlineLibraryDialog extends StatelessWidget {
               if (context.mounted) {
                 if (result['success'] == true) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('${material['name']} Downloaded')),
+                    SnackBar(content: Text(_translateStatus(context, 'L10N:statusImportSuccess|${material['name']}', l10n))),
                   );
-                  // Phase 79.2 + 81.3: Refresh materials and select the new one (if needed)
+                  
+                  // Phase 79.2 + 81.1: Refresh materials
                   await state.loadStudyMaterials(); 
 
                   // Auto-Select Logic
                   if (type == 'dialogue') {
-                      // Switch to Mode 3
                       final dId = result['dialogue_id'] as String?;
                       if (dId != null) {
-                        // Ensure DialogueGroup model availability
                         final group = state.dialogueGroups.firstWhere(
                           (g) => g.id == dId, 
                           orElse: () => DialogueGroup(
@@ -128,12 +128,10 @@ class OnlineLibraryDialog extends StatelessWidget {
                         state.switchMode(3);
                       }
                   } else {
-                      // Switch to Mode 2 (Review) if not already
                       if (state.currentMode != 2) {
                         state.switchMode(2);
                       }
                       
-                      // Select Material
                       final mId = result['material_id'] as int? ?? 0;
                       if (mId > 0) {
                         state.setRecordTypeFilter(type == 'word' ? 'word' : 'sentence');
@@ -143,7 +141,7 @@ class OnlineLibraryDialog extends StatelessWidget {
                   if (context.mounted) Navigator.pop(context); // Close dialog on success
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('Error: ${result['error']}')),
+                    SnackBar(content: Text(_translateStatus(context, result['error'] ?? '', l10n))),
                   );
                 }
               }
@@ -158,5 +156,26 @@ class OnlineLibraryDialog extends StatelessWidget {
         );
       },
     );
+  }
+
+  String _translateStatus(BuildContext context, String status, AppLocalizations l10n) {
+    if (!status.startsWith('L10N:')) return status;
+    
+    final parts = status.substring(5).split('|');
+    final key = parts[0];
+    final param = parts.length > 1 ? parts[1] : '';
+
+    switch (key) {
+      case 'statusDownloading':
+        return l10n.statusDownloading(param);
+      case 'statusImportSuccess':
+        return l10n.statusImportSuccess(param);
+      case 'statusImportFailed':
+        return l10n.statusImportFailed(param);
+      case 'importing':
+        return l10n.importing;
+      default:
+        return status;
+    }
   }
 }

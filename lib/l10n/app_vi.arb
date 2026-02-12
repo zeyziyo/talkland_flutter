@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "Vui lòng nhập văn bản để dịch",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

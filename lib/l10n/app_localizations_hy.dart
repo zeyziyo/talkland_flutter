@@ -295,6 +295,9 @@ class AppLocalizationsHy extends AppLocalizations {
   String get enterTextToTranslate => 'Մուտքագրեք թարգմանելու տեքստը';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Պահպանվում է...';
 
   @override
@@ -496,7 +499,7 @@ class AppLocalizationsHy extends AppLocalizations {
       'Դուք կարող եք այն առանձին պահպանել՝ գրելով նույնիսկ նույն նախադասության իրավիճակը (օրինակ՝ առավոտ, երեկո)։';
 
   @override
-  String get thinkingTimeInterval => 'Մտածելու ժամանակի միջակայք';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc =>
@@ -1026,4 +1029,19 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get save => 'Պահպանել';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

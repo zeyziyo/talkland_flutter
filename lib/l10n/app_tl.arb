@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "Mag-type ng tekstong isasalin",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "กรุณาป้อนข้อความเพื่อแปล",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

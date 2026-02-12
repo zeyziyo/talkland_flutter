@@ -83,14 +83,14 @@ extension AppStateChat on AppState {
         if (_mode4Active && (status == 'done' || status == 'notListening')) {
              debugPrint('[AppState] Auto-restarting Mode 4 STT...');
              _speechService.startContinuousSTT(
-               lang: _getServiceLocale(lang),
+               lang: getServiceLocale(lang),
                onResult: (text, isFinal, alternates) => onResult(text, isFinal),
              );
         }
       });
       
       await _speechService.startContinuousSTT(
-        lang: _getServiceLocale(lang),
+        lang: getServiceLocale(lang),
         onResult: (text, isFinal, alternates) {
           onResult(text, isFinal);
         },

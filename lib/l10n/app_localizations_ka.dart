@@ -292,6 +292,9 @@ class AppLocalizationsKa extends AppLocalizations {
   String get enterTextToTranslate => 'შეიყვანეთ ტექსტი თარგმნისთვის';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'მიმდინარეობს შენახვა...';
 
   @override
@@ -494,7 +497,7 @@ class AppLocalizationsKa extends AppLocalizations {
       'ერთი და იგივე წინადადებაც კი შეიძლება ცალკე შენახული იყოს სიტუაციის მითითებით (მაგ. დილა, საღამო).';
 
   @override
-  String get thinkingTimeInterval => 'ფიქრის დროის ინტერვალი';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'დრო, რომ იფიქროთ პასუხის გამოვლენამდე.';
@@ -1023,4 +1026,19 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get save => 'შენახვა';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

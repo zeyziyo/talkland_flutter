@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "અનુવાદ માટે લખાણ દાખલ કરો",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

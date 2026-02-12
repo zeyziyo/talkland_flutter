@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "Írja be a szöveget a fordításhoz",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

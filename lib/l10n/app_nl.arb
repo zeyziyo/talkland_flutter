@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "Voer tekst in om te vertalen",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

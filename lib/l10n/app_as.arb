@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "অনুবাদ কৰিবলৈ টেক্সট লিখক",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

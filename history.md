@@ -23,6 +23,19 @@
 
 ## 📅 최근 주요 변경 로그 (Recent Changelog)
 
+### [2026-02-12] Technical Debt Cleanup & Optimization (Phase 96)
+- **Centralization**: `lib/constants/app_constants.dart`를 생성하여 분산되어 있던 서버 URL, GitHub 경로, 기본 학습 자료 명칭 등을 상수로 통합 관리.
+- **Refactoring**: `AppStateSettings` 내의 로캘 맵핑 로직(`getServiceLocale`)을 하나로 통합하고 중복된 레거시 메서드를 제거하여 코드 응집도 향상.
+- **Optimization**: `TranslationService`에 안전성 검증 에러 메시지 맵핑 도우미(`getErrorMessage`)를 추가하여 `AppState`의 복잡한 UI 분기 로직을 정규화.
+- **Integrity**: 전체 파트 파일(`Mode 1, 2, 3, Chat`)의 내부 메서드 참조 명칭을 일관성 있게 동기화하고, `flutter analyze`를 통해 잠재적 오류를 전수 제거.
+
+### [2026-02-12] UI Finish & Critical Download Fix (Phase 95)
+- **Repair (Online Library)**: `baseRepoUrl`에서 실제 서버에 존재하지 않던 `/docs` 경로를 삭제하여 온라인 자료실의 404 다운로드 오류(Download failed)를 근본적으로 해결.
+- **UX (Mode 1)**: 번역 결과창에 부적절하게 표시되던 "번역할 텍스트를 입력하세요" 힌트를 "**번역 결과 - 수정 가능함** (Translation result - editable)"으로 변경하고 80개 언어 전체에 적용.
+- **UI (Mode 3)**: 발음 연습 모드 카드의 상단 헤더에 **언어 이름(전체 명칭)**과 **주석(Note)**을 가로 한 줄로 나란히 배치하여 레이아웃 최적화.
+- **Relocation (Hint)**: 상단 텍스트 영역에 노출되던 **목표 언어 힌트**(첫 글자 힌트 등)를 하단 오디오 컨트롤 영역(Listening/Result View)으로 이전하여 가독성 강화 및 디자인 간소화.
+
+
 ### [2026-02-12] UI Refinement & Mode 1 Reset Fix (Phase 94)
 - **Repair**: Mode 1(입력) 초기화(X) 버튼 클릭 시 입력란뿐만 아니라 '상세 분류'의 주석(Note) 필드도 함께 초기화되도록 `AppState.clearTexts` 로직 수정.
 - **UI/UX**: Mode 2(복습) 상단의 4가지 주요 컨트롤(검색 조건, 끝낸것, 자동 재생, 재생 시차)을 가로 한 줄로 재정렬하고 `SingleChildScrollView`를 적용하여 공간 효율성 극대화.

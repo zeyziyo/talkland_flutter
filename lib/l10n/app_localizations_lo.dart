@@ -288,6 +288,9 @@ class AppLocalizationsLo extends AppLocalizations {
   String get enterTextToTranslate => 'ປ້ອນຂໍ້ຄວາມທີ່ຈະແປ';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'ກຳລັງບັນທຶກ...';
 
   @override
@@ -488,7 +491,7 @@ class AppLocalizationsLo extends AppLocalizations {
       'ເຖິງແມ່ນວ່າຈະເປັນປະໂຫຍກດຽວກັນ, ຖ້າທ່ານຂຽນສະຖານະການ (ຕົວຢ່າງ: ເຊົ້າ, ແລງ) ທ່ານສາມາດບັນທຶກແຍກຕ່າງຫາກໄດ້.';
 
   @override
-  String get thinkingTimeInterval => 'ໄລຍະເວລາໃນການຄິດ';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'ເວລາກ່ອນທີ່ຄໍາຕອບຈະຖືກເປີດເຜີຍ.';
@@ -1012,4 +1015,19 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get save => 'ບັນທຶກ';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

@@ -292,6 +292,9 @@ class AppLocalizationsNe extends AppLocalizations {
   String get enterTextToTranslate => 'अनुवाद गर्न पाठ प्रविष्ट गर्नुहोस्';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'सुरक्षित गर्दै...';
 
   @override
@@ -494,7 +497,7 @@ class AppLocalizationsNe extends AppLocalizations {
       'एउटै वाक्य भए पनि स्थिति (उदाहरण: बिहान, बेलुका) लेखेर छुट्टै सुरक्षित गर्न सकिन्छ।';
 
   @override
-  String get thinkingTimeInterval => 'सोच्ने समय अन्तराल';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'सही उत्तर सार्वजनिक हुनु अघि सोच्ने समय हो।';
@@ -1023,4 +1026,19 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get save => 'सुरक्षित गर्नुहोस्';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

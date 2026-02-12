@@ -291,6 +291,9 @@ class AppLocalizationsHu extends AppLocalizations {
   String get enterTextToTranslate => 'Írja be a szöveget a fordításhoz';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Mentés...';
 
   @override
@@ -486,7 +489,7 @@ class AppLocalizationsHu extends AppLocalizations {
       'Adjon hozzá kontextust (pl. Reggel) a hasonló mondatok megkülönböztetéséhez.';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -1014,4 +1017,19 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get save => 'Mentés';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

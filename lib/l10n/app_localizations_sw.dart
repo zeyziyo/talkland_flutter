@@ -290,6 +290,9 @@ class AppLocalizationsSw extends AppLocalizations {
   String get enterTextToTranslate => 'Weka maandishi ya kutafsiri';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Inahifadhi...';
 
   @override
@@ -485,7 +488,7 @@ class AppLocalizationsSw extends AppLocalizations {
       'Ongeza muktadha (k.m. Asubuhi) ili kutofautisha sentensi zinazofanana.';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -1014,4 +1017,19 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get save => 'Hifadhi';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

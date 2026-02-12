@@ -292,6 +292,9 @@ class AppLocalizationsSk extends AppLocalizations {
   String get enterTextToTranslate => 'Zadajte text na preklad';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Ukladá sa...';
 
   @override
@@ -491,7 +494,7 @@ class AppLocalizationsSk extends AppLocalizations {
       'Ak si zapíšete situáciu (napr. ráno, večer) aj pre tú istú vetu, môžete si ju uložiť samostatne.';
 
   @override
-  String get thinkingTimeInterval => 'Interval času na premýšľanie';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc =>
@@ -1019,4 +1022,19 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get save => 'Uložiť';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

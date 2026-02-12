@@ -229,7 +229,7 @@ extension AppStateAuth on AppState {
     _isLoadingOnlineMaterials = true;
     notify();
     try {
-      final response = await http.get(Uri.parse('https://zeyziyo.github.io/talkie/materials_v3.json'));
+      final response = await http.get(Uri.parse(AppConstants.onlineMaterialsIndexUrl));
       if (response.statusCode == 200) {
         final data = json.decode(utf8.decode(response.bodyBytes));
         _onlineMaterials = List<Map<String, dynamic>>.from(data['materials'] ?? []);
@@ -266,7 +266,7 @@ extension AppStateAuth on AppState {
     if (sPath == null || tPath == null) {
       final String? relativePath = material['path'] as String?;
       if (relativePath != null) {
-        final String baseRepoUrl = 'https://zeyziyo.github.io/talkie/docs/materials';
+        final String baseRepoUrl = AppConstants.materialsBaseUrl;
         sPath = '$baseRepoUrl/${Uri.encodeComponent(getLangDir(_sourceLang))}/$relativePath';
         tPath = '$baseRepoUrl/${Uri.encodeComponent(getLangDir(_targetLang))}/$relativePath';
         pPath = '$baseRepoUrl/English/$relativePath';

@@ -288,6 +288,9 @@ class AppLocalizationsUr extends AppLocalizations {
   String get enterTextToTranslate => 'ترجمہ کے لیے متن درج کریں';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'محفوظ ہو رہا ہے...';
 
   @override
@@ -483,7 +486,7 @@ class AppLocalizationsUr extends AppLocalizations {
       'ملتے جلتے جملوں میں فرق کرنے کے لیے سیاق و سباق (مثلاً صبح) شامل کریں۔';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -1013,4 +1016,19 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get save => 'محفوظ کریں';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

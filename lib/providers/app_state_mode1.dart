@@ -157,32 +157,9 @@ extension AppStateMode1 on AppState {
       if (context != null && context.mounted) {
         final l10n = AppLocalizations.of(context);
         if (l10n != null) {
-            switch (reason) {
-              case 'PROFANITY':
-                errorMsg = l10n.errorProfanity;
-                break;
-              case 'HATE_SPEECH':
-                errorMsg = l10n.errorHateSpeech;
-                break;
-              case 'SEXUAL':
-                errorMsg = l10n.errorSexualContent;
-                break;
-              case 'OTHER':
-              default:
-                // If it's a descriptive sentence (e.g., in Korean), use it directly
-                // Standard internal codes start with uppercase or "Error:"
-                if (reason.startsWith('Error:')) {
-                  errorMsg = reason;
-                } else if (reason.length > 20 || reason.contains(' ')) {
-                   // This is likely the AI's descriptive NATIVE language reason
-                   errorMsg = reason;
-                } else {
-                  errorMsg = l10n.errorOtherSafety;
-                }
-                break;
-            }
-          }
+          errorMsg = TranslationService.getErrorMessage(reason, l10n);
         }
+      }
         
         // Return error message for UI to display in dialog
         // DO NOT set _translatedText to error message
@@ -331,12 +308,12 @@ extension AppStateMode1 on AppState {
       
       // Add the User-Selected Material Subject as a Tag for Filtering
       String subjectToSave = _selectedSaveSubject;
-      // Phase 81.5: Enforce localized default titles if no subject or "Basic"
+      // Phase 81.5/96: Enforce localized default titles using AppConstants
       if (subjectToSave.isEmpty || subjectToSave == 'Basic') {
         if (_sourceLang == 'ko') {
-          subjectToSave = _isWordMode ? '나의 단어장' : '나의 문장집';
+          subjectToSave = _isWordMode ? AppConstants.defaultWordbookKo : AppConstants.defaultSentenceBookKo;
         } else {
-          subjectToSave = _isWordMode ? 'My Wordbook' : 'My Sentence Collection';
+          subjectToSave = _isWordMode ? AppConstants.defaultWordbookEn : AppConstants.defaultSentenceBookEn;
         }
       }
 
@@ -415,7 +392,7 @@ extension AppStateMode1 on AppState {
       
       await _speechService.speak(
         _translatedText,
-        lang: _getServiceLocale(_targetLang),
+        lang: getServiceLocale(_targetLang),
       );
       
       _isSpeaking = false;

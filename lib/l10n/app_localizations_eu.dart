@@ -293,6 +293,9 @@ class AppLocalizationsEu extends AppLocalizations {
   String get enterTextToTranslate => 'Idatzi itzuli nahi duzun testua';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Gordetzen...';
 
   @override
@@ -494,7 +497,7 @@ class AppLocalizationsEu extends AppLocalizations {
       'Esaldi bera bada ere, egoera (adibidez, goiza, arratsaldea) idatziz gero, bereizita gorde dezakezu.';
 
   @override
-  String get thinkingTimeInterval => 'Pentsatzeko denbora-tartea';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc =>
@@ -1019,4 +1022,19 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get save => 'Gorde';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

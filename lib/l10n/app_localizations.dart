@@ -579,7 +579,7 @@ abstract class AppLocalizations {
   /// Import in progress
   ///
   /// In ko, this message translates to:
-  /// **'불러오는 중...'**
+  /// **'자료 가져오는 중...'**
   String get importing;
 
   /// Import success title
@@ -743,6 +743,12 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'번역할 텍스트를 입력하세요'**
   String get enterTextToTranslate;
+
+  /// No description provided for @translationResultHint.
+  ///
+  /// In ko, this message translates to:
+  /// **'번역 결과 - 수정 가능함'**
+  String get translationResultHint;
 
   /// Save in progress
   ///
@@ -1107,7 +1113,7 @@ abstract class AppLocalizations {
   /// No description provided for @thinkingTimeInterval.
   ///
   /// In ko, this message translates to:
-  /// **'생각 시간 간격'**
+  /// **'재생 시차'**
   String get thinkingTimeInterval;
 
   /// No description provided for @thinkingTimeDesc.
@@ -2111,6 +2117,24 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'저장'**
   String get save;
+
+  /// No description provided for @statusDownloading.
+  ///
+  /// In ko, this message translates to:
+  /// **'다운로드 중: {name}...'**
+  String statusDownloading(Object name);
+
+  /// No description provided for @statusImportSuccess.
+  ///
+  /// In ko, this message translates to:
+  /// **'{name} 가져오기 완료'**
+  String statusImportSuccess(Object name);
+
+  /// No description provided for @statusImportFailed.
+  ///
+  /// In ko, this message translates to:
+  /// **'가져오기 실패: {error}'**
+  String statusImportFailed(Object error);
 }
 
 class _AppLocalizationsDelegate

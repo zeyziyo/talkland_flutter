@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "Vendosni tekstin për ta përkthyer",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

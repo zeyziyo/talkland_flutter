@@ -295,6 +295,9 @@ class AppLocalizationsTa extends AppLocalizations {
   String get enterTextToTranslate => 'மொழிபெயர்க்க உரையை உள்ளிடவும்';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'சேமிக்கிறது...';
 
   @override
@@ -493,7 +496,7 @@ class AppLocalizationsTa extends AppLocalizations {
       'ஒரே மாதிரியான வாக்கியங்களை வேறுபடுத்த சூழலை (எ.கா. காலை)ச் சேர்க்கவும்.';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -1025,4 +1028,19 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get save => 'சேமி';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

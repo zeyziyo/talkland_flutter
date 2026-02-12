@@ -30,7 +30,6 @@ class Mode3PracticeCard extends StatelessWidget {
     final topText = record['source_text'] as String;
     
 
-    final bottomText = record['target_text'] as String;
 
     final contextTag = record['note'] as String?;
     final isMemorized = record['is_memorized'] == true;
@@ -71,46 +70,40 @@ class Mode3PracticeCard extends StatelessWidget {
                   children: [
                     // Header: Lang Badge + Info + Checkbox
                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center, // Center for horizontal alignment
                       children: [
-                         // Lang Badge
-                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                          decoration: BoxDecoration(
-                            color: Colors.white24,
-                            borderRadius: BorderRadius.circular(4),
-                            border: Border.all(color: Colors.white30),
-                          ),
-                          child: Text(
-                            topLang.toUpperCase(),
-                            style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.white),
-                          ),
-                         ),
-                         const SizedBox(width: 8),
-                         
-                         // Metadata Badges
+                         // Lang Badge + Note
                          Expanded(
-                           child: Column(
-                             crossAxisAlignment: CrossAxisAlignment.start,
+                           child: Row(
                              children: [
-                                 if (record['dialogue_id'] != null)
-                                   Padding(
-                                     padding: const EdgeInsets.only(bottom: 4),
-                                     child: Row(
-                                       children: [
-                                         const Icon(Icons.chat_bubble_outline, size: 10, color: Colors.white70),
-                                         const SizedBox(width: 4),
-                                         Text(
-                                           l10n.chatFromConversation(record['speaker'] ?? "AI"),
-                                           style: const TextStyle(fontSize: 10, color: Colors.white70, fontWeight: FontWeight.bold),
-                                         ),
-                                       ],
-                                     ),
+                               Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                decoration: BoxDecoration(
+                                  color: Colors.white24,
+                                  borderRadius: BorderRadius.circular(4),
+                                  border: Border.all(color: Colors.white30),
+                                ),
+                                child: Text(
+                                  (appState.languageNames[topLang] ?? topLang).toUpperCase(),
+                                  style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.white),
+                                ),
+                               ),
+                               if (contextTag != null && contextTag.isNotEmpty) ...[
+                                 const SizedBox(width: 8),
+                                 Expanded(
+                                   child: Text(
+                                     contextTag,
+                                     style: const TextStyle(fontSize: 12, color: Colors.white70, fontStyle: FontStyle.italic),
+                                     overflow: TextOverflow.ellipsis,
                                    ),
+                                 ),
+                               ],
                              ],
                            ),
                          ),
-  
+                         
+                         const SizedBox(width: 8),
+
                          // Checkbox (Completed Toggle)
                          GestureDetector(
                             onTap: () => appState.toggleMemorizedStatus(targetId, isMemorized),
@@ -144,40 +137,21 @@ class Mode3PracticeCard extends StatelessWidget {
                       ),
                     ),
                     
-                    // Note / Context Tag
-                    if (contextTag != null && contextTag.isNotEmpty)
+                    // Dialogue Info
+                    if (record['dialogue_id'] != null)
                       Padding(
                         padding: const EdgeInsets.only(top: 8),
                         child: Row(
                           children: [
-                            const Icon(Icons.label_outline, size: 14, color: Colors.white70),
+                            const Icon(Icons.chat_bubble_outline, size: 12, color: Colors.white70),
                             const SizedBox(width: 4),
                             Text(
-                              contextTag,
-                              style: const TextStyle(fontSize: 13, color: Colors.white70, fontStyle: FontStyle.italic),
+                              l10n.chatFromConversation(record['speaker'] ?? "AI"),
+                              style: const TextStyle(fontSize: 11, color: Colors.white70, fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
                       ),
-                      
-                     // Hint (First Letter) - Only visible if expanded or maybe always? 
-                     // User said "remove old card... replace with top part". 
-                     // Let's show hint always or only expanded? Usually hint belongs to practice.
-                     // I will show it only when expanded to keep the top clean.
-                     // Actually, let's keep it if it was there. But maybe move to bottom?
-                     // I'll keep it here for now if expanded.
-                     if (isExpanded)
-                       Padding(
-                         padding: const EdgeInsets.only(top: 8),
-                         child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                            decoration: BoxDecoration(color: Colors.white10, borderRadius: BorderRadius.circular(4)),
-                            child: Text(
-                              _getFirstLetterHint(bottomText), 
-                              style: const TextStyle(fontSize: 12, color: Colors.white70, fontFamily: 'monospace')
-                            ),
-                         ),
-                       ),
                   ],
                 ),
               ),
@@ -284,6 +258,16 @@ class Mode3PracticeCard extends StatelessWidget {
              size: 60,
              onPressed: () => appState.stopMode3ListeningManual(),
            ),
+           const SizedBox(height: 16),
+           // Hint relocated here
+           Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              decoration: BoxDecoration(color: Colors.white10, borderRadius: BorderRadius.circular(6)),
+              child: Text(
+                _getFirstLetterHint(record['target_text'] as String), 
+                style: const TextStyle(fontSize: 14, color: Colors.white70, fontFamily: 'monospace', letterSpacing: 2)
+              ),
+           ),
         ],
       );
     } else {
@@ -336,22 +320,18 @@ class Mode3PracticeCard extends StatelessWidget {
                  iconSize: 20,
                  onPressed: () => appState.resetMode3Question(),
                ),
-            ],
-          ),
-          
-          // Reset Button (Also visible in Idle state?) 
-          // If we are idle, maybe we want to reset if we just recognized? 
-          // But if idle and no score, reset does nothing. 
-          // Wait, design requirement: "Add Reset button".
-          // If I am in Idle state (before mic), Reset is not really needed unless I want to 'unselect' the card?
-          // But 'Reset' usually implies resetting the *practice result*.
-          // So I put it in Result View.
-          // But if the user wants to "Reset" to initial state (maybe they spoke but it failed/timed out?), `retry` covers that.
-          // If the definition of Reset is "Clear everything and go back to Idle", then `resetMode3Question` does that.
-          // I'll add a Reset button in Idle view as well, maybe top-left or bottom-left?
-          // Or strictly in Result view as requested? "In that area... insert reset button".
-          // Usually reset is useful after a result.
-          // Let's stick to Result View for now.
+             ],
+           ),
+           const SizedBox(height: 20),
+           // Hint relocated here (Idle view)
+           Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              decoration: BoxDecoration(color: Colors.white10, borderRadius: BorderRadius.circular(6)),
+              child: Text(
+                _getFirstLetterHint(record['target_text'] as String), 
+                style: const TextStyle(fontSize: 14, color: Colors.white70, fontFamily: 'monospace', letterSpacing: 2)
+              ),
+           ),
         ],
       );
     }

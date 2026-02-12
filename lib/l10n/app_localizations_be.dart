@@ -293,6 +293,9 @@ class AppLocalizationsBe extends AppLocalizations {
   String get enterTextToTranslate => 'Увядзіце тэкст для перакладу';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Захаванне...';
 
   @override
@@ -494,7 +497,7 @@ class AppLocalizationsBe extends AppLocalizations {
       'Вы можаце захаваць адну і тую ж фразу асобна, запісаўшы сітуацыю (напрыклад, раніца, вечар).';
 
   @override
-  String get thinkingTimeInterval => 'Інтэрвал часу абдумвання';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc =>
@@ -1022,4 +1025,19 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get save => 'Захаваць';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

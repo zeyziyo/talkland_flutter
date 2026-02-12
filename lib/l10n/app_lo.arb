@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "ປ້ອນຂໍ້ຄວາມທີ່ຈະແປ",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "翻訳するテキストを入力してください",
+  "translationResultHint": "翻訳結果 - 修正可能",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

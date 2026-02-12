@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "පරිවර්තනය කිරීමට පෙළ ඇතුළත් කරන්න",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

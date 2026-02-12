@@ -291,6 +291,9 @@ class AppLocalizationsLt extends AppLocalizations {
   String get enterTextToTranslate => 'Įveskite tekstą, kurį norite išversti';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Išsaugoma...';
 
   @override
@@ -492,7 +495,7 @@ class AppLocalizationsLt extends AppLocalizations {
       'Net jei tai tas pats sakinys, galite jį išsaugoti atskirai parašydami situaciją (pvz., rytą, vakarą).';
 
   @override
-  String get thinkingTimeInterval => 'Mąstymo laiko intervalas';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc =>
@@ -1023,4 +1026,19 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get save => 'Išsaugoti';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

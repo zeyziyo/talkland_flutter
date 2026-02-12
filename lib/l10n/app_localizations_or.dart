@@ -293,6 +293,9 @@ class AppLocalizationsOr extends AppLocalizations {
   String get enterTextToTranslate => 'ଅନୁବାଦ କରିବାକୁ ଟେକ୍ସଟ୍ ଇନପୁଟ୍ କରନ୍ତୁ';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'ସେଭ୍ କରୁଛି...';
 
   @override
@@ -495,7 +498,7 @@ class AppLocalizationsOr extends AppLocalizations {
       'ଯଦି ଏହା ସମାନ ବାକ୍ୟ, ତେବେ ମଧ୍ୟ ଆପଣ ଏହାକୁ ପୃଥକ ଭାବରେ ସେଭ୍ କରିପାରିବେ ଯଦି ଆପଣ ଏକ ପରିସ୍ଥିତି (ଉଦାହରଣ ସ୍ୱରୂପ: ସକାଳ, ସନ୍ଧ୍ୟା) ଲେଖନ୍ତି |';
 
   @override
-  String get thinkingTimeInterval => 'ଚିନ୍ତା କରିବା ସମୟ ବ୍ୟବଧାନ';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc =>
@@ -1028,4 +1031,19 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get save => 'ସଞ୍ଚୟ କରନ୍ତୁ';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

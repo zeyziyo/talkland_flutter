@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "متن را برای ترجمه وارد کنید",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

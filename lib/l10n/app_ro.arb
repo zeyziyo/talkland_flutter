@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "Introduceți text pentru traducere",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

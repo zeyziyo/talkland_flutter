@@ -82,6 +82,7 @@
   "translationLoaded": "저장된 번역 불러옴",
   "translationFailed": "번역 실패: {error}",
   "enterTextToTranslate": "번역할 텍스트를 입력하세요",
+  "translationResultHint": "번역 결과 - 수정 가능함",
   "saving": "저장 중...",
   "noTranslationToSave": "저장할 번역이 없습니다",
   "saveFailed": "저장 실패: {error}",

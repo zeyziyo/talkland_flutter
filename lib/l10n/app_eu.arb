@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "Idatzi itzuli nahi duzun testua",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

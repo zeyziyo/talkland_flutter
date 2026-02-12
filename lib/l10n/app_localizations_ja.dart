@@ -286,6 +286,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get enterTextToTranslate => '翻訳するテキストを入力してください';
 
   @override
+  String get translationResultHint => '翻訳結果 - 修正可能';
+
+  @override
   String get saving => '保存中...';
 
   @override
@@ -476,7 +479,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get tutorialContextDesc => '同じ文章でも状況（例：朝、夜）を追加して区別できます。';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => '再生時差';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -997,4 +1000,19 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get save => '保存';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

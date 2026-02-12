@@ -291,6 +291,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get enterTextToTranslate => 'أدخل نصاً للترجمة';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'جاري الحفظ...';
 
   @override
@@ -485,7 +488,7 @@ class AppLocalizationsAr extends AppLocalizations {
       'أضف سياقًا (مثلاً: الصباح) لتمييز الجمل المتشابهة.';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => 'تأخير التشغيل';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -1010,4 +1013,19 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get save => 'حفظ';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

@@ -296,6 +296,9 @@ class AppLocalizationsMy extends AppLocalizations {
   String get enterTextToTranslate => 'ဘာသာပြန်ရန် စာသားကို ရိုက်ထည့်ပါ';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'သိမ်းဆည်းနေသည်...';
 
   @override
@@ -497,7 +500,7 @@ class AppLocalizationsMy extends AppLocalizations {
       'အတူတူ စာကြောင်းဖြစ်သော်လည်း အခြေအနေ (ဥပမာ- မနက်၊ ည)ကို ရေးထားလျှင် သီးခြား သိမ်းဆည်းနိုင်သည်။';
 
   @override
-  String get thinkingTimeInterval => 'စဉ်းစားချိန် ကြားကာလ';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc =>
@@ -1034,4 +1037,19 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get save => 'သိမ်းမည်';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

@@ -185,7 +185,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get importJsonFile => 'JSON 파일 불러오기';
 
   @override
-  String get importing => '불러오는 중...';
+  String get importing => '자료 가져오는 중...';
 
   @override
   String get importComplete => '불러오기 완료';
@@ -283,6 +283,9 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get enterTextToTranslate => '번역할 텍스트를 입력하세요';
+
+  @override
+  String get translationResultHint => '번역 결과 - 수정 가능함';
 
   @override
   String get saving => '저장 중...';
@@ -478,7 +481,7 @@ class AppLocalizationsKo extends AppLocalizations {
       '같은 문장이라도 상황(예: 아침, 저녁)을 적어두면 별도로 저장할 수 있어요.';
 
   @override
-  String get thinkingTimeInterval => '생각 시간 간격';
+  String get thinkingTimeInterval => '재생 시차';
 
   @override
   String get thinkingTimeDesc => '정답이 공개되기 전 생각할 시간입니다.';
@@ -995,4 +998,19 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get save => '저장';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

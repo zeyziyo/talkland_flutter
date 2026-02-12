@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "Sisesta tõlgitav tekst",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

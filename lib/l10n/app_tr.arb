@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "Çevirmek için metin girin",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

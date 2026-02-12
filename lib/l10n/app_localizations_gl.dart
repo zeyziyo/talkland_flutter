@@ -294,6 +294,9 @@ class AppLocalizationsGl extends AppLocalizations {
   String get enterTextToTranslate => 'Escribe o texto para traducir';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Gardando...';
 
   @override
@@ -495,7 +498,7 @@ class AppLocalizationsGl extends AppLocalizations {
       'Podes gardar a mesma frase por separado se anotas a situación (por exemplo, mañá, noite).';
 
   @override
-  String get thinkingTimeInterval => 'Intervalo de tempo de reflexión';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc =>
@@ -1026,4 +1029,19 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get save => 'Gardar';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

@@ -91,7 +91,7 @@ extension AppStateMode2 on AppState {
   /// Play TTS for a study record
   Future<void> playRecordTts(String text, String lang) async {
     try {
-      await _speechService.speak(text, lang: _getServiceLocale(lang));
+      await _speechService.speak(text, lang: getServiceLocale(lang));
     } catch (e) {
       debugPrint('[AppState] Error playing TTS: $e');
     }
@@ -428,7 +428,7 @@ extension AppStateMode2 on AppState {
     int? recordId,
   }) async {
     try {
-      await _speechService.speak(text, lang: _getServiceLocale(lang));
+      await _speechService.speak(text, lang: getServiceLocale(lang));
     } catch (e) {
       debugPrint('[AppState] Error playing material TTS: $e');
     }

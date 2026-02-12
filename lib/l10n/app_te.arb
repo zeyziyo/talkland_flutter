@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "అనువదించడానికి వచనాన్ని నమోదు చేయండి",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

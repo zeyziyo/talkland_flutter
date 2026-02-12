@@ -292,6 +292,9 @@ class AppLocalizationsSi extends AppLocalizations {
   String get enterTextToTranslate => 'පරිවර්තනය කිරීමට පෙළ ඇතුළත් කරන්න';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'සුරකිමින්...';
 
   @override
@@ -491,7 +494,7 @@ class AppLocalizationsSi extends AppLocalizations {
       'එකම වාක්‍යයක් වුවද, තත්වය (උදා: උදෑසන, සවස) සටහන් කර ඇත්නම් එය වෙන වෙනම සුරැකිය හැක.';
 
   @override
-  String get thinkingTimeInterval => 'කල්පනාකාරී කාල පරතරය';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc =>
@@ -1019,4 +1022,19 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get save => 'සුරකින්න';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

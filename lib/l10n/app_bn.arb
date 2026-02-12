@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "অনুবাদের জন্য পাঠ্য লিখুন",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

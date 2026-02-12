@@ -21,6 +21,7 @@ import 'package:flutter/material.dart';
 
 import '../services/supabase_service.dart';
 import '../l10n/app_localizations.dart';
+import '../constants/app_constants.dart';
 
 part 'app_state_auth.dart';
 part 'app_state_mode1.dart';
@@ -331,7 +332,7 @@ class AppState extends ChangeNotifier {
       notify();
       
       await _speechService.startSTT(
-        lang: _getServiceLocale(languageCode ?? _sourceLang),
+        lang: getServiceLocale(languageCode ?? _sourceLang),
         onResult: (text, isFinal, alternates) {
           _sourceText = text;
           if (isFinal) {

@@ -289,6 +289,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get enterTextToTranslate => 'Çevirmek için metin girin';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Kaydediliyor...';
 
   @override
@@ -487,7 +490,7 @@ class AppLocalizationsTr extends AppLocalizations {
       'Benzer cümleleri ayırt etmek için bağlam (örn. Sabah) ekleyin.';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => 'Oynatma Gecikmesi';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -1015,4 +1018,19 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get save => 'Kaydet';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

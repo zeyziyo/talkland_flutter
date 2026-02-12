@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "மொழிபெயர்க்க உரையை உள்ளிடவும்",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

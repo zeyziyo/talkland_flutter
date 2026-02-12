@@ -105,12 +105,13 @@ extension AppStateSettings on AppState {
     notify();
   }
 
-  String _getServiceLocale(String lang) {
+  String getServiceLocale(String lang) {
     // Map app language codes to STT/TTS language codes
     final map = {
       // East Asian
       'ko': 'ko-KR',
       'ja': 'ja-JP',
+      'zh': 'zh-CN',
       'zh-CN': 'zh-CN',
       'zh-TW': 'zh-TW',
       
@@ -165,22 +166,4 @@ extension AppStateSettings on AppState {
     };
     return map[lang] ?? lang;
   }
-
-  String getServiceLocale(String langCode) {
-    // This seems like a legacy subset of _getServiceLocale, but keeping for compatibility
-    switch (langCode) {
-      case 'ko': return 'ko-KR';
-      case 'en': return 'en-US';
-      case 'ja': return 'ja-JP';
-      case 'zh': return 'zh-CN';
-      case 'es': return 'es-ES';
-      case 'fr': return 'fr-FR';
-      case 'de': return 'de-DE';
-      default: return langCode;
-  }
-  }
 }
-// End of AppStateSettings
-
-// End of AppStateSettings
-// End of AppStateSettings

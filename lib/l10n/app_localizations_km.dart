@@ -291,6 +291,9 @@ class AppLocalizationsKm extends AppLocalizations {
   String get enterTextToTranslate => 'បញ្ចូលអត្ថបទដែលត្រូវបកប្រែ';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'កំពុងរក្សាទុក...';
 
   @override
@@ -491,7 +494,7 @@ class AppLocalizationsKm extends AppLocalizations {
       'សូម្បីតែប្រយោគដូចគ្នា អ្នកអាចរក្សាទុកវដាច់ដោយឡែកពីគ្នាដោយសរសេរបរិបទ (ឧទាហរណ៍៖ ពេលព្រឹក ពេលល្ងាច)។';
 
   @override
-  String get thinkingTimeInterval => 'ចន្លោះពេលគិត';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'ពេលវេលាដើម្បីគិត មុនពេលចម្លើយត្រូវបានបង្ហាញ។';
@@ -1020,4 +1023,19 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get save => 'រក្សាទុក';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "Ipasok ang teksto upang isalin",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

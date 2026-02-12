@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "បញ្ចូលអត្ថបទដែលត្រូវបកប្រែ",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "വിവർത്തനം ചെയ്യാൻ ടെക്സ്റ്റ് നൽകുക",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

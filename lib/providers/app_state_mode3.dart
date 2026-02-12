@@ -101,7 +101,7 @@ extension AppStateMode3 on AppState {
       });
       
       await _speechService.startSTT(
-        lang: _getServiceLocale(targetLang),
+        lang: getServiceLocale(targetLang),
         listenFor: const Duration(seconds: 30), 
         pauseFor: const Duration(seconds: 3),
         onResult: (text, isFinal, alternates) {
@@ -268,7 +268,7 @@ extension AppStateMode3 on AppState {
     
     final sourceText = _currentMode3Question!['source_text'] as String;
     final sourceLang = _currentMode3Question!['source_lang'] as String;
-    await _speechService.speak(sourceText, lang: _getServiceLocale(sourceLang));
+    await _speechService.speak(sourceText, lang: getServiceLocale(sourceLang));
   }
   
   List<Map<String, Object?>> _getAvailableQuestions() {

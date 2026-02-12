@@ -291,6 +291,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get enterTextToTranslate => 'Vui lòng nhập văn bản để dịch';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Đang lưu...';
 
   @override
@@ -485,7 +488,7 @@ class AppLocalizationsVi extends AppLocalizations {
       'Thêm ngữ cảnh (ví dụ: Buổi sáng) để phân biệt các câu tương tự.';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => 'Độ trễ phát lại';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -1013,4 +1016,19 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get save => 'Lưu';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

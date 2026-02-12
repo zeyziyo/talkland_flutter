@@ -292,6 +292,9 @@ class AppLocalizationsMn extends AppLocalizations {
   String get enterTextToTranslate => 'Орчуулах текстийг оруулна уу';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Хадгалж байна...';
 
   @override
@@ -493,7 +496,7 @@ class AppLocalizationsMn extends AppLocalizations {
       'Ижил өгүүлбэр байсан ч нөхцөл (Жишээ нь: Өглөө, орой) бичсэнээр тусад нь хадгалах боломжтой.';
 
   @override
-  String get thinkingTimeInterval => 'Бодох хугацааны завсар';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'Зөв хариулт гарахын өмнө бодох хугацаа.';
@@ -1022,4 +1025,19 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get save => 'Хадгалах';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

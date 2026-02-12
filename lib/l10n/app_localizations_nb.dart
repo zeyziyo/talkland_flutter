@@ -291,6 +291,9 @@ class AppLocalizationsNb extends AppLocalizations {
   String get enterTextToTranslate => 'Skriv inn tekst som skal oversettes';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Lagrer...';
 
   @override
@@ -491,7 +494,7 @@ class AppLocalizationsNb extends AppLocalizations {
       'Selv om det er samme setning, kan du lagre den separat ved å skrive ned situasjonen (f.eks. morgen, kveld).';
 
   @override
-  String get thinkingTimeInterval => 'Tenketidsintervall';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc =>
@@ -1017,4 +1020,19 @@ class AppLocalizationsNb extends AppLocalizations {
 
   @override
   String get save => 'Lagre';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

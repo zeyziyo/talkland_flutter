@@ -294,6 +294,9 @@ class AppLocalizationsEt extends AppLocalizations {
   String get enterTextToTranslate => 'Sisesta tõlgitav tekst';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Salvestamine...';
 
   @override
@@ -492,7 +495,7 @@ class AppLocalizationsEt extends AppLocalizations {
       'Isegi kui lause on sama, saad selle eraldi salvestada, märkides olukorra (nt hommik, õhtu).';
 
   @override
-  String get thinkingTimeInterval => 'Mõtlemisaja intervall';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'Aeg, et mõelda enne õige vastuse avaldamist.';
@@ -1018,4 +1021,19 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get save => 'Salvesta';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

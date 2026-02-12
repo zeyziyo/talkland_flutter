@@ -192,7 +192,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get importJsonFile => 'Import JSON File';
 
   @override
-  String get importing => 'Importing...';
+  String get importing => 'Importing material...';
 
   @override
   String get importComplete => 'Import Complete';
@@ -290,6 +290,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get enterTextToTranslate => 'Please enter text to translate';
+
+  @override
+  String get translationResultHint => 'Translation result - editable';
 
   @override
   String get saving => 'Saving...';
@@ -490,7 +493,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Add context (e.g., Morning) to distinguish similar sentences.';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -1018,4 +1021,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get save => 'Save';
+
+  @override
+  String statusDownloading(Object name) {
+    return 'Downloading: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name Imported Successfully';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return 'Import Failed: $error';
+  }
 }

@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "请输入要翻译的文本",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

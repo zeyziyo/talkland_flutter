@@ -291,6 +291,9 @@ class AppLocalizationsIs extends AppLocalizations {
   String get enterTextToTranslate => 'Sláðu inn texta til að þýða';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Vista...';
 
   @override
@@ -490,7 +493,7 @@ class AppLocalizationsIs extends AppLocalizations {
       'Jafnvel þótt það sé sama setningin geturðu vistað hana sérstaklega með því að skrifa aðstæður (td morgun, kvöld).';
 
   @override
-  String get thinkingTimeInterval => 'Hugsunartímabil';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc =>
@@ -1021,4 +1024,19 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get save => 'Vista';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

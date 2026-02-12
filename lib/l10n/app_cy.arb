@@ -340,6 +340,7 @@
     }
   },
   "enterTextToTranslate": "Rhowch y testun i'w gyfieithu",
+  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },

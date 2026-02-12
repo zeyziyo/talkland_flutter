@@ -292,6 +292,9 @@ class AppLocalizationsAz extends AppLocalizations {
   String get enterTextToTranslate => 'Tərcümə etmək üçün mətn daxil edin';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Saxlanılır...';
 
   @override
@@ -494,7 +497,7 @@ class AppLocalizationsAz extends AppLocalizations {
       'Eyni cümlə olsa belə, vəziyyəti (məsələn, səhər, axşam) qeyd etsəniz, onu ayrı saxlayabilirsiniz.';
 
   @override
-  String get thinkingTimeInterval => 'Düşünmə Vaxtı İntervalı';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc =>
@@ -1024,4 +1027,19 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get save => 'Saxla';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

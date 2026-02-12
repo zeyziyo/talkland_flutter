@@ -292,6 +292,9 @@ class AppLocalizationsBo extends AppLocalizations {
   String get enterTextToTranslate => 'Please enter text to translate';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Saving...';
 
   @override
@@ -490,7 +493,7 @@ class AppLocalizationsBo extends AppLocalizations {
       'Add context (e.g., Morning) to distinguish similar sentences.';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -1018,4 +1021,19 @@ class AppLocalizationsBo extends AppLocalizations {
 
   @override
   String get save => 'བསྲུང་';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

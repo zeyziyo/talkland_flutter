@@ -1,9 +1,26 @@
 import 'database_service.dart';
-
 import 'supabase_service.dart';
-
+import '../l10n/app_localizations.dart';
 
 class TranslationService {
+  /// Maps error reasons to localized messages
+  static String getErrorMessage(String reason, AppLocalizations l10n) {
+    switch (reason) {
+      case 'PROFANITY':
+        return l10n.errorProfanity;
+      case 'HATE_SPEECH':
+        return l10n.errorHateSpeech;
+      case 'SEXUAL':
+        return l10n.errorSexualContent;
+      default:
+        // If it looks like a descriptive message, return as is
+        if (reason.startsWith('Error:') || reason.length > 20 || reason.contains(' ')) {
+          return reason;
+        }
+        return l10n.errorOtherSafety;
+    }
+  }
+
   /// Translate text using Supabase Edge Function (Gemini)
   ///
   /// Parameters:

@@ -13,6 +13,7 @@ import '../widgets/help_dialog.dart';
 import '../constants/language_constants.dart';
 import 'chat_history_screen.dart';
 import '../widgets/online_library_dialog.dart';
+import '../constants/app_constants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -467,7 +468,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       );
                       break;
                     case 'downloads':
-                      _launchURL('https://zeyziyo.github.io/talkie/index.html');
+                      _launchURL(AppConstants.devWebsiteUrl);
                       break;
                     case 'settings':
                       _showLanguageSettingsDialog(context);

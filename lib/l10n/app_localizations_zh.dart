@@ -285,6 +285,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get enterTextToTranslate => '请输入要翻译的文本';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => '正在保存...';
 
   @override
@@ -476,7 +479,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tutorialContextDesc => '添加上下文（例如：早上）以区分相似的句子。';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => '播放延迟';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -997,6 +1000,21 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get save => '保存';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -1281,6 +1299,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get enterTextToTranslate => '请输入要翻译的文本';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => '正在保存...';
 
   @override
@@ -1471,7 +1492,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get tutorialContextDesc => '添加上下文（例如：早上）以区分相似的句子。';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => '播放延迟';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -2279,6 +2300,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get enterTextToTranslate => '請輸入要翻譯的文字';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => '正在儲存...';
 
   @override
@@ -2469,7 +2493,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get tutorialContextDesc => '添加上下文（例如：早上）以區分相似的句子。';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => '播放延遲';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';

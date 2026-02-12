@@ -292,6 +292,9 @@ class AppLocalizationsFil extends AppLocalizations {
   String get enterTextToTranslate => 'Ipasok ang teksto upang isalin';
 
   @override
+  String get translationResultHint => 'Translation result - editable';
+
+  @override
   String get saving => 'Nagsa-save...';
 
   @override
@@ -491,7 +494,7 @@ class AppLocalizationsFil extends AppLocalizations {
       'Magdagdag ng konteksto (hal. Umaga) upang makilala ang magkatulad na mga pangungusap.';
 
   @override
-  String get thinkingTimeInterval => 'Thinking Time Interval';
+  String get thinkingTimeInterval => 'Playback Delay';
 
   @override
   String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
@@ -1022,4 +1025,19 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get save => 'I-save';
+
+  @override
+  String statusDownloading(Object name) {
+    return '다운로드 중: $name...';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 가져오기 완료';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return '가져오기 실패: $error';
+  }
 }

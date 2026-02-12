@@ -451,7 +451,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                     controller: _translatedTextController,
                                     decoration: InputDecoration(
                                       border: const OutlineInputBorder(),
-                                      hintText: l10n.enterTextToTranslate,
+                                      hintText: l10n.translationResultHint,
                                       contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                                     ),
                                     minLines: 1,
