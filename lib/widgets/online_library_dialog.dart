@@ -111,7 +111,7 @@ class OnlineLibraryDialog extends StatelessWidget {
                   // Phase 79.2 + 81.1: Refresh materials
                   await state.loadStudyMaterials(); 
 
-                  // Phase 97: Fix mode indices (1: Review, 2: Practice, 3: Chat)
+                  // Phase 97.5: Stay in current mode instead of forcing transition
                   if (type == 'dialogue') {
                       final dId = result['dialogue_id'] as String?;
                       if (dId != null) {
@@ -122,13 +122,10 @@ class OnlineLibraryDialog extends StatelessWidget {
                         if (group != null) {
                           await state.loadExistingDialogue(group);
                         }
-                        state.switchMode(3); // Go to Chat
+                        // Removed: state.switchMode(3)
                       }
                   } else {
-                      // Move to Review Mode (Index 1) for Words/Sentences
-                      if (state.currentMode != 1) {
-                        state.switchMode(1);
-                      }
+                      // Removed: state.switchMode(1)
                       
                       final dynamic mIdRaw = result['material_id'];
                       final int mId = (mIdRaw is int) ? mIdRaw : (int.tryParse(mIdRaw?.toString() ?? '0') ?? 0);
