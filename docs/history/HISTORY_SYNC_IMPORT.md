@@ -5,6 +5,15 @@
 
 ## ✅ 구현 완료 기능 (Finalized Features)
 
+### 2026-02-12: 데이터 구조 정규화 및 양방향 동기화 완료 (Phase 98 + 98.3)
+- **로컬-서버 동기화 (Alignment)**: 로컬 SQLite와 Supabase의 `words`, `sentences` 테이블 스키마를 1:1로 일치시켰습니다.
+    - `words`: `style` 제거 후 품사/형태/기본형에 집중.
+    - `sentences`: `form_type`/`root` 제거 후 문장종류/문체에 집중.
+- **정합성 (Sync Integrity)**: `BackgroundSyncService` 보완을 통해 오프라인 저장 시 전역 공용 테이블 데이터가 유실되지 않도록 정비했습니다.
+- **가져오기/내보내기 (I/O)**: 테이블 간 컬럼 불일치로 인한 `UNION ALL` 쿼리 오류를 해결하고, JSON 내보내기 시 새 필드(`style` 등)가 포함되도록 개선했습니다.
+- **필터링 (Field Filtering)**: 저장 시 각 테이블 타입에 맞는 유효 필드만 선별적으로 저장하도록 모든 데이터 유입 경로를 강화했습니다.
+
+
 ### 2026-02-10: 데이터 정량화 및 전방위 국제화 (Phase 81.5)
 - **국제화 (L10n)**: "나의 단어장", "나의 문장집" 기본 제목을 80개 언어로 자동 번역하여 시스템 기본값으로 적용.
 - **무결성 (Integrity)**: Supabase 동기화 시 `type` 및 `tags` 누락 방지 로직을 `SupabaseService`에 구현.

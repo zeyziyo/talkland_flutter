@@ -90,23 +90,53 @@ class BackgroundSyncService {
         final generalTags = tags.where((t) => !materialSubjects.contains(t)).toList();
 
         // 3. Phase 98: Upload words to 'words' table, sentences to 'sentences' table
-        if (words.isNotEmpty) {
-          for (var word in words) {
-            word['tags'] = generalTags;
-          }
-        }
-        if (sentences.isNotEmpty) {
-          for (var sentence in sentences) {
-            sentence['tags'] = generalTags;
-          }
+        // Clean data according to Supabase schema to avoid errors
+        final List<Map<String, dynamic>> cleanWords = [];
+        for (var word in words) {
+          cleanWords.add({
+            'group_id': groupId,
+            'text': word['text'],
+            'lang_code': word['lang_code'],
+            'note': word['note'],
+            'pos': word['pos'],
+            'form_type': word['form_type'],
+            'root': word['root'],
+            'tags': generalTags.isNotEmpty ? generalTags : null,
+            'author_id': currentUser.id,
+            'status': 'approved',
+          });
         }
 
+        final List<Map<String, dynamic>> cleanSentences = [];
+        for (var sentence in sentences) {
+          cleanSentences.add({
+            'group_id': groupId,
+            'text': sentence['text'],
+            'lang_code': sentence['lang_code'],
+            'note': sentence['note'],
+            'pos': sentence['pos'],
+            'style': sentence['style'], // Phase 98.1: Sentence formality
+            'tags': generalTags.isNotEmpty ? generalTags : null,
+            'author_id': currentUser.id,
+            'status': 'approved',
+          });
+        }
+
+        // Parallel upload to global pool
+        if (cleanWords.isNotEmpty) {
+          await SupabaseService.client.from('words').upsert(cleanWords, onConflict: 'text, lang_code, author_id');
+        }
+        if (cleanSentences.isNotEmpty) {
+          await SupabaseService.client.from('sentences').upsert(cleanSentences, onConflict: 'text, lang_code, author_id');
+        }
+
+        // 4. Update User Library with personal metadata
         await SupabaseService.client.from('user_library').upsert({
           'user_id': currentUser.id,
           'group_id': groupId,
           'content': {
-            'words': words,
-            'sentences': sentences,
+            'words': cleanWords,
+            'sentences': cleanSentences,
             'synced_at': DateTime.now().toIso8601String(),
           },
           'material_tags': titleTags.isNotEmpty ? titleTags : null,
