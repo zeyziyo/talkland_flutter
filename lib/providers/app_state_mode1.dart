@@ -490,11 +490,11 @@ extension AppStateMode1 on AppState {
     _translatedText = newText;
   }
 
-  Future<List<String>> searchMatchingRoots(String query) async {
+  Future<List<Map<String, dynamic>>> searchMatchingRoots(String query) async {
     return await DatabaseService.searchWords(query);
   }
 
-  Future<List<Map<String, String>>> searchByType(String query) async {
+  Future<List<Map<String, dynamic>>> searchByType(String query) async {
     // Current Type (Word or Sentence)
     final type = _recordTypeFilter == 'word' ? 'word' : 'sentence';
     // Phase 79: Respect Current Source Language for Autocomplete

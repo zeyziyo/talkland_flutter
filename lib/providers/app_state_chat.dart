@@ -80,13 +80,13 @@ extension AppStateChat on AppState {
 
       _speechStatusSubscription?.cancel();
       _speechStatusSubscription = _speechService.statusStream.listen((status) {
-        if (_mode4Active && (status == 'done' || status == 'notListening')) {
-             debugPrint('[AppState] Auto-restarting Mode 4 STT...');
-             _speechService.startContinuousSTT(
-               lang: getServiceLocale(lang),
-               onResult: (text, isFinal, alternates) => onResult(text, isFinal),
-             );
-        }
+          if (_mode4Active && (status == 'done' || status == 'notListening')) {
+            debugPrint('[AppState] Auto-restarting Mode 4 STT...');
+            _speechService.startContinuousSTT(
+              lang: getServiceLocale(lang),
+              onResult: (text, isFinal, alternates) => onResult(text, isFinal),
+            );
+          }
       });
       
       await _speechService.startContinuousSTT(

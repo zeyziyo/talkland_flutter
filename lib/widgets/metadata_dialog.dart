@@ -256,11 +256,12 @@ class _MetadataDialogState extends State<MetadataDialog> {
                       Text(l10n.metadataRootWord, style: Theme.of(context).textTheme.labelMedium),
                       const SizedBox(height: 4),
                       Autocomplete<String>(
-                        optionsBuilder: (TextEditingValue textEditingValue) {
+                        optionsBuilder: (TextEditingValue textEditingValue) async {
                           if (textEditingValue.text.isEmpty) {
                             return const Iterable<String>.empty();
                           }
-                          return appState.searchMatchingRoots(textEditingValue.text);
+                          final results = await appState.searchMatchingRoots(textEditingValue.text);
+                          return results.map((m) => m['text'] as String).toList();
                         },
                         onSelected: (String selection) {
                            appState.setSourceRoot(selection);

@@ -50,16 +50,16 @@ class Mode3Widget extends StatelessWidget {
                     // Smart Autocomplete Search (Global)
                     LayoutBuilder(
                     builder: (context, constraints) {
-                      return Autocomplete<Map<String, String>>(
+                      return Autocomplete<Map<String, dynamic>>(
                         optionsBuilder: (TextEditingValue textEditingValue) {
                           if (textEditingValue.text.isEmpty) {
-                             return const Iterable<Map<String, String>>.empty();
+                             return const Iterable<Map<String, dynamic>>.empty();
                           }
                           // Tab-Specific Search
                           return appState.searchByType(textEditingValue.text);
                         },
-                        displayStringForOption: (Map<String, String> option) => option['text']!,
-                        onSelected: (Map<String, String> selection) {
+                        displayStringForOption: (Map<String, dynamic> option) => option['text'] as String,
+                        onSelected: (Map<String, dynamic> selection) {
                            // Just jump to result within current tab
                            appState.jumpToSearchResult(selection['text']!, selection['type']!);
                            if (appState.mode3SessionActive) appState.startMode3SessionDirectly();

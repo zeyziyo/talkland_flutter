@@ -1,1620 +1,195 @@
 import 'package:sqflite/sqflite.dart';
-import 'package:path/path.dart';
-import 'package:flutter/foundation.dart';
-import 'dart:convert';
-import 'package:uuid/uuid.dart';
+import 'database/database_helper.dart';
+import 'database/word_repository.dart';
+import 'database/sentence_repository.dart';
+import 'database/tag_repository.dart';
+import 'database/dialogue_repository.dart';
+import 'database/material_repository.dart';
+import 'database/data_transfer_service.dart';
 
-/// DatabaseService - 로컬 데이터베이스 관리
-/// 언어별 테이블을 동적으로 생성하고 일대다 번역 관계 지원
+/// DatabaseService - 로컬 데이터베이스 관리 (Facade)
 class DatabaseService {
-  static Database? _database;
-  
-  /// 데이터베이스 인스턴스 가져오기
-  static Future<Database> get database async {
-    if (_database != null) return _database!;
-    
-    _database = await _initDatabase();
-    return _database!;
-  }
-  
-  /// 데이터베이스 초기화 및 기본 테이블 생성
-  static Future<Database> _initDatabase() async {
-    final databasesPath = await getDatabasesPath();
-    final path = join(databasesPath, 'talkie.db');
-    
-    return await openDatabase(
-      path,
-    version: 14, // Phase 87: Unified Audio & Review columns
-      onCreate: (db, version) async {
-        await _createBaseTables(db);
-        await _ensureDefaultMaterial(db);
-      },
-      onUpgrade: (db, oldVersion, newVersion) async {
-        if (oldVersion < 2) {
-          // ... (Existing upgrades)
-          await db.execute('''
-            CREATE TABLE dialogue_groups (
-              id TEXT PRIMARY KEY,
-              user_id TEXT,
-              title TEXT,
-              persona TEXT,
-              created_at TEXT NOT NULL
-            )
-          ''');
-          
-          await db.execute('ALTER TABLE translations ADD COLUMN dialogue_id TEXT');
-          await db.execute('ALTER TABLE translations ADD COLUMN speaker TEXT');
-          await db.execute('ALTER TABLE translations ADD COLUMN sequence_order INTEGER');
-          
-          print('[DB] Upgraded to version 2: Dialogue support added');
-        }
-        
-        if (oldVersion < 3) {
-          await db.execute('ALTER TABLE translations ADD COLUMN is_synced INTEGER DEFAULT 0');
-          print('[DB] Upgraded to version 3: Sync support added');
-        }
+  static Future<Database> get database => DatabaseHelper.database;
 
-        if (oldVersion < 4) {
-          await db.execute('ALTER TABLE dialogue_groups ADD COLUMN location TEXT');
-          print('[DB] Upgraded to version 4: Location support added');
-        }
+  // --- Database Helper Delegation ---
+  static Future<void> reset() => DatabaseHelper.reset();
+  static Future<void> close() => DatabaseHelper.close();
 
-        if (oldVersion < 5) {
-        // Legacy migration removed in Phase 79.4 (Unified Schema is now default)
-        print('[DB] Version 5 upgrade: Unified Schema is now the primary structure');
-      }
+  // --- Word Repository Delegation ---
+  static Future<int> insertWord(Map<String, dynamic> data) => WordRepository.insert(data);
+  static Future<List<Map<String, dynamic>>> searchWords(String query, {int limit = 10}) => WordRepository.search(query, limit: limit);
+  static Future<void> toggleWordMemorized(int id, bool status) => WordRepository.updateMemorizedStatus(id, status);
 
-        if (oldVersion < 6) {
-          await db.execute('ALTER TABLE sentences ADD COLUMN pos TEXT');
-          await db.execute('ALTER TABLE sentences ADD COLUMN form_type TEXT');
-          await db.execute('ALTER TABLE sentences ADD COLUMN root TEXT');
-          print('[DB] Upgraded to version 6: Sentences metadata added');
-        }
+  // --- Sentence Repository Delegation ---
+  static Future<int> insertSentence(Map<String, dynamic> data) => SentenceRepository.insert(data);
+  static Future<List<Map<String, dynamic>>> searchSentences(String query, {int limit = 10}) => SentenceRepository.search(query, limit: limit);
+  static Future<void> toggleSentenceMemorized(int id, bool status) => SentenceRepository.updateMemorizedStatus(id, status);
 
-        if (oldVersion < 7) {
-          await db.execute('''
-            CREATE TABLE IF NOT EXISTS chat_messages (
-              id INTEGER PRIMARY KEY AUTOINCREMENT,
-              dialogue_id TEXT NOT NULL,
-              group_id INTEGER NOT NULL,
-              speaker TEXT,
-              sequence_order INTEGER,
-              created_at TEXT NOT NULL,
-              FOREIGN KEY (dialogue_id) REFERENCES dialogue_groups (id) ON DELETE CASCADE
-            )
-          ''');
-          print('[DB] Upgraded to version 7: chat_messages table added');
-        }
-        
-        if (oldVersion < 8) {
-          // Phase 21: Memorized Status
-          await db.execute('ALTER TABLE words ADD COLUMN is_memorized INTEGER DEFAULT 0');
-          await db.execute('ALTER TABLE sentences ADD COLUMN is_memorized INTEGER DEFAULT 0');
-          print('[DB] Upgraded to version 8: Memorized status added');
-        }
+  // --- Tag Repository Delegation ---
+  static Future<List<String>> getAllTags() => TagRepository.getAllTags();
+  static Future<List<String>> getAllTagsForLanguage(String langCode) => TagRepository.getAllTagsForLanguage(langCode);
+  static Future<void> addTag(int itemId, String itemType, String tag) => TagRepository.addTag(itemId, itemType, tag);
 
-        if (oldVersion < 9) {
-          // Phase 62: Dialogue Notes
-          await db.execute('ALTER TABLE dialogue_groups ADD COLUMN note TEXT');
-          print('[DB] Upgraded to version 9: Dialogue note added');
-        }
-
-        if (oldVersion < 10) {
-          // Hotfix: Ensure 'note' column exists for users who had fresh installed v9 (which missed it in onCreate)
-          try {
-            await db.execute('ALTER TABLE dialogue_groups ADD COLUMN note TEXT');
-            print('[DB] Upgraded to version 10: Dialogue note column recovered');
-          } catch (e) {
-            // Column already exists (Normal upgrade flow), ignore error
-            print('[DB] Upgraded to version 10: Note column already exists');
-          }
-        }
-
-        if (oldVersion < 11) {
-          // Phase 79: Style field for Sentence/Word
-          try {
-            await db.execute('ALTER TABLE words ADD COLUMN style TEXT');
-            await db.execute('ALTER TABLE sentences ADD COLUMN style TEXT');
-            print('[DB] Upgraded to version 11: Style field added');
-          } catch (e) {
-            print('[DB] Upgraded to version 11: Style column already exists or error: $e');
-          }
-        }
-
-        if (oldVersion < 13) {
-          // Phase 81.1: Add sync status for Unified Schema
-          try {
-            await db.execute('ALTER TABLE words ADD COLUMN is_synced INTEGER DEFAULT 0');
-            await db.execute('ALTER TABLE sentences ADD COLUMN is_synced INTEGER DEFAULT 0');
-            print('[DB] Upgraded to version 13: is_synced columns added to unified tables');
-          } catch (e) {
-            print('[DB] Upgraded to version 13: Columns might exist or error: $e');
-          }
-        }
-
-        if (oldVersion < 14) {
-          // Phase 87: Unified Audio & Review columns
-          try {
-            for (var table in ['words', 'sentences']) {
-              await db.execute('ALTER TABLE $table ADD COLUMN audio_file BLOB');
-              await db.execute('ALTER TABLE $table ADD COLUMN last_reviewed TEXT');
-              await db.execute('ALTER TABLE $table ADD COLUMN review_count INTEGER DEFAULT 0');
-            }
-            print('[DB] Upgraded to version 14: Unified Audio & Review columns added');
-          } catch (e) {
-            print('[DB] Upgraded to version 14: Error adding columns: $e');
-          }
-        }
-      },
-    );
-  }
-  
-  /// 기본 테이블 및 신규 통합 테이블 생성
-  static Future<void> _createBaseTables(Database db) async {
-    // 1. 신규 통합 테이블 (Phase 12)
-    
-    // 통합 단어 테이블
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS words (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        group_id INTEGER,
-        text TEXT NOT NULL,
-        lang_code TEXT NOT NULL,
-        root TEXT,
-        pos TEXT,
-        form_type TEXT,
-        style TEXT,
-        note TEXT,
-        created_at TEXT NOT NULL,
-        is_memorized INTEGER DEFAULT 0,
-        is_synced INTEGER DEFAULT 0, -- Phase 81.1
-        audio_file BLOB,             -- Phase 87
-        last_reviewed TEXT,           -- Phase 87
-        review_count INTEGER DEFAULT 0 -- Phase 87
-      )
-    ''');
-    await db.execute('CREATE INDEX IF NOT EXISTS idx_words_group_id ON words (group_id)');
-    await db.execute('CREATE INDEX IF NOT EXISTS idx_words_text_lang ON words (text, lang_code)');
-    await db.execute('CREATE INDEX IF NOT EXISTS idx_words_root ON words (root)');
-    await db.execute('CREATE UNIQUE INDEX IF NOT EXISTS idx_words_unique ON words (text, lang_code, IFNULL(note, ""))');
-
-    // 통합 문장 테이블
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS sentences (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        group_id INTEGER,
-        text TEXT NOT NULL,
-        lang_code TEXT NOT NULL,
-        pos TEXT,
-        form_type TEXT,
-        style TEXT,
-        root TEXT,
-        note TEXT,
-        created_at TEXT NOT NULL,
-        is_memorized INTEGER DEFAULT 0,
-        is_synced INTEGER DEFAULT 0, -- Phase 81.1
-        audio_file BLOB,             -- Phase 87
-        last_reviewed TEXT,           -- Phase 87
-        review_count INTEGER DEFAULT 0 -- Phase 87
-      )
-    ''');
-    await db.execute('CREATE INDEX IF NOT EXISTS idx_sentences_group_id ON sentences (group_id)');
-    await db.execute('CREATE INDEX IF NOT EXISTS idx_sentences_text_lang ON sentences (text, lang_code)');
-    await db.execute('CREATE UNIQUE INDEX IF NOT EXISTS idx_sentences_unique ON sentences (text, lang_code, IFNULL(note, ""))');
-
-    // 3. 태그 시스템 테이블
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS item_tags (
-        item_id INTEGER NOT NULL,
-        item_type TEXT NOT NULL,
-        tag TEXT NOT NULL,
-        PRIMARY KEY (item_id, item_type, tag)
-      )
-    ''');
-    await db.execute('CREATE INDEX IF NOT EXISTS idx_item_tags_tag ON item_tags (tag)');
-
-    // 기존 테이블들 (Legacy)
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS dialogue_groups (
-        id TEXT PRIMARY KEY,
-        user_id TEXT,
-        title TEXT,
-        persona TEXT,
-        location TEXT,
-        note TEXT,
-        created_at TEXT NOT NULL
-      )
-    ''');
-
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS chat_messages (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        dialogue_id TEXT NOT NULL,
-        group_id INTEGER NOT NULL,
-        speaker TEXT,  -- Legacy: Can be arbitrary name
-        participant_id TEXT, -- NEW: Link to dialogue_participants
-        sequence_order INTEGER NOT NULL,
-        created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')),
-        FOREIGN KEY (dialogue_id) REFERENCES dialogue_groups (id) ON DELETE CASCADE
-      )
-    ''');
-
-    // Phase 70: Multi-Persona Participants
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS dialogue_participants (
-        id TEXT PRIMARY KEY, -- UUID
-        dialogue_id TEXT NOT NULL,
-        name TEXT NOT NULL,
-        role TEXT NOT NULL, -- 'user', 'ai'
-        gender TEXT,        -- 'male', 'female'
-        lang_code TEXT,     -- 'en-US', 'es-ES'
-        avatar_color INTEGER,
-        created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')),
-        FOREIGN KEY (dialogue_id) REFERENCES dialogue_groups (id) ON DELETE CASCADE
-      )
-    ''');
-    
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS translation_cache (
-        cache_key TEXT PRIMARY KEY,
-        translation TEXT NOT NULL,
-        timestamp INTEGER NOT NULL
-      )
-    ''');
-    
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS study_materials (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        subject TEXT NOT NULL,
-        source TEXT NOT NULL,
-        source_language TEXT NOT NULL,
-        target_language TEXT NOT NULL,
-        file_name TEXT,
-        created_at TEXT NOT NULL,
-        imported_at TEXT NOT NULL
-      )
-    ''');
-    
-    print('[DB] Unified Schema tables created successfully');
-  }
-
-  /// 기본 학습 자료 보장 (ID=0)
-  static Future<void> _ensureDefaultMaterial(Database db) async {
-    try {
-      // ID=0인 레코드가 있는지 확인
-      final result = await db.query(
-        'study_materials',
-        where: 'id = ?',
-        whereArgs: [0],
-      );
-
-      if (result.isEmpty) {
-        // ID=0으로 강제 삽입
-        await db.rawInsert('''
-          INSERT INTO study_materials (id, subject, source, source_language, target_language, created_at, imported_at)
-          VALUES (0, 'Basic', 'Google', 'auto', 'auto', ?, ?)
-        ''', [
-          DateTime.now().toIso8601String(),
-          DateTime.now().toIso8601String(),
-        ]);
-        print('[DB] Default material (ID=0) created');
-      }
-    } catch (e) {
-      print('[DB] Error creating default material: $e');
-    }
-  }
-
-  /// 기본 학습 자료 ID 가져오기 (없으면 생성)
-  static Future<int> getOrCreateDefaultMaterial() async {
-    final db = await database;
-    await _ensureDefaultMaterial(db);
-    return 0;
-  }
-  
-  // ==========================================
-  // 언어별 테이블 관리
-  // ==========================================
-  
-  /// 언어별 테이블 생성 (Legacy - v14부터 No-op)
-  static Future<void> createLanguageTable(String langCode) async {
-    // 모든 데이터는 이제 words, sentences 테이블로 통합되었습니다.
-    debugPrint('[DB] createLanguageTable called for $langCode (No-op in Unified v14)');
-  }
-  
-  /// 유사 텍스트 검색 (Unified Schema v14)
-  static Future<List<Map<String, dynamic>>> searchSimilarText(
-    String langCode,
-    String text,
-  ) async {
-    final db = await database;
-    
-    // 공백으로 단어 분리 및 소문자 정규화
-    final inputWords = text.trim().toLowerCase().split(RegExp(r'\s+'));
-    if (inputWords.isEmpty) return [];
-    
-    // 1. Broad Search: 'words'와 'sentences' 테이블에서 통합 검색
-    String whereClause = '';
-    List<dynamic> whereArgs = [];
-    
-    for (int i = 0; i < inputWords.length; i++) {
-      if (inputWords[i].length < 2) continue;
-      if (whereClause.isNotEmpty) whereClause += ' OR ';
-      whereClause += 'text LIKE ?';
-      whereArgs.add('%${inputWords[i]}%');
-    }
-    
-    if (whereClause.isEmpty) return [];
-
-    // 최종 쿼리 조합 (언어 필터 포함)
-    final finalWhereClause = '($whereClause) AND lang_code = ?';
-    final finalWhereArgs = [...whereArgs, langCode];
-
-    final wordCandidates = await db.query('words', where: finalWhereClause, whereArgs: finalWhereArgs, limit: 25);
-    final sentenceCandidates = await db.query('sentences', where: finalWhereClause, whereArgs: finalWhereArgs, limit: 25);
-    
-    final List<Map<String, dynamic>> candidates = [...wordCandidates, ...sentenceCandidates];
-    
-    // 2. Strict Filter (Symmetric Difference Size <= 2)
-    final inputSet = inputWords.toSet();
-    
-    final results = candidates.map((record) {
-      final recordText = record['text'] as String;
-      final recordWords = recordText.trim().toLowerCase().split(RegExp(r'\s+'));
-      final recordSet = recordWords.toSet();
-      final intersection = inputSet.intersection(recordSet).length;
-      final diff = (inputSet.length - intersection) + (recordSet.length - intersection);
-      return {'record': record, 'diff': diff};
-    }).where((item) => (item['diff'] as int) <= 2).toList();
-    
-    results.sort((a, b) => (a['diff'] as int).compareTo(b['diff'] as int));
-    
-    final topResults = results.take(3).map((item) => item['record'] as Map<String, dynamic>).toList();
-    
-    print('[DB] Found ${topResults.length} similar texts in unified tables for lang=$langCode');
-    return topResults;
-  }
-
-  /// 자동 완성을 위한 시작 문구 검색 (Phase 31)
-  /// words와 sentences 테이블에서 해당 언어로 시작하는 텍스트 검색
-  static Future<List<Map<String, dynamic>>> searchAutocompleteText(
-    String langCode,
-    String text,
-  ) async {
-    final db = await database;
-    final normalized = text.trim();
-    if (normalized.isEmpty) return [];
-
-    // words와 sentences 테이블에서 검색 (개별 메타데이터 및 note 포함)
-    // 텍스트가 같더라도 note가 다르면 다른 항목으로 간주
-    final List<Map<String, dynamic>> results = [];
-
-    // 1. 단어 검색
-    final wordResults = await db.query(
-      'words',
-      where: 'lang_code = ? AND text LIKE ?',
-      whereArgs: [langCode, '$normalized%'],
-      limit: 10,
-    );
-    results.addAll(wordResults);
-
-    // 2. 문장 검색
-    final sentenceResults = await db.query(
-      'sentences',
-      where: 'lang_code = ? AND text LIKE ?',
-      whereArgs: [langCode, '$normalized%'],
-      limit: 10,
-    );
-    results.addAll(sentenceResults);
-
-    // 중복 제거 (text + note 조합 기준) 및 최신순 정렬 등은 필요 시 추가
-    return results;
-  }
-
-  /// 번역이 이미 존재하는지 확인 (Unified Schema v14 리팩토링)
-  static Future<Map<String, dynamic>?> getTranslationIfExists(
-    String sourceLang,
-    int sourceId,
-    String targetLang, {
-    String? note,
-  }) async {
-    final db = await database;
-    
-    // 1. Determine which table the sourceId belongs to and get its group_id
-    // We check 'words' first, then 'sentences'
-    int? groupId;
-    String table = 'words';
-    
-    var res = await db.query('words', columns: ['group_id'], where: 'id = ? AND lang_code = ?', whereArgs: [sourceId, sourceLang]);
-    if (res.isNotEmpty) {
-      groupId = res.first['group_id'] as int;
-    } else {
-      res = await db.query('sentences', columns: ['group_id'], where: 'id = ? AND lang_code = ?', whereArgs: [sourceId, sourceLang]);
-      if (res.isNotEmpty) {
-        groupId = res.first['group_id'] as int;
-        table = 'sentences';
-      }
-    }
-
-    if (groupId == null) return null;
-
-    // 2. Find target record in the same group and language
-    String whereClause;
-    List<dynamic> whereArgs;
-    
-    if (note == null || note.isEmpty) {
-      whereClause = 'group_id = ? AND lang_code = ? AND (note IS NULL OR note = "")';
-      whereArgs = [groupId, targetLang];
-    } else {
-      whereClause = 'group_id = ? AND lang_code = ? AND note = ?';
-      whereArgs = [groupId, targetLang, note];
-    }
-    
-    final targets = await db.query(
-      table,
-      where: whereClause,
-      whereArgs: whereArgs,
-      limit: 1,
-    );
-    
-    if (targets.isEmpty) return null;
-    
-    final target = targets.first;
-    final targetId = target['id'] as int;
-    
-    print('[DB] Found existing unified translation: $sourceLang($sourceId) -> $targetLang($targetId) [Group: $groupId, Note: ${target['note']}]');
-    
-    return {
-      'target_id': targetId,
-      'target_text': target['text'] as String,
-      'audio_file': target['audio_file'],
-      'note': target['note'],
-    };
-  }
-  
-
-  /// 오디오 파일 저장 (Unified Schema v14)
-  static Future<void> saveAudioFile(
-    String langCode,
-    int recordId,
-    Uint8List audioData,
-  ) async {
-    final db = await database;
-    
-    // Update both tables (IDs are globally unique per type session usually, but checking both is safe)
-    int count = await db.update('words', {'audio_file': audioData}, where: 'id = ? AND lang_code = ?', whereArgs: [recordId, langCode]);
-    if (count == 0) {
-      count = await db.update('sentences', {'audio_file': audioData}, where: 'id = ? AND lang_code = ?', whereArgs: [recordId, langCode]);
-    }
-    
-    print('[DB] Audio file saved for record $recordId ($langCode), updated=$count');
-  }
-  
-  /// 오디오 파일 가져오기 (Unified Schema v14)
-  static Future<Uint8List?> getAudioFile(String langCode, int recordId) async {
-    final db = await database;
-    
-    var res = await db.query('words', columns: ['audio_file'], where: 'id = ? AND lang_code = ?', whereArgs: [recordId, langCode]);
-    if (res.isNotEmpty && res.first['audio_file'] != null) {
-      return res.first['audio_file'] as Uint8List;
-    }
-    
-    res = await db.query('sentences', columns: ['audio_file'], where: 'id = ? AND lang_code = ?', whereArgs: [recordId, langCode]);
-    if (res.isNotEmpty && res.first['audio_file'] != null) {
-      return res.first['audio_file'] as Uint8List;
-    }
-    
-    return null;
-  }
-
-  
-  
-  // ==========================================
-  // 번역 캐시 (기존 유지)
-  // ==========================================
-  
-  /// 번역 결과 캐시 저장
-  static Future<void> cacheTranslation(String key, String translation) async {
-    final db = await database;
-    
-    await db.insert(
-      'translation_cache',
-      {
-        'cache_key': key,
-        'translation': translation,
-        'timestamp': DateTime.now().millisecondsSinceEpoch,
-      },
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
-    
-    print('[DB] Translation cached: $key');
-  }
-  
-  /// 캐시된 번역 조회
-  static Future<String?> getCachedTranslation(String key) async {
-    final db = await database;
-    
-    final result = await db.query(
-      'translation_cache',
-      where: 'cache_key = ?',
-      whereArgs: [key],
-    );
-    
-    if (result.isNotEmpty) {
-      print('[DB] Translation cache hit: $key');
-      return result.first['translation'] as String;
-    }
-    
-    print('[DB] Translation cache miss: $key');
-    return null;
-  }
-  
-  // ==========================================
-  // 유틸리티
-  // ==========================================
-  
-  /// 데이터베이스 닫기
-  static Future<void> close() async {
-    final db = _database;
-    if (db != null) {
-      await db.close();
-      _database = null;
-      print('[DB] Database closed');
-    }
-  }
-  
-  /// 데이터베이스 초기화 (개발용)
-  static Future<void> reset() async {
-    final databasesPath = await getDatabasesPath();
-    final path = join(databasesPath, 'talkie.db');
-    
-    await deleteDatabase(path);
-    _database = null;
-    
-    print('[DB] Database reset');
-  }
-  
-  // ==========================================
-  // JSON Import/Export
-  // ==========================================
-  
-  /// Import study materials from JSON file
-  static Future<Map<String, dynamic>> importFromJson(String jsonContent, {String? fileName}) async {
-    try {
-      final data = json.decode(jsonContent) as Map<String, dynamic>;
-      final sourceLang = data['source_language'] as String;
-      final targetLang = data['target_language'] as String;
-      final defaultType = data['default_type'] as String? ?? 'sentence';
-      final entries = data['entries'] as List;
-      
-      final db = await database;
-      
-      // Define variables to be captured by closure
-      int importedCount = 0;
-      int skippedCount = 0;
-      List<String> errors = [];
-      int materialId = 0;
-      
-      await db.transaction((txn) async {
-        // 0. Create Material (Group)
-        String subject = data['subject'] as String? ?? 'Imported ${DateTime.now().toString().split(' ')[0]}';
-        
-        // Use createStudyMaterial with txn
-        materialId = await createStudyMaterial(
-          subject: subject,
-          source: 'Device Import',
-          sourceLanguage: sourceLang,
-          targetLanguage: targetLang,
-          fileName: fileName ?? subject,
-          createdAt: DateTime.now().toIso8601String(),
-          txn: txn,
-        );
-
-        data['processed_material_id'] = materialId;
-
-        for (var i = 0; i < entries.length; i++) {
-          try {
-            final entry = entries[i] as Map<String, dynamic>;
-            final sourceText = entry['source_text'] as String;
-            final targetText = entry['target_text'] as String;
-            
-            if (sourceText.trim().isEmpty || targetText.trim().isEmpty) {
-              skippedCount++;
-              continue;
-            }
-            
-            
-            // 3. Create unified record (Phase 79.4)
-            await saveUnifiedRecord(
-              text: sourceText,
-              lang: sourceLang,
-              translation: targetText,
-              targetLang: targetLang,
-              type: entry['type'] as String? ?? defaultType,
-              note: (entry['note'] ?? entry['context']) as String?,
-              tags: [subject],
-              txn: txn,
-            );
-            
-            importedCount++;
-          } catch (e) {
-            errors.add('Entry ${i + 1}: $e');
-            skippedCount++;
-          }
-        }
-      });
-      
-      print('[DB] Import complete: $importedCount imported, $skippedCount skipped');
-      
-      return {
-        'success': true,
-        'imported': importedCount,
-        'skipped': skippedCount,
-        'total': entries.length,
-        'errors': errors,
-        'material_id': materialId,
-      };
-    } catch (e) {
-      print('[DB] Error importing JSON: $e');
-      return {
-        'success': false,
-        'imported': 0,
-        'skipped': 0,
-        'total': 0,
-        'errors': ['Failed to parse JSON or DB Error: $e'],
-      };
-    }
-  }
-  
-  // ==========================================
-  // Mode 3: Study Materials Metadata Management
-  // ==========================================
-  
-  /// Create study material metadata and return its ID
-  static Future<int> createStudyMaterial({
-    required String subject,
-    required String source,
-    required String sourceLanguage,
-    required String targetLanguage,
-    String? fileName,
-    required String createdAt,
-    Transaction? txn, // Added txn
-  }) async {
-    final db = txn ?? await database; // Use txn if provided
-    
-    // Check for duplicates
-    final existing = await db.query(
-      'study_materials',
-      where: 'subject = ? AND source_language = ? AND target_language = ?',
-      whereArgs: [subject, sourceLanguage, targetLanguage],
-      limit: 1,
-    );
-    
-    if (existing.isNotEmpty) {
-      final id = existing.first['id'] as int;
-      print('[DB] Found existing material: id=$id, subject=$subject');
-      
-      // Update imported_at timestamp
-      await db.update(
-        'study_materials',
-        {'imported_at': DateTime.now().toIso8601String()},
-        where: 'id = ?',
-        whereArgs: [id],
-      );
-      
-      return id;
-    }
-    
-    final id = await db.insert('study_materials', {
-      'subject': subject,
-      'source': source,
-      'source_language': sourceLanguage,
-      'target_language': targetLanguage,
-      'file_name': fileName,
-      'created_at': createdAt,
-      'imported_at': DateTime.now().toIso8601String(),
-    });
-    
-    print('[DB] Study material created: id=$id, subject=$subject');
-    return id;
-  }
-   /// Import study materials from JSON file with metadata
-  /// Import study materials from JSON file with metadata
-  /// Import study materials from JSON file with metadata
-  static Future<Map<String, dynamic>> importFromJsonWithMetadata(
-    String jsonContent, {
-    String? overrideSubject, // Phase 77: Visible Title
-    String? syncKey, // Phase 79: stable key for grouping
-    String? defaultType, // Phase 81.3: Explicit type fallback
-    String? defaultSourceLang, // Phase 81.5: Fallback if missing in JSON
-    String? defaultTargetLang, // Phase 81.5: Fallback if missing in JSON
-    String? fileName, // Add missing param
-    String? userId, // Add missing param
-  }) async {
-    try {
-      final data = json.decode(jsonContent) as Map<String, dynamic>;
-      
-      // Phase 66: Support 'meta' object
-      final meta = data['meta'] as Map<String, dynamic>? ?? {};
-      
-      // 언어 이름(Korean)을 코드(ko)로 매핑
-      final rawSourceLang = (meta['source_language'] ?? data['source_language']) as String? ?? defaultSourceLang ?? 'auto';
-      final rawTargetLang = (meta['target_language'] ?? data['target_language']) as String? ?? defaultTargetLang ?? 'auto';
-      final sourceLang = _mapLanguageToCode(rawSourceLang);
-      final targetLang = _mapLanguageToCode(rawTargetLang);
-      
-      final nativeSubject = (meta['title'] ?? data['subject']) as String?;
-      final materialSubject = overrideSubject ?? nativeSubject ?? fileName ?? 'Imported Material';
-      final syncSubject = syncKey ?? materialSubject; // Fallback to title if no syncKey provided
-      final source = (meta['source'] ?? data['source']) as String? ?? 'File Upload';
-      final fileCreatedAt = (meta['created_at'] ?? data['created_at']) as String? ?? DateTime.now().toIso8601String();
-      final effectiveDefaultType = defaultType ?? (data['default_type'] ?? meta['default_type']) as String? ?? 'sentence';
-      
-      // Phase 66: File-level Tags
-      final fileTags = (meta['tags'] as List?)?.map((e) => e.toString()).toList() ?? [];
-
-      // Support both 'entries' (standard) and 'dialogues' (for chat records)
-      final entries = data['entries'] as List?;
-      final dialogues = data['dialogues'] as List?;
-      
-      // Phase 66: Participants Pool
-      final participantsList = data['participants'] as List?;
-      final Map<String, Map<String, dynamic>> participantMap = {};
-      if (participantsList != null) {
-        for (var p in participantsList) {
-          final pMap = p as Map<String, dynamic>;
-          if (pMap['id'] != null) {
-            participantMap[pMap['id']] = pMap;
-          }
-        }
-      }
-      
-      final db = await database;
-      
-      // 1. 테이블 미리 생성 (트랜잭션 외부에서 실행하여 데드락 방지)
-      await createLanguageTable(sourceLang);
-      await createLanguageTable(targetLang);
-      
-      return await db.transaction((txn) async {
-         int importedCount = 0;
-         int skippedCount = 0;
-         List<String> errors = [];
-
-
-         // Case A: Standard Entries
-         if (entries != null) {
-            // Note: createStudyMaterial writes to `study_materials` table which IS used by UI dropdowns (Legacy table but used by AppState).
-            // We KEEP this. The *content* (sentences) uses Unified Schema.
-            final materialId = await createStudyMaterial(
-              subject: materialSubject,
-              source: source,
-              sourceLanguage: sourceLang,
-              targetLanguage: targetLang,
-              fileName: fileName,
-              createdAt: fileCreatedAt,
-              txn: txn,
-            );
-
-            for (var i = 0; i < entries.length; i++) {
-              try {
-                final entry = entries[i] as Map<String, dynamic>;
-                // Phase 66: Entry-level Meta priority
-                final entryMeta = entry['meta'] as Map<String, dynamic>? ?? {};
-                
-                 final sourceText = (entry['source_text'] ?? entry['text']) as String?;
-                final targetText = (entry['target_text'] ?? entry['translation']) as String?;
-                
-                if (sourceText == null || sourceText.trim().isEmpty) {
-                  skippedCount++;
-                  continue;
-                }
-
-                final bool hasTarget = targetText != null && targetText.trim().isNotEmpty && targetLang != 'auto';
-                final type = entry['type'] as String? ?? effectiveDefaultType;
-                
-                // Collect Tags (File + Entry + Local Native Subject)
-                // Phase 97: Exclude syncSubject from user-visible tags to keep dropdown clean
-                final entryTags = (entry['tags'] as List?)?.map((e) => e.toString()).toList() ?? [];
-                final List<String> allTags = {
-                  ...fileTags, 
-                  ...entryTags,
-                  materialSubject,
-                }.toList(); // Use set literal to remove duplicates
-                
-                // Phase 97.7: Proactive repair - if lang is 'auto', fallback to defaults
-                final effectiveSourceLang = (sourceLang == 'auto') ? (defaultSourceLang ?? 'auto') : sourceLang;
-                final effectiveTargetLang = (targetLang == 'auto') ? (defaultTargetLang ?? 'auto') : targetLang;
-
-                // Phase 97.8: Generate a unique, stable integer groupId for the material entry
-                final entryId = int.tryParse(entry['id']?.toString() ?? '') ?? i;
-                final entryGroupId = (materialId * 100000) + entryId;
-
-                await saveUnifiedRecord(
-                  text: sourceText,
-                  lang: effectiveSourceLang,
-                  translation: hasTarget ? targetText : '', 
-                  targetLang: hasTarget ? effectiveTargetLang : '', 
-                  type: type,
-                  // Extended Metadata
-                  pos: (entry['pos'] ?? entryMeta['pos']) as String?,
-                  root: (entry['root'] ?? entryMeta['root']) as String?,
-                  formType: (entry['form_type'] ?? entryMeta['form_type']) as String?,
-                  style: (entry['style'] ?? entryMeta['style']) as String?,
-                  note: (entry['note'] ?? entryMeta['note'] ?? entry['context']) as String?,
-                  tags: allTags.isNotEmpty ? allTags : null,
-                  txn: txn,
-                  // Phase 77/97.8: Pivot Strategy Params
-                  syncSubject: syncSubject,
-                  sequenceOrder: i,
-                  groupId: entryGroupId,
-                  );
-
-                
-                // REMOVED: saveTranslationLinkWithMaterial (Legacy)
-                
-                importedCount++;
-              } catch (e) {
-                errors.add('Entry ${i + 1}: $e');
-                skippedCount++;
-              }
-            }
-            
-            return {
-              'success': true,
-              'material_id': materialId,
-              'imported': importedCount,
-              'skipped': skippedCount,
-              'total': entries.length,
-              'errors': errors,
-            };
-         } 
-         
-         // Case B: Dialogues
-         if (dialogues != null) {
-            String lastDialogueId = '';
-            int totalMessages = 0;
-
-            for (var d in dialogues) {
-              final dMap = d as Map<String, dynamic>;
-              final dMeta = dMap['meta'] as Map<String, dynamic>? ?? {}; // Dialogue-level meta
-              
-              final dTitle = (dMap['title'] ?? dMeta['title']) as String? ?? nativeSubject ?? syncSubject;
-              final dPersona = (dMap['persona'] ?? dMeta['persona']) as String? ?? 'Partner';
-              
-              // Phase 77: Pivot Sync for Dialogues - Use syncSubject (File Name) if available
-              // Find existing group by syncSubject (Stable key) or title
-              final existingGroup = await txn.query(
-                'dialogue_groups',
-                where: '(title = ? OR note = ?) AND user_id = ?', // Leveraging 'note' for syncKey storage lookup if needed, but for now title/subject
-                whereArgs: [syncSubject, syncSubject, userId],
-                limit: 1,
-              );
-
-              String? dId;
-              if (existingGroup.isNotEmpty) {
-                dId = existingGroup.first['id'] as String;
-                lastDialogueId = dId;
-                print('[DB] Smart Sync: Found existing dialogue group "$dTitle" (ID: $dId)');
-              } else {
-                // Generate new ID if not found
-                dId = '${DateTime.now().millisecondsSinceEpoch}_$importedCount';
-                lastDialogueId = dId;
-
-                await insertDialogueGroup(
-                  id: dId,
-                  userId: userId, 
-                  title: dTitle,
-                  persona: dPersona,
-                  note: syncSubject, // Store syncSubject (File Name) in note field for stable linking
-                  createdAt: fileCreatedAt,
-                  txn: txn,
-                );
-              }
-
-              // Phase 66/75.9: Insert or Link Participants
-              final dParticipants = dMap['participants'];
-              final Map<String, String> nameToIdMap = {}; 
-              
-              // Load existing participants for matching
-              final existingParticipants = await txn.query(
-                'dialogue_participants',
-                where: 'dialogue_id = ?',
-                whereArgs: [dId],
-              );
-              final Map<String, String> existingNameToId = {
-                for (var p in existingParticipants) (p['name'] as String): (p['id'] as String)
-              };
-
-              if (dParticipants is List && dParticipants.isNotEmpty) {
-                for (var pRef in dParticipants) {
-                  Map<String, dynamic>? pData;
-                  if (pRef is String) {
-                    pData = participantMap[pRef];
-                  } else if (pRef is Map<String, dynamic>) {
-                    pData = pRef;
-                  }
-                  
-                  if (pData != null) {
-                    final pName = pData['name'] ?? 'Unknown';
-                    
-                    if (existingNameToId.containsKey(pName)) {
-                      nameToIdMap[pName] = existingNameToId[pName]!;
-                      // Optionally update metadata if new file has more info
-                      await txn.update('dialogue_participants', {
-                        if (pData['gender'] != null) 'gender': pData['gender'],
-                        if (pData['lang_code'] != null) 'lang_code': pData['lang_code'],
-                        if (pData['role'] != null) 'role': pData['role'],
-                      }, where: 'id = ?', whereArgs: [existingNameToId[pName]]);
-                    } else {
-                      final pId = const Uuid().v4();
-                      nameToIdMap[pName] = pId;
-                      await txn.insert('dialogue_participants', {
-                        'id': pId,
-                        'dialogue_id': dId,
-                        'name': pName,
-                        'role': pData['role'] ?? 'user',
-                        'gender': pData['gender'],
-                        'lang_code': pData['lang_code'],
-                        'created_at': DateTime.now().toIso8601String(),
-                      });
-                    }
-                  }
-                }
-              } else {
-                // Phase 75.9: Fallback for missing participants - Auto-create from Persona
-                if (!existingNameToId.containsKey(dPersona)) {
-                  final pId = const Uuid().v4();
-                  nameToIdMap[dPersona] = pId;
-                  await txn.insert('dialogue_participants', {
-                    'id': pId,
-                    'dialogue_id': dId,
-                    'name': dPersona,
-                    'role': 'ai',
-                    'gender': 'female', // Default to female for AI if unknown
-                    'lang_code': targetLang, // Assume AI speaks target language
-                    'created_at': DateTime.now().toIso8601String(),
-                  });
-                } else {
-                  nameToIdMap[dPersona] = existingNameToId[dPersona]!;
-                }
-
-                // Also ensure a 'User' participant exists for legacy compatibility
-                const uName = 'User';
-                if (!existingNameToId.containsKey(uName) && !nameToIdMap.containsKey(uName)) {
-                  final uId = const Uuid().v4();
-                  nameToIdMap[uName] = uId;
-                  await txn.insert('dialogue_participants', {
-                    'id': uId,
-                    'dialogue_id': dId,
-                    'name': uName,
-                    'role': 'user',
-                    'gender': 'male',
-                    'lang_code': sourceLang,
-                    'created_at': DateTime.now().toIso8601String(),
-                  });
-                } else if (existingNameToId.containsKey(uName)) {
-                  nameToIdMap[uName] = existingNameToId[uName]!;
-                }
-              }
-
-              final messages = dMap['messages'] as List? ?? [];
-              totalMessages += messages.length;
-
-              for (var j = 0; j < messages.length; j++) {
-                try {
-                  final msg = messages[j] as Map<String, dynamic>;
-                  final sText = msg['source_text'] as String?;
-                  final tText = msg['target_text'] as String?;
-                  
-                  String speakerName = 'Unknown';
-                  String? participantId;
-                  
-                  if (msg['speaker'] is String) {
-                    speakerName = msg['speaker'];
-                    if (participantMap.containsKey(speakerName)) {
-                      speakerName = participantMap[speakerName]!['name'];
-                    }
-                    participantId = nameToIdMap[speakerName];
-                  }
-
-                  // If only one text provided, treat it as source
-                  final primaryText = sText ?? tText;
-                  if (primaryText == null || primaryText.trim().isEmpty) {
-                    skippedCount++;
-                    continue;
-                  }
-
-                  // Phase 75.9: Smart Sync - Find existing message by sequence_order
-                  final existingMessage = await txn.query(
-                    'chat_messages',
-                    where: 'dialogue_id = ? AND sequence_order = ?',
-                    whereArgs: [dId, j],
-                    limit: 1,
-                  );
-
-                  int groupId;
-                  if (existingMessage.isNotEmpty) {
-                    groupId = existingMessage.first['group_id'] as int;
-                    // Add new language text to existing unified record group
-                    await _addLanguageToUnifiedRecord(
-                      groupId: groupId,
-                      text: primaryText,
-                      lang: (sText != null) ? sourceLang : targetLang,
-                      type: msg['type'] as String? ?? 'sentence',
-                      pos: msg['pos'] as String?,
-                      formType: (msg['form_type'] ?? msg['formType']) as String?,
-                      style: msg['style'] as String?,
-                      root: msg['root'] as String?,
-                      note: (msg['note'] ?? msg['context']) as String?,
-                      txn: txn,
-                    );
-                    
-                    // Also handle target_text if provided (Smart Sync of translations)
-                    if (sText != null && tText != null && sText != tText) {
-                      await _addLanguageToUnifiedRecord(
-                        groupId: groupId,
-                        text: tText,
-                        lang: targetLang,
-                        type: msg['type'] as String? ?? 'sentence',
-                        txn: txn,
-                      );
-                    }
-                  } else {
-                    // Phase 97.8: Use a stable unique integer groupId for the dialogue message
-                    // Derived from dialogue ID hash + message sequence
-                    final msgGroupId = dId.hashCode + j;
-
-                    groupId = await saveUnifiedRecord(
-                      text: sText ?? tText!,
-                      lang: (sText != null) ? sourceLang : targetLang,
-                      translation: tText ?? sText!,
-                      targetLang: (tText != null) ? targetLang : sourceLang,
-                      type: msg['type'] as String? ?? 'sentence',
-                      pos: msg['pos'] as String?,
-                      formType: (msg['form_type'] ?? msg['formType']) as String?,
-                      style: msg['style'] as String?,
-                      root: msg['root'] as String?,
-                      note: (msg['note'] ?? msg['context']) as String?,
-                      syncSubject: syncSubject,
-                      tags: ['Dialogue', materialSubject, ...fileTags],
-                      txn: txn,
-                      groupId: msgGroupId, // Phase 97.8: Pass explicit stable ID
-                    );
-
-                    
-                    await txn.insert('chat_messages', {
-                      'dialogue_id': dId,
-                      'group_id': groupId,
-                      'speaker': speakerName,
-                      'participant_id': participantId,
-                      'sequence_order': j,
-                      'created_at': DateTime.now().toIso8601String(),
-                    });
-                  }
-                  
-                  importedCount++;
-                } catch (e) {
-                   errors.add('Dialogue $importedCount: $e');
-                   skippedCount++;
-                }
-              }
-            }
-
-            return {
-              'success': true,
-              'dialogue_id': lastDialogueId,
-              'imported': importedCount,
-              'skipped': skippedCount,
-              'total': totalMessages,
-              'errors': errors,
-            };
-         }
-
-         return {
-           'success': false,
-           'error': 'No entries or dialogues found in JSON',
-           'imported': 0,
-           'skipped': 0,
-           'total': 0,
-           'errors': ['Root keys "entries" or "dialogues" not found.'],
-         };
-      });
-      
-    } catch (e) {
-      print('[DB] Error importing JSON with metadata: $e');
-      return {
-        'success': false,
-        'imported': 0,
-        'skipped': 0,
-        'total': 0,
-        'errors': ['Failed to parse JSON: $e'],
-      };
-    }
-  }
-
-  
-  /// Get all study materials with type counts (Includes Dialogue Groups and Unique Tags as materials)
-  static Future<List<Map<String, dynamic>>> getStudyMaterials() async {
-    final db = await database;
-    
-    // 1. Get Regular Study Materials (Explicitly imported/created)
-    final materials = await db.rawQuery('''
-      SELECT m.*, 
-        COALESCE((SELECT COUNT(DISTINCT it.item_id) FROM item_tags it 
-         JOIN words w ON it.item_id = w.id AND it.item_type = 'word'
-         WHERE it.tag = m.subject), 0) as word_count,
-        COALESCE((SELECT COUNT(DISTINCT it.item_id) FROM item_tags it
-         JOIN sentences s ON it.item_id = s.id AND it.item_type = 'sentence'
-         WHERE it.tag = m.subject), 0) as sentence_count
-      FROM study_materials m 
-      GROUP BY m.subject
-      ORDER BY m.imported_at DESC
-    ''',
-    
-    // 2. Get Dialogue Groups
-    final dialogues = await db.rawQuery('''
-      SELECT d.*,
-        COALESCE((SELECT COUNT(DISTINCT it.item_id) FROM item_tags it 
-         JOIN words w ON it.item_id = w.id AND it.item_type = 'word'
-         WHERE it.tag = d.title), 0) as word_count,
-        COALESCE((SELECT COUNT(DISTINCT it.item_id) FROM item_tags it
-         JOIN sentences s ON it.item_id = s.id AND it.item_type = 'sentence'
-         WHERE it.tag = d.title), 0) as sentence_count
-      FROM dialogue_groups d
-      ORDER BY d.created_at DESC
-    ''');
-    
-    // 3. Discover Unique Tags that are NOT in materials or dialogues
-    // Phase 97.6: Strict filter to exclude tags that belong to items already covered by regular materials
-    // Also exclude common system patterns and internal keys.
-    final discoveredTags = await db.rawQuery('''
-      SELECT DISTINCT tag FROM item_tags 
-      WHERE tag NOT IN (SELECT subject FROM study_materials)
-        AND tag NOT IN (SELECT title FROM dialogue_groups)
-        AND tag != 'Dialogue'
-        AND tag NOT LIKE '%_1' ESCAPE '`'
-        AND tag NOT LIKE '%_json' ESCAPE '`'
-        -- Exclude tags that only exist on items that already have a material-subject tag
-        AND tag NOT IN (
-          SELECT it2.tag FROM item_tags it2
-          WHERE it2.item_id IN (
-            SELECT it3.item_id FROM item_tags it3 
-            JOIN study_materials sm ON it3.tag = sm.subject
-          )
-        )
-    ''');
-    
-    final List<Map<String, dynamic>> result = [];
-
-    // Add Basic folder by default (ID 0)
-    result.add({
-      'id': 0,
-      'subject': 'Basic',
-      'source': 'System',
-      'source_language': 'auto',
-      'target_language': 'auto',
-      'created_at': '',
-      'imported_at': '',
-      'word_count': 0, 
-      'sentence_count': 0,
-    });
-    
-    // Add Materials
-    for (var m in materials) {
-      if (m['subject'] == 'Basic') continue; // Avoid duplicate Basic
-      result.add(Map<String, dynamic>.from(m));
-    }
-    
-    // Add Dialogues
-    for (var d in dialogues) {
-      result.add({
-        'id': d['id'], // String UUID
-        'subject': d['title'] ?? 'Conversation',
-        'source': d['persona'] ?? 'AI Chat',
-        'source_language': 'auto', 
-        'target_language': 'auto',
-        'created_at': d['created_at'],
-        'imported_at': d['created_at'],
-        'location': d['location'],
-        'word_count': d['word_count'],
-        'sentence_count': d['sentence_count'],
-        'is_dialogue': 1,
-      });
-    }
-
-    // Add Discovered Tags
-    for (var t in discoveredTags) {
-      final tagName = t['tag'] as String;
-      if (tagName == 'Basic') continue; // Handled above
-      
-      // Count items for this tag
-      final wcRows = await db.rawQuery("SELECT COUNT(DISTINCT item_id) as count FROM item_tags WHERE tag = ? AND item_type = 'word'", [tagName]);
-      final scRows = await db.rawQuery("SELECT COUNT(DISTINCT item_id) as count FROM item_tags WHERE tag = ? AND item_type = 'sentence'", [tagName]);
-      
-      result.add({
-        'id': -(result.length + 1000), // Unique negative ID for discovered tags
-        'subject': tagName,
-        'source': 'User Tag',
-        'source_language': 'auto',
-        'target_language': 'auto',
-        'created_at': '',
-        'imported_at': '',
-        'word_count': wcRows.first['count'],
-        'sentence_count': scRows.first['count'],
-      });
-    }
-    
-    print('[DB] Retrieved ${result.length} study items (Materials + Dialogues + Discovered Tags)');
-    return result;
-  }
-  
-  /// Get study material by ID
-  static Future<Map<String, dynamic>?> getStudyMaterialById(int materialId) async {
-    final db = await database;
-    
-    final materials = await db.query(
-      'study_materials',
-      where: 'id = ?',
-      whereArgs: [materialId],
-      limit: 1,
-    );
-    
-    if (materials.isEmpty) {
-      return null;
-    }
-    
-    return materials.first;
-  }
-
-
-  // === Dialogue Group Operations (Phase 11) ===
-
-  /// Insert or Update a dialogue group
-  /// Insert or Update a dialogue group
+  // --- Dialogue Repository Delegation ---
+  static Future<List<Map<String, dynamic>>> getDialogueGroups({String? userId}) => DialogueRepository.getGroups(userId: userId);
   static Future<void> insertDialogueGroup({
     required String id,
     String? userId,
     String? title,
     String? persona,
     String? location,
-    String? note, // Phase 62
+    String? note,
     required String createdAt,
-    Transaction? txn, 
-  }) async {
-    final executor = txn ?? await database;
-    await executor.insert(
-      'dialogue_groups',
-      {
-        'id': id,
-        'user_id': userId,
-        'title': title,
-        'persona': persona,
-        'location': location,
-        'note': note,
-        'created_at': createdAt,
-      },
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
-    print('[DB] Dialogue group saved: $id ($title, Location: $location)');
+    Transaction? txn,
+  }) => DialogueRepository.insertGroup(
+    id: id,
+    userId: userId,
+    title: title,
+    persona: persona,
+    location: location,
+    note: note,
+    createdAt: createdAt,
+    txn: txn,
+  );
+  static Future<void> deleteDialogueGroup(String id) => DialogueRepository.deleteGroup(id);
+  static Future<int> getDialogueCount() => DialogueRepository.getDialogueCount();
+
+  // --- Dialogue Participants Delegation ---
+  static Future<List<Map<String, dynamic>>> getParticipants(String dialogueId) => DialogueRepository.getParticipants(dialogueId);
+  static Future<void> insertParticipant(Map<String, dynamic> data) => DialogueRepository.insertParticipant(data);
+  static Future<void> updateParticipant(String id, Map<String, dynamic> data) => DialogueRepository.updateParticipant(id, data);
+  static Future<List<Map<String, dynamic>>> getRecordsByDialogueId(String dialogueId, {String? sourceLang, String? targetLang}) => DialogueRepository.getRecordsByDialogueId(dialogueId, sourceLang: sourceLang, targetLang: targetLang);
+
+  // --- Search & Autocomplete Delegation ---
+  static Future<List<Map<String, dynamic>>> searchAutocompleteText(String langCode, String text) async {
+    final wRes = await WordRepository.searchAutocompleteText(langCode, text);
+    final sRes = await SentenceRepository.searchAutocompleteText(langCode, text);
+    
+    // Deduplicate by text using a map
+    final Map<String, Map<String, dynamic>> unique = {};
+    for (var item in wRes) unique[item['text']] = item;
+    for (var item in sRes) unique[item['text']] = item;
+    
+    return unique.values.toList();
   }
 
-  /// Delete a dialogue group and its messages
-  static Future<void> deleteDialogueGroup(String id) async {
+  static Future<Map<String, dynamic>?> getTranslationIfExists(String lang, int groupId, String targetLang, {String? note}) async {
+    final wRes = await WordRepository.getTranslationIfExists(groupId, targetLang, note: note);
+    if (wRes != null) return wRes;
+    return await SentenceRepository.getTranslationIfExists(groupId, targetLang, note: note);
+  }
+
+  static Future<void> toggleMemorizedStatus(int id, String type, bool status) async {
+    if (type == 'word') {
+      await WordRepository.updateMemorizedStatus(id, status);
+    } else {
+      await SentenceRepository.updateMemorizedStatus(id, status);
+    }
+  }
+
+  static Future<List<Map<String, dynamic>>> searchByType(String query, String type, {String? langCode, int limit = 10}) async {
+    if (type == 'word') {
+      return await WordRepository.search(query, limit: limit);
+    } else {
+      return await SentenceRepository.search(query, limit: limit);
+    }
+  }
+
+  // --- Material Repository Delegation ---
+  static Future<List<Map<String, dynamic>>> getStudyMaterials() => MaterialRepository.getAll();
+  static Future<Map<String, dynamic>?> getStudyMaterialById(int id) => MaterialRepository.getById(id);
+
+  // --- Data Transfer Delegation ---
+  static Future<Map<String, dynamic>> importFromJsonWithMetadata(
+    String jsonContent, {
+    String? overrideSubject,
+    String? syncKey,
+    String? defaultType,
+    String? defaultSourceLang,
+    String? defaultTargetLang,
+    String? fileName,
+    String? userId,
+  }) => DataTransferService.importFromJsonWithMetadata(
+    jsonContent,
+    overrideSubject: overrideSubject,
+    syncKey: syncKey,
+    defaultType: defaultType,
+    defaultSourceLang: defaultSourceLang,
+    defaultTargetLang: defaultTargetLang,
+    fileName: fileName,
+    userId: userId,
+  );
+
+  static Future<Map<String, dynamic>> importFromJson(String content, {String? fileName}) {
+    return DataTransferService.importFromJsonWithMetadata(content, fileName: fileName);
+  }
+
+  static Future<String> exportMaterialToJson(int materialId) => DataTransferService.exportMaterialToJson(
+    materialId,
+    getRows: (subject) async => [],
+    getTags: (id, type) => TagRepository.getTagsForItem(id, type),
+  );
+
+  // --- Sync & Utility ---
+  static Future<List<int>> getUnsyncedGroupIds({int limit = 50}) async {
+    final db = await database;
+    final List<Map<String, dynamic>> result = await db.rawQuery('''
+      SELECT DISTINCT group_id FROM words WHERE is_synced = 0
+      UNION
+      SELECT DISTINCT group_id FROM sentences WHERE is_synced = 0
+      LIMIT ?
+    ''', [limit]);
+    return result.map((row) => row['group_id'] as int).toList();
+  }
+
+  static Future<Map<String, dynamic>?> fetchGroupSyncData(int groupId) async {
+    final db = await database;
+    final words = await db.query('words', where: 'group_id = ?', whereArgs: [groupId]);
+    final sentences = await db.query('sentences', where: 'group_id = ?', whereArgs: [groupId]);
+    return {
+      'words': words,
+      'sentences': sentences,
+    };
+  }
+
+  static Future<void> markGroupAsSynced(int groupId) async {
     final db = await database;
     await db.transaction((txn) async {
-      // 1. Delete Messages
-      await txn.delete(
-        'chat_messages',
-        where: 'dialogue_id = ?',
-        whereArgs: [id],
-      );
-
-      // 2. Delete Participants (Phase 75.6)
-      await txn.delete(
-        'dialogue_participants',
-        where: 'dialogue_id = ?',
-        whereArgs: [id],
-      );
-      
-      // 3. Delete Group
-      await txn.delete(
-        'dialogue_groups',
-        where: 'id = ?',
-        whereArgs: [id],
-      );
+      await txn.update('words', {'is_synced': 1}, where: 'group_id = ?', whereArgs: [groupId]);
+      await txn.update('sentences', {'is_synced': 1}, where: 'group_id = ?', whereArgs: [groupId]);
     });
   }
 
-  /// Get total count of dialogues (for Auto-Naming "Chat N")
-  static Future<int> getDialogueCount() async {
-    final db = await database;
-    final result = await db.rawQuery('SELECT COUNT(*) as count FROM dialogue_groups');
-    return Sqflite.firstIntValue(result) ?? 0;
-  }
-
-  // ==========================================
-  // Phase 70: Participant Management
-  // ==========================================
-  
-  static Future<void> insertParticipant(Map<String, dynamic> data) async {
-    final db = await database;
-    await db.insert(
-      'dialogue_participants',
-      data,
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
-  }
-
-  static Future<void> updateParticipant(String id, Map<String, dynamic> data) async {
-    final db = await database;
-    await db.update(
-      'dialogue_participants',
-      data,
-      where: 'id = ?',
-      whereArgs: [id],
-    );
-  }
-
-  static Future<List<Map<String, dynamic>>> getParticipants(String dialogueId) async {
-    final db = await database;
-    return await db.query(
-      'dialogue_participants',
-      where: 'dialogue_id = ?',
-      orderBy: 'created_at ASC',
-      whereArgs: [dialogueId],
-    );
-  }
-
-  /// Get all dialogue groups for a user
-  static Future<List<Map<String, dynamic>>> getDialogueGroups({String? userId}) async {
-    final db = await database;
-    if (userId != null && userId.isNotEmpty) {
-      return await db.query(
-        'dialogue_groups', 
-        where: 'user_id = ? OR user_id IS NULL OR user_id = ?',
-        whereArgs: [userId, 'anonymous'],
-        orderBy: 'created_at DESC'
-      );
-    }
-    return await db.query('dialogue_groups', orderBy: 'created_at DESC');
-  }
-
-  /// Update dialogue title
-  static Future<void> updateLocalDialogueTitle(String id, String title) async {
-    final db = await database;
-    await db.update(
-      'dialogue_groups',
-      {'title': title},
-      where: 'id = ?',
-      whereArgs: [id],
-    );
-  }
-
-  /// Get all translations for a specific dialogue
-  static Future<List<Map<String, dynamic>>> getRecordsByDialogueId(
-    String dialogueId, {
-    String? sourceLang,
-    String? targetLang,
-  }) async {
-    final db = await database;
-    
-    // Join chat_messages with dialogue_participants to get metadata (gender, lang_code)
-    final List<Map<String, dynamic>> messages = await db.rawQuery('''
-      SELECT m.*, p.gender, p.lang_code as participant_lang, p.name as p_name
-      FROM chat_messages m
-      LEFT JOIN dialogue_participants p ON m.participant_id = p.id
-      WHERE m.dialogue_id = ?
-      ORDER BY m.sequence_order ASC
-    ''', [dialogueId]);
-    
-    List<Map<String, dynamic>> results = [];
-    
-    for (var msg in messages) {
-      final groupId = msg['group_id'] as int;
-      
-      // Phase 75.9: Dynamic Language Extraction
-      // Get all sentences in this group
-      final groupSentences = await db.query(
-        'sentences',
-        where: 'group_id = ?',
-        whereArgs: [groupId],
-      );
-      
-      if (groupSentences.isNotEmpty) {
-        Map<String, dynamic>? source;
-        Map<String, dynamic>? target;
-
-        // If languages are specified, find exact matches
-        if (sourceLang != null) {
-          source = groupSentences.where((s) => s['lang_code'] == sourceLang).firstOrNull;
-        }
-        if (targetLang != null) {
-          target = groupSentences.where((s) => s['lang_code'] == targetLang).firstOrNull;
-        }
-
-        // Fallback logic
-        source ??= groupSentences.first;
-        target ??= groupSentences.length > 1 ? (groupSentences[1]['lang_code'] != source['lang_code'] ? groupSentences[1] : groupSentences.firstWhere((s) => s['id'] != source!['id'], orElse: () => groupSentences.first)) : source;
-
-        results.add({
-          'id': msg['id'],
-          'group_id': groupId,
-          'source_text': source['text'],
-          'target_text': target['text'],
-          'source_lang': source['lang_code'],
-          'target_lang': target['lang_code'],
-          'speaker': msg['speaker'] ?? msg['p_name'],
-          'participant_id': msg['participant_id'],
-          'gender': msg['gender'], 
-          'participant_lang': msg['participant_lang'], 
-          'sequence_order': msg['sequence_order'],
-          'created_at': msg['created_at'],
-          'note': source['note'] ?? target['note'],
-        });
-      }
-    }
-    
-    return results;
-  }
-  // ==========================================
-  // Background Sync Helpers
-  // ==========================================
-  
   static String getLanguageFullName(String code) {
-    final Map<String, String> map = {
-      'ko': 'Korean',
-      'en': 'English',
-      'ja': 'Japanese',
-      'zh': 'Chinese',
-      'es': 'Spanish',
-      'fr': 'French',
-      'de': 'German',
-    };
-    return map[code] ?? code;
-  }
-  static String _mapLanguageToCode(String name) {
-    if (name.isEmpty) return name;
-    
-    final lowerName = name.toLowerCase().trim();
-
-    switch (lowerName) {
-      case 'korean':
-      case '한국어':
-        return 'ko';
-      case 'english':
-      case '영어':
-        return 'en';
-      case 'japanese':
-      case '일본어':
-        return 'ja';
-      case 'chinese':
-      case '중국어':
-        return 'zh';
-      case 'simplified chinese':
-      case '중국어(간체)':
-        return 'zh-CN';
-      case 'traditional chinese':
-      case '중국어(번체)':
-        return 'zh-TW';
-      case 'spanish':
-      case '스페인어':
-        return 'es';
-      case 'french':
-      case '프랑스어':
-        return 'fr';
-      case 'german':
-      case '독일어':
-        return 'de';
-      case 'russian':
-      case '러시아어':
-        return 'ru';
-      case 'vietnamese':
-      case '베트남어':
-        return 'vi';
-      case 'indonesian':
-      case '인도네시아어':
-        return 'id';
-      case 'thai':
-      case '태국어':
-        return 'th';
-      case 'portuguese':
-      case '포르투갈어':
-        return 'pt';
-      case 'italian':
-      case '이탈리아어':
-        return 'it';
-      case 'turkish':
-      case '터키어':
-        return 'tr';
-      case 'arabic':
-      case '아랍어':
-        return 'ar';
-      case 'hindi':
-      case '힌디어':
-        return 'hi';
-      case 'bengali':
-      case '뱅골어':
-        return 'bn';
-      case 'urdu':
-      case '우르두어':
-        return 'ur';
-      case 'malay':
-      case '말레이어':
-        return 'ms';
-      case 'filipino':
-      case '필리핀어':
-        return 'fil';
-      case 'polish':
-      case '폴란드어':
-        return 'pl';
-      case 'ukrainian':
-      case '우크라이나어':
-        return 'uk';
-      case 'dutch':
-      case '네덜란드어':
-        return 'nl';
-      case 'swedish':
-      case '스웨덴어':
-        return 'sv';
-      case 'danish':
-      case '덴마크어':
-        return 'da';
-      case 'finnish':
-      case '핀란드어':
-        return 'fi';
-      case 'norwegian':
-      case '노르웨이어':
-        return 'no';
-      case 'hungarian':
-      case '헝가리어':
-        return 'hu';
-      case 'czech':
-      case '체코어':
-        return 'cs';
-      case 'romanian':
-      case '루마니아어':
-        return 'ro';
-      case 'greek':
-      case '그리스어':
-        return 'el';
-      case 'hebrew':
-      case '히브리어':
-        return 'he';
-      case 'persian':
-      case '페르시아어':
-        return 'fa';
-      case 'tamil':
-      case '타밀어':
-        return 'ta';
-      case 'telugu':
-      case '텔루구어':
-        return 'te';
-      case 'marathi':
-      case '마라티어':
-        return 'mr';
-      case 'gujarati':
-      case '구자라트어':
-        return 'gu';
-      case 'kannada':
-      case '칸나다어':
-        return 'kn';
-      case 'malayalam':
-      case '말라얄람어':
-        return 'ml';
-      case 'punjabi':
-      case '펀자브어':
-        return 'pa';
-      case 'swahili':
-      case '스와힐리어':
-        return 'sw';
-      case 'afrikaans':
-      case '아프리칸스어':
-        return 'af';
-      default:
-        return name.trim(); // Return original input (trimmed) to preserve case for codes like zh-CN
+    switch (code) {
+      case 'ko': return 'Korean';
+      case 'en': return 'English';
+      case 'ja': return 'Japanese';
+      default: return code;
     }
   }
 
-  /// 통합 테이블에 단어/문장 및 번역 연결 저장
+  static String mapLanguageToCode(String name) {
+    final n = name.toLowerCase();
+    if (n.contains('kor')) return 'ko';
+    if (n.contains('eng')) return 'en';
+    if (n.contains('jap')) return 'ja';
+    return 'en';
+  }
+
+  // --- Cache Delegation ---
+  static Future<void> cacheTranslation(String key, String trans) async {
+    final db = await database;
+    await db.insert('translation_cache', {'cache_key': key, 'translation': trans, 'timestamp': DateTime.now().millisecondsSinceEpoch}, conflictAlgorithm: ConflictAlgorithm.replace);
+  }
+
+  static Future<String?> getCachedTranslation(String key) async {
+    final db = await database;
+    final res = await db.query('translation_cache', where: 'cache_key = ?', whereArgs: [key]);
+    return res.isNotEmpty ? res.first['translation'] as String : null;
+  }
+
+  // --- Unified Record ---
   static Future<int> saveUnifiedRecord({
     required String text,
     required String lang,
@@ -1628,421 +203,35 @@ class DatabaseService {
     String? note,
     List<String>? tags,
     Transaction? txn,
-    // Phase 77/79: Pivot Strategy (Smart Sync) - internal stable key
     String? syncSubject,
     int? sequenceOrder,
-    int? groupId, // Phase 97.8: Explicit integer ID support
+    int? groupId,
   }) async {
-    final executor = txn ?? await database;
-    final table = type == 'word' ? 'words' : 'sentences';
-    
-    // Phase 97.8: Determine final integer Group ID
-    int effectiveGroupId = DateTime.now().millisecondsSinceEpoch;
-    
-    if (groupId != null) {
-      effectiveGroupId = groupId;
-    } else if (syncSubject != null && sequenceOrder != null) {
-      // Check for existing group ID for this Subject + Sequence (from any language)
-      try {
-        final existing = await executor.rawQuery('''
-          SELECT w.group_id 
-          FROM item_tags t 
-          JOIN $table w ON t.item_id = w.id 
-          WHERE t.tag = ? 
-          ORDER BY w.created_at ASC 
-          LIMIT 1 OFFSET ?
-        ''', [syncSubject, sequenceOrder]);
-        
-        if (existing.isNotEmpty) {
-           final foundId = existing.first['group_id'] as int?;
-           if (foundId != null && foundId > 0) {
-             effectiveGroupId = foundId;
-           }
-        }
-      } catch (e) {
-        print('[DB] Pivot Sync Error: $e');
-      }
-    }
-
-    final timestamp = effectiveGroupId; // Phase 97.8: Use the uniquely determined integer group_id
-    final createdAt = DateTime.now().toIso8601String();
-    // final table = type == 'word' ? 'words' : 'sentences'; // Already defined above
-
-    // 1. Source 저장
-    final sourceId = await executor.insert(table, {
+    final timestamp = groupId ?? DateTime.now().millisecondsSinceEpoch;
+    final row = {
       'group_id': timestamp,
       'text': text,
       'lang_code': lang,
-      'pos': pos, // Added Phase 13
-      'form_type': formType, // Added Phase 13
-      'style': style,
-      'root': root, // Added Phase 13 (as TEXT)
+      'pos': pos,
       'note': note,
-      'created_at': createdAt,
-    }, conflictAlgorithm: ConflictAlgorithm.ignore);
+      'created_at': DateTime.now().toIso8601String(),
+    };
 
-    // 2. Target 저장
-    int targetId = 0;
-    if (translation.isNotEmpty && targetLang.isNotEmpty && targetLang != 'auto') {
-      targetId = await executor.insert(table, {
-        'group_id': timestamp,
-        'text': translation,
-        'lang_code': targetLang,
-        'created_at': createdAt,
-      }, conflictAlgorithm: ConflictAlgorithm.ignore);
+    int id;
+    if (type == 'word') {
+      row['form_type'] = formType;
+      row['root'] = root;
+      id = await WordRepository.insert(row, txn: txn);
+    } else {
+      row['style'] = style;
+      id = await SentenceRepository.insert(row, txn: txn);
     }
 
-    // 3. 태그 저장
-    if (tags != null && tags.isNotEmpty) {
-      final resolvedSourceId = sourceId > 0 
-          ? sourceId 
-          : await _getUnifiedIdStatic(executor, table, text, lang, note);
-      
-      int resolvedTargetId = targetId > 0 ? targetId : 0;
-      if (resolvedTargetId <= 0 && translation.isNotEmpty && targetLang.isNotEmpty && targetLang != 'auto') {
-        resolvedTargetId = await _getUnifiedIdStatic(executor, table, translation, targetLang, '');
-      }
-
-      for (var tag in tags) {
-        if (resolvedSourceId > 0) {
-          await executor.insert('item_tags', {
-            'item_id': resolvedSourceId,
-            'item_type': type,
-            'tag': tag,
-          }, conflictAlgorithm: ConflictAlgorithm.ignore);
-        }
-        
-        if (resolvedTargetId > 0) {
-          await executor.insert('item_tags', {
-            'item_id': resolvedTargetId,
-            'item_type': type,
-            'tag': tag,
-          }, conflictAlgorithm: ConflictAlgorithm.ignore);
-        }
+    if (tags != null) {
+      for (var t in tags) {
+        await TagRepository.addTag(id, type, t, txn: txn);
       }
     }
     return timestamp;
   }
-
-  static Future<int> _getUnifiedIdStatic(dynamic db, String table, String text, String lang, String? note) async {
-    final results = await db.query(table, columns: ['id'], 
-        where: 'text = ? AND lang_code = ? AND IFNULL(note, "") = ?', 
-        whereArgs: [text, lang, note ?? ""]);
-    if (results.isNotEmpty) return results.first['id'] as int;
-    return 0;
-  }
-
-  /// Autocomplete Support: 단어 검색
-  static Future<List<String>> searchWords(String query, {int limit = 10}) async {
-    if (query.trim().isEmpty) return [];
-    
-    final db = await database;
-    final results = await db.query(
-      'words',
-      columns: ['text'],
-      where: 'text LIKE ?',
-      whereArgs: ['$query%'], // Prefix search
-      limit: limit,
-      orderBy: 'text ASC',
-      distinct: true,
-    );
-    
-    return results.map((row) => row['text'] as String).toList();
-  }
-
-
-  // --- Search & Memorized Status ---
-
-  /// Search by Type (Refined for Phase 21 & Phase 79)
-  /// type: 'word' or 'sentence'
-  static Future<List<Map<String, String>>> searchByType(String query, String type, {String? langCode, int limit = 10}) async {
-    if (query.trim().isEmpty) return [];
-
-    final db = await database;
-    final String table = type == 'word' ? 'words' : 'sentences';
-    
-    // WHERE logic: basic text search + optional language filter
-    String whereClause = 'text LIKE ?';
-    List<dynamic> whereArgs = ['$query%'];
-    
-    if (langCode != null && langCode.isNotEmpty) {
-      whereClause += ' AND lang_code = ?';
-      whereArgs.add(langCode);
-    }
-
-    final results = await db.query(
-      table,
-      columns: ['text', 'note'], // 주석 정보도 함께 가져옴
-      where: whereClause,
-      whereArgs: whereArgs,
-      limit: limit,
-      orderBy: 'text ASC',
-      distinct: true,
-    );
-    
-    return results.map((row) => {
-      'text': row['text'] as String,
-      'note': (row['note'] as String?) ?? '', // 주석 정보 추가
-      'type': type,
-    }).toList();
-  }
-
-  /// Phase 77: Pivot Search (Find Group ID by Text)
-  /// word: text to search (e.g. "Apple")
-  /// lang: language (e.g. "en")
-  static Future<int?> findGroupIdByText(String text, String lang) async {
-    final db = await database;
-    // Check 'words' table first (most likely)
-    final words = await db.query(
-      'words',
-      columns: ['group_id'],
-      where: 'text = ? AND lang_code = ?',
-      whereArgs: [text, lang],
-      limit: 1,
-    );
-    if (words.isNotEmpty) return words.first['group_id'] as int;
-    
-    // Check 'sentences'
-    final sentences = await db.query(
-      'sentences',
-      columns: ['group_id'],
-      where: 'text = ? AND lang_code = ?',
-      whereArgs: [text, lang],
-      limit: 1,
-    );
-    if (sentences.isNotEmpty) return sentences.first['group_id'] as int;
-    
-    return null;
-  }
-  /// Toggle Memorized Status (is_memorized)
-  static Future<void> toggleMemorizedStatus(int id, String type, bool status) async {
-    final db = await database;
-    final String table = type == 'word' ? 'words' : 'sentences';
-    
-    await db.update(
-      table, 
-      {'is_memorized': status ? 1 : 0},
-      where: 'id = ?',
-      whereArgs: [id]
-    );
-  }
-
-  /// Toggle Memorized Status by Group ID (Updates both source and target)
-  static Future<void> toggleMemorizedStatusByGroup(int groupId, String type, bool status) async {
-    final db = await database;
-    final String table = type == 'word' ? 'words' : 'sentences';
-    
-    await db.update(
-      table, 
-      {'is_memorized': status ? 1 : 0},
-      where: 'group_id = ?',
-      whereArgs: [groupId]
-    );
-    print('[DB] Toggled is_memorized to $status for group $groupId in table $table');
-  }
-
-  /// Phase 75.9: 통합 테이블에 특정 언어 버전 추가
-  static Future<void> _addLanguageToUnifiedRecord({
-    required int groupId,
-    required String text,
-    required String lang,
-    required String type,
-    String? pos,
-    String? formType,
-    String? style,
-    String? root,
-    String? note,
-    Transaction? txn,
-  }) async {
-    final executor = txn ?? await database;
-    final table = type == 'word' ? 'words' : 'sentences';
-    final createdAt = DateTime.now().toIso8601String();
-
-    // Check if lang already exists for this group
-    final existing = await executor.query(
-      table,
-      where: 'group_id = ? AND lang_code = ?',
-      whereArgs: [groupId, lang],
-      limit: 1,
-    );
-
-    if (existing.isEmpty) {
-      await executor.insert(table, {
-        'group_id': groupId,
-        'text': text,
-        'lang_code': lang,
-        'pos': pos,
-        'form_type': formType,
-        'style': style,
-        'root': root,
-        'note': note,
-        'created_at': createdAt,
-      });
-      print('[DB] Smart Sync: Added "$lang" version to group $groupId');
-    }
-  }
-
-  /// Phase 76.8: 모든 고유 태그 조회
-  static Future<List<String>> getAllTags() async {
-    final db = await database;
-    try {
-      final results = await db.rawQuery('SELECT DISTINCT tag FROM item_tags ORDER BY tag ASC');
-      return results.map((row) => row['tag'] as String).toList();
-    } catch (e) {
-      print('[DB] Error fetching tags: $e');
-      return [];
-    }
-  }
-
-  /// Phase 79: 특정 언어와 연관된 고유 태그 조회 (UI 리뉴얼용)
-  static Future<List<String>> getAllTagsForLanguage(String langCode) async {
-    final db = await database;
-    try {
-      // words와 sentences 테이블 모두에서 해당 언어의 아이템에 붙은 태그들을 가져옴
-      final results = await db.rawQuery('''
-        SELECT DISTINCT it.tag 
-        FROM item_tags it
-        LEFT JOIN words w ON it.item_id = w.id AND it.item_type = 'word'
-        LEFT JOIN sentences s ON it.item_id = s.id AND it.item_type = 'sentence'
-        WHERE w.lang_code = ? OR s.lang_code = ?
-        ORDER BY it.tag ASC
-      ''', [langCode, langCode]);
-      return results.map((row) => row['tag'] as String).toList();
-    } catch (e) {
-      print('[DB] Error fetching language filtered tags: $e');
-      return [];
-    }
-  }
-
-  // ==========================================
-  // Phase 81.1: Unified Schema Sync Support
-  // ==========================================
-
-  /// 동기화되지 않은 아이템(words, sentences)이 있는 고유 group_id 목록 조회
-  static Future<List<int>> getUnsyncedGroupIds({int limit = 50}) async {
-    final db = await database;
-    try {
-      final results = await db.rawQuery('''
-        SELECT DISTINCT group_id FROM words WHERE is_synced = 0
-        UNION
-        SELECT DISTINCT group_id FROM sentences WHERE is_synced = 0
-        LIMIT ?
-      ''', [limit]);
-      
-      return results.map((row) => row['group_id'] as int).toList();
-    } catch (e) {
-      print('[DB] Error getting unsynced group IDs: $e');
-      return [];
-    }
-  }
-
-  /// 특정 group_id에 속한 모든 데이터(words, sentences, tags) 조회
-  static Future<Map<String, dynamic>?> fetchGroupSyncData(int groupId) async {
-    final db = await database;
-    try {
-      // 1. Words 조회
-      final words = await db.query('words', where: 'group_id = ?', whereArgs: [groupId]);
-      // 2. Sentences 조회
-      final sentences = await db.query('sentences', where: 'group_id = ?', whereArgs: [groupId]);
-      
-      if (words.isEmpty && sentences.isEmpty) return null;
-
-      // 3. Tags 조회 (동기화 단위인 그룹의 태그 수집)
-      // item_id가 여러 개일 수 있으므로 group 내 첫 번째 아이템 기반으로 태그 수집 (통상 그룹 내 공유)
-      final firstItemId = words.isNotEmpty ? words.first['id'] : sentences.first['id'];
-      final firstType = words.isNotEmpty ? 'word' : 'sentence';
-
-      final tagResults = await db.query(
-        'item_tags', 
-        columns: ['tag'], 
-        where: 'item_id = ? AND item_type = ?', 
-        whereArgs: [firstItemId, firstType]
-      );
-      final tags = tagResults.map((row) => row['tag'] as String).toList();
-
-      return {
-        'group_id': groupId,
-        'words': words,
-        'sentences': sentences,
-        'tags': tags,
-      };
-    } catch (e) {
-      print('[DB] Error fetching group sync data: $e');
-      return null;
-    }
-  }
-
-  /// 특정 그룹 내의 모든 아이템을 동기화 완료 상태로 업데이트
-  static Future<void> markGroupAsSynced(int groupId) async {
-    final db = await database;
-    try {
-      await db.transaction((txn) async {
-        await txn.update('words', {'is_synced': 1}, where: 'group_id = ?', whereArgs: [groupId]);
-        await txn.update('sentences', {'is_synced': 1}, where: 'group_id = ?', whereArgs: [groupId]);
-      });
-      print('[DB] Group $groupId marked as synced');
-    } catch (e) {
-      print('[DB] Error marking group as synced: $e');
-    }
-  /// Phase 97.8: Export Material to JSON (for sharing/manual sync)
-  static Future<String> exportMaterialToJson(int materialId) async {
-    final db = await database;
-    
-    // 1. Get Material Metadata
-    final materialRes = await db.query('study_materials', where: 'id = ?', whereArgs: [materialId]);
-    if (materialRes.isEmpty) return '{}';
-    final material = materialRes.first;
-    
-    // 2. Get Records (Joined with tags)
-    final subject = material['subject'] as String;
-    
-    final List<Map<String, dynamic>> sourceRows = await db.rawQuery('''
-      SELECT w.*, 'word' as source_table FROM words w
-      JOIN item_tags t ON w.id = t.item_id AND t.item_type = 'word'
-      WHERE t.tag = ?
-      UNION ALL
-      SELECT s.*, 'sentence' as source_table FROM sentences s
-      JOIN item_tags t ON s.id = t.item_id AND t.item_type = 'sentence'
-      WHERE t.tag = ?
-      ORDER BY created_at ASC
-    ''', [subject, subject]);
-
-    // 3. Prepare Entries
-    List<Map<String, dynamic>> entries = [];
-    
-    Map<int, List<Map<String, dynamic>>> grouped = {};
-    for (var row in sourceRows) {
-      final gId = row['group_id'] as int;
-      grouped.putIfAbsent(gId, () => []).add(row);
-    }
-    
-    for (var gId in grouped.keys) {
-      final rows = grouped[gId]!;
-      final source = rows.first;
-      final translations = rows.skip(1).toList();
-      
-      final tagRes = await db.query('item_tags', where: 'item_id = ? AND item_type = ?', whereArgs: [source['id'], source['source_table']]); 
-      final tags = tagRes.map((t) => t['tag'] as String).where((t) => t != subject).toList();
-
-      entries.add({
-        'text': source['text'],
-        'translation': translations.isNotEmpty ? translations.first['text'] : '',
-        'type': source['source_table'],
-        'pos': source['pos'],
-        'note': source['note'],
-        'tags': tags,
-      });
-    }
-
-    final Map<String, dynamic> output = {
-      'subject': subject,
-      'source_language': material['source_language'],
-      'target_language': material['target_language'],
-      'created_at': material['created_at'],
-      'entries': entries,
-    };
-
-    return jsonEncode(output);
-  }
 }
-
