@@ -1148,14 +1148,23 @@ class DatabaseService {
     ''');
     
     // 3. Discover Unique Tags that are NOT in materials or dialogues
-    // Phase 97: Refine tag discovery to exclude system-internal keys or common non-subject tags
+    // Phase 97.6: Strict filter to exclude tags that belong to items already covered by regular materials
+    // Also exclude common system patterns and internal keys.
     final discoveredTags = await db.rawQuery('''
       SELECT DISTINCT tag FROM item_tags 
       WHERE tag NOT IN (SELECT subject FROM study_materials)
         AND tag NOT IN (SELECT title FROM dialogue_groups)
         AND tag != 'Dialogue'
-        AND tag NOT LIKE '%_1' -- Common internal sync keys like nouns_1, verbs_1
-        AND tag NOT LIKE '%_json'
+        AND tag NOT LIKE '%_1' ESCAPE '`'
+        AND tag NOT LIKE '%_json' ESCAPE '`'
+        -- Exclude tags that only exist on items that already have a material-subject tag
+        AND tag NOT IN (
+          SELECT it2.tag FROM item_tags it2
+          WHERE it2.item_id IN (
+            SELECT it3.item_id FROM item_tags it3 
+            JOIN study_materials sm ON it3.tag = sm.subject
+          )
+        )
     ''');
     
     final List<Map<String, dynamic>> result = [];

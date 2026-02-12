@@ -300,9 +300,11 @@ extension AppStateAuth on AppState {
 
       final syncKey = sPath.split('/').last.replaceAll('.json', '');
 
+      int? localMaterialId;
+
       _statusMessage = 'L10N:importing';
       notify();
-      await DatabaseService.importFromJsonWithMetadata(
+      final sResult = await DatabaseService.importFromJsonWithMetadata(
         sJson, 
         fileName: 'remote_${mId}_$_sourceLang.json',
         overrideSubject: mName, 
@@ -310,6 +312,9 @@ extension AppStateAuth on AppState {
         userId: 'user', 
         defaultType: type,
       );
+      if (sResult['success'] == true) {
+        localMaterialId = sResult['material_id'] as int?;
+      }
 
       await DatabaseService.importFromJsonWithMetadata(
         tJson, 
@@ -340,18 +345,11 @@ extension AppStateAuth on AppState {
       _statusMessage = 'L10N:statusImportSuccess|$mName';
       notify();
 
-      // Phase 97: Ensure material_id is int and prioritize the one from DB results
-      int? finalMaterialId;
-      if (material['material_id'] is int) {
-        finalMaterialId = material['material_id'];
-      } else if (material['id'] is int) {
-        finalMaterialId = material['id'];
-      }
-      
+      // Phase 97.6: Return the ACTUAL local DB ID captured during import
       return {
         'success': true, 
-        'material_id': finalMaterialId,
-        'dialogue_id': syncKey // For Dialogue mode, syncKey is used as dId
+        'material_id': localMaterialId,
+        'dialogue_id': syncKey
       };
     } catch (e) {
       _statusMessage = 'L10N:statusImportFailed|$e';
