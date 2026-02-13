@@ -233,6 +233,10 @@ class AppLocalizationsOr extends AppLocalizations {
   }
 
   @override
+  String get importDuplicateTitleError =>
+      '동일한 제목의 자료가 이미 존재합니다. 제목을 변경한 후 다시 시도해주세요.';
+
+  @override
   String get selectStudyMaterial => 'ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ଚୟନ କରନ୍ତୁ';
 
   @override
@@ -529,6 +533,9 @@ class AppLocalizationsOr extends AppLocalizations {
   @override
   String get dialogueQuestDesc =>
       'ପରିସ୍ଥିତି ଡ୍ରାମା ମାଧ୍ୟମରେ କଥାବାର୍ତ୍ତା ଅଭ୍ୟାସ କରନ୍ତୁ। ଏକ ଉପଯୁକ୍ତ ଉତ୍ତର ଚୟନ କରନ୍ତୁ ଏବଂ କୁହନ୍ତୁ।';
+
+  @override
+  String get translation => '번역';
 
   @override
   String get labelType => 'ପ୍ରକାର:';

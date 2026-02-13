@@ -268,7 +268,8 @@ extension AppStateMode2 on AppState {
       }
       
       query += 'GROUP BY t.group_id ';
-      query += 'ORDER BY t.created_at DESC ';
+      // Phase 115: Order by material date (Newest first) THEN original insertion order (JSON order)
+      query += 'ORDER BY t.created_at DESC, t.id ASC ';
 
       if (_filterLimit != null) {
         query += 'LIMIT ? ';

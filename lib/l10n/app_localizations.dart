@@ -636,6 +636,12 @@ abstract class AppLocalizations {
   /// **'파일 불러오기 실패:\\n{error}'**
   String importErrorMessage(String error);
 
+  /// No description provided for @importDuplicateTitleError.
+  ///
+  /// In ko, this message translates to:
+  /// **'동일한 제목의 자료가 이미 존재합니다. 제목을 변경한 후 다시 시도해주세요.'**
+  String get importDuplicateTitleError;
+
   /// Study material selector label
   ///
   /// In ko, this message translates to:
@@ -1169,6 +1175,12 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'상황극을 통해 대화 연습을 하세요. 적절한 답변을 선택하고 말해보세요.'**
   String get dialogueQuestDesc;
+
+  /// Label for translation toggle
+  ///
+  /// In ko, this message translates to:
+  /// **'번역'**
+  String get translation;
 
   /// No description provided for @labelType.
   ///

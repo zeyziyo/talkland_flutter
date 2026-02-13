@@ -228,6 +228,10 @@ class AppLocalizationsAm extends AppLocalizations {
   }
 
   @override
+  String get importDuplicateTitleError =>
+      '동일한 제목의 자료가 이미 존재합니다. 제목을 변경한 후 다시 시도해주세요.';
+
+  @override
   String get selectStudyMaterial => 'የጥናት ቁሳቁስ ይምረጡ';
 
   @override
@@ -516,6 +520,9 @@ class AppLocalizationsAm extends AppLocalizations {
   @override
   String get dialogueQuestDesc =>
       'በድራማ በኩል የንግግር ልምምድ ያድርጉ። ተገቢውን መልስ ይምረጡ እና ይናገሩ።';
+
+  @override
+  String get translation => '번역';
 
   @override
   String get labelType => 'ዓይነት:';

@@ -102,6 +102,10 @@
   "@translate": {
     "description": "Translate button"
   },
+  "translation": "Traducción",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "listen": "Escuchar",
   "@listen": {
     "description": "Listen/TTS button"

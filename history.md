@@ -43,6 +43,12 @@
 - **Merging**: 소스/타겟 언어 파일의 고유 메타데이터(어근 등)가 병합 과정에서 유실되지 않고 각각의 행에 정확히 배분되도록 엔진을 고도화했습니다.
 - **Integrity**: 빈 문자열과 누락 필드를 정규화하여 앱의 고급 학습 기능(필터링, 그룹화)과의 100% 정합성을 Toxicology-style로 확보했습니다.
 
+### [2026-02-13] AI Chat Multi-Language & Acoustic Symmetry (Phase 118)
+- **Feature**: 대화 모드(Mode 4)에서 사용자와 AI 각각의 대화 언어를 독립적으로 지정할 수 있는 헤더 드롭다운을 추가했습니다.
+- **Toggle**: 각 메시지별로 번역(상대 언어)을 볼 수 있는 토글 스위치를 배치하여 학습 가독성을 높였습니다.
+- **Acoustic Symmetry**: 사용자의 핵심 요청인 "표시된 언어와 발음 억양의 일치"를 위해, 토글된 언어에 맞춰 TTS 로케일이 즉시 전환되도록 구현했습니다 (예: 영어 텍스트는 원어민 발음으로 재생).
+- **L10n**: KO, EN, ES, JA 4개 국어 지원 및 `flutter analyze` 무결성 검증을 완료했습니다.
+
 ### [2026-02-13] Pivot Sync Precision & Performance Optimization (Phase 105 ~ 108)
 - **UI/L10n**: 문체 배지(`Style Badge`)를 80개 언어 전체에 적용하고, Mode 2 카드에서 문체 정보를 시각적으로 확인할 수 있도록 개선 (Phase 105).
 - **Integrity**: 서버의 정식 그룹 ID(`Canonical ID`) 확인 및 로컬 임시 ID의 자동 재연결(`Relinking`) 로직을 구현하여 데이터 정합성 강화 (Phase 106).

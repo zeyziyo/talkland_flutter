@@ -32,6 +32,9 @@ class _ChatScreenState extends State<ChatScreen> {
   String? _lastSourceLang; // Phase 75.9
   String? _lastTargetLang; // Phase 75.9
 
+  // Phase 118: Individual translation visibility toggle state
+  // Key: sequence_order (int), Value: if translation is visible
+  final Map<int, bool> _showTranslationMap = {};
   @override
   void initState() {
     super.initState();
@@ -629,7 +632,7 @@ class _ChatScreenState extends State<ChatScreen> {
               itemCount: _messages.length,
               itemBuilder: (context, index) {
                 final msg = _messages[index];
-                return _buildMessageBubble(msg, appState, l10n);
+                return _buildMessageBubble(msg, appState, l10n, index);
               },
             ),
           ),
@@ -644,30 +647,39 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 
-  Widget _buildMessageBubble(Map<String, dynamic> msg, AppState appState, AppLocalizations l10n) {
+  Widget _buildMessageBubble(Map<String, dynamic> msg, AppState appState, AppLocalizations l10n, int index) {
     final speakerName = msg['speaker'] ?? 'Unknown';
     final bool isUser = speakerName.toLowerCase() == 'user';
     final bool isPartner = speakerName.toLowerCase() == 'partner';
-    
-    // Find Participant Config
+
+    // Phase 118: Securely find Participant Config for metadata isolation
     final participant = appState.activeParticipants.firstWhere(
       (p) => p.name == speakerName,
       orElse: () => ChatParticipant(
         id: 'temp', dialogueId: '', name: speakerName, role: isUser ? 'user' : 'ai'
       )
     );
-
+    
+    final int seq = msg['sequence_order'] as int? ?? index;
+    final bool isTranslationVisible = _showTranslationMap[seq] ?? false;
+    
     // Layout alignment: User Right, AI Left
     final alignment = isUser ? Alignment.centerRight : Alignment.centerLeft;
     final color = isUser ? Colors.blue[50] : (isPartner ? Colors.teal[50] : const Color(0xFFF5F5F5));
     
-    // Text Logic
-    final topText = msg['source_text'] ?? '';
-    final bottomText = msg['target_text'] ?? '';
-    
-    // Lang Logic for TTS (Phase 75.9 Polish: Use explicit DB meta if available)
-    final topLang = msg['source_lang'] ?? (isUser ? appState.sourceLang : participant.langCode);
-    final bottomLang = msg['target_lang'] ?? (isUser ? appState.targetLang : appState.sourceLang);
+    // Text Logic for Acoustic Symmetry
+    // If translation is visible, we show the target_text and speak in target_lang.
+    // Otherwise, we show source_text and speak in source_lang.
+    final String displayText = isTranslationVisible 
+        ? (msg['target_text'] ?? '') 
+        : (msg['source_text'] ?? '');
+        
+    final String displayLang = isTranslationVisible
+        ? (isUser ? appState.targetLang : appState.sourceLang)
+        : (isUser ? appState.sourceLang : participant.langCode);
+
+    // Unified gender logic for identity consistency
+    final String displayGender = isUser ? appState.chatUserGender : participant.gender;
 
     return Align(
       alignment: alignment,
@@ -684,34 +696,58 @@ class _ChatScreenState extends State<ChatScreen> {
               _buildParticipantHeader(context, participant, appState, l10n, msg),
 
             // Bubble
-            Container(
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: color,
-                borderRadius: BorderRadius.circular(16).copyWith(
-                  topRight: isUser ? const Radius.circular(0) : const Radius.circular(16),
-                  topLeft: isUser ? const Radius.circular(16) : const Radius.circular(0),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                if (!isUser) _buildToggle(seq, l10n),
+                Flexible(
+                  child: Container(
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: color,
+                      borderRadius: BorderRadius.circular(16).copyWith(
+                        topRight: isUser ? const Radius.circular(0) : const Radius.circular(16),
+                        topLeft: isUser ? const Radius.circular(16) : const Radius.circular(0),
+                      ),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 2),
+                      ],
+                    ),
+                    child: _buildTextRow(displayText, displayLang, displayGender, isUser),
+                  ),
                 ),
-                boxShadow: [
-                  BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 2),
-                ],
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Top Text (Primary Speak)
-                  _buildTextRow(topText, topLang, isUser ? appState.chatUserGender : participant.gender, isUser),
-                  
-                  // Divider & Bottom Text (Translation)
-                  if (bottomText.isNotEmpty) ...[
-                    const Divider(height: 16),
-                    _buildTextRow(bottomText, bottomLang, isUser ? 'female' : participant.gender, true), 
-                  ],
-                ],
-              ),
+                if (isUser) _buildToggle(seq, l10n),
+              ],
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildToggle(int seq, AppLocalizations l10n) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 4),
+      child: Column(
+        children: [
+          Transform.scale(
+            scale: 0.7,
+            child: Switch(
+              value: _showTranslationMap[seq] ?? false,
+              activeThumbColor: Colors.orange,
+              onChanged: (val) {
+                setState(() {
+                  _showTranslationMap[seq] = val;
+                });
+              },
+            ),
+          ),
+          Text(
+            l10n.translation,
+            style: const TextStyle(fontSize: 8, color: Colors.grey),
+          ),
+        ],
       ),
     );
   }
@@ -723,10 +759,28 @@ class _ChatScreenState extends State<ChatScreen> {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          // 1. Language Label (Read Only)
-          Text(
-            appState.sourceLang.toUpperCase(),
-            style: TextStyle(fontSize: 10, color: Colors.grey[600], fontWeight: FontWeight.bold),
+          // 1. Language Dropdown (User)
+          SizedBox(
+            height: 24,
+            child: DropdownButton<String>(
+              value: LanguageConstants.supportedLanguages.any((l) => l['code'] == appState.sourceLang) 
+                  ? appState.sourceLang 
+                  : 'en',
+              underline: const SizedBox(),
+              icon: const Icon(Icons.arrow_drop_down, size: 16),
+              style: const TextStyle(fontSize: 11, color: Colors.black87),
+              onChanged: (newLang) {
+                if (newLang != null && newLang != appState.sourceLang) {
+                  appState.setSourceLang(newLang);
+                }
+              },
+              items: LanguageConstants.supportedLanguages.map((l) {
+                return DropdownMenuItem(
+                  value: l['code'],
+                  child: Text(l['name']!),
+                );
+              }).toList(),
+            ),
           ),
           const SizedBox(width: 8),
 

@@ -347,8 +347,13 @@
   "@targetLanguageFilter": {
     "description": "Language filter label"
   },
+  "translate": "번역",
   "@translate": {
     "description": "Translate button"
+  },
+  "translation": "번역",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
   "@noRecords": {
     "description": "Empty state message"

@@ -63,6 +63,7 @@ class Mode3Widget extends StatelessWidget {
                            // Just jump to result within current tab
                            appState.jumpToSearchResult(selection['text']!, selection['type']!);
                            if (appState.mode3SessionActive) appState.startMode3SessionDirectly();
+                           FocusScope.of(context).unfocus(); // Phase 113: Dismiss overlay
                         },
                         fieldViewBuilder: (context, textEditingController, focusNode, onFieldSubmitted) {
                           // Phase 109: Robust Sync
@@ -98,11 +99,11 @@ class Mode3Widget extends StatelessWidget {
                                 IconButton(
                                   icon: const Icon(Icons.clear),
                                   onPressed: () {
-                                    // Phase 109: Clear and dismiss
+                                    // Phase 109/113: Clear and dismiss
                                     textEditingController.clear();
                                     appState.setSearchQuery('');
                                     if (appState.mode3SessionActive) appState.startMode3SessionDirectly();
-                                    focusNode.requestFocus();
+                                    focusNode.unfocus(); // Phase 113: Do not requestFocus, dismiss instead
                                   },
                                 ),
                             ],

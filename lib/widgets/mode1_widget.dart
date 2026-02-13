@@ -230,6 +230,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                             onPressed: () {
                                               appState.clearTexts();
                                               controller.clear();
+                                              focusNode.unfocus(); // Phase 113: Dismiss overlay
                                               setState(() => _currentTags = []);
                                             },
                                             tooltip: l10n.clearAll,

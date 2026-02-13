@@ -98,9 +98,13 @@
   "@search": {
     "description": "Search mode label"
   },
-  "translate": "翻訳",
+  "translate": "翻訳する",
   "@translate": {
     "description": "Translate button"
+  },
+  "translation": "翻訳",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
   "listen": "聞く",
   "@listen": {

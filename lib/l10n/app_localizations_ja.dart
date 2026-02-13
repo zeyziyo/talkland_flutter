@@ -122,7 +122,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get search => '検索';
 
   @override
-  String get translate => '翻訳';
+  String get translate => '翻訳する';
 
   @override
   String get listen => '聞く';
@@ -224,6 +224,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String importErrorMessage(String error) {
     return 'ファイルの読み込みに失敗しました:\\n$error';
   }
+
+  @override
+  String get importDuplicateTitleError =>
+      '동일한 제목의 자료가 이미 존재합니다. 제목을 변경한 후 다시 시도해주세요.';
 
   @override
   String get selectStudyMaterial => '学習教材を選択';
@@ -511,6 +515,9 @@ class AppLocalizationsJa extends AppLocalizations {
       'Roleplay in scenarios. Choose the right response and speak it aloud.';
 
   @override
+  String get translation => '翻訳';
+
+  @override
   String get labelType => 'Type:';
 
   @override
@@ -625,7 +632,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get menuWebDownload => 'Get Material from Web';
 
   @override
-  String get menuDeviceImport => 'Import from Device';
+  String get menuDeviceImport => 'デバイスからインポート';
 
   @override
   String get menuSettings => 'Settings';

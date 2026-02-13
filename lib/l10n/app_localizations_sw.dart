@@ -230,6 +230,10 @@ class AppLocalizationsSw extends AppLocalizations {
   }
 
   @override
+  String get importDuplicateTitleError =>
+      '동일한 제목의 자료가 이미 존재합니다. 제목을 변경한 후 다시 시도해주세요.';
+
+  @override
   String get selectStudyMaterial => 'Chagua Nyenzo';
 
   @override
@@ -518,6 +522,9 @@ class AppLocalizationsSw extends AppLocalizations {
   @override
   String get dialogueQuestDesc =>
       'Roleplay in scenarios. Choose the right response and speak it aloud.';
+
+  @override
+  String get translation => '번역';
 
   @override
   String get labelType => 'Type:';
