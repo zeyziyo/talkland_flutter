@@ -65,12 +65,15 @@ class Mode3Widget extends StatelessWidget {
                            if (appState.mode3SessionActive) appState.startMode3SessionDirectly();
                         },
                         fieldViewBuilder: (context, textEditingController, focusNode, onFieldSubmitted) {
-                          // Sync
-                          if (appState.searchQuery != textEditingController.text && appState.searchQuery.isNotEmpty) {
-                             if (textEditingController.text.isEmpty) { 
-                                textEditingController.text = appState.searchQuery;
+                          // Phase 109: Robust Sync
+                          if (appState.searchQuery.isEmpty) {
+                             if (textEditingController.text.isNotEmpty) {
+                                textEditingController.clear();
                              }
+                          } else if (appState.searchQuery != textEditingController.text) {
+                             textEditingController.text = appState.searchQuery;
                           }
+
                           return SearchBar(
                             controller: textEditingController,
                             focusNode: focusNode,
@@ -95,8 +98,11 @@ class Mode3Widget extends StatelessWidget {
                                 IconButton(
                                   icon: const Icon(Icons.clear),
                                   onPressed: () {
+                                    // Phase 109: Clear and dismiss
                                     textEditingController.clear();
                                     appState.setSearchQuery('');
+                                    if (appState.mode3SessionActive) appState.startMode3SessionDirectly();
+                                    focusNode.requestFocus();
                                   },
                                 ),
                             ],

@@ -15,6 +15,7 @@ class WordRepository {
   }
 
   static Future<List<Map<String, dynamic>>> search(String query, {int limit = 10}) async {
+    if (query.isEmpty) return [];
     final db = await _db;
     return await db.query(
       'words',

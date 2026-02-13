@@ -28,6 +28,11 @@
 - **Performance**: `sqflite`의 `Batch` 객체와 SQL 서브쿼리를 활용하여 수천 개의 레코드와 태그를 한꺼번에 삽입하는 고속 임포트 엔진 구축 (Phase 108).
 - **Database**: 인덱스 추가(`v16`)를 통해 대량 데이터 조회 성능을 최적화하고 시스템 안정성을 확보.
 
+### [2026-02-13] Focus & Autocomplete UX Maintenance (Phase 109)
+- **Bug Fix**: 복습/발음 연습 모드에서 검색어 초기화 시 자동 완성 목록(Overlay)이 사라지지 않던 잔상 문제를 해결.
+- **Repository**: `WordRepository` 및 `SentenceRepository`의 검색 메서드에 빈 검색어 가드를 추가하여 불필요한 DB 조회를 차단.
+- **UI/UX**: `Autocomplete` 위젯의 컨트롤러와 `AppState` 간의 동기화 로직을 강화하고, 삭제 버튼 클릭 시 오버레이가 즉시 닫히도록 개선.
+
 ### [2026-02-12] Supabase 스키마 정규화 및 양방향 동기화 정합성 완료 (Phase 98 + 98.1 + 98.2 + 98.3)
 - **Schema Alignment**: 로컬 SQLite와 Supabase 공용 DB의 `words`, `sentences` 테이블 스키마를 1:1로 일치시켰습니다. 불필요한 필드는 각 테이블에서 제거하여 데이터 순수성을 확보했습니다.
 - **Normalization**: `words`는 `pos`/`form_type`/`root`, `sentences`는 `pos`/`style` 필드로 명확히 분리하여 전문화된 정보만 보관합니다.

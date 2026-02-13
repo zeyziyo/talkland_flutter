@@ -86,12 +86,15 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                            FocusScope.of(context).unfocus(); // Dismiss overlay
                         },
                         fieldViewBuilder: (context, textEditingController, focusNode, onFieldSubmitted) {
-                          // Sync with AppState's query
-                          if (appState.searchQuery != textEditingController.text && appState.searchQuery.isNotEmpty) {
-                             if (textEditingController.text.isEmpty) { 
-                                textEditingController.text = appState.searchQuery;
-                             }
+                          // Phase 109: Robust Sync with AppState's query
+                          if (appState.searchQuery.isEmpty) {
+                            if (textEditingController.text.isNotEmpty) {
+                              textEditingController.clear();
+                            }
+                          } else if (appState.searchQuery != textEditingController.text) {
+                            textEditingController.text = appState.searchQuery;
                           }
+
                           return SearchBar(
                             controller: textEditingController,
                             focusNode: focusNode,
@@ -112,8 +115,11 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                                 IconButton(
                                   icon: const Icon(Icons.clear),
                                   onPressed: () {
+                                    // Phase 109: Explicitly clear and trigger overlay dismissal
                                     textEditingController.clear();
                                     appState.setSearchQuery('');
+                                    // Triggering onChanged with empty value helps Autocomplete close overlay
+                                    focusNode.requestFocus(); 
                                   },
                                 ),
                             ],
