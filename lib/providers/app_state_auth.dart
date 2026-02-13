@@ -208,6 +208,7 @@ extension AppStateAuth on AppState {
         jsonContent, 
         fileName: fileName,
         userId: userId,
+        checkDuplicate: true,
       );
       
       await loadStudyMaterials();

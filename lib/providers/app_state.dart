@@ -119,7 +119,7 @@ class AppState extends ChangeNotifier {
   List<String> _selectedTags = [];
   int? _filterLimit;
   String? _filterStartsWith;
-  int? _selectedMaterialId;
+  Object? _selectedMaterialId;
   List<Map<String, dynamic>> _materialRecords = [];
   String _recordTypeFilter = 'word';
   String _searchQuery = '';
@@ -185,7 +185,7 @@ class AppState extends ChangeNotifier {
   String get selectedSaveSubject => _selectedSaveSubject;
   List<Map<String, dynamic>> get onlineMaterials => _onlineMaterials;
   bool get isLoadingOnlineMaterials => _isLoadingOnlineMaterials;
-  int? get selectedMaterialId => _selectedMaterialId;
+  Object? get selectedMaterialId => _selectedMaterialId;
   List<String> get availableTags => _availableTags;
   List<String> get selectedTags => _selectedTags;
   int? get filterLimit => _filterLimit;

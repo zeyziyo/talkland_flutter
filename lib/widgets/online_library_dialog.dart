@@ -112,28 +112,34 @@ class OnlineLibraryDialog extends StatelessWidget {
                   await state.loadStudyMaterials(); 
 
                   // Phase 97.5: Stay in current mode instead of forcing transition
+                  // Phase 110: Integrated post-import logic
                   if (type == 'dialogue') {
-                      final dId = result['dialogue_id'] as String?;
-                      if (dId != null) {
-                        final group = state.dialogueGroups.cast<DialogueGroup?>().firstWhere(
-                          (g) => g?.id == dId, 
-                          orElse: () => null,
-                        );
-                        if (group != null) {
-                          await state.loadExistingDialogue(group);
-                        }
-                        // Removed: state.switchMode(3)
+                    final String? dId = result['dialogue_id'] as String?;
+                    if (dId != null) {
+                      state.setRecordTypeFilter('sentence'); // Dialogue items are sentences
+                      state.selectMaterial(dId);
+                      
+                      final group = state.dialogueGroups.cast<DialogueGroup?>().firstWhere(
+                        (g) => g?.id == dId, 
+                        orElse: () => null,
+                      );
+                      if (group != null) {
+                        await state.loadExistingDialogue(group);
                       }
+                    }
                   } else {
-                      // Removed: state.switchMode(1)
-                      
-                      final dynamic mIdRaw = result['material_id'];
-                      final int mId = (mIdRaw is int) ? mIdRaw : (int.tryParse(mIdRaw?.toString() ?? '0') ?? 0);
-                      
-                      if (mId > 0) {
-                        state.setRecordTypeFilter(type == 'word' ? 'word' : 'sentence');
-                        state.selectMaterial(mId);
-                      }
+                    final dynamic mIdRaw = result['material_id'];
+                    Object materialId = 0;
+                    if (mIdRaw is int && mIdRaw > 0) {
+                      materialId = mIdRaw;
+                    } else if (mIdRaw is String && mIdRaw.isNotEmpty) {
+                      materialId = mIdRaw;
+                    }
+
+                    if (materialId != 0) {
+                      state.setRecordTypeFilter(type == 'word' ? 'word' : 'sentence');
+                      state.selectMaterial(materialId);
+                    }
                   }
                   if (context.mounted) Navigator.pop(context);
                 } else {

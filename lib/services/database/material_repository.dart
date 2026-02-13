@@ -66,4 +66,15 @@ class MaterialRepository {
       ORDER BY m.imported_at DESC
     ''');
   }
+
+  static Future<bool> existsBySubject(String subject, String sourceLanguage, String targetLanguage) async {
+    final db = await _db;
+    final res = await db.query(
+      'study_materials',
+      where: 'subject = ? AND source_language = ? AND target_language = ?',
+      whereArgs: [subject, sourceLanguage, targetLanguage],
+      limit: 1,
+    );
+    return res.isNotEmpty;
+  }
 }

@@ -458,6 +458,24 @@ class _HomeScreenState extends State<HomeScreen> {
                     case 'online_library':
                       OnlineLibraryDialog.show(context); // Open Online Tab
                       break;
+                    case 'device_import':
+                      final result = await appState.pickAndImportJson();
+                      if (result != null && context.mounted) {
+                        if (result['success'] == true) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text(l10n.importComplete)),
+                          );
+                        } else if (result['error'] == 'DuplicateTitle') {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text(l10n.importDuplicateTitleError)),
+                          );
+                        } else if (result['error'] != null) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text(result['error'])),
+                          );
+                        }
+                      }
+                      break;
                     case 'help':
                       showDialog(
                         context: context,
@@ -499,6 +517,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       const Icon(Icons.cloud_download, color: Colors.blueAccent),
                       const SizedBox(width: 8),
                       Text(l10n.menuOnlineLibrary),
+                    ],
+                  ),
+                ),
+
+                PopupMenuItem<String>(
+                  value: 'device_import',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.folder_open, color: Colors.orange),
+                      const SizedBox(width: 8),
+                      Text(l10n.menuDeviceImport),
                     ],
                   ),
                 ),

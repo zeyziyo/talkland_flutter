@@ -379,9 +379,9 @@ extension AppStateMode2 on AppState {
   }
 
   /// 학습 자료 선택 (Legacy & Tag Sync)
-  Future<void> selectMaterial(int? id) async {
+  Future<void> selectMaterial(Object? id) async {
     _selectedMaterialId = id;
-    if (id != null && id != 0) {
+    if (id != null && id != 0 && id != '') {
       await loadMaterialRecords(id);
     } else {
       await loadRecordsByTags();
@@ -389,14 +389,28 @@ extension AppStateMode2 on AppState {
     notify();
   }
 
-  Future<void> loadMaterialRecords(int materialId) async {
-    if (materialId == 0) {
+  Future<void> loadMaterialRecords(Object materialId) async {
+    if (materialId == 0 || materialId == '') {
       await loadRecordsByTags();
-    } else {
+    } else if (materialId is int) {
       final material = _studyMaterials.firstWhere((m) => m['id'] == materialId, orElse: () => {});
       if (material.isNotEmpty) {
         _selectedTags = [material['subject'] as String];
         await loadRecordsByTags();
+      }
+    } else if (materialId is String) {
+      // Phase 110: Support Dialogue UUID
+      // Dialogue data is primarily for Chat Mode, but we support viewing it here if tagged.
+      final group = _dialogueGroups.where((g) => g.id == materialId).toList();
+      if (group.isNotEmpty) {
+        _selectedTags = [group.first.title ?? group.first.note ?? 'Untitled'];
+        await loadRecordsByTags();
+      } else {
+        final material = _studyMaterials.firstWhere((m) => m['id'] == materialId, orElse: () => {});
+        if (material.isNotEmpty) {
+          _selectedTags = [material['subject'] as String? ?? 'Untitled'];
+          await loadRecordsByTags();
+        }
       }
     }
   }

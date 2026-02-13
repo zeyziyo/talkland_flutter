@@ -292,7 +292,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
             const SizedBox(height: 16),
             
             // Progress indicator
-            if (materialRecords.isNotEmpty && selectedMaterialId != -1)
+            if (materialRecords.isNotEmpty && selectedMaterialId != null && selectedMaterialId != 0)
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
@@ -318,7 +318,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                 ),
               ),
               
-            if (selectedMaterialId == -1 && materialRecords.isNotEmpty)
+            if ((selectedMaterialId == null || selectedMaterialId == 0) && materialRecords.isNotEmpty)
                Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
@@ -354,7 +354,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                           ),
                           const SizedBox(height: 16),
                           Text(
-                            selectedMaterialId == null 
+                            (selectedMaterialId == null || selectedMaterialId == 0)
                                 ? l10n.selectMaterialPrompt 
                                 : l10n.noRecords,
                             style: TextStyle(

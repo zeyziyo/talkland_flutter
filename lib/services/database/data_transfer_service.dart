@@ -17,6 +17,7 @@ class DataTransferService {
     String? defaultTargetLang,
     String? fileName,
     String? userId,
+    bool checkDuplicate = false,
   }) async {
     try {
       final data = json.decode(jsonContent) as Map<String, dynamic>;
@@ -35,6 +36,20 @@ class DataTransferService {
       final entryDefaultType = (data['default_type'] ?? meta['default_type'] ?? defaultType) as String? ?? 'sentence';
       
       final fileTags = (meta['tags'] as List?)?.map((e) => e.toString()).toList() ?? [];
+
+      if (checkDuplicate) {
+        final exists = await MaterialRepository.existsBySubject(materialSubject, sourceLang, targetLang);
+        if (exists) {
+          return {
+            'success': false,
+            'error': 'DuplicateTitle',
+            'imported': 0,
+            'skipped': 0,
+            'total': 0,
+            'errors': ['A material with the same title already exists.'],
+          };
+        }
+      }
 
       final entries = data['entries'] as List?;
       final dialogues = data['dialogues'] as List?;
