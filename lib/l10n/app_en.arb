@@ -693,6 +693,10 @@
   "selectExistingSubject": "Select Existing Subject",
   "addTagHint": "Add Tag...",
   "save": "Save",
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
   "statusDownloading": "Downloading: {name}...",
   "statusImportSuccess": "{name} Imported Successfully",
   "statusImportFailed": "Import Failed: {error}"

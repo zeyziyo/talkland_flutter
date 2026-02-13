@@ -78,7 +78,7 @@ class SpeechTtsService {
         await _flutterTts.speak(text);
         return;
       } catch (e) {
-        if (attempts >= 2) throw e;
+        if (attempts >= 2) rethrow;
         await Future.delayed(const Duration(milliseconds: 300));
       }
     }

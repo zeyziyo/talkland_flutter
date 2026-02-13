@@ -1002,6 +1002,18 @@ class AppLocalizationsJa extends AppLocalizations {
   String get save => '保存';
 
   @override
+  String get styleFormal => '敬語';
+
+  @override
+  String get styleInformal => 'ため口';
+
+  @override
+  String get stylePolite => '丁寧';
+
+  @override
+  String get styleSlang => 'スラング';
+
+  @override
   String statusDownloading(Object name) {
     return '다운로드 중: $name...';
   }

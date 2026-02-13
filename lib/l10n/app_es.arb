@@ -692,5 +692,9 @@
   "addNewSubject": "Añadir nuevo título",
   "selectExistingSubject": "Seleccionar título existente",
   "addTagHint": "Añadir etiqueta...",
-  "save": "Guardar"
+  "save": "Guardar",
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Cortés",
+  "styleSlang": "Argot"
 }

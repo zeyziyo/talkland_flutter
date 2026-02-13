@@ -1023,6 +1023,18 @@ class AppLocalizationsEn extends AppLocalizations {
   String get save => 'Save';
 
   @override
+  String get styleFormal => 'Formal';
+
+  @override
+  String get styleInformal => 'Informal';
+
+  @override
+  String get stylePolite => 'Polite';
+
+  @override
+  String get styleSlang => 'Slang';
+
+  @override
   String statusDownloading(Object name) {
     return 'Downloading: $name...';
   }

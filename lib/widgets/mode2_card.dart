@@ -119,6 +119,10 @@ class Mode2Card extends StatelessWidget {
                                // 1. POS Badge
                                if (record['pos'] != null)
                                   _buildBadge(_getLocalizedTag(record['pos'], l10n), Colors.white, Colors.white24),
+
+                               // 1.1 Style Badge (Phase 105: Sentence Style)
+                               if (record['style'] != null)
+                                  _buildBadge(_getLocalizedTag(record['style'], l10n), Colors.cyanAccent, Colors.white24),
                                
                                // 2. Note (Context Tag) - Moved to row 1
                                if (contextTag != null && contextTag.isNotEmpty && contextTag != record['pos'])
@@ -403,6 +407,11 @@ class Mode2Card extends StatelessWidget {
       case 'possessive': return l10n.casePossessive;
       case 'possessivepronoun': return l10n.casePossessivePronoun;
       case 'reflexive': return l10n.caseReflexive;
+      // Phase 105: Styles
+      case 'formal': return l10n.styleFormal;
+      case 'informal': return l10n.styleInformal;
+      case 'polite': return l10n.stylePolite;
+      case 'slang': return l10n.styleSlang;
       default: return tag;
     }
   }

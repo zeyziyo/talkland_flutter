@@ -6,6 +6,7 @@ import 'database/tag_repository.dart';
 import 'database/dialogue_repository.dart';
 import 'database/material_repository.dart';
 import 'database/data_transfer_service.dart';
+import 'database/unified_repository.dart';
 
 /// DatabaseService - 로컬 데이터베이스 관리 (Facade)
 class DatabaseService {
@@ -67,8 +68,12 @@ class DatabaseService {
     
     // Deduplicate by text using a map
     final Map<String, Map<String, dynamic>> unique = {};
-    for (var item in wRes) unique[item['text']] = item;
-    for (var item in sRes) unique[item['text']] = item;
+    for (var item in wRes) {
+      unique[item['text']] = item;
+    }
+    for (var item in sRes) {
+      unique[item['text']] = item;
+    }
     
     return unique.values.toList();
   }
@@ -96,7 +101,29 @@ class DatabaseService {
   }
 
   // --- Material Repository Delegation ---
-  static Future<List<Map<String, dynamic>>> getStudyMaterials() => MaterialRepository.getAll();
+  static Future<List<Map<String, dynamic>>> getStudyMaterials() async {
+    final materials = await MaterialRepository.getAll();
+    final dialogues = await DialogueRepository.getGroupsWithCounts();
+    
+    final List<Map<String, dynamic>> result = materials.map((m) => Map<String, dynamic>.from(m)).toList();
+    
+    for (var d in dialogues) {
+      result.add({
+        'id': d['id'], // String UUID
+        'subject': d['title'] ?? 'Conversation',
+        'source': d['persona'] ?? 'AI Chat',
+        'source_language': 'auto', 
+        'target_language': 'auto',
+        'created_at': d['created_at'],
+        'imported_at': d['created_at'],
+        'location': d['location'],
+        'word_count': d['word_count'],
+        'sentence_count': d['sentence_count'],
+        'is_dialogue': 1,
+      });
+    }
+    return result;
+  }
   static Future<Map<String, dynamic>?> getStudyMaterialById(int id) => MaterialRepository.getById(id);
 
   // --- Data Transfer Delegation ---
@@ -124,11 +151,17 @@ class DatabaseService {
     return DataTransferService.importFromJsonWithMetadata(content, fileName: fileName);
   }
 
-  static Future<String> exportMaterialToJson(int materialId) => DataTransferService.exportMaterialToJson(
-    materialId,
-    getRows: (subject) async => [],
-    getTags: (id, type) => TagRepository.getTagsForItem(id, type),
-  );
+  static Future<String> exportMaterialToJson(int materialId, {String? targetLang}) async {
+    final material = await getStudyMaterialById(materialId);
+    if (material == null) return '{}';
+
+    return DataTransferService.exportMaterialToJson(
+      materialId,
+      getRows: (s, {targetLang}) => TagRepository.getItemsByTag(s, targetLang: targetLang),
+      getTags: (id, type) => TagRepository.getTagsForItem(id, type),
+      targetLang: targetLang,
+    );
+  }
 
   // --- Sync & Utility ---
   static Future<List<int>> getUnsyncedGroupIds({int limit = 50}) async {
@@ -146,9 +179,19 @@ class DatabaseService {
     final db = await database;
     final words = await db.query('words', where: 'group_id = ?', whereArgs: [groupId]);
     final sentences = await db.query('sentences', where: 'group_id = ?', whereArgs: [groupId]);
+    
+    // Get tags for all items in this group
+    final List<String> tags = [];
+    final allItems = [...words, ...sentences];
+    for (var item in allItems) {
+      final itemTags = await TagRepository.getTagsForItem(item['id'] as int, words.contains(item) ? 'word' : 'sentence');
+      tags.addAll(itemTags);
+    }
+
     return {
       'words': words,
       'sentences': sentences,
+      'tags': tags.toSet().toList(), // Deduplicate
     };
   }
 
@@ -160,22 +203,9 @@ class DatabaseService {
     });
   }
 
-  static String getLanguageFullName(String code) {
-    switch (code) {
-      case 'ko': return 'Korean';
-      case 'en': return 'English';
-      case 'ja': return 'Japanese';
-      default: return code;
-    }
-  }
+  static String getLanguageFullName(String code) => UnifiedRepository.getLanguageFullName(code);
 
-  static String mapLanguageToCode(String name) {
-    final n = name.toLowerCase();
-    if (n.contains('kor')) return 'ko';
-    if (n.contains('eng')) return 'en';
-    if (n.contains('jap')) return 'ja';
-    return 'en';
-  }
+  static String mapLanguageToCode(String name) => UnifiedRepository.mapLanguageToCode(name);
 
   // --- Cache Delegation ---
   static Future<void> cacheTranslation(String key, String trans) async {
@@ -206,32 +236,47 @@ class DatabaseService {
     String? syncSubject,
     int? sequenceOrder,
     int? groupId,
-  }) async {
-    final timestamp = groupId ?? DateTime.now().millisecondsSinceEpoch;
-    final row = {
-      'group_id': timestamp,
-      'text': text,
-      'lang_code': lang,
-      'pos': pos,
-      'note': note,
-      'created_at': DateTime.now().toIso8601String(),
-    };
+  }) => UnifiedRepository.saveUnifiedRecord(
+    text: text,
+    lang: lang,
+    translation: translation,
+    targetLang: targetLang,
+    type: type,
+    pos: pos,
+    formType: formType,
+    style: style,
+    root: root,
+    note: note,
+    tags: tags,
+    txn: txn,
+    syncSubject: syncSubject,
+    sequenceOrder: sequenceOrder,
+    groupId: groupId,
+  );
 
-    int id;
-    if (type == 'word') {
-      row['form_type'] = formType;
-      row['root'] = root;
-      id = await WordRepository.insert(row, txn: txn);
-    } else {
-      row['style'] = style;
-      id = await SentenceRepository.insert(row, txn: txn);
-    }
+  static Future<void> addLanguageToUnifiedRecord({
+    required int groupId,
+    required String text,
+    required String lang,
+    required String type,
+    String? pos,
+    String? formType,
+    String? style,
+    String? root,
+    String? note,
+    Transaction? txn,
+  }) => UnifiedRepository.addLanguageToUnifiedRecord(
+    groupId: groupId,
+    text: text,
+    lang: lang,
+    type: type,
+    pos: pos,
+    formType: formType,
+    style: style,
+    root: root,
+    note: note,
+    txn: txn,
+  );
 
-    if (tags != null) {
-      for (var t in tags) {
-        await TagRepository.addTag(id, type, t, txn: txn);
-      }
-    }
-    return timestamp;
-  }
+  static Future<void> relinkGroupId(int oldId, int newId) => UnifiedRepository.relinkGroupId(oldId, newId);
 }

@@ -2118,6 +2118,30 @@ abstract class AppLocalizations {
   /// **'저장'**
   String get save;
 
+  /// No description provided for @styleFormal.
+  ///
+  /// In ko, this message translates to:
+  /// **'존댓말'**
+  String get styleFormal;
+
+  /// No description provided for @styleInformal.
+  ///
+  /// In ko, this message translates to:
+  /// **'반말'**
+  String get styleInformal;
+
+  /// No description provided for @stylePolite.
+  ///
+  /// In ko, this message translates to:
+  /// **'정중함'**
+  String get stylePolite;
+
+  /// No description provided for @styleSlang.
+  ///
+  /// In ko, this message translates to:
+  /// **'슬랭/속어'**
+  String get styleSlang;
+
   /// No description provided for @statusDownloading.
   ///
   /// In ko, this message translates to:

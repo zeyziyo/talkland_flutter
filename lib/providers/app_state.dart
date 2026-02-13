@@ -325,6 +325,7 @@ class AppState extends ChangeNotifier {
     if (!_isWordMode) _applyAutoPunctuation();
     notify(); 
   }
+  void setSourceStyle(String value) { _sourceStyle = value; notify(); } // Phase 105
   void setSourceRoot(String value) { _sourceRoot = value; notify(); }
 
   void setSelectedSaveSubject(String value) { _selectedSaveSubject = value; notify(); }

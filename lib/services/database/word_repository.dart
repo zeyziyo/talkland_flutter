@@ -29,7 +29,7 @@ class WordRepository {
     final db = await _db;
     return await db.query(
       'words',
-      columns: ['id', 'text'],
+      columns: ['id', 'text', 'group_id', 'pos', 'form_type', 'root', 'note'],
       where: 'lang_code = ? AND text LIKE ?',
       whereArgs: [langCode, '$text%'],
       limit: 10,
@@ -40,7 +40,7 @@ class WordRepository {
     final db = await _db;
     final result = await db.query(
       'words',
-      where: 'group_id = ? AND lang_code = ?' + (note != null ? ' AND note = ?' : ''),
+      where: 'group_id = ? AND lang_code = ? ${note != null ? "AND note = ?" : ""}',
       whereArgs: [groupId, targetLang, if (note != null) note],
       limit: 1,
     );

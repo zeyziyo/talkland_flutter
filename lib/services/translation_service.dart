@@ -98,6 +98,8 @@ class TranslationService {
         'pos': result['pos'] as String?,
         'formType': result['formType'] as String?,
         'root': result['root'] as String?,
+        'style': result['style'] as String?,
+        'englishText': result['englishText'] as String?, // Phase 106: Preserve pivot
       };
 
     } catch (e) {

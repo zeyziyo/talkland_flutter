@@ -693,6 +693,10 @@
   "selectExistingSubject": "기존 제목 선택",
   "addTagHint": "태그 추가...",
   "save": "저장",
+  "styleFormal": "존댓말",
+  "styleInformal": "반말",
+  "stylePolite": "정중함",
+  "styleSlang": "슬랭/속어",
   "statusDownloading": "다운로드 중: {name}...",
   "statusImportSuccess": "{name} 가져오기 완료",
   "statusImportFailed": "가져오기 실패: {error}"

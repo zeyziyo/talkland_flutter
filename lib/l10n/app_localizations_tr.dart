@@ -1020,6 +1020,18 @@ class AppLocalizationsTr extends AppLocalizations {
   String get save => 'Kaydet';
 
   @override
+  String get styleFormal => '존댓말';
+
+  @override
+  String get styleInformal => '반말';
+
+  @override
+  String get stylePolite => '정중함';
+
+  @override
+  String get styleSlang => '슬랭/속어';
+
+  @override
   String statusDownloading(Object name) {
     return '다운로드 중: $name...';
   }

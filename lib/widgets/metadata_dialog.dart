@@ -364,6 +364,37 @@ class _MetadataDialogState extends State<MetadataDialog> {
                 },
               ),
             ],
+
+            // Phase 105: Sentence Style Section
+            if (appState.recordTypeFilter == 'sentence') ...[
+              const SizedBox(height: 16),
+              Text(l10n.labelType, style: Theme.of(context).textTheme.labelMedium), // Reuse labelType for Style header or add new
+              const SizedBox(height: 4),
+              DropdownButtonFormField<String>(
+                initialValue: appState.sourceStyle.isNotEmpty ? appState.sourceStyle.toLowerCase() : null,
+                decoration: const InputDecoration(
+                  isDense: true,
+                  border: OutlineInputBorder(),
+                  contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                ),
+                hint: Text(l10n.notSelected),
+                items: ['formal', 'informal', 'polite', 'slang'].map((style) {
+                  return DropdownMenuItem(
+                    value: style,
+                    child: Text(_getLocalizedCategory(style, l10n)),
+                  );
+                }).toList(),
+                onChanged: (val) {
+                  if (val != null) {
+                    // We need a setter for Style in AppState. AppState already has _sourceStyle.
+                    // I'll use a direct assignment or add a setter if needed.
+                    // Currently AppStateMode1 has direct access.
+                    // But MetadataDialog is a widget, so I should call a method on AppState.
+                    appState.setSourceStyle(val); 
+                  }
+                },
+              ),
+            ],
           ],
         ),
       ),
@@ -377,33 +408,38 @@ class _MetadataDialogState extends State<MetadataDialog> {
   }
 
   String _getLocalizedCategory(String cat, AppLocalizations l10n) {
-    switch (cat) {
-      case 'Noun': return l10n.posNoun;
-      case 'Verb': return l10n.posVerb;
-      case 'Adjective': return l10n.posAdjective;
-      case 'Adverb': return l10n.posAdverb;
-      case 'Pronoun': return l10n.posPronoun;
-      case 'Preposition': return l10n.posPreposition;
-      case 'Conjunction': return l10n.posConjunction;
-      case 'Interjection': return l10n.posInterjection;
-      case 'Statement': return l10n.typeStatement;
-      case 'Question': return l10n.typeQuestion;
-      case 'Exclamation': return l10n.typeExclamation;
-      case 'Imperative': return l10n.typeImperative;
-      case 'Infinitive': return l10n.formInfinitive;
-      case 'Past': return l10n.formPast;
-      case 'Past Participle': return l10n.formPastParticiple;
-      case 'Present Participle': return l10n.formPresentParticiple;
-      case '3rd Person Singular': return l10n.formThirdPersonSingular;
-      case 'Plural': return l10n.formPlural;
-      case 'Positive': return l10n.formPositive;
-      case 'Comparative': return l10n.formComparative;
-      case 'Superlative': return l10n.formSuperlative;
-      case 'Subject': return l10n.caseSubject;
-      case 'Object': return l10n.caseObject;
-      case 'Possessive': return l10n.casePossessive;
-      case 'PossessivePronoun': return l10n.casePossessivePronoun;
-      case 'Reflexive': return l10n.caseReflexive;
+    switch (cat.toLowerCase()) {
+      case 'noun': return l10n.posNoun;
+      case 'verb': return l10n.posVerb;
+      case 'adjective': return l10n.posAdjective;
+      case 'adverb': return l10n.posAdverb;
+      case 'pronoun': return l10n.posPronoun;
+      case 'preposition': return l10n.posPreposition;
+      case 'conjunction': return l10n.posConjunction;
+      case 'interjection': return l10n.posInterjection;
+      case 'statement': return l10n.typeStatement;
+      case 'question': return l10n.typeQuestion;
+      case 'exclamation': return l10n.typeExclamation;
+      case 'imperative': return l10n.typeImperative;
+      case 'infinitive': return l10n.formInfinitive;
+      case 'past': return l10n.formPast;
+      case 'past participle': return l10n.formPastParticiple;
+      case 'present participle': return l10n.formPresentParticiple;
+      case '3rd person singular': return l10n.formThirdPersonSingular;
+      case 'plural': return l10n.formPlural;
+      case 'positive': return l10n.formPositive;
+      case 'comparative': return l10n.formComparative;
+      case 'superlative': return l10n.formSuperlative;
+      case 'subject': return l10n.caseSubject;
+      case 'object': return l10n.caseObject;
+      case 'possessive': return l10n.casePossessive;
+      case 'possessivepronoun': return l10n.casePossessivePronoun;
+      case 'reflexive': return l10n.caseReflexive;
+      // Phase 105: Styles
+      case 'formal': return l10n.styleFormal;
+      case 'informal': return l10n.styleInformal;
+      case 'polite': return l10n.stylePolite;
+      case 'slang': return l10n.styleSlang;
       default: return cat;
     }
   }

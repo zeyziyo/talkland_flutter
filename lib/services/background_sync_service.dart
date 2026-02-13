@@ -77,24 +77,55 @@ class BackgroundSyncService {
       for (final groupId in unsyncedGroupIds) {
         // 2. Fetch all data for this group
         final syncData = await DatabaseService.fetchGroupSyncData(groupId);
-        if (syncData == null) continue;
+        if (syncData == null || (syncData['words'] as List).isEmpty && (syncData['sentences'] as List).isEmpty) continue;
 
         final words = syncData['words'] as List<Map<String, dynamic>>;
         final sentences = syncData['sentences'] as List<Map<String, dynamic>>;
         final tags = syncData['tags'] as List<String>;
 
-        // Phase 98: Separate title tags from general tags
+        // Phase 107: Resolve Canonical ID before uploading
+        // Extract sample for resolution
+        final samples = [...words, ...sentences];
+        final source = samples.first; // Use first one as source sample
+        final target = samples.length > 1 ? samples[1] : samples[0];
+        final english = samples.firstWhere((s) => s['lang_code'] == 'en', orElse: () => {});
+
+        int activeGroupId = groupId;
+        try {
+          final canonicalId = await SupabaseService.resolveCanonicalGroupId(
+            sourceText: source['text'],
+            sourceLang: source['lang_code'],
+            targetText: target['text'],
+            targetLang: target['lang_code'],
+            englishText: english['text'],
+            type: words.contains(source) ? 'word' : 'sentence',
+            pos: source['pos'],
+            formType: source['form_type'],
+            root: source['root'],
+            style: source['style'],
+            note: source['note'],
+          );
+
+          if (canonicalId != groupId) {
+             print("[BackgroundSync] Relinking offline group $groupId to canonical $canonicalId");
+             await DatabaseService.relinkGroupId(groupId, canonicalId);
+             activeGroupId = canonicalId;
+          }
+        } catch (e) {
+          print("[BackgroundSync] Canonical ID resolution failed (offline/error), continuing with local ID: $e");
+        }
+
+        // 3. Phase 98: Upload words to 'words' table, sentences to 'sentences' table
+        // Use activeGroupId instead of groupId
         final studyMaterials = await DatabaseService.getStudyMaterials();
         final materialSubjects = studyMaterials.map((m) => m['subject'] as String).toSet();
         final titleTags = tags.where((t) => materialSubjects.contains(t)).toList();
         final generalTags = tags.where((t) => !materialSubjects.contains(t)).toList();
 
-        // 3. Phase 98: Upload words to 'words' table, sentences to 'sentences' table
-        // Clean data according to Supabase schema to avoid errors
         final List<Map<String, dynamic>> cleanWords = [];
         for (var word in words) {
           cleanWords.add({
-            'group_id': groupId,
+            'group_id': activeGroupId,
             'text': word['text'],
             'lang_code': word['lang_code'],
             'note': word['note'],
@@ -110,12 +141,12 @@ class BackgroundSyncService {
         final List<Map<String, dynamic>> cleanSentences = [];
         for (var sentence in sentences) {
           cleanSentences.add({
-            'group_id': groupId,
+            'group_id': activeGroupId,
             'text': sentence['text'],
             'lang_code': sentence['lang_code'],
             'note': sentence['note'],
             'pos': sentence['pos'],
-            'style': sentence['style'], // Phase 98.1: Sentence formality
+            'style': sentence['style'],
             'tags': generalTags.isNotEmpty ? generalTags : null,
             'author_id': currentUser.id,
             'status': 'approved',
@@ -133,7 +164,7 @@ class BackgroundSyncService {
         // 4. Update User Library with personal metadata
         await SupabaseService.client.from('user_library').upsert({
           'user_id': currentUser.id,
-          'group_id': groupId,
+          'group_id': activeGroupId,
           'content': {
             'words': cleanWords,
             'sentences': cleanSentences,
@@ -141,11 +172,11 @@ class BackgroundSyncService {
           },
           'material_tags': titleTags.isNotEmpty ? titleTags : null,
           'last_updated': DateTime.now().toIso8601String(),
-        });
+        }, onConflict: 'user_id, group_id'); // Added missing onConflict for user_library
 
         // 4. Mark as synced locally
-        await DatabaseService.markGroupAsSynced(groupId);
-        print("[BackgroundSync] Group $groupId synced successfully.");
+        await DatabaseService.markGroupAsSynced(activeGroupId);
+        print("[BackgroundSync] Group $activeGroupId synced successfully.");
       }
 
       return true;

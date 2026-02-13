@@ -57,6 +57,31 @@ class SupabaseRepository {
     return null;
   }
 
+  /// Phase 106: Intelligent group ID search using source, target and pivot
+  static Future<int?> findGroupIdWithPivot({
+    required String sourceText,
+    required String sourceLang,
+    required String targetText,
+    required String targetLang,
+    String? englishText,
+  }) async {
+    // 1. Check Source
+    int? groupId = await findGroupId(sourceText, sourceLang);
+    if (groupId != null) return groupId;
+    
+    // 2. Check Target
+    groupId = await findGroupId(targetText, targetLang);
+    if (groupId != null) return groupId;
+    
+    // 3. Check English Pivot (Shared Dictionary Point)
+    if (englishText != null && sourceLang != 'en' && targetLang != 'en') {
+      groupId = await findGroupId(englishText, 'en');
+      if (groupId != null) return groupId;
+    }
+    
+    return null;
+  }
+
   static Future<int> getNextGroupId() async {
     try {
       final response = await SupabaseHelper.client.rpc('next_group_id');

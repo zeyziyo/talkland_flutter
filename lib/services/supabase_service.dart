@@ -85,16 +85,74 @@ class SupabaseService {
     required String targetText,
     required String targetLang,
     String? englishText,
+  }) => SupabaseRepository.findGroupIdWithPivot(
+    sourceText: sourceText,
+    sourceLang: sourceLang,
+    targetText: targetText,
+    targetLang: targetLang,
+    englishText: englishText,
+  );
+
+  /// Phase 106: Resolve or Issue a canonical group ID for a translation set
+  static Future<int> resolveCanonicalGroupId({
+    required String sourceText,
+    required String sourceLang,
+    required String targetText,
+    required String targetLang,
+    String? englishText,
+    String? type,
+    String? pos,
+    String? formType,
+    String? root,
+    String? style,
+    String? note,
   }) async {
-    int? groupId = await findGroupId(sourceText, sourceLang);
-    if (groupId != null) return groupId;
-    groupId = await findGroupId(targetText, targetLang);
-    if (groupId != null) return groupId;
-    if (englishText != null && sourceLang != 'en' && targetLang != 'en') {
-      groupId = await findGroupId(englishText, 'en');
-      if (groupId != null) return groupId;
+    // 1. Check if canonical ID already exists in cloud
+    int? canonicalId = await findGroupIdWithPivot(
+      sourceText: sourceText,
+      sourceLang: sourceLang,
+      targetText: targetText,
+      targetLang: targetLang,
+      englishText: englishText,
+    );
+
+    if (canonicalId != null) {
+      print('[Supabase] Found existing canonical group_id: $canonicalId');
+      return canonicalId;
     }
-    return null;
+
+    // 2. No canonical ID found - Get a new one from server sequence
+    print('[Supabase] No canonical ID found. Requesting new ID...');
+    canonicalId = await SupabaseRepository.getNextGroupId();
+    
+    // 3. Register the new ID with basic data (Source + Pivot if any)
+    // This ensures other users can find this set via Source or Pivot immediately.
+    final itemType = type ?? ((sourceText.split(' ').length > 3) ? 'sentence' : 'word');
+    
+    // Save Source
+    await saveEntry(
+      groupId: canonicalId,
+      text: sourceText,
+      langCode: sourceLang,
+      type: itemType,
+      pos: pos,
+      formType: formType,
+      root: root,
+      style: style,
+      note: note,
+    );
+
+    // Save English Pivot (Shared Dictionary Key)
+    if (englishText != null && sourceLang != 'en' && targetLang != 'en') {
+      await saveEntry(
+        groupId: canonicalId,
+        text: englishText,
+        langCode: 'en',
+        type: itemType,
+      );
+    }
+    
+    return canonicalId;
   }
 
   // Complex Operations (Keep in facade or move to logic layer if needed)

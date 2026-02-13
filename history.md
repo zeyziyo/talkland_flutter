@@ -21,7 +21,12 @@
 
 ---
 
-## 📅 최근 주요 변경 로그 (Recent Changelog)
+### [2026-02-13] Pivot Sync Precision & Performance Optimization (Phase 105 ~ 108)
+- **UI/L10n**: 문체 배지(`Style Badge`)를 80개 언어 전체에 적용하고, Mode 2 카드에서 문체 정보를 시각적으로 확인할 수 있도록 개선 (Phase 105).
+- **Integrity**: 서버의 정식 그룹 ID(`Canonical ID`) 확인 및 로컬 임시 ID의 자동 재연결(`Relinking`) 로직을 구현하여 데이터 정합성 강화 (Phase 106).
+- **Sync**: 인터넷이 끊긴 상태에서 저장된 항목이 나중에 백그라운드 동기화될 때도 서버의 정식 ID를 찾아 자동으로 통합하도록 `BackgroundSyncService` 고도화 (Phase 107).
+- **Performance**: `sqflite`의 `Batch` 객체와 SQL 서브쿼리를 활용하여 수천 개의 레코드와 태그를 한꺼번에 삽입하는 고속 임포트 엔진 구축 (Phase 108).
+- **Database**: 인덱스 추가(`v16`)를 통해 대량 데이터 조회 성능을 최적화하고 시스템 안정성을 확보.
 
 ### [2026-02-12] Supabase 스키마 정규화 및 양방향 동기화 정합성 완료 (Phase 98 + 98.1 + 98.2 + 98.3)
 - **Schema Alignment**: 로컬 SQLite와 Supabase 공용 DB의 `words`, `sentences` 테이블 스키마를 1:1로 일치시켰습니다. 불필요한 필드는 각 테이블에서 제거하여 데이터 순수성을 확보했습니다.

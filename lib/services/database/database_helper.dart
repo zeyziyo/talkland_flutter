@@ -1,11 +1,10 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
-import 'package:flutter/foundation.dart';
 
 class DatabaseHelper {
   static Database? _database;
   static const String _dbName = 'talkie.db';
-  static const int _dbVersion = 15; // Phase 98.3/99: New version for normalization clean-up
+  static const int _dbVersion = 16; // Phase 105: Adding indexes for performance
 
   static Future<Database> get database async {
     if (_database != null) return _database!;
@@ -56,14 +55,34 @@ class DatabaseHelper {
           print('[DB] Upgraded to version 2');
         }
 
-        // Simplified for brevity, but in real implementation I should copy all oldVersion blocks
-        // Phase 99: Add v15 migration
+        // Phase 99: v15
         if (oldVersion < 15) {
-          print('[DB] Migrating to version 15: Normalizing local tables (Column removal)');
+          print('[DB] Migrating to version 15: Normalizing local tables');
           await _migrateToV15(db);
+        }
+
+        // Phase 105: v16
+        if (oldVersion < 16) {
+          print('[DB] Migrating to version 16: Adding indexes for performance');
+          await _addIndexesV16(db);
         }
       },
     );
+  }
+
+  static Future<void> _addIndexesV16(Database db) async {
+    await db.transaction((txn) async {
+      // 1. Tag Search Optimization
+      await txn.execute('CREATE INDEX IF NOT EXISTS idx_item_tags_tag ON item_tags (tag)');
+      
+      // 2. Text Search Optimization (for Autocomplete/LIKE queries)
+      await txn.execute('CREATE INDEX IF NOT EXISTS idx_words_text ON words (text)');
+      await txn.execute('CREATE INDEX IF NOT EXISTS idx_sentences_text ON sentences (text)');
+      
+      // 3. User Filter Optimization
+      await txn.execute('CREATE INDEX IF NOT EXISTS idx_sentences_style ON sentences (style)');
+      await txn.execute('CREATE INDEX IF NOT EXISTS idx_words_pos ON words (pos)');
+    });
   }
 
   static Future<void> _migrateToV15(Database db) async {
@@ -223,6 +242,15 @@ class DatabaseHelper {
         created_at TEXT NOT NULL
       )
     ''');
+
+    // Phase 105: Performance Indexes
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_words_group_id ON words (group_id)');
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_sentences_group_id ON sentences (group_id)');
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_item_tags_tag ON item_tags (tag)');
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_words_text ON words (text)');
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_sentences_text ON sentences (text)');
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_sentences_style ON sentences (style)');
+    await db.execute('CREATE INDEX IF NOT EXISTS idx_words_pos ON words (pos)');
   }
 
   static Future<void> ensureDefaultMaterial(Database db) async {

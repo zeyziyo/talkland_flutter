@@ -61,6 +61,13 @@ extension AppStateMode1 on AppState {
     _selectedSourceId = source['id'] as int;
     _sourceText = source['text'] as String;
     
+    // Sync Metadata from Autocomplete Result
+    _sourcePos = source['pos'] as String? ?? '';
+    _sourceFormType = source['form_type'] as String? ?? '';
+    _sourceRoot = source['root'] as String? ?? '';
+    _sourceStyle = source['style'] as String? ?? '';
+    _note = source['note'] as String? ?? '';
+
     // Reset translation state for new source selection? 
     // Or check if translation exists for this source + current note?
     // Let's trigger check.
@@ -252,6 +259,7 @@ extension AppStateMode1 on AppState {
     required String? dialogueId, 
     required String speaker, 
     required int sequenceOrder,
+    int? groupId, // Phase 106: Accept canonical ID
     String? pos,
     String? formType,
     String? root,
@@ -261,7 +269,7 @@ extension AppStateMode1 on AppState {
       if (authorId == null) return;
 
       try {
-        final timestamp = DateTime.now().millisecondsSinceEpoch;
+        final gId = groupId ?? DateTime.now().millisecondsSinceEpoch;
         final itemType = _isWordMode ? 'word' : 'sentence';
         final tableName = itemType == 'word' ? 'words' : 'sentences';
         
@@ -277,7 +285,7 @@ extension AppStateMode1 on AppState {
         final data = <String, dynamic>{
           'lang_code': _targetLang,
           'text': _translatedText,
-          'group_id': timestamp,
+          'group_id': gId,
           'pos': pos,
           'tags': generalTags.isNotEmpty ? generalTags : null,
           'author_id': authorId,
@@ -296,7 +304,7 @@ extension AppStateMode1 on AppState {
         // 2. Add to User Library with title tags (personal) + dialogue metadata
         await SupabaseService.client.from('user_library').insert({
           'user_id': authorId,
-          'group_id': timestamp,
+          'group_id': gId,
           'personal_note': _note.isNotEmpty ? _note : null,
           'material_tags': titleTags.isNotEmpty ? titleTags : null,
           'dialogue_id': dialogueId,
@@ -304,7 +312,7 @@ extension AppStateMode1 on AppState {
           'sequence_order': sequenceOrder,
         });
 
-        debugPrint('[AppState] Supabase Cloud Sync Successful: table=$tableName, groupId=$timestamp, titleTags=$titleTags, generalTags=$generalTags');
+        debugPrint('[AppState] Supabase Cloud Sync Successful: table=$tableName, groupId=$gId, titleTags=$titleTags, generalTags=$generalTags');
       } catch (e) {
         debugPrint('[AppState] Supabase background save failed: $e');
       }
@@ -375,16 +383,46 @@ extension AppStateMode1 on AppState {
       
       // 2. Supabase Save (Cloud Sync)
       try {
+        // Phase 106: Resolve Canonical ID before cloud sync
+        final canonicalId = await SupabaseService.resolveCanonicalGroupId(
+          sourceText: _sourceText,
+          sourceLang: _sourceLang,
+          targetText: _translatedText,
+          targetLang: _targetLang,
+          englishText: _englishText.isNotEmpty ? _englishText : null,
+          type: itemType,
+          pos: _sourcePos,
+          formType: _sourceFormType,
+          root: _sourceRoot,
+          style: _sourceStyle,
+          note: _note,
+        );
+
+        if (canonicalId != timestamp) {
+          // Relink local temporary ID to canonical ID
+          await DatabaseService.saveUnifiedRecord(
+             text: _sourceText, lang: _sourceLang, translation: _translatedText, targetLang: _targetLang, type: itemType,
+             groupId: canonicalId, // Set to canonical
+          );
+          // Note: saveUnifiedRecord actually inserts/updates. 
+          // But we need to update ALL related records (item_tags, etc). 
+          // Let's use our new relink method via UnifiedRepository/DatabaseService facade if available.
+          // Since I haven't added relink to DatabaseService facade yet, I'll call it directly via UnifiedRepository if possible or use DatabaseService if I add it.
+          // I will use UnifiedRepository.relinkGroupId.
+          await DatabaseService.relinkGroupId(timestamp, canonicalId);
+        }
+
         await _saveToSupabase(
           dialogueId: _activeDialogueId,
           speaker: _activeDialogueId != null ? 'User' : '',
           sequenceOrder: _activeDialogueId != null ? _currentDialogueSequence : 0,
+          groupId: canonicalId, // Phase 106: Pass canonical ID
           pos: _sourcePos,
           formType: _sourceFormType,
           root: _sourceRoot,
         );
       } catch (e) {
-        debugPrint('[AppState] Supabase Cloud Sync failed: $e');
+        debugPrint('[AppState] Supabase Cloud Sync failed (Phase 106): $e');
       }
 
       _statusMessage = '저장 완료!';

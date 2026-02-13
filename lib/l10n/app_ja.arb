@@ -692,5 +692,9 @@
   "addNewSubject": "新しいタイトルを追加",
   "selectExistingSubject": "既存のタイトルを選択",
   "addTagHint": "タグを追加...",
-  "save": "保存"
+  "save": "保存",
+  "styleFormal": "敬語",
+  "styleInformal": "ため口",
+  "stylePolite": "丁寧",
+  "styleSlang": "スラング"
 }

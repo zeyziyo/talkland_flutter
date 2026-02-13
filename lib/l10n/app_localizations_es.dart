@@ -1027,6 +1027,18 @@ class AppLocalizationsEs extends AppLocalizations {
   String get save => 'Guardar';
 
   @override
+  String get styleFormal => 'Formal';
+
+  @override
+  String get styleInformal => 'Informal';
+
+  @override
+  String get stylePolite => 'Cortés';
+
+  @override
+  String get styleSlang => 'Argot';
+
+  @override
   String statusDownloading(Object name) {
     return '다운로드 중: $name...';
   }

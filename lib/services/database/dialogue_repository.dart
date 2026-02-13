@@ -29,16 +29,52 @@ class DialogueRepository {
   static Future<void> deleteGroup(String id) async {
     final db = await _db;
     await db.transaction((txn) async {
+      final group = await txn.query('dialogue_groups', columns: ['title'], where: 'id = ?', whereArgs: [id], limit: 1);
+      if (group.isNotEmpty) {
+        final title = group.first['title'] as String?;
+        if (title != null) {
+          await txn.delete('item_tags', where: 'tag = ?', whereArgs: [title]);
+        }
+      }
       await txn.delete('chat_messages', where: 'dialogue_id = ?', whereArgs: [id]);
       await txn.delete('dialogue_participants', where: 'dialogue_id = ?', whereArgs: [id]);
       await txn.delete('dialogue_groups', where: 'id = ?', whereArgs: [id]);
     });
   }
 
+  static Future<List<Map<String, dynamic>>> getGroupsWithCounts({String? userId}) async {
+    final db = await _db;
+    String whereClause = '';
+    List<dynamic> whereArgs = [];
+    
+    if (userId != null && userId.isNotEmpty) {
+      whereClause = 'WHERE user_id = ? OR user_id IS NULL OR user_id = ?';
+      whereArgs = [userId, 'anonymous'];
+    }
+
+    return await db.rawQuery('''
+      SELECT d.*,
+        COALESCE((SELECT COUNT(DISTINCT it.item_id) FROM item_tags it 
+         JOIN words w ON it.item_id = w.id AND it.item_type = 'word'
+         WHERE it.tag = d.title), 0) as word_count,
+        COALESCE((SELECT COUNT(DISTINCT it.item_id) FROM item_tags it
+         JOIN sentences s ON it.item_id = s.id AND it.item_type = 'sentence'
+         WHERE it.tag = d.title), 0) as sentence_count
+      FROM dialogue_groups d
+      $whereClause
+      ORDER BY d.created_at DESC
+    ''', whereArgs);
+  }
+
   static Future<List<Map<String, dynamic>>> getGroups({String? userId}) async {
     final db = await _db;
-    if (userId != null) {
-      return await db.query('dialogue_groups', where: 'user_id = ?', whereArgs: [userId], orderBy: 'created_at DESC');
+    if (userId != null && userId.isNotEmpty) {
+      return await db.query(
+        'dialogue_groups', 
+        where: 'user_id = ? OR user_id IS NULL OR user_id = ?',
+        whereArgs: [userId, 'anonymous'],
+        orderBy: 'created_at DESC'
+      );
     }
     return await db.query('dialogue_groups', orderBy: 'created_at DESC');
   }
@@ -69,20 +105,64 @@ class DialogueRepository {
     await db.update('dialogue_participants', data, where: 'id = ?', whereArgs: [id]);
   }
 
-  static Future<List<Map<String, dynamic>>> getRecordsByDialogueId(String dialogueId, {String? sourceLang, String? targetLang}) async {
+  static Future<List<Map<String, dynamic>>> getRecordsByDialogueId(
+    String dialogueId, {
+    String? sourceLang,
+    String? targetLang,
+  }) async {
     final db = await _db;
-    // Note: Re-implementing the join logic from original DatabaseService
-    final result = await db.rawQuery('''
-      SELECT m.group_id, m.speaker, m.sequence_order, w.text as word_text, s.text as sentence_text,
-             COALESCE(w.lang_code, s.lang_code) as lang_code,
-             COALESCE(w.pos, s.pos) as pos,
-             w.form_type, w.root, s.style
+    
+    final List<Map<String, dynamic>> messages = await db.rawQuery('''
+      SELECT m.*, p.gender, p.lang_code as participant_lang, p.name as p_name
       FROM chat_messages m
-      LEFT JOIN words w ON m.group_id = w.group_id
-      LEFT JOIN sentences s ON m.group_id = s.group_id
+      LEFT JOIN dialogue_participants p ON m.participant_id = p.id
       WHERE m.dialogue_id = ?
       ORDER BY m.sequence_order ASC
     ''', [dialogueId]);
-    return result;
+    
+    List<Map<String, dynamic>> results = [];
+    
+    for (var msg in messages) {
+      final groupId = msg['group_id'] as int;
+      
+      // Get all sentences in this group (including words/sentences)
+      final words = await db.query('words', where: 'group_id = ?', whereArgs: [groupId]);
+      final sents = await db.query('sentences', where: 'group_id = ?', whereArgs: [groupId]);
+      final allItems = [...words, ...sents];
+      
+      if (allItems.isNotEmpty) {
+        Map<String, dynamic>? source;
+        Map<String, dynamic>? target;
+
+        if (sourceLang != null) {
+          source = allItems.where((s) => s['lang_code'] == sourceLang).firstOrNull;
+        }
+        if (targetLang != null) {
+          target = allItems.where((s) => s['lang_code'] == targetLang).firstOrNull;
+        }
+
+        source ??= allItems.first;
+        target ??= allItems.length > 1 
+            ? (allItems[1]['lang_code'] != source['lang_code'] ? allItems[1] : allItems.firstWhere((s) => s['id'] != source!['id'], orElse: () => allItems.first)) 
+            : source;
+
+        results.add({
+          'id': msg['id'],
+          'group_id': groupId,
+          'source_text': source['text'],
+          'target_text': target['text'],
+          'source_lang': source['lang_code'],
+          'target_lang': target['lang_code'],
+          'speaker': msg['speaker'] ?? msg['p_name'],
+          'participant_id': msg['participant_id'],
+          'gender': msg['gender'], 
+          'participant_lang': msg['participant_lang'], 
+          'sequence_order': msg['sequence_order'],
+          'created_at': msg['created_at'],
+          'note': source['note'] ?? target['note'],
+        });
+      }
+    }
+    return results;
   }
 }

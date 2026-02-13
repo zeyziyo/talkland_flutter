@@ -202,6 +202,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                               onSelected: (option) {
                                 appState.selectSource(option);
                                 _sourceTextController.text = option['text'] as String;
+                                FocusScope.of(context).unfocus(); // Dismiss overlay and keyboard
                               },
                               fieldViewBuilder: (context, controller, focusNode, onFieldSubmitted) {
                                 // Sync controller with AppState
