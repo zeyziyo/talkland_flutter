@@ -449,7 +449,7 @@ class _HomeScreenState extends State<HomeScreen> {
               
               PopupMenuButton<String>(
                 key: _actionButtonKey,
-                onSelected: (value) {
+                onSelected: (value) async {
                   final appState = Provider.of<AppState>(context, listen: false);
                   switch (value) {
                     case 'refresh':

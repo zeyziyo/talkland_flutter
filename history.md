@@ -44,6 +44,12 @@
 - **Integrity**: `DialogueRepository`의 메시지 조회 쿼리를 강화하고, `AppStateChat`에 참가자 생성 시 널 참조 방지 가드를 추가하여 안정성 확보.
 - **Reporting**: 대화 목록 로드 시 'User'/'user' 대소문자를 구분하지 않고 메시지 수를 정확히 카운트하도록 개선.
 
+### [2026-02-13] Phase 112 Hotfix: Emergency Build Recovery
+- **Critical Fix**: `lib/services/database_service.dart`의 괄호 유실로 인한 대규모 구문 오류(Syntax Error)를 복구하고 누락된 `importFromJsonWithMetadata` 선언부를 복원했습니다.
+- **Scope Fix**: `lib/screens/chat_screen.dart`의 화자 헤더에서 정의되지 않은 변수(`isUser`, `isPartner`) 참조 오류를 해결하고, 'Partner' 명칭의 지역화 로직을 보완했습니다.
+- **Async Fix**: `lib/screens/home_screen.dart`의 `PopupMenuButton` 콜백에 `async` 키워드가 누락되어 `await`를 사용할 수 없던 문제를 수정했습니다.
+- **Stability**: 이전 커밋 과정에서 의도치 않게 mangled된 `Switch` 위젯 로직을 정상화하여 UI 안정성을 확보했습니다.
+
 ### [2026-02-13] Import Visibility & ID Type Mismatch Fix (Phase 110)
 - **Bug Fix**: 자료 임포트 시 `syncKey`와 `id` 필드의 타입 불일치로 인해 임포트된 자료가 즉시 화면에 노출되지 않던 문제 해결.
 - **Integrity**: `DatabaseService.importFromJsonWithMetadata` 로직을 개선하여 임포트된 자료의 `id`가 `int` 타입으로 정확히 저장되도록 수정.

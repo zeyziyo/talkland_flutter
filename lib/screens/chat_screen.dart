@@ -748,7 +748,7 @@ class _ChatScreenState extends State<ChatScreen> {
           
           // 3. Name (Me)
           Text(
-             isUser ? l10n.me : (isPartner ? l10n.partner : speakerName),
+             l10n.me,
              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.grey[700]),
           ),
         ],
@@ -773,10 +773,10 @@ class _ChatScreenState extends State<ChatScreen> {
                    child: Text(participant.name[0], style: const TextStyle(fontSize: 10, color: Colors.white)),
                  ),
                  const SizedBox(width: 4),
-                 Text(
-                    participant.name,
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.grey[700]),
-                 ),
+                  Text(
+                     participant.name.toLowerCase() == 'partner' ? l10n.partner : participant.name,
+                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.grey[700]),
+                  ),
                  const SizedBox(width: 4),
                  Icon(Icons.edit, size: 10, color: Colors.grey[400]),
                ],
@@ -964,8 +964,8 @@ class _ChatScreenState extends State<ChatScreen> {
                    Switch(
                      value: _isPartnerTurn,
                      activeThumbColor: Colors.teal,
-                     onChanged: (val) {
-                       setState(() => _isPartnerTurn = val);
+                     onChanged: (value) {
+                       setState(() => _isPartnerTurn = value);
                      },
                    ),
                    Text(
