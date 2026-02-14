@@ -30,15 +30,25 @@ class TagRepository {
     return result.map((e) => e['tag'] as String).toList();
   }
 
+  // Phase 125: 자료 제목(Subject)은 태그 목록에 포함하지 않음
   static Future<List<String>> getAllTags() async {
     final db = await _db;
-    final result = await db.rawQuery('SELECT DISTINCT tag FROM item_tags ORDER BY tag ASC');
+    final result = await db.rawQuery('''
+      SELECT DISTINCT tag FROM item_tags 
+      WHERE tag NOT IN (SELECT subject FROM study_materials)
+      ORDER BY tag ASC
+    ''');
     return result.map((e) => e['tag'] as String).toList();
   }
 
   static Future<List<String>> getAllTagsForLanguage(String langCode) async {
     final db = await _db;
-    final result = await db.rawQuery('SELECT DISTINCT tag FROM item_tags WHERE lang_code = ? OR lang_code = "auto"', [langCode]);
+    final result = await db.rawQuery('''
+      SELECT DISTINCT tag FROM item_tags 
+      WHERE (lang_code = ? OR lang_code = "auto")
+      AND tag NOT IN (SELECT subject FROM study_materials)
+      ORDER BY tag ASC
+    ''', [langCode]);
     return result.map((e) => e['tag'] as String).toList();
   }
 
