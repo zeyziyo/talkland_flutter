@@ -142,12 +142,13 @@ class Mode2Card extends StatelessWidget {
                                // 3. User Tags - Moved to row 1
                                if (record['tags'] != null && (record['tags'] as List).isNotEmpty)
                                  ...(() {
+                                    // Phase 125.3: Enhanced Tag Filtering with Global Hidden Tags
                                     final systemTags = {
                                       ...AppState.posCategories,
                                       ...AppState.sentenceCategories,
                                       ...AppState.verbFormCategories,
                                       ...AppState.adjectiveFormCategories,
-                                      'word', 'sentence'
+                                      ...AppState.systemHiddenTags,
                                     }.map((e) => e.toLowerCase()).toSet();
 
                                     final appState = Provider.of<AppState>(context, listen: false);
@@ -251,12 +252,13 @@ class Mode2Card extends StatelessWidget {
                           spacing: 8,
                           runSpacing: 4,
                           children: (() {
+                            // Phase 125.3: Enhanced Tag Filtering with Global Hidden Tags
                             final systemTags = {
                               ...AppState.posCategories,
                               ...AppState.sentenceCategories,
                               ...AppState.verbFormCategories,
                               ...AppState.adjectiveFormCategories,
-                              'word', 'sentence', 'Dialogue'
+                              ...AppState.systemHiddenTags,
                             }.map((e) => e.toLowerCase()).toSet();
 
                             final appState = Provider.of<AppState>(context, listen: false);

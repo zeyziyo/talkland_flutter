@@ -63,6 +63,11 @@ class AppState extends ChangeNotifier {
     'Subject', 'Object', 'Possessive', 'PossessivePronoun', 'Reflexive'
   ];
 
+  // Phase 125.3: Global Hidden Tags (UI Display Filter)
+  static const Set<String> systemHiddenTags = {
+    'word', 'sentence', 'Dialogue', 'User Input', 'File Import', '#word', '#sentence', '#Dialogue'
+  };
+
   // ---------------------------------------------------------
   // Fields (State Variables)
   // ---------------------------------------------------------
