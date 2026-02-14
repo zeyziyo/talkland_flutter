@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../providers/app_state.dart';
+import 'package:provider/provider.dart'; // State Management
+import 'package:talkie/providers/app_state.dart';
 import '../models/dialogue_group.dart';
 import '../l10n/app_localizations.dart';
 import '../services/speech_service.dart';

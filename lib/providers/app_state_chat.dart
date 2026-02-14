@@ -410,7 +410,6 @@ extension AppStateChat on AppState {
     try {
       final db = await DatabaseService.database;
       await db.transaction((txn) async {
-      await db.transaction((txn) async {
         // Phase 126: Restore Data Isolation (UnifiedRepository Removed)
         // Store dialogue ONLY in chat_messages table.
 
@@ -467,7 +466,6 @@ extension AppStateChat on AppState {
     try {
       final db = await DatabaseService.database;
       
-      await db.transaction((txn) async {
       await db.transaction((txn) async {
         // Phase 126: Restore Data Isolation (UnifiedRepository Removed)
         // Store dialogue ONLY in chat_messages table.
