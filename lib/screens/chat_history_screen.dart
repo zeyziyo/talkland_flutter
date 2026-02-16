@@ -139,6 +139,7 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
                 ),
                 child: DropdownButtonHideUnderline(
                   child: DropdownButton<String>(
+                    hint: Text(l10n.labelNote), // Phase 130: Clarify this is Note/Subject filter
                     value: _selectedSubject ?? 'All',
                     isExpanded: true,
                     items: [

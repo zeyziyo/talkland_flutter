@@ -15,15 +15,38 @@ class DialogueRepository {
     Transaction? txn,
   }) async {
     final executor = txn ?? await _db;
-    await executor.insert('dialogue_groups', {
-      'id': id,
-      'user_id': userId,
-      'title': title,
-      'persona': persona,
-      'location': location,
-      'note': note,
-      'created_at': createdAt,
-    }, conflictAlgorithm: ConflictAlgorithm.replace);
+    
+    // Phase 130 Fix: Avoid ConflictAlgorithm.replace because it triggers ON DELETE CASCADE
+    // causing all messages in 'dialogues' table to be deleted when updating a group.
+    final existing = await executor.query(
+      'dialogue_groups', 
+      columns: ['id'], 
+      where: 'id = ?', 
+      whereArgs: [id],
+      limit: 1
+    );
+
+    if (existing.isNotEmpty) {
+      await executor.update('dialogue_groups', {
+        'user_id': userId,
+        'title': title,
+        'persona': persona,
+        'location': location,
+        'note': note,
+        // created_at should typically NOT be updated, but if needed:
+        // 'created_at': createdAt, 
+      }, where: 'id = ?', whereArgs: [id]);
+    } else {
+      await executor.insert('dialogue_groups', {
+        'id': id,
+        'user_id': userId,
+        'title': title,
+        'persona': persona,
+        'location': location,
+        'note': note,
+        'created_at': createdAt,
+      });
+    }
   }
 
   static Future<void> deleteGroup(String id) async {

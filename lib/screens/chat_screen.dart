@@ -803,18 +803,22 @@ class _ChatScreenState extends State<ChatScreen> {
                 ),
                 VerticalDivider(width: 8, thickness: 1, color: Colors.grey.shade300),
                 // 2. Gender Toggle (User)
-                InkWell(
-                  onTap: () {
-                    final newGender = appState.chatUserGender == 'male' ? 'female' : 'male';
-                    appState.setChatUserGender(newGender);
-                    _speak(msg['source_text'] ?? '', appState.sourceLang, isUser: true);
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 4),
-                    child: Icon(
-                      appState.chatUserGender == 'male' ? Icons.face : Icons.face_3,
-                      size: 16,
-                      color: appState.chatUserGender == 'male' ? Colors.blue : Colors.pink,
+                Tooltip(
+                  message: 'Toggle Gender',
+                  child: InkWell(
+                    onTap: () {
+                      final newGender = appState.chatUserGender == 'male' ? 'female' : 'male';
+                      appState.setChatUserGender(newGender);
+                      _speak(msg['source_text'] ?? '', appState.sourceLang, isUser: true);
+                    },
+                    borderRadius: BorderRadius.circular(12),
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0), // Increased padding
+                      child: Icon(
+                        appState.chatUserGender == 'male' ? Icons.face : Icons.face_3,
+                        size: 20, // Increased size from 16
+                        color: appState.chatUserGender == 'male' ? Colors.blue : Colors.pink,
+                      ),
                     ),
                   ),
                 ),
@@ -894,18 +898,22 @@ class _ChatScreenState extends State<ChatScreen> {
                 ),
                 VerticalDivider(width: 8, thickness: 1, color: Colors.grey.shade300),
                 // 2. Gender Toggle (AI)
-                InkWell(
-                  onTap: () async {
-                    final newGender = participant.gender == 'male' ? 'female' : 'male';
-                    await appState.updateParticipant(participant.id, gender: newGender);
-                    _speak(msg['source_text'] ?? '', participant.langCode, isUser: false);
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 4),
-                    child: Icon(
-                      participant.gender == 'male' ? Icons.face : Icons.face_3,
-                      size: 16,
-                      color: participant.gender == 'male' ? Colors.blue : Colors.pink,
+                Tooltip(
+                  message: 'Toggle Gender',
+                  child: InkWell(
+                    onTap: () async {
+                      final newGender = participant.gender == 'male' ? 'female' : 'male';
+                      await appState.updateParticipant(participant.id, gender: newGender);
+                      _speak(msg['source_text'] ?? '', participant.langCode, isUser: false);
+                    },
+                    borderRadius: BorderRadius.circular(12),
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Icon(
+                        participant.gender == 'male' ? Icons.face : Icons.face_3,
+                        size: 20,
+                        color: participant.gender == 'male' ? Colors.blue : Colors.pink,
+                      ),
                     ),
                   ),
                 ),
