@@ -60,13 +60,53 @@ class _ChatScreenState extends State<ChatScreen> {
   Future<void> _loadHistory() async {
     final appState = Provider.of<AppState>(context, listen: false);
     
+    // Phase 134 Fix: Safety check for New Chat (initialDialogue is null)
+    // Use activeDialogueId from AppState if widget.initialDialogue is null
+    final dialogueId = widget.initialDialogue?.id ?? appState.activeDialogueId;
+    
+    if (dialogueId == null) return;
+
     try {
-      final history = await DatabaseService.getRecordsByDialogueId(
-        widget.initialDialogue!.id,
+      var history = await DatabaseService.getRecordsByDialogueId(
+        dialogueId,
         sourceLang: appState.sourceLang,
         targetLang: appState.targetLang,
       );
       
+      // Phase 135 Fix: Self-Healing Logic (If local empty, check server)
+      // This handles cases where local DB is cleared or sync failed previously.
+      if (history.isEmpty) {
+        debugPrint('[ChatScreen] Local history empty. Checking server for dialogue: $dialogueId');
+        try {
+          final cloudMessages = await SupabaseService.getPrivateChatMessages(dialogueId);
+          if (cloudMessages.isNotEmpty) {
+             // Sort by sequence or created_at
+             cloudMessages.sort((a, b) => (a['sequence_order'] as int).compareTo(b['sequence_order'] as int));
+             
+             // Sync to Local DB
+             for (var msg in cloudMessages) {
+               await DialogueRepository.insertMessage({
+                 'dialogue_id': dialogueId,
+                 'speaker': msg['speaker'],
+                 'source_text': msg['source_text'],
+                 'target_text': msg['target_text'],
+                 'created_at': msg['created_at'],
+               });
+             }
+             
+             // Reload from Local to get standardized format
+             history = await DatabaseService.getRecordsByDialogueId(
+                dialogueId,
+                sourceLang: appState.sourceLang,
+                targetLang: appState.targetLang,
+             );
+          }
+        } catch (e) {
+          debugPrint('[ChatScreen] Server sync attempt failed: $e');
+          // Non-blocking error. If server fails, we just show empty.
+        }
+      }
+
       // Phase 133 Fix: Render messages immediately (Optimistic UI)
       if (mounted) {
         setState(() {
