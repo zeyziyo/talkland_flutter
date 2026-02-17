@@ -18,7 +18,9 @@ extension AppStateChat on AppState {
   }) async {
     // 1. Check Cache
     final existing = _activeParticipants.firstWhere(
-      (p) => p.name == name && p.role == role,
+      (p) => p.name == name && 
+             p.role == role && 
+             (_activeDialogueId == null || p.dialogueId == _activeDialogueId), // Phase 136 Fix: Scope by Dialogue ID
       orElse: () => ChatParticipant(
         id: 'temp', 
         dialogueId: '', 
@@ -263,6 +265,22 @@ extension AppStateChat on AppState {
     _activePersona = group.persona;
     _activeDialogueLocation = group.location;
     _currentChatLocation = group.location ?? '';
+    
+    // Phase 136 Fix: Load Participants for this dialogue
+    _activeParticipants.clear();
+    try {
+      final participantsData = await DatabaseService.getParticipants(group.id);
+      if (participantsData.isNotEmpty) {
+        _activeParticipants = participantsData.map((json) => ChatParticipant.fromJson(json)).toList();
+      } else {
+        // Legacy Support: If no participants found, create default AI based on Persona
+        if (group.persona != null) {
+          await getOrAddParticipant(name: group.persona!, role: 'ai');
+        }
+      }
+    } catch (e) {
+      debugPrint('[AppState] Failed to load participants: $e');
+    }
     
     var records = await DatabaseService.getRecordsByDialogueId(
       group.id,
