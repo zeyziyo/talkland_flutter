@@ -514,5 +514,21 @@ extension AppStateChat on AppState {
       debugPrint('[AppState] Error saving AI response: $e');
     }
   }
+  /* Phase 136: Runtime Repair Helper */
+  Future<void> _repairParticipantsFromMessages(String dialogueId) async {
+    try {
+      final messages = await DatabaseService.getRecordsByDialogueId(dialogueId);
+      final uniqueSpeakers = messages.map((m) => m['speaker'] as String? ?? '').where((s) => s.isNotEmpty).toSet();
+      
+      for (final name in uniqueSpeakers) {
+        final role = name.toLowerCase() == 'user' ? 'user' : 'ai';
+        // Use getOrAdd to handle creation logic
+        await getOrAddParticipant(name: name, role: role);
+      }
+      debugPrint('[AppState] Repaired ${uniqueSpeakers.length} participants for dialogue $dialogueId');
+    } catch (e) {
+      debugPrint('[AppState] Participant repair failed: $e');
+    }
+  }
 }
 // End of AppStateChat
