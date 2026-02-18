@@ -5,7 +5,7 @@ import 'package:path/path.dart';
 class DatabaseHelper {
   static Database? _database;
   static const String _dbName = 'talkie.db';
-  static const int _dbVersion = 20; // Phase 136: Fix Missing Dialogue Participants
+  static const int _dbVersion = 21; // Phase 136: Fix Missing Dialogue Participants (Retry)
 
   static Future<Database> get database async {
     if (_database != null) return _database!;
@@ -76,6 +76,12 @@ class DatabaseHelper {
         if (oldVersion < 20) {
           print('[DB] Migrating to version 20: Populating missing dialogue_participants');
           await _migrateToV20(db);
+        }
+
+        // Phase 136: v21 (Force Retry Repair)
+        if (oldVersion < 21) {
+          print('[DB] Migrating to version 21: Retrying participant repair (force run)');
+          await _migrateToV20(db); // Reuse idempotent logic
         }
         
         // Final Safety Check: Ensure all base tables exist for upgraded users

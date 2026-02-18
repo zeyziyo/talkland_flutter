@@ -267,43 +267,22 @@ extension AppStateChat on AppState {
     _activeDialogueLocation = group.location;
     _currentChatLocation = group.location ?? '';
     
-    // Phase 136 Fix: Load Participants for this dialogue
-    _activeParticipants.clear();
-    try {
-      final participantsData = await DatabaseService.getParticipants(group.id);
-      if (participantsData.isNotEmpty) {
-        _activeParticipants = participantsData.map((json) => ChatParticipant.fromJson(json)).toList();
-      } else {
-        // Phase 136 Fix: Runtime Self-Healing
-        // If migration failed or didn't run, repair participants from existing messages now.
-        debugPrint('[AppState] No participants found. Attempting runtime repair...');
-        await _repairParticipantsFromMessages(group.id);
-        
-        // Reload after repair
-        final repaired = await DatabaseService.getParticipants(group.id);
-        if (repaired.isNotEmpty) {
-           _activeParticipants = repaired.map((json) => ChatParticipant.fromJson(json)).toList();
-        } else {
-           // Fallback: Default AI
-           if (group.persona != null) {
-             await getOrAddParticipant(name: group.persona!, role: 'ai');
-           }
-        }
-      }
-    } catch (e) {
-      debugPrint('[AppState] Failed to load participants: $e');
-    }
-    
+    // Phase 136 Fix: Reordered Logic - Load Messages FIRST, then Participants
+    // This ensues runtime repair has messages to work with.
+
+    // 1. Load Messages (Local)
     var records = await DatabaseService.getRecordsByDialogueId(
       group.id,
       sourceLang: _sourceLang,
       targetLang: _targetLang,
     );
     
+    // 2. Cloud Sync if missing (Self-Healing Messages)
     if (records.isEmpty) {
+      debugPrint('[AppState] Local messages empty. Attempting Cloud Sync for ${group.id}...');
       final cloudMessages = await SupabaseService.getPrivateChatMessages(group.id);
       if (cloudMessages.isNotEmpty) {
-        // Sort by sequence order to ensure correct insertion order for ID-based sorting
+        // Sort by sequence order
         cloudMessages.sort((a, b) => (a['sequence_order'] as int).compareTo(b['sequence_order'] as int));
         
         final db = await DatabaseService.database;
@@ -320,6 +299,7 @@ extension AppStateChat on AppState {
           }
         });
         
+        // Reload records after sync
         records = await DatabaseService.getRecordsByDialogueId(
           group.id,
           sourceLang: _sourceLang,
@@ -328,14 +308,47 @@ extension AppStateChat on AppState {
       }
     }
 
+    // 3. Load Participants (NOW we have messages if they existed in cloud)
+    _activeParticipants.clear();
+    try {
+      var participantsData = await DatabaseService.getParticipants(group.id);
+      
+      if (participantsData.isEmpty) {
+        // Phase 136 Fix: Runtime Self-Healing Participants
+        // Only try to repair if we actually have messages now
+        if (records.isNotEmpty) {
+          debugPrint('[AppState] No participants found but messages exist. Triggering Runtime Repair...');
+          await _repairParticipantsFromMessages(group.id);
+          // Reload after repair
+          participantsData = await DatabaseService.getParticipants(group.id);
+        }
+      }
+
+      if (participantsData.isNotEmpty) {
+        _activeParticipants = participantsData.map((json) => ChatParticipant.fromJson(json)).toList();
+      } else {
+        // Legacy Support: Only if repair failed or no messages existed
+        if (group.persona != null) {
+          await getOrAddParticipant(name: group.persona!, role: 'ai');
+        }
+      }
+    } catch (e) {
+      debugPrint('[AppState] Failed to process participants: $e');
+    }
+
     if (records.isNotEmpty) {
-      // Sequence order is now implicitly ID-based or we rely on Cloud sequence for logical tracking
-      // But _currentDialogueSequence is a counter for next message.
-      _currentDialogueSequence = records.length; 
+      // Find max sequence
+      int maxSeq = 0;
+      for (var r in records) {
+        int seq = r['sequence_order'] as int? ?? 0; // Use ID if needed, but repo maps it
+        if (seq > maxSeq) maxSeq = seq;
+      }
+      _currentDialogueSequence = maxSeq;
     } else {
       _currentDialogueSequence = 0;
     }
-    
+
+    _currentChatMessages = records;
     notify();
   }
 
