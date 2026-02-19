@@ -4,7 +4,7 @@ import '../providers/app_state.dart';
 import 'chat_screen.dart';
 import '../l10n/app_localizations.dart';
 import '../models/dialogue_group.dart';
-import '../models/chat_participant.dart';
+
 import '../widgets/participant_selector_dialog.dart';
 
 class ChatHistoryScreen extends StatefulWidget {

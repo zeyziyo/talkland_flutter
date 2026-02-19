@@ -47,7 +47,7 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
                     ),
                     const SizedBox(height: 16),
                     DropdownButtonFormField<String>(
-                      value: role,
+                      initialValue: role,
                       decoration: InputDecoration(labelText: 'Role'),
                       items: const [
                         DropdownMenuItem(value: 'user', child: Text('User')),
@@ -57,7 +57,7 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
                     ),
                      const SizedBox(height: 16),
                     DropdownButtonFormField<String>(
-                      value: gender,
+                      initialValue: gender,
                       decoration: InputDecoration(labelText: 'Gender'),
                       items: const [
                         DropdownMenuItem(value: 'male', child: Text('Male')),

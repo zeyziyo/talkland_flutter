@@ -319,7 +319,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Future<void> _savePartnerMessage(AppState appState, String source, String sLang, String target, String tLang, String speaker) async {
       // Create a dialogue group if none
       if (appState.activeDialogueId == null) {
-         await appState.startNewDialogue(persona: 'Partner');
+         await appState.startNewDialogue(title: 'Partner Chat');
       }
       
       // Save Message (We reuse saveAiResponse logic or call save directly)
