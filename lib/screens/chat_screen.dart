@@ -15,7 +15,9 @@ import 'package:geocoding/geocoding.dart';
 
 class ChatScreen extends StatefulWidget {
   final DialogueGroup? initialDialogue;
-  const ChatScreen({super.key, this.initialDialogue});
+  /// true = AI 모드(_isPartnerMode=false), false = 파트너 모드(_isPartnerMode=true)
+  final bool hasAiParticipant;
+  const ChatScreen({super.key, this.initialDialogue, this.hasAiParticipant = true});
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
@@ -39,21 +41,27 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   void initState() {
     super.initState();
-    
+
+    // 참가자 구성에 따라 모드 초기화
+    // hasAiParticipant=true  → AI 모드 (_isPartnerMode = false)
+    // hasAiParticipant=false → 파트너 모드 (_isPartnerMode = true)
+    _isPartnerMode = !widget.hasAiParticipant;
+
     // Phase 119: Pre-warm Speech Services to avoid initial STT/TTS delay
     _speechService.initialize().catchError((e) {
       debugPrint('[ChatScreen] Pre-warm failed: $e');
       return false;
     });
 
-    if (widget.initialDialogue != null) {
+    // Load History if we have an active dialogue (New Chat or Existing)
+    final appState = Provider.of<AppState>(context, listen: false);
+    if (widget.initialDialogue != null || appState.activeDialogueId != null) {
       _loadHistory();
     }
+
     // Load list for Dropdown
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
-      final appState = Provider.of<AppState>(context, listen: false);
-      appState.loadDialogueGroups();
       appState.loadParticipants(); // Phase 70
     });
   }
@@ -566,32 +574,13 @@ class _ChatScreenState extends State<ChatScreen> {
     setState(() => _isListening = true);
 
     try {
-      // Determine Language based on Partner Mode Key
-      // If Partner Turn: Listen in Target Lang
-      // Else: Listen in Source Lang
-      
       final isPartnerListen = _isPartnerMode && _isPartnerTurn;
       final listenLang = isPartnerListen ? appState.targetLang : appState.sourceLang;
 
-      await appState.startListening(
-        languageCode: listenLang,
-      );
-      
-      // We need to continuously update local controller from AppState sourceText?
-      // Wait, AppState.startListening updates AppState.sourceText.
-      // But Chat Screen has its own controller `_textController`.
-      // The callback below is what connects them.
-      // Wait, AppState `startListening` calls `setSourceText`.
-      // I should listen to AppState changes or pass a callback?
-      // Actually, my `_startListening` here calls `_speechService.startSTT` directly in the OLD code.
-      // Do I use `appState.startListening` or `_speechService` directly?
-      // `appState.startListening` is better for global state management but `ChatScreen` has local text controller.
-      // Let's stick to using `_speechService` DIRECTLY here to avoid conflicting with Mode 1 text state.
-      
+      // ChatScreen의 _textController를 직접 업데이트하기 위해 _speechService 단돁 사용
+      // appState.startListening()을 병용 호출 시 STT가 충돌하여 대화문이 입력되지 않는 버그 발생
       await _speechService.startSTT(
-        lang: appState.getServiceLocale(listenLang), // I need to expose this helper or duplicate logic
-        // Helper `_getServiceLocale` is private in AppState.
-        // Let's imply generic locale string construction:
+        lang: appState.getServiceLocale(listenLang),
         listenFor: const Duration(seconds: 30),
         onResult: (text, isFinal, alternates) {
           setState(() {
@@ -605,7 +594,10 @@ class _ChatScreenState extends State<ChatScreen> {
       );
     } catch (e) {
       if (!mounted) return;
-      setState(() => _isLoading = false);
+      setState(() {
+        _isListening = false;
+        _isLoading = false;
+      });
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(l10n.recognitionFailed(e.toString()))),
       );

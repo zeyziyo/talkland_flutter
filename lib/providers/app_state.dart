@@ -248,7 +248,39 @@ class AppState extends ChangeNotifier {
 
   Future<void> loadGlobalParticipants() async {
     _globalParticipants = await DialogueRepository.getAllUniqueParticipants();
+    await _ensureDefaultParticipants();
     notifyListeners();
+  }
+
+  /// 기본 참가자('나', 'AI')가 없으면 자동 생성
+  Future<void> _ensureDefaultParticipants() async {
+    final hasUser = _globalParticipants.any((p) => p.role == 'user');
+    final hasAi = _globalParticipants.any((p) => p.role == 'ai');
+
+    if (!hasUser) {
+      final user = ChatParticipant(
+        id: const Uuid().v4(),
+        dialogueId: '',
+        name: '나',
+        role: 'user',
+        gender: _chatUserGender,
+        langCode: _sourceLang,
+      );
+      await DialogueRepository.insertParticipant(user.toJson());
+      _globalParticipants.insert(0, user);
+    }
+    if (!hasAi) {
+      final ai = ChatParticipant(
+        id: const Uuid().v4(),
+        dialogueId: '',
+        name: 'AI',
+        role: 'ai',
+        gender: _chatAiGender,
+        langCode: _targetLang,
+      );
+      await DialogueRepository.insertParticipant(ai.toJson());
+      _globalParticipants.add(ai);
+    }
   }
 
   Future<void> addGlobalParticipant(ChatParticipant participant) async {

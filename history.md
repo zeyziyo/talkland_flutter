@@ -27,6 +27,14 @@
 - **Bug Fix (Start Chat)**: `participant_selector_dialog.dart`의 "Start Chat" 버튼 `onPressed`를 `async`로 변경하고 `onSelected` 콜백을 `await` 처리. 기존에는 `Navigator.pop` 이후 `startNewDialogue()`가 완료되기 전에 `ChatScreen`이 열려 `activeDialogueId == null` 상태였던 타이밍 버그 해결.
 - **Quality**: `flutter analyze` No issues found.
 
+### [2026-02-20] Chat 기능 버그 수정 및 AI 응답 구현
+
+- **Bug Fix (STT 대화문 미입력)**: `_startListening`에서 `appState.startListening()` + `_speechService.startSTT()` 이중 호출로 인한 충돌 제거. `_speechService.startSTT()` 단독 사용으로 STT 결과가 `_textController`에 정상 반영.
+- **Feature (기본 참가자)**: `loadGlobalParticipants()`에 `_ensureDefaultParticipants()` 추가. 신규 설치 시 '나(user)', 'AI(ai)' 기본 참가자 자동 생성. `ParticipantSelectorDialog` 열릴 때 전체 참가자 기본 선택 상태로 표시.
+- **Feature (AI 응답)**: `ChatScreen`에 `hasAiParticipant` 파라미터 추가. AI 참가자 선택 시 AI 모드(`_isPartnerMode=false`), 사람만 선택 시 파트너 모드(`_isPartnerMode=true`)로 진입. `_showNewChatDialog`에서 선택된 참가자 구성 분석 후 파라미터 전달.
+- **Quality**: `flutter analyze` No issues found.
+
+
 ### [2026-02-13] AI Chat UI/UX Refinement & Reliability (Phase 119)
 - **UI/UX**: 성별 선택 다이얼로그를 제거하고, 각 참가자의 헤더(언어 드롭다운 옆)로 성별 전환 위젯을 이동하여 실시간 제어성을 극대화했습니다. 
 - **Acoustic Symmetry**: 영어('en-US') 및 한국어('ko-KR') 로케일을 강제 매핑하여 억양 불일치(콩글리쉬)를 원천 차단했습니다.

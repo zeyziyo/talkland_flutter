@@ -270,25 +270,33 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
   }
 
   void _showNewChatDialog(AppState appState, AppLocalizations l10n) {
+    // Capture parent context to ensure navigation works after dialog closes
+    final parentContext = context;
+    
     showDialog(
       context: context,
-      builder: (context) => ParticipantSelectorDialog(
+      builder: (dialogContext) => ParticipantSelectorDialog(
         onSelected: (participants) async {
             // Create chat with selected participants
-            // We can use the first selected item's name as title/persona hint or generic
             final title = participants.isNotEmpty 
                 ? participants.map((p) => p.name).join(', ') 
                 : 'Group Chat';
             
             await appState.startNewDialogue(
-              title: title, // Pass title
+              title: title, 
               initialParticipants: participants,
             );
             
-            if (context.mounted) {
+            // AI 참가자 포함 여부에 따라 모드 결정
+            final hasAi = participants.any((p) => p.role == 'ai');
+
+            // Use parentContext for navigation
+            if (parentContext.mounted) {
               Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const ChatScreen()),
+                parentContext,
+                MaterialPageRoute(
+                  builder: (_) => ChatScreen(hasAiParticipant: hasAi),
+                ),
               );
             }
         },
