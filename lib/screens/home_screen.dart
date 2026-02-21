@@ -317,6 +317,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final l10n = AppLocalizations.of(context)!;
     
     return Scaffold(
+      backgroundColor: Colors.yellow[50], // VISUAL PROOF 1
       appBar: AppBar(
         title: Consumer<AppState>(
           builder: (context, appState, child) {
@@ -353,7 +354,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
             centerTitle: true,
-            backgroundColor: const Color(0xFF667eea),
+            backgroundColor: Colors.orange, // VISUAL PROOF 2
             foregroundColor: Colors.white,
             leading: Builder(
               builder: (context) => IconButton(
@@ -654,6 +655,36 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
+          // VISUAL PROOF 3: Version Banner
+          Container(
+            width: double.infinity,
+            color: Colors.yellow[300],
+            padding: const EdgeInsets.symmetric(vertical: 4),
+            child: const Text(
+              'v14.6 - DATA INTEGRITY PATCH (STABLE MODE)',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+            ),
+          ),
+          // Phase 9: Offline Banner
+          if (appState.isOffline)
+            Container(
+              width: double.infinity,
+              color: Colors.orange.shade800,
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              child: Row(
+                children: [
+                  const Icon(Icons.wifi_off, color: Colors.white, size: 18),
+                  const SizedBox(width: 8),
+                  const Expanded(
+                    child: Text(
+                      '인터넷 연결이 없습니다. 저장된 내용으로 복습만 가능합니다.',
+                      style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           Expanded(
             child: PageView(
               controller: _pageController,

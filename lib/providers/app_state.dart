@@ -24,6 +24,7 @@ import 'package:flutter/material.dart';
 import '../services/supabase_service.dart';
 import '../l10n/app_localizations.dart';
 import '../constants/app_constants.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 part 'app_state_auth.dart';
 part 'app_state_mode1.dart';
@@ -40,7 +41,14 @@ class AppState extends ChangeNotifier {
   final SharedPreferences? _prefs;
 
   AppState(this._prefs) {
+    debugPrint('>>> APPSTATE [1] Constructor Start');
+    _usageService.init(prefs: _prefs); 
     _initSettings();
+    debugPrint('>>> APPSTATE [2] Settings Init Done');
+    loadGlobalParticipants();
+    cleanupCorruptedParticipants(); // Phase 28: Clean ghost data on start
+    _initConnectivity();
+    debugPrint('>>> APPSTATE [3] Constructor Exit');
   }
 
   // Helper for Extensions to notify listeners
@@ -165,6 +173,14 @@ class AppState extends ChangeNotifier {
   List<ChatParticipant> _activeParticipants = [];
   List<Map<String, dynamic>> _currentChatMessages = [];
 
+  // Phase 9: Offline State
+  bool _isOffline = false;
+  StreamSubscription<List<ConnectivityResult>>? _connectivitySubscription;
+
+  // Phase 1: Identity & Lifecycle Guard
+  bool _globalParticipantsLoading = true;
+  bool get globalParticipantsLoading => _globalParticipantsLoading;
+
   // ---------------------------------------------------------
   // Getters
   // ---------------------------------------------------------
@@ -213,10 +229,12 @@ class AppState extends ChangeNotifier {
   String get currentChatLocation => _currentChatLocation;
   String get sourcePos => _sourcePos;
   String get sourceFormType => _sourceFormType;
-  String get sourceStyle => _sourceStyle; // Phase 98.1
+  String get sourceStyle => _sourceStyle;
   String get sourceRoot => _sourceRoot;
   List<DialogueGroup> get dialogueGroups => _dialogueGroups;
+  List<ChatParticipant> get activeParticipants => _activeParticipants;
   List<Map<String, dynamic>> get currentChatMessages => _currentChatMessages;
+  bool get isOffline => _isOffline;
   
   bool get mode3SessionActive => _mode3SessionActive;
   Map<String, dynamic>? get currentMode3Question => _currentMode3Question;
@@ -230,7 +248,6 @@ class AppState extends ChangeNotifier {
   
   // Essential Getters for UI
   String get recordTypeFilter => _recordTypeFilter;
-  List<ChatParticipant> get activeParticipants => _activeParticipants;
   bool get isRecommendationLoading => _isRecommendationLoading;
   List<Map<String, dynamic>> get recommendedItems => _recommendedItems;
   List<Map<String, dynamic>> get studyMaterials => _studyMaterials;
@@ -247,17 +264,35 @@ class AppState extends ChangeNotifier {
   List<ChatParticipant> get globalParticipants => _globalParticipants;
 
   Future<void> loadGlobalParticipants() async {
-    _globalParticipants = await DialogueRepository.getAllUniqueParticipants();
-    await _ensureDefaultParticipants();
+    _globalParticipantsLoading = true;
     notifyListeners();
+    
+    try {
+      debugPrint('>>> APPSTATE [4] loadGlobalParticipants Try Start');
+      debugPrint('[AppState] Starting Sequential Global Participants Loading...');
+      _globalParticipants = await DialogueRepository.getAllUniqueParticipants();
+      debugPrint('>>> APPSTATE [5] Unique Participants fetched: ${_globalParticipants.length}');
+      
+      await _ensureDefaultParticipants();
+      debugPrint('>>> APPSTATE [6] Default Participants ensured.');
+      
+    } catch (e) {
+      debugPrint('[AppState] Global Participants Loading Error: $e');
+    } finally {
+      _globalParticipantsLoading = false;
+      debugPrint('[AppState] Global Participants Loading Finished. Guard Disconnected.');
+      notifyListeners();
+    }
   }
 
   /// 기본 참가자('나', 'AI')가 없으면 자동 생성
   Future<void> _ensureDefaultParticipants() async {
-    final hasUser = _globalParticipants.any((p) => p.role == 'user');
-    final hasAi = _globalParticipants.any((p) => p.role == 'ai');
+    // Phase 10 Debug: 이름('나', 'AI')까지 확인하여 확실하게 생성 보장
+    final hasUserMe = _globalParticipants.any((p) => p.role == 'user' && p.name == '나');
+    final hasAiBot = _globalParticipants.any((p) => (p.role == 'ai' || p.role == 'assistant') && p.name == 'AI');
 
-    if (!hasUser) {
+    if (!hasUserMe) {
+      debugPrint('[AppState] Creating default user: 나');
       final user = ChatParticipant(
         id: const Uuid().v4(),
         dialogueId: '',
@@ -269,7 +304,9 @@ class AppState extends ChangeNotifier {
       await DialogueRepository.insertParticipant(user.toJson());
       _globalParticipants.insert(0, user);
     }
-    if (!hasAi) {
+    
+    if (!hasAiBot) {
+      debugPrint('[AppState] Creating default AI: AI');
       final ai = ChatParticipant(
         id: const Uuid().v4(),
         dialogueId: '',
@@ -280,6 +317,15 @@ class AppState extends ChangeNotifier {
       );
       await DialogueRepository.insertParticipant(ai.toJson());
       _globalParticipants.add(ai);
+    }
+
+    // 레거시 'assistant' 역할 정규화
+    final assistantIndex = _globalParticipants.indexWhere((p) => p.role == 'assistant');
+    if (assistantIndex != -1) {
+      final legacyAi = _globalParticipants[assistantIndex];
+      final updatedAi = legacyAi.copyWith(role: 'ai');
+      await DialogueRepository.updateParticipant(updatedAi.id, {'role': 'ai'});
+      _globalParticipants[assistantIndex] = updatedAi;
     }
   }
 
@@ -496,9 +542,34 @@ class AppState extends ChangeNotifier {
     _sourceText = prefix + text + suffix;
   }
 
+  // ---------------------------------------------------------
+  // Phase 9: Connectivity Logic
+  // ---------------------------------------------------------
+
+  void _initConnectivity() {
+    // Initial check
+    Connectivity().checkConnectivity().then(_updateConnectionStatus);
+    
+    // Listen for changes
+    _connectivitySubscription = Connectivity().onConnectivityChanged.listen(_updateConnectionStatus);
+  }
+
+  void _updateConnectionStatus(List<ConnectivityResult> results) {
+    // connectivity_plus v6.0.0+ returns a List.
+    // Offline if the list contains only .none, or is empty (though usually it has .none)
+    final bool offline = results.isEmpty || (results.length == 1 && results.contains(ConnectivityResult.none));
+    
+    if (_isOffline != offline) {
+      _isOffline = offline;
+      debugPrint('[AppState] Connectivity Changed: Offline=$_isOffline');
+      notify();
+    }
+  }
+
   @override
   void dispose() {
     _speechStatusSubscription?.cancel();
+    _connectivitySubscription?.cancel();
     _cancelMode3Timers();
     super.dispose();
   }

@@ -4,9 +4,13 @@ extension AppStateChat on AppState {
   Future<void> loadParticipants() async {
     if (_activeDialogueId == null) return;
     
-    final data = await DatabaseService.getParticipants(_activeDialogueId!);
-    _activeParticipants = data.map((json) => ChatParticipant.fromJson(json)).toList();
-    notify();
+    try {
+      final data = await DatabaseService.getParticipants(_activeDialogueId!);
+      _activeParticipants = data.map((json) => ChatParticipant.fromJson(json)).toList();
+      notify();
+    } catch (e) {
+      debugPrint('[AppState] Failed to load participants for chat: $e');
+    }
   }
 
   /// Find a participant or create a new one (e.g. Stranger)
@@ -15,25 +19,26 @@ extension AppStateChat on AppState {
     required String role, 
     String? gender,
     String? languageCode,
+    String? id, // Phase 28: Explicit ID support
   }) async {
-    // 1. Check Cache
+    // 1. Check existing active participants (by ID or Name+Role)
     final existing = _activeParticipants.firstWhere(
-      (p) => p.name.toLowerCase() == name.toLowerCase() && 
-             p.role == role && 
-             (_activeDialogueId == null || p.dialogueId == _activeDialogueId), // Phase 136 Fix: Scope by Dialogue ID
-      orElse: () => ChatParticipant(
-        id: 'temp', 
-        dialogueId: '', 
-        name: '', 
-        role: ''
-      ),
+      (p) => (id != null && p.id == id) || 
+             (p.name.toLowerCase() == name.toLowerCase() && p.role == role),
+      orElse: () => ChatParticipant(id: 'temp', dialogueId: '', name: '', role: ''),
     );
-
+ 
     if (existing.id != 'temp') return existing;
 
-    // 2. Create New
-    final dId = _activeDialogueId ?? (role == 'user' ? 'legacy' : 'unknown');
-    final newId = const Uuid().v4();
+    // 2. Determine Canonical ID for Core Roles
+    String newId = id ?? const Uuid().v4();
+    if (role == 'user' && (name == '나' || name == 'User' || id == 'me')) {
+      newId = 'me';
+    } else if ((role == 'ai' || role == 'assistant') && (name == 'AI' || id == 'ai')) {
+      newId = 'ai';
+    }
+
+    final dId = _activeDialogueId ?? 'global';
     final newParticipant = ChatParticipant(
       id: newId,
       dialogueId: dId,
@@ -41,13 +46,16 @@ extension AppStateChat on AppState {
       role: role,
       gender: gender ?? (role.toLowerCase() == 'user' ? _chatUserGender : _chatAiGender),
       langCode: languageCode ?? (role.toLowerCase() == 'user' ? _sourceLang : _targetLang),
-      avatarColor: Colors.primaries[Random().nextInt(Colors.primaries.length)].toARGB32(),
+      avatarColor: Colors.primaries[Random().nextInt(Colors.primaries.length)].value,
     );
 
-    if (dId != 'legacy' && dId != 'unknown') {
-      await DatabaseService.insertParticipant(newParticipant.toJson());
+    // 3. Persist to DB
+    await DatabaseService.insertParticipant(newParticipant.toJson());
+    
+    // 4. Update memory state
+    if (!_activeParticipants.any((p) => p.id == newId)) {
+      _activeParticipants.add(newParticipant);
     }
-    _activeParticipants.add(newParticipant);
     notify();
     
     return newParticipant;
@@ -118,8 +126,10 @@ extension AppStateChat on AppState {
   }
 
   /// Create a new dialogue and set as active session
+  /// Phase 10 Fix: Offline-First 방식으로 변경
+  /// 로컬에서 먼저 UUID로 대화를 생성하고, Supabase는 백그라운드 동기화로 처리
   Future<void> startNewDialogue({
-    String? title, // Changed from 'persona' to 'title' to generally represent the chat
+    String? title,
     List<ChatParticipant>? initialParticipants, 
   }) async {
     try {
@@ -128,25 +138,41 @@ extension AppStateChat on AppState {
 
       final dialogueTitle = title ?? 'New Conversation';
 
-      final dialogueId = await SupabaseService.createDialogueGroup(
-        title: dialogueTitle,
-        persona: 'Group', // Default persona type
-      );
+      // [Offline-First] 로컬에서 먼저 UUID 기반 대화 ID를 생성합니다.
+      // Supabase 서버 의존성을 제거하여 비로그인/오프라인 상태에서도 정상 동작합니다.
+      final dialogueId = const Uuid().v4();
+      final now = DateTime.now().toIso8601String();
+      final userId = SupabaseService.client.auth.currentUser?.id;
 
       _activeDialogueId = dialogueId;
       _activeDialogueTitle = dialogueTitle;
       _activePersona = 'Group';
       _currentDialogueSequence = 1;
 
+      // 로컬 DB에 먼저 저장
       await DatabaseService.insertDialogueGroup(
         id: dialogueId,
         title: dialogueTitle,
         persona: 'Group',
-        createdAt: DateTime.now().toIso8601String(),
-        userId: SupabaseService.client.auth.currentUser?.id,
+        createdAt: now,
+        userId: userId,
       );
 
-      // Phase 4: Add Initial Participants
+      // Supabase 동기화는 백그라운드에서 처리 (실패해도 무관)
+      if (userId != null) {
+        SupabaseService.createDialogueGroup(
+          title: dialogueTitle,
+          persona: 'Group',
+        ).then((serverId) {
+          // 서버 ID와 로컬 ID가 다를 경우, 로컬 DB를 업데이트하거나 매핑 유지
+          // 현재는 로컬 ID를 기준으로 사용하므로 별도 처리 없음
+          debugPrint('[AppState] Background Supabase sync for dialogue: serverId=$serverId, localId=$dialogueId');
+        }).catchError((e) {
+          debugPrint('[AppState] Background Supabase sync failed (ignored): $e');
+        });
+      }
+
+      // Phase 10: Add Initial Participants
       if (initialParticipants != null && initialParticipants.isNotEmpty) {
         for (var p in initialParticipants) {
           await DatabaseService.insertParticipant({
@@ -159,15 +185,20 @@ extension AppStateChat on AppState {
           });
           _activeParticipants.add(p);
         }
-      } 
-      // Removed Legacy Fallback: Users must select participants via standard flow.
-      // If no participants, it's an empty chat (which is allowed, user can add later)
+      }
+      // Phase 10/28: "나"와 "AI"만 명시적으로 주입 (고정 참가자 정책)
+      final userPart = await getOrAddParticipant(name: '나', role: 'user', id: 'me');
+      final aiPart = await getOrAddParticipant(name: _activePersona ?? 'AI', role: 'ai', id: 'ai');
+
+      // Ensure they are linked to this dialogue
+      await DatabaseService.insertParticipant({...userPart.toJson(), 'dialogue_id': dialogueId});
+      await DatabaseService.insertParticipant({...aiPart.toJson(), 'dialogue_id': dialogueId});
 
       _dialogueGroups.insert(0, DialogueGroup(
         id: dialogueId,
         userId: SupabaseService.client.auth.currentUser?.id ?? 'anonymous',
         title: dialogueTitle,
-        persona: 'Group',
+        persona: 'AI', // Phase 29: default to AI, not Group
         createdAt: DateTime.now(),
       ));
 
@@ -459,15 +490,24 @@ extension AppStateChat on AppState {
 
   /// Save User's message to dialogue
   Future<void> saveUserMessage(String sourceText, String targetText) async {
-    if (_activeDialogueId == null) return;
+    if (_activeDialogueId == null) {
+      await startNewDialogue();
+    }
+
+    // Find the participant with role 'user'
+    final userPart = _activeParticipants.firstWhere(
+      (p) => p.role == 'user',
+      orElse: () => ChatParticipant(id: 'me', dialogueId: _activeDialogueId!, name: '나', role: 'user'),
+    );
 
     _currentDialogueSequence++;
 
     try {
-      // Phase 129: Use DialogueRepository (dialogues table)
+      // Phase 129/21: Use ID for speaker_id (Data Integrity)
       await DialogueRepository.insertMessage({
         'dialogue_id': _activeDialogueId,
-        'speaker': 'User',
+        'speaker_id': userPart.id, // ID 기반 저장 (integrated_data_structure.md 준수)
+        'speaker': userPart.name,   // Legacy support for display
         'source_text': sourceText,
         'target_text': targetText,
         'created_at': DateTime.now().toIso8601String(),
@@ -481,7 +521,7 @@ extension AppStateChat on AppState {
         targetText: targetText,
         sourceLang: _sourceLang,
         targetLang: _targetLang,
-        speaker: 'User',
+        speaker: userPart.id, // Phase 28: Store ID on server too
         sequenceOrder: _currentDialogueSequence,
       ).catchError((e) => debugPrint('[AppState] Cloud Sync Error: $e'));
 
@@ -503,8 +543,15 @@ extension AppStateChat on AppState {
     if (_activeDialogueId == null) {
       await startNewDialogue();
     }
+
+    // Find the participant with role 'ai'
+    final aiPart = _activeParticipants.firstWhere(
+      (p) => p.role == 'ai',
+      // orElse handle: activePersona might be used as name
+      orElse: () => ChatParticipant(id: 'ai', dialogueId: _activeDialogueId!, name: _activePersona ?? 'AI', role: 'ai'),
+    );
     
-    final finalSpeaker = speaker ?? _activePersona ?? 'AI';
+    final finalSpeaker = speaker ?? aiPart.name;
     final createdAt = DateTime.now().toIso8601String();
     
     _currentDialogueSequence++;
@@ -517,13 +564,20 @@ extension AppStateChat on AppState {
         languageCode: _targetLang,
       );
 
-      // Phase 129: Use DialogueRepository
+      // AI Participant 찾기 (Ensure we have the latest participant after getOrAddParticipant)
+      final updatedAiPart = _activeParticipants.firstWhere(
+        (p) => p.role == 'ai' || p.role == 'assistant',
+        orElse: () => ChatParticipant(id: 'ai', dialogueId: _activeDialogueId!, name: 'AI', role: 'ai'),
+      );
+
+      // Phase 21: ID 기반 저장
       await DialogueRepository.insertMessage({
         'dialogue_id': _activeDialogueId,
-        'speaker': finalSpeaker,
+        'speaker_id': updatedAiPart.id,
+        'speaker': speaker ?? updatedAiPart.name,
         'source_text': sourceText,
         'target_text': targetText,
-        'created_at': createdAt,
+        'created_at': DateTime.now().toIso8601String(),
       });
 
       SupabaseService.savePrivateChatMessage(
@@ -532,27 +586,53 @@ extension AppStateChat on AppState {
         targetText: targetText,
         sourceLang: _sourceLang,
         targetLang: _targetLang,
-        speaker: finalSpeaker,
+        speaker: updatedAiPart.id, // Phase 28: Store ID
         sequenceOrder: _currentDialogueSequence,
       ).catchError((e) => debugPrint('[AppState] Background Cloud Sync Error: $e'));
     } catch (e) {
       debugPrint('[AppState] Error saving AI response: $e');
     }
   }
-  /* Phase 136: Runtime Repair Helper */
+  /* Phase 136/28: Improved Runtime Repair */
   Future<void> _repairParticipantsFromMessages(String dialogueId) async {
     try {
       final messages = await DatabaseService.getRecordsByDialogueId(dialogueId);
       final uniqueSpeakers = messages.map((m) => m['speaker'] as String? ?? '').where((s) => s.isNotEmpty).toSet();
       
-      for (final name in uniqueSpeakers) {
-        final role = name.toLowerCase() == 'user' ? 'user' : 'ai';
-        // Use getOrAdd to handle creation logic
-        await getOrAddParticipant(name: name, role: role);
+      for (final idOrName in uniqueSpeakers) {
+        // 만약 이름이 너무 길다면(오염 데이터) 건너뜀
+        if (idOrName.length > 50) continue;
+
+        final role = idOrName.toLowerCase() == 'user' || idOrName == 'me' ? 'user' : 'ai';
+        await getOrAddParticipant(
+          name: idOrName == 'me' ? '나' : (idOrName == 'ai' ? 'AI' : idOrName), 
+          role: role,
+          id: idOrName.contains('-') || idOrName == 'me' || idOrName == 'ai' ? idOrName : null
+        );
       }
       debugPrint('[AppState] Repaired ${uniqueSpeakers.length} participants for dialogue $dialogueId');
     } catch (e) {
       debugPrint('[AppState] Participant repair failed: $e');
+    }
+  }
+
+  /// Phase 28: Cleanup Task - Remove Corrupted Participants
+  Future<void> cleanupCorruptedParticipants() async {
+    try {
+      final all = await DatabaseService.getAllUniqueParticipants();
+      int count = 0;
+      for (var p in all) {
+        if (p.name.length > 50 || p.name.contains('\n')) {
+          await DatabaseService.deleteParticipant(p.id);
+          count++;
+        }
+      }
+      if (count > 0) {
+        debugPrint('[AppState] Cleaned up $count corrupted participants.');
+        loadParticipants(); // Refresh
+      }
+    } catch (e) {
+      debugPrint('[AppState] Cleanup failed: $e');
     }
   }
 }

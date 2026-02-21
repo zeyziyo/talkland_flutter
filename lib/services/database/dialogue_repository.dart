@@ -100,16 +100,23 @@ class DialogueRepository {
 
   static Future<void> insertMessage(Map<String, dynamic> data, {Transaction? txn}) async {
     final executor = txn ?? await _db;
-    // Phase 129: Insert into dialogues table
-    // Mapping: dialogue_id -> session_id, source_text -> content, target_text -> translation
+    // Phase 129/21/28: ID 기반 저장 강화
+    // integrated_data_structure.md 규격에 따라 speaker 컬럼에 참여자 ID를 저장합니다.
+    // 필드명을 source_text, target_text로 통일하여 UI와 직접 매핑되도록 합니다.
     
     final row = {
       'session_id': data['dialogue_id'] ?? data['session_id'],
-      'speaker': data['speaker'],
-      'content': data['source_text'] ?? data['content'] ?? '',
-      'translation': data['target_text'] ?? data['translation'] ?? '',
+      'speaker': data['speaker_id'], // 반드시 ID를 저장 (v14.6)
+      'content': data['source_text'] ?? '', 
+      'translation': data['target_text'] ?? '',
       'created_at': data['created_at'] ?? DateTime.now().toIso8601String(),
     };
+    
+    // Safety check: speaker_id가 누락된 경우 legacy speaker name이라도 저장 (하지만 경고 로그)
+    if (row['speaker'] == null) {
+      row['speaker'] = data['speaker'] ?? 'unknown';
+      print('[DialogueRepository] WARNING: speaker_id is null for message. Falling back to name: ${row['speaker']}');
+    }
     
     await executor.insert('dialogues', row);
   }
@@ -153,10 +160,11 @@ class DialogueRepository {
         'created_at': DateTime.now().toIso8601String(),
       }, conflictAlgorithm: ConflictAlgorithm.replace);
 
-      // 2. Insert Link if dialogue_id is present
-      if (data.containsKey('dialogue_id')) {
+      // 2. Insert Link if dialogue_id is present and valid
+      final String? dialogueId = data['dialogue_id'];
+      if (dialogueId != null && dialogueId.isNotEmpty) {
         await txn.insert('dialogue_participants', {
-          'dialogue_id': data['dialogue_id'],
+          'dialogue_id': dialogueId,
           'participant_id': id,
           'joined_at': DateTime.now().toIso8601String(),
         }, conflictAlgorithm: ConflictAlgorithm.ignore);
@@ -184,21 +192,28 @@ class DialogueRepository {
   }) async {
     final db = await _db;
     
-    // Phase 137 Fix: Return ALL messages for the dialogue, regardless of speaker.
-    // The previous implementation might have implicitly filtered or joined incorrectly.
-    // We strictly select by session_id (dialogue_id).
-    return await db.query( 
+    // Phase 137/28 Fix: UI 표준 필드명(source_text, target_text)으로 매핑하여 반환
+    final List<Map<String, dynamic>> results = await db.query( 
       'dialogues', 
-      columns: ['*'], // Select all columns: session_id, speaker, content, translation, created_at
       where: 'session_id = ?', 
       whereArgs: [dialogueId],
-      orderBy: 'created_at ASC, rowid ASC' // Ensure proper chronological order
+      orderBy: 'created_at ASC, rowid ASC'
     );
+
+    return results.map((row) => {
+      ...row,
+      'source_text': row['content'],
+      'target_text': row['translation'],
+    }).toList();
   }
   /// Phase 4: Get all unique participants for management UI
   static Future<List<ChatParticipant>> getAllUniqueParticipants() async {
     final db = await _db;
-    final List<Map<String, dynamic>> maps = await db.query('participants');
+    final List<Map<String, dynamic>> maps = await db.rawQuery('''
+      SELECT DISTINCT id, name, role, gender, lang_code 
+      FROM participants 
+      WHERE name != '' AND name != 'Group' AND name != 'group'
+    ''');
     return List.generate(maps.length, (i) {
       return ChatParticipant(
         id: maps[i]['id'],

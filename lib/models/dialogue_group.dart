@@ -22,7 +22,7 @@ class DialogueGroup {
       id: json['id'] as String,
       userId: json['user_id'] as String,
       title: json['title'] as String?,
-      persona: json['persona'] as String?,
+      persona: (json['persona'] == 'Group' || json['persona'] == null) ? 'AI' : json['persona'] as String, // Phase 29: Hide 'Group'
       location: json['location'] as String?,
       note: json['note'] as String?,
       createdAt: DateTime.parse(json['created_at'] as String),

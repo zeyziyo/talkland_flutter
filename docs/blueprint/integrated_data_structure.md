@@ -65,11 +65,13 @@
     *   **UK (Unique Key)**: `(group_id, notebook_title)` 복합 키.
     *   `source_lang` (TEXT NN): 질문 언어 (e.g. 'ko').
     *   `target_lang` (TEXT NN): 정답 언어 (e.g. 'en').
+    *   `caption` (TEXT): 개인 메모/캡션.
     *   `tags` (TEXT): 태그 (JSON string).
     *   `is_memorized` (INTEGER): 학습 완료 여부 (0/1).
+    *   `is_synced` (INTEGER): 서버 동기화 여부 (0/1).
     *   `review_count` (INTEGER): 복습 횟수.
-    *   `last_reviewed` (INTEGER): 최근 학습일.
-    *   `created_at` (INTEGER): 등록일.
+    *   `last_reviewed` (TEXT): 최근 학습일 (ISO8601).
+    *   `created_at` (TEXT): 등록일.
 
 *   **`sentences_meta`** (나만의 문장장)
     *   `id` (INTEGER PK AI).
@@ -78,11 +80,13 @@
     *   **UK (Unique Key)**: `(group_id, notebook_title)` 복합 키.
     *   `source_lang` (TEXT NN).
     *   `target_lang` (TEXT NN).
+    *   `caption` (TEXT).
     *   `tags` (TEXT).
     *   `is_memorized` (INTEGER).
+    *   `is_synced` (INTEGER).
     *   `review_count` (INTEGER).
-    *   `last_reviewed` (INTEGER).
-    *   `created_at` (INTEGER).
+    *   `last_reviewed` (TEXT).
+    *   `created_at` (TEXT).
 
 ### 2.3 대화 데이터 (Dialogue) - Personal
 채팅 세션과 대화 내용을 관리하는 테이블입니다.
@@ -90,35 +94,38 @@
 *   **`dialogue_groups`** (대화 세션)
     > **역할**: 개별 대화 메시지(`dialogues`)를 하나로 묶는 **세션 컨테이너**입니다.
     *   `id` (TEXT PK): UUID (세션 고유 ID).
+    *   `user_id` (TEXT): 사용자 식별 ID.
     *   `title` (TEXT NN): 시나리오 제목 (예: "카페에서 주문하기").
-    *   `persona_id` (TEXT): **AI 페르소나 템플릿 ID** (예: `tutor_bot_v1`).
-    *   `created_at` (INTEGER NN): 대화 시작 시간 (이력 정렬용).
+    *   `persona` (TEXT): AI 페르소나 이름/설명.
+    *   `location` (TEXT): 대화 장소 정보.
+    *   `note` (TEXT): 대화 관련 메모.
+    *   `created_at` (TEXT NN): 대화 시작 시간 (이력 정렬용).
 
 *   **`participants`** (참여자 마스터)
     > **역할**: 앱 전체에서 등장하는 **고유한 사용자/AI 프로필**입니다. (예: '나', 'AI튜터')
     *   `id` (TEXT PK): 고유 ID.
-    *   `name` (TEXT): 기본 이름.
-    *   `role` (TEXT): 역할 (user/ai).
+    *   `name` (TEXT NN): 기본 이름.
+    *   `role` (TEXT NN): 역할 (user/ai).
     *   `gender` (TEXT): 성별.
     *   `lang_code` (TEXT): 기본 언어.
+    *   `avatar_color` (INTEGER): 아바타 색상 값.
+    *   `created_at` (TEXT NN): 생성 시간.
 
 *   **`dialogue_participants`** (참여자 연결 - Link Table)
     > **역할**: 대화 세션(`groups`)과 참여자(`participants`)를 연결하는 **N:M 매핑 테이블**입니다.
-    > **활용**:
-    > 1. **대화방 목록**: "이 방에 참여 중인 사람(AI)들의 이름"을 미리 보여줄 때.
-    > 2. **대화 화면**: 채팅방 입장 시, 참여자들의 프로필(이름, 사진 등)을 로딩할 때.
     *   `dialogue_id` (TEXT NN, FK): `dialogue_groups.id` 참조.
     *   `participant_id` (TEXT NN, FK): `participants.id` 참조.
+    *   `joined_at` (TEXT NN): 참여 시간.
     *   **UK (Unique Key)**: `(dialogue_id, participant_id)` (중복 참여 방지).
 
 *   **`dialogues`** (메시지 내역)
     *   `id` (INTEGER PK AI).
     *   `session_id` (TEXT NN, FK): `dialogue_groups.id` 참조.
-    *   `speaker_id` (TEXT NN): 화자 ID (A/B) -> `participants.id` 참조.
+    *   `speaker` (TEXT NN): 발화자 정보. (`participants.id` 또는 레거시 이름 저장).
     *   `content` (TEXT NN): 메시지 내용.
     *   `translation` (TEXT): 번역 (옵션).
     *   `sequence_order` (INTEGER): 순서.
-    *   `created_at` (INTEGER NN): 발화 시간.
+    *   `created_at` (TEXT NN): 발화 시간.
 
 ---
 
@@ -297,29 +304,33 @@ Supabase의 **`user_id`를 활용한 RLS(Row Level Security)** 정책이 적용�
     *   `id` (UUID PK): 로컬 `dialogue_groups.id`와 동일값 저장.
     *   `user_id` (UUID FK NN): 소유자 ID.
     *   `title` (TEXT NN): 채팅방 제목.
-    *   `persona_id` (TEXT): 페르소나 템플릿 ID.
+    *   `persona` (TEXT): 페르소나 설명.
+    *   `location` (TEXT): 대화 장소.
+    *   `note` (TEXT): 메모.
     *   `created_at` (TIMESTAMP WITH TIME ZONE NN).
 
 2.  **`user_participants`** (참여자 프로필 백업)
-    *   `id` (TEXT): 로컬 `participants.id` (예: `me`, `tutor_bot`).
+    *   `id` (TEXT): 로컬 `participants.id`.
     *   `user_id` (UUID FK NN): 소유자 ID.
-    *   `name` (TEXT): 사용자 지정 이름.
-    *   `role` (TEXT): `user` / `ai`.
+    *   `name` (TEXT NN): 사용자 지정 이름.
+    *   `role` (TEXT NN): `user` / `ai`.
     *   `gender` (TEXT).
     *   `lang_code` (TEXT).
-    *   **PK (Primary Key)**: `(user_id, id)` 복합키. (사용자마다 'me'가 다름)
+    *   `avatar_color` (INTEGER).
+    *   **PK (Primary Key)**: `(user_id, id)` 복합키.
 
 3.  **`user_dialogue_participants`** (참여자 연결 백업)
     *   `dialogue_id` (UUID FK NN): `user_dialogue_groups.id` 참조.
     *   `participant_id` (TEXT NN): 사용자의 `user_participants.id` 참조.
     *   `user_id` (UUID FK NN): RLS용 소유자 ID.
+    *   `joined_at` (TIMESTAMP WITH TIME ZONE NN).
     *   **PK (Primary Key)**: `(dialogue_id, participant_id)`.
 
 4.  **`user_dialogue_messages`** (대화 내역 백업)
     *   `id` (BIGINT PK GENERATED BY DEFAULT AS IDENTITY).
     *   `session_id` (UUID FK NN): `user_dialogue_groups.id` 참조.
     *   `user_id` (UUID FK NN): RLS용 소유자 ID.
-    *   `speaker_id` (TEXT NN): `user_participants.id` 참조.
+    *   `speaker` (TEXT NN): `user_participants.id` 참조 (화자 ID 저장).
     *   `content` (TEXT NN): 메시지 내용.
     *   `translation` (TEXT): 번역문.
     *   `sequence_order` (INTEGER NN): 말풍선 순서.

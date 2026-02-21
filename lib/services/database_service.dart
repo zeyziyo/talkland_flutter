@@ -8,6 +8,7 @@ import 'database/dialogue_repository.dart';
 import 'database/material_repository.dart';
 import 'database/data_transfer_service.dart';
 import 'database/unified_repository.dart';
+import '../models/chat_participant.dart';
 
 /// DatabaseService - 로컬 데이터베이스 관리 (Facade)
 class DatabaseService {
@@ -60,6 +61,8 @@ class DatabaseService {
   static Future<List<Map<String, dynamic>>> getParticipants(String dialogueId) => DialogueRepository.getParticipants(dialogueId);
   static Future<void> insertParticipant(Map<String, dynamic> data) => DialogueRepository.insertParticipant(data);
   static Future<void> updateParticipant(String id, Map<String, dynamic> data) => DialogueRepository.updateParticipant(id, data);
+  static Future<List<ChatParticipant>> getAllUniqueParticipants() => DialogueRepository.getAllUniqueParticipants();
+  static Future<void> deleteParticipant(String id) => DialogueRepository.deleteParticipant(id);
   static Future<List<Map<String, dynamic>>> getRecordsByDialogueId(String dialogueId, {String? sourceLang, String? targetLang}) => DialogueRepository.getRecordsByDialogueId(dialogueId, sourceLang: sourceLang, targetLang: targetLang);
 
   // --- Search & Autocomplete Delegation ---

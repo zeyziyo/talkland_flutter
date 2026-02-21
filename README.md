@@ -14,6 +14,20 @@
 
 It provides an intuitive UX for switching modes by swiping the screen. In particular, it becomes an even more powerful tool when used with your own study materials (JSON files). Simply collect the sentences you want to learn, translate them using AI models, and save them as a file to import into the app. You can then practice these verified translations with unlimited repetition. We hope this app becomes a valuable asset in your language learning journey.
 
+### Platforms
+-   **Android & iOS**: Full support (STT/TTS/Ads/Sync)
+-   **Web**: Supported (IndexedDB SQLite, STT/TTS via Browser)
+-   **Windows**: Setup completed (MSVC environment required)
+
+### Run with Web
+```bash
+flutter run -d chrome --release
+```
+To setup web SQLite assets:
+```bash
+dart run sqflite_common_ffi_web:setup --dir web
+```
+
 ## 기능 (Features)
 
 ### MODE 1: 입력 (Input)
