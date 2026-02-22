@@ -21,6 +21,14 @@
 
 ---
 
+### [2026-02-22] 출시 준비 및 국제화(i18n) 고도화 (Phase 31)
+
+- **Internationalization**: `ParticipantManageScreen` 및 `ChatScreen` 내의 모든 하드코딩된 영어 문자열을 제거하고 `l10n`(KO, EN, ES, JA)으로 전환 완료.
+- **User Guidance**: `HelpDialog`의 안내 문구와 JSON 예제를 최신 v14.6+ 데이터 무결성 패치 규격(ID 기반 매핑)에 맞게 현행화.
+- **UI/UX Polish**: 성별 전환 툴팁, 참가자 이름 변경 다이얼로그, 번역 에러 메시지 등 사용자 접점 텍스트 전수 조사 및 디자인 폴리싱.
+- **Infrastructure**: `pubspec.yaml` 버전을 `1.2.0+16`으로 범프하고, 프로젝트 청사진(`integrated_data_structure.md`)에 국제화 사양 업그레이드 내역 반영.
+- **Deployment**: 모든 수정 사항을 GitHub 메인 브랜치에 안전하게 배포하여 출시 빌드 준비 완료.
+
 ### [2026-02-21] Chat 기능 버그 수정 및 AI 구현 (2차 시도 완결)
 
 - **Bug Fix (이름 매핑 불일치)**: DB 저장 시 'User'로 하드코딩되던 발화자 이름을 실제 참가자 이름('나')으로 동기화. 히스토리 로드 시 참가자 데이터(성별, 언어) 유실 문제 해결.
