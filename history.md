@@ -21,18 +21,21 @@
 
 ---
 
+### [2026-02-21] Chat 기능 버그 수정 및 AI 구현 (2차 시도 완결)
+
+- **Bug Fix (이름 매핑 불일치)**: DB 저장 시 'User'로 하드코딩되던 발화자 이름을 실제 참가자 이름('나')으로 동기화. 히스토리 로드 시 참가자 데이터(성별, 언어) 유실 문제 해결.
+- **Bug Fix (STT 입력 안정화)**: `ChatScreen`에서 마이크 버튼 클릭 시 `appState.stopListening()`을 선제 호출하여 기존 STT 세션과의 충돌 방지.
+- **Reliability (초기화 보강)**: `AppState` 생성자에서 참가자 정보를 미리 로딩하도록 수정하여 신규 유저의 다이얼로그 지연 현상 제거.
+- **Feature (AI 응답 및 모드)**: 참가자 선택 시 AI 포함 여부에 따라 AI 대화 모드와 파트너(사람간) 모드가 정확히 자동 전환되도록 구현.
+- **Desktop (인프라 구축)**: Windows 빌드 대응을 위한 `sqflite_ffi` 설정 및 플랫폼 가드(`kIsWeb`, `Platform.isWindows`)를 `main.dart`에 적용 완료. (수동 빌드 도구 설치 후 즉시 빌드 가능)
+- **Quality**: `flutter analyze` No issues found.
+
 ### [2026-02-20] Phase 6 Bug Fixes: Online Library & Start Chat
 
 - **Bug Fix (Online Library)**: `online_library_dialog.dart`의 category 필터 조건에서 `"Dialogue"` (단수형)를 `"Dialogues"` (복수형) 소문자 비교로 수정. JSON 실제 값과의 불일치로 대화 탭이 빈 화면으로 표시되던 문제 해결.
 - **Bug Fix (Start Chat)**: `participant_selector_dialog.dart`의 "Start Chat" 버튼 `onPressed`를 `async`로 변경하고 `onSelected` 콜백을 `await` 처리. 기존에는 `Navigator.pop` 이후 `startNewDialogue()`가 완료되기 전에 `ChatScreen`이 열려 `activeDialogueId == null` 상태였던 타이밍 버그 해결.
 - **Quality**: `flutter analyze` No issues found.
 
-### [2026-02-20] Chat 기능 버그 수정 및 AI 응답 구현
-
-- **Bug Fix (STT 대화문 미입력)**: `_startListening`에서 `appState.startListening()` + `_speechService.startSTT()` 이중 호출로 인한 충돌 제거. `_speechService.startSTT()` 단독 사용으로 STT 결과가 `_textController`에 정상 반영.
-- **Feature (기본 참가자)**: `loadGlobalParticipants()`에 `_ensureDefaultParticipants()` 추가. 신규 설치 시 '나(user)', 'AI(ai)' 기본 참가자 자동 생성. `ParticipantSelectorDialog` 열릴 때 전체 참가자 기본 선택 상태로 표시.
-- **Feature (AI 응답)**: `ChatScreen`에 `hasAiParticipant` 파라미터 추가. AI 참가자 선택 시 AI 모드(`_isPartnerMode=false`), 사람만 선택 시 파트너 모드(`_isPartnerMode=true`)로 진입. `_showNewChatDialog`에서 선택된 참가자 구성 분석 후 파라미터 전달.
-- **Quality**: `flutter analyze` No issues found.
 
 
 ### [2026-02-13] AI Chat UI/UX Refinement & Reliability (Phase 119)

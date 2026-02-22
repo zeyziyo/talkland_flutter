@@ -289,6 +289,7 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
             
             // AI 참가자 포함 여부에 따라 모드 결정
             final hasAi = participants.any((p) => p.role == 'ai');
+            debugPrint('[ChatHistoryScreen] Starting new chat. hasAi: $hasAi, Participants: ${participants.map((p) => p.name).join(", ")}');
 
             // Use parentContext for navigation
             if (parentContext.mounted) {

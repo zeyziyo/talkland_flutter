@@ -20,7 +20,7 @@ class ChatParticipant {
   factory ChatParticipant.fromJson(Map<String, dynamic> json) {
     return ChatParticipant(
       id: json['id'] as String,
-      dialogueId: json['dialogue_id'] as String,
+      dialogueId: json['dialogue_id'] as String? ?? '', // dialogue_id가 없는 Master 레코드 대응
       name: json['name'] as String,
       role: json['role'] as String,
       gender: json['gender'] as String? ?? 'female',
@@ -39,5 +39,25 @@ class ChatParticipant {
       'lang_code': langCode,
       'avatar_color': avatarColor,
     };
+  }
+
+  ChatParticipant copyWith({
+    String? id,
+    String? dialogueId,
+    String? name,
+    String? role,
+    String? gender,
+    String? langCode,
+    int? avatarColor,
+  }) {
+    return ChatParticipant(
+      id: id ?? this.id,
+      dialogueId: dialogueId ?? this.dialogueId,
+      name: name ?? this.name,
+      role: role ?? this.role,
+      gender: gender ?? this.gender,
+      langCode: langCode ?? this.langCode,
+      avatarColor: avatarColor ?? this.avatarColor,
+    );
   }
 }

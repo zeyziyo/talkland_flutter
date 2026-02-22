@@ -21,13 +21,18 @@ class _ParticipantSelectorDialogState extends State<ParticipantSelectorDialog> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       final appState = Provider.of<AppState>(context, listen: false);
+      debugPrint('[ParticipantSelectorDialog] Loading global participants...');
       await appState.loadGlobalParticipants();
+      
       // 로드 완료 후 전체 참가자 기본 선택
       if (mounted) {
         setState(() {
-          _selectedIds.addAll(appState.globalParticipants.map((p) => p.id));
-          _initialized = true;
+          if (appState.globalParticipants.isNotEmpty) {
+            _selectedIds.addAll(appState.globalParticipants.map((p) => p.id));
+            _initialized = true;
+          }
         });
+        debugPrint('[ParticipantSelectorDialog] Initialized with ${_selectedIds.length} participants');
       }
     });
   }
@@ -42,10 +47,10 @@ class _ParticipantSelectorDialogState extends State<ParticipantSelectorDialog> {
           builder: (context, appState, child) {
             final participants = appState.globalParticipants;
 
-            // Consumer 리빌드 시 아직 미초기화면 전체 선택
+            // Consumer 리빌드 시 아직 미초기화면 전체 선택 (Safety Net)
             if (!_initialized && participants.isNotEmpty) {
               WidgetsBinding.instance.addPostFrameCallback((_) {
-                if (mounted) {
+                if (mounted && !_initialized) {
                   setState(() {
                     _selectedIds.addAll(participants.map((p) => p.id));
                     _initialized = true;
@@ -55,7 +60,14 @@ class _ParticipantSelectorDialogState extends State<ParticipantSelectorDialog> {
             }
 
             if (participants.isEmpty) {
-              return const Center(child: CircularProgressIndicator());
+              return const Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  CircularProgressIndicator(),
+                  SizedBox(height: 16),
+                  Text('Loading participants...'),
+                ],
+              );
             }
 
             return ListView.builder(

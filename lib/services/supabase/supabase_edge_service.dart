@@ -16,10 +16,10 @@ class SupabaseEdgeService {
           'targetLang': targetLang,
           'note': note,
         },
-      );
+      ).timeout(const Duration(seconds: 20));
       return Map<String, dynamic>.from(response.data);
     } catch (e) {
-      throw Exception('Translation Failed: $e');
+      throw Exception('Translation Failed (Timeout or Network Error): $e');
     }
   }
 
@@ -38,10 +38,10 @@ class SupabaseEdgeService {
           'targetLang': targetLang,
           'history': history,
         },
-      );
+      ).timeout(const Duration(seconds: 20));
       return Map<String, dynamic>.from(response.data);
     } catch (e) {
-      throw Exception('Chat Failed: $e');
+      throw Exception('Chat Failed (Timeout or Network Error): $e');
     }
   }
 
@@ -52,7 +52,7 @@ class SupabaseEdgeService {
       final response = await SupabaseHelper.client.functions.invoke(
         'suggest-titles',
         body: {'history': history},
-      );
+      ).timeout(const Duration(seconds: 15));
       final data = response.data as Map<String, dynamic>;
       final titles = data['titles'] as List<dynamic>?;
       return titles?.cast<String>() ?? [];
@@ -74,7 +74,7 @@ class SupabaseEdgeService {
           'sourceLang': sourceLang,
           'targetLang': targetLang,
         },
-      );
+      ).timeout(const Duration(seconds: 20));
       return Map<String, dynamic>.from(response.data);
     } catch (e) {
       throw Exception('Recommendations Failed: $e');

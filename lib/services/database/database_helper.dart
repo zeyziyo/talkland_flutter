@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class DatabaseHelper {
   static Database? _database;
@@ -28,8 +29,14 @@ class DatabaseHelper {
   }
 
   static Future<Database> _initDatabase() async {
-    final databasesPath = await getDatabasesPath();
-    final path = join(databasesPath, _dbName);
+    String path;
+    if (kIsWeb) {
+      // On web, the path is used as the IndexedDB database name
+      path = _dbName;
+    } else {
+      final databasesPath = await getDatabasesPath();
+      path = join(databasesPath, _dbName);
+    }
 
     return await openDatabase(
       path,
@@ -423,6 +430,7 @@ class DatabaseHelper {
         role TEXT NOT NULL, -- 'user' or 'ai'
         gender TEXT,
         lang_code TEXT,
+        avatar_color INTEGER, -- Missing column from v11
         created_at TEXT NOT NULL
       )
     ''');
@@ -485,6 +493,7 @@ class DatabaseHelper {
           role TEXT NOT NULL,
           gender TEXT,
           lang_code TEXT,
+          avatar_color INTEGER, -- Added here as well for migration
           created_at TEXT NOT NULL
         )
       ''');

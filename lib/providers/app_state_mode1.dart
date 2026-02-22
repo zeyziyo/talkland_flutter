@@ -494,10 +494,9 @@ extension AppStateMode1 on AppState {
       );
 
       _recommendedItems = List<Map<String, dynamic>>.from(result['recommendations'] ?? []);
-      _isRecommendationLoading = false;
-      notify();
     } catch (e) {
       debugPrint('[AppState] Recommendation Error: $e');
+    } finally {
       _isRecommendationLoading = false;
       notify();
     }

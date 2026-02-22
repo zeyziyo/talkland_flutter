@@ -9,6 +9,7 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'services/supabase_service.dart';
 import 'services/background_sync_service.dart';
+import 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
 
 
 import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
@@ -19,12 +20,18 @@ import 'platform_stub.dart' if (dart.library.io) 'dart:io' as platform;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  debugPrint('>>> MAIN [1] Widgets Binding Initialized');
   
   // Desktop SQLite FFI setup (not for web)
-  if (!kIsWeb && (platform.Platform.isWindows || platform.Platform.isLinux)) {
+  if (kIsWeb) {
+    // Web setup
+    databaseFactory = databaseFactoryFfiWeb;
+  } else if (platform.Platform.isWindows || platform.Platform.isLinux) {
+    // Desktop setup
     sqfliteFfiInit();
     databaseFactory = databaseFactoryFfi;
   }
+  debugPrint('>>> MAIN [2] Database Factory Set');
   
   try {
     await dotenv.load(fileName: ".env");
@@ -46,13 +53,16 @@ void main() async {
 
   // Initialize SharedPrefs
   final prefs = await SharedPreferences.getInstance();
+  debugPrint('>>> MAIN [3] SharedPrefs Done');
 
   // Initialize Supabase
   try {
     await SupabaseService.initialize();
   } catch (e) {
-    print("Error initializing Supabase: $e"); // Modified error message
+    debugPrint('>>> MAIN [!] Supabase Error: $e');
+    print("Error initializing Supabase: $e"); 
   }
+  debugPrint('>>> MAIN [4] Supabase Init Attempted');
   
   // Initialize Background Sync (Workmanager)
   if (!kIsWeb && (platform.Platform.isAndroid || platform.Platform.isIOS)) {

@@ -1,3 +1,4 @@
+message(STATUS "DEBUG: Loading windows/CMakeLists.txt")
 # Project-level configuration.
 cmake_minimum_required(VERSION 3.14)
 project(talkie LANGUAGES CXX)
@@ -13,8 +14,7 @@ cmake_policy(VERSION 3.14...3.25)
 # Define build configuration option.
 get_property(IS_MULTICONFIG GLOBAL PROPERTY GENERATOR_IS_MULTI_CONFIG)
 if(IS_MULTICONFIG)
-  set(CMAKE_CONFIGURATION_TYPES "Debug;Profile;Release"
-    CACHE STRING "" FORCE)
+  set(CMAKE_CONFIGURATION_TYPES "Debug;Profile;Release" CACHE STRING "" FORCE)
 else()
   if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     set(CMAKE_BUILD_TYPE "Debug" CACHE
@@ -52,11 +52,9 @@ add_subdirectory(${FLUTTER_MANAGED_DIR})
 # Application build; see runner/CMakeLists.txt.
 add_subdirectory("runner")
 
-
 # Generated plugin build rules, which manage building the plugins and adding
 # them to the application.
-include(flutter/generated_plugins.cmake)
-
+# include(flutter/generated_plugins.cmake)
 
 # === Installation ===
 # Support files are copied into place next to the executable, so that it can

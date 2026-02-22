@@ -68,8 +68,8 @@ class _Mode1WidgetState extends State<Mode1Widget> {
       final appState = Provider.of<AppState>(context, listen: false);
       appState.loadStudyMaterials();
       
-      // AI 추천 데이터 로드 (첫 진입 시)
-      if (appState.recommendedItems.isEmpty) {
+      // AI 추천 데이터 로드 (첫 진입 시 - 온라인 상태에서만)
+      if (appState.recommendedItems.isEmpty && !appState.isOffline) {
         appState.fetchAiRecommendations();
       }
     });
@@ -243,7 +243,15 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                           ),
                                           onPressed: appState.isListening
                                               ? () => appState.stopListening()
-                                              : () => appState.startListening(),
+                                              : () {
+                                                  if (appState.isOffline) {
+                                                    ScaffoldMessenger.of(context).showSnackBar(
+                                                      const SnackBar(content: Text('인터넷 연결이 없습니다. 오프라인 상태에서는 음성 인식이 불가능할 수 있습니다.')),
+                                                    );
+                                                    return;
+                                                  }
+                                                  appState.startListening();
+                                                },
                                           tooltip: l10n.micButtonTooltip,
                                         ),
                                       ],
@@ -838,6 +846,22 @@ class _Mode1WidgetState extends State<Mode1Widget> {
   }
 
   void _performTranslation(BuildContext context, AppState appState, AppLocalizations l10n) async {
+    if (appState.isOffline) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(l10n.error),
+          content: const Text('인터넷 연결이 없습니다. 오프라인 상태에서는 번역 기능을 사용할 수 없습니다. 복습 모드를 이용해 주세요.'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text(l10n.confirm),
+            ),
+          ],
+        ),
+      );
+      return;
+    }
     if (appState.recordTypeFilter == 'all') {
       showDialog(
         context: context,

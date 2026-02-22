@@ -45,11 +45,12 @@ class TranslationService {
         ? '$sourceLang-$targetLang-$normalized-$note'
         : '$sourceLang-$targetLang-$normalized';
 
-    // 1. Check local cache first
+    // 1. Check local cache first (WITH TIMEOUT)
     try {
-      final cached = await DatabaseService.getCachedTranslation(cacheKey);
+      print('[Translation] Checking cache with timeout...');
+      final cached = await DatabaseService.getCachedTranslation(cacheKey)
+          .timeout(const Duration(milliseconds: 800)); // 0.8s max for cache
       if (cached != null) {
-        // Validation check: Ignore cached errors or filters
         if (!cached.startsWith('Filtered:') && !cached.startsWith('Error:')) {
            print('[Translation] Cache hit');
            return {'text': cached, 'isValid': true};
@@ -57,7 +58,7 @@ class TranslationService {
         print('[Translation] Invalid cache ignored: $cached');
       }
     } catch (e) {
-      print('[Translation] Cache unavailable (web/error)');
+      print('[Translation] Cache SKIP/Error/Timeout: $e');
     }
 
     // 2. Call Supabase Edge Function
@@ -83,11 +84,12 @@ class TranslationService {
 
       print('[Translation] Success: $translatedText (Note: $note)');
 
-      // 3. Cache the result locally (Text only for now)
+      // 3. Cache the result locally (Non-blocking timeout)
       try {
-        await DatabaseService.cacheTranslation(cacheKey, translatedText);
+        await DatabaseService.cacheTranslation(cacheKey, translatedText)
+            .timeout(const Duration(milliseconds: 500));
       } catch (e) {
-        print('[Translation] Could not cache locally');
+        print('[Translation] Could not cache locally: $e');
       }
       
       return {

@@ -33,9 +33,16 @@ class UsageService {
   SharedPreferences? _prefs;
 
   /// Initialize dependencies
-  Future<void> init() async {
+  Future<void> init({SharedPreferences? prefs}) async {
+    if (prefs != null) {
+      _prefs = prefs;
+      print('[UsageService] Initialized with provided prefs');
+    }
+    
     if (_prefs == null) {
+      print('[UsageService] Initializing SharedPreferences.getInstance()...');
       _prefs = await SharedPreferences.getInstance();
+      print('[UsageService] SharedPreferences.getInstance() OK');
       
       // AdMob 테스트 ID 사용 경고 (디버그 모드에서만 확인용)
       if (adUnitId.contains('3940256099942544')) {
@@ -46,47 +53,56 @@ class UsageService {
 
   /// Check current status and reset if needed
   Future<void> checkReset() async {
+    print('[UsageService] checkReset starting...');
     await init();
     
+    print('[UsageService] Reading last reset date...');
     final lastResetStr = _prefs!.getString(_keyLastResetDate);
     final isPro = _prefs!.getBool(_keyIsPro) ?? false;
     final now = DateTime.now();
     
     if (lastResetStr == null) {
-      // First run
+      print('[UsageService] First run detected. Resetting counters...');
       await _resetCounters(now);
       return;
     }
 
-    final lastResetDate = DateTime.parse(lastResetStr);
-    
-    if (isPro) {
-      // Pro: Monthly Reset
-      // Create new DateTime objects for comparison to ignore time
-      final lastMonth = DateTime(lastResetDate.year, lastResetDate.month);
-      final currentMonth = DateTime(now.year, now.month);
+    try {
+      print('[UsageService] Parsing last reset date: $lastResetStr');
+      final lastResetDate = DateTime.parse(lastResetStr);
       
-      if (currentMonth.isAfter(lastMonth)) {
-        await _resetCounters(now);
+      if (isPro) {
+        final lastMonth = DateTime(lastResetDate.year, lastResetDate.month);
+        final currentMonth = DateTime(now.year, now.month);
+        
+        if (currentMonth.isAfter(lastMonth)) {
+          print('[UsageService] Pro: Month changed. Resetting...');
+          await _resetCounters(now);
+        }
+      } else {
+        final lastDay = DateTime(lastResetDate.year, lastResetDate.month, lastResetDate.day);
+        final currentDay = DateTime(now.year, now.month, now.day);
+        
+        if (currentDay.isAfter(lastDay)) {
+          print('[UsageService] Free: Day changed. Resetting...');
+          await _resetCounters(now);
+        }
       }
-    } else {
-      // Free: Daily Reset
-      final lastDay = DateTime(lastResetDate.year, lastResetDate.month, lastResetDate.day);
-      final currentDay = DateTime(now.year, now.month, now.day);
-      
-      if (currentDay.isAfter(lastDay)) {
-        await _resetCounters(now);
-      }
+    } catch (e) {
+      print('[UsageService] Date Parse Error: $e. Resetting anyway.');
+      await _resetCounters(now);
     }
+    print('[UsageService] checkReset completed.');
   }
 
   Future<void> _resetCounters(DateTime now) async {
-    // Keep refill count? -> Usually refill expires daily for free users.
-    // Policy: "Daily 5 free". "Watch ad to refill". 
-    // Usually refills are transient. Let's reset refill count too.
+    print('[UsageService] _resetCounters: Usage=0');
     await _prefs!.setInt(_keyUsageCount, 0);
+    print('[UsageService] _resetCounters: Refill=0');
     await _prefs!.setInt(_keyRefillCount, 0);
+    print('[UsageService] _resetCounters: Date=$now');
     await _prefs!.setString(_keyLastResetDate, now.toIso8601String());
+    print('[UsageService] _resetCounters DONE');
   }
 
   /// Get remaining translations available
@@ -115,7 +131,11 @@ class UsageService {
   
   /// Check limit and throw exception if reached
   Future<void> checkLimitOrThrow() async {
-    if (!await canTranslate()) {
+    print('[UsageService] checkLimitOrThrow starting...');
+    final canTrans = await canTranslate();
+    print('[UsageService] canTranslate result: $canTrans');
+    
+    if (!canTrans) {
       final isPro = _prefs!.getBool(_keyIsPro) ?? false;
       if (isPro) {
         throw LimitReachedException("Monthly limit reached ($contextMonthLimit)");
@@ -123,6 +143,7 @@ class UsageService {
         throw LimitReachedException("Daily limit reached");
       }
     }
+    print('[UsageService] checkLimitOrThrow OK.');
   }
 
   /// Increment usage counter

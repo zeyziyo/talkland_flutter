@@ -51,7 +51,7 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
                       decoration: InputDecoration(labelText: 'Role'),
                       items: const [
                         DropdownMenuItem(value: 'user', child: Text('User')),
-                        DropdownMenuItem(value: 'assistant', child: Text('Assistant')), // AI
+                        DropdownMenuItem(value: 'ai', child: Text('AI')), // Changed to 'ai' for consistency
                       ],
                       onChanged: (val) => setState(() => role = val!),
                     ),
