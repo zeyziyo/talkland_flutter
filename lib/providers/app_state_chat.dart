@@ -212,6 +212,7 @@ extension AppStateChat on AppState {
 
   /// Load dialogue groups (Offline-First Strategy)
   Future<void> loadDialogueGroups() async {
+    isSyncing = true; // Phase 33: Start Syncing indicator
     final userId = SupabaseService.client.auth.currentUser?.id;
     
     if (userId != null) {
@@ -279,6 +280,9 @@ extension AppStateChat on AppState {
       notify();
     } catch (e) {
        debugPrint('[AppState] Local dialogue load failed: $e');
+    } finally {
+      isSyncing = false; // Phase 33: End Syncing
+      notify();
     }
   }
 

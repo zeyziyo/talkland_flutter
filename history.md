@@ -21,6 +21,14 @@
 
 ---
 
+### [2026-02-22] 출시 품질 최종 고도화 (Phase 32)
+
+- **AI Participant Recovery**: AI 참가자 명칭이 'Group'으로 표시되던 하드코딩 오류를 'AI'로 통일하고 초기화 로직을 정교화했습니다.
+- **TTS Core Logic**: 주요 4개 국어(KO, EN, ES, JA)에 대해 성별(Male/Female)과 일치하는 최적의 보이스가 Source/Target 언어 모두에서 선택되도록 알고리즘을 고도화했습니다.
+- **Visual Polish**: HomeScreen 및 ChatScreen에 남아있던 테스트용 버전 배너(v14.6)와 잔여 임시 UI 요소를 전면 제거하여 정식 버전의 품질을 확보했습니다.
+- **User Guidance**: 튜토리얼(`TutorialCoachMark`) 가이드 지점에 검색바(SearchBar)를 추가하여 대량 데이터 검색 기능을 사용자에게 효과적으로 각인시켰습니다.
+- **Static Analysis**: `flutter analyze` 린트 경고(Color.value, DropdownButtonFormField.value 등) 및 미사용 코드를 전수 정리하여 No Issues Found 상태를 달성했습니다.
+
 ### [2026-02-22] 출시 준비 및 국제화(i18n) 고도화 (Phase 31)
 
 - **Internationalization**: `ParticipantManageScreen` 및 `ChatScreen` 내의 모든 하드코딩된 영어 문자열을 제거하고 `l10n`(KO, EN, ES, JA)으로 전환 완료.

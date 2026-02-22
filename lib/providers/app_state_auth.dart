@@ -389,7 +389,39 @@ extension AppStateAuth on AppState {
     } finally {
       _isTranslating = false;
       notify();
+    }
   }
-}
+
+  User? get currentUser => SupabaseAuthService.currentUser;
+
+  Future<void> loginWithGoogle() async {
+    try {
+      _isTranslating = true; // Use as general loading state
+      _statusMessage = 'L10N:statusLoggingIn';
+      notify();
+
+      final response = await SupabaseAuthService.signInWithGoogle();
+      
+      if (response != null && response.user != null) {
+        _statusMessage = 'L10N:statusLoginSuccess';
+        // Auth Listener within AppState will trigger loadDialogueGroups()
+      } else {
+        _statusMessage = 'L10N:statusLoginCancelled';
+      }
+    } catch (e) {
+      debugPrint('[AppState] Google Login Failed: $e');
+      _statusMessage = 'L10N:statusLoginFailed|$e';
+    } finally {
+      _isTranslating = false;
+      notify();
+    }
+  }
+
+  Future<void> logout() async {
+    await SupabaseAuthService.signOut();
+    _currentChatMessages = [];
+    _dialogueGroups = [];
+    notify();
+  }
 }
 // End of AppStateAuth

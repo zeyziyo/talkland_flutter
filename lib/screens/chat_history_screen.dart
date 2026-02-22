@@ -133,9 +133,14 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
           ),
         ),
         
+        if (appState.isSyncing)
+          const LinearProgressIndicator(minHeight: 2),
+        
         // List
         Expanded(
-          child: filteredDialogues.isEmpty
+          child: RefreshIndicator(
+            onRefresh: () => appState.loadDialogueGroups(),
+            child: filteredDialogues.isEmpty
             ? _buildEmptyState(l10n)
             : ListView.builder(
                 itemCount: filteredDialogues.length,
@@ -214,6 +219,7 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
                   );
                 },
               ),
+          ),
         ),
       ],
     );
@@ -237,6 +243,40 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
         title: Text(l10n.chatHistoryTitle),
         backgroundColor: const Color(0xFF667eea),
         foregroundColor: Colors.white,
+        actions: [
+          // Google Login/Logout Icon
+          if (appState.currentUser?.isAnonymous ?? true)
+            IconButton(
+              icon: const Icon(Icons.login),
+              tooltip: 'Google Login',
+              onPressed: () => appState.loginWithGoogle(),
+            )
+          else
+            PopupMenuButton<String>(
+              icon: const Icon(Icons.account_circle),
+              onSelected: (val) {
+                if (val == 'logout') appState.logout();
+              },
+              itemBuilder: (context) => [
+                const PopupMenuItem(
+                  value: 'user_info',
+                  enabled: false,
+                  child: Text('Permanent Account', style: TextStyle(fontSize: 12)),
+                ),
+                const PopupMenuDivider(),
+                const PopupMenuItem(
+                  value: 'logout',
+                  child: Row(
+                    children: [
+                      Icon(Icons.logout, size: 20, color: Colors.red),
+                      SizedBox(width: 8),
+                      Text('Logout', style: TextStyle(color: Colors.red)),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+        ],
       ),
       body: content,
       floatingActionButton: FloatingActionButton.extended(

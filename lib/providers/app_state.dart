@@ -21,6 +21,7 @@ import 'package:uuid/uuid.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
 
+import 'package:supabase_flutter/supabase_flutter.dart';
 import '../services/supabase_service.dart';
 import '../l10n/app_localizations.dart';
 import '../constants/app_constants.dart';
@@ -48,7 +49,24 @@ class AppState extends ChangeNotifier {
     loadGlobalParticipants();
     cleanupCorruptedParticipants(); // Phase 28: Clean ghost data on start
     _initConnectivity();
+    _initAuthListener(); // Phase 33: Listen for Google Sign-in status
     debugPrint('>>> APPSTATE [3] Constructor Exit');
+  }
+
+  /// Phase 33: Listen for Auth Changes to trigger data sync
+  void _initAuthListener() {
+    SupabaseService.client.auth.onAuthStateChange.listen((data) {
+      final AuthChangeEvent event = data.event;
+      final Session? session = data.session;
+      
+      debugPrint('[AppState] Auth Event: $event, UID: ${session?.user.id}');
+      
+      if (event == AuthChangeEvent.signedIn) {
+        // User logged in (Anonymous OR Google)
+        loadDialogueGroups();
+        loadStudyMaterials();
+      }
+    });
   }
 
   // Helper for Extensions to notify listeners
@@ -107,6 +125,8 @@ class AppState extends ChangeNotifier {
   String _statusMessage = '';
   List<String> _aiDetectedTags = [];
   
+  bool _isSyncing = false; // Phase 33: Global sync status
+  
   // Recommendations
   bool _isRecommendationLoading = false;
   List<Map<String, dynamic>> _recommendedItems = [];
@@ -127,6 +147,12 @@ class AppState extends ChangeNotifier {
 
   // Save Subject
   String _selectedSaveSubject = 'Basic'; 
+
+  bool get isSyncing => _isSyncing;
+  set isSyncing(bool value) {
+    _isSyncing = value;
+    notify();
+  }
 
   // Mode 2 (Library & Records)
   List<Map<String, dynamic>> _studyRecords = [];
