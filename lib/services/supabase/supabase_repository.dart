@@ -181,4 +181,46 @@ class SupabaseRepository {
       };
     }).toList();
   }
+
+  // Phase 33: Get Dialogue Participants for Restore/Sync
+  static Future<List<Map<String, dynamic>>> getDialogueParticipants(String dialogueId) async {
+    try {
+      final response = await SupabaseHelper.client
+          .from('dialogue_participants')
+          .select('joined_at, participants(id, name, role, gender, lang_code, avatar_color, created_at)')
+          .eq('dialogue_id', dialogueId);
+      
+      return (response as List).map((row) {
+        final p = row['participants'] as Map<String, dynamic>;
+        return {
+          'id': p['id'],
+          'name': p['name'],
+          'role': p['role'],
+          'gender': p['gender'],
+          'lang_code': p['lang_code'],
+          'avatar_color': p['avatar_color'],
+          'created_at': p['created_at'],
+          'joined_at': row['joined_at'],
+        };
+      }).toList();
+    } catch (e) {
+      print('[SupabaseRepo] Error getting participants: $e');
+      return [];
+    }
+  }
+
+  // Phase 33: Get Message Count for Restore/Sync
+  static Future<int> getChatMessageCount(String dialogueId) async {
+    try {
+      final response = await SupabaseHelper.client
+          .from('chat_messages')
+          .select('id')
+          .eq('dialogue_id', dialogueId);
+      
+      return (response as List).length;
+    } catch (e) {
+      print('[SupabaseRepo] Error getting message count: $e');
+      return 0;
+    }
+  }
 }

@@ -46,7 +46,7 @@ extension AppStateChat on AppState {
       role: role,
       gender: gender ?? (role.toLowerCase() == 'user' ? _chatUserGender : _chatAiGender),
       langCode: languageCode ?? (role.toLowerCase() == 'user' ? _sourceLang : _targetLang),
-      avatarColor: Colors.primaries[Random().nextInt(Colors.primaries.length)].value,
+      avatarColor: Colors.primaries[Random().nextInt(Colors.primaries.length)].toARGB32(),
     );
 
     // 3. Persist to DB
@@ -146,14 +146,14 @@ extension AppStateChat on AppState {
 
       _activeDialogueId = dialogueId;
       _activeDialogueTitle = dialogueTitle;
-      _activePersona = 'Group';
+      _activePersona = 'AI';
       _currentDialogueSequence = 1;
 
       // 로컬 DB에 먼저 저장
       await DatabaseService.insertDialogueGroup(
         id: dialogueId,
         title: dialogueTitle,
-        persona: 'Group',
+        persona: 'AI',
         createdAt: now,
         userId: userId,
       );
@@ -162,7 +162,7 @@ extension AppStateChat on AppState {
       if (userId != null) {
         SupabaseService.createDialogueGroup(
           title: dialogueTitle,
-          persona: 'Group',
+          persona: 'AI',
         ).then((serverId) {
           // 서버 ID와 로컬 ID가 다를 경우, 로컬 DB를 업데이트하거나 매핑 유지
           // 현재는 로컬 ID를 기준으로 사용하므로 별도 처리 없음
@@ -233,6 +233,19 @@ extension AppStateChat on AppState {
             location: group.location,
             createdAt: group.createdAt.toIso8601String(),
           );
+
+          // Phase 33: Prefetch participants for better restore visualization (v15.0)
+          final participants = await SupabaseService.getDialogueParticipants(group.id);
+          for (var p in participants) {
+            await DialogueRepository.insertParticipant({
+              'id': p['id'],
+              'dialogue_id': group.id,
+              'name': p['name'],
+              'role': p['role'],
+              'gender': p['gender'],
+              'lang_code': p['lang_code'],
+            });
+          }
         }
       } catch (e) {
         debugPrint('[AppState] Supabase dialogue sync failed: $e');
@@ -577,7 +590,7 @@ extension AppStateChat on AppState {
         'speaker': speaker ?? updatedAiPart.name,
         'source_text': sourceText,
         'target_text': targetText,
-        'created_at': DateTime.now().toIso8601String(),
+        'created_at': createdAt,
       });
 
       SupabaseService.savePrivateChatMessage(

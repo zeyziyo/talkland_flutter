@@ -32,12 +32,15 @@ class _ChatScreenState extends State<ChatScreen> {
   
   bool _isPartnerMode = false; // Toggle for Real Person Chat
   bool _isPartnerTurn = false; // For Mic Logic (True = Listen in Target Lang)
-  String? _lastSourceLang; // Phase 75.9
-  String? _lastTargetLang; // Phase 75.9
 
   // Phase 118: Individual translation visibility toggle state
   // Key: sequence_order (int), Value: if translation is visible
   final Map<int, bool> _showTranslationMap = {};
+
+  // Phase 33: Chat Content Search
+  final TextEditingController _searchController = TextEditingController();
+  bool _isSearching = false;
+  String _searchQuery = '';
   @override
   void initState() {
     super.initState();
@@ -283,33 +286,6 @@ class _ChatScreenState extends State<ChatScreen> {
     });
   }
 
-  Future<void> _savePartnerMessage(AppState appState, String source, String sLang, String target, String tLang, String speaker) async {
-      // Create a dialogue group if none
-      if (appState.activeDialogueId == null) {
-         await appState.startNewDialogue(title: 'Partner Chat');
-      }
-      
-      // Save Message (We reuse saveAiResponse logic or call save directly)
-      // saveAiResponse assumes Source->Target.
-      // Here we might have Target->Source (Partner).
-      // But database expects Source/Target fields.
-      // Let's align: DB 'source_text' is what was spoken/typed. 'target_text' is translation.
-      // 'speaker' field distinguishes who said it.
-      
-      // Ensure Participant Exists & get ID
-      final p = await appState.getOrAddParticipant(
-        name: speaker,
-        role: speaker == 'User' ? 'user' : 'ai',
-        languageCode: sLang,
-      );
- 
-      await appState.saveAiResponse(
-        source, 
-        target, 
-        speaker: p.id // Store ID
-      );
-  }
-
   Future<void> _processAiChat(AppState appState, String userText, String userTranslation, AppLocalizations l10n) async {
       // Get GPS Context
       final location = await _getLocationString(l10n);
@@ -329,7 +305,7 @@ class _ChatScreenState extends State<ChatScreen> {
         (p) => p.id == 'ai' || p.role == 'ai' || p.role == 'assistant',
         orElse: () => ChatParticipant(id: 'ai', dialogueId: '', name: 'AI', role: 'ai', langCode: appState.targetLang)
       );
-      final aiLangCode = aiParticipant.langCode ?? appState.targetLang;
+      final aiLangCode = aiParticipant.langCode;
 
       final result = await SupabaseService.processChat(
         text: userText,
@@ -614,74 +590,107 @@ class _ChatScreenState extends State<ChatScreen> {
         backgroundColor: const Color(0xFF4A69BD), 
         elevation: 4,
         centerTitle: true,
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Title Only (Dropdown Removed per user request)
-            Consumer<AppState>(
-              builder: (context, state, _) {
-                return Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(Icons.check_circle, color: Colors.greenAccent),
-                    const SizedBox(width: 8),
-                    const Text(
-                       'Talkie',
-                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white),
-                    ),
-                    const SizedBox(width: 8),
-                    Text(
-                       'v14.6 [Msg:${_messages.length}]',
-                       style: const TextStyle(fontSize: 12, color: Colors.white70),
-                    ),
-                  ],
-                );
-              }
+        title: _isSearching 
+          ? TextField(
+              controller: _searchController,
+              autofocus: true,
+              style: const TextStyle(color: Colors.white),
+              decoration: InputDecoration(
+                hintText: l10n.search,
+                hintStyle: const TextStyle(color: Colors.white70),
+                border: InputBorder.none,
+              ),
+              onChanged: (val) => setState(() => _searchQuery = val.toLowerCase()),
+            )
+          : Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Title Only (Dropdown Removed per user request)
+                Consumer<AppState>(
+                  builder: (context, state, _) {
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(Icons.check_circle, color: Colors.greenAccent),
+                        const SizedBox(width: 8),
+                        Text(
+                           appState.activeDialogueTitle ?? 'Talkie',
+                           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white),
+                        ),
+                      ],
+                    );
+                  }
+                ),
+                
+                if (_isPartnerMode)
+                   Padding(
+                     padding: const EdgeInsets.only(top: 4, left: 4),
+                     child: Text(
+                       '${l10n.partnerMode}: ${l10n.manual}', 
+                       style: const TextStyle(fontSize: 12, color: Colors.white70)
+                     ),
+                   ),
+              ],
             ),
-            
-            if (_isPartnerMode)
-               Padding(
-                 padding: const EdgeInsets.only(top: 4, left: 4),
-                 child: Text(
-                   '${l10n.partnerMode}: ${l10n.manual}', 
-                   style: const TextStyle(fontSize: 12, color: Colors.white70)
-                 ),
-               ),
-          ],
-        ),
         foregroundColor: Colors.white,
         actions: [
-          // Partner Mode Toggle
+          // Search Icon
           IconButton(
-            icon: Icon(_isPartnerMode ? Icons.person : Icons.smart_toy),
-            tooltip: _isPartnerMode ? l10n.switchToAi : l10n.switchToPartner,
+            icon: Icon(_isSearching ? Icons.close : Icons.search),
             onPressed: () {
               setState(() {
-                _isPartnerMode = !_isPartnerMode;
-                _isPartnerTurn = false; // Reset to User turn
+                _isSearching = !_isSearching;
+                if (!_isSearching) {
+                  _searchController.clear();
+                  _searchQuery = '';
+                }
               });
             },
+            tooltip: l10n.search,
           ),
-          IconButton(
-            icon: const Icon(Icons.save),
-            onPressed: () => _endChat(l10n),
-            tooltip: l10n.chatSaveAndExit,
-          ),
+          // Partner Mode Toggle
+          if (!_isSearching)
+            IconButton(
+              icon: Icon(_isPartnerMode ? Icons.person : Icons.smart_toy),
+              tooltip: _isPartnerMode ? l10n.switchToAi : l10n.switchToPartner,
+              onPressed: () {
+                setState(() {
+                  _isPartnerMode = !_isPartnerMode;
+                  _isPartnerTurn = false; // Reset to User turn
+                });
+              },
+            ),
+          if (!_isSearching)
+            IconButton(
+              icon: const Icon(Icons.save),
+              onPressed: () => _endChat(l10n),
+              tooltip: l10n.chatSaveAndExit,
+            ),
         ],
       ),
       body: Column(
         children: [
           Expanded(
             child: _messages.isEmpty 
-              ? Center(child: Text('대화 내역이 없습니다. (v14.6)', style: TextStyle(color: Colors.grey[400])))
+              ? Center(child: Text(l10n.noDialogueHistory, style: TextStyle(color: Colors.grey[400])))
               : ListView.builder(
-                  key: ValueKey('msg_list_${_messages.length}'), // Force whole list rebuild
+                  key: ValueKey('msg_list_${_messages.length}_$_isSearching'), // Force whole list rebuild
                   controller: _scrollController,
                   padding: const EdgeInsets.all(16),
                   physics: const AlwaysScrollableScrollPhysics(),
                   itemCount: _messages.length,
                   itemBuilder: (context, index) {
                     final msg = _messages[index];
+                    
+                    // Filter Logic for Search
+                    if (_isSearching && _searchQuery.isNotEmpty) {
+                      final src = (msg['source_text'] ?? '').toString().toLowerCase();
+                      final tgt = (msg['target_text'] ?? '').toString().toLowerCase();
+                      if (!src.contains(_searchQuery) && !tgt.contains(_searchQuery)) {
+                        return const SizedBox.shrink();
+                      }
+                    }
+
                     return _buildMessageBubble(msg, appState, l10n, index);
                   },
                 ),
@@ -763,9 +772,9 @@ class _ChatScreenState extends State<ChatScreen> {
                         topRight: isUser ? const Radius.circular(0) : const Radius.circular(16),
                         topLeft: isUser ? const Radius.circular(16) : const Radius.circular(0),
                       ),
-                      boxShadow: [
-                        BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 2),
-                      ],
+                        boxShadow: [
+                          BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 2),
+                        ],
                     ),
                     child: _buildTextRow(displayText, displayLang, displayGender, isUser),
                   ),
@@ -896,7 +905,7 @@ class _ChatScreenState extends State<ChatScreen> {
                children: [
                  CircleAvatar(
                    radius: 10,
-                   backgroundColor: Color(participant.avatarColor ?? Colors.grey.value),
+                   backgroundColor: Color(participant.avatarColor ?? Colors.grey.toARGB32()),
                    child: Text(participant.name[0], style: const TextStyle(fontSize: 10, color: Colors.white)),
                  ),
                  const SizedBox(width: 4),

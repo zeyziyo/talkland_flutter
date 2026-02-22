@@ -138,7 +138,9 @@ class SupabaseService {
     } catch (e) {
       return {'success': false, 'reason': e.toString()};
     }
-  }  static SupabaseClient get client => SupabaseHelper.client;
+  }
+
+  static SupabaseClient get client => SupabaseHelper.client;
 
   static Future<void> initialize() async {
     await SupabaseHelper.initialize();
@@ -291,6 +293,10 @@ class SupabaseService {
   static Future<String> createDialogueGroup({String? title, String? persona}) => SupabaseRepository.createDialogueGroup(title: title, persona: persona);
   static Future<void> updateDialogueTitle(String id, String title) => SupabaseRepository.updateDialogueTitle(id, title);
   static Future<void> deleteDialogueGroup(String id) => SupabaseRepository.deleteDialogueGroup(id);
+
+  // Phase 33
+  static Future<List<Map<String, dynamic>>> getDialogueParticipants(String dialogueId) => SupabaseRepository.getDialogueParticipants(dialogueId);
+  static Future<int> getChatMessageCount(String dialogueId) => SupabaseRepository.getChatMessageCount(dialogueId);
 
   // Legacy wrappers
   static Future<void> saveSentence({required int groupId, required String text, required String langCode, String? note}) => 

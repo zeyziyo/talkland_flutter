@@ -39,14 +39,12 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
   // Filter Logic
   List<DialogueGroup> _filterDialogues(List<DialogueGroup> allDialogues) {
     return allDialogues.where((group) {
-      // 1. Search Text
+      // 1. Search Text (Restricted to Title per user request)
       if (_searchController.text.isNotEmpty) {
         final query = _searchController.text.toLowerCase();
         final titleMatch = group.title?.toLowerCase().contains(query) ?? false;
-        final noteMatch = group.note?.toLowerCase().contains(query) ?? false;
-        final personaMatch = group.persona?.toLowerCase().contains(query) ?? false;
         
-        if (!titleMatch && !noteMatch && !personaMatch) return false;
+        if (!titleMatch) return false;
       }
       
       // 2. Subject Filter
@@ -54,10 +52,13 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
         if (group.note != _selectedSubject) return false;
       }
       
-      // 3. Date Range
+      // 3. Date Range (Robust Date-Only comparison)
       if (_selectedDateRange != null) {
-        if (group.createdAt.isBefore(_selectedDateRange!.start) ||
-            group.createdAt.isAfter(_selectedDateRange!.end.add(const Duration(days: 1)))) {
+        final start = DateTime(_selectedDateRange!.start.year, _selectedDateRange!.start.month, _selectedDateRange!.start.day);
+        final end = DateTime(_selectedDateRange!.end.year, _selectedDateRange!.end.month, _selectedDateRange!.end.day);
+        final current = DateTime(group.createdAt.year, group.createdAt.month, group.createdAt.day);
+
+        if (current.isBefore(start) || current.isAfter(end)) {
           return false;
         }
       }
