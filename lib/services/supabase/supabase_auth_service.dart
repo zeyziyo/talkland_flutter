@@ -1,6 +1,5 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:google_sign_in/google_sign_in.dart' as g_auth;
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:google_sign_in/google_sign_in.dart' as gn_auth;
 import 'supabase_helper.dart';
 
 class SupabaseAuthService {
@@ -26,8 +25,8 @@ class SupabaseAuthService {
       // webClientId and iosClientId are currently configured in Supabase Console
       // and google-services.json for native signIn() to work.
 
-      // v15.2: Use explicit alias & dynamic to satisfy both constructor lookup and method calls
-      final dynamic googleClient = g_auth.GoogleSignIn();
+      // v15.3: Use stable version (^6.2.1) and explicit alias gn_auth to resolve AOT lookup issue
+      final dynamic googleClient = gn_auth.GoogleSignIn();
       
       final googleUser = await googleClient.signIn();
       if (googleUser == null) return null; // Cancelled
