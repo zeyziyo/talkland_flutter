@@ -136,6 +136,7 @@ class AppState extends ChangeNotifier {
   String _targetLang = 'en';
   bool _isListening = false;
   bool _isTranslating = false;
+  bool _isLoggingIn = false; // Phase 15.6: Dedicated login loading state
   bool _isSpeaking = false;
   bool _isSaved = false;
   String _note = '';
@@ -169,12 +170,6 @@ class AppState extends ChangeNotifier {
 
   // Save Subject
   String _selectedSaveSubject = 'Basic'; 
-
-  bool get isSyncing => _isSyncing;
-  set isSyncing(bool value) {
-    _isSyncing = value;
-    notify();
-  }
 
   // Mode 2 (Library & Records)
   List<Map<String, dynamic>> _studyRecords = [];
@@ -241,15 +236,21 @@ class AppState extends ChangeNotifier {
   bool get isListening => _isListening;
   bool get fetchPivot => _targetLang != 'en' && _sourceLang != 'en';
   bool get isTranslating => _isTranslating;
+  set isTranslating(bool val) { _isTranslating = val; notifyListeners(); }
+
+  bool get isLoggingIn => _isLoggingIn;
+  set isLoggingIn(bool val) { _isLoggingIn = val; notifyListeners(); }
+
   bool get isSpeaking => _isSpeaking;
   bool get isSaved => _isSaved;
+  String get note => _note;
+  bool get isSyncing => _isSyncing;
+  set isSyncing(bool val) { _isSyncing = val; notifyListeners(); }
   String get statusMessage => _statusMessage;
   List<String> get aiDetectedTags => _aiDetectedTags;
   String get chatUserGender => _chatUserGender;
   String get chatAiGender => _chatAiGender;
   String? get activePersonaGender => _activePersonaGender;
-  String get sourceLanguage => _sourceLang;
-  String get note => _note;
   bool get isWordMode => _isWordMode;
   List<Map<String, dynamic>> get studyRecords => _studyRecords;
   List<Map<String, dynamic>> get similarSources => _similarSources;

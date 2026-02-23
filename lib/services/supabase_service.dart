@@ -295,9 +295,12 @@ class SupabaseService {
   static Future<void> updateDialogueTitle(String id, String title) => SupabaseRepository.updateDialogueTitle(id, title);
   static Future<void> deleteDialogueGroup(String id) => SupabaseRepository.deleteDialogueGroup(id);
 
-  // Phase 33
   static Future<List<Map<String, dynamic>>> getDialogueParticipants(String dialogueId) => SupabaseRepository.getDialogueParticipants(dialogueId);
   static Future<int> getChatMessageCount(String dialogueId) => SupabaseRepository.getChatMessageCount(dialogueId);
+
+  /// Phase 33: Merge anonymous data to permanent user account on Supabase server
+  static Future<void> mergeUserSessions(String oldId, String newId) =>
+      SupabaseRepository.mergeUserSessions(oldId, newId);
 
   // Legacy wrappers
   static Future<void> saveSentence({required int groupId, required String text, required String langCode, String? note}) => 

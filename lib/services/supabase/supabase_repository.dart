@@ -141,6 +141,31 @@ class SupabaseRepository {
     await SupabaseHelper.client.from('user_library').delete().eq('dialogue_id', id).eq('user_id', userId);
   }
 
+  /// Phase 33: Merge anonymous data to permanent user ID on Supabase server
+  static Future<void> mergeUserSessions(String oldId, String newId) async {
+    if (oldId == newId) return;
+    
+    // 1. Update primary ownership in dialogue_groups
+    await SupabaseHelper.client
+        .from('dialogue_groups')
+        .update({'user_id': newId})
+        .eq('user_id', oldId);
+        
+    // 2. Update messages ownership
+    await SupabaseHelper.client
+        .from('chat_messages')
+        .update({'user_id': newId})
+        .eq('user_id', oldId);
+        
+    // 3. Update library ownership
+    await SupabaseHelper.client
+        .from('user_library')
+        .update({'user_id': newId})
+        .eq('user_id', oldId);
+        
+    print('[SupabaseRepo] Cloud data ownership transferred: $oldId -> $newId');
+  }
+
   // Phase 131: Chat Isolation - Use dedicated 'chat_messages' table
   static Future<void> saveChatMessage({
     required String dialogueId,

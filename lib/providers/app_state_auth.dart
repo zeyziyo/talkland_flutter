@@ -398,7 +398,7 @@ extension AppStateAuth on AppState {
     try {
       final oldUserId = SupabaseService.client.auth.currentUser?.id;
 
-      _isTranslating = true; // Use as general loading state
+      isLoggingIn = true; // Use dedicated loading state
       _statusMessage = 'L10N:statusLoggingIn';
       notify();
 
@@ -408,9 +408,13 @@ extension AppStateAuth on AppState {
         final newUserId = response.user!.id;
         _statusMessage = 'L10N:statusLoginSuccess';
         
-        // Phase 33: Merge anonymous data to new user account
+        // Phase 33/15.6: Merge anonymous data to new user account (Local + Cloud)
         if (oldUserId != null && oldUserId != newUserId) {
+          debugPrint('[AppState] Triggering Data Merge: $oldUserId -> $newUserId');
+          // 1. Local DB Merge
           await mergeAnonymousDataToUser(oldUserId, newUserId);
+          // 2. Cloud Server Merge (The missing link!)
+          await SupabaseService.mergeUserSessions(oldUserId, newUserId);
         }
 
         // Auth Listener within AppState will trigger loadDialogueGroups()
@@ -421,7 +425,7 @@ extension AppStateAuth on AppState {
       debugPrint('[AppState] Google Login Failed: $e');
       _statusMessage = 'L10N:statusLoginFailed|$e';
     } finally {
-      _isTranslating = false;
+      isLoggingIn = false;
       notify();
     }
   }

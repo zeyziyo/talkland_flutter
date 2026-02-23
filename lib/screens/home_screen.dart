@@ -652,7 +652,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 if (appState.currentUser == null || appState.currentUser!.isAnonymous)
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                    child: appState.isTranslating 
+                    child: appState.isLoggingIn 
                       ? const Center(child: Padding(
                           padding: EdgeInsets.all(8.0),
                           child: CircularProgressIndicator(),
