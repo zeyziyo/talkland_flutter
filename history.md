@@ -23,6 +23,7 @@
 
 ### [2026-02-23] 구글 로그인 UI 개선 및 데이터 동기화 보강 (v15.4)
 
+- **Hotfix (Build Recovery)**: 배포 시 누락되었던 `Mode2Widget`, `Mode3Widget` 파라미터(`searchKey`)와 자동 생성된 국제화(L10n) 파일을 긴급 푸시하여 원격 빌드 시스템을 복구했습니다.
 - **Auth Accessibility**: 구글 로그인/로그아웃 기능을 메인 사이드바(Drawer)에 통합하여 접근성을 높이고, 로그인 시 사용자 프로필(아바타, 이메일)이 표시되도록 개선했습니다.
 - **Auto Session Sync**: 앱 구동 시 및 로그인 이벤트 발생 시 세션을 즉시 감지하여 대화 기록 및 학습 데이터를 클라우드로부터 자동 동기화하는 트리거를 보강했습니다.
 - **Cloud-to-Local Pull**: `syncCloudLibraryToLocal` 기능을 구현하여 사용자의 클라우드 보관함 데이터를 로컬 SQLite로 자동 캐싱(Pull)함으로써 기기 변경 시에도 데이터 연속성을 보장했습니다.
