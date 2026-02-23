@@ -1,5 +1,6 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:google_sign_in/google_sign_in.dart' as gn_auth;
+import 'package:flutter/foundation.dart' show kIsWeb, kDebugMode;
 import 'supabase_helper.dart';
 
 class SupabaseAuthService {
@@ -20,12 +21,18 @@ class SupabaseAuthService {
   /// v15.0: For permanent account persistence and data recovery after re-installation.
   static Future<AuthResponse?> signInWithGoogle() async {
     try {
-      // 1. Configure Google Sign In
-      // Client IDs should be provided by the user in .env
-      // webClientId and iosClientId are currently configured in Supabase Console
-      // and google-services.json for native signIn() to work.
+      // Phase 15.6: Web-specific OAuth logic to ensure response on browsers
+      if (kIsWeb) {
+        await SupabaseHelper.client.auth.signInWithOAuth(
+          OAuthProvider.google,
+          // Use redirect strategy for web to prevent popup blockers
+          redirectTo: kDebugMode ? 'http://localhost:8081' : null, 
+        );
+        // signInWithOAuth starts redirect, session will be handled by auth listener
+        return null; 
+      }
 
-      // v15.3: Use stable version (^6.2.1) and explicit alias gn_auth to resolve AOT lookup issue
+      // 1. Configure Google Sign In (Native Only)
       final dynamic googleClient = gn_auth.GoogleSignIn();
       
       final googleUser = await googleClient.signIn();
