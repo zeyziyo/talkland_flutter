@@ -1,6 +1,6 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:google_sign_in/google_sign_in.dart' as gn_auth;
-import 'package:flutter/foundation.dart' show kIsWeb, kDebugMode;
+import 'package:flutter/foundation.dart' show kIsWeb, kDebugMode, debugPrint;
 import 'supabase_helper.dart';
 
 class SupabaseAuthService {
@@ -22,15 +22,27 @@ class SupabaseAuthService {
   static Future<AuthResponse?> signInWithGoogle() async {
     try {
       if (kIsWeb) {
-        // Phase 15.6: Dynamically determine redirect URL based on current origin
-        // This fixes "Site not found" errors when using different hostnames (localhost vs 127.0.0.1)
-        final String currentOrigin = Uri.base.origin;
+        // Phase 15.6: Dynamically determine redirect URL
+        // We use the full URL to check which host we are on, then pick the corresponding allowed redirect URL.
+        final String currentUrl = Uri.base.toString();
+        String? redirectUrl;
+        
+        if (currentUrl.contains('127.0.0.1')) {
+          redirectUrl = 'http://127.0.0.1:8081';
+        } else if (currentUrl.contains('localhost')) {
+          redirectUrl = 'http://localhost:8081';
+        }
+        
+        // Safety check to ensure we don't pass null if somehow both fail
+        redirectUrl ??= 'http://localhost:8081';
+        
+        debugPrint('[SupabaseAuth] Starting Redirect Login with: $redirectUrl');
         
         await SupabaseHelper.client.auth.signInWithOAuth(
           OAuthProvider.google,
-          redirectTo: kDebugMode ? currentOrigin : null,
+          redirectTo: kDebugMode ? redirectUrl : null,
         );
-        return null;
+        return null; 
       }
 
       // 1. Configure Google Sign In (Native Only)
