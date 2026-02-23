@@ -97,6 +97,7 @@
   "translationFailed": "번역 실패: {error}",
   "enterTextToTranslate": "번역할 텍스트를 입력하세요",
   "translationResultHint": "번역 결과 - 수정 가능함",
+  "voluntaryTranslations": "자발적 번역",
   "saving": "저장 중...",
   "noTranslationToSave": "저장할 번역이 없습니다",
   "saveFailed": "저장 실패: {error}",
@@ -726,5 +727,15 @@
   "statusLoginFailed": "로그인 실패: {error}",
   "statusLoginCancelled": "로그인이 취소되었습니다.",
   "statusLoggingIn": "Google로 로그인 중...",
-  "statusLogoutSuccess": "로그아웃되었습니다."
+  "statusLogoutSuccess": "로그아웃되었습니다.",
+  "email": "이메일",
+  "password": "비밀번호",
+  "login": "로그인",
+  "signUp": "회원가입",
+  "dontHaveAccount": "계정이 없으신가요?",
+  "alreadyHaveAccount": "이미 계정이 있으신가요?",
+  "invalidEmail": "유효한 이메일을 입력하세요.",
+  "passwordTooShort": "비밀번호는 6자 이상이어야 합니다.",
+  "statusSigningUp": "회원가입 중...",
+  "statusSignUpFailed": "회원가입 실패: {error}"
 }

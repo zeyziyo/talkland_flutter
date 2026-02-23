@@ -15,6 +15,7 @@ import 'chat_history_screen.dart';
 import '../widgets/online_library_dialog.dart';
 import '../constants/app_constants.dart';
 import 'participant_manage_screen.dart';
+import 'auth_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -468,27 +469,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 appState.isLoggingIn
                   ? const SizedBox(width: 48, height: 48, child: Padding(padding: EdgeInsets.all(12), child: CircularProgressIndicator(strokeWidth: 2)))
                   : IconButton(
-                      tooltip: l10n.googleContinue,
+                      tooltip: l10n.login,
                       icon: const Icon(Icons.login_rounded, color: Colors.blueAccent),
-                      onPressed: () async {
-                        await appState.loginWithGoogle();
-                        if (context.mounted) {
-                          final l10nMsg = AppLocalizations.of(context)!;
-                          String msg = appState.statusMessage;
-                          if (msg.startsWith('L10N:')) {
-                            final key = msg.split('|')[0].substring(5);
-                            final arg = msg.contains('|') ? msg.split('|')[1] : null;
-                            if (key == 'statusLoginSuccess') {
-                              msg = l10nMsg.statusLoginSuccess;
-                            } else if (key == 'statusLoginFailed') {
-                              msg = l10nMsg.statusLoginFailed(arg ?? '');
-                            } else if (key == 'statusLoginCancelled') {
-                              msg = l10nMsg.statusLoginCancelled;
-                            }
-                          }
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
-                        }
-                      },
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const AuthScreen()),
+                      ),
                     ),
               
               PopupMenuButton<String>(
@@ -684,30 +670,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: CircularProgressIndicator(),
                         ))
                       : ElevatedButton.icon(
-                          onPressed: () async {
-                            await appState.loginWithGoogle();
-                            if (context.mounted) {
-                              final l10n = AppLocalizations.of(context)!;
-                              String msg = appState.statusMessage;
-                              if (msg.startsWith('L10N:')) {
-                                final key = msg.split('|')[0].substring(5);
-                                final arg = msg.contains('|') ? msg.split('|')[1] : null;
-                                if (key == 'statusLoginSuccess') {
-                                  msg = l10n.statusLoginSuccess;
-                                } else if (key == 'statusLoginFailed') {
-                                  msg = l10n.statusLoginFailed(arg ?? '');
-                                } else if (key == 'statusLoginCancelled') {
-                                  msg = l10n.statusLoginCancelled;
-                                }
-                              }
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text(msg)),
-                              );
-                            }
+                          onPressed: () {
+                            Navigator.pop(context); // Close drawer
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const AuthScreen()),
+                            );
                           },
                           icon: const Icon(Icons.login_rounded, size: 20, color: Colors.blueAccent),
                           label: Text(
-                            l10n.googleContinue,
+                            l10n.login,
                             style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
                           style: ElevatedButton.styleFrom(

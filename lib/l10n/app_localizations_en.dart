@@ -340,6 +340,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get translationResultHint => 'Translation result - editable';
 
   @override
+  String get voluntaryTranslations => 'Voluntary Translations';
+
+  @override
   String get saving => 'Saving...';
 
   @override
@@ -1123,4 +1126,36 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get statusLogoutSuccess => 'Logged out.';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get password => 'Password';
+
+  @override
+  String get login => 'Login';
+
+  @override
+  String get signUp => 'Sign Up';
+
+  @override
+  String get dontHaveAccount => 'Don\'t have an account?';
+
+  @override
+  String get alreadyHaveAccount => 'Already have an account?';
+
+  @override
+  String get invalidEmail => 'Please enter a valid email.';
+
+  @override
+  String get passwordTooShort => 'Password must be at least 6 characters.';
+
+  @override
+  String get statusSigningUp => 'Signing up...';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return 'Sign up failed: $error';
+  }
 }

@@ -21,6 +21,14 @@
 
 ---
 
+### [2026-02-23] 안드로이드 구글 로그인 수정 및 이메일 인증 기능 구현 (v15.7)
+
+- **Android Google Login Fix**: 안드로이드 환경에서 "No ID Token found" 오류가 발생하던 문제를 해결했습니다. `.env`의 `GOOGLE_WEB_CLIENT_ID`를 '웹 애플리케이션' 클라이언트 ID로 수정하고, `SupabaseAuthService`에서 `openid`, `profile` 스코프를 명시적으로 요청하도록 개선했습니다.
+- **Email/Password Authentication**: Supabase 기반의 이메일 가입 및 로그인 기능을 새롭게 구현했습니다. `SupabaseAuthService`와 `AppStateAuth`에 관련 로직을 추가하여 보조 인증 수단을 확보했습니다.
+- **Unified Auth UI (AuthScreen)**: 구글 로그인과 이메일 인증을 통합하여 제공하는 `AuthScreen` 위젯을 신규 개발했습니다. 로그인/가입 모드 전환, 비밀번호 가시성 토글, 유효성 검사 기능을 포함합니다.
+- **App Entry Integration**: `HomeScreen`의 상단 앱바와 사이드바(Drawer)에 위치한 로그인 버튼을 새로운 `AuthScreen`으로 연동하여 사용자 접근성을 통일했습니다.
+- **L11n & Quality**: 이메일 인증 관련 다국어(KO, EN) 문자열을 추가하고, 비동기 BuildContext 사용 관련 린트 경고(`context.mounted`)를 모두 해결하여 `flutter analyze` 무결점 상태를 유지했습니다.
+
 ### [2026-02-23] 대화 이력 병합 로직 및 빌드 안정화 (v15.5)
 
 - **Anonymous Data Merge**: 익명 사용자가 구글 로그인 시 기존 대화 내역이 유실(은폐)되지 않도록, 로컬 DB의 `user_id`를 새로운 계정 ID로 자동 업데이트하는 병합 로직을 구현했습니다.

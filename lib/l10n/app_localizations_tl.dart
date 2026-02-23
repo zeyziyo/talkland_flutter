@@ -341,6 +341,9 @@ class AppLocalizationsTl extends AppLocalizations {
   String get translationResultHint => 'Translation result - editable';
 
   @override
+  String get voluntaryTranslations => '자발적 번역';
+
+  @override
   String get saving => 'Nagse-save...';
 
   @override
@@ -1131,4 +1134,36 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String get statusLogoutSuccess => '로그아웃되었습니다.';
+
+  @override
+  String get email => '이메일';
+
+  @override
+  String get password => '비밀번호';
+
+  @override
+  String get login => '로그인';
+
+  @override
+  String get signUp => '회원가입';
+
+  @override
+  String get dontHaveAccount => '계정이 없으신가요?';
+
+  @override
+  String get alreadyHaveAccount => '이미 계정이 있으신가요?';
+
+  @override
+  String get invalidEmail => '유효한 이메일을 입력하세요.';
+
+  @override
+  String get passwordTooShort => '비밀번호는 6자 이상이어야 합니다.';
+
+  @override
+  String get statusSigningUp => '회원가입 중...';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return '회원가입 실패: $error';
+  }
 }

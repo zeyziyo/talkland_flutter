@@ -1,0 +1,205 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../providers/app_state.dart';
+import '../l10n/app_localizations.dart';
+
+class AuthScreen extends StatefulWidget {
+  const AuthScreen({super.key});
+
+  @override
+  State<AuthScreen> createState() => _AuthScreenState();
+}
+
+class _AuthScreenState extends State<AuthScreen> {
+  final _formKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  
+  bool _isLogin = true;
+  bool _obscurePassword = true;
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+  void _submit() async {
+    if (!_formKey.currentState!.validate()) return;
+
+    final appState = Provider.of<AppState>(context, listen: false);
+    final l10n = AppLocalizations.of(context)!;
+    final scaffoldMessenger = ScaffoldMessenger.of(context);
+    final navigator = Navigator.of(context);
+    
+    try {
+      if (_isLogin) {
+        await appState.signInWithEmail(
+          _emailController.text.trim(), 
+          _passwordController.text.trim()
+        );
+      } else {
+        await appState.signUpWithEmail(
+          _emailController.text.trim(), 
+          _passwordController.text.trim()
+        );
+      }
+      
+      if (!mounted) return;
+      
+      navigator.pop();
+      scaffoldMessenger.showSnackBar(
+        SnackBar(content: Text(l10n.statusLoginSuccess))
+      );
+    } catch (e) {
+      if (!mounted) return;
+      
+      String errorMsg = e.toString();
+      if (errorMsg.contains('Invalid login credentials')) {
+        errorMsg = l10n.statusLoginFailed('Invalid credentials');
+      }
+      scaffoldMessenger.showSnackBar(
+        SnackBar(content: Text(errorMsg), backgroundColor: Colors.redAccent)
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final appState = Provider.of<AppState>(context);
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(_isLogin ? l10n.login : l10n.signUp),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.black87,
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Colors.white, Colors.orange.shade50],
+          ),
+        ),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const SizedBox(height: 20),
+                const Icon(Icons.lock_person_rounded, size: 80, color: Colors.orange),
+                const SizedBox(height: 40),
+                
+                // Email Field
+                TextFormField(
+                  controller: _emailController,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    labelText: l10n.email,
+                    prefixIcon: const Icon(Icons.email_outlined),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    filled: true,
+                    fillColor: Colors.white70,
+                  ),
+                  validator: (value) {
+                    if (value == null || !value.contains('@')) {
+                      return l10n.invalidEmail;
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
+                
+                // Password Field
+                TextFormField(
+                  controller: _passwordController,
+                  obscureText: _obscurePassword,
+                  decoration: InputDecoration(
+                    labelText: l10n.password,
+                    prefixIcon: const Icon(Icons.lock_outline),
+                    suffixIcon: IconButton(
+                      icon: Icon(_obscurePassword ? Icons.visibility_off : Icons.visibility),
+                      onPressed: () => setState(() => _obscurePassword = !_obscurePassword),
+                    ),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    filled: true,
+                    fillColor: Colors.white70,
+                  ),
+                  validator: (value) {
+                    if (value == null || value.length < 6) {
+                      return l10n.passwordTooShort;
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 32),
+                
+                // Submit Button
+                ElevatedButton(
+                  onPressed: appState.isLoggingIn ? null : _submit,
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    backgroundColor: Colors.orange,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    elevation: 2,
+                  ),
+                  child: appState.isLoggingIn 
+                    ? const SizedBox(height: 20, width: 20, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                    : Text(_isLogin ? l10n.login : l10n.signUp, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                ),
+                
+                const SizedBox(height: 16),
+                
+                // Toggle Login/SignUp
+                TextButton(
+                  onPressed: () => setState(() => _isLogin = !_isLogin),
+                  child: Text(_isLogin ? l10n.dontHaveAccount : l10n.alreadyHaveAccount),
+                ),
+                
+                const SizedBox(height: 24),
+                const Row(
+                  children: [
+                    Expanded(child: Divider()),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      child: Text('OR', style: TextStyle(color: Colors.grey)),
+                    ),
+                    Expanded(child: Divider()),
+                  ],
+                ),
+                const SizedBox(height: 24),
+                
+                // Google Login Button
+                OutlinedButton.icon(
+                  onPressed: appState.isLoggingIn ? null : () async {
+                    final navigator = Navigator.of(context);
+                    await appState.loginWithGoogle();
+                    if (!mounted) return;
+                    
+                    if (appState.currentUser != null && !appState.currentUser!.isAnonymous) {
+                      navigator.pop();
+                    }
+                  },
+                  icon: const Icon(Icons.login, color: Colors.blueAccent),
+                  label: Text(l10n.googleContinue),
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    side: BorderSide(color: Colors.grey.shade300),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

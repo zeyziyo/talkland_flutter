@@ -834,6 +834,12 @@ abstract class AppLocalizations {
   /// **'번역 결과 - 수정 가능함'**
   String get translationResultHint;
 
+  /// No description provided for @voluntaryTranslations.
+  ///
+  /// In ko, this message translates to:
+  /// **'자발적 번역'**
+  String get voluntaryTranslations;
+
   /// Save in progress
   ///
   /// In ko, this message translates to:
@@ -2297,6 +2303,66 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'로그아웃되었습니다.'**
   String get statusLogoutSuccess;
+
+  /// No description provided for @email.
+  ///
+  /// In ko, this message translates to:
+  /// **'이메일'**
+  String get email;
+
+  /// No description provided for @password.
+  ///
+  /// In ko, this message translates to:
+  /// **'비밀번호'**
+  String get password;
+
+  /// No description provided for @login.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그인'**
+  String get login;
+
+  /// No description provided for @signUp.
+  ///
+  /// In ko, this message translates to:
+  /// **'회원가입'**
+  String get signUp;
+
+  /// No description provided for @dontHaveAccount.
+  ///
+  /// In ko, this message translates to:
+  /// **'계정이 없으신가요?'**
+  String get dontHaveAccount;
+
+  /// No description provided for @alreadyHaveAccount.
+  ///
+  /// In ko, this message translates to:
+  /// **'이미 계정이 있으신가요?'**
+  String get alreadyHaveAccount;
+
+  /// No description provided for @invalidEmail.
+  ///
+  /// In ko, this message translates to:
+  /// **'유효한 이메일을 입력하세요.'**
+  String get invalidEmail;
+
+  /// No description provided for @passwordTooShort.
+  ///
+  /// In ko, this message translates to:
+  /// **'비밀번호는 6자 이상이어야 합니다.'**
+  String get passwordTooShort;
+
+  /// No description provided for @statusSigningUp.
+  ///
+  /// In ko, this message translates to:
+  /// **'회원가입 중...'**
+  String get statusSigningUp;
+
+  /// No description provided for @statusSignUpFailed.
+  ///
+  /// In ko, this message translates to:
+  /// **'회원가입 실패: {error}'**
+  String statusSignUpFailed(Object error);
 }
 
 class _AppLocalizationsDelegate

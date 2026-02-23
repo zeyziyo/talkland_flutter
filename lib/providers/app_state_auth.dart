@@ -405,19 +405,7 @@ extension AppStateAuth on AppState {
       final response = await SupabaseAuthService.signInWithGoogle();
       
       if (response != null && response.user != null) {
-        final newUserId = response.user!.id;
-        _statusMessage = 'L10N:statusLoginSuccess';
-        
-        // Phase 33/15.6: Merge anonymous data to new user account (Local + Cloud)
-        if (oldUserId != null && oldUserId != newUserId) {
-          debugPrint('[AppState] Triggering Data Merge: $oldUserId -> $newUserId');
-          // 1. Local DB Merge
-          await mergeAnonymousDataToUser(oldUserId, newUserId);
-          // 2. Cloud Server Merge (The missing link!)
-          await SupabaseService.mergeUserSessions(oldUserId, newUserId);
-        }
-
-        // Auth Listener within AppState will trigger loadDialogueGroups()
+        await _handleAuthSuccess(oldUserId, response.user!.id);
       } else {
         _statusMessage = 'L10N:statusLoginCancelled';
       }
@@ -428,6 +416,67 @@ extension AppStateAuth on AppState {
       isLoggingIn = false;
       notify();
     }
+  }
+
+  /// v15.7: Email Sign-Up with Data Merge
+  Future<void> signUpWithEmail(String email, String password) async {
+    try {
+      final oldUserId = SupabaseService.client.auth.currentUser?.id;
+      isLoggingIn = true;
+      _statusMessage = 'L10N:statusSigningUp';
+      notify();
+
+      final response = await SupabaseAuthService.signUpWithEmail(email, password);
+      
+      if (response.user != null) {
+        await _handleAuthSuccess(oldUserId, response.user!.id);
+      }
+    } catch (e) {
+      debugPrint('[AppState] Email Sign-Up Failed: $e');
+      _statusMessage = 'L10N:statusSignUpFailed|$e';
+      rethrow;
+    } finally {
+      isLoggingIn = false;
+      notify();
+    }
+  }
+
+  /// v15.7: Email Sign-In with Data Merge
+  Future<void> signInWithEmail(String email, String password) async {
+    try {
+      final oldUserId = SupabaseService.client.auth.currentUser?.id;
+      isLoggingIn = true;
+      _statusMessage = 'L10N:statusLoggingIn';
+      notify();
+
+      final response = await SupabaseAuthService.signInWithEmail(email, password);
+      
+      if (response.user != null) {
+        await _handleAuthSuccess(oldUserId, response.user!.id);
+      }
+    } catch (e) {
+      debugPrint('[AppState] Email Sign-In Failed: $e');
+      _statusMessage = 'L10N:statusLoginFailed|$e';
+      rethrow;
+    } finally {
+      isLoggingIn = false;
+      notify();
+    }
+  }
+
+  /// v15.7: Helper to handle post-auth logic (Merge & Sync)
+  Future<void> _handleAuthSuccess(String? oldUserId, String newUserId) async {
+    _statusMessage = 'L10N:statusLoginSuccess';
+    
+    if (oldUserId != null && oldUserId != newUserId) {
+      debugPrint('[AppState] Triggering Data Merge: $oldUserId -> $newUserId');
+      // 1. Local DB Merge
+      await mergeAnonymousDataToUser(oldUserId, newUserId);
+      // 2. Cloud Server Merge
+      await SupabaseService.mergeUserSessions(oldUserId, newUserId);
+    }
+    
+    // Final sync trigger is handled via the Auth Listener in AppState
   }
 
   Future<void> logout() async {

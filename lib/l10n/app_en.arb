@@ -97,6 +97,7 @@
   "translationFailed": "Translation failed: {error}",
   "enterTextToTranslate": "Please enter text to translate",
   "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Saving...",
   "noTranslationToSave": "No translation to save",
   "saveFailed": "Save failed: {error}",
@@ -339,5 +340,15 @@
   "statusLoginFailed": "Login failed: {error}",
   "statusLoginCancelled": "Login cancelled.",
   "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out."
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}"
 }
