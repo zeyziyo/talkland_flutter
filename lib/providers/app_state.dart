@@ -66,56 +66,75 @@ class AppState extends ChangeNotifier {
       
       if (event == AuthChangeEvent.signedIn || event == AuthChangeEvent.initialSession) {
         if (newUser != null) {
-          // CRITICAL: Await merge completion before triggering sync to avoid race conditions (v15.6)
+          // CRITICAL: Handle both storing anon ID and merging to Google account
           await _handleAuthMerge(newUser);
-          await _triggerAllSync();
         }
       }
       notify();
     });
 
-    // 2. Immediate check for existing session on startup
+    // 2. Immediate check for existing session on startup (Redirect Recovery)
     final currentSession = SupabaseService.client.auth.currentSession;
     if (currentSession != null) {
-      debugPrint('[AppState] Existing session found on init. Triggering sequential merge/sync.');
-      // We wrap this in a future to allow the constructor to finish while ensuring sequential execution
-      Future.microtask(() async {
-        await _handleAuthMerge(currentSession.user);
-        await _triggerAllSync();
-      });
+      debugPrint('[AppState] Existing session found on init. Triggering auth handler.');
+      Future.microtask(() => _handleAuthMerge(currentSession.user));
     }
   }
 
   /// Unified helper to handle data merging for both Native and Web (Redirect)
   Future<void> _handleAuthMerge(User newUser) async {
-    final oldId = _prefs?.getString('last_anonymous_id');
     final newId = newUser.id;
 
-    if (!newUser.isAnonymous) {
-      // User is now authenticated (Google)
-      if (oldId != null && oldId != newId) {
-        debugPrint('[AppState] Merge Triggered: $oldId -> $newId');
-        await _performAutoMerge(oldId, newId);
-      }
-      // Clear persistence after merge or if already logged in
-      await _prefs?.remove('last_anonymous_id');
-    } else {
-      // User is currently Anonymous, remember this ID for potential future merge
+    if (newUser.isAnonymous) {
+      // User is Anonymous, remember this ID for potential future merge
       await _prefs?.setString('last_anonymous_id', newId);
       debugPrint('[AppState] Storing Anonymous ID for potential merge: $newId');
+      await _triggerAllSync(); 
+      return;
+    }
+
+    // Now handling Authenticated (Google) User
+    if (_isMerging) {
+      debugPrint('[AppState] Merge/Sync already in progress. Skipping...');
+      return;
+    }
+    
+    final oldId = _prefs?.getString('last_anonymous_id');
+
+    if (oldId != null && oldId != newId) {
+      _isMerging = true;
+      debugPrint('[AppState] Merge Triggered: $oldId -> $newId');
+      
+      try {
+        isLoggingIn = true; // Show spinner during migration
+        
+        // [PHASE 1] Cloud Ownership Transfer (Priority)
+        await SupabaseService.mergeUserSessions(oldId, newId);
+        
+        // [PHASE 2] Local Database Transfer
+        await DatabaseService.mergeUserSessions(oldId, newId);
+        
+        // [PHASE 3] Final Data Sync
+        await _triggerAllSync();
+        
+        // Clear persistence ONLY after successful complete chain
+        await _prefs?.remove('last_anonymous_id');
+        debugPrint('[AppState] Sequential Merge & Sync Complete.');
+      } catch (e) {
+        debugPrint('[AppState] Automated Merge Failed: $e');
+        // Fallback sync to ensure user sees what's already theirs
+        await _triggerAllSync(); 
+      } finally {
+        isLoggingIn = false;
+        _isMerging = false;
+      }
+    } else {
+      // If no merge needed, still ensure data is synced for the user
+      await _triggerAllSync();
     }
   }
 
   /// Automated merge helper for Web/Redirect flows (Phase 15.6)
-  Future<void> _performAutoMerge(String oldId, String newId) async {
-    try {
-      await mergeAnonymousDataToUser(oldId, newId);
-      await SupabaseService.mergeUserSessions(oldId, newId);
-      debugPrint('[AppState] Auto-Merge Success');
-    } catch (e) {
-      debugPrint('[AppState] Auto-Merge Failed: $e');
-    }
-  }
 
   /// Trigger all cloud -> local syncs
   Future<void> _triggerAllSync() async {
@@ -188,6 +207,7 @@ class AppState extends ChangeNotifier {
   List<String> _aiDetectedTags = [];
   
   bool _isSyncing = false; // Phase 33: Global sync status
+  bool _isMerging = false; // Phase 15.6: Prevent race condition on post-login merge
   
   // Recommendations
   bool _isRecommendationLoading = false;
@@ -380,9 +400,9 @@ class AppState extends ChangeNotifier {
     final hasAiBot = _globalParticipants.any((p) => (p.role == 'ai' || p.role == 'assistant') && p.name == 'AI');
 
     if (!hasUserMe) {
-      debugPrint('[AppState] Creating default user: 나');
+      debugPrint('[AppState] Creating default user: me');
       final user = ChatParticipant(
-        id: const Uuid().v4(),
+        id: 'me', // Fixed ID for canonical user
         dialogueId: '',
         name: '나',
         role: 'user',
@@ -394,9 +414,9 @@ class AppState extends ChangeNotifier {
     }
     
     if (!hasAiBot) {
-      debugPrint('[AppState] Creating default AI: AI');
+      debugPrint('[AppState] Creating default AI: ai');
       final ai = ChatParticipant(
-        id: const Uuid().v4(),
+        id: 'ai', // Fixed ID for canonical AI
         dialogueId: '',
         name: 'AI',
         role: 'ai',

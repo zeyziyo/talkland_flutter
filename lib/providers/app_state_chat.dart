@@ -32,17 +32,26 @@ extension AppStateChat on AppState {
 
     // 2. Determine Canonical ID for Core Roles
     String newId = id ?? const Uuid().v4();
+    String newName = name; // Default
+
+    // Logic: If name suggests canonical roles, enforce canonical IDs
     if (role == 'user' && (name == '나' || name == 'User' || id == 'me')) {
       newId = 'me';
+      newName = '나';
     } else if ((role == 'ai' || role == 'assistant') && (name == 'AI' || id == 'ai')) {
       newId = 'ai';
+      newName = 'AI';
+    } else if (id == 'me') {
+      newName = '나'; // Force name if ID is 'me'
+    } else if (id == 'ai') {
+      newName = 'AI'; // Force name if ID is 'ai'
     }
 
     final dId = _activeDialogueId ?? 'global';
     final newParticipant = ChatParticipant(
       id: newId,
       dialogueId: dId,
-      name: name,
+      name: newName,
       role: role,
       gender: gender ?? (role.toLowerCase() == 'user' ? _chatUserGender : _chatAiGender),
       langCode: languageCode ?? (role.toLowerCase() == 'user' ? _sourceLang : _targetLang),
@@ -254,9 +263,30 @@ extension AppStateChat on AppState {
       }
     }
 
+    // [DIAGNOSIS & RECOVERY] Phase 15.6: Search for "Orphaned" data in local DB
     try {
-      final userId = SupabaseService.client.auth.currentUser?.id;
+      final db = await DatabaseService.database;
+      final orphanedData = await db.query('dialogue_groups');
+      final uniqueOwners = orphanedData.map((m) => m['user_id'] as String? ?? 'null').toSet();
+      debugPrint('[AppState] DB Diagnosis: Found dialogue groups owned by: $uniqueOwners');
+      
+      // If we see data owned by someone else (anonymous UUID or 'anonymous'), and merge hasn't happened:
+      if (userId != null && uniqueOwners.any((owner) => owner != userId)) {
+        debugPrint('[AppState] Orphaned data detected! Attempting emergency local merge...');
+        for (final owner in uniqueOwners) {
+          if (owner != userId) {
+            await DatabaseService.mergeUserSessions(owner, userId);
+            debugPrint('[AppState] Emergency Merge: $owner -> $userId');
+          }
+        }
+      }
+    } catch (e) {
+      debugPrint('[AppState] DB Diagnosis Failed: $e');
+    }
+
+    try {
       final localData = await DatabaseService.getDialogueGroups(userId: userId);
+      debugPrint('[AppState] Local data count for $userId: ${localData.length}');
       
       final List<DialogueGroup> loadedGroups = [];
       for (final m in localData) {
@@ -618,14 +648,21 @@ extension AppStateChat on AppState {
       final uniqueSpeakers = messages.map((m) => m['speaker'] as String? ?? '').where((s) => s.isNotEmpty).toSet();
       
       for (final idOrName in uniqueSpeakers) {
-        // 만약 이름이 너무 길다면(오염 데이터) 건너뜀
-        if (idOrName.length > 50) continue;
-
+        // [Phase 15.6] Improved Name Recovery Logic
+        final bool isId = idOrName.contains('-') || idOrName == 'me' || idOrName == 'ai';
         final role = idOrName.toLowerCase() == 'user' || idOrName == 'me' ? 'user' : 'ai';
+        
+        String resolvedName = idOrName;
+        if (idOrName == 'me' || (isId && role == 'user')) {
+          resolvedName = '나';
+        } else if (idOrName == 'ai' || (isId && role == 'ai')) {
+          resolvedName = 'AI';
+        }
+
         await getOrAddParticipant(
-          name: idOrName == 'me' ? '나' : (idOrName == 'ai' ? 'AI' : idOrName), 
+          name: resolvedName, 
           role: role,
-          id: idOrName.contains('-') || idOrName == 'me' || idOrName == 'ai' ? idOrName : null
+          id: isId ? idOrName : null
         );
       }
       debugPrint('[AppState] Repaired ${uniqueSpeakers.length} participants for dialogue $dialogueId');
