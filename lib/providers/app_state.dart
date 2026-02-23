@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async';
-// Phase 119: Cleaned up unused sqflite import
+import 'package:sqflite/sqflite.dart';
 import '../services/database_service.dart';
 import '../services/translation_service.dart';
 import '../services/speech_service.dart';
@@ -56,18 +56,38 @@ class AppState extends ChangeNotifier {
 
   /// Phase 33: Listen for Auth Changes to trigger data sync
   void _initAuthListener() {
+    // 1. Listen for future changes
     SupabaseService.client.auth.onAuthStateChange.listen((data) {
       final AuthChangeEvent event = data.event;
       final Session? session = data.session;
       
       debugPrint('[AppState] Auth Event: $event, UID: ${session?.user.id}');
       
-      if (event == AuthChangeEvent.signedIn) {
+      if (event == AuthChangeEvent.signedIn || event == AuthChangeEvent.initialSession) {
         // User logged in (Anonymous OR Google)
-        loadDialogueGroups();
-        loadStudyMaterials();
+        _triggerAllSync();
       }
     });
+
+    // 2. Immediate check for existing session on startup
+    final currentSession = SupabaseService.client.auth.currentSession;
+    if (currentSession != null) {
+      debugPrint('[AppState] Existing session found on init. Triggering sync...');
+      _triggerAllSync();
+    }
+  }
+
+  /// Trigger all cloud -> local syncs
+  Future<void> _triggerAllSync() async {
+    if (_isSyncing) return;
+    isSyncing = true;
+    try {
+      await loadDialogueGroups();
+      await loadStudyMaterials();
+      await loadRecordsByTags(); // Ensure Mode 2 UI updates
+    } finally {
+      isSyncing = false;
+    }
   }
 
   // Helper for Extensions to notify listeners

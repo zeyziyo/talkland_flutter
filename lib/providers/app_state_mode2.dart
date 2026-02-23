@@ -364,9 +364,104 @@ extension AppStateMode2 on AppState {
     await loadRecordsByTags();
   }
 
+  /// Phase 33: Sync User's Cloud Library to Local (v15.4)
+  Future<void> syncCloudLibraryToLocal() async {
+    final userId = SupabaseService.client.auth.currentUser?.id;
+    if (userId == null) return;
+
+    try {
+      // 1. Fetch User's Library from Cloud
+      final response = await SupabaseService.client
+          .from('user_library')
+          .select()
+          .eq('user_id', userId);
+
+      final List cloudLibrary = response as List;
+      if (cloudLibrary.isEmpty) return;
+
+      debugPrint('[AppState] Syncing ${cloudLibrary.length} items from cloud library...');
+
+      for (var entry in cloudLibrary) {
+        final int groupId = entry['group_id'];
+        final String? note = entry['personal_note'];
+        final List<String> tags = (entry['material_tags'] as List?)?.map((e) => e.toString()).toList() ?? [];
+
+        // Check if exists locally (Phase 129: check meta)
+        final db = await DatabaseService.database;
+        final existing = await db.query('sentences_meta', where: 'group_id = ?', whereArgs: [groupId], limit: 1);
+        final existingWord = await db.query('words_meta', where: 'group_id = ?', whereArgs: [groupId], limit: 1);
+
+        if (existing.isEmpty && existingWord.isEmpty) {
+          // 2. Fetch missing content from cloud global tables
+          // Determine type (check words first, then sentences)
+          var contentResponse = await SupabaseService.client.from('words').select().eq('group_id', groupId);
+          String type = 'word';
+          if ((contentResponse as List).isEmpty) {
+            contentResponse = await SupabaseService.client.from('sentences').select().eq('group_id', groupId);
+            type = 'sentence';
+          }
+
+          final List contentList = contentResponse as List;
+          if (contentList.isNotEmpty) {
+            // 3. Save to local DB using Repository logic
+            // We need to group them by language to use saveUnifiedRecord or similar
+            final first = contentList.first;
+            // Actually saveUnifiedRecord expects source, target and translation
+            // Let's use a simpler insert if we have the full data
+            
+            // Reconstruct data_json map
+            Map<String, Map<String, dynamic>> dataMap = {};
+            for (var c in contentList) {
+               dataMap[c['lang_code']] = {
+                 'text': c['text'],
+                 'pos': c['pos'],
+                 'note': c['note'],
+                 'root': c['root'],
+                 'style': c['style'],
+                 'form_type': c['form_type'],
+               };
+            }
+
+            final String table = type == 'word' ? 'words' : 'sentences';
+            final String metaTable = type == 'word' ? 'words_meta' : 'sentences_meta';
+
+            await db.transaction((txn) async {
+              await txn.insert(table, {
+                'group_id': groupId,
+                'data_json': jsonEncode(dataMap),
+                'created_at': first['created_at'] ?? DateTime.now().toIso8601String(),
+              }, conflictAlgorithm: ConflictAlgorithm.ignore);
+
+              // Use primary language as base for meta
+              final baseLang = dataMap.containsKey(_sourceLang) ? _sourceLang : dataMap.keys.first;
+
+              await txn.insert(metaTable, {
+                'group_id': groupId,
+                'source_lang': baseLang,
+                'target_lang': _targetLang,
+                'tags': tags.join(','),
+                'caption': note,
+                'is_memorized': 0,
+                'is_synced': 1,
+                'created_at': DateTime.now().toIso8601String(),
+              }, conflictAlgorithm: ConflictAlgorithm.ignore);
+            });
+          }
+        }
+      }
+      debugPrint('[AppState] Cloud Library Sync Finished.');
+    } catch (e) {
+      debugPrint('[AppState] Cloud Library Sync Failed: $e');
+    }
+  }
+
   /// 기존 호환성 유지용 (Legacy)
   Future<void> loadStudyMaterials() async {
     await loadTags(); 
+    // Phase 33: Also sync from cloud if logged in (v15.4)
+    if (SupabaseService.client.auth.currentUser != null && !SupabaseService.client.auth.currentUser!.isAnonymous) {
+      syncCloudLibraryToLocal().then((_) => loadRecordsByTags());
+    }
     _studyMaterials = await DatabaseService.getStudyMaterials(); 
     notify();
   }

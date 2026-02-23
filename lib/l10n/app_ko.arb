@@ -1,5 +1,10 @@
 {
   "@@locale": "ko",
+  "googleContinue": "Google로 계속하기",
+  "logout": "로그아웃",
+  "logoutConfirmTitle": "로그아웃",
+  "logoutConfirmMessage": "현재 기기에서 로그아웃하시겠습니까?",
+  "syncingData": "데이터 동기화 중...",
   "helpTitle": "도움말 & 가이드",
   "helpTabModes": "모드 설명",
   "helpTabJson": "JSON 형식",

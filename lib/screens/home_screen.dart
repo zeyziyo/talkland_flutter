@@ -37,10 +37,12 @@ class _HomeScreenState extends State<HomeScreen> {
   // Mode 2 Keys
   final GlobalKey _mode2DropdownKey = GlobalKey();
   final GlobalKey _mode2ListKey = GlobalKey();
+  final GlobalKey _mode2SearchKey = GlobalKey(); // New: Mode 2 Search Key
 
   // Mode 3 Keys
   final GlobalKey _mode3DropdownKey = GlobalKey();
   final GlobalKey _mode3SettingsKey = GlobalKey(); // Renamed from _mode3ResetKey
+  final GlobalKey _mode3SearchKey = GlobalKey(); // New: Mode 3 Search Key
   
   // Tutorial Keys - Fixed
   final GlobalKey _menuKey = GlobalKey(); // Renamed from _tabKey
@@ -207,6 +209,13 @@ class _HomeScreenState extends State<HomeScreen> {
         paddingFocus: 8,
       ));
       targets.add(_buildTarget(
+        _mode2SearchKey, 
+        l10n.search, 
+        l10n.tutorialM2SearchDesc,
+        ContentAlign.bottom,
+        radius: 12,
+      ));
+      targets.add(_buildTarget(
         _actionButtonKey, 
         l10n.importJsonFile, 
         l10n.tutorialM2ImportDesc,
@@ -219,6 +228,13 @@ class _HomeScreenState extends State<HomeScreen> {
         l10n.menuSelectMaterialSet, 
         l10n.tutorialM3SelectDesc,
         ContentAlign.top,
+        radius: 12,
+      ));
+      targets.add(_buildTarget(
+        _mode3SearchKey, 
+        l10n.search, 
+        l10n.tutorialM2SearchDesc,
+        ContentAlign.bottom,
         radius: 12,
       ));
       targets.add(_buildTarget(
@@ -588,25 +604,113 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 DrawerHeader(
                   decoration: const BoxDecoration(
-                    color: Color(0xFF667eea),
+                    gradient: LinearGradient(
+                      colors: [Color(0xFF667eea), Color(0xFF764ba2)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                       const Icon(Icons.language, color: Colors.white, size: 48),
-                       const SizedBox(height: 10),
-                       Text(
-                         l10n.appTitle,
-                         style: const TextStyle(
-                           color: Colors.white,
-                           fontSize: 24,
-                           fontWeight: FontWeight.bold,
-                         ),
-                       ),
+                      Row(
+                        children: [
+                          const Icon(Icons.language, color: Colors.white, size: 40),
+                          const Spacer(),
+                          if (appState.currentUser != null && !appState.currentUser!.isAnonymous)
+                            ClipOval(
+                              child: Image.network(
+                                appState.currentUser!.userMetadata?['avatar_url'] ?? '',
+                                width: 32,
+                                height: 32,
+                                errorBuilder: (c, e, s) => const Icon(Icons.account_circle, color: Colors.white, size: 32),
+                              ),
+                            )
+                          else
+                            const Icon(Icons.account_circle_outlined, color: Colors.white70, size: 32),
+                        ],
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        l10n.appTitle,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      if (appState.currentUser != null && !appState.currentUser!.isAnonymous)
+                        Text(
+                          appState.currentUser!.email ?? '',
+                          style: const TextStyle(color: Colors.white70, fontSize: 12),
+                        ),
                     ],
                   ),
                 ),
+                // Google Login Section (v15.4: High Visibility)
+                if (appState.currentUser == null || appState.currentUser!.isAnonymous)
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ElevatedButton.icon(
+                      onPressed: () => appState.loginWithGoogle(),
+                      icon: Image.network(
+                        'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg',
+                        width: 18,
+                        height: 18,
+                        errorBuilder: (c, e, s) => const Icon(Icons.login, size: 18),
+                      ),
+                      label: Text(
+                        l10n.googleContinue,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        foregroundColor: Colors.black87,
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      ),
+                    ),
+                  )
+                else
+                  Column(
+                    children: [
+                      if (appState.isSyncing)
+                        ListTile(
+                          dense: true,
+                          leading: const SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: CircularProgressIndicator(strokeWidth: 2),
+                          ),
+                          title: Text(
+                            l10n.syncingData,
+                            style: const TextStyle(fontSize: 12, color: Colors.blueAccent),
+                          ),
+                        ),
+                      ListTile(
+                        leading: const Icon(Icons.logout, color: Colors.redAccent),
+                        title: Text(l10n.logout, style: const TextStyle(color: Colors.redAccent)),
+                        onTap: () async {
+                          final confirmed = await showDialog<bool>(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                              title: Text(l10n.logoutConfirmTitle),
+                              content: Text(l10n.logoutConfirmMessage),
+                              actions: [
+                                TextButton(onPressed: () => Navigator.pop(context, false), child: Text(l10n.cancel)),
+                                TextButton(onPressed: () => Navigator.pop(context, true), child: Text(l10n.confirm)),
+                              ],
+                            ),
+                          );
+                          if (confirmed == true) {
+                            await appState.logout();
+                          }
+                        },
+                      ),
+                    ],
+                  ),
+                const Divider(),
                 ListTile(
                   leading: const Icon(Icons.keyboard),
                   title: Text(l10n.inputModeTitle),
@@ -655,17 +759,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-          // VISUAL PROOF 3: Version Banner
-          Container(
-            width: double.infinity,
-            color: Colors.yellow[300],
-            padding: const EdgeInsets.symmetric(vertical: 4),
-            child: const Text(
-              'v14.6 - DATA INTEGRITY PATCH (STABLE MODE)',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
-            ),
-          ),
           // Phase 9: Offline Banner
           if (appState.isOffline)
             Container(
@@ -708,13 +801,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   onSelectMaterial: () => OnlineLibraryDialog.show(context),
                 ),
                 Mode2Widget(
+                  key: const ValueKey('mode2'),
                   materialDropdownKey: _mode2DropdownKey,
                   tutorialListKey: _mode2ListKey,
+                  searchKey: _mode2SearchKey,
                   onSelectMaterial: () => OnlineLibraryDialog.show(context),
                 ),
                 Mode3Widget(
+                  key: const ValueKey('mode3'),
                   materialDropdownKey: _mode3DropdownKey,
                   settingsKey: _mode3SettingsKey,
+                  searchKey: _mode3SearchKey,
                   onSelectMaterial: () => OnlineLibraryDialog.show(context),
                 ),
                 ChatHistoryScreen(

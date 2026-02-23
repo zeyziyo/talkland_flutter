@@ -1,5 +1,10 @@
 {
   "@@locale": "en",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Help & Guide",
   "helpTabModes": "Modes",
   "helpTabJson": "JSON Format",
