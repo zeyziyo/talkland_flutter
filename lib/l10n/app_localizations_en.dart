@@ -1106,4 +1106,21 @@ class AppLocalizationsEn extends AppLocalizations {
   String statusImportFailed(Object error) {
     return 'Import Failed: $error';
   }
+
+  @override
+  String get statusLoginSuccess => 'Login successful.';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return 'Login failed: $error';
+  }
+
+  @override
+  String get statusLoginCancelled => 'Login cancelled.';
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLogoutSuccess => 'Logged out.';
 }

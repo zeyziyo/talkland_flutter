@@ -669,7 +669,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 if (key == 'statusLoginSuccess') {
                                   msg = l10n.statusLoginSuccess;
                                 } else if (key == 'statusLoginFailed') {
-                                  msg = '${l10n.statusLoginFailed}${arg != null ? ": $arg" : ""}';
+                                  msg = l10n.statusLoginFailed(arg ?? '');
                                 } else if (key == 'statusLoginCancelled') {
                                   msg = l10n.statusLoginCancelled;
                                 }

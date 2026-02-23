@@ -27,7 +27,8 @@
 - **Dialogue ID Integrity**: 서버와 로컬 간의 대화 ID 불일치(Mismatch)로 인해 메시지가 유실되던 근본 원인을 수정했습니다. 이제 서버 저장 시 로컬 고유 UUID를 그대로 유지하여 재설치 후에도 완벽한 복원이 가능합니다.
 - **Login Flow & UI Feedback**: Google 로그인 상태가 UI(Drawer)에 실시간으로 반영되지 않던 문제를 해결했습니다. 이제 로그인 즉시 '로그아웃' 버튼이 나타나며, 로그인/로그아웃 성공·실패 시 하단 스낵바를 통해 명확한 피드백을 제공합니다.
 - **L10n Enrichment**: 로그인 상태 변화와 관련된 모든 피드백 메시지를 한국어 및 영어 국제화 파일(`app_ko.arb`, `app_en.arb`)에 추가하여 글로벌 사용자 경험을 강화했습니다.
-- **Build Fix**: `HomeScreen`에서 `Mode2Widget` 및 `Mode3Widget` 호출 시 발생하던 `searchKey` 매개변수 컴파일 에러를 수정하여 릴리즈 빌드 안정성을 확보했습니다.
+- **Build Fix (Kernel Snapshot)**: `HomeScreen`에서 `statusLoginFailed` 리소스가 메서드(Function)임에도 문자열처럼 사용되던 문법 오류를 수정했습니다. 또한 `l10n.yaml`의 `output-dir`을 교정하여 모든 80개 언어의 국제화 파일이 소스 경로(`lib/l10n`)에 정확히 생성되도록 보장했습니다.
+- **UI Logic Finalization**: `AppLocalizations`의 불필요한 Null-aware 연산자를 제거하고 Lint 경고를 해결하여 최적화된 빌드 무결성을 달성했습니다.
 
 ---
 
