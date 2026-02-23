@@ -252,6 +252,36 @@ abstract class AppLocalizations {
     Locale('zu')
   ];
 
+  /// No description provided for @googleContinue.
+  ///
+  /// In ko, this message translates to:
+  /// **'Google로 계속하기'**
+  String get googleContinue;
+
+  /// No description provided for @logout.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그아웃'**
+  String get logout;
+
+  /// No description provided for @logoutConfirmTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그아웃'**
+  String get logoutConfirmTitle;
+
+  /// No description provided for @logoutConfirmMessage.
+  ///
+  /// In ko, this message translates to:
+  /// **'현재 기기에서 로그아웃하시겠습니까?'**
+  String get logoutConfirmMessage;
+
+  /// No description provided for @syncingData.
+  ///
+  /// In ko, this message translates to:
+  /// **'데이터 동기화 중...'**
+  String get syncingData;
+
   /// No description provided for @helpTitle.
   ///
   /// In ko, this message translates to:
@@ -321,7 +351,7 @@ abstract class AppLocalizations {
   /// No description provided for @helpModeChatDetails.
   ///
   /// In ko, this message translates to:
-  /// **'• AI 채팅: 내 언어로 말하여 회화 연습\n• 멀티 페르소나: 말풍선 위 메뉴로 상대방의 성별/언어/이름 변경 가능\n• 파트너 추가: + 버튼으로 새로운 대화 상대(Stranger) 추가\n• GPS: 현재 위치 기반 상황극\n• 자동 저장: 대화 내용 자동 번역 및 저장'**
+  /// **'• AI 채팅: 페르소나와 실전 대화를 연습하세요.\n• 참가자 관리: 내 언어와 AI의 언어를 각각 설정하여 언어 불일치를 방지할 수 있습니다.\n• GPS 상황극: 현재 위치 기반으로 자연스러운 대화 상황을 연출합니다.\n• 기록 보존: 모든 대화는 ID 기반으로 안전하게 저장되며, 이름을 바꿔도 기록이 유지됩니다.'**
   String get helpModeChatDetails;
 
   /// No description provided for @helpJsonDesc.
@@ -599,6 +629,54 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'파일: {fileName}'**
   String importFile(String fileName);
+
+  /// No description provided for @addParticipant.
+  ///
+  /// In ko, this message translates to:
+  /// **'참가자 추가'**
+  String get addParticipant;
+
+  /// No description provided for @editParticipant.
+  ///
+  /// In ko, this message translates to:
+  /// **'참가자 수정'**
+  String get editParticipant;
+
+  /// No description provided for @labelRole.
+  ///
+  /// In ko, this message translates to:
+  /// **'역할'**
+  String get labelRole;
+
+  /// No description provided for @labelLangCode.
+  ///
+  /// In ko, this message translates to:
+  /// **'언어 코드 (예: en-US, ko-KR)'**
+  String get labelLangCode;
+
+  /// No description provided for @roleUser.
+  ///
+  /// In ko, this message translates to:
+  /// **'사용자'**
+  String get roleUser;
+
+  /// No description provided for @roleAi.
+  ///
+  /// In ko, this message translates to:
+  /// **'AI'**
+  String get roleAi;
+
+  /// No description provided for @participantDeleted.
+  ///
+  /// In ko, this message translates to:
+  /// **'참가자가 삭제되었습니다.'**
+  String get participantDeleted;
+
+  /// No description provided for @confirmDeleteParticipant.
+  ///
+  /// In ko, this message translates to:
+  /// **'이 참가자를 삭제하시겠습니까?'**
+  String get confirmDeleteParticipant;
 
   /// Total import count
   ///
@@ -1073,6 +1151,12 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'상단 메뉴를 통해 학습할 자료를 선택할 수 있습니다.'**
   String get tutorialM2DropdownDesc;
+
+  /// No description provided for @tutorialM2SearchDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'저장된 단어와 문장을 검색하여 빠르게 찾을 수 있습니다.'**
+  String get tutorialM2SearchDesc;
 
   /// No description provided for @tutorialM2ImportDesc.
   ///
@@ -1650,6 +1734,12 @@ abstract class AppLocalizations {
   /// **'아직 대화가 없습니다'**
   String get chatNoConversations;
 
+  /// No description provided for @noDialogueHistory.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화 내역이 없습니다.'**
+  String get noDialogueHistory;
+
   /// No description provided for @chatStartNewPrompt.
   ///
   /// In ko, this message translates to:
@@ -1691,6 +1781,12 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'채팅'**
   String get chatAiChat;
+
+  /// No description provided for @manageParticipants.
+  ///
+  /// In ko, this message translates to:
+  /// **'참가자 관리'**
+  String get manageParticipants;
 
   /// No description provided for @tutorialAiChatTitle.
   ///

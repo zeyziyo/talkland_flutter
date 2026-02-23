@@ -13,11 +13,13 @@ import 'package:talkie/widgets/search_filter_dialog.dart';
 class Mode2Widget extends StatefulWidget {
   final Key? materialDropdownKey;
   final Key? tutorialListKey;
+  final Key? searchKey; // New
 
   const Mode2Widget({
     super.key,
     this.materialDropdownKey,
     this.tutorialListKey,
+    this.searchKey,
     this.onSelectMaterial,
   });
 
@@ -99,6 +101,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                           }
 
                           return SearchBar(
+                            key: widget.searchKey,
                             controller: textEditingController,
                             focusNode: focusNode,
                             hintText: appState.recordTypeFilter == 'word' 

@@ -13,11 +13,13 @@ import 'package:talkie/widgets/search_filter_dialog.dart';
 class Mode3Widget extends StatelessWidget {
   final Key? materialDropdownKey;
   final Key? settingsKey;
+  final Key? searchKey; // New
 
   const Mode3Widget({
     super.key,
     this.materialDropdownKey,
     this.settingsKey,
+    this.searchKey,
     this.onSelectMaterial,
   });
 
@@ -76,6 +78,7 @@ class Mode3Widget extends StatelessWidget {
                           }
 
                           return SearchBar(
+                            key: searchKey,
                             controller: textEditingController,
                             focusNode: focusNode,
                             hintText: appState.recordTypeFilter == 'word' 

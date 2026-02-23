@@ -9,6 +9,21 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
+  String get googleContinue => 'Google로 계속하기';
+
+  @override
+  String get logout => '로그아웃';
+
+  @override
+  String get logoutConfirmTitle => '로그아웃';
+
+  @override
+  String get logoutConfirmMessage => '현재 기기에서 로그아웃하시겠습니까?';
+
+  @override
+  String get syncingData => '데이터 동기화 중...';
+
+  @override
   String get helpTitle => 'ヘルプ＆ガイド';
 
   @override
@@ -198,6 +213,30 @@ class AppLocalizationsJa extends AppLocalizations {
   String importFile(String fileName) {
     return 'ファイル: $fileName';
   }
+
+  @override
+  String get addParticipant => '参加者を追加';
+
+  @override
+  String get editParticipant => '参加者を編集';
+
+  @override
+  String get labelRole => '役割';
+
+  @override
+  String get labelLangCode => '言語コード (例: en-US, ja-JP)';
+
+  @override
+  String get roleUser => 'ユーザー';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get participantDeleted => '参加者が削除されました。';
+
+  @override
+  String get confirmDeleteParticipant => 'この参加者を削除してもよろしいですか？';
 
   @override
   String importTotal(int count) {
@@ -460,6 +499,9 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get tutorialM2DropdownDesc => '学習教材を選択します。';
+
+  @override
+  String get tutorialM2SearchDesc => '저장된 단어와 문장을 검색하여 빠르게 찾을 수 있습니다.';
 
   @override
   String get tutorialM2ImportDesc => 'デバイスのフォルダからJSONファイルを読み込みます。';
@@ -763,6 +805,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get chatNoConversations => '会話がありません';
 
   @override
+  String get noDialogueHistory => 'No dialogue history.';
+
+  @override
   String get chatStartNewPrompt => '練習を始めるために新しいチャットを開始しましょう！';
 
   @override
@@ -784,6 +829,9 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get chatAiChat => 'チャット';
+
+  @override
+  String get manageParticipants => '参加者管理';
 
   @override
   String get tutorialAiChatTitle => 'AIチャット';

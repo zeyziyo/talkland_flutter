@@ -9,6 +9,21 @@ class AppLocalizationsKo extends AppLocalizations {
   AppLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
+  String get googleContinue => 'Google로 계속하기';
+
+  @override
+  String get logout => '로그아웃';
+
+  @override
+  String get logoutConfirmTitle => '로그아웃';
+
+  @override
+  String get logoutConfirmMessage => '현재 기기에서 로그아웃하시겠습니까?';
+
+  @override
+  String get syncingData => '데이터 동기화 중...';
+
+  @override
   String get helpTitle => '도움말 & 가이드';
 
   @override
@@ -46,7 +61,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• AI 채팅: 내 언어로 말하여 회화 연습\n• 멀티 페르소나: 말풍선 위 메뉴로 상대방의 성별/언어/이름 변경 가능\n• 파트너 추가: + 버튼으로 새로운 대화 상대(Stranger) 추가\n• GPS: 현재 위치 기반 상황극\n• 자동 저장: 대화 내용 자동 번역 및 저장';
+      '• AI 채팅: 페르소나와 실전 대화를 연습하세요.\n• 참가자 관리: 내 언어와 AI의 언어를 각각 설정하여 언어 불일치를 방지할 수 있습니다.\n• GPS 상황극: 현재 위치 기반으로 자연스러운 대화 상황을 연출합니다.\n• 기록 보존: 모든 대화는 ID 기반으로 안전하게 저장되며, 이름을 바꿔도 기록이 유지됩니다.';
 
   @override
   String get helpJsonDesc => 'Mode 3에서 사용할 학습 자료를 JSON 파일로 가져오려면 다음 형식을 따르세요:';
@@ -197,6 +212,30 @@ class AppLocalizationsKo extends AppLocalizations {
   String importFile(String fileName) {
     return '파일: $fileName';
   }
+
+  @override
+  String get addParticipant => '참가자 추가';
+
+  @override
+  String get editParticipant => '참가자 수정';
+
+  @override
+  String get labelRole => '역할';
+
+  @override
+  String get labelLangCode => '언어 코드 (예: en-US, ko-KR)';
+
+  @override
+  String get roleUser => '사용자';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get participantDeleted => '참가자가 삭제되었습니다.';
+
+  @override
+  String get confirmDeleteParticipant => '이 참가자를 삭제하시겠습니까?';
 
   @override
   String importTotal(int count) {
@@ -461,6 +500,9 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get tutorialM2DropdownDesc => '상단 메뉴를 통해 학습할 자료를 선택할 수 있습니다.';
+
+  @override
+  String get tutorialM2SearchDesc => '저장된 단어와 문장을 검색하여 빠르게 찾을 수 있습니다.';
 
   @override
   String get tutorialM2ImportDesc => '기기의 폴더에서 JSON 파일을 불러옵니다.';
@@ -760,6 +802,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get chatNoConversations => '아직 대화가 없습니다';
 
   @override
+  String get noDialogueHistory => '대화 내역이 없습니다.';
+
+  @override
   String get chatStartNewPrompt => '연습을 위해 새 대화를 시작해보세요!';
 
   @override
@@ -781,6 +826,9 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get chatAiChat => '채팅';
+
+  @override
+  String get manageParticipants => '참가자 관리';
 
   @override
   String get tutorialAiChatTitle => 'AI 채팅';

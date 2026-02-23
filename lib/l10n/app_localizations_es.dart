@@ -9,6 +9,21 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
+  String get googleContinue => 'Google로 계속하기';
+
+  @override
+  String get logout => '로그아웃';
+
+  @override
+  String get logoutConfirmTitle => '로그아웃';
+
+  @override
+  String get logoutConfirmMessage => '현재 기기에서 로그아웃하시겠습니까?';
+
+  @override
+  String get syncingData => '데이터 동기화 중...';
+
+  @override
   String get helpTitle => 'Ayuda y Guía';
 
   @override
@@ -204,6 +219,31 @@ class AppLocalizationsEs extends AppLocalizations {
   String importFile(String fileName) {
     return 'Archivo: $fileName';
   }
+
+  @override
+  String get addParticipant => 'Añadir Participante';
+
+  @override
+  String get editParticipant => 'Editar Participante';
+
+  @override
+  String get labelRole => 'Rol';
+
+  @override
+  String get labelLangCode => 'Código de Idioma (ej. en-US, es-ES)';
+
+  @override
+  String get roleUser => 'Usuario';
+
+  @override
+  String get roleAi => 'IA';
+
+  @override
+  String get participantDeleted => 'Participante eliminado.';
+
+  @override
+  String get confirmDeleteParticipant =>
+      '¿Estás seguro de que quieres eliminar a este participante?';
 
   @override
   String importTotal(int count) {
@@ -474,6 +514,9 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get tutorialM2DropdownDesc => 'Selecciona materiales de estudio.';
+
+  @override
+  String get tutorialM2SearchDesc => '저장된 단어와 문장을 검색하여 빠르게 찾을 수 있습니다.';
 
   @override
   String get tutorialM2ImportDesc =>
@@ -786,6 +829,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get chatNoConversations => 'Sin conversaciones';
 
   @override
+  String get noDialogueHistory => 'No dialogue history.';
+
+  @override
   String get chatStartNewPrompt => '¡Inicia un chat para practicar!';
 
   @override
@@ -807,6 +853,9 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get chatAiChat => 'Chat';
+
+  @override
+  String get manageParticipants => 'Gestionar Participantes';
 
   @override
   String get tutorialAiChatTitle => 'Chat de IA';

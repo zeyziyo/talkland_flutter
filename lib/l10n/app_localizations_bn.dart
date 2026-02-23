@@ -9,6 +9,21 @@ class AppLocalizationsBn extends AppLocalizations {
   AppLocalizationsBn([String locale = 'bn']) : super(locale);
 
   @override
+  String get googleContinue => 'Google로 계속하기';
+
+  @override
+  String get logout => '로그아웃';
+
+  @override
+  String get logoutConfirmTitle => '로그아웃';
+
+  @override
+  String get logoutConfirmMessage => '현재 기기에서 로그아웃하시겠습니까?';
+
+  @override
+  String get syncingData => '데이터 동기화 중...';
+
+  @override
   String get helpTitle => 'সাহায্য ও নির্দেশিকা';
 
   @override
@@ -202,6 +217,30 @@ class AppLocalizationsBn extends AppLocalizations {
   String importFile(String fileName) {
     return 'ফাইল: $fileName';
   }
+
+  @override
+  String get addParticipant => '참가자 추가';
+
+  @override
+  String get editParticipant => '참가자 수정';
+
+  @override
+  String get labelRole => '역할';
+
+  @override
+  String get labelLangCode => '언어 코드 (예: en-US, ko-KR)';
+
+  @override
+  String get roleUser => '사용자';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get participantDeleted => '참가자가 삭제되었습니다.';
+
+  @override
+  String get confirmDeleteParticipant => '이 참가자를 삭제하시겠습니까?';
 
   @override
   String importTotal(int count) {
@@ -469,6 +508,9 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get tutorialM2DropdownDesc => 'অধ্যয়ন উপকরণ নির্বাচন করুন।';
+
+  @override
+  String get tutorialM2SearchDesc => '저장된 단어와 문장을 검색하여 빠르게 찾을 수 있습니다.';
 
   @override
   String get tutorialM2ImportDesc =>
@@ -776,6 +818,9 @@ class AppLocalizationsBn extends AppLocalizations {
   String get chatNoConversations => 'No conversations yet';
 
   @override
+  String get noDialogueHistory => 'No dialogue history.';
+
+  @override
   String get chatStartNewPrompt => 'Start a new chat to practice!';
 
   @override
@@ -797,6 +842,9 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get chatAiChat => 'চ্যাট';
+
+  @override
+  String get manageParticipants => 'Manage Participants';
 
   @override
   String get tutorialAiChatTitle => 'AI চ্যাট';

@@ -9,6 +9,22 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
+  String get googleContinue => 'Continue with Google';
+
+  @override
+  String get logout => 'Logout';
+
+  @override
+  String get logoutConfirmTitle => 'Logout';
+
+  @override
+  String get logoutConfirmMessage =>
+      'Are you sure you want to logout from this device?';
+
+  @override
+  String get syncingData => 'Syncing data...';
+
+  @override
   String get helpTitle => 'Help & Guide';
 
   @override
@@ -204,6 +220,31 @@ class AppLocalizationsEn extends AppLocalizations {
   String importFile(String fileName) {
     return 'File: $fileName';
   }
+
+  @override
+  String get addParticipant => 'Add Participant';
+
+  @override
+  String get editParticipant => 'Edit Participant';
+
+  @override
+  String get labelRole => 'Role';
+
+  @override
+  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
+
+  @override
+  String get roleUser => 'User';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get participantDeleted => 'Participant deleted.';
+
+  @override
+  String get confirmDeleteParticipant =>
+      'Are you sure you want to delete this participant?';
 
   @override
   String importTotal(int count) {
@@ -472,6 +513,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tutorialM2DropdownDesc => 'Select study materials.';
+
+  @override
+  String get tutorialM2SearchDesc =>
+      'Search through your saved words and sentences.';
 
   @override
   String get tutorialM2ImportDesc => 'Import JSON file from device folder.';
@@ -780,6 +825,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get chatNoConversations => 'No conversations yet';
 
   @override
+  String get noDialogueHistory => 'No dialogue history.';
+
+  @override
   String get chatStartNewPrompt => 'Start a new chat to practice!';
 
   @override
@@ -801,6 +849,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get chatAiChat => 'Chat';
+
+  @override
+  String get manageParticipants => 'Manage Participants';
 
   @override
   String get tutorialAiChatTitle => 'AI Chat';
