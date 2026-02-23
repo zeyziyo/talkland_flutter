@@ -23,21 +23,11 @@ class SupabaseAuthService {
   static Future<AuthResponse?> signInWithGoogle() async {
     try {
       if (kIsWeb) {
-        // Phase 15.6: Dynamically determine redirect URL
-        // We use the full URL to check which host we are on, then pick the corresponding allowed redirect URL.
-        final String currentUrl = Uri.base.toString();
-        String? redirectUrl;
+        // Phase v15.7: Dynamically determine redirect URL using current origin
+        // This ensures compatibility regardless of the port (8080, 8081, etc.)
+        final String redirectUrl = Uri.base.origin;
         
-        if (currentUrl.contains('127.0.0.1')) {
-          redirectUrl = 'http://127.0.0.1:8081';
-        } else if (currentUrl.contains('localhost')) {
-          redirectUrl = 'http://localhost:8081';
-        }
-        
-        // Safety check to ensure we don't pass null if somehow both fail
-        redirectUrl ??= 'http://localhost:8081';
-        
-        debugPrint('[SupabaseAuth] Starting Redirect Login with: $redirectUrl');
+        debugPrint('[SupabaseAuth] Starting Redirect Login with origin: $redirectUrl');
         
         await SupabaseHelper.client.auth.signInWithOAuth(
           OAuthProvider.google,
@@ -48,14 +38,18 @@ class SupabaseAuthService {
       }
 
       // 1. Configure Google Sign In (Native Only)
-      // v15.7: Explicitly pass serverClientId (Web Client ID from Google Cloud Console)
-      // This is REQUIRED for native Google Sign-In with Supabase.
       final String? serverClientId = dotenv.env['GOOGLE_WEB_CLIENT_ID'];
+      
+      if (serverClientId == null || serverClientId.isEmpty) {
+        debugPrint('[SupabaseAuth] CRITICAL: GOOGLE_WEB_CLIENT_ID is missing in .env!');
+        throw 'Google Client ID not configured. Please check .env file or GitHub Secrets.';
+      }
+      
       debugPrint('[SupabaseAuth] Native Sign-In - Using serverClientId: $serverClientId');
 
-      final dynamic googleClient = gn_auth.GoogleSignIn(
+      final gn_auth.GoogleSignIn googleClient = gn_auth.GoogleSignIn(
         serverClientId: serverClientId,
-        forceCodeForRefreshToken: true, // v15.7: Ensure token/code is always requested
+        forceCodeForRefreshToken: true,
         scopes: [
           'email',
           'openid',
@@ -65,36 +59,42 @@ class SupabaseAuthService {
       
       debugPrint('[SupabaseAuth] Native Sign-In - Starting googleClient.signIn()...');
       final googleUser = await googleClient.signIn();
+      
       if (googleUser == null) {
-        debugPrint('[SupabaseAuth] Native Sign-In - User cancelled or failed.');
+        debugPrint('[SupabaseAuth] Native Sign-In - User cancelled the selection or an error occurred before selection.');
         return null; 
       }
 
-      debugPrint('[SupabaseAuth] Native Sign-In - Google Sign-In Success. Fetching authentication...');
       final googleAuth = await googleUser.authentication;
       final accessToken = googleAuth.accessToken;
       final idToken = googleAuth.idToken;
-      final serverAuthCode = googleAuth.serverAuthCode; // New: For debug info
 
-      debugPrint('[SupabaseAuth] Native Sign-In - Tokens received: '
+      debugPrint('[SupabaseAuth] Native Sign-In - Auth Objects: '
                  'idToken: ${idToken != null ? "FOUND (${idToken.substring(0, 10)}...)" : "MISSING"}, '
-                 'accessToken: ${accessToken != null ? "FOUND" : "MISSING"}, '
-                 'serverAuthCode: ${serverAuthCode != null ? "FOUND" : "MISSING"}');
+                 'accessToken: ${accessToken != null ? "FOUND" : "MISSING"}');
 
       if (idToken == null) {
-        throw 'No ID Token found from Google Sign-In. Check if GOOGLE_WEB_CLIENT_ID in .env is correct AND is a WEB CLIENT ID.';
+        debugPrint('[SupabaseAuth] CRITICAL ERROR: idToken is NULL but user signed in.');
+        debugPrint('[SupabaseAuth] HINT: This usually means GOOGLE_WEB_CLIENT_ID is NOT a "Web Application" type ID, '
+                   'OR the Android SHA-1 is missing in Google Cloud Console.');
+        throw 'No ID Token found from Google Sign-In. Check console for details.';
       }
 
       // 2. Sign in to Supabase with the ID Token
-      debugPrint('[SupabaseAuth] Native Sign-In - Attempting Supabase signInWithIdToken...');
-      final dynamic auth = Supabase.instance.client.auth;
-      return await auth.signInWithIdToken(
+      debugPrint('[SupabaseAuth] Native Sign-In - Attempting Supabase login with idToken...');
+      return await Supabase.instance.client.auth.signInWithIdToken(
         provider: OAuthProvider.google,
         idToken: idToken,
         accessToken: accessToken,
       );
+    } on gn_auth.GoogleSignInAccount catch (e) {
+       debugPrint('[SupabaseAuth] GoogleSignInAccount Error: $e');
+       rethrow;
     } catch (e) {
-      print("SupabaseAuth: Google Sign-in Error: $e");
+      debugPrint('[SupabaseAuth] UNEXPECTED ERROR during Google Sign-In: $e');
+      if (e.toString().contains('PlatformException')) {
+        debugPrint('[SupabaseAuth] PlatformException detected. This often relates to SHA-1 or package name mismatch.');
+      }
       rethrow;
     }
   }

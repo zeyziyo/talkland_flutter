@@ -51,6 +51,8 @@ jobs:
         echo "GOOGLE_CLOUD_API_KEY=${{ secrets.GOOGLE_CLOUD_API_KEY }}" > .env
         echo "SUPABASE_URL=${{ secrets.SUPABASE_URL }}" >> .env
         echo "SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }}" >> .env
+        echo "GOOGLE_WEB_CLIENT_ID=${{ secrets.GOOGLE_WEB_CLIENT_ID }}" >> .env
+        echo "GOOGLE_IOS_CLIENT_ID=${{ secrets.GOOGLE_IOS_CLIENT_ID }}" >> .env
 
     - name: Build APK
       env:
