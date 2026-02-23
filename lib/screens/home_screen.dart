@@ -329,11 +329,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final appState = Provider.of<AppState>(context);
     final l10n = AppLocalizations.of(context)!;
-    
+    final appState = Provider.of<AppState>(context);
+
     return Scaffold(
-      backgroundColor: Colors.yellow[50], // VISUAL PROOF 1
       appBar: AppBar(
         title: Consumer<AppState>(
           builder: (context, appState, child) {
@@ -464,6 +463,33 @@ class _HomeScreenState extends State<HomeScreen> {
                 )
               : null,
             actions: [
+              // Phase 15.6: Web-Friendly Login Action in AppBar
+              if (appState.currentUser == null || appState.currentUser!.isAnonymous)
+                appState.isLoggingIn
+                  ? const SizedBox(width: 48, height: 48, child: Padding(padding: EdgeInsets.all(12), child: CircularProgressIndicator(strokeWidth: 2)))
+                  : IconButton(
+                      tooltip: l10n.googleContinue,
+                      icon: const Icon(Icons.login_rounded, color: Colors.blueAccent),
+                      onPressed: () async {
+                        await appState.loginWithGoogle();
+                        if (context.mounted) {
+                          final l10nMsg = AppLocalizations.of(context)!;
+                          String msg = appState.statusMessage;
+                          if (msg.startsWith('L10N:')) {
+                            final key = msg.split('|')[0].substring(5);
+                            final arg = msg.contains('|') ? msg.split('|')[1] : null;
+                            if (key == 'statusLoginSuccess') {
+                              msg = l10nMsg.statusLoginSuccess;
+                            } else if (key == 'statusLoginFailed') {
+                              msg = l10nMsg.statusLoginFailed(arg ?? '');
+                            } else if (key == 'statusLoginCancelled') {
+                              msg = l10nMsg.statusLoginCancelled;
+                            }
+                          }
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
+                        }
+                      },
+                    ),
               
               PopupMenuButton<String>(
                 key: _actionButtonKey,
@@ -679,12 +705,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               );
                             }
                           },
-                          icon: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg',
-                            width: 18,
-                            height: 18,
-                            errorBuilder: (c, e, s) => const Icon(Icons.login, size: 18),
-                          ),
+                          icon: const Icon(Icons.login_rounded, size: 20, color: Colors.blueAccent),
                           label: Text(
                             l10n.googleContinue,
                             style: const TextStyle(fontWeight: FontWeight.bold),
