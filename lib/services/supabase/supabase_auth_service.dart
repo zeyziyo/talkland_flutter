@@ -40,7 +40,8 @@ class SupabaseAuthService {
         
         await SupabaseHelper.client.auth.signInWithOAuth(
           OAuthProvider.google,
-          redirectTo: kDebugMode ? redirectUrl : null,
+          // Always provide redirectTo if determined, to ensure reliability on local release tests
+          redirectTo: redirectUrl, 
         );
         return null; 
       }
