@@ -57,7 +57,7 @@ class AppState extends ChangeNotifier {
   /// Phase 33: Listen for Auth Changes to trigger data sync
   void _initAuthListener() {
     // 1. Listen for future changes
-    SupabaseService.client.auth.onAuthStateChange.listen((data) {
+    SupabaseService.client.auth.onAuthStateChange.listen((data) async {
       final AuthChangeEvent event = data.event;
       final Session? session = data.session;
       final newUser = session?.user;
@@ -66,8 +66,9 @@ class AppState extends ChangeNotifier {
       
       if (event == AuthChangeEvent.signedIn || event == AuthChangeEvent.initialSession) {
         if (newUser != null) {
-          _handleAuthMerge(newUser);
-          _triggerAllSync();
+          // CRITICAL: Await merge completion before triggering sync to avoid race conditions (v15.6)
+          await _handleAuthMerge(newUser);
+          await _triggerAllSync();
         }
       }
       notify();
@@ -76,9 +77,12 @@ class AppState extends ChangeNotifier {
     // 2. Immediate check for existing session on startup
     final currentSession = SupabaseService.client.auth.currentSession;
     if (currentSession != null) {
-      debugPrint('[AppState] Existing session found on init.');
-      _handleAuthMerge(currentSession.user);
-      _triggerAllSync();
+      debugPrint('[AppState] Existing session found on init. Triggering sequential merge/sync.');
+      // We wrap this in a future to allow the constructor to finish while ensuring sequential execution
+      Future.microtask(() async {
+        await _handleAuthMerge(currentSession.user);
+        await _triggerAllSync();
+      });
     }
   }
 
