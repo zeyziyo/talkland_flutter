@@ -721,5 +721,10 @@
   "styleSlang": "슬랭/속어",
   "statusDownloading": "다운로드 중: {name}...",
   "statusImportSuccess": "{name} 가져오기 완료",
-  "statusImportFailed": "가져오기 실패: {error}"
+  "statusImportFailed": "가져오기 실패: {error}",
+  "statusLoginSuccess": "로그인에 성공했습니다.",
+  "statusLoginFailed": "로그인 실패: {error}",
+  "statusLoginCancelled": "로그인이 취소되었습니다.",
+  "statusLoggingIn": "Google로 로그인 중...",
+  "statusLogoutSuccess": "로그아웃되었습니다."
 }

@@ -106,15 +106,25 @@ class SupabaseRepository {
   }
 
   // Dialogue Operations
-  static Future<String> createDialogueGroup({String? title, String? persona}) async {
+  static Future<String> createDialogueGroup({String? id, String? title, String? persona}) async {
     final userId = SupabaseAuthService.currentUser?.id;
     if (userId == null) throw Exception('User not authenticated');
 
-    final response = await SupabaseHelper.client.from('dialogue_groups').insert({
+    final data = {
       'user_id': userId,
       'title': title,
       'persona': persona,
-    }).select('id').single();
+    };
+    
+    if (id != null) {
+      data['id'] = id;
+    }
+
+    final response = await SupabaseHelper.client
+        .from('dialogue_groups')
+        .insert(data)
+        .select('id')
+        .single();
 
     return response['id'] as String;
   }

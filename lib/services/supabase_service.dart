@@ -290,7 +290,8 @@ class SupabaseService {
   }
 
   // Dialogue Group Delegation
-  static Future<String> createDialogueGroup({String? title, String? persona}) => SupabaseRepository.createDialogueGroup(title: title, persona: persona);
+  static Future<String> createDialogueGroup({String? id, String? title, String? persona}) =>
+      SupabaseRepository.createDialogueGroup(id: id, title: title, persona: persona);
   static Future<void> updateDialogueTitle(String id, String title) => SupabaseRepository.updateDialogueTitle(id, title);
   static Future<void> deleteDialogueGroup(String id) => SupabaseRepository.deleteDialogueGroup(id);
 

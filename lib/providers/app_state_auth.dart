@@ -396,6 +396,8 @@ extension AppStateAuth on AppState {
 
   Future<void> loginWithGoogle() async {
     try {
+      final oldUserId = SupabaseService.client.auth.currentUser?.id;
+
       _isTranslating = true; // Use as general loading state
       _statusMessage = 'L10N:statusLoggingIn';
       notify();
@@ -403,7 +405,14 @@ extension AppStateAuth on AppState {
       final response = await SupabaseAuthService.signInWithGoogle();
       
       if (response != null && response.user != null) {
+        final newUserId = response.user!.id;
         _statusMessage = 'L10N:statusLoginSuccess';
+        
+        // Phase 33: Merge anonymous data to new user account
+        if (oldUserId != null && oldUserId != newUserId) {
+          await mergeAnonymousDataToUser(oldUserId, newUserId);
+        }
+
         // Auth Listener within AppState will trigger loadDialogueGroups()
       } else {
         _statusMessage = 'L10N:statusLoginCancelled';

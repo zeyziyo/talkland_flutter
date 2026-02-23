@@ -648,29 +648,55 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                // Google Login Section (v15.4: High Visibility)
+                // Google Login Section (v15.5: Enhanced Feedback)
                 if (appState.currentUser == null || appState.currentUser!.isAnonymous)
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: ElevatedButton.icon(
-                      onPressed: () => appState.loginWithGoogle(),
-                      icon: Image.network(
-                        'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg',
-                        width: 18,
-                        height: 18,
-                        errorBuilder: (c, e, s) => const Icon(Icons.login, size: 18),
-                      ),
-                      label: Text(
-                        l10n.googleContinue,
-                        style: const TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        foregroundColor: Colors.black87,
-                        elevation: 2,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                      ),
-                    ),
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                    child: appState.isTranslating 
+                      ? const Center(child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: CircularProgressIndicator(),
+                        ))
+                      : ElevatedButton.icon(
+                          onPressed: () async {
+                            await appState.loginWithGoogle();
+                            if (context.mounted) {
+                              final l10n = AppLocalizations.of(context)!;
+                              String msg = appState.statusMessage;
+                              if (msg.startsWith('L10N:')) {
+                                final key = msg.split('|')[0].substring(5);
+                                final arg = msg.contains('|') ? msg.split('|')[1] : null;
+                                if (key == 'statusLoginSuccess') {
+                                  msg = l10n.statusLoginSuccess;
+                                } else if (key == 'statusLoginFailed') {
+                                  msg = '${l10n.statusLoginFailed}${arg != null ? ": $arg" : ""}';
+                                } else if (key == 'statusLoginCancelled') {
+                                  msg = l10n.statusLoginCancelled;
+                                }
+                              }
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text(msg)),
+                              );
+                            }
+                          },
+                          icon: Image.network(
+                            'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg',
+                            width: 18,
+                            height: 18,
+                            errorBuilder: (c, e, s) => const Icon(Icons.login, size: 18),
+                          ),
+                          label: Text(
+                            l10n.googleContinue,
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            foregroundColor: Colors.black87,
+                            elevation: 2,
+                            minimumSize: const Size(double.infinity, 48),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          ),
+                        ),
                   )
                 else
                   Column(
@@ -705,6 +731,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           );
                           if (confirmed == true) {
                             await appState.logout();
+                            if (context.mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text(l10n.statusLogoutSuccess)),
+                              );
+                            }
                           }
                         },
                       ),

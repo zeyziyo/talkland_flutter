@@ -2267,6 +2267,36 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'가져오기 실패: {error}'**
   String statusImportFailed(Object error);
+
+  /// No description provided for @statusLoginSuccess.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그인에 성공했습니다.'**
+  String get statusLoginSuccess;
+
+  /// No description provided for @statusLoginFailed.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그인 실패: {error}'**
+  String statusLoginFailed(Object error);
+
+  /// No description provided for @statusLoginCancelled.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그인이 취소되었습니다.'**
+  String get statusLoginCancelled;
+
+  /// No description provided for @statusLoggingIn.
+  ///
+  /// In ko, this message translates to:
+  /// **'Google로 로그인 중...'**
+  String get statusLoggingIn;
+
+  /// No description provided for @statusLogoutSuccess.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그아웃되었습니다.'**
+  String get statusLogoutSuccess;
 }
 
 class _AppLocalizationsDelegate

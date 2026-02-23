@@ -161,6 +161,7 @@ extension AppStateChat on AppState {
       // Supabase 동기화는 백그라운드에서 처리 (실패해도 무관)
       if (userId != null) {
         SupabaseService.createDialogueGroup(
+          id: dialogueId, // Phase 33: Pass Local UUID to Server
           title: dialogueTitle,
           persona: 'AI',
         ).then((serverId) {
@@ -630,6 +631,18 @@ extension AppStateChat on AppState {
       debugPrint('[AppState] Repaired ${uniqueSpeakers.length} participants for dialogue $dialogueId');
     } catch (e) {
       debugPrint('[AppState] Participant repair failed: $e');
+    }
+  }
+
+  /// Phase 33: Merge anonymous data to permanent user account after login
+  Future<void> mergeAnonymousDataToUser(String oldId, String newId) async {
+    if (oldId == newId) return;
+    try {
+      debugPrint('[AppState] Merging anonymous data ($oldId) to user account ($newId)...');
+      await DatabaseService.mergeUserSessions(oldId, newId);
+      await loadDialogueGroups();
+    } catch (e) {
+      debugPrint('[AppState] Data merger failed: $e');
     }
   }
 

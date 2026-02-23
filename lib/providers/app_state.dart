@@ -67,6 +67,7 @@ class AppState extends ChangeNotifier {
         // User logged in (Anonymous OR Google)
         _triggerAllSync();
       }
+      notify(); // Phase 8: Ensure UI updates on ANY auth event (login, logout, etc.)
     });
 
     // 2. Immediate check for existing session on startup
