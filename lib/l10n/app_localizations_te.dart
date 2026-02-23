@@ -9,7 +9,7 @@ class AppLocalizationsTe extends AppLocalizations {
   AppLocalizationsTe([String locale = 'te']) : super(locale);
 
   @override
-  String get googleContinue => 'Google로 계속하기';
+  String get googleContinue => '로그인';
 
   @override
   String get logout => '로그아웃';

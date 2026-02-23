@@ -9,7 +9,7 @@ class AppLocalizationsSq extends AppLocalizations {
   AppLocalizationsSq([String locale = 'sq']) : super(locale);
 
   @override
-  String get googleContinue => 'Google로 계속하기';
+  String get googleContinue => '로그인';
 
   @override
   String get logout => '로그아웃';

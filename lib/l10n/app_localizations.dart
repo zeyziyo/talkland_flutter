@@ -255,7 +255,7 @@ abstract class AppLocalizations {
   /// No description provided for @googleContinue.
   ///
   /// In ko, this message translates to:
-  /// **'Google로 계속하기'**
+  /// **'로그인'**
   String get googleContinue;
 
   /// No description provided for @logout.

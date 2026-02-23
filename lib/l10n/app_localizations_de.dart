@@ -9,7 +9,7 @@ class AppLocalizationsDe extends AppLocalizations {
   AppLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
-  String get googleContinue => 'Google로 계속하기';
+  String get googleContinue => '로그인';
 
   @override
   String get logout => '로그아웃';

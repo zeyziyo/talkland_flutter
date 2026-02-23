@@ -9,7 +9,7 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get googleContinue => 'Google로 계속하기';
+  String get googleContinue => '로그인';
 
   @override
   String get logout => '로그아웃';
