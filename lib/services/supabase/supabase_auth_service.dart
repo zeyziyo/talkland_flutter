@@ -21,15 +21,16 @@ class SupabaseAuthService {
   /// v15.0: For permanent account persistence and data recovery after re-installation.
   static Future<AuthResponse?> signInWithGoogle() async {
     try {
-      // Phase 15.6: Web-specific OAuth logic to ensure response on browsers
       if (kIsWeb) {
+        // Phase 15.6: Dynamically determine redirect URL based on current origin
+        // This fixes "Site not found" errors when using different hostnames (localhost vs 127.0.0.1)
+        final String currentOrigin = Uri.base.origin;
+        
         await SupabaseHelper.client.auth.signInWithOAuth(
           OAuthProvider.google,
-          // Use redirect strategy for web to prevent popup blockers
-          redirectTo: kDebugMode ? 'http://localhost:8081' : null, 
+          redirectTo: kDebugMode ? currentOrigin : null,
         );
-        // signInWithOAuth starts redirect, session will be handled by auth listener
-        return null; 
+        return null;
       }
 
       // 1. Configure Google Sign In (Native Only)
