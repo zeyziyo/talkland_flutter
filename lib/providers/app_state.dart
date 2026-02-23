@@ -60,21 +60,56 @@ class AppState extends ChangeNotifier {
     SupabaseService.client.auth.onAuthStateChange.listen((data) {
       final AuthChangeEvent event = data.event;
       final Session? session = data.session;
+      final newUser = session?.user;
       
-      debugPrint('[AppState] Auth Event: $event, UID: ${session?.user.id}');
+      debugPrint('[AppState] Auth Event: $event, UID: ${newUser?.id}');
       
       if (event == AuthChangeEvent.signedIn || event == AuthChangeEvent.initialSession) {
-        // User logged in (Anonymous OR Google)
-        _triggerAllSync();
+        if (newUser != null) {
+          _handleAuthMerge(newUser);
+          _triggerAllSync();
+        }
       }
-      notify(); // Phase 8: Ensure UI updates on ANY auth event (login, logout, etc.)
+      notify();
     });
 
     // 2. Immediate check for existing session on startup
     final currentSession = SupabaseService.client.auth.currentSession;
     if (currentSession != null) {
-      debugPrint('[AppState] Existing session found on init. Triggering sync...');
+      debugPrint('[AppState] Existing session found on init.');
+      _handleAuthMerge(currentSession.user);
       _triggerAllSync();
+    }
+  }
+
+  /// Unified helper to handle data merging for both Native and Web (Redirect)
+  Future<void> _handleAuthMerge(User newUser) async {
+    final oldId = _prefs?.getString('last_anonymous_id');
+    final newId = newUser.id;
+
+    if (!newUser.isAnonymous) {
+      // User is now authenticated (Google)
+      if (oldId != null && oldId != newId) {
+        debugPrint('[AppState] Merge Triggered: $oldId -> $newId');
+        await _performAutoMerge(oldId, newId);
+      }
+      // Clear persistence after merge or if already logged in
+      await _prefs?.remove('last_anonymous_id');
+    } else {
+      // User is currently Anonymous, remember this ID for potential future merge
+      await _prefs?.setString('last_anonymous_id', newId);
+      debugPrint('[AppState] Storing Anonymous ID for potential merge: $newId');
+    }
+  }
+
+  /// Automated merge helper for Web/Redirect flows (Phase 15.6)
+  Future<void> _performAutoMerge(String oldId, String newId) async {
+    try {
+      await mergeAnonymousDataToUser(oldId, newId);
+      await SupabaseService.mergeUserSessions(oldId, newId);
+      debugPrint('[AppState] Auto-Merge Success');
+    } catch (e) {
+      debugPrint('[AppState] Auto-Merge Failed: $e');
     }
   }
 
