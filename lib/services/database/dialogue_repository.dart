@@ -50,6 +50,17 @@ class DialogueRepository {
     }
   }
 
+  /// Phase 33: Merge Anonymous sessions to a permanent User ID
+  static Future<void> mergeUserSessions(String oldId, String newId) async {
+    final db = await _db;
+    await db.update(
+      'dialogue_groups', 
+      {'user_id': newId}, 
+      where: 'user_id = ? OR user_id IS NULL OR user_id = ?', 
+      whereArgs: [oldId, 'anonymous']
+    );
+  }
+
   static Future<void> deleteGroup(String id) async {
     final db = await _db;
     await db.transaction((txn) async {

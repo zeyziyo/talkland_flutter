@@ -123,16 +123,36 @@ class SpeechTtsService {
         bestVoice = candidates.firstWhere((v) {
           final vMap = Map<String, dynamic>.from(v as Map);
           final name = (vMap['name'] as String).toLowerCase();
+          
+          // Phase 32: Enhanced Gender Mapping per Language
           if (targetGender == 'male') {
-            return name.contains('male') || name.contains('david') || name.contains('arthur') || name.contains('james');
+            // Male Keywords
+            return name.contains('male') || 
+                   name.contains('david') || name.contains('arthur') || name.contains('james') || // English
+                   name.contains('민수') || name.contains('misu') || name.contains('대건') || // Korean
+                   name.contains('es-es-x-ana-network') == false && name.contains('es-es-x-ies-network') == false && // Spanish Male Fallback logic if needed
+                   name.contains('ja-jp-x-gma-network') == false; // Japanese Male Fallback
           } else {
-            return name.contains('female') || name.contains('sara') || name.contains('samantha') || name.contains('ava') || name.contains('minji');
+            // Female Keywords
+            return name.contains('female') || 
+                   name.contains('sara') || name.contains('samantha') || name.contains('ava') || // English
+                   name.contains('minji') || name.contains('민지') || name.contains('지민') || // Korean
+                   name.contains('kyoko') || name.contains('mizuki'); // Japanese
           }
         });
       } catch (_) {}
       
+      // Smart Fallback based on candidates order (Google TTS often lists Female first)
       if (bestVoice == null && candidates.length >= 2) {
-        bestVoice = (targetGender == 'male') ? candidates[1] : candidates[0];
+        if (targetLocale.startsWith('ko')) {
+           // Korean: 0-Female, 1-Male (Typical Google TTS)
+           bestVoice = (targetGender == 'male') ? candidates[1] : candidates[0];
+        } else if (targetLocale.startsWith('en')) {
+           // English: Search for common patterns
+           bestVoice = candidates.firstWhere((v) => (v as Map)['name'].toString().toLowerCase().contains(targetGender), orElse: () => candidates[0]);
+        } else {
+           bestVoice = (targetGender == 'male') ? candidates[candidates.length - 1] : candidates[0];
+        }
       }
     }
 
@@ -147,6 +167,7 @@ class SpeechTtsService {
 
     bestVoice ??= candidates.first;
     final vMap = Map<String, dynamic>.from(bestVoice as Map);
+    debugPrint('[TTS] Selected Voice: ${vMap['name']} for $targetLocale ($targetGender)');
     await _flutterTts.setVoice({"name": vMap['name'], "locale": vMap['locale']});
   }
 

@@ -1,0 +1,7 @@
+Analyzing talkie...                                             
+
+warning - The value of the local variable 'dialogueId' isn't used - lib\providers\app_state_mode2.dart:386:23 - unused_local_variable
+  error - Undefined name 'ConflictAlgorithm' - lib\providers\app_state_mode2.dart:434:37 - undefined_identifier
+  error - Undefined name 'ConflictAlgorithm' - lib\providers\app_state_mode2.dart:448:37 - undefined_identifier
+
+3 issues found. (ran in 2.3s)

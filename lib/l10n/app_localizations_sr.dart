@@ -1105,4 +1105,21 @@ class AppLocalizationsSr extends AppLocalizations {
   String statusImportFailed(Object error) {
     return '가져오기 실패: $error';
   }
+
+  @override
+  String get statusLoginSuccess => '로그인에 성공했습니다.';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return '로그인 실패: $error';
+  }
+
+  @override
+  String get statusLoginCancelled => '로그인이 취소되었습니다.';
+
+  @override
+  String get statusLoggingIn => 'Google로 로그인 중...';
+
+  @override
+  String get statusLogoutSuccess => '로그아웃되었습니다.';
 }
