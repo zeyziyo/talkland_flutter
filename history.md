@@ -27,6 +27,7 @@
 - **Email/Password Authentication**: Supabase 기반의 이메일 가입 및 로그인 기능을 새롭게 구현했습니다. `SupabaseAuthService`와 `AppStateAuth`에 관련 로직을 추가하여 보조 인증 수단을 확보했습니다.
 - **Unified Auth UI (AuthScreen)**: 구글 로그인과 이메일 인증을 통합하여 제공하는 `AuthScreen` 위젯을 신규 개발했습니다. 로그인/가입 모드 전환, 비밀번호 가시성 토글, 유효성 검사 기능을 포함합니다.
 - **App Entry Integration**: `HomeScreen`의 상단 앱바와 사이드바(Drawer)에 위치한 로그인 버튼을 새로운 `AuthScreen`으로 연동하여 사용자 접근성을 통일했습니다.
+- **Unified Auth UI Refinement**: 구글 로그인 버튼의 시인성을 개선(브랜드 색상 및 아이콘 적용)하고, 다국어 파일의 "Google로 계속하기" 오번역을 수정하여 웹/모바일 공통의 인증 경험을 고도화했습니다.
 - **L11n & Quality**: 이메일 인증 관련 다국어(KO, EN) 문자열을 추가하고, 비동기 BuildContext 사용 관련 린트 경고(`context.mounted`)를 모두 해결하여 `flutter analyze` 무결점 상태를 유지했습니다.
 
 ### [2026-02-23] 대화 이력 병합 로직 및 빌드 안정화 (v15.5)

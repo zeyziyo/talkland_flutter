@@ -176,23 +176,43 @@ class _AuthScreenState extends State<AuthScreen> {
                 ),
                 const SizedBox(height: 24),
                 
-                // Google Login Button
-                OutlinedButton.icon(
-                  onPressed: appState.isLoggingIn ? null : () async {
-                    final navigator = Navigator.of(context);
-                    await appState.loginWithGoogle();
-                    if (!mounted) return;
-                    
-                    if (appState.currentUser != null && !appState.currentUser!.isAnonymous) {
-                      navigator.pop();
-                    }
-                  },
-                  icon: const Icon(Icons.login, color: Colors.blueAccent),
-                  label: Text(l10n.googleContinue),
-                  style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                    side: BorderSide(color: Colors.grey.shade300),
+                // Google Login Button - Improved Visibility
+                SizedBox(
+                  width: double.infinity,
+                  height: 54,
+                  child: OutlinedButton.icon(
+                    onPressed: appState.isLoggingIn ? null : () async {
+                      final navigator = Navigator.of(context);
+                      await appState.loginWithGoogle();
+                      if (!mounted) return;
+                      
+                      if (appState.currentUser != null && !appState.currentUser!.isAnonymous) {
+                        navigator.pop();
+                      }
+                    },
+                    icon: Container(
+                      padding: const EdgeInsets.all(4),
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(Icons.g_mobiledata_rounded, color: Colors.blue, size: 28), // "G" feel icon
+                    ),
+                    label: Text(
+                      l10n.googleContinue,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87,
+                      ),
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.black87,
+                      side: BorderSide(color: Colors.grey.shade300, width: 1.5),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      elevation: 1,
+                    ),
                   ),
                 ),
               ],
