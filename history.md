@@ -23,6 +23,13 @@
 
 ---
 
+### [2026-02-25] 빌드 오류 수정 및 로직 최적화 (v15.8.1)
+
+- **Build Fix (main.dart)**: 누락되었던 `dart:io`, `google_mobile_ads`, `shared_preferences` 임포트를 복구하고 `io.Platform` 접두어 문제를 해결했습니다.
+- **Conflict Resolution**: `google_mobile_ads` 패키지의 `AppState` 클래스와 프로젝트 내 클래스 간의 명칭 충돌을 `hide` 키워드로 해결했습니다.
+- **Type Safety (Kakao Auth)**: `SupabaseAuthService.signInWithKakao`의 반환 타입을 `Future<void>`로 정규화하여 `signInWithOAuth`와의 타입 불일치 오류를 제거하고, `AppStateAuth`의 연동 로직을 OAuth 흐름에 최적화했습니다.
+- **Code Hygiene**: `app_state_auth.dart`에서 사용되지 않는 지역 변수를 삭제하고 `flutter analyze` 무결점 상태를 복구했습니다.
+
 ### [2026-02-25] 카카오톡 로그인 기능 통합 (v15.8)
 
 - **Kakao Login Integration**: 카카오톡 간편 로그인 기능을 추가했습니다. `kakao_flutter_sdk_user`를 도입하고 `main.dart`에서 초기화하여 네이티브 및 웹 환경을 지원합니다.

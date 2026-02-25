@@ -101,7 +101,7 @@ class SupabaseAuthService {
 
   /// Kakao Login (Native & Web)
   /// Phase v1.2.0: Support for Kakao OAuth
-  static Future<AuthResponse?> signInWithKakao() async {
+  static Future<void> signInWithKakao() async {
     try {
       if (kIsWeb) {
         final String redirectUrl = Uri.base.origin;
@@ -111,7 +111,7 @@ class SupabaseAuthService {
           OAuthProvider.kakao,
           redirectTo: redirectUrl,
         );
-        return null;
+        return;
       }
 
       // Native Kakao Login (handles KakaoTalk or Browser automatically)
@@ -119,7 +119,7 @@ class SupabaseAuthService {
       
       // We use signInWithOAuth for simplicity on Native as well, 
       // Supabase handles the deep link callback.
-      return await SupabaseHelper.client.auth.signInWithOAuth(
+      await SupabaseHelper.client.auth.signInWithOAuth(
         OAuthProvider.kakao,
         redirectTo: 'kakao${dotenv.env['KAKAO_NATIVE_APP_KEY']}://oauth',
       );

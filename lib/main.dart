@@ -10,6 +10,9 @@ import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'services/supabase_service.dart';
 import 'services/background_sync_service.dart';
 import 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
+import 'dart:io' as io;
+import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart';
 
@@ -30,7 +33,7 @@ void main() async {
   if (kIsWeb) {
     // Web setup
     databaseFactory = databaseFactoryFfiWeb;
-  } else if (platform.Platform.isWindows || platform.Platform.isLinux) {
+  } else if (io.Platform.isWindows || io.Platform.isLinux) {
     // Desktop setup
     sqfliteFfiInit();
     databaseFactory = databaseFactoryFfi;
@@ -47,7 +50,7 @@ void main() async {
   // Initialize AdMob (mobile only)
   if (!kIsWeb) {
     try {
-      if (platform.Platform.isAndroid || platform.Platform.isIOS) {
+      if (io.Platform.isAndroid || io.Platform.isIOS) {
         await MobileAds.instance.initialize();
       }
     } catch (e) {
@@ -69,7 +72,7 @@ void main() async {
   debugPrint('>>> MAIN [4] Supabase Init Attempted');
   
   // Initialize Background Sync (Workmanager)
-  if (!kIsWeb && (platform.Platform.isAndroid || platform.Platform.isIOS)) {
+  if (!kIsWeb && (io.Platform.isAndroid || io.Platform.isIOS)) {
     try {
       // Lazy import handled by file level, but logic conditional
       await BackgroundSyncService.initialize();

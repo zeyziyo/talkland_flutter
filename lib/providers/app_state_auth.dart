@@ -423,23 +423,16 @@ extension AppStateAuth on AppState {
 
   Future<void> loginWithKakao() async {
     try {
-      final oldUserId = SupabaseService.client.auth.currentUser?.id;
-
       isLoggingIn = true;
-      _statusMessage = 'L10N:statusLoggingIn';
-      notify();
+    _statusMessage = 'L10N:statusLoggingIn';
+    notify();
 
-      final response = await SupabaseAuthService.signInWithKakao();
-      
-      if (response != null && response.user != null) {
-        await _handleAuthSuccess(oldUserId, response.user!.id);
-      } else if (kIsWeb) {
-        // OAuth redirect in progress
-        _statusMessage = 'L10N:statusLoggingIn';
-      } else {
-        _statusMessage = 'L10N:statusLoginCancelled';
-      }
-    } catch (e) {
+    await SupabaseAuthService.signInWithKakao();
+    
+    // OAuth flows on mobile/web usually resume via deep link/redirect.
+    // The session update is handled by the Supabase auth listener.
+    _statusMessage = 'L10N:statusLoggingIn';
+  } catch (e) {
       debugPrint('[AppState] Kakao Login Failed: $e');
       _statusMessage = 'L10N:statusLoginFailed|$e';
     } finally {
