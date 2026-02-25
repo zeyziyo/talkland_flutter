@@ -1,5 +1,10 @@
 {
   "@@locale": "si",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "උපකාර සහ මාර්ගෝපදේශය",
   "helpTabModes": "මාදිලි පැහැදිලි කිරීම",
   "helpTabJson": "JSON ආකෘතිය",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "AI පෞරුෂය සමඟ කතාබස් කරමින් සැබෑ සංවාදයන් පුහුණු වන්න.",
   "helpModeChatDetails": "• AI කතාබස්: සංවාදය පුහුණු වීමට ඔබේ භාෂාවෙන් කතා කරන්න\n• බහු පෞරුෂය: ප්‍රතිවාදියාගේ ස්ත්‍රී පුරුෂ භාවය/භාෂාව/නම වෙනස් කිරීමට බුබුලට ඉහළින් ඇති මෙනුව භාවිත කරන්න\n• හවුල්කරුවෙකු එක් කරන්න: නව සංවාද සහකරුවෙකු (ආගන්තුකයෙකු) එක් කිරීමට + බොත්තම\n• GPS: වත්මන් ස්ථානය පදනම් කරගත් අවස්ථා රඟදැක්වීම\n• ස්වයංක්‍රීය සුරැකීම: සංවාද අන්තර්ගතය ස්වයංක්‍රීයව පරිවර්තනය කර සුරකින්න",
   "helpJsonDesc": "3 වන මාදිලියේදී භාවිතා කිරීමට JSON ගොනුවක් ලෙස ඉගෙනුම් ද්‍රව්‍ය ආයාත කිරීමට පහත ආකෘතිය අනුගමනය කරන්න:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "සම්පූර්ණ දෙබස් කට්ටලයක් JSON ගොනුවක් ලෙස ආයාත කරන්න.",
   "helpDialogueImportDetails": "• JSON ව්‍යුහය: `entries` වෙනුවට `dialogues` අරාව භාවිත කරන්න\n• ස්වයංක්‍රීය ප්‍රතිසාධනය: සංවාදයේ මාතෘකාව, පෞරුෂය සහ පණිවිඩ අනුපිළිවෙල ප්‍රතිසාධනය කෙරේ.\n• ස්ථානය: ආයාත කළ සංවාද AI කතාබස් මාදිලියේ 'වාර්තා' ටැබය මත දිස්වේ.",
   "helpTourDesc": "**ප්‍රධාන ලක්ෂණ ඉස්මතු කරන රවුම** මඟින් මඟ පෙන්වනු ලැබේ.\n(උදා: **ඉස්මතු කරන රවුම** විසින් පෙන්වන කාඩ්පත මකා දැමීමට දිගු වේලාවක් ඔබන්න.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "සම්පූර්ණ: {count}ක්",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "ඉගෙනුම් ද්‍රව්‍ය තෝරන්න",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "පරිවර්තනය කිරීමට පෙළ ඇතුළත් කරන්න",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "සුරකිමින්...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "ඇතුළත් කළ පෙළ පරිවර්තනය කරන්න.",
   "tutorialSaveTitle": "සුරකින්න",
   "tutorialSaveDesc": "පරිවර්තනය කළ ප්‍රතිඵල ඉගෙනුම් වාර්තාවේ සුරකින්න.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI කතාබස්",
+  "tutorialAiChatDesc": "AI පෞරුෂයක් සමඟ සැබෑ සංවාදයක් පුහුණු වන්න.",
   "tutorialM2SelectTitle": "ද්‍රව්‍ය තෝරන්න",
   "tutorialM2SelectDesc": "ඉගෙනීමට ද්‍රව්‍ය එකතුවක් තේරීමට ඉහළ යෙදුම් තීරුවේ ඇති ද්‍රව්‍ය එකතු නිරූපකය (📚) ඔබන්න.",
-  "tutorialM3SelectDesc": "පුහුණු වීමට ද්‍රව්‍ය එකතුවක් තේරීමට ඉහළ යෙදුම් තීරුවේ ඇති ද්‍රව්‍ය එකතු නිරූපකය (📚) ඔබන්න.",
   "tutorialM2ListTitle": "ඉගෙනුම් ලැයිස්තුව",
   "tutorialM2ListDesc": "මෙම කාඩ්පත මකා දැමීමට දිගු වේලාවක් ඔබන්න. සුරකින ලද වාක්‍ය පරීක්ෂා කර ඒවා පෙරළන්න.",
   "tutorialM3SelectTitle": "ද්‍රව්‍ය තෝරන්න",
+  "tutorialM3SelectDesc": "පුහුණු වීමට ද්‍රව්‍ය එකතුවක් තේරීමට ඉහළ යෙදුම් තීරුවේ ඇති ද්‍රව්‍ය එකතු නිරූපකය (📚) ඔබන්න.",
   "tutorialM3IntervalTitle": "පරතරය සකසන්න",
   "tutorialM3IntervalDesc": "වාක්‍ය අතර රැඳී සිටීමේ කාලය සකසන්න.",
   "tutorialM3StartTitle": "පුහුණුව ආරම්භ කරන්න",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "වැඩි කරන්න",
   "languageSettings": "භාෂා සැකසුම්",
   "tutorialM2DropdownDesc": "ඉහළ මෙනුව හරහා ඔබට ඉගෙන ගැනීමට අවශ්‍ය ද්‍රව්‍ය තෝරාගත හැක.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "ඔබගේ උපාංගයේ ෆෝල්ඩරයකින් JSON ගොනුව ආයාත කරන්න.",
   "tutorialLangSettingsTitle": "භාෂා සැකසුම්",
   "tutorialLangSettingsDesc": "පරිවර්තනය කිරීමට මූලාශ්‍ර සහ ඉලක්ක භාෂා සකසන්න.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "සතුරා පැමිණීමට පෙර වචනය කියා පදනම ආරක්ෂා කරන්න.",
   "dialogueQuestTitle": "සංවාද සෙවීම",
   "dialogueQuestDesc": "අවස්ථා රඟදැක්වීම් හරහා සංවාද පුහුණු වන්න. සුදුසු පිළිතුරක් තෝරා කතා කරන්න.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "වර්ගය:",
   "labelWord": "වචනය",
   "labelSentence": "වාක්‍යය",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "තවම සංවාද නැත",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "පුහුණුවීම් සඳහා නව සංවාදයක් ආරම්භ කිරීමට උත්සාහ කරන්න!",
   "chatFromConversation": "සංවාදයෙන් උපුටා ගැනීම ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "ප්‍රදේශීය මිතුරා",
   "chatUntitled": "මාතෘකාවක් නැති සංවාදය",
   "chatAiChat": "කතාබස්",
-  "tutorialAiChatTitle": "AI කතාබස්",
-  "tutorialAiChatDesc": "AI පෞරුෂයක් සමඟ සැබෑ සංවාදයක් පුහුණු වන්න.",
   "mode1SelectedMaterial": "දැනට තෝරාගත් ද්‍රව්‍ය එකතුව: {name}",
   "basicWordRepository": "මූලික වචන ගබඩාව",
   "basicSentenceRepository": "මූලික වාක්‍ය ගබඩාව",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "පවතින මාතෘකාවක් තෝරන්න",
   "addTagHint": "ටැගය එක් කරන්න...",
   "save": "සුරකින්න",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "විද්‍යුත් තැපෑල පරීක්ෂා කර සත්‍යාපනය සම්පූර්ණ කරන්න."
 }

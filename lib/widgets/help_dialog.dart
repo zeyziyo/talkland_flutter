@@ -227,24 +227,32 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
     );
   }
 
-  Widget _buildJsonGuide(AppLocalizations l10n) {
-    const jsonExample = '''
-{
-  "subject": "첫 만남 (First Meeting)",
-  "dialogues": [
-    {
-      "speaker": "ai_persona",
-      "text": "안녕하세요! 제 이름은 조단입니다.",
-      "sequence_order": 1,
-      "style": "Formal",
-      "tags": ["Greeting"]
+  // JSON Example selection state
+  String _selectedJsonType = 'dialogue';
+
+  Future<String> _loadJsonExample(String type) async {
+    final path = 'assets/help/${type}_example.json';
+    try {
+      return await rootBundle.loadString(path);
+    } catch (e) {
+      return 'Error loading example: $e';
     }
-  ],
-  "participants": [
-    { "id": "user_1", "name": "나", "role": "user", "gender": "male", "lang_code": "ko-KR" },
-    { "id": "ai_persona", "name": "조단", "role": "ai", "gender": "male", "lang_code": "en-US" }
-  ]
-}''';
+  }
+
+  Widget _buildJsonGuide(AppLocalizations l10n) {
+    String typeDesc = '';
+    
+    switch (_selectedJsonType) {
+      case 'dialogue':
+        typeDesc = l10n.helpDialogueImportDetails;
+        break;
+      case 'sentence':
+        typeDesc = l10n.helpMode2Details; 
+        break;
+      case 'word':
+        typeDesc = l10n.helpMode1Details; 
+        break;
+    }
 
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -253,50 +261,88 @@ class _HelpDialogState extends State<HelpDialog> with SingleTickerProviderStateM
           l10n.helpJsonDesc, 
           style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
-        const SizedBox(height: 8),
-        Text(
-          l10n.helpDialogueImportDesc,
-          style: TextStyle(fontSize: 14, color: Colors.blue[700]),
-        ),
         const SizedBox(height: 16),
-        Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: Colors.grey[100],
-            borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: Colors.grey[300]!),
+        
+        // Type Selector
+        SegmentedButton<String>(
+          segments: [
+            ButtonSegment(value: 'dialogue', label: Text(l10n.helpJsonTypeDialogue)),
+            ButtonSegment(value: 'sentence', label: Text(l10n.helpJsonTypeSentence)),
+            ButtonSegment(value: 'word', label: Text(l10n.helpJsonTypeWord)),
+          ],
+          selected: {_selectedJsonType},
+          onSelectionChanged: (Set<String> newSelection) {
+            setState(() {
+              _selectedJsonType = newSelection.first;
+            });
+          },
+        ),
+        
+        const SizedBox(height: 16),
+        if (l10n.helpTourDesc.isNotEmpty)
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Text(
+              l10n.helpTourDesc,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 15, color: Colors.grey[800], height: 1.5),
+            ),
           ),
-          child: Stack(
-            children: [
-              const SelectableText(
-                jsonExample,
-                style: TextStyle(fontFamily: 'monospace', fontSize: 13),
-              ),
-              Positioned(
-                top: 0,
-                right: 0,
-                child: IconButton(
-                  icon: const Icon(Icons.copy, size: 18),
-                  tooltip: l10n.copy,
-                  onPressed: () {
-                    Clipboard.setData(ClipboardData(text: jsonExample));
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text(l10n.copiedToClipboard)),
-                    );
-                  },
-                ),
-              ),
-            ],
+          
+        if (_selectedJsonType == 'dialogue')
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: Text(
+              l10n.helpDialogueImportDesc,
+              style: TextStyle(fontSize: 14, color: Colors.blue[700]),
+            ),
           ),
+          
+        FutureBuilder<String>(
+          future: _loadJsonExample(_selectedJsonType),
+          builder: (context, snapshot) {
+            final jsonExample = snapshot.data ?? 'Loading...';
+            
+            return Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.grey[100],
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.grey[300]!),
+              ),
+              child: Stack(
+                children: [
+                  SelectableText(
+                    jsonExample,
+                    style: const TextStyle(fontFamily: 'monospace', fontSize: 13),
+                  ),
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: IconButton(
+                      icon: const Icon(Icons.copy, size: 18),
+                      tooltip: l10n.copy,
+                      onPressed: snapshot.hasData ? () {
+                        Clipboard.setData(ClipboardData(text: jsonExample));
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text(l10n.copiedToClipboard)),
+                        );
+                      } : null,
+                    ),
+                  ),
+                ],
+              ),
+            );
+          }
         ),
         const SizedBox(height: 24),
         Text(
-          l10n.importTotal(1), // Reuse as header if needed, but details better
+          l10n.materialInfo,
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         const Divider(),
         Text(
-          l10n.helpDialogueImportDetails,
+          typeDesc,
           style: const TextStyle(fontSize: 14, height: 1.6),
         ),
       ],

@@ -58,3 +58,8 @@ keystore-base64.txt
 backups/
 backup/
 *.bak
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz

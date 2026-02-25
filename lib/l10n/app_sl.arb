@@ -1,5 +1,10 @@
 {
   "@@locale": "sl",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Pomoč in vodniki",
   "helpTabModes": "Razlaga načinov",
   "helpTabJson": "Format JSON",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Vadite pogovor v resničnem življenju s pogovorom z osebnostjo AI.",
   "helpModeChatDetails": "• Klepet AI: vadite pogovor s pogovorom v mojem jeziku\n• Več osebnosti: spremenite spol/jezik/ime sogovornika z menijem nad oblački\n• Dodajanje partnerja: dodajanje novega sogovornika (Neznanec) z gumbom +\n• GPS: Situacijska komedija na podlagi trenutne lokacije\n• Samodejno shranjevanje: samodejno prevajanje in shranjevanje pogovorov",
   "helpJsonDesc": "Za uvoz učnega gradiva, ki se uporablja v načinu 3, kot datoteko JSON, upoštevajte naslednjo obliko:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Uvozi celoten nabor pogovorov kot datoteko JSON.",
   "helpDialogueImportDetails": "• Struktura JSON: uporabite niz `dialogues` namesto `entries`\n• Samodejna obnovitev: obnovljeni so naslov pogovora, osebnost in vrstni red sporočil.\n• Lokacija: uvoženi pogovori se prikažejo na zavihku »Zgodovina« načina klepeta AI.",
   "helpTourDesc": "**Poudarjeni krogi** vas vodijo skozi ključne funkcije.\n(Primer: **Poudarjeni krog**, ki kaže na kartico, lahko izbrišete z dolgim pritiskom.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Skupaj: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Izberite učno gradivo",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Vnesite besedilo za prevajanje",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Shranjujem ...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Prevede vneseno besedilo.",
   "tutorialSaveTitle": "Shrani",
   "tutorialSaveDesc": "Shranite prevedene rezultate v zapise učenja.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI klepet",
+  "tutorialAiChatDesc": "Vadite pogovor v resničnem življenju z AI osebnostjo.",
   "tutorialM2SelectTitle": "Izbira gradiva",
   "tutorialM2SelectDesc": "Izberite gradivo za učenje s pritiskom na ikono zbirke gradiv (📚) na zgornji vrstici aplikacije.",
-  "tutorialM3SelectDesc": "Izberite gradivo za vadbo s pritiskom na ikono zbirke gradiv (📚) na zgornji vrstici aplikacije.",
   "tutorialM2ListTitle": "Seznam za učenje",
   "tutorialM2ListDesc": "To kartico lahko izbrišete z dolgim pritiskom (dolgi klik). Preverite shranjene stavke in jih obrnite.",
   "tutorialM3SelectTitle": "Izbira gradiva",
+  "tutorialM3SelectDesc": "Izberite gradivo za vadbo s pritiskom na ikono zbirke gradiv (📚) na zgornji vrstici aplikacije.",
   "tutorialM3IntervalTitle": "Nastavitev intervala",
   "tutorialM3IntervalDesc": "Prilagodite čas čakanja med stavki.",
   "tutorialM3StartTitle": "Začni z vajo",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Povečaj",
   "languageSettings": "Nastavitve jezika",
   "tutorialM2DropdownDesc": "Gradivo za učenje lahko izberete v zgornjem meniju.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Uvozi datoteko JSON iz mape v napravi.",
   "tutorialLangSettingsTitle": "Nastavitve jezika",
   "tutorialLangSettingsDesc": "Nastavite izvorni in ciljni jezik za prevajanje.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Branite bazo tako, da izgovorite besede, preden prispejo sovražniki.",
   "dialogueQuestTitle": "Dialogna naloga",
   "dialogueQuestDesc": "Vadite pogovor s situacijsko komedijo. Izberite ustrezen odgovor in ga izgovorite.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Vrsta:",
   "labelWord": "Beseda",
   "labelSentence": "Stavek",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Še nimate pogovorov",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Začnite nov pogovor za vadbo!",
   "chatFromConversation": "Izvleček pogovora ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Lokalni prijatelj",
   "chatUntitled": "Pogovor brez naslova",
   "chatAiChat": "Klepet",
-  "tutorialAiChatTitle": "AI klepet",
-  "tutorialAiChatDesc": "Vadite pogovor v resničnem življenju z AI osebnostjo.",
   "mode1SelectedMaterial": "Trenutno izbrano gradivo: {name}",
   "basicWordRepository": "Osnovno skladišče besed",
   "basicSentenceRepository": "Osnovno skladišče stavkov",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Izberite obstoječe ime",
   "addTagHint": "Dodaj oznako...",
   "save": "Shrani",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Za dokončanje overitve preverite svojo e-pošto."
 }

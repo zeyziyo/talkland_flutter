@@ -1,9 +1,0 @@
-Analyzing talkie...                                             
-
-  error - The getter 'googleContinue' isn't defined for the type 'AppLocalizations' - lib\screens\home_screen.dart:664:30 - undefined_getter
-  error - The getter 'syncingData' isn't defined for the type 'AppLocalizations' - lib\screens\home_screen.dart:687:34 - undefined_getter
-  error - The getter 'logout' isn't defined for the type 'AppLocalizations' - lib\screens\home_screen.dart:693:42 - undefined_getter
-  error - The getter 'logoutConfirmTitle' isn't defined for the type 'AppLocalizations' - lib\screens\home_screen.dart:698:48 - undefined_getter
-  error - The getter 'logoutConfirmMessage' isn't defined for the type 'AppLocalizations' - lib\screens\home_screen.dart:699:50 - undefined_getter
-
-5 issues found. (ran in 3.7s)

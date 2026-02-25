@@ -33,9 +33,11 @@ extension AppStateAuth on AppState {
          
          await loadStudyMaterials();
          
-         final newMaterialId = result['material_id'] as int? ?? 0;
-         if (newMaterialId != 0) {
-             await selectMaterial(newMaterialId);
+         final materialId = result['material_id'];
+         final String? newNotebookTitle = materialId is String ? materialId : materialId?.toString();
+         
+         if (newNotebookTitle != null && newNotebookTitle.isNotEmpty) {
+             await selectMaterial(newNotebookTitle);
          } else {
              await loadStudyRecords();
          }
@@ -348,7 +350,7 @@ extension AppStateAuth on AppState {
 
       final masterJson = json.encode(masterData);
       final syncKey = sPath.split('/').last.replaceAll('.json', '');
-      int? localMaterialId;
+      String? localNotebookTitle;
 
       _statusMessage = 'L10N:importing';
       notify();
@@ -365,13 +367,14 @@ extension AppStateAuth on AppState {
       );
 
       if (result['success'] == true) {
-        localMaterialId = result['material_id'] as int?;
+        localNotebookTitle = result['notebook_title']?.toString(); 
       }
 
       await loadDialogueGroups();
       await loadStudyMaterials();
       await loadTags(); 
-      await loadRecordsByTags(); 
+      await loadStudyRecords(); // Phase 15.8: Force refresh Meta for Mode 2
+      await loadRecordsByTags(); // Phase 15.8: Force refresh Content for Mode 2
       
       _statusMessage = 'L10N:statusImportSuccess|$mName';
       notify();
@@ -379,7 +382,7 @@ extension AppStateAuth on AppState {
       // Phase 97.6: Return the ACTUAL local DB ID captured during import
       return {
         'success': true, 
-        'material_id': localMaterialId,
+        'notebook_title': localNotebookTitle,
         'dialogue_id': syncKey
       };
     } catch (e) {
@@ -429,7 +432,16 @@ extension AppStateAuth on AppState {
       final response = await SupabaseAuthService.signUpWithEmail(email, password);
       
       if (response.user != null) {
-        await _handleAuthSuccess(oldUserId, response.user!.id);
+        // If identities is empty, it means the user already exists 
+        // (Supabase returns a success response with empty identities for enumeration protection)
+        if (response.user!.identities?.isEmpty == true) {
+          _statusMessage = 'L10N:emailAlreadyInUse';
+        } else if (response.session == null) {
+          // New user, email confirmation pending
+          _statusMessage = 'L10N:statusCheckEmail';
+        } else {
+          await _handleAuthSuccess(oldUserId, response.user!.id);
+        }
       }
     } catch (e) {
       debugPrint('[AppState] Email Sign-Up Failed: $e');

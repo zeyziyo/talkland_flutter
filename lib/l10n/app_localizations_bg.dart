@@ -9,19 +9,20 @@ class AppLocalizationsBg extends AppLocalizations {
   AppLocalizationsBg([String locale = 'bg']) : super(locale);
 
   @override
-  String get googleContinue => '로그인';
+  String get googleContinue => 'Continue with Google';
 
   @override
-  String get logout => '로그아웃';
+  String get logout => 'Logout';
 
   @override
-  String get logoutConfirmTitle => '로그아웃';
+  String get logoutConfirmTitle => 'Logout';
 
   @override
-  String get logoutConfirmMessage => '현재 기기에서 로그아웃하시겠습니까?';
+  String get logoutConfirmMessage =>
+      'Are you sure you want to logout from this device?';
 
   @override
-  String get syncingData => '데이터 동기화 중...';
+  String get syncingData => 'Syncing data...';
 
   @override
   String get helpTitle => 'Помощ и ръководство';
@@ -70,6 +71,15 @@ class AppLocalizationsBg extends AppLocalizations {
   @override
   String get helpJsonDesc =>
       'Следвайте този формат, за да импортирате учебни материали във формат JSON за режим 3:';
+
+  @override
+  String get helpJsonTypeDialogue => 'Dialogue';
+
+  @override
+  String get helpJsonTypeSentence => 'Sentence';
+
+  @override
+  String get helpJsonTypeWord => 'Word';
 
   @override
   String get helpDialogueImportDesc =>
@@ -221,28 +231,29 @@ class AppLocalizationsBg extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => '참가자 추가';
+  String get addParticipant => 'Add Participant';
 
   @override
-  String get editParticipant => '참가자 수정';
+  String get editParticipant => 'Edit Participant';
 
   @override
-  String get labelRole => '역할';
+  String get labelRole => 'Role';
 
   @override
-  String get labelLangCode => '언어 코드 (예: en-US, ko-KR)';
+  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
 
   @override
-  String get roleUser => '사용자';
+  String get roleUser => 'User';
 
   @override
   String get roleAi => 'AI';
 
   @override
-  String get participantDeleted => '참가자가 삭제되었습니다.';
+  String get participantDeleted => 'Participant deleted.';
 
   @override
-  String get confirmDeleteParticipant => '이 참가자를 삭제하시겠습니까?';
+  String get confirmDeleteParticipant =>
+      'Are you sure you want to delete this participant?';
 
   @override
   String importTotal(int count) {
@@ -272,7 +283,7 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get importDuplicateTitleError =>
-      '동일한 제목의 자료가 이미 존재합니다. 제목을 변경한 후 다시 시도해주세요.';
+      'A material with the same title already exists. Please change the title and try again.';
 
   @override
   String get selectStudyMaterial => 'Избор на учебни материали';
@@ -338,7 +349,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get translationResultHint => 'Translation result - editable';
 
   @override
-  String get voluntaryTranslations => '자발적 번역';
+  String get voluntaryTranslations => 'Voluntary Translations';
 
   @override
   String get saving => 'Запазване...';
@@ -456,15 +467,57 @@ class AppLocalizationsBg extends AppLocalizations {
       'Запазете преведения резултат в записите за обучение.';
 
   @override
+  String get selectParticipants => 'Select Participants';
+
+  @override
+  String get loadingParticipants => 'Loading participants...';
+
+  @override
+  String get noParticipantsFound => 'No participants found.';
+
+  @override
+  String get noInternetWarningMic =>
+      'No internet connection. Voice recognition may not work offline.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'No internet connection. Translation is unavailable offline. Please use Review mode.';
+
+  @override
+  String get noMaterialsInCategory => 'No materials in this category.';
+
+  @override
+  String get onlineLibraryLoadFailed => 'Failed to load materials.';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'Please check your internet connection or try again later.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'No materials found.';
+
+  @override
+  String get sendingMessage => '메시지 전송 중...';
+
+  @override
+  String get startChat => 'Start Chat';
+
+  @override
+  String get manageParticipants => 'Manage Participants';
+
+  @override
+  String get tutorialAiChatTitle => 'AI Чат';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'Практикувайте разговори в реални ситуации с AI персонаж.';
+
+  @override
   String get tutorialM2SelectTitle => 'Избор на материали';
 
   @override
   String get tutorialM2SelectDesc =>
       'Докоснете иконата на колекция от материали (📚) в горната лента на приложението, за да изберете материала, който да учите.';
-
-  @override
-  String get tutorialM3SelectDesc =>
-      'Докоснете иконата на колекция от материали (📚) в горната лента на приложението, за да изберете материала, който да практикувате.';
 
   @override
   String get tutorialM2ListTitle => 'Списък за обучение';
@@ -475,6 +528,10 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get tutorialM3SelectTitle => 'Избор на материали';
+
+  @override
+  String get tutorialM3SelectDesc =>
+      'Докоснете иконата на колекция от материали (📚) в горната лента на приложението, за да изберете материала, който да практикувате.';
 
   @override
   String get tutorialM3IntervalTitle => 'Настройка на интервала';
@@ -519,7 +576,8 @@ class AppLocalizationsBg extends AppLocalizations {
       'Можете да изберете материала за учене чрез горното меню.';
 
   @override
-  String get tutorialM2SearchDesc => '저장된 단어와 문장을 검색하여 빠르게 찾을 수 있습니다.';
+  String get tutorialM2SearchDesc =>
+      'Search through your saved words and sentences.';
 
   @override
   String get tutorialM2ImportDesc =>
@@ -579,7 +637,7 @@ class AppLocalizationsBg extends AppLocalizations {
       'Практикувайте разговори чрез ролеви игри. Изберете подходящ отговор и го кажете.';
 
   @override
-  String get translation => '번역';
+  String get translation => 'Translation';
 
   @override
   String get labelType => 'Тип:';
@@ -858,16 +916,6 @@ class AppLocalizationsBg extends AppLocalizations {
   String get chatAiChat => 'Чат';
 
   @override
-  String get manageParticipants => 'Manage Participants';
-
-  @override
-  String get tutorialAiChatTitle => 'AI Чат';
-
-  @override
-  String get tutorialAiChatDesc =>
-      'Практикувайте разговори в реални ситуации с AI персонаж.';
-
-  @override
   String mode1SelectedMaterial(Object name) {
     return 'Текущо избрана колекция от материали: $name';
   }
@@ -1087,78 +1135,85 @@ class AppLocalizationsBg extends AppLocalizations {
   String get save => 'Запазване';
 
   @override
-  String get styleFormal => '존댓말';
+  String get styleFormal => 'Formal';
 
   @override
-  String get styleInformal => '반말';
+  String get styleInformal => 'Informal';
 
   @override
-  String get stylePolite => '정중함';
+  String get stylePolite => 'Polite';
 
   @override
-  String get styleSlang => '슬랭/속어';
+  String get styleSlang => 'Slang';
 
   @override
   String statusDownloading(Object name) {
-    return '다운로드 중: $name...';
+    return 'Downloading: $name...';
   }
 
   @override
   String statusImportSuccess(Object name) {
-    return '$name 가져오기 완료';
+    return '$name Imported Successfully';
   }
 
   @override
   String statusImportFailed(Object error) {
-    return '가져오기 실패: $error';
+    return 'Import Failed: $error';
   }
 
   @override
-  String get statusLoginSuccess => '로그인에 성공했습니다.';
+  String get statusLoginSuccess => 'Login successful.';
 
   @override
   String statusLoginFailed(Object error) {
-    return '로그인 실패: $error';
+    return 'Login failed: $error';
   }
 
   @override
-  String get statusLoginCancelled => '로그인이 취소되었습니다.';
+  String get statusLoginCancelled => 'Login cancelled.';
 
   @override
-  String get statusLoggingIn => 'Google로 로그인 중...';
+  String get statusLoggingIn => 'Logging in with Google...';
 
   @override
-  String get statusLogoutSuccess => '로그아웃되었습니다.';
+  String get statusLogoutSuccess => 'Logged out.';
 
   @override
-  String get email => '이메일';
+  String get email => 'Email';
 
   @override
-  String get password => '비밀번호';
+  String get password => 'Password';
 
   @override
-  String get login => '로그인';
+  String get login => 'Login';
 
   @override
-  String get signUp => '회원가입';
+  String get signUp => 'Sign Up';
 
   @override
-  String get dontHaveAccount => '계정이 없으신가요?';
+  String get dontHaveAccount => 'Don\'t have an account?';
 
   @override
-  String get alreadyHaveAccount => '이미 계정이 있으신가요?';
+  String get alreadyHaveAccount => 'Already have an account?';
 
   @override
-  String get invalidEmail => '유효한 이메일을 입력하세요.';
+  String get invalidEmail => 'Please enter a valid email.';
 
   @override
-  String get passwordTooShort => '비밀번호는 6자 이상이어야 합니다.';
+  String get passwordTooShort => 'Password must be at least 6 characters.';
 
   @override
-  String get statusSigningUp => '회원가입 중...';
+  String get statusSigningUp => 'Signing up...';
 
   @override
   String statusSignUpFailed(Object error) {
-    return '회원가입 실패: $error';
+    return 'Sign up failed: $error';
   }
+
+  @override
+  String get statusCheckEmail =>
+      'Моля, проверете имейла си, за да завършите удостоверяването.';
+
+  @override
+  String get emailAlreadyInUse => '이미 등록된 이메일입니다. 로그인하거나 비밀번호 찾기를 이용해주세요.';
 }

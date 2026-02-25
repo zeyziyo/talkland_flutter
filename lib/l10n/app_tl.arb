@@ -1,5 +1,10 @@
 {
   "@@locale": "tl",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Tulong at Gabay",
   "helpTabModes": "Paglalarawan ng Mode",
   "helpTabJson": "Format ng JSON",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Makipag-usap sa isang AI persona upang magsanay ng tunay na pag-uusap.",
   "helpModeChatDetails": "• AI Chat: Magsalita sa aking wika para magsanay sa pag-uusap\n• Multi Persona: Maaaring baguhin ang kasarian/wika/pangalan ng kabilang panig gamit ang menu sa ibabaw ng speech bubble\n• Magdagdag ng Partner: Magdagdag ng bagong kausap (Stranger) gamit ang button na +\n• GPS: Pagsasadula batay sa kasalukuyang lokasyon\n• Awtomatikong I-save: Awtomatikong isalin at i-save ang nilalaman ng pag-uusap",
   "helpJsonDesc": "Para mag-import ng materyal sa pag-aaral sa Mode 3 bilang isang JSON file, sundin ang format na ito:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Mag-import ng buong set ng pag-uusap bilang JSON file.",
   "helpDialogueImportDetails": "• Istraktura ng JSON: Gumamit ng array na `dialogues` sa halip na `entries`\n• Awtomatikong Pag-recover: Na-recover ang pamagat ng pag-uusap, persona, at pagkakasunud-sunod ng mensahe.\n• Lokasyon: Lumalabas ang mga na-import na pag-uusap sa tab na 'Kasaysayan' ng AI Chat Mode.",
   "helpTourDesc": "Ginagabayan ka ng **Highlight Circle** sa mga pangunahing feature.\n(Hal: Maaari mong i-delete ang card na itinuturo ng **Highlight Circle** sa pamamagitan ng pagpindot nang matagal dito.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Kabuuang: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Pumili ng Materyal sa Pag-aaral",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Mag-type ng tekstong isasalin",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Nagse-save...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Isinasalin ang tekstong in-input mo.",
   "tutorialSaveTitle": "I-save",
   "tutorialSaveDesc": "I-save ang isinalin na resulta sa iyong tala sa pag-aaral.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI Chat",
+  "tutorialAiChatDesc": "Magsanay sa pag-uusap sa totoong buhay sa pamamagitan ng AI persona.",
   "tutorialM2SelectTitle": "Pumili ng Materyal",
   "tutorialM2SelectDesc": "Pindutin ang icon ng set ng materyal (📚) sa itaas na app bar para pumili ng materyal na pag-aaralan.",
-  "tutorialM3SelectDesc": "Pindutin ang icon ng set ng materyal (📚) sa itaas na app bar para pumili ng materyal na pagsasanayan.",
   "tutorialM2ListTitle": "Listahan ng Pag-aaral",
   "tutorialM2ListDesc": "Maaari mong i-delete ang card na ito sa pamamagitan ng pagpindot nang matagal dito (Long Click). Suriin ang mga naka-save na pangungusap at i-flip ang mga ito.",
   "tutorialM3SelectTitle": "Pumili ng Materyal",
+  "tutorialM3SelectDesc": "Pindutin ang icon ng set ng materyal (📚) sa itaas na app bar para pumili ng materyal na pagsasanayan.",
   "tutorialM3IntervalTitle": "Itakda ang Interval",
   "tutorialM3IntervalDesc": "Inaayos ang oras ng paghihintay sa pagitan ng mga pangungusap.",
   "tutorialM3StartTitle": "Simulan ang Pagsasanay",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Dagdagan",
   "languageSettings": "Mga Setting ng Wika",
   "tutorialM2DropdownDesc": "Maaari kang pumili ng materyal na pag-aaralan sa pamamagitan ng menu sa itaas.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Mag-import ng JSON file mula sa folder ng device.",
   "tutorialLangSettingsTitle": "Mga Setting ng Wika",
   "tutorialLangSettingsDesc": "Itakda ang source na wika at ang target na wika na isasalin.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Sabihin ang salita para ipagtanggol ang base bago dumating ang kaaway.",
   "dialogueQuestTitle": "Dialogue Quest",
   "dialogueQuestDesc": "Magsanay sa pag-uusap sa pamamagitan ng pagsasadula. Pumili at sabihin ang naaangkop na sagot.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Uri:",
   "labelWord": "Salita",
   "labelSentence": "Pangungusap",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Wala pang pag-uusap",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Subukang magsimula ng bagong pag-uusap para sa pagsasanay!",
   "chatFromConversation": "Sipi mula sa pag-uusap ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Kaibigan na Lokal",
   "chatUntitled": "Pag-uusap na Walang Pamagat",
   "chatAiChat": "Chat",
-  "tutorialAiChatTitle": "AI Chat",
-  "tutorialAiChatDesc": "Magsanay sa pag-uusap sa totoong buhay sa pamamagitan ng AI persona.",
   "mode1SelectedMaterial": "Kasalukuyang napiling set ng materyal: {name}",
   "basicWordRepository": "Basic na Imbakan ng Salita",
   "basicSentenceRepository": "Basic na Imbakan ng Pangungusap",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Pumili ng kasalukuyang pamagat",
   "addTagHint": "Magdagdag ng tag...",
   "save": "I-save",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Pakisuy ang iyong email para makumpleto ang verification."
 }

@@ -22,7 +22,11 @@ class SentenceRepository {
     }
     
     // 2. Insert or Update Meta (Preserving User Stats)
-    final existingMeta = await executor.query('sentences_meta', where: 'group_id = ?', whereArgs: [groupId]);
+    final String notebookTitle = data['notebook_title'] ?? 'My Sentencebook';
+    final existingMeta = await executor.query('sentences_meta', 
+      where: 'group_id = ? AND notebook_title = ?', 
+      whereArgs: [groupId, notebookTitle]
+    );
     
     Map<String, dynamic> metaValues = {
       'group_id': groupId,
@@ -35,6 +39,7 @@ class SentenceRepository {
       'is_synced': (data['is_synced'] == true || data['is_synced'] == 1) ? 1 : 0,
       'review_count': data['review_count'] ?? 0,
       'last_reviewed': data['last_reviewed'],
+      'created_at': data['created_at_meta'] ?? data['created_at'] ?? DateTime.now().toIso8601String(),
     };
 
     if (existingMeta.isNotEmpty) {
@@ -48,8 +53,13 @@ class SentenceRepository {
           metaValues['caption'] = old['caption'];
       }
       
-      return await executor.update('sentences_meta', metaValues, where: 'group_id = ?', whereArgs: [groupId]);
+      // Update existing meta
+      return await executor.update('sentences_meta', metaValues, 
+        where: 'group_id = ? AND notebook_title = ?', 
+        whereArgs: [groupId, notebookTitle]
+      );
     } else {
+      // Insert new meta
       return await executor.insert('sentences_meta', metaValues);
     }
   }

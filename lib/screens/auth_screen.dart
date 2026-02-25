@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../providers/app_state.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import '../l10n/app_localizations.dart';
+import '../providers/app_state.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -47,6 +48,21 @@ class _AuthScreenState extends State<AuthScreen> {
       }
       
       if (!mounted) return;
+
+      // Handle special status messages from AppState (like emailAlreadyInUse or statusCheckEmail)
+      if (!_isLogin) {
+        if (appState.statusMessage.contains('emailAlreadyInUse')) {
+          scaffoldMessenger.showSnackBar(
+            SnackBar(content: Text(l10n.emailAlreadyInUse), backgroundColor: Colors.orange)
+          );
+          return;
+        } else if (Supabase.instance.client.auth.currentSession == null) {
+          scaffoldMessenger.showSnackBar(
+            SnackBar(content: Text(l10n.statusCheckEmail))
+          );
+          return;
+        }
+      }
       
       navigator.pop();
       scaffoldMessenger.showSnackBar(
@@ -58,6 +74,9 @@ class _AuthScreenState extends State<AuthScreen> {
       String errorMsg = e.toString();
       if (errorMsg.contains('Invalid login credentials')) {
         errorMsg = l10n.statusLoginFailed('Invalid credentials');
+      } else if (errorMsg.contains('email_not_confirmed')) {
+        // Handle unconfirmed email during login attempt
+        errorMsg = l10n.statusCheckEmail;
       }
       scaffoldMessenger.showSnackBar(
         SnackBar(content: Text(errorMsg), backgroundColor: Colors.redAccent)
@@ -89,6 +108,7 @@ class _AuthScreenState extends State<AuthScreen> {
           padding: const EdgeInsets.all(24.0),
           child: Form(
             key: _formKey,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -108,7 +128,14 @@ class _AuthScreenState extends State<AuthScreen> {
                     fillColor: Colors.white70,
                   ),
                   validator: (value) {
-                    if (value == null || !value.contains('@')) {
+                    final trimmedValue = value?.trim();
+                    if (trimmedValue == null || trimmedValue.isEmpty) {
+                      return l10n.invalidEmail;
+                    }
+                    final bool emailValid = 
+                      RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                        .hasMatch(trimmedValue);
+                    if (!emailValid) {
                       return l10n.invalidEmail;
                     }
                     return null;
@@ -132,7 +159,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     fillColor: Colors.white70,
                   ),
                   validator: (value) {
-                    if (value == null || value.length < 6) {
+                    if (value == null || value.trim().length < 6) {
                       return l10n.passwordTooShort;
                     }
                     return null;
@@ -159,7 +186,14 @@ class _AuthScreenState extends State<AuthScreen> {
                 
                 // Toggle Login/SignUp
                 TextButton(
-                  onPressed: () => setState(() => _isLogin = !_isLogin),
+                  onPressed: () {
+                    setState(() {
+                      _isLogin = !_isLogin;
+                      _formKey.currentState?.reset();
+                      _emailController.clear();
+                      _passwordController.clear();
+                    });
+                  },
                   child: Text(_isLogin ? l10n.dontHaveAccount : l10n.alreadyHaveAccount),
                 ),
                 

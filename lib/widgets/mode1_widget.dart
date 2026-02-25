@@ -246,7 +246,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                               : () {
                                                   if (appState.isOffline) {
                                                     ScaffoldMessenger.of(context).showSnackBar(
-                                                      const SnackBar(content: Text('인터넷 연결이 없습니다. 오프라인 상태에서는 음성 인식이 불가능할 수 있습니다.')),
+                                                      SnackBar(content: Text(l10n.noInternetWarningMic)),
                                                     );
                                                     return;
                                                   }
@@ -851,7 +851,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
         context: context,
         builder: (context) => AlertDialog(
           title: Text(l10n.error),
-          content: const Text('인터넷 연결이 없습니다. 오프라인 상태에서는 번역 기능을 사용할 수 없습니다. 복습 모드를 이용해 주세요.'),
+          content: Text(l10n.noInternetWarningTranslate),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),

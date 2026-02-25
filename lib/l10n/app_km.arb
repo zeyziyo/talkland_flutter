@@ -1,5 +1,10 @@
 {
   "@@locale": "km",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "ជំនួយ & មគ្គុទ្ទេសក៍",
   "helpTabModes": "ការពិពណ៌នាអំពីរបៀប",
   "helpTabJson": "ទម្រង់ JSON",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "ហ្វឹកហាត់​ការ​សន្ទនា​ជាក់ស្តែង​ដោយ​ការ​ជជែក​ជាមួយ AI persona​។",
   "helpModeChatDetails": "• AI Chat៖ និយាយជាភាសារបស់អ្នកដើម្បីអនុវត្តការសន្ទនា\n• Multi Persona៖ ផ្លាស់ប្ដូរភេទ/ភាសា/ឈ្មោះរបស់ភាគីម្ខាងទៀតជាមួយម៉ឺនុយខាងលើពពុះសន្ទនា\n• បន្ថែមដៃគូ៖ បន្ថែម Stranger ថ្មីជាមួយប៊ូតុង + \n• GPS៖ ធ្វើសេណារីយ៉ូដោយផ្អែកលើទីតាំងបច្ចុប្បន្ន\n• រក្សាទុកដោយស្វ័យប្រវត្តិ៖ បកប្រែ និងរក្សាទុកខ្លឹមសារសន្ទនាដោយស្វ័យប្រវត្តិ",
   "helpJsonDesc": "ដើម្បីនាំចូលសម្ភារៈសិក្សាទៅជាឯកសារ JSON សម្រាប់ប្រើក្នុងរបៀប 3 សូមអនុវត្តតាមទម្រង់ខាងក្រោម៖",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "នាំចូលសំណុំការសន្ទនាទាំងមូលជាឯកសារ JSON ។",
   "helpDialogueImportDetails": "• រចនាសម្ព័ន្ធ JSON៖ ប្រើអារេ `dialogues` ជំនួសឱ្យ `entries`\n• ការស្ដារឡើងវិញដោយស្វ័យប្រវត្តិ៖ ចំណងជើងនៃការសន្ទនា Persona និងលំដាប់សារត្រូវបានស្ដារឡើងវិញ។\n• ទីតាំង៖ ការសន្ទនាដែលបាននាំចូលនឹងបង្ហាញនៅក្នុងផ្ទាំង 'កំណត់ត្រា' នៃរបៀប AI Chat ។",
   "helpTourDesc": "**រង្វង់​គូស​បញ្ជាក់** ណែនាំ​អ្នក​អំពី​មុខងារ​សំខាន់ៗ។\n(ឧទាហរណ៍៖ អ្នក​អាច​ចុច​ឱ្យ​ជាប់​លើ​កាត​ដែល​**រង្វង់​គូស​បញ្ជាក់** ចង្អុល​បង្ហាញ​ដើម្បី​លុប​វា​ចោល។)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "សរុប៖ {count}ធាតុ",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "ជ្រើសរើសសម្ភារៈសិក្សា",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "បញ្ចូលអត្ថបទដែលត្រូវបកប្រែ",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "កំពុងរក្សាទុក...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "បកប្រែអត្ថបទដែលអ្នកបានបញ្ចូល។",
   "tutorialSaveTitle": "រក្សាទុក",
   "tutorialSaveDesc": "រក្សាទុកលទ្ធផលដែលបានបកប្រែទៅក្នុងកំណត់ត្រាសិក្សារបស់អ្នក។",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "ជជែក AI",
+  "tutorialAiChatDesc": "អនុវត្តការសន្ទនាក្នុងជីវិតជាក់ស្ដែងជាមួយ AI Persona ។",
   "tutorialM2SelectTitle": "ជ្រើសរើសសម្ភារៈ",
   "tutorialM2SelectDesc": "ចុចរូបតំណាងបណ្ណាល័យ (📚) នៅលើរបារកម្មវិធីខាងលើ ដើម្បីជ្រើសរើសសម្ភារៈដែលត្រូវសិក្សា។",
-  "tutorialM3SelectDesc": "ចុចរូបតំណាងបណ្ណាល័យ (📚) នៅលើរបារកម្មវិធីខាងលើ ដើម្បីជ្រើសរើសសម្ភារៈដែលត្រូវអនុវត្ត។",
   "tutorialM2ListTitle": "បញ្ជីសិក្សា",
   "tutorialM2ListDesc": "អ្នកអាចលុបកាតនេះដោយចុចឱ្យជាប់ (Long Click)។ ពិនិត្យមើលប្រយោគដែលបានរក្សាទុក ហើយបង្វិលវា។",
   "tutorialM3SelectTitle": "ជ្រើសរើសសម្ភារៈ",
+  "tutorialM3SelectDesc": "ចុចរូបតំណាងបណ្ណាល័យ (📚) នៅលើរបារកម្មវិធីខាងលើ ដើម្បីជ្រើសរើសសម្ភារៈដែលត្រូវអនុវត្ត។",
   "tutorialM3IntervalTitle": "កំណត់ចន្លោះពេល",
   "tutorialM3IntervalDesc": "លៃតម្រូវពេលវេលារង់ចាំរវាងប្រយោគ។",
   "tutorialM3StartTitle": "ចាប់ផ្ដើមអនុវត្ត",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "បង្កើន",
   "languageSettings": "ការកំណត់ភាសា",
   "tutorialM2DropdownDesc": "អ្នកអាចជ្រើសរើសសម្ភារៈដែលត្រូវសិក្សា តាមរយៈម៉ឺនុយខាងលើ។",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "នាំចូលឯកសារ JSON ពីថតឯកសារនៃឧបករណ៍របស់អ្នក។",
   "tutorialLangSettingsTitle": "ការកំណត់ភាសា",
   "tutorialLangSettingsDesc": "កំណត់ភាសាដើម និងភាសាគោលដៅដែលត្រូវបកប្រែ។",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "ការពារមូលដ្ឋានដោយនិយាយពាក្យ មុនពេលសត្រូវមកដល់។",
   "dialogueQuestTitle": "ដំណើរស្វែងរកការសន្ទនា",
   "dialogueQuestDesc": "អនុវត្តការសន្ទនា តាមរយៈការធ្វើសេណារីយ៉ូ។ ជ្រើសរើស និងនិយាយចម្លើយសមស្រប។",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "ប្រភេទ៖",
   "labelWord": "ពាក្យ",
   "labelSentence": "ប្រយោគ",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "មិនទាន់មានការសន្ទនា",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "ចាប់ផ្ដើមការសន្ទនាថ្មីដើម្បីអនុវត្ត!",
   "chatFromConversation": "ដកស្រង់ចេញពីការសន្ទនា ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "មិត្តភក្ដិក្នុងស្រុក",
   "chatUntitled": "ការសន្ទនាគ្មានចំណងជើង",
   "chatAiChat": "ជជែក",
-  "tutorialAiChatTitle": "ជជែក AI",
-  "tutorialAiChatDesc": "អនុវត្តការសន្ទនាក្នុងជីវិតជាក់ស្ដែងជាមួយ AI Persona ។",
   "mode1SelectedMaterial": "បណ្ណាល័យដែលបានជ្រើសរើសនាពេលបច្ចុប្បន្ន៖ {name}",
   "basicWordRepository": "ឃ្លាំងផ្ទុកពាក្យជាមូលដ្ឋាន",
   "basicSentenceRepository": "ឃ្លាំងផ្ទុកប្រយោគជាមូលដ្ឋាន",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "ជ្រើសរើសឈ្មោះដែលមានស្រាប់",
   "addTagHint": "បន្ថែមស្លាក...",
   "save": "រក្សាទុក",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "សូម​ពិនិត្យ​អ៊ីមែល​របស់​អ្នក​ដើម្បី​បញ្ចប់​ការ​ផ្ទៀងផ្ទាត់​។"
 }

@@ -50,7 +50,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
     return Consumer<AppState>(
       builder: (context, appState, child) {
 
-        final selectedMaterialId = appState.selectedMaterialId;
+        final selectedNotebookTitle = appState.selectedNotebookTitle;
         final materialRecords = appState.filteredMaterialRecords; // Use filtered records
         final studiedIds = materialRecords
             .where((r) => r['is_memorized'] == true)
@@ -296,8 +296,8 @@ class _Mode2WidgetState extends State<Mode2Widget> {
 
             const SizedBox(height: 16),
             
-            // Progress indicator
-            if (materialRecords.isNotEmpty && selectedMaterialId != null && selectedMaterialId != 0)
+            // Progress indicator (Phase 160: notebook based)
+            if (materialRecords.isNotEmpty && selectedNotebookTitle != null && selectedNotebookTitle.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
@@ -323,7 +323,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                 ),
               ),
               
-            if ((selectedMaterialId == null || selectedMaterialId == 0) && materialRecords.isNotEmpty)
+            if ((selectedNotebookTitle == null || selectedNotebookTitle.isEmpty) && materialRecords.isNotEmpty)
                Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
@@ -359,7 +359,7 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                           ),
                           const SizedBox(height: 16),
                           Text(
-                            (selectedMaterialId == null || selectedMaterialId == 0)
+                            (selectedNotebookTitle == null || selectedNotebookTitle.isEmpty)
                                 ? l10n.selectMaterialPrompt 
                                 : l10n.noRecords,
                             style: TextStyle(

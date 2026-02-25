@@ -1,5 +1,10 @@
 {
   "@@locale": "de",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Hilfe & Anleitung",
   "helpTabModes": "Modi",
   "helpTabJson": "JSON Format",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Übe echte Konversationen, indem du mit einer KI-Persona chattest.",
   "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
   "helpJsonDesc": "Zum Importieren von Lernmaterialien im Modus 3 JSON-Datei mit folgender Struktur erstellen:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
   "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
   "helpTourDesc": "Der **Hervorhebungs-Kreis** führt Sie durch die Hauptfunktionen.\n(z. B. können Sie einen Eintrag löschen, indem Sie lange drücken, wenn der **Hervorhebungs-Kreis** darauf zeigt.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Gesamt: {count} Einträge",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Lernmaterial auswählen",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Bitte Text zum Übersetzen eingeben",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Speichern...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Tippen Sie hier, um Ihren Text zu übersetzen.",
   "tutorialSaveTitle": "Speichern",
   "tutorialSaveDesc": "Speichern Sie Ihre Übersetzung in den Lernprotokollen.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "KI-Chat",
+  "tutorialAiChatDesc": "Übe echte Gespräche mit KI-Personas.",
   "tutorialM2SelectTitle": "Auswahl & Filter",
   "tutorialM2SelectDesc": "Wählen Sie Lernmaterialien oder wechseln Sie zu 'Alles wiederholen'.",
-  "tutorialM3SelectDesc": "Wählen Sie ein Materialset für die Sprechübung.",
   "tutorialM2ListTitle": "Lernliste",
   "tutorialM2ListDesc": "Überprüfen Sie Ihre gespeicherten Karten und drehen Sie sie um. (Long-press to delete)",
   "tutorialM3SelectTitle": "Materialwahl",
+  "tutorialM3SelectDesc": "Wählen Sie ein Materialset für die Sprechübung.",
   "tutorialM3IntervalTitle": "Intervall",
   "tutorialM3IntervalDesc": "Passen Sie die Wartezeit zwischen den Sätzen an.",
   "tutorialM3StartTitle": "Übung starten",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Erhöhen",
   "languageSettings": "Spracheinstellungen",
   "tutorialM2DropdownDesc": "Wählen Sie Lernmaterialien aus.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "JSON-Datei aus Geräteordner importieren.",
   "tutorialLangSettingsTitle": "Spracheinstellungen",
   "tutorialLangSettingsDesc": "Konfigurieren Sie Quell- und Zielsprachen für die Übersetzung.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
   "dialogueQuestTitle": "Dialogue Quest",
   "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Type:",
   "labelWord": "Word",
   "labelSentence": "Sentence",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Keine Gespräche",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Starte einen Chat zum Üben!",
   "chatFromConversation": "From Conversation ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Lokaler Freund",
   "chatUntitled": "Untitled Conversation",
   "chatAiChat": "Chatten",
-  "tutorialAiChatTitle": "KI-Chat",
-  "tutorialAiChatDesc": "Übe echte Gespräche mit KI-Personas.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
   "basicWordRepository": "Basis-Wortschatz",
   "basicSentenceRepository": "Basis-Sätze",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Vorhandenen Titel auswählen",
   "addTagHint": "Tag hinzufügen...",
   "save": "Speichern",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Bitte bestätige deine E-Mail-Adresse, um die Verifizierung abzuschließen."
 }

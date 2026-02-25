@@ -1,5 +1,10 @@
 {
   "@@locale": "as",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "সহায়িকা & নিৰ্দেশনা",
   "helpTabModes": "মোডৰ বিষয়ে",
   "helpTabJson": "JSON বিন্যাস",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "এআই ব্যক্তিত্বৰ সৈতে কথা পাতি বাস্তৱিক কথোপকথনৰ অনুশীলন কৰক।",
   "helpModeChatDetails": "• এআই চেটিং: কথোপকথনৰ অনুশীলন কৰিবলৈ আপোনাৰ ভাষাত কওক\n• মাল্টি পাৰ্চনা: বেলুনৰ ওপৰত থকা মেনুৰ সৈতে আনজন ব্যক্তিৰ লিংগ/ভাষা/নাম সলনি কৰিব পাৰি\n• সংগী যোগ কৰক: এটা নতুন বাৰ্তালাপ অংশীদাৰ যোগ কৰিবলৈ + বুটাম (অচিনাকি)\n• GPS: বৰ্তমানৰ অৱস্থানৰ ওপৰত ভিত্তি কৰি পৰিস্থিতি নাটক\n• স্বয়ংক্ৰিয় সংৰক্ষণ: বাৰ্তালাপৰ স্বয়ংক্ৰিয় অনুবাদ আৰু সংৰক্ষণ",
   "helpJsonDesc": "মোড 3 ত ব্যৱহাৰ কৰিবলৈ JSON ফাইল হিচাপে শিকন সামগ্ৰী ইম্প’ৰ্ট কৰিবলৈ, নিম্নলিখিত বিন্যাস ব্যৱহাৰ কৰক:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "JSON ফাইল হিচাপে সম্পূৰ্ণ বাৰ্তালাপৰ এটা সংহতি ইম্প’ৰ্ট কৰক।",
   "helpDialogueImportDetails": "• JSON গঠন: `এন্ট্ৰী`ৰ পৰিৱৰ্তে `ডাইলগ` এৰে ব্যৱহাৰ কৰক\n• স্বয়ংক্ৰিয় পুনৰুদ্ধাৰ: বাৰ্তালাপৰ শিৰোনাম, ব্যক্তি, বাৰ্তাৰ ক্ৰম পুনৰুদ্ধাৰ কৰা হৈছে।\n• অৱস্থান: ইম্প’ৰ্ট কৰা বাৰ্তালাপ এআই চেট মোডৰ ‘ইতিহাস’ টেবত দৃশ্যমান হ’ব।",
   "helpTourDesc": "হাইলাইট কৰা বৃত্তই মূল বৈশিষ্ট্যসমূহৰ মাজেৰে আপোনাক পথ দেখুৱাব।\n(উদাহৰণস্বৰূপে: ইয়াক মচিবলৈ হাইলাইট কৰা বৃত্তই নিৰ্দেশ কৰা কাৰ্ডখন টিপি ধৰি ৰাখিব পাৰি।)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "মুঠ: {count}টা",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "অধ্যয়ন সামগ্ৰী নিৰ্বাচন কৰক",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "অনুবাদ কৰিবলৈ টেক্সট লিখক",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "সংৰক্ষণ কৰি থকা হৈছে...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "লিখা টেক্সট অনুবাদ কৰক।",
   "tutorialSaveTitle": "সংৰক্ষণ কৰক",
   "tutorialSaveDesc": "অনূদিত ফলাফল আপোনাৰ শিকন ৰেকৰ্ডত সংৰক্ষণ কৰক।",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "এআই চ্যাটিং",
+  "tutorialAiChatDesc": "এটা এআই ব্যক্তিৰ সৈতে বাস্তৱিক জীৱনৰ বাৰ্তালাপৰ অনুশীলন কৰক।",
   "tutorialM2SelectTitle": "সামগ্ৰী নিৰ্বাচন",
   "tutorialM2SelectDesc": "শিকিবলৈ সামগ্ৰী সংকলন নিৰ্বাচন কৰিবলৈ শীৰ্ষ এপবাৰৰ সামগ্ৰী সংকলন আইকন (📚) টিপক।",
-  "tutorialM3SelectDesc": "অনুশীলন কৰিবলৈ সামগ্ৰী সংকলন নিৰ্বাচন কৰিবলৈ শীৰ্ষ এপবাৰৰ সামগ্ৰী সংকলন আইকন (📚) টিপক।",
   "tutorialM2ListTitle": "শিকন তালিকা",
   "tutorialM2ListDesc": "এই কাৰ্ডখন টিপি ধৰি (দীঘলীয়া ক্লিক) মচিব পাৰি। সংৰক্ষিত বাক্য পৰীক্ষা কৰক আৰু লুটিয়াই চাওক।",
   "tutorialM3SelectTitle": "সামগ্ৰী নিৰ্বাচন",
+  "tutorialM3SelectDesc": "অনুশীলন কৰিবলৈ সামগ্ৰী সংকলন নিৰ্বাচন কৰিবলৈ শীৰ্ষ এপবাৰৰ সামগ্ৰী সংকলন আইকন (📚) টিপক।",
   "tutorialM3IntervalTitle": "সময় নিৰ্ধাৰণ",
   "tutorialM3IntervalDesc": "বাক্যৰ মাজৰ সময় এডজাষ্ট কৰক।",
   "tutorialM3StartTitle": "অনুশীলন আৰম্ভ কৰক",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "বঢ়াওক",
   "languageSettings": "ভাষাৰ ছেটিং",
   "tutorialM2DropdownDesc": "আপুনি শীৰ্ষ মেনুৰ জৰিয়তে শিকিবলৈ সামগ্ৰী নিৰ্বাচন কৰিব পাৰে।",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "আপোনাৰ ডিভাইচৰ এটা ফোল্ডাৰৰ পৰা JSON ফাইল ইম্প’ৰ্ট কৰক।",
   "tutorialLangSettingsTitle": "ভাষাৰ ছেটিং",
   "tutorialLangSettingsDesc": "অনুবাদ কৰিবলৈ উৎস ভাষা আৰু লক্ষ্য ভাষা নিৰ্ধাৰণ কৰক।",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "শত্ৰু অহাৰ আগতে শব্দ কৈ ঘাটি ৰক্ষা কৰক।",
   "dialogueQuestTitle": "বাৰ্তালাপৰ সন্ধান",
   "dialogueQuestDesc": "এটা পৰিস্থিতি নাটকৰ জৰিয়তে বাৰ্তালাপৰ অনুশীলন কৰক। উপযুক্ত উত্তৰ নিৰ্বাচন কৰক আৰু কওক।",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "প্ৰকাৰ:",
   "labelWord": "শব্দ",
   "labelSentence": "বাক্য",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "এতিয়ালৈকে কোনো বাৰ্তালাপ নাই",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "অনুশীলনৰ বাবে এটা নতুন বাৰ্তালাপ আৰম্ভ কৰিবলৈ চেষ্টা কৰক!",
   "chatFromConversation": "বাৰ্তালাপৰ উদ্ধৃতি ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "স্থানীয় বন্ধু",
   "chatUntitled": "শিৰোনামবিহীন বাৰ্তালাপ",
   "chatAiChat": "চ্যাটিং",
-  "tutorialAiChatTitle": "এআই চ্যাটিং",
-  "tutorialAiChatDesc": "এটা এআই ব্যক্তিৰ সৈতে বাস্তৱিক জীৱনৰ বাৰ্তালাপৰ অনুশীলন কৰক।",
   "mode1SelectedMaterial": "বৰ্তমান নিৰ্বাচিত সামগ্ৰী সংকলন: {name}",
   "basicWordRepository": "বেচিক শব্দ ভঁৰাল",
   "basicSentenceRepository": "বেচিক বাক্য ভঁৰাল",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "পূৰ্বৰ নাম বাছক",
   "addTagHint": "টেগ যোগ কৰক...",
   "save": "সংৰক্ষণ কৰক",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "অনুগ্রহ কৰি আপোনাৰ ইমেইল পৰীক্ষা কৰি প্ৰমাণীকৰণ সম্পূৰ্ণ কৰক।"
 }

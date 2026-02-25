@@ -5,7 +5,7 @@ class SentenceRepository {
   /// Fetch all translations for a specific group
   Future<List<Sentence>> getSentencesByGroup(int groupId) async {
     final response = await SupabaseService.client
-        .from('sentences')
+        .from('public_sentences')
         .select()
         .eq('group_id', groupId);
 
@@ -16,7 +16,7 @@ class SentenceRepository {
   /// Search for sentences by text and language
   Future<List<Sentence>> searchSentences(String query, String langCode) async {
     final response = await SupabaseService.client
-        .from('sentences')
+        .from('public_sentences')
         .select()
         .eq('lang_code', langCode)
         .ilike('text', '%$query%'); // Case-insensitive partial match
@@ -28,7 +28,7 @@ class SentenceRepository {
   /// Add a new confirmed sentence
   Future<Sentence> addSentence(Sentence sentence) async {
     final response = await SupabaseService.client
-        .from('sentences')
+        .from('public_sentences')
         .insert(sentence.toJson()..remove('id')) // ID is auto-generated
         .select()
         .single();

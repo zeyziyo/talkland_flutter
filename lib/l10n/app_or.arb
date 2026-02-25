@@ -1,5 +1,10 @@
 {
   "@@locale": "or",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "ସହାୟତା ଏବଂ ଗାଇଡ୍",
   "helpTabModes": "ମୋଡ୍ ବ୍ୟାଖ୍ୟା",
   "helpTabJson": "JSON ଫର୍ମାଟ୍",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "AI ପେର୍ସୋନା ସହିତ କଥାବାର୍ତ୍ତା କରି ପ୍ରକୃତ ବାର୍ତ୍ତାଳାପର ଅଭ୍ୟାସ କରନ୍ତୁ।",
   "helpModeChatDetails": "• AI ଚାଟିଂ: ମୋ ଭାଷାରେ କହି କଥାବାର୍ତ୍ତା ଅଭ୍ୟାସ କରନ୍ତୁ\n• ମଲ୍ଟି ପର୍ସୋନା: ବାର୍ତ୍ତା ବବୁଲ୍ ଉପରେ ମେନୁ ସହିତ ଅନ୍ୟ ବ୍ୟକ୍ତିଙ୍କ ଲିଙ୍ଗ/ଭାଷା/ନାମ ବଦଳାଇପାରିବେ\n• ଅଂଶୀଦାର ଯୋଡନ୍ତୁ: + ବଟନ୍ ସହିତ ନୂତନ କଥାବାର୍ତ୍ତା ସାଥୀ (ଅପରିଚିତ ବ୍ୟକ୍ତି) ଯୋଡନ୍ତୁ\n• GPS: ବର୍ତ୍ତମାନର ଅବସ୍ଥା ଉପରେ ଆଧାର କରି ପରିସ୍ଥିତି ଡ୍ରାମା\n• ସ୍ୱୟଂଚାଳିତ ସେଭ୍: କଥାବାର୍ତ୍ତା ବିଷୟବସ୍ତୁ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଅନୁବାଦ ଏବଂ ସେଭ୍ କରାଯାଏ",
   "helpJsonDesc": "ମୋଡ୍ 3 ରେ ବ୍ୟବହାର କରିବାକୁ ଏକ JSON ଫାଇଲ୍ ଭାବରେ ଶିକ୍ଷଣ ସାମଗ୍ରୀ ଆଣିବାକୁ, ନିମ୍ନଲିଖିତ ଫର୍ମାଟ୍ ଅନୁସରଣ କରନ୍ତୁ:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "ଏକ JSON ଫାଇଲ୍ ଭାବରେ ସମ୍ପୂର୍ଣ୍ଣ ସଂଳାପ ସେଟ୍ ଆଣନ୍ତୁ।",
   "helpDialogueImportDetails": "• JSON ଗଠନ: `entries` ପରିବର୍ତ୍ତେ `dialogues` ଆରେ ବ୍ୟବହାର କରନ୍ତୁ\n• ସ୍ୱୟଂଚାଳିତ ପୁନରୁଦ୍ଧାର: ସଂଳାପ ଶୀର୍ଷକ, ପର୍ସୋନା, ବାର୍ତ୍ତା କ୍ରମ ପୁନରୁଦ୍ଧାର କରାଯାଏ।\n• ଅବସ୍ଥାନ: ଆମଦାନୀ ହୋଇଥିବା ସଂଳାପଗୁଡ଼ିକ AI ଚାଟିଂ ମୋଡ୍ ର 'ରେକର୍ଡ' ଟ୍ୟାବରେ ଦେଖାଯାଏ।",
   "helpTourDesc": "**ହାଇଲାଇଟ୍ ସର୍କଲ୍** ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟଗୁଡ଼ିକରେ ତୁମର ମାର୍ଗଦର୍ଶନ କରେ।\n(ଉଦାହରଣ ସ୍ୱରୂପ: **ହାଇଲାଇଟ୍ ସର୍କଲ୍** ଦ୍ୱାରା ସୂଚିତ କାର୍ଡକୁ ଡିଲିଟ୍ କରିବାକୁ ଆପଣ ଏହାକୁ ଦୀର୍ଘ ସମୟ ପର୍ଯ୍ୟନ୍ତ ଦବାଇ ପାରିବେ |)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "ସମୁଦାୟ: {count}ଟି",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ଚୟନ କରନ୍ତୁ",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "ଅନୁବାଦ କରିବାକୁ ଟେକ୍ସଟ୍ ଇନପୁଟ୍ କରନ୍ତୁ",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "ସେଭ୍ କରୁଛି...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "ଇନପୁଟ୍ ହୋଇଥିବା ଟେକ୍ସଟ୍ ଅନୁବାଦ କରନ୍ତୁ।",
   "tutorialSaveTitle": "ସେଭ୍ କରନ୍ତୁ",
   "tutorialSaveDesc": "ଅଧ୍ୟୟନ ରେକର୍ଡରେ ଅନୁବାଦ ହୋଇଥିବା ଫଳାଫଳ ସେଭ୍ କରନ୍ତୁ।",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI ଚାଟିଂ",
+  "tutorialAiChatDesc": "AI ପର୍ସୋନା ସହିତ ବାସ୍ତବିକ କଥାବାର୍ତ୍ତା ଅଭ୍ୟାସ କରନ୍ତୁ।",
   "tutorialM2SelectTitle": "ସାମଗ୍ରୀ ଚୟନ",
   "tutorialM2SelectDesc": "ଅଧ୍ୟୟନ କରିବାକୁ ଉପର ଆପ୍ ବାର୍ ରେ ଥିବା ଉପାଦାନ ସଂଗ୍ରହ ଆଇକନ୍ (📚) କୁ ଦବାଇ ଏକ ଉପାଦାନ ଚୟନ କରନ୍ତୁ।",
-  "tutorialM3SelectDesc": "ଅଭ୍ୟାସ କରିବାକୁ ଉପର ଆପ୍ ବାର୍ ରେ ଥିବା ଉପାଦାନ ସଂଗ୍ରହ ଆଇକନ୍ (📚) କୁ ଦବାଇ ଏକ ଉପାଦାନ ଚୟନ କରନ୍ତୁ।",
   "tutorialM2ListTitle": "ଅଧ୍ୟୟନ ତାଲିକା",
   "tutorialM2ListDesc": "ଆପଣ ଏହି କାର୍ଡକୁ ଡିଲିଟ୍ କରିବାକୁ ଏହାକୁ ଦୀର୍ଘ ସମୟ ପର୍ଯ୍ୟନ୍ତ ଦବାଇପାରିବେ (ଲମ୍ବା କ୍ଲିକ୍)। ସେଭ୍ ହୋଇଥିବା ବାକ୍ୟ ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ଓଲଟାନ୍ତୁ।",
   "tutorialM3SelectTitle": "ସାମଗ୍ରୀ ଚୟନ",
+  "tutorialM3SelectDesc": "ଅଭ୍ୟାସ କରିବାକୁ ଉପର ଆପ୍ ବାର୍ ରେ ଥିବା ଉପାଦାନ ସଂଗ୍ରହ ଆଇକନ୍ (📚) କୁ ଦବାଇ ଏକ ଉପାଦାନ ଚୟନ କରନ୍ତୁ।",
   "tutorialM3IntervalTitle": "ବ୍ୟବଧାନ ସେଟିଂ",
   "tutorialM3IntervalDesc": "ବାକ୍ୟ ମଧ୍ୟରେ ଅପେକ୍ଷା ସମୟ ସମାୟୋଜନ କରନ୍ତୁ।",
   "tutorialM3StartTitle": "ଅଭ୍ୟାସ ଆରମ୍ଭ କରନ୍ତୁ",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "ବୃଦ୍ଧି",
   "languageSettings": "ଭାଷା ସେଟିଂ",
   "tutorialM2DropdownDesc": "ଆପଣ ଉପର ମେନୁ ମାଧ୍ୟମରେ ଅଧ୍ୟୟନ କରିବାକୁ ଥିବା ସାମଗ୍ରୀ ଚୟନ କରିପାରିବେ।",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "ଆପଣଙ୍କ ଡିଭାଇସର ଫୋଲ୍ଡରରୁ JSON ଫାଇଲ୍ ଆମଦାନୀ କରନ୍ତୁ।",
   "tutorialLangSettingsTitle": "ଭାଷା ସେଟିଂ",
   "tutorialLangSettingsDesc": "ଅନୁବାଦ କରିବାକୁ ମୂଳ ଭାଷା ଏବଂ ଲକ୍ଷ୍ୟ ଭାଷା ସେଟ୍ କରନ୍ତୁ।",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "ଶତ୍ରୁ ପହଞ୍ଚିବା ପୂର୍ବରୁ ଏକ ଶବ୍ଦ କହି ବେସ୍ ରକ୍ଷା କରନ୍ତୁ।",
   "dialogueQuestTitle": "ସଂଳାପ ଅନୁସନ୍ଧାନ",
   "dialogueQuestDesc": "ପରିସ୍ଥିତି ଡ୍ରାମା ମାଧ୍ୟମରେ କଥାବାର୍ତ୍ତା ଅଭ୍ୟାସ କରନ୍ତୁ। ଏକ ଉପଯୁକ୍ତ ଉତ୍ତର ଚୟନ କରନ୍ତୁ ଏବଂ କୁହନ୍ତୁ।",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "ପ୍ରକାର:",
   "labelWord": "ଶବ୍ଦ",
   "labelSentence": "ବାକ୍ୟ",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "ବର୍ତ୍ତମାନ ପର୍ଯ୍ୟନ୍ତ କୌଣସି କଥାବାର୍ତ୍ତା ନାହିଁ",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "ଅଭ୍ୟାସ କରିବାକୁ ଏକ ନୂତନ କଥାବାର୍ତ୍ତା ଆରମ୍ଭ କରିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ!",
   "chatFromConversation": "କଥାବାର୍ତ୍ତାରୁ ଉଦ୍ଧୃତ ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "ସ୍ଥାନୀୟ ବନ୍ଧୁ",
   "chatUntitled": "ଶୀର୍ଷକହୀନ କଥାବାର୍ତ୍ତା",
   "chatAiChat": "ଚାଟିଂ",
-  "tutorialAiChatTitle": "AI ଚାଟିଂ",
-  "tutorialAiChatDesc": "AI ପର୍ସୋନା ସହିତ ବାସ୍ତବିକ କଥାବାର୍ତ୍ତା ଅଭ୍ୟାସ କରନ୍ତୁ।",
   "mode1SelectedMaterial": "ବର୍ତ୍ତମାନ ଚୟନିତ ଉପାଦାନ ସଂଗ୍ରହ: {name}",
   "basicWordRepository": "ମୌଳିକ ଶବ୍ଦ ଷ୍ଟୋରେଜ୍",
   "basicSentenceRepository": "ମୌଳିକ ବାକ୍ୟ ଷ୍ଟୋରେଜ୍",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "ପୂର୍ବରୁ ଥିବା ନାମ ବାଛନ୍ତୁ",
   "addTagHint": "ଟ୍ୟାଗ୍ ଯୋଡନ୍ତୁ...",
   "save": "ସଞ୍ଚୟ କରନ୍ତୁ",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "ଇମେଲ ଯାଞ୍ଚ କରି ସତ୍ୟାପନ ସମାପ୍ତ କରନ୍ତୁ।"
 }

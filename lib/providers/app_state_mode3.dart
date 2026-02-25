@@ -44,7 +44,7 @@ extension AppStateMode3 on AppState {
       _mode3SessionActive = true;
 
       // Smart Filter Check: If current filter hides all content, switch to 'all'
-      if (_recordTypeFilter != 'all' && _selectedMaterialId != null) {
+      if (_recordTypeFilter != 'all' && _selectedNotebookTitle != null && _selectedNotebookTitle!.isNotEmpty) {
          final currentMatches = _getAvailableQuestions(); 
          if (currentMatches.isEmpty) {
              final allRecords = _materialRecords;
@@ -282,7 +282,7 @@ extension AppStateMode3 on AppState {
   }
   
   List<Map<String, Object?>> _getAvailableQuestions() {
-      if (_selectedMaterialId == null) return [];
+      if (_selectedNotebookTitle == null || _selectedNotebookTitle!.isEmpty) return [];
       
       final records = _materialRecords;
       List<Map<String, Object?>> candidates = records;

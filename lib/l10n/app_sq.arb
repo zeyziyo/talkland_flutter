@@ -1,5 +1,10 @@
 {
   "@@locale": "sq",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Ndihmë & Udhëzime",
   "helpTabModes": "Përshkrimi i Modit",
   "helpTabJson": "Formati JSON",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Praktikoni biseda reale duke biseduar me një personazh AI.",
   "helpModeChatDetails": "• Biseda AI: Ushtroni bisedën duke folur në gjuhën tuaj\n• Multi-Personazh: Ndryshoni gjininë/gjuhën/emrin e palës tjetër me menunë mbi flluskën e të folurit\n• Shto partner: Shto një bashkëbisedues të ri (i panjohur) me butonin +\n• GPS: Sitcom i bazuar në vendndodhjen aktuale\n• Ruajtja automatike: Përkthimi dhe ruajtja automatike e përmbajtjes së bisedës",
   "helpJsonDesc": "Për të importuar materialet e studimit për t'u përdorur në Modalitetin 3 si një skedar JSON, ndiqni formatin e mëposhtëm:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Importoni një grup të tërë dialogësh si një skedar JSON.",
   "helpDialogueImportDetails": "• Struktura JSON: Përdorni një varg `dialogues` në vend të `entries`\n• Rikuperimi automatik: Titulli i dialogut, personazhi dhe rendi i mesazheve restaurohen.\n• Vendndodhja: Dialogët e importuar shfaqen në skedën 'Histori' të modalitetit të bisedës AI.",
   "helpTourDesc": "**Rrethi i theksuar** do t'ju udhëzojë për funksionet kryesore.\n(Për shembull: Ju mund të fshini një kartë duke shtypur gjatë kartën e treguar nga **rrethi i theksuar**.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Totali: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Zgjidh materialin e studimit",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Vendosni tekstin për ta përkthyer",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Duke ruajtur...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Përktheni tekstin e vendosur.",
   "tutorialSaveTitle": "Ruaje",
   "tutorialSaveDesc": "Ruajeni rezultatin e përkthyer në regjistrin e studimit.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "Bisedë me AI",
+  "tutorialAiChatDesc": "Ushtroni bisedat e jetës reale me personazhet AI.",
   "tutorialM2SelectTitle": "Zgjidhni Materialin",
   "tutorialM2SelectDesc": "Shtypni ikonën e librit burim (📚) në shiritin e aplikacionit të sipërm për të zgjedhur materialin për të studiuar.",
-  "tutorialM3SelectDesc": "Shtypni ikonën e librit burim (📚) në shiritin e aplikacionit të sipërm për të zgjedhur materialin për të ushtruar.",
   "tutorialM2ListTitle": "Lista e Studimit",
   "tutorialM2ListDesc": "Ju mund ta fshini këtë kartë duke e shtypur gjatë (Shtypni Gjatë). Kontrolloni dhe ktheni fjalinë e ruajtur.",
   "tutorialM3SelectTitle": "Zgjidhni Materialin",
+  "tutorialM3SelectDesc": "Shtypni ikonën e librit burim (📚) në shiritin e aplikacionit të sipërm për të zgjedhur materialin për të ushtruar.",
   "tutorialM3IntervalTitle": "Vendosni Intervalin",
   "tutorialM3IntervalDesc": "Rregulloni kohën e pritjes midis fjalive.",
   "tutorialM3StartTitle": "Fillo Praktikën",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Rrit",
   "languageSettings": "Cilësimet e gjuhës",
   "tutorialM2DropdownDesc": "Mund të zgjidhni materialin për të studiuar përmes menysë së sipërme.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Importoni një skedar JSON nga dosja e pajisjes tuaj.",
   "tutorialLangSettingsTitle": "Cilësimet e gjuhës",
   "tutorialLangSettingsDesc": "Vendosni gjuhën burimore dhe gjuhën e synuar për të përkthyer.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Mbroni bazën duke thënë fjalët përpara se të mbërrijnë armiqtë.",
   "dialogueQuestTitle": "Kërkimi i dialogut",
   "dialogueQuestDesc": "Ushtroni bisedën përmes sitcom. Zgjidhni dhe thoni përgjigjen e duhur.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Lloji:",
   "labelWord": "Fjalë",
   "labelSentence": "Fjali",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Ende nuk ka biseda",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Fillo një bisedë të re për të praktikuar!",
   "chatFromConversation": "Ekstrakt nga biseda ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Shok vendas",
   "chatUntitled": "Bisedë pa titull",
   "chatAiChat": "Bisedë",
-  "tutorialAiChatTitle": "Bisedë me AI",
-  "tutorialAiChatDesc": "Ushtroni bisedat e jetës reale me personazhet AI.",
   "mode1SelectedMaterial": "Libri burim aktual i zgjedhur: {name}",
   "basicWordRepository": "Depo bazë e fjalëve",
   "basicSentenceRepository": "Depo bazë e fjalive",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Zgjidh emër ekzistues",
   "addTagHint": "Shto etiketë...",
   "save": "Ruaj",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Ju lutemi, verifikoni email-in për të përfunduar vërtetimin."
 }

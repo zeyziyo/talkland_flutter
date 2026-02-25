@@ -81,20 +81,20 @@ class _OnlineLibraryDialogState extends State<OnlineLibraryDialog> {
                              children: [
                                const Icon(Icons.error_outline, size: 48, color: Colors.orange),
                                const SizedBox(height: 16),
-                               const Text("자료를 불러오는데 실패했습니다.", style: TextStyle(fontSize: 16)),
+                               Text(l10n.onlineLibraryLoadFailed, style: const TextStyle(fontSize: 16)),
                                const SizedBox(height: 8),
-                               const Text("인터넷 연결을 확인하거나 나중에 다시 시도해주세요.", style: TextStyle(color: Colors.grey)),
+                               Text(l10n.onlineLibraryCheckInternet, style: const TextStyle(color: Colors.grey)),
                                const SizedBox(height: 24),
                                ElevatedButton.icon(
                                  onPressed: _loadMaterials,
                                  icon: const Icon(Icons.refresh),
-                                 label: const Text("다시 시도"),
+                                 label: Text(l10n.retry),
                                )
                              ],
                            ),
                          );
                       }
-                      return const Center(child: Text("자료가 없습니다."));
+                      return Center(child: Text(l10n.onlineLibraryNoMaterials));
                     }
 
                     // Filter lists based on 'category' content — case-insensitive + plural form match
@@ -136,9 +136,6 @@ class _OnlineLibraryDialogState extends State<OnlineLibraryDialog> {
 
   Widget _buildMaterialList(BuildContext context, AppState state, List<Map<String, dynamic>> materials, String type) {
     final l10n = AppLocalizations.of(context)!;
-    if (materials.isEmpty) {
-      return const Center(child: Text("이 카테고리에는 자료가 없습니다."));
-    }
     return ListView.builder(
       itemCount: materials.length,
       itemBuilder: (context, index) {
@@ -181,14 +178,14 @@ class _OnlineLibraryDialogState extends State<OnlineLibraryDialog> {
                     }
                   } else {
                     final dynamic mIdRaw = result['material_id'];
-                    Object materialId = 0;
-                    if (mIdRaw is int && mIdRaw > 0) {
+                    String? materialId;
+                    if (mIdRaw is String && mIdRaw.isNotEmpty) {
                       materialId = mIdRaw;
-                    } else if (mIdRaw is String && mIdRaw.isNotEmpty) {
-                      materialId = mIdRaw;
+                    } else if (mIdRaw is int && mIdRaw > 0) {
+                      materialId = mIdRaw.toString();
                     }
 
-                    if (materialId != 0) {
+                    if (materialId != null) {
                       state.setRecordTypeFilter(type == 'word' ? 'word' : 'sentence');
                       state.selectMaterial(materialId);
                     }

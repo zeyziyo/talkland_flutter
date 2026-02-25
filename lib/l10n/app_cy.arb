@@ -1,5 +1,10 @@
 {
   "@@locale": "cy",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Help & Canllawiau",
   "helpTabModes": "Esboniad o'r Moddau",
   "helpTabJson": "Fformat JSON",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Ymarferwch sgiliau sgwrsio go iawn trwy sgwrsio â persona AI.",
   "helpModeChatDetails": "• Sgwrs AI: ymarfer sgwrsio trwy siarad yn fy iaith\n• Personâu Lluosog: newidiwch ryw/iaith/enw'r parti arall gyda'r ddewislen uwchben y swigen lleferydd\n• Ychwanegu Partner: ychwanegu partner sgwrsio newydd (Dieithryn) gyda'r botwm +\n• GPS: seiliau sefyllfa ar leoliad cyfredol\n• Cadw Awtomatig: cyfieithu a chadw cynnwys sgwrsio yn awtomatig",
   "helpJsonDesc": "Dilynwch y fformat canlynol i fewnforio deunyddiau astudio i ffeil JSON i'w defnyddio yn Mode 3:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Mewnforio set sgwrs gyfan fel ffeil JSON.",
   "helpDialogueImportDetails": "• Strwythur JSON: defnyddiwch arae `dialogues` yn lle `entries`\n• Adferiad Awtomatig: mae teitlau sgwrs, personâu a threfn negeseuon yn cael eu hadfer.\n• Lleoliad: mae sgyrsiau wedi'u mewnforio yn ymddangos yn y tab 'Hanes' yn y modd Sgwrs AI.",
   "helpTourDesc": "Mae **Cylch Tynnau Sylw** yn eich tywys trwy'r prif nodweddion.\n(Ex: Gallwch ddileu'r cerdyn y mae'r **Cylch Tynnau Sylw** yn pwyntio ato trwy ei wasgu am amser hir.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Cyfanswm: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Dewis Deunydd Astudio",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Rhowch y testun i'w gyfieithu",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Cadw...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Cyfieithu'r testun a fewnbynnwyd.",
   "tutorialSaveTitle": "Cadw",
   "tutorialSaveDesc": "Cadwch y canlyniadau cyfieithiedig i'ch cofnod astudio.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "Sgwrsio AI",
+  "tutorialAiChatDesc": "Ymarfer sgyrsiau go iawn gyda AI Persona.",
   "tutorialM2SelectTitle": "Dewis Deunydd",
   "tutorialM2SelectDesc": "Pwyswch yr eicon casgliad deunydd (📚) ar far app uchaf i ddewis y deunydd i'w astudio.",
-  "tutorialM3SelectDesc": "Pwyswch yr eicon casgliad deunydd (📚) ar far app uchaf i ddewis y deunydd i'w ymarfer.",
   "tutorialM2ListTitle": "Rhestr Astudio",
   "tutorialM2ListDesc": "Gallwch ei ddileu trwy wasgu a dal y cerdyn hwn (Clic Hir). Gwiriwch a throwch y brawddegau sydd wedi'u cadw drosodd.",
   "tutorialM3SelectTitle": "Dewis Deunydd",
+  "tutorialM3SelectDesc": "Pwyswch yr eicon casgliad deunydd (📚) ar far app uchaf i ddewis y deunydd i'w ymarfer.",
   "tutorialM3IntervalTitle": "Gosod Cyfwng",
   "tutorialM3IntervalDesc": "Addaswch yr amser aros rhwng brawddegau.",
   "tutorialM3StartTitle": "Dechrau Ymarfer",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Cynyddu",
   "languageSettings": "Gosodiadau Iaith",
   "tutorialM2DropdownDesc": "Gallwch ddewis y deunydd i'w astudio trwy'r ddewislen uchaf.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Mewnforio ffeil JSON o ffolder eich dyfais.",
   "tutorialLangSettingsTitle": "Gosodiadau Iaith",
   "tutorialLangSettingsDesc": "Gosodwch yr iaith ffynhonnell a'r iaith darged i'w chyfieithu.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Amddiffynwch y sylfaen trwy ddweud y gair cyn i'r gelyn gyrraedd.",
   "dialogueQuestTitle": "Cwest Sgwrs",
   "dialogueQuestDesc": "Ymarfer sgwrsio trwy berfformio sefyllfa. Dewiswch yr ateb cywir a'i ddweud.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Math:",
   "labelWord": "Gair",
   "labelSentence": "Brawddeg",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Dim sgyrsiau eto",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Dechreuwch sgwrs newydd i ymarfer!",
   "chatFromConversation": "Detholiad sgwrsio ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Ffrind Lleol",
   "chatUntitled": "Sgwrs ddi-deitl",
   "chatAiChat": "Sgwrsio",
-  "tutorialAiChatTitle": "Sgwrsio AI",
-  "tutorialAiChatDesc": "Ymarfer sgyrsiau go iawn gyda AI Persona.",
   "mode1SelectedMaterial": "Casgliad deunydd a ddewiswyd ar hyn o bryd: {name}",
   "basicWordRepository": "Storio geiriau sylfaenol",
   "basicSentenceRepository": "Storio brawddegau sylfaenol",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Dewis teitl presennol",
   "addTagHint": "Ychwanegu tag...",
   "save": "Cadw",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Gwiriwch eich e-bost i gwblhau'r dilysu."
 }

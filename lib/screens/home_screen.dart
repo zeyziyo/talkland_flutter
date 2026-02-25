@@ -404,7 +404,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   isSelected: appState.recordTypeFilter == 'word',
                                   onTap: () {
                                     appState.setRecordTypeFilter('word');
-                                    appState.selectMaterial(0);
+                                    appState.selectMaterial(null);
                                   },
                                 ),
                                 _buildToggleButton(
@@ -413,7 +413,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   isSelected: appState.recordTypeFilter == 'sentence',
                                   onTap: () {
                                     appState.setRecordTypeFilter('sentence');
-                                    appState.selectMaterial(0);
+                                    appState.selectMaterial(null);
                                   },
                                 ),
                               ],
@@ -588,7 +588,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       const Icon(Icons.people, color: Colors.purple),
                       const SizedBox(width: 8),
-                      Text('Manage Participants'), // TODO: Add to l10n
+                      Text(l10n.manageParticipants),
                     ],
                   ),
                 ),

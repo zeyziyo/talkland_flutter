@@ -1,4 +1,5 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:flutter/foundation.dart';
 import 'supabase/supabase_helper.dart';
 import 'supabase/supabase_repository.dart';
 import 'supabase/supabase_edge_service.dart';
@@ -39,8 +40,13 @@ class SupabaseService {
     // 2. No canonical ID found - Generate Content-Based ID
     print('[Supabase] No canonical ID found. Generating Content ID...');
     final itemType = type ?? ((sourceText.split(' ').length > 3) ? 'sentence' : 'word');
-    final props = '$itemType|$sourceLang';
-    canonicalId = UnifiedRepository.generateContentId(sourceText, props);
+    canonicalId = UnifiedRepository.generateGroupId(
+      text: sourceText, 
+      type: itemType,
+      pos: pos,
+      style: style,
+      formType: formType,
+    );
     
     // 3. Register the new ID with basic data (Source + Pivot if any)
     
@@ -108,8 +114,13 @@ class SupabaseService {
       
       if (groupId == null) {
         final itemType = type ?? 'sentence';
-        final props = '$itemType|$sourceLang';
-        groupId = UnifiedRepository.generateContentId(sourceText, props);
+        groupId = UnifiedRepository.generateGroupId(
+          text: sourceText,
+          type: itemType,
+          pos: pos ?? validation['pos'] as String?,
+          style: style ?? validation['style'] as String?,
+          formType: formType ?? validation['formType'] as String?,
+        );
 
         await saveEntry(
           groupId: groupId,
@@ -132,7 +143,13 @@ class SupabaseService {
       await saveEntry(groupId: groupId, text: targetText, langCode: targetLang, type: type ?? 'sentence');
       
       final materialTags = syncSubject != null ? [syncSubject] : <String>[];
-      await SupabaseRepository.addToLibrary(groupId, note, materialTags: materialTags);
+      await SupabaseRepository.addToLibrary(
+        groupId: groupId, 
+        type: type ?? 'sentence',
+        note: note, 
+        tags: materialTags,
+        notebookTitle: syncSubject,
+      );
       
       return {'success': true, 'id': groupId};
     } catch (e) {
@@ -144,7 +161,11 @@ class SupabaseService {
 
   static Future<void> initialize() async {
     await SupabaseHelper.initialize();
-    await SupabaseAuthService.signInAnonymously();
+    try {
+      await SupabaseAuthService.signInAnonymously();
+    } catch (e) {
+      debugPrint('[SupabaseService] Anonymous sign-in failed: $e');
+    }
   }
 
   // Edge Functions Delegation
@@ -211,6 +232,30 @@ class SupabaseService {
     tags: tags,
   );
 
+  static Future<void> addToLibrary({
+    required int groupId,
+    required String type,
+    String? note,
+    String? sourceLang,
+    String? targetLang,
+    List<String>? tags,
+    int? reviewCount,
+    bool? isMemorized,
+    String? lastReviewed,
+    String? notebookTitle,
+  }) => SupabaseRepository.addToLibrary(
+    groupId: groupId,
+    type: type,
+    note: note,
+    sourceLang: sourceLang,
+    targetLang: targetLang,
+    tags: tags,
+    reviewCount: reviewCount,
+    isMemorized: isMemorized,
+    lastReviewed: lastReviewed,
+    notebookTitle: notebookTitle,
+  );
+
   static Future<int?> findGroupId(String text, String langCode) => SupabaseRepository.findGroupId(text, langCode);
 
   static Future<int?> findGroupIdWithPivot({
@@ -243,8 +288,14 @@ class SupabaseService {
     try {
       int? groupId = await findGroupId(sourceText, sourceLang);
       if (groupId == null) {
-        groupId = DateTime.now().millisecondsSinceEpoch;
         final itemType = (sourceText.split(' ').length > 3) ? 'sentence' : 'word';
+        groupId = UnifiedRepository.generateGroupId(
+          text: sourceText,
+          type: itemType,
+          pos: pos,
+          style: style,
+          formType: formType,
+        );
         await saveEntry(
           groupId: groupId,
           text: sourceText,
@@ -257,7 +308,13 @@ class SupabaseService {
         );
       }
       await saveEntry(groupId: groupId, text: targetText, langCode: targetLang, type: 'sentence');
-      await SupabaseRepository.addToLibrary(groupId, null, dialogueId: dialogueId, speaker: speaker, sequenceOrder: sequenceOrder);
+      await SupabaseRepository.addToLibrary(
+        groupId: groupId, 
+        type: (sourceText.split(' ').length > 3) ? 'sentence' : 'word',
+        note: null,
+        tags: [speaker],
+        notebookTitle: 'Dialogue Import',
+      );
       return {'success': true};
     } catch (e) {
       return {'success': false, 'reason': e.toString()};
@@ -277,7 +334,7 @@ class SupabaseService {
     String? note,
     String? style,
   }) async {
-    // Phase 131: Use dedicated chat_messages table
+    // Phase 131: Use dedicated user_dialogue_messages table
     await SupabaseRepository.saveChatMessage(
       dialogueId: dialogueId,
       sourceText: sourceText,
@@ -290,8 +347,8 @@ class SupabaseService {
   }
 
   // Dialogue Group Delegation
-  static Future<String> createDialogueGroup({String? id, String? title, String? persona}) =>
-      SupabaseRepository.createDialogueGroup(id: id, title: title, persona: persona);
+  static Future<String> createDialogueGroup({String? id, String? title, String? persona, String? location, String? note}) =>
+      SupabaseRepository.createDialogueGroup(id: id, title: title, persona: persona, location: location, note: note);
   static Future<void> updateDialogueTitle(String id, String title) => SupabaseRepository.updateDialogueTitle(id, title);
   static Future<void> deleteDialogueGroup(String id) => SupabaseRepository.deleteDialogueGroup(id);
 
@@ -303,6 +360,25 @@ class SupabaseService {
       SupabaseRepository.mergeUserSessions(oldId, newId);
 
   // Legacy wrappers
+  // Legacy wrappers
   static Future<void> saveSentence({required int groupId, required String text, required String langCode, String? note}) => 
-    saveEntry(groupId: groupId, text: text, langCode: langCode, type: 'sentence', note: note);
+    SupabaseRepository.saveEntry(groupId: groupId, text: text, langCode: langCode, type: 'sentence', note: note);
+
+  static Future<void> syncParticipant({
+    required String dialogueId,
+    required String id,
+    required String name,
+    required String role,
+    String? gender,
+    String? langCode,
+    int? avatarColor,
+  }) => SupabaseRepository.syncParticipant(
+    dialogueId: dialogueId,
+    id: id,
+    name: name,
+    role: role,
+    gender: gender,
+    langCode: langCode,
+    avatarColor: avatarColor,
+  );
 }

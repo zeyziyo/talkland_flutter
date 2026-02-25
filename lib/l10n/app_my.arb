@@ -1,5 +1,10 @@
 {
   "@@locale": "my",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "အကူအညီ & လမ်းညွှန်",
   "helpTabModes": "ပုံစံများအကြောင်း",
   "helpTabJson": "JSON ဖော်မတ်",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "AI ပုံရိပ်နဲ့ စကားပြောပြီး လက်တွေ့စကားပြောကို လေ့ကျင့်ပါ။",
   "helpModeChatDetails": "• AI စကားပြော- မိမိဘာသာစကားဖြင့် ပြော၍ စကားပြောဆိုမှုကို လေ့ကျင့်ပါ\n• မလ်တီ ပုံစံ- စကားပြောပူဖောင်းပေါ်ရှိ မီနူးဖြင့် တစ်ဖက်လူ၏ ကျား/မ၊ ဘာသာစကား/အမည်ကို ပြောင်းနိုင်သည်\n• ပါတနာ ထပ်ထည့်ခြင်း: + ခလုတ်ဖြင့် စကားပြောရန် အသစ် (Stranger) ထပ်ထည့်ပါ\n• GPS: လက်ရှိ တည်နေရာကို အခြေခံသော အခြေအနေတု\n• အလိုအလျောက် သိမ်းဆည်းခြင်း- စကားပြော အကြောင်းအရာကို အလိုအလျောက် ဘာသာပြန်ပြီး သိမ်းဆည်းပါ",
   "helpJsonDesc": "Mode 3 တွင် အသုံးပြုမည့် သင်ယူရန် အချက်အလက်ကို JSON ဖိုင်ဖြင့် ထည့်သွင်းလိုပါက အောက်ပါ ဖော်မတ်အတိုင်း လိုက်နာပါ-",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "JSON ဖိုင်ဖြင့် စကားပြောဆိုမှု အစုံကို တင်သွင်းပါ။",
   "helpDialogueImportDetails": "• JSON တည်ဆောက်ပုံ: `entries` အစား `dialogues` အစီအစဉ်ကို သုံးပါ\n• အလိုအလျောက် ပြန်လည်ရယူခြင်း- စကားပြော ခေါင်းစဉ်၊ ပုံစံ၊ မက်ဆေ့ချ် အစီအစဉ်ကို ပြန်လည်ရယူပါမည်။\n• တည်နေရာ- တင်သွင်းထားသော စကားပြောဆိုမှုသည် AI စကားပြောပုံစံ၏ 'မှတ်တမ်း' တက်ဘ်တွင် ပေါ်လာပါမည်။",
   "helpTourDesc": "**အဓိက လုပ်ဆောင်ချက်ကို မီးမောင်းထိုးပြသော စက်ဝိုင်း**က လမ်းညွှန်ပေးပါသည်။\n(ဥပမာ- **မီးမောင်းထိုးပြသော စက်ဝိုင်း** ညွှန်ပြနေသော ကတ်ကို ဖိထားပြီး ဖျက်နိုင်ပါသည်။)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "စုစုပေါင်း: {count}ခု",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "သင်ယူရန် အချက်အလက် ရွေးပါ",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "ဘာသာပြန်ရန် စာသားကို ရိုက်ထည့်ပါ",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "သိမ်းဆည်းနေသည်...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "ထည့်သွင်းထားသော စာသားကို ဘာသာပြန်သည်။",
   "tutorialSaveTitle": "သိမ်းဆည်းခြင်း",
   "tutorialSaveDesc": "ဘာသာပြန်ထားသော ရလဒ်ကို သင်ယူခြင်း မှတ်တမ်းတွင် သိမ်းဆည်းပါ။",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI စကားပြော",
+  "tutorialAiChatDesc": "AI ကိုယ်ပွားဖြင့် လက်တွေ့ စကားပြောဆိုမှုကို လေ့ကျင့်ကြည့်ပါ။",
   "tutorialM2SelectTitle": "အချက်အလက် ရွေးချယ်ခြင်း",
   "tutorialM2SelectDesc": "အပေါ်ဆုံး အက်ပ်ဘားရှိ အချက်အလက်များ စုစည်းထားသော စာအုပ် အိုင်ကွန်(📚)ကို နှိပ်၍ သင်ယူမည့် အချက်အလက်ကို ရွေးပါ။",
-  "tutorialM3SelectDesc": "အပေါ်ဆုံး အက်ပ်ဘားရှိ အချက်အလက်များ စုစည်းထားသော စာအုပ် အိုင်ကွန်(📚)ကို နှိပ်၍ လေ့ကျင့်မည့် အချက်အလက်ကို ရွေးပါ။",
   "tutorialM2ListTitle": "သင်ယူခြင်း စာရင်း",
   "tutorialM2ListDesc": "ဤ ကတ်ကို ဖိထားလျှင် (Long Click) ဖျက်နိုင်သည်။ သိမ်းဆည်းထားသော စာကြောင်းကို စစ်ဆေးပြီး လှန်ကြည့်ပါ။",
   "tutorialM3SelectTitle": "အချက်အလက် ရွေးချယ်ခြင်း",
+  "tutorialM3SelectDesc": "အပေါ်ဆုံး အက်ပ်ဘားရှိ အချက်အလက်များ စုစည်းထားသော စာအုပ် အိုင်ကွန်(📚)ကို နှိပ်၍ လေ့ကျင့်မည့် အချက်အလက်ကို ရွေးပါ။",
   "tutorialM3IntervalTitle": "ကြားကာလ ဆက်တင်",
   "tutorialM3IntervalDesc": "စာကြောင်းများကြား စောင့်ဆိုင်းချိန်ကို ချိန်ညှိပါ။",
   "tutorialM3StartTitle": "လေ့ကျင့်ခန်း စတင်",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "တိုးမြှင့်ခြင်း",
   "languageSettings": "ဘာသာစကား ဆက်တင်များ",
   "tutorialM2DropdownDesc": "အပေါ်ဆုံး မီနူးမှ သင်ယူမည့် အချက်အလက်ကို ရွေးနိုင်သည်။",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "စက်၏ ဖိုဒါမှ JSON ဖိုင်ကို တင်သွင်းပါ။",
   "tutorialLangSettingsTitle": "ဘာသာစကား ဆက်တင်",
   "tutorialLangSettingsDesc": "ဘာသာပြန်မည့် မူရင်း ဘာသာစကားနှင့် ဦးတည် ဘာသာစကားကို ဆက်တင်ပြုလုပ်ပါ။",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "ရန်သူ မရောက်ခင် စကားလုံးကို ပြော၍ အခြေခံကို ကာကွယ်ပါ။",
   "dialogueQuestTitle": "စကားပြော မစ်ရှင်",
   "dialogueQuestDesc": "အခြေအနေတုမှတစ်ဆင့် စကားပြော လေ့ကျင့်ပါ။ သင့်လျော်သော အဖြေကို ရွေးပြီး ပြောကြည့်ပါ။",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "အမျိုးအစား:",
   "labelWord": "စကားလုံး",
   "labelSentence": "စာကြောင်း",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "စကားပြောဆိုမှု မရှိသေးပါ",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "လေ့ကျင့်ရန် စကားပြောဆိုမှု အသစ်ကို စတင်ကြည့်ပါ။",
   "chatFromConversation": "စကားပြောမှ ကောက်နုတ်ချက် ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "ဒေသခံ သူငယ်ချင်း",
   "chatUntitled": "ခေါင်းစဉ်မဲ့ စကားပြော",
   "chatAiChat": "စကားပြောရန်",
-  "tutorialAiChatTitle": "AI စကားပြော",
-  "tutorialAiChatDesc": "AI ကိုယ်ပွားဖြင့် လက်တွေ့ စကားပြောဆိုမှုကို လေ့ကျင့်ကြည့်ပါ။",
   "mode1SelectedMaterial": "လက်ရှိ ရွေးချယ်ထားသော အချက်အလက်များ စုစည်းထားသော စာအုပ်: {name}",
   "basicWordRepository": "အခြေခံ စကားလုံး သိမ်းဆည်းရာ",
   "basicSentenceRepository": "အခြေခံ စာကြောင်း သိမ်းဆည်းရာ",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "ရွေးရန်",
   "addTagHint": "အမှတ်အသားထည့်ရန်...",
   "save": "သိမ်းမည်",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "အတည်ပြုရန် အီးမေးလ်ကို စစ်ဆေးပါ။"
 }

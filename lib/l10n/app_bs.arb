@@ -1,5 +1,10 @@
 {
   "@@locale": "bs",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Pomoć i vodiči",
   "helpTabModes": "Objašnjenje načina rada",
   "helpTabJson": "JSON format",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Vježbajte konverzaciju iz stvarnog života razgovarajući sa AI personom.",
   "helpModeChatDetails": "• AI Chat: Vježbajte razgovor govoreći na svom jeziku\n• Više persona: Možete promijeniti spol/jezik/ime druge osobe putem izbornika iznad oblačića za govor\n• Dodavanje partnera: Dodajte novog partnera za razgovor (Stranac) pomoću tipke +\n• GPS: Igranje uloga na temelju trenutne lokacije\n• Automatsko spremanje: Automatski prijevod i spremanje sadržaja razgovora",
   "helpJsonDesc": "Slijedite ovaj format da biste uvezli materijale za učenje kao JSON datoteku za korištenje u načinu rada 3:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Uvezite cijeli set dijaloga kao JSON datoteku.",
   "helpDialogueImportDetails": "• JSON struktura: Koristite niz `dialogues` umjesto `entries`\n• Automatski oporavak: Naslov dijaloga, persona i redoslijed poruka se oporavljaju.\n• Lokacija: Uvezeni dijalozi pojavljuju se na kartici 'Historija' u načinu rada AI Chat.",
   "helpTourDesc": "**Istaknuti krug** vas vodi kroz ključne funkcije.\n(Npr. dugi pritisak na karticu koju pokazuje **istaknuti krug** omogućava brisanje.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Ukupno: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Odaberite materijal za učenje",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Unesite tekst za prijevod",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Spremanje...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Prevodi uneseni tekst.",
   "tutorialSaveTitle": "Spremanje",
   "tutorialSaveDesc": "Spremite prevedene rezultate u zapise učenja.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI Čet",
+  "tutorialAiChatDesc": "Vježbajte konverzacije u stvarnom životu s AI personama.",
   "tutorialM2SelectTitle": "Odabir materijala",
   "tutorialM2SelectDesc": "Odaberite materijal za učenje pritiskom na ikonu zbirke materijala (📚) na gornjoj traci aplikacije.",
-  "tutorialM3SelectDesc": "Odaberite materijal za vježbanje pritiskom na ikonu zbirke materijala (📚) na gornjoj traci aplikacije.",
   "tutorialM2ListTitle": "Lista za učenje",
   "tutorialM2ListDesc": "Možete ga obrisati dugim pritiskom (dugi klik) na ovu karticu. Provjerite i okrenite spremljenu rečenicu.",
   "tutorialM3SelectTitle": "Odabir materijala",
+  "tutorialM3SelectDesc": "Odaberite materijal za vježbanje pritiskom na ikonu zbirke materijala (📚) na gornjoj traci aplikacije.",
   "tutorialM3IntervalTitle": "Podešavanje intervala",
   "tutorialM3IntervalDesc": "Podesite vrijeme čekanja između rečenica.",
   "tutorialM3StartTitle": "Započni vježbu",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Povećaj",
   "languageSettings": "Postavke jezika",
   "tutorialM2DropdownDesc": "Materijal za učenje možete odabrati putem gornjeg izbornika.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Uvezite JSON datoteku iz mape na uređaju.",
   "tutorialLangSettingsTitle": "Postavke jezika",
   "tutorialLangSettingsDesc": "Postavite izvorni i ciljni jezik za prijevod.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Odbranite bazu izgovarajući riječi prije nego što neprijatelji stignu.",
   "dialogueQuestTitle": "Dijaloška potraga",
   "dialogueQuestDesc": "Vježbajte dijaloge kroz igranje uloga. Odaberite i izgovorite odgovarajuće odgovore.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Vrsta:",
   "labelWord": "Riječ",
   "labelSentence": "Rečenica",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Još nema razgovora",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Započnite novi razgovor za vježbanje!",
   "chatFromConversation": "Izvadak iz razgovora ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Lokalni prijatelj",
   "chatUntitled": "Razgovor bez naslova",
   "chatAiChat": "Čet",
-  "tutorialAiChatTitle": "AI Čet",
-  "tutorialAiChatDesc": "Vježbajte konverzacije u stvarnom životu s AI personama.",
   "mode1SelectedMaterial": "Trenutno odabrani materijal: {name}",
   "basicWordRepository": "Osnovno spremište riječi",
   "basicSentenceRepository": "Osnovno spremište rečenica",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Odaberite postojeći naslov",
   "addTagHint": "Dodaj oznaku...",
   "save": "Spasi",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Molimo provjerite e-poštu da biste dovršili autentifikaciju."
 }

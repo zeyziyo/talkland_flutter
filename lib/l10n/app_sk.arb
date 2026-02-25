@@ -1,5 +1,10 @@
 {
   "@@locale": "sk",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Pomocník a sprievodca",
   "helpTabModes": "Popis režimov",
   "helpTabJson": "Formát JSON",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Precvičujte si konverzáciu v reálnom svete rozhovorom s AI osobnosťou.",
   "helpModeChatDetails": "• AI Chat: precvičujte si konverzáciu rozprávaním vo svojom jazyku\n• Viacero osôb: zmena pohlavia/jazyka/mena partnera pomocou ponuky nad bublinou\n• Pridanie partnera: pridanie nového partnera na konverzáciu (Neznámy) pomocou tlačidla +\n• GPS: situačná komédia založená na aktuálnej polohe\n• Automatické uloženie: automatický preklad a ukladanie obsahu konverzácie",
   "helpJsonDesc": "Ak chcete importovať učebné materiály, ktoré sa majú použiť v režime 3, ako súbor JSON, postupujte podľa tohto formátu:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Importujte kompletnú sadu dialógov ako súbor JSON.",
   "helpDialogueImportDetails": "• Štruktúra JSON: použitie poľa `dialogues` namiesto `entries`\n• Automatické obnovenie: názov dialógu, osoba, poradie správ sa obnovia.\n• Umiestnenie: importované dialógy sa zobrazia na karte 'História' režimu AI chatu.",
   "helpTourDesc": "**Zvýraznený kruh** vás prevedie kľúčovými funkciami.\n(Napríklad: kartu označenú **zvýrazneným kruhom** môžete odstrániť dlhým stlačením.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Celkom: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Vyberte učebné materiály",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Zadajte text na preklad",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Ukladá sa...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Preloží zadaný text.",
   "tutorialSaveTitle": "Uložiť",
   "tutorialSaveDesc": "Uložte preložené výsledky do záznamu o učení.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI Chat",
+  "tutorialAiChatDesc": "Precvičte si konverzáciu v reálnom čase s AI osobou.",
   "tutorialM2SelectTitle": "Výber materiálu",
   "tutorialM2SelectDesc": "Stlačením ikony zbierky materiálov (📚) na hornom paneli aplikácie vyberte materiál na učenie.",
-  "tutorialM3SelectDesc": "Stlačením ikony zbierky materiálov (📚) na hornom paneli aplikácie vyberte materiál na precvičovanie.",
   "tutorialM2ListTitle": "Zoznam učenia",
   "tutorialM2ListDesc": "Túto kartu môžete odstrániť dlhým stlačením (dlhé kliknutie). Skontrolujte uloženú vetu a otočte ju.",
   "tutorialM3SelectTitle": "Výber materiálu",
+  "tutorialM3SelectDesc": "Stlačením ikony zbierky materiálov (📚) na hornom paneli aplikácie vyberte materiál na precvičovanie.",
   "tutorialM3IntervalTitle": "Nastavenie intervalu",
   "tutorialM3IntervalDesc": "Upravte čakaciu dobu medzi vetami.",
   "tutorialM3StartTitle": "Začať cvičiť",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Zvýšiť",
   "languageSettings": "Nastavenia jazyka",
   "tutorialM2DropdownDesc": "Prostredníctvom hornej ponuky si môžete vybrať materiály na štúdium.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Importuje súbor JSON z priečinka v zariadení.",
   "tutorialLangSettingsTitle": "Nastavenia jazyka",
   "tutorialLangSettingsDesc": "Nastavuje zdrojový a cieľový jazyk na preklad.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Bráňte základňu vyslovením slov predtým, ako dorazí nepriateľ.",
   "dialogueQuestTitle": "Dialógová úloha",
   "dialogueQuestDesc": "Precvičte si konverzáciu prostredníctvom situačných hier. Vyberte a vyslovte vhodné odpovede.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Typ:",
   "labelWord": "Slovo",
   "labelSentence": "Veta",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Zatiaľ žiadne konverzácie",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Začnite novú konverzáciu na precvičovanie!",
   "chatFromConversation": "Výňatok z konverzácie ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Miestny priateľ",
   "chatUntitled": "Konverzácia bez názvu",
   "chatAiChat": "Chat",
-  "tutorialAiChatTitle": "AI Chat",
-  "tutorialAiChatDesc": "Precvičte si konverzáciu v reálnom čase s AI osobou.",
   "mode1SelectedMaterial": "Aktuálne vybraná zbierka materiálov: {name}",
   "basicWordRepository": "Základné úložisko slov",
   "basicSentenceRepository": "Základné úložisko viet",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Vybrať existujúci názov",
   "addTagHint": "Pridať tag...",
   "save": "Uložiť",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Overte si e-mail pre dokončenie overenia."
 }

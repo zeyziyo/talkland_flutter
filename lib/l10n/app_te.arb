@@ -1,5 +1,10 @@
 {
   "@@locale": "te",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "సహాయం & గైడ్",
   "helpTabModes": "మోడ్‌లు",
   "helpTabJson": "JSON ఫార్మాట్",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "AI వ్యక్తిత్వంతో సంభాషిస్తూ నిజ జీవిత సంభాషణను ప్రాక్టీస్ చేయండి.",
   "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
   "helpJsonDesc": "మోడ్ 3లో దిగుమతి చేయడానికి, JSONని సృష్టించండి:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
   "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
   "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "మొత్తం: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "మెటీరియల్ ఎంచుకోండి",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "అనువదించడానికి వచనాన్ని నమోదు చేయండి",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "సేవ్ అవుతోంది...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "మీ వచనాన్ని అనువదించడానికి ఇక్కడ నొక్కండి.",
   "tutorialSaveTitle": "సేవ్",
   "tutorialSaveDesc": "మీ అనువాదాన్ని సేవ్ చేయండి.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI చాటింగ్",
+  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
   "tutorialM2SelectTitle": "ఎంచుకోండి & ఫిల్టర్",
   "tutorialM2SelectDesc": "మెటీరియల్ ఎంచుకోండి లేదా 'అన్నీ సమీక్షించు'కి మారండి.",
-  "tutorialM3SelectDesc": "మాట్లాడే సాధన కోసం సెట్‌ను ఎంచుకోండి.",
   "tutorialM2ListTitle": "స్టడీ జాబితా",
   "tutorialM2ListDesc": "మీ కార్డులను తనిఖీ చేయండి మరియు వాటిని తిప్పండి. (Long-press to delete)",
   "tutorialM3SelectTitle": "మెటీరియల్ ఎంచుకోండి",
+  "tutorialM3SelectDesc": "మాట్లాడే సాధన కోసం సెట్‌ను ఎంచుకోండి.",
   "tutorialM3IntervalTitle": "విరామం",
   "tutorialM3IntervalDesc": "వాక్యాల మధ్య వేచి ఉండే సమయాన్ని సర్దుబాటు చేయండి.",
   "tutorialM3StartTitle": "ప్రారంభించు",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "పెంచు",
   "languageSettings": "భాష సెట్టింగ్‌లు",
   "tutorialM2DropdownDesc": "అధ్యయన విషయాలను ఎంచుకోండి.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "పరికర ఫోల్డర్ నుండి JSON ఫైల్‌ను దిగుమతి చేయండి.",
   "tutorialLangSettingsTitle": "Language Settings",
   "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
   "dialogueQuestTitle": "Dialogue Quest",
   "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Type:",
   "labelWord": "Word",
   "labelSentence": "Sentence",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "No conversations yet",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Start a new chat to practice!",
   "chatFromConversation": "From Conversation ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Local Friend",
   "chatUntitled": "Untitled Conversation",
   "chatAiChat": "చాటింగ్",
-  "tutorialAiChatTitle": "AI చాటింగ్",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
   "mode1SelectedMaterial": "Current Material Set: {name}",
   "basicWordRepository": "ప్రాథమిక పద రిపోజిటరీ",
   "basicSentenceRepository": "ప్రాథమిక వాక్య రిపోజిటరీ",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "ఉన్న పేరును ఎంచుకోండి",
   "addTagHint": "ట్యాగ్‌ను జోడించు...",
   "save": "భద్రపరచు",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "దయచేసి మీ ఇమెయిల్‌ను ధృవీకరించడం ద్వారా ప్రామాణీకరణను పూర్తి చేయండి."
 }

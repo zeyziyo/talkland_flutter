@@ -5,7 +5,6 @@ import 'database/word_repository.dart';
 import 'database/sentence_repository.dart';
 import 'database/tag_repository.dart';
 import 'database/dialogue_repository.dart';
-import 'database/material_repository.dart';
 import 'database/data_transfer_service.dart';
 import 'database/unified_repository.dart';
 import '../models/chat_participant.dart';
@@ -17,6 +16,15 @@ class DatabaseService {
   // --- Database Helper Delegation ---
   static Future<void> reset() => DatabaseHelper.reset();
   static Future<void> close() => DatabaseHelper.close();
+
+  /// Check if a notebook (subject) already exists in meta tables
+  static Future<bool> materialExistsBySubject(String subject) async {
+    final db = await database;
+    final wRes = await db.query('words_meta', where: 'notebook_title = ?', whereArgs: [subject], limit: 1);
+    if (wRes.isNotEmpty) return true;
+    final sRes = await db.query('sentences_meta', where: 'notebook_title = ?', whereArgs: [subject], limit: 1);
+    return sRes.isNotEmpty;
+  }
 
   // --- Word Repository Delegation ---
   static Future<int> insertWord(Map<String, dynamic> data) => WordRepository.insert(data);
@@ -59,6 +67,13 @@ class DatabaseService {
 
   // --- Dialogue Participants Delegation ---
   static Future<List<Map<String, dynamic>>> getParticipants(String dialogueId) => DialogueRepository.getParticipants(dialogueId);
+  static Future<List<Map<String, dynamic>>> getDialogueParticipants(String dialogueId) => DialogueRepository.getParticipants(dialogueId);
+  static Future<void> updateMessageSpeaker({required String dialogueId, required String oldSpeakerId, required String newSpeakerId}) =>
+      DialogueRepository.updateMessageSpeaker(dialogueId, oldSpeakerId, newSpeakerId);
+      
+  static Future<void> removeParticipantFromDialogue({required String dialogueId, required String participantId}) =>
+      DialogueRepository.removeParticipantFromDialogue(dialogueId, participantId);
+
   static Future<void> insertParticipant(Map<String, dynamic> data) => DialogueRepository.insertParticipant(data);
   static Future<void> updateParticipant(String id, Map<String, dynamic> data) => DialogueRepository.updateParticipant(id, data);
   static Future<List<ChatParticipant>> getAllUniqueParticipants() => DialogueRepository.getAllUniqueParticipants();
@@ -113,32 +128,40 @@ class DatabaseService {
     }
   }
 
-  // --- Material Repository Delegation ---
+  // --- Material Management (Notebook based - Phase 160) ---
+  // Material IDs are now strings (notebook titles)
+  // getStudyMaterialById removed as it was for legacy table
   static Future<List<Map<String, dynamic>>> getStudyMaterials() async {
-    return await MaterialRepository.getAll();
+    final db = await database;
+    // Extract unique notebook titles from meta tables
+    final List<Map<String, dynamic>> results = await db.rawQuery('''
+      SELECT DISTINCT notebook_title as subject, 'Notebook' as source 
+      FROM words_meta
+      UNION
+      SELECT DISTINCT notebook_title as subject, 'Notebook' as source 
+      FROM sentences_meta
+      WHERE notebook_title NOT IN (SELECT notebook_title FROM words_meta)
+    ''');
+    return results;
   }
 
-  static Future<int> createStudyMaterial({
-    required String subject,
-    required String source,
-    required String sourceLanguage,
-    required String targetLanguage,
-    String? fileName,
-    required String createdAt,
-    Transaction? txn,
-  }) => MaterialRepository.create(
-    subject: subject,
-    source: source,
-    sourceLanguage: sourceLanguage,
-    targetLanguage: targetLanguage,
-    fileName: fileName,
-    createdAt: createdAt,
-    txn: txn,
-  );
-
-  static Future<Map<String, dynamic>?> getStudyMaterialById(int id) => MaterialRepository.getById(id);
-
-  static Future<void> deleteStudyMaterial(int id) => MaterialRepository.delete(id);
+  static Future<void> deleteStudyMaterial(String subject) async {
+    final db = await database;
+    await db.transaction((txn) async {
+      // Cascade delete items belonging to this notebook (handled by meta delete if we want to delete ALL items)
+      // For now, removing meta entries is enough to "remove from notebook"
+      await txn.delete('words_meta', where: 'notebook_title = ?', whereArgs: [subject]);
+      await txn.delete('sentences_meta', where: 'notebook_title = ?', whereArgs: [subject]);
+      
+      // Cleanup orphan content (optional performance, but keep for now to avoid bloat)
+      await txn.rawDelete('''
+        DELETE FROM words WHERE group_id NOT IN (SELECT group_id FROM words_meta)
+      ''');
+      await txn.rawDelete('''
+        DELETE FROM sentences WHERE group_id NOT IN (SELECT group_id FROM sentences_meta)
+      ''');
+    });
+  }
 
   // --- Data Transfer Delegation ---
   static Future<Map<String, dynamic>> importFromJsonWithMetadata(
@@ -167,38 +190,32 @@ class DatabaseService {
     return DataTransferService.importFromJsonWithMetadata(content, fileName: fileName);
   }
 
-  static Future<String> exportMaterialToJson(int materialId, {String? targetLang}) async {
-    final material = await getStudyMaterialById(materialId);
-    if (material == null) return '{}';
-
+  static Future<String> exportMaterialToJson(String subject, {String? targetLang}) async {
     return DataTransferService.exportMaterialToJson(
-      materialId,
+      subject,
       getRows: (s, {targetLang}) async {
         // Fetch raw rows with Method that Joins Meta
         final rawItems = await TagRepository.getItemsByTag(s, targetLang: targetLang);
         
         // Parse & Flatten
-        return rawItems.map((row) {
-           final Map<String, dynamic> data = jsonDecode(row['data_json'] as String);
-           // Determine which language to export as 'text'? 
-           // Usually source language of material.
-           final sourceLang = material['source_language'] as String? ?? 'auto';
-           // If auto, pick first key?
-           // Or search for matching lang?
-           
-           // Simple export logic:
-           // text = data[sourceLang]['text']
-           // translation = data[targetLang]['text']
-           
-           // We need robust selection.
-           String bestKey = data.keys.first;
-           if (sourceLang != 'auto' && data.containsKey(sourceLang)) bestKey = sourceLang;
-           
-           final content = data[bestKey] as Map<String, dynamic>;
-           String trans = '';
-           if (targetLang != null && data.containsKey(targetLang)) {
-              trans = data[targetLang]['text'];
-           }
+         return rawItems.map((row) {
+            final Map<String, dynamic> data = jsonDecode(row['data_json'] as String);
+            // Phase 160: When exporting by title, we assume the first language as default source if auto
+            const sourceLang = 'auto'; 
+            
+            // Simple export logic:
+            // text = data[sourceLang]['text']
+            // translation = data[targetLang]['text']
+            
+            // We need robust selection.
+            String bestKey = data.keys.first;
+            if (sourceLang != 'auto' && data.containsKey(sourceLang)) bestKey = sourceLang;
+            
+            final content = data[bestKey] as Map<String, dynamic>;
+            String trans = '';
+            if (targetLang != null && data.containsKey(targetLang)) {
+               trans = data[targetLang]['text'];
+            }
            
            return {
              ...row,

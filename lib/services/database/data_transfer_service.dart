@@ -1,7 +1,7 @@
 import 'dart:convert';
+import '../database_service.dart';
 import 'package:sqflite/sqflite.dart';
 import 'database_helper.dart';
-import 'material_repository.dart';
 import 'dialogue_repository.dart';
 import 'unified_repository.dart';
 
@@ -31,7 +31,6 @@ class DataTransferService {
       final nativeSubject = (meta['title'] ?? data['subject']) as String?;
       final materialSubject = overrideSubject ?? nativeSubject ?? fileName ?? 'Imported Material';
       final syncSubject = syncKey ?? materialSubject;
-      final source = (meta['source'] ?? data['source']) as String? ?? 'File Upload';
       final fileCreatedAt = (meta['created_at'] ?? data['created_at']) as String? ?? DateTime.now().toIso8601String();
       final batchCreatedAt = DateTime.now().toIso8601String();
       final entryDefaultType = (data['default_type'] ?? meta['default_type'] ?? defaultType) as String? ?? 'sentence';
@@ -40,7 +39,7 @@ class DataTransferService {
       final fileTags = (meta['tags'] as List?)?.map((e) => e.toString().trim()).where((e) => e.isNotEmpty).toList() ?? [];
 
       if (checkDuplicate) {
-        final exists = await MaterialRepository.existsBySubject(materialSubject, sourceLang, targetLang);
+        final exists = await DatabaseService.materialExistsBySubject(materialSubject);
         if (exists) {
           return {
             'success': false,
@@ -72,182 +71,170 @@ class DataTransferService {
          int skippedCount = 0;
          int totalMessages = 0;
          List<String> errors = [];
+         dynamic importId; // To store material_id or dId
 
-          // Case A: Standard Entries
+          // Case A & C: Standard Entries OR Single Dialogue Session via default_type: dialogue
           if (entries != null) {
-            await MaterialRepository.create(
-              subject: materialSubject,
-              source: source,
-              sourceLanguage: sourceLang,
-              targetLanguage: targetLang,
-              fileName: fileName,
-              createdAt: fileCreatedAt,
-              txn: txn,
-            );
+            // Case C: Handle default_type: dialogue using entries
+            if (entryDefaultType == 'dialogue') {
+               final dId = '${DateTime.now().millisecondsSinceEpoch}_0';
+               // Create Dialogue Group
+               await DialogueRepository.insertGroup(
+                 id: dId,
+                 userId: userId,
+                 title: materialSubject,
+                 persona: participantMap.values.where((p) => p['role']?.toString().toLowerCase() == 'ai').firstOrNull?['name'] ?? 'Partner',
+                 note: syncSubject,
+                 createdAt: fileCreatedAt,
+                 txn: txn,
+               );
+               importId = dId; // Assign dId to importId
 
-            // Pre-fetch existing items for deduplication (to enable Upsert)
-            final Map<String, int> existingItems = {}; 
-            // If checkDuplicate is true, we return early anyway. 
-            // So we only run this if we are merging/updating.
-            
-             // Fetch Words
-             final words = await txn.rawQuery('''
-                SELECT w.group_id, w.data_json 
-                FROM words w 
-                JOIN words_meta wm ON w.group_id = wm.group_id 
-                WHERE wm.notebook_title = ?
-             ''', [materialSubject]);
-             
-             for (var w in words) {
-                try {
-                  final data = jsonDecode(w['data_json'] as String);
-                  // Check sourceLang first
-                  if (data[sourceLang] != null) {
-                     final text = data[sourceLang]['text'] as String;
-                     existingItems[text.trim()] = w['group_id'] as int;
-                  }
-                } catch (_) {}
-             }
-
-             // Fetch Sentences
-             final sentences = await txn.rawQuery('''
-                SELECT s.group_id, s.data_json 
-                FROM sentences s 
-                JOIN sentences_meta sm ON s.group_id = sm.group_id 
-                WHERE sm.notebook_title = ?
-             ''', [materialSubject]);
-             for (var s in sentences) {
-                try {
-                   final data = jsonDecode(s['data_json'] as String);
-                   if (data[sourceLang] != null) {
-                     final text = data[sourceLang]['text'] as String;
-                     existingItems[text.trim()] = s['group_id'] as int;
+               for (var i = 0; i < entries.length; i++) {
+                 try {
+                   final entry = entries[i] as Map<String, dynamic>;
+                   final sText = (entry['source_text'] ?? entry['text']) as String?;
+                   final tText = (entry['target_text'] ?? entry['translation']) as String?;
+                   
+                   if (sText == null || sText.trim().isEmpty) {
+                     skippedCount++;
+                     continue;
                    }
-                } catch (_) {}
-             }
 
-            final batch = txn.batch();
-            for (var i = 0; i < entries.length; i++) {
-              try {
-                final entry = entries[i] as Map<String, dynamic>;
-                
-                final sText = (entry['source_text'] ?? entry['text']) as String?;
-                final tText = (entry['target_text'] ?? entry['translation']) as String?;
-                
-                if (sText == null || sText.trim().isEmpty) {
-                  skippedCount++;
-                  continue;
-                }
+                   await txn.insert('dialogues', {
+                     'session_id': dId,
+                     'speaker': entry['speaker'] ?? (i % 2 == 0 ? 'User' : 'AI'),
+                     'content': sText,
+                     'translation': tText ?? '',
+                     'created_at': batchCreatedAt,
+                   });
+                   importedCount++;
+                 } catch (e) {
+                   errors.add('Dialogue Entry ${i + 1}: $e');
+                   skippedCount++;
+                 }
+               }
+            } else {
+              // Standard words/sentences
+              // Phase 160: study_materials table removed. 
+              // Notebooks are identified by notebook_title in meta tables.
+              importId = materialSubject;
 
-                final bool hasTarget = tText != null && tText.trim().isNotEmpty && targetLang != 'auto';
-                final entryTags = (entry['tags'] as List?)?.map((e) => e.toString().trim()).where((e) => e.isNotEmpty).toList() ?? [];
-                
-                // Phase 129: NoteBook Title uses materialSubject
-                // Use Set to remove duplicates and Trim everything
-                final Set<String> uniqueTags = {
-                   ...fileTags, 
-                   ...entryTags, 
-                   materialSubject.trim(), 
-                   syncSubject.trim()
-                };
-                final List<String> allTags = uniqueTags.where((t) => t.isNotEmpty).toList();
-                
-                // Deduplication Logic: Reuse ID if text matches
-                final int gId = existingItems[sText.trim()] ?? (DateTime.now().millisecondsSinceEpoch + i); 
-                
-                // Phase 117: Metadata Extraction
-                String? getVal(dynamic item, String key, [String? topLevelDefault]) {
-                   final val = item[key] as String?;
-                   if (val == null || val.trim().isEmpty) return (topLevelDefault?.trim().isEmpty ?? true) ? null : topLevelDefault;
-                   return val.trim();
-                }
+              // Phase 160: existingItems is no longer needed as we use Deterministic Hash IDs
 
-                // Phase 129: Construct data_json (Shared Content)
-                final Map<String, dynamic> contentMap = {};
-                
-                // Source Language Data
-                contentMap[sourceLang] = {
-                  'text': sText,
-                  'pos': getVal(entry, 'pos', entryPos),
-                  'note': getVal(entry, 'note'),
-                };
-                
-                final type = entry['type'] as String? ?? entryDefaultType;
-                final tableContent = type == 'word' ? 'words' : 'sentences';
+              final batch = txn.batch();
+              for (var i = 0; i < entries.length; i++) {
+                try {
+                  final entry = entries[i] as Map<String, dynamic>;
+                  final sText = (entry['source_text'] ?? entry['text']) as String?;
+                  final tText = (entry['target_text'] ?? entry['translation']) as String?;
+                  
+                  if (sText == null || sText.trim().isEmpty) {
+                    skippedCount++;
+                    continue;
+                  }
 
-                if (type == 'word') {
-                  contentMap[sourceLang]['form_type'] = getVal(entry, 'form_type');
-                  contentMap[sourceLang]['root'] = getVal(entry, 'root');
-                } else {
-                  contentMap[sourceLang]['style'] = getVal(entry, 'style');
-                }
+                  final bool hasTarget = tText != null && tText.trim().isNotEmpty && targetLang != 'auto';
+                  final entryTags = (entry['tags'] as List?)?.map((e) => e.toString().trim()).where((e) => e.isNotEmpty).toList() ?? [];
+                  final Set<String> uniqueTags = {
+                     ...fileTags, 
+                     ...entryTags, 
+                     materialSubject.trim(), 
+                     syncSubject.trim()
+                  };
+                  final List<String> allTags = uniqueTags.where((t) => t.isNotEmpty).toList();
+                  final type = entry['type'] as String? ?? entryDefaultType;
+                  final tableContent = type == 'word' ? 'words' : 'sentences';
 
-                // Target Language Data (if exists)
-                if (hasTarget) {
-                  contentMap[targetLang] = {
-                    'text': tText,
-                    'pos': getVal(entry, 'target_pos') ?? getVal(entry, 'pos', entryPos),
-                    'note': getVal(entry, 'note'), // Note usually shared
+                  // Phase 160: Deterministic ID Generation (Content-Based)
+                  // If English is present, use it as pivot. Default to sourceText.
+                  final String idBaseText = (sourceLang == 'en') ? sText : (tText != null && targetLang == 'en' ? tText : sText);
+                  
+                  final int gId = UnifiedRepository.generateGroupId(
+                    text: idBaseText,
+                    type: type,
+                    pos: _getVal(entry, 'pos', entryPos),
+                    style: _getVal(entry, 'style'),
+                    formType: _getVal(entry, 'form_type'),
+                  );
+
+                  // Phase 160: Multilingual Merge (Upsert) Logic
+                  final existing = await txn.query(tableContent, where: 'group_id = ?', whereArgs: [gId], limit: 1);
+                  Map<String, dynamic> finalContentMap = {};
+                  
+                  if (existing.isNotEmpty) {
+                    // Load existing and merge
+                    finalContentMap = jsonDecode(existing.first['data_json'] as String);
+                  }
+
+                  // Add/Update Source Data
+                  finalContentMap[sourceLang] = {
+                    'text': sText,
+                    'pos': _getVal(entry, 'pos', entryPos),
+                    'note': _getVal(entry, 'note'),
                   };
                   if (type == 'word') {
-                    contentMap[targetLang]['form_type'] = getVal(entry, 'target_form_type');
-                    contentMap[targetLang]['root'] = getVal(entry, 'target_root');
+                    finalContentMap[sourceLang]['form_type'] = _getVal(entry, 'form_type');
+                    finalContentMap[sourceLang]['root'] = _getVal(entry, 'root');
                   } else {
-                    contentMap[targetLang]['style'] = getVal(entry, 'target_style') ?? getVal(entry, 'style');
+                    finalContentMap[sourceLang]['style'] = _getVal(entry, 'style');
                   }
+
+                  // Add/Update Target Data
+                  if (hasTarget) {
+                    finalContentMap[targetLang] = {
+                      'text': tText,
+                      'pos': _getVal(entry, 'target_pos') ?? _getVal(entry, 'pos', entryPos),
+                      'note': _getVal(entry, 'note'),
+                    };
+                    if (type == 'word') {
+                      finalContentMap[targetLang]['form_type'] = _getVal(entry, 'target_form_type');
+                      finalContentMap[targetLang]['root'] = _getVal(entry, 'target_root');
+                    } else {
+                      finalContentMap[targetLang]['style'] = _getVal(entry, 'target_style') ?? _getVal(entry, 'style');
+                    }
+                  }
+
+                  await txn.insert(tableContent, {
+                    'group_id': gId,
+                    'data_json': jsonEncode(finalContentMap),
+                    'created_at': batchCreatedAt,
+                  }, conflictAlgorithm: ConflictAlgorithm.replace);
+
+                  final metaTable = type == 'word' ? 'words_meta' : 'sentences_meta';
+                  batch.rawInsert('''
+                    INSERT INTO $metaTable (
+                      group_id, notebook_title, source_lang, target_lang, caption, tags,
+                      is_memorized, is_synced, review_count, last_reviewed, created_at
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ON CONFLICT(group_id, notebook_title) DO UPDATE SET
+                      source_lang = excluded.source_lang,
+                      target_lang = excluded.target_lang,
+                      tags = excluded.tags,
+                      is_synced = MAX($metaTable.is_synced, excluded.is_synced),
+                      is_memorized = MAX($metaTable.is_memorized, excluded.is_memorized),
+                      review_count = MAX($metaTable.review_count, excluded.review_count),
+                      last_reviewed = MAX($metaTable.last_reviewed, excluded.last_reviewed),
+                      caption = COALESCE(NULLIF(excluded.caption, ''), $metaTable.caption)
+                  ''', [
+                    gId,
+                    materialSubject,
+                    sourceLang,
+                    targetLang,
+                    _getVal(entry, 'note') ?? '',
+                    allTags.join(','),
+                    0, 0, 0, null,
+                    batchCreatedAt
+                  ]);
+
+                  importedCount++;
+                } catch (e) {
+                  errors.add('Entry ${i + 1}: $e');
+                  skippedCount++;
                 }
-
-                // 1. Insert Shared Content
-                batch.insert(tableContent, {
-                  'group_id': gId,
-                  'data_json': jsonEncode(contentMap),
-                  'created_at': batchCreatedAt,
-                }, conflictAlgorithm: ConflictAlgorithm.replace);
-
-                // 2. Insert Personal Meta (Upsert with Logic)
-                final metaTable = type == 'word' ? 'words_meta' : 'sentences_meta';
-                
-                // Using rawInsert for complex Upsert logic (Preserve user stats)
-                // Note: We use rawInsert directly on batch, but batch in sqflite is a bit different.
-                // batch.rawInsert(sql, arguments)
-                
-                batch.rawInsert('''
-                  INSERT INTO $metaTable (
-                    group_id, notebook_title, source_lang, target_lang, caption, tags,
-                    is_memorized, is_synced, review_count, last_reviewed
-                  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                  ON CONFLICT(group_id) DO UPDATE SET
-                    notebook_title = excluded.notebook_title,
-                    source_lang = excluded.source_lang,
-                    target_lang = excluded.target_lang,
-                    tags = excluded.tags,
-                    is_synced = MAX($metaTable.is_synced, excluded.is_synced),
-                    is_memorized = MAX($metaTable.is_memorized, excluded.is_memorized),
-                    review_count = MAX($metaTable.review_count, excluded.review_count),
-                    last_reviewed = MAX($metaTable.last_reviewed, excluded.last_reviewed),
-                    caption = COALESCE(NULLIF(excluded.caption, ''), $metaTable.caption)
-                ''', [
-                  gId,
-                  materialSubject,
-                  sourceLang,
-                  targetLang,
-                  getVal(entry, 'note') ?? '',
-                  allTags.join(','),
-                  0, // is_memorized default for import (safe to merge with MAX)
-                  0, // is_synced default
-                  0, // review_count default
-                  null // last_reviewed default
-                ]);
-
-                // 3. (Removed) item_tags table is deprecated/removed. Tags are stored in meta.
-
-                importedCount++;
-              } catch (e) {
-                errors.add('Entry ${i + 1}: $e');
-                skippedCount++;
               }
+              await batch.commit(noResult: true);
             }
-            await batch.commit(noResult: true);
           } 
           
           // Case B: Dialogues
@@ -281,6 +268,7 @@ class DataTransferService {
                   txn: txn,
                 );
               }
+              importId = dId; // Assign dId to importId
               
               // Prevent Duplicate Messages: Clear existing messages for this session
               await txn.delete('dialogues', where: 'session_id = ?', whereArgs: [dId]);
@@ -340,6 +328,7 @@ class DataTransferService {
             'imported': importedCount,
             'skipped': skippedCount,
             'total': (entries?.length ?? 0) + totalMessages,
+            'notebook_title': importId, // Dialogue dId or Notebook Title
             'errors': errors,
           };
       });
@@ -357,17 +346,12 @@ class DataTransferService {
 
 
 
-  static Future<String> exportMaterialToJson(int materialId, {
+  static Future<String> exportMaterialToJson(String subject, {
     required Future<List<Map<String, dynamic>>> Function(String subject, {String? targetLang}) getRows,
     required Future<List<String>> Function(int itemId, String type) getTags,
     String? targetLang,
   }) async {
-    final db = await _db;
-    final materialRes = await db.query('study_materials', where: 'id = ?', whereArgs: [materialId]);
-    if (materialRes.isEmpty) return '{}';
-    
-    final material = materialRes.first;
-    final subject = material['subject'] as String;
+    // Phase 160: Export by subject (notebook_title) directly
     final items = await getRows(subject, targetLang: targetLang);
     
     final List<Map<String, dynamic>> entries = [];
@@ -392,13 +376,16 @@ class DataTransferService {
     return jsonEncode({
       'meta': {
         'title': subject,
-        'source': material['source'],
-        'source_language': material['source_language'],
-        'target_language': material['target_language'],
-        'created_at': material['created_at'],
+        'source': 'Local Export',
         'exported_at': DateTime.now().toIso8601String(),
       },
       'entries': entries,
     });
+  }
+
+  static String? _getVal(dynamic item, String key, [String? topLevelDefault]) {
+    final val = item[key] as String?;
+    if (val == null || val.trim().isEmpty) return (topLevelDefault?.trim().isEmpty ?? true) ? null : topLevelDefault;
+    return val.trim();
   }
 }

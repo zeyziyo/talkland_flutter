@@ -1,5 +1,10 @@
 {
   "@@locale": "et",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Abi & juhend",
   "helpTabModes": "Režiimide selgitus",
   "helpTabJson": "JSON-vorming",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Harjuta vestlust tehisintellekti persooniga suheldes.",
   "helpModeChatDetails": "• AI vestlus: harjuta vestlust, rääkides oma keeles\n• Mitu personaži: muuda partneri sugu/keelt/nime kõnemulli kohal asuva menüü kaudu\n• Lisa partner: lisa uusi vestluskaaslasi (võõraid) nupuga +\n• GPS: praegusel asukohal põhinevad situatsioonid\n• Automaatne salvestamine: vestlussisu automaatne tõlkimine ja salvestamine",
   "helpJsonDesc": "Õppematerjali JSON-failina importimiseks režiimis 3 järgi seda vormingut:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Impordi kogu dialoogikomplekt JSON-failina.",
   "helpDialogueImportDetails": "• JSON-struktuur: kasuta massiivi `dialogues` massiivi `entries` asemel\n• Automaatne taastamine: dialoogi pealkiri, personaž ja sõnumite järjekord taastatakse.\n• Asukoht: imporditud dialoog kuvatakse AI vestlusrežiimi vahekaardil \"Ajalugu\".",
   "helpTourDesc": "**Esiletõstetud ring** juhendab peamisi funktsioone.\n(Näide: **Esiletõstetud ringi** osutatud kaardi kustutamiseks hoia seda all.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Kokku: {count} tk",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Vali õppematerjal",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Sisesta tõlgitav tekst",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Salvestamine...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Tõlgi sisestatud tekst.",
   "tutorialSaveTitle": "Salvesta",
   "tutorialSaveDesc": "Salvesta tõlgitud tulemus õppimisajalukku.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI vestlus",
+  "tutorialAiChatDesc": "Harjuta AI personažiga reaalset vestlust.",
   "tutorialM2SelectTitle": "Materjali valik",
   "tutorialM2SelectDesc": "Õpitava materjali valimiseks vajuta ülemise rakenduseriba materjalikogumi ikooni (📚).",
-  "tutorialM3SelectDesc": "Harjutatava materjali valimiseks vajuta ülemise rakenduseriba materjalikogumi ikooni (📚).",
   "tutorialM2ListTitle": "Õppimisnimekiri",
   "tutorialM2ListDesc": "Selle kustutamiseks hoia seda kaarti all (pikk klõps). Kontrolli salvestatud lauset ja keera see ümber.",
   "tutorialM3SelectTitle": "Materjali valik",
+  "tutorialM3SelectDesc": "Harjutatava materjali valimiseks vajuta ülemise rakenduseriba materjalikogumi ikooni (📚).",
   "tutorialM3IntervalTitle": "Intervalli seadistus",
   "tutorialM3IntervalDesc": "Reguleeri lausete vahelist ooteaega.",
   "tutorialM3StartTitle": "Alusta harjutamist",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Suurenda",
   "languageSettings": "Keele seaded",
   "tutorialM2DropdownDesc": "Õpitava materjali saad valida ülemise menüü kaudu.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Impordi JSON-fail seadme kaustast.",
   "tutorialLangSettingsTitle": "Keele seaded",
   "tutorialLangSettingsDesc": "Seadista tõlgitav lähtekeel ja sihtkeel.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Kaitske oma baasi, öeldes sõnu enne, kui vaenlased kohale jõuavad.",
   "dialogueQuestTitle": "Dialoogiülesanne",
   "dialogueQuestDesc": "Harjutage vestlust situatsioonide kaudu. Valige sobiv vastus ja öelge see.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Tüüp:",
   "labelWord": "Sõna",
   "labelSentence": "Lause",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Vestlusi pole veel",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Proovige harjutamiseks uut vestlust alustada!",
   "chatFromConversation": "Vestluse väljavõte ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Kohalik sõber",
   "chatUntitled": "Pealkirjata vestlus",
   "chatAiChat": "Vestlus",
-  "tutorialAiChatTitle": "AI vestlus",
-  "tutorialAiChatDesc": "Harjuta AI personažiga reaalset vestlust.",
   "mode1SelectedMaterial": "Praegu valitud materjalikogum: {name}",
   "basicWordRepository": "Põhiliste sõnade hoidla",
   "basicSentenceRepository": "Põhiliste lausete hoidla",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Vali olemasolev nimi",
   "addTagHint": "Lisa silt...",
   "save": "Salvesta",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Palun kinnita oma e-posti aadress, et autentimine lõpule viia."
 }

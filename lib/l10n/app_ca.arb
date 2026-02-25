@@ -1,5 +1,10 @@
 {
   "@@locale": "ca",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Ajuda i guia",
   "helpTabModes": "Descripció dels modes",
   "helpTabJson": "Format JSON",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Practiqueu la conversa real xerrant amb una IA personalitzada.",
   "helpModeChatDetails": "• Xat amb IA: Practica la conversa parlant en el teu idioma\n• Persona múltiple: Canvia el gènere/idioma/nom de l'altra persona amb el menú de sobre la bombolla de diàleg\n• Afegeix un soci: Afegeix una nova persona amb qui parlar (desconegut) amb el botó +\n• GPS: Obra de situació basada en la ubicació actual\n• Desa automàticament: Tradueix i desa automàticament el contingut de la conversa",
   "helpJsonDesc": "Segueix aquest format per importar material d'aprenentatge en fitxers JSON que s'utilitzaran al Mode 3:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Importa conjunts de diàlegs complets amb fitxers JSON.",
   "helpDialogueImportDetails": "• Estructura JSON: Utilitza l'array `dialogues` en comptes d'`entries`\n• Recuperació automàtica: Es restauren el títol del diàleg, la persona i l'ordre dels missatges.\n• Ubicació: Els diàlegs importats apareixen a la pestanya 'Historial' del mode de xat amb IA.",
   "helpTourDesc": "El **cercle de ressalt** et guiarà per les funcions principals.\n(Per exemple: pots suprimir les targetes mantenint premuda la targeta que indica el **cercle de ressalt**).",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Total: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Selecciona el material d'estudi",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Introdueix el text que vols traduir",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "S'està desant...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Tradueix el text que has introduït.",
   "tutorialSaveTitle": "Desa",
   "tutorialSaveDesc": "Desa els resultats traduïts a l'historial d'aprenentatge.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "Xat amb IA",
+  "tutorialAiChatDesc": "Practica la conversa real amb una persona d'IA.",
   "tutorialM2SelectTitle": "Selecciona el material",
   "tutorialM2SelectDesc": "Prem la icona de la col·lecció de material (📚) a la barra d'aplicacions superior per seleccionar el material que vols estudiar.",
-  "tutorialM3SelectDesc": "Prem la icona de la col·lecció de material (📚) a la barra d'aplicacions superior per seleccionar el material que vols practicar.",
   "tutorialM2ListTitle": "Llista d'aprenentatge",
   "tutorialM2ListDesc": "Pots suprimir aquesta targeta mantenint-la premuda (clic llarg). Comprova i gira les frases desades.",
   "tutorialM3SelectTitle": "Selecciona el material",
+  "tutorialM3SelectDesc": "Prem la icona de la col·lecció de material (📚) a la barra d'aplicacions superior per seleccionar el material que vols practicar.",
   "tutorialM3IntervalTitle": "Configura l'interval",
   "tutorialM3IntervalDesc": "Ajusta el temps d'espera entre frases.",
   "tutorialM3StartTitle": "Comença la pràctica",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Augmenta",
   "languageSettings": "Configuració de l'idioma",
   "tutorialM2DropdownDesc": "Pots seleccionar el material que vols estudiar mitjançant el menú superior.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Importa un fitxer JSON des de la carpeta del dispositiu.",
   "tutorialLangSettingsTitle": "Configuració de l'idioma",
   "tutorialLangSettingsDesc": "Configura l'idioma original i l'idioma de destinació que vols traduir.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Digues la paraula abans que l'enemic arribi per defensar la base.",
   "dialogueQuestTitle": "Cerca de diàlegs",
   "dialogueQuestDesc": "Practica la conversa mitjançant una obra de situació. Selecciona la resposta adequada i digues-la.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Tipus:",
   "labelWord": "Paraula",
   "labelSentence": "Frase",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Encara no hi ha cap conversa",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Comença una conversa nova per practicar!",
   "chatFromConversation": "Extret de la conversa ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Amic local",
   "chatUntitled": "Xat sense títol",
   "chatAiChat": "Xat",
-  "tutorialAiChatTitle": "Xat amb IA",
-  "tutorialAiChatDesc": "Practica la conversa real amb una persona d'IA.",
   "mode1SelectedMaterial": "Col·lecció de material seleccionada actualment: {name}",
   "basicWordRepository": "Repositori bàsic de paraules",
   "basicSentenceRepository": "Repositori bàsic de frases",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Selecciona un títol existent",
   "addTagHint": "Afegeix una etiqueta...",
   "save": "Desa",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Si us plau, verifica el teu correu electrònic per completar l'autenticació."
 }

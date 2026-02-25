@@ -255,7 +255,7 @@ abstract class AppLocalizations {
   /// No description provided for @googleContinue.
   ///
   /// In ko, this message translates to:
-  /// **'로그인'**
+  /// **'Google로 계속하기'**
   String get googleContinue;
 
   /// No description provided for @logout.
@@ -315,19 +315,19 @@ abstract class AppLocalizations {
   /// No description provided for @helpMode1Details.
   ///
   /// In ko, this message translates to:
-  /// **'• 언어 설정: 상단/하단 아이콘을 눌러 언어 변경\n• 단어/문장 토글: 모드 전환\n• 음성 입력: 마이크 아이콘을 눌러 듣기 시작/정지\n• 텍스트 입력: 직접 입력하여 번역\n• 자동 검색: 유사한 기존 문장 감지\n• 번역: 번역 버튼을 눌러 즉시 번역\n• 듣기: 스피커 아이콘으로 TTS 재생\n• 저장: \'데이터 저장\'으로 기록 추가\n• 지우기: 입력 초기화'**
+  /// **'• 언어 설정: 하단 버튼을 눌러 내 언어와 학습 언어 변경\n• 단어/문장 토글: 상단 탭에서 모드 전환\n• 음성 입력: 마이크 아이콘을 눌러 듣기 시작/정지\n• 텍스트 입력: 직접 입력하여 번역\n• 상황 태그: 문맥(예: 아침인사)을 입력하여 구분 저장\n• 자동 검색: 유사한 기존 문장 감지\n• 번역: 번역 버튼을 눌러 즉시 번역\n• 듣기: 스피커 아이콘으로 TTS 재생\n• 저장: \'데이터 저장\'으로 기록 추가'**
   String get helpMode1Details;
 
   /// No description provided for @helpMode2Desc.
   ///
   /// In ko, this message translates to:
-  /// **'저장된 문장을 복습하고, 자동 숨김 기능으로 암기 여부를 확인하세요.'**
+  /// **'저장된 단어와 문장을 복습하고, 보이기/숨기기 기능으로 암기 여부를 확인하세요.'**
   String get helpMode2Desc;
 
   /// No description provided for @helpMode2Details.
   ///
   /// In ko, this message translates to:
-  /// **'• 자료 선택: 상단 앱바의 상세 설정(Tune) 아이콘으로 자료 선택 및 온라인 자료실 접근\n• 카드 뒤집기: \'보이기/숨기기\'로 번역 확인 (자동 학습 체크)\n• 듣기: 문장 TTS 재생\n• 학습 완료: 체크 표시(V)로 학습 완료 처리\n• 삭제: 카드를 길게 눌러 기록 삭제\n• 검색 조건: 태그, 최근 항목, 시작 글자로 필터링'**
+  /// **'• 자료집 선택: 우측 상단 메뉴(⋮)에서 \'학습 자료집 선택\'이나 \'온라인 자료실\' 이용\n• 카드 뒤집기: \'보이기/숨기기\'로 번역 확인\n• 듣기: 스피커 아이콘으로 발음 재생\n• 학습 완료: 체크 표시(V)로 학습 완료 처리\n• 삭제: 카드를 길게 눌러(Long Click) 기록 삭제\n• 검색 및 필터: 검색바와 태그, 시작 글자로 필터링'**
   String get helpMode2Details;
 
   /// No description provided for @helpMode3Desc.
@@ -339,7 +339,7 @@ abstract class AppLocalizations {
   /// No description provided for @helpMode3Details.
   ///
   /// In ko, this message translates to:
-  /// **'• 자료 선택: 상단 앱바의 상세 설정(Tune) 아이콘으로 자료 선택\n• 간격 설정: [-] [+] 버튼으로 문장 간 대기 시간 조정 (3초~60초)\n• 시작/정지: 쉐도잉 세션 제어\n• 말하기: 음성을 듣고 따라 말하기\n• 피드백: 정확도 점수(0-100) 및 색상 표시\n• 검색 조건: 태그, 최근 항목, 시작 글자로 연습 대상 필터링'**
+  /// **'• 자료집 선택: 우측 상단 메뉴(⋮)에서 \'학습 자료집 선택\' 이용\n• 간격 설정: [-] [+] 버튼으로 문장 간 대기 시간 조정 (3초~60초)\n• 시작/정지: 중앙의 시작/종료 버튼으로 세션 제어\n• 말하기: 원어민 음성을 듣고 큰 소리로 따라하기\n• 피드백: 정확도 점수(0-100) 및 색상 표시\n• 필터 설정: 설정(톱니바퀴) 아이콘에서 태그별 연습 범위 지정'**
   String get helpMode3Details;
 
   /// No description provided for @helpModeChatDesc.
@@ -357,8 +357,26 @@ abstract class AppLocalizations {
   /// No description provided for @helpJsonDesc.
   ///
   /// In ko, this message translates to:
-  /// **'Mode 3에서 사용할 학습 자료를 JSON 파일로 가져오려면 다음 형식을 따르세요:'**
+  /// **'학습 자료를 JSON 파일로 대량으로 가져오는 방법입니다.'**
   String get helpJsonDesc;
+
+  /// No description provided for @helpJsonTypeDialogue.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화 (Dialogue)'**
+  String get helpJsonTypeDialogue;
+
+  /// No description provided for @helpJsonTypeSentence.
+  ///
+  /// In ko, this message translates to:
+  /// **'문장 (Sentence)'**
+  String get helpJsonTypeSentence;
+
+  /// No description provided for @helpJsonTypeWord.
+  ///
+  /// In ko, this message translates to:
+  /// **'단어 (Word)'**
+  String get helpJsonTypeWord;
 
   /// No description provided for @helpDialogueImportDesc.
   ///
@@ -369,7 +387,7 @@ abstract class AppLocalizations {
   /// No description provided for @helpDialogueImportDetails.
   ///
   /// In ko, this message translates to:
-  /// **'• JSON 구조: `entries` 대신 `dialogues` 배열 사용\n• 자동 복구: 대화 제목, 페르소나, 메시지 순서가 복구됩니다.\n• 위치: 가져온 대화는 AI 채팅 모드의 \'기록\' 탭에 나타납니다.'**
+  /// **'• JSON 구조: `entries` 배열 내에 `speaker`를 지정하여 대화 흐름을 구성합니다.\n• 참가자 설정: `participants` 정보를 정확히 입력하면 AI 채팅 모드에서 페르소나와 언어가 자동으로 설정됩니다.\n• 위치: 가져온 대화는 AI 채팅 모드의 \'기록\' 탭에 나타납니다.'**
   String get helpDialogueImportDetails;
 
   /// No description provided for @helpTourDesc.
@@ -1044,23 +1062,101 @@ abstract class AppLocalizations {
   /// **'번역된 결과를 학습 기록에 저장하세요.'**
   String get tutorialSaveDesc;
 
+  /// No description provided for @selectParticipants.
+  ///
+  /// In ko, this message translates to:
+  /// **'참가자 선택'**
+  String get selectParticipants;
+
+  /// No description provided for @loadingParticipants.
+  ///
+  /// In ko, this message translates to:
+  /// **'참가자 불러오는 중...'**
+  String get loadingParticipants;
+
+  /// No description provided for @noParticipantsFound.
+  ///
+  /// In ko, this message translates to:
+  /// **'등록된 참가자가 없습니다.'**
+  String get noParticipantsFound;
+
+  /// No description provided for @noInternetWarningMic.
+  ///
+  /// In ko, this message translates to:
+  /// **'인터넷 연결이 없습니다. 오프라인 상태에서는 음성 인식이 불가능할 수 있습니다.'**
+  String get noInternetWarningMic;
+
+  /// No description provided for @noInternetWarningTranslate.
+  ///
+  /// In ko, this message translates to:
+  /// **'인터넷 연결이 없습니다. 오프라인 상태에서는 번역 기능을 사용할 수 없습니다. 복습 모드를 이용해 주세요.'**
+  String get noInternetWarningTranslate;
+
+  /// No description provided for @noMaterialsInCategory.
+  ///
+  /// In ko, this message translates to:
+  /// **'이 카테고리에는 자료가 없습니다.'**
+  String get noMaterialsInCategory;
+
+  /// No description provided for @onlineLibraryLoadFailed.
+  ///
+  /// In ko, this message translates to:
+  /// **'자료를 불러오는데 실패했습니다.'**
+  String get onlineLibraryLoadFailed;
+
+  /// No description provided for @onlineLibraryCheckInternet.
+  ///
+  /// In ko, this message translates to:
+  /// **'인터넷 연결을 확인하거나 나중에 다시 시도해주세요.'**
+  String get onlineLibraryCheckInternet;
+
+  /// No description provided for @onlineLibraryNoMaterials.
+  ///
+  /// In ko, this message translates to:
+  /// **'자료가 없습니다.'**
+  String get onlineLibraryNoMaterials;
+
+  /// No description provided for @sendingMessage.
+  ///
+  /// In ko, this message translates to:
+  /// **'메시지 전송 중...'**
+  String get sendingMessage;
+
+  /// No description provided for @startChat.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화 시작'**
+  String get startChat;
+
+  /// No description provided for @manageParticipants.
+  ///
+  /// In ko, this message translates to:
+  /// **'참가자 관리'**
+  String get manageParticipants;
+
+  /// No description provided for @tutorialAiChatTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'AI 채팅'**
+  String get tutorialAiChatTitle;
+
+  /// No description provided for @tutorialAiChatDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'AI 페르소나와 실전 대화를 연습해 보세요.'**
+  String get tutorialAiChatDesc;
+
   /// No description provided for @tutorialM2SelectTitle.
   ///
   /// In ko, this message translates to:
-  /// **'자료 선택'**
+  /// **'자료집 선택'**
   String get tutorialM2SelectTitle;
 
   /// No description provided for @tutorialM2SelectDesc.
   ///
   /// In ko, this message translates to:
-  /// **'상단 앱바의 상세 설정(Tune) 아이콘을 눌러 학습할 자료를 선택하거나 온라인 자료실을 이용하세요.'**
+  /// **'우측 상단 메뉴(⋮)를 눌러 학습할 자료집을 선택하거나 온라인 자료실을 이용하세요.'**
   String get tutorialM2SelectDesc;
-
-  /// No description provided for @tutorialM3SelectDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'상단 앱바의 자료집 아이콘(📚)을 눌러 연습할 자료를 선택하세요.'**
-  String get tutorialM3SelectDesc;
 
   /// No description provided for @tutorialM2ListTitle.
   ///
@@ -1071,7 +1167,7 @@ abstract class AppLocalizations {
   /// No description provided for @tutorialM2ListDesc.
   ///
   /// In ko, this message translates to:
-  /// **'이 카드를 길게 누르면(Long Click) 삭제할 수 있습니다. 저장된 문장을 확인하고 뒤집어보세요.'**
+  /// **'저장된 항목을 확인하고 뒤집어보세요. 카드를 길게 누르면 삭제할 수 있습니다.'**
   String get tutorialM2ListDesc;
 
   /// No description provided for @tutorialM3SelectTitle.
@@ -1079,6 +1175,12 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'자료 선택'**
   String get tutorialM3SelectTitle;
+
+  /// No description provided for @tutorialM3SelectDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'우측 상단 메뉴(⋮)에서 연습하고 싶은 자료집을 선택하세요.'**
+  String get tutorialM3SelectDesc;
 
   /// No description provided for @tutorialM3IntervalTitle.
   ///
@@ -1788,24 +1890,6 @@ abstract class AppLocalizations {
   /// **'채팅'**
   String get chatAiChat;
 
-  /// No description provided for @manageParticipants.
-  ///
-  /// In ko, this message translates to:
-  /// **'참가자 관리'**
-  String get manageParticipants;
-
-  /// No description provided for @tutorialAiChatTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'AI 채팅'**
-  String get tutorialAiChatTitle;
-
-  /// No description provided for @tutorialAiChatDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'AI 페르소나와 실전 대화를 연습해 보세요.'**
-  String get tutorialAiChatDesc;
-
   /// No description provided for @mode1SelectedMaterial.
   ///
   /// In ko, this message translates to:
@@ -2295,7 +2379,7 @@ abstract class AppLocalizations {
   /// No description provided for @statusLoggingIn.
   ///
   /// In ko, this message translates to:
-  /// **'Google로 로그인 중...'**
+  /// **'로그인 중...'**
   String get statusLoggingIn;
 
   /// No description provided for @statusLogoutSuccess.
@@ -2363,6 +2447,18 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'회원가입 실패: {error}'**
   String statusSignUpFailed(Object error);
+
+  /// No description provided for @statusCheckEmail.
+  ///
+  /// In ko, this message translates to:
+  /// **'이메일을 확인하여 인증을 완료해주세요.'**
+  String get statusCheckEmail;
+
+  /// No description provided for @emailAlreadyInUse.
+  ///
+  /// In ko, this message translates to:
+  /// **'이미 등록된 이메일입니다. 로그인하거나 비밀번호 찾기를 이용해주세요.'**
+  String get emailAlreadyInUse;
 }
 
 class _AppLocalizationsDelegate

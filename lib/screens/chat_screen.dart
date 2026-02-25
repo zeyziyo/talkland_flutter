@@ -5,7 +5,7 @@ import '../models/dialogue_group.dart';
 import '../l10n/app_localizations.dart';
 import '../services/speech_service.dart';
 import '../models/chat_participant.dart'; // Phase 70
-import '../constants/language_constants.dart'; // Phase 70
+
 import '../services/supabase_service.dart';
 import '../services/database_service.dart';
 import '../services/translation_service.dart';
@@ -164,6 +164,9 @@ class _ChatScreenState extends State<ChatScreen> {
       }
       
       if (permission == LocationPermission.deniedForever) return '';
+      
+      // Phase 162: If Windows, Geolocator might return error or empty. 
+      // We try to handle it gracefully.
 
       // 1. Try Last Known Position (Instant)
       Position? position = await Geolocator.getLastKnownPosition();
@@ -201,7 +204,7 @@ class _ChatScreenState extends State<ChatScreen> {
         return city.isNotEmpty ? city : place.country ?? '';
       }
     } catch (e) {
-      print('[GPS] Final catch Error: $e');
+      debugPrint('[GPS] Final catch Error: $e');
     }
     return '';
   }
@@ -363,10 +366,13 @@ class _ChatScreenState extends State<ChatScreen> {
     final appState = Provider.of<AppState>(context, listen: false);
     
     // 1. Prepare Initial Values
-    // final dateStr = DateFormat('MM/dd HH:mm').format(now);
+    // Phase 162: Prioritize AppState's pre-fetched location
+    String? detectedLocation = appState.activeDialogueLocation;
     
-    // Fetch location for pre-filling
-    final detectedLocation = await _getLocationString(l10n);
+    // If not pre-fetched, try fetching now (last attempt)
+    if (detectedLocation == null || detectedLocation.isEmpty) {
+      detectedLocation = await _getLocationString(l10n);
+    }
     
     // Auto-generate Title Logic: "Chat N"
     int count = await DatabaseService.getDialogueCount();
@@ -444,10 +450,10 @@ class _ChatScreenState extends State<ChatScreen> {
                         
                       const SizedBox(height: 16),
                       
-                      // Location Input (Read Only)
+                      // Location Input
                       TextField(
                         controller: locationController,
-                        readOnly: true, // User requested Read-Only
+                        readOnly: locationController.text.isNotEmpty, // Phase 162: Allow manual entry if empty
                         decoration: InputDecoration(
                           labelText: l10n.location,
                           prefixIcon: const Icon(Icons.location_on),
@@ -516,7 +522,7 @@ class _ChatScreenState extends State<ChatScreen> {
     final appState = Provider.of<AppState>(context, listen: false);
     if (appState.isOffline) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('인터넷 연결이 없습니다. 오프라인 상태에서는 음성 인식이 불가능할 수 있습니다.')),
+        SnackBar(content: Text(l10n.noInternetWarningMic)),
       );
       return;
     }
@@ -672,7 +678,7 @@ class _ChatScreenState extends State<ChatScreen> {
         children: [
           Expanded(
             child: _messages.isEmpty 
-              ? Center(child: Text(l10n.noDialogueHistory, style: TextStyle(color: Colors.grey[400])))
+              ? Center(child: Text(l10n.noMaterialsInCategory, style: TextStyle(color: Colors.grey[400])))
               : ListView.builder(
                   key: ValueKey('msg_list_${_messages.length}_$_isSearching'), // Force whole list rebuild
                   controller: _scrollController,
@@ -821,67 +827,6 @@ class _ChatScreenState extends State<ChatScreen> {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          // Mode 4 UI Enhancement: Group Language & Gender
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 4),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Colors.grey.shade300),
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                // 1. Language Dropdown (User)
-                SizedBox(
-                  height: 24,
-                  child: DropdownButton<String>(
-                    value: LanguageConstants.supportedLanguages.any((l) => l['code'] == appState.sourceLang) 
-                        ? appState.sourceLang 
-                        : 'ko',
-                    underline: const SizedBox(),
-                    icon: const Icon(Icons.arrow_drop_down, size: 16),
-                    style: const TextStyle(fontSize: 11, color: Colors.black87),
-                    onChanged: (newLang) {
-                      if (newLang != null && newLang != appState.sourceLang) {
-                        appState.setSourceLang(newLang);
-                      }
-                    },
-                    items: LanguageConstants.supportedLanguages.map((l) {
-                      return DropdownMenuItem(
-                        value: l['code'],
-                        child: Text(l['name']!),
-                      );
-                    }).toList(),
-                  ),
-                ),
-                VerticalDivider(width: 8, thickness: 1, color: Colors.grey.shade300),
-                // 2. Gender Toggle (User)
-                Tooltip(
-                  message: l10n.gender,
-                  child: InkWell(
-                    onTap: () {
-                      final newGender = appState.chatUserGender == 'male' ? 'female' : 'male';
-                      appState.setChatUserGender(newGender);
-                      // User requested to REMOVE auto-read on icon tap.
-                      // _speak(msg['source_text'] ?? '', appState.sourceLang, isUser: true);
-                    },
-                    borderRadius: BorderRadius.circular(12),
-                    child: Padding(
-                      padding: const EdgeInsets.all(6.0), // Increased padding
-                      child: Icon(
-                        appState.chatUserGender == 'male' ? Icons.face : Icons.face_3,
-                        size: 20, // Increased size from 16
-                        color: appState.chatUserGender == 'male' ? Colors.blue : Colors.pink,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(width: 8),
-          
           // 3. Name (Me)
           Text(
              l10n.me,
@@ -919,85 +864,6 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
           ),
           
-          const SizedBox(width: 8),
-
-          // Mode 4 UI Enhancement: Group Language & Gender
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 4),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Colors.grey.shade300),
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                // 1. Language Dropdown (AI)
-                SizedBox(
-                  height: 24,
-                  child: DropdownButton<String>(
-                    value: LanguageConstants.supportedLanguages.any((l) => l['code'] == participant.langCode) 
-                        ? participant.langCode 
-                        : 'en',
-                    underline: const SizedBox(),
-                    icon: const Icon(Icons.arrow_drop_down, size: 16),
-                    style: const TextStyle(fontSize: 11, color: Colors.black87),
-                    onChanged: (newLang) => _handleLanguageChange(participant, newLang, appState, msg),
-                    items: LanguageConstants.supportedLanguages.map((l) {
-                      return DropdownMenuItem(
-                        value: l['code'],
-                        child: Text(l['name']!),
-                      );
-                    }).toList(),
-                  ),
-                ),
-                VerticalDivider(width: 8, thickness: 1, color: Colors.grey.shade300),
-                // 2. Gender Toggle (AI)
-                Tooltip(
-                  message: l10n.gender,
-                  child: InkWell(
-                    onTap: () async {
-                      // Phase 137 Fix: Simplified Gender Toggle with Forced UI Update
-                      // 1. Resolve Target ID (Create JIT if temp)
-                      String targetId = participant.id;
-                      if (targetId == 'temp') {
-                        debugPrint('[ChatScreen] JIT Creation for ${participant.name}');
-                        // Create and add to active participants list
-                        final newP = await appState.getOrAddParticipant(
-                          name: participant.name, 
-                          role: participant.role,
-                          gender: participant.gender, 
-                          languageCode: participant.langCode
-                        );
-                        targetId = newP.id;
-                      }
-
-                      // 2. Toggle Gender
-                      final newGender = participant.gender == 'male' ? 'female' : 'male';
-                      debugPrint('[ChatScreen] Toggling gender for $targetId to $newGender');
-                      
-                      // 3. Update State & DB
-                      await appState.updateParticipant(targetId, gender: newGender);
-                      
-                      // 4. Force Rebuild (Just in case Provider doesn't catch deep change)
-                      if (context.mounted) {
-                        setState(() {}); 
-                      }
-                    },
-                    borderRadius: BorderRadius.circular(12),
-                    child: Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: Icon(
-                        participant.gender == 'male' ? Icons.face : Icons.face_3,
-                        size: 20,
-                        color: participant.gender == 'male' ? Colors.blue : Colors.pink,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
         ],
       ),
     );
@@ -1075,46 +941,6 @@ class _ChatScreenState extends State<ChatScreen> {
      );
   }
 
-  Future<void> _handleLanguageChange(ChatParticipant p, String? newLang, AppState appState, Map<String, dynamic> msg) async {
-     if (newLang == null || newLang == p.langCode) return;
-     
-     setState(() => _isLoading = true);
-
-     // 1. Update Participant
-     await appState.updateParticipant(p.id, languageCode: newLang);
-     
-     // 2. Retranslate (Source Text -> New Lang)
-     // User asked to retranslate content.
-     // AI Message: source_text is the Foreign Content.
-     // We need to translate IT to new Lang? 
-     // Or translate the Original Prompt?
-     // Simpler: Access TranslationService to translate `msg['target_text']` (Which is Native Meaning) -> New Lang.
-     // Because `target_text` is "Hello" (Native), we want New Foreign for "Hello".
-     
-     try {
-       final result = await TranslationService.translate(
-         text: msg['target_text'], // The Native Text (Anchor)
-         sourceLang: appState.sourceLang, // Native
-         targetLang: newLang,
-       );
-       final newForeignText = result['text'];
-       
-       if (newForeignText != null) {
-          setState(() {
-            msg['source_text'] = newForeignText; // Update Foreign Text
-            // target_text remains Native
-          });
-          
-          // Speak immediately
-          _speak(newForeignText, newLang, isUser: false, gender: p.gender);
-       }
-     } catch (e) {
-       if (!mounted) return;
-       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Translation failed')));
-     } finally {
-       setState(() => _isLoading = false);
-     }
-  }
 
   Widget _buildInputArea(AppState appState, AppLocalizations l10n) {
     return Container(
@@ -1208,7 +1034,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       onPressed: () {
                         debugPrint('>>> USER CLICKED SEND ICON (Reactively)');
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('>>> 전송 버튼 클릭됨 (Sending...)'), duration: Duration(milliseconds: 500)),
+                          SnackBar(content: Text(l10n.sendingMessage), duration: const Duration(milliseconds: 500)),
                         );
                         _sendMessage(l10n);
                       },

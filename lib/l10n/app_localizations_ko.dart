@@ -9,7 +9,7 @@ class AppLocalizationsKo extends AppLocalizations {
   AppLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get googleContinue => '로그인';
+  String get googleContinue => 'Google로 계속하기';
 
   @override
   String get logout => '로그아웃';
@@ -40,21 +40,21 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get helpMode1Details =>
-      '• 언어 설정: 상단/하단 아이콘을 눌러 언어 변경\n• 단어/문장 토글: 모드 전환\n• 음성 입력: 마이크 아이콘을 눌러 듣기 시작/정지\n• 텍스트 입력: 직접 입력하여 번역\n• 자동 검색: 유사한 기존 문장 감지\n• 번역: 번역 버튼을 눌러 즉시 번역\n• 듣기: 스피커 아이콘으로 TTS 재생\n• 저장: \'데이터 저장\'으로 기록 추가\n• 지우기: 입력 초기화';
+      '• 언어 설정: 하단 버튼을 눌러 내 언어와 학습 언어 변경\n• 단어/문장 토글: 상단 탭에서 모드 전환\n• 음성 입력: 마이크 아이콘을 눌러 듣기 시작/정지\n• 텍스트 입력: 직접 입력하여 번역\n• 상황 태그: 문맥(예: 아침인사)을 입력하여 구분 저장\n• 자동 검색: 유사한 기존 문장 감지\n• 번역: 번역 버튼을 눌러 즉시 번역\n• 듣기: 스피커 아이콘으로 TTS 재생\n• 저장: \'데이터 저장\'으로 기록 추가';
 
   @override
-  String get helpMode2Desc => '저장된 문장을 복습하고, 자동 숨김 기능으로 암기 여부를 확인하세요.';
+  String get helpMode2Desc => '저장된 단어와 문장을 복습하고, 보이기/숨기기 기능으로 암기 여부를 확인하세요.';
 
   @override
   String get helpMode2Details =>
-      '• 자료 선택: 상단 앱바의 상세 설정(Tune) 아이콘으로 자료 선택 및 온라인 자료실 접근\n• 카드 뒤집기: \'보이기/숨기기\'로 번역 확인 (자동 학습 체크)\n• 듣기: 문장 TTS 재생\n• 학습 완료: 체크 표시(V)로 학습 완료 처리\n• 삭제: 카드를 길게 눌러 기록 삭제\n• 검색 조건: 태그, 최근 항목, 시작 글자로 필터링';
+      '• 자료집 선택: 우측 상단 메뉴(⋮)에서 \'학습 자료집 선택\'이나 \'온라인 자료실\' 이용\n• 카드 뒤집기: \'보이기/숨기기\'로 번역 확인\n• 듣기: 스피커 아이콘으로 발음 재생\n• 학습 완료: 체크 표시(V)로 학습 완료 처리\n• 삭제: 카드를 길게 눌러(Long Click) 기록 삭제\n• 검색 및 필터: 검색바와 태그, 시작 글자로 필터링';
 
   @override
   String get helpMode3Desc => '문장을 듣고 따라 말하며(Shadowing) 발음을 연습하세요.';
 
   @override
   String get helpMode3Details =>
-      '• 자료 선택: 상단 앱바의 상세 설정(Tune) 아이콘으로 자료 선택\n• 간격 설정: [-] [+] 버튼으로 문장 간 대기 시간 조정 (3초~60초)\n• 시작/정지: 쉐도잉 세션 제어\n• 말하기: 음성을 듣고 따라 말하기\n• 피드백: 정확도 점수(0-100) 및 색상 표시\n• 검색 조건: 태그, 최근 항목, 시작 글자로 연습 대상 필터링';
+      '• 자료집 선택: 우측 상단 메뉴(⋮)에서 \'학습 자료집 선택\' 이용\n• 간격 설정: [-] [+] 버튼으로 문장 간 대기 시간 조정 (3초~60초)\n• 시작/정지: 중앙의 시작/종료 버튼으로 세션 제어\n• 말하기: 원어민 음성을 듣고 큰 소리로 따라하기\n• 피드백: 정확도 점수(0-100) 및 색상 표시\n• 필터 설정: 설정(톱니바퀴) 아이콘에서 태그별 연습 범위 지정';
 
   @override
   String get helpModeChatDesc => 'AI 페르소나와 대화하며 실전 회화를 연습하세요.';
@@ -64,14 +64,23 @@ class AppLocalizationsKo extends AppLocalizations {
       '• AI 채팅: 페르소나와 실전 대화를 연습하세요.\n• 참가자 관리: 내 언어와 AI의 언어를 각각 설정하여 언어 불일치를 방지할 수 있습니다.\n• GPS 상황극: 현재 위치 기반으로 자연스러운 대화 상황을 연출합니다.\n• 기록 보존: 모든 대화는 ID 기반으로 안전하게 저장되며, 이름을 바꿔도 기록이 유지됩니다.';
 
   @override
-  String get helpJsonDesc => 'Mode 3에서 사용할 학습 자료를 JSON 파일로 가져오려면 다음 형식을 따르세요:';
+  String get helpJsonDesc => '학습 자료를 JSON 파일로 대량으로 가져오는 방법입니다.';
+
+  @override
+  String get helpJsonTypeDialogue => '대화 (Dialogue)';
+
+  @override
+  String get helpJsonTypeSentence => '문장 (Sentence)';
+
+  @override
+  String get helpJsonTypeWord => '단어 (Word)';
 
   @override
   String get helpDialogueImportDesc => 'JSON 파일로 전체 대화 세트를 가져옵니다.';
 
   @override
   String get helpDialogueImportDetails =>
-      '• JSON 구조: `entries` 대신 `dialogues` 배열 사용\n• 자동 복구: 대화 제목, 페르소나, 메시지 순서가 복구됩니다.\n• 위치: 가져온 대화는 AI 채팅 모드의 \'기록\' 탭에 나타납니다.';
+      '• JSON 구조: `entries` 배열 내에 `speaker`를 지정하여 대화 흐름을 구성합니다.\n• 참가자 설정: `participants` 정보를 정확히 입력하면 AI 채팅 모드에서 페르소나와 언어가 자동으로 설정됩니다.\n• 위치: 가져온 대화는 AI 채팅 모드의 \'기록\' 탭에 나타납니다.';
 
   @override
   String get helpTourDesc =>
@@ -446,24 +455,68 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tutorialSaveDesc => '번역된 결과를 학습 기록에 저장하세요.';
 
   @override
-  String get tutorialM2SelectTitle => '자료 선택';
+  String get selectParticipants => '참가자 선택';
+
+  @override
+  String get loadingParticipants => '참가자 불러오는 중...';
+
+  @override
+  String get noParticipantsFound => '등록된 참가자가 없습니다.';
+
+  @override
+  String get noInternetWarningMic =>
+      '인터넷 연결이 없습니다. 오프라인 상태에서는 음성 인식이 불가능할 수 있습니다.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      '인터넷 연결이 없습니다. 오프라인 상태에서는 번역 기능을 사용할 수 없습니다. 복습 모드를 이용해 주세요.';
+
+  @override
+  String get noMaterialsInCategory => '이 카테고리에는 자료가 없습니다.';
+
+  @override
+  String get onlineLibraryLoadFailed => '자료를 불러오는데 실패했습니다.';
+
+  @override
+  String get onlineLibraryCheckInternet => '인터넷 연결을 확인하거나 나중에 다시 시도해주세요.';
+
+  @override
+  String get onlineLibraryNoMaterials => '자료가 없습니다.';
+
+  @override
+  String get sendingMessage => '메시지 전송 중...';
+
+  @override
+  String get startChat => '대화 시작';
+
+  @override
+  String get manageParticipants => '참가자 관리';
+
+  @override
+  String get tutorialAiChatTitle => 'AI 채팅';
+
+  @override
+  String get tutorialAiChatDesc => 'AI 페르소나와 실전 대화를 연습해 보세요.';
+
+  @override
+  String get tutorialM2SelectTitle => '자료집 선택';
 
   @override
   String get tutorialM2SelectDesc =>
-      '상단 앱바의 상세 설정(Tune) 아이콘을 눌러 학습할 자료를 선택하거나 온라인 자료실을 이용하세요.';
-
-  @override
-  String get tutorialM3SelectDesc => '상단 앱바의 자료집 아이콘(📚)을 눌러 연습할 자료를 선택하세요.';
+      '우측 상단 메뉴(⋮)를 눌러 학습할 자료집을 선택하거나 온라인 자료실을 이용하세요.';
 
   @override
   String get tutorialM2ListTitle => '학습 목록';
 
   @override
   String get tutorialM2ListDesc =>
-      '이 카드를 길게 누르면(Long Click) 삭제할 수 있습니다. 저장된 문장을 확인하고 뒤집어보세요.';
+      '저장된 항목을 확인하고 뒤집어보세요. 카드를 길게 누르면 삭제할 수 있습니다.';
 
   @override
   String get tutorialM3SelectTitle => '자료 선택';
+
+  @override
+  String get tutorialM3SelectDesc => '우측 상단 메뉴(⋮)에서 연습하고 싶은 자료집을 선택하세요.';
 
   @override
   String get tutorialM3IntervalTitle => '간격 설정';
@@ -831,15 +884,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get chatAiChat => '채팅';
 
   @override
-  String get manageParticipants => '참가자 관리';
-
-  @override
-  String get tutorialAiChatTitle => 'AI 채팅';
-
-  @override
-  String get tutorialAiChatDesc => 'AI 페르소나와 실전 대화를 연습해 보세요.';
-
-  @override
   String mode1SelectedMaterial(Object name) {
     return '현재 선택된 자료집: $name';
   }
@@ -1096,7 +1140,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get statusLoginCancelled => '로그인이 취소되었습니다.';
 
   @override
-  String get statusLoggingIn => 'Google로 로그인 중...';
+  String get statusLoggingIn => '로그인 중...';
 
   @override
   String get statusLogoutSuccess => '로그아웃되었습니다.';
@@ -1132,4 +1176,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String statusSignUpFailed(Object error) {
     return '회원가입 실패: $error';
   }
+
+  @override
+  String get statusCheckEmail => '이메일을 확인하여 인증을 완료해주세요.';
+
+  @override
+  String get emailAlreadyInUse => '이미 등록된 이메일입니다. 로그인하거나 비밀번호 찾기를 이용해주세요.';
 }

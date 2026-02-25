@@ -1,0 +1,15 @@
+{
+    "default_type": "word",
+    "subject": "Nouns 1",
+    "entries": [
+        {
+            "text": "Person",
+            "pos": "Noun"
+        },
+        {
+            "text": "Water",
+            "note": "Drinking water",
+            "pos": "Noun"
+        }
+    ]
+}

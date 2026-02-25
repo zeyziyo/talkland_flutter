@@ -130,7 +130,7 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
           final participants = appState.globalParticipants;
           
           if (participants.isEmpty) {
-            return const Center(child: Text('No participants found.'));
+            return Center(child: Text(l10n.noParticipantsFound));
           }
 
           return ListView.builder(

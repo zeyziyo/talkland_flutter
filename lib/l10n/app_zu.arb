@@ -1,5 +1,10 @@
 {
   "@@locale": "zu",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Usizo & Umhlahlandlela",
   "helpTabModes": "Incazelo Yezindlela",
   "helpTabJson": "Ifomethi ye-JSON",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Zijwayeze ingxoxo yangempela ngokuxoxa no-AI.",
   "helpModeChatDetails": "• Ingxoxo ye-AI: Khuluma ngolimi lwakho ukuze uzilolonge ingxoxo\n• Ubuningi Bezimo: Ungashintsha ubulili/ulimi/igama lomuntu okhuluma naye ngemenyu engaphezu kwebhamuza lenkulumo\n• Engeza Umlingani: Engeza umuntu omusha (Ongamazi) ngenkinobho +\n• I-GPS: Isimo esisekelwe endaweni yamanje\n• Ukulondolozwa Okuzenzakalelayo: Ukuhumusha okuzenzakalelayo nokulondolozwa kokuqukethwe kwengxoxo",
   "helpJsonDesc": "Ukuze ungenise izinto zokwakha zokufunda njengefayela le-JSON ongazisebenzisa kumodi 3, landela ifomethi elandelayo:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Ngenisa isethi yonke yezingxoxo njengefayela le-JSON.",
   "helpDialogueImportDetails": "• Isakhiwo se-JSON: Sebenzisa uhlu 'lwezingxoxo' esikhundleni 'sokungenela'\n• Ukubuyisela okuzenzakalelayo: Isihloko sengxoxo, ubungcweti, nokuhleleka kwemilayezo kuyabuyiselwa.\n• Indawo: Izingxoxo ezingenisiwe zivela kuthebhu 'Yomlando' yemodi yengxoxo ye-AI.",
   "helpTourDesc": "**Umbuthano ogqamile** uqondisa izici ezibalulekile.\n(Isb: Cindezela isikhathi eside ikhadi **Umbuthano ogqamile** okhomba kulo ukuze ulisuse.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Isamba: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Khetha Izinto Zokwakha Zokufunda",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Faka umbhalo ozohunyushwa",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Kuyalondolozwa...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Humusha umbhalo owufakile.",
   "tutorialSaveTitle": "Londoloza",
   "tutorialSaveDesc": "Londoloza imiphumela ehunyushiwe kumarekhodi akho okufunda.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "Ingxoxo ye-AI",
+  "tutorialAiChatDesc": "Prakthiza izingxoxo zempilo yangempela nezinhlamvu ze-AI.",
   "tutorialM2SelectTitle": "Khetha Izinto Zokwakha",
   "tutorialM2SelectDesc": "Cindezela isithonjana seqoqo lezinto zokwakha (📚) kubha yohlelo lokusebenza engenhla ukuze ukhethe izinto zokwakha ozofunda.",
-  "tutorialM3SelectDesc": "Cindezela isithonjana seqoqo lezinto zokwakha (📚) kubha yohlelo lokusebenza engenhla ukuze ukhethe izinto zokwakha ozozijwayeza.",
   "tutorialM2ListTitle": "Uhlu Lokufunda",
   "tutorialM2ListDesc": "Ungalicindezela isikhathi eside (Long Click) leli khadi ukuze ulisuse. Bheka imisho elondoloziwe bese uyayiphendula.",
   "tutorialM3SelectTitle": "Khetha Izinto Zokwakha",
+  "tutorialM3SelectDesc": "Cindezela isithonjana seqoqo lezinto zokwakha (📚) kubha yohlelo lokusebenza engenhla ukuze ukhethe izinto zokwakha ozozijwayeza.",
   "tutorialM3IntervalTitle": "Setha Isikhawu",
   "tutorialM3IntervalDesc": "Lungisa isikhathi sokulinda phakathi kwemisho.",
   "tutorialM3StartTitle": "Qala Ukuzijwayeza",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Nyusa",
   "languageSettings": "Izilungiselelo Zolimi",
   "tutorialM2DropdownDesc": "Ungakhetha izinto zokwakha ongazifunda ngemenyu engenhla.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Ngenisa ifayela le-JSON kusuka kufolda yedivayisi yakho.",
   "tutorialLangSettingsTitle": "Izilungiselelo Zolimi",
   "tutorialLangSettingsDesc": "Setha ulimi lokuqala nolimi oluhlosiwe ongathanda ukuhumusha kulo.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Vikela isizinda ngokukhuluma igama ngaphambi kokufika kwesitha.",
   "dialogueQuestTitle": "Ukufuna Ingxoxo",
   "dialogueQuestDesc": "Prakthiza ingxoxo ngezimo. Khetha impendulo efanele bese uyayikhuluma.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Uhlobo:",
   "labelWord": "Igama",
   "labelSentence": "Umusho",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Azikho izingxoxo okwamanje",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Qala ingxoxo entsha ukuze uzilolonge!",
   "chatFromConversation": "Ingxoxo Eyacashuniwe ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Umthengisi Wendawo",
   "chatUntitled": "Ingxoxo Engenasiihloko",
   "chatAiChat": "Ingxoxo",
-  "tutorialAiChatTitle": "Ingxoxo ye-AI",
-  "tutorialAiChatDesc": "Prakthiza izingxoxo zempilo yangempela nezinhlamvu ze-AI.",
   "mode1SelectedMaterial": "Iqoqo lezinto zokwakha elikhethiwe njengamanje: {name}",
   "basicWordRepository": "Inqolobane Yamagama Ayisisekelo",
   "basicSentenceRepository": "Inqolobane Yemisho Eyisisekelo",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Khetha Isihloko Esikhona",
   "addTagHint": "Engeza ithegi...",
   "save": "Londoloza",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Sicela uqinisekise i-imeyili ukuze uqedele ukuqinisekiswa."
 }

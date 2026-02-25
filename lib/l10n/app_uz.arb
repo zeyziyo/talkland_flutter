@@ -1,5 +1,10 @@
 {
   "@@locale": "uz",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Yordam & Qo'llanma",
   "helpTabModes": "Rejimlar haqida ma'lumot",
   "helpTabJson": "JSON formati",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "AI persona bilan suhbatlashib, amaliy suhbatni mashq qiling.",
   "helpModeChatDetails": "• AI chat: o'z tilingizda gapirib, suhbatni mashq qiling\n• Multi-persona: nutq pufagi ustidagi menyu orqali boshqa odamning jinsi/tili/nomini o'zgartirishingiz mumkin\n• Hamkor qo'shish: + tugmasi bilan yangi suhbatdosh (Stranger) qo'shing\n• GPS: joriy joylashuvga asoslangan vaziyatli dramatik sahna\n• Avtomatik saqlash: suhbat mazmunini avtomatik tarjima qilish va saqlash",
   "helpJsonDesc": "3-rejimda foydalaniladigan o'quv materiallarini JSON fayli sifatida import qilish uchun quyidagi formatga rioya qiling:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "JSON faylidan butun dialoglar to'plamini import qiling.",
   "helpDialogueImportDetails": "• JSON tuzilishi: `entries` o'rniga `dialogues` massivini ishlating\n• Avtomatik tiklash: dialog sarlavhasi, persona, xabar tartibi tiklanadi.\n• Joylashuv: Import qilingan dialoglar AI chat rejimining 'Tarix' yorlig'ida paydo bo'ladi.",
   "helpTourDesc": "**Ta'kidlangan doira** asosiy funktsiyalarni ko'rsatadi.\n(Masalan: **Ta'kidlangan doira** ko'rsatgan kartani uzoq bosib o'chirish mumkin.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Jami: {count} dona",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "O'quv materiallarini tanlash",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Tarjima qilish uchun matnni kiriting",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Saqlanmoqda...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Kiritilgan matnni tarjima qiladi.",
   "tutorialSaveTitle": "Saqlash",
   "tutorialSaveDesc": "Tarjima qilingan natijani o'rganish yozuviga saqlang.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI Chat",
+  "tutorialAiChatDesc": "AI persona bilan amaliy suhbatni mashq qiling.",
   "tutorialM2SelectTitle": "Ma'lumotlarni tanlash",
   "tutorialM2SelectDesc": "Yuqori ilova panelidagi ma'lumotlar to'plami belgisini (📚) bosib, o'rganmoqchi bo'lgan ma'lumotlarni tanlang.",
-  "tutorialM3SelectDesc": "Yuqori ilova panelidagi ma'lumotlar to'plami belgisini (📚) bosib, mashq qilmoqchi bo'lgan ma'lumotlarni tanlang.",
   "tutorialM2ListTitle": "O'rganish ro'yxati",
   "tutorialM2ListDesc": "Ushbu kartani uzoq bosish (Long Click) orqali o'chirishingiz mumkin. Saqlangan jumlalarni tekshiring va aylantirib ko'ring.",
   "tutorialM3SelectTitle": "Ma'lumotlarni tanlash",
+  "tutorialM3SelectDesc": "Yuqori ilova panelidagi ma'lumotlar to'plami belgisini (📚) bosib, mashq qilmoqchi bo'lgan ma'lumotlarni tanlang.",
   "tutorialM3IntervalTitle": "Intervalni sozlash",
   "tutorialM3IntervalDesc": "Jumlalar orasidagi kutish vaqtini sozlang.",
   "tutorialM3StartTitle": "Mashqni boshlash",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Ko'paytirish",
   "languageSettings": "Til sozlamalari",
   "tutorialM2DropdownDesc": "Yuqori menyu orqali o'rganmoqchi bo'lgan ma'lumotlarni tanlashingiz mumkin.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Qurilma papkasidan JSON faylini import qiladi.",
   "tutorialLangSettingsTitle": "Til sozlamalari",
   "tutorialLangSettingsDesc": "Tarjima qilinadigan asl tilni va maqsadli tilni o'rnating.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Dushman kelishidan oldin so'zni aytib bazani himoya qiling.",
   "dialogueQuestTitle": "Dialog qidiruvi",
   "dialogueQuestDesc": "Vaziyatli dramatik sahna orqali suhbatni mashq qiling. Tegishli javobni tanlang va ayting.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Turi:",
   "labelWord": "So'z",
   "labelSentence": "Gap",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Hali suhbatlar yo'q",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Mashq qilish uchun yangi suhbatni boshlang!",
   "chatFromConversation": "Suhbatdan iqtibos ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Mahalliy do'st",
   "chatUntitled": "Sarlavhasiz suhbat",
   "chatAiChat": "Chat",
-  "tutorialAiChatTitle": "AI Chat",
-  "tutorialAiChatDesc": "AI persona bilan amaliy suhbatni mashq qiling.",
   "mode1SelectedMaterial": "Hozirda tanlangan ma'lumotlar to'plami: {name}",
   "basicWordRepository": "Asosiy so'zlar ombori",
   "basicSentenceRepository": "Asosiy jumlalar ombori",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Mavjud nomni tanlang",
   "addTagHint": "Teg qo'shish...",
   "save": "Saqlash",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Elektron pochtangizni tekshiring va tasdiqlashni yakunlang."
 }

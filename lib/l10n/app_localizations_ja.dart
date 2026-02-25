@@ -9,19 +9,20 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get googleContinue => '로그인';
+  String get googleContinue => 'Continue with Google';
 
   @override
-  String get logout => '로그아웃';
+  String get logout => 'Logout';
 
   @override
-  String get logoutConfirmTitle => '로그아웃';
+  String get logoutConfirmTitle => 'Logout';
 
   @override
-  String get logoutConfirmMessage => '현재 기기에서 로그아웃하시겠습니까?';
+  String get logoutConfirmMessage =>
+      'Are you sure you want to logout from this device?';
 
   @override
-  String get syncingData => '데이터 동기화 중...';
+  String get syncingData => 'Syncing data...';
 
   @override
   String get helpTitle => 'ヘルプ＆ガイド';
@@ -65,6 +66,15 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get helpJsonDesc => 'モード3等で学習教材をインポートするには、以下の構造のJSONファイルを使用してください:';
+
+  @override
+  String get helpJsonTypeDialogue => 'Dialogue';
+
+  @override
+  String get helpJsonTypeSentence => 'Sentence';
+
+  @override
+  String get helpJsonTypeWord => 'Word';
 
   @override
   String get helpDialogueImportDesc =>
@@ -266,7 +276,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get importDuplicateTitleError =>
-      '동일한 제목의 자료가 이미 존재합니다. 제목을 변경한 후 다시 시도해주세요.';
+      'A material with the same title already exists. Please change the title and try again.';
 
   @override
   String get selectStudyMaterial => '学習教材を選択';
@@ -332,7 +342,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get translationResultHint => '翻訳結果 - 修正可能';
 
   @override
-  String get voluntaryTranslations => '자발적 번역';
+  String get voluntaryTranslations => 'Voluntary Translations';
 
   @override
   String get saving => '保存中...';
@@ -447,13 +457,55 @@ class AppLocalizationsJa extends AppLocalizations {
   String get tutorialSaveDesc => '翻訳結果を学習記録に保存します。';
 
   @override
+  String get selectParticipants => 'Select Participants';
+
+  @override
+  String get loadingParticipants => 'Loading participants...';
+
+  @override
+  String get noParticipantsFound => 'No participants found.';
+
+  @override
+  String get noInternetWarningMic =>
+      'No internet connection. Voice recognition may not work offline.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'No internet connection. Translation is unavailable offline. Please use Review mode.';
+
+  @override
+  String get noMaterialsInCategory => 'No materials in this category.';
+
+  @override
+  String get onlineLibraryLoadFailed => 'Failed to load materials.';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'Please check your internet connection or try again later.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'No materials found.';
+
+  @override
+  String get sendingMessage => '메시지 전송 중...';
+
+  @override
+  String get startChat => 'Start Chat';
+
+  @override
+  String get manageParticipants => '参加者管理';
+
+  @override
+  String get tutorialAiChatTitle => 'AIチャット';
+
+  @override
+  String get tutorialAiChatDesc => 'AIペルソナと実践的な会話を練習しましょう。';
+
+  @override
   String get tutorialM2SelectTitle => '選択とフィルタ';
 
   @override
   String get tutorialM2SelectDesc => '学習する教材を選択するか、全復習モードに切り替えます。';
-
-  @override
-  String get tutorialM3SelectDesc => 'スピーキング練習を行う教材セットを選択してください。';
 
   @override
   String get tutorialM2ListTitle => '学習リスト';
@@ -463,6 +515,9 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get tutorialM3SelectTitle => '教材選択';
+
+  @override
+  String get tutorialM3SelectDesc => 'スピーキング練習を行う教材セットを選択してください。';
 
   @override
   String get tutorialM3IntervalTitle => '間隔設定';
@@ -504,7 +559,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get tutorialM2DropdownDesc => '学習教材を選択します。';
 
   @override
-  String get tutorialM2SearchDesc => '저장된 단어와 문장을 검색하여 빠르게 찾을 수 있습니다.';
+  String get tutorialM2SearchDesc =>
+      'Search through your saved words and sentences.';
 
   @override
   String get tutorialM2ImportDesc => 'デバイスのフォルダからJSONファイルを読み込みます。';
@@ -834,15 +890,6 @@ class AppLocalizationsJa extends AppLocalizations {
   String get chatAiChat => 'チャット';
 
   @override
-  String get manageParticipants => '参加者管理';
-
-  @override
-  String get tutorialAiChatTitle => 'AIチャット';
-
-  @override
-  String get tutorialAiChatDesc => 'AIペルソナと実践的な会話を練習しましょう。';
-
-  @override
   String mode1SelectedMaterial(Object name) {
     return 'Current Material Set: $name';
   }
@@ -1073,65 +1120,71 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String statusDownloading(Object name) {
-    return '다운로드 중: $name...';
+    return 'Downloading: $name...';
   }
 
   @override
   String statusImportSuccess(Object name) {
-    return '$name 가져오기 완료';
+    return '$name Imported Successfully';
   }
 
   @override
   String statusImportFailed(Object error) {
-    return '가져오기 실패: $error';
+    return 'Import Failed: $error';
   }
 
   @override
-  String get statusLoginSuccess => '로그인에 성공했습니다.';
+  String get statusLoginSuccess => 'Login successful.';
 
   @override
   String statusLoginFailed(Object error) {
-    return '로그인 실패: $error';
+    return 'Login failed: $error';
   }
 
   @override
-  String get statusLoginCancelled => '로그인이 취소되었습니다.';
+  String get statusLoginCancelled => 'Login cancelled.';
 
   @override
-  String get statusLoggingIn => 'Google로 로그인 중...';
+  String get statusLoggingIn => 'ログイン中...';
 
   @override
-  String get statusLogoutSuccess => '로그아웃되었습니다.';
+  String get statusLogoutSuccess => 'Logged out.';
 
   @override
-  String get email => '이메일';
+  String get email => 'Email';
 
   @override
-  String get password => '비밀번호';
+  String get password => 'Password';
 
   @override
-  String get login => '로그인';
+  String get login => 'Login';
 
   @override
-  String get signUp => '회원가입';
+  String get signUp => 'Sign Up';
 
   @override
-  String get dontHaveAccount => '계정이 없으신가요?';
+  String get dontHaveAccount => 'Don\'t have an account?';
 
   @override
-  String get alreadyHaveAccount => '이미 계정이 있으신가요?';
+  String get alreadyHaveAccount => 'Already have an account?';
 
   @override
-  String get invalidEmail => '유효한 이메일을 입력하세요.';
+  String get invalidEmail => 'Please enter a valid email.';
 
   @override
-  String get passwordTooShort => '비밀번호는 6자 이상이어야 합니다.';
+  String get passwordTooShort => 'Password must be at least 6 characters.';
 
   @override
-  String get statusSigningUp => '회원가입 중...';
+  String get statusSigningUp => 'Signing up...';
 
   @override
   String statusSignUpFailed(Object error) {
-    return '회원가입 실패: $error';
+    return 'Sign up failed: $error';
   }
+
+  @override
+  String get statusCheckEmail => 'メールを確認して認証を完了してください。';
+
+  @override
+  String get emailAlreadyInUse => '이미 등록된 이메일입니다. 로그인하거나 비밀번호 찾기를 이용해주세요.';
 }

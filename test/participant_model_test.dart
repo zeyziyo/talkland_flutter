@@ -50,12 +50,12 @@ void main() {
 
   group('UnifiedRepository ID Generation', () {
     test('generateContentId should return consistent hash', () {
-      final id1 = UnifiedRepository.generateContentId('test_content', null);
-      final id2 = UnifiedRepository.generateContentId('test_content', null);
-      final id3 = UnifiedRepository.generateContentId('other_content', null);
+      final id1 = UnifiedRepository.generateGroupId(text: 'test_content', type: 'word', pos: 'Noun');
+      final id2 = UnifiedRepository.generateGroupId(text: 'test_content', type: 'word', pos: 'Noun');
+      final id3 = UnifiedRepository.generateGroupId(text: 'other_content', type: 'word', pos: 'Noun');
 
       expect(id1, isNotNull);
-      expect(id1, isNotEmpty);
+      expect(id1, greaterThan(0));
       expect(id1, id2); // Consistent
       expect(id1, isNot(id3)); // Unique
     });

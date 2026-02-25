@@ -1,5 +1,10 @@
 {
   "@@locale": "ka",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "დახმარება და გზამკვლევი",
   "helpTabModes": "რეჟიმების აღწერა",
   "helpTabJson": "JSON ფორმატი",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "ივარჯიშეთ რეალურ საუბარში AI პერსონასთან საუბრით.",
   "helpModeChatDetails": "• AI ჩატი: ისაუბრეთ ჩემს ენაზე საუბრის სავარჯიშოდ.\n• მრავალი პერსონაჟი: შეცვალეთ მეორე მხარის სქესი/ენა/სახელი მეტყველების ბუშტის ზემოთ მენიუდან.\n• პარტნიორის დამატება: დაამატეთ ახალი თანამოსაუბრე (უცნობი) + ღილაკით.\n• GPS: სიტუაციური თამაშები მიმდინარე მდებარეობაზე დაყრდნობით.\n• ავტომატური შენახვა: საუბრის ავტომატური თარგმნა და შენახვა",
   "helpJsonDesc": "მიჰყევით ამ ფორმატს, თუ გსურთ სასწავლო მასალების იმპორტი JSON ფაილში გამოსაყენებლად Mode 3-ში:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "მთელი დიალოგის ნაკრების იმპორტი JSON ფაილიდან.",
   "helpDialogueImportDetails": "• JSON სტრუქტურა: გამოიყენეთ `dialogues` მასივი `entries`-ის ნაცვლად\n• ავტომატური აღდგენა: აღდგება დიალოგის სათაური, პერსონა და შეტყობინების თანმიმდევრობა.\n• მდებარეობა: იმპორტირებული დიალოგები გამოჩნდება AI Chat რეჟიმის ჩანართში „ისტორია“.",
   "helpTourDesc": "**მონიშნული წრე** გაგიწევთ სახელმძღვანელოს ძირითადი ფუნქციების შესახებ.\n(მაგალითად: შეგიძლიათ წაშალოთ ბარათი **მონიშნულ წრეზე** მითითებულზე ხანგრძლივი დაჭერით.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "სულ: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "სასწავლო მასალის არჩევა",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "შეიყვანეთ ტექსტი თარგმნისთვის",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "მიმდინარეობს შენახვა...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "თარგმნეთ შეყვანილი ტექსტი.",
   "tutorialSaveTitle": "შენახვა",
   "tutorialSaveDesc": "შეინახეთ თარგმნილი შედეგები თქვენს სასწავლო ჩანაწერებში.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI ჩეთი",
+  "tutorialAiChatDesc": "ივარჯიშეთ რეალურ საუბრებში AI პერსონაჟებთან ერთად.",
   "tutorialM2SelectTitle": "მასალის არჩევა",
   "tutorialM2SelectDesc": "აირჩიეთ მასალა შესასწავლად მასალების ნაკრების ხატულაზე (📚) ზედა ზოლზე დაჭერით.",
-  "tutorialM3SelectDesc": "აირჩიეთ მასალა სავარჯიშოდ მასალების ნაკრების ხატულაზე (📚) ზედა ზოლზე დაჭერით.",
   "tutorialM2ListTitle": "სწავლის სია",
   "tutorialM2ListDesc": "ამ ბარათზე ხანგრძლივი დაჭერით (Long Click) შეგიძლიათ წაშალოთ იგი. შეამოწმეთ შენახული წინადადებები და გადააბრუნეთ ისინი.",
   "tutorialM3SelectTitle": "მასალის არჩევა",
+  "tutorialM3SelectDesc": "აირჩიეთ მასალა სავარჯიშოდ მასალების ნაკრების ხატულაზე (📚) ზედა ზოლზე დაჭერით.",
   "tutorialM3IntervalTitle": "ინტერვალის დაყენება",
   "tutorialM3IntervalDesc": "დაარეგულირეთ ლოდინის დრო წინადადებებს შორის.",
   "tutorialM3StartTitle": "ვარჯიშის დაწყება",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "გაზრდა",
   "languageSettings": "ენის პარამეტრები",
   "tutorialM2DropdownDesc": "ზედა მენიუს საშუალებით შეგიძლიათ აირჩიოთ სასწავლო მასალა.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "ჩამოტვირთეთ JSON ფაილი თქვენი მოწყობილობის საქაღალდიდან.",
   "tutorialLangSettingsTitle": "ენის პარამეტრები",
   "tutorialLangSettingsDesc": "დააყენეთ წყარო ენა და სამიზნე ენა თარგმნისთვის.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "დაიცავით ბაზა სიტყვების თქმით, სანამ მტრები მოვლენ.",
   "dialogueQuestTitle": "დიალოგის ქვესტი",
   "dialogueQuestDesc": "ივარჯიშეთ დიალოგში სიტუაციური თამაშის საშუალებით. აირჩიეთ და თქვით შესაბამისი პასუხები.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "ტიპი:",
   "labelWord": "სიტყვა",
   "labelSentence": "წინადადება",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "ჯერ საუბრები არ არის",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "სცადეთ ახალი საუბრის დაწყება სავარჯიშოდ!",
   "chatFromConversation": "საუბრის ამონარიდი ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "ადგილობრივი მეგობარი",
   "chatUntitled": "უსათაურო საუბარი",
   "chatAiChat": "ჩეთი",
-  "tutorialAiChatTitle": "AI ჩეთი",
-  "tutorialAiChatDesc": "ივარჯიშეთ რეალურ საუბრებში AI პერსონაჟებთან ერთად.",
   "mode1SelectedMaterial": "ამჟამად არჩეული მასალების ნაკრები: {name}",
   "basicWordRepository": "სიტყვების ძირითადი საცავი",
   "basicSentenceRepository": "წინადადებების ძირითადი საცავი",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "არსებული სათაურის არჩევა",
   "addTagHint": "ტეგის დამატება...",
   "save": "შენახვა",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "გთხოვთ, გადაამოწმოთ ელფოსტა ავტორიზაციის დასასრულებლად."
 }

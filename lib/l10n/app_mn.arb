@@ -1,5 +1,10 @@
 {
   "@@locale": "mn",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Тусламж & Заавар",
   "helpTabModes": "Горим тайлбар",
   "helpTabJson": "JSON формат",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "AI дүртэй ярилцаж, бодит харилцан яриаг дадлагажуулаарай.",
   "helpModeChatDetails": "• AI чат: Өөрийн хэлээр ярьж ярианы дадлага хийх\n• Олон дүр: Ярианы бөмбөлөгийн дээрх цэсээр харилцагчийн хүйс/хэл/нэрийг өөрчлөх боломжтой\n• Хамтрагч нэмэх: + товчлуураар шинэ ярилцах хүнтэй (Stranger) нэмэх\n• GPS: Одоогийн байршилд суурилсан драм\n• Автомат хадгалах: Ярианы агуулгыг автоматаар орчуулж хадгалах",
   "helpJsonDesc": "Mode 3-т ашиглах сургалтын материалыг JSON файлаар импортлохын тулд дараах форматыг баримтална уу:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Бүхэл ярианы багцыг JSON файлаар импортлох.",
   "helpDialogueImportDetails": "• JSON бүтэц: `entries`-ийн оронд `dialogues` массивыг ашиглах\n• Автомат сэргээлт: Ярианы гарчиг, дүр, мессежийн дарааллыг сэргээнэ.\n• Байршил: Импортолсон яриа нь AI чат горимын 'Түүх' таб дээр гарч ирнэ.",
   "helpTourDesc": "**Тодруулсан хүрээ** нь үндсэн функцийг чиглүүлдэг.\n(Жишээ нь: **Тодруулсан хүрээ** нь зааж буй картыг удаан дарснаар устгах боломжтой.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Нийт: {count} ширхэг",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Сурах материал сонгох",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Орчуулах текстийг оруулна уу",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Хадгалж байна...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Оруулсан текстийг орчуулна.",
   "tutorialSaveTitle": "Хадгалах",
   "tutorialSaveDesc": "Орчуулсан үр дүнг сургалтын түүхэнд хадгалаарай.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI чат",
+  "tutorialAiChatDesc": "AI дүртэй бодит ярианы дадлага хийж үзээрэй.",
   "tutorialM2SelectTitle": "Материал сонгох",
   "tutorialM2SelectDesc": "Дээд талын апп баар дээрх цуглуулгын дүрс (📚)-г дарж сурах материалаа сонгоно уу.",
-  "tutorialM3SelectDesc": "Дээд талын апп баар дээрх цуглуулгын дүрс (📚)-г дарж дадлага хийх материалаа сонгоно уу.",
   "tutorialM2ListTitle": "Сурах жагсаалт",
   "tutorialM2ListDesc": "Энэ картыг удаан дарснаар (Long Click) устгах боломжтой. Хадгалсан өгүүлбэрийг шалгаж эргүүлж үзээрэй.",
   "tutorialM3SelectTitle": "Материал сонгох",
+  "tutorialM3SelectDesc": "Дээд талын апп баар дээрх цуглуулгын дүрс (📚)-г дарж дадлага хийх материалаа сонгоно уу.",
   "tutorialM3IntervalTitle": "Завсар тохируулах",
   "tutorialM3IntervalDesc": "Өгүүлбэр хоорондын хүлээх хугацааг тохируулна.",
   "tutorialM3StartTitle": "Дадлага эхлүүлэх",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Нэмэгдүүлэх",
   "languageSettings": "Хэлний тохиргоо",
   "tutorialM2DropdownDesc": "Дээд цэсээр дамжуулан сурах материалаа сонгох боломжтой.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Төхөөрөмжийн фолдероос JSON файлыг оруулах.",
   "tutorialLangSettingsTitle": "Хэлний тохиргоо",
   "tutorialLangSettingsDesc": "Орчуулах эх хэл болон зорилтот хэлийг тохируулна.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Дайсан ирэхээс өмнө үгийг хэлж баазыг хамгаалаарай.",
   "dialogueQuestTitle": "Ярианы даалгавар",
   "dialogueQuestDesc": "Нөхцөл байдлын жүжгээр ярианы дадлага хийгээрэй. Тохиромжтой хариултыг сонгож хэлээрэй.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Төрөл:",
   "labelWord": "Үг",
   "labelSentence": "Өгүүлбэр",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Одоогоор яриа байхгүй байна",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Дадлага хийхийн тулд шинэ яриа эхлүүлээд үзээрэй!",
   "chatFromConversation": "Ярианаас иш татах ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Орон нутгийн найз",
   "chatUntitled": "Гарчиггүй яриа",
   "chatAiChat": "Чат",
-  "tutorialAiChatTitle": "AI чат",
-  "tutorialAiChatDesc": "AI дүртэй бодит ярианы дадлага хийж үзээрэй.",
   "mode1SelectedMaterial": "Одоогоор сонгогдсон материал: {name}",
   "basicWordRepository": "Үндсэн үгсийн сан",
   "basicSentenceRepository": "Үндсэн өгүүлбэрийн сан",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Одоо байгаа нэрийг сонгох",
   "addTagHint": "Тэмдэг нэмэх...",
   "save": "Хадгалах",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Имэйлээ шалгаж баталгаажуулалтаа дуусгана уу."
 }

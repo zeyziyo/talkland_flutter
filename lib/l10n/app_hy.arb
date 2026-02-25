@@ -1,5 +1,10 @@
 {
   "@@locale": "hy",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Օգնություն և ուղեցույց",
   "helpTabModes": "Ռեժիմների նկարագրություն",
   "helpTabJson": "JSON ձևաչափ",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Զրուցեք AI պերսոնաժի հետ և մարզվեք իրական խոսակցություններում:",
   "helpModeChatDetails": "• AI զրույց՝ խոսեք ձեր լեզվով՝ խոսակցական լեզուն մարզելու համար\n• Բազմաթիվ անձեր՝ փոխեք մյուս կողմի սեռը/լեզուն/անունը խոսքի փուչիկի վրայի ընտրացանկով\n• Գործընկեր ավելացնել՝ ավելացրեք նոր զրուցակից (Օտարերկրացի) + կոճակով\n• GPS՝ ընթացիկ գտնվելու վայրի վրա հիմնված իրավիճակ\n• Ավտոմատ պահպանում՝ զրույցի բովանդակության ավտոմատ թարգմանություն և պահպանում",
   "helpJsonDesc": "Հետևեք հետևյալ ձևաչափին Mode 3-ում օգտագործելու համար ուսումնական նյութերը JSON ֆայլի մեջ ներմուծելու համար.",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Ներմուծեք ամբողջական երկխոսության հավաքածուները JSON ֆայլերի միջոցով:",
   "helpDialogueImportDetails": "• JSON կառուցվածք՝ օգտագործեք `dialogues` զանգվածը `entries`-ի փոխարեն\n• Ավտոմատ վերականգնում՝ երկխոսության վերնագրերը, անձերը, հաղորդագրությունների կարգը վերականգնվում են:\n• Գտնվելու վայրը՝ ներմուծված զրույցները հայտնվում են AI զրույցի ռեժիմի «Պատմություն» ներդիրում:",
   "helpTourDesc": "**Ընդգծված շրջանակը** ուղղորդում է հիմնական գործառույթները:\n(Օրինակ՝ դուք կարող եք ջնջել **ընդգծված շրջանակով** նշված քարտը երկար սեղմելով):",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Ընդհանուր. {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Ընտրել ուսումնական նյութեր",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Մուտքագրեք թարգմանելու տեքստը",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Պահպանվում է...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Թարգմանեք մուտքագրված տեքստը։",
   "tutorialSaveTitle": "Պահպանել",
   "tutorialSaveDesc": "Պահպանեք թարգմանված արդյունքները ուսուցման գրառումներում:",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI Զրույց",
+  "tutorialAiChatDesc": "Մարզեք իրական զրույցներ AI անձի հետ:",
   "tutorialM2SelectTitle": "Նյութի ընտրություն",
   "tutorialM2SelectDesc": "Սեղմեք վերևի հավելվածի գործիքագոտու նյութերի հավաքածուի պատկերակը (📚)՝ ուսումնասիրելու համար նյութ ընտրելու համար։",
-  "tutorialM3SelectDesc": "Սեղմեք վերևի հավելվածի գործիքագոտու նյութերի հավաքածուի պատկերակը (📚)՝ մարզվելու համար նյութ ընտրելու համար։",
   "tutorialM2ListTitle": "Ուսուցման ցուցակ",
   "tutorialM2ListDesc": "Երկար սեղմեք (Երկար սեղմում) այս քարտի վրա՝ այն ջնջելու համար։ Ստուգեք պահպանված նախադասությունները և շրջեք այն։",
   "tutorialM3SelectTitle": "Նյութի ընտրություն",
+  "tutorialM3SelectDesc": "Սեղմեք վերևի հավելվածի գործիքագոտու նյութերի հավաքածուի պատկերակը (📚)՝ մարզվելու համար նյութ ընտրելու համար։",
   "tutorialM3IntervalTitle": "Միջակայքի կարգավորում",
   "tutorialM3IntervalDesc": "Կարգավորեք սպասման ժամանակը նախադասությունների միջև:",
   "tutorialM3StartTitle": "Սկսել մարզումը",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Ավելացնել",
   "languageSettings": "Լեզվի կարգավորումներ",
   "tutorialM2DropdownDesc": "Դուք կարող եք ընտրել ուսումնասիրելու նյութերը վերևի ընտրացանկի միջոցով:",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Ներմուծեք JSON ֆայլ ձեր սարքի պանակից։",
   "tutorialLangSettingsTitle": "Լեզվի կարգավորումներ",
   "tutorialLangSettingsDesc": "Սահմանեք սկզբնաղբյուր լեզուն և թարգմանելու թիրախային լեզուն։",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Պաշտպանեք ձեր բազան՝ ասելով բառեր, նախքան թշնամին կժամանի:",
   "dialogueQuestTitle": "Երկխոսության որոնում",
   "dialogueQuestDesc": "Մարզեք խոսակցությունները դերային խաղերի միջոցով: Ընտրեք և խոսեք համապատասխան պատասխաններ:",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Տեսակ.",
   "labelWord": "Բառ",
   "labelSentence": "Նախադասություն",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Դեռևս զրույցներ չկան",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Սկսեք նոր զրույց մարզվելու համար!",
   "chatFromConversation": "Քաղված զրույցից ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Տեղացի ընկեր",
   "chatUntitled": "Անանուն զրույց",
   "chatAiChat": "Զրույց",
-  "tutorialAiChatTitle": "AI Զրույց",
-  "tutorialAiChatDesc": "Մարզեք իրական զրույցներ AI անձի հետ:",
   "mode1SelectedMaterial": "Ընթացիկ ընտրված նյութերի հավաքածու. {name}",
   "basicWordRepository": "Հիմնական բառերի պահեստ",
   "basicSentenceRepository": "Հիմնական նախադասությունների պահեստ",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Ընտրել առկա վերնագիրը",
   "addTagHint": "Ավելացնել թեգ...",
   "save": "Պահպանել",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Ստուգեք ձեր էլ. փոստը՝ նույնականացումն ավարտելու համար:"
 }

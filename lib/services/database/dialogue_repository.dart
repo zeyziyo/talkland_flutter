@@ -1,4 +1,5 @@
 import 'package:sqflite/sqflite.dart';
+import 'package:flutter/foundation.dart';
 import '../../models/chat_participant.dart';
 import 'database_helper.dart';
 
@@ -86,10 +87,11 @@ class DialogueRepository {
     }
 
     // Phase 129: Count from dialogues table
+    // Phase 160 Fix: Match user ID 'me' for sentence count
     return await db.rawQuery('''
       SELECT d.*,
-        (SELECT COUNT(*) FROM dialogues m WHERE m.session_id = d.id AND LOWER(m.speaker) = 'user') as sentence_count,
-        (SELECT COUNT(*) FROM dialogues m WHERE m.session_id = d.id AND LOWER(m.speaker) != 'user') as ai_count
+        (SELECT COUNT(*) FROM dialogues m WHERE m.session_id = d.id AND (LOWER(m.speaker) = 'user' OR m.speaker = 'me')) as sentence_count,
+        (SELECT COUNT(*) FROM dialogues m WHERE m.session_id = d.id AND (LOWER(m.speaker) != 'user' AND m.speaker != 'me')) as ai_count
       FROM dialogue_groups d
       $whereClause
       ORDER BY d.created_at DESC
@@ -120,6 +122,7 @@ class DialogueRepository {
       'speaker': data['speaker_id'], // 반드시 ID를 저장 (v14.6)
       'content': data['source_text'] ?? '', 
       'translation': data['target_text'] ?? '',
+      'sequence_order': data['sequence_order'], // 순서값 저장
       'created_at': data['created_at'] ?? DateTime.now().toIso8601String(),
     };
     
@@ -220,11 +223,25 @@ class DialogueRepository {
   /// Phase 4: Get all unique participants for management UI
   static Future<List<ChatParticipant>> getAllUniqueParticipants() async {
     final db = await _db;
+    
+    // Safety Check: Table existence
+    try {
+      final tableCheck = await db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name='participants'");
+      debugPrint('[DialogueRepository] Table check "participants": $tableCheck');
+      
+      final countCheck = await db.rawQuery("SELECT COUNT(*) as count FROM participants");
+      debugPrint('[DialogueRepository] Raw count in "participants": $countCheck');
+    } catch (e) {
+      debugPrint('[DialogueRepository] Safety check failed (might mean table missing): $e');
+    }
+
     final List<Map<String, dynamic>> maps = await db.rawQuery('''
       SELECT DISTINCT id, name, role, gender, lang_code 
       FROM participants 
       WHERE name != '' AND name != 'Group' AND name != 'group'
     ''');
+    debugPrint('[DialogueRepository] getAllUniqueParticipants fetched: ${maps.length} rows');
+    
     return List.generate(maps.length, (i) {
       return ChatParticipant(
         id: maps[i]['id'],
@@ -232,17 +249,35 @@ class DialogueRepository {
         name: maps[i]['name'],
         role: maps[i]['role'],
         gender: maps[i]['gender'] ?? 'female',
-        langCode: maps[i]['lang_code'] ?? 'en-US',
+        langCode: maps[i]['lang_code'] ?? 'en_US',
       );
     });
   }
 
+  static Future<void> updateMessageSpeaker(String dialogueId, String oldSpeakerId, String newSpeakerId) async {
+    final db = await _db;
+    await db.update(
+      'dialogues',
+      {'speaker': newSpeakerId}, // We store participant_id in 'speaker' column since v19
+      where: 'session_id = ? AND speaker = ?',
+      whereArgs: [dialogueId, oldSpeakerId],
+    );
+  }
+
+  static Future<void> removeParticipantFromDialogue(String dialogueId, String participantId) async {
+    final db = await _db;
+    await db.delete(
+      'dialogue_participants',
+      where: 'dialogue_id = ? AND participant_id = ?',
+      whereArgs: [dialogueId, participantId],
+    );
+  }
+
   static Future<void> deleteParticipant(String id) async {
     final db = await _db;
-    await db.delete('participants', where: 'id = ?', whereArgs: [id]);
-    // Also delete links? Or keep history? 
-    // If we delete from master, we should probably delete links or set to null?
-    // Foreign key constraint might handle it or we leave it.
-    // For now, let's just delete the master record.
+    await db.transaction((txn) async {
+      await txn.delete('dialogue_participants', where: 'participant_id = ?', whereArgs: [id]);
+      await txn.delete('participants', where: 'id = ?', whereArgs: [id]);
+    });
   }
 }

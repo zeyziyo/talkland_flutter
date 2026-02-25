@@ -1,5 +1,10 @@
 {
   "@@locale": "lv",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Palīdzība un ceļveži",
   "helpTabModes": "Režīmu skaidrojumi",
   "helpTabJson": "JSON formāts",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Praktizējiet sarunas reālajā dzīvē, sarunājoties ar AI personu.",
   "helpModeChatDetails": "• AI tērzēšana: runājiet savā valodā, lai praktizētu sarunu\n• Vairākas personas: mainiet otras puses dzimumu/valodu/vārdu ar izvēlni virs runas burbuļa\n• Partnera pievienošana: pievienojiet jaunu sarunu partneri (Svešinieku) ar pogu +\n• GPS: uz atrašanās vietu balstīti scenāriji\n• Automātiska saglabāšana: automātiska sarunu satura tulkošana un saglabāšana",
   "helpJsonDesc": "Lai importētu mācību materiālus, kas jāizmanto 3. režīmā, kā JSON failu, ievērojiet šo formātu:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Importējiet veselu dialogu kopumu kā JSON failu.",
   "helpDialogueImportDetails": "• JSON struktūra: izmantojiet `dialogues` masīvu `entries` vietā\n• Automātiska atkopšana: tiek atjaunots dialoga nosaukums, persona un ziņojumu secība.\n• Atrašanās vieta: importētie dialogi parādās AI tērzēšanas režīma cilnē 'Vēsture'.",
   "helpTourDesc": "**Izgaismots aplis** sniedz norādījumus par galvenajām funkcijām.\n(Piemērs: varat ilgi nospiest kartīti, uz kuru norāda **izgaismots aplis**, lai to izdzēstu.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Kopā: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Atlasiet mācību materiālu",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Ievadiet tekstu, ko tulkot",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Saglabā...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Tulko ievadīto tekstu.",
   "tutorialSaveTitle": "Saglabāt",
   "tutorialSaveDesc": "Saglabājiet tulkotos rezultātus mācību ierakstos.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI tērzēšana",
+  "tutorialAiChatDesc": "Praktizējiet sarunas reālajā dzīvē ar AI personu.",
   "tutorialM2SelectTitle": "Materiāla izvēle",
   "tutorialM2SelectDesc": "Nospiediet materiālu kopuma ikonu (📚) augšējā lietotnes joslā, lai izvēlētos materiālu, ko mācīties.",
-  "tutorialM3SelectDesc": "Nospiediet materiālu kopuma ikonu (📚) augšējā lietotnes joslā, lai izvēlētos materiālu, ko praktizēt.",
   "tutorialM2ListTitle": "Mācību saraksts",
   "tutorialM2ListDesc": "Varat ilgi nospiest šo kartīti, lai to izdzēstu. Pārbaudiet saglabātos teikumus un apgrieziet tos.",
   "tutorialM3SelectTitle": "Materiāla izvēle",
+  "tutorialM3SelectDesc": "Nospiediet materiālu kopuma ikonu (📚) augšējā lietotnes joslā, lai izvēlētos materiālu, ko praktizēt.",
   "tutorialM3IntervalTitle": "Intervāla iestatīšana",
   "tutorialM3IntervalDesc": "Pielāgojiet gaidīšanas laiku starp teikumiem.",
   "tutorialM3StartTitle": "Sākt praktizēties",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Palielināt",
   "languageSettings": "Valodas iestatījumi",
   "tutorialM2DropdownDesc": "Varat izvēlēties materiālu, ko mācīties, izmantojot augšējo izvēlni.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Importējiet JSON failu no ierīces mapes.",
   "tutorialLangSettingsTitle": "Valodas iestatījumi",
   "tutorialLangSettingsDesc": "Iestatiet pirmvalodu un mērķa valodu, ko tulkot.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Aizstāviet bāzi, izrunājot vārdus, pirms ienaidnieks sasniedz.",
   "dialogueQuestTitle": "Dialoga meklējums",
   "dialogueQuestDesc": "Praktizējiet sarunas, izmantojot situācijas. Atlasiet un izrunājiet piemērotas atbildes.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Veids:",
   "labelWord": "Vārds",
   "labelSentence": "Teikums",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Vēl nav sarunu",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Sāciet jaunu sarunu, lai praktizētu!",
   "chatFromConversation": "Sarunas izvilkums ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Vietējais draugs",
   "chatUntitled": "Saruna bez nosaukuma",
   "chatAiChat": "Tērzēšana",
-  "tutorialAiChatTitle": "AI tērzēšana",
-  "tutorialAiChatDesc": "Praktizējiet sarunas reālajā dzīvē ar AI personu.",
   "mode1SelectedMaterial": "Pašlaik atlasīts materiālu kopums: {name}",
   "basicWordRepository": "Pamata vārdu repozitorijs",
   "basicSentenceRepository": "Pamata teikumu repozitorijs",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Izvēlieties esošu nosaukumu",
   "addTagHint": "Pievienot tagu...",
   "save": "Saglabāt",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Lūdzu, pārbaudiet savu e-pastu, lai pabeigtu verifikāciju."
 }

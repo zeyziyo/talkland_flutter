@@ -1,5 +1,10 @@
 {
   "@@locale": "lo",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "ຄູ່ມືແນະນຳ",
   "helpTabModes": "ຄຳອະທິບາຍໂໝດ",
   "helpTabJson": "ຮູບແບບ JSON",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "ສົນທະນາກັບ AI ເພື່ອຝຶກການສົນທະນາຕົວຈິງ.",
   "helpModeChatDetails": "• ສົນທະນາ AI: ເວົ້າດ້ວຍພາສາຂອງເຈົ້າເພື່ອຝຶກສົນທະນາ\n• Multi Persona: ສາມາດປ່ຽນເພດ/ພາສາ/ຊື່ຂອງຄູ່ສົນທະນາໄດ້ດ້ວຍເມນູເທິງຟອງຄຳເວົ້າ\n• ເພີ່ມຄູ່ຮ່ວມງານ: ເພີ່ມຄູ່ສົນທະນາໃໝ່ (Stranger) ດ້ວຍປຸ່ມ +\n• GPS: ສະຖານະການທີ່ອີງໃສ່ສະຖານທີ່ປະຈຸບັນ\n• ບັນທຶກອັດຕະໂນມັດ: ແປ ແລະບັນທຶກເນື້ອໃນການສົນທະນາອັດຕະໂນມັດ",
   "helpJsonDesc": "ເພື່ອເອົາເຂົ້າເອກະສານການຮຽນຮູ້ໃນຮູບແບບ JSON ທີ່ຈະໃຊ້ໃນໂໝດ 3, ໃຫ້ເຮັດຕາມຮູບແບບຕໍ່ໄປນີ້:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "ນຳເຂົ້າຊຸດການສົນທະນາທັງໝົດເປັນໄຟລ໌ JSON.",
   "helpDialogueImportDetails": "• ໂຄງສ້າງ JSON: ໃຊ້ແຖວ 'dialogues' ແທນ 'entries'\n• ການກູ້ຄືນອັດຕະໂນມັດ: ຊື່ຫົວຂໍ້ການສົນທະນາ, Persona, ລໍາດັບຂໍ້ຄວາມຈະຖືກກູ້ຄືນ.\n• ສະຖານທີ່: ການສົນທະນາທີ່ນໍາເຂົ້າມາຈະປາກົດຢູ່ໃນແຖບ 'ປະຫວັດ' ຂອງໂໝດສົນທະນາ AI.",
   "helpTourDesc": "**ວົງກົມເນັ້ນ** ຈະນຳພາເຈົ້າຜ່ານຄຸນສົມບັດຫຼັກ.\n(ຕົວຢ່າງ: ກົດຄ້າງໄວ້ທີ່ບັດທີ່ **ວົງກົມເນັ້ນ** ຊີ້ບອກເພື່ອລຶບ).",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "ທັງໝົດ: {count} ລາຍການ",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "ເລືອກເອກະສານການຮຽນ",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "ປ້ອນຂໍ້ຄວາມທີ່ຈະແປ",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "ກຳລັງບັນທຶກ...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "ແປຂໍ້ຄວາມທີ່ປ້ອນເຂົ້າ.",
   "tutorialSaveTitle": "ບັນທຶກ",
   "tutorialSaveDesc": "ບັນທຶກຜົນການແປໄວ້ໃນບັນທຶກການຮຽນຮູ້.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "ສົນທະນາ AI",
+  "tutorialAiChatDesc": "ປະຕິບັດການສົນທະນາທີ່ແທ້ຈິງກັບ AI Personas.",
   "tutorialM2SelectTitle": "ເລືອກເອກະສານ",
   "tutorialM2SelectDesc": "ກົດໄອຄອນຊຸດເອກະສານ (📚) ຢູ່ເທິງແຖບແອັບເພື່ອເລືອກເອກະສານທີ່ຈະຮຽນ.",
-  "tutorialM3SelectDesc": "ກົດໄອຄອນຊຸດເອກະສານ (📚) ຢູ່ເທິງແຖບແອັບເພື່ອເລືອກເອກະສານທີ່ຈະຝຶກ.",
   "tutorialM2ListTitle": "ລາຍການຮຽນຮູ້",
   "tutorialM2ListDesc": "ກົດຄ້າງໄວ້ (Long Click) ທີ່ບັດນີ້ເພື່ອລຶບ. ກວດເບິ່ງປະໂຫຍກທີ່ບັນທຶກໄວ້ ແລະປີ້ນມັນ.",
   "tutorialM3SelectTitle": "ເລືອກເອກະສານ",
+  "tutorialM3SelectDesc": "ກົດໄອຄອນຊຸດເອກະສານ (📚) ຢູ່ເທິງແຖບແອັບເພື່ອເລືອກເອກະສານທີ່ຈະຝຶກ.",
   "tutorialM3IntervalTitle": "ຕັ້ງຄ່າໄລຍະຫ່າງ",
   "tutorialM3IntervalDesc": "ປັບເວລາລໍຖ້າລະຫວ່າງປະໂຫຍກ.",
   "tutorialM3StartTitle": "ເລີ່ມຝຶກ",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "ເພີ່ມຂຶ້ນ",
   "languageSettings": "ການຕັ້ງຄ່າພາສາ",
   "tutorialM2DropdownDesc": "ທ່ານສາມາດເລືອກເອກະສານທີ່ຈະຮຽນຮູ້ຜ່ານເມນູດ້ານເທິງ.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "ນຳເຂົ້າໄຟລ໌ JSON ຈາກໂຟນເດີ້ໃນອຸປະກອນຂອງທ່ານ.",
   "tutorialLangSettingsTitle": "ການຕັ້ງຄ່າພາສາ",
   "tutorialLangSettingsDesc": "ຕັ້ງຄ່າພາສາຕົ້ນສະບັບ ແລະພາສາເປົ້າໝາຍທີ່ຈະແປ.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "ປ້ອງກັນຖານໂດຍການເວົ້າຄໍາສັບກ່ອນທີ່ສັດຕູຈະມາຮອດ.",
   "dialogueQuestTitle": "Dialogue Quest",
   "dialogueQuestDesc": "ຝຶກການສົນທະນາຜ່ານສະຖານະການ. ເລືອກຄໍາຕອບທີ່ເໝາະສົມ ແລະເວົ້າ.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "ປະເພດ:",
   "labelWord": "ຄໍາສັບ",
   "labelSentence": "ປະໂຫຍກ",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "ຍັງບໍ່ມີການສົນທະນາ",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "ເລີ່ມຕົ້ນການສົນທະນາໃໝ່ສຳລັບການຝຶກຊ້ອມ!",
   "chatFromConversation": "ຄັດຈາກການສົນທະນາ ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "ເພື່ອນທ້ອງຖິ່ນ",
   "chatUntitled": "ບໍ່ມີຊື່ການສົນທະນາ",
   "chatAiChat": "ສົນທະນາ",
-  "tutorialAiChatTitle": "ສົນທະນາ AI",
-  "tutorialAiChatDesc": "ປະຕິບັດການສົນທະນາທີ່ແທ້ຈິງກັບ AI Personas.",
   "mode1SelectedMaterial": "ຊຸດເອກະສານທີ່ເລືອກໃນປັດຈຸບັນ: {name}",
   "basicWordRepository": "ບ່ອນເກັບມ້ຽນຄຳສັບພື້ນຖານ",
   "basicSentenceRepository": "ບ່ອນເກັບມ້ຽນປະໂຫຍກພື້ນຖານ",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "ເລືອກຫົວຂໍ້ທີ່ມີຢູ່",
   "addTagHint": "ເພີ່ມແທັກ...",
   "save": "ບັນທຶກ",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "ກະລຸນາກວດສອບອີເມວເພື່ອສໍາເລັດການຢືນຢັນ."
 }

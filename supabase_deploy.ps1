@@ -17,7 +17,7 @@ if (-not (Test-Path $npx)) {
 
 # 2. Set Secrets (MANUAL STEP - DO NOT HARDCODE IN SCRIPT)
 Write-Host "`n[2/3] Skipping hardcoded secret set... (Set manually via npx supabase secrets set)" -ForegroundColor Yellow
-# & $npx -y supabase secrets set GEMINI_API_KEY=AIzaSyCHZPInTBC4wdERw3SN94H0dKUQMpy5Nqg --project-ref soxdzielqtabyradajle
+# & $npx -y supabase secrets set GEMINI_API_KEY=YOUR_KEY_HERE --project-ref soxdzielqtabyradajle
 
 # 3. Deploy
 Write-Host "`n[3/3] Deploying Function..." -ForegroundColor Green

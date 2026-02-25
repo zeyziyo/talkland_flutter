@@ -8,18 +8,61 @@ import 'sentence_repository.dart';
 class UnifiedRepository {
   static Future<Database> get _db async => await DatabaseHelper.database;
 
-  static int generateContentId(String text, String? properties) {
-    // Phase 2: Content-Based Hash ID Generation
-    final String combined = '$text|${properties ?? ""}';
-    final bytes = utf8.encode(combined);
+  /// 내용 기반 해시 ID 생성 (integrated_data_structure.md 3.1 준수)
+  static int generateContentId(String text, {required String type, String? pos, String? style}) {
+    // 1. 정규화 (소문자 + 앞뒤 공백 제거)
+    String normalizedText = text.trim().toLowerCase();
     
+    // 2. 부호 보정 (문장의 경우) - integrated_data_structure.md 3.1.B 준수
+    // (여기서는 간단히 공백 처리 위주로 하며, 명시적인 form_type이 들어오면 호출부에서 보정 권장)
+    
+    // 3. 구성 요소 결합
+    String combined;
+    if (type == 'word') {
+      // Rule 3.1.A: hash(영어/피봇단어 + 품사)
+      combined = '${normalizedText}_${(pos ?? "unknown").toLowerCase()}';
+    } else {
+      // Rule 3.1.B: hash(표준_문장 + 문체)
+      combined = '${normalizedText}_${(style ?? "formal").toLowerCase()}';
+    }
+    
+    // 4. FNV-1a Hash 알고리즘 (32비트)
+    final bytes = utf8.encode(combined);
     int hash = 0x811c9dc5;
     for (var b in bytes) {
       hash ^= b;
-      hash *= 0x01000193;
-      hash &= 0x7FFFFFFF; 
+      hash *= 0x01000193; // FNV Prime
+      hash &= 0xFFFFFFFF; // Ensure 32-bit (unsigned behavior simulation)
     }
-    return hash == 0 ? 1 : hash;
+    
+    // Dart int는 64비트이므로 signed로 변환되거나 클 수 있으므로 
+    // 저장하기 안전한 양의 정수 범위(SQLite INTEGER는 64비트 가능)로 제한
+    return hash.abs() == 0 ? 1 : hash.abs();
+  }
+
+  /// AppState 등에서 사용하기 편리한 래퍼
+  static int generateGroupId({
+    required String text, 
+    required String type, 
+    String? pos, 
+    String? style,
+    String? formType,
+  }) {
+    String standardText = text.trim();
+    if (type == 'sentence' && formType != null) {
+      // Rule 3.1.B: 부호 보정
+      final suffix = standardText.endsWith('.') || standardText.endsWith('?') || standardText.endsWith('!');
+      if (!suffix) {
+        if (formType == 'Question') {
+          standardText += '?';
+        } else if (formType == 'Exclamation') {
+          standardText += '!';
+        } else {
+          standardText += '.';
+        }
+      }
+    }
+    return generateContentId(standardText, type: type, pos: pos, style: style);
   }
 
   static Future<int> saveUnifiedRecord({
@@ -48,9 +91,14 @@ class UnifiedRepository {
     if (groupId != null) {
       gId = groupId;
     } else {
-      // Generate ID from content
-      final props = '$type|$lang'; 
-      gId = generateContentId(text, props);
+      // Phase 160: Generate Content-Based ID (Standard Rule)
+      gId = generateGroupId(
+        text: text, 
+        type: type, 
+        pos: pos, 
+        style: style, 
+        formType: formType
+      );
     }
     
     if (groupId == null && syncSubject != null && sequenceOrder != null) {
@@ -116,6 +164,7 @@ class UnifiedRepository {
       'caption': note, // Note plays dual role: shared content note & personal caption
       'tags': tags?.join(','),
       'is_memorized': 0,
+      'created_at_meta': timestamp, // Pass separate timestamp for meta created_at
     };
 
     // 7. Insert via Repository (which handles split)
@@ -241,7 +290,7 @@ class UnifiedRepository {
        // Meta relinking handled above.
 
        // 3. Update Dialogues (if they used group_id references? No, Dialogues use UUIDs now)
-       // Old chat_messages update removed.
+       // Old user_dialogue_messages update removed.
     });
     print('[DB] Relinked (with merge) group_id: $oldId -> $newId');
   }

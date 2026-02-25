@@ -27,6 +27,8 @@ import '../services/supabase/supabase_auth_service.dart';
 import '../l10n/app_localizations.dart';
 import '../constants/app_constants.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:geocoding/geocoding.dart';
 
 part 'app_state_auth.dart';
 part 'app_state_mode1.dart';
@@ -240,7 +242,7 @@ class AppState extends ChangeNotifier {
   List<String> _selectedTags = [];
   int? _filterLimit;
   String? _filterStartsWith;
-  Object? _selectedMaterialId;
+  String? _selectedNotebookTitle;
   List<Map<String, dynamic>> _materialRecords = [];
   String _recordTypeFilter = 'word';
   String _searchQuery = '';
@@ -321,7 +323,7 @@ class AppState extends ChangeNotifier {
   String get selectedSaveSubject => _selectedSaveSubject;
   List<Map<String, dynamic>> get onlineMaterials => _onlineMaterials;
   bool get isLoadingOnlineMaterials => _isLoadingOnlineMaterials;
-  Object? get selectedMaterialId => _selectedMaterialId;
+  String? get selectedNotebookTitle => _selectedNotebookTitle;
   List<String> get availableTags => _availableTags;
   List<String> get selectedTags => _selectedTags;
   int? get filterLimit => _filterLimit;
@@ -372,58 +374,78 @@ class AppState extends ChangeNotifier {
   List<ChatParticipant> get globalParticipants => _globalParticipants;
 
   Future<void> loadGlobalParticipants() async {
+    if (_globalParticipantsLoading) {
+      debugPrint('[AppState] loadGlobalParticipants: Already loading. Skipping.');
+      return;
+    }
+    
+    // 데이터가 이미 있으면 굳이 다시 로드하지 않음 (필요시 force parameter 도입 가능)
+    if (_globalParticipants.isNotEmpty) {
+      debugPrint('[AppState] loadGlobalParticipants: Already has ${_globalParticipants.length} participants. Skipping.');
+      return;
+    }
+
     _globalParticipantsLoading = true;
     notifyListeners();
     
     try {
-      debugPrint('>>> APPSTATE [4] loadGlobalParticipants Try Start');
       debugPrint('[AppState] Starting Sequential Global Participants Loading...');
       _globalParticipants = await DialogueRepository.getAllUniqueParticipants();
-      debugPrint('>>> APPSTATE [5] Unique Participants fetched: ${_globalParticipants.length}');
+      debugPrint('[AppState] Unique Participants fetched from DB: ${_globalParticipants.length}');
       
       await _ensureDefaultParticipants();
-      debugPrint('>>> APPSTATE [6] Default Participants ensured.');
+      debugPrint('[AppState] Final Global Participants count: ${_globalParticipants.length}');
       
-    } catch (e) {
+    } catch (e, stack) {
       debugPrint('[AppState] Global Participants Loading Error: $e');
+      debugPrint('[AppState] Stack: $stack');
     } finally {
       _globalParticipantsLoading = false;
-      debugPrint('[AppState] Global Participants Loading Finished. Guard Disconnected.');
+      debugPrint('[AppState] Global Participants Loading Finished.');
       notifyListeners();
     }
   }
 
   /// 기본 참가자('나', 'AI')가 없으면 자동 생성
   Future<void> _ensureDefaultParticipants() async {
-    // Phase 10 Debug: 이름('나', 'AI')까지 확인하여 확실하게 생성 보장
     final hasUserMe = _globalParticipants.any((p) => p.role == 'user' && p.name == '나');
     final hasAiBot = _globalParticipants.any((p) => (p.role == 'ai' || p.role == 'assistant') && p.name == 'AI');
+
+    debugPrint('[AppState] _ensureDefaultParticipants: hasUserMe=$hasUserMe, hasAiBot=$hasAiBot');
 
     if (!hasUserMe) {
       debugPrint('[AppState] Creating default user: me');
       final user = ChatParticipant(
-        id: 'me', // Fixed ID for canonical user
+        id: 'me',
         dialogueId: '',
         name: '나',
         role: 'user',
         gender: _chatUserGender,
         langCode: _sourceLang,
       );
-      await DialogueRepository.insertParticipant(user.toJson());
+      try {
+        await DialogueRepository.insertParticipant(user.toJson());
+      } catch (e) {
+        debugPrint('[AppState] Failed to insert default user: $e');
+      }
       _globalParticipants.insert(0, user);
     }
     
     if (!hasAiBot) {
       debugPrint('[AppState] Creating default AI: ai');
       final ai = ChatParticipant(
-        id: 'ai', // Fixed ID for canonical AI
+        id: 'ai',
         dialogueId: '',
         name: 'AI',
         role: 'ai',
         gender: _chatAiGender,
         langCode: _targetLang,
       );
-      await DialogueRepository.insertParticipant(ai.toJson());
+      try {
+        await DialogueRepository.insertParticipant(ai.toJson());
+      } catch (e) {
+        debugPrint('[AppState] Failed to insert default AI: $e');
+      }
       _globalParticipants.add(ai);
     }
 

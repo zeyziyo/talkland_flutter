@@ -1,5 +1,10 @@
 {
   "@@locale": "am",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "እገዛ & መመሪያ",
   "helpTabModes": "ስለ ሞዶች",
   "helpTabJson": "JSON ቅርጸት",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "ከ AI ሰው ጋር እየተወያዩ ተግባራዊ የንግግር ልምምድ ያድርጉ።",
   "helpModeChatDetails": "• AI ውይይት: በቋንቋዎ በመናገር የንግግር ልምምድ ያድርጉ\n• ብዙ ሰው: ከንግግር አረፋው በላይ ባለው ምናሌ ተናጋሪውን ጾታ/ቋንቋ/ስም መቀየር ይችላሉ\n• አጋር ያክሉ: አዲስ የውይይት አጋር (+ አዝራር) ያክሉ\n• ጂፒኤስ: በአሁኑ ሥፍራ ላይ የተመሠረተ ድራማ\n• ራስ-ሰር አስቀምጥ: የውይይት ይዘት በራስ-ሰር ይተረጎማል እና ይቀመጣል",
   "helpJsonDesc": "በሞድ 3 ላይ ለመጠቀም የጥናት ውሂብን እንደ JSON ፋይል ለማስመጣት የሚከተለውን ቅርጸት ይከተሉ:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "ጠቅላላ የውይይት ስብስብን እንደ JSON ፋይል ያስመጡ።",
   "helpDialogueImportDetails": "• JSON መዋቅር: `entries` ከሚለው ይልቅ `dialogues` ድርድር ይጠቀሙ\n• ራስ-ሰር መልሶ ማግኛ: የውይይት ርዕስ፣ ሰው፣ መልእክት ቅደም ተከተል ይመለሳል\n• ሥፍራ: ያስመጣው ውይይት በ AI የውይይት ሞድ 'የመዝገብ' ትር ላይ ይታያል",
   "helpTourDesc": "**የደመቀው ክበብ** ዋና ዋና ባህሪያትን ይመራል።\n(ለምሳሌ: **የደመቀው ክበብ** የሚያመለክተውን ካርድ በረጅሙ በመጫን መሰረዝ ይችላሉ።)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "ጠቅላላ: {count} ዕቃዎች",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "የጥናት ቁሳቁስ ይምረጡ",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "ለመተርጎም ጽሑፍ ያስገቡ",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "በማስቀመጥ ላይ...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "ያስገቡትን ጽሑፍ ይተርጉሙ።",
   "tutorialSaveTitle": "አስቀምጥ",
   "tutorialSaveDesc": "የተተረጎሙትን ውጤቶች በታሪክ መዝገብ ውስጥ ያስቀምጡ።",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI ቻት",
+  "tutorialAiChatDesc": "ከ AI ሰው ጋር እውነተኛ ውይይቶችን ይለማመዱ።",
   "tutorialM2SelectTitle": "ቁሳቁስ ይምረጡ",
   "tutorialM2SelectDesc": "ቁሳቁሶችን ለማጥናት የቁሳቁስ ስብስብ አዶን (📚) በላይኛው የመተግበሪያ አሞሌ ላይ ይጫኑ።",
-  "tutorialM3SelectDesc": "ቁሳቁሶችን ለመለማመድ የቁሳቁስ ስብስብ አዶን (📚) በላይኛው የመተግበሪያ አሞሌ ላይ ይጫኑ።",
   "tutorialM2ListTitle": "የጥናት ዝርዝር",
   "tutorialM2ListDesc": "ይህንን ካርድ በረጅሙ ጠቅ ካደረጉት መሰረዝ ይችላሉ። የተቀመጡትን ዓረፍተ ነገሮች ይመልከቱ እና ይገለብጡ።",
   "tutorialM3SelectTitle": "ቁሳቁስ ይምረጡ",
+  "tutorialM3SelectDesc": "ቁሳቁሶችን ለመለማመድ የቁሳቁስ ስብስብ አዶን (📚) በላይኛው የመተግበሪያ አሞሌ ላይ ይጫኑ።",
   "tutorialM3IntervalTitle": "ክፍተት ያዘጋጁ",
   "tutorialM3IntervalDesc": "በዓረፍተ ነገሮች መካከል የጥበቃ ጊዜውን ያስተካክሉ።",
   "tutorialM3StartTitle": "ልምምድ ይጀምሩ",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "ጨምር",
   "languageSettings": "የቋንቋ ቅንጅቶች",
   "tutorialM2DropdownDesc": "ሊያጠኑት የሚፈልጉትን ቁሳቁስ ከላይኛው ምናሌ ላይ መምረጥ ይችላሉ።",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "በመሣሪያዎ አቃፊ ውስጥ ካለው JSON ፋይል ያስመጡ።",
   "tutorialLangSettingsTitle": "የቋንቋ ቅንጅቶች",
   "tutorialLangSettingsDesc": "ለመተርጎም የመጀመሪያ ቋንቋ እና ዒላማ ቋንቋ ያዘጋጁ።",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "ጠላት ከመድረሱ በፊት ቃሉን በመናገር ጣቢያዎን ይከላከሉ።",
   "dialogueQuestTitle": "የውይይት ተልዕኮ",
   "dialogueQuestDesc": "በድራማ በኩል የንግግር ልምምድ ያድርጉ። ተገቢውን መልስ ይምረጡ እና ይናገሩ።",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "ዓይነት:",
   "labelWord": "ቃል",
   "labelSentence": "ዓረፍተ ነገር",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "ገና ምንም ንግግሮች የሉም",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "ለመለማመድ አዲስ ውይይት ይጀምሩ!",
   "chatFromConversation": "ውይይት ተወስዷል ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "የአካባቢው ጓደኛ",
   "chatUntitled": "ርዕስ የሌለው ውይይት",
   "chatAiChat": "ቻት",
-  "tutorialAiChatTitle": "AI ቻት",
-  "tutorialAiChatDesc": "ከ AI ሰው ጋር እውነተኛ ውይይቶችን ይለማመዱ።",
   "mode1SelectedMaterial": "በአሁኑ ጊዜ የተመረጠው ቁሳቁስ: {name}",
   "basicWordRepository": "መሠረታዊ የቃላት ማከማቻ",
   "basicSentenceRepository": "መሠረታዊ የዓረፍተ ነገር ማከማቻ",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "ያለውን ርዕስ ይምረጡ",
   "addTagHint": "መለያ ያክሉ...",
   "save": "አስቀምጥ",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "ኢሜይልዎን በማረጋገጥ ማረጋገጫውን ያጠናቅቁ።"
 }

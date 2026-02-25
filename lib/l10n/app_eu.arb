@@ -1,5 +1,10 @@
 {
   "@@locale": "eu",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Laguntza eta Gidak",
   "helpTabModes": "Moduen azalpena",
   "helpTabJson": "JSON formatua",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Praktikatu elkarrizketak AI pertsonaiarekin hizketan.",
   "helpModeChatDetails": "• AI txata: praktikatu elkarrizketa zure hizkuntzan hitz eginez\n• Pertsonaia anitz: aldatu beste pertsonaren generoa/hizkuntza/izena goiko menuarekin\n• Bazkidea gehitu: gehitu solaskide berri bat (+) botoiarekin (Ezezaguna)\n• GPS: uneko kokapenean oinarritutako antzezpena\n• Automatikoki gorde: elkarrizketa automatikoki itzuli eta gorde",
   "helpJsonDesc": "3. Moduan erabiliko den ikaskuntza-materiala JSON fitxategi gisa inportatzeko, jarraitu formatu hau:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Inportatu elkarrizketa-sorta oso bat JSON fitxategi gisa.",
   "helpDialogueImportDetails": "• JSON egitura: erabili `dialogues` array `entries` ordez\n• Berreskuratze automatikoa: elkarrizketaren izenburua, pertsonaia eta mezu-ordena berreskuratzen dira.\n• Kokapena: inportatutako elkarrizketak AI txat moduaren 'Historia' fitxan agertzen dira.",
   "helpTourDesc": "**Nabarmendutako zirkuluak** funtzio nagusiak gidatzen ditu.\n(Adibidez: **Nabarmendutako zirkuluak** seinalatzen duen txartela luze sakatuta ezaba dezakezu.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Guztira: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Ikasketa-materiala hautatu",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Idatzi itzuli nahi duzun testua",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Gordetzen...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Idatzitako testua itzultzen du.",
   "tutorialSaveTitle": "Gorde",
   "tutorialSaveDesc": "Gorde itzulitako emaitzak ikasketa-erregistroan.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI txata",
+  "tutorialAiChatDesc": "Praktikatu elkarrizketa errealak AI pertsonaia batekin.",
   "tutorialM2SelectTitle": "Materiala hautatu",
   "tutorialM2SelectDesc": "Sakatu datu-multzoaren ikonoa (📚) goiko aplikazio-barran ikasi nahi duzun materiala hautatzeko.",
-  "tutorialM3SelectDesc": "Sakatu datu-multzoaren ikonoa (📚) goiko aplikazio-barran praktikatu nahi duzun materiala hautatzeko.",
   "tutorialM2ListTitle": "Ikasketa-zerrenda",
   "tutorialM2ListDesc": "Txartel hau luze sakatuta (Sakatu luzea) ezaba dezakezu. Egiaztatu eta irauli gordetako esaldiak.",
   "tutorialM3SelectTitle": "Materiala hautatu",
+  "tutorialM3SelectDesc": "Sakatu datu-multzoaren ikonoa (📚) goiko aplikazio-barran praktikatu nahi duzun materiala hautatzeko.",
   "tutorialM3IntervalTitle": "Tartea ezarri",
   "tutorialM3IntervalDesc": "Doitu esaldien arteko itxaron-denbora.",
   "tutorialM3StartTitle": "Praktika hasi",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Handitu",
   "languageSettings": "Hizkuntza-ezarpenak",
   "tutorialM2DropdownDesc": "Goiko menuaren bidez ikasi nahi duzun materiala hauta dezakezu.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Inportatu JSON fitxategi bat zure gailuko karpetatik.",
   "tutorialLangSettingsTitle": "Hizkuntza-ezarpenak",
   "tutorialLangSettingsDesc": "Ezarri itzuli nahi duzun jatorrizko hizkuntza eta helburuko hizkuntza.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Hitz egin hitzak etsaiak iritsi baino lehen oinarria defendatzeko.",
   "dialogueQuestTitle": "Elkarrizketa bilaketa",
   "dialogueQuestDesc": "Praktikatu elkarrizketa egoera baten bidez. Hautatu erantzun egoki bat eta hitz egin.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Mota:",
   "labelWord": "Hitza",
   "labelSentence": "Esaldi",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Oraindik ez dago elkarrizketarik",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Hasi elkarrizketa berri bat praktikatzeko!",
   "chatFromConversation": "Elkarrizketatik ateratakoa ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Bertako laguna",
   "chatUntitled": "Izenik gabeko elkarrizketa",
   "chatAiChat": "Txat",
-  "tutorialAiChatTitle": "AI txata",
-  "tutorialAiChatDesc": "Praktikatu elkarrizketa errealak AI pertsonaia batekin.",
   "mode1SelectedMaterial": "Uneko hautatutako datu-multzoa: {name}",
   "basicWordRepository": "Oinarrizko hitz biltegia",
   "basicSentenceRepository": "Oinarrizko esaldi biltegia",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Aukeratu lehendik dagoen izenburua",
   "addTagHint": "Gehitu etiketa...",
   "save": "Gorde",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Mesedez, egiaztatu e-posta autentifikazioa osatzeko."
 }

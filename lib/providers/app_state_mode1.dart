@@ -257,9 +257,6 @@ extension AppStateMode1 on AppState {
 
   /// Phase 98: Helper to save to Supabase (Dual Write with type branching + tag separation)
   Future<void> _saveToSupabase({
-    required String? dialogueId, 
-    required String speaker, 
-    required int sequenceOrder,
     int? groupId, // Phase 106: Accept canonical ID
     String? pos,
     String? formType,
@@ -302,16 +299,16 @@ extension AppStateMode1 on AppState {
 
         await SupabaseService.client.from(tableName).insert(data);
 
-        // 2. Add to User Library with title tags (personal) + dialogue metadata
-        await SupabaseService.client.from('user_library').insert({
-          'user_id': authorId,
-          'group_id': gId,
-          'personal_note': _note.isNotEmpty ? _note : null,
-          'material_tags': titleTags.isNotEmpty ? titleTags : null,
-          'dialogue_id': dialogueId,
-          'speaker': speaker,
-          'sequence_order': sequenceOrder,
-        });
+        // 2. Add to User Meta Tables (Blueprint Alignment Phase)
+        await SupabaseService.addToLibrary(
+          groupId: gId,
+          type: itemType,
+          note: _note.isNotEmpty ? _note : null,
+          sourceLang: _sourceLang,
+          targetLang: _targetLang,
+          tags: titleTags.isNotEmpty ? titleTags : null,
+          notebookTitle: titleTags.isNotEmpty ? titleTags.first : (itemType == 'word' ? 'My Wordbook' : 'My Collection'),
+        );
 
         debugPrint('[AppState] Supabase Cloud Sync Successful: table=$tableName, groupId=$gId, titleTags=$titleTags, generalTags=$generalTags');
       } catch (e) {
@@ -353,15 +350,8 @@ extension AppStateMode1 on AppState {
         finalTags.add(subjectToSave);
       }
 
-      // Phase 116: Ensure the material subject exists in study_materials table
-      // This ensures it appears in the "Title Tag (Material)" dropdown in Mode 2/3 filter
-      await DatabaseService.createStudyMaterial(
-        subject: subjectToSave,
-        source: 'User Input',
-        sourceLanguage: _sourceLang,
-        targetLanguage: _targetLang,
-        createdAt: DateTime.now().toIso8601String(),
-      );
+      // Phase 160: study_materials table removed. 
+      // Unified Repository saving logic handles notebook association.
 
       // Phase 77: Pivot Strategy (Internal key check for linking)
       String? syncKey;
@@ -414,9 +404,6 @@ extension AppStateMode1 on AppState {
         }
 
         await _saveToSupabase(
-          dialogueId: _activeDialogueId,
-          speaker: _activeDialogueId != null ? 'User' : '',
-          sequenceOrder: _activeDialogueId != null ? _currentDialogueSequence : 0,
           groupId: canonicalId, // Phase 106: Pass canonical ID
           pos: _sourcePos,
           formType: _sourceFormType,
@@ -546,14 +533,14 @@ extension AppStateMode1 on AppState {
       // Find material by title and select it
       final material = _studyMaterials.firstWhere((m) => m['subject'] == text, orElse: () => {});
       if (material.isNotEmpty) {
-        _selectedMaterialId = material['id'] as int;
+        _selectedNotebookTitle = text;
         _selectedTags = [text];
         _searchQuery = ''; // Clear text search to show material items
         loadRecordsByTags(); // Phase 113: Ensure UI updates immediately
       }
     } else {
       _selectedTags.clear(); // Clear tag filters to show result
-      _selectedMaterialId = null; 
+      _selectedNotebookTitle = null; 
       setSearchQuery(text); // This calls loadRecordsByTags
     }
     notify();

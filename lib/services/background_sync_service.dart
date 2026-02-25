@@ -155,24 +155,36 @@ class BackgroundSyncService {
 
         // Parallel upload to global pool
         if (cleanWords.isNotEmpty) {
-          await SupabaseService.client.from('words').upsert(cleanWords, onConflict: 'text, lang_code, author_id');
+          await SupabaseService.client.from('public_words').upsert(cleanWords, onConflict: 'text, lang_code, author_id');
         }
         if (cleanSentences.isNotEmpty) {
-          await SupabaseService.client.from('sentences').upsert(cleanSentences, onConflict: 'text, lang_code, author_id');
+          await SupabaseService.client.from('public_sentences').upsert(cleanSentences, onConflict: 'text, lang_code, author_id');
         }
 
-        // 4. Update User Library with personal metadata
-        await SupabaseService.client.from('user_library').upsert({
-          'user_id': currentUser.id,
-          'group_id': activeGroupId,
-          'content': {
-            'words': cleanWords,
-            'sentences': cleanSentences,
-            'synced_at': DateTime.now().toIso8601String(),
-          },
-          'material_tags': titleTags.isNotEmpty ? titleTags : null,
-          'last_updated': DateTime.now().toIso8601String(),
-        }, onConflict: 'user_id, group_id'); // Added missing onConflict for user_library
+        // 4. Update User Meta with personal metadata (Blueprint Alignment Phase)
+        for (var word in cleanWords) {
+          await SupabaseService.addToLibrary(
+            groupId: activeGroupId,
+            type: 'word',
+            note: word['note'],
+            sourceLang: word['lang_code'],
+            targetLang: syncData['target_lang'], // Assuming target_lang available in syncData
+            tags: titleTags.isNotEmpty ? titleTags : null,
+            notebookTitle: titleTags.isNotEmpty ? titleTags.first : 'My Wordbook',
+          );
+        }
+
+        for (var sentence in cleanSentences) {
+          await SupabaseService.addToLibrary(
+            groupId: activeGroupId,
+            type: 'sentence',
+            note: sentence['note'],
+            sourceLang: sentence['lang_code'],
+            targetLang: syncData['target_lang'],
+            tags: titleTags.isNotEmpty ? titleTags : null,
+            notebookTitle: titleTags.isNotEmpty ? titleTags.first : 'My Collection',
+          );
+        }
 
         // 4. Mark as synced locally
         await DatabaseService.markGroupAsSynced(activeGroupId);

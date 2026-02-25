@@ -1,5 +1,10 @@
 {
   "@@locale": "az",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Kömək & Bələdçi",
   "helpTabModes": "Rejim Açıqlaması",
   "helpTabJson": "JSON Formatı",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Süni intellekt personajı ilə danışaraq real söhbət bacarıqlarınızı məşq edin.",
   "helpModeChatDetails": "• AI Söhbət: Dilinizdə danışaraq söhbət bacarıqlarınızı məşq edin\n• Çoxlu personaj: Nitq balonunun yuxarısındakı menyu ilə qarşı tərəfin cinsini/dilini/adını dəyişdirə bilərsiniz\n• Tərəfdaş əlavə edin: + düyməsi ilə yeni söhbət ortağı (Yad) əlavə edin\n• GPS: Mövcud yerə əsaslanan teatrlaşdırılmış vəziyyət\n• Avtomatik saxla: Söhbət məzmununun avtomatik tərcüməsi və saxlanılması",
   "helpJsonDesc": "3-cü Rejimdə istifadə etmək üçün öyrənmə materiallarını JSON faylı kimi idxal etmək üçün aşağıdakı formata əməl edin:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Bütün dialoq dəstlərini JSON faylı olaraq idxal edin.",
   "helpDialogueImportDetails": "• JSON strukturu: `Girişlər` əvəzinə `dialoqlar` massivindən istifadə edin\n• Avtomatik bərpa: Dialoq başlığı, persona, mesaj ardıcıllığı bərpa edilir.\n• Yer: İdxal olunan dialoqlar Süni İntellekt Söhbət rejiminin 'Qeydlər' sekmesinde görünür.",
   "helpTourDesc": "**Vurğulanan dairə** əsas funksiyaları göstərir.\n(Məsələn, **vurğulanan dairənin** göstərdiyi kartı silmək üçün uzun müddət basın.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Ümumi: {count} ədəd",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Öyrənmə Materialını Seçin",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Tərcümə etmək üçün mətn daxil edin",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Saxlanılır...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Daxil edilmiş mətni tərcümə edin.",
   "tutorialSaveTitle": "Saxla",
   "tutorialSaveDesc": "Tərcümə edilmiş nəticələri öyrənmə qeydlərinizə saxlayın.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "Süni İntellekt Söhbəti",
+  "tutorialAiChatDesc": "Süni intellekt personajları ilə real söhbət bacarıqlarınızı məşq edin.",
   "tutorialM2SelectTitle": "Material Seçimi",
   "tutorialM2SelectDesc": "Öyrənmək üçün material seçmək üçün yuxarıdakı proqram çubuğundakı material toplusu işarəsinə (📚) toxunun.",
-  "tutorialM3SelectDesc": "Məşq etmək üçün material seçmək üçün yuxarıdakı proqram çubuğundakı material toplusu işarəsinə (📚) toxunun.",
   "tutorialM2ListTitle": "Öyrənmə Siyahısı",
   "tutorialM2ListDesc": "Saxlanılan cümlələri yoxlamaq və çevirmək üçün bu karta uzun müddət (Uzun Klik) toxunun. Onu silmək üçün.",
   "tutorialM3SelectTitle": "Material Seçimi",
+  "tutorialM3SelectDesc": "Məşq etmək üçün material seçmək üçün yuxarıdakı proqram çubuğundakı material toplusu işarəsinə (📚) toxunun.",
   "tutorialM3IntervalTitle": "İnterval Təyin Edin",
   "tutorialM3IntervalDesc": "Cümlələr arasındakı gözləmə müddətini tənzimləyin.",
   "tutorialM3StartTitle": "Məşqə Başlayın",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Artır",
   "languageSettings": "Dil Parametrləri",
   "tutorialM2DropdownDesc": "Yuxarıdakı menyu vasitəsilə öyrənmək üçün material seçə bilərsiniz.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "JSON faylını cihazınızın qovluğundan idxal edin.",
   "tutorialLangSettingsTitle": "Dil Parametrləri",
   "tutorialLangSettingsDesc": "Tərcümə etmək üçün mənbə və hədəf dilləri təyin edin.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Düşmənlər gəlmədən sözləri deyərək bazanı müdafiə edin.",
   "dialogueQuestTitle": "Dialoq Tapşırığı",
   "dialogueQuestDesc": "Teatrlaşdırılmış vəziyyət vasitəsilə dialoq məşqi edin. Müvafiq cavabları seçin və deyin.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Növü:",
   "labelWord": "Söz",
   "labelSentence": "Cümlə",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Hələ heç bir söhbət yoxdur",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Məşq üçün yeni söhbətə başlayın!",
   "chatFromConversation": "Söhbətdən Çıxarış ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Yerli Dost",
   "chatUntitled": "Başlıqsız Söhbət",
   "chatAiChat": "Söhbət",
-  "tutorialAiChatTitle": "Süni İntellekt Söhbəti",
-  "tutorialAiChatDesc": "Süni intellekt personajları ilə real söhbət bacarıqlarınızı məşq edin.",
   "mode1SelectedMaterial": "Cari seçilmiş material toplusu: {name}",
   "basicWordRepository": "Əsas Söz Deposu",
   "basicSentenceRepository": "Əsas Cümlə Deposu",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Mövcud adı seçin",
   "addTagHint": "Etiket əlavə edin...",
   "save": "Saxla",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Zəhmət olmasa, identifikasiyanı tamamlamaq üçün e-poçtunuzu yoxlayın."
 }

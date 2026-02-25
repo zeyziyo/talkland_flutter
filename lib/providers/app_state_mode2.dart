@@ -12,8 +12,10 @@ extension AppStateMode2 on AppState {
       }
 
       // 1. Fetch User's Library (Groups)
+      final table = _recordTypeFilter == 'word' ? 'user_words_meta' : 'user_sentences_meta';
+      
       final libraryResponse = await SupabaseService.client
-          .from('user_library')
+          .from(table)
           .select()
           .eq('user_id', userId)
           .order('created_at', ascending: false);
@@ -30,7 +32,7 @@ extension AppStateMode2 on AppState {
       final groupIds = libraryEntries.map((e) => e.groupId).toList();
       
       final sentencesResponse = await SupabaseService.client
-          .from('sentences')
+          .from('public_sentences')
           .select()
           .filter('group_id', 'in', groupIds);
           
@@ -63,13 +65,10 @@ extension AppStateMode2 on AppState {
           'target_lang': targetSentence.langCode,
           'source_text': sourceSentence.text,
           'target_text': targetSentence.text,
-          'personal_note': entry.personalNote,
+          'personal_note': entry.caption,
           'created_at': entry.createdAt.toIso8601String(),
-          'dialogue_id': entry.dialogueId,
-          'speaker': entry.speaker,
-          'sequence_order': entry.sequenceOrder,
-          'review_count': entry.reviewStats['count'] ?? 0,
-          'last_reviewed': entry.reviewStats['last_reviewed'],
+          'review_count': entry.reviewCount,
+          'last_reviewed': entry.lastReviewed?.toIso8601String(),
         });
       }
 
@@ -103,21 +102,21 @@ extension AppStateMode2 on AppState {
       final userId = SupabaseService.client.auth.currentUser?.id;
       if (userId == null) return;
       
-      final response = await SupabaseService.client
-          .from('user_library')
-          .select('review_stats')
+      final table = _recordTypeFilter == 'word' ? 'user_words_meta' : 'user_sentences_meta';
+      
+      final current = await SupabaseService.client
+          .from(table)
+          .select('review_count')
           .eq('user_id', userId)
           .eq('group_id', groupId)
           .single();
-          
-      Map<String, dynamic> stats = Map<String, dynamic>.from(response['review_stats'] ?? {});
-      int count = (stats['count'] as int? ?? 0) + 1;
-      stats['count'] = count;
-      stats['last_reviewed'] = DateTime.now().toIso8601String();
-      
+
       await SupabaseService.client
-          .from('user_library')
-          .update({'review_stats': stats})
+          .from(table)
+          .update({
+            'review_count': (current['review_count'] as int? ?? 0) + 1,
+            'last_reviewed': DateTime.now().toIso8601String(),
+          })
           .eq('user_id', userId)
           .eq('group_id', groupId);
 
@@ -192,6 +191,11 @@ extension AppStateMode2 on AppState {
   void updateSelectedTags(List<String> tags) {
     _selectedTags.clear();
     _selectedTags.addAll(tags);
+    
+    // Phase 160: Sync _selectedNotebookTitle if a material tag is found
+    final subjects = _studyMaterials.map((m) => m['subject'] as String).toList();
+    _selectedNotebookTitle = tags.firstWhere((t) => subjects.contains(t), orElse: () => '');
+    
     loadRecordsByTags();
     notify();
   }
@@ -285,7 +289,8 @@ extension AppStateMode2 on AppState {
       }
 
       final List<Map<String, dynamic>> results = await db.rawQuery(query, whereArgs);
-      
+      debugPrint('[AppState] loadRecordsByTags: table=$table, recordsFound=${results.length}, sourceLang=$_sourceLang, selectedTags=$_selectedTags, query=$query');
+
       if (results.isEmpty) {
         _materialRecords = [];
         notify();
@@ -370,21 +375,28 @@ extension AppStateMode2 on AppState {
     if (userId == null) return;
 
     try {
-      // 1. Fetch User's Library from Cloud
-      final response = await SupabaseService.client
-          .from('user_library')
+      // 1. Fetch User's Meta from Cloud (Both Tables)
+      final wordsResponse = await SupabaseService.client
+          .from('user_words_meta')
+          .select()
+          .eq('user_id', userId);
+          
+      final sentencesResponse = await SupabaseService.client
+          .from('user_sentences_meta')
           .select()
           .eq('user_id', userId);
 
-      final List cloudLibrary = response as List;
+      final List cloudLibrary = [...(wordsResponse as List), ...(sentencesResponse as List)];
       if (cloudLibrary.isEmpty) return;
 
       debugPrint('[AppState] Syncing ${cloudLibrary.length} items from cloud library...');
 
       for (var entry in cloudLibrary) {
         final int groupId = entry['group_id'];
-        final String? note = entry['personal_note'];
-        final List<String> tags = (entry['material_tags'] as List?)?.map((e) => e.toString()).toList() ?? [];
+        final String? note = entry['caption'];
+        final List<String> tags = (entry['tags'] is List)
+            ? List<String>.from(entry['tags'] as List)
+            : (entry['tags'] as String?)?.split(',').where((t) => t.isNotEmpty).toList() ?? [];
 
         // Check if exists locally (Phase 129: check meta)
         final db = await DatabaseService.database;
@@ -394,10 +406,10 @@ extension AppStateMode2 on AppState {
         if (existing.isEmpty && existingWord.isEmpty) {
           // 2. Fetch missing content from cloud global tables
           // Determine type (check words first, then sentences)
-          var contentResponse = await SupabaseService.client.from('words').select().eq('group_id', groupId);
+          var contentResponse = await SupabaseService.client.from('public_words').select().eq('group_id', groupId);
           String type = 'word';
           if ((contentResponse as List).isEmpty) {
-            contentResponse = await SupabaseService.client.from('sentences').select().eq('group_id', groupId);
+            contentResponse = await SupabaseService.client.from('public_sentences').select().eq('group_id', groupId);
             type = 'sentence';
           }
 
@@ -466,39 +478,31 @@ extension AppStateMode2 on AppState {
     notify();
   }
 
-  /// 학습 자료 선택 (Legacy & Tag Sync)
-  Future<void> selectMaterial(Object? id) async {
-    _selectedMaterialId = id;
-    if (id != null && id != 0 && id != '') {
-      await loadMaterialRecords(id);
+  /// 학습 자료 선택 (Notebook based - Phase 160)
+  Future<void> selectMaterial(String? subject) async {
+    _selectedNotebookTitle = subject;
+    if (subject != null && subject.isNotEmpty) {
+      await loadMaterialRecords(subject);
     } else {
       await loadRecordsByTags();
     }
     notify();
   }
 
-  Future<void> loadMaterialRecords(Object materialId) async {
-    if (materialId == 0 || materialId == '') {
+  Future<void> loadMaterialRecords(String subject) async {
+    if (subject.isEmpty) {
       await loadRecordsByTags();
-    } else if (materialId is int) {
-      final material = _studyMaterials.firstWhere((m) => m['id'] == materialId, orElse: () => {});
-      if (material.isNotEmpty) {
-        _selectedTags = [material['subject'] as String];
-        await loadRecordsByTags();
-      }
-    } else if (materialId is String) {
-      // Phase 110: Support Dialogue UUID
-      // Dialogue data is primarily for Chat Mode, but we support viewing it here if tagged.
-      final group = _dialogueGroups.where((g) => g.id == materialId).toList();
-      if (group.isNotEmpty) {
-        _selectedTags = [group.first.title ?? group.first.note ?? 'Untitled'];
+    } else {
+      // Check if it's a Dialogue Title by searching dialogue groups
+      final matchedDialogues = _dialogueGroups.where((g) => g.title == subject).toList();
+      if (matchedDialogues.isNotEmpty) {
+        _selectedTags = [subject];
         await loadRecordsByTags();
       } else {
-        final material = _studyMaterials.firstWhere((m) => m['id'] == materialId, orElse: () => {});
-        if (material.isNotEmpty) {
-          _selectedTags = [material['subject'] as String? ?? 'Untitled'];
-          await loadRecordsByTags();
-        }
+        // Assume it's a Notebook Title (already in _studyMaterials or new)
+        _selectedTags = [subject];
+        debugPrint('[AppState] loadMaterialRecords (Notebook): $subject');
+        await loadRecordsByTags();
       }
     }
   }

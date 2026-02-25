@@ -30,6 +30,48 @@ extension AppStateChat on AppState {
  
     if (existing.id != 'temp') return existing;
 
+    // 1-b. [Phase 16.1 Fix] Check Global Database for existing participant
+    try {
+      final allParticipants = await DatabaseService.getAllUniqueParticipants();
+      final globalMatch = allParticipants.firstWhere(
+        (p) => (id != null && p.id == id) || 
+               (p.name.toLowerCase() == name.toLowerCase() && p.role == role),
+        orElse: () => ChatParticipant(id: 'temp', dialogueId: '', name: '', role: ''),
+      );
+
+        if (globalMatch.id != 'temp') {
+          debugPrint('[AppState] Reusing global participant ID: ${globalMatch.id} for ${globalMatch.name}');
+          
+          // Link it to the current dialogue
+          if (_activeDialogueId != null) {
+            await DatabaseService.insertParticipant({
+              ...globalMatch.toJson(),
+              'dialogue_id': _activeDialogueId,
+            });
+
+            // Phase 140: Sync to Supabase (Blueprint Alignment)
+            if (SupabaseService.client.auth.currentUser != null) {
+              SupabaseService.syncParticipant(
+                dialogueId: _activeDialogueId!,
+                id: globalMatch.id,
+                name: globalMatch.name,
+                role: globalMatch.role,
+                gender: globalMatch.gender,
+                langCode: globalMatch.langCode,
+                avatarColor: globalMatch.avatarColor,
+              ).catchError((e) => debugPrint('[AppState] Participant link sync failed: $e'));
+            }
+          }
+          if (!_activeParticipants.any((p) => p.id == globalMatch.id)) {
+            _activeParticipants.add(globalMatch);
+          }
+          notify();
+          return globalMatch;
+        }
+    } catch (e) {
+      debugPrint('[AppState] Global participant lookup failed: $e');
+    }
+
     // 2. Determine Canonical ID for Core Roles
     String newId = id ?? const Uuid().v4();
     String newName = name; // Default
@@ -42,9 +84,9 @@ extension AppStateChat on AppState {
       newId = 'ai';
       newName = 'AI';
     } else if (id == 'me') {
-      newName = '나'; // Force name if ID is 'me'
+      newName = '나'; 
     } else if (id == 'ai') {
-      newName = 'AI'; // Force name if ID is 'ai'
+      newName = 'AI'; 
     }
 
     final dId = _activeDialogueId ?? 'global';
@@ -61,6 +103,19 @@ extension AppStateChat on AppState {
     // 3. Persist to DB
     await DatabaseService.insertParticipant(newParticipant.toJson());
     
+    // Phase 140: Sync to Supabase (Blueprint Alignment)
+    if (_activeDialogueId != null && SupabaseService.client.auth.currentUser != null) {
+      SupabaseService.syncParticipant(
+        dialogueId: _activeDialogueId!,
+        id: newParticipant.id,
+        name: newParticipant.name,
+        role: newParticipant.role,
+        gender: newParticipant.gender,
+        langCode: newParticipant.langCode,
+        avatarColor: newParticipant.avatarColor,
+      ).catchError((e) => debugPrint('[AppState] New participant sync failed: $e'));
+    }
+    
     // 4. Update memory state
     if (!_activeParticipants.any((p) => p.id == newId)) {
       _activeParticipants.add(newParticipant);
@@ -69,6 +124,7 @@ extension AppStateChat on AppState {
     
     return newParticipant;
   }
+
 
   Future<void> updateParticipant(String id, {String? gender, String? languageCode, String? name}) async {
     final index = _activeParticipants.indexWhere((p) => p.id == id);
@@ -153,10 +209,13 @@ extension AppStateChat on AppState {
       final now = DateTime.now().toIso8601String();
       final userId = SupabaseService.client.auth.currentUser?.id;
 
-      _activeDialogueId = dialogueId;
       _activeDialogueTitle = dialogueTitle;
       _activePersona = 'AI';
+      _activeDialogueLocation = null; // Phase 162: Reset location
       _currentDialogueSequence = 1;
+
+      // [Phase 162] Background Pre-fetch Location
+      _fetchAndStoreLocation();
 
       // 로컬 DB에 먼저 저장
       await DatabaseService.insertDialogueGroup(
@@ -167,19 +226,34 @@ extension AppStateChat on AppState {
         userId: userId,
       );
 
-      // Supabase 동기화는 백그라운드에서 처리 (실패해도 무관)
+      // Supabase 동기화: 서버 ID를 확실히 받을 때까지 기다립니다. (중복 생성 방지)
       if (userId != null) {
-        SupabaseService.createDialogueGroup(
-          id: dialogueId, // Phase 33: Pass Local UUID to Server
-          title: dialogueTitle,
-          persona: 'AI',
-        ).then((serverId) {
-          // 서버 ID와 로컬 ID가 다를 경우, 로컬 DB를 업데이트하거나 매핑 유지
-          // 현재는 로컬 ID를 기준으로 사용하므로 별도 처리 없음
-          debugPrint('[AppState] Background Supabase sync for dialogue: serverId=$serverId, localId=$dialogueId');
-        }).catchError((e) {
-          debugPrint('[AppState] Background Supabase sync failed (ignored): $e');
-        });
+        try {
+          final serverId = await SupabaseService.createDialogueGroup(
+            id: dialogueId, 
+            title: dialogueTitle,
+            persona: 'AI',
+          );
+          
+          if (serverId != dialogueId) {
+             debugPrint('[AppState] ID Mismatch detected. serverId=$serverId, localId=$dialogueId. Updating local record...');
+             final db = await DatabaseService.database;
+             await db.transaction((txn) async {
+               await txn.rawUpdate('UPDATE dialogue_groups SET id = ? WHERE id = ?', [serverId, dialogueId]);
+               await txn.rawUpdate('UPDATE dialogues SET session_id = ? WHERE session_id = ?', [serverId, dialogueId]);
+               await txn.rawUpdate('UPDATE dialogue_participants SET dialogue_id = ? WHERE dialogue_id = ?', [serverId, dialogueId]);
+             });
+             _activeDialogueId = serverId;
+          } else {
+             _activeDialogueId = dialogueId;
+          }
+          debugPrint('[AppState] Synchronous Supabase sync completed: id=$_activeDialogueId');
+        } catch (e) {
+          debugPrint('[AppState] Supabase initial sync failed: $e. Using local ID only.');
+          _activeDialogueId = dialogueId;
+        }
+      } else {
+        _activeDialogueId = dialogueId;
       }
 
       // Phase 10: Add Initial Participants
@@ -197,18 +271,17 @@ extension AppStateChat on AppState {
         }
       }
       // Phase 10/28: "나"와 "AI"만 명시적으로 주입 (고정 참가자 정책)
-      final userPart = await getOrAddParticipant(name: '나', role: 'user', id: 'me');
-      final aiPart = await getOrAddParticipant(name: _activePersona ?? 'AI', role: 'ai', id: 'ai');
-
-      // Ensure they are linked to this dialogue
-      await DatabaseService.insertParticipant({...userPart.toJson(), 'dialogue_id': dialogueId});
-      await DatabaseService.insertParticipant({...aiPart.toJson(), 'dialogue_id': dialogueId});
+      // getOrAddParticipant handles DB persistence and UI state internally.
+      await getOrAddParticipant(name: '나', role: 'user', id: 'me');
+      await getOrAddParticipant(name: _activePersona ?? 'AI', role: 'ai', id: 'ai');
 
       _dialogueGroups.insert(0, DialogueGroup(
         id: dialogueId,
-        userId: SupabaseService.client.auth.currentUser?.id ?? 'anonymous',
+        userId: userId ?? 'anonymous',
         title: dialogueTitle,
-        persona: 'AI', // Phase 29: default to AI, not Group
+        persona: 'AI', 
+        location: null,
+        note: null,
         createdAt: DateTime.now(),
       ));
 
@@ -228,34 +301,57 @@ extension AppStateChat on AppState {
     if (userId != null) {
       try {
         final response = await SupabaseService.client
-            .from('dialogue_groups')
+            .from('user_dialogue_groups')
             .select()
             .eq('user_id', userId)
             .order('created_at', ascending: false);
 
         final cloudGroups = (response as List).map((json) => DialogueGroup.fromJson(json)).toList();
-        
+        // [Phase 162 Fix] Fetch all local groups once to avoid multiple DB hits in loop
+        final existingLocal = await DialogueRepository.getGroups();
+        final localMap = { for (var item in existingLocal) item['id']: item };
+
         for (var group in cloudGroups) {
+          final localRef = localMap[group.id] ?? {};
+          
+          // [Logic Change] 로컬 데이터가 이미 존재하고 구체적인 정보(제목, 위치 등)가 있다면 클라우드의 오래된 데이터로 덮어쓰지 않습니다.
+          // 특히 클라우드의 제목이 기본값('New Conversation', 'Group Chat')인 경우 더욱 로컬을 우선합니다.
+          final localTitle = localRef['title'] as String? ?? '';
+          final isDefaultCloudTitle = group.title == 'New Conversation' || group.title == 'Group Chat';
+          
+          final finalTitle = (localTitle.isNotEmpty && isDefaultCloudTitle) ? localTitle : (group.title ?? localTitle);
+          
+          final localLocation = localRef['location'] as String? ?? '';
+          final finalLocation = (localLocation.isNotEmpty && (group.location == null || group.location!.isEmpty)) ? localLocation : (group.location ?? localLocation);
+          
+          final localNote = localRef['note'] as String? ?? '';
+          final finalNote = (localNote.isNotEmpty && (group.note == null || group.note!.isEmpty)) ? localNote : (group.note ?? localNote);
+
           await DatabaseService.insertDialogueGroup(
             id: group.id,
             userId: group.userId,
-            title: group.title,
+            title: finalTitle.isNotEmpty ? finalTitle : 'New Conversation',
             persona: group.persona,
-            location: group.location,
+            location: finalLocation,
+            note: finalNote,
             createdAt: group.createdAt.toIso8601String(),
           );
 
           // Phase 33: Prefetch participants for better restore visualization (v15.0)
-          final participants = await SupabaseService.getDialogueParticipants(group.id);
-          for (var p in participants) {
-            await DialogueRepository.insertParticipant({
-              'id': p['id'],
-              'dialogue_id': group.id,
-              'name': p['name'],
-              'role': p['role'],
-              'gender': p['gender'],
-              'lang_code': p['lang_code'],
-            });
+          try {
+            final participants = await SupabaseService.getDialogueParticipants(group.id);
+            for (var p in participants) {
+              await DialogueRepository.insertParticipant({
+                'id': p['id'],
+                'dialogue_id': group.id,
+                'name': p['name'],
+                'role': p['role'],
+                'gender': p['gender'],
+                'lang_code': p['lang_code'],
+              });
+            }
+          } catch (e) {
+            debugPrint('[AppState] Participant prefetch failed for ${group.id}: $e');
           }
         }
       } catch (e) {
@@ -486,32 +582,39 @@ extension AppStateChat on AppState {
   /// Finalize dialogue with user-defined title, location, and note
   Future<void> saveDialogueProgress(String title, String location, String? note) async {
     if (_activeDialogueId == null) return;
+    debugPrint('[AppState] Saving Dialogue Progress: id=$_activeDialogueId, title=$title');
     
     _activeDialogueTitle = title;
     _activeDialogueLocation = location;
     
     try {
+      final index = _dialogueGroups.indexWhere((g) => g.id == _activeDialogueId);
+      
+      // Update Local DB First
       await DatabaseService.insertDialogueGroup(
         id: _activeDialogueId!,
         title: title,
         location: location,
         persona: _activePersona,
         note: note,
-        createdAt: DateTime.now().toIso8601String(),
+        createdAt: index != -1 ? _dialogueGroups[index].createdAt.toIso8601String() : DateTime.now().toIso8601String(),
         userId: SupabaseService.client.auth.currentUser?.id,
       );
       
-      await SupabaseService.updateDialogueTitle(_activeDialogueId!, title);
-      try {
-        await SupabaseService.client.from('dialogue_groups').update({
-          'location': location,
-          'note': note
-        }).eq('id', _activeDialogueId!);
-      } catch (e) {
-        debugPrint('[AppState] Supabase location sync failed: $e');
+      // Update Supabase and Await (Crucial to prevent race condition during history re-load)
+      if (SupabaseService.client.auth.currentUser != null) {
+        try {
+          await SupabaseService.client.from('user_dialogue_groups').update({
+            'title': title,
+            'location': location,
+            'note': note
+          }).eq('id', _activeDialogueId!);
+          debugPrint('[AppState] Supabase update completed for dialog: $_activeDialogueId');
+        } catch (e) {
+          debugPrint('[AppState] Supabase dialogue save failed: $e');
+        }
       }
       
-      final index = _dialogueGroups.indexWhere((g) => g.id == _activeDialogueId);
       final updatedGroup = DialogueGroup(
           id: _activeDialogueId!,
           userId: SupabaseService.client.auth.currentUser?.id ?? 'anonymous',
@@ -527,9 +630,10 @@ extension AppStateChat on AppState {
       } else {
         _dialogueGroups.insert(0, updatedGroup);
       }
-      notify();
 
-      await loadStudyMaterials();
+      // await loadDialogueGroups(); // [Phase 162 Fix] Removed to prevent race condition/overwrite
+      await loadStudyMaterials(); // Sync Mode 2 list
+      notify();
       
     } catch (e) {
       debugPrint('[AppState] Error saving dialogue progress: $e');
@@ -700,6 +804,55 @@ extension AppStateChat on AppState {
       }
     } catch (e) {
       debugPrint('[AppState] Cleanup failed: $e');
+    }
+  }
+
+  /// [Phase 162] Internal helper to pre-fetch location at dialogue start
+  Future<void> _fetchAndStoreLocation() async {
+    try {
+      final permission = await Geolocator.checkPermission();
+      if (permission == LocationPermission.always || permission == LocationPermission.whileInUse) {
+        // [Logic Change] getLastKnownPosition이 없으면 getCurrentPosition 시도
+        Position? pos = await Geolocator.getLastKnownPosition();
+        if (pos == null) {
+          try {
+            pos = await Geolocator.getCurrentPosition(
+              locationSettings: const LocationSettings(
+                accuracy: LocationAccuracy.low,
+                timeLimit: Duration(seconds: 5),
+              ),
+            );
+          } catch (e) {
+            debugPrint('[AppState] getCurrentPosition failed: $e');
+          }
+        }
+
+        if (pos != null) {
+          // 좌표 정보는 항상 백업으로 보관하며, 주소 변환 실패 시 바로 사용함
+          final coords = '${pos.latitude.toStringAsFixed(2)}, ${pos.longitude.toStringAsFixed(2)}';
+          
+          try {
+             final placemarks = await placemarkFromCoordinates(pos.latitude, pos.longitude)
+                .timeout(const Duration(seconds: 3));
+             if (placemarks.isNotEmpty) {
+               final place = placemarks.first;
+               final city = place.locality ?? place.administrativeArea ?? '';
+               final sub = place.subLocality ?? place.thoroughfare ?? '';
+               _activeDialogueLocation = sub.isNotEmpty && city.isNotEmpty ? '$sub, $city' : (city.isNotEmpty ? city : coords);
+               notify();
+             } else {
+               _activeDialogueLocation = coords;
+               notify();
+             }
+          } catch (_) { 
+            // Geocoding 실패 시 좌표를 위치 정보로 설정
+            _activeDialogueLocation = coords;
+            notify();
+          }
+        }
+      }
+    } catch (e) {
+      debugPrint('[AppState] Pre-fetch location failed: $e');
     }
   }
 }

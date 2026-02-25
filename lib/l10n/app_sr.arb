@@ -1,5 +1,10 @@
 {
   "@@locale": "sr",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Помоћ и водич",
   "helpTabModes": "Објашњење режима",
   "helpTabJson": "JSON формат",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Вежбајте разговор у стварним ситуацијама комуницирајући са АИ персоном.",
   "helpModeChatDetails": "• AI ћаскање: Вежбајте разговор говорећи на свом језику\n• Вишеструка персона: Можете променити пол/језик/име друге особе помоћу менија изнад облачића за разговор\n• Додавање партнера: Додајте нову особу за разговор (Странац) помоћу дугмета +\n• GPS: Ситуациона драма заснована на вашој тренутној локацији\n• Аутоматско чување: Аутоматски превод и чување садржаја разговора",
   "helpJsonDesc": "Да бисте увезли материјале за учење које ћете користити у режиму 3 као JSON датотеку, следите овај формат:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Увезите комплетан скуп дијалога као JSON датотеку.",
   "helpDialogueImportDetails": "• JSON структура: Користите низ `dialogues` уместо `entries`\n• Аутоматски опоравак: Наслов дијалога, персона и редослед порука се враћају.\n• Локација: Увезени дијалози се појављују на картици 'Историја' у режиму AI ћаскања.",
   "helpTourDesc": "**Означени круг** вас води кроз главне функције.\n(На пример: Можете да избришете картицу држећи је **означени круг** показује на њу.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Укупно: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Изаберите материјал за учење",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Унесите текст за превод",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Чување у току...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Преводи унети текст.",
   "tutorialSaveTitle": "Чување",
   "tutorialSaveDesc": "Сачувајте преведене резултате у записе о учењу.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "АИ Ћаскање",
+  "tutorialAiChatDesc": "Вежбајте разговор у стварном животу са AI персоном.",
   "tutorialM2SelectTitle": "Избор материјала",
   "tutorialM2SelectDesc": "Притисните икону збирке материјала (📚) на горњој траци апликације да бисте изабрали материјал за учење.",
-  "tutorialM3SelectDesc": "Притисните икону збирке материјала (📚) на горњој траци апликације да бисте изабрали материјал за вежбање.",
   "tutorialM2ListTitle": "Листа за учење",
   "tutorialM2ListDesc": "Можете да обришете ову картицу држањем (дуги клик). Проверите и преврните сачуване реченице.",
   "tutorialM3SelectTitle": "Избор материјала",
+  "tutorialM3SelectDesc": "Притисните икону збирке материјала (📚) на горњој траци апликације да бисте изабрали материјал за вежбање.",
   "tutorialM3IntervalTitle": "Подешавање интервала",
   "tutorialM3IntervalDesc": "Подесите време чекања између реченица.",
   "tutorialM3StartTitle": "Започните вежбање",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Повећај",
   "languageSettings": "Подешавања језика",
   "tutorialM2DropdownDesc": "Можете да изаберете материјал за учење преко горњег менија.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Увезите JSON датотеку из фасцикле на уређају.",
   "tutorialLangSettingsTitle": "Подешавања језика",
   "tutorialLangSettingsDesc": "Подесите изворни језик и циљни језик за превод.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Одбраните базу изговарањем речи пре него што непријатељ стигне.",
   "dialogueQuestTitle": "Дијалошка потрага",
   "dialogueQuestDesc": "Вежбајте разговор кроз ситуациону драму. Изаберите и изговорите одговарајући одговор.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Врста:",
   "labelWord": "Реч",
   "labelSentence": "Реченица",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Још нема разговора",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Започните нови разговор за вежбање!",
   "chatFromConversation": "Издвојено из разговора ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Локални пријатељ",
   "chatUntitled": "Разговор без наслова",
   "chatAiChat": "Ћаскање",
-  "tutorialAiChatTitle": "АИ Ћаскање",
-  "tutorialAiChatDesc": "Вежбајте разговор у стварном животу са AI персоном.",
   "mode1SelectedMaterial": "Тренутно изабрана збирка материјала: {name}",
   "basicWordRepository": "Основно складиште речи",
   "basicSentenceRepository": "Основно складиште реченица",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Изабери постојећи наслов",
   "addTagHint": "Додај ознаку...",
   "save": "Сачувај",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Молимо вас да верификујете своју е-пошту да бисте довршили аутентификацију."
 }

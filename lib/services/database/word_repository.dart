@@ -22,7 +22,11 @@ class WordRepository {
     }
     
     // 2. Insert or Update Meta (Preserving User Stats)
-    final existingMeta = await executor.query('words_meta', where: 'group_id = ?', whereArgs: [groupId]);
+    final String notebookTitle = data['notebook_title'] ?? 'My Wordbook';
+    final existingMeta = await executor.query('words_meta', 
+      where: 'group_id = ? AND notebook_title = ?', 
+      whereArgs: [groupId, notebookTitle]
+    );
     
     Map<String, dynamic> metaValues = {
       'group_id': groupId,
@@ -36,6 +40,7 @@ class WordRepository {
       'is_synced': (data['is_synced'] == true || data['is_synced'] == 1) ? 1 : 0, // Phase 129: Handle Sync Status
       'review_count': data['review_count'] ?? 0,
       'last_reviewed': data['last_reviewed'],
+      'created_at': data['created_at_meta'] ?? data['created_at'] ?? DateTime.now().toIso8601String(),
     };
 
     if (existingMeta.isNotEmpty) {
@@ -52,7 +57,10 @@ class WordRepository {
       }
       
       // Update existing meta
-      return await executor.update('words_meta', metaValues, where: 'group_id = ?', whereArgs: [groupId]);
+      return await executor.update('words_meta', metaValues, 
+        where: 'group_id = ? AND notebook_title = ?', 
+        whereArgs: [groupId, notebookTitle]
+      );
     } else {
       // Insert new meta
       return await executor.insert('words_meta', metaValues);

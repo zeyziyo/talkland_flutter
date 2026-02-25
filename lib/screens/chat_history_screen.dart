@@ -158,20 +158,57 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          '${group.persona ?? "Assistant"} • ${group.createdAt.toString().split('.')[0]}',
-                          style: TextStyle(color: Colors.grey[600], fontSize: 12),
-                        ),
-                        if (group.note != null && group.note!.isNotEmpty)
-                          Padding(
-                            padding: const EdgeInsets.only(top: 2),
-                            child: Text(
-                              '${l10n.labelNote}: ${group.note}',
-                              style: TextStyle(color: Colors.grey[800], fontStyle: FontStyle.italic, fontSize: 13),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
+                        const SizedBox(height: 2),
+                        Wrap(
+                          spacing: 12,
+                          runSpacing: 4,
+                          crossAxisAlignment: WrapCrossAlignment.center,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const Icon(Icons.calendar_today, size: 12, color: Colors.grey),
+                                const SizedBox(width: 4),
+                                Text(
+                                  group.createdAt.toString().substring(5, 16).replaceAll('-', '/'), 
+                                  style: TextStyle(color: Colors.grey[600], fontSize: 11),
+                                ),
+                              ],
                             ),
-                          ),
+                            if (group.location != null && group.location!.isNotEmpty)
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  const Icon(Icons.location_on_outlined, size: 12, color: Colors.blueAccent),
+                                  const SizedBox(width: 4),
+                                  Flexible(
+                                    child: Text(
+                                      group.location!,
+                                      style: TextStyle(color: Colors.blueAccent[700], fontSize: 11, fontWeight: FontWeight.w500),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            if (group.note != null && group.note!.isNotEmpty)
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  const Icon(Icons.note_alt_outlined, size: 12, color: Colors.orange),
+                                  const SizedBox(width: 4),
+                                  Flexible(
+                                    child: Text(
+                                      group.note!,
+                                      style: TextStyle(color: Colors.orange[900], fontStyle: FontStyle.italic, fontSize: 11),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                          ],
+                        ),
                       ],
                     ),
 
@@ -210,11 +247,13 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
                     onTap: () async {
                       final navigator = Navigator.of(context);
                       await appState.loadExistingDialogue(group);
-                      navigator.push(
+                      await navigator.push(
                         MaterialPageRoute(
                           builder: (context) => ChatScreen(initialDialogue: group),
                         ),
                       );
+                      // Phase 160 Fix: Always refresh list after returning from chat
+                      appState.loadDialogueGroups();
                     },
                   );
                 },
@@ -334,12 +373,14 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
 
             // Use parentContext for navigation
             if (parentContext.mounted) {
-              Navigator.push(
+              await Navigator.push(
                 parentContext,
                 MaterialPageRoute(
                   builder: (_) => ChatScreen(hasAiParticipant: hasAi),
                 ),
               );
+              // Phase 160/162 Fix: No need to refresh immediately as saveDialogueProgress already updated state
+              // appState.loadDialogueGroups(); 
             }
         },
       ),

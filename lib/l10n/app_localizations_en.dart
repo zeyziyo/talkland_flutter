@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get googleContinue => 'Login';
+  String get googleContinue => 'Continue with Google';
 
   @override
   String get logout => 'Logout';
@@ -42,15 +42,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpMode1Details =>
-      '• Language Settings: Change via top/bottom Translate icon\n• Toggle: Switch between \'Word\' and \'Sentence\' mode\n• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: \'Save Data\' adds to history\n• Clear: Reset all inputs';
+      '• Languages: Tap bottom buttons to switch Source and Target languages.\n• Word/Sentence: Switch modes using the top tabs.\n• Voice: Tap the microphone icon to start/stop listening.\n• Text: Type directly for instant translation.\n• Context Tag: Add situation tags (e.g., Morning Greeting) to save separately.\n• Search: Auto-detects similar existing sentences.\n• Translate: Manual translation button for instant results.\n• Listen: Tap speaker icons for TTS playback.\n• Save: Use \'Save Data\' to add to your records.';
 
   @override
   String get helpMode2Desc =>
-      'Review saved sentences with auto-hide translations and track your review count.';
+      'Review saved words and sentences with hide/reveal functionality.';
 
   @override
   String get helpMode2Details =>
-      '• Select Material: Choose specific set or \'Review All\'\n• Flip Card: Use \'Show/Hide\' to check translation\n• Listen: Play TTS for specific sentence\n• Mark Studied: Checkmark (V) for completed items\n• Delete: Long-press card to remove record\n• Search Conditions: Filter by Tags, Recent N items, or Start character';
+      '• Materials: Access \'Select Material Set\' or \'Online Library\' via the top-right menu (⋮).\n• Flip Card: Use \'Show/Hide\' to check translations.\n• Listen: Tap speaker icons for pronunciation.\n• Mastery: Mark items as studied with the checkmark (V).\n• Delete: Long-press a card to remove it from your records.\n• Filter: Search and filter by tags or starting letters.';
 
   @override
   String get helpMode3Desc =>
@@ -58,7 +58,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpMode3Details =>
-      '• Select Material: Choose learning pack\n• Interval: [-] [+] to adjust wait time (3s-60s)\n• Start/Stop: Control shadowing session\n• Speak: Listen to audio and repeat after it\n• Feedback: Accuracy score (0-100) with color code\n• Search Conditions: Filter practice targets by Tags, Recent N, or Start char';
+      '• Materials: Select a material set via the top-right menu (⋮).\n• Interval: Adjust wait time between sentences (3s to 60s) using [-] [+].\n• Start/Stop: Control shadowing sessions with central buttons.\n• Speak: Listen to the native speaker and repeat loudly.\n• Feedback: Real-time accuracy scores (0-100) and color coding.\n• Settings: Use the gear icon to filter practice scope by tags.';
 
   @override
   String get helpModeChatDesc =>
@@ -70,7 +70,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpJsonDesc =>
-      'To import study materials in Mode 3, create a JSON file with the following structure:';
+      'Learn how to import study materials in bulk using JSON files.';
+
+  @override
+  String get helpJsonTypeDialogue => 'Dialogue';
+
+  @override
+  String get helpJsonTypeSentence => 'Sentence';
+
+  @override
+  String get helpJsonTypeWord => 'Word';
 
   @override
   String get helpDialogueImportDesc =>
@@ -78,7 +87,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+      '• JSON Structure: Use the `entries` array and specify a `speaker` for each turn.\n• Participants: Accurate `participants` data will auto-configure personas and languages in AI Chat.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
 
   @override
   String get helpTourDesc =>
@@ -274,7 +283,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get importDuplicateTitleError =>
-      '동일한 제목의 자료가 이미 존재합니다. 제목을 변경한 후 다시 시도해주세요.';
+      'A material with the same title already exists. Please change the title and try again.';
 
   @override
   String get selectStudyMaterial => 'Select Study Material';
@@ -456,25 +465,71 @@ class AppLocalizationsEn extends AppLocalizations {
   String get tutorialSaveDesc => 'Save your translation to study records.';
 
   @override
-  String get tutorialM2SelectTitle => 'Select & Filter';
+  String get selectParticipants => 'Select Participants';
+
+  @override
+  String get loadingParticipants => 'Loading participants...';
+
+  @override
+  String get noParticipantsFound => 'No participants found.';
+
+  @override
+  String get noInternetWarningMic =>
+      'No internet connection. Voice recognition may not work offline.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'No internet connection. Translation is unavailable offline. Please use Review mode.';
+
+  @override
+  String get noMaterialsInCategory => 'No materials in this category.';
+
+  @override
+  String get onlineLibraryLoadFailed => 'Failed to load materials.';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'Please check your internet connection or try again later.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'No materials found.';
+
+  @override
+  String get sendingMessage => 'Sending message...';
+
+  @override
+  String get startChat => 'Start Chat';
+
+  @override
+  String get manageParticipants => 'Manage Participants';
+
+  @override
+  String get tutorialAiChatTitle => 'AI Chat';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'Practice real conversation with AI personas here.';
+
+  @override
+  String get tutorialM2SelectTitle => 'Select Materials';
 
   @override
   String get tutorialM2SelectDesc =>
-      'Choose study materials or switch to \'Review All\'.';
+      'Tap the top-right menu (⋮) to select a material set or visit the Online Library.';
+
+  @override
+  String get tutorialM2ListTitle => 'Study List';
+
+  @override
+  String get tutorialM2ListDesc =>
+      'Check and flip saved items. Long-press a card to delete it.';
+
+  @override
+  String get tutorialM3SelectTitle => 'Select Materials';
 
   @override
   String get tutorialM3SelectDesc =>
       'Choose a material set for speaking practice.';
-
-  @override
-  String get tutorialM2ListTitle => 'Practice List';
-
-  @override
-  String get tutorialM2ListDesc =>
-      'You can see your saved words and sentences here. Tap to practice or edit.';
-
-  @override
-  String get tutorialM3SelectTitle => 'Select Material';
 
   @override
   String get tutorialM3IntervalTitle => 'Interval';
@@ -854,16 +909,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get chatAiChat => 'Chat';
 
   @override
-  String get manageParticipants => 'Manage Participants';
-
-  @override
-  String get tutorialAiChatTitle => 'AI Chat';
-
-  @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
-
-  @override
   String mode1SelectedMaterial(Object name) {
     return 'Current Material Set: $name';
   }
@@ -1122,7 +1167,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get statusLoginCancelled => 'Login cancelled.';
 
   @override
-  String get statusLoggingIn => 'Logging in with Google...';
+  String get statusLoggingIn => 'Logging in...';
 
   @override
   String get statusLogoutSuccess => 'Logged out.';
@@ -1158,4 +1203,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String statusSignUpFailed(Object error) {
     return 'Sign up failed: $error';
   }
+
+  @override
+  String get statusCheckEmail =>
+      'Please check your email to complete authentication.';
+
+  @override
+  String get emailAlreadyInUse =>
+      'This email is already in use. Please log in or use password recovery.';
 }

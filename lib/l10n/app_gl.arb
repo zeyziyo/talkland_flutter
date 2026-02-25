@@ -1,5 +1,10 @@
 {
   "@@locale": "gl",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Axuda e guía",
   "helpTabModes": "Descrición dos modos",
   "helpTabJson": "Formato JSON",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Practica a conversación real falando cunha personaxe de IA.",
   "helpModeChatDetails": "• Chat de IA: fala no teu idioma para practicar a conversa\n• Multi-persoa: podes cambiar o sexo/idioma/nome da outra persoa co menú sobre a burbulla de diálogo\n• Engadir socio: engade un novo compañeiro de conversa (estranxeiro) co botón +\n• GPS: situación baseada na localización actual\n• Gardado automático: tradución e gardado automático do contido da conversa",
   "helpJsonDesc": "Para importar material de aprendizaxe para usar no modo 3 como ficheiro JSON, siga o seguinte formato:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Importa un conxunto completo de diálogos como un ficheiro JSON.",
   "helpDialogueImportDetails": "• Estrutura JSON: usa a matriz `dialogues` en lugar de `entries`\n• Recuperación automática: o título, a persoa e a orde da mensaxe do diálogo restablécense.\n• Localización: os diálogos importados aparecen na pestana «Historial» do modo de chat da IA.",
   "helpTourDesc": "Un **círculo resaltado** guiaráche polas funcións clave.\n(Ex: mantén pulsada a tarxeta que apunta o **círculo resaltado** para eliminar.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Total: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Selecciona o material de estudo",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Escribe o texto para traducir",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Gardando...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Traduce o texto que escribiches.",
   "tutorialSaveTitle": "Gardar",
   "tutorialSaveDesc": "Garda os resultados traducidos no teu rexistro de aprendizaxe.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "Chat con IA",
+  "tutorialAiChatDesc": "Practica a conversa real cunha persoa da IA.",
   "tutorialM2SelectTitle": "Selección de material",
   "tutorialM2SelectDesc": "Toca a icona do libro de traballo (📚) na barra de aplicacións superior para seleccionar o material que queres estudar.",
-  "tutorialM3SelectDesc": "Toca a icona do libro de traballo (📚) na barra de aplicacións superior para seleccionar o material que queres practicar.",
   "tutorialM2ListTitle": "Lista de aprendizaxe",
   "tutorialM2ListDesc": "Podes eliminar esta tarxeta manténdoa pulsada (clic longo). Comproba e dá a volta á frase gardada.",
   "tutorialM3SelectTitle": "Selección de material",
+  "tutorialM3SelectDesc": "Toca a icona do libro de traballo (📚) na barra de aplicacións superior para seleccionar o material que queres practicar.",
   "tutorialM3IntervalTitle": "Axuste de intervalo",
   "tutorialM3IntervalDesc": "Axusta o tempo de espera entre frases.",
   "tutorialM3StartTitle": "Comezar a practicar",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Aumentar",
   "languageSettings": "Axustes de idioma",
   "tutorialM2DropdownDesc": "Podes seleccionar o material que queres estudar a través do menú superior.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Importa un ficheiro JSON desde o cartafol do teu dispositivo.",
   "tutorialLangSettingsTitle": "Axustes de idioma",
   "tutorialLangSettingsDesc": "Establece o idioma orixinal e o idioma de destino para traducir.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Defende a base dicindo a palabra antes de que chegue o inimigo.",
   "dialogueQuestTitle": "Busca de diálogos",
   "dialogueQuestDesc": "Practica diálogos a través de xogos de rol. Selecciona e di as respostas axeitadas.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Tipo:",
   "labelWord": "Palabra",
   "labelSentence": "Frase",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Aínda non hai conversas",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Comeza unha nova conversa para practicar!",
   "chatFromConversation": "Extracto da conversa ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Amigo local",
   "chatUntitled": "Conversa sen título",
   "chatAiChat": "Chat",
-  "tutorialAiChatTitle": "Chat con IA",
-  "tutorialAiChatDesc": "Practica a conversa real cunha persoa da IA.",
   "mode1SelectedMaterial": "Libro de traballo seleccionado actualmente: {name}",
   "basicWordRepository": "Repositorio básico de palabras",
   "basicSentenceRepository": "Repositorio básico de frases",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Seleccionar título existente",
   "addTagHint": "Engadir etiqueta...",
   "save": "Gardar",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Por favor, comproba o teu correo electrónico para completar a verificación."
 }

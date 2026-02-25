@@ -1,5 +1,10 @@
 {
   "@@locale": "is",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Hjálp & leiðbeiningar",
   "helpTabModes": "Umfjöllun um stillingar",
   "helpTabJson": "JSON snið",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Æfðu raunverulegar samræður með því að spjalla við AI persónu.",
   "helpModeChatDetails": "• Gervigreindarspjall: Talaðu á þínu tungumáli til að æfa samtöl\n• Margar persónur: Hægt er að breyta kyni/tungumáli/nafni viðmælandans með valmyndinni fyrir ofan talbólu\n• Bæta við maka: Bættu við nýjum samtalsfélaga (ókunnum) með + hnappinum\n• GPS: Aðstæður byggðar á núverandi staðsetningu\n• Sjálfvirk vistun: Sjálfvirk þýðing og vistun samtalsinnihalds",
   "helpJsonDesc": "Til að flytja inn námsefni til notkunar í stillingu 3 sem JSON skrá, vinsamlegast fylgdu þessu sniði:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Flytja inn heilt samtalasett sem JSON skrá.",
   "helpDialogueImportDetails": "• JSON uppbygging: Notaðu `dialogues` fylkið í stað `entries`\n• Sjálfvirk endurheimt: Endurheimt samtalsaheiti, persóna og skilaboðaröð.\n• Staðsetning: Innflutt samtöl birtast á 'Saga' flipanum í gervigreindarspjallstillingu.",
   "helpTourDesc": "**Auðkenndur hringur** leiðbeinir lykileiginleikum.\n(Dæmi: Hægt er að eyða kortinu sem **auðkenndi hringurinn** vísar á með því að halda því inni.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Alls: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Veldu námsefni",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Sláðu inn texta til að þýða",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Vista...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Þýðir textann sem þú slóst inn.",
   "tutorialSaveTitle": "Vista",
   "tutorialSaveDesc": "Vistaðu þýddar niðurstöður í námsferilinn þinn.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI spjall",
+  "tutorialAiChatDesc": "Æfðu raunveruleg samtöl við gervigreindarpersónu.",
   "tutorialM2SelectTitle": "Efnisval",
   "tutorialM2SelectDesc": "Ýttu á efnissettstáknið (📚) á efsta appbarnum til að velja efni til að læra.",
-  "tutorialM3SelectDesc": "Ýttu á efnissettstáknið (📚) á efsta appbarnum til að velja efni til að æfa.",
   "tutorialM2ListTitle": "Námslisti",
   "tutorialM2ListDesc": "Þú getur eytt þessu korti með því að halda því inni (Langa smelltu). Athugaðu vistaðar setningar og snúðu þeim við.",
   "tutorialM3SelectTitle": "Efnisval",
+  "tutorialM3SelectDesc": "Ýttu á efnissettstáknið (📚) á efsta appbarnum til að velja efni til að æfa.",
   "tutorialM3IntervalTitle": "Millibilsstilling",
   "tutorialM3IntervalDesc": "Stilltu biðtímann á milli setninga.",
   "tutorialM3StartTitle": "Hefja æfingu",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Auka",
   "languageSettings": "Tungumálastillingar",
   "tutorialM2DropdownDesc": "Þú getur valið námsefni í gegnum valmyndina efst.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Flytja inn JSON skrá úr möppu tækisins.",
   "tutorialLangSettingsTitle": "Tungumálastillingar",
   "tutorialLangSettingsDesc": "Stilltu frumtungu og marktungu til að þýða.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Verjaðu stöðina með því að segja orðið áður en óvinurinn kemur.",
   "dialogueQuestTitle": "Samtalaleiðangur",
   "dialogueQuestDesc": "Æfðu samtöl í gegnum atburðarás. Veldu viðeigandi svar og segðu það.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Tegund:",
   "labelWord": "Orð",
   "labelSentence": "Setning",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Engin samtöl ennþá",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Byrjaðu nýtt samtal til að æfa!",
   "chatFromConversation": "Samtalsútdráttur ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Vinur heimamanns",
   "chatUntitled": "Ónefnt samtal",
   "chatAiChat": "Spjall",
-  "tutorialAiChatTitle": "AI spjall",
-  "tutorialAiChatDesc": "Æfðu raunveruleg samtöl við gervigreindarpersónu.",
   "mode1SelectedMaterial": "Núverandi valið efnissett: {name}",
   "basicWordRepository": "Grunn orðageymsla",
   "basicSentenceRepository": "Grunn setningageymsla",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Veldu núverandi nafn",
   "addTagHint": "Bættu við merki...",
   "save": "Vista",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Vinsamlegast athugaðu tölvupóstinn þinn til að staðfesta."
 }

@@ -1,5 +1,10 @@
 {
   "@@locale": "lt",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Pagalba ir gidai",
   "helpTabModes": "Režimų paaiškinimas",
   "helpTabJson": "JSON formatas",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "Praktikuokite pokalbius su AI personažu.",
   "helpModeChatDetails": "• AI pokalbiai: praktikuokite pokalbius kalbėdami savo kalba\n• Keli personažai: galima pakeisti oponento lytį / kalbą / vardą meniu virš baliono\n• Pridėti partnerį: pridėkite naują pašnekovą (Nepažįstamąjį) naudodami mygtuką +\n• GPS: situacijos komedija pagal dabartinę vietą\n• Automatinis išsaugojimas: automatinis pokalbio turinio vertimas ir išsaugojimas",
   "helpJsonDesc": "Jei norite importuoti mokymosi medžiagą, kuri bus naudojama 3 režime, kaip JSON failą, vadovaukitės šiuo formatu:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "Importuokite visą pokalbių rinkinį kaip JSON failą.",
   "helpDialogueImportDetails": "• JSON struktūra: naudokite `dialogues` masyvą vietoj `entries`\n• Automatinis atkūrimas: atkuriamas pokalbio pavadinimas, personažas, pranešimų tvarka.\n• Vieta: importuoti pokalbiai rodomi AI pokalbių režimo skirtuke „Istorija“.",
   "helpTourDesc": "**Paryškintas apskritimas** nurodo pagrindines funkcijas.\n(Pavyzdžiui, **Paryškintas apskritimas** rodo, kad galite ištrinti ilgai paspausdami kortelę.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Iš viso: {count}",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Pasirinkite mokymosi medžiagą",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Įveskite tekstą, kurį norite išversti",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Išsaugoma...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Išverčia įvestą tekstą.",
   "tutorialSaveTitle": "Išsaugoti",
   "tutorialSaveDesc": "Išsaugokite išverstą rezultatą savo mokymosi įrašuose.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI pokalbis",
+  "tutorialAiChatDesc": "Praktikuokite realius pokalbius su AI personažu.",
   "tutorialM2SelectTitle": "Medžiagos pasirinkimas",
   "tutorialM2SelectDesc": "Spustelėkite medžiagų rinkinio piktogramą (📚) viršutinėje programos juostoje, kad pasirinktumėte medžiagą, kurią norite studijuoti.",
-  "tutorialM3SelectDesc": "Spustelėkite medžiagų rinkinio piktogramą (📚) viršutinėje programos juostoje, kad pasirinktumėte medžiagą, kurią norite praktikuoti.",
   "tutorialM2ListTitle": "Mokymosi sąrašas",
   "tutorialM2ListDesc": "Galite ištrinti ilgai paspausdami šią kortelę. Patikrinkite išsaugotus sakinius ir apverskite juos.",
   "tutorialM3SelectTitle": "Medžiagos pasirinkimas",
+  "tutorialM3SelectDesc": "Spustelėkite medžiagų rinkinio piktogramą (📚) viršutinėje programos juostoje, kad pasirinktumėte medžiagą, kurią norite praktikuoti.",
   "tutorialM3IntervalTitle": "Intervalo nustatymas",
   "tutorialM3IntervalDesc": "Sureguliuoja laukimo laiką tarp sakinių.",
   "tutorialM3StartTitle": "Pradėti praktiką",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Padidinti",
   "languageSettings": "Kalbos nustatymai",
   "tutorialM2DropdownDesc": "Galite pasirinkti medžiagą, kurią norite studijuoti, naudodami viršutinį meniu.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Importuoja JSON failą iš įrenginio aplanko.",
   "tutorialLangSettingsTitle": "Kalbos nustatymai",
   "tutorialLangSettingsDesc": "Nustato pradinę ir tikslinę kalbas, kurias norite versti.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Apginkite savo bazę sakydami žodžius prieš atvykstant priešui.",
   "dialogueQuestTitle": "Dialogo užduotis",
   "dialogueQuestDesc": "Praktikuokite pokalbius per situacijų komediją. Pasirinkite tinkamą atsakymą ir pasakykite.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Tipas:",
   "labelWord": "Žodis",
   "labelSentence": "Sakinys",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Dar nėra pokalbių",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Pradėkite naują pokalbį praktikai!",
   "chatFromConversation": "Pokalbio ištrauka ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Vietinis draugas",
   "chatUntitled": "Pokalbis be pavadinimo",
   "chatAiChat": "Pokalbis",
-  "tutorialAiChatTitle": "AI pokalbis",
-  "tutorialAiChatDesc": "Praktikuokite realius pokalbius su AI personažu.",
   "mode1SelectedMaterial": "Šiuo metu pasirinkta medžiaga: {name}",
   "basicWordRepository": "Pagrindinė žodžių saugykla",
   "basicSentenceRepository": "Pagrindinė sakinių saugykla",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Pasirinkti esamą pavadinimą",
   "addTagHint": "Pridėti žymę...",
   "save": "Išsaugoti",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Patikrinkite el. paštą ir užbaikite autentifikavimą."
 }

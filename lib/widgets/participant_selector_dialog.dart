@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../models/chat_participant.dart';
+import '../l10n/app_localizations.dart';
 
 class ParticipantSelectorDialog extends StatefulWidget {
   final Function(List<ChatParticipant>) onSelected;
@@ -39,8 +40,9 @@ class _ParticipantSelectorDialogState extends State<ParticipantSelectorDialog> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return AlertDialog(
-      title: const Text('Select Participants'),
+      title: Text(l10n.selectParticipants),
       content: SizedBox(
         width: double.maxFinite,
         child: Consumer<AppState>(
@@ -59,13 +61,29 @@ class _ParticipantSelectorDialogState extends State<ParticipantSelectorDialog> {
               });
             }
 
-            if (participants.isEmpty) {
-              return const Column(
+            if (appState.globalParticipantsLoading && participants.isEmpty) {
+              return Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  CircularProgressIndicator(),
-                  SizedBox(height: 16),
-                  Text('Loading participants...'),
+                  const CircularProgressIndicator(),
+                  const SizedBox(height: 16),
+                  Text(l10n.loadingParticipants),
+                ],
+              );
+            }
+
+            if (participants.isEmpty) {
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(Icons.error_outline, size: 48, color: Colors.orange),
+                  const SizedBox(height: 16),
+                  const Text('기본 참가자(나/AI) 생성에 실패했습니다.'),
+                  const SizedBox(height: 8),
+                  TextButton(
+                    onPressed: () => appState.loadGlobalParticipants(),
+                    child: const Text('다시 시도'),
+                  ),
                 ],
               );
             }
@@ -103,7 +121,7 @@ class _ParticipantSelectorDialogState extends State<ParticipantSelectorDialog> {
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: const Text('Cancel'),
+          child: Text(l10n.cancel),
         ),
         FilledButton(
           onPressed: () async {
@@ -116,7 +134,7 @@ class _ParticipantSelectorDialogState extends State<ParticipantSelectorDialog> {
             Navigator.pop(context); // 다이얼로그를 먼저 닫음
             await widget.onSelected(selected); // DB 작업 완료 후 ChatScreen으로 이동
           },
-          child: const Text('Start Chat'),
+          child: Text(l10n.startChat),
         ),
       ],
     );

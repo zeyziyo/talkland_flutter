@@ -1,5 +1,10 @@
 {
   "@@locale": "ky",
+  "googleContinue": "Continue with Google",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Logout",
+  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
+  "syncingData": "Syncing data...",
   "helpTitle": "Жардам жана колдонмо",
   "helpTabModes": "Режимдерди түшүндүрүү",
   "helpTabJson": "JSON форматы",
@@ -13,6 +18,9 @@
   "helpModeChatDesc": "AI персона менен сүйлөшүп, чыныгы сүйлөшүүнү машыктырыңыз.",
   "helpModeChatDetails": "• AI чат: өзүңүздүн тилиңизде сүйлөп сүйлөшүүнү машыктырыңыз\n• Көп Persona: көбүкчөнүн үстүндөгү меню менен оппоненттин жынысын/тилин/атын өзгөртүүгө болот\n• Өнөктөштү кошуу: + баскычы менен жаңы сүйлөшүү өнөктөшүн (бейтааныш адамды) кошуу\n• GPS: учурдагы жайгашкан жерге негизделген кырдаалдык драма\n• Автоматтык сактоо: сүйлөшүүнүн мазмунун автоматтык которуу жана сактоо",
   "helpJsonDesc": "3-режимде колдонула турган окуу материалдарын JSON файлы катары импорттоо үчүн, төмөнкү форматты аткарыңыз:",
+  "helpJsonTypeDialogue": "Dialogue",
+  "helpJsonTypeSentence": "Sentence",
+  "helpJsonTypeWord": "Word",
   "helpDialogueImportDesc": "JSON файлы менен толук сүйлөшүү топтомун импорттоо.",
   "helpDialogueImportDetails": "• JSON структурасы: `entries` ордуна `dialogues` массивин колдонуңуз\n• Автоматтык калыбына келтирүү: сүйлөшүүнүн аталышы, Persona, билдирүүлөрдүн ирети калыбына келтирилет.\n• Жайгашкан жер: импорттолгон сүйлөшүү AI чат режиминин 'Жазуулар' кошумча барагында пайда болот.",
   "helpTourDesc": "**Урунттуу тегерек** негизги функцияларды көрсөтөт.\n(Мисалы: **Урунттуу тегерек** көрсөткөн картты узакка басып өчүрүүгө болот.)",
@@ -209,6 +217,14 @@
       }
     }
   },
+  "addParticipant": "Add Participant",
+  "editParticipant": "Edit Participant",
+  "labelRole": "Role",
+  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
+  "roleUser": "User",
+  "roleAi": "AI",
+  "participantDeleted": "Participant deleted.",
+  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Бардыгы: {count} даана",
   "@importTotal": {
     "description": "Total import count",
@@ -253,6 +269,7 @@
       }
     }
   },
+  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Окуу материалын тандоо",
   "@selectStudyMaterial": {
     "description": "Study material selector label"
@@ -340,10 +357,11 @@
     }
   },
   "enterTextToTranslate": "Которула турган текстти киргизиңиз",
-  "translationResultHint": "Translation result - editable",
   "@enterTextToTranslate": {
     "description": "Empty input warning"
   },
+  "translationResultHint": "Translation result - editable",
+  "voluntaryTranslations": "Voluntary Translations",
   "saving": "Сакталууда...",
   "@saving": {
     "description": "Save in progress"
@@ -443,12 +461,26 @@
   "tutorialTransDesc": "Киргизилген текстти которот.",
   "tutorialSaveTitle": "Сактоо",
   "tutorialSaveDesc": "Которулган жыйынтыкты окуу жазууларына сактаңыз.",
+  "selectParticipants": "Select Participants",
+  "loadingParticipants": "Loading participants...",
+  "noParticipantsFound": "No participants found.",
+  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
+  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
+  "noMaterialsInCategory": "No materials in this category.",
+  "onlineLibraryLoadFailed": "Failed to load materials.",
+  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
+  "onlineLibraryNoMaterials": "No materials found.",
+  "sendingMessage": "메시지 전송 중...",
+  "startChat": "Start Chat",
+  "manageParticipants": "Manage Participants",
+  "tutorialAiChatTitle": "AI чат",
+  "tutorialAiChatDesc": "AI Persona менен иш жүзүндө сүйлөшүү көнүгүүсүн жасап көрүңүз.",
   "tutorialM2SelectTitle": "Материал тандоо",
   "tutorialM2SelectDesc": "Жогорку колдонмо тилкесиндеги жыйнак белгисин (📚) басып үйрөнө турган материалды тандаңыз.",
-  "tutorialM3SelectDesc": "Жогорку колдонмо тилкесиндеги жыйнак белгисин (📚) басып машыга турган материалды тандаңыз.",
   "tutorialM2ListTitle": "Окуу тизмеси",
   "tutorialM2ListDesc": "Бул картты узакка бассаңыз (Long Click) өчүрүүгө болот. Сакталган сүйлөмдөрдү текшерип оодарыңыз.",
   "tutorialM3SelectTitle": "Материал тандоо",
+  "tutorialM3SelectDesc": "Жогорку колдонмо тилкесиндеги жыйнак белгисин (📚) басып машыга турган материалды тандаңыз.",
   "tutorialM3IntervalTitle": "Аралыкты жөндөө",
   "tutorialM3IntervalDesc": "Сүйлөмдөрдүн ортосундагы күтүү убактысын жөндөйт.",
   "tutorialM3StartTitle": "Көнүгүүнү баштоо",
@@ -462,6 +494,7 @@
   "tooltipIncrease": "Көбөйтүү",
   "languageSettings": "Тил жөндөөлөрү",
   "tutorialM2DropdownDesc": "Жогорку меню аркылуу үйрөнө турган материалды тандай аласыз.",
+  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
   "tutorialM2ImportDesc": "Түзмөктүн папкасынан JSON файлын жүктөп алыңыз.",
   "tutorialLangSettingsTitle": "Тил жөндөөлөрү",
   "tutorialLangSettingsDesc": "Которула турган түпкү тилди жана максаттуу тилди орнотуңуз.",
@@ -479,6 +512,10 @@
   "wordDefenseDesc": "Душман келгенге чейин сөздү айтып базаны коргоңуз.",
   "dialogueQuestTitle": "Сүйлөшүү тапшырмасы",
   "dialogueQuestDesc": "Кырдаалдык драма аркылуу сүйлөшүү көнүгүүсүн жасаңыз. Ылайыктуу жоопту тандап айтыңыз.",
+  "translation": "Translation",
+  "@translation": {
+    "description": "Label for translation toggle"
+  },
   "labelType": "Түрү:",
   "labelWord": "Сөз",
   "labelSentence": "Сүйлөм",
@@ -599,6 +636,7 @@
     }
   },
   "chatNoConversations": "Азырынча сүйлөшүү жок",
+  "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "Көнүгүү үчүн жаңы сүйлөшүүнү баштап көрүңүз!",
   "chatFromConversation": "Сүйлөшүүдөн үзүндү ({speaker})",
   "@chatFromConversation": {
@@ -613,8 +651,6 @@
   "personaFriend": "Жергиликтүү дос",
   "chatUntitled": "Аталышы жок сүйлөшүү",
   "chatAiChat": "Чат",
-  "tutorialAiChatTitle": "AI чат",
-  "tutorialAiChatDesc": "AI Persona менен иш жүзүндө сүйлөшүү көнүгүүсүн жасап көрүңүз.",
   "mode1SelectedMaterial": "Учурда тандалган жыйнак: {name}",
   "basicWordRepository": "Негизги сөз сактагычы",
   "basicSentenceRepository": "Негизги сүйлөм сактагычы",
@@ -693,6 +729,27 @@
   "selectExistingSubject": "Мурунку аталышты тандаңыз",
   "addTagHint": "Тэг кошуу...",
   "save": "Сактоо",
-  "noDialogueHistory": "No dialogue history.",
-  "manageParticipants": "Manage Participants"
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Polite",
+  "styleSlang": "Slang",
+  "statusDownloading": "Downloading: {name}...",
+  "statusImportSuccess": "{name} Imported Successfully",
+  "statusImportFailed": "Import Failed: {error}",
+  "statusLoginSuccess": "Login successful.",
+  "statusLoginFailed": "Login failed: {error}",
+  "statusLoginCancelled": "Login cancelled.",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLogoutSuccess": "Logged out.",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "invalidEmail": "Please enter a valid email.",
+  "passwordTooShort": "Password must be at least 6 characters.",
+  "statusSigningUp": "Signing up...",
+  "statusSignUpFailed": "Sign up failed: {error}",
+  "statusCheckEmail": "Электрондук почтаңызды текшерип, аутентификацияны аягына чыгарыңыз."
 }

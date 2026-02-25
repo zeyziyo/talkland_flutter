@@ -1,0 +1,14 @@
+{
+    "default_type": "sentence",
+    "subject": "Greetings 1",
+    "entries": [
+        {
+            "text": "Hello.",
+            "note": "Polite greeting"
+        },
+        {
+            "text": "Nice to meet you.",
+            "note": "First meeting"
+        }
+    ]
+}
