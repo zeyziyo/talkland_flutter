@@ -1,6 +1,7 @@
 {
   "@@locale": "en",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Continue with Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",

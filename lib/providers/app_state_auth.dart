@@ -421,6 +421,33 @@ extension AppStateAuth on AppState {
     }
   }
 
+  Future<void> loginWithKakao() async {
+    try {
+      final oldUserId = SupabaseService.client.auth.currentUser?.id;
+
+      isLoggingIn = true;
+      _statusMessage = 'L10N:statusLoggingIn';
+      notify();
+
+      final response = await SupabaseAuthService.signInWithKakao();
+      
+      if (response != null && response.user != null) {
+        await _handleAuthSuccess(oldUserId, response.user!.id);
+      } else if (kIsWeb) {
+        // OAuth redirect in progress
+        _statusMessage = 'L10N:statusLoggingIn';
+      } else {
+        _statusMessage = 'L10N:statusLoginCancelled';
+      }
+    } catch (e) {
+      debugPrint('[AppState] Kakao Login Failed: $e');
+      _statusMessage = 'L10N:statusLoginFailed|$e';
+    } finally {
+      isLoggingIn = false;
+      notify();
+    }
+  }
+
   /// v15.7: Email Sign-Up with Data Merge
   Future<void> signUpWithEmail(String email, String password) async {
     try {

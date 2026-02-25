@@ -21,6 +21,17 @@
 
 ---
 
+---
+
+### [2026-02-25] 카카오톡 로그인 기능 통합 (v15.8)
+
+- **Kakao Login Integration**: 카카오톡 간편 로그인 기능을 추가했습니다. `kakao_flutter_sdk_user`를 도입하고 `main.dart`에서 초기화하여 네이티브 및 웹 환경을 지원합니다.
+- **Platform Configuration**: Android(`AndroidManifest.xml`)의 패키지 가시성 및 리다이렉트 액티비티 설정, iOS(`Info.plist`)의 URL 스키마 등록을 완료했습니다.
+- **Supabase OAuth Linkage**: Supabase의 카카오 OAuth 프로바이더를 연동했습니다. `SupabaseAuthService`에 `signInWithKakao`를 구현하고, `AppStateAuth`에서 기존 익명 세션 데이터와의 머지 로직을 통합했습니다.
+- **Kakao Style UI**: `AuthScreen`에 카카오 공식 브랜드 가이드(노란색 #FEE500)를 준수한 로그인 버튼을 배치했습니다.
+- **L10n & Assets**: 한국어 및 영어 다국어 파일에 "카카오로 계속하기" 문자열을 추가하고, 카카오 전용 128px 고해상도 아이콘 리소스를 생성 및 등록했습니다.
+- **Verification**: `flutter analyze` 정적 분석 무결성을 확인하고, 안드로이드 디버그 키 해시 추출 도구를 지원하여 설정 편의성을 높였습니다.
+
 ### [2026-02-23] 안드로이드 구글 로그인 수정 및 이메일 인증 기능 구현 (v15.7)
 
 - **Android Google Login Fix**: 안드로이드 환경에서 "No ID Token found" 오류가 발생하던 문제를 해결했습니다. `.env`의 `GOOGLE_WEB_CLIENT_ID`를 '웹 애플리케이션' 클라이언트 ID로 수정하고, `SupabaseAuthService`에서 `openid`, `profile` 스코프를 명시적으로 요청하도록 개선했습니다.

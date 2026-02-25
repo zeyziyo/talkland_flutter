@@ -11,16 +11,20 @@ import 'services/supabase_service.dart';
 import 'services/background_sync_service.dart';
 import 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
 
-
-import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
-import 'package:shared_preferences/shared_preferences.dart';
-
-// Conditional import for dart:io (not available on web)
-import 'platform_stub.dart' if (dart.library.io) 'dart:io' as platform;
+import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  debugPrint('>>> MAIN [1] Widgets Binding Initialized');
+  
+  // Initialize Kakao SDK before any UI build
+  // v1.2.0: Added Kakao Login Support
+  await dotenv.load(fileName: ".env");
+  KakaoSdk.init(
+    nativeAppKey: dotenv.env['KAKAO_NATIVE_APP_KEY'],
+    javaScriptAppKey: dotenv.env['KAKAO_JAVASCRIPT_KEY'],
+  );
+
+  debugPrint('>>> MAIN [1] Widgets/Kakao Binding Initialized');
   
   // Desktop SQLite FFI setup (not for web)
   if (kIsWeb) {

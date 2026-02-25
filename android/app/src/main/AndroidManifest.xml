@@ -44,6 +44,19 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-2281211992064241~7424683465"/>
+
+        <!-- Kakao Login Activity -->
+        <activity 
+            android:name="com.kakao.sdk.flutter.AuthCodeCustomTabsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Replace 'YOUR_NATIVE_APP_KEY' with your actual key in .env -->
+                <data android:scheme="kakao${KAKAO_NATIVE_APP_KEY}" />
+            </intent-filter>
+        </activity>
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and
@@ -55,5 +68,7 @@
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
         </intent>
+        <!-- KakaoTalk visibility for Android 11+ -->
+        <package android:name="com.kakao.talk" />
     </queries>
 </manifest>

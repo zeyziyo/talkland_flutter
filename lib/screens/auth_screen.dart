@@ -210,6 +210,40 @@ class _AuthScreenState extends State<AuthScreen> {
                 ),
                 const SizedBox(height: 24),
                 
+                // Kakao Login Button - Brand Guidelines (Yellow #FEE500)
+                SizedBox(
+                  width: double.infinity,
+                  height: 54,
+                  child: ElevatedButton.icon(
+                    onPressed: appState.isLoggingIn ? null : () async {
+                      final navigator = Navigator.of(context);
+                      await appState.loginWithKakao();
+                      if (!mounted) return;
+                      
+                      if (appState.currentUser != null && !appState.currentUser!.isAnonymous) {
+                        navigator.pop();
+                      }
+                    },
+                    icon: const Icon(Icons.chat_bubble_rounded, color: Colors.black87, size: 24), // Kakao-like icon
+                    label: Text(
+                      l10n.kakaoContinue,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFFEE500),
+                      foregroundColor: Colors.black87,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      elevation: 1,
+                    ),
+                  ),
+                ),
+                
+                const SizedBox(height: 12),
+                
                 // Google Login Button - Improved Visibility
                 SizedBox(
                   width: double.infinity,
