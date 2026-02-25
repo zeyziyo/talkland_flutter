@@ -23,6 +23,10 @@
 
 ---
 
+### [2026-02-25] 안드로이드 매니페스트 빌드 오류 수정 (v15.8.2)
+
+- **Manifest Merger Fix**: `AndroidManifest.xml`에서 사용된 `KAKAO_NATIVE_APP_KEY` 플레이스홀더가 Gradle에서 정의되지 않아 발생하던 빌드 오류를 해결했습니다. `build.gradle.kts`의 `manifestPlaceholders`에 해당 키값을 등록하여 CI/CD 환경에서의 빌드 정합성을 확보했습니다.
+
 ### [2026-02-25] 빌드 오류 수정 및 로직 최적화 (v15.8.1)
 
 - **Build Fix (main.dart)**: 누락되었던 `dart:io`, `google_mobile_ads`, `shared_preferences` 임포트를 복구하고 `io.Platform` 접두어 문제를 해결했습니다.

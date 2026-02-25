@@ -39,6 +39,9 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+
+        // Added Kakao Native App Key as placeholder for AndroidManifest.xml
+        manifestPlaceholders["KAKAO_NATIVE_APP_KEY"] = "e3cbe962dbd2b80cedf5399c6d320e6b"
     }
 
     signingConfigs {
