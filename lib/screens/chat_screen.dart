@@ -12,6 +12,7 @@ import '../services/translation_service.dart';
 import '../services/database/dialogue_repository.dart'; // Phase 135
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
+import 'package:flutter/foundation.dart'; // Phase 164: kIsWeb
 
 class ChatScreen extends StatefulWidget {
   final DialogueGroup? initialDialogue;
@@ -155,54 +156,77 @@ class _ChatScreenState extends State<ChatScreen> {
   // Helper to get GPS Context
   Future<String> _getLocationString(AppLocalizations l10n) async {
     try {
-      print('[GPS] Checking permissions...');
+      debugPrint('[GPS] Checking permissions...');
       LocationPermission permission = await Geolocator.checkPermission().timeout(const Duration(seconds: 2));
       if (permission == LocationPermission.denied) {
-        print('[GPS] Requesting permissions...');
+        debugPrint('[GPS] Requesting permissions...');
         permission = await Geolocator.requestPermission().timeout(const Duration(seconds: 3));
         if (permission == LocationPermission.denied) return '';
       }
       
-      if (permission == LocationPermission.deniedForever) return '';
+      if (permission == LocationPermission.deniedForever) {
+        debugPrint('[GPS] Permission denied forever.');
+        return '';
+      }
       
-      // Phase 162: If Windows, Geolocator might return error or empty. 
-      // We try to handle it gracefully.
-
-      // 1. Try Last Known Position (Instant)
-      Position? position = await Geolocator.getLastKnownPosition();
+      Position? position;
       
-      // 2. If null or old, try Current Position with Timeout (3s)
+      // 1. Try Last Known Position (Web Safe)
+      try {
+        position = await Geolocator.getLastKnownPosition();
+      } catch (e) {
+        debugPrint('[GPS] getLastKnownPosition failed (common on web): $e');
+      }
+      
+      // 2. Try Current Position with Timeout
       if (position == null) {
         try {
-          print('[GPS] Fetching current position (3s timeout)...');
+          debugPrint('[GPS] Fetching current position...');
           position = await Geolocator.getCurrentPosition(
-            locationSettings: const LocationSettings(
-              accuracy: LocationAccuracy.medium,
-              timeLimit: Duration(seconds: 3),
+            locationSettings: LocationSettings(
+              accuracy: kIsWeb ? LocationAccuracy.high : LocationAccuracy.medium,
+              timeLimit: const Duration(seconds: 5),
             ),
-          ).timeout(const Duration(seconds: 3));
+          ).timeout(const Duration(seconds: 5));
         } catch (e) {
-          print('[GPS] Timeout or Error: $e');
+          debugPrint('[GPS] getCurrentPosition Timeout or Error: $e');
         }
       }
 
-      if (position == null) return '';
+      if (position == null) {
+        debugPrint('[GPS] No position acquired.');
+        return '';
+      }
 
-      print('[GPS] Converting coordinates to address...');
-      final placemarks = await placemarkFromCoordinates(position.latitude, position.longitude)
-          .timeout(const Duration(seconds: 2));
+      final coords = '${position.latitude.toStringAsFixed(3)}, ${position.longitude.toStringAsFixed(3)}';
+      debugPrint('[GPS] Position: $coords');
       
-      if (placemarks.isNotEmpty) {
-        final place = placemarks.first;
-        final city = place.locality ?? place.administrativeArea ?? '';
-        final sub = place.subLocality ?? place.thoroughfare ?? '';
-        
-        print('[GPS] Success: $city, $sub');
-        if (sub.isNotEmpty && city.isNotEmpty) {
-          return '$sub, $city';
-        }
-        return city.isNotEmpty ? city : place.country ?? '';
+      // [Phase 164] Web skips geocoding due to lack of support
+      if (kIsWeb) {
+        debugPrint('[GPS] Web detected. Returning coordinates.');
+        return coords;
       }
+
+      debugPrint('[GPS] Converting coordinates to address...');
+      try {
+        final placemarks = await placemarkFromCoordinates(position.latitude, position.longitude)
+            .timeout(const Duration(seconds: 5));
+        
+        if (placemarks.isNotEmpty) {
+          final place = placemarks.first;
+          final city = place.locality ?? place.administrativeArea ?? '';
+          final sub = place.subLocality ?? place.thoroughfare ?? '';
+          
+          debugPrint('[GPS] Address: $city, $sub');
+          if (sub.isNotEmpty && city.isNotEmpty) {
+            return '$sub, $city';
+          }
+          return city.isNotEmpty ? city : (place.country ?? coords);
+        }
+      } catch (e) {
+        debugPrint('[GPS] Geocoding error, falling back to coords: $e');
+      }
+      return coords;
     } catch (e) {
       debugPrint('[GPS] Final catch Error: $e');
     }

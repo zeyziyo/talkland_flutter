@@ -49,11 +49,53 @@ class AppState extends ChangeNotifier {
     _usageService.init(prefs: _prefs); 
     _initSettings();
     debugPrint('>>> APPSTATE [2] Settings Init Done');
-    loadGlobalParticipants();
-    cleanupCorruptedParticipants(); // Phase 28: Clean ghost data on start
+    
+    // [Phase 164] 중앙 집중식 초기화 및 구원 타이머 도입
+    _initializeAll();
+    
     _initConnectivity();
     _initAuthListener(); // Phase 33: Listen for Google Sign-in status
     debugPrint('>>> APPSTATE [3] Constructor Exit');
+  }
+
+  Future<void> _initializeAll() async {
+    debugPrint('[AppState] >>> _initializeAll: START');
+    
+    // [Phase 164] 강제 구원 타이머: 15초 후 무조건 로딩 상태 해제 및 기본 데이터 주입
+    Future.delayed(const Duration(seconds: 15), () async {
+      if (_globalParticipantsLoading) {
+        debugPrint('[AppState] !!! RESCUE TIMER fired: Force clearing loading state');
+        _globalParticipantsLoading = false;
+        
+        // 만약 여전히 비어있다면 강제로 메모리 상에라도 '나/AI'를 주입하여 사용자 경험을 보호합니다.
+        if (_globalParticipants.isEmpty) {
+          debugPrint('[AppState] !!! RESCUE TIMER: Injecting default participants to memory as emergency fallback.');
+          _globalParticipants = [
+            ChatParticipant(id: 'me', dialogueId: '', name: '나', role: 'user', gender: _chatUserGender, langCode: _sourceLang),
+            ChatParticipant(id: 'ai', dialogueId: '', name: 'AI', role: 'ai', gender: _chatAiGender, langCode: _targetLang),
+          ];
+        }
+        notifyListeners();
+      }
+    });
+
+    try {
+      // loadGlobalParticipants 내부에서 cleanup 및 ensureDefault를 통합 처리합니다.
+      await loadGlobalParticipants().timeout(const Duration(seconds: 12));
+    } catch (e) {
+      debugPrint('[AppState] !!! _initializeAll Error (caught): $e');
+      // 에러 시 로딩 해제 보장
+      _globalParticipantsLoading = false;
+      if (_globalParticipants.isEmpty) {
+         _globalParticipants = [
+            ChatParticipant(id: 'me', dialogueId: '', name: '나', role: 'user', gender: _chatUserGender, langCode: _sourceLang),
+            ChatParticipant(id: 'ai', dialogueId: '', name: 'AI', role: 'ai', gender: _chatAiGender, langCode: _targetLang),
+         ];
+      }
+      notifyListeners();
+    } finally {
+      debugPrint('[AppState] >>> _initializeAll: FINISHED');
+    }
   }
 
   /// Phase 33: Listen for Auth Changes to trigger data sync
@@ -379,7 +421,6 @@ class AppState extends ChangeNotifier {
       return;
     }
     
-    // 데이터가 이미 있으면 굳이 다시 로드하지 않음 (필요시 force parameter 도입 가능)
     if (_globalParticipants.isNotEmpty) {
       debugPrint('[AppState] loadGlobalParticipants: Already has ${_globalParticipants.length} participants. Skipping.');
       return;
@@ -389,19 +430,44 @@ class AppState extends ChangeNotifier {
     notifyListeners();
     
     try {
-      debugPrint('[AppState] Starting Sequential Global Participants Loading...');
-      _globalParticipants = await DialogueRepository.getAllUniqueParticipants();
-      debugPrint('[AppState] Unique Participants fetched from DB: ${_globalParticipants.length}');
+      final startTime = DateTime.now();
+      debugPrint('[AppState] Starting Optimized Global Participants Loading...');
+
+      // 1. 1회 통합 조회 (타임아웃 적용)
+      List<ChatParticipant> rawParticipants = await DialogueRepository.getAllUniqueParticipants().timeout(
+        const Duration(seconds: 10),
+        onTimeout: () {
+          debugPrint('[AppState] !!! Global Participants Loading TIMEOUT (10s).');
+          return [];
+        },
+      );
+
+      // 2. 메모리 상에서 자가 치유 (Self-healing: 이름이 없거나 중복된 항목 제거)
+      final Set<String> seenIds = {};
+      final List<ChatParticipant> cleanList = [];
       
+      for (var p in rawParticipants) {
+        if (p.name.trim().isEmpty || p.name == 'Group') continue;
+        if (seenIds.contains(p.id)) continue;
+        seenIds.add(p.id);
+        cleanList.add(p);
+      }
+      
+      _globalParticipants = cleanList;
+
+      // 3. 기본 참가자 보장 (메모리 우선 처리 후 비동기 DB 삽입)
       await _ensureDefaultParticipants();
-      debugPrint('[AppState] Final Global Participants count: ${_globalParticipants.length}');
       
-    } catch (e, stack) {
+      final duration = DateTime.now().difference(startTime);
+      debugPrint('[AppState] Participants load/clean finished in ${duration.inMilliseconds}ms. Count: ${_globalParticipants.length}');
+      
+    } catch (e) {
       debugPrint('[AppState] Global Participants Loading Error: $e');
-      debugPrint('[AppState] Stack: $stack');
+      if (_globalParticipants.isEmpty) {
+        await _ensureDefaultParticipants();
+      }
     } finally {
       _globalParticipantsLoading = false;
-      debugPrint('[AppState] Global Participants Loading Finished.');
       notifyListeners();
     }
   }

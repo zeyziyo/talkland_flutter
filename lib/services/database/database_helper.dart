@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'package:flutter/foundation.dart';
@@ -7,10 +8,26 @@ class DatabaseHelper {
   static const String _dbName = 'talkie.db';
   static const int _dbVersion = 25; // Phase 25: Force Re-create for Participant Loading Fix
 
+  static Future<Database>? _initFuture;
+
   static Future<Database> get database async {
-    if (_database != null) return _database!;
-    _database = await _initDatabase();
-    return _database!;
+    if (_database != null && _database!.isOpen) return _database!;
+    
+    if (_initFuture != null) {
+      debugPrint('[DB] Database is already initializing... waiting for existing Future.');
+      return await _initFuture!;
+    }
+    
+    debugPrint('[DB] Starting new database initialization Future.');
+    _initFuture = _initDatabase();
+    try {
+      _database = await _initFuture!;
+      return _database!;
+    } catch (e) {
+      debugPrint('[DB] Database initialization Future FAILED: $e');
+      _initFuture = null; // Allow retry
+      rethrow;
+    }
   }
 
   static Future<void> reset() async {
@@ -63,15 +80,20 @@ class DatabaseHelper {
   }
 
   static Future<void> _dropAllTables(Database db) async {
+    debugPrint('[DB] Dropping all tables for fresh start...');
     await db.execute('PRAGMA foreign_keys = OFF');
     try {
+      // android_metadata 및 sqlite_ 시스템 테이블 제외
       final List<Map<String, dynamic>> tables = await db.rawQuery(
-        "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'"
+        "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name NOT LIKE 'android_%'"
       );
       for (var table in tables) {
         final name = table['name'] as String;
-        await db.execute('DROP TABLE IF EXISTS $name');
+        debugPrint('[DB] Wiping table: $name');
+        await db.execute('DROP TABLE IF EXISTS "$name"');
       }
+    } catch (e) {
+      debugPrint('[DB] Table wipe failed: $e');
     } finally {
       await db.execute('PRAGMA foreign_keys = ON');
     }

@@ -787,39 +787,32 @@ extension AppStateChat on AppState {
     }
   }
 
-  /// Phase 28: Cleanup Task - Remove Corrupted Participants
-  Future<void> cleanupCorruptedParticipants() async {
-    try {
-      final all = await DatabaseService.getAllUniqueParticipants();
-      int count = 0;
-      for (var p in all) {
-        if (p.name.length > 50 || p.name.contains('\n')) {
-          await DatabaseService.deleteParticipant(p.id);
-          count++;
-        }
-      }
-      if (count > 0) {
-        debugPrint('[AppState] Cleaned up $count corrupted participants.');
-        loadParticipants(); // Refresh
-      }
-    } catch (e) {
-      debugPrint('[AppState] Cleanup failed: $e');
-    }
-  }
 
   /// [Phase 162] Internal helper to pre-fetch location at dialogue start
   Future<void> _fetchAndStoreLocation() async {
     try {
-      final permission = await Geolocator.checkPermission();
+      debugPrint('[AppState] _fetchAndStoreLocation: Attempting to get position...');
+      LocationPermission permission = await Geolocator.checkPermission();
+      if (permission == LocationPermission.denied) {
+        permission = await Geolocator.requestPermission();
+      }
+      
       if (permission == LocationPermission.always || permission == LocationPermission.whileInUse) {
-        // [Logic Change] getLastKnownPosition이 없으면 getCurrentPosition 시도
-        Position? pos = await Geolocator.getLastKnownPosition();
+        Position? pos;
+        
+        // [Phase 164] Web/Unsupported Platform Defense
+        try {
+          pos = await Geolocator.getLastKnownPosition();
+        } catch (e) {
+          debugPrint('[AppState] getLastKnownPosition not supported/failed: $e');
+        }
+
         if (pos == null) {
           try {
             pos = await Geolocator.getCurrentPosition(
-              locationSettings: const LocationSettings(
-                accuracy: LocationAccuracy.low,
-                timeLimit: Duration(seconds: 5),
+              locationSettings: LocationSettings(
+                accuracy: kIsWeb ? LocationAccuracy.high : LocationAccuracy.low,
+                timeLimit: const Duration(seconds: 5),
               ),
             );
           } catch (e) {
@@ -828,31 +821,43 @@ extension AppStateChat on AppState {
         }
 
         if (pos != null) {
-          // 좌표 정보는 항상 백업으로 보관하며, 주소 변환 실패 시 바로 사용함
-          final coords = '${pos.latitude.toStringAsFixed(2)}, ${pos.longitude.toStringAsFixed(2)}';
+          final coords = '${pos.latitude.toStringAsFixed(3)}, ${pos.longitude.toStringAsFixed(3)}';
+          debugPrint('[AppState] Position acquired: $coords');
           
+          // 우선 좌표로 설정 (Immediate Fallback)
+          _activeDialogueLocation = coords;
+          notify();
+          
+          // [Phase 164] Web에서는 geocoding 패키지가 작동하지 않으므로 건너뜁니다.
+          if (kIsWeb) {
+            debugPrint('[AppState] Skip geocoding on Web. Using coordinates.');
+            return;
+          }
+
           try {
              final placemarks = await placemarkFromCoordinates(pos.latitude, pos.longitude)
-                .timeout(const Duration(seconds: 3));
+                .timeout(const Duration(seconds: 5));
              if (placemarks.isNotEmpty) {
                final place = placemarks.first;
                final city = place.locality ?? place.administrativeArea ?? '';
                final sub = place.subLocality ?? place.thoroughfare ?? '';
-               _activeDialogueLocation = sub.isNotEmpty && city.isNotEmpty ? '$sub, $city' : (city.isNotEmpty ? city : coords);
-               notify();
-             } else {
-               _activeDialogueLocation = coords;
-               notify();
+               if (city.isNotEmpty || sub.isNotEmpty) {
+                  _activeDialogueLocation = sub.isNotEmpty && city.isNotEmpty ? '$sub, $city' : city;
+                  notify();
+                  debugPrint('[AppState] Geocoding success: $_activeDialogueLocation');
+               }
              }
-          } catch (_) { 
-            // Geocoding 실패 시 좌표를 위치 정보로 설정
-            _activeDialogueLocation = coords;
-            notify();
+          } catch (e) { 
+            debugPrint('[AppState] Geocoding failed or not supported, keeping coords: $e');
           }
+        } else {
+          debugPrint('[AppState] No position acquired after all attempts.');
         }
+      } else {
+        debugPrint('[AppState] Location permission denied: $permission');
       }
     } catch (e) {
-      debugPrint('[AppState] Pre-fetch location failed: $e');
+      debugPrint('[AppState] Pre-fetch location final catch: $e');
     }
   }
 }

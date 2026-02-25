@@ -20,22 +20,7 @@ class _ParticipantSelectorDialogState extends State<ParticipantSelectorDialog> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) async {
-      final appState = Provider.of<AppState>(context, listen: false);
-      debugPrint('[ParticipantSelectorDialog] Loading global participants...');
-      await appState.loadGlobalParticipants();
-      
-      // 로드 완료 후 전체 참가자 기본 선택
-      if (mounted) {
-        setState(() {
-          if (appState.globalParticipants.isNotEmpty) {
-            _selectedIds.addAll(appState.globalParticipants.map((p) => p.id));
-            _initialized = true;
-          }
-        });
-        debugPrint('[ParticipantSelectorDialog] Initialized with ${_selectedIds.length} participants');
-      }
-    });
+    debugPrint('[ParticipantSelectorDialog] Initialized. Waiting for AppState data.');
   }
 
   @override

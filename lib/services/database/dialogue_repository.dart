@@ -224,19 +224,8 @@ class DialogueRepository {
   static Future<List<ChatParticipant>> getAllUniqueParticipants() async {
     final db = await _db;
     
-    // Safety Check: Table existence
-    try {
-      final tableCheck = await db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name='participants'");
-      debugPrint('[DialogueRepository] Table check "participants": $tableCheck');
-      
-      final countCheck = await db.rawQuery("SELECT COUNT(*) as count FROM participants");
-      debugPrint('[DialogueRepository] Raw count in "participants": $countCheck');
-    } catch (e) {
-      debugPrint('[DialogueRepository] Safety check failed (might mean table missing): $e');
-    }
-
     final List<Map<String, dynamic>> maps = await db.rawQuery('''
-      SELECT DISTINCT id, name, role, gender, lang_code 
+      SELECT DISTINCT id, name, role, gender, lang_code, avatar_color 
       FROM participants 
       WHERE name != '' AND name != 'Group' AND name != 'group'
     ''');
@@ -249,7 +238,8 @@ class DialogueRepository {
         name: maps[i]['name'],
         role: maps[i]['role'],
         gender: maps[i]['gender'] ?? 'female',
-        langCode: maps[i]['lang_code'] ?? 'en_US',
+        langCode: maps[i]['lang_code']?.replaceAll('_', '-') ?? 'en-US',
+        avatarColor: maps[i]['avatar_color'] as int?,
       );
     });
   }
