@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -18,9 +19,26 @@ class _AuthScreenState extends State<AuthScreen> {
   
   bool _isLogin = true;
   bool _obscurePassword = true;
+  late final StreamSubscription<AuthState> _authSubscription;
+
+  @override
+  void initState() {
+    super.initState();
+    // Phase 15.8.8: Screen-level listener for maximum responsiveness
+    _authSubscription = Supabase.instance.client.auth.onAuthStateChange.listen((data) {
+      final user = data.session?.user;
+      if (user != null && !user.isAnonymous) {
+        debugPrint('[AuthScreen] Stream detected authenticated user. Popping.');
+        if (mounted && Navigator.of(context).canPop()) {
+          Navigator.of(context).pop();
+        }
+      }
+    });
+  }
 
   @override
   void dispose() {
+    _authSubscription.cancel();
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
@@ -89,14 +107,12 @@ class _AuthScreenState extends State<AuthScreen> {
     final l10n = AppLocalizations.of(context)!;
     final appState = Provider.of<AppState>(context);
 
-    // v15.8.6: Enhanced Auto-pop with better safety checks
+    // v15.8.8: Aggressive build-time check as secondary safety
     final user = appState.currentUser;
     if (user != null && !user.isAnonymous) {
-      debugPrint('[AuthScreen] Authenticated user detected ($user.id). Attempting auto-pop.');
+      debugPrint('[AuthScreen] Build detected authenticated user. Attempting pop.');
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (mounted && Navigator.of(context).canPop()) {
-           // We use canPop() and then check if we should actually pop
-           // to avoid popping past the root if somehow triggered twice
            Navigator.of(context).pop();
         }
       });

@@ -219,10 +219,10 @@ class _ChatScreenState extends State<ChatScreen> {
           
           debugPrint('[GPS] Address: $city, $sub');
           if (sub.isNotEmpty && city.isNotEmpty) {
-            return '$sub, $city ($coords)';
+            return '[$coords] $sub, $city';
           }
-          final address = city.isNotEmpty ? city : (place.country ?? coords);
-          return address == coords ? coords : '$address ($coords)';
+          final address = city.isNotEmpty ? city : (place.country ?? '');
+          return address.isEmpty ? coords : '[$coords] $address';
         }
       } catch (e) {
         debugPrint('[GPS] Geocoding error, falling back to coords: $e');
@@ -367,7 +367,9 @@ class _ChatScreenState extends State<ChatScreen> {
         // Append Location to Title if available
         String finalTitle = suggestedTitle;
         if (location.isNotEmpty) {
-           finalTitle = '$finalTitle @ ${location.split(',')[0]}';
+           // Phase 15.8.8: Use only the address part for title if possible, or keep full
+           final displayLocation = location.contains(']') ? location.split(']').last.trim() : location;
+           finalTitle = '$finalTitle @ ${displayLocation.split(',')[0]}';
         }
         
         await SupabaseService.updateDialogueTitle(appState.activeDialogueId!, finalTitle);

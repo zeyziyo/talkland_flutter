@@ -843,7 +843,7 @@ extension AppStateChat on AppState {
                final sub = place.subLocality ?? place.thoroughfare ?? '';
                if (city.isNotEmpty || sub.isNotEmpty) {
                   final address = sub.isNotEmpty && city.isNotEmpty ? '$sub, $city' : city;
-                  _activeDialogueLocation = '$address ($coords)'; // Phase 15.8.7: Keep both
+                  _activeDialogueLocation = '[$coords] $address'; // Phase 15.8.8: Primary Coordinates
                   notify();
                   debugPrint('[AppState] Geocoding success: $_activeDialogueLocation');
                }
