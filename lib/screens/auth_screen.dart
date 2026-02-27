@@ -89,6 +89,16 @@ class _AuthScreenState extends State<AuthScreen> {
     final l10n = AppLocalizations.of(context)!;
     final appState = Provider.of<AppState>(context);
 
+    // v15.8.5: Auto-pop when authenticated (Handles OAuth Redirect/DeepLink completion)
+    if (appState.currentUser != null && !appState.currentUser!.isAnonymous) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        // Ensure we only pop if this screen is still top-most
+        if (mounted && ModalRoute.of(context)?.isCurrent == true) {
+          Navigator.of(context).pop();
+        }
+      });
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(_isLogin ? l10n.login : l10n.signUp),

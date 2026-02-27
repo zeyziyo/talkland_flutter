@@ -12,6 +12,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get googleContinue => 'Continue with Google';
 
   @override
+  String get kakaoContinue => 'Continue with Kakao';
+
+  @override
   String get logout => 'Logout';
 
   @override

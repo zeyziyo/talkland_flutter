@@ -48,7 +48,7 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
                     ),
                     const SizedBox(height: 16),
                     DropdownButtonFormField<String>(
-                      value: role,
+                      initialValue: role,
                       decoration: InputDecoration(labelText: l10n.labelRole),
                       items: [
                         DropdownMenuItem(value: 'user', child: Text(l10n.roleUser)),
@@ -58,7 +58,7 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
                     ),
                      const SizedBox(height: 16),
                     DropdownButtonFormField<String>(
-                      value: gender,
+                      initialValue: gender,
                       decoration: InputDecoration(labelText: l10n.gender),
                       items: [
                         DropdownMenuItem(value: 'male', child: Text(l10n.male)),
@@ -69,7 +69,7 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
                     ),
                     const SizedBox(height: 16),
                     DropdownButtonFormField<String>(
-                      value: LanguageConstants.supportedLanguages.any((lang) => lang['code'] == langCode) 
+                      initialValue: LanguageConstants.supportedLanguages.any((lang) => lang['code'] == langCode) 
                           ? langCode 
                           : 'en', // Default to 'en' if code not found
                       decoration: InputDecoration(labelText: l10n.labelLangCode),

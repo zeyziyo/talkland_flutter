@@ -258,6 +258,12 @@ abstract class AppLocalizations {
   /// **'Google로 계속하기'**
   String get googleContinue;
 
+  /// No description provided for @kakaoContinue.
+  ///
+  /// In ko, this message translates to:
+  /// **'카카오로 계속하기'**
+  String get kakaoContinue;
+
   /// No description provided for @logout.
   ///
   /// In ko, this message translates to:
