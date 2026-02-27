@@ -16,6 +16,7 @@ import '../widgets/online_library_dialog.dart';
 import '../constants/app_constants.dart';
 import 'participant_manage_screen.dart';
 import 'auth_screen.dart';
+import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -65,6 +66,29 @@ class _HomeScreenState extends State<HomeScreen> {
     final appState = Provider.of<AppState>(context, listen: false);
     _pageController = PageController(initialPage: appState.currentMode);
     appState.setPageController(_pageController);
+
+    // v15.8.4: Show Kakao Key Hash for user to register in console
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      try {
+        final hashKey = await KakaoSdk.origin;
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: SelectableText('KAKAO HASH: $hashKey'),
+              duration: const Duration(seconds: 15),
+              backgroundColor: Colors.blueAccent,
+              action: SnackBarAction(
+                label: 'OK',
+                textColor: Colors.white,
+                onPressed: () {},
+              ),
+            ),
+          );
+        }
+      } catch (e) {
+        debugPrint('>>> KAKAO [!] Error getting key hash: $e');
+      }
+    });
   }
 
   void _loadBannerAd() {
