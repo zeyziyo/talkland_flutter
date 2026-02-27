@@ -350,6 +350,12 @@
 
 
 
+### [2026-02-27] Kakao Login & Location Persistence Final Fix (v15.8.8)
+- **Fix**: `AuthScreen`에 전용 `onAuthStateChange` 리스너를 추가하여, 인증 완료 시 지체 없이 홈 화면으로 전환되도록 개선 (윈도우/네이티브 환경 최적화).
+- **Update**: 위치 정보 저장 형식을 `[좌표] 주소`로 변경하여, 주소 변환 후에도 좌표 정보가 항상 가장 앞에 노출되도록 강제 (정보 유실 방지 정책).
+- **Logic**: 대화 자동 제목 생성 시 좌표 대괄호 `[]`를 파싱하여 제목에 좌표가 불필요하게 섞이지 않도록 개선.
+- **Stability**: `dart:async` 임포트 누락 및 `flutter analyze` 위반 사항 해결.
+
 ---
 
 > **Note**: 과거의 시행착오(Trial & Error) 로그는 삭제되었으며, 각 파일에는 **"최종 구현된 결과(Finalized Features)"** 위주로 기록됩니다.
