@@ -35,6 +35,20 @@ jobs:
     - name: Get dependencies
       run: flutter pub get
 
+    - name: Pre-download sqlite3 native assets
+      run: |
+        VERSION="3.1.2"
+        BASE_URL="https://github.com/simolus3/sqlite3.dart/releases/download/sqlite3-$VERSION"
+        # Determine pub cache directory
+        PUB_CACHE_DIR="${PUB_CACHE:-$HOME/.pub-cache}"
+        TARGET_DIR="$PUB_CACHE_DIR/hosted/pub.dev/sqlite3-$VERSION"
+        mkdir -p "$TARGET_DIR"
+        for arch in arm arm64 x64 x86; do
+          FILE="libsqlite3.$arch.android.so"
+          echo "Attempting to download $FILE to $TARGET_DIR..."
+          curl --retry 5 --retry-delay 5 -L -o "$TARGET_DIR/$FILE" "$BASE_URL/$FILE" || echo "Warning: Failed to download $FILE"
+        done
+
     - name: Generate Localizations
       run: flutter gen-l10n
 
