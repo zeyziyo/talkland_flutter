@@ -19,15 +19,27 @@ import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Initialize Kakao SDK before any UI build
-  // v1.2.0: Added Kakao Login Support
-  await dotenv.load(fileName: ".env");
-  KakaoSdk.init(
-    nativeAppKey: dotenv.env['KAKAO_NATIVE_APP_KEY'],
-    javaScriptAppKey: dotenv.env['KAKAO_JAVASCRIPT_KEY'],
-  );
+  // v15.8.3: Optimized initialization with robust error handling
+  try {
+    await dotenv.load(fileName: ".env");
+    debugPrint('>>> MAIN [1] Env Loaded');
+    
+    final kakaoNativeKey = dotenv.env['KAKAO_NATIVE_APP_KEY'];
+    final kakaoJsKey = dotenv.env['KAKAO_JAVASCRIPT_KEY'];
+    
+    if (kakaoNativeKey != null && kakaoNativeKey.isNotEmpty) {
+      KakaoSdk.init(
+        nativeAppKey: kakaoNativeKey,
+        javaScriptAppKey: kakaoJsKey,
+      );
+      debugPrint('>>> MAIN [2] Kakao SDK Initialized');
+    }
+  } catch (e) {
+    debugPrint('>>> MAIN [!] Fatal Initialization Error: $e');
+    // Continue execution to at least show the UI if possible
+  }
 
-  debugPrint('>>> MAIN [1] Widgets/Kakao Binding Initialized');
+  debugPrint('>>> MAIN [3] Widgets Binding Initialized');
   
   // Desktop SQLite FFI setup (not for web)
   if (kIsWeb) {
@@ -39,13 +51,6 @@ void main() async {
     databaseFactory = databaseFactoryFfi;
   }
   debugPrint('>>> MAIN [2] Database Factory Set');
-  
-  try {
-    await dotenv.load(fileName: ".env");
-  } catch (e) {
-    print("Warning: Failed to load .env file: $e");
-    // Ensure app continues even if .env fails to load
-  }
   
   // Initialize AdMob (mobile only)
   if (!kIsWeb) {

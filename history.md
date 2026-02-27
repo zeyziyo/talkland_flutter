@@ -23,7 +23,13 @@
 
 ---
 
-### [2026-02-25] 안드로이드 매니페스트 빌드 오류 수정 (v15.8.2)
+### [2026-02-27] 안드로이드 런타임 크래시 방지 및 빌드 보완 (v15.8.3)
+
+- **Main Entry Point Stabilization**: `main.dart`의 초기화 로직을 `try-catch` 블록으로 보호했습니다. `.env` 파일 로딩 실패나 카카오 SDK 초기화 오류가 발생하더라도 앱이 비정상 종료되지 않고 실행되도록 개선했습니다.
+- **CI/CD Configuration Update**: GitHub Actions의 `build-apk.yml`에서 `.env` 생성 시 카카오 릴리스 키(`KAKAO_NATIVE_APP_KEY`, `KAKAO_JAVASCRIPT_KEY`)를 포함하도록 수정하여, 빌드된 APK가 런타임 에러 없이 작동하도록 보완했습니다.
+- **Code Refactoring**: `main.dart` 내의 중복된 환경 변수 로딩 코드를 제거하고 초기화 로그 출력을 체계화했습니다.
+
+---
 
 - **Manifest Merger Fix**: `AndroidManifest.xml`에서 사용된 `KAKAO_NATIVE_APP_KEY` 플레이스홀더가 Gradle에서 정의되지 않아 발생하던 빌드 오류를 해결했습니다. `build.gradle.kts`의 `manifestPlaceholders`에 해당 키값을 등록하여 CI/CD 환경에서의 빌드 정합성을 확보했습니다.
 
