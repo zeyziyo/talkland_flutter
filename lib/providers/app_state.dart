@@ -415,13 +415,13 @@ class AppState extends ChangeNotifier {
   List<ChatParticipant> _globalParticipants = [];
   List<ChatParticipant> get globalParticipants => _globalParticipants;
 
-  Future<void> loadGlobalParticipants() async {
+  Future<void> loadGlobalParticipants({bool force = false}) async {
     if (_globalParticipantsLoading) {
       debugPrint('[AppState] loadGlobalParticipants: Already loading. Skipping.');
       return;
     }
     
-    if (_globalParticipants.isNotEmpty) {
+    if (!force && _globalParticipants.isNotEmpty) {
       debugPrint('[AppState] loadGlobalParticipants: Already has ${_globalParticipants.length} participants. Skipping.');
       return;
     }
@@ -474,6 +474,7 @@ class AppState extends ChangeNotifier {
 
   /// 기본 참가자('나', 'AI')가 없으면 자동 생성
   Future<void> _ensureDefaultParticipants() async {
+    // 1. role과 name 모두를 기준으로 중복 체크 (더 엄격하게)
     final hasUserMe = _globalParticipants.any((p) => p.role == 'user' && p.name == '나');
     final hasAiBot = _globalParticipants.any((p) => (p.role == 'ai' || p.role == 'assistant') && p.name == 'AI');
 
@@ -490,10 +491,12 @@ class AppState extends ChangeNotifier {
         langCode: _sourceLang,
       );
       try {
+        // DB에도 없는 경우에만 insert 시도하거나, 에러를 무시하도록 처리
         await DialogueRepository.insertParticipant(user.toJson());
       } catch (e) {
-        debugPrint('[AppState] Failed to insert default user: $e');
+        debugPrint('[AppState] Default user might already exist in DB: $e');
       }
+      _globalParticipants.removeWhere((p) => p.id == 'me'); // 메모리 내 중복 방지
       _globalParticipants.insert(0, user);
     }
     
@@ -510,18 +513,19 @@ class AppState extends ChangeNotifier {
       try {
         await DialogueRepository.insertParticipant(ai.toJson());
       } catch (e) {
-        debugPrint('[AppState] Failed to insert default AI: $e');
+        debugPrint('[AppState] Default AI might already exist in DB: $e');
       }
+      _globalParticipants.removeWhere((p) => p.id == 'ai'); // 메모리 내 중복 방지
       _globalParticipants.add(ai);
     }
 
     // 레거시 'assistant' 역할 정규화
-    final assistantIndex = _globalParticipants.indexWhere((p) => p.role == 'assistant');
-    if (assistantIndex != -1) {
-      final legacyAi = _globalParticipants[assistantIndex];
-      final updatedAi = legacyAi.copyWith(role: 'ai');
-      await DialogueRepository.updateParticipant(updatedAi.id, {'role': 'ai'});
-      _globalParticipants[assistantIndex] = updatedAi;
+    final assistants = _globalParticipants.where((p) => p.role == 'assistant').toList();
+    for (var legacyAi in assistants) {
+        final updatedAi = legacyAi.copyWith(role: 'ai');
+        await DialogueRepository.updateParticipant(updatedAi.id, {'role': 'ai'});
+        final idx = _globalParticipants.indexOf(legacyAi);
+        if (idx != -1) _globalParticipants[idx] = updatedAi;
     }
   }
 
@@ -533,7 +537,7 @@ class AppState extends ChangeNotifier {
       'gender': participant.gender,
       'lang_code': participant.langCode,
     });
-    await loadGlobalParticipants();
+    await loadGlobalParticipants(force: true);
   }
 
   Future<void> updateGlobalParticipant(ChatParticipant participant) async {
@@ -544,12 +548,12 @@ class AppState extends ChangeNotifier {
       'gender': participant.gender,
       'lang_code': participant.langCode,
     });
-    await loadGlobalParticipants();
+    await loadGlobalParticipants(force: true);
   }
 
   Future<void> deleteGlobalParticipant(String id) async {
     await DialogueRepository.deleteParticipant(id);
-    await loadGlobalParticipants();
+    await loadGlobalParticipants(force: true);
   }
 
   // ---------------------------------------------------------

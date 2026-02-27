@@ -89,12 +89,15 @@ class _AuthScreenState extends State<AuthScreen> {
     final l10n = AppLocalizations.of(context)!;
     final appState = Provider.of<AppState>(context);
 
-    // v15.8.5: Auto-pop when authenticated (Handles OAuth Redirect/DeepLink completion)
-    if (appState.currentUser != null && !appState.currentUser!.isAnonymous) {
+    // v15.8.6: Enhanced Auto-pop with better safety checks
+    final user = appState.currentUser;
+    if (user != null && !user.isAnonymous) {
+      debugPrint('[AuthScreen] Authenticated user detected ($user.id). Attempting auto-pop.');
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        // Ensure we only pop if this screen is still top-most
-        if (mounted && ModalRoute.of(context)?.isCurrent == true) {
-          Navigator.of(context).pop();
+        if (mounted && Navigator.of(context).canPop()) {
+           // We use canPop() and then check if we should actually pop
+           // to avoid popping past the root if somehow triggered twice
+           Navigator.of(context).pop();
         }
       });
     }

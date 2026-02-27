@@ -18,7 +18,7 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
     super.initState();
     // Load participants when screen opens
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Provider.of<AppState>(context, listen: false).loadGlobalParticipants();
+      Provider.of<AppState>(context, listen: false).loadGlobalParticipants(force: true);
     });
   }
 

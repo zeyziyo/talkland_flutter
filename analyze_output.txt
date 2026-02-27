@@ -1,0 +1,8 @@
+Analyzing talkie...                                             
+
+  error - 'AppState' isn't a function - lib\main.dart:95:28 - invocation_of_non_function
+  error - The name 'AppState' is defined in the libraries 'package:google_mobile_ads/src/app_background_event_notifier.dart (via package:google_mobile_ads/google_mobile_ads.dart)' and 'package:talkie/providers/app_state.dart' - lib\main.dart:95:28 - ambiguous_import
+  error - The name 'AppState' is defined in the libraries 'package:google_mobile_ads/src/app_background_event_notifier.dart (via package:google_mobile_ads/google_mobile_ads.dart)' and 'package:talkie/providers/app_state.dart' - lib\main.dart:96:23 - ambiguous_import
+  error - The property 'sourceLang' can't be unconditionally accessed because the receiver can be 'null' - lib\main.dart:102:45 - unchecked_use_of_nullable_value
+warning - The value of the local variable 'oldUserId' isn't used - lib\providers\app_state_auth.dart:426:13 - unused_local_variable
+

@@ -424,21 +424,33 @@ extension AppStateAuth on AppState {
   Future<void> loginWithKakao() async {
     try {
       isLoggingIn = true;
-    _statusMessage = 'L10N:statusLoggingIn';
-    notify();
+      _statusMessage = 'L10N:statusLoggingIn';
+      notify();
 
-    await SupabaseAuthService.signInWithKakao();
-    
-    // OAuth flows on mobile/web usually resume via deep link/redirect.
-    // The session update is handled by the Supabase auth listener.
-    _statusMessage = 'L10N:statusLoggingIn';
-  } catch (e) {
+      await SupabaseAuthService.signInWithKakao();
+      
+      // OAuth flows on mobile/web usually resume via deep link/redirect.
+      // On Native, the call returns as soon as the browser is opened.
+      // We keep isLoggingIn = true until the user returns or it times out.
+      if (kIsWeb) {
+        // Web redirect will reload the page, so no need to clear here.
+      } else {
+        // Native: Wait a bit then clear so UI isn't stuck if user cancels browser.
+        // The AuthScreen will auto-pop if login succeeds before this timer.
+        Future.delayed(const Duration(seconds: 30), () {
+          if (isLoggingIn) {
+            isLoggingIn = false;
+            notify();
+          }
+        });
+      }
+    } catch (e) {
       debugPrint('[AppState] Kakao Login Failed: $e');
       _statusMessage = 'L10N:statusLoginFailed|$e';
-    } finally {
       isLoggingIn = false;
       notify();
     }
+    // Removed finally to prevent immediate isLoggingIn = false on Native
   }
 
   /// v15.7: Email Sign-Up with Data Merge
