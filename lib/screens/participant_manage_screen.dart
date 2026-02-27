@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../models/chat_participant.dart';
 import '../l10n/app_localizations.dart';
+import '../constants/language_constants.dart';
 
 class ParticipantManageScreen extends StatefulWidget {
   const ParticipantManageScreen({super.key});
@@ -47,7 +48,7 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
                     ),
                     const SizedBox(height: 16),
                     DropdownButtonFormField<String>(
-                      initialValue: role,
+                      value: role,
                       decoration: InputDecoration(labelText: l10n.labelRole),
                       items: [
                         DropdownMenuItem(value: 'user', child: Text(l10n.roleUser)),
@@ -57,7 +58,7 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
                     ),
                      const SizedBox(height: 16),
                     DropdownButtonFormField<String>(
-                      initialValue: gender,
+                      value: gender,
                       decoration: InputDecoration(labelText: l10n.gender),
                       items: [
                         DropdownMenuItem(value: 'male', child: Text(l10n.male)),
@@ -67,10 +68,18 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
                       onChanged: (val) => setState(() => gender = val!),
                     ),
                     const SizedBox(height: 16),
-                    TextField(
-                       controller: TextEditingController(text: langCode),
-                       decoration: InputDecoration(labelText: l10n.labelLangCode),
-                       onChanged: (val) => langCode = val,
+                    DropdownButtonFormField<String>(
+                      value: LanguageConstants.supportedLanguages.any((lang) => lang['code'] == langCode) 
+                          ? langCode 
+                          : 'en', // Default to 'en' if code not found
+                      decoration: InputDecoration(labelText: l10n.labelLangCode),
+                      items: LanguageConstants.supportedLanguages.map((lang) {
+                        return DropdownMenuItem<String>(
+                          value: lang['code'],
+                          child: Text('${lang['name']} (${lang['code']})'),
+                        );
+                      }).toList(),
+                      onChanged: (val) => setState(() => langCode = val!),
                     ),
                   ],
                 ),
