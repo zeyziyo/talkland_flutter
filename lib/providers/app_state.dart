@@ -110,6 +110,9 @@ class AppState extends ChangeNotifier {
       
       if (event == AuthChangeEvent.signedIn || event == AuthChangeEvent.initialSession) {
         if (newUser != null) {
+          // Phase 15.8.7: Notify immediately so login screens can pop while background sync starts
+          notify(); 
+          
           // CRITICAL: Handle both storing anon ID and merging to Google account
           await _handleAuthMerge(newUser);
         }
@@ -176,6 +179,9 @@ class AppState extends ChangeNotifier {
       // If no merge needed, still ensure data is synced for the user
       await _triggerAllSync();
     }
+    
+    // Phase 15.8.7: Ensure ultimate state is visible (Spinner off, Data on)
+    notify(); 
   }
 
   /// Automated merge helper for Web/Redirect flows (Phase 15.6)

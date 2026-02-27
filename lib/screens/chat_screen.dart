@@ -219,9 +219,10 @@ class _ChatScreenState extends State<ChatScreen> {
           
           debugPrint('[GPS] Address: $city, $sub');
           if (sub.isNotEmpty && city.isNotEmpty) {
-            return '$sub, $city';
+            return '$sub, $city ($coords)';
           }
-          return city.isNotEmpty ? city : (place.country ?? coords);
+          final address = city.isNotEmpty ? city : (place.country ?? coords);
+          return address == coords ? coords : '$address ($coords)';
         }
       } catch (e) {
         debugPrint('[GPS] Geocoding error, falling back to coords: $e');

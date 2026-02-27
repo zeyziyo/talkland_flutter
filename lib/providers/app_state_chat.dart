@@ -842,7 +842,8 @@ extension AppStateChat on AppState {
                final city = place.locality ?? place.administrativeArea ?? '';
                final sub = place.subLocality ?? place.thoroughfare ?? '';
                if (city.isNotEmpty || sub.isNotEmpty) {
-                  _activeDialogueLocation = sub.isNotEmpty && city.isNotEmpty ? '$sub, $city' : city;
+                  final address = sub.isNotEmpty && city.isNotEmpty ? '$sub, $city' : city;
+                  _activeDialogueLocation = '$address ($coords)'; // Phase 15.8.7: Keep both
                   notify();
                   debugPrint('[AppState] Geocoding success: $_activeDialogueLocation');
                }
