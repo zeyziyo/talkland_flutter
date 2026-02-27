@@ -33,6 +33,14 @@ void main() async {
         javaScriptAppKey: kakaoJsKey,
       );
       debugPrint('>>> MAIN [2] Kakao SDK Initialized');
+      
+      // v15.8.4: Print Key Hash for troubleshooting (KOE205)
+      try {
+        final hashKey = await KakaoSdk.origin;
+        debugPrint('>>> KAKAO KEY HASH: $hashKey');
+      } catch (e) {
+        debugPrint('>>> KAKAO [!] Error getting key hash: $e');
+      }
     }
   } catch (e) {
     debugPrint('>>> MAIN [!] Fatal Initialization Error: $e');
