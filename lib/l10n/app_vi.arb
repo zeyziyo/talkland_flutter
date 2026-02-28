@@ -1,6 +1,7 @@
 {
   "@@locale": "vi",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Tiếp tục với Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Vui lòng kiểm tra email để hoàn tất xác minh."
+  "statusCheckEmail": "Vui lòng kiểm tra email để hoàn tất xác minh.",
+  "emailAlreadyInUse": "Email này đã được sử dụng. Vui lòng đăng nhập hoặc sử dụng chức năng tìm mật khẩu."
 }

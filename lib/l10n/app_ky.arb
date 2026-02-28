@@ -1,6 +1,7 @@
 {
   "@@locale": "ky",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Kakao менен улантуу",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Электрондук почтаңызды текшерип, аутентификацияны аягына чыгарыңыз."
+  "statusCheckEmail": "Электрондук почтаңызды текшерип, аутентификацияны аягына чыгарыңыз.",
+  "emailAlreadyInUse": "Бул электрондук почта дареги мурунтан эле катталган. Кириңиз же сыр сөздү калыбына келтириңиз."
 }

@@ -1,6 +1,7 @@
 {
   "@@locale": "sw",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Endelea na Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Tafadhali thibitisha barua pepe ili ukamilishe uthibitishaji."
+  "statusCheckEmail": "Tafadhali thibitisha barua pepe ili ukamilishe uthibitishaji.",
+  "emailAlreadyInUse": "Barua pepe hii tayari inatumika. Tafadhali ingia au tumia urejeshaji wa nywila."
 }

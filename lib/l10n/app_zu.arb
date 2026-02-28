@@ -1,6 +1,7 @@
 {
   "@@locale": "zu",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Qhubeka nge-Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Sicela uqinisekise i-imeyili ukuze uqedele ukuqinisekiswa."
+  "statusCheckEmail": "Sicela uqinisekise i-imeyili ukuze uqedele ukuqinisekiswa.",
+  "emailAlreadyInUse": "I-imeyili isivele isetshenziswa. Ngena ngemvume noma usebenzise ukuthola iphasiwedi."
 }

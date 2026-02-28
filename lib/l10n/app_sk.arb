@@ -1,6 +1,7 @@
 {
   "@@locale": "sk",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Pokračovať s Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Overte si e-mail pre dokončenie overenia."
+  "statusCheckEmail": "Overte si e-mail pre dokončenie overenia.",
+  "emailAlreadyInUse": "Táto e-mailová adresa je už zaregistrovaná. Prihláste sa alebo použite možnosť obnovenia hesla."
 }

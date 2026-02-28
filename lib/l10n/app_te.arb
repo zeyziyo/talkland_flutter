@@ -1,6 +1,7 @@
 {
   "@@locale": "te",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Kakaoతో కొనసాగించండి",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "దయచేసి మీ ఇమెయిల్‌ను ధృవీకరించడం ద్వారా ప్రామాణీకరణను పూర్తి చేయండి."
+  "statusCheckEmail": "దయచేసి మీ ఇమెయిల్‌ను ధృవీకరించడం ద్వారా ప్రామాణీకరణను పూర్తి చేయండి.",
+  "emailAlreadyInUse": "ఈ ఇమెయిల్ ఇప్పటికే ఉపయోగంలో ఉంది. దయచేసి లాగిన్ అవ్వండి లేదా మీ పాస్‌వర్డ్‌ను తిరిగి పొందండి."
 }

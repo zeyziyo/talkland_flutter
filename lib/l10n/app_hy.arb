@@ -1,6 +1,7 @@
 {
   "@@locale": "hy",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Շարունակել Kakao-ով",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Ստուգեք ձեր էլ. փոստը՝ նույնականացումն ավարտելու համար:"
+  "statusCheckEmail": "Ստուգեք ձեր էլ. փոստը՝ նույնականացումն ավարտելու համար:",
+  "emailAlreadyInUse": "Այս էլ․ հասցեն արդեն գրանցված է։ Մուտք գործեք կամ օգտվեք գաղտնաբառի վերականգնման հնարավորությունից։"
 }

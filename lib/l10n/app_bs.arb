@@ -1,6 +1,7 @@
 {
   "@@locale": "bs",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Nastavi sa Kakao računom",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Molimo provjerite e-poštu da biste dovršili autentifikaciju."
+  "statusCheckEmail": "Molimo provjerite e-poštu da biste dovršili autentifikaciju.",
+  "emailAlreadyInUse": "Email je već registriran. Prijavite se ili koristite opciju zaboravljene lozinke."
 }

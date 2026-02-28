@@ -1,6 +1,7 @@
 {
   "@@locale": "az",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Kakao ilə davam et",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Zəhmət olmasa, identifikasiyanı tamamlamaq üçün e-poçtunuzu yoxlayın."
+  "statusCheckEmail": "Zəhmət olmasa, identifikasiyanı tamamlamaq üçün e-poçtunuzu yoxlayın.",
+  "emailAlreadyInUse": "Bu e-poçt artıq qeydiyyatdan keçib. Daxil olun və ya şifrəni bərpa etmək üçün istifadə edin."
 }

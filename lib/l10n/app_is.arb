@@ -1,6 +1,7 @@
 {
   "@@locale": "is",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Halda áfram með Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Vinsamlegast athugaðu tölvupóstinn þinn til að staðfesta."
+  "statusCheckEmail": "Vinsamlegast athugaðu tölvupóstinn þinn til að staðfesta.",
+  "emailAlreadyInUse": "Þetta netfang er þegar í notkun. Vinsamlegast skráðu þig inn eða notaðu endurheimt lykilorðs."
 }

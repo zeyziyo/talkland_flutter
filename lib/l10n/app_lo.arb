@@ -1,6 +1,7 @@
 {
   "@@locale": "lo",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "ສືບຕໍ່ດ້ວຍ Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "ກະລຸນາກວດສອບອີເມວເພື່ອສໍາເລັດການຢືນຢັນ."
+  "statusCheckEmail": "ກະລຸນາກວດສອບອີເມວເພື່ອສໍາເລັດການຢືນຢັນ.",
+  "emailAlreadyInUse": "ອີເມວນີ້ຖືກນຳໃຊ້ແລ້ວ. ກະລຸນາເຂົ້າສູ່ລະບົບ ຫຼື ລືມລະຫັດຜ່ານ."
 }

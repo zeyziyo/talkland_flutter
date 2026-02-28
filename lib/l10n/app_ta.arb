@@ -1,6 +1,7 @@
 {
   "@@locale": "ta",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Kakao மூலம் தொடரவும்",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "சரியான மின்னஞ்சலைச் சரிபார்த்து, அங்கீகாரத்தை முடிக்கவும்."
+  "statusCheckEmail": "சரியான மின்னஞ்சலைச் சரிபார்த்து, அங்கீகாரத்தை முடிக்கவும்.",
+  "emailAlreadyInUse": "இந்த மின்னஞ்சல் முகவரி ஏற்கனவே உள்ளது. உள்நுழையவும் அல்லது கடவுச்சொல்லை மீட்டமைக்கவும்."
 }

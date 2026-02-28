@@ -1,6 +1,7 @@
 {
   "@@locale": "el",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Συνέχεια με Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Ελέγξτε το email σας για να ολοκληρώσετε την επαλήθευση."
+  "statusCheckEmail": "Ελέγξτε το email σας για να ολοκληρώσετε την επαλήθευση.",
+  "emailAlreadyInUse": "Αυτό το email χρησιμοποιείται ήδη. Συνδεθείτε ή χρησιμοποιήστε την ανάκτηση κωδικού πρόσβασης."
 }

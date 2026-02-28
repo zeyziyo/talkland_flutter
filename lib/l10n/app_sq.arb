@@ -1,6 +1,7 @@
 {
   "@@locale": "sq",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Vazhdo me Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Ju lutemi, verifikoni email-in për të përfunduar vërtetimin."
+  "statusCheckEmail": "Ju lutemi, verifikoni email-in për të përfunduar vërtetimin.",
+  "emailAlreadyInUse": "Ky email është tashmë i regjistruar. Ju lutemi identifkohuni ose përdorni opsionin e rivendosjes së fjalëkalimit."
 }

@@ -1,6 +1,7 @@
 {
   "@@locale": "mr",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "काकाओ वापरून पुढे सुरू ठेवा",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "कृपया ईमेल तपासा आणि प्रमाणीकरण पूर्ण करा."
+  "statusCheckEmail": "कृपया ईमेल तपासा आणि प्रमाणीकरण पूर्ण करा.",
+  "emailAlreadyInUse": "हे ईमेल आधीपासूनच नोंदणीकृत आहे. कृपया लॉग इन करा किंवा पासवर्ड रीसेट करा."
 }

@@ -1,6 +1,7 @@
 {
   "@@locale": "my",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "ကာကာအိုနဲ့ ဆက်လုပ်ရန်",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "အတည်ပြုရန် အီးမေးလ်ကို စစ်ဆေးပါ။"
+  "statusCheckEmail": "အတည်ပြုရန် အီးမေးလ်ကို စစ်ဆေးပါ။",
+  "emailAlreadyInUse": "အီးမေးလ်လိပ်စာသည် မှတ်ပုံတင်ပြီးဖြစ်သည်။ ဝင်ရောက်ပါ သို့မဟုတ် စကားဝှက်ကို ပြန်လည်ရယူပါ။"
 }

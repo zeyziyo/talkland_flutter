@@ -1,6 +1,7 @@
 {
   "@@locale": "zh_CN",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "使用Kakao继续",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "请验证您的电子邮件以完成身份验证。"
+  "statusCheckEmail": "请验证您的电子邮件以完成身份验证。",
+  "emailAlreadyInUse": "此邮箱已被注册，请直接登录或找回密码。"
 }

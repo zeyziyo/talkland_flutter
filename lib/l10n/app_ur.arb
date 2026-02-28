@@ -1,6 +1,7 @@
 {
   "@@locale": "ur",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "کاکاو کے ساتھ جاری رکھیں",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "تصدیق مکمل کرنے کے لیے براہ کرم اپنا ای میل چیک کریں۔"
+  "statusCheckEmail": "تصدیق مکمل کرنے کے لیے براہ کرم اپنا ای میل چیک کریں۔",
+  "emailAlreadyInUse": "یہ ای میل پہلے سے رجسٹرڈ ہے۔ براہ کرم لاگ ان کریں یا پاس ورڈ دوبارہ حاصل کرنے کی کوشش کریں۔"
 }

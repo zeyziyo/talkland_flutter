@@ -1,6 +1,7 @@
 {
   "@@locale": "hu",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Folytatás a Kakao-val",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Kérjük, ellenőrizze az e-mail címét a hitelesítés befejezéséhez."
+  "statusCheckEmail": "Kérjük, ellenőrizze az e-mail címét a hitelesítés befejezéséhez.",
+  "emailAlreadyInUse": "Ez az e-mail cím már regisztrálva van. Jelentkezz be, vagy kérj jelszóemlékeztetőt."
 }

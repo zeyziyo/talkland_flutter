@@ -1,6 +1,7 @@
 {
   "@@locale": "fil",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Magpatuloy sa Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Pakisuyong kumpirmahin ang email upang makumpleto ang iyong pagpapatunay."
+  "statusCheckEmail": "Pakisuyong kumpirmahin ang email upang makumpleto ang iyong pagpapatunay.",
+  "emailAlreadyInUse": "Ang email na ito ay ginagamit na. Mag-login o gamitin ang pagbawi ng password."
 }

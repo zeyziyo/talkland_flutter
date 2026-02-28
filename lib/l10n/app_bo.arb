@@ -1,6 +1,7 @@
 {
   "@@locale": "bo",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "ཀ་ཀའོ་བརྒྱུད་མཐུད་མཐུད་པ།",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "ཁྱེད་ཀྱི་གློག་འཕྲིན་ནང་ཞིབ་བཤེར་བྱས་ཏེ་དེའི་ར་སྤྲོད་གནང་རོགས།"
+  "statusCheckEmail": "ཁྱེད་ཀྱི་གློག་འཕྲིན་ནང་ཞིབ་བཤེར་བྱས་ཏེ་དེའི་ར་སྤྲོད་གནང་རོགས།",
+  "emailAlreadyInUse": "གློག་འཕྲིན་ཁ་བྱང་འདི་སྔོན་ནས་ཐོ་འགོད་ཟིན་པས། ཐོ་འཇུག་བྱེད་པའམ་ཡང་ན་གསང་གྲངས་འཚོལ་བར་བེད་སྤྱོད་བྱེད་རོགས།"
 }

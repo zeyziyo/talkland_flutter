@@ -1,6 +1,7 @@
 {
   "@@locale": "as",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "কাকাওৰ সৈতে আগবাঢ়ক",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "অনুগ্রহ কৰি আপোনাৰ ইমেইল পৰীক্ষা কৰি প্ৰমাণীকৰণ সম্পূৰ্ণ কৰক।"
+  "statusCheckEmail": "অনুগ্রহ কৰি আপোনাৰ ইমেইল পৰীক্ষা কৰি প্ৰমাণীকৰণ সম্পূৰ্ণ কৰক।",
+  "emailAlreadyInUse": "এই ইমেইল ইতিমধ্যে ব্যৱহৃত হৈছে। লগইন কৰক বা পাছৱৰ্ড পুনৰুদ্ধাৰ কৰাৰ চেষ্টা কৰক।"
 }

@@ -1,6 +1,7 @@
 {
   "@@locale": "cy",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Parhau â Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Gwiriwch eich e-bost i gwblhau'r dilysu."
+  "statusCheckEmail": "Gwiriwch eich e-bost i gwblhau'r dilysu.",
+  "emailAlreadyInUse": "Mae'r e-bost hwn eisoes yn bodoli. Mewngofnodwch neu defnyddiwch adfer cyfrinair."
 }

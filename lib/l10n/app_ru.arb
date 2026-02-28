@@ -1,6 +1,7 @@
 {
   "@@locale": "ru",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Продолжить с Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Пожалуйста, проверьте свою электронную почту для завершения аутентификации."
+  "statusCheckEmail": "Пожалуйста, проверьте свою электронную почту для завершения аутентификации.",
+  "emailAlreadyInUse": "Этот адрес электронной почты уже зарегистрирован. Пожалуйста, войдите в систему или воспользуйтесь функцией восстановления пароля."
 }

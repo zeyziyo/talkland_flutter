@@ -1,6 +1,7 @@
 {
   "@@locale": "ka",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "გაგრძელება Kakao-თი",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "გთხოვთ, გადაამოწმოთ ელფოსტა ავტორიზაციის დასასრულებლად."
+  "statusCheckEmail": "გთხოვთ, გადაამოწმოთ ელფოსტა ავტორიზაციის დასასრულებლად.",
+  "emailAlreadyInUse": "ეს ელფოსტა უკვე რეგისტრირებულია. გთხოვთ, შეხვიდეთ სისტემაში ან გამოიყენოთ პაროლის აღდგენა."
 }

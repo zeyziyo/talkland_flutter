@@ -1,6 +1,7 @@
 {
   "@@locale": "mk",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Продолжи со Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Ве молиме проверете ја вашата е-пошта за да ја завршите верификацијата."
+  "statusCheckEmail": "Ве молиме проверете ја вашата е-пошта за да ја завршите верификацијата.",
+  "emailAlreadyInUse": "Оваа е-пошта е веќе регистрирана. Ве молиме најавете се или користете го пронаоѓањето на лозинката."
 }

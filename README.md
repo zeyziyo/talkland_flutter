@@ -274,3 +274,33 @@ The app operates a sustainable pricing policy to provide maximum value for free 
 
 자세한 분석 내용은 `revenue_model.md`를 참고하세요.
 See `revenue_model.md` for detailed analysis.
+
+---
+
+## <a id="readme-ko"></a>📘 사용설명서 (Korean Guide)
+1. **입력 모드**: 마이크 아이콘을 눌러 말하면 실시간으로 번역됩니다. '저장' 버튼을 눌러 학습 자료에 추가하세요.
+2. **복습 모드**: 저장된 카드들의 뜻을 가리고 외워보세요. 완료한 카드는 체크 표시를 눌러 숨길 수 있습니다.
+3. **발음 연습**: 원어민 발음을 듣고 따라 말해보세요. 0~100점 사이의 정확도 평가가 제공됩니다.
+4. **AI 채팅**: 다양한 페르소나와 대화하며 실전 실력을 키우세요. GPS 위치 기반 대화도 가능합니다.
+5. **JSON 가져오기**: 상단 메뉴의 [기기에서 가져오기]를 통해 다량의 학습 자료를 한 번에 추가할 수 있습니다.
+
+## <a id="readme-en"></a>📘 User Guide (English Guide)
+1. **Input Mode**: Tap the microphone icon to speak and get real-time translations. Save to your study materials.
+2. **Review Mode**: Test your memory by hiding card meanings. Tap the checkmark to hide fully mastered cards.
+3. **Speaking Practice**: Listen to native speakers and shadow them. Receive accuracy scores from 0-100.
+4. **AI Chat**: Talk with various personas to improve your conversation skills. Location-aware chat is supported.
+5. **Import JSON**: Use [Device Import] in the menu to add bulk study materials at once.
+
+## <a id="readme-es"></a>📘 Guía del Usuario (Spanish Guide)
+1. **Modo de Entrada**: Toca el icono del micrófono para hablar y obtener traducciones en tiempo real. Guarda en tus materiales.
+2. **Modo de Repaso**: Pon a prueba tu memoria ocultando el significado de las tarjetas. Marca las completadas.
+3. **Práctica de Pronunciación**: Escucha a hablantes nativos y repite después de ellos. Obtén puntajes de 0 a 100.
+4. **Chat con IA**: Habla con diferentes personajes para mejorar tu fluidez. Soporta contexto de ubicación GPS.
+5. **Importar JSON**: Usa [Importar Dispositivo] en el menú para agregar materiales de estudio de forma masiva.
+
+## <a id="readme-ja"></a>📘 ユーザーガイド (Japanese Guide)
+1. **入力モード**: マイクアイコンをタップして話し、リアルタイムで翻訳。学習資料에保存します。
+2. **復習モード**: カードの意味を隠して暗記。完了したカードはチェックを押して隠せます。
+3. **発音練習**: ネイティブの音声を聞いてシャドーイング。0〜100点の正確度評価が受けられます。
+4. **AIチャット**: 様々なペルソナと会話して実戦力を高めます。GPS位置情報に基づいた会話も可能です。
+5. **JSONのインポート**: メ뉴の[デバイスからインポート]で、大量の学習資料を一括追加できます。

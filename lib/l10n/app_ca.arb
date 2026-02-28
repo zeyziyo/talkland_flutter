@@ -1,6 +1,7 @@
 {
   "@@locale": "ca",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Continua amb Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Si us plau, verifica el teu correu electrònic per completar l'autenticació."
+  "statusCheckEmail": "Si us plau, verifica el teu correu electrònic per completar l'autenticació.",
+  "emailAlreadyInUse": "Aquest correu electrònic ja està registrat. Si us plau, inicia la sessió o recupera la contrasenya."
 }

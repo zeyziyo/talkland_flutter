@@ -1,6 +1,7 @@
 {
   "@@locale": "et",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Jätka Kakao abil",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Palun kinnita oma e-posti aadress, et autentimine lõpule viia."
+  "statusCheckEmail": "Palun kinnita oma e-posti aadress, et autentimine lõpule viia.",
+  "emailAlreadyInUse": "See e-posti aadress on juba kasutusel. Palun logi sisse või taasta oma parool."
 }

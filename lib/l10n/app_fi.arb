@@ -1,6 +1,7 @@
 {
   "@@locale": "fi",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Jatka Kakaolla",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Vahvista sähköpostiosoitteesi suorittaaksesi todennus."
+  "statusCheckEmail": "Vahvista sähköpostiosoitteesi suorittaaksesi todennus.",
+  "emailAlreadyInUse": "Sähköpostiosoite on jo käytössä. Kirjaudu sisään tai palauta salasana."
 }

@@ -1,6 +1,7 @@
 {
   "@@locale": "lv",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Turpināt ar Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Lūdzu, pārbaudiet savu e-pastu, lai pabeigtu verifikāciju."
+  "statusCheckEmail": "Lūdzu, pārbaudiet savu e-pastu, lai pabeigtu verifikāciju.",
+  "emailAlreadyInUse": "Šis e-pasts jau ir reģistrēts. Lūdzu, piesakieties vai izmantojiet paroles atgūšanas funkciju."
 }

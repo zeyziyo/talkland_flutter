@@ -1,6 +1,7 @@
 {
   "@@locale": "da",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Fortsæt med Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Bekræft din e-mail for at fuldføre godkendelsen."
+  "statusCheckEmail": "Bekræft din e-mail for at fuldføre godkendelsen.",
+  "emailAlreadyInUse": "Denne e-mailadresse er allerede i brug. Log ind, eller brug 'Glemt kodeord'."
 }

@@ -1,6 +1,7 @@
 {
   "@@locale": "eu",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Kakaorekin jarraitu",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Mesedez, egiaztatu e-posta autentifikazioa osatzeko."
+  "statusCheckEmail": "Mesedez, egiaztatu e-posta autentifikazioa osatzeko.",
+  "emailAlreadyInUse": "Helbide elektroniko hau erregistratuta dago. Hasi saioa edo berreskuratu pasahitza."
 }

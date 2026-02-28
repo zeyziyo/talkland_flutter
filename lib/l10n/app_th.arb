@@ -1,6 +1,7 @@
 {
   "@@locale": "th",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "ดำเนินการต่อด้วย Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "โปรดยืนยันอีเมลเพื่อดำเนินการยืนยันให้เสร็จสิ้น"
+  "statusCheckEmail": "โปรดยืนยันอีเมลเพื่อดำเนินการยืนยันให้เสร็จสิ้น",
+  "emailAlreadyInUse": "อีเมลนี้ถูกใช้ไปแล้ว โปรดเข้าสู่ระบบหรือรีเซ็ตรหัสผ่าน"
 }

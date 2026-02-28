@@ -1,6 +1,7 @@
 {
   "@@locale": "id",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Lanjutkan dengan Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Silakan periksa email Anda untuk menyelesaikan verifikasi."
+  "statusCheckEmail": "Silakan periksa email Anda untuk menyelesaikan verifikasi.",
+  "emailAlreadyInUse": "Email sudah terdaftar. Silakan masuk atau gunakan fitur lupa kata sandi."
 }

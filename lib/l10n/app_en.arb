@@ -560,7 +560,7 @@
   "enterTextHint": "Enter text to translate",
   "micButtonTooltip": "Start Listening",
   "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
+  "menuWebDownload": "User Guide",
   "menuDeviceImport": "Import from Device",
   "menuSettings": "Language Settings",
   "@menuSettings": {

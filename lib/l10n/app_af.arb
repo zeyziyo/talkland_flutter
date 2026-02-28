@@ -1,6 +1,7 @@
 {
   "@@locale": "af",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Gaan voort met Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Gaan asseblief jou e-pos na om die verifikasie te voltooi."
+  "statusCheckEmail": "Gaan asseblief jou e-pos na om die verifikasie te voltooi.",
+  "emailAlreadyInUse": "Hierdie e-posadres is reeds in gebruik. Meld asseblief aan of gebruik 'wagwoord vergeet'."
 }

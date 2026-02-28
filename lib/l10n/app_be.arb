@@ -1,6 +1,7 @@
 {
   "@@locale": "be",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Працягнуць з Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Каб завяршыць аўтэнтыфікацыю, праверце сваю электронную пошту."
+  "statusCheckEmail": "Каб завяршыць аўтэнтыфікацыю, праверце сваю электронную пошту.",
+  "emailAlreadyInUse": "Гэты адрас электроннай пошты ўжо выкарыстоўваецца. Калі ласка, увайдзіце або выкарыстоўвайце аднаўленне пароля."
 }

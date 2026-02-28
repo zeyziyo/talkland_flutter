@@ -1,6 +1,7 @@
 {
   "@@locale": "es",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Continuar con Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -25,47 +26,198 @@
   "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
   "helpTourDesc": "El **Círculo Resaltado** le guiará a través de las funciones principales.\n(p. ej., puede eliminar un registro manteniendo pulsado cuando el **Círculo Resaltado** lo señale.)",
   "partnerMode": "Partner Mode",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
   "manual": "Manual",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
   "speaker": "Speaker",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
   "switchToAi": "Switch to AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
   "switchToPartner": "Switch to Partner",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
   "currentLocation": "Current Location",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
   "location": "Ubicación",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
   "partner": "Partner",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
   "me": "Yo",
+  "@me": {
+    "description": "Label for self speaker"
+  },
   "currentMaterialLabel": "Current Selected Material:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
   "basicMaterialRepository": "Basic Repository",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
+  },
   "word": "Word",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
   "sentence": "Sentence",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
   "appTitle": "Talkie",
+  "@appTitle": {
+    "description": "Application title"
+  },
   "tabReview": "Repaso ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "tabStudyMaterial": "Material ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "mode2Title": "Repaso",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
   "search": "Buscar",
+  "@search": {
+    "description": "Search mode label"
+  },
   "translate": "Traducir",
+  "@translate": {
+    "description": "Translate button"
+  },
   "listen": "Escuchar",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
   "saveData": "Guardar",
+  "@saveData": {
+    "description": "Save translation button"
+  },
   "saved": "Guardado",
+  "@saved": {
+    "description": "Data saved status"
+  },
   "delete": "Eliminar",
+  "@delete": {
+    "description": "Delete button"
+  },
   "materialInfo": "Info del Material",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
   "cancel": "Cancelar",
+  "@cancel": {
+    "description": "Cancel button"
+  },
   "confirm": "OK",
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
   "refresh": "Actualizar",
+  "@refresh": {
+    "description": "Refresh button"
+  },
   "studyRecords": "Registros ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "targetLanguageFilter": "Filtrar idioma destino:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
   "noRecords": "No hay registros para el idioma seleccionado",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
   "saveTranslationsFromSearch": "Guarda traducciones en modo búsqueda",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
   "flip": "Mostrar",
+  "@flip": {
+    "description": "Show translation button"
+  },
   "hide": "Ocultar",
+  "@hide": {
+    "description": "Hide translation button"
+  },
   "deleteRecord": "Eliminar registro",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
   "confirmDelete": "¿Seguro que quieres eliminar este registro?",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
   "recordDeleted": "Registro eliminado con éxito",
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
   "deleteFailed": "Fallo al eliminar: {error}",
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "importJsonFile": "Importar JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
   "importing": "Importando...",
+  "@importing": {
+    "description": "Import in progress"
+  },
   "importComplete": "Importación completada",
+  "@importComplete": {
+    "description": "Import success title"
+  },
   "importFailed": "Fallo al importar",
+  "@importFailed": {
+    "description": "Import error title"
+  },
   "importFile": "Archivo: {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
   "addParticipant": "Añadir Participante",
   "editParticipant": "Editar Participante",
   "labelRole": "Rol",
@@ -75,50 +227,225 @@
   "participantDeleted": "Participante eliminado.",
   "confirmDeleteParticipant": "¿Estás seguro de que quieres eliminar a este participante?",
   "importTotal": "Total: {count} ítems",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "importAdded": "Añadidos: {count} ítems",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "importSkipped": "Omitidos: {count} ítems",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "errors": "Errores:",
+  "@errors": {
+    "description": "Error section label"
+  },
   "error": "Error",
+  "@error": {
+    "description": "Error dialog title"
+  },
   "importErrorMessage": "Fallo al importar archivo:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "Seleccionar material",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "subject": "Tema:",
+  "@subject": {
+    "description": "Subject label"
+  },
   "source": "Fuente:",
+  "@source": {
+    "description": "Source label"
+  },
   "file": "Archivo:",
+  "@file": {
+    "description": "File label"
+  },
   "progress": "Progreso: {current} / {total}",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "importJsonFilePrompt": "Por favor importa un archivo JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
   "selectMaterialPrompt": "Por favor selecciona un material",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
   "studyComplete": "Estudiado",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
   "markAsStudied": "Marcar como estudiado",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
   "listening": "Escuchando...",
+  "@listening": {
+    "description": "STT listening status"
+  },
   "recognized": "Reconocimiento completo",
+  "@recognized": {
+    "description": "STT complete status"
+  },
   "recognitionFailed": "Fallo de reconocimiento: {error}",
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "checking": "Comprobando...",
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
   "translating": "Traduciendo...",
+  "@translating": {
+    "description": "Translation in progress"
+  },
   "translationComplete": "Traducción completa (guardar)",
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
   "translationLoaded": "Traducción guardada cargada",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
   "translationFailed": "Fallo de traducción: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "enterTextToTranslate": "Ingresa texto para traducir",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
   "translationResultHint": "Resultado de traducción - editable",
   "voluntaryTranslations": "Voluntary Translations",
   "saving": "Guardando...",
+  "@saving": {
+    "description": "Save in progress"
+  },
   "noTranslationToSave": "Nada para guardar",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
   "saveFailed": "Fallo al guardar: {error}",
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "playing": "Reproduciendo...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
   "noTextToPlay": "No hay texto para reproducir",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
   "playbackFailed": "Fallo de reproducción: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "sourceLanguage": "Idioma Origen",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
   "targetLanguage": "Idioma Destino",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
   "similarTextFound": "Texto similar encontrado",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
   "useExistingText": "Usar Existente",
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
   "createNew": "Crear Nuevo",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
   "reviewCount": "Repasado {count} veces",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "tabSpeaking": "Hablar",
   "speakingPractice": "Práctica de Habla",
   "intervalSeconds": "Intervalo: {seconds}s",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
   "yourPronunciation": "Tu Pronunciación",
   "correctAnswer": "Respuesta Correcta",
   "score": "Precisión: {score}%",
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
   "perfect": "¡Perfecto!",
   "good": "Bien",
   "tryAgain": "Intentar de nuevo",
@@ -186,296 +513,9 @@
   "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
   "dialogueQuestTitle": "Dialogue Quest",
   "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "@recognized": {
-    "description": "STT complete status"
-  },
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
-  },
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "@score": {
-    "placeholders": {
-      "score": {
-        "type": "String"
-      }
-    }
-  },
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "@importFailed": {
-    "description": "Import error title"
-  },
-  "@recognitionFailed": {
-    "description": "STT error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "@translating": {
-    "description": "Translation in progress"
-  },
-  "@subject": {
-    "description": "Subject label"
-  },
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "@delete": {
-    "description": "Delete button"
-  },
-  "@materialInfo": {
-    "description": "Title for material metadata section"
-  },
-  "@cancel": {
-    "description": "Cancel button"
-  },
-  "@importSkipped": {
-    "description": "Skipped import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "@importJsonFile": {
-    "description": "Import JSON button"
-  },
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@importComplete": {
-    "description": "Import success title"
-  },
-  "@source": {
-    "description": "Source label"
-  },
-  "@deleteFailed": {
-    "description": "Delete error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "@recordDeleted": {
-    "description": "Delete success message"
-  },
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "@translationComplete": {
-    "description": "Translation done status"
-  },
-  "@importFile": {
-    "description": "Imported file name",
-    "placeholders": {
-      "fileName": {
-        "type": "String"
-      }
-    }
-  },
-  "@importing": {
-    "description": "Import in progress"
-  },
-  "@appTitle": {
-    "description": "Application title"
-  },
-  "@errors": {
-    "description": "Error section label"
-  },
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
-  },
-  "@studyRecords": {
-    "description": "Study records title with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
-  },
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
-  },
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "@saveFailed": {
-    "description": "Save error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "@confirmDelete": {
-    "description": "Delete confirmation message"
-  },
-  "@checking": {
-    "description": "Checking for duplicates"
-  },
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@playing": {
-    "description": "TTS playing status"
-  },
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
-  },
-  "@translate": {
-    "description": "Translate button"
-  },
   "translation": "Traducción",
   "@translation": {
     "description": "Label for translation toggle"
-  },
-  "@noRecords": {
-    "description": "Empty state message"
-  },
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "@importErrorMessage": {
-    "description": "Import error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "@error": {
-    "description": "Error dialog title"
-  },
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@translationFailed": {
-    "description": "Translation error",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "@search": {
-    "description": "Search mode label"
-  },
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "@progress": {
-    "description": "Progress indicator",
-    "placeholders": {
-      "current": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "@file": {
-    "description": "File label"
-  },
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
   },
   "labelType": "Type:",
   "labelWord": "Word",
@@ -523,11 +563,29 @@
   "menuWebDownload": "Get Material from Web",
   "menuDeviceImport": "Importar desde dispositivo",
   "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
   "basicWords": "Repositorio de palabras",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
+  },
   "basicSentences": "Repositorio de frases",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
+  },
   "selectMaterialSet": "Seleccionar material de aprendizaje",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
   "sectionWords": "Palabras",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
   "sectionSentences": "Frases",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
   "languageSettingsTitle": "Language Settings",
   "sourceLanguageLabel": "Source Language",
   "targetLanguageLabel": "Target Language",
@@ -551,8 +609,17 @@
   "errorOtherSafety": "La traducción ha sido rechazada por la política de seguridad de la IA.",
   "clearAll": "Borrar todo",
   "disambiguationTitle": "Seleccionar significado",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
   "disambiguationPrompt": "¿Qué significado quieres para la traducción?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
   "skip": "Omitir",
+  "@skip": {
+    "description": "Skip button"
+  },
   "inputModeTitle": "Entrada",
   "reviewModeTitle": "Repaso",
   "practiceModeTitle": "Práctica",
@@ -562,10 +629,24 @@
   "chatChoosePersona": "Elige personaje",
   "chatTypeHint": "Escribe aquí...",
   "chatFailed": "Chat failed: {error}",
+  "@chatFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
   "chatNoConversations": "Sin conversaciones",
   "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "¡Inicia un chat para practicar!",
   "chatFromConversation": "From Conversation ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
+  },
   "personaTeacher": "Profesor de inglés",
   "personaGuide": "Guía de viaje",
   "personaFriend": "Amigo local",
@@ -580,83 +661,6 @@
   "errorSelectCategory": "¡Selecciona palabra o frase primero!",
   "tutorialM1ToggleTitle": "Modo Palabra/Frase",
   "tutorialM1ToggleDesc": "Cambia entre modo palabra y frase aquí.",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
-  "@menuSettings": {
-    "description": "Menu item for language settings"
-  },
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
-  },
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
-  },
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
-  },
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "@skip": {
-    "description": "Skip button"
-  },
-  "@chatFailed": {
-    "placeholders": {
-      "error": {
-        "type": "Object"
-      }
-    }
-  },
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
-  },
   "metadataDialogTitle": "Details",
   "tagFormal": "Formal",
   "selectPOS": "Select POS",
@@ -707,9 +711,6 @@
   },
   "startsWith": "Starts with",
   "reset": "Reset",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
   "participantRename": "Rename Participant",
   "labelName": "Name",
   "gender": "Gender",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Por favor, revise su correo electrónico para completar la autenticación."
+  "statusCheckEmail": "Por favor, revise su correo electrónico para completar la autenticación.",
+  "emailAlreadyInUse": "Este correo electrónico ya está en uso. Inicia sesión o recupera tu contraseña."
 }

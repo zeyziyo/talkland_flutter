@@ -1,6 +1,7 @@
 {
   "@@locale": "ro",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Continuă cu Kakao",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Verifică-ți emailul pentru a finaliza autentificarea."
+  "statusCheckEmail": "Verifică-ți emailul pentru a finaliza autentificarea.",
+  "emailAlreadyInUse": "Acest e-mail este deja înregistrat. Te rugăm să te autentifici sau să recuperezi parola."
 }

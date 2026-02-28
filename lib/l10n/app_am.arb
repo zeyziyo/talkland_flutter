@@ -1,6 +1,7 @@
 {
   "@@locale": "am",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "በካካዎ ይቀጥሉ",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "ኢሜይልዎን በማረጋገጥ ማረጋገጫውን ያጠናቅቁ።"
+  "statusCheckEmail": "ኢሜይልዎን በማረጋገጥ ማረጋገጫውን ያጠናቅቁ።",
+  "emailAlreadyInUse": "ይህ ኢሜይል ቀድሞውኑ ተመዝግቧል። ይግቡ ወይም የይለፍ ቃልዎን ዳግም ለማስጀመር ይሞክሩ፡፡"
 }

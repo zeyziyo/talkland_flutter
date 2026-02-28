@@ -1,6 +1,7 @@
 {
   "@@locale": "mn",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Какао-гоор үргэлжлүүлэх",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Имэйлээ шалгаж баталгаажуулалтаа дуусгана уу."
+  "statusCheckEmail": "Имэйлээ шалгаж баталгаажуулалтаа дуусгана уу.",
+  "emailAlreadyInUse": "Бүртгэгдсэн имэйл хаяг байна. Нэвтэрч эсвэл нууц үгээ сэргээнэ үү."
 }

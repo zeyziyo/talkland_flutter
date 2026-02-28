@@ -1,6 +1,7 @@
 {
   "@@locale": "uz",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "Kakaoda davom etish",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Elektron pochtangizni tekshiring va tasdiqlashni yakunlang."
+  "statusCheckEmail": "Elektron pochtangizni tekshiring va tasdiqlashni yakunlang.",
+  "emailAlreadyInUse": "Bu elektron pochta allaqachon ro'yxatdan o'tgan. Tizimga kiring yoki parolni tiklashni ishlating."
 }

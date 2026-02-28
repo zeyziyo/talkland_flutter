@@ -1,6 +1,7 @@
 {
   "@@locale": "bn",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "কাকাও দিয়ে চালিয়ে যান",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "অনুগ্রহ করে ইমেল যাচাই করে আপনার প্রমাণীকরণ সম্পূর্ণ করুন।"
+  "statusCheckEmail": "অনুগ্রহ করে ইমেল যাচাই করে আপনার প্রমাণীকরণ সম্পূর্ণ করুন।",
+  "emailAlreadyInUse": "এই ইমেলটি ইতিমধ্যে ব্যবহার করা হয়েছে। লগইন করুন অথবা পাসওয়ার্ড রিসেট করার চেষ্টা করুন।"
 }

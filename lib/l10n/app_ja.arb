@@ -1,6 +1,7 @@
 {
   "@@locale": "ja",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "カカオで続ける",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -25,47 +26,198 @@
   "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
   "helpTourDesc": "チュートリアルを開始すると、**ハイライトサークル（円）**が主な機能を案内します。\n(例：学習カードを**ハイライトサークル**が指しているときに長押しすると削除できます。)",
   "partnerMode": "Partner Mode",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
   "manual": "Manual",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
   "speaker": "Speaker",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
   "switchToAi": "Switch to AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
   "switchToPartner": "Switch to Partner",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
   "currentLocation": "Current Location",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
   "location": "場所",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
   "partner": "Partner",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
   "me": "私",
+  "@me": {
+    "description": "Label for self speaker"
+  },
   "currentMaterialLabel": "Current Selected Material:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
   "basicMaterialRepository": "Basic Repository",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
+  },
   "word": "Word",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
   "sentence": "Sentence",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
   "appTitle": "Talkie",
+  "@appTitle": {
+    "description": "Application title"
+  },
   "tabReview": "復習 ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "tabStudyMaterial": "学習教材 ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "mode2Title": "復習",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
   "search": "検索",
+  "@search": {
+    "description": "Search mode label"
+  },
   "translate": "翻訳する",
+  "@translate": {
+    "description": "Translate button"
+  },
   "listen": "聞く",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
   "saveData": "保存",
+  "@saveData": {
+    "description": "Save translation button"
+  },
   "saved": "保存完了",
+  "@saved": {
+    "description": "Data saved status"
+  },
   "delete": "削除",
+  "@delete": {
+    "description": "Delete button"
+  },
   "materialInfo": "教材情報",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
   "cancel": "キャンセル",
+  "@cancel": {
+    "description": "Cancel button"
+  },
   "confirm": "確認",
+  "@confirm": {
+    "description": "Confirm/OK button"
+  },
   "refresh": "更新",
+  "@refresh": {
+    "description": "Refresh button"
+  },
   "studyRecords": "学習記録 ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "targetLanguageFilter": "対象言語フィルタ:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
   "noRecords": "選択した言語の学習記録がありません",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
   "saveTranslationsFromSearch": "検索モードから翻訳を保存してください",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
   "flip": "表示",
+  "@flip": {
+    "description": "Show translation button"
+  },
   "hide": "隠す",
+  "@hide": {
+    "description": "Hide translation button"
+  },
   "deleteRecord": "記録の削除",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
   "confirmDelete": "この学習記録を削除しますか？",
+  "@confirmDelete": {
+    "description": "Delete confirmation message"
+  },
   "recordDeleted": "記録が削除されました",
+  "@recordDeleted": {
+    "description": "Delete success message"
+  },
   "deleteFailed": "削除失敗: {error}",
+  "@deleteFailed": {
+    "description": "Delete error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "importJsonFile": "JSONファイル読込",
+  "@importJsonFile": {
+    "description": "Import JSON button"
+  },
   "importing": "読込中...",
+  "@importing": {
+    "description": "Import in progress"
+  },
   "importComplete": "読込完了",
+  "@importComplete": {
+    "description": "Import success title"
+  },
   "importFailed": "読込失敗",
+  "@importFailed": {
+    "description": "Import error title"
+  },
   "importFile": "ファイル: {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
   "addParticipant": "参加者を追加",
   "editParticipant": "参加者を編集",
   "labelRole": "役割",
@@ -75,50 +227,225 @@
   "participantDeleted": "参加者が削除されました。",
   "confirmDeleteParticipant": "この参加者を削除してもよろしいですか？",
   "importTotal": "合計: {count}件",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "importAdded": "追加: {count}件",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "importSkipped": "スキップ: {count}件",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "errors": "エラー:",
+  "@errors": {
+    "description": "Error section label"
+  },
   "error": "エラー",
+  "@error": {
+    "description": "Error dialog title"
+  },
   "importErrorMessage": "ファイルの読み込みに失敗しました:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
   "selectStudyMaterial": "学習教材を選択",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "subject": "主題:",
+  "@subject": {
+    "description": "Subject label"
+  },
   "source": "出典:",
+  "@source": {
+    "description": "Source label"
+  },
   "file": "ファイル:",
+  "@file": {
+    "description": "File label"
+  },
   "progress": "進捗: {current} / {total}",
+  "@progress": {
+    "description": "Progress indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "importJsonFilePrompt": "JSONファイルを読み込んでください",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
+  },
   "selectMaterialPrompt": "学習教材を選択してください",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
   "studyComplete": "学習完了",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
   "markAsStudied": "完了としてマーク",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
   "listening": "聞き取り中...",
+  "@listening": {
+    "description": "STT listening status"
+  },
   "recognized": "認識完了",
+  "@recognized": {
+    "description": "STT complete status"
+  },
   "recognitionFailed": "音声認識失敗: {error}",
+  "@recognitionFailed": {
+    "description": "STT error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "checking": "確認中...",
+  "@checking": {
+    "description": "Checking for duplicates"
+  },
   "translating": "翻訳中...",
+  "@translating": {
+    "description": "Translation in progress"
+  },
   "translationComplete": "翻訳完了 (保存してください)",
+  "@translationComplete": {
+    "description": "Translation done status"
+  },
   "translationLoaded": "保存済みの翻訳を読み込みました",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
+  },
   "translationFailed": "翻訳失敗: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "enterTextToTranslate": "翻訳するテキストを入力してください",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
   "translationResultHint": "翻訳結果 - 修正可能",
   "voluntaryTranslations": "Voluntary Translations",
   "saving": "保存中...",
+  "@saving": {
+    "description": "Save in progress"
+  },
   "noTranslationToSave": "保存する翻訳がありません",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
   "saveFailed": "保存失敗: {error}",
+  "@saveFailed": {
+    "description": "Save error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "playing": "再生中...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
   "noTextToPlay": "再生するテキストがありません",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
   "playbackFailed": "再生失敗: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "sourceLanguage": "原文言語",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
   "targetLanguage": "翻訳言語",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
   "similarTextFound": "類似したテキストが見つかりました",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
   "useExistingText": "既存のテキストを使用",
+  "@useExistingText": {
+    "description": "Use existing text button"
+  },
   "createNew": "新規作成",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
   "reviewCount": "復習 {count}回",
+  "@reviewCount": {
+    "description": "Review count display",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "tabSpeaking": "スピーキング",
   "speakingPractice": "スピーキング練習",
   "intervalSeconds": "間隔: {seconds}秒",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
   "yourPronunciation": "あなたの発音",
   "correctAnswer": "正解",
   "score": "正確さ: {score}%",
+  "@score": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
   "perfect": "完璧です！",
   "good": "良いですね",
   "tryAgain": "もう一度",
@@ -186,296 +513,9 @@
   "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
   "dialogueQuestTitle": "Dialogue Quest",
   "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "@recognized": {
-    "description": "STT complete status"
-  },
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
-  },
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "@score": {
-    "placeholders": {
-      "score": {
-        "type": "String"
-      }
-    }
-  },
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "@importFailed": {
-    "description": "Import error title"
-  },
-  "@recognitionFailed": {
-    "description": "STT error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "@translating": {
-    "description": "Translation in progress"
-  },
-  "@subject": {
-    "description": "Subject label"
-  },
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "@delete": {
-    "description": "Delete button"
-  },
-  "@materialInfo": {
-    "description": "Title for material metadata section"
-  },
-  "@cancel": {
-    "description": "Cancel button"
-  },
-  "@importSkipped": {
-    "description": "Skipped import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "@importJsonFile": {
-    "description": "Import JSON button"
-  },
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@importComplete": {
-    "description": "Import success title"
-  },
-  "@source": {
-    "description": "Source label"
-  },
-  "@deleteFailed": {
-    "description": "Delete error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "@recordDeleted": {
-    "description": "Delete success message"
-  },
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "@translationComplete": {
-    "description": "Translation done status"
-  },
-  "@importFile": {
-    "description": "Imported file name",
-    "placeholders": {
-      "fileName": {
-        "type": "String"
-      }
-    }
-  },
-  "@importing": {
-    "description": "Import in progress"
-  },
-  "@appTitle": {
-    "description": "Application title"
-  },
-  "@errors": {
-    "description": "Error section label"
-  },
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
-  },
-  "@studyRecords": {
-    "description": "Study records title with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
-  },
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
-  },
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "@saveFailed": {
-    "description": "Save error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "@confirmDelete": {
-    "description": "Delete confirmation message"
-  },
-  "@checking": {
-    "description": "Checking for duplicates"
-  },
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@playing": {
-    "description": "TTS playing status"
-  },
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
-  },
-  "@translate": {
-    "description": "Translate button"
-  },
   "translation": "翻訳",
   "@translation": {
     "description": "Label for translation toggle"
-  },
-  "@noRecords": {
-    "description": "Empty state message"
-  },
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "@importErrorMessage": {
-    "description": "Import error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "@error": {
-    "description": "Error dialog title"
-  },
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "@translationFailed": {
-    "description": "Translation error",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "@search": {
-    "description": "Search mode label"
-  },
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "@progress": {
-    "description": "Progress indicator",
-    "placeholders": {
-      "current": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "@file": {
-    "description": "File label"
-  },
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
   },
   "labelType": "Type:",
   "labelWord": "Word",
@@ -523,11 +563,29 @@
   "menuWebDownload": "Get Material from Web",
   "menuDeviceImport": "デバイスからインポート",
   "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
   "basicWords": "基本単語リポジトリ",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
+  },
   "basicSentences": "基本文章リポジトリ",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
+  },
   "selectMaterialSet": "学習資料集を選択",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
   "sectionWords": "単語",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
   "sectionSentences": "文章",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
   "languageSettingsTitle": "Language Settings",
   "sourceLanguageLabel": "Source Language",
   "targetLanguageLabel": "Target Language",
@@ -551,8 +609,17 @@
   "errorOtherSafety": "AI安全ポリシーにより翻訳が拒否されました。",
   "clearAll": "すべてクリア",
   "disambiguationTitle": "意味を選択",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
   "disambiguationPrompt": "どの意味で翻訳しますか？",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
   "skip": "スキップ",
+  "@skip": {
+    "description": "Skip button"
+  },
   "inputModeTitle": "入力",
   "reviewModeTitle": "復習",
   "practiceModeTitle": "練習",
@@ -562,10 +629,24 @@
   "chatChoosePersona": "ペルソナを選択",
   "chatTypeHint": "メッセージを入力...",
   "chatFailed": "Chat failed: {error}",
+  "@chatFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
   "chatNoConversations": "会話がありません",
   "noDialogueHistory": "No dialogue history.",
   "chatStartNewPrompt": "練習を始めるために新しいチャットを開始しましょう！",
   "chatFromConversation": "From Conversation ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
+  },
   "personaTeacher": "英語の先生",
   "personaGuide": "旅行ガイド",
   "personaFriend": "地元の友人",
@@ -580,83 +661,6 @@
   "errorSelectCategory": "先に単語か文章を選択してください！",
   "tutorialM1ToggleTitle": "単語/文章モード",
   "tutorialM1ToggleDesc": "ここで単語と文章のモードを切り替えます。",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
-  "@menuSettings": {
-    "description": "Menu item for language settings"
-  },
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
-  },
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
-  },
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
-  },
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "@skip": {
-    "description": "Skip button"
-  },
-  "@chatFailed": {
-    "placeholders": {
-      "error": {
-        "type": "Object"
-      }
-    }
-  },
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
-  },
   "metadataDialogTitle": "Details",
   "tagFormal": "丁寧語",
   "selectPOS": "Select POS",
@@ -707,9 +711,6 @@
   },
   "startsWith": "Starts with",
   "reset": "Reset",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
   "participantRename": "Rename Participant",
   "labelName": "Name",
   "gender": "Gender",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "メールを確認して認証を完了してください。"
+  "statusCheckEmail": "メールを確認して認証を完了してください。",
+  "emailAlreadyInUse": "すでに登録済みのメールアドレスです。ログインまたはパスワード再設定をご利用ください。"
 }

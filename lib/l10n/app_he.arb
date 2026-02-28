@@ -1,6 +1,7 @@
 {
   "@@locale": "he",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "המשך עם קקאו",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "אמת את כתובת האימייל שלך כדי להשלים את האימות."
+  "statusCheckEmail": "אמת את כתובת האימייל שלך כדי להשלים את האימות.",
+  "emailAlreadyInUse": "כתובת האימייל כבר רשומה. יש להתחבר או לשחזר את הסיסמה."
 }

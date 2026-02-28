@@ -1,6 +1,7 @@
 {
   "@@locale": "si",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "කකාඕ සමඟ ඉදිරියට යන්න",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "විද්‍යුත් තැපෑල පරීක්ෂා කර සත්‍යාපනය සම්පූර්ණ කරන්න."
+  "statusCheckEmail": "විද්‍යුත් තැපෑල පරීක්ෂා කර සත්‍යාපනය සම්පූර්ණ කරන්න.",
+  "emailAlreadyInUse": "මෙම විද්‍යුත් තැපෑල දැනටමත් ලියාපදිංචි වී ඇත. පිවිසෙන්න හෝ මුරපදය සොයා ගැනීමට උත්සාහ කරන්න."
 }

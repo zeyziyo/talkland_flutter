@@ -1,6 +1,7 @@
 {
   "@@locale": "fa",
   "googleContinue": "Continue with Google",
+  "kakaoContinue": "ادامه با کاکائو",
   "logout": "Logout",
   "logoutConfirmTitle": "Logout",
   "logoutConfirmMessage": "Are you sure you want to logout from this device?",
@@ -751,5 +752,6 @@
   "passwordTooShort": "Password must be at least 6 characters.",
   "statusSigningUp": "Signing up...",
   "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "لطفاً ایمیل خود را برای تکمیل تأیید بررسی کنید."
+  "statusCheckEmail": "لطفاً ایمیل خود را برای تکمیل تأیید بررسی کنید.",
+  "emailAlreadyInUse": "این ایمیل قبلاً ثبت شده است. لطفاً وارد شوید یا از بازیابی رمز عبور استفاده کنید."
 }
