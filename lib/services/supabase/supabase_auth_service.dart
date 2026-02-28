@@ -124,7 +124,7 @@ class SupabaseAuthService {
       // Supabase handles the deep link callback.
       await SupabaseHelper.client.auth.signInWithOAuth(
         OAuthProvider.kakao,
-        redirectTo: 'kakao${dotenv.env['KAKAO_NATIVE_APP_KEY']}://oauth',
+        redirectTo: 'io.supabase.talkie://login-callback',
       );
     } catch (e) {
       debugPrint('[SupabaseAuth] Kakao Sign-In Error: $e');
