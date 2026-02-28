@@ -3,7 +3,7 @@ class AppConstants {
   static const String githubBaseUrl = 'https://zeyziyo.github.io/talkie';
   static const String materialsBaseUrl = '$githubBaseUrl/materials';
   static const String onlineMaterialsIndexUrl = '$githubBaseUrl/materials_v3.json';
-  static const String devWebsiteUrl = 'https://github.com/zeyziyo/talkie#readme';
+  static const String devWebsiteUrl = '$githubBaseUrl/index.html';
 
   // --- Default Titles ---
   static const String defaultWordbookKo = '나의 단어장';

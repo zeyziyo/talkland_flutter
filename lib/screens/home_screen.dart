@@ -541,13 +541,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       break;
                     case 'downloads':
                       final localeCode = Localizations.localeOf(context).languageCode;
-                      String urlSuffix = '';
-                      if (['ko', 'en', 'es', 'ja'].contains(localeCode)) {
-                        urlSuffix = '-' + localeCode;
-                      } else {
-                        urlSuffix = '-en'; // Default
-                      }
-                      _launchURL(AppConstants.devWebsiteUrl + urlSuffix);
+                      final targetUrl = '${AppConstants.devWebsiteUrl}?lang=$localeCode';
+                      _launchURL(targetUrl);
                       break;
                     case 'settings':
                       _showLanguageSettingsDialog(context);

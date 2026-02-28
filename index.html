@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talkie User Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="docs/manual_data.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .gradient-bg { background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); }
+        .card { background: white; border-radius: 1.5rem; border: 1px solid #e2e8f0; transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+        .manual-text { white-space: pre-wrap; line-height: 1.6; }
+        pre { background: #1e293b; color: #f8fafc; padding: 1.5rem; border-radius: 1rem; overflow-x: auto; font-size: 0.875rem; }
+        .tab-btn { padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: 600; transition: all 0.2s; }
+        .tab-btn.active { background: white; color: #6366f1; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .tab-btn.inactive { color: #cbd5e1; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- Hero / Header -->
+    <header class="gradient-bg text-white py-16 px-6 text-center">
+        <h1 id="app-title" class="text-5xl font-extrabold mb-4 tracking-tight">Talkie</h1>
+        <p id="help-title" class="text-xl font-light opacity-90">User Guide & Documentation</p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="max-w-4xl mx-auto -mt-8 px-6">
+        <div class="bg-slate-900/10 backdrop-blur-md p-1.5 rounded-full flex justify-between shadow-sm">
+            <button onclick="switchTab('modes')" id="tab-modes" class="tab-btn active w-1/2">Features</button>
+            <button onclick="switchTab('json')" id="tab-json" class="tab-btn inactive w-1/2">JSON Import</button>
+        </div>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <!-- Modes Section -->
+        <div id="section-modes" class="space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Mode 1 -->
+                <div class="card p-8">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-3" id="mode1-title">Input (STT/Translation)</h2>
+                    <p class="text-slate-500 mb-4 font-medium" id="mode1-desc"></p>
+                    <div class="manual-text text-sm text-slate-600 bg-slate-50 p-4 rounded-xl border border-slate-100" id="mode1-details"></div>
+                </div>
+                <!-- Mode 2 -->
+                <div class="card p-8">
+                    <div class="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-3" id="mode2-title">Review</h2>
+                    <p class="text-slate-500 mb-4 font-medium" id="mode2-desc"></p>
+                    <div class="manual-text text-sm text-slate-600 bg-slate-50 p-4 rounded-xl border border-slate-100" id="mode2-details"></div>
+                </div>
+                <!-- Mode 3 -->
+                <div class="card p-8">
+                    <div class="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-3" id="mode3-title">Speaking</h2>
+                    <p class="text-slate-500 mb-4 font-medium" id="mode3-desc"></p>
+                    <div class="manual-text text-sm text-slate-600 bg-slate-50 p-4 rounded-xl border border-slate-100" id="mode3-details"></div>
+                </div>
+                <!-- Mode Chat -->
+                <div class="card p-8">
+                    <div class="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-3" id="chat-title">AI Chat</h2>
+                    <p class="text-slate-500 mb-4 font-medium" id="chat-desc"></p>
+                    <div class="manual-text text-sm text-slate-600 bg-slate-50 p-4 rounded-xl border border-slate-100" id="chat-details"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JSON Section -->
+        <div id="section-json" class="hidden space-y-8">
+            <div class="card p-10">
+                <h2 class="text-3xl font-bold mb-4" id="json-head">Import Guide</h2>
+                <p id="json-desc" class="text-slate-600 mb-8 leading-relaxed"></p>
+
+                <div class="space-y-10">
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-4 flex items-center">
+                            <span class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-500 flex items-center justify-center mr-3 text-xs">1</span>
+                            <span id="json-type-sentence">Sentence Template</span>
+                        </h4>
+<pre><code>{
+  "subject": "Travel Survival",
+  "entries": [
+    {
+      "source_text": "How much is this?",
+      "translated_text": "이거 얼마예요?",
+      "tags": ["Shopping", "Travel"]
+    }
+  ]
+}</code></pre>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-4 flex items-center">
+                            <span class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-500 flex items-center justify-center mr-3 text-xs">2</span>
+                            <span id="json-type-dialogue">Dialogue Template</span>
+                        </h4>
+                        <p id="dialogue-import-desc" class="text-sm text-slate-500 mb-4"></p>
+<pre><code>{
+  "default_type": "dialogue",
+  "subject": "Cafe Order",
+  "participants": [
+    { "id": "p1", "name": "User", "role": "User", "lang_code": "en-US" },
+    { "id": "p2", "name": "Barista", "role": "AI", "lang_code": "ko-KR" }
+  ],
+  "entries": [
+    { "text": "Can I have a latte?", "speaker": "User" },
+    { "text": "라떼 한 잔 드릴까요?", "speaker": "Barista" }
+  ]
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-500 py-12 text-center text-sm">
+        <p>&copy; 2026 Talkie Application. Global Localization System Active.</p>
+    </footer>
+
+    <script>
+        function getQueryLang() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('lang');
+        }
+
+        function init() {
+            let lang = getQueryLang() || navigator.language.split('-')[0] || 'en';
+            
+            // Adjust for specific locales if needed, but we use base code mostly
+            if (!MANUAL_DATA[lang]) {
+                lang = 'en'; // Global fallback
+            }
+
+            const d = MANUAL_DATA[lang];
+            if (!d) return;
+
+            // Header
+            document.getElementById('app-title').textContent = d.appTitle || 'Talkie';
+            document.getElementById('help-title').textContent = d.helpTitle || 'User Guide';
+
+            // Tabs
+            document.getElementById('tab-modes').textContent = d.helpTabModes || 'Modes';
+            document.getElementById('tab-json').textContent = d.helpTabJson || 'JSON';
+
+            // Modes
+            document.getElementById('mode1-title').textContent = (d.helpTabModes ? '1. ' + d.helpTabModes.split('/')[0] : '1. Input');
+            document.getElementById('mode1-desc').textContent = d.helpMode1Desc;
+            document.getElementById('mode1-details').textContent = d.helpMode1Details;
+
+            document.getElementById('mode2-title').textContent = '2. Review';
+            document.getElementById('mode2-desc').textContent = d.helpMode2Desc;
+            document.getElementById('mode2-details').textContent = d.helpMode2Details;
+
+            document.getElementById('mode3-title').textContent = '3. Speaking';
+            document.getElementById('mode3-desc').textContent = d.helpMode3Desc;
+            document.getElementById('mode3-details').textContent = d.helpMode3Details;
+
+            document.getElementById('chat-title').textContent = '4. AI Chat';
+            document.getElementById('chat-desc').textContent = d.helpModeChatDesc;
+            document.getElementById('chat-details').textContent = d.helpModeChatDetails;
+
+            // JSON
+            document.getElementById('json-head').textContent = d.helpTabJson || 'Import Guide';
+            document.getElementById('json-desc').textContent = d.helpJsonDesc;
+            document.getElementById('json-type-sentence').textContent = d.helpJsonTypeSentence || 'Sentence';
+            document.getElementById('json-type-dialogue').textContent = d.helpJsonTypeDialogue || 'Dialogue';
+            document.getElementById('dialogue-import-desc').textContent = d.helpDialogueImportDesc;
+            
+            // Meta
+            document.title = (d.appTitle || 'Talkie') + ' - ' + (d.helpTitle || 'Guide');
+        }
+
+        function switchTab(tab) {
+            const modes = document.getElementById('section-modes');
+            const json = document.getElementById('section-json');
+            const tModes = document.getElementById('tab-modes');
+            const tJson = document.getElementById('tab-json');
+
+            if (tab === 'modes') {
+                modes.classList.remove('hidden');
+                json.classList.add('hidden');
+                tModes.classList.replace('inactive', 'active');
+                tJson.classList.replace('active', 'inactive');
+            } else {
+                modes.classList.add('hidden');
+                json.classList.remove('hidden');
+                tModes.classList.replace('active', 'inactive');
+                tJson.classList.replace('inactive', 'active');
+            }
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
