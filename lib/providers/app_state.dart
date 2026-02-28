@@ -45,7 +45,9 @@ class AppState extends ChangeNotifier {
   final SharedPreferences? _prefs;
 
   AppState(this._prefs) {
-    debugPrint('>>> APPSTATE [1] Constructor Start');
+    // [Phase 15.8.12] 인증 리스너를 가장 먼저 등록하여 리다이렉트 직후의 세션 감지 확률을 높입니다.
+    _initAuthListener();
+    
     _usageService.init(prefs: _prefs); 
     _initSettings();
     debugPrint('>>> APPSTATE [2] Settings Init Done');
@@ -54,7 +56,6 @@ class AppState extends ChangeNotifier {
     _initializeAll();
     
     _initConnectivity();
-    _initAuthListener(); // Phase 33: Listen for Google Sign-in status
     debugPrint('>>> APPSTATE [3] Constructor Exit');
   }
 
@@ -84,17 +85,19 @@ class AppState extends ChangeNotifier {
       await loadGlobalParticipants().timeout(const Duration(seconds: 12));
     } catch (e) {
       debugPrint('[AppState] !!! _initializeAll Error (caught): $e');
-      // 에러 시 로딩 해제 보장
+    } finally {
+      // 에러 여부와 상관없이 초기 로딩 상태는 반드시 해제하여 화면이 멈추지 않게 합니다.
       _globalParticipantsLoading = false;
       if (_globalParticipants.isEmpty) {
-         _globalParticipants = [
-            ChatParticipant(id: 'me', dialogueId: '', name: '나', role: 'user', gender: _chatUserGender, langCode: _sourceLang),
-            ChatParticipant(id: 'ai', dialogueId: '', name: 'AI', role: 'ai', gender: _chatAiGender, langCode: _targetLang),
-         ];
+        debugPrint('[AppState] Resetting to fallback participants due to init failure.');
+        _globalParticipants = [
+          ChatParticipant(id: 'me', dialogueId: '', name: '나', role: 'user', gender: _chatUserGender, langCode: _sourceLang),
+          ChatParticipant(id: 'ai', dialogueId: '', name: 'AI', role: 'ai', gender: _chatAiGender, langCode: _targetLang),
+        ];
       }
+      isLoggingIn = false; // Phase 15.8.11: Ensure logging in flag is also cleared
       notifyListeners();
-    } finally {
-      debugPrint('[AppState] >>> _initializeAll: FINISHED');
+      debugPrint('[AppState] >>> _initializeAll: FINISHED (Loading Cleared)');
     }
   }
 
@@ -108,24 +111,32 @@ class AppState extends ChangeNotifier {
       
       debugPrint('[AppState] Auth Event: $event, UID: ${newUser?.id}');
       
-      if (event == AuthChangeEvent.signedIn || event == AuthChangeEvent.initialSession) {
+      if (event == AuthChangeEvent.signedIn || event == AuthChangeEvent.initialSession || event == AuthChangeEvent.tokenRefreshed) {
         if (newUser != null) {
           // Phase 15.8.7: Notify immediately so login screens can pop while background sync starts
+          isLoggingIn = false; // Always clear when signed in or session recovered
           notify(); 
           
           // CRITICAL: Handle both storing anon ID and merging to Google account
           await _handleAuthMerge(newUser);
         }
+      } else if (event == AuthChangeEvent.signedOut) {
+        isLoggingIn = false;
+        notify();
       }
-      notify();
     });
 
     // 2. Immediate check for existing session on startup (Redirect Recovery)
-    final currentSession = SupabaseService.client.auth.currentSession;
-    if (currentSession != null) {
-      debugPrint('[AppState] Existing session found on init. Triggering auth handler.');
-      Future.microtask(() => _handleAuthMerge(currentSession.user));
-    }
+    // 웹 환경에서는 페이지 새로고침 시 이 부분이 리다이렉트 결과를 잡아내는 핵심입니다.
+    Future.delayed(Duration.zero, () async {
+      final currentSession = SupabaseService.client.auth.currentSession;
+      if (currentSession != null && !currentSession.user.isAnonymous) {
+        debugPrint('[AppState] Found authenticated session on startup redirect. UID: ${currentSession.user.id}');
+        isLoggingIn = false;
+        notify();
+        await _handleAuthMerge(currentSession.user);
+      }
+    });
   }
 
   /// Unified helper to handle data merging for both Native and Web (Redirect)

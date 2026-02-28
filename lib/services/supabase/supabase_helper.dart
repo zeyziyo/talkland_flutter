@@ -18,17 +18,29 @@ class SupabaseHelper {
   static Future<void> initialize() async {
     if (_initialized) return;
     
-    final envUrl = dotenv.env['SUPABASE_URL'];
-    final envKey = dotenv.env['SUPABASE_ANON_KEY'];
+    // Phase v15.8.12: Support for --dart-define environment variables (Release Priority)
+    final String? defineUrl = const String.fromEnvironment('SUPABASE_URL').isNotEmpty 
+        ? const String.fromEnvironment('SUPABASE_URL') : null;
+    final String? defineKey = const String.fromEnvironment('SUPABASE_ANON_KEY').isNotEmpty 
+        ? const String.fromEnvironment('SUPABASE_ANON_KEY') : null;
+
+    final envUrl = defineUrl ?? dotenv.env['SUPABASE_URL'];
+    final envKey = defineKey ?? dotenv.env['SUPABASE_ANON_KEY'];
 
     if (kReleaseMode && (envUrl == null || envKey == null)) {
       debugPrint('CRITICAL: Supabase environment variables missing in Release Mode!');
+      debugPrint('HINT: Check if .env is in pubspec.yaml assets or use --dart-define=SUPABASE_URL=... --dart-define=SUPABASE_ANON_KEY=...');
     }
 
     final url = envUrl?.isNotEmpty == true ? envUrl! : _fallbackUrl;
     final anonKey = envKey?.isNotEmpty == true ? envKey! : _fallbackAnonKey;
     
-    await Supabase.initialize(url: url, anonKey: anonKey);
+    debugPrint('[SupabaseHelper] Initializing with URL: ${url.substring(0, 15)}...');
+    
+    await Supabase.initialize(
+      url: url, 
+      anonKey: anonKey,
+    );
     _initialized = true;
   }
 }

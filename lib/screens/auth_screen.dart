@@ -29,8 +29,12 @@ class _AuthScreenState extends State<AuthScreen> {
       final user = data.session?.user;
       if (user != null && !user.isAnonymous) {
         debugPrint('[AuthScreen] Stream detected authenticated user. Popping.');
-        if (mounted && Navigator.of(context).canPop()) {
-          Navigator.of(context).pop();
+        if (mounted) {
+          final appState = Provider.of<AppState>(context, listen: false);
+          appState.isLoggingIn = false; // Emergency clear on UI side
+          if (Navigator.of(context).canPop()) {
+            Navigator.of(context).pop();
+          }
         }
       }
     });
@@ -109,7 +113,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
     // v15.8.8: Aggressive build-time check as secondary safety
     final user = appState.currentUser;
-    if (user != null && !user.isAnonymous) {
+    if (user != null && !user.isAnonymous && !appState.isLoggingIn) {
       debugPrint('[AuthScreen] Build detected authenticated user. Attempting pop.');
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (mounted && Navigator.of(context).canPop()) {

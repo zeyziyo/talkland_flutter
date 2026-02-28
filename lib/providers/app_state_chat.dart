@@ -301,7 +301,7 @@ extension AppStateChat on AppState {
     if (userId != null) {
       try {
         final response = await SupabaseService.client
-            .from('user_dialogue_groups')
+            .from('dialogue_groups')
             .select()
             .eq('user_id', userId)
             .order('created_at', ascending: false);
@@ -604,7 +604,7 @@ extension AppStateChat on AppState {
       // Update Supabase and Await (Crucial to prevent race condition during history re-load)
       if (SupabaseService.client.auth.currentUser != null) {
         try {
-          await SupabaseService.client.from('user_dialogue_groups').update({
+          await SupabaseService.client.from('dialogue_groups').update({
             'title': title,
             'location': location,
             'note': note

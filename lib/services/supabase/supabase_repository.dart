@@ -105,7 +105,7 @@ class SupabaseRepository {
     final userId = SupabaseAuthService.currentUser?.id;
     if (userId == null) return;
     
-    final table = type == 'word' ? 'user_words_meta' : 'user_sentences_meta';
+    final table = type == 'word' ? 'words_meta' : 'sentences_meta';
     
     await SupabaseHelper.client.from(table).upsert({
       'user_id': userId,
@@ -145,7 +145,7 @@ class SupabaseRepository {
     }
 
     final response = await SupabaseHelper.client
-        .from('user_dialogue_groups')
+        .from('dialogue_groups')
         .upsert(data, onConflict: 'id')
         .select('id')
         .single();
@@ -154,52 +154,58 @@ class SupabaseRepository {
   }
 
   static Future<void> updateDialogueTitle(String id, String title) async {
-    await SupabaseHelper.client.from('user_dialogue_groups').update({'title': title}).eq('id', id);
+    await SupabaseHelper.client.from('dialogue_groups').update({'title': title}).eq('id', id);
   }
 
   static Future<void> deleteDialogueGroup(String id) async {
     final userId = SupabaseAuthService.currentUser?.id;
     if (userId == null) return;
 
-    await SupabaseHelper.client.from('user_dialogue_groups').delete().eq('id', id).eq('user_id', userId);
+    await SupabaseHelper.client.from('dialogue_groups').delete().eq('id', id).eq('user_id', userId);
   }
 
   /// Phase 33: Merge anonymous data to permanent user ID on Supabase server
   static Future<void> mergeUserSessions(String oldId, String newId) async {
     if (oldId == newId) return;
     
-    // 1. Update primary ownership in user_dialogue_groups
+    // 1. Update primary ownership in dialogue_groups
     await SupabaseHelper.client
-        .from('user_dialogue_groups')
+        .from('dialogue_groups')
         .update({'user_id': newId})
         .eq('user_id', oldId);
         
     // 2. Update messages ownership
     await SupabaseHelper.client
-        .from('user_dialogue_messages')
+        .from('dialogue_messages')
         .update({'user_id': newId})
         .eq('user_id', oldId);
         
     // 3. Update Meta ownership
     await SupabaseHelper.client
-        .from('user_words_meta')
+        .from('words_meta')
         .update({'user_id': newId})
         .eq('user_id', oldId);
     await SupabaseHelper.client
-        .from('user_sentences_meta')
+        .from('sentences_meta')
         .update({'user_id': newId})
         .eq('user_id', oldId);
-        
+    
     // 4. Update Participants ownership
     await SupabaseHelper.client
-        .from('user_participants')
+        .from('participants')
+        .update({'user_id': newId})
+        .eq('user_id', oldId);
+
+    // 5. Update Link Table ownership
+    await SupabaseHelper.client
+        .from('dialogue_participants')
         .update({'user_id': newId})
         .eq('user_id', oldId);
         
     print('[SupabaseRepo] Cloud data ownership transferred: $oldId -> $newId');
   }
 
-  // Phase 131: Chat Isolation - Use dedicated 'chat_messages' table
+  // Phase 131: Chat Isolation - Use dedicated 'dialogue_messages' table
   static Future<void> saveChatMessage({
     required String dialogueId,
     required String sourceText,
@@ -212,7 +218,7 @@ class SupabaseRepository {
     final userId = SupabaseAuthService.currentUser?.id;
     if (userId == null) return;
 
-    await SupabaseHelper.client.from('user_dialogue_messages').insert({
+    await SupabaseHelper.client.from('dialogue_messages').insert({
       'user_id': userId,
       'session_id': dialogueId, // dialogue_id -> session_id (설계 5.2.C.4)
       'speaker': speaker,
@@ -227,7 +233,7 @@ class SupabaseRepository {
     if (userId == null) return [];
 
     final response = await SupabaseHelper.client
-        .from('user_dialogue_messages')
+        .from('dialogue_messages')
         .select() // Select all fields
         .eq('user_id', userId)
         .eq('session_id', dialogueId)
@@ -250,12 +256,12 @@ class SupabaseRepository {
   static Future<List<Map<String, dynamic>>> getDialogueParticipants(String dialogueId) async {
     try {
       final response = await SupabaseHelper.client
-          .from('user_dialogue_participants')
-          .select('joined_at, user_participants(id, name, role, gender, lang_code, avatar_color, created_at)')
+          .from('dialogue_participants')
+          .select('joined_at, participants(id, name, role, gender, lang_code, avatar_color, created_at)')
           .eq('dialogue_id', dialogueId);
       
       return (response as List).map((row) {
-        final p = row['user_participants'] as Map<String, dynamic>;
+        final p = row['participants'] as Map<String, dynamic>;
         return {
           'id': p['id'],
           'name': p['name'],
@@ -277,7 +283,7 @@ class SupabaseRepository {
   static Future<int> getChatMessageCount(String dialogueId) async {
     try {
       final response = await SupabaseHelper.client
-          .from('user_dialogue_messages')
+          .from('dialogue_messages')
           .select('id')
           .eq('session_id', dialogueId);
       
@@ -301,8 +307,8 @@ class SupabaseRepository {
     final userId = SupabaseAuthService.currentUser?.id;
     if (userId == null) return;
 
-    // 1. Upsert to user_participants (Master Profile)
-    await SupabaseHelper.client.from('user_participants').upsert({
+    // 1. Upsert to participants (Master Profile)
+    await SupabaseHelper.client.from('participants').upsert({
       'user_id': userId,
       'id': id,
       'name': name,
@@ -313,7 +319,7 @@ class SupabaseRepository {
     }, onConflict: 'user_id, id');
 
     // 2. Link to Dialogue
-    await SupabaseHelper.client.from('user_dialogue_participants').upsert({
+    await SupabaseHelper.client.from('dialogue_participants').upsert({
       'user_id': userId,
       'dialogue_id': dialogueId,
       'participant_id': id,

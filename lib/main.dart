@@ -27,20 +27,22 @@ void main() async {
     final kakaoNativeKey = dotenv.env['KAKAO_NATIVE_APP_KEY'];
     final kakaoJsKey = dotenv.env['KAKAO_JAVASCRIPT_KEY'];
     
-    if (kakaoNativeKey != null && kakaoNativeKey.isNotEmpty) {
+    // v15.8.12: 웹 환경에서는 SDK 초기화가 브라우저 리다이렉트(kakao:// 스킴 오류)에 간섭하므로 네이티브에서만 실행
+    if (!kIsWeb && kakaoNativeKey != null && kakaoNativeKey.isNotEmpty) {
       KakaoSdk.init(
         nativeAppKey: kakaoNativeKey,
         javaScriptAppKey: kakaoJsKey,
       );
-      debugPrint('>>> MAIN [2] Kakao SDK Initialized');
+      debugPrint('>>> MAIN [2] Kakao SDK Initialized (Native Only)');
       
-      // v15.8.4: Print Key Hash for troubleshooting (KOE205)
       try {
         final hashKey = await KakaoSdk.origin;
         debugPrint('>>> KAKAO KEY HASH: $hashKey');
       } catch (e) {
         debugPrint('>>> KAKAO [!] Error getting key hash: $e');
       }
+    } else if (kIsWeb) {
+      debugPrint('>>> MAIN [2] Kakao SDK Initialization Skipped on Web to avoid Redirect interference');
     }
   } catch (e) {
     debugPrint('>>> MAIN [!] Fatal Initialization Error: $e');

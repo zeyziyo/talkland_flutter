@@ -2,6 +2,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:google_sign_in/google_sign_in.dart' as gn_auth;
 import 'package:flutter/foundation.dart' show kIsWeb, debugPrint;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'supabase_helper.dart';
 
 class SupabaseAuthService {
@@ -104,8 +105,11 @@ class SupabaseAuthService {
   static Future<void> signInWithKakao() async {
     try {
       if (kIsWeb) {
-        final String redirectUrl = Uri.base.origin;
-        debugPrint('[SupabaseAuth] Starting Kakao Redirect Login with origin: $redirectUrl');
+        // Phase v15.8.12: SDK 표준 흐름으로 복구하되, 리다이렉트 URI를 정규화하여 사용
+        final String origin = Uri.base.origin;
+        final String redirectUrl = origin.endsWith('/') ? origin : '$origin/';
+        
+        debugPrint('[SupabaseAuth] Web: Starting OAuth with redirect: $redirectUrl');
         
         await SupabaseHelper.client.auth.signInWithOAuth(
           OAuthProvider.kakao,
