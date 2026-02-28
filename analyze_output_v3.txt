@@ -1,8 +1,0 @@
-
-┌─────────────────────────────────────────────────────────┐
-│ A new version of Flutter is available!                  │
-│                                                         │
-│ To update to the latest version, run "flutter upgrade". │
-└─────────────────────────────────────────────────────────┘
-Analyzing talkie...                                             
-No issues found! (ran in 71.6s)

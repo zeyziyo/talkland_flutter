@@ -356,6 +356,12 @@
 - **Logic**: 대화 자동 제목 생성 시 좌표 대괄호 `[]`를 파싱하여 제목에 좌표가 불필요하게 섞이지 않도록 개선.
 - **Stability**: `dart:async` 임포트 누락 및 `flutter analyze` 위반 사항 해결.
 
+### [2026-02-28] 최적화 및 안정성 강화 배포 (v15.8.12)
+- **Feature**: 채팅 히스토리 저장 시 GPS 좌표 획득 실패 대비 ip-api.com 연동 구현.
+- **Cleanup**: user_library.dart 모델과 파생 위젯 삭제.
+- **Legacy Rules**: 구형 테이블 명칭을 최신 분할 메타 규칙으로 수정.
+- **Quality**: Orphaned import 정리 및 앱 경량화 완료.
+
 ### [2026-02-28] Web Kakao Login & Supabase Schema Fix (v15.8.11)
 - **Fix**: Supabase 테이블 명칭에서 잘못된 `user_` 접두사를 모두 제거하여 실제 DB 구조(`dialogue_groups`, `dialogue_messages`, `participants` 등)와 일치하도록 정정.
 - **Stability**: `AppState` 초기화(`_initializeAll`) 과정에서 에러 발생 시에도 `finally` 블록을 통해 로딩 상태를 강제 해제하도록 보강하여 무한 스피너 현상 방지.

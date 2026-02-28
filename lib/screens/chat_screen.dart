@@ -155,27 +155,30 @@ class _ChatScreenState extends State<ChatScreen> {
 
   // Helper to get GPS Context
   Future<String> _getLocationString(AppLocalizations l10n) async {
+    final appState = Provider.of<AppState>(context, listen: false);
     try {
       debugPrint('[GPS] Checking permissions...');
       LocationPermission permission = await Geolocator.checkPermission().timeout(const Duration(seconds: 2));
       if (permission == LocationPermission.denied) {
         debugPrint('[GPS] Requesting permissions...');
         permission = await Geolocator.requestPermission().timeout(const Duration(seconds: 3));
-        if (permission == LocationPermission.denied) return '';
+        if (permission == LocationPermission.denied) return await appState.getIpBasedLocationFallback();
       }
       
       if (permission == LocationPermission.deniedForever) {
         debugPrint('[GPS] Permission denied forever.');
-        return '';
+        return await appState.getIpBasedLocationFallback();
       }
       
       Position? position;
       
       // 1. Try Last Known Position (Web Safe)
-      try {
-        position = await Geolocator.getLastKnownPosition();
-      } catch (e) {
-        debugPrint('[GPS] getLastKnownPosition failed (common on web): $e');
+      if (!kIsWeb) {
+        try {
+          position = await Geolocator.getLastKnownPosition();
+        } catch (e) {
+          debugPrint('[GPS] getLastKnownPosition failed (common on web): $e');
+        }
       }
       
       // 2. Try Current Position with Timeout
@@ -185,9 +188,9 @@ class _ChatScreenState extends State<ChatScreen> {
           position = await Geolocator.getCurrentPosition(
             locationSettings: LocationSettings(
               accuracy: kIsWeb ? LocationAccuracy.high : LocationAccuracy.medium,
-              timeLimit: const Duration(seconds: 5),
+              timeLimit: const Duration(seconds: 15),
             ),
-          ).timeout(const Duration(seconds: 5));
+          ).timeout(const Duration(seconds: 15));
         } catch (e) {
           debugPrint('[GPS] getCurrentPosition Timeout or Error: $e');
         }
@@ -195,7 +198,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
       if (position == null) {
         debugPrint('[GPS] No position acquired.');
-        return '';
+        return await appState.getIpBasedLocationFallback();
       }
 
       final coords = '${position.latitude.toStringAsFixed(3)}, ${position.longitude.toStringAsFixed(3)}';
@@ -231,7 +234,7 @@ class _ChatScreenState extends State<ChatScreen> {
     } catch (e) {
       debugPrint('[GPS] Final catch Error: $e');
     }
-    return '';
+    return await appState.getIpBasedLocationFallback();
   }
 
   Future<void> _sendMessage(AppLocalizations l10n) async {
@@ -480,7 +483,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       // Location Input
                       TextField(
                         controller: locationController,
-                        readOnly: locationController.text.isNotEmpty, // Phase 162: Allow manual entry if empty
+                        readOnly: locationController.text.isNotEmpty && locationController.text != '(위치 정보 없음)', // Phase 162: Allow manual entry if empty
                         decoration: InputDecoration(
                           labelText: l10n.location,
                           prefixIcon: const Icon(Icons.location_on),

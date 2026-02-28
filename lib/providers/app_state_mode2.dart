@@ -20,7 +20,7 @@ extension AppStateMode2 on AppState {
           .eq('user_id', userId)
           .order('created_at', ascending: false);
 
-      final libraryEntries = (libraryResponse as List).map((e) => UserLibrary.fromJson(e)).toList();
+      final libraryEntries = libraryResponse as List;
       
       if (libraryEntries.isEmpty) {
         _studyRecords = [];
@@ -29,7 +29,7 @@ extension AppStateMode2 on AppState {
       }
 
       // 2. Fetch Sentences for these groups
-      final groupIds = libraryEntries.map((e) => e.groupId).toList();
+      final groupIds = libraryEntries.map((e) => e['group_id'] as int).toList();
       
       final sentencesResponse = await SupabaseService.client
           .from('public_sentences')
@@ -42,7 +42,8 @@ extension AppStateMode2 on AppState {
       List<Map<String, dynamic>> combinedRecords = [];
       
       for (var entry in libraryEntries) {
-        final groupSentences = allSentences.where((s) => s.groupId == entry.groupId).toList();
+        final groupId = entry['group_id'] as int;
+        final groupSentences = allSentences.where((s) => s.groupId == groupId).toList();
         
         final sourceSentence = groupSentences.firstWhere(
           (s) => s.langCode == _sourceLang,
@@ -58,17 +59,17 @@ extension AppStateMode2 on AppState {
         if (sourceSentence.id == -1) continue;
 
         combinedRecords.add({
-          'id': entry.groupId,
-          'library_uuid': entry.id,
-          'group_id': entry.groupId,
+          'id': groupId,
+          'library_uuid': entry['id']?.toString() ?? '',
+          'group_id': groupId,
           'source_lang': sourceSentence.langCode,
           'target_lang': targetSentence.langCode,
           'source_text': sourceSentence.text,
           'target_text': targetSentence.text,
-          'personal_note': entry.caption,
-          'created_at': entry.createdAt.toIso8601String(),
-          'review_count': entry.reviewCount,
-          'last_reviewed': entry.lastReviewed?.toIso8601String(),
+          'personal_note': entry['caption'] as String? ?? entry['personal_note'] as String?,
+          'created_at': entry['created_at'],
+          'review_count': entry['review_count'] as int? ?? 0,
+          'last_reviewed': entry['last_reviewed'],
         });
       }
 
@@ -147,8 +148,9 @@ extension AppStateMode2 on AppState {
        final userId = SupabaseService.client.auth.currentUser?.id;
        if (userId != null) {
           try {
+             final table = _recordTypeFilter == 'word' ? 'user_words_meta' : 'user_sentences_meta';
              await SupabaseService.client
-                .from('user_library')
+                .from(table)
                 .delete()
                 .eq('user_id', userId)
                 .eq('group_id', groupId);

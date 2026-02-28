@@ -14,7 +14,6 @@ import '../services/usage_service.dart';
 import '../models/sentence.dart';
 import '../services/database/sentence_repository.dart';
 import '../services/database/dialogue_repository.dart';
-import '../models/user_library.dart';
 import '../models/dialogue_group.dart';
 import '../models/chat_participant.dart';
 import 'package:uuid/uuid.dart';
@@ -332,7 +331,6 @@ class AppState extends ChangeNotifier {
   List<String> _suggestedTitles = [];
   bool _isFetchingTitles = false;
   String _currentChatLocation = '';
-  bool _mode4Active = false;
   List<ChatParticipant> _activeParticipants = [];
   List<Map<String, dynamic>> _currentChatMessages = [];
 

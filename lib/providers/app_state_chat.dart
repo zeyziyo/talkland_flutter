@@ -147,49 +147,6 @@ extension AppStateChat on AppState {
     await DatabaseService.updateParticipant(id, updated.toJson());
   }
   
-  /// Start listening for Game Mode (Continuous)
-  Future<void> startMode4Listening({
-    required String lang,
-    required Function(String text, bool isFinal) onResult,
-  }) async {
-    try {
-      _mode4Active = true;
-      _isListening = true;
-      notify();
-
-      _speechStatusSubscription?.cancel();
-      _speechStatusSubscription = _speechService.statusStream.listen((status) {
-          if (_mode4Active && (status == 'done' || status == 'notListening')) {
-            debugPrint('[AppState] Auto-restarting Mode 4 STT...');
-            _speechService.startContinuousSTT(
-              lang: getServiceLocale(lang),
-              onResult: (text, isFinal, alternates) => onResult(text, isFinal),
-            );
-          }
-      });
-      
-      await _speechService.startContinuousSTT(
-        lang: getServiceLocale(lang),
-        onResult: (text, isFinal, alternates) {
-          onResult(text, isFinal);
-        },
-      );
-    } catch (e) {
-      debugPrint('[AppState] Mode 4 Listen Error: $e');
-      _isListening = false;
-      notify();
-    }
-  }
-
-  /// Stop Mode 4 Listening explicitly
-  Future<void> stopMode4Listening() async {
-    _mode4Active = false;
-    _speechStatusSubscription?.cancel();
-    await _speechService.stopSTT();
-    _isListening = false;
-    notify();
-  }
-
   /// Create a new dialogue and set as active session
   /// Phase 10 Fix: Offline-First 방식으로 변경
   /// 로컬에서 먼저 UUID로 대화를 생성하고, Supabase는 백그라운드 동기화로 처리
@@ -801,10 +758,12 @@ extension AppStateChat on AppState {
         Position? pos;
         
         // [Phase 164] Web/Unsupported Platform Defense
-        try {
-          pos = await Geolocator.getLastKnownPosition();
-        } catch (e) {
-          debugPrint('[AppState] getLastKnownPosition not supported/failed: $e');
+        if (!kIsWeb) {
+          try {
+            pos = await Geolocator.getLastKnownPosition();
+          } catch (e) {
+            debugPrint('[AppState] getLastKnownPosition not supported/failed: $e');
+          }
         }
 
         if (pos == null) {
@@ -812,7 +771,7 @@ extension AppStateChat on AppState {
             pos = await Geolocator.getCurrentPosition(
               locationSettings: LocationSettings(
                 accuracy: kIsWeb ? LocationAccuracy.high : LocationAccuracy.low,
-                timeLimit: const Duration(seconds: 5),
+                timeLimit: const Duration(seconds: 15),
               ),
             );
           } catch (e) {
@@ -852,14 +811,41 @@ extension AppStateChat on AppState {
             debugPrint('[AppState] Geocoding failed or not supported, keeping coords: $e');
           }
         } else {
-          debugPrint('[AppState] No position acquired after all attempts.');
+          debugPrint('[AppState] No position acquired after all attempts. Falling back to IP.');
+          _activeDialogueLocation = await getIpBasedLocationFallback();
+          notify();
         }
       } else {
-        debugPrint('[AppState] Location permission denied: $permission');
+        debugPrint('[AppState] Location permission denied: $permission. Falling back to IP.');
+        _activeDialogueLocation = await getIpBasedLocationFallback();
+        notify();
       }
     } catch (e) {
       debugPrint('[AppState] Pre-fetch location final catch: $e');
+      _activeDialogueLocation = await getIpBasedLocationFallback();
+      notify();
     }
+  }
+
+  /// IP 기반 광역 위치 추적 (Fallback)
+  Future<String> getIpBasedLocationFallback() async {
+    try {
+      debugPrint('[AppState] Attempting IP-based location fallback...');
+      final response = await http.get(Uri.parse('http://ip-api.com/json')).timeout(const Duration(seconds: 5));
+      if (response.statusCode == 200) {
+        final data = json.decode(response.body);
+        if (data['status'] == 'success') {
+          final city = data['city'] ?? '';
+          final country = data['country'] ?? '';
+          final result = '[IP Base] $city, $country'.trim();
+          debugPrint('[AppState] IP-based location acquired: $result');
+          return result;
+        }
+      }
+    } catch (e) {
+      debugPrint('[AppState] IP-based fallback failed: $e');
+    }
+    return '(위치 정보 없음)';
   }
 }
 // End of AppStateChat
