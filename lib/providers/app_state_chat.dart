@@ -783,33 +783,11 @@ extension AppStateChat on AppState {
           final coords = '${pos.latitude.toStringAsFixed(3)}, ${pos.longitude.toStringAsFixed(3)}';
           debugPrint('[AppState] Position acquired: $coords');
           
-          // 우선 좌표로 설정 (Immediate Fallback)
+          // 항상 순수 좌표로만 설정 (Immediate Fallback)
           _activeDialogueLocation = coords;
           notify();
+          return;
           
-          // [Phase 164] Web에서는 geocoding 패키지가 작동하지 않으므로 건너뜁니다.
-          if (kIsWeb) {
-            debugPrint('[AppState] Skip geocoding on Web. Using coordinates.');
-            return;
-          }
-
-          try {
-             final placemarks = await placemarkFromCoordinates(pos.latitude, pos.longitude)
-                .timeout(const Duration(seconds: 5));
-             if (placemarks.isNotEmpty) {
-               final place = placemarks.first;
-               final city = place.locality ?? place.administrativeArea ?? '';
-               final sub = place.subLocality ?? place.thoroughfare ?? '';
-               if (city.isNotEmpty || sub.isNotEmpty) {
-                  final address = sub.isNotEmpty && city.isNotEmpty ? '$sub, $city' : city;
-                  _activeDialogueLocation = '[$coords] $address'; // Phase 15.8.8: Primary Coordinates
-                  notify();
-                  debugPrint('[AppState] Geocoding success: $_activeDialogueLocation');
-               }
-             }
-          } catch (e) { 
-            debugPrint('[AppState] Geocoding failed or not supported, keeping coords: $e');
-          }
         } else {
           debugPrint('[AppState] No position acquired after all attempts. Falling back to IP.');
           _activeDialogueLocation = await getIpBasedLocationFallback();
@@ -835,11 +813,15 @@ extension AppStateChat on AppState {
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
         if (data['status'] == 'success') {
-          final city = data['city'] ?? '';
-          final country = data['country'] ?? '';
-          final result = '[IP Base] $city, $country'.trim();
-          debugPrint('[AppState] IP-based location acquired: $result');
-          return result;
+          // 지명 대신 IP API가 제공하는 위경도 좌표 사용
+          final lat = data['lat'];
+          final lon = data['lon'];
+          
+          if (lat != null && lon != null) {
+             final result = '${lat.toStringAsFixed(3)}, ${lon.toStringAsFixed(3)}';
+             debugPrint('[AppState] IP-based coords acquired: $result');
+             return result;
+          }
         }
       }
     } catch (e) {
