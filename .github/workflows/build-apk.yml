@@ -82,7 +82,13 @@ jobs:
         path: build/app/outputs/flutter-apk/app-release.apk
         retention-days: 7
 
-    # Skipped AAB to save time for testing
-    # - name: Build App Bundle (AAB)
-    #   run: flutter build appbundle --release
+    - name: Build App Bundle (AAB)
+      run: flutter build appbundle --release --verbose
+      
+    - name: Upload AAB
+      uses: actions/upload-artifact@v4
+      with:
+        name: talkie-release-aab
+        path: build/app/outputs/bundle/release/app-release.aab
+        retention-days: 7
 
