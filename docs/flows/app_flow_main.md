@@ -31,11 +31,14 @@
   </div>
 
   <!-- 액션 라인 -->
-  <div style="display: flex; gap: 15px; margin-bottom: 25px; align-items: center;">
-    <div style="flex: 1.5; background: white; padding: 12px; border-radius: 8px; border: 1px solid #dce1e9; text-align: center; font-size: 13px;">
-      의미/품사 선택 <a href="./logic_reference.md#LC-POS-SELECT" style="text-decoration: none; font-size: 12px; vertical-align: super;">[5]</a>
+  <div style="display: flex; gap: 10px; margin-bottom: 25px; align-items: center;">
+    <div style="flex: 2; background: white; padding: 12px; border-radius: 8px; border: 1px solid #dce1e9; text-align: center; font-size: 13px;">
+      품사/문장종류 <a href="./logic_reference.md#LC-POS-SELECT" style="text-decoration: none; font-size: 12px; vertical-align: super;">[5]</a>
     </div>
-    <a href="./app_flow_metadata.md" style="flex: 2; background: #e3f2fd; color: #1976d2; padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: bold; border: 1px solid #bbdefb;">상세 분류 설정 시 이동 ➔</a>
+    <div style="flex: 3; background: #fff9c4; padding: 12px; border-radius: 8px; border: 1px solid #ffe082; text-align: center; font-size: 13px; color: #856404;">
+      빠른 자료집 선택 <a href="./logic_reference.md#LC-SUBJECT-PICK" style="text-decoration: none; font-size: 11px; vertical-align: super;">[10]</a>
+    </div>
+    <a href="./app_flow_metadata.md" style="flex: 1; background: #e3f2fd; color: #1976d2; padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: bold; border: 1px solid #bbdefb; font-size: 18px;" title="상세 분류 설정">⚙️</a>
   </div>
 
   <!-- 실행 및 결과 -->
