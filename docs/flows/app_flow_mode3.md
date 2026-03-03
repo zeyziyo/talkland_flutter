@@ -9,66 +9,108 @@
     Mode 3 (말하기 실전 연습)
   </h2>
 
+  <!-- 공통 상단 앱바 (Home Screen) -->
+  <div style="background: #4a69bd; padding: 15px 20px; border-radius: 12px; margin-bottom: 25px; display: flex; align-items: center; color: white;">
+    <div style="background: rgba(255,255,255,0.2); padding: 5px; border-radius: 8px; display: flex;">
+      <span style="background: white; color: #4a69bd; padding: 5px 15px; border-radius: 6px; font-weight: bold; font-size: 13px;">단어 (Word)</span>
+      <span style="padding: 5px 15px; font-size: 13px;">문장 (Sentence)</span> <a href="./logic_reference.md#LC-TOGGLE" style="text-decoration: none; font-size: 11px; vertical-align: super; color: white;">[1]</a>
+    </div>
+    
+    <div style="margin-left: 10px; cursor: pointer; background: rgba(0,0,0,0.2); padding: 5px; border-radius: 5px;" title="언어 스왑">
+      🔄 <a href="./logic_reference.md#LC-SWAP-LANG" style="text-decoration: none; font-size: 11px; vertical-align: super; color: white;">[2]</a>
+    </div>
+
+    <!-- Mode 2 & 3 전용 자료집 선택 -->
+    <div style="margin-left: auto; background: #fff9c4; color: #856404; padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: bold; border: 1px solid #ffe082;">
+      📚 나의 문장집 (선택) ▼ <a href="./logic_reference.md#LC-SUBJECT-PICK" style="text-decoration: none; font-size: 11px; vertical-align: super; color: #856404;">[10]</a>
+    </div>
+  </div>
+
   <!-- 스마트 검색바 -->
-  <div style="background: white; padding: 20px; border-radius: 12px; border: 2px solid #f8bbd0; margin-bottom: 25px; display: flex; align-items: center;">
-    <span style="font-size: 20px; margin-right: 10px; color: #666;">🔍</span>
-    <span style="color: #9e9e9e; font-style: italic; font-size: 15px;">단어/문장 검색 (연습 풀 필터링)</span> <a href="./logic_reference.md#LC-SEARCHBAR" style="text-decoration: none; font-size: 12px; vertical-align: super; margin-left: auto;">[15]</a>
+  <div style="background: white; padding: 12px 16px; border-radius: 25px; border: 1px solid #f8bbd0; margin-bottom: 15px; display: flex; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+    <span style="font-size: 18px; margin-right: 10px; color: #9e9e9e;">🔍</span>
+    <span style="color: #9e9e9e; font-style: italic; font-size: 14px;">연습할 문장 검색...</span> <a href="./logic_reference.md#LC-SEARCHBAR" style="text-decoration: none; font-size: 12px; vertical-align: super; margin-left: auto;">[15]</a>
   </div>
 
   <!-- 액션 라인 -->
-  <div style="display: flex; gap: 8px; margin-bottom: 25px; align-items: center; overflow-x: auto; padding-bottom: 5px;">
-    <div style="background: white; padding: 8px 12px; border-radius: 8px; border: 1px solid #dce1e9; font-size: 12px; white-space: nowrap; font-weight: bold; color: #c2185b;">
-      다중 필터/태그 설정 <a href="./logic_reference.md#LC-SEARCH-FILTER" style="text-decoration: none; font-size: 11px; vertical-align: super;">[16]</a>
+  <div style="display: flex; gap: 8px; margin-bottom: 20px; align-items: center; overflow-x: auto; padding-bottom: 5px;">
+    <div style="background: #f8f9fa; padding: 8px 12px; border-radius: 8px; border: 1px solid #dce1e9; font-size: 12px; font-weight: bold; color: #424242;">
+      🎛️ 검색 조건 (2) <a href="./logic_reference.md#LC-SEARCH-FILTER" style="text-decoration: none; font-size: 11px; vertical-align: super;">[16]</a>
     </div>
-    <div style="background: white; padding: 8px 12px; border-radius: 8px; border: 1px solid #dce1e9; font-size: 12px; white-space: nowrap; color: #2e7d32; font-weight: bold;">
-      암기 완료 보기 토글 <a href="./logic_reference.md#LC-TOGGLE-MEMORIZED" style="text-decoration: none; font-size: 11px; vertical-align: super;">[17]</a>
+    <div style="background: #e8f5e9; padding: 8px 12px; border-radius: 8px; border: 1px solid #c8e6c9; font-size: 12px; color: #2e7d32; font-weight: bold;">
+      👁️ 외운 항목 보기 <a href="./logic_reference.md#LC-TOGGLE-MEMORIZED" style="text-decoration: none; font-size: 11px; vertical-align: super;">[17]</a>
     </div>
   </div>
 
-  <!-- 연습 카드 영역 -->
+  <!-- 연습 카드 리스트 (Mode3PracticeCard) -->
   <div style="background: #fff0f5; padding: 15px; border-radius: 10px; border: 1px solid #f8bbd0; min-height: 300px;">
     
-    <!-- 비활성 카드 -->
-    <div style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 10px; color: #666;">
-        <span style="font-size: 15px; font-weight: bold;">목표 텍스트 (클릭 시 연습 시작)</span>
-    </div>
-
-    <!-- 활성 연습 세션 카드 -->
-    <div style="background: white; padding: 20px; border-radius: 12px; border: 2px solid #c2185b; box-shadow: 0 4px 12px rgba(194, 24, 91, 0.15); position: relative;">
-        <div style="position: absolute; top: -12px; right: 20px; background: #c2185b; color: white; padding: 4px 12px; border-radius: 15px; font-size: 11px; font-weight: bold;">
-            🎙️ 연습 중 (Active)
+    <!-- 비활성 상태 카드 (그라데이션 배경 적용) -->
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 20px; border-radius: 20px; margin-bottom: 16px; color: white; box-shadow: 0 6px 12px rgba(118, 75, 162, 0.4); border: 2px solid transparent;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <span style="background: rgba(255,255,255,0.24); padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">KO</span>
+                <span style="font-size: 12px; color: rgba(255,255,255,0.7); font-style: italic;">이력서/면접 태그</span>
+            </div>
+            <!-- 암기 완료 원형 체크박스 -->
+            <div style="width: 20px; height: 20px; border-radius: 10px; border: 1.5px solid white; display: flex; justify-content: center; align-items: center; background: white;">
+              <span style="font-size: 14px; color: #764ba2;">✔️</span> <a href="./logic_reference.md#LC-MARK-MEMORIZED" style="text-decoration: none; font-size: 11px; vertical-align: super; color: #764ba2;">[20]</a>
+            </div>
         </div>
         
-        <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
-            <span style="color: #666; font-size: 14px;">모국어 원문 (번역 전)</span>
-            <span style="color: #c2185b; cursor: pointer;">🔊 듣기 <a href="./logic_reference.md#LC-TTS" style="text-decoration: none; font-size: 11px; vertical-align: super;">[7]</a></span>
-        </div>
-
-        <div style="background: #f8faff; padding: 15px; border-radius: 8px; border: 1px dashed #cfd8dc; margin-bottom: 20px; text-align: center; color: #455a64;">
-            내 입으로 말한 영어 문장 (STT 결과) <a href="./logic_reference.md#LC-PRACTICE-STT" style="text-decoration: none; font-size: 12px; vertical-align: super;">[21]</a>
-        </div>
-
-        <div style="display: flex; justify-content: center; gap: 20px;">
-            <div style="background: #ef5350; color: white; padding: 12px 24px; border-radius: 25px; font-weight: bold;">
-                마이크 중지 <a href="./logic_reference.md#LC-STOP-MIC" style="text-decoration: none; font-size: 11px; color: white; vertical-align: super;">[22]</a>
-            </div>
-        </div>
-
-        <!-- 평가 결과 (음성 인식 후) -->
-        <div style="margin-top: 20px; background: #e8f5e9; padding: 15px; border-radius: 8px; border: 1px solid #c8e6c9;">
-            <div style="font-size: 13px; font-weight: bold; color: #2e7d32; margin-bottom: 5px;">
-                채점 결과: 훌륭합니다! (Perfect Match) <a href="./logic_reference.md#LC-JUDGE" style="text-decoration: none; font-size: 11px; vertical-align: super;">[23]</a>
-            </div>
-            <div style="font-size: 12px; color: #1b5e20;">(유사 발음 교정 필터 작동됨)</div>
-        </div>
+        <!-- 원문 (항상 최상단은 본인의 모국어) -->
+        <div style="font-size: 24px; font-weight: bold; line-height: 1.4;">저는 이전에 3년간 개발자로 일했습니다.</div>
     </div>
+
+    <!-- 활성 연습 상태 카드 (카드를 터치하여 확장했을 때) -->
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 20px; color: white; box-shadow: 0 6px 12px rgba(118, 75, 162, 0.4);">
+        <div style="padding: 20px;">
+            <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 12px;">
+                <span style="background: rgba(255,255,255,0.24); padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">KO</span>
+            </div>
+            <!-- 상단 모국어 영역 -->
+            <div style="font-size: 24px; font-weight: bold; margin-bottom: 15px;">이것은 연필입니까?</div>
+        </div>
+        
+        <div style="border-top: 1px solid rgba(255,255,255,0.1);"></div>
+        
+        <!-- 하단 연습 제어 영역 (버튼) -->
+        <div style="background: rgba(0,0,0,0.12); padding: 20px; border-radius: 0 0 20px 20px; text-align: center;">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 20px;">
+                <!-- Skip Button -->
+                <span style="background: rgba(255,255,255,0.24); width: 40px; height: 40px; border-radius: 20px; display: flex; align-items: center; justify-content: center;">⏭️</span>
+                
+                <!-- 대형 마이크 버튼 -->
+                <span style="background: white; color: #764ba2; width: 70px; height: 70px; border-radius: 35px; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">🎤</span> <a href="./logic_reference.md#LC-PRACTICE-STT" style="text-decoration: none; font-size: 11px; vertical-align: super; color: white;">[21]</a>
+                
+                <!-- TTS 듣기 버튼 -->
+                <span style="background: rgba(255,255,255,0.24); width: 40px; height: 40px; border-radius: 20px; display: flex; align-items: center; justify-content: center;">🔊</span> <a href="./logic_reference.md#LC-TTS" style="text-decoration: none; font-size: 11px; vertical-align: super; color: white;">[7]</a>
+                
+                <!-- Reset Button -->
+                <span style="background: rgba(255,255,255,0.24); width: 40px; height: 40px; border-radius: 20px; display: flex; align-items: center; justify-content: center;">🔄</span>
+            </div>
+            
+            <!-- 글자 수 힌트 제공 영역 -->
+            <div style="background: rgba(255,255,255,0.1); display: inline-block; padding: 4px 8px; border-radius: 6px; font-family: monospace; letter-spacing: 2px;">
+                I- ---- - ------ (Hint)
+            </div>
+        </div>
+        
+        <!-- (참고) 마이크(🎤)를 누르고 발음 중일 때는 큰 정지 버튼과 붉은색 글씨로 [Listening...] 문구가 나타남 [22] -->
+        <!-- (참고) 음성을 다 말하고 난 후엔 아래의 [결과 화면]으로 자동 전환됨 -->
+    </div>
+    
+    <!-- (결과 화면 예시) -->
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 20px; color: white; margin-top: 16px; padding: 20px; text-align: center; box-shadow: 0 6px 12px rgba(118, 75, 162, 0.4);">
+      <div style="font-size: 18px; font-weight: bold; color: #69f0ae; margin-bottom: 8px;">정확도: 100.0% <a href="./logic_reference.md#LC-JUDGE" style="text-decoration: none; font-size: 11px; vertical-align: super; color: white;">[23]</a></div>
+      <div style="font-size: 22px; font-weight: bold; margin-bottom: 10px;">Is this a pencil? (정답 어휘)</div>
+      <div style="font-size: 14px; font-style: italic; color: rgba(255,255,255,0.7); margin-bottom: 20px;">"Is this a pencil?" (내 발음 인식 결과)</div>
+      <div style="display: flex; gap: 8px; justify-content: center;">
+        <span style="background: rgba(255,255,255,0.12); padding: 12px; border-radius: 24px;">초기화</span>
+        <span style="background: rgba(255,255,255,0.24); padding: 12px; flex: 1; border-radius: 12px; font-weight: bold;">재도전</span>
+        <span style="background: white; color: #764ba2; padding: 12px; flex: 1; border-radius: 12px; font-weight: bold;">다음 ➔</span>
+      </div>
+    </div>
+
   </div>
-
 </div>
-
----
-
-## 🔗 참고 문서
-- [로직 통합 명세 (Logic Reference)](./logic_reference.md)
-- [메인 입력 화면 흐름도 (App Flow Main)](./app_flow_main.md)
-- [대화(프리토킹) 화면 흐름도 (App Flow Mode 4)](./app_flow_mode4.md)
