@@ -9,23 +9,6 @@
     Mode 2 (복습 화면)
   </h2>
 
-  <!-- 공통 상단 앱바 (Home Screen) -->
-  <div style="background: #4a69bd; padding: 15px 20px; border-radius: 12px; margin-bottom: 25px; display: flex; align-items: center; color: white;">
-    <div style="background: rgba(255,255,255,0.2); padding: 5px; border-radius: 8px; display: flex;">
-      <span style="background: white; color: #4a69bd; padding: 5px 15px; border-radius: 6px; font-weight: bold; font-size: 13px;">단어 (Word)</span>
-      <span style="padding: 5px 15px; font-size: 13px;">문장 (Sentence)</span> <a href="./logic_reference.md#LC-TOGGLE" style="text-decoration: none; font-size: 11px; vertical-align: super; color: white;">[1]</a>
-    </div>
-    
-    <div style="margin-left: 10px; cursor: pointer; background: rgba(0,0,0,0.2); padding: 5px; border-radius: 5px;" title="언어 스왑">
-      🔄 <a href="./logic_reference.md#LC-SWAP-LANG" style="text-decoration: none; font-size: 11px; vertical-align: super; color: white;">[2]</a>
-    </div>
-
-    <!-- Mode 2 & 3 전용 자료집 선택 -->
-    <div style="margin-left: auto; background: #fff9c4; color: #856404; padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: bold; border: 1px solid #ffe082;">
-      📚 나의 단어장 (선택) ▼ <a href="./logic_reference.md#LC-SUBJECT-PICK" style="text-decoration: none; font-size: 11px; vertical-align: super; color: #856404;">[10]</a>
-    </div>
-  </div>
-
   <!-- 스마트 검색바 -->
   <div style="background: white; padding: 12px 16px; border-radius: 25px; border: 1px solid #e1e8f5; margin-bottom: 15px; display: flex; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
     <span style="font-size: 18px; margin-right: 10px; color: #9e9e9e;">🔍</span>
@@ -50,35 +33,75 @@
 
   <!-- 리스트 정보 (Progress Bar) -->
   <div style="display: flex; justify-content: space-between; margin-bottom: 15px; color: #424242; font-size: 14px; font-weight: bold; padding: 0 16px;">
-    <span>📊 학습 현황: 5 / 20</span>
+    <span>📊 진행률 5 / 20</span>
     <span style="color: #9e9e9e;">25%</span>
   </div>
 
-  <!-- 카드 리스트 (Mode2Card) -->
-  <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; border: 1px solid #dce1e9; min-height: 200px;">
+  <!-- 카드 리스트 영역 -->
+  <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; border: 1px solid #dce1e9; min-height: 250px;">
     
-    <!-- 아이템 카드 (최상위 노출 언어는 언어 스왑 상태에 따라 다름) -->
-    <div style="background: white; padding: 15px; border-radius: 12px; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 2px solid transparent;">
-        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-            <div style="display: flex; gap: 6px; align-items: center;">
-                <span style="background: #e3f2fd; color: #1565c0; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: bold;">EN</span>
-                <span style="background: #e8eaf6; color: #3f51b5; padding: 2px 6px; border-radius: 4px; font-size: 10px;">명사</span>
+    <!-- 비확장 카드 (Collapsed) -->
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 20px; margin-bottom: 16px; color: white; box-shadow: 0 6px 12px rgba(118, 75, 162, 0.4);">
+        <div style="padding: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap; flex: 1;">
+                    <span style="background: rgba(255,255,255,0.24); padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">EN</span>
+                    <span style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: bold;">명사</span>
+                    <span style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-size: 10px; font-style: italic; color: rgba(255,255,255,0.7);">과일 태그</span>
+                </div>
+                <!-- 암기 완료 원형 체크박스 -->
+                <div style="width: 20px; height: 20px; border-radius: 10px; border: 1.5px solid white; display: flex; justify-content: center; align-items: center; background: white; flex-shrink: 0;">
+                  <span style="font-size: 14px; color: #764ba2;">✔️</span> <a href="./logic_reference.md#LC-MARK-MEMORIZED" style="text-decoration: none; font-size: 11px; vertical-align: super; color: #764ba2;">[20]</a>
+                </div>
             </div>
-            <!-- 암기 완료 체크박스 -->
-            <span style="font-size: 22px; color: #4caf50;">✅</span> <a href="./logic_reference.md#LC-MARK-MEMORIZED" style="text-decoration: none; font-size: 11px; vertical-align: super;">[20]</a>
+            
+            <div style="font-size: 24px; font-weight: bold; margin-top: 12px; margin-bottom: 0;">Apple</div>
         </div>
         
-        <div style="font-size: 22px; font-weight: bold; margin-bottom: 10px; color: #212121;">Apple</div>
-        
-        <!-- 카드 확장 시 (클릭 시 나타남) -->
-        <div style="border-top: 1px dashed #e2e8f0; padding-top: 12px; display: flex; flex-direction: column; gap: 8px;">
-            <div style="display: flex; align-items: center; gap: 6px;">
-                <span style="background: #fce4ec; color: #c2185b; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: bold;">KO</span>
-                <span style="font-size: 12px; color: #757575;">(과일/디저트 태그)</span>
+        <!-- 하단 Flip 영역 (축소 상태) -->
+        <div style="padding: 12px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <span style="background: rgba(255,255,255,0.24); width: 32px; height: 32px; border-radius: 16px; display: flex; justify-content: center; align-items: center;">🔊</span>
+            <div style="display: flex; align-items: center; font-weight: bold;">
+                뒤집기 ▿
             </div>
-            <div style="font-size: 16px; color: #424242; font-weight: bold;">사과</div>
         </div>
     </div>
+
+    <!-- 활성 카드 (Expanded) -->
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 20px; margin-bottom: 16px; color: white; box-shadow: 0 6px 12px rgba(118, 75, 162, 0.4);">
+        <div style="padding: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                    <span style="background: rgba(255,255,255,0.24); padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">EN</span>
+                </div>
+                <!-- 암기 취소 상태 (투명 빈 원) -->
+                <div style="width: 20px; height: 20px; border-radius: 10px; border: 1.5px solid white; display: flex; justify-content: center; align-items: center; background: transparent;">
+                </div>
+            </div>
+            
+            <div style="font-size: 24px; font-weight: bold; margin-top: 12px;">Car</div>
+        </div>
+        
+        <div style="border-top: 1px solid rgba(255,255,255,0.1);"></div>
+        
+        <!-- 확장된 하단 연습 뷰 -->
+        <div style="background: rgba(0,0,0,0.12); padding: 20px; border-radius: 0 0 20px 20px;">
+            <div style="display: flex; gap: 8px; align-items: flex-start; margin-bottom: 15px;">
+                <span style="background: rgba(255,255,255,0.24); padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">KO</span>
+                <span style="font-size: 18px; line-height: 1.4; flex: 1;">자동차</span>
+            </div>
+            
+            <div style="display: flex; justify-content: flex-end; gap: 12px;">
+                <!-- TTS 듣기 버튼 -->
+                <span style="background: rgba(255,255,255,0.24); width: 40px; height: 40px; border-radius: 20px; display: flex; align-items: center; justify-content: center;">🔊</span> <a href="./logic_reference.md#LC-TTS" style="text-decoration: none; font-size: 11px; vertical-align: super; color: white;">[7]</a>
+                <!-- 숨기기 버튼 -->
+                <span style="display: flex; align-items: center; color: rgba(255,255,255,0.7); font-weight: bold; padding: 0 8px;">
+                     👁️‍🗨️ 숨기기
+                </span>
+            </div>
+        </div>
+    </div>
+    
   </div>
 </div>
 

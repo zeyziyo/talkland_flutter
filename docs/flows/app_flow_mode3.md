@@ -74,7 +74,7 @@
         
         <div style="border-top: 1px solid rgba(255,255,255,0.1);"></div>
         
-        <!-- 하단 연습 제어 영역 (버튼) -->
+        <!-- 하단 연습 제어 영역 (Idle 뷰 - 버튼 나열) -->
         <div style="background: rgba(0,0,0,0.12); padding: 20px; border-radius: 0 0 20px 20px; text-align: center;">
             <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 20px;">
                 <!-- Skip Button -->
@@ -96,19 +96,22 @@
             </div>
         </div>
         
-        <!-- (참고) 마이크(🎤)를 누르고 발음 중일 때는 큰 정지 버튼과 붉은색 글씨로 [Listening...] 문구가 나타남 [22] -->
-        <!-- (참고) 음성을 다 말하고 난 후엔 아래의 [결과 화면]으로 자동 전환됨 -->
+        <!-- (참고) Listening 중 뷰: 마이크(🎤)를 누르고 발음 중일 때는 큰 정지(■) 버튼과 붉은색 글씨로 Listening... 문구가 나타남 [22] -->
     </div>
     
-    <!-- (결과 화면 예시) -->
-    <div style="background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 20px; color: white; margin-top: 16px; padding: 20px; text-align: center; box-shadow: 0 6px 12px rgba(118, 75, 162, 0.4);">
-      <div style="font-size: 18px; font-weight: bold; color: #69f0ae; margin-bottom: 8px;">정확도: 100.0% <a href="./logic_reference.md#LC-JUDGE" style="text-decoration: none; font-size: 11px; vertical-align: super; color: white;">[23]</a></div>
-      <div style="font-size: 22px; font-weight: bold; margin-bottom: 10px;">Is this a pencil? (정답 어휘)</div>
-      <div style="font-size: 14px; font-style: italic; color: rgba(255,255,255,0.7); margin-bottom: 20px;">"Is this a pencil?" (내 발음 인식 결과)</div>
-      <div style="display: flex; gap: 8px; justify-content: center;">
-        <span style="background: rgba(255,255,255,0.12); padding: 12px; border-radius: 24px;">초기화</span>
-        <span style="background: rgba(255,255,255,0.24); padding: 12px; flex: 1; border-radius: 12px; font-weight: bold;">재도전</span>
-        <span style="background: white; color: #764ba2; padding: 12px; flex: 1; border-radius: 12px; font-weight: bold;">다음 ➔</span>
+    <!-- (결과 화면 예시 : 발음을 마치고 난 직후) -->
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 20px; margin-top: 16px; color: white; box-shadow: 0 6px 12px rgba(118, 75, 162, 0.4);">
+      <!-- 원문 표기부 (상단 생략) -->
+      <!-- 실제로는 위쪽 모국어 부분이 그대로 있고 그 아래로 뻗어나옴 -->
+      <div style="background: rgba(0,0,0,0.12); padding: 20px; border-radius: 0 0 20px 20px; text-align: center;">  
+        <div style="font-size: 18px; font-weight: bold; color: #69f0ae; margin-bottom: 8px;">정확도: 100.0% <a href="./logic_reference.md#LC-JUDGE" style="text-decoration: none; font-size: 11px; vertical-align: super; color: white;">[23]</a></div>
+        <div style="font-size: 22px; font-weight: bold; margin-bottom: 10px;">Is this a pencil? (정답 어휘)</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(255,255,255,0.7); margin-bottom: 20px;">"Is this a pencil?" (내 발음 인식 결과)</div>
+        <div style="display: flex; gap: 8px; justify-content: center;">
+          <span style="background: rgba(255,255,255,0.12); width: 48px; height: 48px; border-radius: 24px; display: flex; justify-content: center; align-items: center;">🔄</span>
+          <span style="background: rgba(255,255,255,0.24); padding: 12px; flex: 1; border-radius: 12px; font-weight: bold; display: flex; justify-content: center; align-items: center;">🔁 Retry</span>
+          <span style="background: white; color: #764ba2; padding: 12px; flex: 1; border-radius: 12px; font-weight: bold; display: flex; justify-content: center; align-items: center;">Next ➔</span>
+        </div>
       </div>
     </div>
 
