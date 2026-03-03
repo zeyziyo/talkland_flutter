@@ -224,6 +224,8 @@
   "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
   "roleUser": "User",
   "roleAi": "AI",
+  "roleThirdParty": "Third Party",
+  "speakerSelect": "Select Speaker",
   "participantDeleted": "Participant deleted.",
   "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
   "importTotal": "Total: {count} items",

@@ -491,8 +491,14 @@ class AppState extends ChangeNotifier {
     }
   }
 
-  /// 기본 참가자('나', 'AI')가 없으면 자동 생성
+  /// 기본 참가자('나', 'AI')가 없으면 자동 생성 (앱 최초 구동 시 1회만 동작하도록 개선)
   Future<void> _ensureDefaultParticipants() async {
+    final bool hasCreatedDefaults = _prefs?.getBool('hasDefaultParticipantsCreated') ?? false;
+    if (hasCreatedDefaults) {
+      // 이미 생성했던 이력이 있다면(사용자가 의도적으로 지웠더라도) 다시 강제 부활시키지 않음
+      return;
+    }
+
     // 1. role과 name 모두를 기준으로 중복 체크 (더 엄격하게)
     final hasUserMe = _globalParticipants.any((p) => p.role == 'user' && p.name == '나');
     final hasAiBot = _globalParticipants.any((p) => (p.role == 'ai' || p.role == 'assistant') && p.name == 'AI');
@@ -546,6 +552,8 @@ class AppState extends ChangeNotifier {
         final idx = _globalParticipants.indexOf(legacyAi);
         if (idx != -1) _globalParticipants[idx] = updatedAi;
     }
+
+    await _prefs?.setBool('hasDefaultParticipantsCreated', true);
   }
 
   Future<void> addGlobalParticipant(ChatParticipant participant) async {
@@ -567,11 +575,31 @@ class AppState extends ChangeNotifier {
       'gender': participant.gender,
       'lang_code': participant.langCode,
     });
+    
+    // 현재 활성화된 채팅방(activeParticipants) 에도 변경 사항 동기화
+    final index = _activeParticipants.indexWhere((p) => p.id == participant.id);
+    if (index != -1) {
+      final old = _activeParticipants[index];
+      _activeParticipants[index] = ChatParticipant(
+        id: old.id,
+        dialogueId: old.dialogueId,
+        name: participant.name,
+        role: participant.role,
+        gender: participant.gender,
+        langCode: participant.langCode,
+        avatarColor: old.avatarColor,
+      );
+    }
+
     await loadGlobalParticipants(force: true);
   }
 
   Future<void> deleteGlobalParticipant(String id) async {
     await DialogueRepository.deleteParticipant(id);
+    
+    // 현재 활성화된 채팅방에서도 삭제 처리
+    _activeParticipants.removeWhere((p) => p.id == id);
+    
     await loadGlobalParticipants(force: true);
   }
 

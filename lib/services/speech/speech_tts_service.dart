@@ -127,17 +127,15 @@ class SpeechTtsService {
           // Phase 32: Enhanced Gender Mapping per Language
           if (targetGender == 'male') {
             // Male Keywords
-            return name.contains('male') || 
-                   name.contains('david') || name.contains('arthur') || name.contains('james') || // English
-                   name.contains('민수') || name.contains('misu') || name.contains('대건') || // Korean
-                   name.contains('es-es-x-ana-network') == false && name.contains('es-es-x-ies-network') == false && // Spanish Male Fallback logic if needed
-                   name.contains('ja-jp-x-gma-network') == false; // Japanese Male Fallback
+            return name.contains('male') || name.contains('-male') ||
+                   name.contains('david') || name.contains('arthur') || name.contains('james') || 
+                   name.contains('민수') || name.contains('misu') || name.contains('대건');
           } else {
             // Female Keywords
-            return name.contains('female') || 
-                   name.contains('sara') || name.contains('samantha') || name.contains('ava') || // English
-                   name.contains('minji') || name.contains('민지') || name.contains('지민') || // Korean
-                   name.contains('kyoko') || name.contains('mizuki'); // Japanese
+            return name.contains('female') || name.contains('-female') ||
+                   name.contains('sara') || name.contains('samantha') || name.contains('ava') || 
+                   name.contains('minji') || name.contains('민지') || name.contains('지민') || 
+                   name.contains('kyoko') || name.contains('mizuki');
           }
         });
       } catch (_) {}

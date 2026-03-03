@@ -46,17 +46,6 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
                       controller: nameController,
                       decoration: InputDecoration(labelText: l10n.labelName),
                     ),
-                    const SizedBox(height: 16),
-                    DropdownButtonFormField<String>(
-                      initialValue: role,
-                      decoration: InputDecoration(labelText: l10n.labelRole),
-                      items: [
-                        DropdownMenuItem(value: 'user', child: Text(l10n.roleUser)),
-                        DropdownMenuItem(value: 'ai', child: Text(l10n.roleAi)),
-                      ],
-                      onChanged: (val) => setState(() => role = val!),
-                    ),
-                     const SizedBox(height: 16),
                     DropdownButtonFormField<String>(
                       initialValue: gender,
                       decoration: InputDecoration(labelText: l10n.gender),
@@ -93,7 +82,9 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
                   onPressed: () async {
                     if (nameController.text.isEmpty) return;
 
-                    final newId = participant?.id ?? '${role}_${nameController.text.hashCode}';
+                    // 핵심 버그 수정: 수정(Update) 시에는 무조건 기존 participant의 ID를 유지해야 함.
+                    final isNew = participant == null;
+                    final newId = isNew ? '${role}_${DateTime.now().millisecondsSinceEpoch}_${nameController.text.hashCode}' : participant.id;
                     
                     final newParticipant = ChatParticipant(
                       id: newId,
@@ -104,7 +95,7 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
                       langCode: langCode,
                     );
 
-                    if (participant == null) {
+                    if (isNew) {
                       await appState.addGlobalParticipant(newParticipant);
                     } else {
                       await appState.updateGlobalParticipant(newParticipant);
@@ -148,11 +139,11 @@ class _ParticipantManageScreenState extends State<ParticipantManageScreen> {
               final p = participants[index];
               return ListTile(
                 leading: CircleAvatar(
-                  backgroundColor: p.role == 'user' ? Colors.blue[100] : Colors.green[100],
-                  child: Icon(p.role == 'user' ? Icons.person : Icons.smart_toy),
+                  backgroundColor: p.role == 'user' ? Colors.blue[100] : (p.role == 'third_party' ? Colors.orange[100] : Colors.green[100]),
+                  child: Icon(p.role == 'user' ? Icons.person : (p.role == 'third_party' ? Icons.people : Icons.smart_toy)),
                 ),
-                title: Text(p.name),
-                subtitle: Text('${p.role} • ${p.langCode}'),
+                title: Text(p.name, style: const TextStyle(fontWeight: FontWeight.bold)),
+                subtitle: Text(p.langCode),
                 trailing: IconButton(
                   icon: const Icon(Icons.delete, color: Colors.red),
                   onPressed: () async {

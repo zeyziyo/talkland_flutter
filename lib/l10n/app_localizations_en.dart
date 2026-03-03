@@ -252,6 +252,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get roleAi => 'AI';
 
   @override
+  String get roleThirdParty => 'Third Party';
+
+  @override
+  String get speakerSelect => 'Select Speaker';
+
+  @override
   String get participantDeleted => 'Participant deleted.';
 
   @override

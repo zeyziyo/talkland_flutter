@@ -246,6 +246,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get roleAi => 'AI';
 
   @override
+  String get roleThirdParty => '제삼자';
+
+  @override
+  String get speakerSelect => '발화자 선택';
+
+  @override
   String get participantDeleted => '参加者が削除されました。';
 
   @override

@@ -9,10 +9,6 @@ import '../models/chat_participant.dart'; // Phase 70
 import '../services/supabase_service.dart';
 import '../services/database_service.dart';
 import '../services/translation_service.dart';
-import '../services/database/dialogue_repository.dart'; // Phase 135
-import 'package:geolocator/geolocator.dart';
-import 'package:geocoding/geocoding.dart';
-import 'package:flutter/foundation.dart'; // Phase 164: kIsWeb
 
 class ChatScreen extends StatefulWidget {
   final DialogueGroup? initialDialogue;
@@ -31,8 +27,8 @@ class _ChatScreenState extends State<ChatScreen> {
   bool _isLoading = false;
   final SpeechService _speechService = SpeechService();
   
-  bool _isPartnerMode = false; // Toggle for Real Person Chat
-  bool _isPartnerTurn = false; // For Mic Logic (True = Listen in Target Lang)
+  // Phase 180: Multi-Speaker Support
+  String? _currentSpeakerId; // 드롭다운에서 현재 선택된 발화자 ID
 
   // Phase 118: Individual translation visibility toggle state
   // Key: sequence_order (int), Value: if translation is visible
@@ -46,11 +42,6 @@ class _ChatScreenState extends State<ChatScreen> {
   void initState() {
     super.initState();
 
-    // 참가자 구성에 따라 모드 초기화
-    // hasAiParticipant=true  → AI 모드 (_isPartnerMode = false)
-    // hasAiParticipant=false → 파트너 모드 (_isPartnerMode = true)
-    _isPartnerMode = !widget.hasAiParticipant;
-
     // Phase 119: Pre-warm Speech Services to avoid initial STT/TTS delay
     _speechService.initialize().catchError((e) {
       debugPrint('[ChatScreen] Pre-warm failed: $e');
@@ -61,84 +52,21 @@ class _ChatScreenState extends State<ChatScreen> {
     final appState = Provider.of<AppState>(context, listen: false);
     debugPrint('[ChatScreen] Initialized with hasAiParticipant: ${widget.hasAiParticipant}');
     
-    if (widget.initialDialogue != null || appState.activeDialogueId != null) {
-      _loadHistory();
-    }
-
-    // Load list for Dropdown
+    // 초기 발화자는 주로 '나(User)'로 설정 시도
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
-      appState.loadParticipants(); // Phase 70
-    });
-  }
-
-  Future<void> _loadHistory() async {
-    final appState = Provider.of<AppState>(context, listen: false);
-    
-    // Phase 134 Fix: Safety check for New Chat (initialDialogue is null)
-    // Use activeDialogueId from AppState if widget.initialDialogue is null
-    final dialogueId = widget.initialDialogue?.id ?? appState.activeDialogueId;
-    
-    if (dialogueId == null) return;
-
-    try {
-      var history = await DatabaseService.getRecordsByDialogueId(
-        dialogueId,
-        sourceLang: appState.sourceLang,
-        targetLang: appState.targetLang,
-      );
-      
-      // Phase 135 Fix: Self-Healing Logic (If local empty, check server)
-      // This handles cases where local DB is cleared or sync failed previously.
-      if (history.isEmpty) {
-        debugPrint('[ChatScreen] Local history empty. Checking server for dialogue: $dialogueId');
-        try {
-          final cloudMessages = await SupabaseService.getPrivateChatMessages(dialogueId);
-          if (cloudMessages.isNotEmpty) {
-             // Sort by sequence or created_at
-             cloudMessages.sort((a, b) => (a['sequence_order'] as int).compareTo(b['sequence_order'] as int));
-             
-             // Sync to Local DB
-             for (var msg in cloudMessages) {
-               await DialogueRepository.insertMessage({
-                 'dialogue_id': dialogueId,
-                 'speaker': msg['speaker'],
-                 'source_text': msg['source_text'],
-                 'target_text': msg['target_text'],
-                 'created_at': msg['created_at'],
-               });
-             }
-             
-             // Reload from Local to get standardized format
-             history = await DatabaseService.getRecordsByDialogueId(
-                dialogueId,
-                sourceLang: appState.sourceLang,
-                targetLang: appState.targetLang,
-             );
-          }
-        } catch (e) {
-          debugPrint('[ChatScreen] Server sync attempt failed: $e');
-          // Non-blocking error. If server fails, we just show empty.
+      appState.loadParticipants().then((_) {
+        if (mounted && appState.activeParticipants.isNotEmpty) {
+           final userP = appState.activeParticipants.firstWhere(
+             (p) => p.role == 'user' || p.id == 'user',
+             orElse: () => appState.activeParticipants.first
+           );
+           setState(() {
+             _currentSpeakerId = userP.id;
+           });
         }
-      }
-
-      // Phase 133 Fix: Render messages immediately (Optimistic UI)
-      if (mounted) {
-        setState(() {
-          _messages = history;
-        });
-        _scrollToBottom();
-      }
-      
-      // Phase 70/28: Clean up legacy sync - ID logic handles this now
-    } catch (e) {
-      debugPrint('[ChatScreen] Load History Error: $e');
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Failed to load chat history: $e')),
-        );
-      }
-    }
+      }); // Phase 70
+    });
   }
 
   void _scrollToBottom() {
@@ -153,89 +81,8 @@ class _ChatScreenState extends State<ChatScreen> {
     });
   }
 
-  // Helper to get GPS Context
-  Future<String> _getLocationString(AppLocalizations l10n) async {
-    final appState = Provider.of<AppState>(context, listen: false);
-    try {
-      debugPrint('[GPS] Checking permissions...');
-      LocationPermission permission = await Geolocator.checkPermission().timeout(const Duration(seconds: 2));
-      if (permission == LocationPermission.denied) {
-        debugPrint('[GPS] Requesting permissions...');
-        permission = await Geolocator.requestPermission().timeout(const Duration(seconds: 3));
-        if (permission == LocationPermission.denied) return await appState.getIpBasedLocationFallback();
-      }
-      
-      if (permission == LocationPermission.deniedForever) {
-        debugPrint('[GPS] Permission denied forever.');
-        return await appState.getIpBasedLocationFallback();
-      }
-      
-      Position? position;
-      
-      // 1. Try Last Known Position (Web Safe)
-      if (!kIsWeb) {
-        try {
-          position = await Geolocator.getLastKnownPosition();
-        } catch (e) {
-          debugPrint('[GPS] getLastKnownPosition failed (common on web): $e');
-        }
-      }
-      
-      // 2. Try Current Position with Timeout
-      if (position == null) {
-        try {
-          debugPrint('[GPS] Fetching current position...');
-          position = await Geolocator.getCurrentPosition(
-            locationSettings: LocationSettings(
-              accuracy: kIsWeb ? LocationAccuracy.high : LocationAccuracy.medium,
-              timeLimit: const Duration(seconds: 15),
-            ),
-          ).timeout(const Duration(seconds: 15));
-        } catch (e) {
-          debugPrint('[GPS] getCurrentPosition Timeout or Error: $e');
-        }
-      }
-
-      if (position == null) {
-        debugPrint('[GPS] No position acquired.');
-        return await appState.getIpBasedLocationFallback();
-      }
-
-      final coords = '${position.latitude.toStringAsFixed(3)}, ${position.longitude.toStringAsFixed(3)}';
-      debugPrint('[GPS] Position: $coords');
-      
-      // [Phase 164] Web skips geocoding due to lack of support
-      if (kIsWeb) {
-        debugPrint('[GPS] Web detected. Returning coordinates.');
-        return coords;
-      }
-
-      debugPrint('[GPS] Converting coordinates to address...');
-      try {
-        final placemarks = await placemarkFromCoordinates(position.latitude, position.longitude)
-            .timeout(const Duration(seconds: 5));
-        
-        if (placemarks.isNotEmpty) {
-          final place = placemarks.first;
-          final city = place.locality ?? place.administrativeArea ?? '';
-          final sub = place.subLocality ?? place.thoroughfare ?? '';
-          
-          debugPrint('[GPS] Address: $city, $sub');
-          if (sub.isNotEmpty && city.isNotEmpty) {
-            return '[$coords] $sub, $city';
-          }
-          final address = city.isNotEmpty ? city : (place.country ?? '');
-          return address.isEmpty ? coords : '[$coords] $address';
-        }
-      } catch (e) {
-        debugPrint('[GPS] Geocoding error, falling back to coords: $e');
-      }
-      return coords;
-    } catch (e) {
-      debugPrint('[GPS] Final catch Error: $e');
-    }
-    return await appState.getIpBasedLocationFallback();
-  }
+  // Helper for GPS fallback logic 
+  // (Removed _getLocationString since it's now handled by AppState pre-fetching)
 
   Future<void> _sendMessage(AppLocalizations l10n) async {
     final appState = Provider.of<AppState>(context, listen: false);
@@ -256,10 +103,15 @@ class _ChatScreenState extends State<ChatScreen> {
       SnackBar(content: Text('>>> 메시지 처리 시작: $text')),
     );
 
+    // Phase 180: Use selected dynamic speaker
+    final speakerId = _currentSpeakerId ?? 'user';
+    final speakerName = appState.activeParticipants.firstWhere((p) => p.id == speakerId, orElse: () => ChatParticipant(id: 'user', dialogueId: '', name: 'ME', role: 'user')).name;
+
     // 1. IMMEDIATE UI UPDATE (Aggressive Refresh)
     setState(() {
       _messages = List.from(_messages)..add({
-        'speaker': 'User',
+        'speaker': speakerId, // Save ID instead of hardcoded 'User'
+        'speaker_name': speakerName, // for UI convenience
         'source_text': text,
         'target_text': '[...] Processing...',
       });
@@ -278,30 +130,55 @@ class _ChatScreenState extends State<ChatScreen> {
         // Step 1: Usage Check
         await appState.checkUsageLimit();
 
-        final inputLang = appState.sourceLang;
-        final outputLang = appState.targetLang;
+        final currentParticipant = appState.activeParticipants.firstWhere(
+           (p) => p.id == speakerId, 
+           orElse: () => ChatParticipant(id: 'user', dialogueId: '', name: 'ME', role: 'user', langCode: appState.sourceLang)
+        );
 
-        // Step 2: Translation
-        final translationResult = await TranslationService.translate(
-          text: text,
-          sourceLang: inputLang,
-          targetLang: outputLang,
-        ).timeout(const Duration(seconds: 10), onTimeout: () => {'text': '[Translation Timeout] $text', 'isValid': true});
+        String finalSourceText;
+        String finalTargetText;
 
-        final trans = translationResult['text'] as String;
-        
+        if (currentParticipant.role == 'user') {
+          // User speaks: typed in inputLang, translated to targetLang
+          final inputLang = appState.sourceLang;
+          final outputLang = appState.targetLang;
+
+          final translationResult = await TranslationService.translate(
+            text: text,
+            sourceLang: inputLang,
+            targetLang: outputLang,
+          ).timeout(const Duration(seconds: 10), onTimeout: () => {'text': '[Translation Timeout] $text', 'isValid': true});
+          
+          finalSourceText = text;
+          finalTargetText = translationResult['text'] as String;
+        } else {
+          // Non-user (AI/Third Party) speaks: User typed in inputLang, translate to non-user's langCode
+          final inputLang = appState.sourceLang;
+          final speakerLang = currentParticipant.langCode;
+
+          final translationResult = await TranslationService.translate(
+            text: text,
+            sourceLang: inputLang,
+            targetLang: speakerLang,
+          ).timeout(const Duration(seconds: 10), onTimeout: () => {'text': '[Translation Timeout] $text', 'isValid': true});
+          
+          finalSourceText = translationResult['text'] as String; // The speaker's native language expression
+          finalTargetText = text; // The original text user typed in their UI language
+        }
+
         if (mounted) {
           setState(() {
-            _messages.last['target_text'] = trans;
+            _messages.last['source_text'] = finalSourceText;
+            _messages.last['target_text'] = finalTargetText;
           });
         }
 
         // Step 3: Local/Cloud Save
-        await appState.saveUserMessage(text, trans);
+        await appState.saveUserMessage(finalSourceText, finalTargetText, speakerId: speakerId);
 
-        // Step 4: AI Response Processing
-        await _processAiChat(appState, text, trans, l10n)
-            .timeout(const Duration(seconds: 30), onTimeout: () => debugPrint('[Chat] AI response timeout'));
+        // AUTOMATIC AI RESPONSE REMOVED
+        // 사용자 피드백("다음 대화는 내가 선택한 참가자가 해야지") 반영
+        // 이전에는 발화 시 무조건 AI가 답하여 턴을 빼앗았으나, 이제는 수동으로 요술봉 버튼을 눌러 AI 답변을 생성합니다.
 
       } catch (e) {
         debugPrint('[Chat] BG Error: $e');
@@ -317,9 +194,42 @@ class _ChatScreenState extends State<ChatScreen> {
     });
   }
 
+  Future<void> _triggerAiResponseManually(AppState appState, AppLocalizations l10n) async {
+    if (_isLoading) return;
+    setState(() => _isLoading = true);
+
+    String lastUserText = '';
+    String lastUserTrans = '';
+    if (_messages.isNotEmpty) {
+      final lastMsg = _messages.lastWhere(
+        (m) => m['speaker'] != appState.activePersona && m['speaker'] != 'AI',
+        orElse: () => _messages.last
+      );
+      lastUserText = (lastMsg['source_text'] ?? '').toString();
+      lastUserTrans = (lastMsg['target_text'] ?? '').toString();
+    }
+
+    if (lastUserText.isEmpty) {
+      lastUserText = l10n.chatTypeHint;
+      lastUserTrans = l10n.chatTypeHint;
+    }
+
+    Future.microtask(() async {
+      try {
+        await appState.checkUsageLimit();
+        await _processAiChat(appState, lastUserText, lastUserTrans, l10n);
+      } catch (e) {
+        if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('오류: $e')));
+      } finally {
+        if (mounted) setState(() => _isLoading = false);
+        _scrollToBottom();
+      }
+    });
+  }
+
   Future<void> _processAiChat(AppState appState, String userText, String userTranslation, AppLocalizations l10n) async {
       // Get GPS Context
-      final location = await _getLocationString(l10n);
+      final location = appState.activeDialogueLocation ?? '';
       final currentLocationLabel = l10n.currentLocation;
       final contextString = '${appState.activeDialogueTitle ?? "None"}. ${location.isNotEmpty ? "$currentLocationLabel: $location" : ""}';
 
@@ -399,9 +309,9 @@ class _ChatScreenState extends State<ChatScreen> {
     // Phase 162: Prioritize AppState's pre-fetched location
     String? detectedLocation = appState.activeDialogueLocation;
     
-    // If not pre-fetched, try fetching now (last attempt)
+    // If not pre-fetched, fallback to empty string
     if (detectedLocation == null || detectedLocation.isEmpty) {
-      detectedLocation = await _getLocationString(l10n);
+      detectedLocation = '';
     }
     
     // Auto-generate Title Logic: "Chat N"
@@ -562,13 +472,17 @@ class _ChatScreenState extends State<ChatScreen> {
       // Phase 6: Ensure any background/other mode STT is stopped
       await appState.stopListening();
       
-      final isPartnerListen = _isPartnerMode && _isPartnerTurn;
-      final listenLang = isPartnerListen ? appState.targetLang : appState.sourceLang;
+      // Phase 180: Resolve Listen Language from current speaker
+      final speaker = appState.activeParticipants.firstWhere(
+        (p) => p.id == _currentSpeakerId, 
+        orElse: () => ChatParticipant(id: 'user', dialogueId: '', name: 'ME', role: 'user', langCode: appState.sourceLang)
+      );
+      final listenLang = speaker.langCode;
 
-      // ChatScreen의 _textController를 직접 업데이트하기 위해 _speechService 단돁 사용
+      // ChatScreen의 _textController를 직접 업데이트하기 위해 _speechService 단독 사용
       // appState.startListening()을 병용 호출 시 STT가 충돌하여 대화문이 입력되지 않는 버그 발생
       await _speechService.startSTT(
-        lang: appState.getServiceLocale(listenLang),
+        lang: listenLang, // Use resolved speaker language directly
         listenFor: const Duration(seconds: 30),
         onResult: (text, isFinal, alternates) {
           setState(() {
@@ -592,7 +506,7 @@ class _ChatScreenState extends State<ChatScreen> {
     }
   }
   
-  void _speak(String text, String languageCode, {bool isUser = true, String? gender}) {
+  void _speak(String text, String languageCode, {String? role, String? gender}) {
     if (text.isEmpty) return;
     
     // Determine the actual locale to use
@@ -607,7 +521,7 @@ class _ChatScreenState extends State<ChatScreen> {
     final appState = Provider.of<AppState>(context, listen: false);
     
     // Determine Gender (Use provided gender or fallback to AppState)
-    final resolvedGender = gender ?? (isUser ? appState.chatUserGender : appState.chatAiGender);
+    final resolvedGender = gender ?? (role == 'user' ? appState.chatUserGender : appState.chatAiGender);
 
     _speechService.speak(cleanText, lang: localeId, gender: resolvedGender);
   }
@@ -658,14 +572,14 @@ class _ChatScreenState extends State<ChatScreen> {
                   }
                 ),
                 
-                if (_isPartnerMode)
-                   Padding(
-                     padding: const EdgeInsets.only(top: 4, left: 4),
-                     child: Text(
-                       '${l10n.partnerMode}: ${l10n.manual}', 
-                       style: const TextStyle(fontSize: 12, color: Colors.white70)
-                     ),
-                   ),
+                // if (_isPartnerMode) // REMOVED
+                //    Padding(
+                //      padding: const EdgeInsets.only(top: 4, left: 4),
+                //      child: Text(
+                //        '${l10n.partnerMode}: ${l10n.manual}', 
+                //        style: const TextStyle(fontSize: 12, color: Colors.white70)
+                //      ),
+                //    ),
               ],
             ),
         foregroundColor: Colors.white,
@@ -684,18 +598,7 @@ class _ChatScreenState extends State<ChatScreen> {
             },
             tooltip: l10n.search,
           ),
-          // Partner Mode Toggle
-          if (!_isSearching)
-            IconButton(
-              icon: Icon(_isPartnerMode ? Icons.person : Icons.smart_toy),
-              tooltip: _isPartnerMode ? l10n.switchToAi : l10n.switchToPartner,
-              onPressed: () {
-                setState(() {
-                  _isPartnerMode = !_isPartnerMode;
-                  _isPartnerTurn = false; // Reset to User turn
-                });
-              },
-            ),
+          // Partner Mode Toggle (Removed in Phase 180 Multi-Speaker update)
           if (!_isSearching)
             IconButton(
               icon: const Icon(Icons.save),
@@ -727,7 +630,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       }
                     }
 
-                    return _buildMessageBubble(msg, appState, l10n, index);
+                    return _buildMessageBubble(appState, l10n, msg, index);
                   },
                 ),
           ),
@@ -742,42 +645,41 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 
-  Widget _buildMessageBubble(Map<String, dynamic> msg, AppState appState, AppLocalizations l10n, int index) {
-    final speakerIdOrName = msg['speaker'] ?? 'Unknown';
-    final bool isUser = speakerIdOrName.toString().toLowerCase() == 'user' || speakerIdOrName == 'me';
-    final bool isPartner = speakerIdOrName.toString().toLowerCase() == 'partner';
-
-    // Phase 136/28: Securely find Participant Config by ID (or name fallback)
+  Widget _buildMessageBubble(AppState appState, AppLocalizations l10n, Map<String, dynamic> msg, int index) {
+    final String speakerIdOrName = (msg['speaker'] as String?) ?? 'user';
+    
+    // Phase 180: Use precise ID matching
     final participant = appState.activeParticipants.firstWhere(
       (p) => p.id == speakerIdOrName || p.name.toLowerCase() == speakerIdOrName.toString().toLowerCase(),
       orElse: () {
         debugPrint('[ChatScreen] Participant NOT FOUND for $speakerIdOrName');
         return ChatParticipant(
-          id: 'temp', dialogueId: '', name: speakerIdOrName.toString(), role: isUser ? 'user' : 'ai'
+          id: 'temp', dialogueId: '', name: speakerIdOrName.toString(), role: 'user'
         );
       }
     );
     
+    // UI Override: Determine alignment & color based on role
+    // User is right, everyone else (ai, third_party) is left
+    final alignment = participant.role == 'user' ? Alignment.centerRight : Alignment.centerLeft;
+    final color = participant.role == 'user' ? Colors.blue[50] : (participant.role == 'third_party' ? Colors.orange[50] : const Color(0xFFF5F5F5));
+    
     final int seq = msg['sequence_order'] as int? ?? index;
     final bool isTranslationVisible = _showTranslationMap[seq] ?? false;
     
-    // Layout alignment: User Right, AI Left
-    final alignment = isUser ? Alignment.centerRight : Alignment.centerLeft;
-    final color = isUser ? Colors.blue[50] : (isPartner ? Colors.teal[50] : const Color(0xFFF5F5F5));
-    
     // Text Logic for Acoustic Symmetry
-    // If translation is visible, we show the target_text and speak in target_lang.
-    // Otherwise, we show source_text and speak in source_lang.
+    // If translation is visible, we show the target_text(translated to App's sourceLang) and speak in target_lang.
+    // Otherwise, we show source_text(original speaker lang) and speak in source_lang.
     final String displayText = isTranslationVisible 
-        ? (msg['target_text'] ?? '') 
-        : (msg['source_text'] ?? '');
+        ? (msg['target_text'] ?? '') // 번역된 언어(주로 앱 사용자의 sourceLang)
+        : (msg['source_text'] ?? ''); // 발화자의 원래 언어(participant.langCode)
         
     final String displayLang = isTranslationVisible
-        ? (isUser ? appState.targetLang : appState.sourceLang)
-        : (isUser ? appState.sourceLang : participant.langCode);
+        ? appState.sourceLang // Translated to my native language
+        : participant.langCode; // Original spoken language
 
     // Unified gender logic for identity consistency
-    final String displayGender = isUser ? appState.chatUserGender : participant.gender;
+    final String displayGender = participant.gender;
 
     return Align(
       alignment: alignment,
@@ -785,10 +687,10 @@ class _ChatScreenState extends State<ChatScreen> {
         margin: const EdgeInsets.symmetric(vertical: 4),
         constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.9),
         child: Column(
-          crossAxisAlignment: isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+          crossAxisAlignment: participant.role == 'user' ? CrossAxisAlignment.end : CrossAxisAlignment.start,
           children: [
             // Speaker Header
-            if (isUser)
+            if (participant.role == 'user')
               _buildUserHeader(context, appState, l10n, msg)
             else
               _buildParticipantHeader(context, participant, appState, l10n, msg),
@@ -798,24 +700,24 @@ class _ChatScreenState extends State<ChatScreen> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                if (!isUser) _buildToggle(seq, l10n),
+                if (participant.role != 'user') _buildToggle(seq, l10n),
                 Flexible(
                   child: Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
                       color: color,
                       borderRadius: BorderRadius.circular(16).copyWith(
-                        topRight: isUser ? const Radius.circular(0) : const Radius.circular(16),
-                        topLeft: isUser ? const Radius.circular(16) : const Radius.circular(0),
+                        topRight: participant.role == 'user' ? const Radius.circular(0) : const Radius.circular(16),
+                        topLeft: participant.role == 'user' ? const Radius.circular(16) : const Radius.circular(0),
                       ),
                         boxShadow: [
                           BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 2),
                         ],
                     ),
-                    child: _buildTextRow(displayText, displayLang, displayGender, isUser),
+                    child: _buildTextRow(displayText, displayLang, displayGender, participant.role),
                   ),
                 ),
-                if (isUser) _buildToggle(seq, l10n),
+                if (participant.role == 'user') _buildToggle(seq, l10n),
               ],
             ),
           ],
@@ -899,7 +801,7 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 
-  Widget _buildTextRow(String text, String lang, String gender, bool isUser) {
+  Widget _buildTextRow(String text, String lang, String gender, String role) {
      return Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -927,7 +829,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   if (isSpeaking) {
                     _speechService.stopSpeaking();
                   } else {
-                    _speak(text, lang, isUser: isUser, gender: gender);
+                    _speak(text, lang, role: role, gender: gender);
                   }
                 },
                 constraints: const BoxConstraints(),
@@ -981,44 +883,70 @@ class _ChatScreenState extends State<ChatScreen> {
         bottom: MediaQuery.of(context).padding.bottom + 8
       ),
       decoration: BoxDecoration(
-        color: _isPartnerMode ? Colors.teal.shade50 : Colors.grey[50],
+        color: Colors.grey[50],
         border: Border(top: BorderSide(color: Colors.grey[300]!)),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Partner Turn Indicator / Toggle
-          if (_isPartnerMode)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                   Text(l10n.speaker),
-                   Switch(
-                     value: _isPartnerTurn,
-                     activeThumbColor: Colors.teal,
-                     onChanged: (value) {
-                       setState(() => _isPartnerTurn = value);
-                     },
-                   ),
-                   Text(
-                     _isPartnerTurn ? l10n.partner : l10n.me,
-                     style: TextStyle(
-                       fontWeight: FontWeight.bold,
-                       color: _isPartnerTurn ? Colors.teal : Colors.blue,
+          // Phase 180: Multi-Speaker Dropdown Selector
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                 Text(l10n.speaker, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[700], fontSize: 13)),
+                 const SizedBox(width: 8),
+                 Expanded(
+                   child: Container(
+                     padding: const EdgeInsets.symmetric(horizontal: 12),
+                     decoration: BoxDecoration(
+                       color: Colors.white,
+                       borderRadius: BorderRadius.circular(12),
+                       border: Border.all(color: Colors.grey.shade300),
+                     ),
+                     child: DropdownButtonHideUnderline(
+                       child: DropdownButton<String>(
+                         value: appState.activeParticipants.any((p) => p.id == _currentSpeakerId) 
+                            ? _currentSpeakerId 
+                            : (appState.activeParticipants.isNotEmpty ? appState.activeParticipants.first.id : null),
+                         isExpanded: true,
+                         hint: Text(l10n.speakerSelect, style: const TextStyle(fontSize: 13)),
+                         items: appState.activeParticipants.map((p) {
+                           return DropdownMenuItem<String>(
+                             value: p.id,
+                             child: Row(
+                               children: [
+                                 Icon(
+                                    p.role == 'user' ? Icons.person : (p.role == 'third_party' ? Icons.people : Icons.smart_toy),
+                                    size: 16, 
+                                    color: p.role == 'user' ? Colors.blue : (p.role == 'third_party' ? Colors.orange : Colors.green)
+                                 ),
+                                 const SizedBox(width: 8),
+                                 Expanded(child: Text('${p.name} (${p.langCode})', overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 13))),
+                               ],
+                             ),
+                           );
+                         }).toList(),
+                         onChanged: (val) {
+                           if (val != null) {
+                             setState(() => _currentSpeakerId = val);
+                           }
+                         },
+                       ),
                      ),
                    ),
-                ],
-              ),
+                 ),
+              ],
             ),
+          ),
 
           Row(
             children: [
               IconButton(
                 icon: Icon(
                   _isListening ? Icons.stop_circle : Icons.mic,
-                  color: _isListening ? Colors.red : (_isPartnerTurn ? Colors.teal : Colors.blue),
+                  color: _isListening ? Colors.red : Colors.blue,
                 ),
                 onPressed: () {
                   if (_isListening) {
@@ -1033,8 +961,8 @@ class _ChatScreenState extends State<ChatScreen> {
                 child: TextField(
                   controller: _textController,
                   decoration: InputDecoration(
-                    hintText: _isPartnerMode 
-                        ? (_isPartnerTurn ? '${l10n.partner} (${appState.targetLang})...' : '${l10n.me} (${appState.sourceLang})...')
+                    hintText: _currentSpeakerId != null 
+                        ? '${appState.activeParticipants.firstWhere((p) => p.id == _currentSpeakerId, orElse: () => appState.activeParticipants.first).name} (입력)...' 
                         : l10n.chatTypeHint,
                     filled: true,
                     fillColor: Colors.white,
@@ -1048,8 +976,18 @@ class _ChatScreenState extends State<ChatScreen> {
                 ),
               ),
               const SizedBox(width: 4),
+              if (appState.activeParticipants.any((p) => p.id == (_currentSpeakerId ?? 'user') && (p.role == 'ai' || p.role == 'assistant')))
+                IconButton(
+                  icon: const Icon(Icons.auto_awesome, color: Colors.orange),
+                  tooltip: 'AI 문장 생성',
+                  onPressed: _isLoading ? null : () {
+                    FocusScope.of(context).unfocus();
+                    _triggerAiResponseManually(appState, l10n);
+                  },
+                ),
+              const SizedBox(width: 4),
               CircleAvatar(
-                backgroundColor: _isPartnerMode ? Colors.teal : const Color(0xFF667eea),
+                backgroundColor: const Color(0xFF667eea),
                  child: Consumer<AppState>(
                   builder: (context, state, child) {
                     if (state.globalParticipantsLoading) {

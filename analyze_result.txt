@@ -55,7 +55,9 @@ Downloading packages...
 Got dependencies!
 52 packages have newer versions incompatible with dependency constraints.
 Try `flutter pub outdated` for more information.
-Analyzing mode1_widget.dart...                                  
+Analyzing talkie...                                             
 
-   info - 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre - lib\widgets\mode1_widget.dart:377:43 - deprecated_member_use
+   info - The private field _isPartnerTurn could be 'final' - lib\screens\chat_screen.dart:35:8 - prefer_final_fields
+warning - The declaration '_loadHistory' isn't referenced - lib\screens\chat_screen.dart:84:16 - unused_element
+warning - The value of the local variable 'isPartner' isn't used - lib\screens\chat_screen.dart:766:16 - unused_local_variable
 

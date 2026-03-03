@@ -244,6 +244,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get roleAi => 'AI';
 
   @override
+  String get roleThirdParty => '제삼자';
+
+  @override
+  String get speakerSelect => '발화자 선택';
+
+  @override
   String get participantDeleted => '참가자가 삭제되었습니다.';
 
   @override

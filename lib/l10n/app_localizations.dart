@@ -690,6 +690,18 @@ abstract class AppLocalizations {
   /// **'AI'**
   String get roleAi;
 
+  /// No description provided for @roleThirdParty.
+  ///
+  /// In ko, this message translates to:
+  /// **'제삼자'**
+  String get roleThirdParty;
+
+  /// No description provided for @speakerSelect.
+  ///
+  /// In ko, this message translates to:
+  /// **'발화자 선택'**
+  String get speakerSelect;
+
   /// No description provided for @participantDeleted.
   ///
   /// In ko, this message translates to:

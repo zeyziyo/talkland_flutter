@@ -73,6 +73,8 @@
   "labelLangCode": "언어 코드 (예: en-US, ko-KR)",
   "roleUser": "사용자",
   "roleAi": "AI",
+  "roleThirdParty": "제삼자",
+  "speakerSelect": "발화자 선택",
   "participantDeleted": "참가자가 삭제되었습니다.",
   "confirmDeleteParticipant": "이 참가자를 삭제하시겠습니까?",
   "importTotal": "전체: {count}개",

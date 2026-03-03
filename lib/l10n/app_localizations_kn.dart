@@ -252,6 +252,12 @@ class AppLocalizationsKn extends AppLocalizations {
   String get roleAi => 'AI';
 
   @override
+  String get roleThirdParty => '제삼자';
+
+  @override
+  String get speakerSelect => '발화자 선택';
+
+  @override
   String get participantDeleted => 'Participant deleted.';
 
   @override

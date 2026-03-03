@@ -226,11 +226,6 @@ extension AppStateChat on AppState {
           });
           _activeParticipants.add(p);
         }
-      }
-      // Phase 10/28: "나"와 "AI"만 명시적으로 주입 (고정 참가자 정책)
-      // getOrAddParticipant handles DB persistence and UI state internally.
-      await getOrAddParticipant(name: '나', role: 'user', id: 'me');
-      await getOrAddParticipant(name: _activePersona ?? 'AI', role: 'ai', id: 'ai');
 
       _dialogueGroups.insert(0, DialogueGroup(
         id: dialogueId,
@@ -598,16 +593,24 @@ extension AppStateChat on AppState {
   }
 
   /// Save User's message to dialogue
-  Future<void> saveUserMessage(String sourceText, String targetText) async {
+  Future<void> saveUserMessage(String sourceText, String targetText, {String? speakerId}) async {
     if (_activeDialogueId == null) {
       await startNewDialogue();
     }
 
-    // Find the participant with role 'user'
-    final userPart = _activeParticipants.firstWhere(
-      (p) => p.role == 'user',
-      orElse: () => ChatParticipant(id: 'me', dialogueId: _activeDialogueId!, name: '나', role: 'user'),
-    );
+    // Phase 180: Use precise speakerId if provided, else fallback to 'user' role
+    ChatParticipant userPart;
+    if (speakerId != null) {
+      userPart = _activeParticipants.firstWhere(
+        (p) => p.id == speakerId,
+        orElse: () => ChatParticipant(id: speakerId, dialogueId: _activeDialogueId!, name: 'Speaker', role: 'user'),
+      );
+    } else {
+      userPart = _activeParticipants.firstWhere(
+        (p) => p.role == 'user',
+        orElse: () => ChatParticipant(id: 'me', dialogueId: _activeDialogueId!, name: '나', role: 'user'),
+      );
+    }
 
     _currentDialogueSequence++;
 
