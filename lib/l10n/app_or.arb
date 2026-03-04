@@ -1,188 +1,105 @@
 {
   "@@locale": "or",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "କାକାଓ ସହିତ ଜାରି ରଖନ୍ତୁ",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "ସହାୟତା ଏବଂ ଗାଇଡ୍",
-  "helpTabModes": "ମୋଡ୍ ବ୍ୟାଖ୍ୟା",
-  "helpTabJson": "JSON ଫର୍ମାଟ୍",
-  "helpTabTour": "ଅନୁଭବ କରନ୍ତୁ",
-  "helpMode1Desc": "ଭଏସ୍ ଚିହ୍ନଟ କରି ଅନୁବାଦ କରନ୍ତୁ ଏବଂ ଫଳାଫଳ ଶୁଣନ୍ତୁ।",
-  "helpMode1Details": "• ଭାଷା ସେଟିଂ: ଉପର/ତଳ ଆଇକନ୍ ଦବାଇ ଭାଷା ବଦଳାନ୍ତୁ\n• ଶବ୍ଦ/ବାକ୍ୟ ଟୋଗଲ୍: ମୋଡ୍ ବଦଳାନ୍ତୁ\n• ଭଏସ୍ ଇନପୁଟ୍: ମାଇକ୍ରୋଫୋନ୍ ଆଇକନ୍ ଦବାଇ ଶୁଣିବା ଆରମ୍ଭ/ବନ୍ଦ କରନ୍ତୁ\n• ଟେକ୍ସଟ୍ ଇନପୁଟ୍: ସିଧାସଳଖ ଟାଇପ୍ କରି ଅନୁବାଦ କରନ୍ତୁ\n• ସ୍ୱୟଂଚାଳିତ ସନ୍ଧାନ: ସମାନ ପୂର୍ବ ବାକ୍ୟ ଚିହ୍ନଟ କରନ୍ତୁ\n• ଅନୁବାଦ: ତୁରନ୍ତ ଅନୁବାଦ କରିବାକୁ ଅନୁବାଦ ବଟନ୍ ଦବାନ୍ତୁ\n• ଶୁଣନ୍ତୁ: ସ୍ପିକର୍ ଆଇକନ୍ ସହିତ TTS ପ୍ଲେ କରନ୍ତୁ\n• ସେଭ୍: 'ଡାଟା ସେଭ୍' ସହିତ ରେକର୍ଡ ଯୋଡନ୍ତୁ\n• କ୍ଲିଅର୍: ଇନପୁଟ୍ ରିସେଟ୍ କରନ୍ତୁ",
-  "helpMode2Desc": "ସେଭ୍ ହୋଇଥିବା ବାକ୍ୟଗୁଡ଼ିକୁ ପୁନର୍ବିଚାର କରନ୍ତୁ ଏବଂ ସ୍ୱୟଂଚାଳିତ ଲୁଚାଇବା ବୈଶିଷ୍ଟ୍ୟ ସହିତ ମନେରଖିବା ସ୍ଥିତି ଯାଞ୍ଚ କରନ୍ତୁ।",
-  "helpMode2Details": "• ଉପାଦାନ ଚୟନ: ନିର୍ଦ୍ଦିଷ୍ଟ ଉପାଦାନ ସଂଗ୍ରହ କିମ୍ବା 'ସମସ୍ତ ପୁନର୍ବିଚାର' ଚୟନ କରନ୍ତୁ\n• କାର୍ଡ ଫ୍ଲିପ୍: ଅନୁବାଦ ଯାଞ୍ଚ କରିବାକୁ 'ଦେଖାନ୍ତୁ/ଲୁଚାନ୍ତୁ' (ସ୍ୱୟଂଚାଳିତ ଶିକ୍ଷଣ ଯାଞ୍ଚ)\n• ଶୁଣନ୍ତୁ: ବାକ୍ୟ TTS ପ୍ଲେ କରନ୍ତୁ\n• ଶିକ୍ଷଣ ସମାପ୍ତ: ଚେକ୍ ମାର୍କ (V) ସହିତ ଶିକ୍ଷଣ ସମାପ୍ତି ଭାବରେ ଚିହ୍ନିତ କରନ୍ତୁ\n• ଡିଲିଟ୍: ରେକର୍ଡ ଡିଲିଟ୍ କରିବାକୁ କାର୍ଡକୁ ଦୀର୍ଘ ସମୟ ପର୍ଯ୍ୟନ୍ତ ଦବାନ୍ତୁ\n• ସର୍ଚ୍ଚ ସର୍ତ୍ତ: ଟ୍ୟାଗ୍, ସାମ୍ପ୍ରତିକ ଆଇଟମ୍, ଆରମ୍ଭ ଅକ୍ଷର ଦ୍ୱାରା ଫିଲ୍ଟର୍ କରନ୍ତୁ",
-  "helpMode3Desc": "ବାକ୍ୟ ଶୁଣନ୍ତୁ ଏବଂ ଦୋହରାନ୍ତୁ (ଛାଇ କରିବା) ଏବଂ ଉଚ୍ଚାରଣ ଅଭ୍ୟାସ କରନ୍ତୁ।",
-  "helpMode3Details": "• ଉପାଦାନ ଚୟନ: ଅଧ୍ୟୟନ କରିବାକୁ ଉପାଦାନ ସଂଗ୍ରହ ଚୟନ କରନ୍ତୁ\n• ବ୍ୟବଧାନ ସେଟ୍ କରନ୍ତୁ: ବାକ୍ୟ ମଧ୍ୟରେ ଅପେକ୍ଷା ସମୟ ସମାୟୋଜନ କରିବାକୁ [-] [+] ବଟନ୍ (3 ସେକେଣ୍ଡ ~ 60 ସେକେଣ୍ଡ)\n• ଆରମ୍ଭ/ବନ୍ଦ: ଛାୟା ସେସନ୍ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ\n• କୁହନ୍ତୁ: ଭଏସ୍ ଶୁଣନ୍ତୁ ଏବଂ ପୁନରାବୃତ୍ତି କରନ୍ତୁ\n• ଫିଡବ୍ୟାକ୍: ସଠିକତା ସ୍କୋର୍ (0-100) ଏବଂ ରଙ୍ଗ ପ୍ରଦର୍ଶନ\n• ସର୍ଚ୍ଚ ସର୍ତ୍ତ: ଟ୍ୟାଗ୍, ସାମ୍ପ୍ରତିକ ଆଇଟମ୍, ଆରମ୍ଭ ଅକ୍ଷର ଦ୍ୱାରା ଅଭ୍ୟାସ ଲକ୍ଷ୍ୟ ଫିଲ୍ଟର୍ କରନ୍ତୁ",
-  "helpModeChatDesc": "AI ପେର୍ସୋନା ସହିତ କଥାବାର୍ତ୍ତା କରି ପ୍ରକୃତ ବାର୍ତ୍ତାଳାପର ଅଭ୍ୟାସ କରନ୍ତୁ।",
-  "helpModeChatDetails": "• AI ଚାଟିଂ: ମୋ ଭାଷାରେ କହି କଥାବାର୍ତ୍ତା ଅଭ୍ୟାସ କରନ୍ତୁ\n• ମଲ୍ଟି ପର୍ସୋନା: ବାର୍ତ୍ତା ବବୁଲ୍ ଉପରେ ମେନୁ ସହିତ ଅନ୍ୟ ବ୍ୟକ୍ତିଙ୍କ ଲିଙ୍ଗ/ଭାଷା/ନାମ ବଦଳାଇପାରିବେ\n• ଅଂଶୀଦାର ଯୋଡନ୍ତୁ: + ବଟନ୍ ସହିତ ନୂତନ କଥାବାର୍ତ୍ତା ସାଥୀ (ଅପରିଚିତ ବ୍ୟକ୍ତି) ଯୋଡନ୍ତୁ\n• GPS: ବର୍ତ୍ତମାନର ଅବସ୍ଥା ଉପରେ ଆଧାର କରି ପରିସ୍ଥିତି ଡ୍ରାମା\n• ସ୍ୱୟଂଚାଳିତ ସେଭ୍: କଥାବାର୍ତ୍ତା ବିଷୟବସ୍ତୁ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଅନୁବାଦ ଏବଂ ସେଭ୍ କରାଯାଏ",
-  "helpJsonDesc": "ମୋଡ୍ 3 ରେ ବ୍ୟବହାର କରିବାକୁ ଏକ JSON ଫାଇଲ୍ ଭାବରେ ଶିକ୍ଷଣ ସାମଗ୍ରୀ ଆଣିବାକୁ, ନିମ୍ନଲିଖିତ ଫର୍ମାଟ୍ ଅନୁସରଣ କରନ୍ତୁ:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "ଏକ JSON ଫାଇଲ୍ ଭାବରେ ସମ୍ପୂର୍ଣ୍ଣ ସଂଳାପ ସେଟ୍ ଆଣନ୍ତୁ।",
-  "helpDialogueImportDetails": "• JSON ଗଠନ: `entries` ପରିବର୍ତ୍ତେ `dialogues` ଆରେ ବ୍ୟବହାର କରନ୍ତୁ\n• ସ୍ୱୟଂଚାଳିତ ପୁନରୁଦ୍ଧାର: ସଂଳାପ ଶୀର୍ଷକ, ପର୍ସୋନା, ବାର୍ତ୍ତା କ୍ରମ ପୁନରୁଦ୍ଧାର କରାଯାଏ।\n• ଅବସ୍ଥାନ: ଆମଦାନୀ ହୋଇଥିବା ସଂଳାପଗୁଡ଼ିକ AI ଚାଟିଂ ମୋଡ୍ ର 'ରେକର୍ଡ' ଟ୍ୟାବରେ ଦେଖାଯାଏ।",
-  "helpTourDesc": "**ହାଇଲାଇଟ୍ ସର୍କଲ୍** ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟଗୁଡ଼ିକରେ ତୁମର ମାର୍ଗଦର୍ଶନ କରେ।\n(ଉଦାହରଣ ସ୍ୱରୂପ: **ହାଇଲାଇଟ୍ ସର୍କଲ୍** ଦ୍ୱାରା ସୂଚିତ କାର୍ଡକୁ ଡିଲିଟ୍ କରିବାକୁ ଆପଣ ଏହାକୁ ଦୀର୍ଘ ସମୟ ପର୍ଯ୍ୟନ୍ତ ଦବାଇ ପାରିବେ |)",
-  "partnerMode": "ପାର୍ଟନର୍ ମୋଡ୍",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "ମାନୁଆଲ୍ ଇନପୁଟ୍",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "ବକ୍ତା",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "AI ମୋଡ୍ କୁ ବଦଳାନ୍ତୁ",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "ପାର୍ଟନର୍ ମୋଡ୍ କୁ ବଦଳାନ୍ତୁ",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "ବର୍ତ୍ତମାନର ଅବସ୍ଥାନ",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "ଅବସ୍ଥାନ",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "ଅଂଶୀଦାର",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "ମୁଁ",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "ବର୍ତ୍ତମାନ ଚୟନିତ ଉପାଦାନ ସଂଗ୍ରହ:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "ମୌଳିକ ବାକ୍ୟ/ଶବ୍ଦ ଷ୍ଟୋରେଜ୍",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "ଶବ୍ଦ",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "ବାକ୍ୟ",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "ସଠିକତା",
+  "adLoading": "ବିଜ୍ଞାପନ ଲୋଡ୍ ହେଉଛି। ଦୟାକରି ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
+  "addNewSubject": "ନୂଆ ନାମ ଯୋଡନ୍ତୁ",
+  "addParticipant": "ଅଂଶଗ୍ରହଣକାରୀଙ୍କୁ ଯୋଡନ୍ତୁ",
+  "addTagHint": "ଟ୍ୟାଗ୍ ଯୋଡନ୍ତୁ...",
+  "alreadyHaveAccount": "ଆପଣଙ୍କର ପୂର୍ବରୁ ଏକ ଆକାଉଣ୍ଟ ଅଛି କି?",
   "appTitle": "ଟକି",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "ପୁନର୍ବିଚାର ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "ସ୍ୱୟଂଚାଳିତ ପ୍ଲେ",
+  "basic": "ମୌଳିକ",
+  "basicDefault": "ମୌଳିକ",
+  "basicMaterialRepository": "ମୌଳିକ ବାକ୍ୟ/ଶବ୍ଦ ଷ୍ଟୋରେଜ୍",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "ମୌଳିକ ବାକ୍ୟ ଷ୍ଟୋରେଜ୍",
+  "basicSentences": "ମୌଳିକ ବାକ୍ୟ ଷ୍ଟୋରେଜ୍",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "ପୁନର୍ବିଚାର",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "ସର୍ଚ୍ଚ",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "ଅନୁବାଦ",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "ଶୁଣନ୍ତୁ",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "ଡାଟା ସେଭ୍ କରନ୍ତୁ",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "ସେଭ୍ ହୋଇଗଲା",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "ଡିଲିଟ୍",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "ସାମଗ୍ରୀ ସୂଚନା",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "ମୌଳିକ ଶବ୍ଦ ଷ୍ଟୋରେଜ୍",
+  "basicWords": "ମୌଳିକ ଶବ୍ଦ ଷ୍ଟୋରେଜ୍",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "ବାତିଲ୍ କରନ୍ତୁ",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "ନିଶ୍ଚିତ କରନ୍ତୁ",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "ରିଫ୍ରେସ୍ କରନ୍ତୁ",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "ଅଧ୍ୟୟନ ରେକର୍ଡ ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "କର୍ମ କାରକ",
+  "casePossessive": "ଅଧିକାର ସୂଚକ",
+  "casePossessivePronoun": "ଅଧିକାର ସୂଚକ ସର୍ବନାମ",
+  "caseReflexive": "ସ୍ୱୟଂବାଚୀ",
+  "caseSubject": "କର୍ତ୍ତୃ କାରକ",
+  "chatAiChat": "ଚାଟିଂ",
+  "chatAllConversations": "ସମସ୍ତ ବାର୍ତ୍ତାଳାପ",
+  "chatChoosePersona": "ପର୍ସୋନା ଚୟନ କରନ୍ତୁ",
+  "chatEndMessage": "ଆପଣ କଥାବାର୍ତ୍ତା ଶେଷ କରିବାକୁ ଚାହାଁନ୍ତି କି?",
+  "chatEndTitle": "କଥାବାର୍ତ୍ତା ଶେଷ ଏବଂ ସେଭ୍ କରନ୍ତୁ",
+  "chatFailed": "ଚାଟିଂ ବିଫଳ: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "ଲକ୍ଷ୍ୟ ଭାଷା ଫିଲ୍ଟର୍:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "କଥାବାର୍ତ୍ତାରୁ ଉଦ୍ଧୃତ ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "ଚୟନିତ ଭାଷା ପାଇଁ କୌଣସି ଅଧ୍ୟୟନ ରେକର୍ଡ ନାହିଁ",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "କଥାବାର୍ତ୍ତା ଇତିହାସ",
+  "chatNew": "ନୂତନ କଥାବାର୍ତ୍ତା",
+  "chatNewChat": "ନୂତନ କଥାବାର୍ତ୍ତା",
+  "chatNoConversations": "ବର୍ତ୍ତମାନ ପର୍ଯ୍ୟନ୍ତ କୌଣସି କଥାବାର୍ତ୍ତା ନାହିଁ",
+  "chatSaveAndExit": "ସେଭ୍ କରନ୍ତୁ ଏବଂ ବାହାରକୁ ଯାଆନ୍ତୁ",
+  "chatStartNewPrompt": "ଅଭ୍ୟାସ କରିବାକୁ ଏକ ନୂତନ କଥାବାର୍ତ୍ତା ଆରମ୍ଭ କରିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ!",
+  "chatTypeHint": "ଏକ ବାର୍ତ୍ତା ଟାଇପ୍ କରନ୍ତୁ...",
+  "chatUntitled": "ଶୀର୍ଷକହୀନ କଥାବାର୍ତ୍ତା",
+  "checking": "ଯାଞ୍ଚ କରୁଛି...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "ସର୍ଚ୍ଚ ମୋଡ୍ ରୁ ଅନୁବାଦ ସେଭ୍ କରିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "ଦେଖାନ୍ତୁ",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "ଲୁଚାନ୍ତୁ",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "ରେକର୍ଡ ଡିଲିଟ୍ କରନ୍ତୁ",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "ସବୁ କ୍ଲିଅର୍ କରନ୍ତୁ",
+  "confirm": "ନିଶ୍ଚିତ କରନ୍ତୁ",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "ଆପଣ ଏହି ଅଧ୍ୟୟନ ରେକର୍ଡ ଡିଲିଟ୍ କରିବାକୁ ନିଶ୍ଚିତ କି?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "ରେକର୍ଡ ଡିଲିଟ୍ ହୋଇଗଲା",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "ଆପଣ ଏହି ବାର୍ତ୍ତାଳାପକୁ ଡିଲିଟ୍ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?\nଡିଲିଟ୍ ହୋଇଥିବା ବାର୍ତ୍ତାଳାପକୁ ପୁନରୁଦ୍ଧାର କରାଯାଇପାରିବ ନାହିଁ।",
+  "confirmDeleteParticipant": "ଆପଣ ଏହି ଅଂଶଗ୍ରହଣକାରୀଙ୍କୁ ଡିଲିଟ୍ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
+  "contextTagHint": "ପରେ ପୃଥକ କରିବା ସହଜ କରିବାକୁ ପରିସ୍ଥିତି ଲେଖନ୍ତୁ",
+  "contextTagLabel": "ପ୍ରସଙ୍ଗ/ପରିସ୍ଥିତି (ବୈକଳ୍ପିକ) - ଉଦାହରଣ ସ୍ୱରୂପ: ଶୁଭ ସକାଳ, ସମ୍ମାନଜନକ",
+  "copiedToClipboard": "କ୍ଲିପବୋର୍ଡରେ କପି କରାଯାଇଛି!",
+  "copy": "କପି",
+  "correctAnswer": "ସଠିକ୍ ଉତ୍ତର",
+  "createNew": "ଏକ ନୂତନ ବାକ୍ୟ ସହିତ ଆଗକୁ ବଢନ୍ତୁ",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "ବର୍ତ୍ତମାନର ଅବସ୍ଥାନ",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "ବର୍ତ୍ତମାନ ଚୟନିତ ଉପାଦାନ ସଂଗ୍ରହ:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "ଡିଲିଟ୍",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "ଡିଲିଟ୍ ବିଫଳ: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "JSON ଫାଇଲ୍ ଆମଦାନୀ କରନ୍ତୁ",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "ରେକର୍ଡ ଡିଲିଟ୍ କରନ୍ତୁ",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "ଆମଦାନୀ କରାଯାଉଛି...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "ପରିସ୍ଥିତି ଡ୍ରାମା ମାଧ୍ୟମରେ କଥାବାର୍ତ୍ତା ଅଭ୍ୟାସ କରନ୍ତୁ। ଏକ ଉପଯୁକ୍ତ ଉତ୍ତର ଚୟନ କରନ୍ତୁ ଏବଂ କୁହନ୍ତୁ।",
+  "dialogueQuestTitle": "ସଂଳାପ ଅନୁସନ୍ଧାନ",
+  "disambiguationPrompt": "ଆପଣ କେଉଁ ଅର୍ଥରେ ଅନୁବାଦ କରିବାକୁ ଚାହାଁନ୍ତି?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "ଅର୍ଥ ଚୟନ",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "ଆପଣଙ୍କର ଆକାଉଣ୍ଟ ନାହିଁ କି?",
+  "editParticipant": "ଅଂଶଗ୍ରହଣକାରୀଙ୍କୁ ସଂପାଦନ କରନ୍ତୁ",
+  "email": "ଇମେଲ୍",
+  "emailAlreadyInUse": "ଏହି ଇମେଲ ପୂର୍ବରୁ ପଞ୍ଜୀକୃତ ହୋଇଛି। ଦୟାକରି ଲଗ୍ଇନ୍ କରନ୍ତୁ କିମ୍ବା ପାସୱାର୍ଡ ପୁନରୁଦ୍ଧାର ବ୍ୟବହାର କରନ୍ତୁ।",
+  "enterNewSubjectName": "ନୂଆ ନାମ ଦିଅନ୍ତୁ",
+  "enterSentenceHint": "ବାକ୍ୟଟିଏ ଲେଖନ୍ତୁ...",
+  "enterTextHint": "ଅନୁବାଦ କରିବାକୁ ଟେକ୍ସଟ୍ ଇନପୁଟ୍ କରନ୍ତୁ",
+  "enterTextToTranslate": "ଅନୁବାଦ କରିବାକୁ ଟେକ୍ସଟ୍ ଇନପୁଟ୍ କରନ୍ତୁ",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "ଶବ୍ଦଟିଏ ଲେଖନ୍ତୁ...",
+  "error": "ତ୍ରୁଟି",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "ଏଥିରେ ଘୃଣାତ୍ମକ ଭାଷଣ ଅନ୍ତର୍ଭୁକ୍ତ ଥିବାରୁ ଏହାକୁ ଅନୁବାଦ କରାଯାଇପାରିବ ନାହିଁ।",
+  "errorOtherSafety": "AI ସୁରକ୍ଷା ନୀତି ଦ୍ୱାରା ଅନୁବାଦ ପ୍ରତ୍ୟାଖ୍ୟାନ କରାଯାଇଛି।",
+  "errorProfanity": "ଏଥିରେ ଅଶ୍ଳୀଳ ଭାଷା ଅନ୍ତର୍ଭୁକ୍ତ ଥିବାରୁ ଏହାକୁ ଅନୁବାଦ କରାଯାଇପାରିବ ନାହିଁ।",
+  "errorSelectCategory": "ପ୍ରଥମେ ଏକ ଶବ୍ଦ କିମ୍ବା ବାକ୍ୟ ଚୟନ କରନ୍ତୁ!",
+  "errorSexualContent": "ଏଥିରେ ଯୌନ ସମ୍ବନ୍ଧୀୟ ବିଷୟବସ୍ତୁ ଅନ୍ତର୍ଭୁକ୍ତ ଥିବାରୁ ଏହାକୁ ଅନୁବାଦ କରାଯାଇପାରିବ ନାହିଁ।",
+  "errors": "ତ୍ରୁଟି:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "ମହିଳା",
+  "file": "ଫାଇଲ୍:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "ସମସ୍ତ",
+  "flip": "ଦେଖାନ୍ତୁ",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "ତୁଳନାତ୍ମକ ସ୍ତର",
+  "formInfinitive": "ଅନନ୍ତ/ବର୍ତ୍ତମାନ",
+  "formPast": "ଅତୀତ",
+  "formPastParticiple": "ଅତୀତ କୃଦନ୍ତ",
+  "formPlural": "ବହୁବଚନ",
+  "formPositive": "ମୂଳ ସ୍ତର",
+  "formPresent": "ବର୍ତ୍ତମାନ",
+  "formPresentParticiple": "ବର୍ତ୍ତମାନ କୃଦନ୍ତ (ing)",
+  "formSingular": "ଏକବଚନ",
+  "formSuperlative": "ସର୍ବୋତ୍କୃଷ୍ଟ ସ୍ତର",
+  "formThirdPersonSingular": "ତୃତୀୟ ବ୍ୟକ୍ତି ଏକବଚନ",
+  "gameModeDesc": "ଅଭ୍ୟାସ କରିବାକୁ ଏକ ଖେଳ ମୋଡ୍ ଚୟନ କରନ୍ତୁ",
+  "gameModeTitle": "ଖେଳ ମୋଡ୍",
+  "gameOver": "ଖେଳ ଶେଷ",
+  "gender": "ଲିଙ୍ଗ",
+  "generalTags": "ସାଧାରଣ ଟ୍ୟାଗ୍",
+  "getMaterials": "ସାମଗ୍ରୀ ପାଆନ୍ତୁ",
+  "good": "ଭଲ",
+  "googleContinue": "Google ସହିତ ଜାରି ରଖନ୍ତୁ",
+  "helpDialogueImportDesc": "ଏକ JSON ଫାଇଲ୍ ଭାବରେ ସମ୍ପୂର୍ଣ୍ଣ ସଂଳାପ ସେଟ୍ ଆଣନ୍ତୁ।",
+  "helpDialogueImportDetails": "• JSON ଗଠନ: `entries` ପରିବର୍ତ୍ତେ `dialogues` ଆରେ ବ୍ୟବହାର କରନ୍ତୁ\n• ସ୍ୱୟଂଚାଳିତ ପୁନରୁଦ୍ଧାର: ସଂଳାପ ଶୀର୍ଷକ, ପର୍ସୋନା, ବାର୍ତ୍ତା କ୍ରମ ପୁନରୁଦ୍ଧାର କରାଯାଏ।\n• ଅବସ୍ଥାନ: ଆମଦାନୀ ହୋଇଥିବା ସଂଳାପଗୁଡ଼ିକ AI ଚାଟିଂ ମୋଡ୍ ର 'ରେକର୍ଡ' ଟ୍ୟାବରେ ଦେଖାଯାଏ।",
+  "helpJsonDesc": "ମୋଡ୍ 3 ରେ ବ୍ୟବହାର କରିବାକୁ ଏକ JSON ଫାଇଲ୍ ଭାବରେ ଶିକ୍ଷଣ ସାମଗ୍ରୀ ଆଣିବାକୁ, ନିମ୍ନଲିଖିତ ଫର୍ମାଟ୍ ଅନୁସରଣ କରନ୍ତୁ:",
+  "helpJsonTypeDialogue": "ବାର୍ତ୍ତାଳାପ (Dialogue)",
+  "helpJsonTypeSentence": "ବାକ୍ୟ (Sentence)",
+  "helpJsonTypeWord": "ଶବ୍ଦ (Word)",
+  "helpMode1Desc": "ଭଏସ୍ ଚିହ୍ନଟ କରି ଅନୁବାଦ କରନ୍ତୁ ଏବଂ ଫଳାଫଳ ଶୁଣନ୍ତୁ।",
+  "helpMode1Details": "• ଭାଷା ସେଟିଂ: ଉପର/ତଳ ଆଇକନ୍ ଦବାଇ ଭାଷା ବଦଳାନ୍ତୁ\n• ଶବ୍ଦ/ବାକ୍ୟ ଟୋଗଲ୍: ମୋଡ୍ ବଦଳାନ୍ତୁ\n• ଭଏସ୍ ଇନପୁଟ୍: ମାଇକ୍ରୋଫୋନ୍ ଆଇକନ୍ ଦବାଇ ଶୁଣିବା ଆରମ୍ଭ/ବନ୍ଦ କରନ୍ତୁ\n• ଟେକ୍ସଟ୍ ଇନପୁଟ୍: ସିଧାସଳଖ ଟାଇପ୍ କରି ଅନୁବାଦ କରନ୍ତୁ\n• ସ୍ୱୟଂଚାଳିତ ସନ୍ଧାନ: ସମାନ ପୂର୍ବ ବାକ୍ୟ ଚିହ୍ନଟ କରନ୍ତୁ\n• ଅନୁବାଦ: ତୁରନ୍ତ ଅନୁବାଦ କରିବାକୁ ଅନୁବାଦ ବଟନ୍ ଦବାନ୍ତୁ\n• ଶୁଣନ୍ତୁ: ସ୍ପିକର୍ ଆଇକନ୍ ସହିତ TTS ପ୍ଲେ କରନ୍ତୁ\n• ସେଭ୍: 'ଡାଟା ସେଭ୍' ସହିତ ରେକର୍ଡ ଯୋଡନ୍ତୁ\n• କ୍ଲିଅର୍: ଇନପୁଟ୍ ରିସେଟ୍ କରନ୍ତୁ",
+  "helpMode2Desc": "ସେଭ୍ ହୋଇଥିବା ବାକ୍ୟଗୁଡ଼ିକୁ ପୁନର୍ବିଚାର କରନ୍ତୁ ଏବଂ ସ୍ୱୟଂଚାଳିତ ଲୁଚାଇବା ବୈଶିଷ୍ଟ୍ୟ ସହିତ ମନେରଖିବା ସ୍ଥିତି ଯାଞ୍ଚ କରନ୍ତୁ।",
+  "helpMode2Details": "• ଉପାଦାନ ଚୟନ: ନିର୍ଦ୍ଦିଷ୍ଟ ଉପାଦାନ ସଂଗ୍ରହ କିମ୍ବା 'ସମସ୍ତ ପୁନର୍ବିଚାର' ଚୟନ କରନ୍ତୁ\n• କାର୍ଡ ଫ୍ଲିପ୍: ଅନୁବାଦ ଯାଞ୍ଚ କରିବାକୁ 'ଦେଖାନ୍ତୁ/ଲୁଚାନ୍ତୁ' (ସ୍ୱୟଂଚାଳିତ ଶିକ୍ଷଣ ଯାଞ୍ଚ)\n• ଶୁଣନ୍ତୁ: ବାକ୍ୟ TTS ପ୍ଲେ କରନ୍ତୁ\n• ଶିକ୍ଷଣ ସମାପ୍ତ: ଚେକ୍ ମାର୍କ (V) ସହିତ ଶିକ୍ଷଣ ସମାପ୍ତି ଭାବରେ ଚିହ୍ନିତ କରନ୍ତୁ\n• ଡିଲିଟ୍: ରେକର୍ଡ ଡିଲିଟ୍ କରିବାକୁ କାର୍ଡକୁ ଦୀର୍ଘ ସମୟ ପର୍ଯ୍ୟନ୍ତ ଦବାନ୍ତୁ\n• ସର୍ଚ୍ଚ ସର୍ତ୍ତ: ଟ୍ୟାଗ୍, ସାମ୍ପ୍ରତିକ ଆଇଟମ୍, ଆରମ୍ଭ ଅକ୍ଷର ଦ୍ୱାରା ଫିଲ୍ଟର୍ କରନ୍ତୁ",
+  "helpMode3Desc": "ବାକ୍ୟ ଶୁଣନ୍ତୁ ଏବଂ ଦୋହରାନ୍ତୁ (ଛାଇ କରିବା) ଏବଂ ଉଚ୍ଚାରଣ ଅଭ୍ୟାସ କରନ୍ତୁ।",
+  "helpMode3Details": "• ଉପାଦାନ ଚୟନ: ଅଧ୍ୟୟନ କରିବାକୁ ଉପାଦାନ ସଂଗ୍ରହ ଚୟନ କରନ୍ତୁ\n• ବ୍ୟବଧାନ ସେଟ୍ କରନ୍ତୁ: ବାକ୍ୟ ମଧ୍ୟରେ ଅପେକ୍ଷା ସମୟ ସମାୟୋଜନ କରିବାକୁ [-] [+] ବଟନ୍ (3 ସେକେଣ୍ଡ ~ 60 ସେକେଣ୍ଡ)\n• ଆରମ୍ଭ/ବନ୍ଦ: ଛାୟା ସେସନ୍ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ\n• କୁହନ୍ତୁ: ଭଏସ୍ ଶୁଣନ୍ତୁ ଏବଂ ପୁନରାବୃତ୍ତି କରନ୍ତୁ\n• ଫିଡବ୍ୟାକ୍: ସଠିକତା ସ୍କୋର୍ (0-100) ଏବଂ ରଙ୍ଗ ପ୍ରଦର୍ଶନ\n• ସର୍ଚ୍ଚ ସର୍ତ୍ତ: ଟ୍ୟାଗ୍, ସାମ୍ପ୍ରତିକ ଆଇଟମ୍, ଆରମ୍ଭ ଅକ୍ଷର ଦ୍ୱାରା ଅଭ୍ୟାସ ଲକ୍ଷ୍ୟ ଫିଲ୍ଟର୍ କରନ୍ତୁ",
+  "helpModeChatDesc": "AI ପେର୍ସୋନା ସହିତ କଥାବାର୍ତ୍ତା କରି ପ୍ରକୃତ ବାର୍ତ୍ତାଳାପର ଅଭ୍ୟାସ କରନ୍ତୁ।",
+  "helpModeChatDetails": "• AI ଚାଟିଂ: ମୋ ଭାଷାରେ କହି କଥାବାର୍ତ୍ତା ଅଭ୍ୟାସ କରନ୍ତୁ\n• ମଲ୍ଟି ପର୍ସୋନା: ବାର୍ତ୍ତା ବବୁଲ୍ ଉପରେ ମେନୁ ସହିତ ଅନ୍ୟ ବ୍ୟକ୍ତିଙ୍କ ଲିଙ୍ଗ/ଭାଷା/ନାମ ବଦଳାଇପାରିବେ\n• ଅଂଶୀଦାର ଯୋଡନ୍ତୁ: + ବଟନ୍ ସହିତ ନୂତନ କଥାବାର୍ତ୍ତା ସାଥୀ (ଅପରିଚିତ ବ୍ୟକ୍ତି) ଯୋଡନ୍ତୁ\n• GPS: ବର୍ତ୍ତମାନର ଅବସ୍ଥା ଉପରେ ଆଧାର କରି ପରିସ୍ଥିତି ଡ୍ରାମା\n• ସ୍ୱୟଂଚାଳିତ ସେଭ୍: କଥାବାର୍ତ୍ତା ବିଷୟବସ୍ତୁ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଅନୁବାଦ ଏବଂ ସେଭ୍ କରାଯାଏ",
+  "helpTabJson": "JSON ଫର୍ମାଟ୍",
+  "helpTabModes": "ମୋଡ୍ ବ୍ୟାଖ୍ୟା",
+  "helpTabTour": "ଅନୁଭବ କରନ୍ତୁ",
+  "helpTitle": "ସହାୟତା ଏବଂ ଗାଇଡ୍",
+  "helpTourDesc": "**ହାଇଲାଇଟ୍ ସର୍କଲ୍** ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟଗୁଡ଼ିକରେ ତୁମର ମାର୍ଗଦର୍ଶନ କରେ।\n(ଉଦାହରଣ ସ୍ୱରୂପ: **ହାଇଲାଇଟ୍ ସର୍କଲ୍** ଦ୍ୱାରା ସୂଚିତ କାର୍ଡକୁ ଡିଲିଟ୍ କରିବାକୁ ଆପଣ ଏହାକୁ ଦୀର୍ଘ ସମୟ ପର୍ଯ୍ୟନ୍ତ ଦବାଇ ପାରିବେ |)",
+  "hide": "ଲୁଚାନ୍ତୁ",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "ଯୋଡାଗଲା: {count}ଟି",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "ଆମଦାନୀ ସମାପ୍ତ",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "ସମାନ ଶୀର୍ଷକ ସହିତ ଉପାଦାନ ପୂର୍ବରୁ ବିଦ୍ୟମାନ ଅଛି। ଦୟାକରି ଶୀର୍ଷକ ବଦଳାଇ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
+  "importErrorMessage": "ଫାଇଲ୍ ଆମଦାନୀ କରିବାରେ ବିଫଳ:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "ଆମଦାନୀ ବିଫଳ",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "ସମୁଦାୟ: {count}ଟି",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "JSON ଫାଇଲ୍ ଆମଦାନୀ କରନ୍ତୁ",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "ଯୋଡାଗଲା: {count}ଟି",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "ଦୟାକରି ଏକ JSON ଫାଇଲ୍ ଆମଦାନୀ କରନ୍ତୁ",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "ଏଡାଗଲା: {count}ଟି",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "ତ୍ରୁଟି:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "ସମୁଦାୟ: {count}ଟି",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "ତ୍ରୁଟି",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "ଆମଦାନୀ କରାଯାଉଛି...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "ଫାଇଲ୍ ଆମଦାନୀ କରିବାରେ ବିଫଳ:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "ଇନପୁଟ୍",
+  "intervalSeconds": "ବ୍ୟବଧାନ: {seconds} ସେକେଣ୍ଡ",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "ଏକ ବୈଧ ଇମେଲ୍ ଏଣ୍ଟର୍ କରନ୍ତୁ।",
+  "kakaoContinue": "କାକାଓ ସହିତ ଜାରି ରଖନ୍ତୁ",
+  "labelLangCode": "ଭାଷା କୋଡ୍ (ଉଦାହରଣ: en-US, ko-KR)",
+  "labelName": "ନାମ",
+  "labelNote": "ଟିପ୍ପଣୀ",
+  "labelPOS": "ଶବ୍ଦର ପ୍ରକାର",
+  "labelRole": "ଭୂମିକା",
+  "labelSentence": "ବାକ୍ୟ",
+  "labelSentenceCollection": "ବାକ୍ୟ ସଂଗ୍ରହ",
+  "labelSentenceType": "ବାକ୍ୟର ପ୍ରକାର",
+  "labelShowMemorized": "ସମାପ୍ତ",
+  "labelType": "ପ୍ରକାର:",
+  "labelWord": "ଶବ୍ଦ",
+  "labelWordbook": "ଶବ୍ଦ ସଂଗ୍ରହ",
+  "language": "ଭାଷା",
+  "languageSettings": "ଭାଷା ସେଟିଂ",
+  "languageSettingsTitle": "ଭାଷା ସେଟିଂ",
+  "libTitleFirstMeeting": "ପ୍ରଥମ ସାକ୍ଷାତ",
+  "libTitleGreetings1": "ଅଭିବାଦନ ୧",
+  "libTitleNouns1": "ବିଶେଷ୍ୟ ୧",
+  "libTitleVerbs1": "କ୍ରିୟା ୧",
+  "listen": "ଶୁଣନ୍ତୁ",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "ଶୁଣୁଛି...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "ଅଂଶଗ୍ରହଣକାରୀଙ୍କୁ ଲୋଡ୍ କରାଯାଉଛି...",
+  "location": "ଅବସ୍ଥାନ",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "ଲଗଇନ୍",
+  "logout": "ଲଗଆଉଟ୍",
+  "logoutConfirmMessage": "ଆପଣ ବର୍ତ୍ତମାନର ଡିଭାଇସରୁ ଲଗଆଉଟ୍ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
+  "logoutConfirmTitle": "ଲଗଆଉଟ୍",
+  "male": "ପୁରୁଷ",
+  "manageParticipants": "ଅଂଶଗ୍ରହଣକାରୀଙ୍କୁ ପରିଚାଳନା କରନ୍ତୁ",
+  "manual": "ମାନୁଆଲ୍ ଇନପୁଟ୍",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "ଅଧ୍ୟୟନ ଭାବରେ ଚିହ୍ନିତ କରନ୍ତୁ",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "ସାମଗ୍ରୀ ସୂଚନା",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "ମୁଁ",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "ଡିଭାଇସରୁ ସାମଗ୍ରୀ ଆମଦାନୀ କରନ୍ତୁ",
+  "menuHelp": "ସହାୟତା",
+  "menuLanguageSettings": "ଭାଷା ସେଟିଂସ୍",
+  "menuOnlineLibrary": "ଅନଲାଇନ୍ ଲାଇବ୍ରେରୀ",
+  "menuSelectMaterialSet": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ସଂଗ୍ରହ ଚୟନ କରନ୍ତୁ",
+  "menuSettings": "ଭାଷା ସେଟିଂ",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "ବ୍ୟବହାର ଗାଇଡ୍",
+  "menuWebDownload": "ହୋମପେଜ୍",
+  "metadataDialogTitle": "ବିସ୍ତୃତ ବର୍ଗୀକରଣ",
+  "metadataFormType": "ବ୍ୟାକରଣ ଫର୍ମ",
+  "metadataRootWord": "ମୂଳ ଶବ୍ଦ",
+  "micButtonTooltip": "ଭଏସ୍ ଚିହ୍ନଟ ଆରମ୍ଭ କରନ୍ତୁ",
+  "mode1SelectedMaterial": "ବର୍ତ୍ତମାନ ଚୟନିତ ଉପାଦାନ ସଂଗ୍ରହ: {name}",
+  "mode2Title": "ପୁନର୍ବିଚାର",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "ପରବର୍ତ୍ତୀ",
+  "mode3Start": "ଆରମ୍ଭ",
+  "mode3Stop": "ବନ୍ଦ",
+  "mode3TryAgain": "ପୁନଃ ଚେଷ୍ଟା କରନ୍ତୁ",
+  "mySentenceCollection": "ମୋ ବାକ୍ୟ ସଂଗ୍ରହ",
+  "myWordbook": "ମୋ ଶବ୍ଦବହି",
+  "neutral": "ଉଦାସୀନ",
+  "newSubjectName": "ନୂଆ ବିଷୟ ନାମ",
+  "next": "ପରବର୍ତ୍ତୀ",
+  "noDialogueHistory": "କୌଣସି ବାର୍ତ୍ତାଳାପ ଇତିହାସ ନାହିଁ।",
+  "noInternetWarningMic": "ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ନାହିଁ। ଅଫଲାଇନ୍ ଥିବାବେଳେ ଭଏସ୍ ଚିହ୍ନଟ ସମ୍ଭବ ହୋଇନପାରେ।",
+  "noInternetWarningTranslate": "ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ନାହିଁ। ଅଫଲାଇନ୍ ଥିବାବେଳେ ଅନୁବାଦ ଫଙ୍କସନ୍ ଉପଲବ୍ଧ ନୁହେଁ। ଦୟାକରି ରିଭ୍ୟୁ ମୋଡ୍ ବ୍ୟବହାର କରନ୍ତୁ।",
+  "noMaterialsInCategory": "ଏହି ବର୍ଗରେ କୌଣସି ଉପାଦାନ ନାହିଁ।",
+  "noParticipantsFound": "କୌଣସି ଅଂଶଗ୍ରହଣକାରୀ ମିଳିଲେ ନାହିଁ।",
+  "noRecords": "ଚୟନିତ ଭାଷା ପାଇଁ କୌଣସି ଅଧ୍ୟୟନ ରେକର୍ଡ ନାହିଁ",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ନାହିଁ।",
+  "noTextToPlay": "ଚଲାଇବାକୁ କୌଣସି ଟେକ୍ସଟ୍ ନାହିଁ",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "ସେଭ୍ କରିବାକୁ କୌଣସି ଅନୁବାଦ ନାହିଁ",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "କୌଣସି ସ୍ୱର ଚିହ୍ନଟ ହୋଇନାହିଁ",
+  "notSelected": "- ଚୟନ କରାଯାଇ ନାହିଁ -",
+  "onlineLibraryCheckInternet": "ଆପଣଙ୍କର ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ କିମ୍ବା ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
+  "onlineLibraryLoadFailed": "ଉପାଦାନ ଲୋଡ୍ କରିବାରେ ବିଫଳ।",
+  "onlineLibraryNoMaterials": "କୌଣସି ଉପାଦାନ ନାହିଁ।",
+  "participantDeleted": "ଅଂଶଗ୍ରହଣକାରୀଙ୍କୁ ଡିଲିଟ୍ କରାଯାଇଛି।",
+  "participantRename": "ଅଂଶଗ୍ରହଣକାରୀଙ୍କ ନାମ ପରିବର୍ତ୍ତନ କରନ୍ତୁ",
+  "partner": "ଅଂଶୀଦାର",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "ପାର୍ଟନର୍ ମୋଡ୍",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "ପାସୱାର୍ଡ",
+  "passwordTooShort": "ପାସୱାର୍ଡ ଅତି କମରେ 6 ଅକ୍ଷର ହେବା ଉଚିତ୍।",
+  "perfect": "ସମ୍ପୂର୍ଣ୍ଣ!",
+  "personaFriend": "ସ୍ଥାନୀୟ ବନ୍ଧୁ",
+  "personaGuide": "ଭ୍ରମଣ ଗାଇଡ୍",
+  "personaTeacher": "ଇଂରାଜୀ ଶିକ୍ଷକ",
+  "playAgain": "ପୁନର୍ବାର ଖେଳନ୍ତୁ",
+  "playbackFailed": "ପ୍ଲେବ୍ୟାକ୍ ବିଫଳ: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ଚୟନ କରନ୍ତୁ",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "ଚାଲୁଛି...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "ବିଷୟ:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "ଉତ୍ସ:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "ଫାଇଲ୍:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "ବିଶେଷଣ",
+  "posAdverb": "କ୍ରିୟା ବିଶେଷଣ",
+  "posConjunction": "ସଂଯୋଜକ",
+  "posInterjection": "ଆଶ୍ଚର୍ଯ୍ୟବାଚକ",
+  "posNoun": "ବିଶେଷ୍ୟ",
+  "posPreposition": "ଅବ୍ୟୟ",
+  "posPronoun": "ସର୍ବନାମ",
+  "posVerb": "କ୍ରିୟା",
+  "practiceModeTitle": "ଅଭ୍ୟାସ",
+  "practiceWordsOnly": "କେବଳ ଶବ୍ଦ ଅଭ୍ୟାସ କରନ୍ତୁ",
   "progress": "ପ୍ରଗତି: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "ଦୟାକରି ଏକ JSON ଫାଇଲ୍ ଆମଦାନୀ କରନ୍ତୁ",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ଚୟନ କରନ୍ତୁ",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "ଅଧ୍ୟୟନ ସମାପ୍ତ",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "ଅଧ୍ୟୟନ ଭାବରେ ଚିହ୍ନିତ କରନ୍ତୁ",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "ଶୁଣୁଛି...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "ଚିହ୍ନଟ ହୋଇଗଲା",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "ସାମ୍ପ୍ରତିକ ସୃଷ୍ଟି {count} ଆଇଟମ୍ ଦେଖାନ୍ତୁ",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "ଭଏସ୍ ଚିହ୍ନଟ ବିଫଳ: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "ଯାଞ୍ଚ କରୁଛି...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "ଚିହ୍ନଟ ହୋଇଗଲା",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "ଅନୁବାଦ କରୁଛି...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "ଚିହ୍ନଟ ହୋଇଥିବା ଉଚ୍ଚାରଣ:",
+  "recordDeleted": "ରେକର୍ଡ ଡିଲିଟ୍ ହୋଇଗଲା",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "ଅନୁବାଦ ସମାପ୍ତ (ସେଭ୍ କରିବା ଆବଶ୍ୟକ)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "ରିଫ୍ରେସ୍ କରନ୍ତୁ",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "ସେଭ୍ ହୋଇଥିବା ଅନୁବାଦ ଲୋଡ୍ ହୋଇଛି",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "ଅନୁବାଦ ବିଫଳ: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "ପୁନଃ ସେଟ୍",
+  "resetPracticeHistory": "ଅଭ୍ୟାସ ଇତିହାସ ରିସେଟ୍ କରନ୍ତୁ",
+  "retry": "ପୁନଃ ଚେଷ୍ଟା କରିବେ କି?",
+  "reviewAll": "ସମସ୍ତ ପୁନର୍ବିଚାର",
+  "reviewCount": "ପୁନର୍ବିଚାର {count} ଥର",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "ଅନୁବାଦ କରିବାକୁ ଟେକ୍ସଟ୍ ଇନପୁଟ୍ କରନ୍ତୁ",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "ସେଭ୍ କରୁଛି...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "ସେଭ୍ କରିବାକୁ କୌଣସି ଅନୁବାଦ ନାହିଁ",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "ପୁନର୍ବିଚାର",
+  "roleAi": "AI",
+  "roleThirdParty": "ତୃତୀୟ ପକ୍ଷ",
+  "roleUser": "ଉପଭୋକ୍ତା",
+  "save": "ସଞ୍ଚୟ କରନ୍ତୁ",
+  "saveData": "ଡାଟା ସେଭ୍ କରନ୍ତୁ",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "ସେଭ୍ ବିଫଳ: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "ଚାଲୁଛି...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "ସର୍ଚ୍ଚ ମୋଡ୍ ରୁ ଅନୁବାଦ ସେଭ୍ କରିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "ଚଲାଇବାକୁ କୌଣସି ଟେକ୍ସଟ୍ ନାହିଁ",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "ସେଭ୍ ହୋଇଗଲା",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "ପ୍ଲେବ୍ୟାକ୍ ବିଫଳ: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "ସେଭ୍ କରୁଛି...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "ମୂଳ ଭାଷା",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "ଲକ୍ଷ୍ୟ ଭାଷା",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "ସମାନ ଟେକ୍ସଟ୍ ମିଳିଲା",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "ବର୍ତ୍ତମାନର ଟେକ୍ସଟ୍ ବ୍ୟବହାର କରନ୍ତୁ",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "ଏକ ନୂତନ ବାକ୍ୟ ସହିତ ଆଗକୁ ବଢନ୍ତୁ",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "ପୁନର୍ବିଚାର {count} ଥର",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "କହିବା",
-  "speakingPractice": "କହିବା ଅଭ୍ୟାସ",
-  "intervalSeconds": "ବ୍ୟବଧାନ: {seconds} ସେକେଣ୍ଡ",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "ତୁମର ଉଚ୍ଚାରଣ",
-  "correctAnswer": "ସଠିକ୍ ଉତ୍ତର",
   "score": "ସଠିକତା: {score}%",
   "@score": {
     "placeholders": {
@@ -446,89 +517,161 @@
       }
     }
   },
-  "perfect": "ସମ୍ପୂର୍ଣ୍ଣ!",
-  "good": "ଭଲ",
-  "tryAgain": "ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ",
-  "startPractice": "ଅଭ୍ୟାସ ଆରମ୍ଭ କରନ୍ତୁ",
-  "stopPractice": "ଅଭ୍ୟାସ ବନ୍ଦ କରନ୍ତୁ",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "ଟ୍ୟୁଟୋରିଆଲ୍ ଆରମ୍ଭ କରନ୍ତୁ",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "ଭଏସ୍ ଇନପୁଟ୍",
-  "tutorialMicDesc": "ଆପଣ ମାଇକ୍ରୋଫୋନ୍ ବଟନ୍ ଦବାଇ ଭଏସ୍ ସହିତ ଇନପୁଟ୍ କରିପାରିବେ।",
-  "tutorialTabDesc": "ଆପଣ ଏଠାରୁ ଆପଣଙ୍କର ଇଚ୍ଛିତ ଅଧ୍ୟୟନ ମୋଡ୍ ଚୟନ କରିପାରିବେ।",
-  "tutorialTapToContinue": "ଚାଲୁ ରଖିବା ପାଇଁ ସ୍କ୍ରିନ୍ ଟ୍ୟାପ୍ କରନ୍ତୁ",
-  "tutorialTransTitle": "ଅନୁବାଦ କରନ୍ତୁ",
-  "tutorialTransDesc": "ଇନପୁଟ୍ ହୋଇଥିବା ଟେକ୍ସଟ୍ ଅନୁବାଦ କରନ୍ତୁ।",
-  "tutorialSaveTitle": "ସେଭ୍ କରନ୍ତୁ",
-  "tutorialSaveDesc": "ଅଧ୍ୟୟନ ରେକର୍ଡରେ ଅନୁବାଦ ହୋଇଥିବା ଫଳାଫଳ ସେଭ୍ କରନ୍ତୁ।",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "ସ୍କୋର୍",
+  "search": "ସର୍ଚ୍ଚ",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "ସନ୍ଧାନ ସର୍ତ୍ତାବଳୀ",
+  "searchSentenceHint": "ବାକ୍ୟ ଖୋଜନ୍ତୁ...",
+  "searchWordHint": "ଶବ୍ଦ ଖୋଜନ୍ତୁ...",
+  "sectionSentence": "ବାକ୍ୟ ବିଭାଗ",
+  "sectionSentences": "ବାକ୍ୟ",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "ଶବ୍ଦ ବିଭାଗ",
+  "sectionWords": "ଶବ୍ଦ",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "ପୂର୍ବରୁ ଥିବା ନାମ ବାଛନ୍ତୁ",
+  "selectMaterialPrompt": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ଚୟନ କରନ୍ତୁ",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ସଂଗ୍ରହ ଚୟନ କରନ୍ତୁ",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "ବାକ୍ୟର ଅଂଶ ଚୟନ କରନ୍ତୁ",
+  "selectParticipants": "ଅଂଶଗ୍ରହଣକାରୀଙ୍କୁ ଚୟନ କରନ୍ତୁ",
+  "selectSentenceType": "ବାକ୍ୟ ପ୍ରକାର ଚୟନ କରନ୍ତୁ",
+  "selectStudyMaterial": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ଚୟନ କରନ୍ତୁ",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI ଚାଟିଂ",
-  "tutorialAiChatDesc": "AI ପର୍ସୋନା ସହିତ ବାସ୍ତବିକ କଥାବାର୍ତ୍ତା ଅଭ୍ୟାସ କରନ୍ତୁ।",
-  "tutorialM2SelectTitle": "ସାମଗ୍ରୀ ଚୟନ",
-  "tutorialM2SelectDesc": "ଅଧ୍ୟୟନ କରିବାକୁ ଉପର ଆପ୍ ବାର୍ ରେ ଥିବା ଉପାଦାନ ସଂଗ୍ରହ ଆଇକନ୍ (📚) କୁ ଦବାଇ ଏକ ଉପାଦାନ ଚୟନ କରନ୍ତୁ।",
-  "tutorialM2ListTitle": "ଅଧ୍ୟୟନ ତାଲିକା",
-  "tutorialM2ListDesc": "ଆପଣ ଏହି କାର୍ଡକୁ ଡିଲିଟ୍ କରିବାକୁ ଏହାକୁ ଦୀର୍ଘ ସମୟ ପର୍ଯ୍ୟନ୍ତ ଦବାଇପାରିବେ (ଲମ୍ବା କ୍ଲିକ୍)। ସେଭ୍ ହୋଇଥିବା ବାକ୍ୟ ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ଓଲଟାନ୍ତୁ।",
-  "tutorialM3SelectTitle": "ସାମଗ୍ରୀ ଚୟନ",
-  "tutorialM3SelectDesc": "ଅଭ୍ୟାସ କରିବାକୁ ଉପର ଆପ୍ ବାର୍ ରେ ଥିବା ଉପାଦାନ ସଂଗ୍ରହ ଆଇକନ୍ (📚) କୁ ଦବାଇ ଏକ ଉପାଦାନ ଚୟନ କରନ୍ତୁ।",
-  "tutorialM3IntervalTitle": "ବ୍ୟବଧାନ ସେଟିଂ",
-  "tutorialM3IntervalDesc": "ବାକ୍ୟ ମଧ୍ୟରେ ଅପେକ୍ଷା ସମୟ ସମାୟୋଜନ କରନ୍ତୁ।",
-  "tutorialM3StartTitle": "ଅଭ୍ୟାସ ଆରମ୍ଭ କରନ୍ତୁ",
-  "tutorialM3StartDesc": "ମୂଳ ବକ୍ତାଙ୍କ ଭଏସ୍ ଶୁଣିବାକୁ ଏବଂ ଅନୁସରଣ କରିବାକୁ ପ୍ଲେ ବଟନ୍ ଦବାନ୍ତୁ।",
+  "sentence": "ବାକ୍ୟ",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "ସାଇନ୍ ଅପ୍",
+  "similarTextFound": "ସମାନ ଟେକ୍ସଟ୍ ମିଳିଲା",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "ଏଡ଼ାଇ ଦିଅନ୍ତୁ",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "ଉତ୍ସ:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "ମୂଳ ଭାଷା",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "ମୋ ଭାଷା (ଉତ୍ସ)",
+  "speakNow": "ବର୍ତ୍ତମାନ କୁହନ୍ତୁ!",
+  "speaker": "ବକ୍ତା",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "ବକ୍ତା ଚୟନ କରନ୍ତୁ",
+  "speakingPractice": "କହିବା ଅଭ୍ୟାସ",
+  "startChat": "ଚାଟିଙ୍ଗ୍ ଆରମ୍ଭ କରନ୍ତୁ",
+  "startPractice": "ଅଭ୍ୟାସ ଆରମ୍ଭ କରନ୍ତୁ",
+  "startTutorial": "ଟ୍ୟୁଟୋରିଆଲ୍ ଆରମ୍ଭ କରନ୍ତୁ",
   "startWarning": "ଚେତାବନୀ",
-  "noVoiceDetected": "କୌଣସି ସ୍ୱର ଚିହ୍ନଟ ହୋଇନାହିଁ",
-  "tooltipSearch": "ସର୍ଚ୍ଚ",
-  "tooltipStudyReview": "ଅଧ୍ୟୟନ+ପୁନର୍ବିଚାର",
-  "tooltipSpeaking": "କହିବା",
+  "startsWith": "ଅକ୍ଷରରୁ ଆରମ୍ଭ",
+  "statusCheckEmail": "ଇମେଲ ଯାଞ୍ଚ କରି ସତ୍ୟାପନ ସମାପ୍ତ କରନ୍ତୁ।",
+  "statusDownloading": "ଡାଉନଲୋଡ୍ ହେଉଛି: {name}...",
+  "statusImportFailed": "ଇମ୍ପୋର୍ଟ ବିଫଳ ହେଲା: {error}",
+  "statusImportSuccess": "{name} ଇମ୍ପୋର୍ଟ ସଫଳ ହେଲା",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "ଲଗଇନ୍ ବାତିଲ୍ ହେଲା।",
+  "statusLoginFailed": "ଲଗଇନ୍ ବିଫଳ ହେଲା: {error}",
+  "statusLoginSuccess": "ଲଗଇନ୍ ସଫଳ ହେଲା।",
+  "statusLogoutSuccess": "ଲଗଆଉଟ୍ ହେଲା।",
+  "statusSignUpFailed": "ସାଇନ୍ ଅପ୍ ବିଫଳ ହେଲା: {error}",
+  "statusSigningUp": "ସାଇନ୍ ଅପ୍ ହେଉଛି...",
+  "stopPractice": "ଅଭ୍ୟାସ ବନ୍ଦ କରନ୍ତୁ",
+  "studyComplete": "ଅଧ୍ୟୟନ ସମାପ୍ତ",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "ଅଧ୍ୟୟନ ରେକର୍ଡ ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "ଆନୁଷ୍ଠାନିକ",
+  "styleInformal": "ଅଣଆନୁଷ୍ଠାନିକ",
+  "stylePolite": "ଭଦ୍ର",
+  "styleSlang": "ସ୍ଲାଙ୍ଗ/ଅଶ୍ଳୀଳ",
+  "subject": "ବିଷୟ:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "ଭାଷା ବଦଳାନ୍ତୁ",
+  "switchToAi": "AI ମୋଡ୍ କୁ ବଦଳାନ୍ତୁ",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "ପାର୍ଟନର୍ ମୋଡ୍ କୁ ବଦଳାନ୍ତୁ",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "ଡାଟା ସିଙ୍କ୍ ହେଉଛି...",
+  "tabConversation": "ବାର୍ତ୍ତାଳାପ",
+  "tabReview": "ପୁନର୍ବିଚାର ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "ବାକ୍ୟ",
+  "tabSpeaking": "କହିବା",
+  "tabStudyMaterial": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "ଶବ୍ଦ",
+  "tagFormal": "ସମ୍ମାନଜନକ",
+  "tagSelection": "ଟ୍ୟାଗ୍ ଚୟନ",
+  "targetLanguage": "ଲକ୍ଷ୍ୟ ଭାଷା",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "ଲକ୍ଷ୍ୟ ଭାଷା ଫିଲ୍ଟର୍:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "ଶିକ୍ଷଣ ଭାଷା (ଲକ୍ଷ୍ୟ)",
+  "thinkingTimeDesc": "ସଠିକ୍ ଉତ୍ତର ପ୍ରକାଶିତ ହେବା ପୂର୍ବରୁ ଚିନ୍ତା କରିବାକୁ ଏହା ଏକ ସମୟ।",
+  "thinkingTimeInterval": "ପ୍ଲେବ୍ୟାକ୍ ବିଳମ୍ବ",
+  "timeUp": "ସମୟ ସରୀଗଲା!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "ଶୀର୍ଷକ ଟ୍ୟାଗ୍ (ସଂଗ୍ରହାଳୟ)",
   "tooltipDecrease": "ହ୍ରାସ",
   "tooltipIncrease": "ବୃଦ୍ଧି",
-  "languageSettings": "ଭାଷା ସେଟିଂ",
-  "tutorialM2DropdownDesc": "ଆପଣ ଉପର ମେନୁ ମାଧ୍ୟମରେ ଅଧ୍ୟୟନ କରିବାକୁ ଥିବା ସାମଗ୍ରୀ ଚୟନ କରିପାରିବେ।",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "ଆପଣଙ୍କ ଡିଭାଇସର ଫୋଲ୍ଡରରୁ JSON ଫାଇଲ୍ ଆମଦାନୀ କରନ୍ତୁ।",
-  "tutorialLangSettingsTitle": "ଭାଷା ସେଟିଂ",
-  "tutorialLangSettingsDesc": "ଅନୁବାଦ କରିବାକୁ ମୂଳ ଭାଷା ଏବଂ ଲକ୍ଷ୍ୟ ଭାଷା ସେଟ୍ କରନ୍ତୁ।",
-  "copy": "କପି",
-  "copiedToClipboard": "କ୍ଲିପବୋର୍ଡରେ କପି କରାଯାଇଛି!",
-  "tutorialContextTitle": "ପରିସ୍ଥିତି/ପ୍ରସଙ୍ଗ ଟ୍ୟାଗ୍",
-  "tutorialContextDesc": "ଯଦି ଏହା ସମାନ ବାକ୍ୟ, ତେବେ ମଧ୍ୟ ଆପଣ ଏହାକୁ ପୃଥକ ଭାବରେ ସେଭ୍ କରିପାରିବେ ଯଦି ଆପଣ ଏକ ପରିସ୍ଥିତି (ଉଦାହରଣ ସ୍ୱରୂପ: ସକାଳ, ସନ୍ଧ୍ୟା) ଲେଖନ୍ତି |",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "ସଠିକ୍ ଉତ୍ତର ପ୍ରକାଶିତ ହେବା ପୂର୍ବରୁ ଚିନ୍ତା କରିବାକୁ ଏହା ଏକ ସମୟ।",
-  "autoPlay": "ସ୍ୱୟଂଚାଳିତ ପ୍ଲେ",
-  "timeUp": "ସମୟ ସରୀଗଲା!",
-  "gameModeTitle": "ଖେଳ ମୋଡ୍",
-  "gameModeDesc": "ଅଭ୍ୟାସ କରିବାକୁ ଏକ ଖେଳ ମୋଡ୍ ଚୟନ କରନ୍ତୁ",
-  "wordDefenseTitle": "ଶବ୍ଦ ପ୍ରତିରକ୍ଷା",
-  "wordDefenseDesc": "ଶତ୍ରୁ ପହଞ୍ଚିବା ପୂର୍ବରୁ ଏକ ଶବ୍ଦ କହି ବେସ୍ ରକ୍ଷା କରନ୍ତୁ।",
-  "dialogueQuestTitle": "ସଂଳାପ ଅନୁସନ୍ଧାନ",
-  "dialogueQuestDesc": "ପରିସ୍ଥିତି ଡ୍ରାମା ମାଧ୍ୟମରେ କଥାବାର୍ତ୍ତା ଅଭ୍ୟାସ କରନ୍ତୁ। ଏକ ଉପଯୁକ୍ତ ଉତ୍ତର ଚୟନ କରନ୍ତୁ ଏବଂ କୁହନ୍ତୁ।",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "ପ୍ରକାର:",
-  "labelWord": "ଶବ୍ଦ",
-  "labelSentence": "ବାକ୍ୟ",
-  "contextTagLabel": "ପ୍ରସଙ୍ଗ/ପରିସ୍ଥିତି (ବୈକଳ୍ପିକ) - ଉଦାହରଣ ସ୍ୱରୂପ: ଶୁଭ ସକାଳ, ସମ୍ମାନଜନକ",
-  "contextTagHint": "ପରେ ପୃଥକ କରିବା ସହଜ କରିବାକୁ ପରିସ୍ଥିତି ଲେଖନ୍ତୁ",
-  "usageLimitTitle": "ସୀମା ପହଞ୍ଚିଗଲା",
-  "translationLimitExceeded": "ଅନୁବାଦ ସୀମା ଅତିକ୍ରମ କରାଯାଇଛି",
-  "translationLimitMessage": "ଆପଣ ସମସ୍ତ ଦୈନିକ ମାଗଣା ଅନୁବାଦ (5 ଥର) ବ୍ୟବହାର କରିଛନ୍ତି।\\n\\nଆପଣ ଏକ ବିଜ୍ଞାପନ ଦେଖି ତୁରନ୍ତ 5 ଥର ରିଚାର୍ଜ କରିବାକୁ ଚାହାଁନ୍ତି କି?",
-  "watchAdAndRefill": "ବିଜ୍ଞାପନ ଦେଖି ରିଚାର୍ଜ କରନ୍ତୁ (+5 ଥର)",
-  "translationRefilled": "ଅନୁବାଦ ସଂଖ୍ୟା 5 ଥର ରିଚାର୍ଜ ହୋଇଛି!",
-  "adLoading": "ବିଜ୍ଞାପନ ଲୋଡ୍ ହେଉଛି। ଦୟାକରି ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
-  "reviewAll": "ସମସ୍ତ ପୁନର୍ବିଚାର",
+  "tooltipSearch": "ସର୍ଚ୍ଚ",
+  "tooltipSpeaking": "କହିବା",
+  "tooltipStudyReview": "ଅଧ୍ୟୟନ+ପୁନର୍ବିଚାର",
   "totalRecords": "ମୋଟ {count}ଟି ରେକର୍ଡ (ସମସ୍ତ ଦେଖନ୍ତୁ)",
   "@totalRecords": {
     "description": "Total records count",
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "ସମସ୍ତ",
-  "practiceWordsOnly": "କେବଳ ଶବ୍ଦ ଅଭ୍ୟାସ କରନ୍ତୁ",
-  "resetPracticeHistory": "ଅଭ୍ୟାସ ଇତିହାସ ରିସେଟ୍ କରନ୍ତୁ",
-  "retry": "ପୁନଃ ଚେଷ୍ଟା କରିବେ କି?",
-  "noStudyMaterial": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ନାହିଁ।",
-  "gameOver": "ଖେଳ ଶେଷ",
-  "playAgain": "ପୁନର୍ବାର ଖେଳନ୍ତୁ",
-  "speakNow": "ବର୍ତ୍ତମାନ କୁହନ୍ତୁ!",
-  "scoreLabel": "ସ୍କୋର୍",
-  "viewOnlineGuide": "ଅନଲାଇନ୍ ଗାଇଡ୍ ଦେଖନ୍ତୁ",
-  "getMaterials": "ସାମଗ୍ରୀ ପାଆନ୍ତୁ",
-  "swapLanguages": "ଭାଷା ବଦଳାନ୍ତୁ",
-  "next": "ପରବର୍ତ୍ତୀ",
-  "wordModeLabel": "ଶବ୍ଦ ମୋଡ୍",
-  "accuracy": "ସଠିକତା",
-  "basicDefault": "ମୌଳିକ",
-  "basic": "ମୌଳିକ",
-  "tutorialM3WordsTitle": "ଶବ୍ଦ ଅଭ୍ୟାସ",
-  "tutorialM3WordsDesc": "ଯଦି ଆପଣ ଏହାକୁ ଯାଞ୍ଚ କରନ୍ତି, ତେବେ କେବଳ ସେଭ୍ ହୋଇଥିବା ଶବ୍ଦ ଅଭ୍ୟାସ କରନ୍ତୁ।",
-  "enterTextHint": "ଅନୁବାଦ କରିବାକୁ ଟେକ୍ସଟ୍ ଇନପୁଟ୍ କରନ୍ତୁ",
-  "micButtonTooltip": "ଭଏସ୍ ଚିହ୍ନଟ ଆରମ୍ଭ କରନ୍ତୁ",
-  "menuHelp": "ସହାୟତା",
-  "menuWebDownload": "ହୋମପେଜ୍",
-  "menuDeviceImport": "ଡିଭାଇସରୁ ସାମଗ୍ରୀ ଆମଦାନୀ କରନ୍ତୁ",
-  "menuSettings": "ଭାଷା ସେଟିଂ",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "ଅନୁବାଦ",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "ମୌଳିକ ଶବ୍ଦ ଷ୍ଟୋରେଜ୍",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "ଅନୁବାଦ କରୁଛି...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "ମୌଳିକ ବାକ୍ୟ ଷ୍ଟୋରେଜ୍",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "ଅନୁବାଦ",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ସଂଗ୍ରହ ଚୟନ କରନ୍ତୁ",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "ଅନୁବାଦ ସମାପ୍ତ (ସେଭ୍ କରିବା ଆବଶ୍ୟକ)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "ଶବ୍ଦ",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "ବାକ୍ୟ",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "ଭାଷା ସେଟିଂ",
-  "sourceLanguageLabel": "ମୋ ଭାଷା (ଉତ୍ସ)",
-  "targetLanguageLabel": "ଶିକ୍ଷଣ ଭାଷା (ଲକ୍ଷ୍ୟ)",
-  "mode3Start": "ଆରମ୍ଭ",
-  "mode3Stop": "ବନ୍ଦ",
-  "mode3Next": "ପରବର୍ତ୍ତୀ",
-  "mode3TryAgain": "ପୁନଃ ଚେଷ୍ଟା କରନ୍ତୁ",
-  "tutorialM3ResetTitle": "ରେକର୍ଡ ରିସେଟ୍ କରନ୍ତୁ",
-  "tutorialSwapDesc": "ମୋ ଭାଷା ଏବଂ ଶିକ୍ଷଣ ଭାଷାକୁ ପରସ୍ପର ସହିତ ବଦଳାନ୍ତୁ।",
-  "recognizedText": "ଚିହ୍ନଟ ହୋଇଥିବା ଉଚ୍ଚାରଣ:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "ପ୍ରଥମରୁ ପୁନର୍ବାର ଆରମ୍ଭ କରିବାକୁ ପ୍ରଗତି ଏବଂ ସଠିକତା ସ୍କୋର୍ ରିସେଟ୍ କରନ୍ତୁ।",
-  "menuSelectMaterialSet": "ଅଧ୍ୟୟନ ସାମଗ୍ରୀ ସଂଗ୍ରହ ଚୟନ କରନ୍ତୁ",
-  "sectionWord": "ଶବ୍ଦ ବିଭାଗ",
-  "sectionSentence": "ବାକ୍ୟ ବିଭାଗ",
-  "tabWord": "ଶବ୍ଦ",
-  "tabSentence": "ବାକ୍ୟ",
-  "errorProfanity": "ଏଥିରେ ଅଶ୍ଳୀଳ ଭାଷା ଅନ୍ତର୍ଭୁକ୍ତ ଥିବାରୁ ଏହାକୁ ଅନୁବାଦ କରାଯାଇପାରିବ ନାହିଁ।",
-  "errorHateSpeech": "ଏଥିରେ ଘୃଣାତ୍ମକ ଭାଷଣ ଅନ୍ତର୍ଭୁକ୍ତ ଥିବାରୁ ଏହାକୁ ଅନୁବାଦ କରାଯାଇପାରିବ ନାହିଁ।",
-  "errorSexualContent": "ଏଥିରେ ଯୌନ ସମ୍ବନ୍ଧୀୟ ବିଷୟବସ୍ତୁ ଅନ୍ତର୍ଭୁକ୍ତ ଥିବାରୁ ଏହାକୁ ଅନୁବାଦ କରାଯାଇପାରିବ ନାହିଁ।",
-  "errorOtherSafety": "AI ସୁରକ୍ଷା ନୀତି ଦ୍ୱାରା ଅନୁବାଦ ପ୍ରତ୍ୟାଖ୍ୟାନ କରାଯାଇଛି।",
-  "clearAll": "ସବୁ କ୍ଲିଅର୍ କରନ୍ତୁ",
-  "disambiguationTitle": "ଅର୍ଥ ଚୟନ",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "ଆପଣ କେଉଁ ଅର୍ଥରେ ଅନୁବାଦ କରିବାକୁ ଚାହାଁନ୍ତି?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "ଏଡ଼ାଇ ଦିଅନ୍ତୁ",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "ଇନପୁଟ୍",
-  "reviewModeTitle": "ପୁନର୍ବିଚାର",
-  "practiceModeTitle": "ଅଭ୍ୟାସ",
-  "chatHistoryTitle": "କଥାବାର୍ତ୍ତା ଇତିହାସ",
-  "chatNew": "ନୂତନ କଥାବାର୍ତ୍ତା",
-  "chatNewChat": "ନୂତନ କଥାବାର୍ତ୍ତା",
-  "chatChoosePersona": "ପର୍ସୋନା ଚୟନ କରନ୍ତୁ",
-  "chatTypeHint": "ଏକ ବାର୍ତ୍ତା ଟାଇପ୍ କରନ୍ତୁ...",
-  "chatFailed": "ଚାଟିଂ ବିଫଳ: {error}",
-  "@chatFailed": {
+  "translationFailed": "ଅନୁବାଦ ବିଫଳ: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "ବର୍ତ୍ତମାନ ପର୍ଯ୍ୟନ୍ତ କୌଣସି କଥାବାର୍ତ୍ତା ନାହିଁ",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "ଅଭ୍ୟାସ କରିବାକୁ ଏକ ନୂତନ କଥାବାର୍ତ୍ତା ଆରମ୍ଭ କରିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ!",
-  "chatFromConversation": "କଥାବାର୍ତ୍ତାରୁ ଉଦ୍ଧୃତ ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "ଅନୁବାଦ ସୀମା ଅତିକ୍ରମ କରାଯାଇଛି",
+  "translationLimitMessage": "ଆପଣ ସମସ୍ତ ଦୈନିକ ମାଗଣା ଅନୁବାଦ (5 ଥର) ବ୍ୟବହାର କରିଛନ୍ତି।\\n\\nଆପଣ ଏକ ବିଜ୍ଞାପନ ଦେଖି ତୁରନ୍ତ 5 ଥର ରିଚାର୍ଜ କରିବାକୁ ଚାହାଁନ୍ତି କି?",
+  "translationLoaded": "ସେଭ୍ ହୋଇଥିବା ଅନୁବାଦ ଲୋଡ୍ ହୋଇଛି",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "ଇଂରାଜୀ ଶିକ୍ଷକ",
-  "personaGuide": "ଭ୍ରମଣ ଗାଇଡ୍",
-  "personaFriend": "ସ୍ଥାନୀୟ ବନ୍ଧୁ",
-  "chatUntitled": "ଶୀର୍ଷକହୀନ କଥାବାର୍ତ୍ତା",
-  "chatAiChat": "ଚାଟିଂ",
-  "mode1SelectedMaterial": "ବର୍ତ୍ତମାନ ଚୟନିତ ଉପାଦାନ ସଂଗ୍ରହ: {name}",
-  "basicWordRepository": "ମୌଳିକ ଶବ୍ଦ ଷ୍ଟୋରେଜ୍",
-  "basicSentenceRepository": "ମୌଳିକ ବାକ୍ୟ ଷ୍ଟୋରେଜ୍",
-  "chatEndTitle": "କଥାବାର୍ତ୍ତା ଶେଷ ଏବଂ ସେଭ୍ କରନ୍ତୁ",
-  "chatEndMessage": "ଆପଣ କଥାବାର୍ତ୍ତା ଶେଷ କରିବାକୁ ଚାହାଁନ୍ତି କି?",
-  "chatSaveAndExit": "ସେଭ୍ କରନ୍ତୁ ଏବଂ ବାହାରକୁ ଯାଆନ୍ତୁ",
-  "errorSelectCategory": "ପ୍ରଥମେ ଏକ ଶବ୍ଦ କିମ୍ବା ବାକ୍ୟ ଚୟନ କରନ୍ତୁ!",
-  "tutorialM1ToggleTitle": "ଶବ୍ଦ/ବାକ୍ୟ ମୋଡ୍",
+  "translationRefilled": "ଅନୁବାଦ ସଂଖ୍ୟା 5 ଥର ରିଚାର୍ଜ ହୋଇଛି!",
+  "translationResultHint": "ଅନୁବାଦ ଫଳାଫଳ - ସଂଶୋଧନ କରାଯାଇପାରିବ",
+  "tryAgain": "ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ",
+  "tutorialAiChatDesc": "AI ପର୍ସୋନା ସହିତ ବାସ୍ତବିକ କଥାବାର୍ତ୍ତା ଅଭ୍ୟାସ କରନ୍ତୁ।",
+  "tutorialAiChatTitle": "AI ଚାଟିଂ",
+  "tutorialContextDesc": "ଯଦି ଏହା ସମାନ ବାକ୍ୟ, ତେବେ ମଧ୍ୟ ଆପଣ ଏହାକୁ ପୃଥକ ଭାବରେ ସେଭ୍ କରିପାରିବେ ଯଦି ଆପଣ ଏକ ପରିସ୍ଥିତି (ଉଦାହରଣ ସ୍ୱରୂପ: ସକାଳ, ସନ୍ଧ୍ୟା) ଲେଖନ୍ତି |",
+  "tutorialContextTitle": "ପରିସ୍ଥିତି/ପ୍ରସଙ୍ଗ ଟ୍ୟାଗ୍",
+  "tutorialLangSettingsDesc": "ଅନୁବାଦ କରିବାକୁ ମୂଳ ଭାଷା ଏବଂ ଲକ୍ଷ୍ୟ ଭାଷା ସେଟ୍ କରନ୍ତୁ।",
+  "tutorialLangSettingsTitle": "ଭାଷା ସେଟିଂ",
   "tutorialM1ToggleDesc": "ଏଠାରୁ ଶବ୍ଦ ଏବଂ ବାକ୍ୟ ମୋଡ୍ ମଧ୍ୟରେ ବଦଳ କରନ୍ତୁ।",
-  "metadataDialogTitle": "ବିସ୍ତୃତ ବର୍ଗୀକରଣ",
-  "tagFormal": "ସମ୍ମାନଜନକ",
-  "selectPOS": "ବାକ୍ୟର ଅଂଶ ଚୟନ କରନ୍ତୁ",
-  "selectSentenceType": "ବାକ୍ୟ ପ୍ରକାର ଚୟନ କରନ୍ତୁ",
-  "metadataRootWord": "ମୂଳ ଶବ୍ଦ",
-  "posNoun": "ବିଶେଷ୍ୟ",
-  "posVerb": "କ୍ରିୟା",
-  "posAdjective": "ବିଶେଷଣ",
-  "posAdverb": "କ୍ରିୟା ବିଶେଷଣ",
-  "posPronoun": "ସର୍ବନାମ",
-  "posPreposition": "ଅବ୍ୟୟ",
-  "posConjunction": "ସଂଯୋଜକ",
-  "posInterjection": "ଆଶ୍ଚର୍ଯ୍ୟବାଚକ",
-  "typeStatement": "ବିବୃତି",
-  "typeQuestion": "ପ୍ରଶ୍ନ",
+  "tutorialM1ToggleTitle": "ଶବ୍ଦ/ବାକ୍ୟ ମୋଡ୍",
+  "tutorialM2DropdownDesc": "ଆପଣ ଉପର ମେନୁ ମାଧ୍ୟମରେ ଅଧ୍ୟୟନ କରିବାକୁ ଥିବା ସାମଗ୍ରୀ ଚୟନ କରିପାରିବେ।",
+  "tutorialM2ImportDesc": "ଆପଣଙ୍କ ଡିଭାଇସର ଫୋଲ୍ଡରରୁ JSON ଫାଇଲ୍ ଆମଦାନୀ କରନ୍ତୁ।",
+  "tutorialM2ListDesc": "ଆପଣ ଏହି କାର୍ଡକୁ ଡିଲିଟ୍ କରିବାକୁ ଏହାକୁ ଦୀର୍ଘ ସମୟ ପର୍ଯ୍ୟନ୍ତ ଦବାଇପାରିବେ (ଲମ୍ବା କ୍ଲିକ୍)। ସେଭ୍ ହୋଇଥିବା ବାକ୍ୟ ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ଓଲଟାନ୍ତୁ।",
+  "tutorialM2ListTitle": "ଅଧ୍ୟୟନ ତାଲିକା",
+  "tutorialM2SearchDesc": "ସଂରକ୍ଷିତ ଶବ୍ଦ ଏବଂ ବାକ୍ୟ ଖୋଜି ଶୀଘ୍ର ପାଆନ୍ତୁ।",
+  "tutorialM2SelectDesc": "ଅଧ୍ୟୟନ କରିବାକୁ ଉପର ଆପ୍ ବାର୍ ରେ ଥିବା ଉପାଦାନ ସଂଗ୍ରହ ଆଇକନ୍ (📚) କୁ ଦବାଇ ଏକ ଉପାଦାନ ଚୟନ କରନ୍ତୁ।",
+  "tutorialM2SelectTitle": "ସାମଗ୍ରୀ ଚୟନ",
+  "tutorialM3IntervalDesc": "ବାକ୍ୟ ମଧ୍ୟରେ ଅପେକ୍ଷା ସମୟ ସମାୟୋଜନ କରନ୍ତୁ।",
+  "tutorialM3IntervalTitle": "ବ୍ୟବଧାନ ସେଟିଂ",
+  "tutorialM3ResetDesc": "ପ୍ରଥମରୁ ପୁନର୍ବାର ଆରମ୍ଭ କରିବାକୁ ପ୍ରଗତି ଏବଂ ସଠିକତା ସ୍କୋର୍ ରିସେଟ୍ କରନ୍ତୁ।",
+  "tutorialM3ResetTitle": "ରେକର୍ଡ ରିସେଟ୍ କରନ୍ତୁ",
+  "tutorialM3SelectDesc": "ଅଭ୍ୟାସ କରିବାକୁ ଉପର ଆପ୍ ବାର୍ ରେ ଥିବା ଉପାଦାନ ସଂଗ୍ରହ ଆଇକନ୍ (📚) କୁ ଦବାଇ ଏକ ଉପାଦାନ ଚୟନ କରନ୍ତୁ।",
+  "tutorialM3SelectTitle": "ସାମଗ୍ରୀ ଚୟନ",
+  "tutorialM3StartDesc": "ମୂଳ ବକ୍ତାଙ୍କ ଭଏସ୍ ଶୁଣିବାକୁ ଏବଂ ଅନୁସରଣ କରିବାକୁ ପ୍ଲେ ବଟନ୍ ଦବାନ୍ତୁ।",
+  "tutorialM3StartTitle": "ଅଭ୍ୟାସ ଆରମ୍ଭ କରନ୍ତୁ",
+  "tutorialM3WordsDesc": "ଯଦି ଆପଣ ଏହାକୁ ଯାଞ୍ଚ କରନ୍ତି, ତେବେ କେବଳ ସେଭ୍ ହୋଇଥିବା ଶବ୍ଦ ଅଭ୍ୟାସ କରନ୍ତୁ।",
+  "tutorialM3WordsTitle": "ଶବ୍ଦ ଅଭ୍ୟାସ",
+  "tutorialMicDesc": "ଆପଣ ମାଇକ୍ରୋଫୋନ୍ ବଟନ୍ ଦବାଇ ଭଏସ୍ ସହିତ ଇନପୁଟ୍ କରିପାରିବେ।",
+  "tutorialMicTitle": "ଭଏସ୍ ଇନପୁଟ୍",
+  "tutorialSaveDesc": "ଅଧ୍ୟୟନ ରେକର୍ଡରେ ଅନୁବାଦ ହୋଇଥିବା ଫଳାଫଳ ସେଭ୍ କରନ୍ତୁ।",
+  "tutorialSaveTitle": "ସେଭ୍ କରନ୍ତୁ",
+  "tutorialSwapDesc": "ମୋ ଭାଷା ଏବଂ ଶିକ୍ଷଣ ଭାଷାକୁ ପରସ୍ପର ସହିତ ବଦଳାନ୍ତୁ।",
+  "tutorialTabDesc": "ଆପଣ ଏଠାରୁ ଆପଣଙ୍କର ଇଚ୍ଛିତ ଅଧ୍ୟୟନ ମୋଡ୍ ଚୟନ କରିପାରିବେ।",
+  "tutorialTapToContinue": "ଚାଲୁ ରଖିବା ପାଇଁ ସ୍କ୍ରିନ୍ ଟ୍ୟାପ୍ କରନ୍ତୁ",
+  "tutorialTransDesc": "ଇନପୁଟ୍ ହୋଇଥିବା ଟେକ୍ସଟ୍ ଅନୁବାଦ କରନ୍ତୁ।",
+  "tutorialTransTitle": "ଅନୁବାଦ କରନ୍ତୁ",
   "typeExclamation": "ଉଦ୍ଗାର",
   "typeImperative": "ଆଦେଶ",
-  "labelNote": "ଟିପ୍ପଣୀ",
-  "labelShowMemorized": "ସମାପ୍ତ",
-  "titleTagSelection": "ଶୀର୍ଷକ ଟ୍ୟାଗ୍ (ସଂଗ୍ରହାଳୟ)",
-  "generalTags": "ସାଧାରଣ ଟ୍ୟାଗ୍",
-  "tagSelection": "ଟ୍ୟାଗ୍ ଚୟନ",
-  "metadataFormType": "ବ୍ୟାକରଣ ଫର୍ମ",
-  "formInfinitive": "ଅନନ୍ତ/ବର୍ତ୍ତମାନ",
-  "formPast": "ଅତୀତ",
-  "formPastParticiple": "ଅତୀତ କୃଦନ୍ତ",
-  "formPresentParticiple": "ବର୍ତ୍ତମାନ କୃଦନ୍ତ (ing)",
-  "formPresent": "ବର୍ତ୍ତମାନ",
-  "formThirdPersonSingular": "ତୃତୀୟ ବ୍ୟକ୍ତି ଏକବଚନ",
-  "formPlural": "ବହୁବଚନ",
-  "formSingular": "ଏକବଚନ",
-  "caseSubject": "କର୍ତ୍ତୃ କାରକ",
-  "caseObject": "କର୍ମ କାରକ",
-  "casePossessive": "ଅଧିକାର ସୂଚକ",
-  "casePossessivePronoun": "ଅଧିକାର ସୂଚକ ସର୍ବନାମ",
-  "caseReflexive": "ସ୍ୱୟଂବାଚୀ",
-  "formPositive": "ମୂଳ ସ୍ତର",
-  "formComparative": "ତୁଳନାତ୍ମକ ସ୍ତର",
-  "formSuperlative": "ସର୍ବୋତ୍କୃଷ୍ଟ ସ୍ତର",
-  "searchConditions": "ସନ୍ଧାନ ସର୍ତ୍ତାବଳୀ",
-  "recentNItems": "ସାମ୍ପ୍ରତିକ ସୃଷ୍ଟି {count} ଆଇଟମ୍ ଦେଖାନ୍ତୁ",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "typeQuestion": "ପ୍ରଶ୍ନ",
+  "typeStatement": "ବିବୃତି",
+  "usageLimitTitle": "ସୀମା ପହଞ୍ଚିଗଲା",
+  "useExistingText": "ବର୍ତ୍ତମାନର ଟେକ୍ସଟ୍ ବ୍ୟବହାର କରନ୍ତୁ",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "ଅକ୍ଷରରୁ ଆରମ୍ଭ",
-  "reset": "ପୁନଃ ସେଟ୍",
-  "participantRename": "ଅଂଶଗ୍ରହଣକାରୀଙ୍କ ନାମ ପରିବର୍ତ୍ତନ କରନ୍ତୁ",
-  "labelName": "ନାମ",
-  "gender": "ଲିଙ୍ଗ",
-  "language": "ଭାଷା",
-  "male": "ପୁରୁଷ",
-  "female": "ମହିଳା",
-  "neutral": "ଉଦାସୀନ",
-  "chatAllConversations": "ସମସ୍ତ ବାର୍ତ୍ତାଳାପ",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "ଆପଣ ଏହି ବାର୍ତ୍ତାଳାପକୁ ଡିଲିଟ୍ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?\nଡିଲିଟ୍ ହୋଇଥିବା ବାର୍ତ୍ତାଳାପକୁ ପୁନରୁଦ୍ଧାର କରାଯାଇପାରିବ ନାହିଁ।",
-  "notSelected": "- ଚୟନ କରାଯାଇ ନାହିଁ -",
-  "myWordbook": "ମୋ ଶବ୍ଦବହି",
-  "mySentenceCollection": "ମୋ ବାକ୍ୟ ସଂଗ୍ରହ",
-  "newSubjectName": "ନୂଆ ବିଷୟ ନାମ",
-  "enterNewSubjectName": "ନୂଆ ନାମ ଦିଅନ୍ତୁ",
-  "addNewSubject": "ନୂଆ ନାମ ଯୋଡନ୍ତୁ",
-  "selectExistingSubject": "ପୂର୍ବରୁ ଥିବା ନାମ ବାଛନ୍ତୁ",
-  "addTagHint": "ଟ୍ୟାଗ୍ ଯୋଡନ୍ତୁ...",
-  "save": "ସଞ୍ଚୟ କରନ୍ତୁ",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "ଇମେଲ ଯାଞ୍ଚ କରି ସତ୍ୟାପନ ସମାପ୍ତ କରନ୍ତୁ।",
-  "emailAlreadyInUse": "ଏହି ଇମେଲ ପୂର୍ବରୁ ପଞ୍ଜୀକୃତ ହୋଇଛି। ଦୟାକରି ଲଗ୍ଇନ୍ କରନ୍ତୁ କିମ୍ବା ପାସୱାର୍ଡ ପୁନରୁଦ୍ଧାର ବ୍ୟବହାର କରନ୍ତୁ।"
+  "viewOnlineGuide": "ଅନଲାଇନ୍ ଗାଇଡ୍ ଦେଖନ୍ତୁ",
+  "voluntaryTranslations": "ସ୍ଵେଚ୍ଛାକୃତ ଅନୁବାଦ",
+  "watchAdAndRefill": "ବିଜ୍ଞାପନ ଦେଖି ରିଚାର୍ଜ କରନ୍ତୁ (+5 ଥର)",
+  "word": "ଶବ୍ଦ",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "ଶତ୍ରୁ ପହଞ୍ଚିବା ପୂର୍ବରୁ ଏକ ଶବ୍ଦ କହି ବେସ୍ ରକ୍ଷା କରନ୍ତୁ।",
+  "wordDefenseTitle": "ଶବ୍ଦ ପ୍ରତିରକ୍ଷା",
+  "wordModeLabel": "ଶବ୍ଦ ମୋଡ୍",
+  "yourPronunciation": "ତୁମର ଉଚ୍ଚାରଣ"
 }

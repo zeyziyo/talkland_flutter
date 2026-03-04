@@ -1,188 +1,105 @@
 {
   "@@locale": "de",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Mit Kakao fortfahren",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Hilfe & Anleitung",
-  "helpTabModes": "Modi",
-  "helpTabJson": "JSON Format",
-  "helpTabTour": "Tour",
-  "helpMode1Desc": "Stimme erkennen, in Zielsprache übersetzen und Ergebnis anhören.",
-  "helpMode1Details": "• Spracheinstellungen: Sprache ändern über das Übersetzungs-Symbol\n• Hilfe: Anleitung über das Hilfe-Symbol aufrufen\n• Spracheingabe: Mikrofon-Symbol tippen zum Starten/Stoppen\n• Texteingabe: Direkt tippen zum Übersetzen\n• Auto-Suche: Findet ähnliche vorhandene Sätze\n• Übersetzen: Button tippen für Sofortübersetzung\n• Anhören: Lautsprecher-Symbol für TTS (Original/Übersetzung)\n• Speichern: 'Daten speichern' fügt zum Verlauf hinzu\n• Leeren: Alle Eingaben zurücksetzen",
-  "helpMode2Desc": "Gespeicherte Sätze wiederholen mit Auto-Ausblenden und Wiederholungszähler.",
-  "helpMode2Details": "• Materialwahl: Set wählen oder 'Alles wiederholen'\n• Karte drehen: 'Anzeigen/Verbergen' nutzen\n• Anhören: TTS für Satz abspielen\n• Gelernt markieren: Häkchen (V) für erledigte Elemente\n• Löschen: Lange auf Karte drücken\n• Filter: Alle oder nach Material filtern",
-  "helpMode3Desc": "Übe deine Aussprache, indem du Sätze anhörst und nachsprichst (Shadowing).",
-  "helpMode3Details": "• Materialwahl: Lernpaket wählen\n• Intervall: [-] [+] Wartezeit anpassen (3s-60s)\n• Start/Stop: Sitzung steuern\n• Sprechen: Audio hören und nachsprechen\n• Feedback: Genauigkeit (0-100) mit Farbcode\n• Wiederholen: Retry-Button nutzen falls keine Stimme erkannt",
-  "helpModeChatDesc": "Übe echte Konversationen, indem du mit einer KI-Persona chattest.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "Zum Importieren von Lernmaterialien im Modus 3 JSON-Datei mit folgender Struktur erstellen:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "Der **Hervorhebungs-Kreis** führt Sie durch die Hauptfunktionen.\n(z. B. können Sie einen Eintrag löschen, indem Sie lange drücken, wenn der **Hervorhebungs-Kreis** darauf zeigt.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Standort",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Ich",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Genauigkeit",
+  "adLoading": "Werbung wird geladen. Bitte versuchen Sie es später noch einmal.",
+  "addNewSubject": "Neuen Titel hinzufügen",
+  "addParticipant": "Teilnehmer hinzufügen",
+  "addTagHint": "Tag hinzufügen...",
+  "alreadyHaveAccount": "Bereits ein Konto?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Wiederholen ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Automatische Wiedergabe",
+  "basic": "Einfach",
+  "basicDefault": "Standard",
+  "basicMaterialRepository": "Grundlegendes Satz-/Wort-Repository",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Lernmaterial ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Basis-Sätze",
+  "basicSentences": "Satz-Depot",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Wiederholung",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Suche",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Übersetzen",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Anhören",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Speichern",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Gespeichert",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Löschen",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Materialinfo",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Basis-Wortschatz",
+  "basicWords": "Wortschatz",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Abbrechen",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "OK",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Aktualisieren",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Lernprotokolle ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Akkusativ",
+  "casePossessive": "Genitiv",
+  "casePossessivePronoun": "Possessivpronomen",
+  "caseReflexive": "Reflexivpronomen",
+  "caseSubject": "Nominativ",
+  "chatAiChat": "Chatten",
+  "chatAllConversations": "Alle Konversationen",
+  "chatChoosePersona": "Persona wählen",
+  "chatEndMessage": "Möchten Sie den Chat beenden?",
+  "chatEndTitle": "Beenden & Speichern",
+  "chatFailed": "Chat fehlgeschlagen: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Zielsprache Filter:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Chatauszug ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Keine Lernprotokolle für die ausgewählte Sprache",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Verlauf",
+  "chatNew": "Neuer Chat",
+  "chatNewChat": "Neuer Chat",
+  "chatNoConversations": "Keine Gespräche",
+  "chatSaveAndExit": "Speichern & Beenden",
+  "chatStartNewPrompt": "Starte einen Chat zum Üben!",
+  "chatTypeHint": "Nachricht schreiben...",
+  "chatUntitled": "Unbenannter Chat",
+  "checking": "Prüfe...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Speichern Sie Übersetzungen im Suchmodus",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Umdrehen",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Verbergen",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Eintrag löschen",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "모두 지우기",
+  "confirm": "Bestätigen",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Möchten Sie diesen Eintrag wirklich löschen?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Eintrag erfolgreich gelöscht",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Möchten Sie diese Konversation wirklich löschen?\nGelöschte Konversationen können nicht wiederhergestellt werden.",
+  "confirmDeleteParticipant": "Möchten Sie diesen Teilnehmer wirklich löschen?",
+  "contextTagHint": "Geben Sie die Situation an, um sie später leichter zu unterscheiden",
+  "contextTagLabel": "Kontext/Situation (optional) - z.B. Morgengruß, Höflichkeitsform",
+  "copiedToClipboard": "In die Zwischenablage kopiert!",
+  "copy": "Kopieren",
+  "correctAnswer": "Richtige Antwort",
+  "createNew": "Neuen Eintrag erstellen",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Aktueller Standort",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Aktuell ausgewähltes Material:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Löschen",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Löschen fehlgeschlagen: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "JSON-Datei importieren",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Eintrag löschen",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Importiere...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Üben Sie Dialoge durch Rollenspiele. Wählen Sie die passende Antwort und sprechen Sie sie aus.",
+  "dialogueQuestTitle": "Dialog-Quest",
+  "disambiguationPrompt": "어떤 의미로 번역하시겠습니까?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "의미 선택",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Noch kein Konto?",
+  "editParticipant": "Teilnehmer bearbeiten",
+  "email": "E-Mail",
+  "emailAlreadyInUse": "Diese E-Mail-Adresse ist bereits registriert. Bitte melde dich an oder nutze die Passwortwiederherstellung.",
+  "enterNewSubjectName": "Neuen Titel eingeben",
+  "enterSentenceHint": "Gib einen Satz ein...",
+  "enterTextHint": "Geben Sie den zu übersetzenden Text ein",
+  "enterTextToTranslate": "Bitte Text zum Übersetzen eingeben",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Gib ein Wort ein...",
+  "error": "Fehler",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "혐오 표현이 포함되어 있어 번역할 수 없습니다.",
+  "errorOtherSafety": "AI 안전 정책에 의해 번역이 거부되었습니다.",
+  "errorProfanity": "비속어가 포함되어 있어 번역할 수 없습니다.",
+  "errorSelectCategory": "Bitte zuerst Wort oder Satz wählen!",
+  "errorSexualContent": "선정적인 내용이 포함되어 있어 번역할 수 없습니다.",
+  "errors": "Fehler:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Weiblich",
+  "file": "Datei:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Alle",
+  "flip": "Umdrehen",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Komparativ",
+  "formInfinitive": "Infinitiv",
+  "formPast": "Vergangenheit",
+  "formPastParticiple": "Partizip Perfekt",
+  "formPlural": "Plural",
+  "formPositive": "Positiv",
+  "formPresent": "Präsens",
+  "formPresentParticiple": "Partizip Präsens (ing)",
+  "formSingular": "Singular",
+  "formSuperlative": "Superlativ",
+  "formThirdPersonSingular": "3. Person Singular",
+  "gameModeDesc": "Wählen Sie den Spielmodus, den Sie üben möchten",
+  "gameModeTitle": "Spielmodus",
+  "gameOver": "Spiel vorbei",
+  "gender": "Geschlecht",
+  "generalTags": "Allgemeine Tags",
+  "getMaterials": "Materialien herunterladen",
+  "good": "Gut",
+  "googleContinue": "Weiter mit Google",
+  "helpDialogueImportDesc": "Importieren Sie ganze Dialogsätze aus einer JSON-Datei.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "Zum Importieren von Lernmaterialien im Modus 3 JSON-Datei mit folgender Struktur erstellen:",
+  "helpJsonTypeDialogue": "Dialog",
+  "helpJsonTypeSentence": "Satz",
+  "helpJsonTypeWord": "Wort",
+  "helpMode1Desc": "Stimme erkennen, in Zielsprache übersetzen und Ergebnis anhören.",
+  "helpMode1Details": "• Spracheinstellungen: Sprache ändern über das Übersetzungs-Symbol\n• Hilfe: Anleitung über das Hilfe-Symbol aufrufen\n• Spracheingabe: Mikrofon-Symbol tippen zum Starten/Stoppen\n• Texteingabe: Direkt tippen zum Übersetzen\n• Auto-Suche: Findet ähnliche vorhandene Sätze\n• Übersetzen: Button tippen für Sofortübersetzung\n• Anhören: Lautsprecher-Symbol für TTS (Original/Übersetzung)\n• Speichern: 'Daten speichern' fügt zum Verlauf hinzu\n• Leeren: Alle Eingaben zurücksetzen",
+  "helpMode2Desc": "Gespeicherte Sätze wiederholen mit Auto-Ausblenden und Wiederholungszähler.",
+  "helpMode2Details": "• Materialwahl: Set wählen oder 'Alles wiederholen'\n• Karte drehen: 'Anzeigen/Verbergen' nutzen\n• Anhören: TTS für Satz abspielen\n• Gelernt markieren: Häkchen (V) für erledigte Elemente\n• Löschen: Lange auf Karte drücken\n• Filter: Alle oder nach Material filtern",
+  "helpMode3Desc": "Übe deine Aussprache, indem du Sätze anhörst und nachsprichst (Shadowing).",
+  "helpMode3Details": "• Materialwahl: Lernpaket wählen\n• Intervall: [-] [+] Wartezeit anpassen (3s-60s)\n• Start/Stop: Sitzung steuern\n• Sprechen: Audio hören und nachsprechen\n• Feedback: Genauigkeit (0-100) mit Farbcode\n• Wiederholen: Retry-Button nutzen falls keine Stimme erkannt",
+  "helpModeChatDesc": "Übe echte Konversationen, indem du mit einer KI-Persona chattest.",
+  "helpModeChatDetails": "• KI-Chat: Üben Sie realistische Gespräche mit verschiedenen Persönlichkeiten.\n• Teilnehmerverwaltung: Stellen Sie Ihre Sprache und die der KI separat ein, um Sprachunterschiede zu vermeiden.\n• GPS-Rollenspiel: Erstellen Sie natürliche Gesprächssituationen basierend auf Ihrem aktuellen Standort.\n• Protokollierung: Alle Gespräche werden sicher anhand der ID gespeichert, und die Historie bleibt auch bei Namensänderungen erhalten.",
+  "helpTabJson": "JSON-Format",
+  "helpTabModes": "Modi",
+  "helpTabTour": "Tour starten",
+  "helpTitle": "Hilfe & Anleitung",
+  "helpTourDesc": "Der **Hervorhebungs-Kreis** führt Sie durch die Hauptfunktionen.\n(z. B. können Sie einen Eintrag löschen, indem Sie lange drücken, wenn der **Hervorhebungs-Kreis** darauf zeigt.)",
+  "hide": "Verbergen",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Hinzugefügt: {count} Einträge",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Import abgeschlossen",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Es existiert bereits ein Material mit dem gleichen Titel. Bitte ändern Sie den Titel und versuchen Sie es erneut.",
+  "importErrorMessage": "Import fehlgeschlagen:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Import fehlgeschlagen",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Gesamt: {count} Einträge",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "JSON-Datei importieren",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Hinzugefügt: {count} Einträge",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Bitte importieren Sie eine JSON-Datei",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Übersprungen: {count} Einträge",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Fehler:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Gesamt: {count} Einträge",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Fehler",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Importiere...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Import fehlgeschlagen:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "입력",
+  "intervalSeconds": "Intervall: {seconds}s",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+  "kakaoContinue": "Mit Kakao fortfahren",
+  "labelLangCode": "Sprachcode (z.B. en-US, ko-KR)",
+  "labelName": "Name",
+  "labelNote": "Notiz",
+  "labelPOS": "Wortart",
+  "labelRole": "Rolle",
+  "labelSentence": "Satz",
+  "labelSentenceCollection": "Satzsammlung",
+  "labelSentenceType": "Satztyp",
+  "labelShowMemorized": "Erledigt",
+  "labelType": "Typ:",
+  "labelWord": "Wort",
+  "labelWordbook": "Wortsammlung",
+  "language": "Sprache",
+  "languageSettings": "Spracheinstellungen",
+  "languageSettingsTitle": "Spracheinstellungen",
+  "libTitleFirstMeeting": "Erstes Treffen",
+  "libTitleGreetings1": "Begrüßungen 1",
+  "libTitleNouns1": "Nomen 1",
+  "libTitleVerbs1": "Verben 1",
+  "listen": "Anhören",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Zuhören...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Teilnehmer werden geladen...",
+  "location": "Standort",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Anmelden",
+  "logout": "Abmelden",
+  "logoutConfirmMessage": "Möchten Sie sich von diesem Gerät abmelden?",
+  "logoutConfirmTitle": "Abmelden",
+  "male": "Männlich",
+  "manageParticipants": "Teilnehmer verwalten",
+  "manual": "Manuelle Eingabe",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Als gelernt markieren",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Materialinfo",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Ich",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Materialien vom Gerät importieren",
+  "menuHelp": "Hilfe",
+  "menuLanguageSettings": "Spracheinstellungen",
+  "menuOnlineLibrary": "Online-Bibliothek",
+  "menuSelectMaterialSet": "Lernmaterial auswählen",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Einführungstour",
+  "menuWebDownload": "Benutzerhandbuch",
+  "metadataDialogTitle": "Detaillierte Klassifizierung",
+  "metadataFormType": "Grammatikalische Form",
+  "metadataRootWord": "Grundform",
+  "micButtonTooltip": "Spracherkennung starten",
+  "mode1SelectedMaterial": "Aktuell ausgewähltes Material: {name}",
+  "mode2Title": "Wiederholung",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Weiter",
+  "mode3Start": "Start",
+  "mode3Stop": "Stop",
+  "mode3TryAgain": "Wiederholen",
+  "mySentenceCollection": "Meine Satzsammlung",
+  "myWordbook": "Mein Vokabelheft",
+  "neutral": "Neutrum",
+  "newSubjectName": "Neuer Titel für Vokabelheft/Phrasensammlung",
+  "next": "Weiter",
+  "noDialogueHistory": "Kein Gesprächsverlauf.",
+  "noInternetWarningMic": "Keine Internetverbindung. Die Spracherkennung ist im Offline-Modus möglicherweise nicht verfügbar.",
+  "noInternetWarningTranslate": "Keine Internetverbindung. Die Übersetzungsfunktion ist im Offline-Modus nicht verfügbar. Bitte nutzen Sie den Wiederholungsmodus.",
+  "noMaterialsInCategory": "In dieser Kategorie sind keine Materialien vorhanden.",
+  "noParticipantsFound": "Keine Teilnehmer registriert.",
+  "noRecords": "Keine Lernprotokolle für die ausgewählte Sprache",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Kein Lernmaterial vorhanden.",
+  "noTextToPlay": "Kein Text zum Abspielen",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Keine Übersetzung zum Speichern",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Keine Stimme erkannt",
+  "notSelected": "- Keine Auswahl -",
+  "onlineLibraryCheckInternet": "Bitte überprüfen Sie Ihre Internetverbindung oder versuchen Sie es später erneut.",
+  "onlineLibraryLoadFailed": "Das Laden der Materialien ist fehlgeschlagen.",
+  "onlineLibraryNoMaterials": "Keine Materialien vorhanden.",
+  "participantDeleted": "Teilnehmer wurde gelöscht.",
+  "participantRename": "Teilnehmer umbenennen",
+  "partner": "Partner",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Partnermodus",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Passwort",
+  "passwordTooShort": "Das Passwort muss mindestens 6 Zeichen lang sein.",
+  "perfect": "Perfekt!",
+  "personaFriend": "Lokaler Freund",
+  "personaGuide": "Reiseführer",
+  "personaTeacher": "Englischlehrer",
+  "playAgain": "Nochmal spielen",
+  "playbackFailed": "Wiedergabe fehlgeschlagen: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Lernmaterial auswählen",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Wiedergabe...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Thema:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Quelle:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "Datei:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Adjektiv",
+  "posAdverb": "Adverb",
+  "posConjunction": "Konjunktion",
+  "posInterjection": "Interjektion",
+  "posNoun": "Nomen",
+  "posPreposition": "Präposition",
+  "posPronoun": "Pronomen",
+  "posVerb": "Verb",
+  "practiceModeTitle": "Üben",
+  "practiceWordsOnly": "Nur Wörter üben",
   "progress": "Fortschritt: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Bitte importieren Sie eine JSON-Datei",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Bitte wählen Sie ein Lernmaterial aus",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Gelernt",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Als gelernt markieren",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Zuhören...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Erkennung abgeschlossen",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Zeige die letzten {count} Elemente",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Spracherkennung fehlgeschlagen: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Prüfe...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Erkennung abgeschlossen",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Übersetze...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Erkannter Text:",
+  "recordDeleted": "Eintrag erfolgreich gelöscht",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Übersetzung fertig (Speichern erforderlich)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Aktualisieren",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Gespeicherte Übersetzung geladen",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Übersetzung fehlgeschlagen: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Zurücksetzen",
+  "resetPracticeHistory": "Übungshistorie zurücksetzen",
+  "retry": "Erneut versuchen?",
+  "reviewAll": "Alle wiederholen",
+  "reviewCount": "{count} mal wiederholt",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Bitte Text zum Übersetzen eingeben",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Speichern...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Keine Übersetzung zum Speichern",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "복습",
+  "roleAi": "KI",
+  "roleThirdParty": "Dritte(r)",
+  "roleUser": "Benutzer",
+  "save": "Speichern",
+  "saveData": "Speichern",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Speichern fehlgeschlagen: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Wiedergabe...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Speichern Sie Übersetzungen im Suchmodus",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Kein Text zum Abspielen",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Gespeichert",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Wiedergabe fehlgeschlagen: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Speichern...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Quellsprache",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Zielsprache",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Ähnlicher Text gefunden",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Vorhandenen nutzen",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Neuen Eintrag erstellen",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "{count} mal wiederholt",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Sprechen",
-  "speakingPractice": "Sprechübung",
-  "intervalSeconds": "Intervall: {seconds}s",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Deine Aussprache",
-  "correctAnswer": "Richtige Antwort",
   "score": "Genauigkeit: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "Perfekt!",
-  "good": "Gut",
-  "tryAgain": "Nochmal versuchen",
-  "startPractice": "Übung starten",
-  "stopPractice": "Übung stoppen",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Tutorial starten",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Spracheingabe",
-  "tutorialMicDesc": "Tippen Sie auf das Mikrofon, um die Spracheingabe zu starten.",
-  "tutorialTabDesc": "Hier können Sie den gewünschten Lernmodus auswählen.",
-  "tutorialTapToContinue": "Tippen Sie, um fortzufahren",
-  "tutorialTransTitle": "Übersetzen",
-  "tutorialTransDesc": "Tippen Sie hier, um Ihren Text zu übersetzen.",
-  "tutorialSaveTitle": "Speichern",
-  "tutorialSaveDesc": "Speichern Sie Ihre Übersetzung in den Lernprotokollen.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Punktzahl",
+  "search": "Suche",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Suchbedingungen",
+  "searchSentenceHint": "Satz suchen...",
+  "searchWordHint": "Wort suchen...",
+  "sectionSentence": "Satzabschnitt",
+  "sectionSentences": "문장",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Wortabschnitt",
+  "sectionWords": "단어",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Vorhandenen Titel auswählen",
+  "selectMaterialPrompt": "Bitte wählen Sie ein Lernmaterial aus",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "학습 자료집 선택",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Wortart auswählen",
+  "selectParticipants": "Teilnehmer auswählen",
+  "selectSentenceType": "Satzart auswählen",
+  "selectStudyMaterial": "Lernmaterial auswählen",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "KI-Chat",
-  "tutorialAiChatDesc": "Übe echte Gespräche mit KI-Personas.",
-  "tutorialM2SelectTitle": "Auswahl & Filter",
-  "tutorialM2SelectDesc": "Wählen Sie Lernmaterialien oder wechseln Sie zu 'Alles wiederholen'.",
-  "tutorialM2ListTitle": "Lernliste",
-  "tutorialM2ListDesc": "Überprüfen Sie Ihre gespeicherten Karten und drehen Sie sie um. (Long-press to delete)",
-  "tutorialM3SelectTitle": "Materialwahl",
-  "tutorialM3SelectDesc": "Wählen Sie ein Materialset für die Sprechübung.",
-  "tutorialM3IntervalTitle": "Intervall",
-  "tutorialM3IntervalDesc": "Passen Sie die Wartezeit zwischen den Sätzen an.",
-  "tutorialM3StartTitle": "Übung starten",
-  "tutorialM3StartDesc": "Tippen Sie auf Play, um mit dem Zuhören und Nachsprechen zu beginnen.",
+  "sentence": "Satz",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Registrieren",
+  "similarTextFound": "Ähnlicher Text gefunden",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "건너뛰기",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Quelle:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Quellsprache",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "Jetzt sprechen!",
+  "speaker": "Sprecher",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Sprecher auswählen",
+  "speakingPractice": "Sprechübung",
+  "startChat": "Chat starten",
+  "startPractice": "Übung starten",
+  "startTutorial": "Tutorial starten",
   "startWarning": "Warnung",
-  "noVoiceDetected": "Keine Stimme erkannt",
-  "tooltipSearch": "Suchen",
-  "tooltipStudyReview": "Lernen+Wiederholen",
-  "tooltipSpeaking": "Sprechen",
+  "startsWith": "Beginnt mit",
+  "statusCheckEmail": "Bitte bestätige deine E-Mail-Adresse, um die Verifizierung abzuschließen.",
+  "statusDownloading": "Wird heruntergeladen: {name}...",
+  "statusImportFailed": "Import fehlgeschlagen: {error}",
+  "statusImportSuccess": "{name} wurde erfolgreich importiert",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Anmeldung abgebrochen.",
+  "statusLoginFailed": "Anmeldung fehlgeschlagen: {error}",
+  "statusLoginSuccess": "Anmeldung erfolgreich.",
+  "statusLogoutSuccess": "Abmeldung erfolgreich.",
+  "statusSignUpFailed": "Registrierung fehlgeschlagen: {error}",
+  "statusSigningUp": "Registrierung...",
+  "stopPractice": "Übung stoppen",
+  "studyComplete": "Gelernt",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Lernprotokolle ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Formell",
+  "styleInformal": "Informell",
+  "stylePolite": "Höflich",
+  "styleSlang": "Slang",
+  "subject": "Thema:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Sprachen tauschen",
+  "switchToAi": "Zum KI-Modus wechseln",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Zum Partnermodus wechseln",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Daten werden synchronisiert...",
+  "tabConversation": "Konversation",
+  "tabReview": "Wiederholen ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "Satz",
+  "tabSpeaking": "Sprechen",
+  "tabStudyMaterial": "Lernmaterial ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "Wort",
+  "tagFormal": "Höflichkeitsform",
+  "tagSelection": "Tag-Auswahl",
+  "targetLanguage": "Zielsprache",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Zielsprache Filter:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "Zeit zum Nachdenken, bevor die richtige Antwort angezeigt wird.",
+  "thinkingTimeInterval": "Wiedergabeverzögerung",
+  "timeUp": "Zeit abgelaufen!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Titel-Tag (Materialsammlung)",
   "tooltipDecrease": "Verringern",
   "tooltipIncrease": "Erhöhen",
-  "languageSettings": "Spracheinstellungen",
-  "tutorialM2DropdownDesc": "Wählen Sie Lernmaterialien aus.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "JSON-Datei aus Geräteordner importieren.",
-  "tutorialLangSettingsTitle": "Spracheinstellungen",
-  "tutorialLangSettingsDesc": "Konfigurieren Sie Quell- und Zielsprachen für die Übersetzung.",
-  "copy": "Kopieren",
-  "copiedToClipboard": "In die Zwischenablage kopiert!",
-  "tutorialContextTitle": "Kontext-Tag",
-  "tutorialContextDesc": "Fügen Sie Kontext hinzu (z. B. Morgen), um ähnliche Sätze zu unterscheiden.",
-  "thinkingTimeInterval": "Wiedergabeverzögerung",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "Limit erreicht",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "Suchen",
+  "tooltipSpeaking": "Sprechen",
+  "tooltipStudyReview": "Lernen+Wiederholen",
+  "totalRecords": "Insgesamt {count} Einträge (alle anzeigen)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Übersetzen",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Wortschatz",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Übersetze...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Satz-Depot",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Übersetzung",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "학습 자료집 선택",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Übersetzung fertig (Speichern erforderlich)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "단어",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "문장",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "Ich tausche meine Sprache mit der Sprache, die ich lerne.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "Lernmaterial auswählen",
-  "sectionWord": "Wortabschnitt",
-  "sectionSentence": "Satzabschnitt",
-  "tabWord": "Wort",
-  "tabSentence": "Satz",
-  "errorProfanity": "비속어가 포함되어 있어 번역할 수 없습니다.",
-  "errorHateSpeech": "혐오 표현이 포함되어 있어 번역할 수 없습니다.",
-  "errorSexualContent": "선정적인 내용이 포함되어 있어 번역할 수 없습니다.",
-  "errorOtherSafety": "AI 안전 정책에 의해 번역이 거부되었습니다.",
-  "clearAll": "모두 지우기",
-  "disambiguationTitle": "의미 선택",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "어떤 의미로 번역하시겠습니까?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "건너뛰기",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "입력",
-  "reviewModeTitle": "복습",
-  "practiceModeTitle": "Üben",
-  "chatHistoryTitle": "Verlauf",
-  "chatNew": "New Chat",
-  "chatNewChat": "Neuer Chat",
-  "chatChoosePersona": "Persona wählen",
-  "chatTypeHint": "Nachricht schreiben...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "Übersetzung fehlgeschlagen: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "Keine Gespräche",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Starte einen Chat zum Üben!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Übersetzungslimit überschritten",
+  "translationLimitMessage": "Sie haben Ihr tägliches Limit von 5 kostenlosen Übersetzungen erreicht.\\n\\nMöchten Sie sich eine Werbung ansehen, um sofort 5 weitere zu erhalten?",
+  "translationLoaded": "Gespeicherte Übersetzung geladen",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "Englischlehrer",
-  "personaGuide": "Reiseführer",
-  "personaFriend": "Lokaler Freund",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "Chatten",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "Basis-Wortschatz",
-  "basicSentenceRepository": "Basis-Sätze",
-  "chatEndTitle": "Beenden & Speichern",
-  "chatEndMessage": "Möchten Sie den Chat beenden?",
-  "chatSaveAndExit": "Speichern & Beenden",
-  "errorSelectCategory": "Bitte zuerst Wort oder Satz wählen!",
-  "tutorialM1ToggleTitle": "Wort/Satz-Modus",
+  "translationRefilled": "Ihre Übersetzungen wurden um 5 erhöht!",
+  "translationResultHint": "Übersetzungsergebnis - bearbeitbar",
+  "tryAgain": "Nochmal versuchen",
+  "tutorialAiChatDesc": "Übe echte Gespräche mit KI-Personas.",
+  "tutorialAiChatTitle": "KI-Chat",
+  "tutorialContextDesc": "Fügen Sie Kontext hinzu (z. B. Morgen), um ähnliche Sätze zu unterscheiden.",
+  "tutorialContextTitle": "Kontext-Tag",
+  "tutorialLangSettingsDesc": "Konfigurieren Sie Quell- und Zielsprachen für die Übersetzung.",
+  "tutorialLangSettingsTitle": "Spracheinstellungen",
   "tutorialM1ToggleDesc": "Wechsle hier zwischen Wort- und Satzmodus.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "Höflichkeitsform",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "Titel-Tag (Materialsammlung)",
-  "generalTags": "Allgemeine Tags",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "Singular",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "tutorialM1ToggleTitle": "Wort/Satz-Modus",
+  "tutorialM2DropdownDesc": "Wählen Sie Lernmaterialien aus.",
+  "tutorialM2ImportDesc": "JSON-Datei aus Geräteordner importieren.",
+  "tutorialM2ListDesc": "Überprüfen Sie Ihre gespeicherten Karten und drehen Sie sie um. (Long-press to delete)",
+  "tutorialM2ListTitle": "Lernliste",
+  "tutorialM2SearchDesc": "Durchsuchen Sie gespeicherte Wörter und Sätze, um sie schnell zu finden.",
+  "tutorialM2SelectDesc": "Wählen Sie Lernmaterialien oder wechseln Sie zu 'Alles wiederholen'.",
+  "tutorialM2SelectTitle": "Auswahl & Filter",
+  "tutorialM3IntervalDesc": "Passen Sie die Wartezeit zwischen den Sätzen an.",
+  "tutorialM3IntervalTitle": "Intervall",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "Wählen Sie ein Materialset für die Sprechübung.",
+  "tutorialM3SelectTitle": "Materialwahl",
+  "tutorialM3StartDesc": "Tippen Sie auf Play, um mit dem Zuhören und Nachsprechen zu beginnen.",
+  "tutorialM3StartTitle": "Übung starten",
+  "tutorialM3WordsDesc": "Aktivieren Sie diese Option, um nur gespeicherte Wörter zu üben.",
+  "tutorialM3WordsTitle": "Wort-Übungen",
+  "tutorialMicDesc": "Tippen Sie auf das Mikrofon, um die Spracheingabe zu starten.",
+  "tutorialMicTitle": "Spracheingabe",
+  "tutorialSaveDesc": "Speichern Sie Ihre Übersetzung in den Lernprotokollen.",
+  "tutorialSaveTitle": "Speichern",
+  "tutorialSwapDesc": "Ich tausche meine Sprache mit der Sprache, die ich lerne.",
+  "tutorialTabDesc": "Hier können Sie den gewünschten Lernmodus auswählen.",
+  "tutorialTapToContinue": "Tippen Sie, um fortzufahren",
+  "tutorialTransDesc": "Tippen Sie hier, um Ihren Text zu übersetzen.",
+  "tutorialTransTitle": "Übersetzen",
+  "typeExclamation": "Ausrufesatz",
+  "typeImperative": "Aufforderungssatz",
+  "typeQuestion": "Fragesatz",
+  "typeStatement": "Aussagesatz",
+  "usageLimitTitle": "Limit erreicht",
+  "useExistingText": "Vorhandenen nutzen",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "Neutral",
-  "chatAllConversations": "Alle Konversationen",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Möchten Sie diese Konversation wirklich löschen?\nGelöschte Konversationen können nicht wiederhergestellt werden.",
-  "notSelected": "- Keine Auswahl -",
-  "myWordbook": "Mein Vokabelheft",
-  "mySentenceCollection": "Meine Satzsammlung",
-  "newSubjectName": "Neuer Titel für Vokabelheft/Phrasensammlung",
-  "enterNewSubjectName": "Neuen Titel eingeben",
-  "addNewSubject": "Neuen Titel hinzufügen",
-  "selectExistingSubject": "Vorhandenen Titel auswählen",
-  "addTagHint": "Tag hinzufügen...",
-  "save": "Speichern",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Bitte bestätige deine E-Mail-Adresse, um die Verifizierung abzuschließen.",
-  "emailAlreadyInUse": "Diese E-Mail-Adresse ist bereits registriert. Bitte melde dich an oder nutze die Passwortwiederherstellung."
+  "viewOnlineGuide": "Online-Anleitung anzeigen",
+  "voluntaryTranslations": "Freiwillige Übersetzungen",
+  "watchAdAndRefill": "Werbung ansehen und auffüllen (+5)",
+  "word": "Wort",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Verteidigen Sie Ihre Basis, indem Sie Wörter sagen, bevor die Feinde ankommen.",
+  "wordDefenseTitle": "Wortverteidigung",
+  "wordModeLabel": "Wort-Modus",
+  "yourPronunciation": "Deine Aussprache"
 }

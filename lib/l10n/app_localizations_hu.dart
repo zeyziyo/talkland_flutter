@@ -9,35 +9,327 @@ class AppLocalizationsHu extends AppLocalizations {
   AppLocalizationsHu([String locale = 'hu']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => 'Pontosság';
 
   @override
-  String get kakaoContinue => 'Folytatás a Kakao-val';
+  String get adLoading =>
+      'Hirdetés betöltése folyamatban. Kérlek, próbáld újra később.';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => 'Új név hozzáadása';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => 'Résztvevő hozzáadása';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => 'Címke hozzáadása...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => 'Már van fiókod?';
 
   @override
-  String get helpTitle => 'Segítség és Útmutató';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => 'Módok';
+  String get autoPlay => 'Automatikus lejátszás';
 
   @override
-  String get helpTabJson => 'JSON Formátum';
+  String get basic => 'Alap';
 
   @override
-  String get helpTabTour => 'Túra';
+  String get basicDefault => 'Alapértelmezett';
+
+  @override
+  String get basicMaterialRepository => 'Alap mondat-/szógyűjtemény';
+
+  @override
+  String get basicSentenceRepository => 'Alapvető Mondattár';
+
+  @override
+  String get basicSentences => 'Alap mondatgyűjtemény';
+
+  @override
+  String get basicWordRepository => 'Alapvető Szótár';
+
+  @override
+  String get basicWords => 'Alap szógyűjtemény';
+
+  @override
+  String get cancel => 'Mégse';
+
+  @override
+  String get caseObject => 'Tárgyeset';
+
+  @override
+  String get casePossessive => 'Birtokos eset';
+
+  @override
+  String get casePossessivePronoun => 'Birtokos névmás';
+
+  @override
+  String get caseReflexive => 'Visszaható névmás';
+
+  @override
+  String get caseSubject => 'Alanyeset';
+
+  @override
+  String get chatAiChat => 'Csevegés';
+
+  @override
+  String get chatAllConversations => 'Összes beszélgetés';
+
+  @override
+  String get chatChoosePersona => 'Személyiség választása';
+
+  @override
+  String get chatEndMessage => 'Biztosan befejezed a beszélgetést?';
+
+  @override
+  String get chatEndTitle => 'Beszélgetés befejezése és mentése';
+
+  @override
+  String chatFailed(Object error) {
+    return 'A csevegés sikertelen: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'Beszélgetés részlete ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => 'Beszélgetési előzmények';
+
+  @override
+  String get chatNew => 'Új beszélgetés';
+
+  @override
+  String get chatNewChat => 'Új beszélgetés';
+
+  @override
+  String get chatNoConversations => 'Még nincsenek beszélgetések';
+
+  @override
+  String get chatSaveAndExit => 'Mentés és kilépés';
+
+  @override
+  String get chatStartNewPrompt => 'Kezdj egy új beszélgetést a gyakorláshoz!';
+
+  @override
+  String get chatTypeHint => 'Írd be az üzenetet...';
+
+  @override
+  String get chatUntitled => 'Cím nélküli beszélgetés';
+
+  @override
+  String get checking => 'Ellenőrzés...';
+
+  @override
+  String get clearAll => 'Összes törlése';
+
+  @override
+  String get confirm => 'Megerősítés';
+
+  @override
+  String get confirmDelete => 'Biztosan törölni szeretné ezt a rekordot?';
+
+  @override
+  String get confirmDeleteConversation =>
+      'Törli ezt a beszélgetést?\nA törölt beszélgetések nem állíthatók vissza.';
+
+  @override
+  String get confirmDeleteParticipant => 'Biztosan törlöd ezt a résztvevőt?';
+
+  @override
+  String get contextTagHint =>
+      'Írd le a helyzetet, hogy később könnyebb legyen azonosítani.';
+
+  @override
+  String get contextTagLabel =>
+      'Szövegkörnyezet/helyzet (opcionális) - pl.: Reggeli üdvözlés, Udvarias beszéd';
+
+  @override
+  String get copiedToClipboard => 'Vágólapra másolva!';
+
+  @override
+  String get copy => 'Másolás';
+
+  @override
+  String get correctAnswer => 'Helyes Válasz';
+
+  @override
+  String get createNew => 'Új Létrehozása';
+
+  @override
+  String get currentLocation => 'Jelenlegi hely';
+
+  @override
+  String get currentMaterialLabel => 'Jelenleg kiválasztott anyag:';
+
+  @override
+  String get delete => 'Törlés';
+
+  @override
+  String deleteFailed(String error) {
+    return 'Törlés sikertelen: $error';
+  }
+
+  @override
+  String get deleteRecord => 'Rekord törlése';
+
+  @override
+  String get dialogueQuestDesc =>
+      'Gyakorold a beszélgetést helyzetekben. Válaszd ki a megfelelő választ, és mondd ki.';
+
+  @override
+  String get dialogueQuestTitle => 'Beszélgetés küldetés';
+
+  @override
+  String get disambiguationPrompt => 'Melyik jelentéssel fordítsam le?';
+
+  @override
+  String get disambiguationTitle => 'Jelentés kiválasztása';
+
+  @override
+  String get dontHaveAccount => 'Nincs még fiókod?';
+
+  @override
+  String get editParticipant => 'Résztvevő szerkesztése';
+
+  @override
+  String get email => 'E-mail';
+
+  @override
+  String get emailAlreadyInUse =>
+      'Ez az e-mail cím már regisztrálva van. Jelentkezz be, vagy kérj jelszóemlékeztetőt.';
+
+  @override
+  String get enterNewSubjectName => 'Új név megadása';
+
+  @override
+  String get enterSentenceHint => 'Írj be egy mondatot...';
+
+  @override
+  String get enterTextHint => 'Írd be a lefordítandó szöveget';
+
+  @override
+  String get enterTextToTranslate => 'Írja be a szöveget a fordításhoz';
+
+  @override
+  String get enterWordHint => 'Írj be egy szót...';
+
+  @override
+  String get error => 'Hiba';
+
+  @override
+  String get errorHateSpeech => 'Gyűlöletbeszéd miatt nem lehet lefordítani.';
+
+  @override
+  String get errorOtherSafety =>
+      'Az AI biztonsági irányelvei miatt a fordítás elutasítva.';
+
+  @override
+  String get errorProfanity => 'A trágárság miatt nem lehet lefordítani.';
+
+  @override
+  String get errorSelectCategory => 'Először válassz szót vagy mondatot!';
+
+  @override
+  String get errorSexualContent =>
+      'Szexuális tartalom miatt nem lehet lefordítani.';
+
+  @override
+  String get errors => 'Hibák:';
+
+  @override
+  String get female => 'Nő';
+
+  @override
+  String get file => 'Fájl:';
+
+  @override
+  String get filterAll => 'Összes';
+
+  @override
+  String get flip => 'Fordít';
+
+  @override
+  String get formComparative => 'Középfok';
+
+  @override
+  String get formInfinitive => 'Főnévi igenév/Jelen idő';
+
+  @override
+  String get formPast => 'Múlt idő';
+
+  @override
+  String get formPastParticiple => 'Múlt idejű melléknévi igenév';
+
+  @override
+  String get formPlural => 'Többes szám';
+
+  @override
+  String get formPositive => 'Alapfok';
+
+  @override
+  String get formPresent => 'Jelen idő';
+
+  @override
+  String get formPresentParticiple => 'Folyamatos melléknévi igenév (-ing)';
+
+  @override
+  String get formSingular => 'Egyes szám';
+
+  @override
+  String get formSuperlative => 'Felsőfok';
+
+  @override
+  String get formThirdPersonSingular => 'Harmadik személy egyes szám';
+
+  @override
+  String get gameModeDesc =>
+      'Válaszd ki a gyakorláshoz használni kívánt játék módot';
+
+  @override
+  String get gameModeTitle => 'Játék mód';
+
+  @override
+  String get gameOver => 'Játék vége';
+
+  @override
+  String get gender => 'Nem';
+
+  @override
+  String get generalTags => 'Általános címkék';
+
+  @override
+  String get getMaterials => 'Anyagok beszerzése';
+
+  @override
+  String get good => 'Jó';
+
+  @override
+  String get googleContinue => 'Folytatás a Google-lal';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Teljes beszélgetés-készletek importálása JSON fájlból.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc => '3. Mód importhoz hozzon létre JSON-t:';
+
+  @override
+  String get helpJsonTypeDialogue => 'Beszélgetés (Dialógus)';
+
+  @override
+  String get helpJsonTypeSentence => 'Mondat (Sentence)';
+
+  @override
+  String get helpJsonTypeWord => 'Szó (Word)';
 
   @override
   String get helpMode1Desc =>
@@ -69,160 +361,43 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• AI csevegés: Gyakorold a valós beszélgetéseket személyiségekkel.\n• Résztvevők kezelése: Állítsd be a saját nyelvedet és az AI nyelvét a nyelvi eltérések elkerülése érdekében.\n• GPS helyzetgyakorlat: Hozz létre valósághű beszélgetési helyzeteket a jelenlegi tartózkodási helyed alapján.\n• Előzmények megőrzése: Minden beszélgetés biztonságosan tárolva van az azonosító alapján, és a feljegyzések akkor is megmaradnak, ha átnevezed őket.';
 
   @override
-  String get helpJsonDesc => '3. Mód importhoz hozzon létre JSON-t:';
+  String get helpTabJson => 'JSON Formátum';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => 'Módok';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => 'Túra';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => 'Segítség és Útmutató';
 
   @override
   String get helpTourDesc =>
       'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => 'Helyszín';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => 'Me';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return 'Áttekintés ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return 'Anyagok ($count)';
-  }
-
-  @override
-  String get mode2Title => 'Áttekintés';
-
-  @override
-  String get search => 'Keresés';
-
-  @override
-  String get translate => 'Fordítás';
-
-  @override
-  String get listen => 'Hallgatás';
-
-  @override
-  String get saveData => 'Mentés';
-
-  @override
-  String get saved => 'Mentve';
-
-  @override
-  String get delete => 'Törlés';
-
-  @override
-  String get materialInfo => 'Anyaginformáció';
-
-  @override
-  String get cancel => 'Mégse';
-
-  @override
-  String get confirm => 'OK';
-
-  @override
-  String get refresh => 'Frissítés';
-
-  @override
-  String studyRecords(int count) {
-    return 'Rekordok ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => 'Célnyelv szűrő:';
-
-  @override
-  String get noRecords => 'Nincs rekord a választott nyelvhez';
-
-  @override
-  String get saveTranslationsFromSearch =>
-      'Mentse a fordításokat a keresési módból';
-
-  @override
-  String get flip => 'Fordít';
-
-  @override
   String get hide => 'Elrejt';
 
   @override
-  String get deleteRecord => 'Rekord törlése';
-
-  @override
-  String get confirmDelete => 'Biztosan törölni szeretné ezt a rekordot?';
-
-  @override
-  String get recordDeleted => 'Rekord sikeresen törölve';
-
-  @override
-  String deleteFailed(String error) {
-    return 'Törlés sikertelen: $error';
+  String importAdded(int count) {
+    return 'Hozzáadva: $count';
   }
 
   @override
-  String get importJsonFile => 'JSON Import';
-
-  @override
-  String get importing => 'Importálás...';
-
-  @override
   String get importComplete => 'Import Kész';
+
+  @override
+  String get importDuplicateTitleError =>
+      'Már létezik anyag ilyen címmel. Nevezd át, majd próbáld újra.';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'Fájl importálása sikertelen:\\n$error';
+  }
 
   @override
   String get importFailed => 'Import Sikertelen';
@@ -233,45 +408,10 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => 'JSON Import';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get roleThirdParty => '제삼자';
-
-  @override
-  String get speakerSelect => '발화자 선택';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return 'Összes: $count';
-  }
-
-  @override
-  String importAdded(int count) {
-    return 'Hozzáadva: $count';
-  }
+  String get importJsonFilePrompt => 'Kérjük importáljon egy JSON fájlt';
 
   @override
   String importSkipped(int count) {
@@ -279,133 +419,15 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get errors => 'Hibák:';
-
-  @override
-  String get error => 'Hiba';
-
-  @override
-  String importErrorMessage(String error) {
-    return 'Fájl importálása sikertelen:\\n$error';
+  String importTotal(int count) {
+    return 'Összes: $count';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => 'Importálás...';
 
   @override
-  String get selectStudyMaterial => 'Anyag Kiválasztása';
-
-  @override
-  String get subject => 'Tárgy:';
-
-  @override
-  String get source => 'Forrás:';
-
-  @override
-  String get file => 'Fájl:';
-
-  @override
-  String progress(int current, int total) {
-    return 'Folyamat: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => 'Kérjük importáljon egy JSON fájlt';
-
-  @override
-  String get selectMaterialPrompt => 'Kérjük válasszon tanulási anyagot';
-
-  @override
-  String get studyComplete => 'Megtanulva';
-
-  @override
-  String get markAsStudied => 'Jelölés megtanultként';
-
-  @override
-  String get listening => 'Hallgatás...';
-
-  @override
-  String get recognized => 'Felismerés kész';
-
-  @override
-  String recognitionFailed(String error) {
-    return 'Beszédfelismerés sikertelen: $error';
-  }
-
-  @override
-  String get checking => 'Ellenőrzés...';
-
-  @override
-  String get translating => 'Fordítás...';
-
-  @override
-  String get translationComplete => 'Fordítás kész (mentés szükséges)';
-
-  @override
-  String get translationLoaded => 'Mentett fordítás betöltve';
-
-  @override
-  String translationFailed(String error) {
-    return 'Fordítás sikertelen: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => 'Írja be a szöveget a fordításhoz';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => 'Mentés...';
-
-  @override
-  String get noTranslationToSave => 'Nincs mentendő fordítás';
-
-  @override
-  String saveFailed(String error) {
-    return 'Mentés sikertelen: $error';
-  }
-
-  @override
-  String get playing => 'Lejátszás...';
-
-  @override
-  String get noTextToPlay => 'Nincs lejátszható szöveg';
-
-  @override
-  String playbackFailed(String error) {
-    return 'Lejátszás sikertelen: $error';
-  }
-
-  @override
-  String get sourceLanguage => 'Forrásnyelv';
-
-  @override
-  String get targetLanguage => 'Célnyelv';
-
-  @override
-  String get similarTextFound => 'Hasonló szöveg található';
-
-  @override
-  String get useExistingText => 'Meglévő Használata';
-
-  @override
-  String get createNew => 'Új Létrehozása';
-
-  @override
-  String reviewCount(int count) {
-    return '$count alkalommal áttekintve';
-  }
-
-  @override
-  String get tabSpeaking => 'Beszéd';
-
-  @override
-  String get speakingPractice => 'Beszédgyakorlat';
+  String get inputModeTitle => 'Bevitel';
 
   @override
   String intervalSeconds(int seconds) {
@@ -413,10 +435,375 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get yourPronunciation => 'Kiejtésed';
+  String get invalidEmail => 'Érvényes e-mail címet adj meg.';
 
   @override
-  String get correctAnswer => 'Helyes Válasz';
+  String get kakaoContinue => 'Folytatás a Kakao-val';
+
+  @override
+  String get labelLangCode => 'Nyelvkód (pl.: en-US, ko-KR)';
+
+  @override
+  String get labelName => 'Név';
+
+  @override
+  String get labelNote => 'Jegyzet';
+
+  @override
+  String get labelPOS => 'Szófaj';
+
+  @override
+  String get labelRole => 'Szerep';
+
+  @override
+  String get labelSentence => 'Mondat';
+
+  @override
+  String get labelSentenceCollection => 'Mondatgyűjtemény';
+
+  @override
+  String get labelSentenceType => 'Mondattípus';
+
+  @override
+  String get labelShowMemorized => 'Befejezett';
+
+  @override
+  String get labelType => 'Típus:';
+
+  @override
+  String get labelWord => 'Szó';
+
+  @override
+  String get labelWordbook => 'Szójegyzék';
+
+  @override
+  String get language => 'Nyelv';
+
+  @override
+  String get languageSettings => 'Nyelvi beállítások';
+
+  @override
+  String get languageSettingsTitle => 'Nyelvi beállítások';
+
+  @override
+  String get libTitleFirstMeeting => 'Első találkozás';
+
+  @override
+  String get libTitleGreetings1 => 'Köszönések 1';
+
+  @override
+  String get libTitleNouns1 => 'Főnevek 1';
+
+  @override
+  String get libTitleVerbs1 => 'Igék 1';
+
+  @override
+  String get listen => 'Hallgatás';
+
+  @override
+  String get listening => 'Hallgatás...';
+
+  @override
+  String get loadingParticipants => 'Résztvevők betöltése...';
+
+  @override
+  String get location => 'Helyszín';
+
+  @override
+  String get login => 'Bejelentkezés';
+
+  @override
+  String get logout => 'Kijelentkezés';
+
+  @override
+  String get logoutConfirmMessage =>
+      'Biztosan kijelentkezel erről az eszközről?';
+
+  @override
+  String get logoutConfirmTitle => 'Kijelentkezés';
+
+  @override
+  String get male => 'Férfi';
+
+  @override
+  String get manageParticipants => 'Résztvevők kezelése';
+
+  @override
+  String get manual => 'Kézi bevitel';
+
+  @override
+  String get markAsStudied => 'Jelölés megtanultként';
+
+  @override
+  String get materialInfo => 'Anyaginformáció';
+
+  @override
+  String get me => 'Én';
+
+  @override
+  String get menuDeviceImport => 'Anyagok importálása az eszközről';
+
+  @override
+  String get menuHelp => 'Súgó';
+
+  @override
+  String get menuLanguageSettings => 'Nyelvi beállítások';
+
+  @override
+  String get menuOnlineLibrary => 'Online könyvtár';
+
+  @override
+  String get menuSelectMaterialSet => 'Válasszon egy tanulmányi anyagot';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuTutorial => 'Bemutató';
+
+  @override
+  String get menuWebDownload => 'Használati útmutató';
+
+  @override
+  String get metadataDialogTitle => 'Részletes besorolás';
+
+  @override
+  String get metadataFormType => 'Nyelvtani alak';
+
+  @override
+  String get metadataRootWord => 'Tő (Root Word)';
+
+  @override
+  String get micButtonTooltip => 'Hangfelismerés indítása';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return 'Jelenleg kiválasztott anyag: $name';
+  }
+
+  @override
+  String get mode2Title => 'Áttekintés';
+
+  @override
+  String get mode3Next => 'Következő';
+
+  @override
+  String get mode3Start => 'Indítás';
+
+  @override
+  String get mode3Stop => 'Leállítás';
+
+  @override
+  String get mode3TryAgain => 'Újra';
+
+  @override
+  String get mySentenceCollection => 'Mondatgyűjteményem';
+
+  @override
+  String get myWordbook => 'Szógyűjteményem';
+
+  @override
+  String get neutral => 'Semleges';
+
+  @override
+  String get newSubjectName => 'Új téma/mondatgyűjtemény neve';
+
+  @override
+  String get next => 'Következő';
+
+  @override
+  String get noDialogueHistory => 'Nincs beszélgetési előzmény.';
+
+  @override
+  String get noInternetWarningMic =>
+      'Nincs internetkapcsolat. Offline állapotban a hangfelismerés nem biztos, hogy működik.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'Nincs internetkapcsolat. Offline állapotban a fordítás nem érhető el. Használd az ismétlő módot.';
+
+  @override
+  String get noMaterialsInCategory => 'Ebben a kategóriában nincsenek anyagok.';
+
+  @override
+  String get noParticipantsFound => 'Nincsenek regisztrált résztvevők.';
+
+  @override
+  String get noRecords => 'Nincs rekord a választott nyelvhez';
+
+  @override
+  String get noStudyMaterial => 'Nincsenek tanulási anyagok.';
+
+  @override
+  String get noTextToPlay => 'Nincs lejátszható szöveg';
+
+  @override
+  String get noTranslationToSave => 'Nincs mentendő fordítás';
+
+  @override
+  String get noVoiceDetected => 'Hang nem észlelhető';
+
+  @override
+  String get notSelected => '- Nincs kiválasztva -';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'Ellenőrizd az internetkapcsolatot, vagy próbáld később újra.';
+
+  @override
+  String get onlineLibraryLoadFailed => 'Az anyagok betöltése sikertelen.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'Nincsenek anyagok.';
+
+  @override
+  String get participantDeleted => 'A résztvevő törölve.';
+
+  @override
+  String get participantRename => 'Résztvevő átnevezése';
+
+  @override
+  String get partner => 'Partner';
+
+  @override
+  String get partnerMode => 'Partner mód';
+
+  @override
+  String get password => 'Jelszó';
+
+  @override
+  String get passwordTooShort =>
+      'A jelszónak legalább 6 karakter hosszúnak kell lennie.';
+
+  @override
+  String get perfect => 'Tökéletes!';
+
+  @override
+  String get personaFriend => 'Helyi barát';
+
+  @override
+  String get personaGuide => 'Idegenvezető';
+
+  @override
+  String get personaTeacher => 'Angoltanár';
+
+  @override
+  String get playAgain => 'Újra játszom';
+
+  @override
+  String playbackFailed(String error) {
+    return 'Lejátszás sikertelen: $error';
+  }
+
+  @override
+  String get playing => 'Lejátszás...';
+
+  @override
+  String get posAdjective => 'Melléknév';
+
+  @override
+  String get posAdverb => 'Határozószó';
+
+  @override
+  String get posConjunction => 'Kötőszó';
+
+  @override
+  String get posInterjection => 'Felkiáltószó';
+
+  @override
+  String get posNoun => 'Főnév';
+
+  @override
+  String get posPreposition => 'Elöljárószó';
+
+  @override
+  String get posPronoun => 'Névmás';
+
+  @override
+  String get posVerb => 'Ige';
+
+  @override
+  String get practiceModeTitle => 'Gyakorlás';
+
+  @override
+  String get practiceWordsOnly => 'Csak szavak gyakorlása';
+
+  @override
+  String progress(int current, int total) {
+    return 'Folyamat: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return 'Legutóbb létrehozott $count db megtekintése';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return 'Beszédfelismerés sikertelen: $error';
+  }
+
+  @override
+  String get recognized => 'Felismerés kész';
+
+  @override
+  String get recognizedText => 'Felismert szöveg:';
+
+  @override
+  String get recordDeleted => 'Rekord sikeresen törölve';
+
+  @override
+  String get refresh => 'Frissítés';
+
+  @override
+  String get reset => 'Visszaállítás';
+
+  @override
+  String get resetPracticeHistory => 'Gyakorlási előzmények törlése';
+
+  @override
+  String get retry => 'Újrapróbálkozás?';
+
+  @override
+  String get reviewAll => 'Összes áttekintése';
+
+  @override
+  String reviewCount(int count) {
+    return '$count alkalommal áttekintve';
+  }
+
+  @override
+  String get reviewModeTitle => 'Áttekintés';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => 'Harmadik fél';
+
+  @override
+  String get roleUser => 'Felhasználó';
+
+  @override
+  String get save => 'Mentés';
+
+  @override
+  String get saveData => 'Mentés';
+
+  @override
+  String saveFailed(String error) {
+    return 'Mentés sikertelen: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch =>
+      'Mentse a fordításokat a keresési módból';
+
+  @override
+  String get saved => 'Mentve';
+
+  @override
+  String get saving => 'Mentés...';
 
   @override
   String score(String score) {
@@ -424,145 +811,239 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get perfect => 'Tökéletes!';
+  String get scoreLabel => 'Pontszám';
 
   @override
-  String get good => 'Jó';
+  String get search => 'Keresés';
 
   @override
-  String get tryAgain => 'Próbáld újra';
+  String get searchConditions => 'Keresési feltételek';
 
   @override
-  String get startPractice => 'Gyakorlás Indítása';
+  String get searchSentenceHint => 'Mondat keresése...';
 
   @override
-  String get stopPractice => 'Leállítás';
+  String get searchWordHint => 'Szó keresése...';
 
   @override
-  String get menuOnlineLibrary => 'Online Library';
+  String get sectionSentence => 'Mondatszakasz';
 
   @override
-  String get startTutorial => 'Túra Indítása';
+  String get sectionSentences => 'Mondatok';
 
   @override
-  String get menuTutorial => 'Tutorial';
+  String get sectionWord => 'Szószakasz';
 
   @override
-  String get tutorialMicTitle => 'Hangbemenet';
+  String get sectionWords => 'Szavak';
 
   @override
-  String get tutorialMicDesc => 'Érintse meg a mikrofont a hangbemenethez.';
+  String get selectExistingSubject => 'Meglévő téma kiválasztása';
 
   @override
-  String get tutorialTabDesc => 'Itt kiválaszthatja a kívánt tanulási módot.';
+  String get selectMaterialPrompt => 'Kérjük válasszon tanulási anyagot';
 
   @override
-  String get tutorialTapToContinue => 'Érintse meg a folytatáshoz';
+  String get selectMaterialSet => 'Tananyag kiválasztása';
 
   @override
-  String get tutorialTransTitle => 'Fordítás';
+  String get selectPOS => 'Szófaj kiválasztása';
 
   @override
-  String get tutorialTransDesc => 'Érintse meg ide a fordításhoz.';
+  String get selectParticipants => 'Résztvevők kiválasztása';
 
   @override
-  String get tutorialSaveTitle => 'Mentés';
+  String get selectSentenceType => 'Mondatfajta kiválasztása';
 
   @override
-  String get tutorialSaveDesc => 'Mentse el a fordítást.';
-
-  @override
-  String get selectParticipants => 'Select Participants';
-
-  @override
-  String get loadingParticipants => 'Loading participants...';
-
-  @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
+  String get selectStudyMaterial => 'Anyag Kiválasztása';
 
   @override
   String get sendingMessage => '메시지 전송 중...';
 
   @override
-  String get startChat => 'Start Chat';
+  String get sentence => 'Mondat';
 
   @override
-  String get manageParticipants => 'Manage Participants';
+  String get signUp => 'Regisztráció';
 
   @override
-  String get tutorialAiChatTitle => 'AI csevegés';
+  String get similarTextFound => 'Hasonló szöveg található';
 
   @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
+  String get skip => 'Kihagyás';
 
   @override
-  String get tutorialM2SelectTitle => 'Kiválasztás és Szűrő';
+  String get source => 'Forrás:';
 
   @override
-  String get tutorialM2SelectDesc =>
-      'Válasszon anyagot vagy \'Összes áttekintése\'.';
+  String get sourceLanguage => 'Forrásnyelv';
 
   @override
-  String get tutorialM2ListTitle => 'Tanulólista';
+  String get sourceLanguageLabel => 'Source Language';
 
   @override
-  String get tutorialM2ListDesc =>
-      'Ellenőrizze a kártyákat és fordítsa meg őket. (Long-press to delete)';
+  String get speakNow => 'Beszélj most!';
 
   @override
-  String get tutorialM3SelectTitle => 'Anyag Kiválasztása';
+  String get speaker => 'Beszélő';
 
   @override
-  String get tutorialM3SelectDesc => 'Válasszon készletet beszédgyakorláshoz.';
+  String get speakerSelect => 'Beszélő kiválasztása';
 
   @override
-  String get tutorialM3IntervalTitle => 'Időköz';
+  String get speakingPractice => 'Beszédgyakorlat';
 
   @override
-  String get tutorialM3IntervalDesc => 'Állítsa be a mondatok közötti időt.';
+  String get startChat => 'Beszélgetés indítása';
 
   @override
-  String get tutorialM3StartTitle => 'Indítás';
+  String get startPractice => 'Gyakorlás Indítása';
 
   @override
-  String get tutorialM3StartDesc => 'Nyomja meg a lejátszást az indításhoz.';
+  String get startTutorial => 'Túra Indítása';
 
   @override
   String get startWarning => 'Figyelem';
 
   @override
-  String get noVoiceDetected => 'Hang nem észlelhető';
+  String get startsWith => 'Kezdődik';
 
   @override
-  String get tooltipSearch => 'Keresés';
+  String get statusCheckEmail =>
+      'Kérjük, ellenőrizze az e-mail címét a hitelesítés befejezéséhez.';
 
   @override
-  String get tooltipStudyReview => 'Tanulás+Ismétlés';
+  String statusDownloading(Object name) {
+    return 'Letöltés: $name...';
+  }
 
   @override
-  String get tooltipSpeaking => 'Beszéd';
+  String statusImportFailed(Object error) {
+    return 'Importálás sikertelen: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name importálása sikeres';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => 'A bejelentkezés megszakítva.';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return 'Sikertelen bejelentkezés: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => 'Sikeres bejelentkezés.';
+
+  @override
+  String get statusLogoutSuccess => 'Kijelentkezve.';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return 'Sikertelen regisztráció: $error';
+  }
+
+  @override
+  String get statusSigningUp => 'Regisztráció folyamatban...';
+
+  @override
+  String get stopPractice => 'Leállítás';
+
+  @override
+  String get studyComplete => 'Megtanulva';
+
+  @override
+  String studyRecords(int count) {
+    return 'Rekordok ($count)';
+  }
+
+  @override
+  String get styleFormal => 'Magázó';
+
+  @override
+  String get styleInformal => 'Tegező';
+
+  @override
+  String get stylePolite => 'Udvarias';
+
+  @override
+  String get styleSlang => 'Szleng';
+
+  @override
+  String get subject => 'Tárgy:';
+
+  @override
+  String get swapLanguages => 'Nyelvcsere';
+
+  @override
+  String get switchToAi => 'Váltás AI módba';
+
+  @override
+  String get switchToPartner => 'Váltás Partner módba';
+
+  @override
+  String get syncingData => 'Adatok szinkronizálása...';
+
+  @override
+  String get tabConversation => 'Beszélgetés';
+
+  @override
+  String tabReview(int count) {
+    return 'Áttekintés ($count)';
+  }
+
+  @override
+  String get tabSentence => 'mondat';
+
+  @override
+  String get tabSpeaking => 'Beszéd';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return 'Anyagok ($count)';
+  }
+
+  @override
+  String get tabWord => 'szó';
+
+  @override
+  String get tagFormal => 'Udvarias';
+
+  @override
+  String get tagSelection => 'Címke kiválasztása';
+
+  @override
+  String get targetLanguage => 'Célnyelv';
+
+  @override
+  String get targetLanguageFilter => 'Célnyelv szűrő:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc => 'Ennyi időd van gondolkodni a válasz előtt.';
+
+  @override
+  String get thinkingTimeInterval => 'Gondolkodási idő';
+
+  @override
+  String get timeUp => 'Lejárt az idő!';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
+
+  @override
+  String get titleTagSelection => 'Címke kiválasztása (adatlap)';
 
   @override
   String get tooltipDecrease => 'Csökkentés';
@@ -571,649 +1052,210 @@ class AppLocalizationsHu extends AppLocalizations {
   String get tooltipIncrease => 'Növelés';
 
   @override
-  String get languageSettings => 'Nyelvi beállítások';
+  String get tooltipSearch => 'Keresés';
 
   @override
-  String get tutorialM2DropdownDesc => 'Válasszon tananyagot.';
+  String get tooltipSpeaking => 'Beszéd';
 
   @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
+  String get tooltipStudyReview => 'Tanulás+Ismétlés';
 
   @override
-  String get tutorialM2ImportDesc =>
-      'JSON fájl importálása az eszköz mappájából.';
+  String totalRecords(int count) {
+    return 'Összesen $count bejegyzés (Összes megtekintése)';
+  }
 
   @override
-  String get tutorialLangSettingsTitle => 'Language Settings';
+  String get translate => 'Fordítás';
 
   @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
+  String get translating => 'Fordítás...';
 
   @override
-  String get copy => 'Copy';
+  String get translation => 'Fordítás';
 
   @override
-  String get copiedToClipboard => 'Copied to clipboard!';
+  String get translationComplete => 'Fordítás kész (mentés szükséges)';
 
   @override
-  String get tutorialContextTitle => 'Kontextus címke';
+  String translationFailed(String error) {
+    return 'Fordítás sikertelen: $error';
+  }
+
+  @override
+  String get translationLimitExceeded => 'Fordítási limit túllépve';
+
+  @override
+  String get translationLimitMessage =>
+      'Elhasználtad az összes napi ingyenes fordítási lehetőséget (5 alkalom).\\n\\nSzeretnél megnézni egy hirdetést, hogy azonnal feltöltsd 5 alkalommal?';
+
+  @override
+  String get translationLoaded => 'Mentett fordítás betöltve';
+
+  @override
+  String get translationRefilled =>
+      'A fordítási számláló feltöltve 5 alkalommal!';
+
+  @override
+  String get translationResultHint => 'Fordítás eredménye - szerkeszthető';
+
+  @override
+  String get tryAgain => 'Próbáld újra';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'Gyakorolj valós beszélgetéseket AI személyiségekkel.';
+
+  @override
+  String get tutorialAiChatTitle => 'AI csevegés';
 
   @override
   String get tutorialContextDesc =>
       'Adjon hozzá kontextust (pl. Reggel) a hasonló mondatok megkülönböztetéséhez.';
 
   @override
-  String get thinkingTimeInterval => 'Playback Delay';
+  String get tutorialContextTitle => 'Kontextus címke';
 
   @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
+  String get tutorialLangSettingsDesc =>
+      'Állítsd be a lefordítandó forrásnyelvet és a célnyelvet.';
 
   @override
-  String get autoPlay => 'Auto-Play';
+  String get tutorialLangSettingsTitle => 'Nyelvi beállítások';
 
   @override
-  String get timeUp => 'Time Up!';
+  String get tutorialM1ToggleDesc =>
+      'Itt válthatsz a szó és a mondat mód között.';
 
   @override
-  String get gameModeTitle => 'Game Mode';
+  String get tutorialM1ToggleTitle => 'Szó/Mondat mód';
 
   @override
-  String get gameModeDesc => 'Choose your practice mode';
+  String get tutorialM2DropdownDesc => 'Válasszon tananyagot.';
 
   @override
-  String get wordDefenseTitle => 'Word Defense';
+  String get tutorialM2ImportDesc =>
+      'JSON fájl importálása az eszköz mappájából.';
 
   @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
+  String get tutorialM2ListDesc =>
+      'Ellenőrizze a kártyákat és fordítsa meg őket. (Long-press to delete)';
 
   @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
+  String get tutorialM2ListTitle => 'Tanulólista';
 
   @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
+  String get tutorialM2SearchDesc =>
+      'Gyorsan megtalálhatod a mentett szavakat és mondatokat kereséssel.';
 
   @override
-  String get translation => 'Translation';
+  String get tutorialM2SelectDesc =>
+      'Válasszon anyagot vagy \'Összes áttekintése\'.';
 
   @override
-  String get labelType => 'Type:';
+  String get tutorialM2SelectTitle => 'Kiválasztás és Szűrő';
 
   @override
-  String get labelWord => 'Word';
+  String get tutorialM3IntervalDesc => 'Állítsa be a mondatok közötti időt.';
 
   @override
-  String get labelSentence => 'Sentence';
-
-  @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
-
-  @override
-  String get usageLimitTitle => 'Elérte a limitet';
-
-  @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
-
-  @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
-
-  @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
-
-  @override
-  String get translationRefilled => 'Translations refilled by 5!';
-
-  @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
-
-  @override
-  String get reviewAll => 'Review All';
-
-  @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
-
-  @override
-  String get filterAll => 'All';
-
-  @override
-  String get practiceWordsOnly => 'Practice Words Only';
-
-  @override
-  String get resetPracticeHistory => 'Reset Practice History';
-
-  @override
-  String get retry => 'Retry?';
-
-  @override
-  String get noStudyMaterial => 'No study material found.';
-
-  @override
-  String get gameOver => 'Game Over';
-
-  @override
-  String get playAgain => 'Play Again';
-
-  @override
-  String get speakNow => 'Speak now!';
-
-  @override
-  String get scoreLabel => 'Score';
-
-  @override
-  String get viewOnlineGuide => 'View Online User Guide';
-
-  @override
-  String get getMaterials => 'Get Materials';
-
-  @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
-
-  @override
-  String get wordModeLabel => 'Word Mode';
-
-  @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get menuHelp => 'Help';
-
-  @override
-  String get menuWebDownload => 'Get Material from Web';
-
-  @override
-  String get menuDeviceImport => 'Import from Device';
-
-  @override
-  String get menuSettings => 'Settings';
-
-  @override
-  String get basicWords => 'Basic Word Repository';
-
-  @override
-  String get basicSentences => 'Basic Sentence Repository';
-
-  @override
-  String get selectMaterialSet => 'Tananyag kiválasztása';
-
-  @override
-  String get sectionWords => 'Szavak';
-
-  @override
-  String get sectionSentences => 'Mondatok';
-
-  @override
-  String get languageSettingsTitle => 'Language Settings';
-
-  @override
-  String get sourceLanguageLabel => 'Source Language';
-
-  @override
-  String get targetLanguageLabel => 'Target Language';
-
-  @override
-  String get mode3Start => 'Start';
-
-  @override
-  String get mode3Stop => 'Stop';
-
-  @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc =>
-      'Felcserélem a nyelvemet azzal a nyelvvel, amit tanulok.';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
+  String get tutorialM3IntervalTitle => 'Időköz';
 
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
 
   @override
-  String get menuSelectMaterialSet => 'Válasszon egy tanulmányi anyagot';
+  String get tutorialM3ResetTitle => 'Reset History';
 
   @override
-  String get sectionWord => 'Szószakasz';
+  String get tutorialM3SelectDesc => 'Válasszon készletet beszédgyakorláshoz.';
 
   @override
-  String get sectionSentence => 'Mondatszakasz';
+  String get tutorialM3SelectTitle => 'Anyag Kiválasztása';
 
   @override
-  String get tabWord => 'szó';
+  String get tutorialM3StartDesc => 'Nyomja meg a lejátszást az indításhoz.';
 
   @override
-  String get tabSentence => 'mondat';
+  String get tutorialM3StartTitle => 'Indítás';
 
   @override
-  String get errorProfanity => 'A trágárság miatt nem lehet lefordítani.';
+  String get tutorialM3WordsDesc =>
+      'Ha bejelölöd, csak a mentett szavakat gyakorlod.';
 
   @override
-  String get errorHateSpeech => 'Gyűlöletbeszéd miatt nem lehet lefordítani.';
+  String get tutorialM3WordsTitle => 'Szavak gyakorlása';
 
   @override
-  String get errorSexualContent =>
-      'Szexuális tartalom miatt nem lehet lefordítani.';
+  String get tutorialMicDesc => 'Érintse meg a mikrofont a hangbemenethez.';
 
   @override
-  String get errorOtherSafety =>
-      'Az AI biztonsági irányelvei miatt a fordítás elutasítva.';
+  String get tutorialMicTitle => 'Hangbemenet';
 
   @override
-  String get clearAll => 'Összes törlése';
+  String get tutorialSaveDesc => 'Mentse el a fordítást.';
 
   @override
-  String get disambiguationTitle => 'Jelentés kiválasztása';
+  String get tutorialSaveTitle => 'Mentés';
 
   @override
-  String get disambiguationPrompt => 'Melyik jelentéssel fordítsam le?';
+  String get tutorialSwapDesc =>
+      'Felcserélem a nyelvemet azzal a nyelvvel, amit tanulok.';
 
   @override
-  String get skip => 'Kihagyás';
+  String get tutorialTabDesc => 'Itt kiválaszthatja a kívánt tanulási módot.';
 
   @override
-  String get inputModeTitle => 'Input';
+  String get tutorialTapToContinue => 'Érintse meg a folytatáshoz';
 
   @override
-  String get reviewModeTitle => 'Review';
+  String get tutorialTransDesc => 'Érintse meg ide a fordításhoz.';
 
   @override
-  String get practiceModeTitle => 'Gyakorlás';
+  String get tutorialTransTitle => 'Fordítás';
 
   @override
-  String get chatHistoryTitle => 'Conversation History';
+  String get typeExclamation => 'Felkiáltó mondat';
 
   @override
-  String get chatNew => 'New Chat';
+  String get typeImperative => 'Felszólító mondat';
 
   @override
-  String get chatNewChat => 'New Chat';
+  String get typeQuestion => 'Kérdő mondat';
 
   @override
-  String get chatChoosePersona => 'Choose a Persona';
+  String get typeStatement => 'Állító mondat';
 
   @override
-  String get chatTypeHint => 'Type a message...';
+  String get usageLimitTitle => 'Elérte a limitet';
 
   @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
+  String get useExistingText => 'Meglévő Használata';
 
   @override
-  String get chatNoConversations => 'No conversations yet';
+  String get viewOnlineGuide => 'Online útmutató megtekintése';
 
   @override
-  String get noDialogueHistory => 'No dialogue history.';
+  String get voluntaryTranslations => 'Önkéntes fordítások';
 
   @override
-  String get chatStartNewPrompt => 'Start a new chat to practice!';
+  String get watchAdAndRefill =>
+      'Hirdetés megtekintése és feltöltés (+5 alkalom)';
 
   @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
+  String get word => 'Szó';
 
   @override
-  String get personaTeacher => 'English Teacher';
+  String get wordDefenseDesc =>
+      'Védd meg a bázisodat úgy, hogy kimondod a szavakat, mielőtt az ellenség odaérne.';
 
   @override
-  String get personaGuide => 'Travel Guide';
+  String get wordDefenseTitle => 'Szó védelem';
 
   @override
-  String get personaFriend => 'Local Friend';
+  String get wordModeLabel => 'Szó mód';
 
   @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => 'Csevegés';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => 'Alapvető Szótár';
-
-  @override
-  String get basicSentenceRepository => 'Alapvető Mondattár';
-
-  @override
-  String get chatEndTitle => 'End & Save Chat';
-
-  @override
-  String get chatEndMessage =>
-      'Do you want to end this conversation? You can set a title for it.';
-
-  @override
-  String get chatSaveAndExit => 'Save & Exit';
-
-  @override
-  String get errorSelectCategory => 'Please select word or sentence first!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => 'Udvarias';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => 'Címke kiválasztása (adatlap)';
-
-  @override
-  String get generalTags => 'Általános címkék';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => 'Egyes szám';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => 'Semleges';
-
-  @override
-  String get chatAllConversations => 'Összes beszélgetés';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation =>
-      'Törli ezt a beszélgetést?\nA törölt beszélgetések nem állíthatók vissza.';
-
-  @override
-  String get notSelected => '- Nincs kiválasztva -';
-
-  @override
-  String get myWordbook => 'Szógyűjteményem';
-
-  @override
-  String get mySentenceCollection => 'Mondatgyűjteményem';
-
-  @override
-  String get newSubjectName => 'Új téma/mondatgyűjtemény neve';
-
-  @override
-  String get enterNewSubjectName => 'Új név megadása';
-
-  @override
-  String get addNewSubject => 'Új név hozzáadása';
-
-  @override
-  String get selectExistingSubject => 'Meglévő téma kiválasztása';
-
-  @override
-  String get addTagHint => 'Címke hozzáadása...';
-
-  @override
-  String get save => 'Mentés';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail =>
-      'Kérjük, ellenőrizze az e-mail címét a hitelesítés befejezéséhez.';
-
-  @override
-  String get emailAlreadyInUse =>
-      'Ez az e-mail cím már regisztrálva van. Jelentkezz be, vagy kérj jelszóemlékeztetőt.';
+  String get yourPronunciation => 'Kiejtésed';
 }

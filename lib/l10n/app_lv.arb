@@ -1,188 +1,105 @@
 {
   "@@locale": "lv",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Turpināt ar Kakao",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Palīdzība un ceļveži",
-  "helpTabModes": "Režīmu skaidrojumi",
-  "helpTabJson": "JSON formāts",
-  "helpTabTour": "Apskatīt",
-  "helpMode1Desc": "Atpazīst un tulko balsi, ļauj noklausīties rezultātus.",
-  "helpMode1Details": "• Valodas iestatījumi: mainiet valodu, nospiežot ikonas augšā/apakšā\n• Vārdu/teikumu pārslēgšana: režīmu pārslēgšana\n• Balss ievade: nospiediet mikrofona ikonu, lai sāktu/pārtrauktu klausīšanos\n• Teksta ievade: ievadiet tekstu manuāli tulkošanai\n• Automātiska meklēšana: atrod līdzīgus esošus teikumus\n• Tulkošana: nospiediet pogu Tulkot, lai nekavējoties tulkotu\n• Klausīšanās: atskaņojiet TTS ar skaļruņa ikonu\n• Saglabāšana: pievienojiet ierakstus ar 'Datu saglabāšana'\n• Notīrīšana: atiestatiet ievadi",
-  "helpMode2Desc": "Pārskatiet saglabātos teikumus un pārbaudiet, vai atceraties, izmantojot automātiskās slēpšanas funkciju.",
-  "helpMode2Details": "• Materiālu izvēle: atlasiet noteiktu materiālu kopumu vai 'Visu pārskatīšana'\n• Kartītes apgriešana: pārbaudiet tulkojumu ar 'Rādīt/Slēpt' (automātiska mācību pārbaude)\n• Klausīšanās: teikuma TTS atskaņošana\n• Mācīšanās pabeigta: atzīmējiet ar atzīmi (V), lai atzīmētu, ka mācīšanās ir pabeigta\n• Dzēšana: ilgi nospiediet kartīti, lai dzēstu ierakstu\n• Meklēšanas nosacījumi: filtrēšana pēc atzīmēm, jaunākajiem vienumiem, sākuma burtiem",
-  "helpMode3Desc": "Klausieties teikumu un praktizējiet izrunu, to atdarot (Shadowing).",
-  "helpMode3Details": "• Materiālu izvēle: atlasiet materiālu kopumu, ko mācīties\n• Intervāla iestatīšana: pielāgojiet gaidīšanas laiku starp teikumiem ar pogām [-] [+](3 s ~ 60 s)\n• Sākums/Pārtraukums: ēnošanas sesijas kontrole\n• Runāšana: klausieties un atkārtojiet balsi\n• Atsauksmes: precizitātes rādītājs (0–100) un krāsu displejs\n• Meklēšanas nosacījumi: filtrēšanas mērķi pēc atzīmēm, jaunākajiem vienumiem, sākuma burtiem",
-  "helpModeChatDesc": "Praktizējiet sarunas reālajā dzīvē, sarunājoties ar AI personu.",
-  "helpModeChatDetails": "• AI tērzēšana: runājiet savā valodā, lai praktizētu sarunu\n• Vairākas personas: mainiet otras puses dzimumu/valodu/vārdu ar izvēlni virs runas burbuļa\n• Partnera pievienošana: pievienojiet jaunu sarunu partneri (Svešinieku) ar pogu +\n• GPS: uz atrašanās vietu balstīti scenāriji\n• Automātiska saglabāšana: automātiska sarunu satura tulkošana un saglabāšana",
-  "helpJsonDesc": "Lai importētu mācību materiālus, kas jāizmanto 3. režīmā, kā JSON failu, ievērojiet šo formātu:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Importējiet veselu dialogu kopumu kā JSON failu.",
-  "helpDialogueImportDetails": "• JSON struktūra: izmantojiet `dialogues` masīvu `entries` vietā\n• Automātiska atkopšana: tiek atjaunots dialoga nosaukums, persona un ziņojumu secība.\n• Atrašanās vieta: importētie dialogi parādās AI tērzēšanas režīma cilnē 'Vēsture'.",
-  "helpTourDesc": "**Izgaismots aplis** sniedz norādījumus par galvenajām funkcijām.\n(Piemērs: varat ilgi nospiest kartīti, uz kuru norāda **izgaismots aplis**, lai to izdzēstu.)",
-  "partnerMode": "Partnera režīms",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manuāla ievade",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Runātājs",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Pārslēgties uz AI režīmu",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Pārslēgties uz partnera režīmu",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Pašreizējā atrašanās vieta",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Atrašanās vieta",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partneris",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Es",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Pašlaik atlasīts materiālu kopums:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Pamata teikumu/vārdu repozitorijs",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Vārds",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Teikums",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Precizitāte",
+  "adLoading": "Reklāma tiek ielādēta. Lūdzu, mēģiniet vēlreiz vēlāk.",
+  "addNewSubject": "Pievienot jaunu nosaukumu",
+  "addParticipant": "Pievienot dalībnieku",
+  "addTagHint": "Pievienot tagu...",
+  "alreadyHaveAccount": "Vai jums jau ir konts?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Pārskats ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Automātiska atskaņošana",
+  "basic": "Pamata",
+  "basicDefault": "Pamata",
+  "basicMaterialRepository": "Pamata teikumu/vārdu repozitorijs",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Mācību materiāli ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Pamata teikumu repozitorijs",
+  "basicSentences": "Pamata teikumu repozitorijs",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Pārskats",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Meklēt",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Tulkot",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Klausīties",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Saglabāt datus",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Saglabāts",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Dzēst",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Informācija par materiālu",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Pamata vārdu repozitorijs",
+  "basicWords": "Pamata vārdu repozitorijs",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Atcelt",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "Apstiprināt",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Atjaunot",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Mācību ieraksti ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Akuzatīvs",
+  "casePossessive": "Ģenitīvs",
+  "casePossessivePronoun": "Piederības vietniekvārds",
+  "caseReflexive": "Atgriezeniskais",
+  "caseSubject": "Nominatīvs",
+  "chatAiChat": "Tērzēšana",
+  "chatAllConversations": "Visas sarunas",
+  "chatChoosePersona": "Izvēlieties personu",
+  "chatEndMessage": "Vai vēlaties beigt sarunu?",
+  "chatEndTitle": "Beigt un saglabāt sarunu",
+  "chatFailed": "Tērzēšana neizdevās: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Mērķa valodas filtrs:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Sarunas izvilkums ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Nav mācību ierakstu atlasītajā valodā",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Sarunu vēsture",
+  "chatNew": "Jauna saruna",
+  "chatNewChat": "Jauna saruna",
+  "chatNoConversations": "Vēl nav sarunu",
+  "chatSaveAndExit": "Saglabāt un iziet",
+  "chatStartNewPrompt": "Sāciet jaunu sarunu, lai praktizētu!",
+  "chatTypeHint": "Ierakstiet ziņojumu...",
+  "chatUntitled": "Saruna bez nosaukuma",
+  "checking": "Pārbauda...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Mēģiniet saglabāt tulkojumus no meklēšanas režīma",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Rādīt",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Slēpt",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Dzēst ierakstu",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "Notīrīt visu",
+  "confirm": "Apstiprināt",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Vai tiešām vēlaties dzēst šo mācību ierakstu?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Ieraksts ir dzēsts",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Vai vēlaties izdzēst šo sarunu?\nIzdzēstās sarunas nevar atgūt.",
+  "confirmDeleteParticipant": "Vai vēlaties dzēst šo dalībnieku?",
+  "contextTagHint": "Pierakstiet situāciju, lai vēlāk to būtu vieglāk atšķirt",
+  "contextTagLabel": "Konteksts/Situācija (pēc izvēles) - Piemērs: Rīta sveiciens, formāls",
+  "copiedToClipboard": "Nokopēts starpliktuvē!",
+  "copy": "Kopēt",
+  "correctAnswer": "Pareiza atbilde",
+  "createNew": "Turpināt ar jaunu teikumu",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Pašreizējā atrašanās vieta",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Pašlaik atlasīts materiālu kopums:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Dzēst",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Dzēšana neizdevās: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Importēt JSON failu",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Dzēst ierakstu",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Importē...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Praktizējiet sarunas, izmantojot situācijas. Atlasiet un izrunājiet piemērotas atbildes.",
+  "dialogueQuestTitle": "Dialoga meklējums",
+  "disambiguationPrompt": "Kuru nozīmi vēlaties tulkot?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "Izvēlieties nozīmi",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Vai jums nav konta?",
+  "editParticipant": "Rediģēt dalībnieku",
+  "email": "E-pasts",
+  "emailAlreadyInUse": "Šis e-pasts jau ir reģistrēts. Lūdzu, piesakieties vai izmantojiet paroles atgūšanas funkciju.",
+  "enterNewSubjectName": "Ievadiet jaunu nosaukumu",
+  "enterSentenceHint": "Ievadiet teikumu...",
+  "enterTextHint": "Ievadiet tekstu, ko tulkot",
+  "enterTextToTranslate": "Ievadiet tekstu, ko tulkot",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Ievadiet vārdu...",
+  "error": "Kļūda",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "Nevar tulkot, jo satur naida runu.",
+  "errorOtherSafety": "Tulkošana tika atteikta AI drošības politikas dēļ.",
+  "errorProfanity": "Nevar tulkot, jo satur necenzētus vārdus.",
+  "errorSelectCategory": "Vispirms atlasiet vārdu vai teikumu!",
+  "errorSexualContent": "Nevar tulkot, jo satur seksuāla rakstura saturu.",
+  "errors": "Kļūdas:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Sieviete",
+  "file": "Fails:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Visi",
+  "flip": "Rādīt",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Salīdzināmais",
+  "formInfinitive": "Infinitīvs/Tagadne",
+  "formPast": "Pagātne",
+  "formPastParticiple": "Pagātnes divdabis",
+  "formPlural": "Daudzskaitlis",
+  "formPositive": "Pozitīvs",
+  "formPresent": "Tagadne",
+  "formPresentParticiple": "Tagadnes divdabis (ing)",
+  "formSingular": "Vienskaitlis",
+  "formSuperlative": "Pārākais",
+  "formThirdPersonSingular": "3. persona vienskaitlī",
+  "gameModeDesc": "Izvēlieties spēles režīmu, ko praktizēt",
+  "gameModeTitle": "Spēles režīms",
+  "gameOver": "Spēle beigusies",
+  "gender": "Dzimums",
+  "generalTags": "Vispārīgās atzīmes",
+  "getMaterials": "Saņemt materiālus",
+  "good": "Labi",
+  "googleContinue": "Turpināt ar Google",
+  "helpDialogueImportDesc": "Importējiet veselu dialogu kopumu kā JSON failu.",
+  "helpDialogueImportDetails": "• JSON struktūra: izmantojiet `dialogues` masīvu `entries` vietā\n• Automātiska atkopšana: tiek atjaunots dialoga nosaukums, persona un ziņojumu secība.\n• Atrašanās vieta: importētie dialogi parādās AI tērzēšanas režīma cilnē 'Vēsture'.",
+  "helpJsonDesc": "Lai importētu mācību materiālus, kas jāizmanto 3. režīmā, kā JSON failu, ievērojiet šo formātu:",
+  "helpJsonTypeDialogue": "Dialogs",
+  "helpJsonTypeSentence": "Teikums",
+  "helpJsonTypeWord": "Vārds",
+  "helpMode1Desc": "Atpazīst un tulko balsi, ļauj noklausīties rezultātus.",
+  "helpMode1Details": "• Valodas iestatījumi: mainiet valodu, nospiežot ikonas augšā/apakšā\n• Vārdu/teikumu pārslēgšana: režīmu pārslēgšana\n• Balss ievade: nospiediet mikrofona ikonu, lai sāktu/pārtrauktu klausīšanos\n• Teksta ievade: ievadiet tekstu manuāli tulkošanai\n• Automātiska meklēšana: atrod līdzīgus esošus teikumus\n• Tulkošana: nospiediet pogu Tulkot, lai nekavējoties tulkotu\n• Klausīšanās: atskaņojiet TTS ar skaļruņa ikonu\n• Saglabāšana: pievienojiet ierakstus ar 'Datu saglabāšana'\n• Notīrīšana: atiestatiet ievadi",
+  "helpMode2Desc": "Pārskatiet saglabātos teikumus un pārbaudiet, vai atceraties, izmantojot automātiskās slēpšanas funkciju.",
+  "helpMode2Details": "• Materiālu izvēle: atlasiet noteiktu materiālu kopumu vai 'Visu pārskatīšana'\n• Kartītes apgriešana: pārbaudiet tulkojumu ar 'Rādīt/Slēpt' (automātiska mācību pārbaude)\n• Klausīšanās: teikuma TTS atskaņošana\n• Mācīšanās pabeigta: atzīmējiet ar atzīmi (V), lai atzīmētu, ka mācīšanās ir pabeigta\n• Dzēšana: ilgi nospiediet kartīti, lai dzēstu ierakstu\n• Meklēšanas nosacījumi: filtrēšana pēc atzīmēm, jaunākajiem vienumiem, sākuma burtiem",
+  "helpMode3Desc": "Klausieties teikumu un praktizējiet izrunu, to atdarot (Shadowing).",
+  "helpMode3Details": "• Materiālu izvēle: atlasiet materiālu kopumu, ko mācīties\n• Intervāla iestatīšana: pielāgojiet gaidīšanas laiku starp teikumiem ar pogām [-] [+](3 s ~ 60 s)\n• Sākums/Pārtraukums: ēnošanas sesijas kontrole\n• Runāšana: klausieties un atkārtojiet balsi\n• Atsauksmes: precizitātes rādītājs (0–100) un krāsu displejs\n• Meklēšanas nosacījumi: filtrēšanas mērķi pēc atzīmēm, jaunākajiem vienumiem, sākuma burtiem",
+  "helpModeChatDesc": "Praktizējiet sarunas reālajā dzīvē, sarunājoties ar AI personu.",
+  "helpModeChatDetails": "• AI tērzēšana: runājiet savā valodā, lai praktizētu sarunu\n• Vairākas personas: mainiet otras puses dzimumu/valodu/vārdu ar izvēlni virs runas burbuļa\n• Partnera pievienošana: pievienojiet jaunu sarunu partneri (Svešinieku) ar pogu +\n• GPS: uz atrašanās vietu balstīti scenāriji\n• Automātiska saglabāšana: automātiska sarunu satura tulkošana un saglabāšana",
+  "helpTabJson": "JSON formāts",
+  "helpTabModes": "Režīmu skaidrojumi",
+  "helpTabTour": "Apskatīt",
+  "helpTitle": "Palīdzība un ceļveži",
+  "helpTourDesc": "**Izgaismots aplis** sniedz norādījumus par galvenajām funkcijām.\n(Piemērs: varat ilgi nospiest kartīti, uz kuru norāda **izgaismots aplis**, lai to izdzēstu.)",
+  "hide": "Slēpt",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Pievienots: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Importēšana pabeigta",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Materiāls ar šādu nosaukumu jau pastāv. Lūdzu, mainiet nosaukumu un mēģiniet vēlreiz.",
+  "importErrorMessage": "Faila importēšana neizdevās:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Importēšana neizdevās",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Kopā: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Importēt JSON failu",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Pievienots: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Lūdzu, importējiet JSON failu",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Izlaists: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Kļūdas:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Kopā: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Kļūda",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Importē...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Faila importēšana neizdevās:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "Ievade",
+  "intervalSeconds": "Intervāls: {seconds} s",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Ievadiet derīgu e-pastu.",
+  "kakaoContinue": "Turpināt ar Kakao",
+  "labelLangCode": "Valodas kods (piem., en-US, ko-KR)",
+  "labelName": "Vārds",
+  "labelNote": "Piezīme",
+  "labelPOS": "Runas daļa",
+  "labelRole": "Loma",
+  "labelSentence": "Teikums",
+  "labelSentenceCollection": "Teikumu krājums",
+  "labelSentenceType": "Teikuma veids",
+  "labelShowMemorized": "Pabeigts",
+  "labelType": "Veids:",
+  "labelWord": "Vārds",
+  "labelWordbook": "Vārdu krājums",
+  "language": "Valoda",
+  "languageSettings": "Valodas iestatījumi",
+  "languageSettingsTitle": "Valodas iestatījumi",
+  "libTitleFirstMeeting": "Pirmā tikšanās",
+  "libTitleGreetings1": "Sveicieni 1",
+  "libTitleNouns1": "Lietvārdi 1",
+  "libTitleVerbs1": "Darbības vārdi 1",
+  "listen": "Klausīties",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Klausās...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Ielādē dalībniekus...",
+  "location": "Atrašanās vieta",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Ielogoties",
+  "logout": "Izrakstīties",
+  "logoutConfirmMessage": "Vai vēlaties izrakstīties no šīs ierīces?",
+  "logoutConfirmTitle": "Izrakstīties",
+  "male": "Vīrietis",
+  "manageParticipants": "Pārvaldīt dalībniekus",
+  "manual": "Manuāla ievade",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Atzīmēt kā apgūtu",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Informācija par materiālu",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Es",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Importēt materiālus no ierīces",
+  "menuHelp": "Palīdzība",
+  "menuLanguageSettings": "Valodas iestatījumi",
+  "menuOnlineLibrary": "Tiešsaistes bibliotēka",
+  "menuSelectMaterialSet": "Atlasiet mācību materiālu kopumu",
+  "menuSettings": "Valodas iestatījumi",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Apmācības tūre",
+  "menuWebDownload": "Mājaslapa",
+  "metadataDialogTitle": "Detalizēta klasifikācija",
+  "metadataFormType": "Gramatiskā forma",
+  "metadataRootWord": "Saknes vārds",
+  "micButtonTooltip": "Sākt balss atpazīšanu",
+  "mode1SelectedMaterial": "Pašlaik atlasīts materiālu kopums: {name}",
+  "mode2Title": "Pārskats",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Tālāk",
+  "mode3Start": "Sākt",
+  "mode3Stop": "Pārtraukt",
+  "mode3TryAgain": "Mēģināt vēlreiz",
+  "mySentenceCollection": "Mana teikumu kolekcija",
+  "myWordbook": "Mana vārdnīca",
+  "neutral": "Neitrāls",
+  "newSubjectName": "Jauns vārdu krājuma/teikumu krājuma nosaukums",
+  "next": "Tālāk",
+  "noDialogueHistory": "Nav sarunu vēstures.",
+  "noInternetWarningMic": "Nav interneta savienojuma. Bezsaistē balss atpazīšana var nebūt pieejama.",
+  "noInternetWarningTranslate": "Nav interneta savienojuma. Bezsaistē tulkošanas funkcija nav pieejama. Lūdzu, izmantojiet atkārtošanas režīmu.",
+  "noMaterialsInCategory": "Šajā kategorijā nav materiālu.",
+  "noParticipantsFound": "Nav reģistrētu dalībnieku.",
+  "noRecords": "Nav mācību ierakstu atlasītajā valodā",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Nav mācību materiāla.",
+  "noTextToPlay": "Nav teksta, ko atskaņot",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Nav tulkojumu, ko saglabāt",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Balss nav konstatēta",
+  "notSelected": "- Nav atlasīts -",
+  "onlineLibraryCheckInternet": "Pārbaudiet interneta savienojumu vai mēģiniet vēlreiz vēlāk.",
+  "onlineLibraryLoadFailed": "Neizdevās ielādēt materiālus.",
+  "onlineLibraryNoMaterials": "Nav materiālu.",
+  "participantDeleted": "Dalībnieks ir dzēsts.",
+  "participantRename": "Pārdēvēt dalībnieku",
+  "partner": "Partneris",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Partnera režīms",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Parole",
+  "passwordTooShort": "Parolei jābūt vismaz 6 rakstzīmēm garai.",
+  "perfect": "Lieliski!",
+  "personaFriend": "Vietējais draugs",
+  "personaGuide": "Ceļvedis",
+  "personaTeacher": "Angļu valodas skolotājs",
+  "playAgain": "Spēlēt vēlreiz",
+  "playbackFailed": "Atskaņošana neizdevās: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Atlasiet mācību materiālu",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Atskaņo...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Tēma:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Avots:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "Fails:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Īpašības vārds",
+  "posAdverb": "Apstākļa vārds",
+  "posConjunction": "Saiklis",
+  "posInterjection": "Izsauksmes vārds",
+  "posNoun": "Lietvārds",
+  "posPreposition": "Prievārds/Partikula",
+  "posPronoun": "Vietniekvārds",
+  "posVerb": "Darbības vārds",
+  "practiceModeTitle": "Prakse",
+  "practiceWordsOnly": "Praktizēt tikai vārdus",
   "progress": "Norise: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Lūdzu, importējiet JSON failu",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Lūdzu, atlasiet mācību materiālu",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Mācīšanās pabeigta",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Atzīmēt kā apgūtu",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Klausās...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Atpazīts",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Skatīt pēdējos {count} izveidotos",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Balss atpazīšana neizdevās: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Pārbauda...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Atpazīts",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Tulko...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Atpazīta izruna:",
+  "recordDeleted": "Ieraksts ir dzēsts",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Tulkošana pabeigta (jāsaglabā)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Atjaunot",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Ielādēts saglabātais tulkojums",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Tulkošana neizdevās: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Atiestatīt",
+  "resetPracticeHistory": "Atiestatīt praktizēšanās vēsturi",
+  "retry": "Mēģināt vēlreiz?",
+  "reviewAll": "Visu pārskatīšana",
+  "reviewCount": "Pārskatīts {count} reizes",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Ievadiet tekstu, ko tulkot",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Saglabā...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Nav tulkojumu, ko saglabāt",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "Pārskats",
+  "roleAi": "AI",
+  "roleThirdParty": "Trešā puse",
+  "roleUser": "Lietotājs",
+  "save": "Saglabāt",
+  "saveData": "Saglabāt datus",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Saglabāšana neizdevās: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Atskaņo...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Mēģiniet saglabāt tulkojumus no meklēšanas režīma",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Nav teksta, ko atskaņot",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Saglabāts",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Atskaņošana neizdevās: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Saglabā...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Pirmvaloda",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Mērķa valoda",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Atrasts līdzīgs teksts",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Izmantot esošu tekstu",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Turpināt ar jaunu teikumu",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Pārskatīts {count} reizes",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Runāšana",
-  "speakingPractice": "Runāšanas praktizēšana",
-  "intervalSeconds": "Intervāls: {seconds} s",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Jūsu izruna",
-  "correctAnswer": "Pareiza atbilde",
   "score": "Precizitāte: {score}%",
   "@score": {
     "placeholders": {
@@ -446,89 +517,161 @@
       }
     }
   },
-  "perfect": "Lieliski!",
-  "good": "Labi",
-  "tryAgain": "Mēģiniet vēlreiz",
-  "startPractice": "Sākt praktizēties",
-  "stopPractice": "Pārtraukt praktizēties",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Sākt apmācību",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Balss ievade",
-  "tutorialMicDesc": "Varat ievadīt ar balsi, nospiežot mikrofona pogu.",
-  "tutorialTabDesc": "Šeit varat izvēlēties vēlamo mācību režīmu.",
-  "tutorialTapToContinue": "Pieskarieties ekrānam, lai turpinātu",
-  "tutorialTransTitle": "Tulkot",
-  "tutorialTransDesc": "Tulko ievadīto tekstu.",
-  "tutorialSaveTitle": "Saglabāt",
-  "tutorialSaveDesc": "Saglabājiet tulkotos rezultātus mācību ierakstos.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Punkti",
+  "search": "Meklēt",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Meklēšanas nosacījumi",
+  "searchSentenceHint": "Meklēt teikumu...",
+  "searchWordHint": "Meklēt vārdu...",
+  "sectionSentence": "Teikumu sadaļa",
+  "sectionSentences": "Teikumi",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Vārdu sadaļa",
+  "sectionWords": "Vārdi",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Izvēlieties esošu nosaukumu",
+  "selectMaterialPrompt": "Lūdzu, atlasiet mācību materiālu",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "Atlasiet mācību materiālu kopumu",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Izvēlieties runas daļu",
+  "selectParticipants": "Atlasiet dalībniekus",
+  "selectSentenceType": "Izvēlieties teikuma veidu",
+  "selectStudyMaterial": "Atlasiet mācību materiālu",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI tērzēšana",
-  "tutorialAiChatDesc": "Praktizējiet sarunas reālajā dzīvē ar AI personu.",
-  "tutorialM2SelectTitle": "Materiāla izvēle",
-  "tutorialM2SelectDesc": "Nospiediet materiālu kopuma ikonu (📚) augšējā lietotnes joslā, lai izvēlētos materiālu, ko mācīties.",
-  "tutorialM2ListTitle": "Mācību saraksts",
-  "tutorialM2ListDesc": "Varat ilgi nospiest šo kartīti, lai to izdzēstu. Pārbaudiet saglabātos teikumus un apgrieziet tos.",
-  "tutorialM3SelectTitle": "Materiāla izvēle",
-  "tutorialM3SelectDesc": "Nospiediet materiālu kopuma ikonu (📚) augšējā lietotnes joslā, lai izvēlētos materiālu, ko praktizēt.",
-  "tutorialM3IntervalTitle": "Intervāla iestatīšana",
-  "tutorialM3IntervalDesc": "Pielāgojiet gaidīšanas laiku starp teikumiem.",
-  "tutorialM3StartTitle": "Sākt praktizēties",
-  "tutorialM3StartDesc": "Nospiediet atskaņošanas pogu, lai klausītos vietējā valodā runājošo un atkārtotu.",
+  "sentence": "Teikums",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Reģistrēties",
+  "similarTextFound": "Atrasts līdzīgs teksts",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "Izlaist",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Avots:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Pirmvaloda",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Mana valoda (Avots)",
+  "speakNow": "Runājiet tagad!",
+  "speaker": "Runātājs",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Atlasiet runātāju",
+  "speakingPractice": "Runāšanas praktizēšana",
+  "startChat": "Sākt sarunu",
+  "startPractice": "Sākt praktizēties",
+  "startTutorial": "Sākt apmācību",
   "startWarning": "Brīdinājums",
-  "noVoiceDetected": "Balss nav konstatēta",
-  "tooltipSearch": "Meklēt",
-  "tooltipStudyReview": "Mācīšanās+Pārskats",
-  "tooltipSpeaking": "Runāšana",
+  "startsWith": "Sākas ar",
+  "statusCheckEmail": "Lūdzu, pārbaudiet savu e-pastu, lai pabeigtu verifikāciju.",
+  "statusDownloading": "Lejupielāde: {name}...",
+  "statusImportFailed": "Importēšana neizdevās: {error}",
+  "statusImportSuccess": "{name} importēšana pabeigta",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Pieteikšanās ir atcelta.",
+  "statusLoginFailed": "Pieteikšanās neizdevās: {error}",
+  "statusLoginSuccess": "Ielogojies veiksmīgi.",
+  "statusLogoutSuccess": "Izrakstīšanās veiksmīga.",
+  "statusSignUpFailed": "Reģistrācija neizdevās: {error}",
+  "statusSigningUp": "Reģistrēšanās...",
+  "stopPractice": "Pārtraukt praktizēties",
+  "studyComplete": "Mācīšanās pabeigta",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Mācību ieraksti ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Formāls",
+  "styleInformal": "Neformāls",
+  "stylePolite": "Pieklājīgs",
+  "styleSlang": "Žargons",
+  "subject": "Tēma:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Apmainīt valodas",
+  "switchToAi": "Pārslēgties uz AI režīmu",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Pārslēgties uz partnera režīmu",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Sinhronizē datu...",
+  "tabConversation": "Saruna",
+  "tabReview": "Pārskats ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "Teikums",
+  "tabSpeaking": "Runāšana",
+  "tabStudyMaterial": "Mācību materiāli ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "Vārds",
+  "tagFormal": "Formāls",
+  "tagSelection": "Atzīmju atlase",
+  "targetLanguage": "Mērķa valoda",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Mērķa valodas filtrs:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Mācību valoda (Mērķis)",
+  "thinkingTimeDesc": "Laiks, kas jāpārdomā pirms atbildes atklāšanas.",
+  "thinkingTimeInterval": "Atskaņošanas intervāls",
+  "timeUp": "Laiks ir beidzies!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Virsraksta atzīme (materiāli)",
   "tooltipDecrease": "Samazināt",
   "tooltipIncrease": "Palielināt",
-  "languageSettings": "Valodas iestatījumi",
-  "tutorialM2DropdownDesc": "Varat izvēlēties materiālu, ko mācīties, izmantojot augšējo izvēlni.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Importējiet JSON failu no ierīces mapes.",
-  "tutorialLangSettingsTitle": "Valodas iestatījumi",
-  "tutorialLangSettingsDesc": "Iestatiet pirmvalodu un mērķa valodu, ko tulkot.",
-  "copy": "Kopēt",
-  "copiedToClipboard": "Nokopēts starpliktuvē!",
-  "tutorialContextTitle": "Situācijas/konteksta atzīme",
-  "tutorialContextDesc": "Varat to saglabāt atsevišķi, ja pierakstāt situāciju (piemēram, rīts, vakars), pat ja tas ir tas pats teikums.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Laiks, kas jāpārdomā pirms atbildes atklāšanas.",
-  "autoPlay": "Automātiska atskaņošana",
-  "timeUp": "Laiks ir beidzies!",
-  "gameModeTitle": "Spēles režīms",
-  "gameModeDesc": "Izvēlieties spēles režīmu, ko praktizēt",
-  "wordDefenseTitle": "Vārdu aizsardzība",
-  "wordDefenseDesc": "Aizstāviet bāzi, izrunājot vārdus, pirms ienaidnieks sasniedz.",
-  "dialogueQuestTitle": "Dialoga meklējums",
-  "dialogueQuestDesc": "Praktizējiet sarunas, izmantojot situācijas. Atlasiet un izrunājiet piemērotas atbildes.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Veids:",
-  "labelWord": "Vārds",
-  "labelSentence": "Teikums",
-  "contextTagLabel": "Konteksts/Situācija (pēc izvēles) - Piemērs: Rīta sveiciens, formāls",
-  "contextTagHint": "Pierakstiet situāciju, lai vēlāk to būtu vieglāk atšķirt",
-  "usageLimitTitle": "Sasniegts ierobežojums",
-  "translationLimitExceeded": "Pārsniegts tulkošanas ierobežojums",
-  "translationLimitMessage": "Esat izmantojis visus savus ikdienas bezmaksas tulkojumus (5 reizes).\\n\\nVai vēlaties skatīties reklāmu un nekavējoties papildināt 5 reizes?",
-  "watchAdAndRefill": "Skatīties reklāmu un papildināt (+5 reizes)",
-  "translationRefilled": "Jūsu tulkošanas reižu skaits ir papildināts ar 5 reizēm!",
-  "adLoading": "Reklāma tiek ielādēta. Lūdzu, mēģiniet vēlreiz vēlāk.",
-  "reviewAll": "Visu pārskatīšana",
+  "tooltipSearch": "Meklēt",
+  "tooltipSpeaking": "Runāšana",
+  "tooltipStudyReview": "Mācīšanās+Pārskats",
   "totalRecords": "Kopā {count} ieraksti (skatīt visus)",
   "@totalRecords": {
     "description": "Total records count",
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "Visi",
-  "practiceWordsOnly": "Praktizēt tikai vārdus",
-  "resetPracticeHistory": "Atiestatīt praktizēšanās vēsturi",
-  "retry": "Mēģināt vēlreiz?",
-  "noStudyMaterial": "Nav mācību materiāla.",
-  "gameOver": "Spēle beigusies",
-  "playAgain": "Spēlēt vēlreiz",
-  "speakNow": "Runājiet tagad!",
-  "scoreLabel": "Punkti",
-  "viewOnlineGuide": "Skatīt tiešsaistes ceļvedi",
-  "getMaterials": "Saņemt materiālus",
-  "swapLanguages": "Apmainīt valodas",
-  "next": "Tālāk",
-  "wordModeLabel": "Vārdu režīms",
-  "accuracy": "Precizitāte",
-  "basicDefault": "Pamata",
-  "basic": "Pamata",
-  "tutorialM3WordsTitle": "Vārdu praktizēšana",
-  "tutorialM3WordsDesc": "Atzīmējiet, lai praktizētu tikai saglabātos vārdus.",
-  "enterTextHint": "Ievadiet tekstu, ko tulkot",
-  "micButtonTooltip": "Sākt balss atpazīšanu",
-  "menuHelp": "Palīdzība",
-  "menuWebDownload": "Mājaslapa",
-  "menuDeviceImport": "Importēt materiālus no ierīces",
-  "menuSettings": "Valodas iestatījumi",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Tulkot",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Pamata vārdu repozitorijs",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Tulko...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Pamata teikumu repozitorijs",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Tulkojums",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "Atlasiet mācību materiālu kopumu",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Tulkošana pabeigta (jāsaglabā)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "Vārdi",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "Teikumi",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Valodas iestatījumi",
-  "sourceLanguageLabel": "Mana valoda (Avots)",
-  "targetLanguageLabel": "Mācību valoda (Mērķis)",
-  "mode3Start": "Sākt",
-  "mode3Stop": "Pārtraukt",
-  "mode3Next": "Tālāk",
-  "mode3TryAgain": "Mēģināt vēlreiz",
-  "tutorialM3ResetTitle": "Vēstures atiestatīšana",
-  "tutorialSwapDesc": "Apmaina manu valodu un mācību valodu.",
-  "recognizedText": "Atpazīta izruna:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Atiestata progresu un precizitātes rādītāju, lai sāktu no jauna.",
-  "menuSelectMaterialSet": "Atlasiet mācību materiālu kopumu",
-  "sectionWord": "Vārdu sadaļa",
-  "sectionSentence": "Teikumu sadaļa",
-  "tabWord": "Vārds",
-  "tabSentence": "Teikums",
-  "errorProfanity": "Nevar tulkot, jo satur necenzētus vārdus.",
-  "errorHateSpeech": "Nevar tulkot, jo satur naida runu.",
-  "errorSexualContent": "Nevar tulkot, jo satur seksuāla rakstura saturu.",
-  "errorOtherSafety": "Tulkošana tika atteikta AI drošības politikas dēļ.",
-  "clearAll": "Notīrīt visu",
-  "disambiguationTitle": "Izvēlieties nozīmi",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "Kuru nozīmi vēlaties tulkot?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "Izlaist",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Ievade",
-  "reviewModeTitle": "Pārskats",
-  "practiceModeTitle": "Prakse",
-  "chatHistoryTitle": "Sarunu vēsture",
-  "chatNew": "Jauna saruna",
-  "chatNewChat": "Jauna saruna",
-  "chatChoosePersona": "Izvēlieties personu",
-  "chatTypeHint": "Ierakstiet ziņojumu...",
-  "chatFailed": "Tērzēšana neizdevās: {error}",
-  "@chatFailed": {
+  "translationFailed": "Tulkošana neizdevās: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "Vēl nav sarunu",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Sāciet jaunu sarunu, lai praktizētu!",
-  "chatFromConversation": "Sarunas izvilkums ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Pārsniegts tulkošanas ierobežojums",
+  "translationLimitMessage": "Esat izmantojis visus savus ikdienas bezmaksas tulkojumus (5 reizes).\\n\\nVai vēlaties skatīties reklāmu un nekavējoties papildināt 5 reizes?",
+  "translationLoaded": "Ielādēts saglabātais tulkojums",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "Angļu valodas skolotājs",
-  "personaGuide": "Ceļvedis",
-  "personaFriend": "Vietējais draugs",
-  "chatUntitled": "Saruna bez nosaukuma",
-  "chatAiChat": "Tērzēšana",
-  "mode1SelectedMaterial": "Pašlaik atlasīts materiālu kopums: {name}",
-  "basicWordRepository": "Pamata vārdu repozitorijs",
-  "basicSentenceRepository": "Pamata teikumu repozitorijs",
-  "chatEndTitle": "Beigt un saglabāt sarunu",
-  "chatEndMessage": "Vai vēlaties beigt sarunu?",
-  "chatSaveAndExit": "Saglabāt un iziet",
-  "errorSelectCategory": "Vispirms atlasiet vārdu vai teikumu!",
-  "tutorialM1ToggleTitle": "Vārdu/teikumu režīms",
+  "translationRefilled": "Jūsu tulkošanas reižu skaits ir papildināts ar 5 reizēm!",
+  "translationResultHint": "Tulkošanas rezultāts - var rediģēt",
+  "tryAgain": "Mēģiniet vēlreiz",
+  "tutorialAiChatDesc": "Praktizējiet sarunas reālajā dzīvē ar AI personu.",
+  "tutorialAiChatTitle": "AI tērzēšana",
+  "tutorialContextDesc": "Varat to saglabāt atsevišķi, ja pierakstāt situāciju (piemēram, rīts, vakars), pat ja tas ir tas pats teikums.",
+  "tutorialContextTitle": "Situācijas/konteksta atzīme",
+  "tutorialLangSettingsDesc": "Iestatiet pirmvalodu un mērķa valodu, ko tulkot.",
+  "tutorialLangSettingsTitle": "Valodas iestatījumi",
   "tutorialM1ToggleDesc": "Pārslēdziet vārdu un teikumu režīmu šeit.",
-  "metadataDialogTitle": "Detalizēta klasifikācija",
-  "tagFormal": "Formāls",
-  "selectPOS": "Izvēlieties runas daļu",
-  "selectSentenceType": "Izvēlieties teikuma veidu",
-  "metadataRootWord": "Saknes vārds",
-  "posNoun": "Lietvārds",
-  "posVerb": "Darbības vārds",
-  "posAdjective": "Īpašības vārds",
-  "posAdverb": "Apstākļa vārds",
-  "posPronoun": "Vietniekvārds",
-  "posPreposition": "Prievārds/Partikula",
-  "posConjunction": "Saiklis",
-  "posInterjection": "Izsauksmes vārds",
-  "typeStatement": "Stāstījuma teikums",
-  "typeQuestion": "Jautājuma teikums",
+  "tutorialM1ToggleTitle": "Vārdu/teikumu režīms",
+  "tutorialM2DropdownDesc": "Varat izvēlēties materiālu, ko mācīties, izmantojot augšējo izvēlni.",
+  "tutorialM2ImportDesc": "Importējiet JSON failu no ierīces mapes.",
+  "tutorialM2ListDesc": "Varat ilgi nospiest šo kartīti, lai to izdzēstu. Pārbaudiet saglabātos teikumus un apgrieziet tos.",
+  "tutorialM2ListTitle": "Mācību saraksts",
+  "tutorialM2SearchDesc": "Meklējiet saglabātos vārdus un teikumus, lai tos ātri atrastu.",
+  "tutorialM2SelectDesc": "Nospiediet materiālu kopuma ikonu (📚) augšējā lietotnes joslā, lai izvēlētos materiālu, ko mācīties.",
+  "tutorialM2SelectTitle": "Materiāla izvēle",
+  "tutorialM3IntervalDesc": "Pielāgojiet gaidīšanas laiku starp teikumiem.",
+  "tutorialM3IntervalTitle": "Intervāla iestatīšana",
+  "tutorialM3ResetDesc": "Atiestata progresu un precizitātes rādītāju, lai sāktu no jauna.",
+  "tutorialM3ResetTitle": "Vēstures atiestatīšana",
+  "tutorialM3SelectDesc": "Nospiediet materiālu kopuma ikonu (📚) augšējā lietotnes joslā, lai izvēlētos materiālu, ko praktizēt.",
+  "tutorialM3SelectTitle": "Materiāla izvēle",
+  "tutorialM3StartDesc": "Nospiediet atskaņošanas pogu, lai klausītos vietējā valodā runājošo un atkārtotu.",
+  "tutorialM3StartTitle": "Sākt praktizēties",
+  "tutorialM3WordsDesc": "Atzīmējiet, lai praktizētu tikai saglabātos vārdus.",
+  "tutorialM3WordsTitle": "Vārdu praktizēšana",
+  "tutorialMicDesc": "Varat ievadīt ar balsi, nospiežot mikrofona pogu.",
+  "tutorialMicTitle": "Balss ievade",
+  "tutorialSaveDesc": "Saglabājiet tulkotos rezultātus mācību ierakstos.",
+  "tutorialSaveTitle": "Saglabāt",
+  "tutorialSwapDesc": "Apmaina manu valodu un mācību valodu.",
+  "tutorialTabDesc": "Šeit varat izvēlēties vēlamo mācību režīmu.",
+  "tutorialTapToContinue": "Pieskarieties ekrānam, lai turpinātu",
+  "tutorialTransDesc": "Tulko ievadīto tekstu.",
+  "tutorialTransTitle": "Tulkot",
   "typeExclamation": "Izsauksmes teikums",
   "typeImperative": "Pavēles teikums",
-  "labelNote": "Piezīme",
-  "labelShowMemorized": "Pabeigts",
-  "titleTagSelection": "Virsraksta atzīme (materiāli)",
-  "generalTags": "Vispārīgās atzīmes",
-  "tagSelection": "Atzīmju atlase",
-  "metadataFormType": "Gramatiskā forma",
-  "formInfinitive": "Infinitīvs/Tagadne",
-  "formPast": "Pagātne",
-  "formPastParticiple": "Pagātnes divdabis",
-  "formPresentParticiple": "Tagadnes divdabis (ing)",
-  "formPresent": "Tagadne",
-  "formThirdPersonSingular": "3. persona vienskaitlī",
-  "formPlural": "Daudzskaitlis",
-  "formSingular": "Vienskaitlis",
-  "caseSubject": "Nominatīvs",
-  "caseObject": "Akuzatīvs",
-  "casePossessive": "Ģenitīvs",
-  "casePossessivePronoun": "Piederības vietniekvārds",
-  "caseReflexive": "Atgriezeniskais",
-  "formPositive": "Pozitīvs",
-  "formComparative": "Salīdzināmais",
-  "formSuperlative": "Pārākais",
-  "searchConditions": "Meklēšanas nosacījumi",
-  "recentNItems": "Skatīt pēdējos {count} izveidotos",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "typeQuestion": "Jautājuma teikums",
+  "typeStatement": "Stāstījuma teikums",
+  "usageLimitTitle": "Sasniegts ierobežojums",
+  "useExistingText": "Izmantot esošu tekstu",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Sākas ar",
-  "reset": "Atiestatīt",
-  "participantRename": "Pārdēvēt dalībnieku",
-  "labelName": "Vārds",
-  "gender": "Dzimums",
-  "language": "Valoda",
-  "male": "Vīrietis",
-  "female": "Sieviete",
-  "neutral": "Neitrāls",
-  "chatAllConversations": "Visas sarunas",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Vai vēlaties izdzēst šo sarunu?\nIzdzēstās sarunas nevar atgūt.",
-  "notSelected": "- Nav atlasīts -",
-  "myWordbook": "Mana vārdnīca",
-  "mySentenceCollection": "Mana teikumu kolekcija",
-  "newSubjectName": "Jauns vārdu krājuma/teikumu krājuma nosaukums",
-  "enterNewSubjectName": "Ievadiet jaunu nosaukumu",
-  "addNewSubject": "Pievienot jaunu nosaukumu",
-  "selectExistingSubject": "Izvēlieties esošu nosaukumu",
-  "addTagHint": "Pievienot tagu...",
-  "save": "Saglabāt",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Lūdzu, pārbaudiet savu e-pastu, lai pabeigtu verifikāciju.",
-  "emailAlreadyInUse": "Šis e-pasts jau ir reģistrēts. Lūdzu, piesakieties vai izmantojiet paroles atgūšanas funkciju."
+  "viewOnlineGuide": "Skatīt tiešsaistes ceļvedi",
+  "voluntaryTranslations": "Brīvprātīgie tulkojumi",
+  "watchAdAndRefill": "Skatīties reklāmu un papildināt (+5 reizes)",
+  "word": "Vārds",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Aizstāviet bāzi, izrunājot vārdus, pirms ienaidnieks sasniedz.",
+  "wordDefenseTitle": "Vārdu aizsardzība",
+  "wordModeLabel": "Vārdu režīms",
+  "yourPronunciation": "Jūsu izruna"
 }

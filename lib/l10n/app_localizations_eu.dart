@@ -9,35 +9,325 @@ class AppLocalizationsEu extends AppLocalizations {
   AppLocalizationsEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => 'Zehaztasuna';
 
   @override
-  String get kakaoContinue => 'Kakaorekin jarraitu';
+  String get adLoading =>
+      'Iragarkia kargatzen ari da. Mesedez, saiatu berriro geroago.';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => 'Gehitu izenburu berria';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => 'Parte-hartzailea gehitu';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => 'Gehitu etiketa...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => 'Dagoeneko baduzu kontu bat?';
 
   @override
-  String get helpTitle => 'Laguntza eta Gidak';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => 'Moduen azalpena';
+  String get autoPlay => 'Automatikoki erreproduzitu';
 
   @override
-  String get helpTabJson => 'JSON formatua';
+  String get basic => 'Oinarrizkoa';
 
   @override
-  String get helpTabTour => 'Esperimentatu';
+  String get basicDefault => 'Oinarrizkoa';
+
+  @override
+  String get basicMaterialRepository => 'Oinarrizko esaldi/hitz biltegia';
+
+  @override
+  String get basicSentenceRepository => 'Oinarrizko esaldi biltegia';
+
+  @override
+  String get basicSentences => 'Oinarrizko esaldi biltegia';
+
+  @override
+  String get basicWordRepository => 'Oinarrizko hitz biltegia';
+
+  @override
+  String get basicWords => 'Oinarrizko hitz biltegia';
+
+  @override
+  String get cancel => 'Ezeztatu';
+
+  @override
+  String get caseObject => 'Objektua';
+
+  @override
+  String get casePossessive => 'Jabetza';
+
+  @override
+  String get casePossessivePronoun => 'Jabetza-izenordaina';
+
+  @override
+  String get caseReflexive => 'Erreflexiboa';
+
+  @override
+  String get caseSubject => 'Subjektua';
+
+  @override
+  String get chatAiChat => 'Txat';
+
+  @override
+  String get chatAllConversations => 'Elkarrizketa guztiak';
+
+  @override
+  String get chatChoosePersona => 'Pertsonaia hautatu';
+
+  @override
+  String get chatEndMessage => 'Elkarrizketa amaitu nahi duzu?';
+
+  @override
+  String get chatEndTitle => 'Elkarrizketa amaitu eta gorde';
+
+  @override
+  String chatFailed(Object error) {
+    return 'Txatak huts egin du: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'Elkarrizketatik ateratakoa ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => 'Elkarrizketaren historia';
+
+  @override
+  String get chatNew => 'Elkarrizketa berria';
+
+  @override
+  String get chatNewChat => 'Elkarrizketa berria';
+
+  @override
+  String get chatNoConversations => 'Oraindik ez dago elkarrizketarik';
+
+  @override
+  String get chatSaveAndExit => 'Gorde eta irten';
+
+  @override
+  String get chatStartNewPrompt => 'Hasi elkarrizketa berri bat praktikatzeko!';
+
+  @override
+  String get chatTypeHint => 'Idatzi mezu bat...';
+
+  @override
+  String get chatUntitled => 'Izenik gabeko elkarrizketa';
+
+  @override
+  String get checking => 'Egiaztatzen...';
+
+  @override
+  String get clearAll => 'Guztia garbitu';
+
+  @override
+  String get confirm => 'Egiaztatu';
+
+  @override
+  String get confirmDelete => 'Ikasketa-erregistro hau ezabatu nahi duzu?';
+
+  @override
+  String get confirmDeleteConversation =>
+      'Elkarrizketa hau ezabatu nahi duzu?\nEzabatu ondoren ezin da berreskuratu.';
+
+  @override
+  String get confirmDeleteParticipant =>
+      'Parte-hartzaile hau ezabatu nahi duzu?';
+
+  @override
+  String get contextTagHint => 'Idatzi egoera geroago bereiztea errazteko';
+
+  @override
+  String get contextTagLabel =>
+      'Testuingurua/Egoera (aukerakoa) - Adibidez: goizeko agurra, tratamendu formala';
+
+  @override
+  String get copiedToClipboard => 'Arbelera kopiatu da!';
+
+  @override
+  String get copy => 'Kopiatu';
+
+  @override
+  String get correctAnswer => 'Erantzun zuzena';
+
+  @override
+  String get createNew => 'Sortu esaldi berri bat';
+
+  @override
+  String get currentLocation => 'Uneko kokapena';
+
+  @override
+  String get currentMaterialLabel => 'Hautatutako datu-multzoa:';
+
+  @override
+  String get delete => 'Ezabatu';
+
+  @override
+  String deleteFailed(String error) {
+    return 'Ezabatu egin da: $error';
+  }
+
+  @override
+  String get deleteRecord => 'Erregistroa ezabatu';
+
+  @override
+  String get dialogueQuestDesc =>
+      'Praktikatu elkarrizketa egoera baten bidez. Hautatu erantzun egoki bat eta hitz egin.';
+
+  @override
+  String get dialogueQuestTitle => 'Elkarrizketa bilaketa';
+
+  @override
+  String get disambiguationPrompt => 'Zein esanahirekin itzuli nahi duzu?';
+
+  @override
+  String get disambiguationTitle => 'Esanahia hautatu';
+
+  @override
+  String get dontHaveAccount => 'Ez duzu konturik?';
+
+  @override
+  String get editParticipant => 'Parte-hartzailea editatu';
+
+  @override
+  String get email => 'Posta elektronikoa';
+
+  @override
+  String get emailAlreadyInUse =>
+      'Helbide elektroniko hau erregistratuta dago. Hasi saioa edo berreskuratu pasahitza.';
+
+  @override
+  String get enterNewSubjectName => 'Idatzi izenburu berria';
+
+  @override
+  String get enterSentenceHint => 'Idatzi esaldi bat...';
+
+  @override
+  String get enterTextHint => 'Idatzi itzuli nahi duzun testua';
+
+  @override
+  String get enterTextToTranslate => 'Idatzi itzuli nahi duzun testua';
+
+  @override
+  String get enterWordHint => 'Idatzi hitz bat...';
+
+  @override
+  String get error => 'Errorea';
+
+  @override
+  String get errorHateSpeech => 'Ezin da itzuli gorroto-diskurtsoa duelako.';
+
+  @override
+  String get errorOtherSafety => 'AI segurtasun politikak itzulpena ukatu du.';
+
+  @override
+  String get errorProfanity => 'Ezin da itzuli profanotasuna duelako.';
+
+  @override
+  String get errorSelectCategory => 'Hautatu lehenik hitz bat edo esaldi bat!';
+
+  @override
+  String get errorSexualContent => 'Ezin da itzuli eduki sexuala duelako.';
+
+  @override
+  String get errors => 'Erroreak:';
+
+  @override
+  String get female => 'Emakumezkoa';
+
+  @override
+  String get file => 'Fitxategia:';
+
+  @override
+  String get filterAll => 'Guztiak';
+
+  @override
+  String get flip => 'Erakutsi';
+
+  @override
+  String get formComparative => 'Gradu konparatiboa';
+
+  @override
+  String get formInfinitive => 'Infinitive/Orainaldia';
+
+  @override
+  String get formPast => 'Iraganaldia';
+
+  @override
+  String get formPastParticiple => 'Iraganeko partizipioa';
+
+  @override
+  String get formPlural => 'Plurala';
+
+  @override
+  String get formPositive => 'Gradu positiboa';
+
+  @override
+  String get formPresent => 'Orainaldia';
+
+  @override
+  String get formPresentParticiple => 'Oraingo partizipioa (ing)';
+
+  @override
+  String get formSingular => 'Singularra';
+
+  @override
+  String get formSuperlative => 'Gradu superlatiboa';
+
+  @override
+  String get formThirdPersonSingular => 'Hirugarren pertsona singularra';
+
+  @override
+  String get gameModeDesc => 'Hautatu praktikatu nahi duzun joko modua';
+
+  @override
+  String get gameModeTitle => 'Joko modua';
+
+  @override
+  String get gameOver => 'Jokoa amaitu da';
+
+  @override
+  String get gender => 'Generoa';
+
+  @override
+  String get generalTags => 'Etiketa orokorrak';
+
+  @override
+  String get getMaterials => 'Materialak lortu';
+
+  @override
+  String get good => 'Ona';
+
+  @override
+  String get googleContinue => 'Jarraitu Google-rekin';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Inportatu elkarrizketa-sorta oso bat JSON fitxategi gisa.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON egitura: erabili `dialogues` array `entries` ordez\n• Berreskuratze automatikoa: elkarrizketaren izenburua, pertsonaia eta mezu-ordena berreskuratzen dira.\n• Kokapena: inportatutako elkarrizketak AI txat moduaren \'Historia\' fitxan agertzen dira.';
+
+  @override
+  String get helpJsonDesc =>
+      '3. Moduan erabiliko den ikaskuntza-materiala JSON fitxategi gisa inportatzeko, jarraitu formatu hau:';
+
+  @override
+  String get helpJsonTypeDialogue => 'Elkarrizketa';
+
+  @override
+  String get helpJsonTypeSentence => 'Esaldi';
+
+  @override
+  String get helpJsonTypeWord => 'Hitz';
 
   @override
   String get helpMode1Desc =>
@@ -72,159 +362,40 @@ class AppLocalizationsEu extends AppLocalizations {
       '• AI txata: praktikatu elkarrizketa zure hizkuntzan hitz eginez\n• Pertsonaia anitz: aldatu beste pertsonaren generoa/hizkuntza/izena goiko menuarekin\n• Bazkidea gehitu: gehitu solaskide berri bat (+) botoiarekin (Ezezaguna)\n• GPS: uneko kokapenean oinarritutako antzezpena\n• Automatikoki gorde: elkarrizketa automatikoki itzuli eta gorde';
 
   @override
-  String get helpJsonDesc =>
-      '3. Moduan erabiliko den ikaskuntza-materiala JSON fitxategi gisa inportatzeko, jarraitu formatu hau:';
+  String get helpTabJson => 'JSON formatua';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => 'Moduen azalpena';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => 'Esperimentatu';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Inportatu elkarrizketa-sorta oso bat JSON fitxategi gisa.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON egitura: erabili `dialogues` array `entries` ordez\n• Berreskuratze automatikoa: elkarrizketaren izenburua, pertsonaia eta mezu-ordena berreskuratzen dira.\n• Kokapena: inportatutako elkarrizketak AI txat moduaren \'Historia\' fitxan agertzen dira.';
+  String get helpTitle => 'Laguntza eta Gidak';
 
   @override
   String get helpTourDesc =>
       '**Nabarmendutako zirkuluak** funtzio nagusiak gidatzen ditu.\n(Adibidez: **Nabarmendutako zirkuluak** seinalatzen duen txartela luze sakatuta ezaba dezakezu.)';
 
   @override
-  String get partnerMode => 'Bazkide modua';
-
-  @override
-  String get manual => 'Eskuzko sarrera';
-
-  @override
-  String get speaker => 'Hizlaria';
-
-  @override
-  String get switchToAi => 'AI modura aldatu';
-
-  @override
-  String get switchToPartner => 'Bazkide modura aldatu';
-
-  @override
-  String get currentLocation => 'Uneko kokapena';
-
-  @override
-  String get location => 'Kokapena';
-
-  @override
-  String get partner => 'Bazkidea';
-
-  @override
-  String get me => 'Ni';
-
-  @override
-  String get currentMaterialLabel => 'Hautatutako datu-multzoa:';
-
-  @override
-  String get basicMaterialRepository => 'Oinarrizko esaldi/hitz biltegia';
-
-  @override
-  String get word => 'Hitza';
-
-  @override
-  String get sentence => 'Esaldi';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return 'Berrikusi ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return 'Ikasketa-materiala ($count)';
-  }
-
-  @override
-  String get mode2Title => 'Berrikusi';
-
-  @override
-  String get search => 'Bilatu';
-
-  @override
-  String get translate => 'Itzuli';
-
-  @override
-  String get listen => 'Entzun';
-
-  @override
-  String get saveData => 'Datuak gorde';
-
-  @override
-  String get saved => 'Gordeta';
-
-  @override
-  String get delete => 'Ezabatu';
-
-  @override
-  String get materialInfo => 'Materialaren informazioa';
-
-  @override
-  String get cancel => 'Ezeztatu';
-
-  @override
-  String get confirm => 'Egiaztatu';
-
-  @override
-  String get refresh => 'Freskatu';
-
-  @override
-  String studyRecords(int count) {
-    return 'Ikasketa-erregistroak ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => 'Helburuko hizkuntzaren iragazkia:';
-
-  @override
-  String get noRecords =>
-      'Ez dago hautatutako hizkuntzaren ikasketa-erregistrorik';
-
-  @override
-  String get saveTranslationsFromSearch =>
-      'Saiatu itzulpenak bilaketa moduan gordetzen';
-
-  @override
-  String get flip => 'Erakutsi';
-
-  @override
   String get hide => 'Ezkutatu';
 
   @override
-  String get deleteRecord => 'Erregistroa ezabatu';
-
-  @override
-  String get confirmDelete => 'Ikasketa-erregistro hau ezabatu nahi duzu?';
-
-  @override
-  String get recordDeleted => 'Erregistroa ezabatu da';
-
-  @override
-  String deleteFailed(String error) {
-    return 'Ezabatu egin da: $error';
+  String importAdded(int count) {
+    return 'Gehituta: $count';
   }
 
   @override
-  String get importJsonFile => 'JSON fitxategia inportatu';
-
-  @override
-  String get importing => 'Inportatzen...';
-
-  @override
   String get importComplete => 'Inportatzea amaitu da';
+
+  @override
+  String get importDuplicateTitleError =>
+      'Izenburu bereko material bat existitzen da jada. Aldatu izenburua eta saiatu berriro.';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'Fitxategia inportatzeak huts egin du:\\n$error';
+  }
 
   @override
   String get importFailed => 'Inportatzeak huts egin du';
@@ -235,45 +406,10 @@ class AppLocalizationsEu extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => 'JSON fitxategia inportatu';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get roleThirdParty => '제삼자';
-
-  @override
-  String get speakerSelect => '발화자 선택';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return 'Guztira: $count';
-  }
-
-  @override
-  String importAdded(int count) {
-    return 'Gehituta: $count';
-  }
+  String get importJsonFilePrompt => 'Mesedez, inportatu JSON fitxategi bat';
 
   @override
   String importSkipped(int count) {
@@ -281,133 +417,15 @@ class AppLocalizationsEu extends AppLocalizations {
   }
 
   @override
-  String get errors => 'Erroreak:';
-
-  @override
-  String get error => 'Errorea';
-
-  @override
-  String importErrorMessage(String error) {
-    return 'Fitxategia inportatzeak huts egin du:\\n$error';
+  String importTotal(int count) {
+    return 'Guztira: $count';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => 'Inportatzen...';
 
   @override
-  String get selectStudyMaterial => 'Ikasketa-materiala hautatu';
-
-  @override
-  String get subject => 'Gaia:';
-
-  @override
-  String get source => 'Iturria:';
-
-  @override
-  String get file => 'Fitxategia:';
-
-  @override
-  String progress(int current, int total) {
-    return 'Aurrerapena: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => 'Mesedez, inportatu JSON fitxategi bat';
-
-  @override
-  String get selectMaterialPrompt => 'Mesedez, hautatu ikasketa-materiala';
-
-  @override
-  String get studyComplete => 'Ikaskuntza amaitu da';
-
-  @override
-  String get markAsStudied => 'Ikasketa markatu';
-
-  @override
-  String get listening => 'Entzuten...';
-
-  @override
-  String get recognized => 'Ezagututa';
-
-  @override
-  String recognitionFailed(String error) {
-    return 'Ahots ezagutzeak huts egin du: $error';
-  }
-
-  @override
-  String get checking => 'Egiaztatzen...';
-
-  @override
-  String get translating => 'Itzultzen...';
-
-  @override
-  String get translationComplete => 'Itzulpena amaitu da (gorde behar da)';
-
-  @override
-  String get translationLoaded => 'Gordetako itzulpena kargatu da';
-
-  @override
-  String translationFailed(String error) {
-    return 'Itzulpenak huts egin du: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => 'Idatzi itzuli nahi duzun testua';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => 'Gordetzen...';
-
-  @override
-  String get noTranslationToSave => 'Ez dago gordetzeko itzulpenik';
-
-  @override
-  String saveFailed(String error) {
-    return 'Gordetzeak huts egin du: $error';
-  }
-
-  @override
-  String get playing => 'Erreproduzitzen...';
-
-  @override
-  String get noTextToPlay => 'Ez dago erreproduzitzeko testurik';
-
-  @override
-  String playbackFailed(String error) {
-    return 'Erreprodukzioak huts egin du: $error';
-  }
-
-  @override
-  String get sourceLanguage => 'Jatorrizko hizkuntza';
-
-  @override
-  String get targetLanguage => 'Helburuko hizkuntza';
-
-  @override
-  String get similarTextFound => 'Antzeko testua aurkitu da';
-
-  @override
-  String get useExistingText => 'Erabili lehendik dagoen testua';
-
-  @override
-  String get createNew => 'Sortu esaldi berri bat';
-
-  @override
-  String reviewCount(int count) {
-    return 'Berrikusi $count aldiz';
-  }
-
-  @override
-  String get tabSpeaking => 'Hitz egin';
-
-  @override
-  String get speakingPractice => 'Hitz egiteko praktika';
+  String get inputModeTitle => 'Sarrera';
 
   @override
   String intervalSeconds(int seconds) {
@@ -415,238 +433,37 @@ class AppLocalizationsEu extends AppLocalizations {
   }
 
   @override
-  String get yourPronunciation => 'Zure ahoskera';
+  String get invalidEmail => 'Sartu baliozko posta elektroniko bat.';
 
   @override
-  String get correctAnswer => 'Erantzun zuzena';
+  String get kakaoContinue => 'Kakaorekin jarraitu';
 
   @override
-  String score(String score) {
-    return 'Zehaztasuna: $score%';
-  }
+  String get labelLangCode => 'Hizkuntza-kodea (adibidez: en-US, ko-KR)';
 
   @override
-  String get perfect => 'Ezin hobea!';
+  String get labelName => 'Izena';
 
   @override
-  String get good => 'Ona';
+  String get labelNote => 'Oharra';
 
   @override
-  String get tryAgain => 'Saiatu berriro';
+  String get labelPOS => 'Adiera-kategoria';
 
   @override
-  String get startPractice => 'Praktika hasi';
+  String get labelRole => 'Rola';
 
   @override
-  String get stopPractice => 'Praktika gelditu';
+  String get labelSentence => 'Esaldi';
 
   @override
-  String get menuOnlineLibrary => 'Online Library';
+  String get labelSentenceCollection => 'Esaldi bilduma';
 
   @override
-  String get startTutorial => 'Tutoriala hasi';
+  String get labelSentenceType => 'Esaldi mota';
 
   @override
-  String get menuTutorial => 'Tutorial';
-
-  @override
-  String get tutorialMicTitle => 'Ahots sarrera';
-
-  @override
-  String get tutorialMicDesc =>
-      'Mikrofonoaren botoia sakatuta ahots bidez idatz dezakezu.';
-
-  @override
-  String get tutorialTabDesc =>
-      'Hemen nahi duzun ikasketa-modua hauta dezakezu.';
-
-  @override
-  String get tutorialTapToContinue => 'Sakatu pantaila jarraitzeko';
-
-  @override
-  String get tutorialTransTitle => 'Itzuli';
-
-  @override
-  String get tutorialTransDesc => 'Idatzitako testua itzultzen du.';
-
-  @override
-  String get tutorialSaveTitle => 'Gorde';
-
-  @override
-  String get tutorialSaveDesc =>
-      'Gorde itzulitako emaitzak ikasketa-erregistroan.';
-
-  @override
-  String get selectParticipants => 'Select Participants';
-
-  @override
-  String get loadingParticipants => 'Loading participants...';
-
-  @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
-
-  @override
-  String get sendingMessage => '메시지 전송 중...';
-
-  @override
-  String get startChat => 'Start Chat';
-
-  @override
-  String get manageParticipants => 'Manage Participants';
-
-  @override
-  String get tutorialAiChatTitle => 'AI txata';
-
-  @override
-  String get tutorialAiChatDesc =>
-      'Praktikatu elkarrizketa errealak AI pertsonaia batekin.';
-
-  @override
-  String get tutorialM2SelectTitle => 'Materiala hautatu';
-
-  @override
-  String get tutorialM2SelectDesc =>
-      'Sakatu datu-multzoaren ikonoa (📚) goiko aplikazio-barran ikasi nahi duzun materiala hautatzeko.';
-
-  @override
-  String get tutorialM2ListTitle => 'Ikasketa-zerrenda';
-
-  @override
-  String get tutorialM2ListDesc =>
-      'Txartel hau luze sakatuta (Sakatu luzea) ezaba dezakezu. Egiaztatu eta irauli gordetako esaldiak.';
-
-  @override
-  String get tutorialM3SelectTitle => 'Materiala hautatu';
-
-  @override
-  String get tutorialM3SelectDesc =>
-      'Sakatu datu-multzoaren ikonoa (📚) goiko aplikazio-barran praktikatu nahi duzun materiala hautatzeko.';
-
-  @override
-  String get tutorialM3IntervalTitle => 'Tartea ezarri';
-
-  @override
-  String get tutorialM3IntervalDesc => 'Doitu esaldien arteko itxaron-denbora.';
-
-  @override
-  String get tutorialM3StartTitle => 'Praktika hasi';
-
-  @override
-  String get tutorialM3StartDesc =>
-      'Sakatu erreproduzitzeko botoia jatorrizko hiztunaren ahotsa entzun eta jarraitzeko.';
-
-  @override
-  String get startWarning => 'Abisua';
-
-  @override
-  String get noVoiceDetected => 'Ez da ahotsik detektatu';
-
-  @override
-  String get tooltipSearch => 'Bilatu';
-
-  @override
-  String get tooltipStudyReview => 'Ikasi+Berrikusi';
-
-  @override
-  String get tooltipSpeaking => 'Hitz egin';
-
-  @override
-  String get tooltipDecrease => 'Murriztu';
-
-  @override
-  String get tooltipIncrease => 'Handitu';
-
-  @override
-  String get languageSettings => 'Hizkuntza-ezarpenak';
-
-  @override
-  String get tutorialM2DropdownDesc =>
-      'Goiko menuaren bidez ikasi nahi duzun materiala hauta dezakezu.';
-
-  @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
-
-  @override
-  String get tutorialM2ImportDesc =>
-      'Inportatu JSON fitxategi bat zure gailuko karpetatik.';
-
-  @override
-  String get tutorialLangSettingsTitle => 'Hizkuntza-ezarpenak';
-
-  @override
-  String get tutorialLangSettingsDesc =>
-      'Ezarri itzuli nahi duzun jatorrizko hizkuntza eta helburuko hizkuntza.';
-
-  @override
-  String get copy => 'Kopiatu';
-
-  @override
-  String get copiedToClipboard => 'Arbelera kopiatu da!';
-
-  @override
-  String get tutorialContextTitle => 'Egoera/Testuinguru etiketa';
-
-  @override
-  String get tutorialContextDesc =>
-      'Esaldi bera bada ere, egoera (adibidez, goiza, arratsaldea) idatziz gero, bereizita gorde dezakezu.';
-
-  @override
-  String get thinkingTimeInterval => 'Playback Delay';
-
-  @override
-  String get thinkingTimeDesc =>
-      'Erantzuna argitaratu aurretik pentsatzeko denbora.';
-
-  @override
-  String get autoPlay => 'Automatikoki erreproduzitu';
-
-  @override
-  String get timeUp => 'Denbora agortu da!';
-
-  @override
-  String get gameModeTitle => 'Joko modua';
-
-  @override
-  String get gameModeDesc => 'Hautatu praktikatu nahi duzun joko modua';
-
-  @override
-  String get wordDefenseTitle => 'Hitzen defentsa';
-
-  @override
-  String get wordDefenseDesc =>
-      'Hitz egin hitzak etsaiak iritsi baino lehen oinarria defendatzeko.';
-
-  @override
-  String get dialogueQuestTitle => 'Elkarrizketa bilaketa';
-
-  @override
-  String get dialogueQuestDesc =>
-      'Praktikatu elkarrizketa egoera baten bidez. Hautatu erantzun egoki bat eta hitz egin.';
-
-  @override
-  String get translation => 'Translation';
+  String get labelShowMemorized => 'Amaituta';
 
   @override
   String get labelType => 'Mota:';
@@ -655,17 +472,616 @@ class AppLocalizationsEu extends AppLocalizations {
   String get labelWord => 'Hitza';
 
   @override
-  String get labelSentence => 'Esaldi';
+  String get labelWordbook => 'Hitz bilduma';
 
   @override
-  String get contextTagLabel =>
-      'Testuingurua/Egoera (aukerakoa) - Adibidez: goizeko agurra, tratamendu formala';
+  String get language => 'Hizkuntza';
 
   @override
-  String get contextTagHint => 'Idatzi egoera geroago bereiztea errazteko';
+  String get languageSettings => 'Hizkuntza-ezarpenak';
 
   @override
-  String get usageLimitTitle => 'Mugara iritsi da';
+  String get languageSettingsTitle => 'Hizkuntza-ezarpenak';
+
+  @override
+  String get libTitleFirstMeeting => 'Lehenengo topaketa';
+
+  @override
+  String get libTitleGreetings1 => 'Agurrak 1';
+
+  @override
+  String get libTitleNouns1 => 'Izena 1';
+
+  @override
+  String get libTitleVerbs1 => 'Aditza 1';
+
+  @override
+  String get listen => 'Entzun';
+
+  @override
+  String get listening => 'Entzuten...';
+
+  @override
+  String get loadingParticipants => 'Parte-hartzaileak kargatzen...';
+
+  @override
+  String get location => 'Kokapena';
+
+  @override
+  String get login => 'Saioa hasi';
+
+  @override
+  String get logout => 'Saioa itxi';
+
+  @override
+  String get logoutConfirmMessage => 'Saioa itxi nahi duzu gailu honetan?';
+
+  @override
+  String get logoutConfirmTitle => 'Saioa itxi';
+
+  @override
+  String get male => 'Gizonezkoa';
+
+  @override
+  String get manageParticipants => 'Parte-hartzaileak kudeatu';
+
+  @override
+  String get manual => 'Eskuzko sarrera';
+
+  @override
+  String get markAsStudied => 'Ikasketa markatu';
+
+  @override
+  String get materialInfo => 'Materialaren informazioa';
+
+  @override
+  String get me => 'Ni';
+
+  @override
+  String get menuDeviceImport => 'Materiala gailutik inportatu';
+
+  @override
+  String get menuHelp => 'Laguntza';
+
+  @override
+  String get menuLanguageSettings => 'Hizkuntza ezarpenak';
+
+  @override
+  String get menuOnlineLibrary => 'Online liburutegia';
+
+  @override
+  String get menuSelectMaterialSet => 'Ikasketa-datu-multzoa hautatu';
+
+  @override
+  String get menuSettings => 'Hizkuntza-ezarpenak';
+
+  @override
+  String get menuTutorial => 'Erabiltzeko tutoriala';
+
+  @override
+  String get menuWebDownload => 'Webgunea';
+
+  @override
+  String get metadataDialogTitle => 'Sailkapen zehatza';
+
+  @override
+  String get metadataFormType => 'Forma gramatikala';
+
+  @override
+  String get metadataRootWord => 'Jatorrizko forma (Root Word)';
+
+  @override
+  String get micButtonTooltip => 'Ahots ezagutzea hasi';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return 'Uneko hautatutako datu-multzoa: $name';
+  }
+
+  @override
+  String get mode2Title => 'Berrikusi';
+
+  @override
+  String get mode3Next => 'Hurrengoa';
+
+  @override
+  String get mode3Start => 'Hasi';
+
+  @override
+  String get mode3Stop => 'Gelditu';
+
+  @override
+  String get mode3TryAgain => 'Saiatu berriro';
+
+  @override
+  String get mySentenceCollection => 'Nire esaldi bilduma';
+
+  @override
+  String get myWordbook => 'Nire hiztegia';
+
+  @override
+  String get neutral => 'neutroa';
+
+  @override
+  String get newSubjectName => 'Izenburu berria';
+
+  @override
+  String get next => 'Hurrengoa';
+
+  @override
+  String get noDialogueHistory => 'Ez dago elkarrizketa historiarik.';
+
+  @override
+  String get noInternetWarningMic =>
+      'Ez dago interneteko konexiorik. Baliteke ahots-ezagutza ez egotea erabilgarri lineaz kanpo.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'Ez dago interneteko konexiorik. Ezin duzu itzulpen funtzioa erabili lineaz kanpo. Mesedez, erabili berrikuspen modua.';
+
+  @override
+  String get noMaterialsInCategory => 'Ez dago materialik kategoria honetan.';
+
+  @override
+  String get noParticipantsFound =>
+      'Ez dago erregistratutako parte-hartzailerik.';
+
+  @override
+  String get noRecords =>
+      'Ez dago hautatutako hizkuntzaren ikasketa-erregistrorik';
+
+  @override
+  String get noStudyMaterial => 'Ez dago ikasketa-materialik.';
+
+  @override
+  String get noTextToPlay => 'Ez dago erreproduzitzeko testurik';
+
+  @override
+  String get noTranslationToSave => 'Ez dago gordetzeko itzulpenik';
+
+  @override
+  String get noVoiceDetected => 'Ez da ahotsik detektatu';
+
+  @override
+  String get notSelected => '- Ez dago hautatuta -';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'Egiaztatu interneteko konexioa edo saiatu berriro geroago.';
+
+  @override
+  String get onlineLibraryLoadFailed =>
+      'Errore bat gertatu da materialak kargatzean.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'Ez dago materialik.';
+
+  @override
+  String get participantDeleted => 'Parte-hartzailea ezabatu da.';
+
+  @override
+  String get participantRename => 'Parte-hartzailearen izena aldatu';
+
+  @override
+  String get partner => 'Bazkidea';
+
+  @override
+  String get partnerMode => 'Bazkide modua';
+
+  @override
+  String get password => 'Pasahitza';
+
+  @override
+  String get passwordTooShort =>
+      'Pasahitzak 6 karaktere izan behar ditu gutxienez.';
+
+  @override
+  String get perfect => 'Ezin hobea!';
+
+  @override
+  String get personaFriend => 'Bertako laguna';
+
+  @override
+  String get personaGuide => 'Bidaia gida';
+
+  @override
+  String get personaTeacher => 'Ingeleseko irakaslea';
+
+  @override
+  String get playAgain => 'Berriro jokatu';
+
+  @override
+  String playbackFailed(String error) {
+    return 'Erreprodukzioak huts egin du: $error';
+  }
+
+  @override
+  String get playing => 'Erreproduzitzen...';
+
+  @override
+  String get posAdjective => 'Adjektiboa';
+
+  @override
+  String get posAdverb => 'Adberbioa';
+
+  @override
+  String get posConjunction => 'Lokailua';
+
+  @override
+  String get posInterjection => 'Harridura-hitza';
+
+  @override
+  String get posNoun => 'Izena';
+
+  @override
+  String get posPreposition => 'Preposizioa/Postposizioa';
+
+  @override
+  String get posPronoun => 'Izenordaina';
+
+  @override
+  String get posVerb => 'Aditza';
+
+  @override
+  String get practiceModeTitle => 'Praktika';
+
+  @override
+  String get practiceWordsOnly => 'Hitzak bakarrik praktikatu';
+
+  @override
+  String progress(int current, int total) {
+    return 'Aurrerapena: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return 'Ikusi berriki sortutako $count elementu';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return 'Ahots ezagutzeak huts egin du: $error';
+  }
+
+  @override
+  String get recognized => 'Ezagututa';
+
+  @override
+  String get recognizedText => 'Ezagututako ahoskera:';
+
+  @override
+  String get recordDeleted => 'Erregistroa ezabatu da';
+
+  @override
+  String get refresh => 'Freskatu';
+
+  @override
+  String get reset => 'Berrezarri';
+
+  @override
+  String get resetPracticeHistory => 'Praktikaren historia berrezarri';
+
+  @override
+  String get retry => 'Saiatu berriro?';
+
+  @override
+  String get reviewAll => 'Berrikuspen osoa';
+
+  @override
+  String reviewCount(int count) {
+    return 'Berrikusi $count aldiz';
+  }
+
+  @override
+  String get reviewModeTitle => 'Berrikusi';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => 'Hirugarrena';
+
+  @override
+  String get roleUser => 'Erabiltzailea';
+
+  @override
+  String get save => 'Gorde';
+
+  @override
+  String get saveData => 'Datuak gorde';
+
+  @override
+  String saveFailed(String error) {
+    return 'Gordetzeak huts egin du: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch =>
+      'Saiatu itzulpenak bilaketa moduan gordetzen';
+
+  @override
+  String get saved => 'Gordeta';
+
+  @override
+  String get saving => 'Gordetzen...';
+
+  @override
+  String score(String score) {
+    return 'Zehaztasuna: $score%';
+  }
+
+  @override
+  String get scoreLabel => 'Puntuazioa';
+
+  @override
+  String get search => 'Bilatu';
+
+  @override
+  String get searchConditions => 'Bilaketa-baldintzak';
+
+  @override
+  String get searchSentenceHint => 'Esaldi bilaketa...';
+
+  @override
+  String get searchWordHint => 'Hitz bilaketa...';
+
+  @override
+  String get sectionSentence => 'Esaldi atala';
+
+  @override
+  String get sectionSentences => 'Esaldiak';
+
+  @override
+  String get sectionWord => 'Hitz atala';
+
+  @override
+  String get sectionWords => 'Hitzak';
+
+  @override
+  String get selectExistingSubject => 'Aukeratu lehendik dagoen izenburua';
+
+  @override
+  String get selectMaterialPrompt => 'Mesedez, hautatu ikasketa-materiala';
+
+  @override
+  String get selectMaterialSet => 'Ikasketa-datu-multzoa hautatu';
+
+  @override
+  String get selectPOS => 'Hautatu adiera-kategoria';
+
+  @override
+  String get selectParticipants => 'Parte-hartzaileak aukeratu';
+
+  @override
+  String get selectSentenceType => 'Hautatu esaldi mota';
+
+  @override
+  String get selectStudyMaterial => 'Ikasketa-materiala hautatu';
+
+  @override
+  String get sendingMessage => '메시지 전송 중...';
+
+  @override
+  String get sentence => 'Esaldi';
+
+  @override
+  String get signUp => 'Erregistratu';
+
+  @override
+  String get similarTextFound => 'Antzeko testua aurkitu da';
+
+  @override
+  String get skip => 'Saltatu';
+
+  @override
+  String get source => 'Iturria:';
+
+  @override
+  String get sourceLanguage => 'Jatorrizko hizkuntza';
+
+  @override
+  String get sourceLanguageLabel => 'Nire hizkuntza (Iturria)';
+
+  @override
+  String get speakNow => 'Hitz egin orain!';
+
+  @override
+  String get speaker => 'Hizlaria';
+
+  @override
+  String get speakerSelect => 'Hizlaria aukeratu';
+
+  @override
+  String get speakingPractice => 'Hitz egiteko praktika';
+
+  @override
+  String get startChat => 'Hasi elkarrizketa';
+
+  @override
+  String get startPractice => 'Praktika hasi';
+
+  @override
+  String get startTutorial => 'Tutoriala hasi';
+
+  @override
+  String get startWarning => 'Abisua';
+
+  @override
+  String get startsWith => 'Hasierako letra';
+
+  @override
+  String get statusCheckEmail =>
+      'Mesedez, egiaztatu e-posta autentifikazioa osatzeko.';
+
+  @override
+  String statusDownloading(Object name) {
+    return 'Deskargatzen: $name...';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return 'Inportazioak huts egin du: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name inportatu da';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => 'Saio-hasiera bertan behera utzi da.';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return 'Saio-hasierak huts egin du: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => 'Saioa hasi da.';
+
+  @override
+  String get statusLogoutSuccess => 'Saioa itxi da.';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return 'Errore bat gertatu da erregistratzean: $error';
+  }
+
+  @override
+  String get statusSigningUp => 'Erregistratzen...';
+
+  @override
+  String get stopPractice => 'Praktika gelditu';
+
+  @override
+  String get studyComplete => 'Ikaskuntza amaitu da';
+
+  @override
+  String studyRecords(int count) {
+    return 'Ikasketa-erregistroak ($count)';
+  }
+
+  @override
+  String get styleFormal => 'Formala';
+
+  @override
+  String get styleInformal => 'Informala';
+
+  @override
+  String get stylePolite => 'Adeitsua';
+
+  @override
+  String get styleSlang => 'Slanga';
+
+  @override
+  String get subject => 'Gaia:';
+
+  @override
+  String get swapLanguages => 'Hizkuntzak trukatu';
+
+  @override
+  String get switchToAi => 'AI modura aldatu';
+
+  @override
+  String get switchToPartner => 'Bazkide modura aldatu';
+
+  @override
+  String get syncingData => 'Datuak sinkronizatzen...';
+
+  @override
+  String get tabConversation => 'Elkarrizketa';
+
+  @override
+  String tabReview(int count) {
+    return 'Berrikusi ($count)';
+  }
+
+  @override
+  String get tabSentence => 'Esaldi';
+
+  @override
+  String get tabSpeaking => 'Hitz egin';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return 'Ikasketa-materiala ($count)';
+  }
+
+  @override
+  String get tabWord => 'Hitza';
+
+  @override
+  String get tagFormal => 'Tratamendu formala';
+
+  @override
+  String get tagSelection => 'Etiketa hautatu';
+
+  @override
+  String get targetLanguage => 'Helburuko hizkuntza';
+
+  @override
+  String get targetLanguageFilter => 'Helburuko hizkuntzaren iragazkia:';
+
+  @override
+  String get targetLanguageLabel => 'Ikasketa-hizkuntza (Helburua)';
+
+  @override
+  String get thinkingTimeDesc =>
+      'Erantzuna argitaratu aurretik pentsatzeko denbora.';
+
+  @override
+  String get thinkingTimeInterval => 'Erreprodukzioaren atzerapena';
+
+  @override
+  String get timeUp => 'Denbora agortu da!';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
+
+  @override
+  String get titleTagSelection => 'Izenburu-etiketa (Bilduma)';
+
+  @override
+  String get tooltipDecrease => 'Murriztu';
+
+  @override
+  String get tooltipIncrease => 'Handitu';
+
+  @override
+  String get tooltipSearch => 'Bilatu';
+
+  @override
+  String get tooltipSpeaking => 'Hitz egin';
+
+  @override
+  String get tooltipStudyReview => 'Ikasi+Berrikusi';
+
+  @override
+  String totalRecords(int count) {
+    return 'Guztira $count erregistro (ikusi guztiak)';
+  }
+
+  @override
+  String get translate => 'Itzuli';
+
+  @override
+  String get translating => 'Itzultzen...';
+
+  @override
+  String get translation => 'Itzulpena';
+
+  @override
+  String get translationComplete => 'Itzulpena amaitu da (gorde behar da)';
+
+  @override
+  String translationFailed(String error) {
+    return 'Itzulpenak huts egin du: $error';
+  }
 
   @override
   String get translationLimitExceeded => 'Itzulpen-muga gainditu da';
@@ -675,324 +1091,134 @@ class AppLocalizationsEu extends AppLocalizations {
       'Doako eguneroko itzulpen guztiak (5) erabili dituzu.\\n\\nIragarki bat ikusi nahi duzu 5 gehiago berehala betetzeko?';
 
   @override
-  String get watchAdAndRefill => 'Iragarkia ikusi eta bete (+5)';
+  String get translationLoaded => 'Gordetako itzulpena kargatu da';
 
   @override
   String get translationRefilled => 'Itzulpenen kopurua 5era bete da!';
 
   @override
-  String get adLoading =>
-      'Iragarkia kargatzen ari da. Mesedez, saiatu berriro geroago.';
+  String get translationResultHint => 'Itzulpenaren emaitza - edita daiteke';
 
   @override
-  String get reviewAll => 'Berrikuspen osoa';
+  String get tryAgain => 'Saiatu berriro';
 
   @override
-  String totalRecords(int count) {
-    return 'Guztira $count erregistro (ikusi guztiak)';
-  }
+  String get tutorialAiChatDesc =>
+      'Praktikatu elkarrizketa errealak AI pertsonaia batekin.';
 
   @override
-  String get filterAll => 'Guztiak';
+  String get tutorialAiChatTitle => 'AI txata';
 
   @override
-  String get practiceWordsOnly => 'Hitzak bakarrik praktikatu';
+  String get tutorialContextDesc =>
+      'Esaldi bera bada ere, egoera (adibidez, goiza, arratsaldea) idatziz gero, bereizita gorde dezakezu.';
 
   @override
-  String get resetPracticeHistory => 'Praktikaren historia berrezarri';
+  String get tutorialContextTitle => 'Egoera/Testuinguru etiketa';
 
   @override
-  String get retry => 'Saiatu berriro?';
+  String get tutorialLangSettingsDesc =>
+      'Ezarri itzuli nahi duzun jatorrizko hizkuntza eta helburuko hizkuntza.';
 
   @override
-  String get noStudyMaterial => 'Ez dago ikasketa-materialik.';
+  String get tutorialLangSettingsTitle => 'Hizkuntza-ezarpenak';
 
   @override
-  String get gameOver => 'Game Over';
+  String get tutorialM1ToggleDesc => 'Aldatu hitz eta esaldi moduak hemen.';
 
   @override
-  String get playAgain => 'Berriro jokatu';
+  String get tutorialM1ToggleTitle => 'Hitza/Esaldi modua';
 
   @override
-  String get speakNow => 'Hitz egin orain!';
+  String get tutorialM2DropdownDesc =>
+      'Goiko menuaren bidez ikasi nahi duzun materiala hauta dezakezu.';
 
   @override
-  String get scoreLabel => 'Puntuazioa';
+  String get tutorialM2ImportDesc =>
+      'Inportatu JSON fitxategi bat zure gailuko karpetatik.';
 
   @override
-  String get viewOnlineGuide => 'Ikusi online gida';
+  String get tutorialM2ListDesc =>
+      'Txartel hau luze sakatuta (Sakatu luzea) ezaba dezakezu. Egiaztatu eta irauli gordetako esaldiak.';
 
   @override
-  String get getMaterials => 'Materialak lortu';
+  String get tutorialM2ListTitle => 'Ikasketa-zerrenda';
 
   @override
-  String get swapLanguages => 'Hizkuntzak trukatu';
+  String get tutorialM2SearchDesc =>
+      'Gordetako hitzak eta esaldiak bilatu eta azkar aurki ditzakezu.';
 
   @override
-  String get next => 'Hurrengoa';
+  String get tutorialM2SelectDesc =>
+      'Sakatu datu-multzoaren ikonoa (📚) goiko aplikazio-barran ikasi nahi duzun materiala hautatzeko.';
 
   @override
-  String get wordModeLabel => 'Hitzen modua';
+  String get tutorialM2SelectTitle => 'Materiala hautatu';
 
   @override
-  String get accuracy => 'Zehaztasuna';
+  String get tutorialM3IntervalDesc => 'Doitu esaldien arteko itxaron-denbora.';
 
   @override
-  String get basicDefault => 'Oinarrizkoa';
-
-  @override
-  String get basic => 'Oinarrizkoa';
-
-  @override
-  String get tutorialM3WordsTitle => 'Hitzen praktika';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Markatuta badago, gordetako hitzak bakarrik praktikatuko dira.';
-
-  @override
-  String get enterTextHint => 'Idatzi itzuli nahi duzun testua';
-
-  @override
-  String get micButtonTooltip => 'Ahots ezagutzea hasi';
-
-  @override
-  String get menuHelp => 'Laguntza';
-
-  @override
-  String get menuWebDownload => 'Webgunea';
-
-  @override
-  String get menuDeviceImport => 'Materiala gailutik inportatu';
-
-  @override
-  String get menuSettings => 'Hizkuntza-ezarpenak';
-
-  @override
-  String get basicWords => 'Oinarrizko hitz biltegia';
-
-  @override
-  String get basicSentences => 'Oinarrizko esaldi biltegia';
-
-  @override
-  String get selectMaterialSet => 'Ikasketa-datu-multzoa hautatu';
-
-  @override
-  String get sectionWords => 'Hitzak';
-
-  @override
-  String get sectionSentences => 'Esaldiak';
-
-  @override
-  String get languageSettingsTitle => 'Hizkuntza-ezarpenak';
-
-  @override
-  String get sourceLanguageLabel => 'Nire hizkuntza (Iturria)';
-
-  @override
-  String get targetLanguageLabel => 'Ikasketa-hizkuntza (Helburua)';
-
-  @override
-  String get mode3Start => 'Hasi';
-
-  @override
-  String get mode3Stop => 'Gelditu';
-
-  @override
-  String get mode3Next => 'Hurrengoa';
-
-  @override
-  String get mode3TryAgain => 'Saiatu berriro';
-
-  @override
-  String get tutorialM3ResetTitle => 'Historia berrezarri';
-
-  @override
-  String get tutorialSwapDesc =>
-      'Trukatu nire hizkuntza eta ikasketa-hizkuntza.';
-
-  @override
-  String get recognizedText => 'Ezagututako ahoskera:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
+  String get tutorialM3IntervalTitle => 'Tartea ezarri';
 
   @override
   String get tutorialM3ResetDesc =>
       'Berrezarri aurrerapena eta zehaztasun puntuazioa hutsetik hasteko.';
 
   @override
-  String get menuSelectMaterialSet => 'Ikasketa-datu-multzoa hautatu';
+  String get tutorialM3ResetTitle => 'Historia berrezarri';
 
   @override
-  String get sectionWord => 'Hitz atala';
+  String get tutorialM3SelectDesc =>
+      'Sakatu datu-multzoaren ikonoa (📚) goiko aplikazio-barran praktikatu nahi duzun materiala hautatzeko.';
 
   @override
-  String get sectionSentence => 'Esaldi atala';
+  String get tutorialM3SelectTitle => 'Materiala hautatu';
 
   @override
-  String get tabWord => 'Hitza';
+  String get tutorialM3StartDesc =>
+      'Sakatu erreproduzitzeko botoia jatorrizko hiztunaren ahotsa entzun eta jarraitzeko.';
 
   @override
-  String get tabSentence => 'Esaldi';
+  String get tutorialM3StartTitle => 'Praktika hasi';
 
   @override
-  String get errorProfanity => 'Ezin da itzuli profanotasuna duelako.';
+  String get tutorialM3WordsDesc =>
+      'Markatuta badago, gordetako hitzak bakarrik praktikatuko dira.';
 
   @override
-  String get errorHateSpeech => 'Ezin da itzuli gorroto-diskurtsoa duelako.';
+  String get tutorialM3WordsTitle => 'Hitzen praktika';
 
   @override
-  String get errorSexualContent => 'Ezin da itzuli eduki sexuala duelako.';
+  String get tutorialMicDesc =>
+      'Mikrofonoaren botoia sakatuta ahots bidez idatz dezakezu.';
 
   @override
-  String get errorOtherSafety => 'AI segurtasun politikak itzulpena ukatu du.';
+  String get tutorialMicTitle => 'Ahots sarrera';
 
   @override
-  String get clearAll => 'Guztia garbitu';
+  String get tutorialSaveDesc =>
+      'Gorde itzulitako emaitzak ikasketa-erregistroan.';
 
   @override
-  String get disambiguationTitle => 'Esanahia hautatu';
+  String get tutorialSaveTitle => 'Gorde';
 
   @override
-  String get disambiguationPrompt => 'Zein esanahirekin itzuli nahi duzu?';
+  String get tutorialSwapDesc =>
+      'Trukatu nire hizkuntza eta ikasketa-hizkuntza.';
 
   @override
-  String get skip => 'Saltatu';
+  String get tutorialTabDesc =>
+      'Hemen nahi duzun ikasketa-modua hauta dezakezu.';
 
   @override
-  String get inputModeTitle => 'Sarrera';
+  String get tutorialTapToContinue => 'Sakatu pantaila jarraitzeko';
 
   @override
-  String get reviewModeTitle => 'Berrikusi';
+  String get tutorialTransDesc => 'Idatzitako testua itzultzen du.';
 
   @override
-  String get practiceModeTitle => 'Praktika';
-
-  @override
-  String get chatHistoryTitle => 'Elkarrizketaren historia';
-
-  @override
-  String get chatNew => 'Elkarrizketa berria';
-
-  @override
-  String get chatNewChat => 'Elkarrizketa berria';
-
-  @override
-  String get chatChoosePersona => 'Pertsonaia hautatu';
-
-  @override
-  String get chatTypeHint => 'Idatzi mezu bat...';
-
-  @override
-  String chatFailed(Object error) {
-    return 'Txatak huts egin du: $error';
-  }
-
-  @override
-  String get chatNoConversations => 'Oraindik ez dago elkarrizketarik';
-
-  @override
-  String get noDialogueHistory => 'No dialogue history.';
-
-  @override
-  String get chatStartNewPrompt => 'Hasi elkarrizketa berri bat praktikatzeko!';
-
-  @override
-  String chatFromConversation(Object speaker) {
-    return 'Elkarrizketatik ateratakoa ($speaker)';
-  }
-
-  @override
-  String get personaTeacher => 'Ingeleseko irakaslea';
-
-  @override
-  String get personaGuide => 'Bidaia gida';
-
-  @override
-  String get personaFriend => 'Bertako laguna';
-
-  @override
-  String get chatUntitled => 'Izenik gabeko elkarrizketa';
-
-  @override
-  String get chatAiChat => 'Txat';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Uneko hautatutako datu-multzoa: $name';
-  }
-
-  @override
-  String get basicWordRepository => 'Oinarrizko hitz biltegia';
-
-  @override
-  String get basicSentenceRepository => 'Oinarrizko esaldi biltegia';
-
-  @override
-  String get chatEndTitle => 'Elkarrizketa amaitu eta gorde';
-
-  @override
-  String get chatEndMessage => 'Elkarrizketa amaitu nahi duzu?';
-
-  @override
-  String get chatSaveAndExit => 'Gorde eta irten';
-
-  @override
-  String get errorSelectCategory => 'Hautatu lehenik hitz bat edo esaldi bat!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Hitza/Esaldi modua';
-
-  @override
-  String get tutorialM1ToggleDesc => 'Aldatu hitz eta esaldi moduak hemen.';
-
-  @override
-  String get metadataDialogTitle => 'Sailkapen zehatza';
-
-  @override
-  String get tagFormal => 'Tratamendu formala';
-
-  @override
-  String get selectPOS => 'Hautatu adiera-kategoria';
-
-  @override
-  String get selectSentenceType => 'Hautatu esaldi mota';
-
-  @override
-  String get metadataRootWord => 'Jatorrizko forma (Root Word)';
-
-  @override
-  String get posNoun => 'Izena';
-
-  @override
-  String get posVerb => 'Aditza';
-
-  @override
-  String get posAdjective => 'Adjektiboa';
-
-  @override
-  String get posAdverb => 'Adberbioa';
-
-  @override
-  String get posPronoun => 'Izenordaina';
-
-  @override
-  String get posPreposition => 'Preposizioa/Postposizioa';
-
-  @override
-  String get posConjunction => 'Lokailua';
-
-  @override
-  String get posInterjection => 'Harridura-hitza';
-
-  @override
-  String get typeStatement => 'Baieztapena';
-
-  @override
-  String get typeQuestion => 'Galdera';
+  String get tutorialTransTitle => 'Itzuli';
 
   @override
   String get typeExclamation => 'Harridura';
@@ -1001,224 +1227,39 @@ class AppLocalizationsEu extends AppLocalizations {
   String get typeImperative => 'Agindua';
 
   @override
-  String get labelNote => 'Oharra';
+  String get typeQuestion => 'Galdera';
 
   @override
-  String get labelShowMemorized => 'Amaituta';
+  String get typeStatement => 'Baieztapena';
 
   @override
-  String get titleTagSelection => 'Izenburu-etiketa (Bilduma)';
+  String get usageLimitTitle => 'Mugara iritsi da';
 
   @override
-  String get generalTags => 'Etiketa orokorrak';
+  String get useExistingText => 'Erabili lehendik dagoen testua';
 
   @override
-  String get tagSelection => 'Etiketa hautatu';
+  String get viewOnlineGuide => 'Ikusi online gida';
 
   @override
-  String get metadataFormType => 'Forma gramatikala';
+  String get voluntaryTranslations => 'Borondatezko itzulpenak';
 
   @override
-  String get formInfinitive => 'Infinitive/Orainaldia';
+  String get watchAdAndRefill => 'Iragarkia ikusi eta bete (+5)';
 
   @override
-  String get formPast => 'Iraganaldia';
+  String get word => 'Hitza';
 
   @override
-  String get formPastParticiple => 'Iraganeko partizipioa';
+  String get wordDefenseDesc =>
+      'Hitz egin hitzak etsaiak iritsi baino lehen oinarria defendatzeko.';
 
   @override
-  String get formPresentParticiple => 'Oraingo partizipioa (ing)';
+  String get wordDefenseTitle => 'Hitzen defentsa';
 
   @override
-  String get formPresent => 'Orainaldia';
+  String get wordModeLabel => 'Hitzen modua';
 
   @override
-  String get formThirdPersonSingular => 'Hirugarren pertsona singularra';
-
-  @override
-  String get formPlural => 'Plurala';
-
-  @override
-  String get formSingular => 'Singularra';
-
-  @override
-  String get caseSubject => 'Subjektua';
-
-  @override
-  String get caseObject => 'Objektua';
-
-  @override
-  String get casePossessive => 'Jabetza';
-
-  @override
-  String get casePossessivePronoun => 'Jabetza-izenordaina';
-
-  @override
-  String get caseReflexive => 'Erreflexiboa';
-
-  @override
-  String get formPositive => 'Gradu positiboa';
-
-  @override
-  String get formComparative => 'Gradu konparatiboa';
-
-  @override
-  String get formSuperlative => 'Gradu superlatiboa';
-
-  @override
-  String get searchConditions => 'Bilaketa-baldintzak';
-
-  @override
-  String recentNItems(int count) {
-    return 'Ikusi berriki sortutako $count elementu';
-  }
-
-  @override
-  String get startsWith => 'Hasierako letra';
-
-  @override
-  String get reset => 'Berrezarri';
-
-  @override
-  String get participantRename => 'Parte-hartzailearen izena aldatu';
-
-  @override
-  String get labelName => 'Izena';
-
-  @override
-  String get gender => 'Generoa';
-
-  @override
-  String get language => 'Hizkuntza';
-
-  @override
-  String get male => 'Gizonezkoa';
-
-  @override
-  String get female => 'Emakumezkoa';
-
-  @override
-  String get neutral => 'neutroa';
-
-  @override
-  String get chatAllConversations => 'Elkarrizketa guztiak';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation =>
-      'Elkarrizketa hau ezabatu nahi duzu?\nEzabatu ondoren ezin da berreskuratu.';
-
-  @override
-  String get notSelected => '- Ez dago hautatuta -';
-
-  @override
-  String get myWordbook => 'Nire hiztegia';
-
-  @override
-  String get mySentenceCollection => 'Nire esaldi bilduma';
-
-  @override
-  String get newSubjectName => 'Izenburu berria';
-
-  @override
-  String get enterNewSubjectName => 'Idatzi izenburu berria';
-
-  @override
-  String get addNewSubject => 'Gehitu izenburu berria';
-
-  @override
-  String get selectExistingSubject => 'Aukeratu lehendik dagoen izenburua';
-
-  @override
-  String get addTagHint => 'Gehitu etiketa...';
-
-  @override
-  String get save => 'Gorde';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail =>
-      'Mesedez, egiaztatu e-posta autentifikazioa osatzeko.';
-
-  @override
-  String get emailAlreadyInUse =>
-      'Helbide elektroniko hau erregistratuta dago. Hasi saioa edo berreskuratu pasahitza.';
+  String get yourPronunciation => 'Zure ahoskera';
 }

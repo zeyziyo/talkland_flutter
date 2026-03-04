@@ -215,7 +215,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                   minLines: 2,
                                   maxLines: null,
                                   decoration: InputDecoration(
-                                    hintText: appState.recordTypeFilter == 'word' ? l10n.tabWord : l10n.enterTextHint,
+                                    hintText: appState.recordTypeFilter == 'word' ? l10n.enterWordHint : l10n.enterSentenceHint,
                                     hintStyle: TextStyle(
                                       color: Colors.grey.shade400,
                                       fontStyle: FontStyle.italic,
@@ -311,7 +311,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                          ? (AppState.posCategories.contains(appState.sourcePos) ? appState.sourcePos : null)
                                          : (AppState.sentenceCategories.contains(appState.sourceFormType) ? appState.sourceFormType : null),
                                      decoration: InputDecoration(
-                                       labelText: appState.recordTypeFilter == 'word' ? '품사' : '문장 종류', // Dynamic label
+                                       labelText: appState.recordTypeFilter == 'word' ? l10n.labelPOS : l10n.labelSentenceType, 
                                        isDense: true,
                                        border: const OutlineInputBorder(),
                                        contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
@@ -376,7 +376,7 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                           key: ValueKey('notebook_\${appState.recordTypeFilter}_\${appState.selectedSaveSubject}'),
                                           initialValue: currentVal, 
                                           decoration: InputDecoration(
-                                            labelText: appState.recordTypeFilter == 'word' ? '단어장' : '문장집',
+                                            labelText: appState.recordTypeFilter == 'word' ? l10n.labelWordbook : l10n.labelSentenceCollection,
                                             isDense: true,
                                             border: const OutlineInputBorder(),
                                             contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),

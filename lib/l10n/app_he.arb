@@ -1,188 +1,105 @@
 {
   "@@locale": "he",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "המשך עם קקאו",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "עזרה ומדריך",
-  "helpTabModes": "מצבים",
-  "helpTabJson": "פורמט JSON",
-  "helpTabTour": "סיור",
-  "helpMode1Desc": "זיהוי קול, תרגום והאזנה לתוצאה.",
-  "helpMode1Details": "• קול: הקש על המיקרופון להתחלה/עצירה\n• טקסט: הקלד ישירות לתרגום\n• חיפוש אוטומטי: מזהה משפטים דומים\n• תרגם: כפתור לתרגום מיידי\n• האזן: סמל רמקול ל-TTS\n• שמור: מוסיף להיסטוריה\n• נקה: אפס הכל",
-  "helpMode2Desc": "חזור על משפטים שמורים עם הסתרת תרגום.",
-  "helpMode2Details": "• בחר: בחר סט או 'חזור על הכל'\n• הפוך: 'הצג/הסתר' תרגום\n• האזן: נגן TTS למשפט\n• סמן: וי (V) להושלם\n• מחק: לחיצה ארוכה למחיקה\n• מסנן: הצג הכל או לפי חומר",
-  "helpMode3Desc": "תרגלו הגייה על ידי האזנה וחזרה על משפטים (Shadowing).",
-  "helpMode3Details": "• בחר: בחר חבילה\n• מרווח: [-] [+] זמן המתנה (3ש'-60ש')\n• התחל/עצור: שליטה בסשן\n• דבר: האזן וחזור\n• ניקוד: דיוק (0-100)\n• נסה שוב: כפתור אם קול לא מזוהה",
-  "helpModeChatDesc": "תרגלו שיחה אמיתית על ידי שיחה עם דמות AI.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "לייבוא חומרים במצב 3, צור JSON:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "מיקום",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "דיוק",
+  "adLoading": "טוען מודעה. אנא נסה שוב מאוחר יותר.",
+  "addNewSubject": "הוסף כותרת חדשה",
+  "addParticipant": "הוסף משתתף",
+  "addTagHint": "הוסף תג...",
+  "alreadyHaveAccount": "כבר יש לך חשבון?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "חזרה ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "הפעלה אוטומטית",
+  "basic": "בסיסי",
+  "basicDefault": "בסיסי",
+  "basicMaterialRepository": "מאגר משפטים/מילים בסיסי",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "חומר ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "מאגר משפטים בסיסי",
+  "basicSentences": "מאגר משפטים בסיסי",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "חזרה",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "חיפוש",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "תרגם",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "האזן",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "שמור",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "נשמר",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "מחק",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "מידע על חומר",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "מאגר מילים בסיסי",
+  "basicWords": "מאגר מילים בסיסי",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "ביטול",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "אישור",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "רענן",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "רשומות ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "מושא",
+  "casePossessive": "שייכות",
+  "casePossessivePronoun": "כינוי שייכות",
+  "caseReflexive": "כינוי חוזר",
+  "caseSubject": "נושא",
+  "chatAiChat": "צ'אט",
+  "chatAllConversations": "כל השיחות",
+  "chatChoosePersona": "בחר דמות",
+  "chatEndMessage": "האם ברצונך לסיים את השיחה?",
+  "chatEndTitle": "סיים ושמור שיחה",
+  "chatFailed": "השיחה נכשלה: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "מסנן שפת יעד:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "קטע משיחה ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "אין רשומות לשפה שנבחרה",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "היסטוריית שיחות",
+  "chatNew": "שיחה חדשה",
+  "chatNewChat": "שיחה חדשה",
+  "chatNoConversations": "עדיין אין שיחות",
+  "chatSaveAndExit": "שמור וצא",
+  "chatStartNewPrompt": "התחל שיחה חדשה כדי לתרגל!",
+  "chatTypeHint": "הקלד הודעה...",
+  "chatUntitled": "שיחה ללא כותרת",
+  "checking": "בודק...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "שמור תרגומים ממצב חיפוש",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "הפוך",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "הסתר",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "מחק רשומה",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "נקה הכל",
+  "confirm": "אישור",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "האם אתה בטוח שברצונך למחוק רשומה זו?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "הרשומה נמחקה בהצלחה",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "האם למחוק שיחה זו?\nלא ניתן יהיה לשחזר שיחה שנמחקה.",
+  "confirmDeleteParticipant": "האם למחוק משתתף זה?",
+  "contextTagHint": "רשום את המצב כדי להקל על ההבחנה בהמשך",
+  "contextTagLabel": "הקשר/מצב (אופציונלי) - לדוגמה: ברכת בוקר, נימוס",
+  "copiedToClipboard": "הועתק ללוח!",
+  "copy": "העתק",
+  "correctAnswer": "תשובה נכונה",
+  "createNew": "צור חדש",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "מיקום נוכחי",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "אוסף החומרים הנבחר כעת:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "מחק",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "המחיקה נכשלה: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "ייבא JSON",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "מחק רשומה",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "מייבא...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "תרגל שיחות באמצעות משחק תפקידים. בחר את התשובות המתאימות ואמור אותן.",
+  "dialogueQuestTitle": "משימת דיאלוג",
+  "disambiguationPrompt": "לאיזו משמעות תרצה לתרגם?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "בחר משמעות",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "אין לך חשבון?",
+  "editParticipant": "ערוך משתתף",
+  "email": "אימייל",
+  "emailAlreadyInUse": "כתובת האימייל כבר רשומה. יש להתחבר או לשחזר את הסיסמה.",
+  "enterNewSubjectName": "הזן כותרת חדשה",
+  "enterSentenceHint": "כתוב משפט...",
+  "enterTextHint": "הזן טקסט לתרגום",
+  "enterTextToTranslate": "הכנס טקסט לתרגום",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "כתוב מילה...",
+  "error": "שגיאה",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "לא ניתן לתרגם כי קיימת שפה משתלחת.",
+  "errorOtherSafety": "התרגום נדחה על ידי מדיניות הבטיחות של AI.",
+  "errorProfanity": "לא ניתן לתרגם כי קיימת שפה גסה.",
+  "errorSelectCategory": "אנא בחר תחילה מילה או משפט!",
+  "errorSexualContent": "לא ניתן לתרגם כי קיים תוכן מיני.",
+  "errors": "שגיאות:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "נקבה",
+  "file": "קובץ:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "הכל",
+  "flip": "הפוך",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "השוואתי",
+  "formInfinitive": "צורת מקור",
+  "formPast": "עבר",
+  "formPastParticiple": "צורת בינוני פועל",
+  "formPlural": "רבים",
+  "formPositive": "חיובי",
+  "formPresent": "הווה",
+  "formPresentParticiple": "צורת בינוני פעול",
+  "formSingular": "יחיד",
+  "formSuperlative": "סופרלטיבי",
+  "formThirdPersonSingular": "גוף שלישי יחיד",
+  "gameModeDesc": "בחר מצב משחק לתרגול",
+  "gameModeTitle": "מצב משחק",
+  "gameOver": "המשחק נגמר",
+  "gender": "מגדר",
+  "generalTags": "תגים כלליים",
+  "getMaterials": "קבל חומרים",
+  "good": "טוב",
+  "googleContinue": "המשך עם Google",
+  "helpDialogueImportDesc": "ייבא ערכת דיאלוג שלמה מקובץ JSON.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "לייבוא חומרים במצב 3, צור JSON:",
+  "helpJsonTypeDialogue": "דיאלוג (Dialogue)",
+  "helpJsonTypeSentence": "משפט (Sentence)",
+  "helpJsonTypeWord": "מילה (Word)",
+  "helpMode1Desc": "זיהוי קול, תרגום והאזנה לתוצאה.",
+  "helpMode1Details": "• קול: הקש על המיקרופון להתחלה/עצירה\n• טקסט: הקלד ישירות לתרגום\n• חיפוש אוטומטי: מזהה משפטים דומים\n• תרגם: כפתור לתרגום מיידי\n• האזן: סמל רמקול ל-TTS\n• שמור: מוסיף להיסטוריה\n• נקה: אפס הכל",
+  "helpMode2Desc": "חזור על משפטים שמורים עם הסתרת תרגום.",
+  "helpMode2Details": "• בחר: בחר סט או 'חזור על הכל'\n• הפוך: 'הצג/הסתר' תרגום\n• האזן: נגן TTS למשפט\n• סמן: וי (V) להושלם\n• מחק: לחיצה ארוכה למחיקה\n• מסנן: הצג הכל או לפי חומר",
+  "helpMode3Desc": "תרגלו הגייה על ידי האזנה וחזרה על משפטים (Shadowing).",
+  "helpMode3Details": "• בחר: בחר חבילה\n• מרווח: [-] [+] זמן המתנה (3ש'-60ש')\n• התחל/עצור: שליטה בסשן\n• דבר: האזן וחזור\n• ניקוד: דיוק (0-100)\n• נסה שוב: כפתור אם קול לא מזוהה",
+  "helpModeChatDesc": "תרגלו שיחה אמיתית על ידי שיחה עם דמות AI.",
+  "helpModeChatDetails": "• צ'אט AI: תרגל שיחות אמיתיות עם דמויות.\n• ניהול משתתפים: הגדר את השפה שלך ושפת ה-AI בנפרד כדי למנוע אי התאמות שפה.\n• משחק תפקידים GPS: צור מצבי שיחה טבעיים על סמך המיקום הנוכחי שלך.\n• שמירת היסטוריה: כל השיחות נשמרות בצורה מאובטחת על בסיס מזהה, וההיסטוריה נשמרת גם אם תשנה את השם.",
+  "helpTabJson": "פורמט JSON",
+  "helpTabModes": "מצבים",
+  "helpTabTour": "סיור",
+  "helpTitle": "עזרה ומדריך",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "הסתר",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "נוסף: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "הייבוא הושלם",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "חומר עם שם זהה כבר קיים. שנה את השם ונסה שוב.",
+  "importErrorMessage": "ייבוא הקובץ נכשל:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "הייבוא נכשל",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "סה\"כ: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "ייבא JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "נוסף: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "אנא ייבא קובץ JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "דלג: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "שגיאות:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "סה\"כ: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "שגיאה",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "מייבא...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "ייבוא הקובץ נכשל:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "קלט",
+  "intervalSeconds": "מרווח: {seconds}ש'",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "אנא הזן אימייל חוקי.",
+  "kakaoContinue": "המשך עם קקאו",
+  "labelLangCode": "קוד שפה (לדוגמה: en-US, ko-KR)",
+  "labelName": "שם",
+  "labelNote": "הערה",
+  "labelPOS": "חלקי דיבר",
+  "labelRole": "תפקיד",
+  "labelSentence": "משפט",
+  "labelSentenceCollection": "אוסף משפטים",
+  "labelSentenceType": "סוג המשפט",
+  "labelShowMemorized": "סיימתי",
+  "labelType": "סוג:",
+  "labelWord": "מילה",
+  "labelWordbook": "אוסף מילים",
+  "language": "שפה",
+  "languageSettings": "הגדרות שפה",
+  "languageSettingsTitle": "הגדרות שפה",
+  "libTitleFirstMeeting": "פגישה ראשונה",
+  "libTitleGreetings1": "ברכות 1",
+  "libTitleNouns1": "שמות עצם 1",
+  "libTitleVerbs1": "פעלים 1",
+  "listen": "האזן",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "מקשיב...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "טוען משתתפים...",
+  "location": "מיקום",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "התחברות",
+  "logout": "התנתק",
+  "logoutConfirmMessage": "האם ברצונך להתנתק מהמכשיר הנוכחי?",
+  "logoutConfirmTitle": "התנתקות",
+  "male": "זכר",
+  "manageParticipants": "נהל משתתפים",
+  "manual": "הזנה ידנית",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "סמן כנלמד",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "מידע על חומר",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "אני",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "ייבא חומרים מהמכשיר",
+  "menuHelp": "עזרה",
+  "menuLanguageSettings": "הגדרות שפה",
+  "menuOnlineLibrary": "ספרייה מקוונת",
+  "menuSelectMaterialSet": "בחירת חומר לימוד",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "מדריך שימוש",
+  "menuWebDownload": "מדריך הוראות",
+  "metadataDialogTitle": "סיווג מפורט",
+  "metadataFormType": "צורה דקדוקית",
+  "metadataRootWord": "מילת שורש (Root Word)",
+  "micButtonTooltip": "התחל זיהוי קולי",
+  "mode1SelectedMaterial": "אוסף החומרים שנבחר כעת: {name}",
+  "mode2Title": "חזרה",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "הבא",
+  "mode3Start": "התחל",
+  "mode3Stop": "עצור",
+  "mode3TryAgain": "נסה שוב",
+  "mySentenceCollection": "אוסף המשפטים שלי",
+  "myWordbook": "אוצר המילים שלי",
+  "neutral": "ניטרלי",
+  "newSubjectName": "כותרת מחברת/אוסף חדש",
+  "next": "הבא",
+  "noDialogueHistory": "אין היסטוריית שיחות.",
+  "noInternetWarningMic": "אין חיבור לאינטרנט. ייתכן שזיהוי קולי אינו אפשרי במצב לא מקוון.",
+  "noInternetWarningTranslate": "אין חיבור לאינטרנט. תכונת התרגום לא תעבוד. אנא השתמש במצב חזרה.",
+  "noMaterialsInCategory": "אין חומרים בקטגוריה זו.",
+  "noParticipantsFound": "לא נמצאו משתתפים רשומים.",
+  "noRecords": "אין רשומות לשפה שנבחרה",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "אין חומר לימוד.",
+  "noTextToPlay": "אין טקסט לנגן",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "אין תרגום לשמירה",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "לא זוהה קול",
+  "notSelected": "- לא נבחר -",
+  "onlineLibraryCheckInternet": "אנא בדוק את חיבור האינטרנט שלך או נסה שוב מאוחר יותר.",
+  "onlineLibraryLoadFailed": "הטעינה של החומרים נכשלה.",
+  "onlineLibraryNoMaterials": "אין חומרים.",
+  "participantDeleted": "המשתתף נמחק.",
+  "participantRename": "שנה שם משתתף",
+  "partner": "שותף",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "מצב שותף",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "סיסמה",
+  "passwordTooShort": "הסיסמה חייבת להיות באורך 6 תווים לפחות.",
+  "perfect": "מושלם!",
+  "personaFriend": "חבר מקומי",
+  "personaGuide": "מדריך טיולים",
+  "personaTeacher": "מורה לאנגלית",
+  "playAgain": "שחק שוב",
+  "playbackFailed": "הניגון נכשל: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "בחר חומר",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "מנגן...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "נושא:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "מקור:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "קובץ:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "שם תואר",
+  "posAdverb": "תואר הפועל",
+  "posConjunction": "מילת קישור",
+  "posInterjection": "מילת קריאה",
+  "posNoun": "שם עצם",
+  "posPreposition": "מילת יחס",
+  "posPronoun": "כינוי גוף",
+  "posVerb": "פועל",
+  "practiceModeTitle": "תרגול",
+  "practiceWordsOnly": "תרגל מילים בלבד",
   "progress": "התקדמות: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "אנא ייבא קובץ JSON",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "אנא בחר חומר לימוד",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "נלמד",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "סמן כנלמד",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "מקשיב...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "הזיהוי הושלם",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "הצג את {count} הפריטים שנוצרו לאחרונה",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "זיהוי דיבור נכשל: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "בודק...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "הזיהוי הושלם",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "מתרגם...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "טקסט מזוהה:",
+  "recordDeleted": "הרשומה נמחקה בהצלחה",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "התרגום הושלם (נדרש שמירה)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "רענן",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "תרגום שמור נטען",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "התרגום נכשל: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "איפוס",
+  "resetPracticeHistory": "אפס היסטוריית תרגול",
+  "retry": "לנסות שוב?",
+  "reviewAll": "חזרה על הכל",
+  "reviewCount": "נחזר {count} פעמים",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "הכנס טקסט לתרגום",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "שומר...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "אין תרגום לשמירה",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "חזרה",
+  "roleAi": "AI",
+  "roleThirdParty": "צד שלישי",
+  "roleUser": "משתמש",
+  "save": "שמור",
+  "saveData": "שמור",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "השמירה נכשלה: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "מנגן...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "שמור תרגומים ממצב חיפוש",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "אין טקסט לנגן",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "נשמר",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "הניגון נכשל: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "שומר...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "שפת מקור",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "שפת יעד",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "נמצא טקסט דומה",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "השתמש בקיים",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "צור חדש",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "נחזר {count} פעמים",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "דיבור",
-  "speakingPractice": "תרגול דיבור",
-  "intervalSeconds": "מרווח: {seconds}ש'",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "ההגייה שלך",
-  "correctAnswer": "תשובה נכונה",
   "score": "דיוק: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "מושלם!",
-  "good": "טוב",
-  "tryAgain": "נסה שוב",
-  "startPractice": "התחל תרגול",
-  "stopPractice": "עצור",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "התחל סיור",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "קלט קולי",
-  "tutorialMicDesc": "הקש על המיקרופון לקלט קולי.",
-  "tutorialTabDesc": "כאן תוכל לבחור את מצב הלמידה הרצוי.",
-  "tutorialTapToContinue": "הקש כדי להמשיך",
-  "tutorialTransTitle": "תרגם",
-  "tutorialTransDesc": "הקש כאן לתרגום.",
-  "tutorialSaveTitle": "שמור",
-  "tutorialSaveDesc": "שמור את התרגום שלך.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "ניקוד",
+  "search": "חיפוש",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "תנאי חיפוש",
+  "searchSentenceHint": "חפש משפט...",
+  "searchWordHint": "חפש מילה...",
+  "sectionSentence": "קטע משפט",
+  "sectionSentences": "משפטים",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "מקטע מילים",
+  "sectionWords": "מילים",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "בחר כותרת קיימת",
+  "selectMaterialPrompt": "אנא בחר חומר לימוד",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "בחר ערכת חומרי לימוד",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "בחר חלק דיבר",
+  "selectParticipants": "בחר משתתפים",
+  "selectSentenceType": "בחר סוג משפט",
+  "selectStudyMaterial": "בחר חומר",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "צ'אט AI",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "בחר ומסנן",
-  "tutorialM2SelectDesc": "בחר חומרים או 'חזור על הכל'.",
-  "tutorialM2ListTitle": "רשימת לימוד",
-  "tutorialM2ListDesc": "בדוק את הכרטיסים והפוך אותם. (Long-press to delete)",
-  "tutorialM3SelectTitle": "בחר חומר",
-  "tutorialM3SelectDesc": "בחר סט לתרגול דיבור.",
-  "tutorialM3IntervalTitle": "מרווח",
-  "tutorialM3IntervalDesc": "כוון את זמן ההמתנה.",
-  "tutorialM3StartTitle": "התחל",
-  "tutorialM3StartDesc": "לחץ על נגן להתחלה.",
+  "sentence": "משפט",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "הרשמה",
+  "similarTextFound": "נמצא טקסט דומה",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "דלג",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "מקור:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "שפת מקור",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "דבר עכשיו!",
+  "speaker": "דובר",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "בחר דובר",
+  "speakingPractice": "תרגול דיבור",
+  "startChat": "התחל שיחה",
+  "startPractice": "התחל תרגול",
+  "startTutorial": "התחל סיור",
   "startWarning": "אזהרה",
-  "noVoiceDetected": "לא זוהה קול",
-  "tooltipSearch": "חיפוש",
-  "tooltipStudyReview": "לימוד+חזרה",
-  "tooltipSpeaking": "דיבור",
+  "startsWith": "מתחיל ב",
+  "statusCheckEmail": "אמת את כתובת האימייל שלך כדי להשלים את האימות.",
+  "statusDownloading": "מוריד: {name}...",
+  "statusImportFailed": "הייבוא נכשל: {error}",
+  "statusImportSuccess": "{name} יובא בהצלחה",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "ההתחברות בוטלה.",
+  "statusLoginFailed": "ההתחברות נכשלה: {error}",
+  "statusLoginSuccess": "התחברת בהצלחה.",
+  "statusLogoutSuccess": "התנתקת בהצלחה.",
+  "statusSignUpFailed": "ההרשמה נכשלה: {error}",
+  "statusSigningUp": "נרשם...",
+  "stopPractice": "עצור",
+  "studyComplete": "נלמד",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "רשומות ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "רשמי",
+  "styleInformal": "לא רשמי",
+  "stylePolite": "מנומס",
+  "styleSlang": "סלנג",
+  "subject": "נושא:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "החלף שפות",
+  "switchToAi": "מעבר למצב AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "מעבר למצב שותף",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "מסנכרן נתונים...",
+  "tabConversation": "שיחה",
+  "tabReview": "חזרה ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "מִשׁפָּט",
+  "tabSpeaking": "דיבור",
+  "tabStudyMaterial": "חומר ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "מִלָה",
+  "tagFormal": "לשון נימוס",
+  "tagSelection": "בחירת תגיות",
+  "targetLanguage": "שפת יעד",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "מסנן שפת יעד:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "זמן לחשוב לפני שהתשובה הנכונה נחשפת.",
+  "thinkingTimeInterval": "השהיית חשיבה",
+  "timeUp": "הזמן נגמר!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "תג כותרת (קובץ עזר)",
   "tooltipDecrease": "הפחתה",
   "tooltipIncrease": "הגדלה",
-  "languageSettings": "הגדרות שפה",
-  "tutorialM2DropdownDesc": "בחר חומרי לימוד.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "ייבא קובץ JSON מתיקיית המכשיר.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "תגית הקשר",
-  "tutorialContextDesc": "הוסף הקשר (למשל: בוקר) להבחנה בין משפטים דומים.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "הגעת למגבלת השימוש",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "חיפוש",
+  "tooltipSpeaking": "דיבור",
+  "tooltipStudyReview": "לימוד+חזרה",
+  "totalRecords": "סה\"כ {count} רשומות (הצג הכל)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "תרגם",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "מתרגם...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "תרגום",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "בחר ערכת חומרי לימוד",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "התרגום הושלם (נדרש שמירה)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "מילים",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "משפטים",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "אני מחליף את השפה שלי עם השפה שאני לומד.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "בחירת חומר לימוד",
-  "sectionWord": "מקטע מילים",
-  "sectionSentence": "קטע משפט",
-  "tabWord": "מִלָה",
-  "tabSentence": "מִשׁפָּט",
-  "errorProfanity": "לא ניתן לתרגם כי קיימת שפה גסה.",
-  "errorHateSpeech": "לא ניתן לתרגם כי קיימת שפה משתלחת.",
-  "errorSexualContent": "לא ניתן לתרגם כי קיים תוכן מיני.",
-  "errorOtherSafety": "התרגום נדחה על ידי מדיניות הבטיחות של AI.",
-  "clearAll": "נקה הכל",
-  "disambiguationTitle": "בחר משמעות",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "לאיזו משמעות תרצה לתרגם?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "דלג",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Input",
-  "reviewModeTitle": "Review",
-  "practiceModeTitle": "תרגול",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "התרגום נכשל: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "חריגה ממגבלת תרגום",
+  "translationLimitMessage": "ניצלת את כל מכסת התרגומים החינמיים היומית שלך (5 פעמים).\\n\\nהאם ברצונך לצפות במודעה כדי למלא מיד 5 תרגומים?",
+  "translationLoaded": "תרגום שמור נטען",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "צ'אט",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "מאגר מילים בסיסי",
-  "basicSentenceRepository": "מאגר משפטים בסיסי",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "לשון נימוס",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "תג כותרת (קובץ עזר)",
-  "generalTags": "תגים כלליים",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "יחיד",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "מכסת התרגומים שלך מולאה ב-5!",
+  "translationResultHint": "תוצאת תרגום - ניתן לעריכה",
+  "tryAgain": "נסה שוב",
+  "tutorialAiChatDesc": "תרגל שיחות אמיתיות עם דמויות AI.",
+  "tutorialAiChatTitle": "צ'אט AI",
+  "tutorialContextDesc": "הוסף הקשר (למשל: בוקר) להבחנה בין משפטים דומים.",
+  "tutorialContextTitle": "תגית הקשר",
+  "tutorialLangSettingsDesc": "הגדר את שפת המקור ושפת היעד לתרגום.",
+  "tutorialLangSettingsTitle": "הגדרות שפה",
+  "tutorialM1ToggleDesc": "עבור בין מצב מילה למצב משפט כאן.",
+  "tutorialM1ToggleTitle": "מצב מילה/משפט",
+  "tutorialM2DropdownDesc": "בחר חומרי לימוד.",
+  "tutorialM2ImportDesc": "ייבא קובץ JSON מתיקיית המכשיר.",
+  "tutorialM2ListDesc": "בדוק את הכרטיסים והפוך אותם. (Long-press to delete)",
+  "tutorialM2ListTitle": "רשימת לימוד",
+  "tutorialM2SearchDesc": "חפש ומצא במהירות מילים ומשפטים שמורים.",
+  "tutorialM2SelectDesc": "בחר חומרים או 'חזור על הכל'.",
+  "tutorialM2SelectTitle": "בחר ומסנן",
+  "tutorialM3IntervalDesc": "כוון את זמן ההמתנה.",
+  "tutorialM3IntervalTitle": "מרווח",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "בחר סט לתרגול דיבור.",
+  "tutorialM3SelectTitle": "בחר חומר",
+  "tutorialM3StartDesc": "לחץ על נגן להתחלה.",
+  "tutorialM3StartTitle": "התחל",
+  "tutorialM3WordsDesc": "סמן כדי לתרגל רק מילים שמורות.",
+  "tutorialM3WordsTitle": "תרגול מילים",
+  "tutorialMicDesc": "הקש על המיקרופון לקלט קולי.",
+  "tutorialMicTitle": "קלט קולי",
+  "tutorialSaveDesc": "שמור את התרגום שלך.",
+  "tutorialSaveTitle": "שמור",
+  "tutorialSwapDesc": "אני מחליף את השפה שלי עם השפה שאני לומד.",
+  "tutorialTabDesc": "כאן תוכל לבחור את מצב הלמידה הרצוי.",
+  "tutorialTapToContinue": "הקש כדי להמשיך",
+  "tutorialTransDesc": "הקש כאן לתרגום.",
+  "tutorialTransTitle": "תרגם",
+  "typeExclamation": "קריאה",
+  "typeImperative": "ציווי",
+  "typeQuestion": "שאלה",
+  "typeStatement": "הצהרה",
+  "usageLimitTitle": "הגעת למגבלת השימוש",
+  "useExistingText": "השתמש בקיים",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "ניטרלי",
-  "chatAllConversations": "כל השיחות",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "האם למחוק שיחה זו?\nלא ניתן יהיה לשחזר שיחה שנמחקה.",
-  "notSelected": "- לא נבחר -",
-  "myWordbook": "אוצר המילים שלי",
-  "mySentenceCollection": "אוסף המשפטים שלי",
-  "newSubjectName": "כותרת מחברת/אוסף חדש",
-  "enterNewSubjectName": "הזן כותרת חדשה",
-  "addNewSubject": "הוסף כותרת חדשה",
-  "selectExistingSubject": "בחר כותרת קיימת",
-  "addTagHint": "הוסף תג...",
-  "save": "שמור",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "אמת את כתובת האימייל שלך כדי להשלים את האימות.",
-  "emailAlreadyInUse": "כתובת האימייל כבר רשומה. יש להתחבר או לשחזר את הסיסמה."
+  "viewOnlineGuide": "הצג מדריך מקוון",
+  "voluntaryTranslations": "תרגומים בהתנדבות",
+  "watchAdAndRefill": "צפה במודעה ומלא מחדש (+5 פעמים)",
+  "word": "מילה",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "הגן על הבסיס שלך על ידי אמירת מילים לפני שהאויבים מגיעים.",
+  "wordDefenseTitle": "הגנת מילים",
+  "wordModeLabel": "מצב מילים",
+  "yourPronunciation": "ההגייה שלך"
 }

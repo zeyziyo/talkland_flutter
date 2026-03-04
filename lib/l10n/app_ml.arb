@@ -1,188 +1,105 @@
 {
   "@@locale": "ml",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Kakao ഉപയോഗിച്ച് തുടരുക",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "സഹായവും വഴികാട്ടിയും",
-  "helpTabModes": "മോഡുകൾ",
-  "helpTabJson": "JSON ഫോർമാറ്റ്",
-  "helpTabTour": "ടൂർ",
-  "helpMode1Desc": "ശബ്ദം തിരിച്ചറിയുക, വിവർത്തനം ചെയ്യുക, ഫലം കേൾക്കുക.",
-  "helpMode1Details": "• ശബ്ദം: ആരംഭിക്കാൻ/നിർത്താൻ മൈക്ക് ടാപ്പ് ചെയ്യുക\n• ടെക്സ്റ്റ്: വിവർത്തനം ചെയ്യാൻ നേരിട്ട് ടൈപ്പ് ചെയ്യുക\n• ഓട്ടോ-സെർച്ച്: സമാനമായ വാക്യങ്ങൾ കണ്ടെത്തുന്നു\n• വിവർത്തനം: പെട്ടെന്നുള്ള വിവർത്തന ബട്ടൺ\n• കേൾക്കുക: TTS-നുള്ള സ്പീക്കർ ഐക്കൺ\n• സേവ്: ചരിത്രത്തിലേക്ക് ചേർക്കുന്നു\n• മായ്ക്കുക: എല്ലാം പുനഃസജ്ജമാക്കുക",
-  "helpMode2Desc": "മറഞ്ഞിരിക്കുന്ന വിവർത്തനം ഉപയോഗിച്ച് സേവ് ചെയ്ത വാക്യങ്ങൾ അവലോകനം ചെയ്യുക.",
-  "helpMode2Details": "• തിരഞ്ഞെടുക്കുക: സെറ്റ് അല്ലെങ്കിൽ 'എല്ലാം അവലോകനം ചെയ്യുക' തിരഞ്ഞെടുക്കുക\n• മറിക്കുക: വിവർത്തനം 'കാണിക്കുക/മറയ്ക്കുക'\n• കേൾക്കുക: വാക്യത്തിനായി TTS പ്ലേ ചെയ്യുക\n• അടയാളപ്പെടുത്തുക: പൂർത്തിയായതിന് ടിക്ക് (V)\n• നീക്കം ചെയ്യുക: നീക്കം ചെയ്യാൻ കാർഡ് അമർത്തിപ്പിടിക്കുക\n• ഫിൽട്ടർ: എല്ലാം അല്ലെങ്കിൽ മെറ്റീരിയൽ പ്രകാരം കാണുക",
-  "helpMode3Desc": "ഒരു വാചകം കേട്ട് അത് അനുകരിച്ച് (ഷാഡോയിംഗ്) ഉച്ചാരണം പരിശീലിക്കുക.",
-  "helpMode3Details": "• തിരഞ്ഞെടുക്കുക: പാക്കേജ് തിരഞ്ഞെടുക്കുക\n• ഇടവേള: [-] [+] കാത്തിരിപ്പ് സമയം (3സെ-60സെ)\n• ആരംഭിക്കുക/നിർത്തുക: സെഷൻ നിയന്ത്രിക്കുക\n• സംസാരിക്കുക: ഓഡിയോ കേട്ട് ആവർത്തിക്കുക\n• സ്കോർ: കൃത്യത (0-100)\n• വീണ്ടും ശ്രമിക്കുക: ശബ്ദം കണ്ടെത്തിയില്ലെങ്കിൽ ബട്ടൺ",
-  "helpModeChatDesc": "AI വ്യക്തിത്വവുമായി സംഭാഷണം നടത്തി തത്സമയ സംഭാഷണം പരിശീലിക്കുക.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "മോഡ് 3-ൽ ഇറക്കുമതി ചെയ്യാൻ, JSON സൃഷ്ടിക്കുക:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "സ്ഥലം",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "കൃത്യത",
+  "adLoading": "പരസ്യം ലോഡ് ചെയ്യുന്നു. ദയവായി കുറച്ച് കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക.",
+  "addNewSubject": "പുതിയ പേര് ചേർക്കുക",
+  "addParticipant": "പങ്കാളിയെ ചേർക്കുക",
+  "addTagHint": "ടാഗ് ചേർക്കുക...",
+  "alreadyHaveAccount": "അക്കൗണ്ടുണ്ടോ?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "അവലോകനം ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "ഓട്ടോ പ്ലേ",
+  "basic": "അടിസ്ഥാനം",
+  "basicDefault": "അടിസ്ഥാനം",
+  "basicMaterialRepository": "അടിസ്ഥാന വാക്യം/വാക്ക് ശേഖരം",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "മെറ്റീരിയൽ ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "അടിസ്ഥാന വാചകങ്ങളുടെ ശേഖരം",
+  "basicSentences": "അടിസ്ഥാന വാക്യ ശേഖരം",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "അവലോകനം",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "തിരയുക",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "വിവർത്തനം",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "കേൾക്കുക",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "സേവ് ചെയ്യുക",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "സേവ് ചെയ്തു",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "നീക്കം ചെയ്യുക",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "മെറ്റീരിയൽ വിവരം",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "അടിസ്ഥാന വാക്കുകളുടെ ശേഖരം",
+  "basicWords": "അടിസ്ഥാന വാക്ക് ശേഖരം",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "റദ്ദാക്കുക",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "ശരി",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "പുതുക്കുക",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "രേഖകൾ ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "കർമ്മണി",
+  "casePossessive": "ഉടമസ്ഥത",
+  "casePossessivePronoun": "ഉടമസ്ഥതയിലുള്ള സർവ്വനാമം",
+  "caseReflexive": "റിഫ്ലെക്സീവ്",
+  "caseSubject": "കർത്തരി",
+  "chatAiChat": "ചാറ്റ്",
+  "chatAllConversations": "എല്ലാ സംഭാഷണങ്ങളും",
+  "chatChoosePersona": "വ്യക്തിത്വം തിരഞ്ഞെടുക്കുക",
+  "chatEndMessage": "സംഭാഷണം അവസാനിപ്പിക്കണോ?",
+  "chatEndTitle": "സംഭാഷണം അവസാനിപ്പിച്ച് സംരക്ഷിക്കുക",
+  "chatFailed": "ചാറ്റ് പരാജയപ്പെട്ടു: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "ലക്ഷ്യ ഭാഷ ഫിൽട്ടർ:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "സംഭാഷണത്തിൽ നിന്ന് എടുത്തത് ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "തിരഞ്ഞെടുത്ത ഭാഷയ്ക്ക് രേഖകളില്ല",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "സംഭാഷണ ചരിത്രം",
+  "chatNew": "പുതിയ സംഭാഷണം",
+  "chatNewChat": "പുതിയ സംഭാഷണം",
+  "chatNoConversations": "സംഭാഷണങ്ങളൊന്നും ലഭ്യമല്ല",
+  "chatSaveAndExit": "സംരക്ഷിച്ച് പുറത്തുകടക്കുക",
+  "chatStartNewPrompt": "പരിശീലനത്തിനായി ഒരു പുതിയ സംഭാഷണം ആരംഭിക്കുക!",
+  "chatTypeHint": "ഒരു സന്ദേശം ടൈപ്പ് ചെയ്യുക...",
+  "chatUntitled": "പേരില്ലാത്ത സംഭാഷണം",
+  "checking": "പരിശോധിക്കുന്നു...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "തിരയൽ മോഡിൽ നിന്ന് വിവർത്തനങ്ങൾ സേവ് ചെയ്യുക",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "മറിക്കുക",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "മറയ്ക്കുക",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "രേഖ നീക്കം ചെയ്യുക",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "എല്ലാം മായ്ക്കുക",
+  "confirm": "ശരി",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "ഈ രേഖ നീക്കം ചെയ്യാൻ ആഗ്രഹിക്കുന്നുണ്ടോ?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "രേഖ വിജയകരമായി നീക്കം ചെയ്തു",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "നിങ്ങൾക്ക് ഈ സംഭാഷണം ഇല്ലാതാക്കണോ?\nഇല്ലാതാക്കിയ സംഭാഷണം വീണ്ടെടുക്കാൻ കഴിയില്ല.",
+  "confirmDeleteParticipant": "ഈ പങ്കാളിയെ നീക്കം ചെയ്യണോ?",
+  "contextTagHint": "പിന്നീട് വേർതിരിച്ചറിയാൻ എളുപ്പത്തിന് സാഹചര്യം എഴുതുക",
+  "contextTagLabel": "സന്ദർഭം/അവസ്ഥ (ഓപ്ഷണൽ) - ഉദാഹരണം: പ്രഭാത വന്ദനം, ആദരവ്",
+  "copiedToClipboard": "ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി!",
+  "copy": "പകർത്തുക",
+  "correctAnswer": "ശരിയായ ഉത്തരം",
+  "createNew": "പുതിയത് സൃഷ്ടിക്കുക",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "നിലവിലെ സ്ഥാനം",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "നിലവിൽ തിരഞ്ഞെടുത്ത മെറ്റീരിയൽ ശേഖരം:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "നീക്കം ചെയ്യുക",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "നീക്കം ചെയ്യൽ പരാജയപ്പെട്ടു: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "JSON ഇറക്കുമതി",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "രേഖ നീക്കം ചെയ്യുക",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "ഇറക്കുമതി ചെയ്യുന്നു...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "റോൾ പ്ലേയിലൂടെ സംഭാഷണം പരിശീലിക്കുക. ഉചിതമായ മറുപടി തിരഞ്ഞെടുത്ത് പറയുക.",
+  "dialogueQuestTitle": "സംഭാഷണ ക്വസ്റ്റ്",
+  "disambiguationPrompt": "ഏത് അർത്ഥത്തിലേക്കാണ് വിവർത്തനം ചെയ്യേണ്ടത്?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "അർത്ഥം തിരഞ്ഞെടുക്കുക",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "അക്കൗണ്ടില്ലേ?",
+  "editParticipant": "പങ്കാളിയെ എഡിറ്റ് ചെയ്യുക",
+  "email": "ഇമെയിൽ",
+  "emailAlreadyInUse": "ഈ ഇമെയിൽ ഇതിനകം രജിസ്റ്റർ ചെയ്തിട്ടുണ്ട്. ലോഗിൻ ചെയ്യുക അല്ലെങ്കിൽ പാസ്‌വേഡ് വീണ്ടെടുക്കാൻ ശ്രമിക്കുക.",
+  "enterNewSubjectName": "പുതിയ പേര് നൽകുക",
+  "enterSentenceHint": "ഒരു വാക്യം നൽകുക...",
+  "enterTextHint": "പരിഭാഷ ചെയ്യേണ്ട വാചകം നൽകുക",
+  "enterTextToTranslate": "വിവർത്തനം ചെയ്യാൻ ടെക്സ്റ്റ് നൽകുക",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "ഒരു വാക്ക് നൽകുക...",
+  "error": "പിശക്",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "വിദ്വേഷ പ്രസംഗം അടങ്ങിയതിനാൽ വിവർത്തനം ചെയ്യാൻ കഴിയില്ല.",
+  "errorOtherSafety": "AI സുരക്ഷാ നയം കാരണം വിവർത്തനം നിരസിച്ചു.",
+  "errorProfanity": "അസഭ്യമായ വാക്കുകൾ അടങ്ങിയതിനാൽ വിവർത്തനം ചെയ്യാൻ കഴിയില്ല.",
+  "errorSelectCategory": "ആദ്യം ഒരു വാക്കോ വാക്യമോ തിരഞ്ഞെടുക്കുക!",
+  "errorSexualContent": "ലൈംഗിക ഉള്ളടക്കം അടങ്ങിയതിനാൽ വിവർത്തനം ചെയ്യാൻ കഴിയില്ല.",
+  "errors": "പിശകുകൾ:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "സ്ത്രീ",
+  "file": "ഫയൽ:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "എല്ലാം",
+  "flip": "മറിക്കുക",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "താരതമ്യേനെ",
+  "formInfinitive": "ഇൻഫിനിറ്റീവ്/വർത്തമാനകാലം",
+  "formPast": "കഴിഞ്ഞ കാലം",
+  "formPastParticiple": "പാസ്റ്റ് പാർട്ടിസിപ്പിൾ",
+  "formPlural": "ബഹുവചനം",
+  "formPositive": "പോസിറ്റീവ്",
+  "formPresent": "വർത്തമാനകാലം",
+  "formPresentParticiple": "present പാർട്ടിസിപ്പിൾ (ing)",
+  "formSingular": "ഏകവചനം",
+  "formSuperlative": "ಸೂಪರ್ಲೇಟಿವ್",
+  "formThirdPersonSingular": "മൂന്നാമത്തെ വ്യക്തി ഏകവചനം",
+  "gameModeDesc": "പരിശീലിക്കാൻ ഒരു ഗെയിം മോഡ് തിരഞ്ഞെടുക്കുക",
+  "gameModeTitle": "ഗെയിം മോഡ്",
+  "gameOver": "ഗെയിം ഓവർ",
+  "gender": "ലിംഗം",
+  "generalTags": "പൊതുവായ ടാഗുകൾ",
+  "getMaterials": "മെറ്റീരിയലുകൾ നേടുക",
+  "good": "നല്ലത്",
+  "googleContinue": "Google ഉപയോഗിച്ച് തുടരുക",
+  "helpDialogueImportDesc": "JSON ഫയൽ ഉപയോഗിച്ച് സംഭാഷണ ശകലങ്ങൾ ഇറക്കുമതി ചെയ്യുക.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "മോഡ് 3-ൽ ഇറക്കുമതി ചെയ്യാൻ, JSON സൃഷ്ടിക്കുക:",
+  "helpJsonTypeDialogue": "സംഭാഷണം (Dialogue)",
+  "helpJsonTypeSentence": "വാക്യം (Sentence)",
+  "helpJsonTypeWord": "വാക്ക് (Word)",
+  "helpMode1Desc": "ശബ്ദം തിരിച്ചറിയുക, വിവർത്തനം ചെയ്യുക, ഫലം കേൾക്കുക.",
+  "helpMode1Details": "• ശബ്ദം: ആരംഭിക്കാൻ/നിർത്താൻ മൈക്ക് ടാപ്പ് ചെയ്യുക\n• ടെക്സ്റ്റ്: വിവർത്തനം ചെയ്യാൻ നേരിട്ട് ടൈപ്പ് ചെയ്യുക\n• ഓട്ടോ-സെർച്ച്: സമാനമായ വാക്യങ്ങൾ കണ്ടെത്തുന്നു\n• വിവർത്തനം: പെട്ടെന്നുള്ള വിവർത്തന ബട്ടൺ\n• കേൾക്കുക: TTS-നുള്ള സ്പീക്കർ ഐക്കൺ\n• സേവ്: ചരിത്രത്തിലേക്ക് ചേർക്കുന്നു\n• മായ്ക്കുക: എല്ലാം പുനഃസജ്ജമാക്കുക",
+  "helpMode2Desc": "മറഞ്ഞിരിക്കുന്ന വിവർത്തനം ഉപയോഗിച്ച് സേവ് ചെയ്ത വാക്യങ്ങൾ അവലോകനം ചെയ്യുക.",
+  "helpMode2Details": "• തിരഞ്ഞെടുക്കുക: സെറ്റ് അല്ലെങ്കിൽ 'എല്ലാം അവലോകനം ചെയ്യുക' തിരഞ്ഞെടുക്കുക\n• മറിക്കുക: വിവർത്തനം 'കാണിക്കുക/മറയ്ക്കുക'\n• കേൾക്കുക: വാക്യത്തിനായി TTS പ്ലേ ചെയ്യുക\n• അടയാളപ്പെടുത്തുക: പൂർത്തിയായതിന് ടിക്ക് (V)\n• നീക്കം ചെയ്യുക: നീക്കം ചെയ്യാൻ കാർഡ് അമർത്തിപ്പിടിക്കുക\n• ഫിൽട്ടർ: എല്ലാം അല്ലെങ്കിൽ മെറ്റീരിയൽ പ്രകാരം കാണുക",
+  "helpMode3Desc": "ഒരു വാചകം കേട്ട് അത് അനുകരിച്ച് (ഷാഡോയിംഗ്) ഉച്ചാരണം പരിശീലിക്കുക.",
+  "helpMode3Details": "• തിരഞ്ഞെടുക്കുക: പാക്കേജ് തിരഞ്ഞെടുക്കുക\n• ഇടവേള: [-] [+] കാത്തിരിപ്പ് സമയം (3സെ-60സെ)\n• ആരംഭിക്കുക/നിർത്തുക: സെഷൻ നിയന്ത്രിക്കുക\n• സംസാരിക്കുക: ഓഡിയോ കേട്ട് ആവർത്തിക്കുക\n• സ്കോർ: കൃത്യത (0-100)\n• വീണ്ടും ശ്രമിക്കുക: ശബ്ദം കണ്ടെത്തിയില്ലെങ്കിൽ ബട്ടൺ",
+  "helpModeChatDesc": "AI വ്യക്തിത്വവുമായി സംഭാഷണം നടത്തി തത്സമയ സംഭാഷണം പരിശീലിക്കുക.",
+  "helpModeChatDetails": "• AI ചാറ്റ്: വ്യക്തിത്വങ്ങളുമായി സംഭാഷണം പരിശീലിക്കുക.\n• പങ്കാളികളുടെ മാനേജ്മെന്റ്: നിങ്ങളുടെ ഭാഷയും AI-യുടെ ഭാഷയും സജ്ജീകരിച്ച് ഭാഷാ പൊരുത്തക്കേടുകൾ ഒഴിവാക്കുക.\n• GPS റോൾപ്ലേ: നിങ്ങളുടെ ലൊക്കേഷനെ അടിസ്ഥാനമാക്കി സ്വാഭാവിക സംഭാഷണ സാഹചര്യങ്ങൾ ഉണ്ടാക്കുക.\n• സംഭാഷണ ചരിത്രം: എല്ലാ സംഭാഷണങ്ങളും സുരക്ഷിതമായി ID അടിസ്ഥാനമാക്കി സൂക്ഷിക്കുന്നു, പേര് മാറ്റിയാലും നിലനിർത്തുന്നു.",
+  "helpTabJson": "JSON ഫോർമാറ്റ്",
+  "helpTabModes": "മോഡുകൾ",
+  "helpTabTour": "ടൂർ",
+  "helpTitle": "സഹായവും വഴികാട്ടിയും",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "മറയ്ക്കുക",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "ചേർത്തത്: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "ഇറക്കുമതി പൂർത്തിയായി",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "ഇതേ പേരിലുള്ള മെറ്റീരിയൽ നിലവിൽ ഉണ്ട്. പേര് മാറ്റി വീണ്ടും ശ്രമിക്കുക.",
+  "importErrorMessage": "ഫയൽ ഇറക്കുമതി ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "ഇറക്കുമതി പരാജയപ്പെട്ടു",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "ആകെ: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "JSON ഇറക്കുമതി",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "ചേർത്തത്: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "ദയവായി JSON ഫയൽ ഇറക്കുമതി ചെയ്യുക",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "ഒഴിവാക്കിയത്: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "പിശകുകൾ:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "ആകെ: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "പിശക്",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "ഇറക്കുമതി ചെയ്യുന്നു...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "ഫയൽ ഇറക്കുമതി ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "ഇൻപുട്ട്",
+  "intervalSeconds": "ഇടവേള: {seconds}സെക്കൻഡ്",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "ക്രമമല്ലാത്ത ഇമെയിൽ",
+  "kakaoContinue": "Kakao ഉപയോഗിച്ച് തുടരുക",
+  "labelLangCode": "ഭാഷാ കോഡ് (ഉദാഹരണം: en-US, ko-KR)",
+  "labelName": "പേര്",
+  "labelNote": "കുറിപ്പ്",
+  "labelPOS": "വാക്കിന്റെ ഭാഗം",
+  "labelRole": "റോൾ",
+  "labelSentence": "വാക്യം",
+  "labelSentenceCollection": "വാക്യ ശേഖരം",
+  "labelSentenceType": "വാക്യത്തിന്റെ തരം",
+  "labelShowMemorized": "പൂർത്തിയാക്കിയത്",
+  "labelType": "തരം:",
+  "labelWord": "വാക്ക്",
+  "labelWordbook": "വാക്ക് ശേഖരം",
+  "language": "ഭാഷ",
+  "languageSettings": "ഭാഷാ ക്രമീകരണങ്ങൾ",
+  "languageSettingsTitle": "ഭാഷാ ക്രമീകരണങ്ങൾ",
+  "libTitleFirstMeeting": "ആദ്യ കൂടിക്കാഴ്ച",
+  "libTitleGreetings1": "അഭിവാദ്യങ്ങൾ 1",
+  "libTitleNouns1": "നാമങ്ങൾ 1",
+  "libTitleVerbs1": "ക്രിയകൾ 1",
+  "listen": "കേൾക്കുക",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "കേൾക്കുന്നു...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "പങ്കാളികളെ ലോഡ് ചെയ്യുന്നു...",
+  "location": "സ്ഥലം",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "ലോഗിൻ",
+  "logout": "പുറത്ത് പോകുക",
+  "logoutConfirmMessage": "നിലവിലെ ഉപകരണത്തിൽ നിന്ന് ലോഗ് ഔട്ട് ചെയ്യണോ?",
+  "logoutConfirmTitle": "പുറത്ത് പോകുക",
+  "male": "പുരുഷൻ",
+  "manageParticipants": "പങ്കാളികളെ നിയന്ത്രിക്കുക",
+  "manual": "സ്വമേധയായുള്ള ഇൻപുട്ട്",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "പഠിച്ചതായി അടയാളപ്പെടുത്തുക",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "മെറ്റീരിയൽ വിവരം",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "ഞാൻ",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "ഉപകരണത്തിൽ നിന്ന് മെറ്റീരിയലുകൾ ഇറക്കുമതി ചെയ്യുക",
+  "menuHelp": "സഹായം",
+  "menuLanguageSettings": "ഭാഷാ ക്രമീകരണങ്ങൾ",
+  "menuOnlineLibrary": "ഓൺലൈൻ ലൈബ്രറി",
+  "menuSelectMaterialSet": "ഒരു പഠന സാമഗ്രി തിരഞ്ഞെടുക്കുക",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "টিউটോറിയൽ",
+  "menuWebDownload": "ഉപയോക്തൃ മാനുവൽ",
+  "metadataDialogTitle": "വിശദമായ വർഗ്ഗീകരണം",
+  "metadataFormType": "വ്യാകരണ രൂപം",
+  "metadataRootWord": "മൂല വാക്ക് (Root Word)",
+  "micButtonTooltip": "വോയിസ് റെക്കഗ്നിഷൻ ആരംഭിക്കുക",
+  "mode1SelectedMaterial": "നിലവിൽ തിരഞ്ഞെടുത്ത മെറ്റീരിയൽ ശേഖരം: {name}",
+  "mode2Title": "അവലോകനം",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "അടുത്തത്",
+  "mode3Start": "ആരംഭിക്കുക",
+  "mode3Stop": "നിർത്തുക",
+  "mode3TryAgain": "വീണ്ടും ശ്രമിക്കുക",
+  "mySentenceCollection": "എൻ്റെ വാക്യ ശേഖരം",
+  "myWordbook": "എൻ്റെ പദാവലി",
+  "neutral": "തಟസ്ഥം",
+  "newSubjectName": "പുതിയ പദാവലി/വാക്യ ശേഖരത്തിന്റെ പേര്",
+  "next": "അടുത്തത്",
+  "noDialogueHistory": "സംഭാഷണ ചരിത്രമില്ല.",
+  "noInternetWarningMic": "ഇന്റർനെറ്റ് കണക്ഷൻ ഇല്ല. ഓഫ്‌ലൈനിൽ വോയിസ് റെക്കഗ്നിഷൻ ലഭ്യമല്ല.",
+  "noInternetWarningTranslate": "ഇന്റർനെറ്റ് കണക്ഷൻ ഇല്ല. ഓഫ്‌ലൈനിൽ പരിഭാഷ ലഭ്യമല്ല. റിവ്യൂ മോഡ് ഉപയോഗിക്കുക.",
+  "noMaterialsInCategory": "ഈ വിഭാഗത്തിൽ മെറ്റീരിയലുകളൊന്നും ലഭ്യമല്ല.",
+  "noParticipantsFound": "രജിസ്റ്റർ ചെയ്ത പങ്കാളികളില്ല.",
+  "noRecords": "തിരഞ്ഞെടുത്ത ഭാഷയ്ക്ക് രേഖകളില്ല",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "പഠന സാമഗ്രികളൊന്നും ലഭ്യമല്ല.",
+  "noTextToPlay": "പ്ലേ ചെയ്യാൻ ടെക്സ്റ്റ് ഇല്ല",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "സേവ് ചെയ്യാൻ വിവർത്തനമില്ല",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "ശബ്ദം കണ്ടെത്തിയില്ല",
+  "notSelected": "-ഒന്നും തിരഞ്ഞെടുത്തിട്ടില്ല-",
+  "onlineLibraryCheckInternet": "ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിക്കുക അല്ലെങ്കിൽ പിന്നീട് ശ്രമിക്കുക.",
+  "onlineLibraryLoadFailed": "മെറ്റീരിയലുകൾ ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല.",
+  "onlineLibraryNoMaterials": "മെറ്റീരിയലുകൾ ലഭ്യമല്ല.",
+  "participantDeleted": "പങ്കാളിയെ നീക്കം ചെയ്തു.",
+  "participantRename": "പങ്കാളിയുടെ പേര് മാറ്റുക",
+  "partner": "പങ്കാളി",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "പങ്കാളി മോഡ്",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "രഹസ്യവാക്ക്",
+  "passwordTooShort": "പാസ്‌വേഡ് 6 അക്ഷരമെങ്കിലും വേണം.",
+  "perfect": "അതികഠിനം!",
+  "personaFriend": "പ്രാദേശിക സുഹൃത്ത്",
+  "personaGuide": "യാത്രാ സഹായി",
+  "personaTeacher": "ഇംഗ്ലീഷ് അധ്യാപകൻ",
+  "playAgain": "വീണ്ടും കളിക്കുക",
+  "playbackFailed": "പ്ലേബാക്ക് പരാജയപ്പെട്ടു: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "മെറ്റീരിയൽ തിരഞ്ഞെടുക്കുക",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "പ്ലേ ചെയ്യുന്നു...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "വിഷയം:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "ഉറവിടം:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "ഫയൽ:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "വിശേഷണം",
+  "posAdverb": "ക്രിയാവിശേഷണം",
+  "posConjunction": "കൺജങ്ക്ഷൻ",
+  "posInterjection": "വിക്ഷേപണി",
+  "posNoun": "നാമം",
+  "posPreposition": "പ്രീപോസിഷൻ/ഇടവാക്യം",
+  "posPronoun": "സർവ്വനാമം",
+  "posVerb": "ക്രിയ",
+  "practiceModeTitle": "പരിശീലനം",
+  "practiceWordsOnly": "വാക്കുകൾ മാത്രം പരിശീലിക്കുക",
   "progress": "പുരോഗതി: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "ദയവായി JSON ഫയൽ ഇറക്കുമതി ചെയ്യുക",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "ദയവായി പഠന സാമഗ്രികൾ തിരഞ്ഞെടുക്കുക",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "പഠിച്ചു",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "പഠിച്ചതായി അടയാളപ്പെടുത്തുക",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "കേൾക്കുന്നു...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "തിരിച്ചറിയൽ പൂർത്തിയായി",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "അടുത്തിടെ ഉണ്ടാക്കിയ {count} എണ്ണം കാണുക",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "ശബ്ദ തിരിച്ചറിയൽ പരാജയപ്പെട്ടു: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "പരിശോധിക്കുന്നു...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "തിരിച്ചറിയൽ പൂർത്തിയായി",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "വിവർത്തനം ചെയ്യുന്നു...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "തിരിച്ചറിഞ്ഞ ഉച്ചാരണം:",
+  "recordDeleted": "രേഖ വിജയകരമായി നീക്കം ചെയ്തു",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "വിവർത്തനം പൂർത്തിയായി (സേവ് ചെയ്യണം)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "പുതുക്കുക",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "സേവ് ചെയ്ത വിവർത്തനം ലോഡ് ചെയ്തു",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "വിവർത്തനം പരാജയപ്പെട്ടു: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "പുനഃസജ്ജമാക്കുക",
+  "resetPracticeHistory": "പരിശീലന ചരിത്രം പുനഃസജ്ജമാക്കുക",
+  "retry": "വീണ്ടും ശ്രമിക്കണോ?",
+  "reviewAll": "എല്ലാം അവലോകനം ചെയ്യുക",
+  "reviewCount": "{count} തവണ അവലോകനം ചെയ്തു",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "വിവർത്തനം ചെയ്യാൻ ടെക്സ്റ്റ് നൽകുക",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "സേവ് ചെയ്യുന്നു...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "സേവ് ചെയ്യാൻ വിവർത്തനമില്ല",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "റിവ്യൂ",
+  "roleAi": "AI",
+  "roleThirdParty": "മൂന്നാമൻ",
+  "roleUser": "ഉപയോക്താവ്",
+  "save": "സംരക്ഷിക്കുക",
+  "saveData": "സേവ് ചെയ്യുക",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "സേവ് ചെയ്യുന്നത് പരാജയപ്പെട്ടു: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "പ്ലേ ചെയ്യുന്നു...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "തിരയൽ മോഡിൽ നിന്ന് വിവർത്തനങ്ങൾ സേവ് ചെയ്യുക",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "പ്ലേ ചെയ്യാൻ ടെക്സ്റ്റ് ഇല്ല",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "സേവ് ചെയ്തു",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "പ്ലേബാക്ക് പരാജയപ്പെട്ടു: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "സേവ് ചെയ്യുന്നു...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "ഉറവിട ഭാഷ",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "ലക്ഷ്യ ഭാഷ",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "സമാനമായ ടെക്സ്റ്റ് കണ്ടെത്തി",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "നിലവിലുള്ളത് ഉപയോഗിക്കുക",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "പുതിയത് സൃഷ്ടിക്കുക",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "{count} തവണ അവലോകനം ചെയ്തു",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "സംസാരം",
-  "speakingPractice": "സംസാര പരിശീലനം",
-  "intervalSeconds": "ഇടവേള: {seconds}സെക്കൻഡ്",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "നിങ്ങളുടെ ഉച്ചാരണം",
-  "correctAnswer": "ശരിയായ ഉത്തരം",
   "score": "കൃത്യത: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "അതികഠിനം!",
-  "good": "നല്ലത്",
-  "tryAgain": "വീണ്ടും ശ്രമിക്കുക",
-  "startPractice": "പരിശീലനം ആരംഭിക്കുക",
-  "stopPractice": "നിർത്തുക",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "ടൂർ ആരംഭിക്കുക",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "വോയ്സ് ഇൻപുട്ട്",
-  "tutorialMicDesc": "വോയ്സ് ഇൻപുട്ടിനായി മൈക്ക് ബട്ടൺ ടാപ്പ് ചെയ്യുക.",
-  "tutorialTabDesc": "നിങ്ങൾക്ക് ഇവിടെ നിങ്ങളുടെ ആവശ്യമുള്ള പഠന രീതി തിരഞ്ഞെടുക്കാം.",
-  "tutorialTapToContinue": "തുടരാൻ ടാപ്പ് ചെയ്യുക",
-  "tutorialTransTitle": "വിവർത്തനം",
-  "tutorialTransDesc": "നിങ്ങളുടെ ടെക്സ്റ്റ് വിവർത്തനം ചെയ്യാൻ ഇവിടെ ടാപ്പ് ചെയ്യുക.",
-  "tutorialSaveTitle": "സേവ്",
-  "tutorialSaveDesc": "നിങ്ങളുടെ വിവർത്തനം സേവ് ചെയ്യുക.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "സ്കോർ",
+  "search": "തിരയുക",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "തിരയൽ ഉപാധികൾ",
+  "searchSentenceHint": "വാക്യം തിരയുക...",
+  "searchWordHint": "വാക്ക് തിരയുക...",
+  "sectionSentence": "വാക്യ വിഭാഗം",
+  "sectionSentences": "വാക്യങ്ങൾ",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "പദ വിഭാഗം",
+  "sectionWords": "വാക്കുകൾ",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "നിലവിലുള്ള പേര് തിരഞ്ഞെടുക്കുക",
+  "selectMaterialPrompt": "ദയവായി പഠന സാമഗ്രികൾ തിരഞ്ഞെടുക്കുക",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "പഠന സാമഗ്രി തിരഞ്ഞെടുക്കുക",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "പാർട്ട് ഓഫ് സ്പീച്ച് തിരഞ്ഞെടുക്കുക",
+  "selectParticipants": "പങ്കാളികളെ തിരഞ്ഞെടുക്കുക",
+  "selectSentenceType": "വാക്യത്തിന്റെ തരം തിരഞ്ഞെടുക്കുക",
+  "selectStudyMaterial": "മെറ്റീരിയൽ തിരഞ്ഞെടുക്കുക",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI ചാറ്റ്",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "തിരഞ്ഞെടുക്കുക & ഫിൽട്ടർ",
-  "tutorialM2SelectDesc": "മെറ്റീരിയലുകൾ തിരഞ്ഞെടുക്കുക അല്ലെങ്കിൽ 'എല്ലാം അവലോകനം ചെയ്യുക' എന്നതിലേക്ക് മാറുക.",
-  "tutorialM2ListTitle": "പഠന ലിസ്റ്റ്",
-  "tutorialM2ListDesc": "നിങ്ങളുടെ കാർഡുകൾ പരിശോധിച്ച് അവ മറിക്കുക. (Long-press to delete)",
-  "tutorialM3SelectTitle": "മെറ്റീരിയൽ തിരഞ്ഞെടുക്കുക",
-  "tutorialM3SelectDesc": "സംസാര പരിശീലനത്തിനായി സെറ്റ് തിരഞ്ഞെടുക്കുക.",
-  "tutorialM3IntervalTitle": "ഇടവേള",
-  "tutorialM3IntervalDesc": "വാക്യങ്ങൾക്കിടയിലുള്ള കാത്തിരിപ്പ് സമയം ക്രമീകരിക്കുക.",
-  "tutorialM3StartTitle": "ആരംഭിക്കുക",
-  "tutorialM3StartDesc": "ആരംഭിക്കാൻ പ്ലേ ടാപ്പ് ചെയ്യുക.",
+  "sentence": "വാക്യം",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "സൈൻ അപ്പ്",
+  "similarTextFound": "സമാനമായ ടെക്സ്റ്റ് കണ്ടെത്തി",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "ഒഴിവാക്കുക",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "ഉറവിടം:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "ഉറവിട ഭാഷ",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "ഇപ്പോൾ സംസാരിക്കുക!",
+  "speaker": "സംസാരിക്കുന്നയാൾ",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "സംസാരിക്കുന്നയാളെ തിരഞ്ഞെടുക്കുക",
+  "speakingPractice": "സംസാര പരിശീലനം",
+  "startChat": "സംഭാഷണം ആരംഭിക്കുക",
+  "startPractice": "പരിശീലനം ആരംഭിക്കുക",
+  "startTutorial": "ടൂർ ആരംഭിക്കുക",
   "startWarning": "മുന്നറിയിപ്പ്",
-  "noVoiceDetected": "ശബ്ദം കണ്ടെത്തിയില്ല",
-  "tooltipSearch": "തിരയുക",
-  "tooltipStudyReview": "പഠനം+അവലോകനം",
-  "tooltipSpeaking": "സംസാരിക്കുക",
+  "startsWith": "ആദ്യ അക്ഷരം",
+  "statusCheckEmail": "ഇമെയിൽ പരിശോധിച്ച് സ്ഥിരീകരണം പൂർത്തിയാക്കുക.",
+  "statusDownloading": "ഡൗൺലോഡ് ചെയ്യുന്നു: {name}...",
+  "statusImportFailed": "ഇറക്കുമതി പരാജയപ്പെട്ടു: {error}",
+  "statusImportSuccess": "{name} ഇറക്കുമതി ചെയ്തു",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "ലോഗിൻ റദ്ദാക്കി.",
+  "statusLoginFailed": "ലോഗിൻ പരാജയപ്പെട്ടു: {error}",
+  "statusLoginSuccess": "ലോഗിൻ വിജയകരമായി.",
+  "statusLogoutSuccess": "ലോഗ് ഔട്ട് ചെയ്തു.",
+  "statusSignUpFailed": "സൈൻ അപ്പ് പരാജയപ്പെട്ടു: {error}",
+  "statusSigningUp": "സൈൻ അപ്പ് ചെയ്യുന്നു...",
+  "stopPractice": "നിർത്തുക",
+  "studyComplete": "പഠിച്ചു",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "രേഖകൾ ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "ആദരവോടെ",
+  "styleInformal": "അനൗപചാരികം",
+  "stylePolite": "വിനയം",
+  "styleSlang": "സ്ലാംഗ്/অপভাষা",
+  "subject": "വിഷയം:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "ഭാഷ മാറ്റുക",
+  "switchToAi": "AI മോഡിലേക്ക് മാറുക",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "പങ്കാളി മോഡിലേക്ക് മാറുക",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "ഡാറ്റ സമന്വയിപ്പിക്കുന്നു...",
+  "tabConversation": "സംഭാഷണം",
+  "tabReview": "അവലോകനം ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "വാചകം",
+  "tabSpeaking": "സംസാരം",
+  "tabStudyMaterial": "മെറ്റീരിയൽ ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "വാക്ക്",
+  "tagFormal": "ആദരപൂർവ്വം",
+  "tagSelection": "ടാഗ് തിരഞ്ഞെടുക്കുക",
+  "targetLanguage": "ലക്ഷ്യ ഭാഷ",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "ലക്ഷ്യ ഭാഷ ഫിൽട്ടർ:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "ഉത്തരം വെളിപ്പെടുത്തുന്നതിന് മുമ്പ് ചിന്തിക്കാൻ നൽകുന്ന സമയം.",
+  "thinkingTimeInterval": "ചിന്തിക്കാനുള്ള സമയം",
+  "timeUp": "സമയം കഴിഞ്ഞു!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "ശീർഷക ടാഗ് (മെറ്റീരിയൽ)",
   "tooltipDecrease": "കുറയ്ക്കുക",
   "tooltipIncrease": "വർദ്ധിപ്പിക്കുക",
-  "languageSettings": "ഭാഷാ ക്രമീകരണങ്ങൾ",
-  "tutorialM2DropdownDesc": "പഠന സാമഗ്രികൾ തിരഞ്ഞെടുക്കുക.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "ഉപകരണ ഫോൾഡറിൽ നിന്ന് JSON ഫയൽ ഇറക്കുമതി ചെയ്യുക.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "സന്ദർഭ ടാഗ്",
-  "tutorialContextDesc": "സമാന വാക്യങ്ങൾ വേർതിരിക്കാൻ സന്ദർഭം (ഉദാ. രാവിലെ) ചേർക്കുക.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "പരിധി എത്തിയിരിക്കുന്നു",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "തിരയുക",
+  "tooltipSpeaking": "സംസാരിക്കുക",
+  "tooltipStudyReview": "പഠനം+അവലോകനം",
+  "totalRecords": "ആകെ {count} റെക്കോർഡുകൾ (എല്ലാം കാണുക)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "വിവർത്തനം",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "വിവർത്തനം ചെയ്യുന്നു...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "പരിഭാഷ",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "പഠന സാമഗ്രി തിരഞ്ഞെടുക്കുക",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "വിവർത്തനം പൂർത്തിയായി (സേവ് ചെയ്യണം)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "വാക്കുകൾ",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "വാക്യങ്ങൾ",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "ഞാൻ എന്റെ ഭാഷ പഠിക്കുന്ന ഭാഷയുമായി മാറ്റുന്നു.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "ഒരു പഠന സാമഗ്രി തിരഞ്ഞെടുക്കുക",
-  "sectionWord": "പദ വിഭാഗം",
-  "sectionSentence": "വാക്യ വിഭാഗം",
-  "tabWord": "വാക്ക്",
-  "tabSentence": "വാചകം",
-  "errorProfanity": "അസഭ്യമായ വാക്കുകൾ അടങ്ങിയതിനാൽ വിവർത്തനം ചെയ്യാൻ കഴിയില്ല.",
-  "errorHateSpeech": "വിദ്വേഷ പ്രസംഗം അടങ്ങിയതിനാൽ വിവർത്തനം ചെയ്യാൻ കഴിയില്ല.",
-  "errorSexualContent": "ലൈംഗിക ഉള്ളടക്കം അടങ്ങിയതിനാൽ വിവർത്തനം ചെയ്യാൻ കഴിയില്ല.",
-  "errorOtherSafety": "AI സുരക്ഷാ നയം കാരണം വിവർത്തനം നിരസിച്ചു.",
-  "clearAll": "എല്ലാം മായ്ക്കുക",
-  "disambiguationTitle": "അർത്ഥം തിരഞ്ഞെടുക്കുക",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "ഏത് അർത്ഥത്തിലേക്കാണ് വിവർത്തനം ചെയ്യേണ്ടത്?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "ഒഴിവാക്കുക",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Input",
-  "reviewModeTitle": "Review",
-  "practiceModeTitle": "പരിശീലനം",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "വിവർത്തനം പരാജയപ്പെട്ടു: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "പരിഭാഷാ പരിധി കഴിഞ്ഞു",
+  "translationLimitMessage": "ദിവസേനയുള്ള സൗജന്യ പരിഭാഷ (5 എണ്ണം) പൂർത്തിയായിരിക്കുന്നു.\\n\\nപരസ്യം കണ്ട് 5 എണ്ണം തൽക്ഷണം റീഫിൽ ചെയ്യണോ?",
+  "translationLoaded": "സേവ് ചെയ്ത വിവർത്തനം ലോഡ് ചെയ്തു",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "ചാറ്റ്",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "അടിസ്ഥാന വാക്കുകളുടെ ശേഖരം",
-  "basicSentenceRepository": "അടിസ്ഥാന വാചകങ്ങളുടെ ശേഖരം",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "ആദരപൂർവ്വം",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "ശീർഷക ടാഗ് (മെറ്റീരിയൽ)",
-  "generalTags": "പൊതുവായ ടാഗുകൾ",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "ഏകവചനം",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "പരിഭാഷാ എണ്ണം 5 ആയി റീഫിൽ ചെയ്തു!",
+  "translationResultHint": "പരിഭാഷാ ഫലം - എഡിറ്റ് ചെയ്യാവുന്നതാണ്",
+  "tryAgain": "വീണ്ടും ശ്രമിക്കുക",
+  "tutorialAiChatDesc": "AI വ്യക്തിത്വങ്ങളുമായി സംഭാഷണം പരിശീലിക്കുക.",
+  "tutorialAiChatTitle": "AI ചാറ്റ്",
+  "tutorialContextDesc": "സമാന വാക്യങ്ങൾ വേർതിരിക്കാൻ സന്ദർഭം (ഉദാ. രാവിലെ) ചേർക്കുക.",
+  "tutorialContextTitle": "സന്ദർഭ ടാഗ്",
+  "tutorialLangSettingsDesc": "പരിഭാഷ ചെയ്യേണ്ട ഭാഷയും ലക്ഷ്യമിടുന്ന ഭാഷയും തിരഞ്ഞെടുക്കുക.",
+  "tutorialLangSettingsTitle": "ഭാഷാ ക്രമീകരണങ്ങൾ",
+  "tutorialM1ToggleDesc": "ഇവിടെ വാക്കും വാക്യവും തമ്മിൽ മാറാനുള്ള മോഡ് തിരഞ്ഞെടുക്കുക.",
+  "tutorialM1ToggleTitle": "വാക്ക്/വാക്യ മോഡ്",
+  "tutorialM2DropdownDesc": "പഠന സാമഗ്രികൾ തിരഞ്ഞെടുക്കുക.",
+  "tutorialM2ImportDesc": "ഉപകരണ ഫോൾഡറിൽ നിന്ന് JSON ഫയൽ ഇറക്കുമതി ചെയ്യുക.",
+  "tutorialM2ListDesc": "നിങ്ങളുടെ കാർഡുകൾ പരിശോധിച്ച് അവ മറിക്കുക. (Long-press to delete)",
+  "tutorialM2ListTitle": "പഠന ലിസ്റ്റ്",
+  "tutorialM2SearchDesc": "സംരക്ഷിച്ച വാക്കുകളും വാക്യങ്ങളും തിരഞ്ഞ് കണ്ടെത്തുക.",
+  "tutorialM2SelectDesc": "മെറ്റീരിയലുകൾ തിരഞ്ഞെടുക്കുക അല്ലെങ്കിൽ 'എല്ലാം അവലോകനം ചെയ്യുക' എന്നതിലേക്ക് മാറുക.",
+  "tutorialM2SelectTitle": "തിരഞ്ഞെടുക്കുക & ഫിൽട്ടർ",
+  "tutorialM3IntervalDesc": "വാക്യങ്ങൾക്കിടയിലുള്ള കാത്തിരിപ്പ് സമയം ക്രമീകരിക്കുക.",
+  "tutorialM3IntervalTitle": "ഇടവേള",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "സംസാര പരിശീലനത്തിനായി സെറ്റ് തിരഞ്ഞെടുക്കുക.",
+  "tutorialM3SelectTitle": "മെറ്റീരിയൽ തിരഞ്ഞെടുക്കുക",
+  "tutorialM3StartDesc": "ആരംഭിക്കാൻ പ്ലേ ടാപ്പ് ചെയ്യുക.",
+  "tutorialM3StartTitle": "ആരംഭിക്കുക",
+  "tutorialM3WordsDesc": "പരിശോധിച്ചാൽ സംരക്ഷിച്ച വാക്കുകൾ മാത്രം പരിശീലിക്കും.",
+  "tutorialM3WordsTitle": "വാക്ക് പരിശീലനം",
+  "tutorialMicDesc": "വോയ്സ് ഇൻപുട്ടിനായി മൈക്ക് ബട്ടൺ ടാപ്പ് ചെയ്യുക.",
+  "tutorialMicTitle": "വോയ്സ് ഇൻപുട്ട്",
+  "tutorialSaveDesc": "നിങ്ങളുടെ വിവർത്തനം സേവ് ചെയ്യുക.",
+  "tutorialSaveTitle": "സേവ്",
+  "tutorialSwapDesc": "ഞാൻ എന്റെ ഭാഷ പഠിക്കുന്ന ഭാഷയുമായി മാറ്റുന്നു.",
+  "tutorialTabDesc": "നിങ്ങൾക്ക് ഇവിടെ നിങ്ങളുടെ ആവശ്യമുള്ള പഠന രീതി തിരഞ്ഞെടുക്കാം.",
+  "tutorialTapToContinue": "തുടരാൻ ടാപ്പ് ചെയ്യുക",
+  "tutorialTransDesc": "നിങ്ങളുടെ ടെക്സ്റ്റ് വിവർത്തനം ചെയ്യാൻ ഇവിടെ ടാപ്പ് ചെയ്യുക.",
+  "tutorialTransTitle": "വിവർത്തനം",
+  "typeExclamation": "ആശ്ചര്യചിഹ്നം",
+  "typeImperative": "കല്പന",
+  "typeQuestion": "ചോദ്യം",
+  "typeStatement": "പ്രസ്താവന",
+  "usageLimitTitle": "പരിധി എത്തിയിരിക്കുന്നു",
+  "useExistingText": "നിലവിലുള്ളത് ഉപയോഗിക്കുക",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "തಟസ്ഥം",
-  "chatAllConversations": "എല്ലാ സംഭാഷണങ്ങളും",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "നിങ്ങൾക്ക് ഈ സംഭാഷണം ഇല്ലാതാക്കണോ?\nഇല്ലാതാക്കിയ സംഭാഷണം വീണ്ടെടുക്കാൻ കഴിയില്ല.",
-  "notSelected": "-ഒന്നും തിരഞ്ഞെടുത്തിട്ടില്ല-",
-  "myWordbook": "എൻ്റെ പദാവലി",
-  "mySentenceCollection": "എൻ്റെ വാക്യ ശേഖരം",
-  "newSubjectName": "പുതിയ പദാവലി/വാക്യ ശേഖരത്തിന്റെ പേര്",
-  "enterNewSubjectName": "പുതിയ പേര് നൽകുക",
-  "addNewSubject": "പുതിയ പേര് ചേർക്കുക",
-  "selectExistingSubject": "നിലവിലുള്ള പേര് തിരഞ്ഞെടുക്കുക",
-  "addTagHint": "ടാഗ് ചേർക്കുക...",
-  "save": "സംരക്ഷിക്കുക",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "ഇമെയിൽ പരിശോധിച്ച് സ്ഥിരീകരണം പൂർത്തിയാക്കുക.",
-  "emailAlreadyInUse": "ഈ ഇമെയിൽ ഇതിനകം രജിസ്റ്റർ ചെയ്തിട്ടുണ്ട്. ലോഗിൻ ചെയ്യുക അല്ലെങ്കിൽ പാസ്‌വേഡ് വീണ്ടെടുക്കാൻ ശ്രമിക്കുക."
+  "viewOnlineGuide": "ഓൺലൈൻ ഗൈഡ് കാണുക",
+  "voluntaryTranslations": "സ്വമേധയായുള്ള പരിഭാഷകൾ",
+  "watchAdAndRefill": "പരസ്യം കണ്ട് റീഫിൽ ചെയ്യുക (+5 എണ്ണം)",
+  "word": "വാക്ക്",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "ശത്രുക്കൾ എത്തുന്നതിന് മുൻപ് വാക്ക് പറഞ്ഞ് താവളം രക്ഷിക്കുക.",
+  "wordDefenseTitle": "വേഡ് ഡിഫൻസ്",
+  "wordModeLabel": "വാക്ക് മോഡ്",
+  "yourPronunciation": "നിങ്ങളുടെ ഉച്ചാരണം"
 }

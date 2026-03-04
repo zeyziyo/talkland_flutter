@@ -1,188 +1,105 @@
 {
   "@@locale": "sr",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Настави преко Какао-а",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Помоћ и водич",
-  "helpTabModes": "Објашњење режима",
-  "helpTabJson": "JSON формат",
-  "helpTabTour": "Пробајте",
-  "helpMode1Desc": "Препознајте глас да бисте превели и преслушали резултате.",
-  "helpMode1Details": "• Подешавање језика: Притисните иконе на врху/дну да бисте променили језик\n• Пребацивање између речи/реченица: Промена режима\n• Гласовни унос: Притисните икону микрофона да бисте започели/зауставили слушање\n• Унос текста: Директно унесите текст за превод\n• Аутоматско претраживање: Откривање сличних постојећих реченица\n• Превод: Притисните дугме за превод за тренутни превод\n• Слушање: Репродукција текста у говор помоћу иконе звучника\n• Чување: Додајте запис помоћу опције „Сачувај податке“\n• Брисање: Иницијализација уноса",
-  "helpMode2Desc": "Прегледајте сачуване реченице и проверите памћење помоћу функције аутоматског сакривања.",
-  "helpMode2Details": "• Избор материјала: Изаберите одређену збирку материјала или „Комплетни преглед“\n• Превртање картице: Проверите превод помоћу опције „Прикажи/сакриј“ (аутоматска провера учења)\n• Слушање: Репродукција реченице помоћу текста у говор\n• Завршено учење: Означите као завршено учење помоћу ознаке за потврду (V)\n• Брисање: Држите картицу да бисте избрисали запис\n• Услови претраге: Филтрирање по ознаци, недавним ставкама, почетном слову",
-  "helpMode3Desc": "Вежбајте изговор слушајући реченице и понављајући их (сенчење).",
-  "helpMode3Details": "• Избор материјала: Изаберите збирку материјала за учење\n• Подешавање интервала: Подесите време чекања између реченица помоћу дугмади [-] [+]. (3 секунде ~ 60 секунди)\n• Почетак/заустављање: Контролишите сесију праћења\n• Говор: Слушајте глас и понављајте\n• Повратне информације: Приказ резултата тачности (0-100) и боје\n• Услови претраге: Филтрирање циља за вежбање по ознаци, недавним ставкама, почетном слову",
-  "helpModeChatDesc": "Вежбајте разговор у стварним ситуацијама комуницирајући са АИ персоном.",
-  "helpModeChatDetails": "• AI ћаскање: Вежбајте разговор говорећи на свом језику\n• Вишеструка персона: Можете променити пол/језик/име друге особе помоћу менија изнад облачића за разговор\n• Додавање партнера: Додајте нову особу за разговор (Странац) помоћу дугмета +\n• GPS: Ситуациона драма заснована на вашој тренутној локацији\n• Аутоматско чување: Аутоматски превод и чување садржаја разговора",
-  "helpJsonDesc": "Да бисте увезли материјале за учење које ћете користити у режиму 3 као JSON датотеку, следите овај формат:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Увезите комплетан скуп дијалога као JSON датотеку.",
-  "helpDialogueImportDetails": "• JSON структура: Користите низ `dialogues` уместо `entries`\n• Аутоматски опоравак: Наслов дијалога, персона и редослед порука се враћају.\n• Локација: Увезени дијалози се појављују на картици 'Историја' у режиму AI ћаскања.",
-  "helpTourDesc": "**Означени круг** вас води кроз главне функције.\n(На пример: Можете да избришете картицу држећи је **означени круг** показује на њу.)",
-  "partnerMode": "Режим партнера",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Ручни унос",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Говорник",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Пребацивање на AI режим",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Пребацивање на режим партнера",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Тренутна локација",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Локација",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Партнер",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Ја",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Тренутно изабрана збирка материјала:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Основно складиште реченица/речи",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Реч",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Реченица",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Тачност",
+  "adLoading": "Оглас се учитава. Покушајте поново касније.",
+  "addNewSubject": "Додај нови наслов",
+  "addParticipant": "Додај учесника",
+  "addTagHint": "Додај ознаку...",
+  "alreadyHaveAccount": "Већ имате налог?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Преглед ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Аутоматска репродукција",
+  "basic": "Основно",
+  "basicDefault": "Основно",
+  "basicMaterialRepository": "Основно складиште реченица/речи",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Материјал за учење ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Основно складиште реченица",
+  "basicSentences": "Основно складиште реченица",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Преглед",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Претрага",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Превод",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Слушање",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Сачувај податке",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Сачувано",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Обриши",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Информације о материјалу",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Основно складиште речи",
+  "basicWords": "Основно складиште речи",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Откажи",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "Потврди",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Освежи",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Записи о учењу ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Акузатив",
+  "casePossessive": "Генитив",
+  "casePossessivePronoun": "Посесивна заменица",
+  "caseReflexive": "Рефлексивна заменица",
+  "caseSubject": "Номинатив",
+  "chatAiChat": "Ћаскање",
+  "chatAllConversations": "Сви разговори",
+  "chatChoosePersona": "Изаберите персону",
+  "chatEndMessage": "Да ли желите да завршите разговор?",
+  "chatEndTitle": "Завршетак и чување разговора",
+  "chatFailed": "Ћаскање није успело: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Филтер циљног језика:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Издвојено из разговора ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Нема записа о учењу за изабрани језик",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Историја разговора",
+  "chatNew": "Нови разговор",
+  "chatNewChat": "Нови разговор",
+  "chatNoConversations": "Још нема разговора",
+  "chatSaveAndExit": "Сачувај и изађи",
+  "chatStartNewPrompt": "Започните нови разговор за вежбање!",
+  "chatTypeHint": "Унесите поруку...",
+  "chatUntitled": "Разговор без наслова",
+  "checking": "Провера у току...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Покушајте да сачувате преводе из режима претраге",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Прикажи",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Сакриј",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Обриши запис",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "Обриши све",
+  "confirm": "Потврди",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Да ли сте сигурни да желите да обришете овај запис о учењу?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Запис је обрисан",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Да ли сте сигурни да желите да избришете овај разговор?\nИзбрисани разговори се не могу вратити.",
+  "confirmDeleteParticipant": "Да ли сте сигурни да желите да избришете овог учесника?",
+  "contextTagHint": "Забележите ситуацију да бисте је лакше разликовали касније",
+  "contextTagLabel": "Контекст/Ситуација (опционално) - Пример: Јутарњи поздрав, учтив говор",
+  "copiedToClipboard": "Копирано у клипборд!",
+  "copy": "Копирај",
+  "correctAnswer": "Тачан одговор",
+  "createNew": "Настави са новом реченицом",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Тренутна локација",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Тренутно изабрана збирка материјала:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Обриши",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Брисање није успело: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Увези JSON датотеку",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Обриши запис",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Увоз у току...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Вежбајте разговор кроз ситуациону драму. Изаберите и изговорите одговарајући одговор.",
+  "dialogueQuestTitle": "Дијалошка потрага",
+  "disambiguationPrompt": "Како желите да преведете?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "Изаберите значење",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Немате налог?",
+  "editParticipant": "Измени учесника",
+  "email": "Е-пошта",
+  "emailAlreadyInUse": "Овај имејл је већ регистрован. Молимо вас да се пријавите или користите опцију за проналажење лозинке.",
+  "enterNewSubjectName": "Унесите нови наслов",
+  "enterSentenceHint": "Унесите реченицу...",
+  "enterTextHint": "Унесите текст за превод",
+  "enterTextToTranslate": "Унесите текст за превод",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Унесите реч...",
+  "error": "Грешка",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "Не може да се преведе због садржаја говора мржње.",
+  "errorOtherSafety": "Превод је одбијен због AI безбедносне политике.",
+  "errorProfanity": "Не може да се преведе због садржаја псовки.",
+  "errorSelectCategory": "Прво изаберите реч или реченицу!",
+  "errorSexualContent": "Не може да се преведе због садржаја сексуалне природе.",
+  "errors": "Грешке:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Женски",
+  "file": "Датотека:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Све",
+  "flip": "Прикажи",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Компаратив",
+  "formInfinitive": "Инфинитив/садашњи облик",
+  "formPast": "Прошло време",
+  "formPastParticiple": "Прошли партицип",
+  "formPlural": "Множина",
+  "formPositive": "Позитив",
+  "formPresent": "Садашње време",
+  "formPresentParticiple": "Садашњи партицип (-ing)",
+  "formSingular": "Једнина",
+  "formSuperlative": "Суперлатив",
+  "formThirdPersonSingular": "3. лице једнине",
+  "gameModeDesc": "Изаберите режим игре за вежбање",
+  "gameModeTitle": "Режим игре",
+  "gameOver": "Крај игре",
+  "gender": "Пол",
+  "generalTags": "Опште ознаке",
+  "getMaterials": "Преузмите материјале",
+  "good": "Добро",
+  "googleContinue": "Настави преко Google-а",
+  "helpDialogueImportDesc": "Увезите комплетан скуп дијалога као JSON датотеку.",
+  "helpDialogueImportDetails": "• JSON структура: Користите низ `dialogues` уместо `entries`\n• Аутоматски опоравак: Наслов дијалога, персона и редослед порука се враћају.\n• Локација: Увезени дијалози се појављују на картици 'Историја' у режиму AI ћаскања.",
+  "helpJsonDesc": "Да бисте увезли материјале за учење које ћете користити у режиму 3 као JSON датотеку, следите овај формат:",
+  "helpJsonTypeDialogue": "Дијалог",
+  "helpJsonTypeSentence": "Реченица",
+  "helpJsonTypeWord": "Реч",
+  "helpMode1Desc": "Препознајте глас да бисте превели и преслушали резултате.",
+  "helpMode1Details": "• Подешавање језика: Притисните иконе на врху/дну да бисте променили језик\n• Пребацивање између речи/реченица: Промена режима\n• Гласовни унос: Притисните икону микрофона да бисте започели/зауставили слушање\n• Унос текста: Директно унесите текст за превод\n• Аутоматско претраживање: Откривање сличних постојећих реченица\n• Превод: Притисните дугме за превод за тренутни превод\n• Слушање: Репродукција текста у говор помоћу иконе звучника\n• Чување: Додајте запис помоћу опције „Сачувај податке“\n• Брисање: Иницијализација уноса",
+  "helpMode2Desc": "Прегледајте сачуване реченице и проверите памћење помоћу функције аутоматског сакривања.",
+  "helpMode2Details": "• Избор материјала: Изаберите одређену збирку материјала или „Комплетни преглед“\n• Превртање картице: Проверите превод помоћу опције „Прикажи/сакриј“ (аутоматска провера учења)\n• Слушање: Репродукција реченице помоћу текста у говор\n• Завршено учење: Означите као завршено учење помоћу ознаке за потврду (V)\n• Брисање: Држите картицу да бисте избрисали запис\n• Услови претраге: Филтрирање по ознаци, недавним ставкама, почетном слову",
+  "helpMode3Desc": "Вежбајте изговор слушајући реченице и понављајући их (сенчење).",
+  "helpMode3Details": "• Избор материјала: Изаберите збирку материјала за учење\n• Подешавање интервала: Подесите време чекања између реченица помоћу дугмади [-] [+]. (3 секунде ~ 60 секунди)\n• Почетак/заустављање: Контролишите сесију праћења\n• Говор: Слушајте глас и понављајте\n• Повратне информације: Приказ резултата тачности (0-100) и боје\n• Услови претраге: Филтрирање циља за вежбање по ознаци, недавним ставкама, почетном слову",
+  "helpModeChatDesc": "Вежбајте разговор у стварним ситуацијама комуницирајући са АИ персоном.",
+  "helpModeChatDetails": "• AI ћаскање: Вежбајте разговор говорећи на свом језику\n• Вишеструка персона: Можете променити пол/језик/име друге особе помоћу менија изнад облачића за разговор\n• Додавање партнера: Додајте нову особу за разговор (Странац) помоћу дугмета +\n• GPS: Ситуациона драма заснована на вашој тренутној локацији\n• Аутоматско чување: Аутоматски превод и чување садржаја разговора",
+  "helpTabJson": "JSON формат",
+  "helpTabModes": "Објашњење режима",
+  "helpTabTour": "Пробајте",
+  "helpTitle": "Помоћ и водич",
+  "helpTourDesc": "**Означени круг** вас води кроз главне функције.\n(На пример: Можете да избришете картицу држећи је **означени круг** показује на њу.)",
+  "hide": "Сакриј",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Додато: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Увоз завршен",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Материјал са истим насловом већ постоји. Промените наслов и покушајте поново.",
+  "importErrorMessage": "Увоз датотеке није успео:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Увоз није успео",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Укупно: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Увези JSON датотеку",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Додато: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Увезите JSON датотеку",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Прескочено: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Грешке:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Укупно: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Грешка",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Увоз у току...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Увоз датотеке није успео:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "Унос",
+  "intervalSeconds": "Интервал: {seconds} секунди",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Унесите важећу адресу е-поште.",
+  "kakaoContinue": "Настави преко Какао-а",
+  "labelLangCode": "Код језика (нпр. en-US, ko-KR)",
+  "labelName": "Име",
+  "labelNote": "Белешка",
+  "labelPOS": "Врста речи",
+  "labelRole": "Улога",
+  "labelSentence": "Реченица",
+  "labelSentenceCollection": "Збирка реченица",
+  "labelSentenceType": "Тип реченице",
+  "labelShowMemorized": "Завршено",
+  "labelType": "Врста:",
+  "labelWord": "Реч",
+  "labelWordbook": "Речник",
+  "language": "Језик",
+  "languageSettings": "Подешавања језика",
+  "languageSettingsTitle": "Подешавања језика",
+  "libTitleFirstMeeting": "Први сусрет",
+  "libTitleGreetings1": "Поздрав 1",
+  "libTitleNouns1": "Именице 1",
+  "libTitleVerbs1": "Глаголи 1",
+  "listen": "Слушање",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Слушање у току...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Учитавање учесника...",
+  "location": "Локација",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Пријави ме",
+  "logout": "Одјави ме",
+  "logoutConfirmMessage": "Да ли сте сигурни да желите да се одјавите са овог уређаја?",
+  "logoutConfirmTitle": "Одјављивање",
+  "male": "Мушки",
+  "manageParticipants": "Управљање учесницима",
+  "manual": "Ручни унос",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Означи као научено",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Информације о материјалу",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Ја",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Увези материјале са уређаја",
+  "menuHelp": "Помоћ",
+  "menuLanguageSettings": "Подешавања језика",
+  "menuOnlineLibrary": "Онлајн библиотека",
+  "menuSelectMaterialSet": "Изаберите збирку материјала за учење",
+  "menuSettings": "Подешавања језика",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Туторијал",
+  "menuWebDownload": "Почетна страница",
+  "metadataDialogTitle": "Детаљна класификација",
+  "metadataFormType": "Граматички облик",
+  "metadataRootWord": "Основни облик (Root Word)",
+  "micButtonTooltip": "Започните препознавање говора",
+  "mode1SelectedMaterial": "Тренутно изабрана збирка материјала: {name}",
+  "mode2Title": "Преглед",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Следеће",
+  "mode3Start": "Почетак",
+  "mode3Stop": "Завршетак",
+  "mode3TryAgain": "Покушајте поново",
+  "mySentenceCollection": "Моја листа реченица",
+  "myWordbook": "Моја листа речи",
+  "neutral": "Неутрално",
+  "newSubjectName": "Нови наслов збирке речи/фраза",
+  "next": "Следеће",
+  "noDialogueHistory": "Нема историје разговора.",
+  "noInternetWarningMic": "Нема интернет конекције. Препознавање говора можда неће бити доступно у офлајн режиму.",
+  "noInternetWarningTranslate": "Нема интернет конекције. Функција превођења није доступна у офлајн режиму. Користите режим за преглед.",
+  "noMaterialsInCategory": "Нема материјала у овој категорији.",
+  "noParticipantsFound": "Нема регистрованих учесника.",
+  "noRecords": "Нема записа о учењу за изабрани језик",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Нема материјала за учење.",
+  "noTextToPlay": "Нема текста за репродукцију",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Нема превода за чување",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Глас није откривен",
+  "notSelected": "- Није изабрано -",
+  "onlineLibraryCheckInternet": "Проверите интернет конекцију или покушајте поново касније.",
+  "onlineLibraryLoadFailed": "Учитавање материјала није успело.",
+  "onlineLibraryNoMaterials": "Нема материјала.",
+  "participantDeleted": "Учесник је избрисан.",
+  "participantRename": "Промени име учесника",
+  "partner": "Партнер",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Режим партнера",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Лозинка",
+  "passwordTooShort": "Лозинка мора имати најмање 6 карактера.",
+  "perfect": "Савршено!",
+  "personaFriend": "Локални пријатељ",
+  "personaGuide": "Туристички водич",
+  "personaTeacher": "Наставник енглеског",
+  "playAgain": "Играј поново",
+  "playbackFailed": "Репродукција није успела: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Изаберите материјал за учење",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Репродукција у току...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Наслов:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Извор:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "Датотека:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Придев",
+  "posAdverb": "Прилог",
+  "posConjunction": "Веза",
+  "posInterjection": "Узвик",
+  "posNoun": "Именица",
+  "posPreposition": "Предлог/Предлог",
+  "posPronoun": "Заменица",
+  "posVerb": "Глагол",
+  "practiceModeTitle": "Вежба",
+  "practiceWordsOnly": "Вежбајте само речи",
   "progress": "Напредак: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Увезите JSON датотеку",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Изаберите материјал за учење",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Учење завршено",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Означи као научено",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Слушање у току...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Препознавање завршено",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Прикажи последњих {count} креираних",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Препознавање говора није успело: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Провера у току...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Препознавање завршено",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Превод у току...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Препознати изговор:",
+  "recordDeleted": "Запис је обрисан",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Превод завршен (потребно чување)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Освежи",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Учитан сачувани превод",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Превод није успео: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Ресетуј",
+  "resetPracticeHistory": "Ресетуј историју вежбања",
+  "retry": "Покушати поново?",
+  "reviewAll": "Комплетан преглед",
+  "reviewCount": "Преглед {count} пута",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Унесите текст за превод",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Чување у току...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Нема превода за чување",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "Преглед",
+  "roleAi": "AI",
+  "roleThirdParty": "Трећа страна",
+  "roleUser": "Корисник",
+  "save": "Сачувај",
+  "saveData": "Сачувај податке",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Чување није успело: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Репродукција у току...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Покушајте да сачувате преводе из режима претраге",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Нема текста за репродукцију",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Сачувано",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Репродукција није успела: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Чување у току...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Изворни језик",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Циљни језик",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Пронађен сличан текст",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Користи постојећи текст",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Настави са новом реченицом",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Преглед {count} пута",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Говор",
-  "speakingPractice": "Вежбање говора",
-  "intervalSeconds": "Интервал: {seconds} секунди",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Ваш изговор",
-  "correctAnswer": "Тачан одговор",
   "score": "Тачност: {score}%",
   "@score": {
     "placeholders": {
@@ -446,89 +517,161 @@
       }
     }
   },
-  "perfect": "Савршено!",
-  "good": "Добро",
-  "tryAgain": "Покушајте поново",
-  "startPractice": "Започните вежбање",
-  "stopPractice": "Зауставите вежбање",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Започните упутство",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Гласовни унос",
-  "tutorialMicDesc": "Можете уносити гласом притиском на дугме микрофона.",
-  "tutorialTabDesc": "Овде можете да изаберете жељени режим учења.",
-  "tutorialTapToContinue": "Додирните екран да бисте наставили",
-  "tutorialTransTitle": "Превод",
-  "tutorialTransDesc": "Преводи унети текст.",
-  "tutorialSaveTitle": "Чување",
-  "tutorialSaveDesc": "Сачувајте преведене резултате у записе о учењу.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Резултат",
+  "search": "Претрага",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Услови претраге",
+  "searchSentenceHint": "Претрага реченица...",
+  "searchWordHint": "Претрага речи...",
+  "sectionSentence": "Одељак реченице",
+  "sectionSentences": "Реченице",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Одељак речи",
+  "sectionWords": "Речи",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Изабери постојећи наслов",
+  "selectMaterialPrompt": "Изаберите материјал за учење",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "Изаберите збирку материјала за учење",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Изаберите врсту речи",
+  "selectParticipants": "Изаберите учеснике",
+  "selectSentenceType": "Изаберите врсту реченице",
+  "selectStudyMaterial": "Изаберите материјал за учење",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "АИ Ћаскање",
-  "tutorialAiChatDesc": "Вежбајте разговор у стварном животу са AI персоном.",
-  "tutorialM2SelectTitle": "Избор материјала",
-  "tutorialM2SelectDesc": "Притисните икону збирке материјала (📚) на горњој траци апликације да бисте изабрали материјал за учење.",
-  "tutorialM2ListTitle": "Листа за учење",
-  "tutorialM2ListDesc": "Можете да обришете ову картицу држањем (дуги клик). Проверите и преврните сачуване реченице.",
-  "tutorialM3SelectTitle": "Избор материјала",
-  "tutorialM3SelectDesc": "Притисните икону збирке материјала (📚) на горњој траци апликације да бисте изабрали материјал за вежбање.",
-  "tutorialM3IntervalTitle": "Подешавање интервала",
-  "tutorialM3IntervalDesc": "Подесите време чекања између реченица.",
-  "tutorialM3StartTitle": "Започните вежбање",
-  "tutorialM3StartDesc": "Притисните дугме за репродукцију да бисте слушали изворни глас и понављали.",
+  "sentence": "Реченица",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Региструј ме",
+  "similarTextFound": "Пронађен сличан текст",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "Прескочи",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Извор:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Изворни језик",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Мој језик (Изворни)",
+  "speakNow": "Изговори сада!",
+  "speaker": "Говорник",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Изаберите говорника",
+  "speakingPractice": "Вежбање говора",
+  "startChat": "Започни разговор",
+  "startPractice": "Започните вежбање",
+  "startTutorial": "Започните упутство",
   "startWarning": "Упозорење",
-  "noVoiceDetected": "Глас није откривен",
-  "tooltipSearch": "Претрага",
-  "tooltipStudyReview": "Учење+Преглед",
-  "tooltipSpeaking": "Говор",
+  "startsWith": "Почетно слово",
+  "statusCheckEmail": "Молимо вас да верификујете своју е-пошту да бисте довршили аутентификацију.",
+  "statusDownloading": "Преузимање: {name}...",
+  "statusImportFailed": "Увоз није успео: {error}",
+  "statusImportSuccess": "{name} је успешно увезен/а",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Пријава је отказана.",
+  "statusLoginFailed": "Пријава није успела: {error}",
+  "statusLoginSuccess": "Успешно сте се пријавили.",
+  "statusLogoutSuccess": "Успешно сте се одјавили.",
+  "statusSignUpFailed": "Регистрација није успела: {error}",
+  "statusSigningUp": "Регистрација у току...",
+  "stopPractice": "Зауставите вежбање",
+  "studyComplete": "Учење завршено",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Записи о учењу ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Формално",
+  "styleInformal": "Неформално",
+  "stylePolite": "Учтиво",
+  "styleSlang": "Сленг",
+  "subject": "Наслов:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Замени језике",
+  "switchToAi": "Пребацивање на AI режим",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Пребацивање на режим партнера",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Синхронизација података...",
+  "tabConversation": "Разговор",
+  "tabReview": "Преглед ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "Реченица",
+  "tabSpeaking": "Говор",
+  "tabStudyMaterial": "Материјал за учење ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "Реч",
+  "tagFormal": "Учтиво",
+  "tagSelection": "Избор ознаке",
+  "targetLanguage": "Циљни језик",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Филтер циљног језика:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Језик учења (Циљни)",
+  "thinkingTimeDesc": "Време за размишљање пре откривања тачног одговора.",
+  "thinkingTimeInterval": "Интервал репродукције",
+  "timeUp": "Време је истекло!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Насловне ознаке (збирка)",
   "tooltipDecrease": "Смањи",
   "tooltipIncrease": "Повећај",
-  "languageSettings": "Подешавања језика",
-  "tutorialM2DropdownDesc": "Можете да изаберете материјал за учење преко горњег менија.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Увезите JSON датотеку из фасцикле на уређају.",
-  "tutorialLangSettingsTitle": "Подешавања језика",
-  "tutorialLangSettingsDesc": "Подесите изворни језик и циљни језик за превод.",
-  "copy": "Копирај",
-  "copiedToClipboard": "Копирано у клипборд!",
-  "tutorialContextTitle": "Ознака ситуације/контекста",
-  "tutorialContextDesc": "Можете да сачувате исту реченицу одвојено ако забележите ситуацију (нпр. јутро, вече).",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Време за размишљање пре откривања тачног одговора.",
-  "autoPlay": "Аутоматска репродукција",
-  "timeUp": "Време је истекло!",
-  "gameModeTitle": "Режим игре",
-  "gameModeDesc": "Изаберите режим игре за вежбање",
-  "wordDefenseTitle": "Одбрана речи",
-  "wordDefenseDesc": "Одбраните базу изговарањем речи пре него што непријатељ стигне.",
-  "dialogueQuestTitle": "Дијалошка потрага",
-  "dialogueQuestDesc": "Вежбајте разговор кроз ситуациону драму. Изаберите и изговорите одговарајући одговор.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Врста:",
-  "labelWord": "Реч",
-  "labelSentence": "Реченица",
-  "contextTagLabel": "Контекст/Ситуација (опционално) - Пример: Јутарњи поздрав, учтив говор",
-  "contextTagHint": "Забележите ситуацију да бисте је лакше разликовали касније",
-  "usageLimitTitle": "Достигнуто ограничење",
-  "translationLimitExceeded": "Прекорачено ограничење превода",
-  "translationLimitMessage": "Искористили сте све бесплатне дневне преводе (5 пута).\\n\\nДа ли желите одмах да допуните 5 пута гледањем огласа?",
-  "watchAdAndRefill": "Допуните гледањем огласа (+5 пута)",
-  "translationRefilled": "Број превода је допуњен 5 пута!",
-  "adLoading": "Оглас се учитава. Покушајте поново касније.",
-  "reviewAll": "Комплетан преглед",
+  "tooltipSearch": "Претрага",
+  "tooltipSpeaking": "Говор",
+  "tooltipStudyReview": "Учење+Преглед",
   "totalRecords": "Укупно {count} записа (прикажи све)",
   "@totalRecords": {
     "description": "Total records count",
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "Све",
-  "practiceWordsOnly": "Вежбајте само речи",
-  "resetPracticeHistory": "Ресетуј историју вежбања",
-  "retry": "Покушати поново?",
-  "noStudyMaterial": "Нема материјала за учење.",
-  "gameOver": "Крај игре",
-  "playAgain": "Играј поново",
-  "speakNow": "Изговори сада!",
-  "scoreLabel": "Резултат",
-  "viewOnlineGuide": "Погледајте онлајн водич",
-  "getMaterials": "Преузмите материјале",
-  "swapLanguages": "Замени језике",
-  "next": "Следеће",
-  "wordModeLabel": "Режим речи",
-  "accuracy": "Тачност",
-  "basicDefault": "Основно",
-  "basic": "Основно",
-  "tutorialM3WordsTitle": "Вежбање речи",
-  "tutorialM3WordsDesc": "Ако је означено, вежбајте само сачуване речи.",
-  "enterTextHint": "Унесите текст за превод",
-  "micButtonTooltip": "Започните препознавање говора",
-  "menuHelp": "Помоћ",
-  "menuWebDownload": "Почетна страница",
-  "menuDeviceImport": "Увези материјале са уређаја",
-  "menuSettings": "Подешавања језика",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Превод",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Основно складиште речи",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Превод у току...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Основно складиште реченица",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Превод",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "Изаберите збирку материјала за учење",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Превод завршен (потребно чување)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "Речи",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "Реченице",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Подешавања језика",
-  "sourceLanguageLabel": "Мој језик (Изворни)",
-  "targetLanguageLabel": "Језик учења (Циљни)",
-  "mode3Start": "Почетак",
-  "mode3Stop": "Завршетак",
-  "mode3Next": "Следеће",
-  "mode3TryAgain": "Покушајте поново",
-  "tutorialM3ResetTitle": "Ресетуј историју",
-  "tutorialSwapDesc": "Мења мој језик и језик учења.",
-  "recognizedText": "Препознати изговор:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Ресетује напредак и резултат тачности да би се поново започело од почетка.",
-  "menuSelectMaterialSet": "Изаберите збирку материјала за учење",
-  "sectionWord": "Одељак речи",
-  "sectionSentence": "Одељак реченице",
-  "tabWord": "Реч",
-  "tabSentence": "Реченица",
-  "errorProfanity": "Не може да се преведе због садржаја псовки.",
-  "errorHateSpeech": "Не може да се преведе због садржаја говора мржње.",
-  "errorSexualContent": "Не може да се преведе због садржаја сексуалне природе.",
-  "errorOtherSafety": "Превод је одбијен због AI безбедносне политике.",
-  "clearAll": "Обриши све",
-  "disambiguationTitle": "Изаберите значење",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "Како желите да преведете?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "Прескочи",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Унос",
-  "reviewModeTitle": "Преглед",
-  "practiceModeTitle": "Вежба",
-  "chatHistoryTitle": "Историја разговора",
-  "chatNew": "Нови разговор",
-  "chatNewChat": "Нови разговор",
-  "chatChoosePersona": "Изаберите персону",
-  "chatTypeHint": "Унесите поруку...",
-  "chatFailed": "Ћаскање није успело: {error}",
-  "@chatFailed": {
+  "translationFailed": "Превод није успео: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "Још нема разговора",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Започните нови разговор за вежбање!",
-  "chatFromConversation": "Издвојено из разговора ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Прекорачено ограничење превода",
+  "translationLimitMessage": "Искористили сте све бесплатне дневне преводе (5 пута).\\n\\nДа ли желите одмах да допуните 5 пута гледањем огласа?",
+  "translationLoaded": "Учитан сачувани превод",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "Наставник енглеског",
-  "personaGuide": "Туристички водич",
-  "personaFriend": "Локални пријатељ",
-  "chatUntitled": "Разговор без наслова",
-  "chatAiChat": "Ћаскање",
-  "mode1SelectedMaterial": "Тренутно изабрана збирка материјала: {name}",
-  "basicWordRepository": "Основно складиште речи",
-  "basicSentenceRepository": "Основно складиште реченица",
-  "chatEndTitle": "Завршетак и чување разговора",
-  "chatEndMessage": "Да ли желите да завршите разговор?",
-  "chatSaveAndExit": "Сачувај и изађи",
-  "errorSelectCategory": "Прво изаберите реч или реченицу!",
-  "tutorialM1ToggleTitle": "Режим речи/реченице",
+  "translationRefilled": "Број превода је допуњен 5 пута!",
+  "translationResultHint": "Резултат превода - може се изменити",
+  "tryAgain": "Покушајте поново",
+  "tutorialAiChatDesc": "Вежбајте разговор у стварном животу са AI персоном.",
+  "tutorialAiChatTitle": "АИ Ћаскање",
+  "tutorialContextDesc": "Можете да сачувате исту реченицу одвојено ако забележите ситуацију (нпр. јутро, вече).",
+  "tutorialContextTitle": "Ознака ситуације/контекста",
+  "tutorialLangSettingsDesc": "Подесите изворни језик и циљни језик за превод.",
+  "tutorialLangSettingsTitle": "Подешавања језика",
   "tutorialM1ToggleDesc": "Пребаците режим речи и реченице овде.",
-  "metadataDialogTitle": "Детаљна класификација",
-  "tagFormal": "Учтиво",
-  "selectPOS": "Изаберите врсту речи",
-  "selectSentenceType": "Изаберите врсту реченице",
-  "metadataRootWord": "Основни облик (Root Word)",
-  "posNoun": "Именица",
-  "posVerb": "Глагол",
-  "posAdjective": "Придев",
-  "posAdverb": "Прилог",
-  "posPronoun": "Заменица",
-  "posPreposition": "Предлог/Предлог",
-  "posConjunction": "Веза",
-  "posInterjection": "Узвик",
-  "typeStatement": "Изјава",
-  "typeQuestion": "Питање",
+  "tutorialM1ToggleTitle": "Режим речи/реченице",
+  "tutorialM2DropdownDesc": "Можете да изаберете материјал за учење преко горњег менија.",
+  "tutorialM2ImportDesc": "Увезите JSON датотеку из фасцикле на уређају.",
+  "tutorialM2ListDesc": "Можете да обришете ову картицу држањем (дуги клик). Проверите и преврните сачуване реченице.",
+  "tutorialM2ListTitle": "Листа за учење",
+  "tutorialM2SearchDesc": "Можете брзо да пронађете сачуване речи и реченице претрагом.",
+  "tutorialM2SelectDesc": "Притисните икону збирке материјала (📚) на горњој траци апликације да бисте изабрали материјал за учење.",
+  "tutorialM2SelectTitle": "Избор материјала",
+  "tutorialM3IntervalDesc": "Подесите време чекања између реченица.",
+  "tutorialM3IntervalTitle": "Подешавање интервала",
+  "tutorialM3ResetDesc": "Ресетује напредак и резултат тачности да би се поново започело од почетка.",
+  "tutorialM3ResetTitle": "Ресетуј историју",
+  "tutorialM3SelectDesc": "Притисните икону збирке материјала (📚) на горњој траци апликације да бисте изабрали материјал за вежбање.",
+  "tutorialM3SelectTitle": "Избор материјала",
+  "tutorialM3StartDesc": "Притисните дугме за репродукцију да бисте слушали изворни глас и понављали.",
+  "tutorialM3StartTitle": "Започните вежбање",
+  "tutorialM3WordsDesc": "Ако је означено, вежбајте само сачуване речи.",
+  "tutorialM3WordsTitle": "Вежбање речи",
+  "tutorialMicDesc": "Можете уносити гласом притиском на дугме микрофона.",
+  "tutorialMicTitle": "Гласовни унос",
+  "tutorialSaveDesc": "Сачувајте преведене резултате у записе о учењу.",
+  "tutorialSaveTitle": "Чување",
+  "tutorialSwapDesc": "Мења мој језик и језик учења.",
+  "tutorialTabDesc": "Овде можете да изаберете жељени режим учења.",
+  "tutorialTapToContinue": "Додирните екран да бисте наставили",
+  "tutorialTransDesc": "Преводи унети текст.",
+  "tutorialTransTitle": "Превод",
   "typeExclamation": "Узвик",
   "typeImperative": "Заповест",
-  "labelNote": "Белешка",
-  "labelShowMemorized": "Завршено",
-  "titleTagSelection": "Насловне ознаке (збирка)",
-  "generalTags": "Опште ознаке",
-  "tagSelection": "Избор ознаке",
-  "metadataFormType": "Граматички облик",
-  "formInfinitive": "Инфинитив/садашњи облик",
-  "formPast": "Прошло време",
-  "formPastParticiple": "Прошли партицип",
-  "formPresentParticiple": "Садашњи партицип (-ing)",
-  "formPresent": "Садашње време",
-  "formThirdPersonSingular": "3. лице једнине",
-  "formPlural": "Множина",
-  "formSingular": "Једнина",
-  "caseSubject": "Номинатив",
-  "caseObject": "Акузатив",
-  "casePossessive": "Генитив",
-  "casePossessivePronoun": "Посесивна заменица",
-  "caseReflexive": "Рефлексивна заменица",
-  "formPositive": "Позитив",
-  "formComparative": "Компаратив",
-  "formSuperlative": "Суперлатив",
-  "searchConditions": "Услови претраге",
-  "recentNItems": "Прикажи последњих {count} креираних",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "typeQuestion": "Питање",
+  "typeStatement": "Изјава",
+  "usageLimitTitle": "Достигнуто ограничење",
+  "useExistingText": "Користи постојећи текст",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Почетно слово",
-  "reset": "Ресетуј",
-  "participantRename": "Промени име учесника",
-  "labelName": "Име",
-  "gender": "Пол",
-  "language": "Језик",
-  "male": "Мушки",
-  "female": "Женски",
-  "neutral": "Неутрално",
-  "chatAllConversations": "Сви разговори",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Да ли сте сигурни да желите да избришете овај разговор?\nИзбрисани разговори се не могу вратити.",
-  "notSelected": "- Није изабрано -",
-  "myWordbook": "Моја листа речи",
-  "mySentenceCollection": "Моја листа реченица",
-  "newSubjectName": "Нови наслов збирке речи/фраза",
-  "enterNewSubjectName": "Унесите нови наслов",
-  "addNewSubject": "Додај нови наслов",
-  "selectExistingSubject": "Изабери постојећи наслов",
-  "addTagHint": "Додај ознаку...",
-  "save": "Сачувај",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Молимо вас да верификујете своју е-пошту да бисте довршили аутентификацију.",
-  "emailAlreadyInUse": "Овај имејл је већ регистрован. Молимо вас да се пријавите или користите опцију за проналажење лозинке."
+  "viewOnlineGuide": "Погледајте онлајн водич",
+  "voluntaryTranslations": "Добровољни преводи",
+  "watchAdAndRefill": "Допуните гледањем огласа (+5 пута)",
+  "word": "Реч",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Одбраните базу изговарањем речи пре него што непријатељ стигне.",
+  "wordDefenseTitle": "Одбрана речи",
+  "wordModeLabel": "Режим речи",
+  "yourPronunciation": "Ваш изговор"
 }

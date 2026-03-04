@@ -1,188 +1,105 @@
 {
   "@@locale": "el",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Συνέχεια με Kakao",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Βοήθεια & Οδηγός",
-  "helpTabModes": "Λειτουργίες",
-  "helpTabJson": "Μορφή JSON",
-  "helpTabTour": "Περιήγηση",
-  "helpMode1Desc": "Αναγνώριση φωνής, μετάφραση και ακρόαση αποτελέσματος.",
-  "helpMode1Details": "• Φωνή: Πατήστε μικρόφωνο για έναρξη/διακοπή\n• Κείμενο: Πληκτρολογήστε για μετάφραση\n• Auto-Search: Εντοπίζει παρόμοιες προτάσεις\n• Μετάφραση: Κουμπί για άμεση μετάφραση\n• Ακρόαση: Εικονίδιο ηχείου για TTS\n• Αποθήκευση: Προσθήκη στο ιστορικό\n• Καθαρισμός: Επαναφορά όλων",
-  "helpMode2Desc": "Επανάληψη αποθηκευμένων προτάσεων με απόκρυψη μετάφρασης.",
-  "helpMode2Details": "• Επιλογή: Διαλέξτε σετ ή 'Όλα'\n• Γύρισμα: 'Εμφάνιση/Απόκρυψη' μετάφρασης\n• Ακρόαση: Αναπαραγωγή TTS\n• Σήμανση: Τικ (V) για ολοκληρωμένα\n• Διαγραφή: Παρατεταμένο πάτημα κάρτας\n• Φίλτρο: Προβολή όλων ή ανά υλικό",
-  "helpMode3Desc": "Εξασκήστε την προφορά σας ακούγοντας και επαναλαμβάνοντας φράσεις (Shadowing).",
-  "helpMode3Details": "• Επιλογή: Διαλέξτε πακέτο\n• Διάστημα: [-] [+] χρόνος αναμονής (3δ-60δ)\n• Start/Stop: Έλεγχος συνεδρίας\n• Ομιλία: Ακούστε και επαναλάβετε\n• Βαθμολογία: Ακρίβεια (0-100)\n• Επανάληψη: Κουμπί δοκιμής ξανά",
-  "helpModeChatDesc": "Εξασκήστε την πρακτική συνομιλία μιλώντας με μια περσόνα AI.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "Για εισαγωγή υλικού στη Λειτουργία 3, δημιουργήστε JSON:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Τοποθεσία",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Ακρίβεια",
+  "adLoading": "Φόρτωση διαφήμισης. Προσπαθήστε ξανά σε λίγο.",
+  "addNewSubject": "Προσθήκη νέου τίτλου",
+  "addParticipant": "Προσθήκη συμμετέχοντα",
+  "addTagHint": "Προσθήκη ετικέτας...",
+  "alreadyHaveAccount": "Έχετε ήδη λογαριασμό;",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Επανάληψη ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Αυτόματη αναπαραγωγή",
+  "basic": "Βασικό",
+  "basicDefault": "Βασικό",
+  "basicMaterialRepository": "Βασικό αποθετήριο προτάσεων/λέξεων",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Υλικό ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Βασικό Αποθετήριο Φράσεων",
+  "basicSentences": "Βασικό αποθετήριο προτάσεων",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Επανάληψη",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Αναζήτηση",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Μετάφραση",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Ακρόαση",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Αποθήκευση",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Αποθηκεύτηκε",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Διαγραφή",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Πληροφορίες υλικού",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Βασικό Αποθετήριο Λέξεων",
+  "basicWords": "Βασικό αποθετήριο λέξεων",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Ακύρωση",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "OK",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Ανανέωση",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Εγγραφές ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Αιτιατική",
+  "casePossessive": "Γενική",
+  "casePossessivePronoun": "Κτητική αντωνυμία",
+  "caseReflexive": "Αυτοπαθής",
+  "caseSubject": "Ονομαστική",
+  "chatAiChat": "Συνομιλία",
+  "chatAllConversations": "Όλες οι συνομιλίες",
+  "chatChoosePersona": "Επιλογή περσόνας",
+  "chatEndMessage": "Θέλετε να τερματίσετε τη συνομιλία;",
+  "chatEndTitle": "Τερματισμός και αποθήκευση συνομιλίας",
+  "chatFailed": "Αποτυχία συνομιλίας: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Φίλτρο Γλώσσας:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Απόσπασμα συνομιλίας ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Χωρίς εγγραφές για την επιλεγμένη γλώσσα",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Ιστορικό συνομιλιών",
+  "chatNew": "Νέα συνομιλία",
+  "chatNewChat": "Νέα συνομιλία",
+  "chatNoConversations": "Δεν υπάρχουν ακόμη συνομιλίες",
+  "chatSaveAndExit": "Αποθήκευση και έξοδος",
+  "chatStartNewPrompt": "Ξεκινήστε μια νέα συνομιλία για εξάσκηση!",
+  "chatTypeHint": "Πληκτρολογήστε ένα μήνυμα...",
+  "chatUntitled": "Συνομιλία χωρίς τίτλο",
+  "checking": "Έλεγχος...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Αποθηκεύστε μεταφράσεις από τη λειτουργία αναζήτησης",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Γύρισμα",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Απόκρυψη",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Διαγραφή Εγγραφής",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "모두 지우기",
+  "confirm": "Επιβεβαίωση",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Είστε σίγουροι για τη διαγραφή;",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Η εγγραφή διαγράφηκε επιτυχώς",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Θέλετε να διαγράψετε αυτήν τη συνομιλία;\nΔεν θα μπορείτε να την επαναφέρετε.",
+  "confirmDeleteParticipant": "Θέλετε να διαγράψετε αυτόν τον συμμετέχοντα;",
+  "contextTagHint": "Γράψτε την κατάσταση για να τη διακρίνετε αργότερα",
+  "contextTagLabel": "Πλαίσιο/Κατάσταση (προαιρετικό) - π.χ. Καλημέρα, Ευγενική ομιλία",
+  "copiedToClipboard": "Αντιγράφηκε στο πρόχειρο!",
+  "copy": "Αντιγραφή",
+  "correctAnswer": "Σωστή Απάντηση",
+  "createNew": "Δημιουργία Νέου",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Τρέχουσα τοποθεσία",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Τρέχουσα επιλεγμένη συλλογή υλικού:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Διαγραφή",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Αποτυχία διαγραφής: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Εισαγωγή JSON",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Διαγραφή Εγγραφής",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Εισαγωγή...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Εξασκήστε συνομιλίες μέσω παιχνιδιού ρόλων. Επιλέξτε και πείτε τις κατάλληλες απαντήσεις.",
+  "dialogueQuestTitle": "Αποστολή διαλόγου",
+  "disambiguationPrompt": "어떤 의미로 번역하시겠습니까?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "의미 선택",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Δεν έχετε λογαριασμό;",
+  "editParticipant": "Επεξεργασία συμμετέχοντα",
+  "email": "Email",
+  "emailAlreadyInUse": "Αυτό το email χρησιμοποιείται ήδη. Συνδεθείτε ή χρησιμοποιήστε την ανάκτηση κωδικού πρόσβασης.",
+  "enterNewSubjectName": "Εισαγωγή νέου τίτλου",
+  "enterSentenceHint": "Εισαγάγετε μια πρόταση...",
+  "enterTextHint": "Εισαγάγετε το κείμενο για μετάφραση",
+  "enterTextToTranslate": "Εισάγετε κείμενο προς μετάφραση",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Εισαγάγετε μια λέξη...",
+  "error": "Σφάλμα",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "혐오 표현이 포함되어 있어 번역할 수 없습니다.",
+  "errorOtherSafety": "AI 안전 정책에 의해 번역이 거부되었습니다.",
+  "errorProfanity": "비속어가 포함되어 있어 번역할 수 없습니다.",
+  "errorSelectCategory": "Επιλέξτε πρώτα μια λέξη ή πρόταση!",
+  "errorSexualContent": "선정적인 내용이 포함되어 있어 번역할 수 없습니다.",
+  "errors": "Σφάλματα:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Γυναίκα",
+  "file": "Αρχείο:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Όλα",
+  "flip": "Γύρισμα",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Συγκριτικός βαθμός",
+  "formInfinitive": "Απαρέμφατο/Ενεστώτας",
+  "formPast": "Παρελθόν",
+  "formPastParticiple": "Παθητική μετοχή",
+  "formPlural": "Πληθυντικός",
+  "formPositive": "Θετικός βαθμός",
+  "formPresent": "Ενεστώτας",
+  "formPresentParticiple": "Ενεργητική μετοχή (-ing)",
+  "formSingular": "Ενικός",
+  "formSuperlative": "Υπερθετικός βαθμός",
+  "formThirdPersonSingular": "3ο ενικό πρόσωπο",
+  "gameModeDesc": "Επιλέξτε μια λειτουργία παιχνιδιού για εξάσκηση",
+  "gameModeTitle": "Λειτουργία παιχνιδιού",
+  "gameOver": "Τέλος παιχνιδιού",
+  "gender": "Φύλο",
+  "generalTags": "Γενικές ετικέτες",
+  "getMaterials": "Λήψη υλικών",
+  "good": "Καλά",
+  "googleContinue": "Συνέχεια με το Google",
+  "helpDialogueImportDesc": "Εισαγάγετε ένα ολόκληρο σετ διαλόγων από ένα αρχείο JSON.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "Για εισαγωγή υλικού στη Λειτουργία 3, δημιουργήστε JSON:",
+  "helpJsonTypeDialogue": "Διάλογος",
+  "helpJsonTypeSentence": "Πρόταση",
+  "helpJsonTypeWord": "Λέξη",
+  "helpMode1Desc": "Αναγνώριση φωνής, μετάφραση και ακρόαση αποτελέσματος.",
+  "helpMode1Details": "• Φωνή: Πατήστε μικρόφωνο για έναρξη/διακοπή\n• Κείμενο: Πληκτρολογήστε για μετάφραση\n• Auto-Search: Εντοπίζει παρόμοιες προτάσεις\n• Μετάφραση: Κουμπί για άμεση μετάφραση\n• Ακρόαση: Εικονίδιο ηχείου για TTS\n• Αποθήκευση: Προσθήκη στο ιστορικό\n• Καθαρισμός: Επαναφορά όλων",
+  "helpMode2Desc": "Επανάληψη αποθηκευμένων προτάσεων με απόκρυψη μετάφρασης.",
+  "helpMode2Details": "• Επιλογή: Διαλέξτε σετ ή 'Όλα'\n• Γύρισμα: 'Εμφάνιση/Απόκρυψη' μετάφρασης\n• Ακρόαση: Αναπαραγωγή TTS\n• Σήμανση: Τικ (V) για ολοκληρωμένα\n• Διαγραφή: Παρατεταμένο πάτημα κάρτας\n• Φίλτρο: Προβολή όλων ή ανά υλικό",
+  "helpMode3Desc": "Εξασκήστε την προφορά σας ακούγοντας και επαναλαμβάνοντας φράσεις (Shadowing).",
+  "helpMode3Details": "• Επιλογή: Διαλέξτε πακέτο\n• Διάστημα: [-] [+] χρόνος αναμονής (3δ-60δ)\n• Start/Stop: Έλεγχος συνεδρίας\n• Ομιλία: Ακούστε και επαναλάβετε\n• Βαθμολογία: Ακρίβεια (0-100)\n• Επανάληψη: Κουμπί δοκιμής ξανά",
+  "helpModeChatDesc": "Εξασκήστε την πρακτική συνομιλία μιλώντας με μια περσόνα AI.",
+  "helpModeChatDetails": "• Συνομιλία AI: Εξασκήστε ρεαλιστικές συνομιλίες με περσόνες.\n• Διαχείριση συμμετεχόντων: Ορίστε τις γλώσσες μου και της AI για την αποφυγή γλωσσικών ασυμφωνιών.\n• Παιχνίδι ρόλων GPS: Δημιουργήστε φυσικές συνομιλίες βάσει της τρέχουσας τοποθεσίας.\n• Διατήρηση ιστορικού: Όλες οι συνομιλίες αποθηκεύονται με ασφάλεια βάσει ID, ακόμη και μετά την αλλαγή ονόματος.",
+  "helpTabJson": "Μορφή JSON",
+  "helpTabModes": "Λειτουργίες",
+  "helpTabTour": "Περιήγηση",
+  "helpTitle": "Βοήθεια & Οδηγός",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "Απόκρυψη",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Προστέθηκαν: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Ολοκληρώθηκε",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Υπάρχει ήδη υλικό με τον ίδιο τίτλο. Αλλάξτε τον τίτλο και δοκιμάστε ξανά.",
+  "importErrorMessage": "Αποτυχία εισαγωγής:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Απέτυχε",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Σύνολο: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Εισαγωγή JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Προστέθηκαν: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Παρακαλώ εισάγετε αρχείο JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Παραλείφθηκαν: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Σφάλματα:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Σύνολο: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Σφάλμα",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Εισαγωγή...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Αποτυχία εισαγωγής:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "입력",
+  "intervalSeconds": "Διάστημα: {seconds}δ",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Εισαγάγετε ένα έγκυρο email.",
+  "kakaoContinue": "Συνέχεια με Kakao",
+  "labelLangCode": "Κωδικός γλώσσας (π.χ. en-US, ko-KR)",
+  "labelName": "Όνομα",
+  "labelNote": "Σημείωση",
+  "labelPOS": "Μέρος του λόγου",
+  "labelRole": "Ρόλος",
+  "labelSentence": "Πρόταση",
+  "labelSentenceCollection": "Συλλογή προτάσεων",
+  "labelSentenceType": "Τύπος πρότασης",
+  "labelShowMemorized": "Ολοκληρωμένο",
+  "labelType": "Τύπος:",
+  "labelWord": "Λέξη",
+  "labelWordbook": "Λεξιλόγιο",
+  "language": "Γλώσσα",
+  "languageSettings": "Ρυθμίσεις γλώσσας",
+  "languageSettingsTitle": "Ρυθμίσεις γλώσσας",
+  "libTitleFirstMeeting": "Πρώτη γνωριμία",
+  "libTitleGreetings1": "Χαιρετισμοί 1",
+  "libTitleNouns1": "Ουσιαστικά 1",
+  "libTitleVerbs1": "Ρήματα 1",
+  "listen": "Ακρόαση",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Ακούγοντας...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Φόρτωση συμμετεχόντων...",
+  "location": "Τοποθεσία",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Σύνδεση",
+  "logout": "Αποσύνδεση",
+  "logoutConfirmMessage": "Θέλετε να αποσυνδεθείτε από αυτήν τη συσκευή;",
+  "logoutConfirmTitle": "Αποσύνδεση",
+  "male": "Άνδρας",
+  "manageParticipants": "Διαχείριση συμμετεχόντων",
+  "manual": "Χειροκίνητη εισαγωγή",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Σήμανση ως Μελετημένο",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Πληροφορίες υλικού",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Εγώ",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Εισαγωγή υλικού από τη συσκευή",
+  "menuHelp": "Βοήθεια",
+  "menuLanguageSettings": "Ρυθμίσεις γλώσσας",
+  "menuOnlineLibrary": "Διαδικτυακή βιβλιοθήκη",
+  "menuSelectMaterialSet": "Επιλέξτε ένα υλικό μελέτης",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Ξενάγηση χρήσης",
+  "menuWebDownload": "Εγχειρίδιο χρήστη",
+  "metadataDialogTitle": "Αναλυτική ταξινόμηση",
+  "metadataFormType": "Μορφή γραμματικής",
+  "metadataRootWord": "Ρίζα λέξης",
+  "micButtonTooltip": "Έναρξη αναγνώρισης φωνής",
+  "mode1SelectedMaterial": "Τρέχουσα επιλεγμένη συλλογή υλικού: {name}",
+  "mode2Title": "Επανάληψη",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Επόμενο",
+  "mode3Start": "Έναρξη",
+  "mode3Stop": "Τέλος",
+  "mode3TryAgain": "Ξανά",
+  "mySentenceCollection": "Η συλλογή μου από προτάσεις",
+  "myWordbook": "Το βιβλίο μου με λέξεις",
+  "neutral": "Ουδέτερο",
+  "newSubjectName": "Νέος τίτλος Λεξιλογίου/Φράσεων",
+  "next": "Επόμενο",
+  "noDialogueHistory": "Δεν υπάρχει ιστορικό διαλόγων.",
+  "noInternetWarningMic": "Δεν υπάρχει σύνδεση στο διαδίκτυο. Η αναγνώριση φωνής ενδέχεται να μην είναι δυνατή εκτός σύνδεσης.",
+  "noInternetWarningTranslate": "Δεν υπάρχει σύνδεση στο διαδίκτυο. Η λειτουργία μετάφρασης δεν είναι διαθέσιμη εκτός σύνδεσης. Χρησιμοποιήστε τη λειτουργία επανάληψης.",
+  "noMaterialsInCategory": "Δεν υπάρχουν υλικά σε αυτήν την κατηγορία.",
+  "noParticipantsFound": "Δεν βρέθηκαν εγγεγραμμένοι συμμετέχοντες.",
+  "noRecords": "Χωρίς εγγραφές για την επιλεγμένη γλώσσα",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Δεν υπάρχει υλικό μελέτης.",
+  "noTextToPlay": "Κανένα κείμενο για αναπαραγωγή",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Καμία μετάφραση για αποθήκευση",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Δεν ανιχνεύθηκε φωνή",
+  "notSelected": "- Δεν έχει επιλεγεί -",
+  "onlineLibraryCheckInternet": "Ελέγξτε τη σύνδεσή σας στο διαδίκτυο ή δοκιμάστε ξανά αργότερα.",
+  "onlineLibraryLoadFailed": "Αποτυχία φόρτωσης υλικών.",
+  "onlineLibraryNoMaterials": "Δεν υπάρχουν υλικά.",
+  "participantDeleted": "Ο συμμετέχων διαγράφηκε.",
+  "participantRename": "Μετονομασία συμμετέχοντα",
+  "partner": "Συνεργάτης",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Λειτουργία συνεργάτη",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Κωδικός πρόσβασης",
+  "passwordTooShort": "Ο κωδικός πρόσβασης πρέπει να έχει τουλάχιστον 6 χαρακτήρες.",
+  "perfect": "Τέλεια!",
+  "personaFriend": "Τοπικός φίλος",
+  "personaGuide": "Τουριστικός οδηγός",
+  "personaTeacher": "Δάσκαλος Αγγλικών",
+  "playAgain": "Ξανά",
+  "playbackFailed": "Αποτυχία αναπαραγωγής: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Επιλογή Υλικού",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Αναπαραγωγή...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Θέμα:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Πηγή:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "Αρχείο:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Επίθετο",
+  "posAdverb": "Επίρρημα",
+  "posConjunction": "Σύνδεσμος",
+  "posInterjection": "Επιφώνημα",
+  "posNoun": "Ουσιαστικό",
+  "posPreposition": "Πρόθεση",
+  "posPronoun": "Αντωνυμία",
+  "posVerb": "Ρήμα",
+  "practiceModeTitle": "Εξάσκηση",
+  "practiceWordsOnly": "Εξάσκηση μόνο λέξεων",
   "progress": "Πρόοδος: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Παρακαλώ εισάγετε αρχείο JSON",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Παρακαλώ επιλέξτε υλικό μελέτης",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Μελετήθηκε",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Σήμανση ως Μελετημένο",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Ακούγοντας...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Αναγνώριση ολοκληρώθηκε",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Εμφάνιση {count} πρόσφατα δημιουργημένων",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Αποτυχία αναγνώρισης φωνής: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Έλεγχος...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Αναγνώριση ολοκληρώθηκε",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Μετάφραση...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Αναγνωρισμένο κείμενο:",
+  "recordDeleted": "Η εγγραφή διαγράφηκε επιτυχώς",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Μετάφραση ολοκληρώθηκε (απαιτείται αποθήκευση)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Ανανέωση",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Φορτώθηκε αποθηκευμένη μετάφραση",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Αποτυχία μετάφρασης: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Επαναφορά",
+  "resetPracticeHistory": "Επαναφορά ιστορικού εξάσκησης",
+  "retry": "Επανάληψη;",
+  "reviewAll": "Επισκόπηση όλων",
+  "reviewCount": "Επαναλήφθηκε {count} φορές",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Εισάγετε κείμενο προς μετάφραση",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Αποθήκευση...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Καμία μετάφραση για αποθήκευση",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "복습",
+  "roleAi": "AI",
+  "roleThirdParty": "Τρίτος",
+  "roleUser": "Χρήστης",
+  "save": "Αποθήκευση",
+  "saveData": "Αποθήκευση",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Αποτυχία αποθήκευσης: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Αναπαραγωγή...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Αποθηκεύστε μεταφράσεις από τη λειτουργία αναζήτησης",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Κανένα κείμενο για αναπαραγωγή",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Αποθηκεύτηκε",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Αποτυχία αναπαραγωγής: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Αποθήκευση...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Γλώσσα Πηγή",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Γλώσσα Στόχος",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Βρέθηκε παρόμοιο κείμενο",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Χρήση Υπάρχοντος",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Δημιουργία Νέου",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Επαναλήφθηκε {count} φορές",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Ομιλία",
-  "speakingPractice": "Πρακτική Ομιλίας",
-  "intervalSeconds": "Διάστημα: {seconds}δ",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Η προφορά σας",
-  "correctAnswer": "Σωστή Απάντηση",
   "score": "Ακρίβεια: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "Τέλεια!",
-  "good": "Καλά",
-  "tryAgain": "Δοκιμάστε ξανά",
-  "startPractice": "Έναρξη Πρακτικής",
-  "stopPractice": "Διακοπή",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Έναρξη Περιήγησης",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Φωνητική Είσοδος",
-  "tutorialMicDesc": "Πατήστε το μικρόφωνο για φωνητική εισαγωγή.",
-  "tutorialTabDesc": "Μπορείτε να επιλέξετε την επιθυμητή λειτουργία μάθησης εδώ.",
-  "tutorialTapToContinue": "Πατήστε για συνέχεια",
-  "tutorialTransTitle": "Μετάφραση",
-  "tutorialTransDesc": "Πατήστε εδώ για μετάφραση.",
-  "tutorialSaveTitle": "Αποθήκευση",
-  "tutorialSaveDesc": "Αποθηκεύστε τη μετάφραση.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Σκορ",
+  "search": "Αναζήτηση",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Όροι αναζήτησης",
+  "searchSentenceHint": "Αναζήτηση πρότασης...",
+  "searchWordHint": "Αναζήτηση λέξης...",
+  "sectionSentence": "Ενότητα προτάσεων",
+  "sectionSentences": "문장",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Ενότητα λέξεων",
+  "sectionWords": "단어",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Επιλογή υπάρχοντος τίτλου",
+  "selectMaterialPrompt": "Παρακαλώ επιλέξτε υλικό μελέτης",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "학습 자료집 선택",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Επιλογή μέρους του λόγου",
+  "selectParticipants": "Επιλογή συμμετεχόντων",
+  "selectSentenceType": "Επιλογή τύπου πρότασης",
+  "selectStudyMaterial": "Επιλογή Υλικού",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI Chat",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "Επιλογή & Φίλτρο",
-  "tutorialM2SelectDesc": "Επιλέξτε υλικό ή 'Επανάληψη Όλων'.",
-  "tutorialM2ListTitle": "Λίστα Μελέτης",
-  "tutorialM2ListDesc": "Ελέγξτε τις κάρτες και γυρίστε τις. (Long-press to delete)",
-  "tutorialM3SelectTitle": "Επιλογή Υλικού",
-  "tutorialM3SelectDesc": "Επιλέξτε σετ για πρακτική ομιλίας.",
-  "tutorialM3IntervalTitle": "Διάστημα",
-  "tutorialM3IntervalDesc": "Ρυθμίστε το χρόνο αναμονής.",
-  "tutorialM3StartTitle": "Έναρξη",
-  "tutorialM3StartDesc": "Πατήστε play για έναρξη.",
+  "sentence": "Πρόταση",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Εγγραφή",
+  "similarTextFound": "Βρέθηκε παρόμοιο κείμενο",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "건너뛰기",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Πηγή:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Γλώσσα Πηγή",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "Μιλήστε τώρα!",
+  "speaker": "Ομιλητής",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Επιλογή ομιλητή",
+  "speakingPractice": "Πρακτική Ομιλίας",
+  "startChat": "Έναρξη συνομιλίας",
+  "startPractice": "Έναρξη Πρακτικής",
+  "startTutorial": "Έναρξη Περιήγησης",
   "startWarning": "Προειδοποίηση",
-  "noVoiceDetected": "Δεν ανιχνεύθηκε φωνή",
-  "tooltipSearch": "Αναζήτηση",
-  "tooltipStudyReview": "Μελέτη+Επανάληψη",
-  "tooltipSpeaking": "Ομιλία",
+  "startsWith": "Ξεκινά με",
+  "statusCheckEmail": "Ελέγξτε το email σας για να ολοκληρώσετε την επαλήθευση.",
+  "statusDownloading": "Λήψη: {name}...",
+  "statusImportFailed": "Αποτυχία εισαγωγής: {error}",
+  "statusImportSuccess": "{name} εισαγωγή ολοκληρώθηκε",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Η σύνδεση ακυρώθηκε.",
+  "statusLoginFailed": "Αποτυχία σύνδεσης: {error}",
+  "statusLoginSuccess": "Επιτυχής σύνδεση.",
+  "statusLogoutSuccess": "Αποσυνδεθήκατε.",
+  "statusSignUpFailed": "Αποτυχία εγγραφής: {error}",
+  "statusSigningUp": "Εγγραφή...",
+  "stopPractice": "Διακοπή",
+  "studyComplete": "Μελετήθηκε",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Εγγραφές ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Επίσημο",
+  "styleInformal": "Ανεπιτήδευτο",
+  "stylePolite": "Ευγενικό",
+  "styleSlang": "Αργκό",
+  "subject": "Θέμα:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Αντιμετάθεση γλωσσών",
+  "switchToAi": "Εναλλαγή σε λειτουργία AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Εναλλαγή σε λειτουργία συνεργάτη",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Συγχρονισμός δεδομένων...",
+  "tabConversation": "Συνομιλία",
+  "tabReview": "Επανάληψη ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "πρόταση",
+  "tabSpeaking": "Ομιλία",
+  "tabStudyMaterial": "Υλικό ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "λέξη",
+  "tagFormal": "Επίσημο",
+  "tagSelection": "Επιλογή ετικέτας",
+  "targetLanguage": "Γλώσσα Στόχος",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Φίλτρο Γλώσσας:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "Χρόνος για σκέψη πριν αποκαλυφθεί η σωστή απάντηση.",
+  "thinkingTimeInterval": "Χρονικό διάστημα σκέψης",
+  "timeUp": "Έληξε ο χρόνος!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Ετικέτα τίτλου (Συλλογή)",
   "tooltipDecrease": "Μείωση",
   "tooltipIncrease": "Αύξηση",
-  "languageSettings": "Ρυθμίσεις γλώσσας",
-  "tutorialM2DropdownDesc": "Επιλέξτε εκπαιδευτικό υλικό.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Εισαγωγή αρχείου JSON από φάκελο συσκευής.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "Ετικέτα περιβάλλοντος",
-  "tutorialContextDesc": "Προσθέστε πλαίσιο (π.χ. Πρωί) για να διακρίνετε παρόμοιες προτάσεις.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "Έφτασε το όριο",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "Αναζήτηση",
+  "tooltipSpeaking": "Ομιλία",
+  "tooltipStudyReview": "Μελέτη+Επανάληψη",
+  "totalRecords": "Σύνολο {count} εγγραφών (Προβολή όλων)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Μετάφραση",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Μετάφραση...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Μετάφραση",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "학습 자료집 선택",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Μετάφραση ολοκληρώθηκε (απαιτείται αποθήκευση)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "단어",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "문장",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "Ανταλλάσσω τη γλώσσα μου με τη γλώσσα που μαθαίνω.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "Επιλέξτε ένα υλικό μελέτης",
-  "sectionWord": "Ενότητα λέξεων",
-  "sectionSentence": "Ενότητα προτάσεων",
-  "tabWord": "λέξη",
-  "tabSentence": "πρόταση",
-  "errorProfanity": "비속어가 포함되어 있어 번역할 수 없습니다.",
-  "errorHateSpeech": "혐오 표현이 포함되어 있어 번역할 수 없습니다.",
-  "errorSexualContent": "선정적인 내용이 포함되어 있어 번역할 수 없습니다.",
-  "errorOtherSafety": "AI 안전 정책에 의해 번역이 거부되었습니다.",
-  "clearAll": "모두 지우기",
-  "disambiguationTitle": "의미 선택",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "어떤 의미로 번역하시겠습니까?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "건너뛰기",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "입력",
-  "reviewModeTitle": "복습",
-  "practiceModeTitle": "Εξάσκηση",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "Αποτυχία μετάφρασης: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Υπέρβαση ορίου μετάφρασης",
+  "translationLimitMessage": "Έχετε χρησιμοποιήσει όλες τις δωρεάν μεταφράσεις της ημέρας (5).\\n\\nΘέλετε να παρακολουθήσετε μια διαφήμιση για να ανανεώσετε αμέσως 5 μεταφράσεις;",
+  "translationLoaded": "Φορτώθηκε αποθηκευμένη μετάφραση",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "Συνομιλία",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "Βασικό Αποθετήριο Λέξεων",
-  "basicSentenceRepository": "Βασικό Αποθετήριο Φράσεων",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "Επίσημο",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "Ετικέτα τίτλου (Συλλογή)",
-  "generalTags": "Γενικές ετικέτες",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "Ενικός",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "Οι μεταφράσεις σας ανανεώθηκαν κατά 5!",
+  "translationResultHint": "Αποτέλεσμα μετάφρασης - Επεξεργάσιμο",
+  "tryAgain": "Δοκιμάστε ξανά",
+  "tutorialAiChatDesc": "Εξασκήστε ρεαλιστικές συνομιλίες με περσόνες AI.",
+  "tutorialAiChatTitle": "Συνομιλία AI",
+  "tutorialContextDesc": "Προσθέστε πλαίσιο (π.χ. Πρωί) για να διακρίνετε παρόμοιες προτάσεις.",
+  "tutorialContextTitle": "Ετικέτα περιβάλλοντος",
+  "tutorialLangSettingsDesc": "Ορίστε την αρχική και την επιθυμητή γλώσσα για μετάφραση.",
+  "tutorialLangSettingsTitle": "Ρυθμίσεις γλώσσας",
+  "tutorialM1ToggleDesc": "Αλλάξτε τη λειτουργία λέξεων και προτάσεων εδώ.",
+  "tutorialM1ToggleTitle": "Λειτουργία λέξεων/προτάσεων",
+  "tutorialM2DropdownDesc": "Επιλέξτε εκπαιδευτικό υλικό.",
+  "tutorialM2ImportDesc": "Εισαγωγή αρχείου JSON από φάκελο συσκευής.",
+  "tutorialM2ListDesc": "Ελέγξτε τις κάρτες και γυρίστε τις. (Long-press to delete)",
+  "tutorialM2ListTitle": "Λίστα Μελέτης",
+  "tutorialM2SearchDesc": "Αναζητήστε και βρείτε γρήγορα αποθηκευμένες λέξεις και προτάσεις.",
+  "tutorialM2SelectDesc": "Επιλέξτε υλικό ή 'Επανάληψη Όλων'.",
+  "tutorialM2SelectTitle": "Επιλογή & Φίλτρο",
+  "tutorialM3IntervalDesc": "Ρυθμίστε το χρόνο αναμονής.",
+  "tutorialM3IntervalTitle": "Διάστημα",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "Επιλέξτε σετ για πρακτική ομιλίας.",
+  "tutorialM3SelectTitle": "Επιλογή Υλικού",
+  "tutorialM3StartDesc": "Πατήστε play για έναρξη.",
+  "tutorialM3StartTitle": "Έναρξη",
+  "tutorialM3WordsDesc": "Εάν επιλεγεί, μόνο οι αποθηκευμένες λέξεις θα εξασκηθούν.",
+  "tutorialM3WordsTitle": "Εξάσκηση λέξεων",
+  "tutorialMicDesc": "Πατήστε το μικρόφωνο για φωνητική εισαγωγή.",
+  "tutorialMicTitle": "Φωνητική Είσοδος",
+  "tutorialSaveDesc": "Αποθηκεύστε τη μετάφραση.",
+  "tutorialSaveTitle": "Αποθήκευση",
+  "tutorialSwapDesc": "Ανταλλάσσω τη γλώσσα μου με τη γλώσσα που μαθαίνω.",
+  "tutorialTabDesc": "Μπορείτε να επιλέξετε την επιθυμητή λειτουργία μάθησης εδώ.",
+  "tutorialTapToContinue": "Πατήστε για συνέχεια",
+  "tutorialTransDesc": "Πατήστε εδώ για μετάφραση.",
+  "tutorialTransTitle": "Μετάφραση",
+  "typeExclamation": "Επιφώνημα",
+  "typeImperative": "Προστακτική",
+  "typeQuestion": "Ερώτηση",
+  "typeStatement": "Δήλωση",
+  "usageLimitTitle": "Έφτασε το όριο",
+  "useExistingText": "Χρήση Υπάρχοντος",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "Ουδέτερο",
-  "chatAllConversations": "Όλες οι συνομιλίες",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Θέλετε να διαγράψετε αυτήν τη συνομιλία;\nΔεν θα μπορείτε να την επαναφέρετε.",
-  "notSelected": "- Δεν έχει επιλεγεί -",
-  "myWordbook": "Το βιβλίο μου με λέξεις",
-  "mySentenceCollection": "Η συλλογή μου από προτάσεις",
-  "newSubjectName": "Νέος τίτλος Λεξιλογίου/Φράσεων",
-  "enterNewSubjectName": "Εισαγωγή νέου τίτλου",
-  "addNewSubject": "Προσθήκη νέου τίτλου",
-  "selectExistingSubject": "Επιλογή υπάρχοντος τίτλου",
-  "addTagHint": "Προσθήκη ετικέτας...",
-  "save": "Αποθήκευση",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Ελέγξτε το email σας για να ολοκληρώσετε την επαλήθευση.",
-  "emailAlreadyInUse": "Αυτό το email χρησιμοποιείται ήδη. Συνδεθείτε ή χρησιμοποιήστε την ανάκτηση κωδικού πρόσβασης."
+  "viewOnlineGuide": "Προβολή διαδικτυακού οδηγού",
+  "voluntaryTranslations": "Εθελοντικές μεταφράσεις",
+  "watchAdAndRefill": "Παρακολουθήστε μια διαφήμιση και ανανεώστε (+5)",
+  "word": "Λέξη",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Υπερασπιστείτε τη βάση σας λέγοντας τις λέξεις πριν φτάσουν οι εχθροί.",
+  "wordDefenseTitle": "Άμυνα λέξεων",
+  "wordModeLabel": "Λειτουργία λέξεων",
+  "yourPronunciation": "Η προφορά σας"
 }

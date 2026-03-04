@@ -1,190 +1,107 @@
 {
   "@@locale": "bo",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "ཀ་ཀའོ་བརྒྱུད་མཐུད་མཐུད་པ།",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Help & Guide",
-  "helpTabModes": "Modes",
-  "helpTabJson": "JSON Format",
-  "helpTabTour": "Tour",
-  "helpMode1Desc": "Recognize voice, translate to target language, and listen to the result.",
-  "helpMode1Details": "• Language Settings: Change via top/bottom Translate icon\n• Toggle: Switch between 'Word' and 'Sentence' mode\n• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: 'Save Data' adds to history\n• Clear: Reset all inputs",
-  "helpMode2Desc": "Review saved sentences with auto-hide translations and track your review count.",
-  "helpMode2Details": "• Select Material: Choose specific set or 'Review All'\n• Flip Card: Use 'Show/Hide' to check translation\n• Listen: Play TTS for specific sentence\n• Mark Studied: Checkmark (V) for completed items\n• Delete: Long-press card to remove record\n• Search Conditions: Filter by Tags, Recent N items, or Start character",
-  "helpMode3Desc": "སྐད་ཆ་ཉན་ནས་ཕྱིར་ཟློས་(Shadowing)བྱས་ཏེ་སྒྲ་གདངས་སྦྱོང་།",
-  "helpMode3Details": "• Select Material: Choose learning pack\n• Interval: [-] [+] to adjust wait time (3s-60s)\n• Start/Stop: Control shadowing session\n• Speak: Listen to audio and repeat after it\n• Feedback: Accuracy score (0-100) with color code\n• Search Conditions: Filter practice targets by Tags, Recent N, or Start char",
-  "helpModeChatDesc": "AI གདོང་རིས་དང་མཉམ་དུ་སྐད་ཆ་བཤད་ནས་དངོས་སྦྱོང་གི་ཁ་བརྡ་སྦྱོང་།",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "To import study materials in Mode 3, create a JSON file with the following structure:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Location",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "ཏག་ཏག་ཚད།",
+  "adLoading": "ཁྱབ་བསྒྲགས་ནང་འཇུག་བྱེད་བཞིན་པ། གནས་སྐབས་སྒུག་རོགས།",
+  "addNewSubject": "མིང་གསརཔ་བསྣོན།",
+  "addParticipant": "མཉམ་ཞུགས་པ་སྣོན་པ།",
+  "addTagHint": "ཚད་རྟགས་ཁ་སྣོན།...",
+  "alreadyHaveAccount": "ཁྱེད་ལ་རྩིས་ཐོ་ཡོད་དམ?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Review ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "རང་འགུལ་སྒྲ་འབྱིན།",
+  "basic": "རྨང་གཞི།",
+  "basicDefault": "རྨང་གཞི།",
+  "basicMaterialRepository": "རྨང་གཞིའི་ཚིག་/ཐ་སྙད་ཉར་མཛོད།",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Study Material ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "རྨང་གཞིའི་ཚིག་ཉར་མཛོད།",
+  "basicSentences": "རྨང་གཞིའི་ཚིག་ཉར་མཛོད།",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Review",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
+  "basicWordRepository": "རྨང་གཞིའི་ཐ་སྙད་ཉར་མཛོད།",
+  "basicWords": "རྨང་གཞིའི་ཐ་སྙད་ཉར་མཛོད།",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
-  "search": "Search",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Translate",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Listen",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Save Data",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Saved",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Delete",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Material Info",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
-  },
-  "cancel": "Cancel",
+  "cancel": "འ বাতিল",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "OK",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Refresh",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Study Records ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "ཡུལ་སྒྲ།",
+  "casePossessive": "བདག་སྒྲ།",
+  "casePossessivePronoun": "བདག་གི་མིང་ཚབ།",
+  "caseReflexive": "རང་སྟོན་མིང་ཚབ།",
+  "caseSubject": "བྱེད་སྒྲ།",
+  "chatAiChat": "ཁ་བརྡ།",
+  "chatAllConversations": "གླེང་མོལ་ཡོངས་རྫོགས།",
+  "chatChoosePersona": "མི་སྣ་འདེམས།",
+  "chatEndMessage": "གླེང་མོ་མཇུག་སྒྲིལ་འདོད་དམ?",
+  "chatEndTitle": "གླེང་མོ་མཇུག་སྒྲིལ་བ་དང་ཉར་ཚགས་བྱེད་པ།",
+  "chatFailed": "གླེང་མོ་བྱེད་མ་ཐུབ: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Target Language Filter:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "གླེང་མོ་བཏོན་པ ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "No study records for selected language",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "གླེང་མོའི་ལོ་རྒྱུས།",
+  "chatNew": "གླེང་མོ་གསར་བ།",
+  "chatNewChat": "གླེང་མོ་གསར་བ།",
+  "chatNoConversations": "ད་དུང་གླེང་མོ་མེད།",
+  "chatSaveAndExit": "ཉར་ཚགས་བྱས་རྗེས་ཕྱིར་འཐོན་པ།",
+  "chatStartNewPrompt": "ཉམས་ལེན་བྱེད་པའི་ཆེད་དུ་གླེང་མོ་གསར་བ་ཞིག་འགོ་བཙུགས་དང་!",
+  "chatTypeHint": "འཕྲིན་ཐུང་ནང་འཇུག་བྱེད་རོགས...",
+  "chatUntitled": "མགོ་བརྗོད་མེད་པའི་གླེང་མོ།",
+  "checking": "ཞིབ་བཤེར་བྱེད་བཞིན་པ...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Save translations from search mode",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
+  "clearAll": "ཡོངས་བསལ་བ།",
+  "confirm": "ཁག་ཐེག",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
-  "flip": "Show",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Hide",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Delete Record",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
-  },
-  "confirmDelete": "Are you sure you want to delete this study record?",
+  "confirmDelete": "སློབ་སྦྱོང་ཟིན་ཐོ་འདི་བསུབ་འདོད་དམ?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Record deleted successfully",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "ཁྱེད་ཀྱིས་གླེང་མོལ་འདི་དོར་འདོད་དམ།\nགླེང་མོལ་བསུབས་པ་ཕྱིར་སློག་བྱེད་མི་ཐུབ།",
+  "confirmDeleteParticipant": "མཉམ་ཞུགས་པ་འདི་བསུབ་འདོད་དམ?",
+  "contextTagHint": "ཕྱིས་སུ་དབྱེ་འབྱེད་སླ་བའི་ཆེད་དུ་གནས་སྟངས་འབྲི་རོགས།",
+  "contextTagLabel": "ཡིག་འབྲུ་/གནས་སྟངས་ (འདེམས་ཆོག) - དཔེར་ན། ཞོགས་པའི་འཚམས་འདྲི། གུས་ཞབས་ཀྱི་སྐད་ཆ།",
+  "copiedToClipboard": "འབྲི་པང་ནང་དུ་འདྲ་བཤུས་བྱས་ཟིན!",
+  "copy": "འདྲ་བཤུས།",
+  "correctAnswer": "ལན་འགྲིག་པ།",
+  "createNew": "ཚིག་གསར་བའི་ཐོག་ནས་མུ་མཐུད་དུ་འགྲོ་།",
+  "@createNew": {
+    "description": "Create new entry button"
   },
-  "deleteFailed": "Delete failed: {error}",
+  "currentLocation": "ད་ལྟའི་གནས་ས།",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "ད་ལྟར་བདམས་པའི་སློབ་སྦྱོང་དཔྱད་ཆས:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "བསུབ།",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "deleteFailed": "བསུབ་མི་ཐུབ: {error}",
   "@deleteFailed": {
     "description": "Delete error message",
     "placeholders": {
@@ -193,49 +110,98 @@
       }
     }
   },
-  "importJsonFile": "Import JSON File",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "ཟིན་ཐོ་བསུབ།",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Importing...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "གནས་སྟངས་འཁྲབ་སྟོན་བརྒྱུད་དེ་གླེང་མོའི་ཉམས་ལེན་བྱེད་རོགས། འོས་འཚམ་གྱི་ལན་འདེམས་པ་དང་བཤད་རོགས།",
+  "dialogueQuestTitle": "གླེང་མོའི་འཚོལ་ཞིབ།",
+  "disambiguationPrompt": "དོན་སྙིང་གང་ཞིག་ཏུ་བསྒྱུར་འདོད་དམ?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
   },
-  "importComplete": "Import Complete",
-  "@importComplete": {
-    "description": "Import success title"
+  "disambiguationTitle": "དོན་སྙིང་འདེམས།",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
   },
-  "importFailed": "Import Failed",
-  "@importFailed": {
-    "description": "Import error title"
+  "dontHaveAccount": "ཁྱེད་ལ་རྩིས་ཐོ་མེད་དམ?",
+  "editParticipant": "མཉམ་ཞུགས་པ་བཟོ་བཅོས་བྱེད།",
+  "email": "གློག་རྡུལ་ཡིག་ཟམ།",
+  "emailAlreadyInUse": "གློག་འཕྲིན་ཁ་བྱང་འདི་སྔོན་ནས་ཐོ་འགོད་ཟིན་པས། ཐོ་འཇུག་བྱེད་པའམ་ཡང་ན་གསང་གྲངས་འཚོལ་བར་བེད་སྤྱོད་བྱེད་རོགས།",
+  "enterNewSubjectName": "མིང་གསརཔ་བཙུགས།",
+  "enterSentenceHint": "ཚིག་གཞི་བཙུགས་...",
+  "enterTextHint": "བསྒྱུར་དགོས་པའི་ཡི་གེ་ནང་འཇུག་བྱེད་རོགས།",
+  "enterTextToTranslate": "བསྒྱུར་དགོས་པའི་ཡི་གེ་ནང་འཇུག་བྱེད།",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
   },
-  "importFile": "File: {fileName}",
-  "@importFile": {
-    "description": "Imported file name",
-    "placeholders": {
-      "fileName": {
-        "type": "String"
-      }
-    }
+  "enterWordHint": "མིང་ཚིག་བཙུགས་...",
+  "error": "ནོར།",
+  "@error": {
+    "description": "Error dialog title"
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Total: {count} items",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "errorHateSpeech": "སྡང་བའི་རྣམ་འགྱུར་འདུས་ཡོད་པས་བསྒྱུར་མི་ཐུབ།",
+  "errorOtherSafety": "AI བདེ་འཇགས་སྲིད་ཇུས་ཀྱི་དབང་གིས་བསྒྱུར་བ་དང་ལེན་བྱེད་མི་ཐུབ།",
+  "errorProfanity": "མི་གཙང་བའི་ཚིག་འདུས་ཡོད་པས་བསྒྱུར་མི་ཐུབ།",
+  "errorSelectCategory": "ཐོག་མར་ཐ་སྙད་དམ་ཡང་ན་ཚིག་ཅིག་འདེམས་རོགས!",
+  "errorSexualContent": "འདོད་པའི་ནང་དོན་འདུས་ཡོད་པས་བསྒྱུར་མི་ཐུབ།",
+  "errors": "ནོར:",
+  "@errors": {
+    "description": "Error section label"
   },
-  "importAdded": "Added: {count} items",
+  "female": "མོ།",
+  "file": "ཡིག་ཆ:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "ཡོངས་།",
+  "flip": "མངོན་པར་བྱེད།",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "བསྡུར་ཚད།",
+  "formInfinitive": "མ་ཚིག་/ད་ལྟ་བ།",
+  "formPast": "འདས་པ།",
+  "formPastParticiple": "འདས་པའི་ལས་ཚིག",
+  "formPlural": "མང་ཚིག",
+  "formPositive": "ཐོག་མའི་རིམ།",
+  "formPresent": "ད་ལྟ་བ།",
+  "formPresentParticiple": "ད་ལྟའི་ལས་ཚིག(ing)",
+  "formSingular": "ཁེར་ཚིག",
+  "formSuperlative": "ཆེས་མཐོའི་རིམ།",
+  "formThirdPersonSingular": "མི་གསུམ་པ་ཁེར་ཚིག",
+  "gameModeDesc": "ཉམས་ལེན་བྱེད་པའི་རྩེད་མོའི་ཐབས་ལམ་འདེམས་རོགས།",
+  "gameModeTitle": "རྩེད་མོའི་ཐབས་ལམ།",
+  "gameOver": "རྩེད་འགྲན་མཇུག་བསྡུས།",
+  "gender": "ཕོ་མོ།",
+  "generalTags": "སྤྱིར་བཏང་གི་རྟགས།",
+  "getMaterials": "དཔྱད་ཆས་ལེན་པ།",
+  "good": "ཡག་པོ།",
+  "googleContinue": "Google བརྒྱུད་ནས་མུ་མཐུད་དུ་འགྲོ་།",
+  "helpDialogueImportDesc": "JSON ཡིག་ཆ་བརྒྱུད་ནས་གླེང་མོའི་ཚོགས་ཚང་མ་ནང་འདྲེན་བྱེད།",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "To import study materials in Mode 3, create a JSON file with the following structure:",
+  "helpJsonTypeDialogue": "གླེང་མོ (Dialogue)",
+  "helpJsonTypeSentence": "ཚིག་ (Sentence)",
+  "helpJsonTypeWord": "ཐ་སྙད་ (Word)",
+  "helpMode1Desc": "སྐད་ངག་ངོས་འཛིན་བྱས་ཏེ་བསྒྱུར་བ་དང་། མཇུག་འབྲས་ལ་ཉན་ཐུབ།",
+  "helpMode1Details": "• Language Settings: Change via top/bottom Translate icon\n• Toggle: Switch between 'Word' and 'Sentence' mode\n• Voice Input: Tap mic icon to start/stop listening\n• Text Input: Type directly to translate\n• Auto-Search: Detects similar existing sentences\n• Translate: Tap button for instant translation\n• Listen: Speaker icon for TTS (Original/Translated)\n• Save: 'Save Data' adds to history\n• Clear: Reset all inputs",
+  "helpMode2Desc": "Review saved sentences with auto-hide translations and track your review count.",
+  "helpMode2Details": "• Select Material: Choose specific set or 'Review All'\n• Flip Card: Use 'Show/Hide' to check translation\n• Listen: Play TTS for specific sentence\n• Mark Studied: Checkmark (V) for completed items\n• Delete: Long-press card to remove record\n• Search Conditions: Filter by Tags, Recent N items, or Start character",
+  "helpMode3Desc": "སྐད་ཆ་ཉན་ནས་ཕྱིར་ཟློས་(Shadowing)བྱས་ཏེ་སྒྲ་གདངས་སྦྱོང་།",
+  "helpMode3Details": "• Select Material: Choose learning pack\n• Interval: [-] [+] to adjust wait time (3s-60s)\n• Start/Stop: Control shadowing session\n• Speak: Listen to audio and repeat after it\n• Feedback: Accuracy score (0-100) with color code\n• Search Conditions: Filter practice targets by Tags, Recent N, or Start char",
+  "helpModeChatDesc": "AI གདོང་རིས་དང་མཉམ་དུ་སྐད་ཆ་བཤད་ནས་དངོས་སྦྱོང་གི་ཁ་བརྡ་སྦྱོང་།",
+  "helpModeChatDetails": "• AI གླེང་མོ། མི་སྣ་དང་མཉམ་དུ་དངོས་སྦྱོང་གླེང་མོ་བྱེད་པ།\n• མཉམ་ཞུགས་པ་དོ་དམ། ངའི་སྐད་དང་ AI ཡི་སྐད་སོ་སོར་སྒྲིག་སྟེ་སྐད་ཆ་མི་མཐུན་པ་སྔོན་འགོག་བྱེད་ཐུབ།\n• GPS གནས་སྟངས་འཁྲབ་སྟོན། ད་ལྟའི་གནས་གཞི་གཞིར་བཞག་ནས་རང་བྱུང་གླེང་མོའི་གནས་སྟངས་འཁྲབ་སྟོན།\n• ཟིན་ཐོ་ཉར་ཚགས། གླེང་མོ་ཚང་མ་ID གཞིར་བཞག་ནས་བདེ་འཇགས་ངང་ཉར་ཚགས་བྱེད་པ་དང་། མིང་བསྒྱུར་རུང་ཟིན་ཐོ་མུ་མཐུད་དུ་ཉར་ཚགས་བྱེད།",
+  "helpTabJson": "JSON རྣམ་གཞག",
+  "helpTabModes": "ཐབས་ལམ་གྱི་འགྲེལ་བཤད།",
+  "helpTabTour": "ཉམས་ལེན་བྱེད།",
+  "helpTitle": "རོགས་རམ་ & ལམ་སྟོན།",
+  "helpTourDesc": "**མཐོང་འདེམས་རྟགས་དང་པོ** ཡིས་གཙོ་གནད་ནུས་པར་ལམ་སྟོན་བྱེད།\n(དཔེར་ན། **མཐོང་འདེམས་རྟགས་དང་པོ** ཡིས་སྟོན་པའི་ཤོག་བྱང་ལ་མཛུབ་མོས་མནན་ནས་བསུབ་ཆོག)",
+  "hide": "སྦེད་པ།",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "སྣོན་པ: {count} ཁ།",
   "@importAdded": {
     "description": "Successfully imported count",
     "placeholders": {
@@ -244,24 +210,12 @@
       }
     }
   },
-  "importSkipped": "Skipped: {count} items",
-  "@importSkipped": {
-    "description": "Skipped import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importComplete": "ནང་འདྲེན་ལེགས་འགྲུབ།",
+  "@importComplete": {
+    "description": "Import success title"
   },
-  "errors": "Errors:",
-  "@errors": {
-    "description": "Error section label"
-  },
-  "error": "Error",
-  "@error": {
-    "description": "Error dialog title"
-  },
-  "importErrorMessage": "Failed to import file:\\n{error}",
+  "importDuplicateTitleError": "མགོ་བརྗོད་གཅིག་མཚུངས་ཀྱི་དཔྱད་ཆས་ད་སྔོན་ནས་ཡོད། མགོ་བརྗོད་བསྒྱུར་རྗེས་ཡང་བསྐྱར་འབད་བརྩོན་བྱེད་རོགས།",
+  "importErrorMessage": "ཡིག་ཆ་ནང་འདྲེན་བྱེད་མ་ཐུབ: \\n{error}",
   "@importErrorMessage": {
     "description": "Import error message",
     "placeholders": {
@@ -270,24 +224,207 @@
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Select Study Material",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "importFailed": "ནང་འདྲེན་བྱེད་མ་ཐུབ།",
+  "@importFailed": {
+    "description": "Import error title"
   },
-  "subject": "Title:",
-  "@subject": {
-    "description": "Subject label"
+  "importFile": "ཡིག་ཆ: {fileName}",
+  "@importFile": {
+    "description": "Imported file name",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
   },
-  "source": "Source:",
-  "@source": {
-    "description": "Source label"
+  "importJsonFile": "JSON ཡིག་ཆ་ནང་འདྲེན་བྱེད།",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "file": "File:",
-  "@file": {
-    "description": "File label"
+  "importJsonFilePrompt": "JSON ཡིག་ཆ་ནང་འདྲེན་བྱེད་རོགས།",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
-  "progress": "Progress: {current} / {total}",
+  "importSkipped": "མི་དགོས་པར་བཞག: {count} ཁ།",
+  "@importSkipped": {
+    "description": "Skipped import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importTotal": "སྤྱི: {count} ཁ།",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importing": "Importing...",
+  "@importing": {
+    "description": "Import in progress"
+  },
+  "inputModeTitle": "ནང་འཇུག",
+  "intervalSeconds": "བར་ཐག: {seconds} སྐར་ཆ།",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "ནུས་པ་ལྡན་པའི་གློག་རྡུལ་ཡིག་ཟམ་ཞིག་འཇུག་རོགས།",
+  "kakaoContinue": "ཀ་ཀའོ་བརྒྱུད་མཐུད་མཐུད་པ།",
+  "labelLangCode": "སྐད་ཆའི་ཨང་རྟགས་ (དཔེར་ན། en-US, ko-KR)",
+  "labelName": "མིང་།",
+  "labelNote": "ཟིན་བྲིས།",
+  "labelPOS": "རྣམ་དབྱེ།",
+  "labelRole": "ལས་འགན།",
+  "labelSentence": "ཚིག",
+  "labelSentenceCollection": "ཚིག་གཞི་ཕྱོགས་སྒྲིག",
+  "labelSentenceType": "ཚིག་གཞི་དབྱེ་བ།",
+  "labelShowMemorized": "མཇུག་རྫོགས་པ།",
+  "labelType": "རིགས:",
+  "labelWord": "ཐ་སྙད།",
+  "labelWordbook": "མིང་ཚིག་དེབ་",
+  "language": "སྐད་ཆ།",
+  "languageSettings": "སྐད་ཆའི་སྒྲིག་འགོད།",
+  "languageSettingsTitle": "སྐད་ཆའི་སྒྲིག་འགོད།",
+  "libTitleFirstMeeting": "ཐོག་མའི་ཐུག་འཕྲད།",
+  "libTitleGreetings1": "འཚམས་འདྲི་ ༡",
+  "libTitleNouns1": "མིང་ཚིག་ ༡",
+  "libTitleVerbs1": "བྱ་ཚིག་ ༡",
+  "listen": "ཉོན།",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "ཉན་བཞིན་པ...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "མཉམ་ཞུགས་པ་ནང་འཇུག་བྱེད་བཞིན་པ...",
+  "location": "གནས་ས།",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "འཛུལ་ཞུགས།",
+  "logout": "ཕྱིར་འཐོན་",
+  "logoutConfirmMessage": "ད་ལྟའི་སྒྲིག་ཆས་ནས་ཕྱིར་འཐོན་འདོད་དམ?",
+  "logoutConfirmTitle": "ཕྱིར་འཐོན་",
+  "male": "ཕོ།",
+  "manageParticipants": "མཉམ་ཞུགས་པ་དོ་དམ།",
+  "manual": "ལག་འབྲི།",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "སློབ་སྦྱོང་མཚན་རྟགས་འགོད།",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "དཔྱད་ཆས་གནས་ཚུལ།",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "ང་།",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "སྒྲིག་ཆས་ནས་དཔྱད་ཆས་ལེན་པ།",
+  "menuHelp": "རོགས་རམ།",
+  "menuLanguageSettings": "སྐད་ཡིག་སྒྲིག་འཛུགས།",
+  "menuOnlineLibrary": "དྲ་ཐོག་དཔྱད་མཛོད།",
+  "menuSelectMaterialSet": "སློབ་སྦྱོང་དཔྱད་ཆས་ཚོགས་པ་འདེམས།",
+  "menuSettings": "སྐད་ཆའི་སྒྲིག་འགོད།",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "བཀོལ་སྟངས་སྐོར་བ།",
+  "menuWebDownload": "བཀོལ་སྤྱོད་འགྲེལ་བཤད།",
+  "metadataDialogTitle": "ཞིབ་ཕྲའི་དབྱེ་བ།",
+  "metadataFormType": "བརྡ་སྤྲོད་རྣམ་པ།",
+  "metadataRootWord": "མ་ཚིག (Root Word)",
+  "micButtonTooltip": "སྐད་ངག་ངོས་འཛིན་འགོ་བཙུགས།",
+  "mode1SelectedMaterial": "ད་ལྟར་བདམས་པའི་དཔྱད་ཆས: {name}",
+  "mode2Title": "བསྐྱར་སྦྱོང་།",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "རྗེས་མ།",
+  "mode3Start": "འགོ་བཙུགས།",
+  "mode3Stop": "མཇུག་སྒྲིལ།",
+  "mode3TryAgain": "ཡང་བསྐྱར་འབད་བརྩོན་བྱེད།",
+  "mySentenceCollection": "ངའི་ཚིག་གྲུབ་ཕྱོགས་བསྡུས།",
+  "myWordbook": "ངའི་ཐ་སྙད་ཕྱོགས་བསྡུས།",
+  "neutral": "ཕྱོགས་གཏོགས་མེད།",
+  "newSubjectName": "བརྗོད་བྱའི་མིང་གསརཔ།",
+  "next": "རྗེས་མ།",
+  "noDialogueHistory": "གླེང་མོའི་ལོ་རྒྱུས་མེད།",
+  "noInternetWarningMic": "དྲ་རྒྱ་མི་འདུག དྲ་རྒྱ་མེད་པའི་སྐབས་སུ་སྐད་ངག་ངོས་འཛིན་བྱེད་མི་ཐུབ་པའང་སྲིད།",
+  "noInternetWarningTranslate": "དྲ་རྒྱ་མི་འདུག དྲ་རྒྱ་མེད་པའི་སྐབས་སུ་བསྒྱུར་བའི་ནུས་པ་སྤྱོད་མི་ཐུབ། བསྐྱར་སྦྱོང་ཐབས་ལམ་སྤྱོད་རོགས།",
+  "noMaterialsInCategory": "རིགས་དབྱེ་འདིའི་ནང་དུ་དཔྱད་ཆས་མེད།",
+  "noParticipantsFound": "ཐོ་འགོད་བྱས་པའི་མཉམ་ཞུགས་པ་མེད།",
+  "noRecords": "བདམས་པའི་སྐད་ཆའི་སློབ་སྦྱོང་ཟིན་ཐོ་མེད།",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "སློབ་སྦྱོང་དཔྱད་ཆས་མེད།",
+  "noTextToPlay": "སྒྲ་འབྱིན་དགོས་པའི་ཡི་གེ་མེད།",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "ཉར་ཚགས་བྱེད་དགོས་པའི་བསྒྱུར་བ་མེད།",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "སྐད་སྒྲ་ཚོར་མ་བྱུང་།",
+  "notSelected": "- གདམ་ག་བྱས་མེད། -",
+  "onlineLibraryCheckInternet": "དྲ་རྒྱའི་མཐུད་སྦྱོར་ཞིབ་བཤེར་བྱེད་པའམ་ཡང་ན་ཕྱིས་སུ་ཡང་བསྐྱར་འབད་བརྩོན་བྱེད་རོགས།",
+  "onlineLibraryLoadFailed": "དཔྱད་ཆས་ནང་འཇུག་བྱེད་པར་འཐུས་ཤོར་བྱུང་།",
+  "onlineLibraryNoMaterials": "དཔྱད་ཆས་མེད།",
+  "participantDeleted": "མཉམ་ཞུགས་པ་བསུབས་ཟིན།",
+  "participantRename": "མཉམ་ཞུགས་པའི་མིང་བསྒྱུར།",
+  "partner": "རོགས་ཟླ།",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "རོགས་ཟླའི་ཐབས་ལམ།",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "གསང་ཨང་།",
+  "passwordTooShort": "གསང་ཨང་ཡིག་གྲངས་6ཡན་དགོས།",
+  "perfect": "འགྲིག་འགྲིག",
+  "personaFriend": "ས་གནས་གྲོགས་པོ།",
+  "personaGuide": "ཡུལ་སྐོར་ལམ་སྟོན།",
+  "personaTeacher": "དབྱིན་ཇིའི་དགེ་རྒན།",
+  "playAgain": "ཡང་བསྐྱར་རྩེད།",
+  "playbackFailed": "སྒྲ་འབྱིན་བྱེད་མ་ཐུབ: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "playing": "སྒྲ་འབྱིན་བཞིན་པ...",
+  "@playing": {
+    "description": "TTS playing status"
+  },
+  "posAdjective": "གཟུགས་ཚིག",
+  "posAdverb": "བྱ་ཚིག་འབྲེལ་ཡུ།",
+  "posConjunction": "འབྲེལ་མཐུད་ཚིག",
+  "posInterjection": "ངུ་རྟགས་ཚིག",
+  "posNoun": "མིང་ཚིག",
+  "posPreposition": "གནས་སྟོན་ཚིག",
+  "posPronoun": "མིང་ཚབ་ཚིག",
+  "posVerb": "བྱ་ཚིག",
+  "practiceModeTitle": "སྦྱོང་བརྡར།",
+  "practiceWordsOnly": "ཐ་སྙད་ཁོ་ནར་ཉམས་ལེན་བྱེད།",
+  "progress": "འཕེལ་རིམ: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
     "placeholders": {
@@ -299,31 +436,15 @@
       }
     }
   },
-  "importJsonFilePrompt": "Please import a JSON file",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
+  "recentNItems": "ཉེ་ལམ་དུ་བཟོས་པའི་ {count} ལ་བལྟ་བ།",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "selectMaterialPrompt": "Please select a study material",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Studied",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Mark as Studied",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Listening...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Recognition complete",
-  "@recognized": {
-    "description": "STT complete status"
-  },
-  "recognitionFailed": "Speech recognition failed: {error}",
+  "recognitionFailed": "སྐད་ངག་ངོས་འཛིན་བྱེད་མ་ཐུབ: {error}",
   "@recognitionFailed": {
     "description": "STT error message",
     "placeholders": {
@@ -332,92 +453,24 @@
       }
     }
   },
-  "checking": "Checking...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "ངོས་འཛིན་ལེགས་འགྲུབ།",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Translating...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "ངོས་འཛིན་བྱས་པའི་ཀློག་སྟངས:",
+  "recordDeleted": "ཟིན་ཐོ་བསུབས་ཟིན།",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Translation complete (save required)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "བསྐྱར་སོས་བྱེད།",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Loaded saved translation",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Translation failed: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "enterTextToTranslate": "Please enter text to translate",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Saving...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "No translation to save",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
-  },
-  "saveFailed": "Save failed: {error}",
-  "@saveFailed": {
-    "description": "Save error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "playing": "Playing...",
-  "@playing": {
-    "description": "TTS playing status"
-  },
-  "noTextToPlay": "No text to play",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
-  },
-  "playbackFailed": "Playback failed: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "sourceLanguage": "Source Language",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Target Language",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Similar text found",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Use Existing",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Create New Entry",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Review {count} time(s)",
+  "reset": "ཐོག་མར་སླར་གསོ།",
+  "resetPracticeHistory": "ཉམས་ལེན་ལོ་རྒྱུས་སླར་སོས་བྱེད།",
+  "retry": "ཡང་བསྐྱར་འབད་བརྩོན་བྱེད་དམ?",
+  "reviewAll": "ཡོངས་བསྐྱར་སྦྱོང་།",
+  "reviewCount": "བསྐྱར་སྦྱོང་ {count} ཐེངས།",
   "@reviewCount": {
     "description": "Review count display",
     "placeholders": {
@@ -426,19 +479,37 @@
       }
     }
   },
-  "tabSpeaking": "Speaking",
-  "speakingPractice": "Speaking Practice",
-  "intervalSeconds": "Interval: {seconds}s",
-  "@intervalSeconds": {
+  "reviewModeTitle": "བསྐྱར་སྦྱོང་།",
+  "roleAi": "AI",
+  "roleThirdParty": "ཕྱོགས་གསུམ་པ།",
+  "roleUser": "བཀོལ་སྤྱོད་པ།",
+  "save": "བསྲུང་",
+  "saveData": "གཞི་གྲངས་ཉར་ཚགས།",
+  "@saveData": {
+    "description": "Save translation button"
+  },
+  "saveFailed": "ཉར་ཚགས་བྱེད་མ་ཐུབ: {error}",
+  "@saveFailed": {
+    "description": "Save error message",
     "placeholders": {
-      "seconds": {
-        "type": "int"
+      "error": {
+        "type": "String"
       }
     }
   },
-  "yourPronunciation": "Your Pronunciation",
-  "correctAnswer": "Correct Answer",
-  "score": "Accuracy: {score}%",
+  "saveTranslationsFromSearch": "འཚོལ་ཞིབ་ཐབས་ལམ་ནས་བསྒྱུར་བ་ཉར་ཚགས་བྱེད་རོགས།",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
+  },
+  "saved": "ཉར་ཚགས་ལེགས་འགྲུབ།",
+  "@saved": {
+    "description": "Data saved status"
+  },
+  "saving": "ཉར་ཚགས་བྱེད་བཞིན་པ...",
+  "@saving": {
+    "description": "Save in progress"
+  },
+  "score": "ཏག་ཏག་ཚད: {score}%",
   "@score": {
     "placeholders": {
       "score": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "Perfect!",
-  "good": "Good",
-  "tryAgain": "Try Again",
-  "startPractice": "Start Practice",
-  "stopPractice": "Stop Practice",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Start Tutorial",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Voice Input",
-  "tutorialMicDesc": "Tap the mic button to start voice input.",
-  "tutorialTabDesc": "You can select your desired learning mode here.",
-  "tutorialTapToContinue": "Tap to continue",
-  "tutorialTransTitle": "Translate",
-  "tutorialTransDesc": "Tap here to translate your text.",
-  "tutorialSaveTitle": "Save",
-  "tutorialSaveDesc": "Save your translation to study records.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
-  "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI ཁ་བརྡ།",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "Select & Filter",
-  "tutorialM2SelectDesc": "Choose study materials or switch to 'Review All'.",
-  "tutorialM2ListTitle": "Study List",
-  "tutorialM2ListDesc": "Long-press this card to delete it. Check your saved sentences and flip them.",
-  "tutorialM3SelectTitle": "Select Material",
-  "tutorialM3SelectDesc": "Choose a material set for speaking practice.",
-  "tutorialM3IntervalTitle": "Interval",
-  "tutorialM3IntervalDesc": "Adjust the waiting time between sentences.",
-  "tutorialM3StartTitle": "Start Practice",
-  "tutorialM3StartDesc": "Tap play to start listening and shadowing.",
-  "startWarning": "Warning",
-  "noVoiceDetected": "No voice detected",
-  "tooltipSearch": "Search",
-  "tooltipStudyReview": "Study+Review",
-  "tooltipSpeaking": "Speaking",
-  "tooltipDecrease": "Decrease",
-  "tooltipIncrease": "Increase",
-  "languageSettings": "Language Settings",
-  "tutorialM2DropdownDesc": "Select study materials.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Import JSON file from device folder.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "Context Tag",
-  "tutorialContextDesc": "Add context (e.g., Morning) to distinguish similar sentences.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
+  "scoreLabel": "སྐར་གྲངས།",
+  "search": "འཚོལ།",
+  "@search": {
+    "description": "Search mode label"
   },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "Limit Reached",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "searchConditions": "འཚོལ་ཞིབ་ཆ་རྐྱེན།",
+  "searchSentenceHint": "ཚིག་གཞི་འཚོལ་ཞིབ...",
+  "searchWordHint": "མིང་ཚིག་འཚོལ་ཞིབ...",
+  "sectionSentence": "ཚིག་སྡེ་ཚན།",
+  "sectionSentences": "ཚིག",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "ཐ་སྙད་སྡེ་ཚན།",
+  "sectionWords": "ཐ་སྙད།",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "ཡོད་པའི་མིང་འདེམས།",
+  "selectMaterialPrompt": "སློབ་སྦྱོང་དཔྱད་ཆས་འདེམས་རོགས།",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "སློབ་སྦྱོང་དཔྱད་ཆས་ཚོགས་པ་འདེམས།",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "རིགས་གྲས་འདེམས།",
+  "selectParticipants": "མཉམ་ཞུགས་པ་འདེམས།",
+  "selectSentenceType": "ཚིག་རིགས་འདེམས།",
+  "selectStudyMaterial": "སློབ་སྦྱོང་དཔྱད་ཆས་འདེམས།",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
+  "sendingMessage": "메시지 전송 중...",
+  "sentence": "ཚིག",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "ཐོ་འགོད་བྱེད།",
+  "similarTextFound": "འདྲ་བའི་ཡི་གེ་རྙེད་བྱུང་།",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "མི་དགོས་པར་བཞག",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "འབྱུང་ཁུངས:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "འབྱུང་ཁུངས་སྐད་ཆ།",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "ངའི་སྐད་ཆ (Source)",
+  "speakNow": "ད་ལྟ་བཤད་རོགས!",
+  "speaker": "གཏམ་བཤད་པ།",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "གཏམ་བཤད་པ་འདེམས།",
+  "speakingPractice": "སྐད་ཆ་ཤོད་པའི་ཉམས་ལེན།",
+  "startChat": "གླེང་མོ་འགོ་བཙུགས།",
+  "startPractice": "ཉམས་ལེན་འགོ་བཙུགས།",
+  "startTutorial": "སློབ་ཚན་འགོ་བཙུགས།",
+  "startWarning": "དོགས་ཟོན།",
+  "startsWith": "འགོ་བཙུགས་པའི་ཡི་གེ",
+  "statusCheckEmail": "ཁྱེད་ཀྱི་གློག་འཕྲིན་ནང་ཞིབ་བཤེར་བྱས་ཏེ་དེའི་ར་སྤྲོད་གནང་རོགས།",
+  "statusDownloading": "ཕབ་ལེན་བྱེད་བཞིན་པ: {name}...",
+  "statusImportFailed": "ནང་འདྲེན་བྱེད་མ་ཐུབ: {error}",
+  "statusImportSuccess": "{name} ནང་འདྲེན་ལེགས་འགྲུབ།",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "འཛུལ་ཞུགས་མེད་པར་བཟོས།",
+  "statusLoginFailed": "འཛུལ་ཞུགས་བྱེད་པར་འཐུས་ཤོར་བྱུང་: {error}",
+  "statusLoginSuccess": "འཛུལ་ཞུགས་བྱེད་པར་ལེགས་འགྲུབ་བྱུང་།",
+  "statusLogoutSuccess": "ཕྱིར་འཐོན་ཟིན།",
+  "statusSignUpFailed": "ཐོ་འགོད་བྱེད་པར་འཐུས་ཤོར་བྱུང་: {error}",
+  "statusSigningUp": "ཐོ་འགོད་བྱེད་བཞིན་པ...",
+  "stopPractice": "ཉམས་ལེན་མཚམས་འཇོག",
+  "studyComplete": "སློབ་སྦྱོང་ལེགས་འགྲུབ།",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "སློབ་སྦྱོང་ཟིན་ཐོ་({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "གུས་ཞབས།",
+  "styleInformal": "སྤྱིར་བཏང་།",
+  "stylePolite": "གོང་བཀུར།",
+  "styleSlang": "སླང་/སྤྱིར་བཏང་།",
+  "subject": "མགོ་བརྗོད:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "སྐད་ཆ་བརྗེ་སྒྱུར་བྱེད།",
+  "switchToAi": "AI ཐབས་ལམ་ལ་བསྒྱུར།",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "རོགས་ཟླའི་ཐབས་ལམ་ལ་བསྒྱུར།",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "གཞི་གྲངས་མཐུན་སྒྲིག་བྱེད་བཞིན་པ...",
+  "tabConversation": "གླེང་མོ།",
+  "tabReview": "བསྐྱར་སྦྱོང་ ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "ཚིག",
+  "tabSpeaking": "སྐད་ཆ་ཤོད་པ།",
+  "tabStudyMaterial": "སློབ་སྦྱོང་དཔྱད་ཆས་ ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "ཐ་སྙད།",
+  "tagFormal": "གུས་ཞབས།",
+  "tagSelection": "རྟགས་འདེམས།",
+  "targetLanguage": "དམིགས་འབེན་སྐད་ཆ།",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "དམིགས་འབེན་སྐད་ཆའི་ཚགས་དབྱེ།:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "སློབ་སྦྱོང་སྐད་ཆ (Target)",
+  "thinkingTimeDesc": "ལན་འགྲིག་པ་ཡོངས་བསྒྲགས་མ་བྱས་པའི་སྔོན་གྱི་བསམ་བློ་གཏོང་བའི་དུས་ཚོད།",
+  "thinkingTimeInterval": "སྒྲ་འབྱིན་བསྐྱར་ལྡེབ།",
+  "timeUp": "དུས་ཚོད་རྫོགས་པ!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "མགོ་བརྗོད་ཀྱི་རྟགས།(ཡིག་ཚགས།)",
+  "tooltipDecrease": "ཇེ་ཉུང་།",
+  "tooltipIncrease": "ཇེ་མང་།",
+  "tooltipSearch": "འཚོལ།",
+  "tooltipSpeaking": "སྐད་ཆ་ཤོད་པ།",
+  "tooltipStudyReview": "སློབ་སྦྱོང་+བསྐྱར་སྦྱོང་།",
+  "totalRecords": "ཟིན་ཐོ་བསྡོམས་{count} ཡོད (ཡོངས་ལ་བལྟ་བ།)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Language Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "བསྒྱུར།",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "བསྒྱུར་བཞིན་པ...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "བསྒྱུར་བ།",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "Select Study Material Set",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "བསྒྱུར་བ་ལེགས་འགྲུབ་ (ཉར་ཚགས་དགོས།)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "Words",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "Sentences",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "My Language (Source)",
-  "targetLanguageLabel": "Study Language (Target)",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "Switch between source and target languages.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "Select Study Material Set",
-  "sectionWord": "Word Section",
-  "sectionSentence": "Sentence Section",
-  "tabWord": "word",
-  "tabSentence": "sentence",
-  "errorProfanity": "Translation cannot be processed due to profanity.",
-  "errorHateSpeech": "Translation cannot be processed due to hate speech.",
-  "errorSexualContent": "Translation cannot be processed due to sexual content.",
-  "errorOtherSafety": "Translation was blocked by AI safety policy.",
-  "clearAll": "Clear All",
-  "disambiguationTitle": "Select Meaning",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "Which meaning do you intend?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "Skip",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Input",
-  "reviewModeTitle": "Review",
-  "practiceModeTitle": "སྦྱོང་བརྡར།",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "བསྒྱུར་བ་བྱེད་མ་ཐུབ: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "བསྒྱུར་བའི་ཚད་ལས་བརྒལ་བ།",
+  "translationLimitMessage": "ཉིན་རེའི་རིན་མེད་བསྒྱུར་བ་(ཐེངས་5)ཚང་མ་བཀོལ་ཚར་བ།\\n\\nཁྱབ་བསྒྲགས་བལྟས་ཏེ་ཐེངས་5མྱུར་དུ་ཁ་གསབ་བྱེད་དམ?",
+  "translationLoaded": "ཉར་ཚགས་བྱས་པའི་བསྒྱུར་བ་ནང་འཇུག་བྱས།",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "ཁ་བརྡ།",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "Basic Word Repository",
-  "basicSentenceRepository": "Basic Sentence Repository",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "Formal",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "མགོ་བརྗོད་ཀྱི་རྟགས།(ཡིག་ཚགས།)",
-  "generalTags": "སྤྱིར་བཏང་གི་རྟགས།",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "Singular",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "བསྒྱུར་བའི་ཐེངས་གྲངས་ཐེངས་5ཁ་གསབ་བྱས་ཟིན!",
+  "translationResultHint": "བསྒྱུར་བའི་མཇུག་འབྲས - བཟོ་བཅོས་བྱེད་ཆོག",
+  "tryAgain": "ཡང་བསྐྱར་འབད་བརྩོན་བྱེད།",
+  "tutorialAiChatDesc": "AI མི་སྣ་དང་མཉམ་དུ་དངོས་སྦྱོང་གླེང་མོ་བྱེད་རོགས།",
+  "tutorialAiChatTitle": "AI ཁ་བརྡ།",
+  "tutorialContextDesc": "ཚིག་གཅིག་པ་ཡིན་ནའང་གནས་སྟངས་(དཔེར་ན། ཞོགས་པ། དགོང་དྲོ)བྲིས་ཚེ་སོ་སོར་ཉར་ཚགས་བྱེད་ཆོག",
+  "tutorialContextTitle": "གནས་སྟངས་/ཡིག་འབྲུའི་རྟགས།",
+  "tutorialLangSettingsDesc": "བསྒྱུར་དགོས་པའི་ཐོག་མའི་སྐད་ཆ་དང་དམིགས་འབེན་སྐད་ཆ་སྒྲིག་འགོད་བྱེད།",
+  "tutorialLangSettingsTitle": "སྐད་ཆའི་སྒྲིག་འགོད།",
+  "tutorialM1ToggleDesc": "ཐ་སྙད་དང་ཚིག་ཐབས་ལམ་འདི་ནས་བརྗེ་བསྒྱུར་བྱེད་རོགས།",
+  "tutorialM1ToggleTitle": "ཐ་སྙད་/ཚིག་ཐབས་ལམ།",
+  "tutorialM2DropdownDesc": "གོང་གི་འདེམས་ཐོའི་བརྒྱུད་ནས་སློབ་སྦྱོང་བྱེད་པའི་དཔྱད་ཆས་འདེམས་ཆོག",
+  "tutorialM2ImportDesc": "སྒྲིག་ཆས་ཀྱི་ཡིག་སྣོད་ནས་ JSON ཡིག་ཆ་ནང་འཇུག་བྱེད།",
+  "tutorialM2ListDesc": "Long-press this card to delete it. Check your saved sentences and flip them.",
+  "tutorialM2ListTitle": "སློབ་སྦྱོང་མིང་ཐོ།",
+  "tutorialM2SearchDesc": "ཉར་ཚགས་བྱས་པའི་ཐ་སྙད་དང་ཚིག་འཚོལ་ཞིབ་བྱས་ཏེ་མགྱོགས་མྱུར་ངང་རྙེད་ཐུབ།",
+  "tutorialM2SelectDesc": "Choose study materials or switch to 'Review All'.",
+  "tutorialM2SelectTitle": "Select & Filter",
+  "tutorialM3IntervalDesc": "ཚིག་བར་གྱི་སྒུག་པའི་དུས་ཚོད་སྙོམས་སྒྲིག་བྱེད།",
+  "tutorialM3IntervalTitle": "བར་ཐག་སྒྲིག",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "གཡས་གོང་གི་འདེམས་ཐོ་(⋮)ནས་ཉམས་ལེན་བྱེད་འདོད་པའི་དཔྱད་ཆས་ཚོགས་པ་འདེམས་རོགས།",
+  "tutorialM3SelectTitle": "Select Material",
+  "tutorialM3StartDesc": "སྒྲ་འབྱིན་མཐེབ་ལ་མནན་ནས་ཐོག་མའི་སྐད་ལ་ཉན་པ་དང་དེའི་རྗེས་སུ་སློབས་རོགས།",
+  "tutorialM3StartTitle": "ཉམས་ལེན་འགོ་བཙུགས།",
+  "tutorialM3WordsDesc": "ཞིབ་བཤེར་བྱས་ཚེ་ཉར་ཚགས་བྱས་པའི་ཐ་སྙད་ཁོ་ནར་ཉམས་ལེན་བྱེད།",
+  "tutorialM3WordsTitle": "ཐ་སྙད་ཉམས་ལེན།",
+  "tutorialMicDesc": "སྐད་སྡེར་རྟགས་མནན་ནས་སྐད་ངག་བརྒྱུད་ནས་ནང་འཇུག་བྱེད་ཆོག",
+  "tutorialMicTitle": "སྐད་ངག་ནང་འཇུག",
+  "tutorialSaveDesc": "བསྒྱུར་བའི་མཇུག་འབྲས་སློབ་སྦྱོང་ཟིན་ཐོར་ཉར་ཚགས་བྱེད་རོགས།",
+  "tutorialSaveTitle": "ཉར་ཚགས་བྱེད།",
+  "tutorialSwapDesc": "ངའི་སྐད་ཆ་དང་སློབ་སྦྱོང་སྐད་ཆ་ཕན་ཚུན་བརྗེ་བ།",
+  "tutorialTabDesc": "འདི་ནས་དགོས་མཁོའི་སློབ་སྦྱོང་ཐབས་ལམ་འདེམས་ཆོག",
+  "tutorialTapToContinue": "བརྙན་ཡོལ་ལ་རེག་ནས་མུ་མཐུད་དུ་འགྲོ",
+  "tutorialTransDesc": "ནང་འཇུག་བྱས་པའི་ཡི་གེ་བསྒྱུར་བ།",
+  "tutorialTransTitle": "བསྒྱུར་བ།",
+  "typeExclamation": "འབོད་སྒྲའི་ཚིག",
+  "typeImperative": "བཀའ་རྒྱའི་ཚིག",
+  "typeQuestion": "དྲི་ཚིག",
+  "typeStatement": "བརྗོད་ཚིག",
+  "usageLimitTitle": "ཚད་ལ་སླེབས་པ།",
+  "useExistingText": "ད་ཡོད་ཀྱི་ཡི་གེ་བཀོལ་སྤྱོད་བྱེད།",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "ཕྱོགས་གཏོགས་མེད།",
-  "chatAllConversations": "གླེང་མོལ་ཡོངས་རྫོགས།",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "ཁྱེད་ཀྱིས་གླེང་མོལ་འདི་དོར་འདོད་དམ།\nགླེང་མོལ་བསུབས་པ་ཕྱིར་སློག་བྱེད་མི་ཐུབ།",
-  "notSelected": "- གདམ་ག་བྱས་མེད། -",
-  "myWordbook": "ངའི་ཐ་སྙད་ཕྱོགས་བསྡུས།",
-  "mySentenceCollection": "ངའི་ཚིག་གྲུབ་ཕྱོགས་བསྡུས།",
-  "newSubjectName": "བརྗོད་བྱའི་མིང་གསརཔ།",
-  "enterNewSubjectName": "མིང་གསརཔ་བཙུགས།",
-  "addNewSubject": "མིང་གསརཔ་བསྣོན།",
-  "selectExistingSubject": "ཡོད་པའི་མིང་འདེམས།",
-  "addTagHint": "ཚད་རྟགས་ཁ་སྣོན།...",
-  "save": "བསྲུང་",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "ཁྱེད་ཀྱི་གློག་འཕྲིན་ནང་ཞིབ་བཤེར་བྱས་ཏེ་དེའི་ར་སྤྲོད་གནང་རོགས།",
-  "emailAlreadyInUse": "གློག་འཕྲིན་ཁ་བྱང་འདི་སྔོན་ནས་ཐོ་འགོད་ཟིན་པས། ཐོ་འཇུག་བྱེད་པའམ་ཡང་ན་གསང་གྲངས་འཚོལ་བར་བེད་སྤྱོད་བྱེད་རོགས།"
+  "viewOnlineGuide": "དྲ་ཐོག་ལམ་སྟོན་ལ་བལྟ་བ།",
+  "voluntaryTranslations": "རང་མོས་བསྒྱུར་བ།",
+  "watchAdAndRefill": "ཁྱབ་བསྒྲགས་བལྟས་ཏེ་ཁ་གསབ་བྱེད (+5 ཐེངས།)",
+  "word": "ཐ་སྙད།",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "དགྲ་འབྱོར་བའི་སྔོན་ལ་ཐ་སྙད་ཤོད་དེ་རྟེན་གཞི་སྲུང་སྐྱོབ་བྱེད།",
+  "wordDefenseTitle": "ཐ་སྙད་སྲུང་བ།",
+  "wordModeLabel": "ཐ་སྙད་ཐབས་ལམ།",
+  "yourPronunciation": "ངའི་ཀློག་སྟངས།"
 }

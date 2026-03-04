@@ -1,188 +1,105 @@
 {
   "@@locale": "ka",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "გაგრძელება Kakao-თი",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "დახმარება და გზამკვლევი",
-  "helpTabModes": "რეჟიმების აღწერა",
-  "helpTabJson": "JSON ფორმატი",
-  "helpTabTour": "დემო",
-  "helpMode1Desc": "თარგმნეთ თქვენი ხმა და მოუსმინეთ შედეგებს.",
-  "helpMode1Details": "• ენის პარამეტრები: შეცვალეთ ენები ზედა/ქვედა ხატულებზე დაჭერით.\n• სიტყვა/წინადადება: რეჟიმების შეცვლა\n• ხმოვანი შეყვანა: დაიწყეთ/შეაჩერეთ მოსმენა მიკროფონის ხატულაზე დაჭერით.\n• ტექსტის შეყვანა: შეიყვანეთ ტექსტი თარგმნისთვის.\n• ავტომატური ძებნა: მსგავსი არსებული წინადადებების ამოცნობა\n• თარგმნა: დააჭირეთ ღილაკს თარგმნა მყისიერი თარგმანისთვის.\n• მოსმენა: TTS დაკვრა დინამიკის ხატულაზე.\n• შენახვა: ჩანაწერების დამატება „მონაცემების შენახვით“\n• გასუფთავება: შეყვანის ინიციალიზაცია",
-  "helpMode2Desc": "გაიმეორეთ შენახული წინადადებები და შეამოწმეთ დამახსოვრება ავტომატური დამალვის ფუნქციით.",
-  "helpMode2Details": "• მასალის არჩევა: აირჩიეთ კონკრეტული კრებული ან „ყველა გამეორება“.\n• ბარათების გადაბრუნება: შეამოწმეთ თარგმანი „ჩვენება/დამალვით“ (ავტომატური სწავლის შემოწმება).\n• მოსმენა: წინადადების TTS დაკვრა\n• სწავლის დასრულება: მონიშნეთ (V) დასრულებულად\n• წაშლა: ხანგრძლივად დააჭირეთ ბარათს ჩანაწერის წასაშლელად.\n• საძიებო პირობები: გაფილტრეთ ტეგებით, უახლესი ელემენტებით ან საწყისი ასოებით",
-  "helpMode3Desc": "მოუსმინეთ წინადადებას და გაიმეორეთ (Shadowing) გამოთქმის სავარჯიშოდ.",
-  "helpMode3Details": "• მასალის არჩევა: აირჩიეთ მასალა სასწავლად.\n• ინტერვალის დაყენება: დაარეგულირეთ ლოდინის დრო წინადადებებს შორის [-] [+] ღილაკებით (3 წმ-დან 60 წმ-მდე)\n• დაწყება/შეჩერება: დაჩრდილვის სესიის კონტროლი\n• საუბარი: მოუსმინეთ და გაიმეორეთ ხმა\n• გამოხმაურება: სიზუსტის ქულა (0-100) და ფერის ჩვენება\n• საძიებო პირობები: გაფილტრეთ სავარჯიშო მიზნები ტეგებით, ბოლო ელემენტებით ან საწყისი ასოებით",
-  "helpModeChatDesc": "ივარჯიშეთ რეალურ საუბარში AI პერსონასთან საუბრით.",
-  "helpModeChatDetails": "• AI ჩატი: ისაუბრეთ ჩემს ენაზე საუბრის სავარჯიშოდ.\n• მრავალი პერსონაჟი: შეცვალეთ მეორე მხარის სქესი/ენა/სახელი მეტყველების ბუშტის ზემოთ მენიუდან.\n• პარტნიორის დამატება: დაამატეთ ახალი თანამოსაუბრე (უცნობი) + ღილაკით.\n• GPS: სიტუაციური თამაშები მიმდინარე მდებარეობაზე დაყრდნობით.\n• ავტომატური შენახვა: საუბრის ავტომატური თარგმნა და შენახვა",
-  "helpJsonDesc": "მიჰყევით ამ ფორმატს, თუ გსურთ სასწავლო მასალების იმპორტი JSON ფაილში გამოსაყენებლად Mode 3-ში:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "მთელი დიალოგის ნაკრების იმპორტი JSON ფაილიდან.",
-  "helpDialogueImportDetails": "• JSON სტრუქტურა: გამოიყენეთ `dialogues` მასივი `entries`-ის ნაცვლად\n• ავტომატური აღდგენა: აღდგება დიალოგის სათაური, პერსონა და შეტყობინების თანმიმდევრობა.\n• მდებარეობა: იმპორტირებული დიალოგები გამოჩნდება AI Chat რეჟიმის ჩანართში „ისტორია“.",
-  "helpTourDesc": "**მონიშნული წრე** გაგიწევთ სახელმძღვანელოს ძირითადი ფუნქციების შესახებ.\n(მაგალითად: შეგიძლიათ წაშალოთ ბარათი **მონიშნულ წრეზე** მითითებულზე ხანგრძლივი დაჭერით.)",
-  "partnerMode": "პარტნიორის რეჟიმი",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "მექანიკური შეყვანა",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "მომხსენებელი",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "AI რეჟიმზე გადართვა",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "პარტნიორის რეჟიმზე გადართვა",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "მიმდინარე ადგილმდებარეობა",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "მდებარეობა",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "პარტნიორი",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "მე",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "ამჟამად არჩეული მასალების ნაკრები:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "ძირითადი წინადადებების/სიტყვების საცავი",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "სიტყვა",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "წინადადება",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "სიზუსტე",
+  "adLoading": "მიმდინარეობს რეკლამის ჩატვირთვა. გთხოვთ, სცადოთ მოგვიანებით.",
+  "addNewSubject": "ახალი სათაურის დამატება",
+  "addParticipant": "მონაწილის დამატება",
+  "addTagHint": "ტეგის დამატება...",
+  "alreadyHaveAccount": "უკვე გაქვთ ანგარიში?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "გამეორება ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "ავტომატური დაკვრა",
+  "basic": "ძირითადი",
+  "basicDefault": "ძირითადი",
+  "basicMaterialRepository": "ძირითადი წინადადებების/სიტყვების საცავი",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "სასწავლო მასალა ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "წინადადებების ძირითადი საცავი",
+  "basicSentences": "წინადადებების ძირითადი საცავი",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "გამეორება",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "ძებნა",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "თარგმნა",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "მოსმენა",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "მონაცემების შენახვა",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "შენახულია",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "წაშლა",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "მასალის ინფორმაცია",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "სიტყვების ძირითადი საცავი",
+  "basicWords": "სიტყვების ძირითადი საცავი",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "გაუქმება",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "დადასტურება",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "განახლება",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "სწავლის ჩანაწერები ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "ბრალდებითი ბრუნვა",
+  "casePossessive": "ნათესაობითი ბრუნვა",
+  "casePossessivePronoun": "მიმთითებელი ნაცვალსახელი",
+  "caseReflexive": "რეფლექსური",
+  "caseSubject": "სახელობითი ბრუნვა",
+  "chatAiChat": "ჩეთი",
+  "chatAllConversations": "ყველა საუბარი",
+  "chatChoosePersona": "პერსონას არჩევა",
+  "chatEndMessage": "გსურთ საუბრის დასრულება?",
+  "chatEndTitle": "საუბრის დასრულება და შენახვა",
+  "chatFailed": "ჩატი ვერ მოხერხდა: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "სამიზნე ენის ფილტრი:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "საუბრის ამონარიდი ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "არ არის სწავლის ჩანაწერები არჩეული ენისთვის",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "საუბრის ისტორია",
+  "chatNew": "ახალი საუბარი",
+  "chatNewChat": "ახალი საუბარი",
+  "chatNoConversations": "ჯერ საუბრები არ არის",
+  "chatSaveAndExit": "შენახვა და გამოსვლა",
+  "chatStartNewPrompt": "სცადეთ ახალი საუბრის დაწყება სავარჯიშოდ!",
+  "chatTypeHint": "დაწერეთ შეტყობინება...",
+  "chatUntitled": "უსათაურო საუბარი",
+  "checking": "მიმდინარეობს შემოწმება...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "სცადეთ თარგმანების შენახვა ძიების რეჟიმში",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "ჩვენება",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "დამალვა",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "ჩანაწერის წაშლა",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "ყველას გასუფთავება",
+  "confirm": "დადასტურება",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "გსურთ ამ სწავლის ჩანაწერის წაშლა?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "ჩანაწერი წაშლილია",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "გსურთ ამ საუბრის წაშლა?\nწაშლილი საუბრის აღდგენა შეუძლებელია.",
+  "confirmDeleteParticipant": "გსურთ ამ მონაწილის წაშლა?",
+  "contextTagHint": "ჩაწერეთ სიტუაცია, რომ მოგვიანებით გაადვილოთ განსხვავება",
+  "contextTagLabel": "კონტექსტი (სურვილისამებრ) - მაგ: დილის მისალმება, თავაზიანი",
+  "copiedToClipboard": "დაკოპირებულია ბუფერში!",
+  "copy": "კოპირება",
+  "correctAnswer": "სწორი პასუხი",
+  "createNew": "გაგრძელება ახალი წინადადებით",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "მიმდინარე ადგილმდებარეობა",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "ამჟამად არჩეული მასალების ნაკრები:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "წაშლა",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "წაშლა ვერ მოხერხდა: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "JSON ფაილის იმპორტი",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "ჩანაწერის წაშლა",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "მიმდინარეობს იმპორტი...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "ივარჯიშეთ დიალოგში სიტუაციური თამაშის საშუალებით. აირჩიეთ და თქვით შესაბამისი პასუხები.",
+  "dialogueQuestTitle": "დიალოგის ქვესტი",
+  "disambiguationPrompt": "რომელი მნიშვნელობით გსურთ თარგმნა?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "მნიშვნელობის არჩევა",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "ჯერ არ გაქვთ ანგარიში?",
+  "editParticipant": "მონაწილის შეცვლა",
+  "email": "ელ. ფოსტა",
+  "emailAlreadyInUse": "ეს ელფოსტა უკვე რეგისტრირებულია. გთხოვთ, შეხვიდეთ სისტემაში ან გამოიყენოთ პაროლის აღდგენა.",
+  "enterNewSubjectName": "ახალი სათაურის შეყვანა",
+  "enterSentenceHint": "შეიყვანეთ წინადადება...",
+  "enterTextHint": "შეიყვანეთ ტექსტი თარგმნისთვის",
+  "enterTextToTranslate": "შეიყვანეთ ტექსტი თარგმნისთვის",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "შეიყვანეთ სიტყვა...",
+  "error": "შეცდომა",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "შეიცავს სიძულვილის ენას, ამიტომ მისი თარგმნა შეუძლებელია.",
+  "errorOtherSafety": "AI-ს უსაფრთხოების პოლიტიკამ უარყო თარგმანი.",
+  "errorProfanity": "შეიცავს უცენზურო სიტყვებს, ამიტომ მისი თარგმნა შეუძლებელია.",
+  "errorSelectCategory": "ჯერ აირჩიეთ სიტყვა ან წინადადება!",
+  "errorSexualContent": "შეიცავს სექსუალურ კონტენტს, ამიტომ მისი თარგმნა შეუძლებელია.",
+  "errors": "შეცდომები:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "მდედრობითი",
+  "file": "ფაილი:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "ყველა",
+  "flip": "ჩვენება",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "შედარებითი ფორმა",
+  "formInfinitive": "ინფინიტივი/აწმყო დრო",
+  "formPast": "წარსული დრო",
+  "formPastParticiple": "წარსული ნაწილაკი",
+  "formPlural": "მრავლობითი",
+  "formPositive": "დადებითი ფორმა",
+  "formPresent": "აწმყო დრო",
+  "formPresentParticiple": "აწმყო ნაწილაკი (ing)",
+  "formSingular": "მხოლობითი",
+  "formSuperlative": "უპირატესი ფორმა",
+  "formThirdPersonSingular": "მესამე პირის მხოლობითი",
+  "gameModeDesc": "აირჩიეთ თამაშის რეჟიმი ვარჯიშისთვის",
+  "gameModeTitle": "თამაშის რეჟიმი",
+  "gameOver": "თამაში დასრულდა",
+  "gender": "სქესი",
+  "generalTags": "ზოგადი ტეგები",
+  "getMaterials": "მასალების მიღება",
+  "good": "კარგია",
+  "googleContinue": "გაგრძელება Google-ით",
+  "helpDialogueImportDesc": "მთელი დიალოგის ნაკრების იმპორტი JSON ფაილიდან.",
+  "helpDialogueImportDetails": "• JSON სტრუქტურა: გამოიყენეთ `dialogues` მასივი `entries`-ის ნაცვლად\n• ავტომატური აღდგენა: აღდგება დიალოგის სათაური, პერსონა და შეტყობინების თანმიმდევრობა.\n• მდებარეობა: იმპორტირებული დიალოგები გამოჩნდება AI Chat რეჟიმის ჩანართში „ისტორია“.",
+  "helpJsonDesc": "მიჰყევით ამ ფორმატს, თუ გსურთ სასწავლო მასალების იმპორტი JSON ფაილში გამოსაყენებლად Mode 3-ში:",
+  "helpJsonTypeDialogue": "დიალოგი",
+  "helpJsonTypeSentence": "წინადადება",
+  "helpJsonTypeWord": "სიტყვა",
+  "helpMode1Desc": "თარგმნეთ თქვენი ხმა და მოუსმინეთ შედეგებს.",
+  "helpMode1Details": "• ენის პარამეტრები: შეცვალეთ ენები ზედა/ქვედა ხატულებზე დაჭერით.\n• სიტყვა/წინადადება: რეჟიმების შეცვლა\n• ხმოვანი შეყვანა: დაიწყეთ/შეაჩერეთ მოსმენა მიკროფონის ხატულაზე დაჭერით.\n• ტექსტის შეყვანა: შეიყვანეთ ტექსტი თარგმნისთვის.\n• ავტომატური ძებნა: მსგავსი არსებული წინადადებების ამოცნობა\n• თარგმნა: დააჭირეთ ღილაკს თარგმნა მყისიერი თარგმანისთვის.\n• მოსმენა: TTS დაკვრა დინამიკის ხატულაზე.\n• შენახვა: ჩანაწერების დამატება „მონაცემების შენახვით“\n• გასუფთავება: შეყვანის ინიციალიზაცია",
+  "helpMode2Desc": "გაიმეორეთ შენახული წინადადებები და შეამოწმეთ დამახსოვრება ავტომატური დამალვის ფუნქციით.",
+  "helpMode2Details": "• მასალის არჩევა: აირჩიეთ კონკრეტული კრებული ან „ყველა გამეორება“.\n• ბარათების გადაბრუნება: შეამოწმეთ თარგმანი „ჩვენება/დამალვით“ (ავტომატური სწავლის შემოწმება).\n• მოსმენა: წინადადების TTS დაკვრა\n• სწავლის დასრულება: მონიშნეთ (V) დასრულებულად\n• წაშლა: ხანგრძლივად დააჭირეთ ბარათს ჩანაწერის წასაშლელად.\n• საძიებო პირობები: გაფილტრეთ ტეგებით, უახლესი ელემენტებით ან საწყისი ასოებით",
+  "helpMode3Desc": "მოუსმინეთ წინადადებას და გაიმეორეთ (Shadowing) გამოთქმის სავარჯიშოდ.",
+  "helpMode3Details": "• მასალის არჩევა: აირჩიეთ მასალა სასწავლად.\n• ინტერვალის დაყენება: დაარეგულირეთ ლოდინის დრო წინადადებებს შორის [-] [+] ღილაკებით (3 წმ-დან 60 წმ-მდე)\n• დაწყება/შეჩერება: დაჩრდილვის სესიის კონტროლი\n• საუბარი: მოუსმინეთ და გაიმეორეთ ხმა\n• გამოხმაურება: სიზუსტის ქულა (0-100) და ფერის ჩვენება\n• საძიებო პირობები: გაფილტრეთ სავარჯიშო მიზნები ტეგებით, ბოლო ელემენტებით ან საწყისი ასოებით",
+  "helpModeChatDesc": "ივარჯიშეთ რეალურ საუბარში AI პერსონასთან საუბრით.",
+  "helpModeChatDetails": "• AI ჩატი: ისაუბრეთ ჩემს ენაზე საუბრის სავარჯიშოდ.\n• მრავალი პერსონაჟი: შეცვალეთ მეორე მხარის სქესი/ენა/სახელი მეტყველების ბუშტის ზემოთ მენიუდან.\n• პარტნიორის დამატება: დაამატეთ ახალი თანამოსაუბრე (უცნობი) + ღილაკით.\n• GPS: სიტუაციური თამაშები მიმდინარე მდებარეობაზე დაყრდნობით.\n• ავტომატური შენახვა: საუბრის ავტომატური თარგმნა და შენახვა",
+  "helpTabJson": "JSON ფორმატი",
+  "helpTabModes": "რეჟიმების აღწერა",
+  "helpTabTour": "დემო",
+  "helpTitle": "დახმარება და გზამკვლევი",
+  "helpTourDesc": "**მონიშნული წრე** გაგიწევთ სახელმძღვანელოს ძირითადი ფუნქციების შესახებ.\n(მაგალითად: შეგიძლიათ წაშალოთ ბარათი **მონიშნულ წრეზე** მითითებულზე ხანგრძლივი დაჭერით.)",
+  "hide": "დამალვა",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "დამატებულია: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "იმპორტი დასრულებულია",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "მსგავსი სათაურის მასალა უკვე არსებობს. შეცვალეთ სათაური და სცადეთ ხელახლა.",
+  "importErrorMessage": "ფაილის იმპორტი ვერ მოხერხდა:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "იმპორტი ვერ მოხერხდა",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "სულ: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "JSON ფაილის იმპორტი",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "დამატებულია: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "გთხოვთ, შემოიტანოთ JSON ფაილი",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "გამოტოვებულია: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "შეცდომები:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "სულ: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "შეცდომა",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "მიმდინარეობს იმპორტი...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "ფაილის იმპორტი ვერ მოხერხდა:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "შეყვანა",
+  "intervalSeconds": "ინტერვალი: {seconds} წმ",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "გთხოვთ, შეიყვანოთ ვალიდური ელ. ფოსტა.",
+  "kakaoContinue": "გაგრძელება Kakao-თი",
+  "labelLangCode": "ენის კოდი (მაგ: en-US, ko-KR)",
+  "labelName": "სახელი",
+  "labelNote": "შენიშვნა",
+  "labelPOS": "მეტყველების ნაწილი",
+  "labelRole": "როლი",
+  "labelSentence": "წინადადება",
+  "labelSentenceCollection": "წინადადებების კრებული",
+  "labelSentenceType": "წინადადების ტიპი",
+  "labelShowMemorized": "დასრულებული",
+  "labelType": "ტიპი:",
+  "labelWord": "სიტყვა",
+  "labelWordbook": "სიტყვების კრებული",
+  "language": "ენა",
+  "languageSettings": "ენის პარამეტრები",
+  "languageSettingsTitle": "ენის პარამეტრები",
+  "libTitleFirstMeeting": "პირველი შეხვედრა",
+  "libTitleGreetings1": "მისალმებები 1",
+  "libTitleNouns1": "არსებითი სახელები 1",
+  "libTitleVerbs1": "ზმნები 1",
+  "listen": "მოსმენა",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "მიმდინარეობს მოსმენა...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "მონაწილეების ჩატვირთვა...",
+  "location": "მდებარეობა",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "შესვლა",
+  "logout": "გამოსვლა",
+  "logoutConfirmMessage": "გსურთ ამ მოწყობილობიდან გამოსვლა?",
+  "logoutConfirmTitle": "გამოსვლა",
+  "male": "მამრობითი",
+  "manageParticipants": "მონაწილეების მართვა",
+  "manual": "მექანიკური შეყვანა",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "მონიშვნა, როგორც შესწავლილი",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "მასალის ინფორმაცია",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "მე",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "მასალების შემოტანა მოწყობილობიდან",
+  "menuHelp": "დახმარება",
+  "menuLanguageSettings": "ენის პარამეტრები",
+  "menuOnlineLibrary": "ონლაინ ბიბლიოთეკა",
+  "menuSelectMaterialSet": "სასწავლო მასალების ნაკრების არჩევა",
+  "menuSettings": "ენის პარამეტრები",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "გამოყენების ტური",
+  "menuWebDownload": "საწყისი გვერდი",
+  "metadataDialogTitle": "დეტალური კლასიფიკაცია",
+  "metadataFormType": "გრამატიკული ფორმა",
+  "metadataRootWord": "ძირითადი სიტყვა (Root Word)",
+  "micButtonTooltip": "ხმის ამოცნობის დაწყება",
+  "mode1SelectedMaterial": "ამჟამად არჩეული მასალების ნაკრები: {name}",
+  "mode2Title": "გამეორება",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "შემდეგი",
+  "mode3Start": "დაწყება",
+  "mode3Stop": "შეჩერება",
+  "mode3TryAgain": "ხელახლა ცდა",
+  "mySentenceCollection": "ჩემი წინადადებების კრებული",
+  "myWordbook": "ჩემი სიტყვების წიგნი",
+  "neutral": "ნეიტრალური",
+  "newSubjectName": "ახალი თემატური ლექსიკონის/ფრაზების კრებულის სათაური",
+  "next": "შემდეგი",
+  "noDialogueHistory": "საუბრის ისტორია არ არის.",
+  "noInternetWarningMic": "ინტერნეტთან კავშირი არ არის. ხმოვანი ამოცნობა შესაძლოა ხაზგარეშე არ მუშაობდეს.",
+  "noInternetWarningTranslate": "ინტერნეტთან კავშირი არ არის. თარგმანის ფუნქცია ხაზგარეშე არ მუშაობს. გამოიყენეთ გამეორების რეჟიმი.",
+  "noMaterialsInCategory": "ამ კატეგორიაში მასალები არ არის.",
+  "noParticipantsFound": "მონაწილეები ვერ მოიძებნა.",
+  "noRecords": "არ არის სწავლის ჩანაწერები არჩეული ენისთვის",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "სასწავლო მასალა არ არის.",
+  "noTextToPlay": "დასაკრავი ტექსტი არ არის",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "შესანახი თარგმანი არ არის",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "ხმა არ არის აღმოჩენილი",
+  "notSelected": "- არ არის არჩეული -",
+  "onlineLibraryCheckInternet": "შეამოწმეთ ინტერნეტ კავშირი ან სცადეთ მოგვიანებით.",
+  "onlineLibraryLoadFailed": "მასალების ჩატვირთვა ვერ მოხერხდა.",
+  "onlineLibraryNoMaterials": "მასალები არ არის.",
+  "participantDeleted": "მონაწილე წაიშალა.",
+  "participantRename": "მონაწილის სახელის შეცვლა",
+  "partner": "პარტნიორი",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "პარტნიორის რეჟიმი",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "პაროლი",
+  "passwordTooShort": "პაროლი უნდა შედგებოდეს მინიმუმ 6 სიმბოლოსგან.",
+  "perfect": "შესანიშნავია!",
+  "personaFriend": "ადგილობრივი მეგობარი",
+  "personaGuide": "ტურის გიდი",
+  "personaTeacher": "ინგლისურის მასწავლებელი",
+  "playAgain": "ხელახლა თამაში",
+  "playbackFailed": "დაკვრა ვერ მოხერხდა: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "სასწავლო მასალის არჩევა",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "მიმდინარეობს დაკვრა...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "სათაური:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "წყარო:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "ფაილი:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "ზედსართავი სახელი",
+  "posAdverb": "ზმნიზედა",
+  "posConjunction": "კავშირი",
+  "posInterjection": "შორისდებული",
+  "posNoun": "არსებითი სახელი",
+  "posPreposition": "წინდებული/ნაწილაკი",
+  "posPronoun": "ნაცვალსახელი",
+  "posVerb": "ზმნა",
+  "practiceModeTitle": "ვარჯიში",
+  "practiceWordsOnly": "ივარჯიშეთ მხოლოდ სიტყვები",
   "progress": "პროგრესი: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "გთხოვთ, შემოიტანოთ JSON ფაილი",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "აირჩიეთ სასწავლო მასალა",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "სწავლა დასრულებულია",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "მონიშვნა, როგორც შესწავლილი",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "მიმდინარეობს მოსმენა...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "ამოცნობა დასრულებულია",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "ბოლო {count} ელემენტის ჩვენება",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "ხმის ამოცნობა ვერ მოხერხდა: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "მიმდინარეობს შემოწმება...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "ამოცნობა დასრულებულია",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "მიმდინარეობს თარგმნა...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "ამოცნობილი ტექსტი:",
+  "recordDeleted": "ჩანაწერი წაშლილია",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "თარგმანი დასრულებულია (საჭიროა შენახვა)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "განახლება",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "შენახული თარგმანი ჩატვირთულია",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "თარგმანი ვერ მოხერხდა: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "გადატვირთვა",
+  "resetPracticeHistory": "სავარჯიშო ისტორიის გადატვირთვა",
+  "retry": "ხელახლა სცადოთ?",
+  "reviewAll": "ყველა გამეორება",
+  "reviewCount": "გამეორება {count} ჯერ",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "შეიყვანეთ ტექსტი თარგმნისთვის",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "მიმდინარეობს შენახვა...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "შესანახი თარგმანი არ არის",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "გამეორება",
+  "roleAi": "AI",
+  "roleThirdParty": "მესამე მხარე",
+  "roleUser": "მომხმარებელი",
+  "save": "შენახვა",
+  "saveData": "მონაცემების შენახვა",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "შენახვა ვერ მოხერხდა: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "მიმდინარეობს დაკვრა...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "სცადეთ თარგმანების შენახვა ძიების რეჟიმში",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "დასაკრავი ტექსტი არ არის",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "შენახულია",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "დაკვრა ვერ მოხერხდა: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "მიმდინარეობს შენახვა...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "წყარო ენა",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "სამიზნე ენა",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "მსგავსი ტექსტი ნაპოვნია",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "არსებული ტექსტის გამოყენება",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "გაგრძელება ახალი წინადადებით",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "გამეორება {count} ჯერ",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "საუბარი",
-  "speakingPractice": "საუბრის პრაქტიკა",
-  "intervalSeconds": "ინტერვალი: {seconds} წმ",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "თქვენი გამოთქმა",
-  "correctAnswer": "სწორი პასუხი",
   "score": "სიზუსტე: {score}%",
   "@score": {
     "placeholders": {
@@ -446,89 +517,161 @@
       }
     }
   },
-  "perfect": "შესანიშნავია!",
-  "good": "კარგია",
-  "tryAgain": "სცადეთ ხელახლა",
-  "startPractice": "ვარჯიშის დაწყება",
-  "stopPractice": "ვარჯიშის შეწყვეტა",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "სახელმძღვანელოს დაწყება",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "ხმოვანი შეყვანა",
-  "tutorialMicDesc": "შეგიძლიათ ხმოვანი შეყვანა მიკროფონის ღილაკზე დაჭერით.",
-  "tutorialTabDesc": "აქ შეგიძლიათ აირჩიოთ სასურველი სწავლის რეჟიმი.",
-  "tutorialTapToContinue": "გააგრძელეთ ეკრანზე შეხებით",
-  "tutorialTransTitle": "თარგმნა",
-  "tutorialTransDesc": "თარგმნეთ შეყვანილი ტექსტი.",
-  "tutorialSaveTitle": "შენახვა",
-  "tutorialSaveDesc": "შეინახეთ თარგმნილი შედეგები თქვენს სასწავლო ჩანაწერებში.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "ქულა",
+  "search": "ძებნა",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "საძიებო პირობები",
+  "searchSentenceHint": "წინადადების ძიება...",
+  "searchWordHint": "სიტყვის ძიება...",
+  "sectionSentence": "წინადადებების განყოფილება",
+  "sectionSentences": "წინადადებები",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "სიტყვების განყოფილება",
+  "sectionWords": "სიტყვები",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "არსებული სათაურის არჩევა",
+  "selectMaterialPrompt": "აირჩიეთ სასწავლო მასალა",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "სასწავლო მასალების ნაკრების არჩევა",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "მეტყველების ნაწილის არჩევა",
+  "selectParticipants": "მონაწილეების არჩევა",
+  "selectSentenceType": "წინადადების ტიპის არჩევა",
+  "selectStudyMaterial": "სასწავლო მასალის არჩევა",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI ჩეთი",
-  "tutorialAiChatDesc": "ივარჯიშეთ რეალურ საუბრებში AI პერსონაჟებთან ერთად.",
-  "tutorialM2SelectTitle": "მასალის არჩევა",
-  "tutorialM2SelectDesc": "აირჩიეთ მასალა შესასწავლად მასალების ნაკრების ხატულაზე (📚) ზედა ზოლზე დაჭერით.",
-  "tutorialM2ListTitle": "სწავლის სია",
-  "tutorialM2ListDesc": "ამ ბარათზე ხანგრძლივი დაჭერით (Long Click) შეგიძლიათ წაშალოთ იგი. შეამოწმეთ შენახული წინადადებები და გადააბრუნეთ ისინი.",
-  "tutorialM3SelectTitle": "მასალის არჩევა",
-  "tutorialM3SelectDesc": "აირჩიეთ მასალა სავარჯიშოდ მასალების ნაკრების ხატულაზე (📚) ზედა ზოლზე დაჭერით.",
-  "tutorialM3IntervalTitle": "ინტერვალის დაყენება",
-  "tutorialM3IntervalDesc": "დაარეგულირეთ ლოდინის დრო წინადადებებს შორის.",
-  "tutorialM3StartTitle": "ვარჯიშის დაწყება",
-  "tutorialM3StartDesc": "მოუსმინეთ მშობლიური ენის ხმას და გაიმეორეთ დაკვრის ღილაკზე დაჭერით.",
+  "sentence": "წინადადება",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "რეგისტრაცია",
+  "similarTextFound": "მსგავსი ტექსტი ნაპოვნია",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "გამოტოვება",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "წყარო:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "წყარო ენა",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "ჩემი ენა (წყარო)",
+  "speakNow": "ილაპარაკე ახლა!",
+  "speaker": "მომხსენებელი",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "მომხსენებლის არჩევა",
+  "speakingPractice": "საუბრის პრაქტიკა",
+  "startChat": "საუბრის დაწყება",
+  "startPractice": "ვარჯიშის დაწყება",
+  "startTutorial": "სახელმძღვანელოს დაწყება",
   "startWarning": "გაფრთხილება",
-  "noVoiceDetected": "ხმა არ არის აღმოჩენილი",
-  "tooltipSearch": "ძებნა",
-  "tooltipStudyReview": "სწავლა+გამეორება",
-  "tooltipSpeaking": "საუბარი",
+  "startsWith": "იწყება ასოთი",
+  "statusCheckEmail": "გთხოვთ, გადაამოწმოთ ელფოსტა ავტორიზაციის დასასრულებლად.",
+  "statusDownloading": "ჩამოტვირთვა: {name}...",
+  "statusImportFailed": "იმპორტი ვერ მოხერხდა: {error}",
+  "statusImportSuccess": "{name}-ის იმპორტი წარმატებით დასრულდა",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "ავტორიზაცია გაუქმდა.",
+  "statusLoginFailed": "ავტორიზაცია ვერ მოხერხდა: {error}",
+  "statusLoginSuccess": "ავტორიზაცია წარმატებით შესრულდა.",
+  "statusLogoutSuccess": "თქვენ გამოხვედით.",
+  "statusSignUpFailed": "რეგისტრაცია ვერ მოხერხდა: {error}",
+  "statusSigningUp": "რეგისტრაცია...",
+  "stopPractice": "ვარჯიშის შეწყვეტა",
+  "studyComplete": "სწავლა დასრულებულია",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "სწავლის ჩანაწერები ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "ოფიციალური",
+  "styleInformal": "არაფორმალური",
+  "stylePolite": "თავაზიანი",
+  "styleSlang": "სლენგი",
+  "subject": "სათაური:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "ენების შეცვლა",
+  "switchToAi": "AI რეჟიმზე გადართვა",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "პარტნიორის რეჟიმზე გადართვა",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "მონაცემთა სინქრონიზაცია...",
+  "tabConversation": "საუბარი",
+  "tabReview": "გამეორება ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "წინადადება",
+  "tabSpeaking": "საუბარი",
+  "tabStudyMaterial": "სასწავლო მასალა ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "სიტყვა",
+  "tagFormal": "თავაზიანი",
+  "tagSelection": "ტეგების არჩევა",
+  "targetLanguage": "სამიზნე ენა",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "სამიზნე ენის ფილტრი:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "სასწავლო ენა (სამიზნე)",
+  "thinkingTimeDesc": "დრო, რომ იფიქროთ პასუხის გამოვლენამდე.",
+  "thinkingTimeInterval": "დაკვრის ინტერვალი",
+  "timeUp": "დრო ამოიწურა!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "სათაურის ტეგი (კრებული)",
   "tooltipDecrease": "შემცირება",
   "tooltipIncrease": "გაზრდა",
-  "languageSettings": "ენის პარამეტრები",
-  "tutorialM2DropdownDesc": "ზედა მენიუს საშუალებით შეგიძლიათ აირჩიოთ სასწავლო მასალა.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "ჩამოტვირთეთ JSON ფაილი თქვენი მოწყობილობის საქაღალდიდან.",
-  "tutorialLangSettingsTitle": "ენის პარამეტრები",
-  "tutorialLangSettingsDesc": "დააყენეთ წყარო ენა და სამიზნე ენა თარგმნისთვის.",
-  "copy": "კოპირება",
-  "copiedToClipboard": "დაკოპირებულია ბუფერში!",
-  "tutorialContextTitle": "კონტექსტური ტეგი",
-  "tutorialContextDesc": "ერთი და იგივე წინადადებაც კი შეიძლება ცალკე შენახული იყოს სიტუაციის მითითებით (მაგ. დილა, საღამო).",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "დრო, რომ იფიქროთ პასუხის გამოვლენამდე.",
-  "autoPlay": "ავტომატური დაკვრა",
-  "timeUp": "დრო ამოიწურა!",
-  "gameModeTitle": "თამაშის რეჟიმი",
-  "gameModeDesc": "აირჩიეთ თამაშის რეჟიმი ვარჯიშისთვის",
-  "wordDefenseTitle": "სიტყვების დაცვა",
-  "wordDefenseDesc": "დაიცავით ბაზა სიტყვების თქმით, სანამ მტრები მოვლენ.",
-  "dialogueQuestTitle": "დიალოგის ქვესტი",
-  "dialogueQuestDesc": "ივარჯიშეთ დიალოგში სიტუაციური თამაშის საშუალებით. აირჩიეთ და თქვით შესაბამისი პასუხები.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "ტიპი:",
-  "labelWord": "სიტყვა",
-  "labelSentence": "წინადადება",
-  "contextTagLabel": "კონტექსტი (სურვილისამებრ) - მაგ: დილის მისალმება, თავაზიანი",
-  "contextTagHint": "ჩაწერეთ სიტუაცია, რომ მოგვიანებით გაადვილოთ განსხვავება",
-  "usageLimitTitle": "ლიმიტი მიღწეულია",
-  "translationLimitExceeded": "თარგმანის ლიმიტი გადაჭარბებულია",
-  "translationLimitMessage": "თქვენ ამოწურეთ თქვენი უფასო ყოველდღიური თარგმანები (5-ჯერ).\\n\\nგსურთ ნახოთ რეკლამა 5-ჯერ მყისიერად შესავსებად?",
-  "watchAdAndRefill": "რეკლამის ყურება და შევსება (+5-ჯერ)",
-  "translationRefilled": "თქვენი თარგმანის რაოდენობა შეივსო 5-ჯერ!",
-  "adLoading": "მიმდინარეობს რეკლამის ჩატვირთვა. გთხოვთ, სცადოთ მოგვიანებით.",
-  "reviewAll": "ყველა გამეორება",
+  "tooltipSearch": "ძებნა",
+  "tooltipSpeaking": "საუბარი",
+  "tooltipStudyReview": "სწავლა+გამეორება",
   "totalRecords": "სულ {count} ჩანაწერი (ყველას ნახვა)",
   "@totalRecords": {
     "description": "Total records count",
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "ყველა",
-  "practiceWordsOnly": "ივარჯიშეთ მხოლოდ სიტყვები",
-  "resetPracticeHistory": "სავარჯიშო ისტორიის გადატვირთვა",
-  "retry": "ხელახლა სცადოთ?",
-  "noStudyMaterial": "სასწავლო მასალა არ არის.",
-  "gameOver": "თამაში დასრულდა",
-  "playAgain": "ხელახლა თამაში",
-  "speakNow": "ილაპარაკე ახლა!",
-  "scoreLabel": "ქულა",
-  "viewOnlineGuide": "ონლაინ სახელმძღვანელოს ნახვა",
-  "getMaterials": "მასალების მიღება",
-  "swapLanguages": "ენების შეცვლა",
-  "next": "შემდეგი",
-  "wordModeLabel": "სიტყვების რეჟიმი",
-  "accuracy": "სიზუსტე",
-  "basicDefault": "ძირითადი",
-  "basic": "ძირითადი",
-  "tutorialM3WordsTitle": "სიტყვების პრაქტიკა",
-  "tutorialM3WordsDesc": "მონიშნეთ პრაქტიკა მხოლოდ შენახული სიტყვებით.",
-  "enterTextHint": "შეიყვანეთ ტექსტი თარგმნისთვის",
-  "micButtonTooltip": "ხმის ამოცნობის დაწყება",
-  "menuHelp": "დახმარება",
-  "menuWebDownload": "საწყისი გვერდი",
-  "menuDeviceImport": "მასალების შემოტანა მოწყობილობიდან",
-  "menuSettings": "ენის პარამეტრები",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "თარგმნა",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "სიტყვების ძირითადი საცავი",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "მიმდინარეობს თარგმნა...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "წინადადებების ძირითადი საცავი",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "თარგმანი",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "სასწავლო მასალების ნაკრების არჩევა",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "თარგმანი დასრულებულია (საჭიროა შენახვა)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "სიტყვები",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "წინადადებები",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "ენის პარამეტრები",
-  "sourceLanguageLabel": "ჩემი ენა (წყარო)",
-  "targetLanguageLabel": "სასწავლო ენა (სამიზნე)",
-  "mode3Start": "დაწყება",
-  "mode3Stop": "შეჩერება",
-  "mode3Next": "შემდეგი",
-  "mode3TryAgain": "ხელახლა ცდა",
-  "tutorialM3ResetTitle": "ისტორიის გადატვირთვა",
-  "tutorialSwapDesc": "ჩემი ენის და სასწავლო ენის შეცვლა.",
-  "recognizedText": "ამოცნობილი ტექსტი:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "პროგრესის და სიზუსტის ქულების გადატვირთვა თავიდან დასაწყებად.",
-  "menuSelectMaterialSet": "სასწავლო მასალების ნაკრების არჩევა",
-  "sectionWord": "სიტყვების განყოფილება",
-  "sectionSentence": "წინადადებების განყოფილება",
-  "tabWord": "სიტყვა",
-  "tabSentence": "წინადადება",
-  "errorProfanity": "შეიცავს უცენზურო სიტყვებს, ამიტომ მისი თარგმნა შეუძლებელია.",
-  "errorHateSpeech": "შეიცავს სიძულვილის ენას, ამიტომ მისი თარგმნა შეუძლებელია.",
-  "errorSexualContent": "შეიცავს სექსუალურ კონტენტს, ამიტომ მისი თარგმნა შეუძლებელია.",
-  "errorOtherSafety": "AI-ს უსაფრთხოების პოლიტიკამ უარყო თარგმანი.",
-  "clearAll": "ყველას გასუფთავება",
-  "disambiguationTitle": "მნიშვნელობის არჩევა",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "რომელი მნიშვნელობით გსურთ თარგმნა?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "გამოტოვება",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "შეყვანა",
-  "reviewModeTitle": "გამეორება",
-  "practiceModeTitle": "ვარჯიში",
-  "chatHistoryTitle": "საუბრის ისტორია",
-  "chatNew": "ახალი საუბარი",
-  "chatNewChat": "ახალი საუბარი",
-  "chatChoosePersona": "პერსონას არჩევა",
-  "chatTypeHint": "დაწერეთ შეტყობინება...",
-  "chatFailed": "ჩატი ვერ მოხერხდა: {error}",
-  "@chatFailed": {
+  "translationFailed": "თარგმანი ვერ მოხერხდა: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "ჯერ საუბრები არ არის",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "სცადეთ ახალი საუბრის დაწყება სავარჯიშოდ!",
-  "chatFromConversation": "საუბრის ამონარიდი ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "თარგმანის ლიმიტი გადაჭარბებულია",
+  "translationLimitMessage": "თქვენ ამოწურეთ თქვენი უფასო ყოველდღიური თარგმანები (5-ჯერ).\\n\\nგსურთ ნახოთ რეკლამა 5-ჯერ მყისიერად შესავსებად?",
+  "translationLoaded": "შენახული თარგმანი ჩატვირთულია",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "ინგლისურის მასწავლებელი",
-  "personaGuide": "ტურის გიდი",
-  "personaFriend": "ადგილობრივი მეგობარი",
-  "chatUntitled": "უსათაურო საუბარი",
-  "chatAiChat": "ჩეთი",
-  "mode1SelectedMaterial": "ამჟამად არჩეული მასალების ნაკრები: {name}",
-  "basicWordRepository": "სიტყვების ძირითადი საცავი",
-  "basicSentenceRepository": "წინადადებების ძირითადი საცავი",
-  "chatEndTitle": "საუბრის დასრულება და შენახვა",
-  "chatEndMessage": "გსურთ საუბრის დასრულება?",
-  "chatSaveAndExit": "შენახვა და გამოსვლა",
-  "errorSelectCategory": "ჯერ აირჩიეთ სიტყვა ან წინადადება!",
-  "tutorialM1ToggleTitle": "სიტყვა/წინადადების რეჟიმი",
+  "translationRefilled": "თქვენი თარგმანის რაოდენობა შეივსო 5-ჯერ!",
+  "translationResultHint": "თარგმანის შედეგი - შესაძლებელია შეცვლა",
+  "tryAgain": "სცადეთ ხელახლა",
+  "tutorialAiChatDesc": "ივარჯიშეთ რეალურ საუბრებში AI პერსონაჟებთან ერთად.",
+  "tutorialAiChatTitle": "AI ჩეთი",
+  "tutorialContextDesc": "ერთი და იგივე წინადადებაც კი შეიძლება ცალკე შენახული იყოს სიტუაციის მითითებით (მაგ. დილა, საღამო).",
+  "tutorialContextTitle": "კონტექსტური ტეგი",
+  "tutorialLangSettingsDesc": "დააყენეთ წყარო ენა და სამიზნე ენა თარგმნისთვის.",
+  "tutorialLangSettingsTitle": "ენის პარამეტრები",
   "tutorialM1ToggleDesc": "გადართეთ სიტყვების და წინადადებების რეჟიმებს შორის აქ.",
-  "metadataDialogTitle": "დეტალური კლასიფიკაცია",
-  "tagFormal": "თავაზიანი",
-  "selectPOS": "მეტყველების ნაწილის არჩევა",
-  "selectSentenceType": "წინადადების ტიპის არჩევა",
-  "metadataRootWord": "ძირითადი სიტყვა (Root Word)",
-  "posNoun": "არსებითი სახელი",
-  "posVerb": "ზმნა",
-  "posAdjective": "ზედსართავი სახელი",
-  "posAdverb": "ზმნიზედა",
-  "posPronoun": "ნაცვალსახელი",
-  "posPreposition": "წინდებული/ნაწილაკი",
-  "posConjunction": "კავშირი",
-  "posInterjection": "შორისდებული",
-  "typeStatement": "განცხადება",
-  "typeQuestion": "კითხვა",
+  "tutorialM1ToggleTitle": "სიტყვა/წინადადების რეჟიმი",
+  "tutorialM2DropdownDesc": "ზედა მენიუს საშუალებით შეგიძლიათ აირჩიოთ სასწავლო მასალა.",
+  "tutorialM2ImportDesc": "ჩამოტვირთეთ JSON ფაილი თქვენი მოწყობილობის საქაღალდიდან.",
+  "tutorialM2ListDesc": "ამ ბარათზე ხანგრძლივი დაჭერით (Long Click) შეგიძლიათ წაშალოთ იგი. შეამოწმეთ შენახული წინადადებები და გადააბრუნეთ ისინი.",
+  "tutorialM2ListTitle": "სწავლის სია",
+  "tutorialM2SearchDesc": "შეინახეთ და მოძებნეთ სიტყვები და წინადადებები სწრაფად.",
+  "tutorialM2SelectDesc": "აირჩიეთ მასალა შესასწავლად მასალების ნაკრების ხატულაზე (📚) ზედა ზოლზე დაჭერით.",
+  "tutorialM2SelectTitle": "მასალის არჩევა",
+  "tutorialM3IntervalDesc": "დაარეგულირეთ ლოდინის დრო წინადადებებს შორის.",
+  "tutorialM3IntervalTitle": "ინტერვალის დაყენება",
+  "tutorialM3ResetDesc": "პროგრესის და სიზუსტის ქულების გადატვირთვა თავიდან დასაწყებად.",
+  "tutorialM3ResetTitle": "ისტორიის გადატვირთვა",
+  "tutorialM3SelectDesc": "აირჩიეთ მასალა სავარჯიშოდ მასალების ნაკრების ხატულაზე (📚) ზედა ზოლზე დაჭერით.",
+  "tutorialM3SelectTitle": "მასალის არჩევა",
+  "tutorialM3StartDesc": "მოუსმინეთ მშობლიური ენის ხმას და გაიმეორეთ დაკვრის ღილაკზე დაჭერით.",
+  "tutorialM3StartTitle": "ვარჯიშის დაწყება",
+  "tutorialM3WordsDesc": "მონიშნეთ პრაქტიკა მხოლოდ შენახული სიტყვებით.",
+  "tutorialM3WordsTitle": "სიტყვების პრაქტიკა",
+  "tutorialMicDesc": "შეგიძლიათ ხმოვანი შეყვანა მიკროფონის ღილაკზე დაჭერით.",
+  "tutorialMicTitle": "ხმოვანი შეყვანა",
+  "tutorialSaveDesc": "შეინახეთ თარგმნილი შედეგები თქვენს სასწავლო ჩანაწერებში.",
+  "tutorialSaveTitle": "შენახვა",
+  "tutorialSwapDesc": "ჩემი ენის და სასწავლო ენის შეცვლა.",
+  "tutorialTabDesc": "აქ შეგიძლიათ აირჩიოთ სასურველი სწავლის რეჟიმი.",
+  "tutorialTapToContinue": "გააგრძელეთ ეკრანზე შეხებით",
+  "tutorialTransDesc": "თარგმნეთ შეყვანილი ტექსტი.",
+  "tutorialTransTitle": "თარგმნა",
   "typeExclamation": "ძახილი",
   "typeImperative": "ბრძანება",
-  "labelNote": "შენიშვნა",
-  "labelShowMemorized": "დასრულებული",
-  "titleTagSelection": "სათაურის ტეგი (კრებული)",
-  "generalTags": "ზოგადი ტეგები",
-  "tagSelection": "ტეგების არჩევა",
-  "metadataFormType": "გრამატიკული ფორმა",
-  "formInfinitive": "ინფინიტივი/აწმყო დრო",
-  "formPast": "წარსული დრო",
-  "formPastParticiple": "წარსული ნაწილაკი",
-  "formPresentParticiple": "აწმყო ნაწილაკი (ing)",
-  "formPresent": "აწმყო დრო",
-  "formThirdPersonSingular": "მესამე პირის მხოლობითი",
-  "formPlural": "მრავლობითი",
-  "formSingular": "მხოლობითი",
-  "caseSubject": "სახელობითი ბრუნვა",
-  "caseObject": "ბრალდებითი ბრუნვა",
-  "casePossessive": "ნათესაობითი ბრუნვა",
-  "casePossessivePronoun": "მიმთითებელი ნაცვალსახელი",
-  "caseReflexive": "რეფლექსური",
-  "formPositive": "დადებითი ფორმა",
-  "formComparative": "შედარებითი ფორმა",
-  "formSuperlative": "უპირატესი ფორმა",
-  "searchConditions": "საძიებო პირობები",
-  "recentNItems": "ბოლო {count} ელემენტის ჩვენება",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "typeQuestion": "კითხვა",
+  "typeStatement": "განცხადება",
+  "usageLimitTitle": "ლიმიტი მიღწეულია",
+  "useExistingText": "არსებული ტექსტის გამოყენება",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "იწყება ასოთი",
-  "reset": "გადატვირთვა",
-  "participantRename": "მონაწილის სახელის შეცვლა",
-  "labelName": "სახელი",
-  "gender": "სქესი",
-  "language": "ენა",
-  "male": "მამრობითი",
-  "female": "მდედრობითი",
-  "neutral": "ნეიტრალური",
-  "chatAllConversations": "ყველა საუბარი",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "გსურთ ამ საუბრის წაშლა?\nწაშლილი საუბრის აღდგენა შეუძლებელია.",
-  "notSelected": "- არ არის არჩეული -",
-  "myWordbook": "ჩემი სიტყვების წიგნი",
-  "mySentenceCollection": "ჩემი წინადადებების კრებული",
-  "newSubjectName": "ახალი თემატური ლექსიკონის/ფრაზების კრებულის სათაური",
-  "enterNewSubjectName": "ახალი სათაურის შეყვანა",
-  "addNewSubject": "ახალი სათაურის დამატება",
-  "selectExistingSubject": "არსებული სათაურის არჩევა",
-  "addTagHint": "ტეგის დამატება...",
-  "save": "შენახვა",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "გთხოვთ, გადაამოწმოთ ელფოსტა ავტორიზაციის დასასრულებლად.",
-  "emailAlreadyInUse": "ეს ელფოსტა უკვე რეგისტრირებულია. გთხოვთ, შეხვიდეთ სისტემაში ან გამოიყენოთ პაროლის აღდგენა."
+  "viewOnlineGuide": "ონლაინ სახელმძღვანელოს ნახვა",
+  "voluntaryTranslations": "ნებაყოფლობითი თარგმანები",
+  "watchAdAndRefill": "რეკლამის ყურება და შევსება (+5-ჯერ)",
+  "word": "სიტყვა",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "დაიცავით ბაზა სიტყვების თქმით, სანამ მტრები მოვლენ.",
+  "wordDefenseTitle": "სიტყვების დაცვა",
+  "wordModeLabel": "სიტყვების რეჟიმი",
+  "yourPronunciation": "თქვენი გამოთქმა"
 }

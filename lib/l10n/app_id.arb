@@ -1,188 +1,105 @@
 {
   "@@locale": "id",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Lanjutkan dengan Kakao",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Bantuan & Panduan",
-  "helpTabModes": "Mode",
-  "helpTabJson": "Format JSON",
-  "helpTabTour": "Tur",
-  "helpMode1Desc": "Kenali suara, terjemahkan, dan dengarkan hasilnya.",
-  "helpMode1Details": "• Input Suara: Ketuk ikon mikrofon untuk mulai/berhenti\n• Input Teks: Ketik langsung untuk menerjemahkan\n• Cari Otomatis: Mendeteksi kalimat serupa yang ada\n• Terjemahkan: Ketuk tombol untuk terjemahan instan\n• Dengar: Ikon speaker untuk TTS\n• Simpan: 'Simpan Data' menambahkan ke riwayat\n• Hapus: Atur ulang semua input",
-  "helpMode2Desc": "Ulas kalimat tersimpan dengan terjemahan sembunyi otomatis.",
-  "helpMode2Details": "• Pilih Materi: Pilih set atau 'Ulas Semua'\n• Balik Kartu: Gunakan 'Tampil/Sembunyi' untuk melihat terjemahan\n• Dengar: Mainkan TTS untuk kalimat\n• Tandai: Centang (V) untuk item selesai\n• Hapus: Tekan lama kartu untuk menghapus\n• Filter: Lihat semua atau filter berdasarkan materi",
-  "helpMode3Desc": "Berlatih pengucapan dengan mendengarkan dan menirukan kalimat (Shadowing).",
-  "helpMode3Details": "• Pilih Materi: Pilih paket belajar\n• Interval: [-] [+] atur waktu tunggu (3d-60d)\n• Mulai/Berhenti: Kontrol sesi\n• Bicara: Dengar audio dan ulangi\n• Umpan Balik: Skor akurasi (0-100)\n• Coba Lagi: Gunakan tombol coba lagi jika suara tidak terdeteksi",
-  "helpModeChatDesc": "Berlatih percakapan nyata dengan berinteraksi dengan persona AI.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "Untuk mengimpor materi belajar di Mode 3, buat file JSON dengan struktur berikut:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Lokasi",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Saya",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Akurasi",
+  "adLoading": "Memuat iklan. Silakan coba lagi nanti.",
+  "addNewSubject": "Tambahkan Judul Baru",
+  "addParticipant": "Tambah Peserta",
+  "addTagHint": "Tambahkan tag...",
+  "alreadyHaveAccount": "Sudah punya akun?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Ulasan ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Putar Otomatis",
+  "basic": "Dasar",
+  "basicDefault": "Dasar",
+  "basicMaterialRepository": "Repositori Kalimat/Kata Dasar",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Materi Belajar ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Repositori Kalimat Dasar",
+  "basicSentences": "Repositori Kalimat Dasar",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Ulasan",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Cari",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Terjemahkan",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Dengar",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Simpan",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Tersimpan",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Hapus",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Info materi",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Repositori Kata Dasar",
+  "basicWords": "Repositori Kata Dasar",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Batal",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "OK",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Segarkan",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Catatan ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Kasus Objek",
+  "casePossessive": "Kasus Kepemilikan",
+  "casePossessivePronoun": "Kata Ganti Kepemilikan",
+  "caseReflexive": "Kata Ganti Refleksif",
+  "caseSubject": "Kasus Subjek",
+  "chatAiChat": "Obrolan",
+  "chatAllConversations": "Semua percakapan",
+  "chatChoosePersona": "Pilih Persona",
+  "chatEndMessage": "Apakah Anda ingin mengakhiri percakapan?",
+  "chatEndTitle": "Akhiri dan Simpan Percakapan",
+  "chatFailed": "Obrolan Gagal: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Filter Bahasa:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Kutipan Percakapan ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Tidak ada catatan untuk bahasa yang dipilih",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Riwayat Obrolan",
+  "chatNew": "Obrolan Baru",
+  "chatNewChat": "Obrolan Baru",
+  "chatNoConversations": "Belum ada percakapan",
+  "chatSaveAndExit": "Simpan & Keluar",
+  "chatStartNewPrompt": "Mulai percakapan baru untuk latihan!",
+  "chatTypeHint": "Ketik pesan...",
+  "chatUntitled": "Obrolan Tanpa Judul",
+  "checking": "Memeriksa...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Simpan terjemahan dari mode pencarian",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Balik",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Sembunyikan",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Hapus Catatan",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "Hapus Semua",
+  "confirm": "Konfirmasi",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Anda yakin ingin menghapus catatan ini?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Catatan berhasil dihapus",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Anda yakin ingin menghapus percakapan ini?\nPercakapan yang dihapus tidak dapat dipulihkan.",
+  "confirmDeleteParticipant": "Apakah Anda yakin ingin menghapus peserta ini?",
+  "contextTagHint": "Tulis situasinya agar mudah dibedakan nanti",
+  "contextTagLabel": "Konteks/Situasi (Opsional) - Contoh: Sapaan Pagi, Formal",
+  "copiedToClipboard": "Disalin ke clipboard!",
+  "copy": "Salin",
+  "correctAnswer": "Jawaban Benar",
+  "createNew": "Buat Baru",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Lokasi Saat Ini",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Kumpulan Materi yang Dipilih Saat Ini:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Hapus",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Penghapusan gagal: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Impor JSON",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Hapus Catatan",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Mengimpor...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Berlatih percakapan melalui bermain peran. Pilih jawaban yang tepat dan ucapkan.",
+  "dialogueQuestTitle": "Misi Dialog",
+  "disambiguationPrompt": "Makna mana yang ingin Anda terjemahkan?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "Pilih Makna",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Belum punya akun?",
+  "editParticipant": "Edit Peserta",
+  "email": "Email",
+  "emailAlreadyInUse": "Email sudah terdaftar. Silakan masuk atau gunakan fitur lupa kata sandi.",
+  "enterNewSubjectName": "Masukkan Judul Baru",
+  "enterSentenceHint": "Masukkan kalimat...",
+  "enterTextHint": "Masukkan teks untuk diterjemahkan",
+  "enterTextToTranslate": "Masukkan teks untuk diterjemahkan",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Masukkan kata...",
+  "error": "Kesalahan",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "Tidak dapat menerjemahkan karena mengandung ujaran kebencian.",
+  "errorOtherSafety": "Penerjemahan ditolak oleh kebijakan keamanan AI.",
+  "errorProfanity": "Tidak dapat menerjemahkan karena mengandung kata-kata kotor.",
+  "errorSelectCategory": "Pilih kata atau kalimat terlebih dahulu!",
+  "errorSexualContent": "Tidak dapat menerjemahkan karena mengandung konten seksual.",
+  "errors": "Kesalahan:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Wanita",
+  "file": "File:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Semua",
+  "flip": "Balik",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Komparatif",
+  "formInfinitive": "Infinitive/Bentuk Sekarang",
+  "formPast": "Bentuk Lampau",
+  "formPastParticiple": "Partisipel lampau",
+  "formPlural": "Jamak",
+  "formPositive": "Positif",
+  "formPresent": "Bentuk Sekarang",
+  "formPresentParticiple": "Present Participle (-ing)",
+  "formSingular": "Tunggal",
+  "formSuperlative": "Superlatif",
+  "formThirdPersonSingular": "Orang Ketiga Tunggal",
+  "gameModeDesc": "Pilih mode game untuk berlatih",
+  "gameModeTitle": "Mode Game",
+  "gameOver": "Game Selesai",
+  "gender": "Jenis Kelamin",
+  "generalTags": "Tag Umum",
+  "getMaterials": "Dapatkan Materi",
+  "good": "Bagus",
+  "googleContinue": "Lanjutkan dengan Google",
+  "helpDialogueImportDesc": "Impor seluruh set dialog dengan file JSON.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "Untuk mengimpor materi belajar di Mode 3, buat file JSON dengan struktur berikut:",
+  "helpJsonTypeDialogue": "Dialog",
+  "helpJsonTypeSentence": "Kalimat",
+  "helpJsonTypeWord": "Kata",
+  "helpMode1Desc": "Kenali suara, terjemahkan, dan dengarkan hasilnya.",
+  "helpMode1Details": "• Input Suara: Ketuk ikon mikrofon untuk mulai/berhenti\n• Input Teks: Ketik langsung untuk menerjemahkan\n• Cari Otomatis: Mendeteksi kalimat serupa yang ada\n• Terjemahkan: Ketuk tombol untuk terjemahan instan\n• Dengar: Ikon speaker untuk TTS\n• Simpan: 'Simpan Data' menambahkan ke riwayat\n• Hapus: Atur ulang semua input",
+  "helpMode2Desc": "Ulas kalimat tersimpan dengan terjemahan sembunyi otomatis.",
+  "helpMode2Details": "• Pilih Materi: Pilih set atau 'Ulas Semua'\n• Balik Kartu: Gunakan 'Tampil/Sembunyi' untuk melihat terjemahan\n• Dengar: Mainkan TTS untuk kalimat\n• Tandai: Centang (V) untuk item selesai\n• Hapus: Tekan lama kartu untuk menghapus\n• Filter: Lihat semua atau filter berdasarkan materi",
+  "helpMode3Desc": "Berlatih pengucapan dengan mendengarkan dan menirukan kalimat (Shadowing).",
+  "helpMode3Details": "• Pilih Materi: Pilih paket belajar\n• Interval: [-] [+] atur waktu tunggu (3d-60d)\n• Mulai/Berhenti: Kontrol sesi\n• Bicara: Dengar audio dan ulangi\n• Umpan Balik: Skor akurasi (0-100)\n• Coba Lagi: Gunakan tombol coba lagi jika suara tidak terdeteksi",
+  "helpModeChatDesc": "Berlatih percakapan nyata dengan berinteraksi dengan persona AI.",
+  "helpModeChatDetails": "• Obrolan AI: Latih percakapan praktis dengan persona.\n• Manajemen peserta: Atur bahasa Anda dan bahasa AI untuk mencegah perbedaan bahasa.\n• Situasi GPS: Ciptakan situasi percakapan alami berdasarkan lokasi Anda saat ini.\n• Penyimpanan riwayat: Semua percakapan disimpan dengan aman berdasarkan ID, dan riwayat dipertahankan bahkan jika Anda mengubah nama.",
+  "helpTabJson": "Format JSON",
+  "helpTabModes": "Mode",
+  "helpTabTour": "Tur",
+  "helpTitle": "Bantuan & Panduan",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "Sembunyikan",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Ditambahkan: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Impor Selesai",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Materi dengan judul yang sama sudah ada. Ubah judul dan coba lagi.",
+  "importErrorMessage": "Gagal mengimpor file:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Impor Gagal",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Total: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Impor JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Ditambahkan: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Silakan impor file JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Dilewati: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Kesalahan:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Total: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Kesalahan",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Mengimpor...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Gagal mengimpor file:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "Input",
+  "intervalSeconds": "Interval: {seconds}d",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Masukkan email yang valid.",
+  "kakaoContinue": "Lanjutkan dengan Kakao",
+  "labelLangCode": "Kode Bahasa (mis: en-US, ko-KR)",
+  "labelName": "Nama",
+  "labelNote": "Catatan",
+  "labelPOS": "Kelas Kata",
+  "labelRole": "Peran",
+  "labelSentence": "Kalimat",
+  "labelSentenceCollection": "Koleksi Kalimat",
+  "labelSentenceType": "Jenis Kalimat",
+  "labelShowMemorized": "Selesai",
+  "labelType": "Jenis:",
+  "labelWord": "Kata",
+  "labelWordbook": "Koleksi Kata",
+  "language": "Bahasa",
+  "languageSettings": "Pengaturan bahasa",
+  "languageSettingsTitle": "Pengaturan Bahasa",
+  "libTitleFirstMeeting": "Pertemuan Pertama",
+  "libTitleGreetings1": "Salam 1",
+  "libTitleNouns1": "Kata Benda 1",
+  "libTitleVerbs1": "Kata Kerja 1",
+  "listen": "Dengar",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Mendengarkan...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Memuat Peserta...",
+  "location": "Lokasi",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Masuk",
+  "logout": "Keluar",
+  "logoutConfirmMessage": "Apakah Anda yakin ingin keluar dari perangkat ini?",
+  "logoutConfirmTitle": "Keluar",
+  "male": "Pria",
+  "manageParticipants": "Kelola Peserta",
+  "manual": "Input Manual",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Tandai Sudah Dipelajari",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Info materi",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Saya",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Impor Materi dari Perangkat",
+  "menuHelp": "Bantuan",
+  "menuLanguageSettings": "Pengaturan Bahasa",
+  "menuOnlineLibrary": "Perpustakaan Online",
+  "menuSelectMaterialSet": "Pilih bahan pembelajaran",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Tur Penggunaan",
+  "menuWebDownload": "Panduan Pengguna",
+  "metadataDialogTitle": "Klasifikasi Detail",
+  "metadataFormType": "Bentuk Tata Bahasa",
+  "metadataRootWord": "Kata Dasar (Root Word)",
+  "micButtonTooltip": "Mulai Pengenalan Suara",
+  "mode1SelectedMaterial": "Kumpulan materi yang dipilih saat ini: {name}",
+  "mode2Title": "Ulasan",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Berikutnya",
+  "mode3Start": "Mulai",
+  "mode3Stop": "Berhenti",
+  "mode3TryAgain": "Coba Lagi",
+  "mySentenceCollection": "Koleksi Kalimat Saya",
+  "myWordbook": "Buku Kata Saya",
+  "neutral": "Netral",
+  "newSubjectName": "Judul Subjek/Kalimat Baru",
+  "next": "Berikutnya",
+  "noDialogueHistory": "Tidak ada riwayat dialog.",
+  "noInternetWarningMic": "Tidak ada koneksi internet. Pengenalan suara mungkin tidak berfungsi dalam mode offline.",
+  "noInternetWarningTranslate": "Tidak ada koneksi internet. Fitur terjemahan tidak tersedia dalam mode offline. Silakan gunakan mode review.",
+  "noMaterialsInCategory": "Tidak ada materi dalam kategori ini.",
+  "noParticipantsFound": "Tidak ada peserta terdaftar.",
+  "noRecords": "Tidak ada catatan untuk bahasa yang dipilih",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Tidak ada materi pelajaran.",
+  "noTextToPlay": "Tidak ada teks untuk diputar",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Tidak ada terjemahan untuk disimpan",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Suara tidak terdeteksi",
+  "notSelected": "- Tidak Dipilih -",
+  "onlineLibraryCheckInternet": "Periksa koneksi internet Anda atau coba lagi nanti.",
+  "onlineLibraryLoadFailed": "Gagal memuat materi.",
+  "onlineLibraryNoMaterials": "Tidak ada materi.",
+  "participantDeleted": "Peserta telah dihapus.",
+  "participantRename": "Ubah Nama Peserta",
+  "partner": "Mitra",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Mode Partner",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Kata Sandi",
+  "passwordTooShort": "Kata sandi harus lebih dari 6 karakter.",
+  "perfect": "Sempurna!",
+  "personaFriend": "Teman Lokal",
+  "personaGuide": "Pemandu Wisata",
+  "personaTeacher": "Guru Bahasa Inggris",
+  "playAgain": "Main Lagi",
+  "playbackFailed": "Pemutaran gagal: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Pilih Materi Belajar",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Memutar...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Subjek:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Sumber:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "File:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Kata Sifat",
+  "posAdverb": "Kata Keterangan",
+  "posConjunction": "Kata Hubung",
+  "posInterjection": "Kata Seru",
+  "posNoun": "Kata Benda",
+  "posPreposition": "Kata Depan",
+  "posPronoun": "Kata Ganti",
+  "posVerb": "Kata Kerja",
+  "practiceModeTitle": "Latihan",
+  "practiceWordsOnly": "Latih Kata Saja",
   "progress": "Progres: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Silakan impor file JSON",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Silakan pilih materi belajar",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Dipelajari",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Tandai Sudah Dipelajari",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Mendengarkan...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Pengenalan selesai",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Tampilkan {count} item yang baru dibuat",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Pengenalan suara gagal: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Memeriksa...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Pengenalan selesai",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Menerjemahkan...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Teks yang Dikenali:",
+  "recordDeleted": "Catatan berhasil dihapus",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Terjemahan selesai (perlu disimpan)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Segarkan",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Terjemahan tersimpan dimuat",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Terjemahan gagal: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Reset",
+  "resetPracticeHistory": "Reset Riwayat Latihan",
+  "retry": "Coba Lagi?",
+  "reviewAll": "Tinjau Semua",
+  "reviewCount": "Diulas {count} kali",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Masukkan teks untuk diterjemahkan",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Menyimpan...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Tidak ada terjemahan untuk disimpan",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "Ulasan",
+  "roleAi": "AI",
+  "roleThirdParty": "Pihak Ketiga",
+  "roleUser": "Pengguna",
+  "save": "Simpan",
+  "saveData": "Simpan",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Penyimpanan gagal: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Memutar...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Simpan terjemahan dari mode pencarian",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Tidak ada teks untuk diputar",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Tersimpan",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Pemutaran gagal: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Menyimpan...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Bahasa Asal",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Bahasa Tujuan",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Teks serupa ditemukan",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Gunakan Ada",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Buat Baru",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Diulas {count} kali",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Berbicara",
-  "speakingPractice": "Latihan Bicara",
-  "intervalSeconds": "Interval: {seconds}d",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Lafal Anda",
-  "correctAnswer": "Jawaban Benar",
   "score": "Akurasi: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "Sempurna!",
-  "good": "Bagus",
-  "tryAgain": "Coba Lagi",
-  "startPractice": "Mulai Latihan",
-  "stopPractice": "Hentikan Latihan",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Mulai Tur",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Input Suara",
-  "tutorialMicDesc": "Ketuk tombol mikrofon untuk mulai input suara.",
-  "tutorialTabDesc": "Anda dapat memilih mode pembelajaran yang diinginkan di sini.",
-  "tutorialTapToContinue": "Ketuk untuk melanjutkan",
-  "tutorialTransTitle": "Terjemahkan",
-  "tutorialTransDesc": "Ketuk di sini untuk menerjemahkan teks Anda.",
-  "tutorialSaveTitle": "Simpan",
-  "tutorialSaveDesc": "Simpan terjemahan Anda ke catatan belajar.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Skor",
+  "search": "Cari",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Kondisi Pencarian",
+  "searchSentenceHint": "Cari kalimat...",
+  "searchWordHint": "Cari kata...",
+  "sectionSentence": "Bagian kalimat",
+  "sectionSentences": "Kalimat",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Bagian kata",
+  "sectionWords": "Kata",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Pilih Judul yang Ada",
+  "selectMaterialPrompt": "Silakan pilih materi belajar",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "Pilih Set Materi Pembelajaran",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Pilih Kelas Kata",
+  "selectParticipants": "Pilih Peserta",
+  "selectSentenceType": "Pilih Jenis Kalimat",
+  "selectStudyMaterial": "Pilih Materi Belajar",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "Obrolan AI",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "Pilih & Filter",
-  "tutorialM2SelectDesc": "Pilih materi belajar atau beralih ke 'Ulas Semua'.",
-  "tutorialM2ListTitle": "Daftar Belajar",
-  "tutorialM2ListDesc": "Periksa kartu tersimpan Anda dan balik untuk melihat jawaban. (Long-press to delete)",
-  "tutorialM3SelectTitle": "Pilih Materi",
-  "tutorialM3SelectDesc": "Pilih set materi untuk latihan bicara.",
-  "tutorialM3IntervalTitle": "Interval",
-  "tutorialM3IntervalDesc": "Atur waktu tunggu antar kalimat.",
-  "tutorialM3StartTitle": "Mulai Latihan",
-  "tutorialM3StartDesc": "Ketuk putar untuk mulai mendengar dan menirukan.",
+  "sentence": "Kalimat",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Daftar",
+  "similarTextFound": "Teks serupa ditemukan",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "Lewati",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Sumber:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Bahasa Asal",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "Bicaralah Sekarang!",
+  "speaker": "Pembicara",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Pilih Pembicara",
+  "speakingPractice": "Latihan Bicara",
+  "startChat": "Mulai Obrolan",
+  "startPractice": "Mulai Latihan",
+  "startTutorial": "Mulai Tur",
   "startWarning": "Peringatan",
-  "noVoiceDetected": "Suara tidak terdeteksi",
-  "tooltipSearch": "Cari",
-  "tooltipStudyReview": "Belajar+Ulasan",
-  "tooltipSpeaking": "Berbicara",
+  "startsWith": "Mulai Dengan",
+  "statusCheckEmail": "Silakan periksa email Anda untuk menyelesaikan verifikasi.",
+  "statusDownloading": "Mengunduh: {name}...",
+  "statusImportFailed": "Gagal mengimpor: {error}",
+  "statusImportSuccess": "{name} berhasil diimpor",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Masuk dibatalkan.",
+  "statusLoginFailed": "Gagal masuk: {error}",
+  "statusLoginSuccess": "Berhasil masuk.",
+  "statusLogoutSuccess": "Berhasil keluar.",
+  "statusSignUpFailed": "Gagal mendaftar: {error}",
+  "statusSigningUp": "Mendaftar...",
+  "stopPractice": "Hentikan Latihan",
+  "studyComplete": "Dipelajari",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Catatan ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Sopan",
+  "styleSlang": "Slang",
+  "subject": "Subjek:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Tukar Bahasa",
+  "switchToAi": "Beralih ke Mode AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Beralih ke Mode Partner",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Menyinkronkan data...",
+  "tabConversation": "Percakapan",
+  "tabReview": "Ulasan ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "kalimat",
+  "tabSpeaking": "Berbicara",
+  "tabStudyMaterial": "Materi Belajar ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "kata",
+  "tagFormal": "Formal",
+  "tagSelection": "Pilihan Tag",
+  "targetLanguage": "Bahasa Tujuan",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Filter Bahasa:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "Waktu untuk berpikir sebelum jawaban yang benar terungkap.",
+  "thinkingTimeInterval": "Penundaan Pemutaran",
+  "timeUp": "Waktu Habis!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Tag Judul (Kliping)",
   "tooltipDecrease": "Kurangi",
   "tooltipIncrease": "Tambah",
-  "languageSettings": "Pengaturan bahasa",
-  "tutorialM2DropdownDesc": "Pilih materi belajar.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Impor file JSON dari folder perangkat.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "Tag Konteks",
-  "tutorialContextDesc": "Tambahkan konteks (misal: Pagi) untuk membedakan kalimat serupa.",
-  "thinkingTimeInterval": "Penundaan Pemutaran",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "Batas Penggunaan Tercapai",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "Cari",
+  "tooltipSpeaking": "Berbicara",
+  "tooltipStudyReview": "Belajar+Ulasan",
+  "totalRecords": "Total {count} catatan (Lihat semua)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Terjemahkan",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Menerjemahkan...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Terjemahan",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "Pilih Set Materi Pembelajaran",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Terjemahan selesai (perlu disimpan)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "Kata",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "Kalimat",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "Saya mengganti bahasa saya dengan bahasa yang sedang saya pelajari.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "Pilih bahan pembelajaran",
-  "sectionWord": "Bagian kata",
-  "sectionSentence": "Bagian kalimat",
-  "tabWord": "kata",
-  "tabSentence": "kalimat",
-  "errorProfanity": "Tidak dapat menerjemahkan karena mengandung kata-kata kotor.",
-  "errorHateSpeech": "Tidak dapat menerjemahkan karena mengandung ujaran kebencian.",
-  "errorSexualContent": "Tidak dapat menerjemahkan karena mengandung konten seksual.",
-  "errorOtherSafety": "Penerjemahan ditolak oleh kebijakan keamanan AI.",
-  "clearAll": "Hapus Semua",
-  "disambiguationTitle": "Pilih Makna",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "Makna mana yang ingin Anda terjemahkan?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "Lewati",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Input",
-  "reviewModeTitle": "Review",
-  "practiceModeTitle": "Latihan",
-  "chatHistoryTitle": "Riwayat Obrolan",
-  "chatNew": "New Chat",
-  "chatNewChat": "Obrolan Baru",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "Terjemahan gagal: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Batas terjemahan terlampaui",
+  "translationLimitMessage": "Anda telah menggunakan semua terjemahan gratis harian (5 kali).\\n\\nApakah Anda ingin menonton iklan untuk mengisi ulang 5 kali secara instan?",
+  "translationLoaded": "Terjemahan tersimpan dimuat",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "Obrolan",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "Repositori Kata Dasar",
-  "basicSentenceRepository": "Repositori Kalimat Dasar",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Simpan & Keluar",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "Formal",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "Tag Judul (Kliping)",
-  "generalTags": "Tag Umum",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "Tunggal",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "Jumlah terjemahan telah diisi ulang 5 kali!",
+  "translationResultHint": "Hasil Terjemahan - Dapat diedit",
+  "tryAgain": "Coba Lagi",
+  "tutorialAiChatDesc": "Latih percakapan praktis dengan persona AI.",
+  "tutorialAiChatTitle": "Obrolan AI",
+  "tutorialContextDesc": "Tambahkan konteks (misal: Pagi) untuk membedakan kalimat serupa.",
+  "tutorialContextTitle": "Tag Konteks",
+  "tutorialLangSettingsDesc": "Atur bahasa sumber dan target untuk diterjemahkan.",
+  "tutorialLangSettingsTitle": "Pengaturan Bahasa",
+  "tutorialM1ToggleDesc": "Beralih antara mode kata dan kalimat di sini.",
+  "tutorialM1ToggleTitle": "Mode Kata/Kalimat",
+  "tutorialM2DropdownDesc": "Pilih materi belajar.",
+  "tutorialM2ImportDesc": "Impor file JSON dari folder perangkat.",
+  "tutorialM2ListDesc": "Periksa kartu tersimpan Anda dan balik untuk melihat jawaban. (Long-press to delete)",
+  "tutorialM2ListTitle": "Daftar Belajar",
+  "tutorialM2SearchDesc": "Cari dan temukan kata dan kalimat yang disimpan dengan cepat.",
+  "tutorialM2SelectDesc": "Pilih materi belajar atau beralih ke 'Ulas Semua'.",
+  "tutorialM2SelectTitle": "Pilih & Filter",
+  "tutorialM3IntervalDesc": "Atur waktu tunggu antar kalimat.",
+  "tutorialM3IntervalTitle": "Atur Interval",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "Pilih set materi untuk latihan bicara.",
+  "tutorialM3SelectTitle": "Pilih Materi",
+  "tutorialM3StartDesc": "Ketuk putar untuk mulai mendengar dan menirukan.",
+  "tutorialM3StartTitle": "Mulai Latihan",
+  "tutorialM3WordsDesc": "Periksa untuk berlatih hanya kata-kata yang disimpan.",
+  "tutorialM3WordsTitle": "Latihan Kata",
+  "tutorialMicDesc": "Ketuk tombol mikrofon untuk mulai input suara.",
+  "tutorialMicTitle": "Input Suara",
+  "tutorialSaveDesc": "Simpan terjemahan Anda ke catatan belajar.",
+  "tutorialSaveTitle": "Simpan",
+  "tutorialSwapDesc": "Saya mengganti bahasa saya dengan bahasa yang sedang saya pelajari.",
+  "tutorialTabDesc": "Anda dapat memilih mode pembelajaran yang diinginkan di sini.",
+  "tutorialTapToContinue": "Ketuk untuk melanjutkan",
+  "tutorialTransDesc": "Ketuk di sini untuk menerjemahkan teks Anda.",
+  "tutorialTransTitle": "Terjemahkan",
+  "typeExclamation": "Seruan",
+  "typeImperative": "Perintah",
+  "typeQuestion": "Pertanyaan",
+  "typeStatement": "Pernyataan",
+  "usageLimitTitle": "Batas Penggunaan Tercapai",
+  "useExistingText": "Gunakan Ada",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "Netral",
-  "chatAllConversations": "Semua percakapan",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Anda yakin ingin menghapus percakapan ini?\nPercakapan yang dihapus tidak dapat dipulihkan.",
-  "notSelected": "- Tidak Dipilih -",
-  "myWordbook": "Buku Kata Saya",
-  "mySentenceCollection": "Koleksi Kalimat Saya",
-  "newSubjectName": "Judul Subjek/Kalimat Baru",
-  "enterNewSubjectName": "Masukkan Judul Baru",
-  "addNewSubject": "Tambahkan Judul Baru",
-  "selectExistingSubject": "Pilih Judul yang Ada",
-  "addTagHint": "Tambahkan tag...",
-  "save": "Simpan",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Silakan periksa email Anda untuk menyelesaikan verifikasi.",
-  "emailAlreadyInUse": "Email sudah terdaftar. Silakan masuk atau gunakan fitur lupa kata sandi."
+  "viewOnlineGuide": "Lihat Panduan Online",
+  "voluntaryTranslations": "Terjemahan Sukarela",
+  "watchAdAndRefill": "Tonton Iklan dan Isi Ulang (+5 kali)",
+  "word": "Kata",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Pertahankan markas Anda dengan mengucapkan kata-kata sebelum musuh tiba.",
+  "wordDefenseTitle": "Pertahanan Kata",
+  "wordModeLabel": "Mode Kata",
+  "yourPronunciation": "Lafal Anda"
 }

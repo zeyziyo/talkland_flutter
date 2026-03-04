@@ -581,7 +581,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       const Icon(Icons.settings, color: Colors.grey),
                       const SizedBox(width: 8),
-                      Text(l10n.menuSettings),
+                      Text(l10n.menuLanguageSettings),
                     ],
                   ),
                 ),

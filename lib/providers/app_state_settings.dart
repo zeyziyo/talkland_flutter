@@ -8,14 +8,20 @@ extension AppStateSettings on AppState {
 
     if (savedSource != null && savedSource.isNotEmpty) {
       _sourceLang = savedSource;
+    } else {
+      // Default source language to system locale
+      final sysLangCode = ui.PlatformDispatcher.instance.locale.languageCode;
+      final supported = LanguageConstants.supportedLanguages.any((l) => l['code'] == sysLangCode);
+      _sourceLang = supported ? sysLangCode : 'en';
     }
+
     if (savedTarget != null && savedTarget.isNotEmpty) {
       _targetLang = savedTarget;
       _selectedReviewLanguage = savedTarget; // Sync review filter
     } else {
-      // Default to English if no target language saved
-      _targetLang = 'en';
-      _selectedReviewLanguage = 'en';
+      // Default to English if source is not English, otherwise Korean
+      _targetLang = _sourceLang == 'en' ? 'ko' : 'en';
+      _selectedReviewLanguage = _targetLang;
     }
     
     // Chat Gender Settings

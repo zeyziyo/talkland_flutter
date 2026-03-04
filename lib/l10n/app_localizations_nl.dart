@@ -9,35 +9,331 @@ class AppLocalizationsNl extends AppLocalizations {
   AppLocalizationsNl([String locale = 'nl']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => 'Nauwkeurigheid';
 
   @override
-  String get kakaoContinue => 'Doorgaan met Kakao';
+  String get adLoading =>
+      'Advertentie wordt geladen. Probeer het over een moment nog eens.';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => 'Nieuwe titel toevoegen';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => 'Deelnemer toevoegen';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => 'Tag toevoegen...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => 'Heb je al een account?';
 
   @override
-  String get helpTitle => 'Hulp & Gids';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => 'Modi';
+  String get autoPlay => 'Automatisch afspelen';
 
   @override
-  String get helpTabJson => 'JSON Formaat';
+  String get basic => 'Basis';
 
   @override
-  String get helpTabTour => 'Rondleiding';
+  String get basicDefault => 'Standaard';
+
+  @override
+  String get basicMaterialRepository =>
+      'Basis opslagplaats voor zinnen/woorden';
+
+  @override
+  String get basicSentenceRepository => 'Basis Zinnenlijst';
+
+  @override
+  String get basicSentences => 'Basis opslagplaats voor zinnen';
+
+  @override
+  String get basicWordRepository => 'Basis Woordenlijst';
+
+  @override
+  String get basicWords => 'Basis opslagplaats voor woorden';
+
+  @override
+  String get cancel => 'Annuleren';
+
+  @override
+  String get caseObject => 'Accusatief';
+
+  @override
+  String get casePossessive => 'Genitief';
+
+  @override
+  String get casePossessivePronoun => 'Possessief voornaamwoord';
+
+  @override
+  String get caseReflexive => 'Reflexief';
+
+  @override
+  String get caseSubject => 'Nominatief';
+
+  @override
+  String get chatAiChat => 'Chatten';
+
+  @override
+  String get chatAllConversations => 'Alle gesprekken';
+
+  @override
+  String get chatChoosePersona => 'Kies persona';
+
+  @override
+  String get chatEndMessage => 'Wil je dit gesprek beëindigen?';
+
+  @override
+  String get chatEndTitle => 'Gesprek beëindigen en opslaan';
+
+  @override
+  String chatFailed(Object error) {
+    return 'Chat mislukt: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'Fragment uit gesprek ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => 'Chatgeschiedenis';
+
+  @override
+  String get chatNew => 'Nieuwe chat';
+
+  @override
+  String get chatNewChat => 'Nieuwe chat';
+
+  @override
+  String get chatNoConversations => 'Nog geen gesprekken';
+
+  @override
+  String get chatSaveAndExit => 'Opslaan en afsluiten';
+
+  @override
+  String get chatStartNewPrompt => 'Start een nieuw gesprek om te oefenen!';
+
+  @override
+  String get chatTypeHint => 'Typ een bericht...';
+
+  @override
+  String get chatUntitled => 'Naamloze chat';
+
+  @override
+  String get checking => 'Controleren...';
+
+  @override
+  String get clearAll => 'Alles wissen';
+
+  @override
+  String get confirm => 'Bevestigen';
+
+  @override
+  String get confirmDelete => 'Weet u zeker dat u dit record wilt verwijderen?';
+
+  @override
+  String get confirmDeleteConversation =>
+      'Weet je zeker dat je dit gesprek wilt verwijderen?\nVerwijderde gesprekken kunnen niet worden hersteld.';
+
+  @override
+  String get confirmDeleteParticipant =>
+      'Weet je zeker dat je deze deelnemer wilt verwijderen?';
+
+  @override
+  String get contextTagHint =>
+      'Noteer de situatie om het later gemakkelijk te kunnen onderscheiden';
+
+  @override
+  String get contextTagLabel =>
+      'Context/Situatie (optioneel) - bijv. Ochtendgroet, Beleefd';
+
+  @override
+  String get copiedToClipboard => 'Gekopieerd naar het klembord!';
+
+  @override
+  String get copy => 'Kopiëren';
+
+  @override
+  String get correctAnswer => 'Juiste Antwoord';
+
+  @override
+  String get createNew => 'Nieuwe Maken';
+
+  @override
+  String get currentLocation => 'Huidige locatie';
+
+  @override
+  String get currentMaterialLabel => 'Momenteel geselecteerde materialen:';
+
+  @override
+  String get delete => 'Verwijderen';
+
+  @override
+  String deleteFailed(String error) {
+    return 'Verwijderen mislukt: $error';
+  }
+
+  @override
+  String get deleteRecord => 'Record verwijderen';
+
+  @override
+  String get dialogueQuestDesc =>
+      'Oefen gesprekken via rollenspellen. Selecteer en spreek de juiste antwoorden.';
+
+  @override
+  String get dialogueQuestTitle => 'Dialoog Quest';
+
+  @override
+  String get disambiguationPrompt => 'Welke betekenis wilt u vertalen?';
+
+  @override
+  String get disambiguationTitle => 'Betekenis selecteren';
+
+  @override
+  String get dontHaveAccount => 'Heb je geen account?';
+
+  @override
+  String get editParticipant => 'Deelnemer bewerken';
+
+  @override
+  String get email => 'E-mail';
+
+  @override
+  String get emailAlreadyInUse =>
+      'Dit e-mailadres is al in gebruik. Log in of gebruik de functie \'Wachtwoord vergeten\'.';
+
+  @override
+  String get enterNewSubjectName => 'Nieuwe titel invoeren';
+
+  @override
+  String get enterSentenceHint => 'Voer een zin in...';
+
+  @override
+  String get enterTextHint => 'Voer de tekst in om te vertalen';
+
+  @override
+  String get enterTextToTranslate => 'Voer tekst in om te vertalen';
+
+  @override
+  String get enterWordHint => 'Voer een woord in...';
+
+  @override
+  String get error => 'Fout';
+
+  @override
+  String get errorHateSpeech =>
+      'Bevat haatzaaiende uitlatingen en kan niet worden vertaald.';
+
+  @override
+  String get errorOtherSafety =>
+      'Vertaling geweigerd vanwege het AI-veiligheidsbeleid.';
+
+  @override
+  String get errorProfanity =>
+      'Bevat ongepaste taal en kan niet worden vertaald.';
+
+  @override
+  String get errorSelectCategory => 'Selecteer eerst een woord of zin!';
+
+  @override
+  String get errorSexualContent =>
+      'Bevat seksueel getinte inhoud en kan niet worden vertaald.';
+
+  @override
+  String get errors => 'Fouten:';
+
+  @override
+  String get female => 'Vrouw';
+
+  @override
+  String get file => 'Bestand:';
+
+  @override
+  String get filterAll => 'Alles';
+
+  @override
+  String get flip => 'Draaien';
+
+  @override
+  String get formComparative => 'Vergelijkend';
+
+  @override
+  String get formInfinitive => 'Infinitief/Tegenwoordige tijd';
+
+  @override
+  String get formPast => 'Verleden tijd';
+
+  @override
+  String get formPastParticiple => 'Voltooid deelwoord';
+
+  @override
+  String get formPlural => 'Meervoud';
+
+  @override
+  String get formPositive => 'Positief';
+
+  @override
+  String get formPresent => 'Tegenwoordige tijd';
+
+  @override
+  String get formPresentParticiple => 'Onvoltooid deelwoord (ing)';
+
+  @override
+  String get formSingular => 'Enkelvoud';
+
+  @override
+  String get formSuperlative => 'Superlatief';
+
+  @override
+  String get formThirdPersonSingular => 'Derde persoon enkelvoud';
+
+  @override
+  String get gameModeDesc => 'Selecteer de spelmodus om te oefenen';
+
+  @override
+  String get gameModeTitle => 'Spelmodus';
+
+  @override
+  String get gameOver => 'Game Over';
+
+  @override
+  String get gender => 'Geslacht';
+
+  @override
+  String get generalTags => 'Algemene tags';
+
+  @override
+  String get getMaterials => 'Materialen ophalen';
+
+  @override
+  String get good => 'Goed';
+
+  @override
+  String get googleContinue => 'Doorgaan met Google';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Importeer een volledige set dialogen via een JSON-bestand.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc =>
+      'Om studiematerialen in Modus 3 te importeren, maak JSON bestand met deze structuur:';
+
+  @override
+  String get helpJsonTypeDialogue => 'Dialoog';
+
+  @override
+  String get helpJsonTypeSentence => 'Zin';
+
+  @override
+  String get helpJsonTypeWord => 'Woord';
 
   @override
   String get helpMode1Desc =>
@@ -69,160 +365,43 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• AI Chat: Oefen realistische gesprekken met persona\'s.\n• Deelnemersbeheer: Stel je eigen taal en de taal van de AI in om taalverschillen te voorkomen.\n• GPS-rollenspel: Creëer natuurlijke gespreksscenario\'s op basis van je huidige locatie.\n• Geschiedenis behouden: Alle gesprekken worden veilig opgeslagen op basis van ID, zelfs als je de naam wijzigt, blijft de geschiedenis behouden.';
 
   @override
-  String get helpJsonDesc =>
-      'Om studiematerialen in Modus 3 te importeren, maak JSON bestand met deze structuur:';
+  String get helpTabJson => 'JSON Formaat';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => 'Modi';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => 'Rondleiding';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => 'Hulp & Gids';
 
   @override
   String get helpTourDesc =>
       'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => 'Locatie';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => 'Me';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return 'Herhalen ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return 'Studiemateriaal ($count)';
-  }
-
-  @override
-  String get mode2Title => 'Herhaling';
-
-  @override
-  String get search => 'Zoeken';
-
-  @override
-  String get translate => 'Vertalen';
-
-  @override
-  String get listen => 'Luisteren';
-
-  @override
-  String get saveData => 'Opslaan';
-
-  @override
-  String get saved => 'Opgeslagen';
-
-  @override
-  String get delete => 'Verwijderen';
-
-  @override
-  String get materialInfo => 'Materiaalinfo';
-
-  @override
-  String get cancel => 'Annuleren';
-
-  @override
-  String get confirm => 'OK';
-
-  @override
-  String get refresh => 'Verversen';
-
-  @override
-  String studyRecords(int count) {
-    return 'Records ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => 'Doeltaal Filter:';
-
-  @override
-  String get noRecords => 'Geen records voor geselecteerde taal';
-
-  @override
-  String get saveTranslationsFromSearch => 'Vertaal uit zoekmodus opslaan';
-
-  @override
-  String get flip => 'Draaien';
-
-  @override
   String get hide => 'Verbergen';
 
   @override
-  String get deleteRecord => 'Record verwijderen';
-
-  @override
-  String get confirmDelete => 'Weet u zeker dat u dit record wilt verwijderen?';
-
-  @override
-  String get recordDeleted => 'Record succesvol verwijderd';
-
-  @override
-  String deleteFailed(String error) {
-    return 'Verwijderen mislukt: $error';
+  String importAdded(int count) {
+    return 'Toegevoegd: $count';
   }
 
   @override
-  String get importJsonFile => 'JSON Importeren';
-
-  @override
-  String get importing => 'Importeren...';
-
-  @override
   String get importComplete => 'Import Voltooid';
+
+  @override
+  String get importDuplicateTitleError =>
+      'Er bestaat al materiaal met dezelfde titel. Wijzig de titel en probeer het opnieuw.';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'Bestand importeren mislukt:\\n$error';
+  }
 
   @override
   String get importFailed => 'Import Mislukt';
@@ -233,45 +412,10 @@ class AppLocalizationsNl extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => 'JSON Importeren';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get roleThirdParty => '제삼자';
-
-  @override
-  String get speakerSelect => '발화자 선택';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return 'Totaal: $count';
-  }
-
-  @override
-  String importAdded(int count) {
-    return 'Toegevoegd: $count';
-  }
+  String get importJsonFilePrompt => 'Importeer a.u.b. een JSON-bestand';
 
   @override
   String importSkipped(int count) {
@@ -279,508 +423,173 @@ class AppLocalizationsNl extends AppLocalizations {
   }
 
   @override
-  String get errors => 'Fouten:';
-
-  @override
-  String get error => 'Fout';
-
-  @override
-  String importErrorMessage(String error) {
-    return 'Bestand importeren mislukt:\\n$error';
+  String importTotal(int count) {
+    return 'Totaal: $count';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => 'Importeren...';
 
   @override
-  String get selectStudyMaterial => 'Selecteer Materiaal';
-
-  @override
-  String get subject => 'Onderwerp:';
-
-  @override
-  String get source => 'Bron:';
-
-  @override
-  String get file => 'Bestand:';
-
-  @override
-  String progress(int current, int total) {
-    return 'Voortgang: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => 'Importeer a.u.b. een JSON-bestand';
-
-  @override
-  String get selectMaterialPrompt => 'Selecteer a.u.b. studiemateriaal';
-
-  @override
-  String get studyComplete => 'Bestudeerd';
-
-  @override
-  String get markAsStudied => 'Markeren als Bestudeerd';
-
-  @override
-  String get listening => 'Luisteren...';
-
-  @override
-  String get recognized => 'Herkenning voltooid';
-
-  @override
-  String recognitionFailed(String error) {
-    return 'Spraakherkenning mislukt: $error';
-  }
-
-  @override
-  String get checking => 'Controleren...';
-
-  @override
-  String get translating => 'Vertalen...';
-
-  @override
-  String get translationComplete => 'Vertaling voltooid (opslaan vereist)';
-
-  @override
-  String get translationLoaded => 'Opgeslagen vertaling geladen';
-
-  @override
-  String translationFailed(String error) {
-    return 'Vertaling mislukt: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => 'Voer tekst in om te vertalen';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => 'Opslaan...';
-
-  @override
-  String get noTranslationToSave => 'Geen vertaling om op te slaan';
-
-  @override
-  String saveFailed(String error) {
-    return 'Opslaan mislukt: $error';
-  }
-
-  @override
-  String get playing => 'Afspelen...';
-
-  @override
-  String get noTextToPlay => 'Geen tekst om af te spelen';
-
-  @override
-  String playbackFailed(String error) {
-    return 'Afspelen mislukt: $error';
-  }
-
-  @override
-  String get sourceLanguage => 'Brontaal';
-
-  @override
-  String get targetLanguage => 'Doeltaal';
-
-  @override
-  String get similarTextFound => 'Vergelijkbare tekst gevonden';
-
-  @override
-  String get useExistingText => 'Gebruik Bestaande';
-
-  @override
-  String get createNew => 'Nieuwe Maken';
-
-  @override
-  String reviewCount(int count) {
-    return '$count keer herhaald';
-  }
-
-  @override
-  String get tabSpeaking => 'Spreken';
-
-  @override
-  String get speakingPractice => 'Spreekoefening';
+  String get inputModeTitle => 'Invoer';
 
   @override
   String intervalSeconds(int seconds) {
-    return 'Interval: ${seconds}s';
+    return 'Interval: $seconds seconden';
   }
 
   @override
-  String get yourPronunciation => 'Jouw Uitspraak';
+  String get invalidEmail => 'Voer een geldig e-mailadres in.';
 
   @override
-  String get correctAnswer => 'Juiste Antwoord';
+  String get kakaoContinue => 'Doorgaan met Kakao';
 
   @override
-  String score(String score) {
-    return 'Nauwkeurigheid: $score%';
-  }
+  String get labelLangCode => 'Taalcode (bijv. en-US, ko-KR)';
 
   @override
-  String get perfect => 'Perfect!';
+  String get labelName => 'Naam';
 
   @override
-  String get good => 'Goed';
+  String get labelNote => 'Notitie';
 
   @override
-  String get tryAgain => 'Opnieuw Proberen';
+  String get labelPOS => 'Woordsoort';
 
   @override
-  String get startPractice => 'Start Oefening';
+  String get labelRole => 'Rol';
 
   @override
-  String get stopPractice => 'Stop Oefening';
+  String get labelSentence => 'Zin';
 
   @override
-  String get menuOnlineLibrary => 'Online Library';
+  String get labelSentenceCollection => 'Zinnencollectie';
 
   @override
-  String get startTutorial => 'Start Rondleiding';
+  String get labelSentenceType => 'Type zin';
 
   @override
-  String get menuTutorial => 'Tutorial';
-
-  @override
-  String get tutorialMicTitle => 'Spraakinvoer';
-
-  @override
-  String get tutorialMicDesc => 'Tik op de microfoonknop om te starten.';
-
-  @override
-  String get tutorialTabDesc => 'Hier kunt u de gewenste leermodus selecteren.';
-
-  @override
-  String get tutorialTapToContinue => 'Tik om door te gaan';
-
-  @override
-  String get tutorialTransTitle => 'Vertalen';
-
-  @override
-  String get tutorialTransDesc => 'Tik hier om je tekst te vertalen.';
-
-  @override
-  String get tutorialSaveTitle => 'Opslaan';
-
-  @override
-  String get tutorialSaveDesc => 'Sla je vertaling op in studierecords.';
-
-  @override
-  String get selectParticipants => 'Select Participants';
-
-  @override
-  String get loadingParticipants => 'Loading participants...';
-
-  @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
-
-  @override
-  String get sendingMessage => '메시지 전송 중...';
-
-  @override
-  String get startChat => 'Start Chat';
-
-  @override
-  String get manageParticipants => 'Manage Participants';
-
-  @override
-  String get tutorialAiChatTitle => 'AI Chat';
-
-  @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
-
-  @override
-  String get tutorialM2SelectTitle => 'Selecteer & Filter';
-
-  @override
-  String get tutorialM2SelectDesc =>
-      'Kies materialen of wissel naar \'Alles Herhalen\'.';
-
-  @override
-  String get tutorialM2ListTitle => 'Studielijst';
-
-  @override
-  String get tutorialM2ListDesc =>
-      'Bekijk opgeslagen kaarten en draai ze om. (Long-press to delete)';
-
-  @override
-  String get tutorialM3SelectTitle => 'Selecteer Materiaal';
-
-  @override
-  String get tutorialM3SelectDesc => 'Kies een set voor spreekoefening.';
-
-  @override
-  String get tutorialM3IntervalTitle => 'Interval';
-
-  @override
-  String get tutorialM3IntervalDesc => 'Pas de wachttijd tussen zinnen aan.';
-
-  @override
-  String get tutorialM3StartTitle => 'Start Oefening';
-
-  @override
-  String get tutorialM3StartDesc => 'Tik play om te luisteren en na te zeggen.';
-
-  @override
-  String get startWarning => 'Waarschuwing';
-
-  @override
-  String get noVoiceDetected => 'Geen stem gedetecteerd';
-
-  @override
-  String get tooltipSearch => 'Zoeken';
-
-  @override
-  String get tooltipStudyReview => 'Studie+Herhaling';
-
-  @override
-  String get tooltipSpeaking => 'Spreken';
-
-  @override
-  String get tooltipDecrease => 'Verminderen';
-
-  @override
-  String get tooltipIncrease => 'Verhogen';
-
-  @override
-  String get languageSettings => 'Taalinstellingen';
-
-  @override
-  String get tutorialM2DropdownDesc => 'Selecteer studiemateriaal.';
-
-  @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
-
-  @override
-  String get tutorialM2ImportDesc => 'Importeer JSON-bestand uit apparaatmap.';
-
-  @override
-  String get tutorialLangSettingsTitle => 'Language Settings';
-
-  @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
-
-  @override
-  String get copy => 'Copy';
-
-  @override
-  String get copiedToClipboard => 'Copied to clipboard!';
-
-  @override
-  String get tutorialContextTitle => 'Contextlabel';
-
-  @override
-  String get tutorialContextDesc =>
-      'Voeg context toe (bijv. Ochtend) om vergelijkbare zinnen te onderscheiden.';
-
-  @override
-  String get thinkingTimeInterval => 'Playback Delay';
-
-  @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
-
-  @override
-  String get autoPlay => 'Auto-Play';
-
-  @override
-  String get timeUp => 'Time Up!';
-
-  @override
-  String get gameModeTitle => 'Game Mode';
-
-  @override
-  String get gameModeDesc => 'Choose your practice mode';
-
-  @override
-  String get wordDefenseTitle => 'Word Defense';
-
-  @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
-
-  @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
-
-  @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get translation => 'Translation';
+  String get labelShowMemorized => 'Afgewerkt';
 
   @override
   String get labelType => 'Type:';
 
   @override
-  String get labelWord => 'Word';
+  String get labelWord => 'Woord';
 
   @override
-  String get labelSentence => 'Sentence';
+  String get labelWordbook => 'Woordenboek';
 
   @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
+  String get language => 'Taal';
 
   @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
+  String get languageSettings => 'Taalinstellingen';
 
   @override
-  String get usageLimitTitle => 'Limiet bereikt';
+  String get languageSettingsTitle => 'Taalinstellingen';
 
   @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
+  String get libTitleFirstMeeting => 'Eerste ontmoeting';
 
   @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
+  String get libTitleGreetings1 => 'Groeten 1';
 
   @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
+  String get libTitleNouns1 => 'Zelfstandige naamwoorden 1';
 
   @override
-  String get translationRefilled => 'Translations refilled by 5!';
+  String get libTitleVerbs1 => 'Werkwoorden 1';
 
   @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
+  String get listen => 'Luisteren';
 
   @override
-  String get reviewAll => 'Review All';
+  String get listening => 'Luisteren...';
 
   @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
+  String get loadingParticipants => 'Deelnemers laden...';
 
   @override
-  String get filterAll => 'All';
+  String get location => 'Locatie';
 
   @override
-  String get practiceWordsOnly => 'Practice Words Only';
+  String get login => 'Inloggen';
 
   @override
-  String get resetPracticeHistory => 'Reset Practice History';
+  String get logout => 'Uitloggen';
 
   @override
-  String get retry => 'Retry?';
+  String get logoutConfirmMessage =>
+      'Weet je zeker dat je wilt uitloggen van dit apparaat?';
 
   @override
-  String get noStudyMaterial => 'No study material found.';
+  String get logoutConfirmTitle => 'Uitloggen';
 
   @override
-  String get gameOver => 'Game Over';
+  String get male => 'Man';
 
   @override
-  String get playAgain => 'Play Again';
+  String get manageParticipants => 'Deelnemers beheren';
 
   @override
-  String get speakNow => 'Speak now!';
+  String get manual => 'Handmatige invoer';
 
   @override
-  String get scoreLabel => 'Score';
+  String get markAsStudied => 'Markeren als Bestudeerd';
 
   @override
-  String get viewOnlineGuide => 'View Online User Guide';
+  String get materialInfo => 'Materiaalinfo';
 
   @override
-  String get getMaterials => 'Get Materials';
+  String get me => 'Ik';
 
   @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
-
-  @override
-  String get wordModeLabel => 'Word Mode';
-
-  @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
+  String get menuDeviceImport => 'Materiaal importeren van apparaat';
 
   @override
   String get menuHelp => 'Help';
 
   @override
-  String get menuWebDownload => 'Get Material from Web';
+  String get menuLanguageSettings => 'Taalinstellingen';
 
   @override
-  String get menuDeviceImport => 'Import from Device';
+  String get menuOnlineLibrary => 'Online bibliotheek';
+
+  @override
+  String get menuSelectMaterialSet => 'Kies studiemateriaal.';
 
   @override
   String get menuSettings => 'Settings';
 
   @override
-  String get basicWords => 'Basic Word Repository';
+  String get menuTutorial => 'Gebruikershandleiding';
 
   @override
-  String get basicSentences => 'Basic Sentence Repository';
+  String get menuWebDownload => 'Gebruiksaanwijzing';
 
   @override
-  String get selectMaterialSet => 'Leermaterialenset selecteren';
+  String get metadataDialogTitle => 'Gedetailleerde classificatie';
 
   @override
-  String get sectionWords => 'Woorden';
+  String get metadataFormType => 'Grammaticale vorm';
 
   @override
-  String get sectionSentences => 'Zinnen';
+  String get metadataRootWord => 'Basisvorm (Root Word)';
 
   @override
-  String get languageSettingsTitle => 'Language Settings';
+  String get micButtonTooltip => 'Spraakherkenning starten';
 
   @override
-  String get sourceLanguageLabel => 'Source Language';
+  String mode1SelectedMaterial(Object name) {
+    return 'Huidige geselecteerde materialen: $name';
+  }
 
   @override
-  String get targetLanguageLabel => 'Target Language';
+  String get mode2Title => 'Herhaling';
+
+  @override
+  String get mode3Next => 'Volgende';
 
   @override
   String get mode3Start => 'Start';
@@ -789,20 +598,449 @@ class AppLocalizationsNl extends AppLocalizations {
   String get mode3Stop => 'Stop';
 
   @override
-  String get mode3Next => 'Next';
+  String get mode3TryAgain => 'Opnieuw proberen';
 
   @override
-  String get mode3TryAgain => 'Try Again';
+  String get mySentenceCollection => 'Mijn zinnenverzameling';
 
   @override
-  String get tutorialM3ResetTitle => 'Reset History';
+  String get myWordbook => 'Mijn woordenboek';
 
   @override
-  String get tutorialSwapDesc =>
-      'Ik wissel mijn eigen taal om met de taal die ik aan het leren ben.';
+  String get neutral => 'Neutraal';
 
   @override
-  String get recognizedText => 'Recognized Text:';
+  String get newSubjectName => 'Nieuwe woordenlijst/zinscollectie titel';
+
+  @override
+  String get next => 'Volgende';
+
+  @override
+  String get noDialogueHistory => 'Geen dialooggeschiedenis.';
+
+  @override
+  String get noInternetWarningMic =>
+      'Geen internetverbinding. Spraakherkenning is mogelijk niet beschikbaar in de offline modus.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'Geen internetverbinding. De vertaalfunctie is niet beschikbaar in de offline modus. Gebruik de herhalingsmodus.';
+
+  @override
+  String get noMaterialsInCategory =>
+      'Er zijn geen materialen in deze categorie.';
+
+  @override
+  String get noParticipantsFound => 'Geen deelnemers gevonden.';
+
+  @override
+  String get noRecords => 'Geen records voor geselecteerde taal';
+
+  @override
+  String get noStudyMaterial => 'Geen studiemateriaal.';
+
+  @override
+  String get noTextToPlay => 'Geen tekst om af te spelen';
+
+  @override
+  String get noTranslationToSave => 'Geen vertaling om op te slaan';
+
+  @override
+  String get noVoiceDetected => 'Geen stem gedetecteerd';
+
+  @override
+  String get notSelected => '- Niet geselecteerd -';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'Controleer je internetverbinding of probeer het later opnieuw.';
+
+  @override
+  String get onlineLibraryLoadFailed =>
+      'Het laden van de materialen is mislukt.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'Geen materialen.';
+
+  @override
+  String get participantDeleted => 'De deelnemer is verwijderd.';
+
+  @override
+  String get participantRename => 'Deelnemer hernoemen';
+
+  @override
+  String get partner => 'Partner';
+
+  @override
+  String get partnerMode => 'Partnermodus';
+
+  @override
+  String get password => 'Wachtwoord';
+
+  @override
+  String get passwordTooShort => 'Wachtwoord moet minimaal 6 tekens lang zijn.';
+
+  @override
+  String get perfect => 'Perfect!';
+
+  @override
+  String get personaFriend => 'Lokale vriend';
+
+  @override
+  String get personaGuide => 'Reisgids';
+
+  @override
+  String get personaTeacher => 'Engels leraar';
+
+  @override
+  String get playAgain => 'Nog een keer spelen';
+
+  @override
+  String playbackFailed(String error) {
+    return 'Afspelen mislukt: $error';
+  }
+
+  @override
+  String get playing => 'Afspelen...';
+
+  @override
+  String get posAdjective => 'Bijvoeglijk naamwoord';
+
+  @override
+  String get posAdverb => 'Bijwoord';
+
+  @override
+  String get posConjunction => 'Voegwoord';
+
+  @override
+  String get posInterjection => 'Tussenwerpsel';
+
+  @override
+  String get posNoun => 'Zelfstandig naamwoord';
+
+  @override
+  String get posPreposition => 'Voorzetsel';
+
+  @override
+  String get posPronoun => 'Voornaamwoord';
+
+  @override
+  String get posVerb => 'Werkwoord';
+
+  @override
+  String get practiceModeTitle => 'Oefenen';
+
+  @override
+  String get practiceWordsOnly => 'Alleen woorden oefenen';
+
+  @override
+  String progress(int current, int total) {
+    return 'Voortgang: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return 'Toon de laatste $count items';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return 'Spraakherkenning mislukt: $error';
+  }
+
+  @override
+  String get recognized => 'Herkenning voltooid';
+
+  @override
+  String get recognizedText => 'Herkende uitspraak:';
+
+  @override
+  String get recordDeleted => 'Record succesvol verwijderd';
+
+  @override
+  String get refresh => 'Verversen';
+
+  @override
+  String get reset => 'Reset';
+
+  @override
+  String get resetPracticeHistory => 'Oefengeschiedenis resetten';
+
+  @override
+  String get retry => 'Opnieuw proberen?';
+
+  @override
+  String get reviewAll => 'Alles herhalen';
+
+  @override
+  String reviewCount(int count) {
+    return '$count keer herhaald';
+  }
+
+  @override
+  String get reviewModeTitle => 'Herhaling';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => 'Derde partij';
+
+  @override
+  String get roleUser => 'Gebruiker';
+
+  @override
+  String get save => 'Opslaan';
+
+  @override
+  String get saveData => 'Opslaan';
+
+  @override
+  String saveFailed(String error) {
+    return 'Opslaan mislukt: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch => 'Vertaal uit zoekmodus opslaan';
+
+  @override
+  String get saved => 'Opgeslagen';
+
+  @override
+  String get saving => 'Opslaan...';
+
+  @override
+  String score(String score) {
+    return 'Nauwkeurigheid: $score%';
+  }
+
+  @override
+  String get scoreLabel => 'Score';
+
+  @override
+  String get search => 'Zoeken';
+
+  @override
+  String get searchConditions => 'Zoekvoorwaarden';
+
+  @override
+  String get searchSentenceHint => 'Zoek zin...';
+
+  @override
+  String get searchWordHint => 'Zoek woord...';
+
+  @override
+  String get sectionSentence => 'Zinsdeel';
+
+  @override
+  String get sectionSentences => 'Zinnen';
+
+  @override
+  String get sectionWord => 'Woordsectie';
+
+  @override
+  String get sectionWords => 'Woorden';
+
+  @override
+  String get selectExistingSubject => 'Bestaande titel selecteren';
+
+  @override
+  String get selectMaterialPrompt => 'Selecteer a.u.b. studiemateriaal';
+
+  @override
+  String get selectMaterialSet => 'Leermaterialenset selecteren';
+
+  @override
+  String get selectPOS => 'Selecteer woordsoort';
+
+  @override
+  String get selectParticipants => 'Deelnemers selecteren';
+
+  @override
+  String get selectSentenceType => 'Selecteer zin type';
+
+  @override
+  String get selectStudyMaterial => 'Selecteer Materiaal';
+
+  @override
+  String get sendingMessage => '메시지 전송 중...';
+
+  @override
+  String get sentence => 'Zin';
+
+  @override
+  String get signUp => 'Aanmelden';
+
+  @override
+  String get similarTextFound => 'Vergelijkbare tekst gevonden';
+
+  @override
+  String get skip => 'Overslaan';
+
+  @override
+  String get source => 'Bron:';
+
+  @override
+  String get sourceLanguage => 'Brontaal';
+
+  @override
+  String get sourceLanguageLabel => 'Source Language';
+
+  @override
+  String get speakNow => 'Spreek nu!';
+
+  @override
+  String get speaker => 'Spreker';
+
+  @override
+  String get speakerSelect => 'Spreker selecteren';
+
+  @override
+  String get speakingPractice => 'Spreekoefening';
+
+  @override
+  String get startChat => 'Start chat';
+
+  @override
+  String get startPractice => 'Start Oefening';
+
+  @override
+  String get startTutorial => 'Start Rondleiding';
+
+  @override
+  String get startWarning => 'Waarschuwing';
+
+  @override
+  String get startsWith => 'Begint met';
+
+  @override
+  String get statusCheckEmail =>
+      'Controleer uw e-mail om de verificatie te voltooien.';
+
+  @override
+  String statusDownloading(Object name) {
+    return 'Downloaden: $name...';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return 'Importeren mislukt: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name importeren voltooid';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => 'Inloggen geannuleerd.';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return 'Inloggen mislukt: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => 'Succesvol ingelogd.';
+
+  @override
+  String get statusLogoutSuccess => 'Uitgelogd.';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return 'Aanmelden mislukt: $error';
+  }
+
+  @override
+  String get statusSigningUp => 'Aanmelden...';
+
+  @override
+  String get stopPractice => 'Stop Oefening';
+
+  @override
+  String get studyComplete => 'Bestudeerd';
+
+  @override
+  String studyRecords(int count) {
+    return 'Records ($count)';
+  }
+
+  @override
+  String get styleFormal => 'Formeel';
+
+  @override
+  String get styleInformal => 'Informeel';
+
+  @override
+  String get stylePolite => 'Beleefd';
+
+  @override
+  String get styleSlang => 'Straattaal/Slang';
+
+  @override
+  String get subject => 'Onderwerp:';
+
+  @override
+  String get swapLanguages => 'Talen omdraaien';
+
+  @override
+  String get switchToAi => 'Schakel over naar AI-modus';
+
+  @override
+  String get switchToPartner => 'Schakel over naar Partnermodus';
+
+  @override
+  String get syncingData => 'Gegevens synchroniseren...';
+
+  @override
+  String get tabConversation => 'Gesprek';
+
+  @override
+  String tabReview(int count) {
+    return 'Herhalen ($count)';
+  }
+
+  @override
+  String get tabSentence => 'zin';
+
+  @override
+  String get tabSpeaking => 'Spreken';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return 'Studiemateriaal ($count)';
+  }
+
+  @override
+  String get tabWord => 'woord';
+
+  @override
+  String get tagFormal => 'Formeel';
+
+  @override
+  String get tagSelection => 'Tag selectie';
+
+  @override
+  String get targetLanguage => 'Doeltaal';
+
+  @override
+  String get targetLanguageFilter => 'Doeltaal Filter:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc =>
+      'De tijd om na te denken voordat het antwoord wordt onthuld.';
+
+  @override
+  String get thinkingTimeInterval => 'Denktijd interval';
+
+  @override
+  String get timeUp => 'Tijd is om!';
 
   @override
   String titleFormat(Object materialName, Object type) {
@@ -810,411 +1048,216 @@ class AppLocalizationsNl extends AppLocalizations {
   }
 
   @override
+  String get titleTagSelection => 'Titel tag (collectie)';
+
+  @override
+  String get tooltipDecrease => 'Verminderen';
+
+  @override
+  String get tooltipIncrease => 'Verhogen';
+
+  @override
+  String get tooltipSearch => 'Zoeken';
+
+  @override
+  String get tooltipSpeaking => 'Spreken';
+
+  @override
+  String get tooltipStudyReview => 'Studie+Herhaling';
+
+  @override
+  String totalRecords(int count) {
+    return 'Totaal $count records (Bekijk alles)';
+  }
+
+  @override
+  String get translate => 'Vertalen';
+
+  @override
+  String get translating => 'Vertalen...';
+
+  @override
+  String get translation => 'Vertaling';
+
+  @override
+  String get translationComplete => 'Vertaling voltooid (opslaan vereist)';
+
+  @override
+  String translationFailed(String error) {
+    return 'Vertaling mislukt: $error';
+  }
+
+  @override
+  String get translationLimitExceeded => 'Vertaal limiet overschreden';
+
+  @override
+  String get translationLimitMessage =>
+      'Je hebt alle dagelijkse gratis vertalingen (5 keer) gebruikt.\\n\\nWil je een advertentie bekijken en 5 keer direct opladen?';
+
+  @override
+  String get translationLoaded => 'Opgeslagen vertaling geladen';
+
+  @override
+  String get translationRefilled =>
+      'Het aantal vertalingen is 5 keer opgeladen!';
+
+  @override
+  String get translationResultHint => 'Vertaling - kan worden bewerkt';
+
+  @override
+  String get tryAgain => 'Opnieuw Proberen';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'Oefen realistische gesprekken met AI-persona\'s.';
+
+  @override
+  String get tutorialAiChatTitle => 'AI Chat';
+
+  @override
+  String get tutorialContextDesc =>
+      'Voeg context toe (bijv. Ochtend) om vergelijkbare zinnen te onderscheiden.';
+
+  @override
+  String get tutorialContextTitle => 'Contextlabel';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Stel de brontaal en de doeltaal in voor vertaling.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Taalinstellingen';
+
+  @override
+  String get tutorialM1ToggleDesc => 'Schakel hier tussen woord- en zinmodus.';
+
+  @override
+  String get tutorialM1ToggleTitle => 'Woord/Zin modus';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Selecteer studiemateriaal.';
+
+  @override
+  String get tutorialM2ImportDesc => 'Importeer JSON-bestand uit apparaatmap.';
+
+  @override
+  String get tutorialM2ListDesc =>
+      'Bekijk opgeslagen kaarten en draai ze om. (Long-press to delete)';
+
+  @override
+  String get tutorialM2ListTitle => 'Studielijst';
+
+  @override
+  String get tutorialM2SearchDesc =>
+      'Zoek en vind snel opgeslagen woorden en zinnen.';
+
+  @override
+  String get tutorialM2SelectDesc =>
+      'Kies materialen of wissel naar \'Alles Herhalen\'.';
+
+  @override
+  String get tutorialM2SelectTitle => 'Selecteer & Filter';
+
+  @override
+  String get tutorialM3IntervalDesc => 'Pas de wachttijd tussen zinnen aan.';
+
+  @override
+  String get tutorialM3IntervalTitle => 'Interval instellen';
+
+  @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
 
   @override
-  String get menuSelectMaterialSet => 'Kies studiemateriaal.';
+  String get tutorialM3ResetTitle => 'Reset History';
 
   @override
-  String get sectionWord => 'Woordsectie';
+  String get tutorialM3SelectDesc => 'Kies een set voor spreekoefening.';
 
   @override
-  String get sectionSentence => 'Zinsdeel';
+  String get tutorialM3SelectTitle => 'Selecteer Materiaal';
 
   @override
-  String get tabWord => 'woord';
+  String get tutorialM3StartDesc => 'Tik play om te luisteren en na te zeggen.';
 
   @override
-  String get tabSentence => 'zin';
+  String get tutorialM3StartTitle => 'Start Oefening';
 
   @override
-  String get errorProfanity =>
-      'Bevat ongepaste taal en kan niet worden vertaald.';
+  String get tutorialM3WordsDesc =>
+      'Vink dit aan om alleen opgeslagen woorden te oefenen.';
 
   @override
-  String get errorHateSpeech =>
-      'Bevat haatzaaiende uitlatingen en kan niet worden vertaald.';
+  String get tutorialM3WordsTitle => 'Woord oefening';
 
   @override
-  String get errorSexualContent =>
-      'Bevat seksueel getinte inhoud en kan niet worden vertaald.';
+  String get tutorialMicDesc => 'Tik op de microfoonknop om te starten.';
 
   @override
-  String get errorOtherSafety =>
-      'Vertaling geweigerd vanwege het AI-veiligheidsbeleid.';
+  String get tutorialMicTitle => 'Spraakinvoer';
 
   @override
-  String get clearAll => 'Alles wissen';
+  String get tutorialSaveDesc => 'Sla je vertaling op in studierecords.';
 
   @override
-  String get disambiguationTitle => 'Betekenis selecteren';
+  String get tutorialSaveTitle => 'Opslaan';
 
   @override
-  String get disambiguationPrompt => 'Welke betekenis wilt u vertalen?';
+  String get tutorialSwapDesc =>
+      'Ik wissel mijn eigen taal om met de taal die ik aan het leren ben.';
 
   @override
-  String get skip => 'Overslaan';
+  String get tutorialTabDesc => 'Hier kunt u de gewenste leermodus selecteren.';
 
   @override
-  String get inputModeTitle => 'Input';
+  String get tutorialTapToContinue => 'Tik om door te gaan';
 
   @override
-  String get reviewModeTitle => 'Review';
+  String get tutorialTransDesc => 'Tik hier om je tekst te vertalen.';
 
   @override
-  String get practiceModeTitle => 'Oefenen';
+  String get tutorialTransTitle => 'Vertalen';
 
   @override
-  String get chatHistoryTitle => 'Conversation History';
+  String get typeExclamation => 'Uitroep';
 
   @override
-  String get chatNew => 'New Chat';
+  String get typeImperative => 'Imperatief';
 
   @override
-  String get chatNewChat => 'New Chat';
+  String get typeQuestion => 'Vraag';
 
   @override
-  String get chatChoosePersona => 'Choose a Persona';
+  String get typeStatement => 'Stelling';
 
   @override
-  String get chatTypeHint => 'Type a message...';
+  String get usageLimitTitle => 'Limiet bereikt';
 
   @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
+  String get useExistingText => 'Gebruik Bestaande';
 
   @override
-  String get chatNoConversations => 'No conversations yet';
+  String get viewOnlineGuide => 'Online gids bekijken';
 
   @override
-  String get noDialogueHistory => 'No dialogue history.';
+  String get voluntaryTranslations => 'Vrijwillige vertalingen';
 
   @override
-  String get chatStartNewPrompt => 'Start a new chat to practice!';
+  String get watchAdAndRefill => 'Bekijk advertentie en laad op (+5 keer)';
 
   @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
+  String get word => 'Woord';
 
   @override
-  String get personaTeacher => 'English Teacher';
+  String get wordDefenseDesc =>
+      'Verdedig je basis door de woorden te zeggen voordat de vijand arriveert.';
 
   @override
-  String get personaGuide => 'Travel Guide';
+  String get wordDefenseTitle => 'Woordverdediging';
 
   @override
-  String get personaFriend => 'Local Friend';
+  String get wordModeLabel => 'Woordmodus';
 
   @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => 'Chatten';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => 'Basis Woordenlijst';
-
-  @override
-  String get basicSentenceRepository => 'Basis Zinnenlijst';
-
-  @override
-  String get chatEndTitle => 'End & Save Chat';
-
-  @override
-  String get chatEndMessage =>
-      'Do you want to end this conversation? You can set a title for it.';
-
-  @override
-  String get chatSaveAndExit => 'Save & Exit';
-
-  @override
-  String get errorSelectCategory => 'Please select word or sentence first!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => 'Formeel';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => 'Titel tag (collectie)';
-
-  @override
-  String get generalTags => 'Algemene tags';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => 'Enkelvoud';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => 'Neutraal';
-
-  @override
-  String get chatAllConversations => 'Alle gesprekken';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation =>
-      'Weet je zeker dat je dit gesprek wilt verwijderen?\nVerwijderde gesprekken kunnen niet worden hersteld.';
-
-  @override
-  String get notSelected => '- Niet geselecteerd -';
-
-  @override
-  String get myWordbook => 'Mijn woordenboek';
-
-  @override
-  String get mySentenceCollection => 'Mijn zinnenverzameling';
-
-  @override
-  String get newSubjectName => 'Nieuwe woordenlijst/zinscollectie titel';
-
-  @override
-  String get enterNewSubjectName => 'Nieuwe titel invoeren';
-
-  @override
-  String get addNewSubject => 'Nieuwe titel toevoegen';
-
-  @override
-  String get selectExistingSubject => 'Bestaande titel selecteren';
-
-  @override
-  String get addTagHint => 'Tag toevoegen...';
-
-  @override
-  String get save => 'Opslaan';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail =>
-      'Controleer uw e-mail om de verificatie te voltooien.';
-
-  @override
-  String get emailAlreadyInUse =>
-      'Dit e-mailadres is al in gebruik. Log in of gebruik de functie \'Wachtwoord vergeten\'.';
+  String get yourPronunciation => 'Jouw Uitspraak';
 }

@@ -9,35 +9,317 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => '准确率';
 
   @override
-  String get kakaoContinue => '使用Kakao继续';
+  String get adLoading => '正在加载广告。请稍后重试。';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => '添加新标题';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => '添加参与者';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => '添加标签...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => '已经有账户了？';
 
   @override
-  String get helpTitle => '帮助与指南';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => '模式';
+  String get autoPlay => '自动播放';
 
   @override
-  String get helpTabJson => 'JSON 格式';
+  String get basic => '基本';
 
   @override
-  String get helpTabTour => '新手引导';
+  String get basicDefault => '基本';
+
+  @override
+  String get basicMaterialRepository => '基本句子/单词存储库';
+
+  @override
+  String get basicSentenceRepository => '基础句库';
+
+  @override
+  String get basicSentences => '基础句库';
+
+  @override
+  String get basicWordRepository => '基础词库';
+
+  @override
+  String get basicWords => '基础词库';
+
+  @override
+  String get cancel => '取消';
+
+  @override
+  String get caseObject => '宾格';
+
+  @override
+  String get casePossessive => '所有格';
+
+  @override
+  String get casePossessivePronoun => '所有格代词';
+
+  @override
+  String get caseReflexive => '反身代词';
+
+  @override
+  String get caseSubject => '主格';
+
+  @override
+  String get chatAiChat => '聊天';
+
+  @override
+  String get chatAllConversations => '所有对话';
+
+  @override
+  String get chatChoosePersona => '选择角色';
+
+  @override
+  String get chatEndMessage => '是否结束此对话？';
+
+  @override
+  String get chatEndTitle => '结束并保存对话';
+
+  @override
+  String chatFailed(Object error) {
+    return '聊天失败: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return '对话摘录 ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => '对话历史';
+
+  @override
+  String get chatNew => '新对话';
+
+  @override
+  String get chatNewChat => '新对话';
+
+  @override
+  String get chatNoConversations => '暂无对话';
+
+  @override
+  String get chatSaveAndExit => '保存并退出';
+
+  @override
+  String get chatStartNewPrompt => '开始新对话进行练习！';
+
+  @override
+  String get chatTypeHint => '输入消息...';
+
+  @override
+  String get chatUntitled => '无标题对话';
+
+  @override
+  String get checking => '正在检查...';
+
+  @override
+  String get clearAll => '全部清除';
+
+  @override
+  String get confirm => '确认';
+
+  @override
+  String get confirmDelete => '确定要删除这条学习记录吗？';
+
+  @override
+  String get confirmDeleteConversation => '确定要删除此对话吗？\n删除后将无法恢复。';
+
+  @override
+  String get confirmDeleteParticipant => '确定要删除此参与者吗？';
+
+  @override
+  String get contextTagHint => '请写下情境以便以后区分';
+
+  @override
+  String get contextTagLabel => '语境/情境 (可选) - 例如：早上问候，敬语';
+
+  @override
+  String get copiedToClipboard => '已复制到剪贴板！';
+
+  @override
+  String get copy => '复制';
+
+  @override
+  String get correctAnswer => '正确答案';
+
+  @override
+  String get createNew => '新建条目';
+
+  @override
+  String get currentLocation => '当前位置';
+
+  @override
+  String get currentMaterialLabel => '当前选择的材料集：';
+
+  @override
+  String get delete => '删除';
+
+  @override
+  String deleteFailed(String error) {
+    return '删除失败: $error';
+  }
+
+  @override
+  String get deleteRecord => '删除记录';
+
+  @override
+  String get dialogueQuestDesc => '通过情景对话练习。选择并说出适当的答案。';
+
+  @override
+  String get dialogueQuestTitle => '对话任务';
+
+  @override
+  String get disambiguationPrompt => '您想翻译成哪个含义？';
+
+  @override
+  String get disambiguationTitle => '选择含义';
+
+  @override
+  String get dontHaveAccount => '没有账户？';
+
+  @override
+  String get editParticipant => '编辑参与者';
+
+  @override
+  String get email => '电子邮件';
+
+  @override
+  String get emailAlreadyInUse => '此邮箱已被注册，请直接登录或找回密码。';
+
+  @override
+  String get enterNewSubjectName => '输入新标题';
+
+  @override
+  String get enterSentenceHint => '输入句子...';
+
+  @override
+  String get enterTextHint => '输入要翻译的文本';
+
+  @override
+  String get enterTextToTranslate => '请输入要翻译的文本';
+
+  @override
+  String get enterWordHint => '输入单词...';
+
+  @override
+  String get error => '错误';
+
+  @override
+  String get errorHateSpeech => '包含仇恨言论，无法翻译。';
+
+  @override
+  String get errorOtherSafety => '由于 AI 安全策略，翻译被拒绝。';
+
+  @override
+  String get errorProfanity => '包含不雅内容，无法翻译。';
+
+  @override
+  String get errorSelectCategory => '请先选择单词或句子！';
+
+  @override
+  String get errorSexualContent => '包含色情内容，无法翻译。';
+
+  @override
+  String get errors => '错误:';
+
+  @override
+  String get female => '女性';
+
+  @override
+  String get file => '文件:';
+
+  @override
+  String get filterAll => '全部';
+
+  @override
+  String get flip => '翻转';
+
+  @override
+  String get formComparative => '比较级';
+
+  @override
+  String get formInfinitive => '原形/现在时';
+
+  @override
+  String get formPast => '过去式';
+
+  @override
+  String get formPastParticiple => '过去分词';
+
+  @override
+  String get formPlural => '复数';
+
+  @override
+  String get formPositive => '原级';
+
+  @override
+  String get formPresent => '现在时';
+
+  @override
+  String get formPresentParticiple => '现在分词 (ing)';
+
+  @override
+  String get formSingular => '单数';
+
+  @override
+  String get formSuperlative => '最高级';
+
+  @override
+  String get formThirdPersonSingular => '第三人称单数';
+
+  @override
+  String get gameModeDesc => '选择要练习的游戏模式';
+
+  @override
+  String get gameModeTitle => '游戏模式';
+
+  @override
+  String get gameOver => '游戏结束';
+
+  @override
+  String get gender => '性别';
+
+  @override
+  String get generalTags => '通用标签';
+
+  @override
+  String get getMaterials => '获取资料';
+
+  @override
+  String get good => '不错';
+
+  @override
+  String get googleContinue => '使用 Google 帐户继续';
+
+  @override
+  String get helpDialogueImportDesc => '导入 JSON 文件中的完整对话集。';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc => '要在模式 3 中导入学习资料，请创建具有以下结构的 JSON 文件：';
+
+  @override
+  String get helpJsonTypeDialogue => '对话 (Dialogue)';
+
+  @override
+  String get helpJsonTypeSentence => '句子 (Sentence)';
+
+  @override
+  String get helpJsonTypeWord => '单词 (Word)';
 
   @override
   String get helpMode1Desc => '语音识别、翻译并收听结果。';
@@ -65,158 +347,41 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• AI 聊天：与角色进行实战对话练习。\n• 参与者管理：分别设置您和 AI 的语言，以避免语言不一致。\n• GPS 情景：根据当前位置创建自然的对话情境。\n• 记录保存：所有对话都基于 ID 安全存储，即使更改名称也能保留记录。';
 
   @override
-  String get helpJsonDesc => '要在模式 3 中导入学习资料，请创建具有以下结构的 JSON 文件：';
+  String get helpTabJson => 'JSON 格式';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => '模式';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => '新手引导';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => '帮助与指南';
 
   @override
   String get helpTourDesc => '启动交互式教程以了解主要功能。';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => '位置';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => '我';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return '复习 ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return '学习资料 ($count)';
-  }
-
-  @override
-  String get mode2Title => '复习';
-
-  @override
-  String get search => '搜索';
-
-  @override
-  String get translate => '翻译';
-
-  @override
-  String get listen => '收听';
-
-  @override
-  String get saveData => '保存数据';
-
-  @override
-  String get saved => '已保存';
-
-  @override
-  String get delete => '删除';
-
-  @override
-  String get materialInfo => '资料信息';
-
-  @override
-  String get cancel => '取消';
-
-  @override
-  String get confirm => '确认';
-
-  @override
-  String get refresh => '刷新';
-
-  @override
-  String studyRecords(int count) {
-    return '学习记录 ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => '目标语言筛选:';
-
-  @override
-  String get noRecords => '所选语言没有学习记录';
-
-  @override
-  String get saveTranslationsFromSearch => '在搜索模式下保存翻译';
-
-  @override
-  String get flip => '翻转';
-
-  @override
   String get hide => '隐藏';
 
   @override
-  String get deleteRecord => '删除记录';
-
-  @override
-  String get confirmDelete => '确定要删除这条学习记录吗？';
-
-  @override
-  String get recordDeleted => '记录已删除';
-
-  @override
-  String deleteFailed(String error) {
-    return '删除失败: $error';
+  String importAdded(int count) {
+    return '添加: $count 项';
   }
 
   @override
-  String get importJsonFile => '导入 JSON 文件';
-
-  @override
-  String get importing => '正在导入...';
-
-  @override
   String get importComplete => '导入完成';
+
+  @override
+  String get importDuplicateTitleError => '已存在相同标题的资料。请更改标题后重试。';
+
+  @override
+  String importErrorMessage(String error) {
+    return '文件导入失败:\\n$error';
+  }
 
   @override
   String get importFailed => '导入失败';
@@ -227,45 +392,10 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => '导入 JSON 文件';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get roleThirdParty => '제삼자';
-
-  @override
-  String get speakerSelect => '발화자 선택';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return '总计: $count 项';
-  }
-
-  @override
-  String importAdded(int count) {
-    return '添加: $count 项';
-  }
+  String get importJsonFilePrompt => '请导入 JSON 文件';
 
   @override
   String importSkipped(int count) {
@@ -273,133 +403,15 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get errors => '错误:';
-
-  @override
-  String get error => '错误';
-
-  @override
-  String importErrorMessage(String error) {
-    return '文件导入失败:\\n$error';
+  String importTotal(int count) {
+    return '总计: $count 项';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => '正在导入...';
 
   @override
-  String get selectStudyMaterial => '选择学习资料';
-
-  @override
-  String get subject => '主题:';
-
-  @override
-  String get source => '来源:';
-
-  @override
-  String get file => '文件:';
-
-  @override
-  String progress(int current, int total) {
-    return '进度: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => '请导入 JSON 文件';
-
-  @override
-  String get selectMaterialPrompt => '请选择学习资料';
-
-  @override
-  String get studyComplete => '已学习';
-
-  @override
-  String get markAsStudied => '标记为已学习';
-
-  @override
-  String get listening => '正在聆听...';
-
-  @override
-  String get recognized => '识别完成';
-
-  @override
-  String recognitionFailed(String error) {
-    return '语音识别失败: $error';
-  }
-
-  @override
-  String get checking => '正在检查...';
-
-  @override
-  String get translating => '正在翻译...';
-
-  @override
-  String get translationComplete => '翻译完成 (需保存)';
-
-  @override
-  String get translationLoaded => '已加载保存的翻译';
-
-  @override
-  String translationFailed(String error) {
-    return '翻译失败: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => '请输入要翻译的文本';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => '正在保存...';
-
-  @override
-  String get noTranslationToSave => '没有可保存的翻译';
-
-  @override
-  String saveFailed(String error) {
-    return '保存失败: $error';
-  }
-
-  @override
-  String get playing => '正在播放...';
-
-  @override
-  String get noTextToPlay => '没有可播放的文本';
-
-  @override
-  String playbackFailed(String error) {
-    return '播放失败: $error';
-  }
-
-  @override
-  String get sourceLanguage => '源语言';
-
-  @override
-  String get targetLanguage => '目标语言';
-
-  @override
-  String get similarTextFound => '发现相似文本';
-
-  @override
-  String get useExistingText => '使用现有';
-
-  @override
-  String get createNew => '新建条目';
-
-  @override
-  String reviewCount(int count) {
-    return '复习 $count 次';
-  }
-
-  @override
-  String get tabSpeaking => '口语';
-
-  @override
-  String get speakingPractice => '口语练习';
+  String get inputModeTitle => '输入';
 
   @override
   String intervalSeconds(int seconds) {
@@ -407,10 +419,369 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get yourPronunciation => '你的发音';
+  String get invalidEmail => '请输入有效的电子邮件。';
 
   @override
-  String get correctAnswer => '正确答案';
+  String get kakaoContinue => '使用Kakao继续';
+
+  @override
+  String get labelLangCode => '语言代码 (例如：en-US, ko-KR)';
+
+  @override
+  String get labelName => '名称';
+
+  @override
+  String get labelNote => '注释';
+
+  @override
+  String get labelPOS => '词性';
+
+  @override
+  String get labelRole => '角色';
+
+  @override
+  String get labelSentence => '句子';
+
+  @override
+  String get labelSentenceCollection => '句子集';
+
+  @override
+  String get labelSentenceType => '句子类型';
+
+  @override
+  String get labelShowMemorized => '已完成';
+
+  @override
+  String get labelType => '种类：';
+
+  @override
+  String get labelWord => '单词';
+
+  @override
+  String get labelWordbook => '单词本';
+
+  @override
+  String get language => '语言';
+
+  @override
+  String get languageSettings => '语言设置';
+
+  @override
+  String get languageSettingsTitle => '语言设定';
+
+  @override
+  String get libTitleFirstMeeting => '初次见面';
+
+  @override
+  String get libTitleGreetings1 => '问候 1';
+
+  @override
+  String get libTitleNouns1 => '名词 1';
+
+  @override
+  String get libTitleVerbs1 => '动词 1';
+
+  @override
+  String get listen => '收听';
+
+  @override
+  String get listening => '正在聆听...';
+
+  @override
+  String get loadingParticipants => '正在加载参与者...';
+
+  @override
+  String get location => '位置';
+
+  @override
+  String get login => '登录';
+
+  @override
+  String get logout => '登出';
+
+  @override
+  String get logoutConfirmMessage => '确定要从当前设备登出吗？';
+
+  @override
+  String get logoutConfirmTitle => '登出';
+
+  @override
+  String get male => '男性';
+
+  @override
+  String get manageParticipants => '管理参与者';
+
+  @override
+  String get manual => '手动输入';
+
+  @override
+  String get markAsStudied => '标记为已学习';
+
+  @override
+  String get materialInfo => '资料信息';
+
+  @override
+  String get me => '我';
+
+  @override
+  String get menuDeviceImport => '从设备导入资料';
+
+  @override
+  String get menuHelp => '帮助';
+
+  @override
+  String get menuLanguageSettings => '语言设置';
+
+  @override
+  String get menuOnlineLibrary => '在线资料库';
+
+  @override
+  String get menuSelectMaterialSet => '选择学习资料集';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuTutorial => '使用方法教程';
+
+  @override
+  String get menuWebDownload => '使用说明书';
+
+  @override
+  String get metadataDialogTitle => '详细分类';
+
+  @override
+  String get metadataFormType => '语法形式';
+
+  @override
+  String get metadataRootWord => '原型 (Root Word)';
+
+  @override
+  String get micButtonTooltip => '开始语音识别';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return '当前选择的材料集: $name';
+  }
+
+  @override
+  String get mode2Title => '复习';
+
+  @override
+  String get mode3Next => '下一个';
+
+  @override
+  String get mode3Start => '开始';
+
+  @override
+  String get mode3Stop => '停止';
+
+  @override
+  String get mode3TryAgain => '重试';
+
+  @override
+  String get mySentenceCollection => '我的句子集';
+
+  @override
+  String get myWordbook => '我的单词本';
+
+  @override
+  String get neutral => '中性';
+
+  @override
+  String get newSubjectName => '新词汇/句子集标题';
+
+  @override
+  String get next => '下一步';
+
+  @override
+  String get noDialogueHistory => '没有对话历史。';
+
+  @override
+  String get noInternetWarningMic => '没有网络连接。离线状态下语音识别可能无法使用。';
+
+  @override
+  String get noInternetWarningTranslate => '没有网络连接。离线状态下翻译功能无法使用。请使用复习模式。';
+
+  @override
+  String get noMaterialsInCategory => '此类别中没有资料。';
+
+  @override
+  String get noParticipantsFound => '未找到已注册的参与者。';
+
+  @override
+  String get noRecords => '所选语言没有学习记录';
+
+  @override
+  String get noStudyMaterial => '没有学习资料。';
+
+  @override
+  String get noTextToPlay => '没有可播放的文本';
+
+  @override
+  String get noTranslationToSave => '没有可保存的翻译';
+
+  @override
+  String get noVoiceDetected => '未检测到声音';
+
+  @override
+  String get notSelected => '- 未选择 -';
+
+  @override
+  String get onlineLibraryCheckInternet => '请检查网络连接或稍后重试。';
+
+  @override
+  String get onlineLibraryLoadFailed => '加载资料失败。';
+
+  @override
+  String get onlineLibraryNoMaterials => '没有资料。';
+
+  @override
+  String get participantDeleted => '参与者已删除。';
+
+  @override
+  String get participantRename => '重命名参与者';
+
+  @override
+  String get partner => '伙伴';
+
+  @override
+  String get partnerMode => '伙伴模式';
+
+  @override
+  String get password => '密码';
+
+  @override
+  String get passwordTooShort => '密码必须至少为 6 个字符。';
+
+  @override
+  String get perfect => '完美！';
+
+  @override
+  String get personaFriend => '当地朋友';
+
+  @override
+  String get personaGuide => '旅行导游';
+
+  @override
+  String get personaTeacher => '英语老师';
+
+  @override
+  String get playAgain => '再玩一次';
+
+  @override
+  String playbackFailed(String error) {
+    return '播放失败: $error';
+  }
+
+  @override
+  String get playing => '正在播放...';
+
+  @override
+  String get posAdjective => '形容词';
+
+  @override
+  String get posAdverb => '副词';
+
+  @override
+  String get posConjunction => '连词';
+
+  @override
+  String get posInterjection => '感叹词';
+
+  @override
+  String get posNoun => '名词';
+
+  @override
+  String get posPreposition => '介词/助词';
+
+  @override
+  String get posPronoun => '代词';
+
+  @override
+  String get posVerb => '动词';
+
+  @override
+  String get practiceModeTitle => '练习';
+
+  @override
+  String get practiceWordsOnly => '仅练习单词';
+
+  @override
+  String progress(int current, int total) {
+    return '进度: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return '查看最近创建的 $count 个';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return '语音识别失败: $error';
+  }
+
+  @override
+  String get recognized => '识别完成';
+
+  @override
+  String get recognizedText => '识别出的发音：';
+
+  @override
+  String get recordDeleted => '记录已删除';
+
+  @override
+  String get refresh => '刷新';
+
+  @override
+  String get reset => '重置';
+
+  @override
+  String get resetPracticeHistory => '重置练习记录';
+
+  @override
+  String get retry => '重试？';
+
+  @override
+  String get reviewAll => '全部复习';
+
+  @override
+  String reviewCount(int count) {
+    return '复习 $count 次';
+  }
+
+  @override
+  String get reviewModeTitle => '复习';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => '第三方';
+
+  @override
+  String get roleUser => '用户';
+
+  @override
+  String get save => '保存';
+
+  @override
+  String get saveData => '保存数据';
+
+  @override
+  String saveFailed(String error) {
+    return '保存失败: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch => '在搜索模式下保存翻译';
+
+  @override
+  String get saved => '已保存';
+
+  @override
+  String get saving => '正在保存...';
 
   @override
   String score(String score) {
@@ -418,142 +789,238 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get perfect => '完美！';
+  String get scoreLabel => '得分';
 
   @override
-  String get good => '不错';
+  String get search => '搜索';
 
   @override
-  String get tryAgain => '再试一次';
+  String get searchConditions => '搜索条件';
 
   @override
-  String get startPractice => '开始练习';
+  String get searchSentenceHint => '搜索句子...';
 
   @override
-  String get stopPractice => '停止练习';
+  String get searchWordHint => '搜索单词...';
 
   @override
-  String get menuOnlineLibrary => 'Online Library';
+  String get sectionSentence => '句子部分';
 
   @override
-  String get startTutorial => '开始教程';
+  String get sectionSentences => '句子';
 
   @override
-  String get menuTutorial => 'Tutorial';
+  String get sectionWord => '单词部分';
 
   @override
-  String get tutorialMicTitle => '语音输入';
+  String get sectionWords => '单词';
 
   @override
-  String get tutorialMicDesc => '点击麦克风按钮开始语音输入。';
+  String get selectExistingSubject => '选择现有标题';
 
   @override
-  String get tutorialTabDesc => '您可以在这里选择所需的学习模式。';
+  String get selectMaterialPrompt => '请选择学习资料';
 
   @override
-  String get tutorialTapToContinue => '点击继续';
+  String get selectMaterialSet => '选择学习资料集';
 
   @override
-  String get tutorialTransTitle => '翻译';
+  String get selectPOS => '选择词性';
 
   @override
-  String get tutorialTransDesc => '点击此处翻译您的文本。';
+  String get selectParticipants => '选择参与者';
 
   @override
-  String get tutorialSaveTitle => '保存';
+  String get selectSentenceType => '选择句子类型';
 
   @override
-  String get tutorialSaveDesc => '将翻译保存到学习记录。';
-
-  @override
-  String get selectParticipants => 'Select Participants';
-
-  @override
-  String get loadingParticipants => 'Loading participants...';
-
-  @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
+  String get selectStudyMaterial => '选择学习资料';
 
   @override
   String get sendingMessage => '메시지 전송 중...';
 
   @override
-  String get startChat => 'Start Chat';
+  String get sentence => '句子';
 
   @override
-  String get manageParticipants => 'Manage Participants';
+  String get signUp => '注册';
 
   @override
-  String get tutorialAiChatTitle => 'AI 聊天';
+  String get similarTextFound => '发现相似文本';
 
   @override
-  String get tutorialAiChatDesc => '在这里与 AI 角色练习实际对话。';
+  String get skip => '跳过';
 
   @override
-  String get tutorialM2SelectTitle => '选择与筛选';
+  String get source => '来源:';
 
   @override
-  String get tutorialM2SelectDesc => '选择学习资料或切换到“复习全部”。';
+  String get sourceLanguage => '源语言';
 
   @override
-  String get tutorialM2ListTitle => '学习列表';
+  String get sourceLanguageLabel => 'Source Language';
 
   @override
-  String get tutorialM2ListDesc => '查看已保存的卡片并翻转查看答案。 (Long-press to delete)';
+  String get speakNow => '现在说话！';
 
   @override
-  String get tutorialM3SelectTitle => '选择资料';
+  String get speaker => '说话者';
 
   @override
-  String get tutorialM3SelectDesc => '选择用于口语练习的资料集。';
+  String get speakerSelect => '选择发话者';
 
   @override
-  String get tutorialM3IntervalTitle => '间隔';
+  String get speakingPractice => '口语练习';
 
   @override
-  String get tutorialM3IntervalDesc => '调整句子之间的等待时间。';
+  String get startChat => '开始对话';
 
   @override
-  String get tutorialM3StartTitle => '开始练习';
+  String get startPractice => '开始练习';
 
   @override
-  String get tutorialM3StartDesc => '点击播放开始聆听和跟读。';
+  String get startTutorial => '开始教程';
 
   @override
   String get startWarning => '警告';
 
   @override
-  String get noVoiceDetected => '未检测到声音';
+  String get startsWith => '起始字符';
 
   @override
-  String get tooltipSearch => '搜索';
+  String get statusCheckEmail => '请检查您的邮箱，完成验证。';
 
   @override
-  String get tooltipStudyReview => '学习+复习';
+  String statusDownloading(Object name) {
+    return '正在下载: $name...';
+  }
 
   @override
-  String get tooltipSpeaking => '口语';
+  String statusImportFailed(Object error) {
+    return '导入失败: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 导入完成';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => '登录已取消。';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return '登录失败: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => '登录成功。';
+
+  @override
+  String get statusLogoutSuccess => '已登出。';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return '注册失败: $error';
+  }
+
+  @override
+  String get statusSigningUp => '正在注册...';
+
+  @override
+  String get stopPractice => '停止练习';
+
+  @override
+  String get studyComplete => '已学习';
+
+  @override
+  String studyRecords(int count) {
+    return '学习记录 ($count)';
+  }
+
+  @override
+  String get styleFormal => '敬语';
+
+  @override
+  String get styleInformal => '非敬语';
+
+  @override
+  String get stylePolite => '客气';
+
+  @override
+  String get styleSlang => '俚语/俗语';
+
+  @override
+  String get subject => '主题:';
+
+  @override
+  String get swapLanguages => '切换语言';
+
+  @override
+  String get switchToAi => '切换到 AI 模式';
+
+  @override
+  String get switchToPartner => '切换到伙伴模式';
+
+  @override
+  String get syncingData => '正在同步数据...';
+
+  @override
+  String get tabConversation => '对话';
+
+  @override
+  String tabReview(int count) {
+    return '复习 ($count)';
+  }
+
+  @override
+  String get tabSentence => '句子';
+
+  @override
+  String get tabSpeaking => '口语';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return '学习资料 ($count)';
+  }
+
+  @override
+  String get tabWord => '单词';
+
+  @override
+  String get tagFormal => '敬语';
+
+  @override
+  String get tagSelection => '标签选择';
+
+  @override
+  String get targetLanguage => '目标语言';
+
+  @override
+  String get targetLanguageFilter => '目标语言筛选:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc => '答案显示前用于思考的时间。';
+
+  @override
+  String get thinkingTimeInterval => '播放延迟';
+
+  @override
+  String get timeUp => '时间到！';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
+
+  @override
+  String get titleTagSelection => '标题标签 (资料集)';
 
   @override
   String get tooltipDecrease => '减少';
@@ -562,641 +1029,198 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tooltipIncrease => '增加';
 
   @override
-  String get languageSettings => '语言设置';
+  String get tooltipSearch => '搜索';
 
   @override
-  String get tutorialM2DropdownDesc => '选择学习资料。';
+  String get tooltipSpeaking => '口语';
 
   @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
+  String get tooltipStudyReview => '学习+复习';
 
   @override
-  String get tutorialM2ImportDesc => '从设备文件夹导入JSON文件。';
+  String totalRecords(int count) {
+    return '总共 $count 条记录 (查看全部)';
+  }
 
   @override
-  String get tutorialLangSettingsTitle => 'Language Settings';
+  String get translate => '翻译';
 
   @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
+  String get translating => '正在翻译...';
 
   @override
-  String get copy => '复制';
+  String get translation => '翻译';
 
   @override
-  String get copiedToClipboard => '已复制到剪贴板！';
+  String get translationComplete => '翻译完成 (需保存)';
 
   @override
-  String get tutorialContextTitle => '上下文标签';
+  String translationFailed(String error) {
+    return '翻译失败: $error';
+  }
+
+  @override
+  String get translationLimitExceeded => '超出翻译限额';
+
+  @override
+  String get translationLimitMessage => '已用完每日免费翻译 (5次)。\\n\\n观看广告以立即补充 5 次吗？';
+
+  @override
+  String get translationLoaded => '已加载保存的翻译';
+
+  @override
+  String get translationRefilled => '翻译次数已补充 5 次！';
+
+  @override
+  String get translationResultHint => '翻译结果 - 可修改';
+
+  @override
+  String get tryAgain => '再试一次';
+
+  @override
+  String get tutorialAiChatDesc => '在这里与 AI 角色练习实际对话。';
+
+  @override
+  String get tutorialAiChatTitle => 'AI 聊天';
 
   @override
   String get tutorialContextDesc => '添加上下文（例如：早上）以区分相似的句子。';
 
   @override
-  String get thinkingTimeInterval => '播放延迟';
+  String get tutorialContextTitle => '上下文标签';
 
   @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
+  String get tutorialLangSettingsDesc => '设置要翻译的源语言和目标语言。';
 
   @override
-  String get autoPlay => 'Auto-Play';
+  String get tutorialLangSettingsTitle => '语言设置';
 
   @override
-  String get timeUp => 'Time Up!';
+  String get tutorialM1ToggleDesc => '在这里切换单词和句子模式。';
 
   @override
-  String get gameModeTitle => 'Game Mode';
+  String get tutorialM1ToggleTitle => '单词/句子模式';
 
   @override
-  String get gameModeDesc => 'Choose your practice mode';
+  String get tutorialM2DropdownDesc => '选择学习资料。';
 
   @override
-  String get wordDefenseTitle => 'Word Defense';
+  String get tutorialM2ImportDesc => '从设备文件夹导入JSON文件。';
 
   @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
+  String get tutorialM2ListDesc => '查看已保存的卡片并翻转查看答案。 (Long-press to delete)';
 
   @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
+  String get tutorialM2ListTitle => '学习列表';
 
   @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
+  String get tutorialM2SearchDesc => '搜索已保存的单词和句子以快速找到它们。';
 
   @override
-  String get translation => 'Translation';
+  String get tutorialM2SelectDesc => '选择学习资料或切换到“复习全部”。';
 
   @override
-  String get labelType => 'Type:';
+  String get tutorialM2SelectTitle => '选择与筛选';
 
   @override
-  String get labelWord => 'Word';
+  String get tutorialM3IntervalDesc => '调整句子之间的等待时间。';
 
   @override
-  String get labelSentence => 'Sentence';
-
-  @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
-
-  @override
-  String get usageLimitTitle => '已达上限';
-
-  @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
-
-  @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
-
-  @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
-
-  @override
-  String get translationRefilled => 'Translations refilled by 5!';
-
-  @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
-
-  @override
-  String get reviewAll => 'Review All';
-
-  @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
-
-  @override
-  String get filterAll => 'All';
-
-  @override
-  String get practiceWordsOnly => 'Practice Words Only';
-
-  @override
-  String get resetPracticeHistory => 'Reset Practice History';
-
-  @override
-  String get retry => 'Retry?';
-
-  @override
-  String get noStudyMaterial => 'No study material found.';
-
-  @override
-  String get gameOver => 'Game Over';
-
-  @override
-  String get playAgain => 'Play Again';
-
-  @override
-  String get speakNow => 'Speak now!';
-
-  @override
-  String get scoreLabel => 'Score';
-
-  @override
-  String get viewOnlineGuide => 'View Online User Guide';
-
-  @override
-  String get getMaterials => 'Get Materials';
-
-  @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
-
-  @override
-  String get wordModeLabel => 'Word Mode';
-
-  @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get menuHelp => 'Help';
-
-  @override
-  String get menuWebDownload => 'Get Material from Web';
-
-  @override
-  String get menuDeviceImport => 'Import from Device';
-
-  @override
-  String get menuSettings => 'Settings';
-
-  @override
-  String get basicWords => '基础词库';
-
-  @override
-  String get basicSentences => '基础句库';
-
-  @override
-  String get selectMaterialSet => '选择学习资料集';
-
-  @override
-  String get sectionWords => '单词';
-
-  @override
-  String get sectionSentences => '句子';
-
-  @override
-  String get languageSettingsTitle => 'Language Settings';
-
-  @override
-  String get sourceLanguageLabel => 'Source Language';
-
-  @override
-  String get targetLanguageLabel => 'Target Language';
-
-  @override
-  String get mode3Start => 'Start';
-
-  @override
-  String get mode3Stop => 'Stop';
-
-  @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc => '我用我正在学习的语言替换我的母语。';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
+  String get tutorialM3IntervalTitle => '间隔';
 
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
 
   @override
-  String get menuSelectMaterialSet => '选择学习资料集';
+  String get tutorialM3ResetTitle => 'Reset History';
 
   @override
-  String get sectionWord => '单词部分';
+  String get tutorialM3SelectDesc => '选择用于口语练习的资料集。';
 
   @override
-  String get sectionSentence => '句子部分';
+  String get tutorialM3SelectTitle => '选择资料';
 
   @override
-  String get tabWord => '单词';
+  String get tutorialM3StartDesc => '点击播放开始聆听和跟读。';
 
   @override
-  String get tabSentence => '句子';
+  String get tutorialM3StartTitle => '开始练习';
 
   @override
-  String get errorProfanity => '包含不雅内容，无法翻译。';
+  String get tutorialM3WordsDesc => '勾选后只练习保存的单词。';
 
   @override
-  String get errorHateSpeech => '包含仇恨言论，无法翻译。';
+  String get tutorialM3WordsTitle => '单词练习';
 
   @override
-  String get errorSexualContent => '包含色情内容，无法翻译。';
+  String get tutorialMicDesc => '点击麦克风按钮开始语音输入。';
 
   @override
-  String get errorOtherSafety => '由于 AI 安全策略，翻译被拒绝。';
+  String get tutorialMicTitle => '语音输入';
 
   @override
-  String get clearAll => '全部清除';
+  String get tutorialSaveDesc => '将翻译保存到学习记录。';
 
   @override
-  String get disambiguationTitle => '选择含义';
+  String get tutorialSaveTitle => '保存';
 
   @override
-  String get disambiguationPrompt => '您想翻译成哪个含义？';
+  String get tutorialSwapDesc => '我用我正在学习的语言替换我的母语。';
 
   @override
-  String get skip => '跳过';
+  String get tutorialTabDesc => '您可以在这里选择所需的学习模式。';
 
   @override
-  String get inputModeTitle => '输入';
+  String get tutorialTapToContinue => '点击继续';
 
   @override
-  String get reviewModeTitle => '复习';
+  String get tutorialTransDesc => '点击此处翻译您的文本。';
 
   @override
-  String get practiceModeTitle => '练习';
+  String get tutorialTransTitle => '翻译';
 
   @override
-  String get chatHistoryTitle => '对话历史';
+  String get typeExclamation => '感叹句';
 
   @override
-  String get chatNew => 'New Chat';
+  String get typeImperative => '祈使句';
 
   @override
-  String get chatNewChat => '新对话';
+  String get typeQuestion => '疑问句';
 
   @override
-  String get chatChoosePersona => '选择角色';
+  String get typeStatement => '陈述句';
 
   @override
-  String get chatTypeHint => '输入消息...';
+  String get usageLimitTitle => '已达上限';
 
   @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
+  String get useExistingText => '使用现有';
 
   @override
-  String get chatNoConversations => '暂无对话';
+  String get viewOnlineGuide => '查看在线指南';
 
   @override
-  String get noDialogueHistory => 'No dialogue history.';
+  String get voluntaryTranslations => '自愿翻译';
 
   @override
-  String get chatStartNewPrompt => '开始新对话进行练习！';
+  String get watchAdAndRefill => '观看广告并补充 (+5次)';
 
   @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
+  String get word => '单词';
 
   @override
-  String get personaTeacher => '英语老师';
+  String get wordDefenseDesc => '在敌人到达之前说出单词来防御基地。';
 
   @override
-  String get personaGuide => '旅行导游';
+  String get wordDefenseTitle => '单词防御';
 
   @override
-  String get personaFriend => '当地朋友';
+  String get wordModeLabel => '单词模式';
 
   @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => '聊天';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => '基础词库';
-
-  @override
-  String get basicSentenceRepository => '基础句库';
-
-  @override
-  String get chatEndTitle => '结束并保存对话';
-
-  @override
-  String get chatEndMessage => '是否结束此对话？';
-
-  @override
-  String get chatSaveAndExit => '保存并退出';
-
-  @override
-  String get errorSelectCategory => '请先选择单词或句子！';
-
-  @override
-  String get tutorialM1ToggleTitle => '单词/句子模式';
-
-  @override
-  String get tutorialM1ToggleDesc => '在这里切换单词和句子模式。';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => '敬语';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => '标题标签 (资料集)';
-
-  @override
-  String get generalTags => '通用标签';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => '单数';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => '中性';
-
-  @override
-  String get chatAllConversations => '所有对话';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation => '确定要删除此对话吗？\n删除后将无法恢复。';
-
-  @override
-  String get notSelected => '- 未选择 -';
-
-  @override
-  String get myWordbook => '我的单词本';
-
-  @override
-  String get mySentenceCollection => '我的句子集';
-
-  @override
-  String get newSubjectName => '新词汇/句子集标题';
-
-  @override
-  String get enterNewSubjectName => '输入新标题';
-
-  @override
-  String get addNewSubject => '添加新标题';
-
-  @override
-  String get selectExistingSubject => '选择现有标题';
-
-  @override
-  String get addTagHint => '添加标签...';
-
-  @override
-  String get save => '保存';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail => '请检查您的邮箱，完成验证。';
-
-  @override
-  String get emailAlreadyInUse => '此邮箱已被注册，请直接登录或找回密码。';
+  String get yourPronunciation => '你的发音';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -1204,35 +1228,317 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   AppLocalizationsZhCn() : super('zh_CN');
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => '准确率';
 
   @override
-  String get kakaoContinue => '使用Kakao继续';
+  String get adLoading => '正在加载广告。请稍后重试。';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => '添加新标题';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => '添加参与者';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => '添加标签...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => '已有账号？';
 
   @override
-  String get helpTitle => '帮助与指南';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => '模式';
+  String get autoPlay => '自动播放';
 
   @override
-  String get helpTabJson => 'JSON 格式';
+  String get basic => '基本';
 
   @override
-  String get helpTabTour => '新手引导';
+  String get basicDefault => '基本';
+
+  @override
+  String get basicMaterialRepository => '基本语句/单词库';
+
+  @override
+  String get basicSentenceRepository => '基础句库';
+
+  @override
+  String get basicSentences => '基础句库';
+
+  @override
+  String get basicWordRepository => '基础词汇库';
+
+  @override
+  String get basicWords => '基础词库';
+
+  @override
+  String get cancel => '取消';
+
+  @override
+  String get caseObject => '宾格';
+
+  @override
+  String get casePossessive => '所有格';
+
+  @override
+  String get casePossessivePronoun => '所有格代词';
+
+  @override
+  String get caseReflexive => '反身代词';
+
+  @override
+  String get caseSubject => '主格';
+
+  @override
+  String get chatAiChat => '聊天';
+
+  @override
+  String get chatAllConversations => '所有对话';
+
+  @override
+  String get chatChoosePersona => '选择角色';
+
+  @override
+  String get chatEndMessage => '要结束对话吗？';
+
+  @override
+  String get chatEndTitle => '结束并保存对话';
+
+  @override
+  String chatFailed(Object error) {
+    return '聊天失败: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return '对话摘录 ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => '对话记录';
+
+  @override
+  String get chatNew => '新对话';
+
+  @override
+  String get chatNewChat => '新对话';
+
+  @override
+  String get chatNoConversations => '还没有对话';
+
+  @override
+  String get chatSaveAndExit => '保存后退出';
+
+  @override
+  String get chatStartNewPrompt => '开始新的对话练习吧！';
+
+  @override
+  String get chatTypeHint => '输入消息...';
+
+  @override
+  String get chatUntitled => '无标题对话';
+
+  @override
+  String get checking => '正在检查...';
+
+  @override
+  String get clearAll => '全部清除';
+
+  @override
+  String get confirm => '确认';
+
+  @override
+  String get confirmDelete => '确定要删除这条学习记录吗？';
+
+  @override
+  String get confirmDeleteConversation => '确定要删除此对话吗？\n删除后将无法恢复。';
+
+  @override
+  String get confirmDeleteParticipant => '确定要删除此参与者吗？';
+
+  @override
+  String get contextTagHint => '为了方便以后区分，请描述情景';
+
+  @override
+  String get contextTagLabel => '上下文/情景 (可选) - 例如: 早上问候，敬语';
+
+  @override
+  String get copiedToClipboard => '已复制到剪贴板！';
+
+  @override
+  String get copy => '复制';
+
+  @override
+  String get correctAnswer => '正确答案';
+
+  @override
+  String get createNew => '新建条目';
+
+  @override
+  String get currentLocation => '当前位置';
+
+  @override
+  String get currentMaterialLabel => '当前选择的资料集：';
+
+  @override
+  String get delete => '删除';
+
+  @override
+  String deleteFailed(String error) {
+    return '删除失败: $error';
+  }
+
+  @override
+  String get deleteRecord => '删除记录';
+
+  @override
+  String get dialogueQuestDesc => '通过情景对话进行练习。选择合适的答案并说出来。';
+
+  @override
+  String get dialogueQuestTitle => '对话任务';
+
+  @override
+  String get disambiguationPrompt => '您想翻译成哪个意思？';
+
+  @override
+  String get disambiguationTitle => '选择释义';
+
+  @override
+  String get dontHaveAccount => '没有账号？';
+
+  @override
+  String get editParticipant => '编辑参与者';
+
+  @override
+  String get email => '电子邮件';
+
+  @override
+  String get emailAlreadyInUse => '此邮箱已被注册，请直接登录或找回密码。';
+
+  @override
+  String get enterNewSubjectName => '输入新标题';
+
+  @override
+  String get enterSentenceHint => '输入句子...';
+
+  @override
+  String get enterTextHint => '输入要翻译的文本';
+
+  @override
+  String get enterTextToTranslate => '请输入要翻译的文本';
+
+  @override
+  String get enterWordHint => '输入单词...';
+
+  @override
+  String get error => '错误';
+
+  @override
+  String get errorHateSpeech => '包含仇恨言论，无法翻译。';
+
+  @override
+  String get errorOtherSafety => '由于 AI 安全策略，翻译被拒绝。';
+
+  @override
+  String get errorProfanity => '包含不雅内容，无法翻译。';
+
+  @override
+  String get errorSelectCategory => '请先选择单词或句子！';
+
+  @override
+  String get errorSexualContent => '包含性暗示内容，无法翻译。';
+
+  @override
+  String get errors => '错误:';
+
+  @override
+  String get female => '女性';
+
+  @override
+  String get file => '文件:';
+
+  @override
+  String get filterAll => '全部';
+
+  @override
+  String get flip => '翻转';
+
+  @override
+  String get formComparative => '比较级';
+
+  @override
+  String get formInfinitive => '原形/现在形';
+
+  @override
+  String get formPast => '过去式';
+
+  @override
+  String get formPastParticiple => '过去分词';
+
+  @override
+  String get formPlural => '复数';
+
+  @override
+  String get formPositive => '原级';
+
+  @override
+  String get formPresent => '现在式';
+
+  @override
+  String get formPresentParticiple => '现在分词 (ing)';
+
+  @override
+  String get formSingular => '单数';
+
+  @override
+  String get formSuperlative => '最高级';
+
+  @override
+  String get formThirdPersonSingular => '第三人称单数';
+
+  @override
+  String get gameModeDesc => '选择要练习的游戏模式';
+
+  @override
+  String get gameModeTitle => '游戏模式';
+
+  @override
+  String get gameOver => '游戏结束';
+
+  @override
+  String get gender => '性别';
+
+  @override
+  String get generalTags => '通用标签';
+
+  @override
+  String get getMaterials => '获取资料';
+
+  @override
+  String get good => '不错';
+
+  @override
+  String get googleContinue => '使用 Google 账号继续';
+
+  @override
+  String get helpDialogueImportDesc => '通过 JSON 文件导入整个对话集。';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc => '要在模式 3 中导入学习资料，请创建具有以下结构的 JSON 文件：';
+
+  @override
+  String get helpJsonTypeDialogue => '对话（Dialogue）';
+
+  @override
+  String get helpJsonTypeSentence => '句子（Sentence）';
+
+  @override
+  String get helpJsonTypeWord => '单词（Word）';
 
   @override
   String get helpMode1Desc => '语音识别、翻译并收听结果。';
@@ -1260,159 +1566,42 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• AI 聊天：与角色扮演进行真实对话练习。\n• 参与者管理：分别设置您和 AI 的语言，避免语言不匹配。\n• GPS 情景：根据当前位置模拟自然的对话场景。\n• 记录保存：所有对话都基于 ID 安全存储，即使重命名也能保留记录。';
 
   @override
-  String get helpJsonDesc => '要在模式 3 中导入学习资料，请创建具有以下结构的 JSON 文件：';
+  String get helpTabJson => 'JSON 格式';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => '模式';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => '新手引导';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => '帮助与指南';
 
   @override
   String get helpTourDesc =>
       '开始教程后，**高亮圆圈**将引导您了解主要功能。\n(例如：当**高亮圆圈**指向学习卡片时，长按可将其删除。)';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => '位置';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => 'Me';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return '复习 ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return '学习资料 ($count)';
-  }
-
-  @override
-  String get mode2Title => '复习';
-
-  @override
-  String get search => '搜索';
-
-  @override
-  String get translate => '翻译';
-
-  @override
-  String get listen => '收听';
-
-  @override
-  String get saveData => '保存数据';
-
-  @override
-  String get saved => '已保存';
-
-  @override
-  String get delete => '删除';
-
-  @override
-  String get materialInfo => '资料信息';
-
-  @override
-  String get cancel => '取消';
-
-  @override
-  String get confirm => '确认';
-
-  @override
-  String get refresh => '刷新';
-
-  @override
-  String studyRecords(int count) {
-    return '学习记录 ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => '目标语言筛选:';
-
-  @override
-  String get noRecords => '所选语言没有学习记录';
-
-  @override
-  String get saveTranslationsFromSearch => '在搜索模式下保存翻译';
-
-  @override
-  String get flip => '翻转';
-
-  @override
   String get hide => '隐藏';
 
   @override
-  String get deleteRecord => '删除记录';
-
-  @override
-  String get confirmDelete => '确定要删除这条学习记录吗？';
-
-  @override
-  String get recordDeleted => '记录已删除';
-
-  @override
-  String deleteFailed(String error) {
-    return '删除失败: $error';
+  String importAdded(int count) {
+    return '添加: $count 项';
   }
 
   @override
-  String get importJsonFile => '导入 JSON 文件';
-
-  @override
-  String get importing => '正在导入...';
-
-  @override
   String get importComplete => '导入完成';
+
+  @override
+  String get importDuplicateTitleError => '已存在相同标题的资料。请更改标题后重试。';
+
+  @override
+  String importErrorMessage(String error) {
+    return '文件导入失败:\\n$error';
+  }
 
   @override
   String get importFailed => '导入失败';
@@ -1423,39 +1612,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => '导入 JSON 文件';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return '总计: $count 项';
-  }
-
-  @override
-  String importAdded(int count) {
-    return '添加: $count 项';
-  }
+  String get importJsonFilePrompt => '请导入 JSON 文件';
 
   @override
   String importSkipped(int count) {
@@ -1463,133 +1623,15 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get errors => '错误:';
-
-  @override
-  String get error => '错误';
-
-  @override
-  String importErrorMessage(String error) {
-    return '文件导入失败:\\n$error';
+  String importTotal(int count) {
+    return '总计: $count 项';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => '正在导入...';
 
   @override
-  String get selectStudyMaterial => '选择学习资料';
-
-  @override
-  String get subject => '主题:';
-
-  @override
-  String get source => '来源:';
-
-  @override
-  String get file => '文件:';
-
-  @override
-  String progress(int current, int total) {
-    return '进度: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => '请导入 JSON 文件';
-
-  @override
-  String get selectMaterialPrompt => '请选择学习资料';
-
-  @override
-  String get studyComplete => '已学习';
-
-  @override
-  String get markAsStudied => '标记为已学习';
-
-  @override
-  String get listening => '正在聆听...';
-
-  @override
-  String get recognized => '识别完成';
-
-  @override
-  String recognitionFailed(String error) {
-    return '语音识别失败: $error';
-  }
-
-  @override
-  String get checking => '正在检查...';
-
-  @override
-  String get translating => '正在翻译...';
-
-  @override
-  String get translationComplete => '翻译完成 (需保存)';
-
-  @override
-  String get translationLoaded => '已加载保存的翻译';
-
-  @override
-  String translationFailed(String error) {
-    return '翻译失败: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => '请输入要翻译的文本';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => '正在保存...';
-
-  @override
-  String get noTranslationToSave => '没有可保存的翻译';
-
-  @override
-  String saveFailed(String error) {
-    return '保存失败: $error';
-  }
-
-  @override
-  String get playing => '正在播放...';
-
-  @override
-  String get noTextToPlay => '没有可播放的文本';
-
-  @override
-  String playbackFailed(String error) {
-    return '播放失败: $error';
-  }
-
-  @override
-  String get sourceLanguage => '源语言';
-
-  @override
-  String get targetLanguage => '目标语言';
-
-  @override
-  String get similarTextFound => '发现相似文本';
-
-  @override
-  String get useExistingText => '使用现有';
-
-  @override
-  String get createNew => '新建条目';
-
-  @override
-  String reviewCount(int count) {
-    return '复习 $count 次';
-  }
-
-  @override
-  String get tabSpeaking => '口语';
-
-  @override
-  String get speakingPractice => '口语练习';
+  String get inputModeTitle => '输入';
 
   @override
   String intervalSeconds(int seconds) {
@@ -1597,10 +1639,369 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get yourPronunciation => '你的发音';
+  String get invalidEmail => '请输入有效的电子邮件。';
 
   @override
-  String get correctAnswer => '正确答案';
+  String get kakaoContinue => '使用Kakao继续';
+
+  @override
+  String get labelLangCode => '语言代码 (例: en-US, ko-KR)';
+
+  @override
+  String get labelName => '名称';
+
+  @override
+  String get labelNote => '注释';
+
+  @override
+  String get labelPOS => '词性';
+
+  @override
+  String get labelRole => '角色';
+
+  @override
+  String get labelSentence => '句子';
+
+  @override
+  String get labelSentenceCollection => '句子集';
+
+  @override
+  String get labelSentenceType => '句子类型';
+
+  @override
+  String get labelShowMemorized => '已完成';
+
+  @override
+  String get labelType => '类型：';
+
+  @override
+  String get labelWord => '单词';
+
+  @override
+  String get labelWordbook => '单词本';
+
+  @override
+  String get language => '语言';
+
+  @override
+  String get languageSettings => '语言设置';
+
+  @override
+  String get languageSettingsTitle => '语言设置';
+
+  @override
+  String get libTitleFirstMeeting => '初次见面';
+
+  @override
+  String get libTitleGreetings1 => '问候 1';
+
+  @override
+  String get libTitleNouns1 => '名词 1';
+
+  @override
+  String get libTitleVerbs1 => '动词 1';
+
+  @override
+  String get listen => '收听';
+
+  @override
+  String get listening => '正在聆听...';
+
+  @override
+  String get loadingParticipants => '正在加载参与者...';
+
+  @override
+  String get location => '位置';
+
+  @override
+  String get login => '登录';
+
+  @override
+  String get logout => '退出登录';
+
+  @override
+  String get logoutConfirmMessage => '确定要从当前设备退出登录吗？';
+
+  @override
+  String get logoutConfirmTitle => '退出登录';
+
+  @override
+  String get male => '男性';
+
+  @override
+  String get manageParticipants => '管理参与者';
+
+  @override
+  String get manual => '手动输入';
+
+  @override
+  String get markAsStudied => '标记为已学习';
+
+  @override
+  String get materialInfo => '资料信息';
+
+  @override
+  String get me => '我';
+
+  @override
+  String get menuDeviceImport => '从设备导入资料';
+
+  @override
+  String get menuHelp => '帮助';
+
+  @override
+  String get menuLanguageSettings => '语言设置';
+
+  @override
+  String get menuOnlineLibrary => '在线资料库';
+
+  @override
+  String get menuSelectMaterialSet => '选择学习资料';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuTutorial => '使用教程';
+
+  @override
+  String get menuWebDownload => '使用说明书';
+
+  @override
+  String get metadataDialogTitle => '详细分类';
+
+  @override
+  String get metadataFormType => '语法形式';
+
+  @override
+  String get metadataRootWord => '词根 (Root Word)';
+
+  @override
+  String get micButtonTooltip => '开始语音识别';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return '当前选择的资料集: $name';
+  }
+
+  @override
+  String get mode2Title => '复习';
+
+  @override
+  String get mode3Next => '下一个';
+
+  @override
+  String get mode3Start => '开始';
+
+  @override
+  String get mode3Stop => '停止';
+
+  @override
+  String get mode3TryAgain => '重试';
+
+  @override
+  String get mySentenceCollection => '我的句子集';
+
+  @override
+  String get myWordbook => '我的词汇本';
+
+  @override
+  String get neutral => '中性';
+
+  @override
+  String get newSubjectName => '新建词汇本/句子集标题';
+
+  @override
+  String get next => '下一个';
+
+  @override
+  String get noDialogueHistory => '没有对话历史记录。';
+
+  @override
+  String get noInternetWarningMic => '没有网络连接。离线状态下语音识别可能无法使用。';
+
+  @override
+  String get noInternetWarningTranslate => '没有网络连接。离线状态下翻译功能无法使用。请使用复习模式。';
+
+  @override
+  String get noMaterialsInCategory => '此类别下没有资料。';
+
+  @override
+  String get noParticipantsFound => '没有已注册的参与者。';
+
+  @override
+  String get noRecords => '所选语言没有学习记录';
+
+  @override
+  String get noStudyMaterial => '没有学习资料。';
+
+  @override
+  String get noTextToPlay => '没有可播放的文本';
+
+  @override
+  String get noTranslationToSave => '没有可保存的翻译';
+
+  @override
+  String get noVoiceDetected => '未检测到声音';
+
+  @override
+  String get notSelected => '- 未选择 -';
+
+  @override
+  String get onlineLibraryCheckInternet => '请检查网络连接，或稍后重试。';
+
+  @override
+  String get onlineLibraryLoadFailed => '加载资料失败。';
+
+  @override
+  String get onlineLibraryNoMaterials => '没有资料。';
+
+  @override
+  String get participantDeleted => '参与者已删除。';
+
+  @override
+  String get participantRename => '重命名参与者';
+
+  @override
+  String get partner => '伙伴';
+
+  @override
+  String get partnerMode => '伙伴模式';
+
+  @override
+  String get password => '密码';
+
+  @override
+  String get passwordTooShort => '密码必须至少为 6 个字符。';
+
+  @override
+  String get perfect => '完美！';
+
+  @override
+  String get personaFriend => '当地朋友';
+
+  @override
+  String get personaGuide => '旅行指南';
+
+  @override
+  String get personaTeacher => '英语老师';
+
+  @override
+  String get playAgain => '再玩一次';
+
+  @override
+  String playbackFailed(String error) {
+    return '播放失败: $error';
+  }
+
+  @override
+  String get playing => '正在播放...';
+
+  @override
+  String get posAdjective => '形容词';
+
+  @override
+  String get posAdverb => '副词';
+
+  @override
+  String get posConjunction => '连词';
+
+  @override
+  String get posInterjection => '感叹词';
+
+  @override
+  String get posNoun => '名词';
+
+  @override
+  String get posPreposition => '介词/助词';
+
+  @override
+  String get posPronoun => '代词';
+
+  @override
+  String get posVerb => '动词';
+
+  @override
+  String get practiceModeTitle => '练习';
+
+  @override
+  String get practiceWordsOnly => '仅练习单词';
+
+  @override
+  String progress(int current, int total) {
+    return '进度: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return '查看最近创建的 $count 个项目';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return '语音识别失败: $error';
+  }
+
+  @override
+  String get recognized => '识别完成';
+
+  @override
+  String get recognizedText => '识别到的发音：';
+
+  @override
+  String get recordDeleted => '记录已删除';
+
+  @override
+  String get refresh => '刷新';
+
+  @override
+  String get reset => '重置';
+
+  @override
+  String get resetPracticeHistory => '重置练习记录';
+
+  @override
+  String get retry => '重试？';
+
+  @override
+  String get reviewAll => '全部复习';
+
+  @override
+  String reviewCount(int count) {
+    return '复习 $count 次';
+  }
+
+  @override
+  String get reviewModeTitle => '复习';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => '第三方';
+
+  @override
+  String get roleUser => '用户';
+
+  @override
+  String get save => '保存';
+
+  @override
+  String get saveData => '保存数据';
+
+  @override
+  String saveFailed(String error) {
+    return '保存失败: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch => '在搜索模式下保存翻译';
+
+  @override
+  String get saved => '已保存';
+
+  @override
+  String get saving => '正在保存...';
 
   @override
   String score(String score) {
@@ -1608,143 +2009,238 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get perfect => '完美！';
+  String get scoreLabel => '分数';
 
   @override
-  String get good => '不错';
+  String get search => '搜索';
 
   @override
-  String get tryAgain => '再试一次';
+  String get searchConditions => '搜索条件';
 
   @override
-  String get startPractice => '开始练习';
+  String get searchSentenceHint => '搜索句子...';
 
   @override
-  String get stopPractice => '停止练习';
+  String get searchWordHint => '搜索单词...';
 
   @override
-  String get menuOnlineLibrary => 'Online Library';
+  String get sectionSentence => '句子部分';
 
   @override
-  String get startTutorial => '开始教程';
+  String get sectionSentences => '句子';
 
   @override
-  String get menuTutorial => 'Tutorial';
+  String get sectionWord => '文字部分';
 
   @override
-  String get tutorialMicTitle => '语音输入';
+  String get sectionWords => '单词';
 
   @override
-  String get tutorialMicDesc => '点击麦克风按钮开始语音输入。';
+  String get selectExistingSubject => '选择现有标题';
 
   @override
-  String get tutorialTabDesc => '您可以在这里选择所需的学习模式。';
+  String get selectMaterialPrompt => '请选择学习资料';
 
   @override
-  String get tutorialTapToContinue => '点击继续';
+  String get selectMaterialSet => '选择学习资料集';
 
   @override
-  String get tutorialTransTitle => '翻译';
+  String get selectPOS => '选择词性';
 
   @override
-  String get tutorialTransDesc => '点击此处翻译您的文本。';
+  String get selectParticipants => '选择参与者';
 
   @override
-  String get tutorialSaveTitle => '保存';
+  String get selectSentenceType => '选择句子类型';
 
   @override
-  String get tutorialSaveDesc => '将翻译保存到学习记录。';
-
-  @override
-  String get selectParticipants => 'Select Participants';
-
-  @override
-  String get loadingParticipants => 'Loading participants...';
-
-  @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
+  String get selectStudyMaterial => '选择学习资料';
 
   @override
   String get sendingMessage => '메시지 전송 중...';
 
   @override
-  String get startChat => 'Start Chat';
+  String get sentence => '句子';
 
   @override
-  String get manageParticipants => 'Manage Participants';
+  String get signUp => '注册';
 
   @override
-  String get tutorialAiChatTitle => 'AI 聊天';
+  String get similarTextFound => '发现相似文本';
 
   @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
+  String get skip => '跳过';
 
   @override
-  String get tutorialM2SelectTitle => '选择与筛选';
+  String get source => '来源:';
 
   @override
-  String get tutorialM2SelectDesc => '选择学习资料或切换到“复习全部”。';
+  String get sourceLanguage => '源语言';
 
   @override
-  String get tutorialM2ListTitle => '学习列表';
+  String get sourceLanguageLabel => 'Source Language';
 
   @override
-  String get tutorialM2ListDesc => '查看已保存的卡片并翻转查看答案。(长按删除)';
+  String get speakNow => '现在说话！';
 
   @override
-  String get tutorialM3SelectTitle => '选择资料';
+  String get speaker => '说话者';
 
   @override
-  String get tutorialM3SelectDesc => '选择用于口语练习的资料集。';
+  String get speakerSelect => '选择发话人';
 
   @override
-  String get tutorialM3IntervalTitle => '间隔';
+  String get speakingPractice => '口语练习';
 
   @override
-  String get tutorialM3IntervalDesc => '调整句子之间的等待时间。';
+  String get startChat => '开始对话';
 
   @override
-  String get tutorialM3StartTitle => '开始练习';
+  String get startPractice => '开始练习';
 
   @override
-  String get tutorialM3StartDesc => '点击播放开始聆听和跟读。';
+  String get startTutorial => '开始教程';
 
   @override
   String get startWarning => '警告';
 
   @override
-  String get noVoiceDetected => '未检测到声音';
+  String get startsWith => '起始字符';
 
   @override
-  String get tooltipSearch => '搜索';
+  String get statusCheckEmail => '请验证您的电子邮件以完成身份验证。';
 
   @override
-  String get tooltipStudyReview => '学习+复习';
+  String statusDownloading(Object name) {
+    return '下载中: $name...';
+  }
 
   @override
-  String get tooltipSpeaking => '口语';
+  String statusImportFailed(Object error) {
+    return '导入失败: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 导入完成';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => '登录已取消。';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return '登录失败: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => '登录成功。';
+
+  @override
+  String get statusLogoutSuccess => '已退出登录。';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return '注册失败: $error';
+  }
+
+  @override
+  String get statusSigningUp => '注册中...';
+
+  @override
+  String get stopPractice => '停止练习';
+
+  @override
+  String get studyComplete => '已学习';
+
+  @override
+  String studyRecords(int count) {
+    return '学习记录 ($count)';
+  }
+
+  @override
+  String get styleFormal => '敬语';
+
+  @override
+  String get styleInformal => '非敬语';
+
+  @override
+  String get stylePolite => '礼貌';
+
+  @override
+  String get styleSlang => '俚语/俗语';
+
+  @override
+  String get subject => '主题:';
+
+  @override
+  String get swapLanguages => '切换语言';
+
+  @override
+  String get switchToAi => '切换到 AI 模式';
+
+  @override
+  String get switchToPartner => '切换到伙伴模式';
+
+  @override
+  String get syncingData => '数据同步中...';
+
+  @override
+  String get tabConversation => '对话';
+
+  @override
+  String tabReview(int count) {
+    return '复习 ($count)';
+  }
+
+  @override
+  String get tabSentence => '句子';
+
+  @override
+  String get tabSpeaking => '口语';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return '学习资料 ($count)';
+  }
+
+  @override
+  String get tabWord => '单词';
+
+  @override
+  String get tagFormal => '敬语';
+
+  @override
+  String get tagSelection => '选择标签';
+
+  @override
+  String get targetLanguage => '目标语言';
+
+  @override
+  String get targetLanguageFilter => '目标语言筛选:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc => '在显示答案之前，给自己一些思考时间。';
+
+  @override
+  String get thinkingTimeInterval => '播放延迟';
+
+  @override
+  String get timeUp => '时间到！';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
+
+  @override
+  String get titleTagSelection => '标题标签（资料集）';
 
   @override
   String get tooltipDecrease => '减少';
@@ -1753,642 +2249,198 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get tooltipIncrease => '增加';
 
   @override
-  String get languageSettings => '语言设置';
+  String get tooltipSearch => '搜索';
 
   @override
-  String get tutorialM2DropdownDesc => '选择学习资料。';
+  String get tooltipSpeaking => '口语';
 
   @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
+  String get tooltipStudyReview => '学习+复习';
 
   @override
-  String get tutorialM2ImportDesc => '从设备文件夹导入JSON文件。';
+  String totalRecords(int count) {
+    return '总共 $count 条记录（查看全部）';
+  }
 
   @override
-  String get tutorialLangSettingsTitle => '语言设置';
+  String get translate => '翻译';
 
   @override
-  String get tutorialLangSettingsDesc => '设置翻译的源语言和目标语言。';
+  String get translating => '正在翻译...';
 
   @override
-  String get copy => '复制';
+  String get translation => '翻译';
 
   @override
-  String get copiedToClipboard => '已复制到剪贴板！';
+  String get translationComplete => '翻译完成 (需保存)';
 
   @override
-  String get tutorialContextTitle => '上下文标签';
+  String translationFailed(String error) {
+    return '翻译失败: $error';
+  }
+
+  @override
+  String get translationLimitExceeded => '超出翻译限额';
+
+  @override
+  String get translationLimitMessage => '您已用完每日免费翻译 (5 次)。\\n\\n观看广告立即补充 5 次吗？';
+
+  @override
+  String get translationLoaded => '已加载保存的翻译';
+
+  @override
+  String get translationRefilled => '翻译次数已补充 5 次！';
+
+  @override
+  String get translationResultHint => '翻译结果 - 可修改';
+
+  @override
+  String get tryAgain => '再试一次';
+
+  @override
+  String get tutorialAiChatDesc => '与 AI 角色扮演进行真实对话练习。';
+
+  @override
+  String get tutorialAiChatTitle => 'AI 聊天';
 
   @override
   String get tutorialContextDesc => '添加上下文（例如：早上）以区分相似的句子。';
 
   @override
-  String get thinkingTimeInterval => '播放延迟';
+  String get tutorialContextTitle => '上下文标签';
 
   @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
+  String get tutorialLangSettingsDesc => '设置翻译的源语言和目标语言。';
 
   @override
-  String get autoPlay => 'Auto-Play';
+  String get tutorialLangSettingsTitle => '语言设置';
 
   @override
-  String get timeUp => 'Time Up!';
+  String get tutorialM1ToggleDesc => '在这里切换单词和句子模式。';
 
   @override
-  String get gameModeTitle => 'Game Mode';
+  String get tutorialM1ToggleTitle => '单词/句子模式';
 
   @override
-  String get gameModeDesc => 'Choose your practice mode';
+  String get tutorialM2DropdownDesc => '选择学习资料。';
 
   @override
-  String get wordDefenseTitle => 'Word Defense';
+  String get tutorialM2ImportDesc => '从设备文件夹导入JSON文件。';
 
   @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
+  String get tutorialM2ListDesc => '查看已保存的卡片并翻转查看答案。(长按删除)';
 
   @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
+  String get tutorialM2ListTitle => '学习列表';
 
   @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
+  String get tutorialM2SearchDesc => '搜索已保存的单词和句子，以便快速查找。';
 
   @override
-  String get translation => 'Translation';
+  String get tutorialM2SelectDesc => '选择学习资料或切换到“复习全部”。';
 
   @override
-  String get labelType => 'Type:';
+  String get tutorialM2SelectTitle => '选择与筛选';
 
   @override
-  String get labelWord => 'Word';
+  String get tutorialM3IntervalDesc => '调整句子之间的等待时间。';
 
   @override
-  String get labelSentence => 'Sentence';
-
-  @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
-
-  @override
-  String get usageLimitTitle => '已达用量上限';
-
-  @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
-
-  @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
-
-  @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
-
-  @override
-  String get translationRefilled => 'Translations refilled by 5!';
-
-  @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
-
-  @override
-  String get reviewAll => 'Review All';
-
-  @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
-
-  @override
-  String get filterAll => 'All';
-
-  @override
-  String get practiceWordsOnly => 'Practice Words Only';
-
-  @override
-  String get resetPracticeHistory => 'Reset Practice History';
-
-  @override
-  String get retry => 'Retry?';
-
-  @override
-  String get noStudyMaterial => 'No study material found.';
-
-  @override
-  String get gameOver => 'Game Over';
-
-  @override
-  String get playAgain => 'Play Again';
-
-  @override
-  String get speakNow => 'Speak now!';
-
-  @override
-  String get scoreLabel => 'Score';
-
-  @override
-  String get viewOnlineGuide => 'View Online User Guide';
-
-  @override
-  String get getMaterials => 'Get Materials';
-
-  @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
-
-  @override
-  String get wordModeLabel => 'Word Mode';
-
-  @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get menuHelp => 'Help';
-
-  @override
-  String get menuWebDownload => 'Get Material from Web';
-
-  @override
-  String get menuDeviceImport => 'Import from Device';
-
-  @override
-  String get menuSettings => 'Settings';
-
-  @override
-  String get basicWords => '基础词库';
-
-  @override
-  String get basicSentences => '基础句库';
-
-  @override
-  String get selectMaterialSet => '选择学习资料集';
-
-  @override
-  String get sectionWords => '单词';
-
-  @override
-  String get sectionSentences => '句子';
-
-  @override
-  String get languageSettingsTitle => 'Language Settings';
-
-  @override
-  String get sourceLanguageLabel => 'Source Language';
-
-  @override
-  String get targetLanguageLabel => 'Target Language';
-
-  @override
-  String get mode3Start => 'Start';
-
-  @override
-  String get mode3Stop => 'Stop';
-
-  @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc => '我用我正在学习的语言替换我的母语。';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
+  String get tutorialM3IntervalTitle => '间隔';
 
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
 
   @override
-  String get menuSelectMaterialSet => '选择学习资料';
+  String get tutorialM3ResetTitle => 'Reset History';
 
   @override
-  String get sectionWord => '文字部分';
+  String get tutorialM3SelectDesc => '选择用于口语练习的资料集。';
 
   @override
-  String get sectionSentence => '句子部分';
+  String get tutorialM3SelectTitle => '选择资料';
 
   @override
-  String get tabWord => '单词';
+  String get tutorialM3StartDesc => '点击播放开始聆听和跟读。';
 
   @override
-  String get tabSentence => '句子';
+  String get tutorialM3StartTitle => '开始练习';
 
   @override
-  String get errorProfanity => '包含不雅内容，无法翻译。';
+  String get tutorialM3WordsDesc => '勾选后，只练习已保存的单词。';
 
   @override
-  String get errorHateSpeech => '包含仇恨言论，无法翻译。';
+  String get tutorialM3WordsTitle => '单词练习';
 
   @override
-  String get errorSexualContent => '包含性暗示内容，无法翻译。';
+  String get tutorialMicDesc => '点击麦克风按钮开始语音输入。';
 
   @override
-  String get errorOtherSafety => '由于 AI 安全策略，翻译被拒绝。';
+  String get tutorialMicTitle => '语音输入';
 
   @override
-  String get clearAll => '全部清除';
+  String get tutorialSaveDesc => '将翻译保存到学习记录。';
 
   @override
-  String get disambiguationTitle => '选择释义';
+  String get tutorialSaveTitle => '保存';
 
   @override
-  String get disambiguationPrompt => '您想翻译成哪个意思？';
+  String get tutorialSwapDesc => '我用我正在学习的语言替换我的母语。';
 
   @override
-  String get skip => '跳过';
+  String get tutorialTabDesc => '您可以在这里选择所需的学习模式。';
 
   @override
-  String get inputModeTitle => 'Input';
+  String get tutorialTapToContinue => '点击继续';
 
   @override
-  String get reviewModeTitle => 'Review';
+  String get tutorialTransDesc => '点击此处翻译您的文本。';
 
   @override
-  String get practiceModeTitle => '练习';
+  String get tutorialTransTitle => '翻译';
 
   @override
-  String get chatHistoryTitle => 'Conversation History';
+  String get typeExclamation => '感叹句';
 
   @override
-  String get chatNew => 'New Chat';
+  String get typeImperative => '祈使句';
 
   @override
-  String get chatNewChat => 'New Chat';
+  String get typeQuestion => '疑问句';
 
   @override
-  String get chatChoosePersona => 'Choose a Persona';
+  String get typeStatement => '陈述句';
 
   @override
-  String get chatTypeHint => 'Type a message...';
+  String get usageLimitTitle => '已达用量上限';
 
   @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
+  String get useExistingText => '使用现有';
 
   @override
-  String get chatNoConversations => 'No conversations yet';
+  String get viewOnlineGuide => '查看在线指南';
 
   @override
-  String get noDialogueHistory => 'No dialogue history.';
+  String get voluntaryTranslations => '自愿翻译';
 
   @override
-  String get chatStartNewPrompt => 'Start a new chat to practice!';
+  String get watchAdAndRefill => '观看广告并补充 (+5 次)';
 
   @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
+  String get word => '单词';
 
   @override
-  String get personaTeacher => 'English Teacher';
+  String get wordDefenseDesc => '在敌人到达之前说出单词，保卫基地。';
 
   @override
-  String get personaGuide => 'Travel Guide';
+  String get wordDefenseTitle => '单词防御';
 
   @override
-  String get personaFriend => 'Local Friend';
+  String get wordModeLabel => '单词模式';
 
   @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => '聊天';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => '基础词汇库';
-
-  @override
-  String get basicSentenceRepository => '基础句库';
-
-  @override
-  String get chatEndTitle => 'End & Save Chat';
-
-  @override
-  String get chatEndMessage =>
-      'Do you want to end this conversation? You can set a title for it.';
-
-  @override
-  String get chatSaveAndExit => 'Save & Exit';
-
-  @override
-  String get errorSelectCategory => 'Please select word or sentence first!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => '敬语';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => '标题标签（资料集）';
-
-  @override
-  String get generalTags => '通用标签';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => '单数';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => '中性';
-
-  @override
-  String get chatAllConversations => '所有对话';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation => '确定要删除此对话吗？\n删除后将无法恢复。';
-
-  @override
-  String get notSelected => '- 未选择 -';
-
-  @override
-  String get myWordbook => '我的词汇本';
-
-  @override
-  String get mySentenceCollection => '我的句子集';
-
-  @override
-  String get newSubjectName => '新建词汇本/句子集标题';
-
-  @override
-  String get enterNewSubjectName => '输入新标题';
-
-  @override
-  String get addNewSubject => '添加新标题';
-
-  @override
-  String get selectExistingSubject => '选择现有标题';
-
-  @override
-  String get addTagHint => '添加标签...';
-
-  @override
-  String get save => '保存';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail => '请验证您的电子邮件以完成身份验证。';
-
-  @override
-  String get emailAlreadyInUse => '此邮箱已被注册，请直接登录或找回密码。';
+  String get yourPronunciation => '你的发音';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -2396,35 +2448,317 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   AppLocalizationsZhTw() : super('zh_TW');
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => '準確度';
 
   @override
-  String get kakaoContinue => '以 Kakao 繼續';
+  String get adLoading => '正在載入廣告。請稍後重試。';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => '新增標題';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => '新增參與者';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => '新增標籤...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => '已經有帳號了嗎？';
 
   @override
-  String get helpTitle => '幫助與指南';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => '模式';
+  String get autoPlay => '自動播放';
 
   @override
-  String get helpTabJson => 'JSON 格式';
+  String get basic => '基本';
 
   @override
-  String get helpTabTour => '導覽';
+  String get basicDefault => '基本 (預設)';
+
+  @override
+  String get basicMaterialRepository => '基本句子/單字儲存庫';
+
+  @override
+  String get basicSentenceRepository => '基礎句庫';
+
+  @override
+  String get basicSentences => '基礎句庫';
+
+  @override
+  String get basicWordRepository => '基礎詞彙庫';
+
+  @override
+  String get basicWords => '基礎詞庫';
+
+  @override
+  String get cancel => '取消';
+
+  @override
+  String get caseObject => '受格';
+
+  @override
+  String get casePossessive => '所有格';
+
+  @override
+  String get casePossessivePronoun => '所有代名詞';
+
+  @override
+  String get caseReflexive => '反身代名詞';
+
+  @override
+  String get caseSubject => '主格';
+
+  @override
+  String get chatAiChat => '聊天';
+
+  @override
+  String get chatAllConversations => '所有對話';
+
+  @override
+  String get chatChoosePersona => '選擇角色';
+
+  @override
+  String get chatEndMessage => '確定要結束對話嗎？';
+
+  @override
+  String get chatEndTitle => '結束並儲存對話';
+
+  @override
+  String chatFailed(Object error) {
+    return '聊天失敗：$error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return '從對話摘錄 ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => '對話記錄';
+
+  @override
+  String get chatNew => '新對話';
+
+  @override
+  String get chatNewChat => '新對話';
+
+  @override
+  String get chatNoConversations => '還沒有對話';
+
+  @override
+  String get chatSaveAndExit => '儲存後結束';
+
+  @override
+  String get chatStartNewPrompt => '開始新的對話練習吧！';
+
+  @override
+  String get chatTypeHint => '輸入訊息...';
+
+  @override
+  String get chatUntitled => '未命名對話';
+
+  @override
+  String get checking => '正在檢查...';
+
+  @override
+  String get clearAll => '全部清除';
+
+  @override
+  String get confirm => '確認';
+
+  @override
+  String get confirmDelete => '確定要刪除這條學習記錄嗎？';
+
+  @override
+  String get confirmDeleteConversation => '您確定要刪除此對話嗎？\n刪除的對話將無法復原。';
+
+  @override
+  String get confirmDeleteParticipant => '確定要刪除此參與者嗎？';
+
+  @override
+  String get contextTagHint => '請註明情境以便日後區分';
+
+  @override
+  String get contextTagLabel => '情境 (可選) - 例如：早安問候、敬語';
+
+  @override
+  String get copiedToClipboard => '已複製到剪貼板！';
+
+  @override
+  String get copy => '複製';
+
+  @override
+  String get correctAnswer => '正確答案';
+
+  @override
+  String get createNew => '新建項目';
+
+  @override
+  String get currentLocation => '目前位置';
+
+  @override
+  String get currentMaterialLabel => '目前選擇的教材：';
+
+  @override
+  String get delete => '刪除';
+
+  @override
+  String deleteFailed(String error) {
+    return '刪除失敗: $error';
+  }
+
+  @override
+  String get deleteRecord => '刪除記錄';
+
+  @override
+  String get dialogueQuestDesc => '透過情境劇練習對話。選擇並說出適當的回答。';
+
+  @override
+  String get dialogueQuestTitle => '對話任務';
+
+  @override
+  String get disambiguationPrompt => '您想翻譯成哪個含義？';
+
+  @override
+  String get disambiguationTitle => '選擇含義';
+
+  @override
+  String get dontHaveAccount => '還沒有帳號嗎？';
+
+  @override
+  String get editParticipant => '編輯參與者';
+
+  @override
+  String get email => '電子郵件';
+
+  @override
+  String get emailAlreadyInUse => '此電子郵件已註冊。請登入或使用忘記密碼功能。';
+
+  @override
+  String get enterNewSubjectName => '輸入新標題';
+
+  @override
+  String get enterSentenceHint => '請輸入句子...';
+
+  @override
+  String get enterTextHint => '輸入要翻譯的文字';
+
+  @override
+  String get enterTextToTranslate => '請輸入要翻譯的文字';
+
+  @override
+  String get enterWordHint => '請輸入單字...';
+
+  @override
+  String get error => '錯誤';
+
+  @override
+  String get errorHateSpeech => '包含仇恨言論，無法翻譯。';
+
+  @override
+  String get errorOtherSafety => '因人工智慧安全政策而拒絕翻譯。';
+
+  @override
+  String get errorProfanity => '包含不雅字詞，無法翻譯。';
+
+  @override
+  String get errorSelectCategory => '請先選擇單字或句子！';
+
+  @override
+  String get errorSexualContent => '包含煽情內容，無法翻譯。';
+
+  @override
+  String get errors => '錯誤:';
+
+  @override
+  String get female => '女性';
+
+  @override
+  String get file => '檔案:';
+
+  @override
+  String get filterAll => '全部';
+
+  @override
+  String get flip => '翻轉';
+
+  @override
+  String get formComparative => '比較級';
+
+  @override
+  String get formInfinitive => '原形/現在式';
+
+  @override
+  String get formPast => '過去式';
+
+  @override
+  String get formPastParticiple => '過去分詞';
+
+  @override
+  String get formPlural => '複數形';
+
+  @override
+  String get formPositive => '原級';
+
+  @override
+  String get formPresent => '現在式';
+
+  @override
+  String get formPresentParticiple => '現在分詞 (ing)';
+
+  @override
+  String get formSingular => '單數';
+
+  @override
+  String get formSuperlative => '最高級';
+
+  @override
+  String get formThirdPersonSingular => '第三人稱單數';
+
+  @override
+  String get gameModeDesc => '選擇要練習的遊戲模式';
+
+  @override
+  String get gameModeTitle => '遊戲模式';
+
+  @override
+  String get gameOver => '遊戲結束';
+
+  @override
+  String get gender => '性別';
+
+  @override
+  String get generalTags => '一般標籤';
+
+  @override
+  String get getMaterials => '取得資料';
+
+  @override
+  String get good => '不錯';
+
+  @override
+  String get googleContinue => '使用 Google 帳戶繼續';
+
+  @override
+  String get helpDialogueImportDesc => '匯入 JSON 檔案中的整個對話集。';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc => '要在模式 3 中匯入學習資料，請建立具有以下結構的 JSON 檔案：';
+
+  @override
+  String get helpJsonTypeDialogue => '對話 (Dialogue)';
+
+  @override
+  String get helpJsonTypeSentence => '句子 (Sentence)';
+
+  @override
+  String get helpJsonTypeWord => '單字 (Word)';
 
   @override
   String get helpMode1Desc => '語音辨識、翻譯並收聽結果。';
@@ -2452,159 +2786,42 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• AI 聊天：練習與 AI 角色的實際對話。\n• 參與者管理：您可以分別設定您的語言和 AI 的語言，以避免語言不一致。\n• GPS 情境劇：根據您目前的位置建立自然的對話情境。\n• 記錄保存：所有對話都以 ID 為基礎安全地儲存，即使您更改名稱，記錄也會保留。';
 
   @override
-  String get helpJsonDesc => '要在模式 3 中匯入學習資料，請建立具有以下結構的 JSON 檔案：';
+  String get helpTabJson => 'JSON 格式';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => '模式';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => '導覽';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => '幫助與指南';
 
   @override
   String get helpTourDesc =>
       '開始教學後，**高亮圓圈**將引導您了解主要功能。\n(例如：當**高亮圓圈**指向學習卡片時，長按可將其刪除。)';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => '位置';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => 'Me';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return '複習 ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return '學習資料 ($count)';
-  }
-
-  @override
-  String get mode2Title => '複習';
-
-  @override
-  String get search => '搜尋';
-
-  @override
-  String get translate => '翻譯';
-
-  @override
-  String get listen => '收聽';
-
-  @override
-  String get saveData => '儲存資料';
-
-  @override
-  String get saved => '已儲存';
-
-  @override
-  String get delete => '刪除';
-
-  @override
-  String get materialInfo => '資料資訊';
-
-  @override
-  String get cancel => '取消';
-
-  @override
-  String get confirm => '確認';
-
-  @override
-  String get refresh => '重新整理';
-
-  @override
-  String studyRecords(int count) {
-    return '學習記錄 ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => '目標語言篩選:';
-
-  @override
-  String get noRecords => '所選語言沒有學習記錄';
-
-  @override
-  String get saveTranslationsFromSearch => '在搜尋模式下儲存翻譯';
-
-  @override
-  String get flip => '翻轉';
-
-  @override
   String get hide => '隱藏';
 
   @override
-  String get deleteRecord => '刪除記錄';
-
-  @override
-  String get confirmDelete => '確定要刪除這條學習記錄嗎？';
-
-  @override
-  String get recordDeleted => '記錄已刪除';
-
-  @override
-  String deleteFailed(String error) {
-    return '刪除失敗: $error';
+  String importAdded(int count) {
+    return '新增: $count 項';
   }
 
   @override
-  String get importJsonFile => '匯入 JSON 檔案';
-
-  @override
-  String get importing => '正在匯入...';
-
-  @override
   String get importComplete => '匯入完成';
+
+  @override
+  String get importDuplicateTitleError => '已存在相同標題的資料。請變更標題後重試。';
+
+  @override
+  String importErrorMessage(String error) {
+    return '檔案匯入失敗:\\n$error';
+  }
 
   @override
   String get importFailed => '匯入失敗';
@@ -2615,39 +2832,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => '匯入 JSON 檔案';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return '總計: $count 項';
-  }
-
-  @override
-  String importAdded(int count) {
-    return '新增: $count 項';
-  }
+  String get importJsonFilePrompt => '請匯入 JSON 檔案';
 
   @override
   String importSkipped(int count) {
@@ -2655,133 +2843,15 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get errors => '錯誤:';
-
-  @override
-  String get error => '錯誤';
-
-  @override
-  String importErrorMessage(String error) {
-    return '檔案匯入失敗:\\n$error';
+  String importTotal(int count) {
+    return '總計: $count 項';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => '正在匯入...';
 
   @override
-  String get selectStudyMaterial => '選擇學習資料';
-
-  @override
-  String get subject => '主題:';
-
-  @override
-  String get source => '來源:';
-
-  @override
-  String get file => '檔案:';
-
-  @override
-  String progress(int current, int total) {
-    return '進度: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => '請匯入 JSON 檔案';
-
-  @override
-  String get selectMaterialPrompt => '請選擇學習資料';
-
-  @override
-  String get studyComplete => '已學習';
-
-  @override
-  String get markAsStudied => '標記為已學習';
-
-  @override
-  String get listening => '正在聆聽...';
-
-  @override
-  String get recognized => '辨識完成';
-
-  @override
-  String recognitionFailed(String error) {
-    return '語音辨識失敗: $error';
-  }
-
-  @override
-  String get checking => '正在檢查...';
-
-  @override
-  String get translating => '正在翻譯...';
-
-  @override
-  String get translationComplete => '翻譯完成 (需儲存)';
-
-  @override
-  String get translationLoaded => '已載入儲存的翻譯';
-
-  @override
-  String translationFailed(String error) {
-    return '翻譯失敗: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => '請輸入要翻譯的文字';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => '正在儲存...';
-
-  @override
-  String get noTranslationToSave => '沒有可儲存的翻譯';
-
-  @override
-  String saveFailed(String error) {
-    return '儲存失敗: $error';
-  }
-
-  @override
-  String get playing => '正在播放...';
-
-  @override
-  String get noTextToPlay => '沒有可播放的文字';
-
-  @override
-  String playbackFailed(String error) {
-    return '播放失敗: $error';
-  }
-
-  @override
-  String get sourceLanguage => '源語言';
-
-  @override
-  String get targetLanguage => '目標語言';
-
-  @override
-  String get similarTextFound => '發現相似文字';
-
-  @override
-  String get useExistingText => '使用現有';
-
-  @override
-  String get createNew => '新建項目';
-
-  @override
-  String reviewCount(int count) {
-    return '複習 $count 次';
-  }
-
-  @override
-  String get tabSpeaking => '口說';
-
-  @override
-  String get speakingPractice => '口說練習';
+  String get inputModeTitle => '輸入';
 
   @override
   String intervalSeconds(int seconds) {
@@ -2789,10 +2859,369 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get yourPronunciation => '你的發音';
+  String get invalidEmail => '請輸入有效的電子郵件。';
 
   @override
-  String get correctAnswer => '正確答案';
+  String get kakaoContinue => '以 Kakao 繼續';
+
+  @override
+  String get labelLangCode => '語言代碼 (例如：en-US, ko-KR)';
+
+  @override
+  String get labelName => '名稱';
+
+  @override
+  String get labelNote => '註解';
+
+  @override
+  String get labelPOS => '詞性';
+
+  @override
+  String get labelRole => '角色';
+
+  @override
+  String get labelSentence => '句子';
+
+  @override
+  String get labelSentenceCollection => '句子集';
+
+  @override
+  String get labelSentenceType => '句子類型';
+
+  @override
+  String get labelShowMemorized => '已完成';
+
+  @override
+  String get labelType => '種類：';
+
+  @override
+  String get labelWord => '單字';
+
+  @override
+  String get labelWordbook => '單字集';
+
+  @override
+  String get language => '語言';
+
+  @override
+  String get languageSettings => '語言設定';
+
+  @override
+  String get languageSettingsTitle => '語言設定';
+
+  @override
+  String get libTitleFirstMeeting => '初次見面';
+
+  @override
+  String get libTitleGreetings1 => '問候 1';
+
+  @override
+  String get libTitleNouns1 => '名詞 1';
+
+  @override
+  String get libTitleVerbs1 => '動詞 1';
+
+  @override
+  String get listen => '收聽';
+
+  @override
+  String get listening => '正在聆聽...';
+
+  @override
+  String get loadingParticipants => '正在載入參與者...';
+
+  @override
+  String get location => '位置';
+
+  @override
+  String get login => '登入';
+
+  @override
+  String get logout => '登出';
+
+  @override
+  String get logoutConfirmMessage => '確定要從此裝置登出嗎？';
+
+  @override
+  String get logoutConfirmTitle => '登出';
+
+  @override
+  String get male => '男性';
+
+  @override
+  String get manageParticipants => '管理參與者';
+
+  @override
+  String get manual => '手動輸入';
+
+  @override
+  String get markAsStudied => '標記為已學習';
+
+  @override
+  String get materialInfo => '資料資訊';
+
+  @override
+  String get me => '我';
+
+  @override
+  String get menuDeviceImport => '從裝置匯入資料';
+
+  @override
+  String get menuHelp => '說明';
+
+  @override
+  String get menuLanguageSettings => '語言設定';
+
+  @override
+  String get menuOnlineLibrary => '線上資料庫';
+
+  @override
+  String get menuSelectMaterialSet => '選擇學習資料';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuTutorial => '使用教學';
+
+  @override
+  String get menuWebDownload => '使用說明書';
+
+  @override
+  String get metadataDialogTitle => '詳細分類';
+
+  @override
+  String get metadataFormType => '文法形式';
+
+  @override
+  String get metadataRootWord => '原形 (Root Word)';
+
+  @override
+  String get micButtonTooltip => '開始語音辨識';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return '目前選擇的教材：$name';
+  }
+
+  @override
+  String get mode2Title => '複習';
+
+  @override
+  String get mode3Next => '下一步';
+
+  @override
+  String get mode3Start => '開始';
+
+  @override
+  String get mode3Stop => '停止';
+
+  @override
+  String get mode3TryAgain => '重試';
+
+  @override
+  String get mySentenceCollection => '我的句子收藏';
+
+  @override
+  String get myWordbook => '我的單字本';
+
+  @override
+  String get neutral => '中性';
+
+  @override
+  String get newSubjectName => '新增字彙本/句子集標題';
+
+  @override
+  String get next => '下一步';
+
+  @override
+  String get noDialogueHistory => '沒有對話歷史記錄。';
+
+  @override
+  String get noInternetWarningMic => '沒有網路連線。離線狀態下可能無法使用語音辨識。';
+
+  @override
+  String get noInternetWarningTranslate => '沒有網路連線。離線狀態下無法使用翻譯功能。請使用複習模式。';
+
+  @override
+  String get noMaterialsInCategory => '此類別中沒有資料。';
+
+  @override
+  String get noParticipantsFound => '沒有已註冊的參與者。';
+
+  @override
+  String get noRecords => '所選語言沒有學習記錄';
+
+  @override
+  String get noStudyMaterial => '沒有學習資料。';
+
+  @override
+  String get noTextToPlay => '沒有可播放的文字';
+
+  @override
+  String get noTranslationToSave => '沒有可儲存的翻譯';
+
+  @override
+  String get noVoiceDetected => '未偵測到聲音';
+
+  @override
+  String get notSelected => '- 未選擇 -';
+
+  @override
+  String get onlineLibraryCheckInternet => '請檢查網路連線或稍後重試。';
+
+  @override
+  String get onlineLibraryLoadFailed => '載入資料失敗。';
+
+  @override
+  String get onlineLibraryNoMaterials => '沒有資料。';
+
+  @override
+  String get participantDeleted => '參與者已刪除。';
+
+  @override
+  String get participantRename => '參與者重新命名';
+
+  @override
+  String get partner => '夥伴';
+
+  @override
+  String get partnerMode => '夥伴模式';
+
+  @override
+  String get password => '密碼';
+
+  @override
+  String get passwordTooShort => '密碼長度必須超過 6 個字元。';
+
+  @override
+  String get perfect => '完美！';
+
+  @override
+  String get personaFriend => '當地朋友';
+
+  @override
+  String get personaGuide => '旅遊導遊';
+
+  @override
+  String get personaTeacher => '英文老師';
+
+  @override
+  String get playAgain => '再玩一次';
+
+  @override
+  String playbackFailed(String error) {
+    return '播放失敗: $error';
+  }
+
+  @override
+  String get playing => '正在播放...';
+
+  @override
+  String get posAdjective => '形容詞';
+
+  @override
+  String get posAdverb => '副詞';
+
+  @override
+  String get posConjunction => '連接詞';
+
+  @override
+  String get posInterjection => '感嘆詞';
+
+  @override
+  String get posNoun => '名詞';
+
+  @override
+  String get posPreposition => '介系詞/助詞';
+
+  @override
+  String get posPronoun => '代名詞';
+
+  @override
+  String get posVerb => '動詞';
+
+  @override
+  String get practiceModeTitle => '練習';
+
+  @override
+  String get practiceWordsOnly => '只練習單字';
+
+  @override
+  String progress(int current, int total) {
+    return '進度: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return '查看最近 $count 個新增項目';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return '語音辨識失敗: $error';
+  }
+
+  @override
+  String get recognized => '辨識完成';
+
+  @override
+  String get recognizedText => '辨識到的發音：';
+
+  @override
+  String get recordDeleted => '記錄已刪除';
+
+  @override
+  String get refresh => '重新整理';
+
+  @override
+  String get reset => '重置';
+
+  @override
+  String get resetPracticeHistory => '重設練習記錄';
+
+  @override
+  String get retry => '重試？';
+
+  @override
+  String get reviewAll => '全部複習';
+
+  @override
+  String reviewCount(int count) {
+    return '複習 $count 次';
+  }
+
+  @override
+  String get reviewModeTitle => '複習';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => '第三方';
+
+  @override
+  String get roleUser => '使用者';
+
+  @override
+  String get save => '儲存';
+
+  @override
+  String get saveData => '儲存資料';
+
+  @override
+  String saveFailed(String error) {
+    return '儲存失敗: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch => '在搜尋模式下儲存翻譯';
+
+  @override
+  String get saved => '已儲存';
+
+  @override
+  String get saving => '正在儲存...';
 
   @override
   String score(String score) {
@@ -2800,143 +3229,238 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get perfect => '完美！';
+  String get scoreLabel => '分數';
 
   @override
-  String get good => '不錯';
+  String get search => '搜尋';
 
   @override
-  String get tryAgain => '再試一次';
+  String get searchConditions => '搜尋條件';
 
   @override
-  String get startPractice => '開始練習';
+  String get searchSentenceHint => '搜尋句子...';
 
   @override
-  String get stopPractice => '停止練習';
+  String get searchWordHint => '搜尋單字...';
 
   @override
-  String get menuOnlineLibrary => 'Online Library';
+  String get sectionSentence => '句子部分';
 
   @override
-  String get startTutorial => '開始教學';
+  String get sectionSentences => '句子';
 
   @override
-  String get menuTutorial => 'Tutorial';
+  String get sectionWord => '文字部分';
 
   @override
-  String get tutorialMicTitle => '語音輸入';
+  String get sectionWords => '單字';
 
   @override
-  String get tutorialMicDesc => '點擊麥克風按鈕開始語音輸入。';
+  String get selectExistingSubject => '選擇現有標題';
 
   @override
-  String get tutorialTabDesc => '您可以在這裡選擇所需的學習模式。';
+  String get selectMaterialPrompt => '請選擇學習資料';
 
   @override
-  String get tutorialTapToContinue => '點擊繼續';
+  String get selectMaterialSet => '選擇學習資料集';
 
   @override
-  String get tutorialTransTitle => '翻譯';
+  String get selectPOS => '選擇詞性';
 
   @override
-  String get tutorialTransDesc => '點擊此處翻譯您的文字。';
+  String get selectParticipants => '選擇參與者';
 
   @override
-  String get tutorialSaveTitle => '儲存';
+  String get selectSentenceType => '選擇句型';
 
   @override
-  String get tutorialSaveDesc => '將翻譯儲存到學習記錄。';
-
-  @override
-  String get selectParticipants => 'Select Participants';
-
-  @override
-  String get loadingParticipants => 'Loading participants...';
-
-  @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
+  String get selectStudyMaterial => '選擇學習資料';
 
   @override
   String get sendingMessage => '메시지 전송 중...';
 
   @override
-  String get startChat => 'Start Chat';
+  String get sentence => '句子';
 
   @override
-  String get manageParticipants => 'Manage Participants';
+  String get signUp => '註冊';
 
   @override
-  String get tutorialAiChatTitle => 'AI 聊天';
+  String get similarTextFound => '發現相似文字';
 
   @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
+  String get skip => '跳過';
 
   @override
-  String get tutorialM2SelectTitle => '選擇與篩選';
+  String get source => '來源:';
 
   @override
-  String get tutorialM2SelectDesc => '選擇學習資料或切換到「複習全部」。';
+  String get sourceLanguage => '源語言';
 
   @override
-  String get tutorialM2ListTitle => '學習列表';
+  String get sourceLanguageLabel => 'Source Language';
 
   @override
-  String get tutorialM2ListDesc => '查看已儲存的卡片並翻轉查看答案。(長按刪除)';
+  String get speakNow => '現在說！';
 
   @override
-  String get tutorialM3SelectTitle => '選擇資料';
+  String get speaker => '說話者';
 
   @override
-  String get tutorialM3SelectDesc => '選擇用於口說練習的資料集。';
+  String get speakerSelect => '選擇發話者';
 
   @override
-  String get tutorialM3IntervalTitle => '間隔';
+  String get speakingPractice => '口說練習';
 
   @override
-  String get tutorialM3IntervalDesc => '調整句子之間的等待時間。';
+  String get startChat => '開始對話';
 
   @override
-  String get tutorialM3StartTitle => '開始練習';
+  String get startPractice => '開始練習';
 
   @override
-  String get tutorialM3StartDesc => '點擊播放開始聆聽和跟讀。';
+  String get startTutorial => '開始教學';
 
   @override
   String get startWarning => '警告';
 
   @override
-  String get noVoiceDetected => '未偵測到聲音';
+  String get startsWith => '開頭字母';
 
   @override
-  String get tooltipSearch => '搜尋';
+  String get statusCheckEmail => '請檢查電子郵件以完成驗證。';
 
   @override
-  String get tooltipStudyReview => '學習+複習';
+  String statusDownloading(Object name) {
+    return '下載中：$name...';
+  }
 
   @override
-  String get tooltipSpeaking => '口語';
+  String statusImportFailed(Object error) {
+    return '匯入失敗：$error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name 匯入完成';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => '登入已取消。';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return '登入失敗：$error';
+  }
+
+  @override
+  String get statusLoginSuccess => '登入成功。';
+
+  @override
+  String get statusLogoutSuccess => '已登出。';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return '註冊失敗：$error';
+  }
+
+  @override
+  String get statusSigningUp => '註冊中...';
+
+  @override
+  String get stopPractice => '停止練習';
+
+  @override
+  String get studyComplete => '已學習';
+
+  @override
+  String studyRecords(int count) {
+    return '學習記錄 ($count)';
+  }
+
+  @override
+  String get styleFormal => '敬語';
+
+  @override
+  String get styleInformal => '半語';
+
+  @override
+  String get stylePolite => '客氣';
+
+  @override
+  String get styleSlang => '俚語/粗俗語';
+
+  @override
+  String get subject => '主題:';
+
+  @override
+  String get swapLanguages => '交換語言';
+
+  @override
+  String get switchToAi => '切換到 AI 模式';
+
+  @override
+  String get switchToPartner => '切換到夥伴模式';
+
+  @override
+  String get syncingData => '正在同步資料...';
+
+  @override
+  String get tabConversation => '對話';
+
+  @override
+  String tabReview(int count) {
+    return '複習 ($count)';
+  }
+
+  @override
+  String get tabSentence => '句子';
+
+  @override
+  String get tabSpeaking => '口說';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return '學習資料 ($count)';
+  }
+
+  @override
+  String get tabWord => '單字';
+
+  @override
+  String get tagFormal => '敬語';
+
+  @override
+  String get tagSelection => '選擇標籤';
+
+  @override
+  String get targetLanguage => '目標語言';
+
+  @override
+  String get targetLanguageFilter => '目標語言篩選:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc => '在答案揭曉前，給您思考的時間。';
+
+  @override
+  String get thinkingTimeInterval => '播放延遲';
+
+  @override
+  String get timeUp => '時間到！';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
+
+  @override
+  String get titleTagSelection => '標題標籤 (資料夾)';
 
   @override
   String get tooltipDecrease => '減少';
@@ -2945,640 +3469,196 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get tooltipIncrease => '增加';
 
   @override
-  String get languageSettings => '語言設定';
+  String get tooltipSearch => '搜尋';
 
   @override
-  String get tutorialM2DropdownDesc => '選擇學習資料。';
+  String get tooltipSpeaking => '口語';
 
   @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
+  String get tooltipStudyReview => '學習+複習';
 
   @override
-  String get tutorialM2ImportDesc => '從裝置資料夾匯入JSON檔案。';
+  String totalRecords(int count) {
+    return '總共 $count 筆記錄 (查看全部)';
+  }
 
   @override
-  String get tutorialLangSettingsTitle => '語言設定';
+  String get translate => '翻譯';
 
   @override
-  String get tutorialLangSettingsDesc => '設定翻譯的來源語言和目標語言。';
+  String get translating => '正在翻譯...';
 
   @override
-  String get copy => '複製';
+  String get translation => '翻譯';
 
   @override
-  String get copiedToClipboard => '已複製到剪貼板！';
+  String get translationComplete => '翻譯完成 (需儲存)';
 
   @override
-  String get tutorialContextTitle => '上下文標籤';
+  String translationFailed(String error) {
+    return '翻譯失敗: $error';
+  }
+
+  @override
+  String get translationLimitExceeded => '已超過翻譯限制';
+
+  @override
+  String get translationLimitMessage => '您已用完每日免費翻譯 (5 次)。\n\n要觀看廣告立即補充 5 次嗎？';
+
+  @override
+  String get translationLoaded => '已載入儲存的翻譯';
+
+  @override
+  String get translationRefilled => '翻譯次數已補充 5 次！';
+
+  @override
+  String get translationResultHint => '翻譯結果 - 可修改';
+
+  @override
+  String get tryAgain => '再試一次';
+
+  @override
+  String get tutorialAiChatDesc => '練習與 AI 角色的實際對話。';
+
+  @override
+  String get tutorialAiChatTitle => 'AI 聊天';
 
   @override
   String get tutorialContextDesc => '添加上下文（例如：早上）以區分相似的句子。';
 
   @override
-  String get thinkingTimeInterval => '播放延遲';
+  String get tutorialContextTitle => '上下文標籤';
 
   @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
+  String get tutorialLangSettingsDesc => '設定翻譯的來源語言和目標語言。';
 
   @override
-  String get autoPlay => 'Auto-Play';
+  String get tutorialLangSettingsTitle => '語言設定';
 
   @override
-  String get timeUp => 'Time Up!';
+  String get tutorialM1ToggleDesc => '在這裡切換單字和句子模式。';
 
   @override
-  String get gameModeTitle => 'Game Mode';
+  String get tutorialM1ToggleTitle => '單字/句子模式';
 
   @override
-  String get gameModeDesc => 'Choose your practice mode';
+  String get tutorialM2DropdownDesc => '選擇學習資料。';
 
   @override
-  String get wordDefenseTitle => 'Word Defense';
+  String get tutorialM2ImportDesc => '從裝置資料夾匯入JSON檔案。';
 
   @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
+  String get tutorialM2ListDesc => '查看已儲存的卡片並翻轉查看答案。(長按刪除)';
 
   @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
+  String get tutorialM2ListTitle => '學習列表';
 
   @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
+  String get tutorialM2SearchDesc => '搜尋並快速找到已儲存的單字和句子。';
 
   @override
-  String get translation => 'Translation';
+  String get tutorialM2SelectDesc => '選擇學習資料或切換到「複習全部」。';
 
   @override
-  String get labelType => 'Type:';
+  String get tutorialM2SelectTitle => '選擇與篩選';
 
   @override
-  String get labelWord => 'Word';
+  String get tutorialM3IntervalDesc => '調整句子之間的等待時間。';
 
   @override
-  String get labelSentence => 'Sentence';
-
-  @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
-
-  @override
-  String get usageLimitTitle => '已達使用上限';
-
-  @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
-
-  @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
-
-  @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
-
-  @override
-  String get translationRefilled => 'Translations refilled by 5!';
-
-  @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
-
-  @override
-  String get reviewAll => 'Review All';
-
-  @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
-
-  @override
-  String get filterAll => 'All';
-
-  @override
-  String get practiceWordsOnly => 'Practice Words Only';
-
-  @override
-  String get resetPracticeHistory => 'Reset Practice History';
-
-  @override
-  String get retry => 'Retry?';
-
-  @override
-  String get noStudyMaterial => 'No study material found.';
-
-  @override
-  String get gameOver => 'Game Over';
-
-  @override
-  String get playAgain => 'Play Again';
-
-  @override
-  String get speakNow => 'Speak now!';
-
-  @override
-  String get scoreLabel => 'Score';
-
-  @override
-  String get viewOnlineGuide => 'View Online User Guide';
-
-  @override
-  String get getMaterials => 'Get Materials';
-
-  @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
-
-  @override
-  String get wordModeLabel => 'Word Mode';
-
-  @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get menuHelp => 'Help';
-
-  @override
-  String get menuWebDownload => 'Get Material from Web';
-
-  @override
-  String get menuDeviceImport => 'Import from Device';
-
-  @override
-  String get menuSettings => 'Settings';
-
-  @override
-  String get basicWords => '基礎詞庫';
-
-  @override
-  String get basicSentences => '基礎句庫';
-
-  @override
-  String get selectMaterialSet => '選擇學習資料集';
-
-  @override
-  String get sectionWords => '單字';
-
-  @override
-  String get sectionSentences => '句子';
-
-  @override
-  String get languageSettingsTitle => 'Language Settings';
-
-  @override
-  String get sourceLanguageLabel => 'Source Language';
-
-  @override
-  String get targetLanguageLabel => 'Target Language';
-
-  @override
-  String get mode3Start => 'Start';
-
-  @override
-  String get mode3Stop => 'Stop';
-
-  @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc => '我用我正在學習的語言取代我的母語。';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
+  String get tutorialM3IntervalTitle => '間隔';
 
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
 
   @override
-  String get menuSelectMaterialSet => '選擇學習資料';
+  String get tutorialM3ResetTitle => 'Reset History';
 
   @override
-  String get sectionWord => '文字部分';
+  String get tutorialM3SelectDesc => '選擇用於口說練習的資料集。';
 
   @override
-  String get sectionSentence => '句子部分';
+  String get tutorialM3SelectTitle => '選擇資料';
 
   @override
-  String get tabWord => '單字';
+  String get tutorialM3StartDesc => '點擊播放開始聆聽和跟讀。';
 
   @override
-  String get tabSentence => '句子';
+  String get tutorialM3StartTitle => '開始練習';
 
   @override
-  String get errorProfanity => '包含不雅字詞，無法翻譯。';
+  String get tutorialM3WordsDesc => '勾選後，只練習已儲存的單字。';
 
   @override
-  String get errorHateSpeech => '包含仇恨言論，無法翻譯。';
+  String get tutorialM3WordsTitle => '單字練習';
 
   @override
-  String get errorSexualContent => '包含煽情內容，無法翻譯。';
+  String get tutorialMicDesc => '點擊麥克風按鈕開始語音輸入。';
 
   @override
-  String get errorOtherSafety => '因人工智慧安全政策而拒絕翻譯。';
+  String get tutorialMicTitle => '語音輸入';
 
   @override
-  String get clearAll => '全部清除';
+  String get tutorialSaveDesc => '將翻譯儲存到學習記錄。';
 
   @override
-  String get disambiguationTitle => '選擇含義';
+  String get tutorialSaveTitle => '儲存';
 
   @override
-  String get disambiguationPrompt => '您想翻譯成哪個含義？';
+  String get tutorialSwapDesc => '我用我正在學習的語言取代我的母語。';
 
   @override
-  String get skip => '跳過';
+  String get tutorialTabDesc => '您可以在這裡選擇所需的學習模式。';
 
   @override
-  String get inputModeTitle => 'Input';
+  String get tutorialTapToContinue => '點擊繼續';
 
   @override
-  String get reviewModeTitle => 'Review';
+  String get tutorialTransDesc => '點擊此處翻譯您的文字。';
 
   @override
-  String get practiceModeTitle => '練習';
+  String get tutorialTransTitle => '翻譯';
 
   @override
-  String get chatHistoryTitle => 'Conversation History';
+  String get typeExclamation => '感嘆句';
 
   @override
-  String get chatNew => 'New Chat';
+  String get typeImperative => '祈使句';
 
   @override
-  String get chatNewChat => 'New Chat';
+  String get typeQuestion => '疑問句';
 
   @override
-  String get chatChoosePersona => 'Choose a Persona';
+  String get typeStatement => '陳述句';
 
   @override
-  String get chatTypeHint => 'Type a message...';
+  String get usageLimitTitle => '已達使用上限';
 
   @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
+  String get useExistingText => '使用現有';
 
   @override
-  String get chatNoConversations => 'No conversations yet';
+  String get viewOnlineGuide => '查看線上指南';
 
   @override
-  String get noDialogueHistory => 'No dialogue history.';
+  String get voluntaryTranslations => '自願翻譯';
 
   @override
-  String get chatStartNewPrompt => 'Start a new chat to practice!';
+  String get watchAdAndRefill => '觀看廣告並補充 (+5 次)';
 
   @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
+  String get word => '單字';
 
   @override
-  String get personaTeacher => 'English Teacher';
+  String get wordDefenseDesc => '在敵人抵達前說出單字來防禦基地。';
 
   @override
-  String get personaGuide => 'Travel Guide';
+  String get wordDefenseTitle => '單字防禦';
 
   @override
-  String get personaFriend => 'Local Friend';
+  String get wordModeLabel => '單字模式';
 
   @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => '聊天';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => '基礎詞彙庫';
-
-  @override
-  String get basicSentenceRepository => '基礎句庫';
-
-  @override
-  String get chatEndTitle => 'End & Save Chat';
-
-  @override
-  String get chatEndMessage =>
-      'Do you want to end this conversation? You can set a title for it.';
-
-  @override
-  String get chatSaveAndExit => 'Save & Exit';
-
-  @override
-  String get errorSelectCategory => 'Please select word or sentence first!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => '敬語';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => '標題標籤 (資料夾)';
-
-  @override
-  String get generalTags => '一般標籤';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => '單數';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => '中性';
-
-  @override
-  String get chatAllConversations => '所有對話';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation => '您確定要刪除此對話嗎？\n刪除的對話將無法復原。';
-
-  @override
-  String get notSelected => '- 未選擇 -';
-
-  @override
-  String get myWordbook => '我的單字本';
-
-  @override
-  String get mySentenceCollection => '我的句子收藏';
-
-  @override
-  String get newSubjectName => '新增字彙本/句子集標題';
-
-  @override
-  String get enterNewSubjectName => '輸入新標題';
-
-  @override
-  String get addNewSubject => '新增標題';
-
-  @override
-  String get selectExistingSubject => '選擇現有標題';
-
-  @override
-  String get addTagHint => '新增標籤...';
-
-  @override
-  String get save => '儲存';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail => '請檢查電子郵件以完成驗證。';
-
-  @override
-  String get emailAlreadyInUse => '此電子郵件已註冊。請登入或使用忘記密碼功能。';
+  String get yourPronunciation => '你的發音';
 }

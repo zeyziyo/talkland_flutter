@@ -1,188 +1,105 @@
 {
   "@@locale": "fi",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Jatka Kakaolla",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Ohje & Opas",
-  "helpTabModes": "Tilat",
-  "helpTabJson": "JSON Muoto",
-  "helpTabTour": "Kierros",
-  "helpMode1Desc": "Puheentunnistus, käännös ja kuuntelu.",
-  "helpMode1Details": "• Ääni: Napauta mikrofonia aloittaaksesi\n• Teksti: Kirjoita kääntääksesi\n• Auto-Haku: Löytää samanlaiset lauseet\n• Käännä: Painike välittömään käännökseen\n• Kuuntele: Kaiutinikoni TTS:lle\n• Tallenna: Lisää historiaan\n• Tyhjennä: Nollaa kaikki",
-  "helpMode2Desc": "Kertaa tallennetut lauseet piilottamalla käännös.",
-  "helpMode2Details": "• Valitse: Valitse setti tai 'Kaikki'\n• Käännä: 'Näytä/Piilota' käännös\n• Kuuntele: Toista TTS lauseelle\n• Merkitse: Rasti (V) valmiille\n• Poista: Pitkä painallus poistaaksesi\n• Suodatin: Kaikki tai materiaalin mukaan",
-  "helpMode3Desc": "Harjoittele ääntämistä kuuntelemalla ja toistamalla lauseita (varjostus).",
-  "helpMode3Details": "• Valitse: Valitse paketti\n• Aikaväli: [-] [+] odotusaika (3s-60s)\n• Aloita/Lopeta: Hallitse istuntoa\n• Puhu: Kuuntele ja toista\n• Pisteet: Tarkkuus (0-100)\n• Uusinta: Painike jos ääntä ei tunnisteta",
-  "helpModeChatDesc": "Harjoittele käytännön keskustelua keskustelemalla tekoälypersoonan kanssa.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "Tilan 3 tuontia varten luo JSON:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Sijainti",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Tarkkuus",
+  "adLoading": "Mainoksen lataus käynnissä. Yritä hetken kuluttua uudelleen.",
+  "addNewSubject": "Lisää uusi nimi",
+  "addParticipant": "Lisää osallistuja",
+  "addTagHint": "Lisää tagi...",
+  "alreadyHaveAccount": "Onko sinulla jo tili?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Kertaus ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Automaattinen toisto",
+  "basic": "Perus",
+  "basicDefault": "Perus",
+  "basicMaterialRepository": "Perussanojen/lauseiden arkisto",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Materiaali ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Peruslausevarasto",
+  "basicSentences": "Peruslauseiden arkisto",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Kertaus",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Haku",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Käännä",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Kuuntele",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Tallenna",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Tallennettu",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Poista",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Materiaalin tiedot",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Perussanavarasto",
+  "basicWords": "Perussanojen arkisto",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Peruuta",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "OK",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Päivitä",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Tietueet ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Objekti",
+  "casePossessive": "Genetiivi",
+  "casePossessivePronoun": "Possessiivipronomini",
+  "caseReflexive": "Refleksiivipronomini",
+  "caseSubject": "Nominatiivi",
+  "chatAiChat": "Chatti",
+  "chatAllConversations": "Kaikki keskustelut",
+  "chatChoosePersona": "Valitse persoona",
+  "chatEndMessage": "Haluatko lopettaa keskustelun?",
+  "chatEndTitle": "Lopeta ja tallenna keskustelu",
+  "chatFailed": "Keskustelu epäonnistui: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Kohdekieli Suodatin:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Keskustelusta ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Ei tietueita valitulle kielelle",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Keskusteluhistoria",
+  "chatNew": "Uusi keskustelu",
+  "chatNewChat": "Uusi keskustelu",
+  "chatNoConversations": "Ei vielä keskusteluja",
+  "chatSaveAndExit": "Tallenna ja lopeta",
+  "chatStartNewPrompt": "Aloita uusi keskustelu harjoitellaksesi!",
+  "chatTypeHint": "Kirjoita viesti...",
+  "chatUntitled": "Nimetön keskustelu",
+  "checking": "Tarkistetaan...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Tallenna käännöksiä hakutilasta",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Käännä",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Piilota",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Poista Tietue",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "Tyhjennä kaikki",
+  "confirm": "Vahvista",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Haluatko varmasti poistaa tämän?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Tietue poistettu",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Haluatko varmasti poistaa tämän keskustelun?\nPoistettuja keskusteluja ei voi palauttaa.",
+  "confirmDeleteParticipant": "Haluatko poistaa tämän osallistujan?",
+  "contextTagHint": "Kirjoita tilanne helpottamaan myöhempää tunnistamista",
+  "contextTagLabel": "Konteksti/Tilanne (valinnainen) - Esim. Aamutervehdys, Kohtelias",
+  "copiedToClipboard": "Kopioitu leikepöydälle!",
+  "copy": "Kopioi",
+  "correctAnswer": "Oikea Vastaus",
+  "createNew": "Luo Uusi",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Nykyinen sijainti",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Valittu aineisto:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Poista",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Poisto epäonnistui: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Tuo JSON",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Poista Tietue",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Tuodaan...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Harjoittele keskusteluja roolipelin avulla. Valitse sopiva vastaus ja sano se.",
+  "dialogueQuestTitle": "Keskustelutehtävä",
+  "disambiguationPrompt": "Minkä merkityksen haluat kääntää?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "Valitse merkitys",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Eikö sinulla ole tiliä?",
+  "editParticipant": "Muokkaa osallistujaa",
+  "email": "Sähköposti",
+  "emailAlreadyInUse": "Sähköpostiosoite on jo käytössä. Kirjaudu sisään tai palauta salasana.",
+  "enterNewSubjectName": "Kirjoita uusi nimi",
+  "enterSentenceHint": "Kirjoita lause...",
+  "enterTextHint": "Kirjoita teksti, jonka haluat kääntää",
+  "enterTextToTranslate": "Syötä teksti käännettäväksi",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Kirjoita sana...",
+  "error": "Virhe",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "Käännöstä ei voi tehdä, koska se sisältää vihapuhetta.",
+  "errorOtherSafety": "AI-turvallisuuskäytäntöjen vuoksi käännös on estetty.",
+  "errorProfanity": "Käännöstä ei voi tehdä, koska se sisältää sopimatonta kielenkäyttöä.",
+  "errorSelectCategory": "Valitse ensin sana tai lause!",
+  "errorSexualContent": "Käännöstä ei voi tehdä, koska se sisältää seksuaalista sisältöä.",
+  "errors": "Virheet:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Nainen",
+  "file": "Tiedosto:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Kaikki",
+  "flip": "Käännä",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Komparatiivi",
+  "formInfinitive": "Infinitiivi/Perusmuoto",
+  "formPast": "Mennyt aika",
+  "formPastParticiple": "Päättynyt Partisiippi",
+  "formPlural": "Monikko",
+  "formPositive": "Positiivi",
+  "formPresent": "Nykymuoto",
+  "formPresentParticiple": "Nykymuotoinen Partisiippi (-ing)",
+  "formSingular": "Yksikkö",
+  "formSuperlative": "Superlatiivi",
+  "formThirdPersonSingular": "3. Persoona Yksikkö",
+  "gameModeDesc": "Valitse harjoiteltava pelitila",
+  "gameModeTitle": "Pelitila",
+  "gameOver": "Peli ohi",
+  "gender": "Sukupuoli",
+  "generalTags": "Yleiset tunnisteet",
+  "getMaterials": "Hanki materiaaleja",
+  "good": "Hyvä",
+  "googleContinue": "Jatka Googlella",
+  "helpDialogueImportDesc": "Tuo kokonaisia keskustelukokonaisuuksia JSON-tiedostoista.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "Tilan 3 tuontia varten luo JSON:",
+  "helpJsonTypeDialogue": "Keskustelu (Dialogue)",
+  "helpJsonTypeSentence": "Lause (Sentence)",
+  "helpJsonTypeWord": "Sana (Word)",
+  "helpMode1Desc": "Puheentunnistus, käännös ja kuuntelu.",
+  "helpMode1Details": "• Ääni: Napauta mikrofonia aloittaaksesi\n• Teksti: Kirjoita kääntääksesi\n• Auto-Haku: Löytää samanlaiset lauseet\n• Käännä: Painike välittömään käännökseen\n• Kuuntele: Kaiutinikoni TTS:lle\n• Tallenna: Lisää historiaan\n• Tyhjennä: Nollaa kaikki",
+  "helpMode2Desc": "Kertaa tallennetut lauseet piilottamalla käännös.",
+  "helpMode2Details": "• Valitse: Valitse setti tai 'Kaikki'\n• Käännä: 'Näytä/Piilota' käännös\n• Kuuntele: Toista TTS lauseelle\n• Merkitse: Rasti (V) valmiille\n• Poista: Pitkä painallus poistaaksesi\n• Suodatin: Kaikki tai materiaalin mukaan",
+  "helpMode3Desc": "Harjoittele ääntämistä kuuntelemalla ja toistamalla lauseita (varjostus).",
+  "helpMode3Details": "• Valitse: Valitse paketti\n• Aikaväli: [-] [+] odotusaika (3s-60s)\n• Aloita/Lopeta: Hallitse istuntoa\n• Puhu: Kuuntele ja toista\n• Pisteet: Tarkkuus (0-100)\n• Uusinta: Painike jos ääntä ei tunnisteta",
+  "helpModeChatDesc": "Harjoittele käytännön keskustelua keskustelemalla tekoälypersoonan kanssa.",
+  "helpModeChatDetails": "• AI-chat: Harjoittele käytännön keskusteluja persoonien kanssa.\n• Osallistujien hallinta: Määritä oma kielesi ja tekoälyn kieli erikseen välttääksesi kielieroja.\n• GPS-roolipeli: Luo luonnollisia keskustelutilanteita nykyisen sijaintisi perusteella.\n• Tallennushistoria: Kaikki keskustelut tallennetaan turvallisesti tunnuksen perusteella, ja historia säilyy, vaikka nimeä muutettaisiin.",
+  "helpTabJson": "JSON Muoto",
+  "helpTabModes": "Tilat",
+  "helpTabTour": "Kierros",
+  "helpTitle": "Ohje & Opas",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "Piilota",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Lisätty: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Tuonti Valmis",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Samanniminen aineisto on jo olemassa. Yritä uudelleen nimen muuttamisen jälkeen.",
+  "importErrorMessage": "Tiedoston tuonti epäonnistui:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Tuonti Epäonnistui",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Yhteensä: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Tuo JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Lisätty: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Tuo JSON tiedosto",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Ohitettu: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Virheet:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Yhteensä: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Virhe",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Tuodaan...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Tiedoston tuonti epäonnistui:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "Syöttö",
+  "intervalSeconds": "Aikaväli: {seconds}s",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Syötä kelvollinen sähköposti.",
+  "kakaoContinue": "Jatka Kakaolla",
+  "labelLangCode": "Kielikoodi (esim. en-US, ko-KR)",
+  "labelName": "Nimi",
+  "labelNote": "Huomautus",
+  "labelPOS": "Sanaluokka",
+  "labelRole": "Rooli",
+  "labelSentence": "Lause",
+  "labelSentenceCollection": "Lausekokoelma",
+  "labelSentenceType": "Lauseen tyyppi",
+  "labelShowMemorized": "Valmiit",
+  "labelType": "Tyyppi:",
+  "labelWord": "Sana",
+  "labelWordbook": "Sanakokoelma",
+  "language": "Kieli",
+  "languageSettings": "Kieliasetukset",
+  "languageSettingsTitle": "Kieliasetukset",
+  "libTitleFirstMeeting": "Ensimmäinen tapaaminen",
+  "libTitleGreetings1": "Tervehdykset 1",
+  "libTitleNouns1": "Substantiivit 1",
+  "libTitleVerbs1": "Verbit 1",
+  "listen": "Kuuntele",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Kuunnellaan...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Ladataan osallistujia...",
+  "location": "Sijainti",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Kirjaudu sisään",
+  "logout": "Kirjaudu ulos",
+  "logoutConfirmMessage": "Haluatko kirjautua ulos tästä laitteesta?",
+  "logoutConfirmTitle": "Kirjaudu ulos",
+  "male": "Mies",
+  "manageParticipants": "Hallitse osallistujia",
+  "manual": "Manuaalinen syöttö",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Merkitse Opiskelluksi",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Materiaalin tiedot",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Minä",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Tuo materiaalia laitteesta",
+  "menuHelp": "Ohje",
+  "menuLanguageSettings": "Kieliasetukset",
+  "menuOnlineLibrary": "Online-kirjasto",
+  "menuSelectMaterialSet": "Valitse opiskelumateriaali",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Käyttöopastus",
+  "menuWebDownload": "Käyttöohje",
+  "metadataDialogTitle": "Yksityiskohtainen luokittelu",
+  "metadataFormType": "Grammatinen muoto",
+  "metadataRootWord": "Perusmuoto (Root Word)",
+  "micButtonTooltip": "Käynnistä äänentunnistus",
+  "mode1SelectedMaterial": "Valittu aineisto: {name}",
+  "mode2Title": "Kertaus",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Seuraava",
+  "mode3Start": "Aloita",
+  "mode3Stop": "Lopeta",
+  "mode3TryAgain": "Yritä uudelleen",
+  "mySentenceCollection": "Oma lausekokoelmani",
+  "myWordbook": "Oma sanakirjani",
+  "neutral": "Neutraali",
+  "newSubjectName": "Uuden sanasto-/lausekokoelman nimi",
+  "next": "Seuraava",
+  "noDialogueHistory": "Ei keskusteluhistoriaa.",
+  "noInternetWarningMic": "Ei internet-yhteyttä. Äänentunnistus ei välttämättä toimi offline-tilassa.",
+  "noInternetWarningTranslate": "Ei internet-yhteyttä. Käännöstoiminto ei ole käytettävissä offline-tilassa. Käytä kertaustilaa.",
+  "noMaterialsInCategory": "Tässä kategoriassa ei ole aineistoja.",
+  "noParticipantsFound": "Ei rekisteröityjä osallistujia.",
+  "noRecords": "Ei tietueita valitulle kielelle",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Opiskelumateriaalia ei ole.",
+  "noTextToPlay": "Ei tekstiä toistettavaksi",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Ei käännöstä tallennettavaksi",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Ääntä ei havaittu",
+  "notSelected": "- Ei valittu -",
+  "onlineLibraryCheckInternet": "Tarkista internetyhteys tai yritä myöhemmin uudelleen.",
+  "onlineLibraryLoadFailed": "Aineiston lataaminen epäonnistui.",
+  "onlineLibraryNoMaterials": "Aineistoa ei ole.",
+  "participantDeleted": "Osallistuja on poistettu.",
+  "participantRename": "Nimeä osallistuja uudelleen",
+  "partner": "Kumppani",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Kumppanitila",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Salasana",
+  "passwordTooShort": "Salasanan on oltava vähintään 6 merkkiä pitkä.",
+  "perfect": "Täydellistä!",
+  "personaFriend": "Paikallinen ystävä",
+  "personaGuide": "Matkaopas",
+  "personaTeacher": "Englannin opettaja",
+  "playAgain": "Pelaa uudelleen",
+  "playbackFailed": "Toisto epäonnistui: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Valitse Materiaali",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Toistetaan...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Aihe:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Lähde:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "Tiedosto:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Adjektiivi",
+  "posAdverb": "Adverbi",
+  "posConjunction": "Konjunktio",
+  "posInterjection": "Huudahdus",
+  "posNoun": "Substantiivi",
+  "posPreposition": "Prepositio",
+  "posPronoun": "Pronomini",
+  "posVerb": "Verbi",
+  "practiceModeTitle": "Harjoittelu",
+  "practiceWordsOnly": "Harjoittele vain sanoja",
   "progress": "Edistyminen: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Tuo JSON tiedosto",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Valitse opiskelumateriaali",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Opiskeltu",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Merkitse Opiskelluksi",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Kuunnellaan...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Tunnistus valmis",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Näytä {count} viimeksi luotua",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Puheentunnistus epäonnistui: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Tarkistetaan...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Tunnistus valmis",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Käännetään...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Tunnistettu puhe:",
+  "recordDeleted": "Tietue poistettu",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Käännös valmis (tallenna)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Päivitä",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Tallennettu käännös ladattu",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Käännös epäonnistui: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Nollaa",
+  "resetPracticeHistory": "Nollaa harjoitteluhistoria",
+  "retry": "Yritetäänkö uudelleen?",
+  "reviewAll": "Kertaa kaikki",
+  "reviewCount": "Kerrattu {count} kertaa",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Syötä teksti käännettäväksi",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Tallennetaan...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Ei käännöstä tallennettavaksi",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "Kertaus",
+  "roleAi": "AI",
+  "roleThirdParty": "Kolmas osapuoli",
+  "roleUser": "Käyttäjä",
+  "save": "Tallenna",
+  "saveData": "Tallenna",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Tallennus epäonnistui: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Toistetaan...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Tallenna käännöksiä hakutilasta",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Ei tekstiä toistettavaksi",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Tallennettu",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Toisto epäonnistui: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Tallennetaan...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Lähdekieli",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Kohdekieli",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Samankaltainen teksti löytyi",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Käytä Olemassaolevaa",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Luo Uusi",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Kerrattu {count} kertaa",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Puhuminen",
-  "speakingPractice": "Puheharjoitus",
-  "intervalSeconds": "Aikaväli: {seconds}s",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Sinun ääntämys",
-  "correctAnswer": "Oikea Vastaus",
   "score": "Tarkkuus: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "Täydellistä!",
-  "good": "Hyvä",
-  "tryAgain": "Yritä uudelleen",
-  "startPractice": "Aloita",
-  "stopPractice": "Lopeta",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Aloita Kierros",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Äänisyöte",
-  "tutorialMicDesc": "Napauta mikrofonia äänisyötettä varten.",
-  "tutorialTabDesc": "Täältä voit valita haluamasi oppimistilan.",
-  "tutorialTapToContinue": "Napauta jatkaaksesi",
-  "tutorialTransTitle": "Käännä",
-  "tutorialTransDesc": "Napauta tästä kääntääksesi.",
-  "tutorialSaveTitle": "Tallenna",
-  "tutorialSaveDesc": "Tallenna käännös tietueisiin.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Pisteet",
+  "search": "Haku",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Hakuehdot",
+  "searchSentenceHint": "Hae lauseita...",
+  "searchWordHint": "Hae sanoja...",
+  "sectionSentence": "Lauseosa",
+  "sectionSentences": "Lauseet",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Sanaosio",
+  "sectionWords": "Sanat",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Valitse olemassa oleva nimi",
+  "selectMaterialPrompt": "Valitse opiskelumateriaali",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "Valitse oppimateriaali",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Valitse puheosa",
+  "selectParticipants": "Valitse osallistujat",
+  "selectSentenceType": "Valitse lausetyyppi",
+  "selectStudyMaterial": "Valitse Materiaali",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI-chatti",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "Valitse & Suodata",
-  "tutorialM2SelectDesc": "Valitse materiaali tai 'Kertaa Kaikki'.",
-  "tutorialM2ListTitle": "Opiskelulista",
-  "tutorialM2ListDesc": "Tarkista kortit ja käännä ne. (Long-press to delete)",
-  "tutorialM3SelectTitle": "Valitse Materiaali",
-  "tutorialM3SelectDesc": "Valitse setti puheharjoitukseen.",
-  "tutorialM3IntervalTitle": "Aikaväli",
-  "tutorialM3IntervalDesc": "Säädä odotusaika lauseiden välillä.",
-  "tutorialM3StartTitle": "Aloita",
-  "tutorialM3StartDesc": "Paina toista aloittaaksesi.",
+  "sentence": "Lause",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Rekisteröidy",
+  "similarTextFound": "Samankaltainen teksti löytyi",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "Ohita",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Lähde:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Lähdekieli",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "Puhu nyt!",
+  "speaker": "Puhuja",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Valitse puhuja",
+  "speakingPractice": "Puheharjoitus",
+  "startChat": "Aloita keskustelu",
+  "startPractice": "Aloita",
+  "startTutorial": "Aloita Kierros",
   "startWarning": "Varoitus",
-  "noVoiceDetected": "Ääntä ei havaittu",
-  "tooltipSearch": "Haku",
-  "tooltipStudyReview": "Opiskelu+Kertaus",
-  "tooltipSpeaking": "Puhuminen",
+  "startsWith": "Alkaa kirjaimella",
+  "statusCheckEmail": "Vahvista sähköpostiosoitteesi suorittaaksesi todennus.",
+  "statusDownloading": "Ladataan: {name}...",
+  "statusImportFailed": "Tuonti epäonnistui: {error}",
+  "statusImportSuccess": "{name} tuotu onnistuneesti",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Kirjautuminen peruutettiin.",
+  "statusLoginFailed": "Kirjautuminen epäonnistui: {error}",
+  "statusLoginSuccess": "Kirjautuminen onnistui.",
+  "statusLogoutSuccess": "Kirjauduttu ulos.",
+  "statusSignUpFailed": "Rekisteröityminen epäonnistui: {error}",
+  "statusSigningUp": "Rekisteröidytään...",
+  "stopPractice": "Lopeta",
+  "studyComplete": "Opiskeltu",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Tietueet ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Teitittely",
+  "styleInformal": "Sinuttelu",
+  "stylePolite": "Kohtelias",
+  "styleSlang": "Slangi/Argot",
+  "subject": "Aihe:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Vaihda kielet",
+  "switchToAi": "Vaihda AI-tilaan",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Vaihda kumppanitilaan",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Synkronoidaan tietoja...",
+  "tabConversation": "Keskustelu",
+  "tabReview": "Kertaus ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "tuomita",
+  "tabSpeaking": "Puhuminen",
+  "tabStudyMaterial": "Materiaali ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "sana",
+  "tagFormal": "Kohtelias",
+  "tagSelection": "Tagin valinta",
+  "targetLanguage": "Kohdekieli",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Kohdekieli Suodatin:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "Aikaa miettiä ennen kuin oikea vastaus paljastetaan.",
+  "thinkingTimeInterval": "Ajatteluaika",
+  "timeUp": "Aika loppui!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Otsikkotunniste (aineistokirjasto)",
   "tooltipDecrease": "Vähennä",
   "tooltipIncrease": "Lisää",
-  "languageSettings": "Kieliasetukset",
-  "tutorialM2DropdownDesc": "Valitse oppimateriaali.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Tuo JSON-tiedosto laitteen kansiosta.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "Asiayhteystunniste",
-  "tutorialContextDesc": "Lisää asiayhteys (esim. Aamu) erottaaksesi samanlaiset lauseet.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "Käyttöraja saavutettu",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "Haku",
+  "tooltipSpeaking": "Puhuminen",
+  "tooltipStudyReview": "Opiskelu+Kertaus",
+  "totalRecords": "Yhteensä {count} tietuetta (näytä kaikki)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Käännä",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Käännetään...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Käännös",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "Valitse oppimateriaali",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Käännös valmis (tallenna)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "Sanat",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "Lauseet",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "Vaihdan kieleni oppimaani kieleen.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "Valitse opiskelumateriaali",
-  "sectionWord": "Sanaosio",
-  "sectionSentence": "Lauseosa",
-  "tabWord": "sana",
-  "tabSentence": "tuomita",
-  "errorProfanity": "Käännöstä ei voi tehdä, koska se sisältää sopimatonta kielenkäyttöä.",
-  "errorHateSpeech": "Käännöstä ei voi tehdä, koska se sisältää vihapuhetta.",
-  "errorSexualContent": "Käännöstä ei voi tehdä, koska se sisältää seksuaalista sisältöä.",
-  "errorOtherSafety": "AI-turvallisuuskäytäntöjen vuoksi käännös on estetty.",
-  "clearAll": "Tyhjennä kaikki",
-  "disambiguationTitle": "Valitse merkitys",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "Minkä merkityksen haluat kääntää?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "Ohita",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Input",
-  "reviewModeTitle": "Review",
-  "practiceModeTitle": "Harjoittelu",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "Käännös epäonnistui: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Käännösraja ylitetty",
+  "translationLimitMessage": "Olet käyttänyt kaikki päivittäiset ilmaiset käännökset (5 kertaa).\\n\\nHaluatko katsoa mainoksen ja ladata 5 lisää heti?",
+  "translationLoaded": "Tallennettu käännös ladattu",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "Chatti",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "Perussanavarasto",
-  "basicSentenceRepository": "Peruslausevarasto",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "Kohtelias",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "Otsikkotunniste (aineistokirjasto)",
-  "generalTags": "Yleiset tunnisteet",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "Yksikkö",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "Käännöskertojen määrä on ladattu, 5 kertaa!",
+  "translationResultHint": "Käännöksen tulos - muokattavissa",
+  "tryAgain": "Yritä uudelleen",
+  "tutorialAiChatDesc": "Harjoittele käytännön keskusteluja AI-persoonien kanssa.",
+  "tutorialAiChatTitle": "AI-chatti",
+  "tutorialContextDesc": "Lisää asiayhteys (esim. Aamu) erottaaksesi samanlaiset lauseet.",
+  "tutorialContextTitle": "Asiayhteystunniste",
+  "tutorialLangSettingsDesc": "Määritä käännettävä lähdekieli ja kohdekieli.",
+  "tutorialLangSettingsTitle": "Kieliasetukset",
+  "tutorialM1ToggleDesc": "Vaihda sana- ja lausetilan välillä tässä.",
+  "tutorialM1ToggleTitle": "Sana/Lause -tila",
+  "tutorialM2DropdownDesc": "Valitse oppimateriaali.",
+  "tutorialM2ImportDesc": "Tuo JSON-tiedosto laitteen kansiosta.",
+  "tutorialM2ListDesc": "Tarkista kortit ja käännä ne. (Long-press to delete)",
+  "tutorialM2ListTitle": "Opiskelulista",
+  "tutorialM2SearchDesc": "Hae tallennettuja sanoja ja lauseita löytääksesi ne nopeasti.",
+  "tutorialM2SelectDesc": "Valitse materiaali tai 'Kertaa Kaikki'.",
+  "tutorialM2SelectTitle": "Valitse & Suodata",
+  "tutorialM3IntervalDesc": "Säädä odotusaika lauseiden välillä.",
+  "tutorialM3IntervalTitle": "Aikaväli",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "Valitse setti puheharjoitukseen.",
+  "tutorialM3SelectTitle": "Valitse Materiaali",
+  "tutorialM3StartDesc": "Paina toista aloittaaksesi.",
+  "tutorialM3StartTitle": "Aloita",
+  "tutorialM3WordsDesc": "Jos tämä on valittu, harjoitellaan vain tallennettuja sanoja.",
+  "tutorialM3WordsTitle": "Sanaharjoittelu",
+  "tutorialMicDesc": "Napauta mikrofonia äänisyötettä varten.",
+  "tutorialMicTitle": "Äänisyöte",
+  "tutorialSaveDesc": "Tallenna käännös tietueisiin.",
+  "tutorialSaveTitle": "Tallenna",
+  "tutorialSwapDesc": "Vaihdan kieleni oppimaani kieleen.",
+  "tutorialTabDesc": "Täältä voit valita haluamasi oppimistilan.",
+  "tutorialTapToContinue": "Napauta jatkaaksesi",
+  "tutorialTransDesc": "Napauta tästä kääntääksesi.",
+  "tutorialTransTitle": "Käännä",
+  "typeExclamation": "Huudahdus",
+  "typeImperative": "Käsky",
+  "typeQuestion": "Kysymys",
+  "typeStatement": "Toteamus",
+  "usageLimitTitle": "Käyttöraja saavutettu",
+  "useExistingText": "Käytä Olemassaolevaa",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "Neutraali",
-  "chatAllConversations": "Kaikki keskustelut",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Haluatko varmasti poistaa tämän keskustelun?\nPoistettuja keskusteluja ei voi palauttaa.",
-  "notSelected": "- Ei valittu -",
-  "myWordbook": "Oma sanakirjani",
-  "mySentenceCollection": "Oma lausekokoelmani",
-  "newSubjectName": "Uuden sanasto-/lausekokoelman nimi",
-  "enterNewSubjectName": "Kirjoita uusi nimi",
-  "addNewSubject": "Lisää uusi nimi",
-  "selectExistingSubject": "Valitse olemassa oleva nimi",
-  "addTagHint": "Lisää tagi...",
-  "save": "Tallenna",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Vahvista sähköpostiosoitteesi suorittaaksesi todennus.",
-  "emailAlreadyInUse": "Sähköpostiosoite on jo käytössä. Kirjaudu sisään tai palauta salasana."
+  "viewOnlineGuide": "Näytä online-opas",
+  "voluntaryTranslations": "Vapaaehtoiset käännökset",
+  "watchAdAndRefill": "Katso mainos ja lataa (+5 kertaa)",
+  "word": "Sana",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Puolusta tukikohtaa sanomalla sanat ennen kuin viholliset saapuvat.",
+  "wordDefenseTitle": "Sana puolustus",
+  "wordModeLabel": "Sanatila",
+  "yourPronunciation": "Sinun ääntämys"
 }

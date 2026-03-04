@@ -1,188 +1,105 @@
 {
   "@@locale": "as",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "কাকাওৰ সৈতে আগবাঢ়ক",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "সহায়িকা & নিৰ্দেশনা",
-  "helpTabModes": "মোডৰ বিষয়ে",
-  "helpTabJson": "JSON বিন্যাস",
-  "helpTabTour": "অনুভৱ কৰক",
-  "helpMode1Desc": "কথা শুনি অনুবাদ কৰিব পাৰি আৰু ফলাফল শুনিব পাৰি।",
-  "helpMode1Details": "• ভাষা নিৰ্ধাৰণ: ভাষা সলনি কৰিবলৈ ওপৰৰ/তলৰ আইকনত ক্লিক কৰক\n• শব্দ/বাক্যাংশ টগল: মোড সলনি কৰক\n• ভয়েচ ইনপুট: শুনিবলৈ আৰম্ভ/বন্ধ কৰিবলৈ মাইক্ৰ’ফোন আইকনত ক্লিক কৰক\n• টেক্সট ইনপুট: অনুবাদ কৰিবলৈ পোনপটীয়াকৈ লিখক\n• স্বয়ংক্ৰিয় সন্ধান: একে ধৰণৰ বাক্য চিনাক্ত কৰা হয়\n• অনুবাদ: তাৎক্ষণিকভাৱে অনুবাদ কৰিবলৈ অনুবাদ বুটামত ক্লিক কৰক\n• শ্ৰৱণ: TTS প্লেবেকৰ বাবে স্পীকাৰ আইকন\n• সংৰক্ষণ: ‘ডাটা সংৰক্ষণ’ৰ সৈতে ৰেকৰ্ড যোগ কৰক\n• মচি পেলোৱা: ইনপুট ঘূৰাই আনক",
-  "helpMode2Desc": "সংৰক্ষিত বাক্যবোৰ পুনৰীক্ষণ কৰক আৰু স্বয়ংক্ৰিয়ভাৱে লুকুৱাই থোৱা বৈশিষ্ট্যৰ সৈতে আপুনি মনত ৰাখিছেনে নাই সেইটো পৰীক্ষা কৰক।",
-  "helpMode2Details": "• সামগ্ৰী নিৰ্বাচন: এটা নিৰ্দিষ্ট সামগ্ৰী সংকলন বা ‘সকলোবোৰ পুনৰীক্ষণ কৰক’ নিৰ্বাচন কৰক\n• কাৰ্ড ফ্লিপ কৰা: অনুবাদ পৰীক্ষা কৰিবলৈ ‘দেখুৱাওক/লুকুৱাওক’ (স্বয়ংক্ৰিয় শিক্ষা পৰীক্ষা)\n• শ্ৰৱণ: বাক্য TTS প্লেবেক\n• শিকা সম্পূৰ্ণ: এটা চেকেৰে (V) শিকা সম্পূৰ্ণ হিচাপে চিহ্নিত কৰক\n• মচি পেলোৱা: ৰেকৰ্ড মচি পেলোৱাৰ বাবে কাৰ্ডখন টিপি ধৰি ৰাখক\n• সন্ধানৰ চৰ্তসমূহ: টেগ, শেহতীয়া আইটেম, আৰম্ভণিৰ আখৰৰ দ্বাৰা ফিল্টাৰ কৰা",
-  "helpMode3Desc": "এটা শুনি বাক্যবোৰ দোহাৰি (শ্বেডৱিং) উচ্চাৰণৰ অনুশীলন কৰক।",
-  "helpMode3Details": "• সামগ্ৰী নিৰ্বাচন: শিকিবলৈ এটা সামগ্ৰী সংকলন নিৰ্বাচন কৰক\n• সময় নিৰ্ধাৰণ: বাক্যৰ মাজত অপেক্ষাৰ সময় এডজাষ্ট কৰিবলৈ [-] [+] বুটাম (3 চেকেণ্ড – 60 চেকেণ্ড)\n• আৰম্ভ/বন্ধ: শ্বেড’ইং ছেচন নিয়ন্ত্ৰণ কৰক\n• কোৱা: কথাবোৰ শুনক আৰু পুনৰাবৃত্তি কৰক\n• ফীডবেক: সঠিকতাৰ নম্বৰ (0-100) আৰু ৰং প্ৰদৰ্শন\n• সন্ধানৰ চৰ্তসমূহ: টেগ, শেহতীয়া আইটেম, আৰম্ভণিৰ আখৰৰ দ্বাৰা অনুশীলন লক্ষ্য ফিল্টাৰ কৰা",
-  "helpModeChatDesc": "এআই ব্যক্তিত্বৰ সৈতে কথা পাতি বাস্তৱিক কথোপকথনৰ অনুশীলন কৰক।",
-  "helpModeChatDetails": "• এআই চেটিং: কথোপকথনৰ অনুশীলন কৰিবলৈ আপোনাৰ ভাষাত কওক\n• মাল্টি পাৰ্চনা: বেলুনৰ ওপৰত থকা মেনুৰ সৈতে আনজন ব্যক্তিৰ লিংগ/ভাষা/নাম সলনি কৰিব পাৰি\n• সংগী যোগ কৰক: এটা নতুন বাৰ্তালাপ অংশীদাৰ যোগ কৰিবলৈ + বুটাম (অচিনাকি)\n• GPS: বৰ্তমানৰ অৱস্থানৰ ওপৰত ভিত্তি কৰি পৰিস্থিতি নাটক\n• স্বয়ংক্ৰিয় সংৰক্ষণ: বাৰ্তালাপৰ স্বয়ংক্ৰিয় অনুবাদ আৰু সংৰক্ষণ",
-  "helpJsonDesc": "মোড 3 ত ব্যৱহাৰ কৰিবলৈ JSON ফাইল হিচাপে শিকন সামগ্ৰী ইম্প’ৰ্ট কৰিবলৈ, নিম্নলিখিত বিন্যাস ব্যৱহাৰ কৰক:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "JSON ফাইল হিচাপে সম্পূৰ্ণ বাৰ্তালাপৰ এটা সংহতি ইম্প’ৰ্ট কৰক।",
-  "helpDialogueImportDetails": "• JSON গঠন: `এন্ট্ৰী`ৰ পৰিৱৰ্তে `ডাইলগ` এৰে ব্যৱহাৰ কৰক\n• স্বয়ংক্ৰিয় পুনৰুদ্ধাৰ: বাৰ্তালাপৰ শিৰোনাম, ব্যক্তি, বাৰ্তাৰ ক্ৰম পুনৰুদ্ধাৰ কৰা হৈছে।\n• অৱস্থান: ইম্প’ৰ্ট কৰা বাৰ্তালাপ এআই চেট মোডৰ ‘ইতিহাস’ টেবত দৃশ্যমান হ’ব।",
-  "helpTourDesc": "হাইলাইট কৰা বৃত্তই মূল বৈশিষ্ট্যসমূহৰ মাজেৰে আপোনাক পথ দেখুৱাব।\n(উদাহৰণস্বৰূপে: ইয়াক মচিবলৈ হাইলাইট কৰা বৃত্তই নিৰ্দেশ কৰা কাৰ্ডখন টিপি ধৰি ৰাখিব পাৰি।)",
-  "partnerMode": "সংগী মোড",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "হাতেৰে লিখা",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "বক্তা",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "এআই মোডলৈ সলনি কৰক",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "সংগী মোডলৈ সলনি কৰক",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "বৰ্তমানৰ অৱস্থান",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "অৱস্থান",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "সংগী",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "মই",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "বৰ্তমান নিৰ্বাচিত সামগ্ৰী সংকলন:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "বেচিক বাক্য/শব্দ ভঁৰাল",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "শব্দ",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "বাক্য",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "সঠিকতা",
+  "adLoading": "বিজ্ঞাপন লোড কৰি থকা হৈছে। অনুগ্ৰহ কৰি কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক।",
+  "addNewSubject": "নতুন নাম যোগ কৰক",
+  "addParticipant": "অংশগ্ৰহণকাৰী যোগ কৰক",
+  "addTagHint": "টেগ যোগ কৰক...",
+  "alreadyHaveAccount": "আপোনাৰ ইতিমধ্যে একাউণ্ট আছে নেকি?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "পুনৰীক্ষণ ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "স্বয়ংক্ৰিয় প্লে’",
+  "basic": "বেচিক",
+  "basicDefault": "বেচিক",
+  "basicMaterialRepository": "বেচিক বাক্য/শব্দ ভঁৰাল",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "অধ্যয়ন সামগ্ৰী ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "বেচিক বাক্য ভঁৰাল",
+  "basicSentences": "বেচিক বাক্য ভঁৰাল",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "পুনৰীক্ষণ",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "সন্ধান",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "অনুবাদ",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "শুনক",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "ডাটা সংৰক্ষণ কৰক",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "সংৰক্ষণ কৰা হ’ল",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "মচি পেলোৱা",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "সামগ্ৰীৰ তথ্য",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "বেচিক শব্দ ভঁৰাল",
+  "basicWords": "বেচিক শব্দ ভঁৰাল",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "বাতিল কৰক",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "নিশ্চিত কৰক",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "নতুন কৰক",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "অধ্যয়নৰ ৰেকৰ্ডসমূহ ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "কৰ্ম কাৰক",
+  "casePossessive": "অধিকাৰবোধক",
+  "casePossessivePronoun": "অধিকাৰবোধক সৰ্বনাম",
+  "caseReflexive": "প্ৰতিফলিত",
+  "caseSubject": "কৰ্তা কাৰক",
+  "chatAiChat": "চ্যাটিং",
+  "chatAllConversations": "সকলো কথোপকথন",
+  "chatChoosePersona": "এটা ব্যক্তি নিৰ্বাচন কৰক",
+  "chatEndMessage": "আপুনি বাৰ্তালাপ শেষ কৰিব বিচাৰেনে?",
+  "chatEndTitle": "বাৰ্তালাপ শেষ কৰা আৰু সংৰক্ষণ কৰা",
+  "chatFailed": "চেট ব্যৰ্থ হ’ল: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "লক্ষ্য ভাষাৰ ফিল্টাৰ:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "বাৰ্তালাপৰ উদ্ধৃতি ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "নিৰ্বাচিত ভাষাৰ বাবে কোনো শিকন ৰেকৰ্ড নাই",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "চেটৰ ইতিহাস",
+  "chatNew": "নতুন বাৰ্তালাপ",
+  "chatNewChat": "নতুন বাৰ্তালাপ",
+  "chatNoConversations": "এতিয়ালৈকে কোনো বাৰ্তালাপ নাই",
+  "chatSaveAndExit": "সংৰক্ষণ কৰক আৰু ওলাই যাওক",
+  "chatStartNewPrompt": "অনুশীলনৰ বাবে এটা নতুন বাৰ্তালাপ আৰম্ভ কৰিবলৈ চেষ্টা কৰক!",
+  "chatTypeHint": "এটা বাৰ্তা লিখক...",
+  "chatUntitled": "শিৰোনামবিহীন বাৰ্তালাপ",
+  "checking": "পৰীক্ষা কৰি থকা হৈছে...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "অনুসন্ধান মোডৰ পৰা অনুবাদ সংৰক্ষণ কৰিবলৈ চেষ্টা কৰক",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "দেখুৱাওক",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "লুকুৱাওক",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "ৰেকৰ্ড মচি পেলোৱা",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "সকলো মচি পেলোৱা",
+  "confirm": "নিশ্চিত কৰক",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "আপুনি এই শিকন ৰেকৰ্ড মচিব বিচাৰেনে?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "ৰেকৰ্ড মচি পেলোৱা হ’ল",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "আপুনি এই কথোপকথনটো মচিব বিচাৰে নেকি?\nমচাৰ পিছত কথোপকথনটো পুনৰুদ্ধাৰ কৰিব নোৱাৰিব।",
+  "confirmDeleteParticipant": "আপুনি এই অংশগ্ৰহণকাৰীক মচিব বিচাৰেনে?",
+  "contextTagHint": "ভৱিষ্যতে পৃথক কৰিবলৈ পৰিস্থিতি লিখক",
+  "contextTagLabel": "প্ৰসংগ/পৰিস্থিতি (ঐচ্ছিক) – উদাহৰণ: ৰাতিপুৱাৰ সম্ভাষণ, আনুষ্ঠানিক",
+  "copiedToClipboard": "ক্লিপবৰ্ডত কপি কৰা হ’ল!",
+  "copy": "কপি কৰক",
+  "correctAnswer": "সঠিক উত্তৰ",
+  "createNew": "এটা নতুন বাক্যৰ সৈতে আগবাঢ়ক",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "বৰ্তমানৰ অৱস্থান",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "বৰ্তমান নিৰ্বাচিত সামগ্ৰী সংকলন:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "মচি পেলোৱা",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "মচিবলৈ ব্যৰ্থ: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "JSON ফাইল ইম্প’ৰ্ট কৰক",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "ৰেকৰ্ড মচি পেলোৱা",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "ইম্প’ৰ্ট কৰি থকা হৈছে...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "এটা পৰিস্থিতি নাটকৰ জৰিয়তে বাৰ্তালাপৰ অনুশীলন কৰক। উপযুক্ত উত্তৰ নিৰ্বাচন কৰক আৰু কওক।",
+  "dialogueQuestTitle": "বাৰ্তালাপৰ সন্ধান",
+  "disambiguationPrompt": "আপুনি ইয়াক কি অৰ্থত অনুবাদ কৰিব?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "অৰ্থ নিৰ্বাচন",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "আপোনাৰ একাউণ্ট নাই নেকি?",
+  "editParticipant": "অংশগ্ৰহণকাৰী সম্পাদনা কৰক",
+  "email": "ইমেইল",
+  "emailAlreadyInUse": "এই ইমেইল ইতিমধ্যে ব্যৱহৃত হৈছে। লগইন কৰক বা পাছৱৰ্ড পুনৰুদ্ধাৰ কৰাৰ চেষ্টা কৰক।",
+  "enterNewSubjectName": "নতুন নাম লিখক",
+  "enterSentenceHint": "এটা বাক্য লিখাৰ ইংগিত...",
+  "enterTextHint": "অনুবাদ কৰিবলৈ টেক্সট লিখক",
+  "enterTextToTranslate": "অনুবাদ কৰিবলৈ টেক্সট লিখক",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "এটা শব্দ লিখাৰ ইংগিত...",
+  "error": "error",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "ইয়াত ঘৃণা ভাষণ থকা বাবে অনুবাদ কৰিব নোৱাৰি।",
+  "errorOtherSafety": "এআই সুৰক্ষা নীতিৰ দ্বাৰা অনুবাদ নাকচ কৰা হ’ল।",
+  "errorProfanity": "ইয়াত অশ্লীল শব্দ থকা বাবে অনুবাদ কৰিব নোৱাৰি।",
+  "errorSelectCategory": "প্ৰথমে এটা শব্দ বা বাক্য নিৰ্বাচন কৰক!",
+  "errorSexualContent": "ইয়াত যৌনতাপূৰ্ণ সামগ্ৰী থকা বাবে অনুবাদ কৰিব নোৱাৰি।",
+  "errors": "error:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "মহিলা",
+  "file": "ফাইল:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "সকলো",
+  "flip": "দেখুৱাওক",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "তুলনাত্মক",
+  "formInfinitive": "ইনফিনিটিভ/বৰ্তমান",
+  "formPast": "অতীত",
+  "formPastParticiple": "অতীতৰ অংশ",
+  "formPlural": "বহুবচন",
+  "formPositive": "ইতিবাচক",
+  "formPresent": "বৰ্তমান",
+  "formPresentParticiple": "বৰ্তমানৰ অংশ (ing)",
+  "formSingular": "একবচন",
+  "formSuperlative": "সৰ্বোত্তম",
+  "formThirdPersonSingular": "তৃতীয় ব্যক্তি একবচন",
+  "gameModeDesc": "অনুশীলন কৰিবলৈ এটা গেম মোড নিৰ্বাচন কৰক",
+  "gameModeTitle": "গেম মোড",
+  "gameOver": "গেম শেষ",
+  "gender": "লিংগ",
+  "generalTags": "সাধাৰণ টেগসমূহ",
+  "getMaterials": "সামগ্ৰী লাভ কৰক",
+  "good": "ভাল",
+  "googleContinue": "Google ৰ সৈতে আগবাঢ়ক",
+  "helpDialogueImportDesc": "JSON ফাইল হিচাপে সম্পূৰ্ণ বাৰ্তালাপৰ এটা সংহতি ইম্প’ৰ্ট কৰক।",
+  "helpDialogueImportDetails": "• JSON গঠন: `এন্ট্ৰী`ৰ পৰিৱৰ্তে `ডাইলগ` এৰে ব্যৱহাৰ কৰক\n• স্বয়ংক্ৰিয় পুনৰুদ্ধাৰ: বাৰ্তালাপৰ শিৰোনাম, ব্যক্তি, বাৰ্তাৰ ক্ৰম পুনৰুদ্ধাৰ কৰা হৈছে।\n• অৱস্থান: ইম্প’ৰ্ট কৰা বাৰ্তালাপ এআই চেট মোডৰ ‘ইতিহাস’ টেবত দৃশ্যমান হ’ব।",
+  "helpJsonDesc": "মোড 3 ত ব্যৱহাৰ কৰিবলৈ JSON ফাইল হিচাপে শিকন সামগ্ৰী ইম্প’ৰ্ট কৰিবলৈ, নিম্নলিখিত বিন্যাস ব্যৱহাৰ কৰক:",
+  "helpJsonTypeDialogue": "কথা-বতৰা (Dialogue)",
+  "helpJsonTypeSentence": "বাক্য (Sentence)",
+  "helpJsonTypeWord": "শব্দ (Word)",
+  "helpMode1Desc": "কথা শুনি অনুবাদ কৰিব পাৰি আৰু ফলাফল শুনিব পাৰি।",
+  "helpMode1Details": "• ভাষা নিৰ্ধাৰণ: ভাষা সলনি কৰিবলৈ ওপৰৰ/তলৰ আইকনত ক্লিক কৰক\n• শব্দ/বাক্যাংশ টগল: মোড সলনি কৰক\n• ভয়েচ ইনপুট: শুনিবলৈ আৰম্ভ/বন্ধ কৰিবলৈ মাইক্ৰ’ফোন আইকনত ক্লিক কৰক\n• টেক্সট ইনপুট: অনুবাদ কৰিবলৈ পোনপটীয়াকৈ লিখক\n• স্বয়ংক্ৰিয় সন্ধান: একে ধৰণৰ বাক্য চিনাক্ত কৰা হয়\n• অনুবাদ: তাৎক্ষণিকভাৱে অনুবাদ কৰিবলৈ অনুবাদ বুটামত ক্লিক কৰক\n• শ্ৰৱণ: TTS প্লেবেকৰ বাবে স্পীকাৰ আইকন\n• সংৰক্ষণ: ‘ডাটা সংৰক্ষণ’ৰ সৈতে ৰেকৰ্ড যোগ কৰক\n• মচি পেলোৱা: ইনপুট ঘূৰাই আনক",
+  "helpMode2Desc": "সংৰক্ষিত বাক্যবোৰ পুনৰীক্ষণ কৰক আৰু স্বয়ংক্ৰিয়ভাৱে লুকুৱাই থোৱা বৈশিষ্ট্যৰ সৈতে আপুনি মনত ৰাখিছেনে নাই সেইটো পৰীক্ষা কৰক।",
+  "helpMode2Details": "• সামগ্ৰী নিৰ্বাচন: এটা নিৰ্দিষ্ট সামগ্ৰী সংকলন বা ‘সকলোবোৰ পুনৰীক্ষণ কৰক’ নিৰ্বাচন কৰক\n• কাৰ্ড ফ্লিপ কৰা: অনুবাদ পৰীক্ষা কৰিবলৈ ‘দেখুৱাওক/লুকুৱাওক’ (স্বয়ংক্ৰিয় শিক্ষা পৰীক্ষা)\n• শ্ৰৱণ: বাক্য TTS প্লেবেক\n• শিকা সম্পূৰ্ণ: এটা চেকেৰে (V) শিকা সম্পূৰ্ণ হিচাপে চিহ্নিত কৰক\n• মচি পেলোৱা: ৰেকৰ্ড মচি পেলোৱাৰ বাবে কাৰ্ডখন টিপি ধৰি ৰাখক\n• সন্ধানৰ চৰ্তসমূহ: টেগ, শেহতীয়া আইটেম, আৰম্ভণিৰ আখৰৰ দ্বাৰা ফিল্টাৰ কৰা",
+  "helpMode3Desc": "এটা শুনি বাক্যবোৰ দোহাৰি (শ্বেডৱিং) উচ্চাৰণৰ অনুশীলন কৰক।",
+  "helpMode3Details": "• সামগ্ৰী নিৰ্বাচন: শিকিবলৈ এটা সামগ্ৰী সংকলন নিৰ্বাচন কৰক\n• সময় নিৰ্ধাৰণ: বাক্যৰ মাজত অপেক্ষাৰ সময় এডজাষ্ট কৰিবলৈ [-] [+] বুটাম (3 চেকেণ্ড – 60 চেকেণ্ড)\n• আৰম্ভ/বন্ধ: শ্বেড’ইং ছেচন নিয়ন্ত্ৰণ কৰক\n• কোৱা: কথাবোৰ শুনক আৰু পুনৰাবৃত্তি কৰক\n• ফীডবেক: সঠিকতাৰ নম্বৰ (0-100) আৰু ৰং প্ৰদৰ্শন\n• সন্ধানৰ চৰ্তসমূহ: টেগ, শেহতীয়া আইটেম, আৰম্ভণিৰ আখৰৰ দ্বাৰা অনুশীলন লক্ষ্য ফিল্টাৰ কৰা",
+  "helpModeChatDesc": "এআই ব্যক্তিত্বৰ সৈতে কথা পাতি বাস্তৱিক কথোপকথনৰ অনুশীলন কৰক।",
+  "helpModeChatDetails": "• এআই চেটিং: কথোপকথনৰ অনুশীলন কৰিবলৈ আপোনাৰ ভাষাত কওক\n• মাল্টি পাৰ্চনা: বেলুনৰ ওপৰত থকা মেনুৰ সৈতে আনজন ব্যক্তিৰ লিংগ/ভাষা/নাম সলনি কৰিব পাৰি\n• সংগী যোগ কৰক: এটা নতুন বাৰ্তালাপ অংশীদাৰ যোগ কৰিবলৈ + বুটাম (অচিনাকি)\n• GPS: বৰ্তমানৰ অৱস্থানৰ ওপৰত ভিত্তি কৰি পৰিস্থিতি নাটক\n• স্বয়ংক্ৰিয় সংৰক্ষণ: বাৰ্তালাপৰ স্বয়ংক্ৰিয় অনুবাদ আৰু সংৰক্ষণ",
+  "helpTabJson": "JSON বিন্যাস",
+  "helpTabModes": "মোডৰ বিষয়ে",
+  "helpTabTour": "অনুভৱ কৰক",
+  "helpTitle": "সহায়িকা & নিৰ্দেশনা",
+  "helpTourDesc": "হাইলাইট কৰা বৃত্তই মূল বৈশিষ্ট্যসমূহৰ মাজেৰে আপোনাক পথ দেখুৱাব।\n(উদাহৰণস্বৰূপে: ইয়াক মচিবলৈ হাইলাইট কৰা বৃত্তই নিৰ্দেশ কৰা কাৰ্ডখন টিপি ধৰি ৰাখিব পাৰি।)",
+  "hide": "লুকুৱাওক",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "যোগ কৰা হ’ল: {count}টা",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "ইম্প’ৰ্ট সম্পূৰ্ণ হ’ল",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "একে শিৰোনামৰ সামগ্ৰী ইতিমধ্যে আছে। শিৰোনাম সলনি কৰি পুনৰ চেষ্টা কৰক।",
+  "importErrorMessage": "ফাইল ইম্প’ৰ্ট কৰিবলৈ ব্যৰ্থ:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "ইম্প’ৰ্ট ব্যৰ্থ হ’ল",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "মুঠ: {count}টা",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "JSON ফাইল ইম্প’ৰ্ট কৰক",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "যোগ কৰা হ’ল: {count}টা",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "অনুগ্ৰহ কৰি এটা JSON ফাইল ইম্প’ৰ্ট কৰক",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "এৰি যোৱা হ’ল: {count}টা",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "error:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "মুঠ: {count}টা",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "error",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "ইম্প’ৰ্ট কৰি থকা হৈছে...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "ফাইল ইম্প’ৰ্ট কৰিবলৈ ব্যৰ্থ:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "ইনপুট",
+  "intervalSeconds": "সময়: {seconds} চেকেণ্ড",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "বৈধ ইমেইল লিখক।",
+  "kakaoContinue": "কাকাওৰ সৈতে আগবাঢ়ক",
+  "labelLangCode": "ভাষাৰ ক’ড (উদাহৰণস্বৰূপে: en-US, ko-KR)",
+  "labelName": "নাম",
+  "labelNote": "টোকা",
+  "labelPOS": "শব্দৰ অংশ",
+  "labelRole": "ভূমিকা",
+  "labelSentence": "বাক্য",
+  "labelSentenceCollection": "বাক্য সংকলন",
+  "labelSentenceType": "বাক্যৰ প্ৰকাৰ",
+  "labelShowMemorized": "শেষ",
+  "labelType": "প্ৰকাৰ:",
+  "labelWord": "শব্দ",
+  "labelWordbook": "শব্দৰ তালিকা",
+  "language": "ভাষা",
+  "languageSettings": "ভাষাৰ ছেটিং",
+  "languageSettingsTitle": "ভাষাৰ ছেটিং",
+  "libTitleFirstMeeting": "প্ৰথম সাক্ষাৎ",
+  "libTitleGreetings1": "শুভেচ্ছা 1",
+  "libTitleNouns1": "বিশেষ্য 1",
+  "libTitleVerbs1": "ক্ৰিয়া 1",
+  "listen": "শুনক",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "শুনি থকা হৈছে...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "অংশগ্ৰহণকাৰী লোডিং হৈ আছে...",
+  "location": "অৱস্থান",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "লগইন",
+  "logout": "লগআউট",
+  "logoutConfirmMessage": "আপুনি বৰ্তমানৰ ডিভাইচৰ পৰা লগআউট কৰিব বিচাৰেনে?",
+  "logoutConfirmTitle": "লগআউট",
+  "male": "পুৰুষ",
+  "manageParticipants": "অংশগ্ৰহণকাৰী পৰিচালনা কৰক",
+  "manual": "হাতেৰে লিখা",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "অধ্যয়ন হিচাপে চিহ্নিত কৰক",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "সামগ্ৰীৰ তথ্য",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "মই",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "ডিভাইচৰ পৰা সামগ্ৰী ইম্প’ৰ্ট কৰক",
+  "menuHelp": "সহায়িকা",
+  "menuLanguageSettings": "ভাষাৰ ছেটিংছ",
+  "menuOnlineLibrary": "অনলাইন লাইব্ৰেৰী",
+  "menuSelectMaterialSet": "এটা শিকন সামগ্ৰী সংকলন নিৰ্বাচন কৰক",
+  "menuSettings": "ভাষাৰ ছেটিং",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "টিউট’ৰিয়েল",
+  "menuWebDownload": "মুখ্য পৃষ্ঠা",
+  "metadataDialogTitle": "বিৱৰণমূলক শ্ৰেণীবিভাজন",
+  "metadataFormType": "ব্যাকৰণৰ ৰূপ",
+  "metadataRootWord": "মূল শব্দ (Root Word)",
+  "micButtonTooltip": "ভয়েচ চিনি পোৱা আৰম্ভ কৰক",
+  "mode1SelectedMaterial": "বৰ্তমান নিৰ্বাচিত সামগ্ৰী সংকলন: {name}",
+  "mode2Title": "পুনৰীক্ষণ",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "পৰৱৰ্তী",
+  "mode3Start": "আৰম্ভ",
+  "mode3Stop": "বন্ধ",
+  "mode3TryAgain": "পুনৰ চেষ্টা কৰক",
+  "mySentenceCollection": "মোৰ বাক্য সংগ্ৰহ",
+  "myWordbook": "মোৰ শব্দ তালিকা",
+  "neutral": "উদাসীন",
+  "newSubjectName": "নতুন শব্দভাণ্ডাৰ/বাক্যাংশৰ সংগ্ৰহৰ নাম",
+  "next": "পৰৱৰ্তী",
+  "noDialogueHistory": "কোনো কথা-বতৰাৰ ইতিহাস নাই।",
+  "noInternetWarningMic": "ইণ্টাৰনেট সংযোগ নাই। অফলাইনত থকা অৱস্থাত ভইচ ৰিকগনিচন উপলব্ধ নহ’বও পাৰে।",
+  "noInternetWarningTranslate": "ইণ্টাৰনেট সংযোগ নাই। অফলাইনত থকা অৱস্থাত অনুবাদৰ সুবিধা উপলব্ধ নহ’ব। অনুগ্ৰহ কৰি পুনৰীক্ষণ মোড ব্যৱহাৰ কৰক।",
+  "noMaterialsInCategory": "এই শ্ৰেণীত কোনো সামগ্ৰী নাই।",
+  "noParticipantsFound": "কোনো অংশগ্ৰহণকাৰী পোৱা নগ’ল।",
+  "noRecords": "নিৰ্বাচিত ভাষাৰ বাবে কোনো শিকন ৰেকৰ্ড নাই",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "কোনো শিকন সামগ্ৰী নাই।",
+  "noTextToPlay": "প্লে’ কৰিবলৈ কোনো টেক্সট নাই",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "সংৰক্ষণ কৰিবলৈ কোনো অনুবাদ নাই",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "কোনো মাত ধৰা পৰা নাই",
+  "notSelected": "- নিৰ্বাচিত কৰা হোৱা নাই -",
+  "onlineLibraryCheckInternet": "অনুগ্রহ কৰি আপোনাৰ ইণ্টাৰনেট সংযোগ পৰীক্ষা কৰক বা পিছত পুনৰ চেষ্টা কৰক।",
+  "onlineLibraryLoadFailed": "সামগ্ৰী লোড কৰাত ব্যৰ্থ হ’ল।",
+  "onlineLibraryNoMaterials": "সামগ্ৰী উপলব্ধ নহয়।",
+  "participantDeleted": "অংশগ্ৰহণকাৰীক মচি পেলোৱা হ’ল।",
+  "participantRename": "অংশগ্ৰহণকাৰীৰ নাম সলনি কৰক",
+  "partner": "সংগী",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "সংগী মোড",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "পাছৱৰ্ড",
+  "passwordTooShort": "পাছৱৰ্ড ৬টা আখৰৰ হ’ব লাগে।",
+  "perfect": "নিখুঁত!",
+  "personaFriend": "স্থানীয় বন্ধু",
+  "personaGuide": "ভ্ৰমণ পৰিদৰ্শক",
+  "personaTeacher": "ইংৰাজী শিক্ষক",
+  "playAgain": "পুনৰ খেলক",
+  "playbackFailed": "প্লে’বেক ব্যৰ্থ হ’ল: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "অধ্যয়ন সামগ্ৰী নিৰ্বাচন কৰক",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "প্লে’ কৰি থকা হৈছে...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "বিষয়:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "উৎস:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "ফাইল:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "বিশেষণ",
+  "posAdverb": "ক্ৰিয়া-বিশেষণ",
+  "posConjunction": "সংযোজক",
+  "posInterjection": "বিস্ময়বোধক",
+  "posNoun": "বিশেষ্য",
+  "posPreposition": "প্ৰিপ’জিচন",
+  "posPronoun": "সৰ্বনাম",
+  "posVerb": "ক্ৰিয়া",
+  "practiceModeTitle": "অনুশীলন",
+  "practiceWordsOnly": "কেৱল শব্দৰ অনুশীলন কৰক",
   "progress": "প্ৰগতি: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "অনুগ্ৰহ কৰি এটা JSON ফাইল ইম্প’ৰ্ট কৰক",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "অনুগ্ৰহ কৰি এটা শিকন সামগ্ৰী নিৰ্বাচন কৰক",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "অধ্যয়ন সম্পূৰ্ণ",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "অধ্যয়ন হিচাপে চিহ্নিত কৰক",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "শুনি থকা হৈছে...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "চিনাক্ত কৰা হ’ল",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "শেহতীয়াকৈ সৃষ্টি কৰা {count} টা আইটেম চাওক",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "ভয়েচ চিনি পোৱাত ব্যৰ্থ: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "পৰীক্ষা কৰি থকা হৈছে...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "চিনাক্ত কৰা হ’ল",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "অনুবাদ কৰি থকা হৈছে...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "চিনাক্ত কৰা উচ্চাৰণ:",
+  "recordDeleted": "ৰেকৰ্ড মচি পেলোৱা হ’ল",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "অনুবাদ সম্পূৰ্ণ (সংৰক্ষণ কৰিব লাগিব)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "নতুন কৰক",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "সংৰক্ষিত অনুবাদ লোড কৰা হ’ল",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "অনুবাদ ব্যৰ্থ হ’ল: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "ঘূৰাই আনক",
+  "resetPracticeHistory": "অনুশীলনৰ ইতিহাস ঘূৰাই আনক",
+  "retry": "পুনৰ চেষ্টা কৰিব?",
+  "reviewAll": "সকলোবোৰ পুনৰীক্ষণ কৰক",
+  "reviewCount": "পুনৰীক্ষণ {count} বাৰ",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "অনুবাদ কৰিবলৈ টেক্সট লিখক",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "সংৰক্ষণ কৰি থকা হৈছে...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "সংৰক্ষণ কৰিবলৈ কোনো অনুবাদ নাই",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "পুনৰীক্ষণ",
+  "roleAi": "AI",
+  "roleThirdParty": "তৃতীয় পক্ষ",
+  "roleUser": "ব্যৱহাৰকাৰী",
+  "save": "সংৰক্ষণ কৰক",
+  "saveData": "ডাটা সংৰক্ষণ কৰক",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "সংৰক্ষণ ব্যৰ্থ হ’ল: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "প্লে’ কৰি থকা হৈছে...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "অনুসন্ধান মোডৰ পৰা অনুবাদ সংৰক্ষণ কৰিবলৈ চেষ্টা কৰক",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "প্লে’ কৰিবলৈ কোনো টেক্সট নাই",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "সংৰক্ষণ কৰা হ’ল",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "প্লে’বেক ব্যৰ্থ হ’ল: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "সংৰক্ষণ কৰি থকা হৈছে...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "উৎস ভাষা",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "লক্ষ্য ভাষা",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "একে ধৰণৰ টেক্সট পোৱা গ’ল",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "বৰ্তমানৰ টেক্সট ব্যৱহাৰ কৰক",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "এটা নতুন বাক্যৰ সৈতে আগবাঢ়ক",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "পুনৰীক্ষণ {count} বাৰ",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "কথা",
-  "speakingPractice": "কথাৰ অনুশীলন",
-  "intervalSeconds": "সময়: {seconds} চেকেণ্ড",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "আপোনাৰ উচ্চাৰণ",
-  "correctAnswer": "সঠিক উত্তৰ",
   "score": "সঠিকতা: {score}%",
   "@score": {
     "placeholders": {
@@ -446,89 +517,161 @@
       }
     }
   },
-  "perfect": "নিখুঁত!",
-  "good": "ভাল",
-  "tryAgain": "পুনৰ চেষ্টা কৰক",
-  "startPractice": "অনুশীলন আৰম্ভ কৰক",
-  "stopPractice": "অনুশীলন বন্ধ কৰক",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "টিউটোৰিয়েল আৰম্ভ কৰক",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "ভয়েচ ইনপুট",
-  "tutorialMicDesc": "ভয়েচেৰে লিখিবলৈ মাইক্ৰ’ফোন বুটাম টিপক।",
-  "tutorialTabDesc": "ইয়াত আপুনি বিচৰা শিকন মোড নিৰ্বাচন কৰিব পাৰে।",
-  "tutorialTapToContinue": "আগবাঢ়িবলৈ স্ক্ৰীণত টিপক",
-  "tutorialTransTitle": "অনুবাদ কৰক",
-  "tutorialTransDesc": "লিখা টেক্সট অনুবাদ কৰক।",
-  "tutorialSaveTitle": "সংৰক্ষণ কৰক",
-  "tutorialSaveDesc": "অনূদিত ফলাফল আপোনাৰ শিকন ৰেকৰ্ডত সংৰক্ষণ কৰক।",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "স্ক’ৰ",
+  "search": "সন্ধান",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "সন্ধানৰ চৰ্ত",
+  "searchSentenceHint": "বাক্য সন্ধান...",
+  "searchWordHint": "শব্দ সন্ধান...",
+  "sectionSentence": "বাক্য শাখাটো",
+  "sectionSentences": "বাক্য",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "শব্দ শাখাটো",
+  "sectionWords": "শব্দ",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "পূৰ্বৰ নাম বাছক",
+  "selectMaterialPrompt": "অনুগ্ৰহ কৰি এটা শিকন সামগ্ৰী নিৰ্বাচন কৰক",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "এটা শিকন সামগ্ৰী সংকলন নিৰ্বাচন কৰক",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "এটা কথাৰ অংশ নিৰ্বাচন কৰক",
+  "selectParticipants": "অংশগ্ৰহণকাৰী নিৰ্বাচন কৰক",
+  "selectSentenceType": "বাক্যৰ প্ৰকাৰ নিৰ্বাচন কৰক",
+  "selectStudyMaterial": "অধ্যয়ন সামগ্ৰী নিৰ্বাচন কৰক",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "এআই চ্যাটিং",
-  "tutorialAiChatDesc": "এটা এআই ব্যক্তিৰ সৈতে বাস্তৱিক জীৱনৰ বাৰ্তালাপৰ অনুশীলন কৰক।",
-  "tutorialM2SelectTitle": "সামগ্ৰী নিৰ্বাচন",
-  "tutorialM2SelectDesc": "শিকিবলৈ সামগ্ৰী সংকলন নিৰ্বাচন কৰিবলৈ শীৰ্ষ এপবাৰৰ সামগ্ৰী সংকলন আইকন (📚) টিপক।",
-  "tutorialM2ListTitle": "শিকন তালিকা",
-  "tutorialM2ListDesc": "এই কাৰ্ডখন টিপি ধৰি (দীঘলীয়া ক্লিক) মচিব পাৰি। সংৰক্ষিত বাক্য পৰীক্ষা কৰক আৰু লুটিয়াই চাওক।",
-  "tutorialM3SelectTitle": "সামগ্ৰী নিৰ্বাচন",
-  "tutorialM3SelectDesc": "অনুশীলন কৰিবলৈ সামগ্ৰী সংকলন নিৰ্বাচন কৰিবলৈ শীৰ্ষ এপবাৰৰ সামগ্ৰী সংকলন আইকন (📚) টিপক।",
-  "tutorialM3IntervalTitle": "সময় নিৰ্ধাৰণ",
-  "tutorialM3IntervalDesc": "বাক্যৰ মাজৰ সময় এডজাষ্ট কৰক।",
-  "tutorialM3StartTitle": "অনুশীলন আৰম্ভ কৰক",
-  "tutorialM3StartDesc": "মাতৃভাষীৰ কথা শুনিবলৈ আৰু পুনৰাবৃত্তি কৰিবলৈ প্লে’ বুটাম টিপক।",
+  "sentence": "বাক্য",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "ছাইন আপ",
+  "similarTextFound": "একে ধৰণৰ টেক্সট পোৱা গ’ল",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "এৰাই যাওক",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "উৎস:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "উৎস ভাষা",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "মোৰ ভাষা (উৎস)",
+  "speakNow": "এতিয়া কওক!",
+  "speaker": "বক্তা",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "বক্তা নিৰ্বাচন কৰক",
+  "speakingPractice": "কথাৰ অনুশীলন",
+  "startChat": "কথা-বতৰা আৰম্ভ কৰক",
+  "startPractice": "অনুশীলন আৰম্ভ কৰক",
+  "startTutorial": "টিউটোৰিয়েল আৰম্ভ কৰক",
   "startWarning": "সতৰ্কবাণী",
-  "noVoiceDetected": "কোনো মাত ধৰা পৰা নাই",
-  "tooltipSearch": "সন্ধান",
-  "tooltipStudyReview": "অধ্যয়ন+পুনৰীক্ষণ",
-  "tooltipSpeaking": "কথা",
+  "startsWith": "আৰম্ভণি আখৰ",
+  "statusCheckEmail": "অনুগ্রহ কৰি আপোনাৰ ইমেইল পৰীক্ষা কৰি প্ৰমাণীকৰণ সম্পূৰ্ণ কৰক।",
+  "statusDownloading": "ডাউনলোড হৈ আছে: {name}...",
+  "statusImportFailed": "ইম্পৰ্ট ব্যৰ্থ: {error}",
+  "statusImportSuccess": "{name} ইম্পৰ্ট সফল হ’ল",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "লগইন বাতিল কৰা হ’ল।",
+  "statusLoginFailed": "লগইন ব্যৰ্থ: {error}",
+  "statusLoginSuccess": "লগইন সফল হ’ল।",
+  "statusLogoutSuccess": "লগআউট হ’ল।",
+  "statusSignUpFailed": "ছাইন আপ ব্যৰ্থ: {error}",
+  "statusSigningUp": "ছাইন আপ হৈ আছে...",
+  "stopPractice": "অনুশীলন বন্ধ কৰক",
+  "studyComplete": "অধ্যয়ন সম্পূৰ্ণ",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "অধ্যয়নৰ ৰেকৰ্ডসমূহ ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "আনুষ্ঠানিক",
+  "styleInformal": "অনানুষ্ঠানিক",
+  "stylePolite": "ভদ্ৰ",
+  "styleSlang": "অপ্ৰচলিত শব্দ/ঠাঁচ",
+  "subject": "বিষয়:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "ভাষা সলনি কৰক",
+  "switchToAi": "এআই মোডলৈ সলনি কৰক",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "সংগী মোডলৈ সলনি কৰক",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "তথ্য ছিংক্ৰ’নাইজ হৈ আছে...",
+  "tabConversation": "কথা-বতৰা",
+  "tabReview": "পুনৰীক্ষণ ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "বাক্য",
+  "tabSpeaking": "কথা",
+  "tabStudyMaterial": "অধ্যয়ন সামগ্ৰী ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "শব্দ",
+  "tagFormal": "আনুষ্ঠানিক",
+  "tagSelection": "টেগ নিৰ্বাচন",
+  "targetLanguage": "লক্ষ্য ভাষা",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "লক্ষ্য ভাষাৰ ফিল্টাৰ:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "শিকা ভাষা (লক্ষ্য)",
+  "thinkingTimeDesc": "সঠিক উত্তৰ প্ৰকাশ কৰাৰ আগতে ভাবিবলৈ সময়।",
+  "thinkingTimeInterval": "প্লেবেকৰ সময়ৰ ব্যৱধান",
+  "timeUp": "সময় শেষ!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "শিৰোনাম টেগ (সংগ্ৰহ)",
   "tooltipDecrease": "কম কৰক",
   "tooltipIncrease": "বঢ়াওক",
-  "languageSettings": "ভাষাৰ ছেটিং",
-  "tutorialM2DropdownDesc": "আপুনি শীৰ্ষ মেনুৰ জৰিয়তে শিকিবলৈ সামগ্ৰী নিৰ্বাচন কৰিব পাৰে।",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "আপোনাৰ ডিভাইচৰ এটা ফোল্ডাৰৰ পৰা JSON ফাইল ইম্প’ৰ্ট কৰক।",
-  "tutorialLangSettingsTitle": "ভাষাৰ ছেটিং",
-  "tutorialLangSettingsDesc": "অনুবাদ কৰিবলৈ উৎস ভাষা আৰু লক্ষ্য ভাষা নিৰ্ধাৰণ কৰক।",
-  "copy": "কপি কৰক",
-  "copiedToClipboard": "ক্লিপবৰ্ডত কপি কৰা হ’ল!",
-  "tutorialContextTitle": "পৰিস্থিতি/প্ৰসংগ টেগ",
-  "tutorialContextDesc": "একেটা বাক্য হ’লেও পৰিস্থিতি (যেনে: ৰাতিপুৱা, গধূলি) লিখিলে সুকীয়াভাৱে সংৰক্ষণ কৰিব পাৰি।",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "সঠিক উত্তৰ প্ৰকাশ কৰাৰ আগতে ভাবিবলৈ সময়।",
-  "autoPlay": "স্বয়ংক্ৰিয় প্লে’",
-  "timeUp": "সময় শেষ!",
-  "gameModeTitle": "গেম মোড",
-  "gameModeDesc": "অনুশীলন কৰিবলৈ এটা গেম মোড নিৰ্বাচন কৰক",
-  "wordDefenseTitle": "শব্দ ৰক্ষা",
-  "wordDefenseDesc": "শত্ৰু অহাৰ আগতে শব্দ কৈ ঘাটি ৰক্ষা কৰক।",
-  "dialogueQuestTitle": "বাৰ্তালাপৰ সন্ধান",
-  "dialogueQuestDesc": "এটা পৰিস্থিতি নাটকৰ জৰিয়তে বাৰ্তালাপৰ অনুশীলন কৰক। উপযুক্ত উত্তৰ নিৰ্বাচন কৰক আৰু কওক।",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "প্ৰকাৰ:",
-  "labelWord": "শব্দ",
-  "labelSentence": "বাক্য",
-  "contextTagLabel": "প্ৰসংগ/পৰিস্থিতি (ঐচ্ছিক) – উদাহৰণ: ৰাতিপুৱাৰ সম্ভাষণ, আনুষ্ঠানিক",
-  "contextTagHint": "ভৱিষ্যতে পৃথক কৰিবলৈ পৰিস্থিতি লিখক",
-  "usageLimitTitle": "সীমা উপনীত",
-  "translationLimitExceeded": "অনুবাদৰ সীমা অতিক্ৰম কৰা হ’ল",
-  "translationLimitMessage": "আপুনি আপোনাৰ দৈনিক বিনামূলীয়া অনুবাদ (5 বাৰ) ব্যৱহাৰ কৰিছে।\\n\\nআপুনি এটা বিজ্ঞাপন চাই তাৎক্ষণিকভাবে 5 বাৰলৈ ৰিফিল কৰিব বিচাৰেনে?",
-  "watchAdAndRefill": "বিজ্ঞাপন চাওক আৰু ৰিফিল কৰক (+5 বাৰ)",
-  "translationRefilled": "আপোনাৰ অনুবাদৰ সংখ্যা 5 বাৰলৈ ৰিফিল কৰা হৈছে!",
-  "adLoading": "বিজ্ঞাপন লোড কৰি থকা হৈছে। অনুগ্ৰহ কৰি কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক।",
-  "reviewAll": "সকলোবোৰ পুনৰীক্ষণ কৰক",
+  "tooltipSearch": "সন্ধান",
+  "tooltipSpeaking": "কথা",
+  "tooltipStudyReview": "অধ্যয়ন+পুনৰীক্ষণ",
   "totalRecords": "মুঠ {count} টা ৰেকৰ্ড (সকলো দেখুৱাওক)",
   "@totalRecords": {
     "description": "Total records count",
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "সকলো",
-  "practiceWordsOnly": "কেৱল শব্দৰ অনুশীলন কৰক",
-  "resetPracticeHistory": "অনুশীলনৰ ইতিহাস ঘূৰাই আনক",
-  "retry": "পুনৰ চেষ্টা কৰিব?",
-  "noStudyMaterial": "কোনো শিকন সামগ্ৰী নাই।",
-  "gameOver": "গেম শেষ",
-  "playAgain": "পুনৰ খেলক",
-  "speakNow": "এতিয়া কওক!",
-  "scoreLabel": "স্ক’ৰ",
-  "viewOnlineGuide": "অনলাইন গাইড চাওক",
-  "getMaterials": "সামগ্ৰী লাভ কৰক",
-  "swapLanguages": "ভাষা সলনি কৰক",
-  "next": "পৰৱৰ্তী",
-  "wordModeLabel": "শব্দ মোড",
-  "accuracy": "সঠিকতা",
-  "basicDefault": "বেচিক",
-  "basic": "বেচিক",
-  "tutorialM3WordsTitle": "শব্দৰ অনুশীলন",
-  "tutorialM3WordsDesc": "চেক কৰিলে কেৱল সংৰক্ষিত শব্দৰ অনুশীলন কৰা হ’ব।",
-  "enterTextHint": "অনুবাদ কৰিবলৈ টেক্সট লিখক",
-  "micButtonTooltip": "ভয়েচ চিনি পোৱা আৰম্ভ কৰক",
-  "menuHelp": "সহায়িকা",
-  "menuWebDownload": "মুখ্য পৃষ্ঠা",
-  "menuDeviceImport": "ডিভাইচৰ পৰা সামগ্ৰী ইম্প’ৰ্ট কৰক",
-  "menuSettings": "ভাষাৰ ছেটিং",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "অনুবাদ",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "বেচিক শব্দ ভঁৰাল",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "অনুবাদ কৰি থকা হৈছে...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "বেচিক বাক্য ভঁৰাল",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "অনুবাদ",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "এটা শিকন সামগ্ৰী সংকলন নিৰ্বাচন কৰক",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "অনুবাদ সম্পূৰ্ণ (সংৰক্ষণ কৰিব লাগিব)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "শব্দ",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "বাক্য",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "ভাষাৰ ছেটিং",
-  "sourceLanguageLabel": "মোৰ ভাষা (উৎস)",
-  "targetLanguageLabel": "শিকা ভাষা (লক্ষ্য)",
-  "mode3Start": "আৰম্ভ",
-  "mode3Stop": "বন্ধ",
-  "mode3Next": "পৰৱৰ্তী",
-  "mode3TryAgain": "পুনৰ চেষ্টা কৰক",
-  "tutorialM3ResetTitle": "ইতিহাস ঘূৰাই আনক",
-  "tutorialSwapDesc": "মোৰ ভাষা আৰু শিকা ভাষা সলনা-সলনি কৰক।",
-  "recognizedText": "চিনাক্ত কৰা উচ্চাৰণ:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "প্ৰগতি আৰু সঠিকতাৰ স্ক’ৰ ঘূৰাই আনক আৰু পুনৰ আৰম্ভ কৰক।",
-  "menuSelectMaterialSet": "এটা শিকন সামগ্ৰী সংকলন নিৰ্বাচন কৰক",
-  "sectionWord": "শব্দ শাখাটো",
-  "sectionSentence": "বাক্য শাখাটো",
-  "tabWord": "শব্দ",
-  "tabSentence": "বাক্য",
-  "errorProfanity": "ইয়াত অশ্লীল শব্দ থকা বাবে অনুবাদ কৰিব নোৱাৰি।",
-  "errorHateSpeech": "ইয়াত ঘৃণা ভাষণ থকা বাবে অনুবাদ কৰিব নোৱাৰি।",
-  "errorSexualContent": "ইয়াত যৌনতাপূৰ্ণ সামগ্ৰী থকা বাবে অনুবাদ কৰিব নোৱাৰি।",
-  "errorOtherSafety": "এআই সুৰক্ষা নীতিৰ দ্বাৰা অনুবাদ নাকচ কৰা হ’ল।",
-  "clearAll": "সকলো মচি পেলোৱা",
-  "disambiguationTitle": "অৰ্থ নিৰ্বাচন",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "আপুনি ইয়াক কি অৰ্থত অনুবাদ কৰিব?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "এৰাই যাওক",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "ইনপুট",
-  "reviewModeTitle": "পুনৰীক্ষণ",
-  "practiceModeTitle": "অনুশীলন",
-  "chatHistoryTitle": "চেটৰ ইতিহাস",
-  "chatNew": "নতুন বাৰ্তালাপ",
-  "chatNewChat": "নতুন বাৰ্তালাপ",
-  "chatChoosePersona": "এটা ব্যক্তি নিৰ্বাচন কৰক",
-  "chatTypeHint": "এটা বাৰ্তা লিখক...",
-  "chatFailed": "চেট ব্যৰ্থ হ’ল: {error}",
-  "@chatFailed": {
+  "translationFailed": "অনুবাদ ব্যৰ্থ হ’ল: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "এতিয়ালৈকে কোনো বাৰ্তালাপ নাই",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "অনুশীলনৰ বাবে এটা নতুন বাৰ্তালাপ আৰম্ভ কৰিবলৈ চেষ্টা কৰক!",
-  "chatFromConversation": "বাৰ্তালাপৰ উদ্ধৃতি ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "অনুবাদৰ সীমা অতিক্ৰম কৰা হ’ল",
+  "translationLimitMessage": "আপুনি আপোনাৰ দৈনিক বিনামূলীয়া অনুবাদ (5 বাৰ) ব্যৱহাৰ কৰিছে।\\n\\nআপুনি এটা বিজ্ঞাপন চাই তাৎক্ষণিকভাবে 5 বাৰলৈ ৰিফিল কৰিব বিচাৰেনে?",
+  "translationLoaded": "সংৰক্ষিত অনুবাদ লোড কৰা হ’ল",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "ইংৰাজী শিক্ষক",
-  "personaGuide": "ভ্ৰমণ পৰিদৰ্শক",
-  "personaFriend": "স্থানীয় বন্ধু",
-  "chatUntitled": "শিৰোনামবিহীন বাৰ্তালাপ",
-  "chatAiChat": "চ্যাটিং",
-  "mode1SelectedMaterial": "বৰ্তমান নিৰ্বাচিত সামগ্ৰী সংকলন: {name}",
-  "basicWordRepository": "বেচিক শব্দ ভঁৰাল",
-  "basicSentenceRepository": "বেচিক বাক্য ভঁৰাল",
-  "chatEndTitle": "বাৰ্তালাপ শেষ কৰা আৰু সংৰক্ষণ কৰা",
-  "chatEndMessage": "আপুনি বাৰ্তালাপ শেষ কৰিব বিচাৰেনে?",
-  "chatSaveAndExit": "সংৰক্ষণ কৰক আৰু ওলাই যাওক",
-  "errorSelectCategory": "প্ৰথমে এটা শব্দ বা বাক্য নিৰ্বাচন কৰক!",
-  "tutorialM1ToggleTitle": "শব্দ/বাক্য মোড",
+  "translationRefilled": "আপোনাৰ অনুবাদৰ সংখ্যা 5 বাৰলৈ ৰিফিল কৰা হৈছে!",
+  "translationResultHint": "অনুবাদৰ ফলাফল - সম্পাদনা কৰিব পৰা যায়",
+  "tryAgain": "পুনৰ চেষ্টা কৰক",
+  "tutorialAiChatDesc": "এটা এআই ব্যক্তিৰ সৈতে বাস্তৱিক জীৱনৰ বাৰ্তালাপৰ অনুশীলন কৰক।",
+  "tutorialAiChatTitle": "এআই চ্যাটিং",
+  "tutorialContextDesc": "একেটা বাক্য হ’লেও পৰিস্থিতি (যেনে: ৰাতিপুৱা, গধূলি) লিখিলে সুকীয়াভাৱে সংৰক্ষণ কৰিব পাৰি।",
+  "tutorialContextTitle": "পৰিস্থিতি/প্ৰসংগ টেগ",
+  "tutorialLangSettingsDesc": "অনুবাদ কৰিবলৈ উৎস ভাষা আৰু লক্ষ্য ভাষা নিৰ্ধাৰণ কৰক।",
+  "tutorialLangSettingsTitle": "ভাষাৰ ছেটিং",
   "tutorialM1ToggleDesc": "ইয়াত শব্দ আৰু বাক্য মোড সলনি কৰক।",
-  "metadataDialogTitle": "বিৱৰণমূলক শ্ৰেণীবিভাজন",
-  "tagFormal": "আনুষ্ঠানিক",
-  "selectPOS": "এটা কথাৰ অংশ নিৰ্বাচন কৰক",
-  "selectSentenceType": "বাক্যৰ প্ৰকাৰ নিৰ্বাচন কৰক",
-  "metadataRootWord": "মূল শব্দ (Root Word)",
-  "posNoun": "বিশেষ্য",
-  "posVerb": "ক্ৰিয়া",
-  "posAdjective": "বিশেষণ",
-  "posAdverb": "ক্ৰিয়া-বিশেষণ",
-  "posPronoun": "সৰ্বনাম",
-  "posPreposition": "প্ৰিপ’জিচন",
-  "posConjunction": "সংযোজক",
-  "posInterjection": "বিস্ময়বোধক",
-  "typeStatement": "বিবৃতি",
-  "typeQuestion": "প্ৰশ্ন",
+  "tutorialM1ToggleTitle": "শব্দ/বাক্য মোড",
+  "tutorialM2DropdownDesc": "আপুনি শীৰ্ষ মেনুৰ জৰিয়তে শিকিবলৈ সামগ্ৰী নিৰ্বাচন কৰিব পাৰে।",
+  "tutorialM2ImportDesc": "আপোনাৰ ডিভাইচৰ এটা ফোল্ডাৰৰ পৰা JSON ফাইল ইম্প’ৰ্ট কৰক।",
+  "tutorialM2ListDesc": "এই কাৰ্ডখন টিপি ধৰি (দীঘলীয়া ক্লিক) মচিব পাৰি। সংৰক্ষিত বাক্য পৰীক্ষা কৰক আৰু লুটিয়াই চাওক।",
+  "tutorialM2ListTitle": "শিকন তালিকা",
+  "tutorialM2SearchDesc": "সংৰক্ষিত শব্দ আৰু বাক্যসমূহ বিচাৰি উলিয়াই দ্ৰুতভাৱে বিচাৰি পাব পাৰি।",
+  "tutorialM2SelectDesc": "শিকিবলৈ সামগ্ৰী সংকলন নিৰ্বাচন কৰিবলৈ শীৰ্ষ এপবাৰৰ সামগ্ৰী সংকলন আইকন (📚) টিপক।",
+  "tutorialM2SelectTitle": "সামগ্ৰী নিৰ্বাচন",
+  "tutorialM3IntervalDesc": "বাক্যৰ মাজৰ সময় এডজাষ্ট কৰক।",
+  "tutorialM3IntervalTitle": "সময় নিৰ্ধাৰণ",
+  "tutorialM3ResetDesc": "প্ৰগতি আৰু সঠিকতাৰ স্ক’ৰ ঘূৰাই আনক আৰু পুনৰ আৰম্ভ কৰক।",
+  "tutorialM3ResetTitle": "ইতিহাস ঘূৰাই আনক",
+  "tutorialM3SelectDesc": "অনুশীলন কৰিবলৈ সামগ্ৰী সংকলন নিৰ্বাচন কৰিবলৈ শীৰ্ষ এপবাৰৰ সামগ্ৰী সংকলন আইকন (📚) টিপক।",
+  "tutorialM3SelectTitle": "সামগ্ৰী নিৰ্বাচন",
+  "tutorialM3StartDesc": "মাতৃভাষীৰ কথা শুনিবলৈ আৰু পুনৰাবৃত্তি কৰিবলৈ প্লে’ বুটাম টিপক।",
+  "tutorialM3StartTitle": "অনুশীলন আৰম্ভ কৰক",
+  "tutorialM3WordsDesc": "চেক কৰিলে কেৱল সংৰক্ষিত শব্দৰ অনুশীলন কৰা হ’ব।",
+  "tutorialM3WordsTitle": "শব্দৰ অনুশীলন",
+  "tutorialMicDesc": "ভয়েচেৰে লিখিবলৈ মাইক্ৰ’ফোন বুটাম টিপক।",
+  "tutorialMicTitle": "ভয়েচ ইনপুট",
+  "tutorialSaveDesc": "অনূদিত ফলাফল আপোনাৰ শিকন ৰেকৰ্ডত সংৰক্ষণ কৰক।",
+  "tutorialSaveTitle": "সংৰক্ষণ কৰক",
+  "tutorialSwapDesc": "মোৰ ভাষা আৰু শিকা ভাষা সলনা-সলনি কৰক।",
+  "tutorialTabDesc": "ইয়াত আপুনি বিচৰা শিকন মোড নিৰ্বাচন কৰিব পাৰে।",
+  "tutorialTapToContinue": "আগবাঢ়িবলৈ স্ক্ৰীণত টিপক",
+  "tutorialTransDesc": "লিখা টেক্সট অনুবাদ কৰক।",
+  "tutorialTransTitle": "অনুবাদ কৰক",
   "typeExclamation": "বিস্ময়বোধক",
   "typeImperative": "আদেশমূলক",
-  "labelNote": "টোকা",
-  "labelShowMemorized": "শেষ",
-  "titleTagSelection": "শিৰোনাম টেগ (সংগ্ৰহ)",
-  "generalTags": "সাধাৰণ টেগসমূহ",
-  "tagSelection": "টেগ নিৰ্বাচন",
-  "metadataFormType": "ব্যাকৰণৰ ৰূপ",
-  "formInfinitive": "ইনফিনিটিভ/বৰ্তমান",
-  "formPast": "অতীত",
-  "formPastParticiple": "অতীতৰ অংশ",
-  "formPresentParticiple": "বৰ্তমানৰ অংশ (ing)",
-  "formPresent": "বৰ্তমান",
-  "formThirdPersonSingular": "তৃতীয় ব্যক্তি একবচন",
-  "formPlural": "বহুবচন",
-  "formSingular": "একবচন",
-  "caseSubject": "কৰ্তা কাৰক",
-  "caseObject": "কৰ্ম কাৰক",
-  "casePossessive": "অধিকাৰবোধক",
-  "casePossessivePronoun": "অধিকাৰবোধক সৰ্বনাম",
-  "caseReflexive": "প্ৰতিফলিত",
-  "formPositive": "ইতিবাচক",
-  "formComparative": "তুলনাত্মক",
-  "formSuperlative": "সৰ্বোত্তম",
-  "searchConditions": "সন্ধানৰ চৰ্ত",
-  "recentNItems": "শেহতীয়াকৈ সৃষ্টি কৰা {count} টা আইটেম চাওক",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "typeQuestion": "প্ৰশ্ন",
+  "typeStatement": "বিবৃতি",
+  "usageLimitTitle": "সীমা উপনীত",
+  "useExistingText": "বৰ্তমানৰ টেক্সট ব্যৱহাৰ কৰক",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "আৰম্ভণি আখৰ",
-  "reset": "ঘূৰাই আনক",
-  "participantRename": "অংশগ্ৰহণকাৰীৰ নাম সলনি কৰক",
-  "labelName": "নাম",
-  "gender": "লিংগ",
-  "language": "ভাষা",
-  "male": "পুৰুষ",
-  "female": "মহিলা",
-  "neutral": "উদাসীন",
-  "chatAllConversations": "সকলো কথোপকথন",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "আপুনি এই কথোপকথনটো মচিব বিচাৰে নেকি?\nমচাৰ পিছত কথোপকথনটো পুনৰুদ্ধাৰ কৰিব নোৱাৰিব।",
-  "notSelected": "- নিৰ্বাচিত কৰা হোৱা নাই -",
-  "myWordbook": "মোৰ শব্দ তালিকা",
-  "mySentenceCollection": "মোৰ বাক্য সংগ্ৰহ",
-  "newSubjectName": "নতুন শব্দভাণ্ডাৰ/বাক্যাংশৰ সংগ্ৰহৰ নাম",
-  "enterNewSubjectName": "নতুন নাম লিখক",
-  "addNewSubject": "নতুন নাম যোগ কৰক",
-  "selectExistingSubject": "পূৰ্বৰ নাম বাছক",
-  "addTagHint": "টেগ যোগ কৰক...",
-  "save": "সংৰক্ষণ কৰক",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "অনুগ্রহ কৰি আপোনাৰ ইমেইল পৰীক্ষা কৰি প্ৰমাণীকৰণ সম্পূৰ্ণ কৰক।",
-  "emailAlreadyInUse": "এই ইমেইল ইতিমধ্যে ব্যৱহৃত হৈছে। লগইন কৰক বা পাছৱৰ্ড পুনৰুদ্ধাৰ কৰাৰ চেষ্টা কৰক।"
+  "viewOnlineGuide": "অনলাইন গাইড চাওক",
+  "voluntaryTranslations": "স্বেচ্ছামূলক অনুবাদ",
+  "watchAdAndRefill": "বিজ্ঞাপন চাওক আৰু ৰিফিল কৰক (+5 বাৰ)",
+  "word": "শব্দ",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "শত্ৰু অহাৰ আগতে শব্দ কৈ ঘাটি ৰক্ষা কৰক।",
+  "wordDefenseTitle": "শব্দ ৰক্ষা",
+  "wordModeLabel": "শব্দ মোড",
+  "yourPronunciation": "আপোনাৰ উচ্চাৰণ"
 }

@@ -9,35 +9,317 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => '正確度';
 
   @override
-  String get kakaoContinue => 'カカオで続ける';
+  String get adLoading => '広告を読み込み中です。しばらくしてからもう一度試してください。';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => '新しいタイトルを追加';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => '参加者を追加';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => 'タグを追加...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => 'すでにアカウントをお持ちですか？';
 
   @override
-  String get helpTitle => 'ヘルプ＆ガイド';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => '機能紹介';
+  String get autoPlay => '自動再生';
 
   @override
-  String get helpTabJson => 'JSON形式';
+  String get basic => '基本';
 
   @override
-  String get helpTabTour => 'ツアー';
+  String get basicDefault => '基本';
+
+  @override
+  String get basicMaterialRepository => '基本文/単語リポジトリ';
+
+  @override
+  String get basicSentenceRepository => '基本文章リポジトリ';
+
+  @override
+  String get basicSentences => '基本文章リポジトリ';
+
+  @override
+  String get basicWordRepository => '基本単語リポジトリ';
+
+  @override
+  String get basicWords => '基本単語リポジトリ';
+
+  @override
+  String get cancel => 'キャンセル';
+
+  @override
+  String get caseObject => '目的格';
+
+  @override
+  String get casePossessive => '所有格';
+
+  @override
+  String get casePossessivePronoun => '所有代名詞';
+
+  @override
+  String get caseReflexive => '再帰代名詞';
+
+  @override
+  String get caseSubject => '主格';
+
+  @override
+  String get chatAiChat => 'チャット';
+
+  @override
+  String get chatAllConversations => 'すべての会話';
+
+  @override
+  String get chatChoosePersona => 'ペルソナを選択';
+
+  @override
+  String get chatEndMessage => '会話を終了しますか？';
+
+  @override
+  String get chatEndTitle => '会話を終了して保存';
+
+  @override
+  String chatFailed(Object error) {
+    return 'チャット失敗: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return '会話から抜粋 ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => '会話履歴';
+
+  @override
+  String get chatNew => '新しい会話';
+
+  @override
+  String get chatNewChat => '新しいチャット';
+
+  @override
+  String get chatNoConversations => '会話がありません';
+
+  @override
+  String get chatSaveAndExit => '保存して終了';
+
+  @override
+  String get chatStartNewPrompt => '練習を始めるために新しいチャットを開始しましょう！';
+
+  @override
+  String get chatTypeHint => 'メッセージを入力...';
+
+  @override
+  String get chatUntitled => '無題の会話';
+
+  @override
+  String get checking => '確認中...';
+
+  @override
+  String get clearAll => 'すべてクリア';
+
+  @override
+  String get confirm => '確認';
+
+  @override
+  String get confirmDelete => 'この学習記録を削除しますか？';
+
+  @override
+  String get confirmDeleteConversation => 'この会話を削除しますか？\n削除した会話は復元できません。';
+
+  @override
+  String get confirmDeleteParticipant => 'この参加者を削除してもよろしいですか？';
+
+  @override
+  String get contextTagHint => '後で区別しやすいように状況を記入してください';
+
+  @override
+  String get contextTagLabel => '文脈/状況 (オプション) - 例：朝の挨拶、丁寧語';
+
+  @override
+  String get copiedToClipboard => 'クリップボードにコピーしました！';
+
+  @override
+  String get copy => 'コピー';
+
+  @override
+  String get correctAnswer => '正解';
+
+  @override
+  String get createNew => '新規作成';
+
+  @override
+  String get currentLocation => '現在の位置';
+
+  @override
+  String get currentMaterialLabel => '現在選択されている教材集:';
+
+  @override
+  String get delete => '削除';
+
+  @override
+  String deleteFailed(String error) {
+    return '削除失敗: $error';
+  }
+
+  @override
+  String get deleteRecord => '記録の削除';
+
+  @override
+  String get dialogueQuestDesc => 'ロールプレイを通じて会話練習をしてください。適切な答えを選択して話してください。';
+
+  @override
+  String get dialogueQuestTitle => '対話クエスト';
+
+  @override
+  String get disambiguationPrompt => 'どの意味で翻訳しますか？';
+
+  @override
+  String get disambiguationTitle => '意味を選択';
+
+  @override
+  String get dontHaveAccount => 'アカウントをお持ちでないですか？';
+
+  @override
+  String get editParticipant => '参加者を編集';
+
+  @override
+  String get email => 'メールアドレス';
+
+  @override
+  String get emailAlreadyInUse => 'すでに登録済みのメールアドレスです。ログインまたはパスワード再設定をご利用ください。';
+
+  @override
+  String get enterNewSubjectName => '新しいタイトルを入力';
+
+  @override
+  String get enterSentenceHint => '文章を入力してください...';
+
+  @override
+  String get enterTextHint => '翻訳するテキストを入力してください';
+
+  @override
+  String get enterTextToTranslate => '翻訳するテキストを入力してください';
+
+  @override
+  String get enterWordHint => '単語を入力してください...';
+
+  @override
+  String get error => 'エラー';
+
+  @override
+  String get errorHateSpeech => 'ヘイトスピーチが含まれているため、翻訳できません。';
+
+  @override
+  String get errorOtherSafety => 'AI安全ポリシーにより翻訳が拒否されました。';
+
+  @override
+  String get errorProfanity => '不適切な表現が含まれているため、翻訳できません。';
+
+  @override
+  String get errorSelectCategory => '先に単語か文章を選択してください！';
+
+  @override
+  String get errorSexualContent => '性的なコンテンツが含まれているため、翻訳できません。';
+
+  @override
+  String get errors => 'エラー:';
+
+  @override
+  String get female => '女性';
+
+  @override
+  String get file => 'ファイル:';
+
+  @override
+  String get filterAll => 'すべて';
+
+  @override
+  String get flip => '表示';
+
+  @override
+  String get formComparative => '比較級';
+
+  @override
+  String get formInfinitive => '原形/現在形';
+
+  @override
+  String get formPast => '過去形';
+
+  @override
+  String get formPastParticiple => '過去分詞';
+
+  @override
+  String get formPlural => '複数形';
+
+  @override
+  String get formPositive => '原級';
+
+  @override
+  String get formPresent => '現在形';
+
+  @override
+  String get formPresentParticiple => '現在分詞 (ing)';
+
+  @override
+  String get formSingular => '単数形';
+
+  @override
+  String get formSuperlative => '最上級';
+
+  @override
+  String get formThirdPersonSingular => '3人称単数';
+
+  @override
+  String get gameModeDesc => '練習するゲームモードを選択してください';
+
+  @override
+  String get gameModeTitle => 'ゲームモード';
+
+  @override
+  String get gameOver => 'ゲームオーバー';
+
+  @override
+  String get gender => '性別';
+
+  @override
+  String get generalTags => '一般タグ';
+
+  @override
+  String get getMaterials => '資料を入手';
+
+  @override
+  String get good => '良いですね';
+
+  @override
+  String get googleContinue => 'Googleで続行';
+
+  @override
+  String get helpDialogueImportDesc => 'JSONファイルで全体の対話セットをインポートします。';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc => 'モード3等で学習教材をインポートするには、以下の構造のJSONファイルを使用してください:';
+
+  @override
+  String get helpJsonTypeDialogue => '対話 (Dialogue)';
+
+  @override
+  String get helpJsonTypeSentence => '文 (Sentence)';
+
+  @override
+  String get helpJsonTypeWord => '単語 (Word)';
 
   @override
   String get helpMode1Desc => '音声を認識して翻訳し、結果を聞くことができます。新しい表現を学ぶのに最適です。';
@@ -65,159 +347,43 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• AIチャット：ペルソナと実践的な会話を練習します。\n• 参加者管理：自分の言語とAIの言語をそれぞれ設定して、言語の不一致を防ぐことができます。\n• GPSロールプレイ：現在の位置情報に基づいて自然な会話状況を演出します。\n• 記録保存：すべての会話はIDに基づいて安全に保存され、名前を変更しても記録は維持されます。';
 
   @override
-  String get helpJsonDesc => 'モード3等で学習教材をインポートするには、以下の構造のJSONファイルを使用してください:';
+  String get helpTabJson => 'JSON形式';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => '機能紹介';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => 'ツアー';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => 'ヘルプ＆ガイド';
 
   @override
   String get helpTourDesc =>
       'チュートリアルを開始すると、**ハイライトサークル（円）**が主な機能を案内します。\n(例：学習カードを**ハイライトサークル**が指しているときに長押しすると削除できます。)';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => '場所';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => '私';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return '復習 ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return '学習教材 ($count)';
-  }
-
-  @override
-  String get mode2Title => '復習';
-
-  @override
-  String get search => '検索';
-
-  @override
-  String get translate => '翻訳する';
-
-  @override
-  String get listen => '聞く';
-
-  @override
-  String get saveData => '保存';
-
-  @override
-  String get saved => '保存完了';
-
-  @override
-  String get delete => '削除';
-
-  @override
-  String get materialInfo => '教材情報';
-
-  @override
-  String get cancel => 'キャンセル';
-
-  @override
-  String get confirm => '確認';
-
-  @override
-  String get refresh => '更新';
-
-  @override
-  String studyRecords(int count) {
-    return '学習記録 ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => '対象言語フィルタ:';
-
-  @override
-  String get noRecords => '選択した言語の学習記録がありません';
-
-  @override
-  String get saveTranslationsFromSearch => '検索モードから翻訳を保存してください';
-
-  @override
-  String get flip => '表示';
-
-  @override
   String get hide => '隠す';
 
   @override
-  String get deleteRecord => '記録の削除';
-
-  @override
-  String get confirmDelete => 'この学習記録を削除しますか？';
-
-  @override
-  String get recordDeleted => '記録が削除されました';
-
-  @override
-  String deleteFailed(String error) {
-    return '削除失敗: $error';
+  String importAdded(int count) {
+    return '追加: $count件';
   }
 
   @override
-  String get importJsonFile => 'JSONファイル読込';
-
-  @override
-  String get importing => '読込中...';
-
-  @override
   String get importComplete => '読込完了';
+
+  @override
+  String get importDuplicateTitleError =>
+      '同じタイトルの資料が既に存在します。タイトルを変更してからもう一度試してください。';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'ファイルの読み込みに失敗しました:\\n$error';
+  }
 
   @override
   String get importFailed => '読込失敗';
@@ -228,44 +394,10 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => '参加者を追加';
+  String get importJsonFile => 'JSONファイル読込';
 
   @override
-  String get editParticipant => '参加者を編集';
-
-  @override
-  String get labelRole => '役割';
-
-  @override
-  String get labelLangCode => '言語コード (例: en-US, ja-JP)';
-
-  @override
-  String get roleUser => 'ユーザー';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get roleThirdParty => '제삼자';
-
-  @override
-  String get speakerSelect => '발화자 선택';
-
-  @override
-  String get participantDeleted => '参加者が削除されました。';
-
-  @override
-  String get confirmDeleteParticipant => 'この参加者を削除してもよろしいですか？';
-
-  @override
-  String importTotal(int count) {
-    return '合計: $count件';
-  }
-
-  @override
-  String importAdded(int count) {
-    return '追加: $count件';
-  }
+  String get importJsonFilePrompt => 'JSONファイルを読み込んでください';
 
   @override
   String importSkipped(int count) {
@@ -273,133 +405,15 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get errors => 'エラー:';
-
-  @override
-  String get error => 'エラー';
-
-  @override
-  String importErrorMessage(String error) {
-    return 'ファイルの読み込みに失敗しました:\\n$error';
+  String importTotal(int count) {
+    return '合計: $count件';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => '読込中...';
 
   @override
-  String get selectStudyMaterial => '学習教材を選択';
-
-  @override
-  String get subject => '主題:';
-
-  @override
-  String get source => '出典:';
-
-  @override
-  String get file => 'ファイル:';
-
-  @override
-  String progress(int current, int total) {
-    return '進捗: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => 'JSONファイルを読み込んでください';
-
-  @override
-  String get selectMaterialPrompt => '学習教材を選択してください';
-
-  @override
-  String get studyComplete => '学習完了';
-
-  @override
-  String get markAsStudied => '完了としてマーク';
-
-  @override
-  String get listening => '聞き取り中...';
-
-  @override
-  String get recognized => '認識完了';
-
-  @override
-  String recognitionFailed(String error) {
-    return '音声認識失敗: $error';
-  }
-
-  @override
-  String get checking => '確認中...';
-
-  @override
-  String get translating => '翻訳中...';
-
-  @override
-  String get translationComplete => '翻訳完了 (保存してください)';
-
-  @override
-  String get translationLoaded => '保存済みの翻訳を読み込みました';
-
-  @override
-  String translationFailed(String error) {
-    return '翻訳失敗: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => '翻訳するテキストを入力してください';
-
-  @override
-  String get translationResultHint => '翻訳結果 - 修正可能';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => '保存中...';
-
-  @override
-  String get noTranslationToSave => '保存する翻訳がありません';
-
-  @override
-  String saveFailed(String error) {
-    return '保存失敗: $error';
-  }
-
-  @override
-  String get playing => '再生中...';
-
-  @override
-  String get noTextToPlay => '再生するテキストがありません';
-
-  @override
-  String playbackFailed(String error) {
-    return '再生失敗: $error';
-  }
-
-  @override
-  String get sourceLanguage => '原文言語';
-
-  @override
-  String get targetLanguage => '翻訳言語';
-
-  @override
-  String get similarTextFound => '類似したテキストが見つかりました';
-
-  @override
-  String get useExistingText => '既存のテキストを使用';
-
-  @override
-  String get createNew => '新規作成';
-
-  @override
-  String reviewCount(int count) {
-    return '復習 $count回';
-  }
-
-  @override
-  String get tabSpeaking => 'スピーキング';
-
-  @override
-  String get speakingPractice => 'スピーキング練習';
+  String get inputModeTitle => '入力';
 
   @override
   String intervalSeconds(int seconds) {
@@ -407,10 +421,371 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get yourPronunciation => 'あなたの発音';
+  String get invalidEmail => '有効なメールアドレスを入力してください。';
 
   @override
-  String get correctAnswer => '正解';
+  String get kakaoContinue => 'カカオで続ける';
+
+  @override
+  String get labelLangCode => '言語コード (例: en-US, ja-JP)';
+
+  @override
+  String get labelName => '名前';
+
+  @override
+  String get labelNote => '注釈';
+
+  @override
+  String get labelPOS => '品詞';
+
+  @override
+  String get labelRole => '役割';
+
+  @override
+  String get labelSentence => '文';
+
+  @override
+  String get labelSentenceCollection => '文章集';
+
+  @override
+  String get labelSentenceType => '文章の種類';
+
+  @override
+  String get labelShowMemorized => '完了済み';
+
+  @override
+  String get labelType => '種類:';
+
+  @override
+  String get labelWord => '単語';
+
+  @override
+  String get labelWordbook => '単語帳';
+
+  @override
+  String get language => '言語';
+
+  @override
+  String get languageSettings => '言語設定';
+
+  @override
+  String get languageSettingsTitle => '言語設定';
+
+  @override
+  String get libTitleFirstMeeting => '初対面';
+
+  @override
+  String get libTitleGreetings1 => 'あいさつ 1';
+
+  @override
+  String get libTitleNouns1 => '名詞 1';
+
+  @override
+  String get libTitleVerbs1 => '動詞 1';
+
+  @override
+  String get listen => '聞く';
+
+  @override
+  String get listening => '聞き取り中...';
+
+  @override
+  String get loadingParticipants => '参加者を読み込み中...';
+
+  @override
+  String get location => '場所';
+
+  @override
+  String get login => 'ログイン';
+
+  @override
+  String get logout => 'ログアウト';
+
+  @override
+  String get logoutConfirmMessage => '現在のデバイスからログアウトしますか？';
+
+  @override
+  String get logoutConfirmTitle => 'ログアウト';
+
+  @override
+  String get male => '男性';
+
+  @override
+  String get manageParticipants => '参加者管理';
+
+  @override
+  String get manual => '手動入力';
+
+  @override
+  String get markAsStudied => '完了としてマーク';
+
+  @override
+  String get materialInfo => '教材情報';
+
+  @override
+  String get me => '私';
+
+  @override
+  String get menuDeviceImport => 'デバイスからインポート';
+
+  @override
+  String get menuHelp => 'ヘルプ';
+
+  @override
+  String get menuLanguageSettings => '言語設定';
+
+  @override
+  String get menuOnlineLibrary => 'オンライン資料室';
+
+  @override
+  String get menuSelectMaterialSet => '学習教材セットを選択';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuTutorial => 'チュートリアル';
+
+  @override
+  String get menuWebDownload => '取扱説明書';
+
+  @override
+  String get metadataDialogTitle => '詳細分類';
+
+  @override
+  String get metadataFormType => '文法形式';
+
+  @override
+  String get metadataRootWord => '原形 (Root Word)';
+
+  @override
+  String get micButtonTooltip => '音声認識を開始';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return '現在選択されている教材集: $name';
+  }
+
+  @override
+  String get mode2Title => '復習';
+
+  @override
+  String get mode3Next => '次へ';
+
+  @override
+  String get mode3Start => '開始';
+
+  @override
+  String get mode3Stop => '終了';
+
+  @override
+  String get mode3TryAgain => '再試行';
+
+  @override
+  String get mySentenceCollection => 'マイ例文集';
+
+  @override
+  String get myWordbook => 'マイ単語帳';
+
+  @override
+  String get neutral => '中性';
+
+  @override
+  String get newSubjectName => '新しい単語帳/文章集のタイトル';
+
+  @override
+  String get next => '次へ';
+
+  @override
+  String get noDialogueHistory => '会話履歴がありません。';
+
+  @override
+  String get noInternetWarningMic =>
+      'インターネット接続がありません。オフライン状態では音声認識ができない場合があります。';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'インターネット接続がありません。オフライン状態では翻訳機能を利用できません。復習モードをご利用ください。';
+
+  @override
+  String get noMaterialsInCategory => 'このカテゴリには資料がありません。';
+
+  @override
+  String get noParticipantsFound => '登録された参加者はいません。';
+
+  @override
+  String get noRecords => '選択した言語の学習記録がありません';
+
+  @override
+  String get noStudyMaterial => '学習資料がありません。';
+
+  @override
+  String get noTextToPlay => '再生するテキストがありません';
+
+  @override
+  String get noTranslationToSave => '保存する翻訳がありません';
+
+  @override
+  String get noVoiceDetected => '音声が検出されませんでした';
+
+  @override
+  String get notSelected => 'ー選択されていませんー';
+
+  @override
+  String get onlineLibraryCheckInternet => 'インターネット接続を確認するか、後でもう一度試してください。';
+
+  @override
+  String get onlineLibraryLoadFailed => '資料を読み込むのに失敗しました。';
+
+  @override
+  String get onlineLibraryNoMaterials => '資料がありません。';
+
+  @override
+  String get participantDeleted => '参加者が削除されました。';
+
+  @override
+  String get participantRename => '参加者の名前を変更';
+
+  @override
+  String get partner => 'パートナー';
+
+  @override
+  String get partnerMode => 'パートナーモード';
+
+  @override
+  String get password => 'パスワード';
+
+  @override
+  String get passwordTooShort => 'パスワードは6文字以上である必要があります。';
+
+  @override
+  String get perfect => '完璧です！';
+
+  @override
+  String get personaFriend => '地元の友人';
+
+  @override
+  String get personaGuide => '旅行ガイド';
+
+  @override
+  String get personaTeacher => '英語の先生';
+
+  @override
+  String get playAgain => 'もう一度プレイ';
+
+  @override
+  String playbackFailed(String error) {
+    return '再生失敗: $error';
+  }
+
+  @override
+  String get playing => '再生中...';
+
+  @override
+  String get posAdjective => '形容詞';
+
+  @override
+  String get posAdverb => '副詞';
+
+  @override
+  String get posConjunction => '接続詞';
+
+  @override
+  String get posInterjection => '感動詞';
+
+  @override
+  String get posNoun => '名詞';
+
+  @override
+  String get posPreposition => '前置詞/助詞';
+
+  @override
+  String get posPronoun => '代名詞';
+
+  @override
+  String get posVerb => '動詞';
+
+  @override
+  String get practiceModeTitle => '練習';
+
+  @override
+  String get practiceWordsOnly => '単語のみ練習';
+
+  @override
+  String progress(int current, int total) {
+    return '進捗: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return '最近作成された$count個を表示';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return '音声認識失敗: $error';
+  }
+
+  @override
+  String get recognized => '認識完了';
+
+  @override
+  String get recognizedText => '認識された発音:';
+
+  @override
+  String get recordDeleted => '記録が削除されました';
+
+  @override
+  String get refresh => '更新';
+
+  @override
+  String get reset => 'リセット';
+
+  @override
+  String get resetPracticeHistory => '練習履歴を初期化';
+
+  @override
+  String get retry => '再試行？';
+
+  @override
+  String get reviewAll => 'すべて復習';
+
+  @override
+  String reviewCount(int count) {
+    return '復習 $count回';
+  }
+
+  @override
+  String get reviewModeTitle => '復習';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => '第三者';
+
+  @override
+  String get roleUser => 'ユーザー';
+
+  @override
+  String get save => '保存';
+
+  @override
+  String get saveData => '保存';
+
+  @override
+  String saveFailed(String error) {
+    return '保存失敗: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch => '検索モードから翻訳を保存してください';
+
+  @override
+  String get saved => '保存完了';
+
+  @override
+  String get saving => '保存中...';
 
   @override
   String score(String score) {
@@ -418,702 +793,157 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get perfect => '完璧です！';
+  String get scoreLabel => 'スコア';
 
   @override
-  String get good => '良いですね';
+  String get search => '検索';
 
   @override
-  String get tryAgain => 'もう一度';
+  String get searchConditions => '検索条件';
 
   @override
-  String get startPractice => '練習開始';
+  String get searchSentenceHint => '文章検索...';
 
   @override
-  String get stopPractice => '練習停止';
-
-  @override
-  String get menuOnlineLibrary => 'Online Library';
-
-  @override
-  String get startTutorial => 'チュートリアル開始';
-
-  @override
-  String get menuTutorial => 'Tutorial';
-
-  @override
-  String get tutorialMicTitle => '音声入力';
-
-  @override
-  String get tutorialMicDesc => 'マイクボタンをタップして音声で入力できます。';
-
-  @override
-  String get tutorialTabDesc => 'ここで希望する学習モードを選択できます。';
-
-  @override
-  String get tutorialTapToContinue => 'タップして続ける';
-
-  @override
-  String get tutorialTransTitle => '翻訳';
-
-  @override
-  String get tutorialTransDesc => '入力したテキストを翻訳します。';
-
-  @override
-  String get tutorialSaveTitle => '保存';
-
-  @override
-  String get tutorialSaveDesc => '翻訳結果を学習記録に保存します。';
-
-  @override
-  String get selectParticipants => 'Select Participants';
-
-  @override
-  String get loadingParticipants => 'Loading participants...';
-
-  @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
-
-  @override
-  String get sendingMessage => '메시지 전송 중...';
-
-  @override
-  String get startChat => 'Start Chat';
-
-  @override
-  String get manageParticipants => '参加者管理';
-
-  @override
-  String get tutorialAiChatTitle => 'AIチャット';
-
-  @override
-  String get tutorialAiChatDesc => 'AIペルソナと実践的な会話を練習しましょう。';
-
-  @override
-  String get tutorialM2SelectTitle => '選択とフィルタ';
-
-  @override
-  String get tutorialM2SelectDesc => '学習する教材を選択するか、全復習モードに切り替えます。';
-
-  @override
-  String get tutorialM2ListTitle => '学習リスト';
-
-  @override
-  String get tutorialM2ListDesc => '保存されたカードを確認し、裏返して正解を確認します。(長押しで削除)';
-
-  @override
-  String get tutorialM3SelectTitle => '教材選択';
-
-  @override
-  String get tutorialM3SelectDesc => 'スピーキング練習を行う教材セットを選択してください。';
-
-  @override
-  String get tutorialM3IntervalTitle => '間隔設定';
-
-  @override
-  String get tutorialM3IntervalDesc => '文章間の待機時間を調整します。';
-
-  @override
-  String get tutorialM3StartTitle => '練習開始';
-
-  @override
-  String get tutorialM3StartDesc => '再生ボタンを押してネイティブ音声を聞き、続いて発音してください。';
-
-  @override
-  String get startWarning => '注意';
-
-  @override
-  String get noVoiceDetected => '音声が検出されませんでした';
-
-  @override
-  String get tooltipSearch => '検索';
-
-  @override
-  String get tooltipStudyReview => '学習+復習';
-
-  @override
-  String get tooltipSpeaking => 'スピーキング';
-
-  @override
-  String get tooltipDecrease => '減少';
-
-  @override
-  String get tooltipIncrease => '増加';
-
-  @override
-  String get languageSettings => '言語設定';
-
-  @override
-  String get tutorialM2DropdownDesc => '学習教材を選択します。';
-
-  @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
-
-  @override
-  String get tutorialM2ImportDesc => 'デバイスのフォルダからJSONファイルを読み込みます。';
-
-  @override
-  String get tutorialLangSettingsTitle => '言語設定';
-
-  @override
-  String get tutorialLangSettingsDesc => '翻訳元の言語と翻訳先の言語を設定します。';
-
-  @override
-  String get copy => 'コピー';
-
-  @override
-  String get copiedToClipboard => 'クリップボードにコピーしました！';
-
-  @override
-  String get tutorialContextTitle => '文脈タグ';
-
-  @override
-  String get tutorialContextDesc => '同じ文章でも状況（例：朝、夜）を追加して区別できます。';
-
-  @override
-  String get thinkingTimeInterval => '再生時差';
-
-  @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
-
-  @override
-  String get autoPlay => 'Auto-Play';
-
-  @override
-  String get timeUp => 'Time Up!';
-
-  @override
-  String get gameModeTitle => 'Game Mode';
-
-  @override
-  String get gameModeDesc => 'Choose your practice mode';
-
-  @override
-  String get wordDefenseTitle => 'Word Defense';
-
-  @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
-
-  @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
-
-  @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get translation => '翻訳';
-
-  @override
-  String get labelType => 'Type:';
-
-  @override
-  String get labelWord => 'Word';
-
-  @override
-  String get labelSentence => 'Sentence';
-
-  @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
-
-  @override
-  String get usageLimitTitle => '上限に達しました';
-
-  @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
-
-  @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
-
-  @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
-
-  @override
-  String get translationRefilled => 'Translations refilled by 5!';
-
-  @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
-
-  @override
-  String get reviewAll => 'Review All';
-
-  @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
-
-  @override
-  String get filterAll => 'All';
-
-  @override
-  String get practiceWordsOnly => 'Practice Words Only';
-
-  @override
-  String get resetPracticeHistory => 'Reset Practice History';
-
-  @override
-  String get retry => 'Retry?';
-
-  @override
-  String get noStudyMaterial => 'No study material found.';
-
-  @override
-  String get gameOver => 'Game Over';
-
-  @override
-  String get playAgain => 'Play Again';
-
-  @override
-  String get speakNow => 'Speak now!';
-
-  @override
-  String get scoreLabel => 'Score';
-
-  @override
-  String get viewOnlineGuide => 'View Online User Guide';
-
-  @override
-  String get getMaterials => 'Get Materials';
-
-  @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
-
-  @override
-  String get wordModeLabel => 'Word Mode';
-
-  @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get menuHelp => 'Help';
-
-  @override
-  String get menuWebDownload => 'Get Material from Web';
-
-  @override
-  String get menuDeviceImport => 'デバイスからインポート';
-
-  @override
-  String get menuSettings => 'Settings';
-
-  @override
-  String get basicWords => '基本単語リポジトリ';
-
-  @override
-  String get basicSentences => '基本文章リポジトリ';
-
-  @override
-  String get selectMaterialSet => '学習資料集を選択';
-
-  @override
-  String get sectionWords => '単語';
-
-  @override
-  String get sectionSentences => '文章';
-
-  @override
-  String get languageSettingsTitle => 'Language Settings';
-
-  @override
-  String get sourceLanguageLabel => 'Source Language';
-
-  @override
-  String get targetLanguageLabel => 'Target Language';
-
-  @override
-  String get mode3Start => 'Start';
-
-  @override
-  String get mode3Stop => 'Stop';
-
-  @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc => '私の言語と学習言語を交換してください。';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
-
-  @override
-  String get tutorialM3ResetDesc =>
-      'Clear your progress and accuracy scores to start fresh.';
-
-  @override
-  String get menuSelectMaterialSet => '学習教材セットを選択';
-
-  @override
-  String get sectionWord => '単語セクション';
+  String get searchWordHint => '単語検索...';
 
   @override
   String get sectionSentence => '文章セクション';
 
   @override
-  String get tabWord => '言葉';
+  String get sectionSentences => '文章';
 
   @override
-  String get tabSentence => '文章';
+  String get sectionWord => '単語セクション';
 
   @override
-  String get errorProfanity => '不適切な表現が含まれているため、翻訳できません。';
-
-  @override
-  String get errorHateSpeech => 'ヘイトスピーチが含まれているため、翻訳できません。';
-
-  @override
-  String get errorSexualContent => '性的なコンテンツが含まれているため、翻訳できません。';
-
-  @override
-  String get errorOtherSafety => 'AI安全ポリシーにより翻訳が拒否されました。';
-
-  @override
-  String get clearAll => 'すべてクリア';
-
-  @override
-  String get disambiguationTitle => '意味を選択';
-
-  @override
-  String get disambiguationPrompt => 'どの意味で翻訳しますか？';
-
-  @override
-  String get skip => 'スキップ';
-
-  @override
-  String get inputModeTitle => '入力';
-
-  @override
-  String get reviewModeTitle => '復習';
-
-  @override
-  String get practiceModeTitle => '練習';
-
-  @override
-  String get chatHistoryTitle => '会話履歴';
-
-  @override
-  String get chatNew => 'New Chat';
-
-  @override
-  String get chatNewChat => '新しいチャット';
-
-  @override
-  String get chatChoosePersona => 'ペルソナを選択';
-
-  @override
-  String get chatTypeHint => 'メッセージを入力...';
-
-  @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
-
-  @override
-  String get chatNoConversations => '会話がありません';
-
-  @override
-  String get noDialogueHistory => 'No dialogue history.';
-
-  @override
-  String get chatStartNewPrompt => '練習を始めるために新しいチャットを開始しましょう！';
-
-  @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
-
-  @override
-  String get personaTeacher => '英語の先生';
-
-  @override
-  String get personaGuide => '旅行ガイド';
-
-  @override
-  String get personaFriend => '地元の友人';
-
-  @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => 'チャット';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => '基本単語リポジトリ';
-
-  @override
-  String get basicSentenceRepository => '基本文章リポジトリ';
-
-  @override
-  String get chatEndTitle => '会話を終了して保存';
-
-  @override
-  String get chatEndMessage => '会話を終了しますか？';
-
-  @override
-  String get chatSaveAndExit => '保存して終了';
-
-  @override
-  String get errorSelectCategory => '先に単語か文章を選択してください！';
-
-  @override
-  String get tutorialM1ToggleTitle => '単語/文章モード';
-
-  @override
-  String get tutorialM1ToggleDesc => 'ここで単語と文章のモードを切り替えます。';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => '丁寧語';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => 'タイトルのタグ（資料集）';
-
-  @override
-  String get generalTags => '一般タグ';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => '単数形';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => '中性';
-
-  @override
-  String get chatAllConversations => 'すべての会話';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation => 'この会話を削除しますか？\n削除した会話は復元できません。';
-
-  @override
-  String get notSelected => 'ー選択されていませんー';
-
-  @override
-  String get myWordbook => 'マイ単語帳';
-
-  @override
-  String get mySentenceCollection => 'マイ例文集';
-
-  @override
-  String get newSubjectName => '新しい単語帳/文章集のタイトル';
-
-  @override
-  String get enterNewSubjectName => '新しいタイトルを入力';
-
-  @override
-  String get addNewSubject => '新しいタイトルを追加';
+  String get sectionWords => '単語';
 
   @override
   String get selectExistingSubject => '既存のタイトルを選択';
 
   @override
-  String get addTagHint => 'タグを追加...';
+  String get selectMaterialPrompt => '学習教材を選択してください';
 
   @override
-  String get save => '保存';
+  String get selectMaterialSet => '学習資料集を選択';
+
+  @override
+  String get selectPOS => '品詞を選択';
+
+  @override
+  String get selectParticipants => '参加者を選択';
+
+  @override
+  String get selectSentenceType => '文の種類を選択';
+
+  @override
+  String get selectStudyMaterial => '学習教材を選択';
+
+  @override
+  String get sendingMessage => '메시지 전송 중...';
+
+  @override
+  String get sentence => '文';
+
+  @override
+  String get signUp => '会員登録';
+
+  @override
+  String get similarTextFound => '類似したテキストが見つかりました';
+
+  @override
+  String get skip => 'スキップ';
+
+  @override
+  String get source => '出典:';
+
+  @override
+  String get sourceLanguage => '原文言語';
+
+  @override
+  String get sourceLanguageLabel => 'Source Language';
+
+  @override
+  String get speakNow => '今すぐ話してください！';
+
+  @override
+  String get speaker => '発話者';
+
+  @override
+  String get speakerSelect => '発話者を選択';
+
+  @override
+  String get speakingPractice => 'スピーキング練習';
+
+  @override
+  String get startChat => '会話を開始';
+
+  @override
+  String get startPractice => '練習開始';
+
+  @override
+  String get startTutorial => 'チュートリアル開始';
+
+  @override
+  String get startWarning => '注意';
+
+  @override
+  String get startsWith => '先頭文字';
+
+  @override
+  String get statusCheckEmail => 'メールを確認して認証を完了してください。';
+
+  @override
+  String statusDownloading(Object name) {
+    return 'ダウンロード中: $name...';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return 'インポート失敗: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$nameのインポートが完了しました';
+  }
+
+  @override
+  String get statusLoggingIn => 'ログイン中...';
+
+  @override
+  String get statusLoginCancelled => 'ログインがキャンセルされました。';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return 'ログイン失敗: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => 'ログインに成功しました。';
+
+  @override
+  String get statusLogoutSuccess => 'ログアウトしました。';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return '会員登録失敗: $error';
+  }
+
+  @override
+  String get statusSigningUp => '会員登録中...';
+
+  @override
+  String get stopPractice => '練習停止';
+
+  @override
+  String get studyComplete => '学習完了';
+
+  @override
+  String studyRecords(int count) {
+    return '学習記録 ($count)';
+  }
 
   @override
   String get styleFormal => '敬語';
@@ -1128,72 +958,272 @@ class AppLocalizationsJa extends AppLocalizations {
   String get styleSlang => 'スラング';
 
   @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
+  String get subject => '主題:';
+
+  @override
+  String get swapLanguages => '言語を切り替え';
+
+  @override
+  String get switchToAi => 'AIモードに切り替え';
+
+  @override
+  String get switchToPartner => 'パートナーモードに切り替え';
+
+  @override
+  String get syncingData => 'データを同期中...';
+
+  @override
+  String get tabConversation => '会話';
+
+  @override
+  String tabReview(int count) {
+    return '復習 ($count)';
   }
 
   @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
+  String get tabSentence => '文章';
+
+  @override
+  String get tabSpeaking => 'スピーキング';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return '学習教材 ($count)';
   }
 
   @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
+  String get tabWord => '言葉';
+
+  @override
+  String get tagFormal => '丁寧語';
+
+  @override
+  String get tagSelection => 'タグ選択';
+
+  @override
+  String get targetLanguage => '翻訳言語';
+
+  @override
+  String get targetLanguageFilter => '対象言語フィルタ:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc => '正解が表示される前に考える時間です。';
+
+  @override
+  String get thinkingTimeInterval => '再生時差';
+
+  @override
+  String get timeUp => '時間切れ！';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
   }
 
   @override
-  String get statusLoginSuccess => 'Login successful.';
+  String get titleTagSelection => 'タイトルのタグ（資料集）';
 
   @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
+  String get tooltipDecrease => '減少';
+
+  @override
+  String get tooltipIncrease => '増加';
+
+  @override
+  String get tooltipSearch => '検索';
+
+  @override
+  String get tooltipSpeaking => 'スピーキング';
+
+  @override
+  String get tooltipStudyReview => '学習+復習';
+
+  @override
+  String totalRecords(int count) {
+    return '合計$count件の記録（すべて表示）';
   }
 
   @override
-  String get statusLoginCancelled => 'Login cancelled.';
+  String get translate => '翻訳する';
 
   @override
-  String get statusLoggingIn => 'ログイン中...';
+  String get translating => '翻訳中...';
 
   @override
-  String get statusLogoutSuccess => 'Logged out.';
+  String get translation => '翻訳';
 
   @override
-  String get email => 'Email';
+  String get translationComplete => '翻訳完了 (保存してください)';
 
   @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
+  String translationFailed(String error) {
+    return '翻訳失敗: $error';
   }
 
   @override
-  String get statusCheckEmail => 'メールを確認して認証を完了してください。';
+  String get translationLimitExceeded => '翻訳制限を超過';
 
   @override
-  String get emailAlreadyInUse => 'すでに登録済みのメールアドレスです。ログインまたはパスワード再設定をご利用ください。';
+  String get translationLimitMessage =>
+      '1日の無料翻訳（5回）をすべて使い切りました。\n\n広告を見て5回をすぐにチャージしますか？';
+
+  @override
+  String get translationLoaded => '保存済みの翻訳を読み込みました';
+
+  @override
+  String get translationRefilled => '翻訳回数が5回チャージされました！';
+
+  @override
+  String get translationResultHint => '翻訳結果 - 修正可能';
+
+  @override
+  String get tryAgain => 'もう一度';
+
+  @override
+  String get tutorialAiChatDesc => 'AIペルソナと実践的な会話を練習しましょう。';
+
+  @override
+  String get tutorialAiChatTitle => 'AIチャット';
+
+  @override
+  String get tutorialContextDesc => '同じ文章でも状況（例：朝、夜）を追加して区別できます。';
+
+  @override
+  String get tutorialContextTitle => '文脈タグ';
+
+  @override
+  String get tutorialLangSettingsDesc => '翻訳元の言語と翻訳先の言語を設定します。';
+
+  @override
+  String get tutorialLangSettingsTitle => '言語設定';
+
+  @override
+  String get tutorialM1ToggleDesc => 'ここで単語と文章のモードを切り替えます。';
+
+  @override
+  String get tutorialM1ToggleTitle => '単語/文章モード';
+
+  @override
+  String get tutorialM2DropdownDesc => '学習教材を選択します。';
+
+  @override
+  String get tutorialM2ImportDesc => 'デバイスのフォルダからJSONファイルを読み込みます。';
+
+  @override
+  String get tutorialM2ListDesc => '保存されたカードを確認し、裏返して正解を確認します。(長押しで削除)';
+
+  @override
+  String get tutorialM2ListTitle => '学習リスト';
+
+  @override
+  String get tutorialM2SearchDesc => '保存された単語や文を検索して、すばやく見つけることができます。';
+
+  @override
+  String get tutorialM2SelectDesc => '学習する教材を選択するか、全復習モードに切り替えます。';
+
+  @override
+  String get tutorialM2SelectTitle => '選択とフィルタ';
+
+  @override
+  String get tutorialM3IntervalDesc => '文章間の待機時間を調整します。';
+
+  @override
+  String get tutorialM3IntervalTitle => '間隔設定';
+
+  @override
+  String get tutorialM3ResetDesc =>
+      'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get tutorialM3ResetTitle => 'Reset History';
+
+  @override
+  String get tutorialM3SelectDesc => 'スピーキング練習を行う教材セットを選択してください。';
+
+  @override
+  String get tutorialM3SelectTitle => '教材選択';
+
+  @override
+  String get tutorialM3StartDesc => '再生ボタンを押してネイティブ音声を聞き、続いて発音してください。';
+
+  @override
+  String get tutorialM3StartTitle => '練習開始';
+
+  @override
+  String get tutorialM3WordsDesc => 'チェックすると、保存された単語のみ練習します。';
+
+  @override
+  String get tutorialM3WordsTitle => '単語練習';
+
+  @override
+  String get tutorialMicDesc => 'マイクボタンをタップして音声で入力できます。';
+
+  @override
+  String get tutorialMicTitle => '音声入力';
+
+  @override
+  String get tutorialSaveDesc => '翻訳結果を学習記録に保存します。';
+
+  @override
+  String get tutorialSaveTitle => '保存';
+
+  @override
+  String get tutorialSwapDesc => '私の言語と学習言語を交換してください。';
+
+  @override
+  String get tutorialTabDesc => 'ここで希望する学習モードを選択できます。';
+
+  @override
+  String get tutorialTapToContinue => 'タップして続ける';
+
+  @override
+  String get tutorialTransDesc => '入力したテキストを翻訳します。';
+
+  @override
+  String get tutorialTransTitle => '翻訳';
+
+  @override
+  String get typeExclamation => '感嘆文';
+
+  @override
+  String get typeImperative => '命令文';
+
+  @override
+  String get typeQuestion => '疑問文';
+
+  @override
+  String get typeStatement => '平叙文';
+
+  @override
+  String get usageLimitTitle => '上限に達しました';
+
+  @override
+  String get useExistingText => '既存のテキストを使用';
+
+  @override
+  String get viewOnlineGuide => 'オンラインガイドを見る';
+
+  @override
+  String get voluntaryTranslations => '自主的な翻訳';
+
+  @override
+  String get watchAdAndRefill => '広告を見てチャージ (+5回)';
+
+  @override
+  String get word => '単語';
+
+  @override
+  String get wordDefenseDesc => '敵が到着する前に単語を言って基地を守ってください。';
+
+  @override
+  String get wordDefenseTitle => '単語ディフェンス';
+
+  @override
+  String get wordModeLabel => '単語モード';
+
+  @override
+  String get yourPronunciation => 'あなたの発音';
 }

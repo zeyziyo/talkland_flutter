@@ -9,35 +9,332 @@ class AppLocalizationsFil extends AppLocalizations {
   AppLocalizationsFil([String locale = 'fil']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => 'Katumpakan';
 
   @override
-  String get kakaoContinue => 'Magpatuloy sa Kakao';
+  String get adLoading =>
+      'Naglo-load ng ad. Subukang muli sa ibang pagkakataon.';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => 'Idagdag ang bagong pamagat';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => 'Magdagdag ng Kalahok';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => 'Magdagdag ng tag...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => 'May account ka na?';
 
   @override
-  String get helpTitle => 'Tulong at Gabay';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => 'Mga Mode';
+  String get autoPlay => 'Auto-play';
 
   @override
-  String get helpTabJson => 'JSON Format';
+  String get basic => 'Pangunahin';
 
   @override
-  String get helpTabTour => 'Pasyal';
+  String get basicDefault => 'Basic Default';
+
+  @override
+  String get basicMaterialRepository =>
+      'Basic na Repository ng Pangungusap/Salita';
+
+  @override
+  String get basicSentenceRepository =>
+      'Repository ng Mga Pangunahing Pangungusap';
+
+  @override
+  String get basicSentences => 'Basic na Repository ng mga Pangungusap';
+
+  @override
+  String get basicWordRepository => 'Repository ng Mga Pangunahing Salita';
+
+  @override
+  String get basicWords => 'Basic na Repository ng mga Salita';
+
+  @override
+  String get cancel => 'Kanselahin';
+
+  @override
+  String get caseObject => 'Layon';
+
+  @override
+  String get casePossessive => 'Pang-angkin';
+
+  @override
+  String get casePossessivePronoun => 'Panghalip na Pang-angkin';
+
+  @override
+  String get caseReflexive => 'Panaong Pabalik';
+
+  @override
+  String get caseSubject => 'Paksa';
+
+  @override
+  String get chatAiChat => 'Chat';
+
+  @override
+  String get chatAllConversations => 'Lahat ng Usapan';
+
+  @override
+  String get chatChoosePersona => 'Pumili ng Persona';
+
+  @override
+  String get chatEndMessage => 'Gusto mo bang tapusin ang chat?';
+
+  @override
+  String get chatEndTitle => 'Tapusin at I-save ang Chat';
+
+  @override
+  String chatFailed(Object error) {
+    return 'Nabigo ang chat: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'Sipi mula sa pag-uusap ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => 'Kasaysayan ng Chat';
+
+  @override
+  String get chatNew => 'Bagong Chat';
+
+  @override
+  String get chatNewChat => 'Bagong Chat';
+
+  @override
+  String get chatNoConversations => 'Wala pang pag-uusap';
+
+  @override
+  String get chatSaveAndExit => 'I-save at Lumabas';
+
+  @override
+  String get chatStartNewPrompt =>
+      'Subukan ang isang bagong pag-uusap para sa pagsasanay!';
+
+  @override
+  String get chatTypeHint => 'Mag-type ng mensahe...';
+
+  @override
+  String get chatUntitled => 'Walang Pamagat na Chat';
+
+  @override
+  String get checking => 'Sinusuri...';
+
+  @override
+  String get clearAll => 'I-clear Lahat';
+
+  @override
+  String get confirm => 'Kumpirmahin';
+
+  @override
+  String get confirmDelete => 'Sigurado ka bang gusto mong tanggalin ito?';
+
+  @override
+  String get confirmDeleteConversation =>
+      'Sigurado ka bang gusto mong burahin ang usapang ito?\nHindi na ito mababawi pa.';
+
+  @override
+  String get confirmDeleteParticipant =>
+      'Sigurado ka bang gusto mong tanggalin ang kalahok na ito?';
+
+  @override
+  String get contextTagHint =>
+      'Isulat ang sitwasyon para madaling makilala sa ibang pagkakataon';
+
+  @override
+  String get contextTagLabel =>
+      'Konteksto/Sitwasyon (Opsyonal) - Hal: Pagbati sa Umaga, Pormal';
+
+  @override
+  String get copiedToClipboard => 'Kinopya sa clipboard!';
+
+  @override
+  String get copy => 'Kopyahin';
+
+  @override
+  String get correctAnswer => 'Tamang Sagot';
+
+  @override
+  String get createNew => 'Lumikha ng Bago';
+
+  @override
+  String get currentLocation => 'Kasalukuyang Lokasyon';
+
+  @override
+  String get currentMaterialLabel => 'Kasalukuyang Piling Materyal:';
+
+  @override
+  String get delete => 'Tanggalin';
+
+  @override
+  String deleteFailed(String error) {
+    return 'Nabigong tanggalin: $error';
+  }
+
+  @override
+  String get deleteRecord => 'Tanggalin ang Tala';
+
+  @override
+  String get dialogueQuestDesc =>
+      'Magsanay ng pag-uusap sa pamamagitan ng role-playing. Pumili at sabihin ang naaangkop na sagot.';
+
+  @override
+  String get dialogueQuestTitle => 'Quest sa Pag-uusap';
+
+  @override
+  String get disambiguationPrompt => 'Anong kahulugan ang gusto mong isalin?';
+
+  @override
+  String get disambiguationTitle => 'Pumili ng Kahulugan';
+
+  @override
+  String get dontHaveAccount => 'Wala ka pang account?';
+
+  @override
+  String get editParticipant => 'I-edit ang Kalahok';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get emailAlreadyInUse =>
+      'Ang email na ito ay ginagamit na. Mag-login o gamitin ang pagbawi ng password.';
+
+  @override
+  String get enterNewSubjectName => 'Ilagay ang bagong pamagat';
+
+  @override
+  String get enterSentenceHint => 'Maglagay ng pangungusap...';
+
+  @override
+  String get enterTextHint => 'Ilagay ang tekstong isasalin';
+
+  @override
+  String get enterTextToTranslate => 'Ipasok ang teksto upang isalin';
+
+  @override
+  String get enterWordHint => 'Maglagay ng salita...';
+
+  @override
+  String get error => 'Error';
+
+  @override
+  String get errorHateSpeech =>
+      'Hindi maaaring isalin dahil naglalaman ng mga pahayag ng pagkapoot.';
+
+  @override
+  String get errorOtherSafety =>
+      'Ang pagsasalin ay tinanggihan dahil sa patakaran sa kaligtasan ng AI.';
+
+  @override
+  String get errorProfanity =>
+      'Hindi maaaring isalin dahil naglalaman ng mga malaswang salita.';
+
+  @override
+  String get errorSelectCategory => 'Pumili muna ng salita o pangungusap!';
+
+  @override
+  String get errorSexualContent =>
+      'Hindi maaaring isalin dahil naglalaman ng sekswal na nilalaman.';
+
+  @override
+  String get errors => 'Mga Error:';
+
+  @override
+  String get female => 'Babae';
+
+  @override
+  String get file => 'File:';
+
+  @override
+  String get filterAll => 'Lahat';
+
+  @override
+  String get flip => 'I-flip';
+
+  @override
+  String get formComparative => 'Pahambing';
+
+  @override
+  String get formInfinitive => 'Infinitive/Kasalukuyan';
+
+  @override
+  String get formPast => 'Nakaraan';
+
+  @override
+  String get formPastParticiple => 'Nakaraang Participle';
+
+  @override
+  String get formPlural => 'Maramihan';
+
+  @override
+  String get formPositive => 'Positibo';
+
+  @override
+  String get formPresent => 'Kasalukuyan';
+
+  @override
+  String get formPresentParticiple => 'Kasalukuyang Participle (-ing)';
+
+  @override
+  String get formSingular => 'Isahan';
+
+  @override
+  String get formSuperlative => 'Pasukdol';
+
+  @override
+  String get formThirdPersonSingular => 'Pangatlong Panauhan Isahan';
+
+  @override
+  String get gameModeDesc => 'Pumili ng game mode para sa pagsasanay';
+
+  @override
+  String get gameModeTitle => 'Mode ng Laro';
+
+  @override
+  String get gameOver => 'Tapos na ang Laro';
+
+  @override
+  String get gender => 'Kasarian';
+
+  @override
+  String get generalTags => 'Pangkalahatang mga Tag';
+
+  @override
+  String get getMaterials => 'Kumuha ng mga Materyales';
+
+  @override
+  String get good => 'Mahusay';
+
+  @override
+  String get googleContinue => 'Magpatuloy sa Google';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Mag-import ng buong set ng dayalogo gamit ang JSON file.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc => 'Para sa pag-import sa Mode 3, lumikha ng JSON:';
+
+  @override
+  String get helpJsonTypeDialogue => 'Dayalogo (Dialogue)';
+
+  @override
+  String get helpJsonTypeSentence => 'Pangungusap (Sentence)';
+
+  @override
+  String get helpJsonTypeWord => 'Salita (Word)';
 
   @override
   String get helpMode1Desc =>
@@ -68,160 +365,43 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• AI Chat: Magsanay ng mga totoong pag-uusap gamit ang mga persona.\n• Pamamahala ng Kalahok: Itakda ang iyong wika at ang wika ng AI upang maiwasan ang hindi pagkakatugma ng wika.\n• GPS Roleplay: Lumikha ng mga natural na sitwasyon sa pag-uusap batay sa iyong kasalukuyang lokasyon.\n• Pagpapanatili ng Kasaysayan: Ang lahat ng pag-uusap ay ligtas na naka-save batay sa ID, at ang kasaysayan ay nananatili kahit na palitan mo ang pangalan.';
 
   @override
-  String get helpJsonDesc => 'Para sa pag-import sa Mode 3, lumikha ng JSON:';
+  String get helpTabJson => 'JSON Format';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => 'Mga Mode';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => 'Pasyal';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => 'Tulong at Gabay';
 
   @override
   String get helpTourDesc =>
       'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => 'Lokasyon';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => 'Me';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return 'Balik-aral ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return 'Materyales ($count)';
-  }
-
-  @override
-  String get mode2Title => 'Balik-aral';
-
-  @override
-  String get search => 'Hanapin';
-
-  @override
-  String get translate => 'Isalin';
-
-  @override
-  String get listen => 'Makinig';
-
-  @override
-  String get saveData => 'I-save';
-
-  @override
-  String get saved => 'Na-save';
-
-  @override
-  String get delete => 'Tanggalin';
-
-  @override
-  String get materialInfo => 'Impormasyon ng materyal';
-
-  @override
-  String get cancel => 'Kanselahin';
-
-  @override
-  String get confirm => 'OK';
-
-  @override
-  String get refresh => 'I-refresh';
-
-  @override
-  String studyRecords(int count) {
-    return 'Mga Tala ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => 'Target na Wika:';
-
-  @override
-  String get noRecords => 'Walang tala para sa napiling wika';
-
-  @override
-  String get saveTranslationsFromSearch =>
-      'I-save ang mga pagsasalin mula sa search mode';
-
-  @override
-  String get flip => 'I-flip';
-
-  @override
   String get hide => 'Itago';
 
   @override
-  String get deleteRecord => 'Tanggalin ang Tala';
-
-  @override
-  String get confirmDelete => 'Sigurado ka bang gusto mong tanggalin ito?';
-
-  @override
-  String get recordDeleted => 'Matagumpay na natanggal ang tala';
-
-  @override
-  String deleteFailed(String error) {
-    return 'Nabigong tanggalin: $error';
+  String importAdded(int count) {
+    return 'Idinagdag: $count';
   }
 
   @override
-  String get importJsonFile => 'Mag-import ng JSON';
-
-  @override
-  String get importing => 'Nag-iimport...';
-
-  @override
   String get importComplete => 'Tapos na ang Pag-import';
+
+  @override
+  String get importDuplicateTitleError =>
+      'Mayroon nang materyal na may parehong pamagat. Subukang baguhin ang pamagat.';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'Nabigong i-import ang file:\\n$error';
+  }
 
   @override
   String get importFailed => 'Nabigong Mag-import';
@@ -232,45 +412,10 @@ class AppLocalizationsFil extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => 'Mag-import ng JSON';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get roleThirdParty => '제삼자';
-
-  @override
-  String get speakerSelect => '발화자 선택';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return 'Kabuuan: $count';
-  }
-
-  @override
-  String importAdded(int count) {
-    return 'Idinagdag: $count';
-  }
+  String get importJsonFilePrompt => 'Mangyaring mag-import ng JSON file';
 
   @override
   String importSkipped(int count) {
@@ -278,135 +423,15 @@ class AppLocalizationsFil extends AppLocalizations {
   }
 
   @override
-  String get errors => 'Mga Error:';
-
-  @override
-  String get error => 'Error';
-
-  @override
-  String importErrorMessage(String error) {
-    return 'Nabigong i-import ang file:\\n$error';
+  String importTotal(int count) {
+    return 'Kabuuan: $count';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => 'Nag-iimport...';
 
   @override
-  String get selectStudyMaterial => 'Pumili ng Materyales';
-
-  @override
-  String get subject => 'Paksa:';
-
-  @override
-  String get source => 'Pinagmulan:';
-
-  @override
-  String get file => 'File:';
-
-  @override
-  String progress(int current, int total) {
-    return 'Progreso: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => 'Mangyaring mag-import ng JSON file';
-
-  @override
-  String get selectMaterialPrompt =>
-      'Mangyaring pumili ng materyales sa pag-aaral';
-
-  @override
-  String get studyComplete => 'Napag-aralan na';
-
-  @override
-  String get markAsStudied => 'Markahan bilang Napag-aralan';
-
-  @override
-  String get listening => 'Nakikinig...';
-
-  @override
-  String get recognized => 'Natapos ang pagkilala';
-
-  @override
-  String recognitionFailed(String error) {
-    return 'Nabigo ang pagkilala sa boses: $error';
-  }
-
-  @override
-  String get checking => 'Sinusuri...';
-
-  @override
-  String get translating => 'Nagsasalin...';
-
-  @override
-  String get translationComplete =>
-      'Tapos na ang pagsasalin (kailangang i-save)';
-
-  @override
-  String get translationLoaded => 'Na-load ang naka-save na pagsasalin';
-
-  @override
-  String translationFailed(String error) {
-    return 'Nabigo ang pagsasalin: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => 'Ipasok ang teksto upang isalin';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => 'Nagsa-save...';
-
-  @override
-  String get noTranslationToSave => 'Walang pagsasalin na i-save';
-
-  @override
-  String saveFailed(String error) {
-    return 'Nabigong i-save: $error';
-  }
-
-  @override
-  String get playing => 'Nagpe-play...';
-
-  @override
-  String get noTextToPlay => 'Walang teksto na i-play';
-
-  @override
-  String playbackFailed(String error) {
-    return 'Nabigo ang pag-play: $error';
-  }
-
-  @override
-  String get sourceLanguage => 'Pinagmulang Wika';
-
-  @override
-  String get targetLanguage => 'Target na Wika';
-
-  @override
-  String get similarTextFound => 'May natagpuang katulad na teksto';
-
-  @override
-  String get useExistingText => 'Gamitin ang Umiiral';
-
-  @override
-  String get createNew => 'Lumikha ng Bago';
-
-  @override
-  String reviewCount(int count) {
-    return 'Binago nang $count beses';
-  }
-
-  @override
-  String get tabSpeaking => 'Pagsasalita';
-
-  @override
-  String get speakingPractice => 'Pagsasanay sa Pagsasalita';
+  String get inputModeTitle => 'Input';
 
   @override
   String intervalSeconds(int seconds) {
@@ -414,10 +439,374 @@ class AppLocalizationsFil extends AppLocalizations {
   }
 
   @override
-  String get yourPronunciation => 'Ang iyong Pagbigkas';
+  String get invalidEmail => 'Mangyaring magpasok ng isang wastong email.';
 
   @override
-  String get correctAnswer => 'Tamang Sagot';
+  String get kakaoContinue => 'Magpatuloy sa Kakao';
+
+  @override
+  String get labelLangCode => 'Language Code (Hal: en-US, ko-KR)';
+
+  @override
+  String get labelName => 'Pangalan';
+
+  @override
+  String get labelNote => 'Tala';
+
+  @override
+  String get labelPOS => 'Bahagi ng Pananalita';
+
+  @override
+  String get labelRole => 'Papel';
+
+  @override
+  String get labelSentence => 'Pangungusap';
+
+  @override
+  String get labelSentenceCollection => 'Koleksyon ng Pangungusap';
+
+  @override
+  String get labelSentenceType => 'Uri ng Pangungusap';
+
+  @override
+  String get labelShowMemorized => 'Tapos na';
+
+  @override
+  String get labelType => 'Uri:';
+
+  @override
+  String get labelWord => 'Salita';
+
+  @override
+  String get labelWordbook => 'Wordbook';
+
+  @override
+  String get language => 'Wika';
+
+  @override
+  String get languageSettings => 'Mga setting ng wika';
+
+  @override
+  String get languageSettingsTitle => 'Mga Setting ng Wika';
+
+  @override
+  String get libTitleFirstMeeting => 'Unang Pagkikita';
+
+  @override
+  String get libTitleGreetings1 => 'Pagbati 1';
+
+  @override
+  String get libTitleNouns1 => 'Pangngalan 1';
+
+  @override
+  String get libTitleVerbs1 => 'Pandiwa 1';
+
+  @override
+  String get listen => 'Makinig';
+
+  @override
+  String get listening => 'Nakikinig...';
+
+  @override
+  String get loadingParticipants => 'Naglo-load ng mga Kalahok...';
+
+  @override
+  String get location => 'Lokasyon';
+
+  @override
+  String get login => 'Mag-login';
+
+  @override
+  String get logout => 'Mag-logout';
+
+  @override
+  String get logoutConfirmMessage =>
+      'Sigurado ka bang gusto mong mag-logout sa kasalukuyang device?';
+
+  @override
+  String get logoutConfirmTitle => 'Mag-logout';
+
+  @override
+  String get male => 'Lalaki';
+
+  @override
+  String get manageParticipants => 'Pamahalaan ang mga Kalahok';
+
+  @override
+  String get manual => 'Manwal na Input';
+
+  @override
+  String get markAsStudied => 'Markahan bilang Napag-aralan';
+
+  @override
+  String get materialInfo => 'Impormasyon ng materyal';
+
+  @override
+  String get me => 'Ako';
+
+  @override
+  String get menuDeviceImport => 'Mag-import ng mga Materyales mula sa Device';
+
+  @override
+  String get menuHelp => 'Tulong';
+
+  @override
+  String get menuLanguageSettings => 'Mga Setting ng Wika';
+
+  @override
+  String get menuOnlineLibrary => 'Online Library';
+
+  @override
+  String get menuSelectMaterialSet => 'Pumili ng materyal sa pag-aaral';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuTutorial => 'Tutorial';
+
+  @override
+  String get menuWebDownload => 'Manwal ng Gumagamit';
+
+  @override
+  String get metadataDialogTitle => 'Detalyadong Klasipikasyon';
+
+  @override
+  String get metadataFormType => 'Uri ng Balangkas';
+
+  @override
+  String get metadataRootWord => 'Salitang-ugat (Root Word)';
+
+  @override
+  String get micButtonTooltip => 'Simulan ang pagkilala ng boses';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return 'Kasalukuyang Napiling Materyal: $name';
+  }
+
+  @override
+  String get mode2Title => 'Balik-aral';
+
+  @override
+  String get mode3Next => 'Susunod';
+
+  @override
+  String get mode3Start => 'Simulan';
+
+  @override
+  String get mode3Stop => 'Tapusin';
+
+  @override
+  String get mode3TryAgain => 'Subukang Muli';
+
+  @override
+  String get mySentenceCollection => 'Aking Pangungusap';
+
+  @override
+  String get myWordbook => 'Aking Talasalitaan';
+
+  @override
+  String get neutral => 'Neutral';
+
+  @override
+  String get newSubjectName => 'Bagong Pamagat ng Aralin/Pangungusap';
+
+  @override
+  String get next => 'Susunod';
+
+  @override
+  String get noDialogueHistory => 'Walang kasaysayan ng dayalogo.';
+
+  @override
+  String get noInternetWarningMic =>
+      'Walang koneksyon sa internet. Maaaring hindi posible ang pagkilala ng boses sa offline mode.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'Walang koneksyon sa internet. Hindi magagamit ang function ng pagsasalin sa offline mode. Mangyaring gamitin ang review mode.';
+
+  @override
+  String get noMaterialsInCategory => 'Walang materyales sa kategoryang ito.';
+
+  @override
+  String get noParticipantsFound => 'Walang nakarehistrong kalahok.';
+
+  @override
+  String get noRecords => 'Walang tala para sa napiling wika';
+
+  @override
+  String get noStudyMaterial => 'Walang materyal sa pag-aaral.';
+
+  @override
+  String get noTextToPlay => 'Walang teksto na i-play';
+
+  @override
+  String get noTranslationToSave => 'Walang pagsasalin na i-save';
+
+  @override
+  String get noVoiceDetected => 'Walang boses na nakita';
+
+  @override
+  String get notSelected => '- Walang Napili -';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'Suriin ang iyong koneksyon sa internet o subukang muli sa ibang pagkakataon.';
+
+  @override
+  String get onlineLibraryLoadFailed => 'Nabigo sa pag-load ng mga materyales.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'Walang materyales.';
+
+  @override
+  String get participantDeleted => 'Natanggal ang kalahok.';
+
+  @override
+  String get participantRename => 'Palitan ang Pangalan ng Kalahok';
+
+  @override
+  String get partner => 'Partner';
+
+  @override
+  String get partnerMode => 'Partner Mode';
+
+  @override
+  String get password => 'Password';
+
+  @override
+  String get passwordTooShort => 'Dapat umabot ng 6 na character ang password.';
+
+  @override
+  String get perfect => 'Perpekto!';
+
+  @override
+  String get personaFriend => 'Kaibigang Lokal';
+
+  @override
+  String get personaGuide => 'Gabay sa Paglalakbay';
+
+  @override
+  String get personaTeacher => 'Guro sa Ingles';
+
+  @override
+  String get playAgain => 'Maglaro Muli';
+
+  @override
+  String playbackFailed(String error) {
+    return 'Nabigo ang pag-play: $error';
+  }
+
+  @override
+  String get playing => 'Nagpe-play...';
+
+  @override
+  String get posAdjective => 'Pang-uri';
+
+  @override
+  String get posAdverb => 'Pang-abay';
+
+  @override
+  String get posConjunction => 'Pangatnig';
+
+  @override
+  String get posInterjection => 'Pandamdam';
+
+  @override
+  String get posNoun => 'Pangngalan';
+
+  @override
+  String get posPreposition => 'Pang-ukol';
+
+  @override
+  String get posPronoun => 'Panghalip';
+
+  @override
+  String get posVerb => 'Pandiwa';
+
+  @override
+  String get practiceModeTitle => 'Pagsasanay';
+
+  @override
+  String get practiceWordsOnly => 'Magsanay lamang ng mga salita';
+
+  @override
+  String progress(int current, int total) {
+    return 'Progreso: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return 'Ipakita ang Kamakailang Nilikhang $count';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return 'Nabigo ang pagkilala sa boses: $error';
+  }
+
+  @override
+  String get recognized => 'Natapos ang pagkilala';
+
+  @override
+  String get recognizedText => 'Nakilalang pagbigkas:';
+
+  @override
+  String get recordDeleted => 'Matagumpay na natanggal ang tala';
+
+  @override
+  String get refresh => 'I-refresh';
+
+  @override
+  String get reset => 'I-reset';
+
+  @override
+  String get resetPracticeHistory => 'I-reset ang kasaysayan ng pagsasanay';
+
+  @override
+  String get retry => 'Subukan muli?';
+
+  @override
+  String get reviewAll => 'Review Lahat';
+
+  @override
+  String reviewCount(int count) {
+    return 'Binago nang $count beses';
+  }
+
+  @override
+  String get reviewModeTitle => 'Review';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => 'Ikatlong Partido';
+
+  @override
+  String get roleUser => 'Gumagamit';
+
+  @override
+  String get save => 'I-save';
+
+  @override
+  String get saveData => 'I-save';
+
+  @override
+  String saveFailed(String error) {
+    return 'Nabigong i-save: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch =>
+      'I-save ang mga pagsasalin mula sa search mode';
+
+  @override
+  String get saved => 'Na-save';
+
+  @override
+  String get saving => 'Nagsa-save...';
 
   @override
   String score(String score) {
@@ -425,34 +814,402 @@ class AppLocalizationsFil extends AppLocalizations {
   }
 
   @override
-  String get perfect => 'Perpekto!';
+  String get scoreLabel => 'Iskor';
 
   @override
-  String get good => 'Mahusay';
+  String get search => 'Hanapin';
 
   @override
-  String get tryAgain => 'Subukan muli';
+  String get searchConditions => 'Mga Kondisyon sa Paghahanap';
+
+  @override
+  String get searchSentenceHint => 'Maghanap ng pangungusap...';
+
+  @override
+  String get searchWordHint => 'Maghanap ng salita...';
+
+  @override
+  String get sectionSentence => 'Seksyon ng Pangungusap';
+
+  @override
+  String get sectionSentences => 'Mga Pangungusap';
+
+  @override
+  String get sectionWord => 'Seksyon ng salita';
+
+  @override
+  String get sectionWords => 'Mga Salita';
+
+  @override
+  String get selectExistingSubject => 'Pumili ng kasalukuyang pamagat';
+
+  @override
+  String get selectMaterialPrompt =>
+      'Mangyaring pumili ng materyales sa pag-aaral';
+
+  @override
+  String get selectMaterialSet => 'Pumili ng Materyales sa Pag-aaral';
+
+  @override
+  String get selectPOS => 'Pumili ng Bahagi ng Pananalita';
+
+  @override
+  String get selectParticipants => 'Piliin ang mga Kalahok';
+
+  @override
+  String get selectSentenceType => 'Pumili ng Uri ng Pangungusap';
+
+  @override
+  String get selectStudyMaterial => 'Pumili ng Materyales';
+
+  @override
+  String get sendingMessage => '메시지 전송 중...';
+
+  @override
+  String get sentence => 'Pangungusap';
+
+  @override
+  String get signUp => 'Mag-sign Up';
+
+  @override
+  String get similarTextFound => 'May natagpuang katulad na teksto';
+
+  @override
+  String get skip => 'Laktawan';
+
+  @override
+  String get source => 'Pinagmulan:';
+
+  @override
+  String get sourceLanguage => 'Pinagmulang Wika';
+
+  @override
+  String get sourceLanguageLabel => 'Source Language';
+
+  @override
+  String get speakNow => 'Magsalita Ngayon!';
+
+  @override
+  String get speaker => 'Tagapagsalita';
+
+  @override
+  String get speakerSelect => 'Piliin ang Tagapagsalita';
+
+  @override
+  String get speakingPractice => 'Pagsasanay sa Pagsasalita';
+
+  @override
+  String get startChat => 'Simulan ang Chat';
 
   @override
   String get startPractice => 'Simulan ang Pagsasanay';
 
   @override
-  String get stopPractice => 'Itigil';
-
-  @override
-  String get menuOnlineLibrary => 'Online Library';
-
-  @override
   String get startTutorial => 'Simulan ang Pasyal';
 
   @override
-  String get menuTutorial => 'Tutorial';
+  String get startWarning => 'Babala';
 
   @override
-  String get tutorialMicTitle => 'Voice Input';
+  String get startsWith => 'Nagsisimula sa';
+
+  @override
+  String get statusCheckEmail =>
+      'Pakisuyong kumpirmahin ang email upang makumpleto ang iyong pagpapatunay.';
+
+  @override
+  String statusDownloading(Object name) {
+    return 'Nagda-download: $name...';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return 'Nabigo ang pag-import: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name ay matagumpay na na-import';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => 'Kinansela ang pag-login.';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return 'Nabigo ang pag-login: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => 'Matagumpay na naka-login.';
+
+  @override
+  String get statusLogoutSuccess => 'Naka-logout.';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return 'Nabigo ang pag-sign up: $error';
+  }
+
+  @override
+  String get statusSigningUp => 'Nagsa-sign Up...';
+
+  @override
+  String get stopPractice => 'Itigil';
+
+  @override
+  String get studyComplete => 'Napag-aralan na';
+
+  @override
+  String studyRecords(int count) {
+    return 'Mga Tala ($count)';
+  }
+
+  @override
+  String get styleFormal => 'Pormal';
+
+  @override
+  String get styleInformal => 'Impormal';
+
+  @override
+  String get stylePolite => 'Magalang';
+
+  @override
+  String get styleSlang => 'Slang';
+
+  @override
+  String get subject => 'Paksa:';
+
+  @override
+  String get swapLanguages => 'Magpalit ng Wika';
+
+  @override
+  String get switchToAi => 'Lumipat sa AI Mode';
+
+  @override
+  String get switchToPartner => 'Lumipat sa Partner Mode';
+
+  @override
+  String get syncingData => 'Sini-sync ang data...';
+
+  @override
+  String get tabConversation => 'Usapan';
+
+  @override
+  String tabReview(int count) {
+    return 'Balik-aral ($count)';
+  }
+
+  @override
+  String get tabSentence => 'pangungusap';
+
+  @override
+  String get tabSpeaking => 'Pagsasalita';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return 'Materyales ($count)';
+  }
+
+  @override
+  String get tabWord => 'salita';
+
+  @override
+  String get tagFormal => 'Pormal';
+
+  @override
+  String get tagSelection => 'Pagpili ng Tag';
+
+  @override
+  String get targetLanguage => 'Target na Wika';
+
+  @override
+  String get targetLanguageFilter => 'Target na Wika:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc => 'Oras para mag-isip bago ipakita ang sagot.';
+
+  @override
+  String get thinkingTimeInterval => 'Pagitan ng Pag-iisip';
+
+  @override
+  String get timeUp => 'Tapos na ang oras!';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
+
+  @override
+  String get titleTagSelection => 'Tag ng Pamagat (Collection)';
+
+  @override
+  String get tooltipDecrease => 'Bawasan';
+
+  @override
+  String get tooltipIncrease => 'Dagdagan';
+
+  @override
+  String get tooltipSearch => 'Maghanap';
+
+  @override
+  String get tooltipSpeaking => 'Pagsasalita';
+
+  @override
+  String get tooltipStudyReview => 'Pag-aaral+Pagsusuri';
+
+  @override
+  String totalRecords(int count) {
+    return 'Kabuuang $count tala (Tingnan ang lahat)';
+  }
+
+  @override
+  String get translate => 'Isalin';
+
+  @override
+  String get translating => 'Nagsasalin...';
+
+  @override
+  String get translation => 'Pagsasalin';
+
+  @override
+  String get translationComplete =>
+      'Tapos na ang pagsasalin (kailangang i-save)';
+
+  @override
+  String translationFailed(String error) {
+    return 'Nabigo ang pagsasalin: $error';
+  }
+
+  @override
+  String get translationLimitExceeded => 'Lumampas sa limitasyon ng pagsasalin';
+
+  @override
+  String get translationLimitMessage =>
+      'Naubos mo na ang iyong pang-araw-araw na libreng pagsasalin (5 beses).\\n\\nGusto mo bang manood ng ad upang agad na mag-refill ng 5 beses?';
+
+  @override
+  String get translationLoaded => 'Na-load ang naka-save na pagsasalin';
+
+  @override
+  String get translationRefilled =>
+      'Ang bilang ng pagsasalin ay na-refill ng 5 beses!';
+
+  @override
+  String get translationResultHint => 'Resulta ng Pagsasalin - Maaaring i-edit';
+
+  @override
+  String get tryAgain => 'Subukan muli';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'Magsanay ng mga totoong pag-uusap gamit ang isang AI persona.';
+
+  @override
+  String get tutorialAiChatTitle => 'AI Chat';
+
+  @override
+  String get tutorialContextDesc =>
+      'Magdagdag ng konteksto (hal. Umaga) upang makilala ang magkatulad na mga pangungusap.';
+
+  @override
+  String get tutorialContextTitle => 'Tag ng Konteksto';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Itakda ang orihinal at target na wika para sa pagsasalin.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Mga Setting ng Wika';
+
+  @override
+  String get tutorialM1ToggleDesc =>
+      'Lumipat sa pagitan ng word at sentence mode dito.';
+
+  @override
+  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Pumili ng mga materyales sa pag-aaral.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Mag-import ng JSON file mula sa folder ng device.';
+
+  @override
+  String get tutorialM2ListDesc =>
+      'Suriin ang iyong mga na-save na card at i-flip ang mga ito. (Long-press to delete)';
+
+  @override
+  String get tutorialM2ListTitle => 'Listahan ng Pag-aaral';
+
+  @override
+  String get tutorialM2SearchDesc =>
+      'Mabilis na hanapin sa pamamagitan ng paghahanap ng mga naka-save na salita at pangungusap.';
+
+  @override
+  String get tutorialM2SelectDesc =>
+      'Pumili ng materyales o lumipat sa \'Balik-aralan Lahat\'.';
+
+  @override
+  String get tutorialM2SelectTitle => 'Pumili at Mag-filter';
+
+  @override
+  String get tutorialM3IntervalDesc =>
+      'Ayusin ang oras ng paghihintay sa pagitan ng mga pangungusap.';
+
+  @override
+  String get tutorialM3IntervalTitle => 'Agwat';
+
+  @override
+  String get tutorialM3ResetDesc =>
+      'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get tutorialM3ResetTitle => 'Reset History';
+
+  @override
+  String get tutorialM3SelectDesc =>
+      'Pumili ng set para sa pagsasanay sa pagsasalita.';
+
+  @override
+  String get tutorialM3SelectTitle => 'Pumili ng Materyales';
+
+  @override
+  String get tutorialM3StartDesc => 'I-tap ang play para magsimula.';
+
+  @override
+  String get tutorialM3StartTitle => 'Simulan';
+
+  @override
+  String get tutorialM3WordsDesc =>
+      'Lagyan ng tsek para magsanay lamang ng mga naka-save na salita.';
+
+  @override
+  String get tutorialM3WordsTitle => 'Pagsasanay ng mga Salita';
 
   @override
   String get tutorialMicDesc => 'I-tap ang mic button para sa voice input.';
+
+  @override
+  String get tutorialMicTitle => 'Input ng Boses';
+
+  @override
+  String get tutorialSaveDesc =>
+      'I-save ang iyong pagsasalin sa mga tala ng pag-aaral.';
+
+  @override
+  String get tutorialSaveTitle => 'I-save';
+
+  @override
+  String get tutorialSwapDesc =>
+      'Pinapalitan ko ang aking wika ng wikang aking pinag-aaralan.';
 
   @override
   String get tutorialTabDesc =>
@@ -462,766 +1219,51 @@ class AppLocalizationsFil extends AppLocalizations {
   String get tutorialTapToContinue => 'I-tap upang magpatuloy';
 
   @override
-  String get tutorialTransTitle => 'Isalin';
-
-  @override
   String get tutorialTransDesc => 'I-tap dito para isalin ang iyong teksto.';
 
   @override
-  String get tutorialSaveTitle => 'I-save';
+  String get tutorialTransTitle => 'Isalin';
 
   @override
-  String get tutorialSaveDesc =>
-      'I-save ang iyong pagsasalin sa mga tala ng pag-aaral.';
+  String get typeExclamation => 'Padamdam';
 
   @override
-  String get selectParticipants => 'Select Participants';
+  String get typeImperative => 'Pautos';
 
   @override
-  String get loadingParticipants => 'Loading participants...';
+  String get typeQuestion => 'Tanong';
 
   @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
-
-  @override
-  String get sendingMessage => '메시지 전송 중...';
-
-  @override
-  String get startChat => 'Start Chat';
-
-  @override
-  String get manageParticipants => 'Manage Participants';
-
-  @override
-  String get tutorialAiChatTitle => 'AI Chat';
-
-  @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
-
-  @override
-  String get tutorialM2SelectTitle => 'Pumili at Mag-filter';
-
-  @override
-  String get tutorialM2SelectDesc =>
-      'Pumili ng materyales o lumipat sa \'Balik-aralan Lahat\'.';
-
-  @override
-  String get tutorialM2ListTitle => 'Listahan ng Pag-aaral';
-
-  @override
-  String get tutorialM2ListDesc =>
-      'Suriin ang iyong mga na-save na card at i-flip ang mga ito. (Long-press to delete)';
-
-  @override
-  String get tutorialM3SelectTitle => 'Pumili ng Materyales';
-
-  @override
-  String get tutorialM3SelectDesc =>
-      'Pumili ng set para sa pagsasanay sa pagsasalita.';
-
-  @override
-  String get tutorialM3IntervalTitle => 'Agwat';
-
-  @override
-  String get tutorialM3IntervalDesc =>
-      'Ayusin ang oras ng paghihintay sa pagitan ng mga pangungusap.';
-
-  @override
-  String get tutorialM3StartTitle => 'Simulan';
-
-  @override
-  String get tutorialM3StartDesc => 'I-tap ang play para magsimula.';
-
-  @override
-  String get startWarning => 'Babala';
-
-  @override
-  String get noVoiceDetected => 'Walang boses na nakita';
-
-  @override
-  String get tooltipSearch => 'Maghanap';
-
-  @override
-  String get tooltipStudyReview => 'Pag-aaral+Pagsusuri';
-
-  @override
-  String get tooltipSpeaking => 'Pagsasalita';
-
-  @override
-  String get tooltipDecrease => 'Bawasan';
-
-  @override
-  String get tooltipIncrease => 'Dagdagan';
-
-  @override
-  String get languageSettings => 'Mga setting ng wika';
-
-  @override
-  String get tutorialM2DropdownDesc => 'Pumili ng mga materyales sa pag-aaral.';
-
-  @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
-
-  @override
-  String get tutorialM2ImportDesc =>
-      'Mag-import ng JSON file mula sa folder ng device.';
-
-  @override
-  String get tutorialLangSettingsTitle => 'Language Settings';
-
-  @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
-
-  @override
-  String get copy => 'Copy';
-
-  @override
-  String get copiedToClipboard => 'Copied to clipboard!';
-
-  @override
-  String get tutorialContextTitle => 'Tag ng Konteksto';
-
-  @override
-  String get tutorialContextDesc =>
-      'Magdagdag ng konteksto (hal. Umaga) upang makilala ang magkatulad na mga pangungusap.';
-
-  @override
-  String get thinkingTimeInterval => 'Playback Delay';
-
-  @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
-
-  @override
-  String get autoPlay => 'Auto-Play';
-
-  @override
-  String get timeUp => 'Time Up!';
-
-  @override
-  String get gameModeTitle => 'Game Mode';
-
-  @override
-  String get gameModeDesc => 'Choose your practice mode';
-
-  @override
-  String get wordDefenseTitle => 'Word Defense';
-
-  @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
-
-  @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
-
-  @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get translation => 'Translation';
-
-  @override
-  String get labelType => 'Type:';
-
-  @override
-  String get labelWord => 'Word';
-
-  @override
-  String get labelSentence => 'Sentence';
-
-  @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
+  String get typeStatement => 'Pahayag';
 
   @override
   String get usageLimitTitle => 'Limitado na Paggamit';
 
   @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
+  String get useExistingText => 'Gamitin ang Umiiral';
 
   @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
+  String get viewOnlineGuide => 'Tingnan ang Online Guide';
 
   @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
+  String get voluntaryTranslations => 'Mga Boluntaryong Pagsasalin';
 
   @override
-  String get translationRefilled => 'Translations refilled by 5!';
+  String get watchAdAndRefill => 'Manood ng Ad at Mag-refill (+5 beses)';
 
   @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
+  String get word => 'Salita';
 
   @override
-  String get reviewAll => 'Review All';
+  String get wordDefenseDesc =>
+      'Ipagtanggol ang base sa pamamagitan ng pagsasabi ng salita bago makarating ang kaaway.';
 
   @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
-
-  @override
-  String get filterAll => 'All';
-
-  @override
-  String get practiceWordsOnly => 'Practice Words Only';
-
-  @override
-  String get resetPracticeHistory => 'Reset Practice History';
-
-  @override
-  String get retry => 'Retry?';
-
-  @override
-  String get noStudyMaterial => 'No study material found.';
-
-  @override
-  String get gameOver => 'Game Over';
-
-  @override
-  String get playAgain => 'Play Again';
-
-  @override
-  String get speakNow => 'Speak now!';
-
-  @override
-  String get scoreLabel => 'Score';
-
-  @override
-  String get viewOnlineGuide => 'View Online User Guide';
-
-  @override
-  String get getMaterials => 'Get Materials';
-
-  @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
+  String get wordDefenseTitle => 'Word Defense';
 
   @override
   String get wordModeLabel => 'Word Mode';
 
   @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get menuHelp => 'Help';
-
-  @override
-  String get menuWebDownload => 'Get Material from Web';
-
-  @override
-  String get menuDeviceImport => 'Import from Device';
-
-  @override
-  String get menuSettings => 'Settings';
-
-  @override
-  String get basicWords => 'Basic Word Repository';
-
-  @override
-  String get basicSentences => 'Basic Sentence Repository';
-
-  @override
-  String get selectMaterialSet => 'Pumili ng Materyales sa Pag-aaral';
-
-  @override
-  String get sectionWords => 'Mga Salita';
-
-  @override
-  String get sectionSentences => 'Mga Pangungusap';
-
-  @override
-  String get languageSettingsTitle => 'Language Settings';
-
-  @override
-  String get sourceLanguageLabel => 'Source Language';
-
-  @override
-  String get targetLanguageLabel => 'Target Language';
-
-  @override
-  String get mode3Start => 'Start';
-
-  @override
-  String get mode3Stop => 'Stop';
-
-  @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc =>
-      'Pinapalitan ko ang aking wika ng wikang aking pinag-aaralan.';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
-
-  @override
-  String get tutorialM3ResetDesc =>
-      'Clear your progress and accuracy scores to start fresh.';
-
-  @override
-  String get menuSelectMaterialSet => 'Pumili ng materyal sa pag-aaral';
-
-  @override
-  String get sectionWord => 'Seksyon ng salita';
-
-  @override
-  String get sectionSentence => 'Seksyon ng Pangungusap';
-
-  @override
-  String get tabWord => 'salita';
-
-  @override
-  String get tabSentence => 'pangungusap';
-
-  @override
-  String get errorProfanity =>
-      'Hindi maaaring isalin dahil naglalaman ng mga malaswang salita.';
-
-  @override
-  String get errorHateSpeech =>
-      'Hindi maaaring isalin dahil naglalaman ng mga pahayag ng pagkapoot.';
-
-  @override
-  String get errorSexualContent =>
-      'Hindi maaaring isalin dahil naglalaman ng sekswal na nilalaman.';
-
-  @override
-  String get errorOtherSafety =>
-      'Ang pagsasalin ay tinanggihan dahil sa patakaran sa kaligtasan ng AI.';
-
-  @override
-  String get clearAll => 'I-clear Lahat';
-
-  @override
-  String get disambiguationTitle => 'Pumili ng Kahulugan';
-
-  @override
-  String get disambiguationPrompt => 'Anong kahulugan ang gusto mong isalin?';
-
-  @override
-  String get skip => 'Laktawan';
-
-  @override
-  String get inputModeTitle => 'Input';
-
-  @override
-  String get reviewModeTitle => 'Review';
-
-  @override
-  String get practiceModeTitle => 'Pagsasanay';
-
-  @override
-  String get chatHistoryTitle => 'Conversation History';
-
-  @override
-  String get chatNew => 'New Chat';
-
-  @override
-  String get chatNewChat => 'New Chat';
-
-  @override
-  String get chatChoosePersona => 'Choose a Persona';
-
-  @override
-  String get chatTypeHint => 'Type a message...';
-
-  @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
-
-  @override
-  String get chatNoConversations => 'No conversations yet';
-
-  @override
-  String get noDialogueHistory => 'No dialogue history.';
-
-  @override
-  String get chatStartNewPrompt => 'Start a new chat to practice!';
-
-  @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
-
-  @override
-  String get personaTeacher => 'English Teacher';
-
-  @override
-  String get personaGuide => 'Travel Guide';
-
-  @override
-  String get personaFriend => 'Local Friend';
-
-  @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => 'Chat';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => 'Repository ng Mga Pangunahing Salita';
-
-  @override
-  String get basicSentenceRepository =>
-      'Repository ng Mga Pangunahing Pangungusap';
-
-  @override
-  String get chatEndTitle => 'End & Save Chat';
-
-  @override
-  String get chatEndMessage =>
-      'Do you want to end this conversation? You can set a title for it.';
-
-  @override
-  String get chatSaveAndExit => 'Save & Exit';
-
-  @override
-  String get errorSelectCategory => 'Please select word or sentence first!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => 'Pormal';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => 'Tag ng Pamagat (Collection)';
-
-  @override
-  String get generalTags => 'Pangkalahatang mga Tag';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => 'Isahan';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => 'Neutral';
-
-  @override
-  String get chatAllConversations => 'Lahat ng Usapan';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation =>
-      'Sigurado ka bang gusto mong burahin ang usapang ito?\nHindi na ito mababawi pa.';
-
-  @override
-  String get notSelected => '- Walang Napili -';
-
-  @override
-  String get myWordbook => 'Aking Talasalitaan';
-
-  @override
-  String get mySentenceCollection => 'Aking Pangungusap';
-
-  @override
-  String get newSubjectName => 'Bagong Pamagat ng Aralin/Pangungusap';
-
-  @override
-  String get enterNewSubjectName => 'Ilagay ang bagong pamagat';
-
-  @override
-  String get addNewSubject => 'Idagdag ang bagong pamagat';
-
-  @override
-  String get selectExistingSubject => 'Pumili ng kasalukuyang pamagat';
-
-  @override
-  String get addTagHint => 'Magdagdag ng tag...';
-
-  @override
-  String get save => 'I-save';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail =>
-      'Pakisuyong kumpirmahin ang email upang makumpleto ang iyong pagpapatunay.';
-
-  @override
-  String get emailAlreadyInUse =>
-      'Ang email na ito ay ginagamit na. Mag-login o gamitin ang pagbawi ng password.';
+  String get yourPronunciation => 'Ang iyong Pagbigkas';
 }

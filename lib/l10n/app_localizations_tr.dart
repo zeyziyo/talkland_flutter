@@ -9,35 +9,329 @@ class AppLocalizationsTr extends AppLocalizations {
   AppLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => 'Doğruluk';
 
   @override
-  String get kakaoContinue => 'Kakao ile devam et';
+  String get adLoading =>
+      'Reklam yükleniyor. Lütfen daha sonra tekrar deneyin.';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => 'Yeni Başlık Ekle';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => 'Katılımcı Ekle';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => 'Etiket ekle...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => 'Zaten bir hesabınız var mı?';
 
   @override
-  String get helpTitle => 'Yardım & Rehber';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => 'Modlar';
+  String get autoPlay => 'Otomatik Oynat';
 
   @override
-  String get helpTabJson => 'JSON Formatı';
+  String get basic => 'Temel';
 
   @override
-  String get helpTabTour => 'Tur';
+  String get basicDefault => 'Temel';
+
+  @override
+  String get basicMaterialRepository => 'Temel Cümle/Kelime Deposu';
+
+  @override
+  String get basicSentenceRepository => 'Temel Cümle Deposu';
+
+  @override
+  String get basicSentences => 'Temel Cümle Deposu';
+
+  @override
+  String get basicWordRepository => 'Temel Kelime Deposu';
+
+  @override
+  String get basicWords => 'Temel Kelime Deposu';
+
+  @override
+  String get cancel => 'İptal';
+
+  @override
+  String get caseObject => 'Nesne';
+
+  @override
+  String get casePossessive => 'İyelik';
+
+  @override
+  String get casePossessivePronoun => 'İyelik Zamiri';
+
+  @override
+  String get caseReflexive => 'Dönüşlü';
+
+  @override
+  String get caseSubject => 'Özne';
+
+  @override
+  String get chatAiChat => 'Sohbet';
+
+  @override
+  String get chatAllConversations => 'Tüm Sohbetler';
+
+  @override
+  String get chatChoosePersona => 'Kişilik Seç';
+
+  @override
+  String get chatEndMessage => 'Sohbeti bitirmek istediğinizden emin misiniz?';
+
+  @override
+  String get chatEndTitle => 'Sohbeti Bitir ve Kaydet';
+
+  @override
+  String chatFailed(Object error) {
+    return 'Sohbet başarısız: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'Sohbetten Alıntı ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => 'Sohbet Geçmişi';
+
+  @override
+  String get chatNew => 'Yeni Sohbet';
+
+  @override
+  String get chatNewChat => 'Yeni Sohbet';
+
+  @override
+  String get chatNoConversations => 'Henüz bir sohbet yok';
+
+  @override
+  String get chatSaveAndExit => 'Kaydet ve Çık';
+
+  @override
+  String get chatStartNewPrompt =>
+      'Pratik yapmak için yeni bir sohbete başlayın!';
+
+  @override
+  String get chatTypeHint => 'Bir mesaj yazın...';
+
+  @override
+  String get chatUntitled => 'Başlıksız Sohbet';
+
+  @override
+  String get checking => 'Kontrol ediliyor...';
+
+  @override
+  String get clearAll => 'Tümünü Temizle';
+
+  @override
+  String get confirm => 'Tamam';
+
+  @override
+  String get confirmDelete => 'Bu kaydı silmek istediğinizden emin misiniz?';
+
+  @override
+  String get confirmDeleteConversation =>
+      'Bu konuşmayı silmek istediğinizden emin misiniz?\nSilinen konuşmalar geri alınamaz.';
+
+  @override
+  String get confirmDeleteParticipant =>
+      'Bu katılımcıyı silmek istediğinizden emin misiniz?';
+
+  @override
+  String get contextTagHint =>
+      'Daha sonra kolayca ayırt etmek için durumu girin';
+
+  @override
+  String get contextTagLabel =>
+      'Bağlam/Durum (İsteğe Bağlı) - Örn: Sabah Selamı, Resmi';
+
+  @override
+  String get copiedToClipboard => 'Panoya kopyalandı!';
+
+  @override
+  String get copy => 'Kopyala';
+
+  @override
+  String get correctAnswer => 'Doğru Cevap';
+
+  @override
+  String get createNew => 'Yeni Oluştur';
+
+  @override
+  String get currentLocation => 'Mevcut Konum';
+
+  @override
+  String get currentMaterialLabel => 'Seçilen Materyal Kitaplığı:';
+
+  @override
+  String get delete => 'Sil';
+
+  @override
+  String deleteFailed(String error) {
+    return 'Silme başarısız: $error';
+  }
+
+  @override
+  String get deleteRecord => 'Kaydı Sil';
+
+  @override
+  String get dialogueQuestDesc =>
+      'Senaryolar aracılığıyla konuşma pratiği yapın. Uygun cevapları seçin ve söyleyin.';
+
+  @override
+  String get dialogueQuestTitle => 'Diyalog Görevi';
+
+  @override
+  String get disambiguationPrompt => 'Hangi anlamda çevirmek istersiniz?';
+
+  @override
+  String get disambiguationTitle => 'Anlam Seçimi';
+
+  @override
+  String get dontHaveAccount => 'Hesabınız yok mu?';
+
+  @override
+  String get editParticipant => 'Katılımcıyı Düzenle';
+
+  @override
+  String get email => 'E-posta';
+
+  @override
+  String get emailAlreadyInUse =>
+      'Bu e-posta adresi zaten kullanımda. Lütfen giriş yapın veya şifrenizi sıfırlayın.';
+
+  @override
+  String get enterNewSubjectName => 'Yeni Başlık Girin';
+
+  @override
+  String get enterSentenceHint => 'Cümle girin...';
+
+  @override
+  String get enterTextHint => 'Çevrilecek metni girin';
+
+  @override
+  String get enterTextToTranslate => 'Çevirmek için metin girin';
+
+  @override
+  String get enterWordHint => 'Kelime girin...';
+
+  @override
+  String get error => 'Hata';
+
+  @override
+  String get errorHateSpeech => 'Nefret söylemi içerdiği için çevrilemiyor.';
+
+  @override
+  String get errorOtherSafety =>
+      'AI güvenlik politikaları nedeniyle çeviri reddedildi.';
+
+  @override
+  String get errorProfanity => 'Küfür içerdiği için çevrilemiyor.';
+
+  @override
+  String get errorSelectCategory => 'Önce bir kelime veya cümle seçin!';
+
+  @override
+  String get errorSexualContent =>
+      'Müstehcen içerik içerdiği için çevrilemiyor.';
+
+  @override
+  String get errors => 'Hatalar:';
+
+  @override
+  String get female => 'Kadın';
+
+  @override
+  String get file => 'Dosya:';
+
+  @override
+  String get filterAll => 'Tümü';
+
+  @override
+  String get flip => 'Çevir';
+
+  @override
+  String get formComparative => 'Karşılaştırmalı';
+
+  @override
+  String get formInfinitive => 'Mastar/Şimdiki Zaman';
+
+  @override
+  String get formPast => 'Geçmiş Zaman';
+
+  @override
+  String get formPastParticiple => 'Geçmiş Zaman Ortacı';
+
+  @override
+  String get formPlural => 'Çoğul';
+
+  @override
+  String get formPositive => 'Yalın';
+
+  @override
+  String get formPresent => 'Şimdiki Zaman';
+
+  @override
+  String get formPresentParticiple => 'Şimdiki Zaman Ortacı (ing)';
+
+  @override
+  String get formSingular => 'Tekil';
+
+  @override
+  String get formSuperlative => 'Üstün';
+
+  @override
+  String get formThirdPersonSingular => '3. Tekil Şahıs';
+
+  @override
+  String get gameModeDesc => 'Pratik yapmak için bir oyun modu seçin';
+
+  @override
+  String get gameModeTitle => 'Oyun Modu';
+
+  @override
+  String get gameOver => 'Oyun Bitti';
+
+  @override
+  String get gender => 'Cinsiyet';
+
+  @override
+  String get generalTags => 'Genel Etiketler';
+
+  @override
+  String get getMaterials => 'Materyalleri Al';
+
+  @override
+  String get good => 'İyi';
+
+  @override
+  String get googleContinue => 'Google ile Devam Et';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'JSON dosyasıyla tüm diyalog kümesini içe aktarın.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc =>
+      'Mod 3\'te materyal aktarmak için bu yapıda JSON oluşturun:';
+
+  @override
+  String get helpJsonTypeDialogue => 'Diyalog (Konuşma)';
+
+  @override
+  String get helpJsonTypeSentence => 'Cümle';
+
+  @override
+  String get helpJsonTypeWord => 'Kelime';
 
   @override
   String get helpMode1Desc => 'Sesi tanı, hedef dile çevir ve sonucu dinle.';
@@ -67,160 +361,43 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• AI Sohbet: Personel ile gerçek hayattaki konuşmaları pratik yapın.\n• Katılımcı Yönetimi: Dil uyuşmazlıklarını önlemek için kendi dilinizi ve AI\'nın dilini ayrı ayrı ayarlayabilirsiniz.\n• GPS Senaryosu: Mevcut konumunuza göre doğal konuşma senaryoları oluşturun.\n• Kayıt Tutma: Tüm konuşmalar, ID tabanlı olarak güvenli bir şekilde saklanır ve adını değiştirseniz bile kayıtlar korunur.';
 
   @override
-  String get helpJsonDesc =>
-      'Mod 3\'te materyal aktarmak için bu yapıda JSON oluşturun:';
+  String get helpTabJson => 'JSON Formatı';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => 'Modlar';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => 'Tur';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => 'Yardım & Rehber';
 
   @override
   String get helpTourDesc =>
       'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => 'Konum';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => 'Ben';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return 'Tekrar ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return 'Materyal ($count)';
-  }
-
-  @override
-  String get mode2Title => 'Tekrar';
-
-  @override
-  String get search => 'Ara';
-
-  @override
-  String get translate => 'Çevir';
-
-  @override
-  String get listen => 'Dinle';
-
-  @override
-  String get saveData => 'Kaydet';
-
-  @override
-  String get saved => 'Kaydedildi';
-
-  @override
-  String get delete => 'Sil';
-
-  @override
-  String get materialInfo => 'Materyal bilgisi';
-
-  @override
-  String get cancel => 'İptal';
-
-  @override
-  String get confirm => 'Tamam';
-
-  @override
-  String get refresh => 'Yenile';
-
-  @override
-  String studyRecords(int count) {
-    return 'Kayıtlar ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => 'Hedef Dil Filtresi:';
-
-  @override
-  String get noRecords => 'Seçili dil için kayıt yok';
-
-  @override
-  String get saveTranslationsFromSearch => 'Arama modundan çevirileri kaydet';
-
-  @override
-  String get flip => 'Çevir';
-
-  @override
   String get hide => 'Gizle';
 
   @override
-  String get deleteRecord => 'Kaydı Sil';
-
-  @override
-  String get confirmDelete => 'Bu kaydı silmek istediğinizden emin misiniz?';
-
-  @override
-  String get recordDeleted => 'Kayıt başarıyla silindi';
-
-  @override
-  String deleteFailed(String error) {
-    return 'Silme başarısız: $error';
+  String importAdded(int count) {
+    return 'Eklendi: $count';
   }
 
   @override
-  String get importJsonFile => 'JSON İçe Aktar';
-
-  @override
-  String get importing => 'Aktarılıyor...';
-
-  @override
   String get importComplete => 'Aktarım Tamamlandı';
+
+  @override
+  String get importDuplicateTitleError =>
+      'Aynı başlığa sahip bir materyal zaten var. Lütfen başlığı değiştirip tekrar deneyin.';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'Dosya aktarılamadı:\\n$error';
+  }
 
   @override
   String get importFailed => 'Aktarım Başarısız';
@@ -231,45 +408,10 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => 'JSON İçe Aktar';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get roleThirdParty => '제삼자';
-
-  @override
-  String get speakerSelect => '발화자 선택';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return 'Toplam: $count';
-  }
-
-  @override
-  String importAdded(int count) {
-    return 'Eklendi: $count';
-  }
+  String get importJsonFilePrompt => 'Lütfen JSON dosyası aktarın';
 
   @override
   String importSkipped(int count) {
@@ -277,133 +419,15 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get errors => 'Hatalar:';
-
-  @override
-  String get error => 'Hata';
-
-  @override
-  String importErrorMessage(String error) {
-    return 'Dosya aktarılamadı:\\n$error';
+  String importTotal(int count) {
+    return 'Toplam: $count';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => 'Aktarılıyor...';
 
   @override
-  String get selectStudyMaterial => 'Materyal Seç';
-
-  @override
-  String get subject => 'Konu:';
-
-  @override
-  String get source => 'Kaynak:';
-
-  @override
-  String get file => 'Dosya:';
-
-  @override
-  String progress(int current, int total) {
-    return 'İlerleme: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => 'Lütfen JSON dosyası aktarın';
-
-  @override
-  String get selectMaterialPrompt => 'Lütfen çalışma materyali seçin';
-
-  @override
-  String get studyComplete => 'Çalışıldı';
-
-  @override
-  String get markAsStudied => 'Çalışıldı Olarak İşaretle';
-
-  @override
-  String get listening => 'Dinleniyor...';
-
-  @override
-  String get recognized => 'Tanıma tamamlandı';
-
-  @override
-  String recognitionFailed(String error) {
-    return 'Ses tanıma başarısız: $error';
-  }
-
-  @override
-  String get checking => 'Kontrol ediliyor...';
-
-  @override
-  String get translating => 'Çevriliyor...';
-
-  @override
-  String get translationComplete => 'Çeviri tamamlandı (kayıt gerekli)';
-
-  @override
-  String get translationLoaded => 'Kayıtlı çeviri yüklendi';
-
-  @override
-  String translationFailed(String error) {
-    return 'Çeviri başarısız: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => 'Çevirmek için metin girin';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => 'Kaydediliyor...';
-
-  @override
-  String get noTranslationToSave => 'Kaydedilecek çeviri yok';
-
-  @override
-  String saveFailed(String error) {
-    return 'Kaydetme başarısız: $error';
-  }
-
-  @override
-  String get playing => 'Çalınıyor...';
-
-  @override
-  String get noTextToPlay => 'Çalınacak metin yok';
-
-  @override
-  String playbackFailed(String error) {
-    return 'Oynatma başarısız: $error';
-  }
-
-  @override
-  String get sourceLanguage => 'Kaynak Dil';
-
-  @override
-  String get targetLanguage => 'Hedef Dil';
-
-  @override
-  String get similarTextFound => 'Benzer metin bulundu';
-
-  @override
-  String get useExistingText => 'Mevcudu Kullan';
-
-  @override
-  String get createNew => 'Yeni Oluştur';
-
-  @override
-  String reviewCount(int count) {
-    return '$count kez tekrarlandı';
-  }
-
-  @override
-  String get tabSpeaking => 'Konuşma';
-
-  @override
-  String get speakingPractice => 'Konuşma Pratiği';
+  String get inputModeTitle => 'Giriş';
 
   @override
   String intervalSeconds(int seconds) {
@@ -411,10 +435,375 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get yourPronunciation => 'Telaffuzunuz';
+  String get invalidEmail => 'Lütfen geçerli bir e-posta adresi girin.';
 
   @override
-  String get correctAnswer => 'Doğru Cevap';
+  String get kakaoContinue => 'Kakao ile devam et';
+
+  @override
+  String get labelLangCode => 'Dil Kodu (Örn: en-US, ko-KR)';
+
+  @override
+  String get labelName => 'Ad';
+
+  @override
+  String get labelNote => 'Not';
+
+  @override
+  String get labelPOS => 'Kelime Türü';
+
+  @override
+  String get labelRole => 'Rol';
+
+  @override
+  String get labelSentence => 'Cümle';
+
+  @override
+  String get labelSentenceCollection => 'Cümle Koleksiyonu';
+
+  @override
+  String get labelSentenceType => 'Cümle Türü';
+
+  @override
+  String get labelShowMemorized => 'Bitti';
+
+  @override
+  String get labelType => 'Tür:';
+
+  @override
+  String get labelWord => 'Kelime';
+
+  @override
+  String get labelWordbook => 'Kelime Defteri';
+
+  @override
+  String get language => 'Dil';
+
+  @override
+  String get languageSettings => 'Dil ayarları';
+
+  @override
+  String get languageSettingsTitle => 'Dil Ayarları';
+
+  @override
+  String get libTitleFirstMeeting => 'İlk Buluşma';
+
+  @override
+  String get libTitleGreetings1 => 'Selamlaşma 1';
+
+  @override
+  String get libTitleNouns1 => 'İsimler 1';
+
+  @override
+  String get libTitleVerbs1 => 'Fiiller 1';
+
+  @override
+  String get listen => 'Dinle';
+
+  @override
+  String get listening => 'Dinleniyor...';
+
+  @override
+  String get loadingParticipants => 'Katılımcılar yükleniyor...';
+
+  @override
+  String get location => 'Konum';
+
+  @override
+  String get login => 'Giriş Yap';
+
+  @override
+  String get logout => 'Çıkış Yap';
+
+  @override
+  String get logoutConfirmMessage =>
+      'Bu cihazdan çıkış yapmak istediğinizden emin misiniz?';
+
+  @override
+  String get logoutConfirmTitle => 'Çıkış Yap';
+
+  @override
+  String get male => 'Erkek';
+
+  @override
+  String get manageParticipants => 'Katılımcıları Yönet';
+
+  @override
+  String get manual => 'Manuel Giriş';
+
+  @override
+  String get markAsStudied => 'Çalışıldı Olarak İşaretle';
+
+  @override
+  String get materialInfo => 'Materyal bilgisi';
+
+  @override
+  String get me => 'Ben';
+
+  @override
+  String get menuDeviceImport => 'Cihazdan Materyal İçe Aktar';
+
+  @override
+  String get menuHelp => 'Yardım';
+
+  @override
+  String get menuLanguageSettings => 'Dil Ayarları';
+
+  @override
+  String get menuOnlineLibrary => 'Çevrimiçi Kütüphane';
+
+  @override
+  String get menuSelectMaterialSet => 'Bir çalışma materyali seçin';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuTutorial => 'Nasıl Kullanılır Turu';
+
+  @override
+  String get menuWebDownload => 'Kullanım Kılavuzu';
+
+  @override
+  String get metadataDialogTitle => 'Ayrıntılı Sınıflandırma';
+
+  @override
+  String get metadataFormType => 'Dilbilgisi Biçimi';
+
+  @override
+  String get metadataRootWord => 'Kök Kelime';
+
+  @override
+  String get micButtonTooltip => 'Ses Tanımayı Başlat';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return 'Seçilen Materyal Kitaplığı: $name';
+  }
+
+  @override
+  String get mode2Title => 'Tekrar';
+
+  @override
+  String get mode3Next => 'İleri';
+
+  @override
+  String get mode3Start => 'Başlat';
+
+  @override
+  String get mode3Stop => 'Durdur';
+
+  @override
+  String get mode3TryAgain => 'Tekrar Dene';
+
+  @override
+  String get mySentenceCollection => 'Cümle Koleksiyonum';
+
+  @override
+  String get myWordbook => 'Kelime Defterim';
+
+  @override
+  String get neutral => 'Nötr';
+
+  @override
+  String get newSubjectName => 'Yeni Kelime Defteri/Cümle Koleksiyonu Başlığı';
+
+  @override
+  String get next => 'İleri';
+
+  @override
+  String get noDialogueHistory => 'Konuşma geçmişi yok.';
+
+  @override
+  String get noInternetWarningMic =>
+      'İnternet bağlantısı yok. Çevrimdışı modda ses tanıma kullanılamayabilir.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'İnternet bağlantısı yok. Çevrimdışı modda çeviri işlevi kullanılamaz. Lütfen tekrar modunu kullanın.';
+
+  @override
+  String get noMaterialsInCategory => 'Bu kategoride materyal yok.';
+
+  @override
+  String get noParticipantsFound => 'Kayıtlı katılımcı yok.';
+
+  @override
+  String get noRecords => 'Seçili dil için kayıt yok';
+
+  @override
+  String get noStudyMaterial => 'Çalışma materyali yok.';
+
+  @override
+  String get noTextToPlay => 'Çalınacak metin yok';
+
+  @override
+  String get noTranslationToSave => 'Kaydedilecek çeviri yok';
+
+  @override
+  String get noVoiceDetected => 'Ses algılanmadı';
+
+  @override
+  String get notSelected => '- Seçilmedi -';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'Lütfen internet bağlantınızı kontrol edin veya daha sonra tekrar deneyin.';
+
+  @override
+  String get onlineLibraryLoadFailed =>
+      'Materyaller yüklenirken bir hata oluştu.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'Materyal yok.';
+
+  @override
+  String get participantDeleted => 'Katılımcı silindi.';
+
+  @override
+  String get participantRename => 'Katılımcıyı Yeniden Adlandır';
+
+  @override
+  String get partner => 'Ortak';
+
+  @override
+  String get partnerMode => 'Ortak Modu';
+
+  @override
+  String get password => 'Şifre';
+
+  @override
+  String get passwordTooShort =>
+      'Şifre en az 6 karakter uzunluğunda olmalıdır.';
+
+  @override
+  String get perfect => 'Mükemmel!';
+
+  @override
+  String get personaFriend => 'Yerel Arkadaş';
+
+  @override
+  String get personaGuide => 'Seyahat Rehberi';
+
+  @override
+  String get personaTeacher => 'İngilizce Öğretmeni';
+
+  @override
+  String get playAgain => 'Tekrar Oyna';
+
+  @override
+  String playbackFailed(String error) {
+    return 'Oynatma başarısız: $error';
+  }
+
+  @override
+  String get playing => 'Çalınıyor...';
+
+  @override
+  String get posAdjective => 'Sıfat';
+
+  @override
+  String get posAdverb => 'Zarf';
+
+  @override
+  String get posConjunction => 'Bağlaç';
+
+  @override
+  String get posInterjection => 'Ünlem';
+
+  @override
+  String get posNoun => 'İsim';
+
+  @override
+  String get posPreposition => 'Edat';
+
+  @override
+  String get posPronoun => 'Zamir';
+
+  @override
+  String get posVerb => 'Fiil';
+
+  @override
+  String get practiceModeTitle => 'Alıştırma';
+
+  @override
+  String get practiceWordsOnly => 'Sadece Kelimeleri Pratik Yap';
+
+  @override
+  String progress(int current, int total) {
+    return 'İlerleme: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return 'Son Oluşturulan $count Öğe';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return 'Ses tanıma başarısız: $error';
+  }
+
+  @override
+  String get recognized => 'Tanıma tamamlandı';
+
+  @override
+  String get recognizedText => 'Tanınan Telaffuz:';
+
+  @override
+  String get recordDeleted => 'Kayıt başarıyla silindi';
+
+  @override
+  String get refresh => 'Yenile';
+
+  @override
+  String get reset => 'Sıfırla';
+
+  @override
+  String get resetPracticeHistory => 'Pratik Geçmişini Sıfırla';
+
+  @override
+  String get retry => 'Tekrar Dene?';
+
+  @override
+  String get reviewAll => 'Tümünü Gözden Geçir';
+
+  @override
+  String reviewCount(int count) {
+    return '$count kez tekrarlandı';
+  }
+
+  @override
+  String get reviewModeTitle => 'Gözden Geçir';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => 'Üçüncü Taraf';
+
+  @override
+  String get roleUser => 'Kullanıcı';
+
+  @override
+  String get save => 'Kaydet';
+
+  @override
+  String get saveData => 'Kaydet';
+
+  @override
+  String saveFailed(String error) {
+    return 'Kaydetme başarısız: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch => 'Arama modundan çevirileri kaydet';
+
+  @override
+  String get saved => 'Kaydedildi';
+
+  @override
+  String get saving => 'Kaydediliyor...';
 
   @override
   String score(String score) {
@@ -422,35 +811,399 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get perfect => 'Mükemmel!';
+  String get scoreLabel => 'Puan';
 
   @override
-  String get good => 'İyi';
+  String get search => 'Ara';
 
   @override
-  String get tryAgain => 'Tekrar Dene';
+  String get searchConditions => 'Arama Koşulları';
+
+  @override
+  String get searchSentenceHint => 'Cümle ara...';
+
+  @override
+  String get searchWordHint => 'Kelime ara...';
+
+  @override
+  String get sectionSentence => 'Cümle bölümü';
+
+  @override
+  String get sectionSentences => 'Cümleler';
+
+  @override
+  String get sectionWord => 'Kelime bölümü';
+
+  @override
+  String get sectionWords => 'Kelimeler';
+
+  @override
+  String get selectExistingSubject => 'Mevcut Başlığı Seç';
+
+  @override
+  String get selectMaterialPrompt => 'Lütfen çalışma materyali seçin';
+
+  @override
+  String get selectMaterialSet => 'Öğrenme Materyali Seti Seç';
+
+  @override
+  String get selectPOS => 'Konuşma Bölümü Seç';
+
+  @override
+  String get selectParticipants => 'Katılımcıları Seç';
+
+  @override
+  String get selectSentenceType => 'Cümle Türü Seç';
+
+  @override
+  String get selectStudyMaterial => 'Materyal Seç';
+
+  @override
+  String get sendingMessage => '메시지 전송 중...';
+
+  @override
+  String get sentence => 'Cümle';
+
+  @override
+  String get signUp => 'Kaydol';
+
+  @override
+  String get similarTextFound => 'Benzer metin bulundu';
+
+  @override
+  String get skip => 'Atla';
+
+  @override
+  String get source => 'Kaynak:';
+
+  @override
+  String get sourceLanguage => 'Kaynak Dil';
+
+  @override
+  String get sourceLanguageLabel => 'Source Language';
+
+  @override
+  String get speakNow => 'Şimdi Konuş!';
+
+  @override
+  String get speaker => 'Konuşmacı';
+
+  @override
+  String get speakerSelect => 'Konuşmacı Seç';
+
+  @override
+  String get speakingPractice => 'Konuşma Pratiği';
+
+  @override
+  String get startChat => 'Sohbete Başla';
 
   @override
   String get startPractice => 'Pratiği Başlat';
 
   @override
-  String get stopPractice => 'Durdur';
-
-  @override
-  String get menuOnlineLibrary => 'Online Library';
-
-  @override
   String get startTutorial => 'Turu Başlat';
 
   @override
-  String get menuTutorial => 'Tutorial';
+  String get startWarning => 'Uyarı';
+
+  @override
+  String get startsWith => 'Şununla Başlar';
+
+  @override
+  String get statusCheckEmail =>
+      'Lütfen e-postanızı kontrol ederek doğrulamayı tamamlayın.';
+
+  @override
+  String statusDownloading(Object name) {
+    return '$name indiriliyor...';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return 'İçe aktarma başarısız: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name başarıyla içe aktarıldı';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => 'Giriş iptal edildi.';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return 'Giriş başarısız: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => 'Giriş başarılı.';
+
+  @override
+  String get statusLogoutSuccess => 'Çıkış yapıldı.';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return 'Kayıt başarısız: $error';
+  }
+
+  @override
+  String get statusSigningUp => 'Kaydolunuyor...';
+
+  @override
+  String get stopPractice => 'Durdur';
+
+  @override
+  String get studyComplete => 'Çalışıldı';
+
+  @override
+  String studyRecords(int count) {
+    return 'Kayıtlar ($count)';
+  }
+
+  @override
+  String get styleFormal => 'Resmi';
+
+  @override
+  String get styleInformal => 'Gayri Resmi';
+
+  @override
+  String get stylePolite => 'Nezaket';
+
+  @override
+  String get styleSlang => 'Argo';
+
+  @override
+  String get subject => 'Konu:';
+
+  @override
+  String get swapLanguages => 'Dilleri Değiştir';
+
+  @override
+  String get switchToAi => 'AI Moduna Geç';
+
+  @override
+  String get switchToPartner => 'Ortak Moduna Geç';
+
+  @override
+  String get syncingData => 'Veri senkronize ediliyor...';
+
+  @override
+  String get tabConversation => 'Konuşma';
+
+  @override
+  String tabReview(int count) {
+    return 'Tekrar ($count)';
+  }
+
+  @override
+  String get tabSentence => 'cümle';
+
+  @override
+  String get tabSpeaking => 'Konuşma';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return 'Materyal ($count)';
+  }
+
+  @override
+  String get tabWord => 'kelime';
+
+  @override
+  String get tagFormal => 'Resmi';
+
+  @override
+  String get tagSelection => 'Etiket Seçimi';
+
+  @override
+  String get targetLanguage => 'Hedef Dil';
+
+  @override
+  String get targetLanguageFilter => 'Hedef Dil Filtresi:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc =>
+      'Doğru cevap açıklanmadan önce düşünmek için süre.';
+
+  @override
+  String get thinkingTimeInterval => 'Oynatma Gecikmesi';
+
+  @override
+  String get timeUp => 'Süre Doldu!';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
+
+  @override
+  String get titleTagSelection => 'Başlık Etiketi (Koleksiyon)';
+
+  @override
+  String get tooltipDecrease => 'Azalt';
+
+  @override
+  String get tooltipIncrease => 'Artır';
+
+  @override
+  String get tooltipSearch => 'Ara';
+
+  @override
+  String get tooltipSpeaking => 'Konuşma';
+
+  @override
+  String get tooltipStudyReview => 'Çalışma+Tekrar';
+
+  @override
+  String totalRecords(int count) {
+    return 'Toplam $count Kayıt (Tümünü Görüntüle)';
+  }
+
+  @override
+  String get translate => 'Çevir';
+
+  @override
+  String get translating => 'Çevriliyor...';
+
+  @override
+  String get translation => 'Çeviri';
+
+  @override
+  String get translationComplete => 'Çeviri tamamlandı (kayıt gerekli)';
+
+  @override
+  String translationFailed(String error) {
+    return 'Çeviri başarısız: $error';
+  }
+
+  @override
+  String get translationLimitExceeded => 'Çeviri limiti aşıldı';
+
+  @override
+  String get translationLimitMessage =>
+      'Günlük ücretsiz çeviri sınırına (5 kez) ulaştınız.\\n\\nReklam izleyerek hemen 5 çeviri hakkı kazanmak ister misiniz?';
+
+  @override
+  String get translationLoaded => 'Kayıtlı çeviri yüklendi';
+
+  @override
+  String get translationRefilled => 'Çeviri sayısı 5\'e tamamlandı!';
+
+  @override
+  String get translationResultHint => 'Çeviri Sonucu - Düzenlenebilir';
+
+  @override
+  String get tryAgain => 'Tekrar Dene';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'AI personeli ile gerçek hayattaki konuşmaları pratik yapın.';
+
+  @override
+  String get tutorialAiChatTitle => 'AI Sohbet';
+
+  @override
+  String get tutorialContextDesc =>
+      'Benzer cümleleri ayırt etmek için bağlam (örn. Sabah) ekleyin.';
+
+  @override
+  String get tutorialContextTitle => 'Bağlam Etiketi';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Çevrilecek kaynak dili ve hedef dili ayarlayın.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Dil Ayarları';
+
+  @override
+  String get tutorialM1ToggleDesc =>
+      'Kelime ve cümle modları arasında buradan geçiş yapın.';
+
+  @override
+  String get tutorialM1ToggleTitle => 'Kelime/Cümle Modu';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Çalışma materyallerini seçin.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Cihaz klasöründen JSON dosyası içe aktarın.';
+
+  @override
+  String get tutorialM2ListDesc =>
+      'Kayıtlı kartlarını kontrol et ve cevapları gör. (Long-press to delete)';
+
+  @override
+  String get tutorialM2ListTitle => 'Çalışma Listesi';
+
+  @override
+  String get tutorialM2SearchDesc =>
+      'Kaydedilmiş kelimeleri ve cümleleri arayarak hızlıca bulun.';
+
+  @override
+  String get tutorialM2SelectDesc =>
+      'Materyal seç veya \'Tümünü Tekrarla\'ya geç.';
+
+  @override
+  String get tutorialM2SelectTitle => 'Seç & Filtrele';
+
+  @override
+  String get tutorialM3IntervalDesc =>
+      'Cümleler arası bekleme süresini ayarla.';
+
+  @override
+  String get tutorialM3IntervalTitle => 'Aralık';
+
+  @override
+  String get tutorialM3ResetDesc =>
+      'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get tutorialM3ResetTitle => 'Reset History';
+
+  @override
+  String get tutorialM3SelectDesc => 'Konuşma pratiği için bir set seç.';
+
+  @override
+  String get tutorialM3SelectTitle => 'Materyal Seç';
+
+  @override
+  String get tutorialM3StartDesc => 'Dinleyip tekrarlamak için oynat\'a bas.';
+
+  @override
+  String get tutorialM3StartTitle => 'Pratiği Başlat';
+
+  @override
+  String get tutorialM3WordsDesc =>
+      'İşaretlerseniz, sadece kaydedilmiş kelimeleri alıştırın.';
+
+  @override
+  String get tutorialM3WordsTitle => 'Kelime Alıştırması';
+
+  @override
+  String get tutorialMicDesc =>
+      'Ses girişini başlatmak için mikrofon butonuna dokunun.';
 
   @override
   String get tutorialMicTitle => 'Ses Girişi';
 
   @override
-  String get tutorialMicDesc =>
-      'Ses girişini başlatmak için mikrofon butonuna dokunun.';
+  String get tutorialSaveDesc => 'Çevirini çalışma kayıtlarına kaydet.';
+
+  @override
+  String get tutorialSaveTitle => 'Kaydet';
+
+  @override
+  String get tutorialSwapDesc =>
+      'Kendi dilimi, öğrenmekte olduğum dille değiştiriyorum.';
 
   @override
   String get tutorialTabDesc =>
@@ -460,761 +1213,51 @@ class AppLocalizationsTr extends AppLocalizations {
   String get tutorialTapToContinue => 'Devam etmek için dokunun';
 
   @override
-  String get tutorialTransTitle => 'Çevir';
-
-  @override
   String get tutorialTransDesc => 'Metnini çevirmek için buraya dokun.';
 
   @override
-  String get tutorialSaveTitle => 'Kaydet';
+  String get tutorialTransTitle => 'Çevir';
 
   @override
-  String get tutorialSaveDesc => 'Çevirini çalışma kayıtlarına kaydet.';
+  String get typeExclamation => 'Ünlem Cümlesi';
 
   @override
-  String get selectParticipants => 'Select Participants';
+  String get typeImperative => 'Emir Cümlesi';
 
   @override
-  String get loadingParticipants => 'Loading participants...';
+  String get typeQuestion => 'Soru Cümlesi';
 
   @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
-
-  @override
-  String get sendingMessage => '메시지 전송 중...';
-
-  @override
-  String get startChat => 'Start Chat';
-
-  @override
-  String get manageParticipants => 'Manage Participants';
-
-  @override
-  String get tutorialAiChatTitle => 'AI Sohbet';
-
-  @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
-
-  @override
-  String get tutorialM2SelectTitle => 'Seç & Filtrele';
-
-  @override
-  String get tutorialM2SelectDesc =>
-      'Materyal seç veya \'Tümünü Tekrarla\'ya geç.';
-
-  @override
-  String get tutorialM2ListTitle => 'Çalışma Listesi';
-
-  @override
-  String get tutorialM2ListDesc =>
-      'Kayıtlı kartlarını kontrol et ve cevapları gör. (Long-press to delete)';
-
-  @override
-  String get tutorialM3SelectTitle => 'Materyal Seç';
-
-  @override
-  String get tutorialM3SelectDesc => 'Konuşma pratiği için bir set seç.';
-
-  @override
-  String get tutorialM3IntervalTitle => 'Aralık';
-
-  @override
-  String get tutorialM3IntervalDesc =>
-      'Cümleler arası bekleme süresini ayarla.';
-
-  @override
-  String get tutorialM3StartTitle => 'Pratiği Başlat';
-
-  @override
-  String get tutorialM3StartDesc => 'Dinleyip tekrarlamak için oynat\'a bas.';
-
-  @override
-  String get startWarning => 'Uyarı';
-
-  @override
-  String get noVoiceDetected => 'Ses algılanmadı';
-
-  @override
-  String get tooltipSearch => 'Ara';
-
-  @override
-  String get tooltipStudyReview => 'Çalışma+Tekrar';
-
-  @override
-  String get tooltipSpeaking => 'Konuşma';
-
-  @override
-  String get tooltipDecrease => 'Azalt';
-
-  @override
-  String get tooltipIncrease => 'Artır';
-
-  @override
-  String get languageSettings => 'Dil ayarları';
-
-  @override
-  String get tutorialM2DropdownDesc => 'Çalışma materyallerini seçin.';
-
-  @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
-
-  @override
-  String get tutorialM2ImportDesc =>
-      'Cihaz klasöründen JSON dosyası içe aktarın.';
-
-  @override
-  String get tutorialLangSettingsTitle => 'Language Settings';
-
-  @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
-
-  @override
-  String get copy => 'Copy';
-
-  @override
-  String get copiedToClipboard => 'Copied to clipboard!';
-
-  @override
-  String get tutorialContextTitle => 'Bağlam Etiketi';
-
-  @override
-  String get tutorialContextDesc =>
-      'Benzer cümleleri ayırt etmek için bağlam (örn. Sabah) ekleyin.';
-
-  @override
-  String get thinkingTimeInterval => 'Oynatma Gecikmesi';
-
-  @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
-
-  @override
-  String get autoPlay => 'Auto-Play';
-
-  @override
-  String get timeUp => 'Time Up!';
-
-  @override
-  String get gameModeTitle => 'Game Mode';
-
-  @override
-  String get gameModeDesc => 'Choose your practice mode';
-
-  @override
-  String get wordDefenseTitle => 'Word Defense';
-
-  @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
-
-  @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
-
-  @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get translation => 'Translation';
-
-  @override
-  String get labelType => 'Type:';
-
-  @override
-  String get labelWord => 'Word';
-
-  @override
-  String get labelSentence => 'Sentence';
-
-  @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
+  String get typeStatement => 'Düz Cümle';
 
   @override
   String get usageLimitTitle => 'Kullanım Limiti Aşıldı';
 
   @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
+  String get useExistingText => 'Mevcudu Kullan';
 
   @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
+  String get viewOnlineGuide => 'Çevrimiçi Kılavuzu Görüntüle';
 
   @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
+  String get voluntaryTranslations => 'Gönüllü Çeviriler';
 
   @override
-  String get translationRefilled => 'Translations refilled by 5!';
+  String get watchAdAndRefill => 'Reklam İzle ve Yenile (+5 Çeviri)';
 
   @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
+  String get word => 'Kelime';
 
   @override
-  String get reviewAll => 'Review All';
+  String get wordDefenseDesc =>
+      'Düşmanlar ulaşmadan kelimeyi söyleyerek üssü savunun.';
 
   @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
+  String get wordDefenseTitle => 'Kelime Savunması';
 
   @override
-  String get filterAll => 'All';
+  String get wordModeLabel => 'Kelime Modu';
 
   @override
-  String get practiceWordsOnly => 'Practice Words Only';
-
-  @override
-  String get resetPracticeHistory => 'Reset Practice History';
-
-  @override
-  String get retry => 'Retry?';
-
-  @override
-  String get noStudyMaterial => 'No study material found.';
-
-  @override
-  String get gameOver => 'Game Over';
-
-  @override
-  String get playAgain => 'Play Again';
-
-  @override
-  String get speakNow => 'Speak now!';
-
-  @override
-  String get scoreLabel => 'Score';
-
-  @override
-  String get viewOnlineGuide => 'View Online User Guide';
-
-  @override
-  String get getMaterials => 'Get Materials';
-
-  @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
-
-  @override
-  String get wordModeLabel => 'Word Mode';
-
-  @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get menuHelp => 'Help';
-
-  @override
-  String get menuWebDownload => 'Get Material from Web';
-
-  @override
-  String get menuDeviceImport => 'Import from Device';
-
-  @override
-  String get menuSettings => 'Settings';
-
-  @override
-  String get basicWords => 'Basic Word Repository';
-
-  @override
-  String get basicSentences => 'Basic Sentence Repository';
-
-  @override
-  String get selectMaterialSet => 'Öğrenme Materyali Seti Seç';
-
-  @override
-  String get sectionWords => 'Kelimeler';
-
-  @override
-  String get sectionSentences => 'Cümleler';
-
-  @override
-  String get languageSettingsTitle => 'Language Settings';
-
-  @override
-  String get sourceLanguageLabel => 'Source Language';
-
-  @override
-  String get targetLanguageLabel => 'Target Language';
-
-  @override
-  String get mode3Start => 'Start';
-
-  @override
-  String get mode3Stop => 'Stop';
-
-  @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc =>
-      'Kendi dilimi, öğrenmekte olduğum dille değiştiriyorum.';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
-
-  @override
-  String get tutorialM3ResetDesc =>
-      'Clear your progress and accuracy scores to start fresh.';
-
-  @override
-  String get menuSelectMaterialSet => 'Bir çalışma materyali seçin';
-
-  @override
-  String get sectionWord => 'Kelime bölümü';
-
-  @override
-  String get sectionSentence => 'Cümle bölümü';
-
-  @override
-  String get tabWord => 'kelime';
-
-  @override
-  String get tabSentence => 'cümle';
-
-  @override
-  String get errorProfanity => 'Küfür içerdiği için çevrilemiyor.';
-
-  @override
-  String get errorHateSpeech => 'Nefret söylemi içerdiği için çevrilemiyor.';
-
-  @override
-  String get errorSexualContent =>
-      'Müstehcen içerik içerdiği için çevrilemiyor.';
-
-  @override
-  String get errorOtherSafety =>
-      'AI güvenlik politikaları nedeniyle çeviri reddedildi.';
-
-  @override
-  String get clearAll => 'Tümünü Temizle';
-
-  @override
-  String get disambiguationTitle => 'Anlam Seçimi';
-
-  @override
-  String get disambiguationPrompt => 'Hangi anlamda çevirmek istersiniz?';
-
-  @override
-  String get skip => 'Atla';
-
-  @override
-  String get inputModeTitle => 'Input';
-
-  @override
-  String get reviewModeTitle => 'Review';
-
-  @override
-  String get practiceModeTitle => 'Alıştırma';
-
-  @override
-  String get chatHistoryTitle => 'Sohbet Geçmişi';
-
-  @override
-  String get chatNew => 'New Chat';
-
-  @override
-  String get chatNewChat => 'Yeni Sohbet';
-
-  @override
-  String get chatChoosePersona => 'Choose a Persona';
-
-  @override
-  String get chatTypeHint => 'Type a message...';
-
-  @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
-
-  @override
-  String get chatNoConversations => 'No conversations yet';
-
-  @override
-  String get noDialogueHistory => 'No dialogue history.';
-
-  @override
-  String get chatStartNewPrompt => 'Start a new chat to practice!';
-
-  @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
-
-  @override
-  String get personaTeacher => 'English Teacher';
-
-  @override
-  String get personaGuide => 'Travel Guide';
-
-  @override
-  String get personaFriend => 'Local Friend';
-
-  @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => 'Sohbet';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => 'Temel Kelime Deposu';
-
-  @override
-  String get basicSentenceRepository => 'Temel Cümle Deposu';
-
-  @override
-  String get chatEndTitle => 'End & Save Chat';
-
-  @override
-  String get chatEndMessage =>
-      'Do you want to end this conversation? You can set a title for it.';
-
-  @override
-  String get chatSaveAndExit => 'Kaydet ve Çık';
-
-  @override
-  String get errorSelectCategory => 'Please select word or sentence first!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => 'Resmi';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => 'Başlık Etiketi (Koleksiyon)';
-
-  @override
-  String get generalTags => 'Genel Etiketler';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => 'Tekil';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => 'Nötr';
-
-  @override
-  String get chatAllConversations => 'Tüm Sohbetler';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation =>
-      'Bu konuşmayı silmek istediğinizden emin misiniz?\nSilinen konuşmalar geri alınamaz.';
-
-  @override
-  String get notSelected => '- Seçilmedi -';
-
-  @override
-  String get myWordbook => 'Kelime Defterim';
-
-  @override
-  String get mySentenceCollection => 'Cümle Koleksiyonum';
-
-  @override
-  String get newSubjectName => 'Yeni Kelime Defteri/Cümle Koleksiyonu Başlığı';
-
-  @override
-  String get enterNewSubjectName => 'Yeni Başlık Girin';
-
-  @override
-  String get addNewSubject => 'Yeni Başlık Ekle';
-
-  @override
-  String get selectExistingSubject => 'Mevcut Başlığı Seç';
-
-  @override
-  String get addTagHint => 'Etiket ekle...';
-
-  @override
-  String get save => 'Kaydet';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail =>
-      'Lütfen e-postanızı kontrol ederek doğrulamayı tamamlayın.';
-
-  @override
-  String get emailAlreadyInUse =>
-      'Bu e-posta adresi zaten kullanımda. Lütfen giriş yapın veya şifrenizi sıfırlayın.';
+  String get yourPronunciation => 'Telaffuzunuz';
 }

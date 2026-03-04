@@ -1,188 +1,105 @@
 {
   "@@locale": "af",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Gaan voort met Kakao",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Hulp & Gids",
-  "helpTabModes": "Modusse",
-  "helpTabJson": "JSON Formaat",
-  "helpTabTour": "Toer",
-  "helpMode1Desc": "Herken stem, vertaal en luister na resultaat.",
-  "helpMode1Details": "• Stem: Tik mikrofoon vir begin/stop\n• Teks: Tik direk om te vertaal\n• Outo-Soek: Bespeur soortgelyke sinne\n• Vertaal: Knoppie vir direkte vertaling\n• Luister: Luidspreker-ikoon vir TTS\n• Stoor: Voeg by geskiedenis\n• Maak skoon: Stel alles terug",
-  "helpMode2Desc": "Hersien gestorde sinne met versteekte vertaling.",
-  "helpMode2Details": "• Kies: Kies stel of 'Hersien Alles'\n• Draai: 'Wys/Versteek' vertaling\n• Luister: Speel TTS vir sin\n• Merk: Merk (V) vir voltooi\n• Verwyder: Lang druk om te verwyder\n• Filter: Sien alles of per materiaal",
-  "helpMode3Desc": "Oefen jou uitspraak deur na sinne te luister en dit te herhaal (Skadu).",
-  "helpMode3Details": "• Kies: Kies pakket\n• Interval: [-] [+] wagtyd (3s-60s)\n• Begin/Stop: Beheer sessie\n• Praat: Luister en herhaal\n• Telling: Akkuraatheid (0-100)\n• Probeer weer: Knoppie as stem nie bespeur word nie",
-  "helpModeChatDesc": "Oefen werklike gesprekke deur met 'n KI-persona te gesels.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "Vir invoer in Modus 3, skep JSON:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Ligging",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Akkuraatheid",
+  "adLoading": "Advertensie word gelaai. Probeer asseblief later weer.",
+  "addNewSubject": "Voeg nuwe naam by",
+  "addParticipant": "Voeg deelnemer by",
+  "addTagHint": "Voeg merker by...",
+  "alreadyHaveAccount": "Het jy reeds 'n rekening?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Hersiening ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Outomatiese speel",
+  "basic": "Basies",
+  "basicDefault": "Basies",
+  "basicMaterialRepository": "Basiese sin/woordbewaarplek",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Materiaal ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Basiese Sinbewaarplek",
+  "basicSentences": "Basiese sinnebewaarplek",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Hersiening",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Soek",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Vertaal",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Luister",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Stoor",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Gestoor",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Verwyder",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Materiaalinligting",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Basiese Woordbewaarplek",
+  "basicWords": "Basiese woordebewaarplek",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Kanselleer",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "OK",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Verfris",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Rekords ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Akusatief",
+  "casePossessive": "Possessief",
+  "casePossessivePronoun": "Possessiewe voornaamwoord",
+  "caseReflexive": "Refleksief",
+  "caseSubject": "Nominatief",
+  "chatAiChat": "Klets",
+  "chatAllConversations": "Alle gesprekke",
+  "chatChoosePersona": "Kies Persona",
+  "chatEndMessage": "Wil jy die gesprek beëindig?",
+  "chatEndTitle": "Beëindig en stoor gesprek",
+  "chatFailed": "Klets het misluk: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Teiltaal Filter:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Uittreksel uit gesprek ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Geen rekords vir gekose taal",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Gesprekgeskiedenis",
+  "chatNew": "Nuwe gesprek",
+  "chatNewChat": "Nuwe gesprek",
+  "chatNoConversations": "Nog geen gesprekke nie",
+  "chatSaveAndExit": "Stoor en verlaat",
+  "chatStartNewPrompt": "Begin 'n nuwe gesprek om te oefen!",
+  "chatTypeHint": "Tik 'n boodskap...",
+  "chatUntitled": "Naamlose gesprek",
+  "checking": "Kontroleer...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Stoor vertalings vanaf soekmodus",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Draai",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Versteek",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Verwyder Rekord",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "모두 지우기",
+  "confirm": "Bevestig",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Is jy seker jy wil hierdie rekord verwyder?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Rekord suksesvol verwyder",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Wil jy hierdie gesprek uitvee?\nJy sal nie die uitgeveede gesprek kan herstel nie.",
+  "confirmDeleteParticipant": "Wil jy hierdie deelnemer skrap?",
+  "contextTagHint": "Skryf die situasie neer sodat dit later makliker is om te onderskei",
+  "contextTagLabel": "Kontekst/Situasie (opsioneel) - bv. Oggendgroet, Formeel",
+  "copiedToClipboard": "Gekopieer na knipbord!",
+  "copy": "Kopieer",
+  "correctAnswer": "Korrekte Antwoord",
+  "createNew": "Skep Nuwe",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Huidige ligging",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Huidige geselekteerde materiaal:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Verwyder",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Verwydering misluk: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Voer JSON in",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Verwyder Rekord",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Voer in...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Oefen gesprekke deur toneelspel. Kies en praat die regte antwoorde.",
+  "dialogueQuestTitle": "Dialoog Soeke",
+  "disambiguationPrompt": "어떤 의미로 번역하시겠습니까?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "의미 선택",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Het jy nie 'n rekening nie?",
+  "editParticipant": "Wysig deelnemer",
+  "email": "E-pos",
+  "emailAlreadyInUse": "Hierdie e-posadres is reeds in gebruik. Meld asseblief aan of gebruik 'wagwoord vergeet'.",
+  "enterNewSubjectName": "Voer nuwe naam in",
+  "enterSentenceHint": "Tik 'n sin...",
+  "enterTextHint": "Tik teks in om te vertaal",
+  "enterTextToTranslate": "Voer teks in om te vertaal",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Tik 'n woord...",
+  "error": "Fout",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "Kan nie vertaal nie omdat dit haatspraak bevat.",
+  "errorOtherSafety": "AI 안전 정책에 의해 번역이 거부되었습니다.",
+  "errorProfanity": "Dit bevat vloektaal, daarom kan dit nie vertaal word nie.",
+  "errorSelectCategory": "Kies eers 'n woord of sin!",
+  "errorSexualContent": "선정적인 내용이 포함되어 있어 번역할 수 없습니다.",
+  "errors": "Foute:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Vroulik",
+  "file": "Lêer:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Alles",
+  "flip": "Draai",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Vergrotend",
+  "formInfinitive": "Infinitief/Teenwoordige tyd",
+  "formPast": "Verlede tyd",
+  "formPastParticiple": "Verlede deelwoord",
+  "formPlural": "Meervoud",
+  "formPositive": "Positief",
+  "formPresent": "Teenwoordige tyd",
+  "formPresentParticiple": "Teenwoordige deelwoord (ing)",
+  "formSingular": "Enkelvoud",
+  "formSuperlative": "Oortreffend",
+  "formThirdPersonSingular": "Derde persoon enkelvoud",
+  "gameModeDesc": "Kies 'n spelmodus om te oefen",
+  "gameModeTitle": "Spelmodus",
+  "gameOver": "Spel oor",
+  "gender": "Geslag",
+  "generalTags": "Algemene merkers",
+  "getMaterials": "Kry materiaal",
+  "good": "Goed",
+  "googleContinue": "Gaan voort met Google",
+  "helpDialogueImportDesc": "Voer 'n hele stel dialoë in as 'n JSON-lêer.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "Vir invoer in Modus 3, skep JSON:",
+  "helpJsonTypeDialogue": "Dialoog",
+  "helpJsonTypeSentence": "Sin",
+  "helpJsonTypeWord": "Woord",
+  "helpMode1Desc": "Herken stem, vertaal en luister na resultaat.",
+  "helpMode1Details": "• Stem: Tik mikrofoon vir begin/stop\n• Teks: Tik direk om te vertaal\n• Outo-Soek: Bespeur soortgelyke sinne\n• Vertaal: Knoppie vir direkte vertaling\n• Luister: Luidspreker-ikoon vir TTS\n• Stoor: Voeg by geskiedenis\n• Maak skoon: Stel alles terug",
+  "helpMode2Desc": "Hersien gestorde sinne met versteekte vertaling.",
+  "helpMode2Details": "• Kies: Kies stel of 'Hersien Alles'\n• Draai: 'Wys/Versteek' vertaling\n• Luister: Speel TTS vir sin\n• Merk: Merk (V) vir voltooi\n• Verwyder: Lang druk om te verwyder\n• Filter: Sien alles of per materiaal",
+  "helpMode3Desc": "Oefen jou uitspraak deur na sinne te luister en dit te herhaal (Skadu).",
+  "helpMode3Details": "• Kies: Kies pakket\n• Interval: [-] [+] wagtyd (3s-60s)\n• Begin/Stop: Beheer sessie\n• Praat: Luister en herhaal\n• Telling: Akkuraatheid (0-100)\n• Probeer weer: Knoppie as stem nie bespeur word nie",
+  "helpModeChatDesc": "Oefen werklike gesprekke deur met 'n KI-persona te gesels.",
+  "helpModeChatDetails": "• KI-klets: Oefen gesprekke met personas.\n• Deelnemerbestuur: Stel jou taal en KI se taal afsonderlik om taalverskille te vermy.\n• GPS-scenario's: Skep natuurlike gesprekscenario's gebaseer op jou huidige ligging.\n• Rekordbewaring: Alle gesprekke word veilig gestoor op grond van ID, en rekords word gehandhaaf, selfs al word die naam verander.",
+  "helpTabJson": "JSON Formaat",
+  "helpTabModes": "Modusse",
+  "helpTabTour": "Toer",
+  "helpTitle": "Hulp & Gids",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "Versteek",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Bygevoeg: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Invoer Voltooi",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Daar bestaan reeds materiaal met dieselfde titel. Verander die titel en probeer weer.",
+  "importErrorMessage": "Kon nie lêer invoer nie:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Invoer Misluk",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Totaal: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Voer JSON in",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Bygevoeg: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Voer asseblief 'n JSON-lêer in",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Oorgeslaan: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Foute:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Totaal: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Fout",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Voer in...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Kon nie lêer invoer nie:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "입력",
+  "intervalSeconds": "Interval: {seconds} sekondes",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Voer 'n geldige e-posadres in.",
+  "kakaoContinue": "Gaan voort met Kakao",
+  "labelLangCode": "Taalkode (bv. en-US, ko-KR)",
+  "labelName": "Naam",
+  "labelNote": "Nota",
+  "labelPOS": "Woordsoort",
+  "labelRole": "Rol",
+  "labelSentence": "Sin",
+  "labelSentenceCollection": "Sinversameling",
+  "labelSentenceType": "Sintipe",
+  "labelShowMemorized": "Voltooi",
+  "labelType": "Tipe:",
+  "labelWord": "Woord",
+  "labelWordbook": "Woordeboek",
+  "language": "Taal",
+  "languageSettings": "Taalinstellings",
+  "languageSettingsTitle": "Taalinstellings",
+  "libTitleFirstMeeting": "Eerste ontmoeting",
+  "libTitleGreetings1": "Groete 1",
+  "libTitleNouns1": "Selfstandige naamwoorde 1",
+  "libTitleVerbs1": "Werkwoorde 1",
+  "listen": "Luister",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Luister...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Laai deelnemers...",
+  "location": "Ligging",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Meld aan",
+  "logout": "Teken uit",
+  "logoutConfirmMessage": "Wil jy uit die huidige toestel teken?",
+  "logoutConfirmTitle": "Teken uit",
+  "male": "Manlik",
+  "manageParticipants": "Bestuur deelnemers",
+  "manual": "Handmatige invoer",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Merk as Bestudeer",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Materiaalinligting",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Ek",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Voer materiaal vanaf toestel in",
+  "menuHelp": "Hulp",
+  "menuLanguageSettings": "Taalinstellings",
+  "menuOnlineLibrary": "Aanlyn biblioteek",
+  "menuSelectMaterialSet": "Kies 'n studiemateriaal",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Gebruiksaanwysings",
+  "menuWebDownload": "Gebruikershandleiding",
+  "metadataDialogTitle": "Gedetailleerde klassifikasie",
+  "metadataFormType": "Grammatikale vorm",
+  "metadataRootWord": "Stamwoord (Root Word)",
+  "micButtonTooltip": "Begin stemherkenning",
+  "mode1SelectedMaterial": "Huidige geselekteerde materiaal: {name}",
+  "mode2Title": "Hersiening",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Volgende",
+  "mode3Start": "Begin",
+  "mode3Stop": "Stop",
+  "mode3TryAgain": "Probeer weer",
+  "mySentenceCollection": "My Sinversameling",
+  "myWordbook": "My Woordeboek",
+  "neutral": "Neutraal",
+  "newSubjectName": "Nuwe Onderwerp Naam",
+  "next": "Volgende",
+  "noDialogueHistory": "Geen dialooggeskiedenis nie.",
+  "noInternetWarningMic": "Geen internetverbinding nie. Stemherkenning mag dalk nie vanlyn werk nie.",
+  "noInternetWarningTranslate": "Geen internetverbinding nie. Vertaling is nie vanlyn beskikbaar nie. Gebruik asseblief die hersieningsmodus.",
+  "noMaterialsInCategory": "Daar is geen materiaal in hierdie kategorie nie.",
+  "noParticipantsFound": "Geen deelnemers gevind nie.",
+  "noRecords": "Geen rekords vir gekose taal",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Geen studiemateriaal nie.",
+  "noTextToPlay": "Geen teks om te speel",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Geen vertaling om te stoor",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Geen stem bespeur",
+  "notSelected": "- Nie gekies nie -",
+  "onlineLibraryCheckInternet": "Kontroleer jou internetverbinding of probeer later weer.",
+  "onlineLibraryLoadFailed": "Kon nie materiaal laai nie.",
+  "onlineLibraryNoMaterials": "Geen materiaal beskikbaar nie.",
+  "participantDeleted": "Deelnemer is geskrap.",
+  "participantRename": "Hernoem deelnemer",
+  "partner": "Vennoot",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Vennootmodus",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Wagwoord",
+  "passwordTooShort": "Wagwoord moet minstens 6 karakters lank wees.",
+  "perfect": "Perfek!",
+  "personaFriend": "Plaaslike vriend",
+  "personaGuide": "Toergids",
+  "personaTeacher": "Engelse onderwyser",
+  "playAgain": "Speel weer",
+  "playbackFailed": "Terugspeel misluk: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Kies Materiaal",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Speel...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Onderwerp:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Bron:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "Lêer:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Byvoeglike naamwoord",
+  "posAdverb": "Bywoord",
+  "posConjunction": "Voegwoord",
+  "posInterjection": "Tussenwerpsel",
+  "posNoun": "Naamwoord",
+  "posPreposition": "Voorsetsel",
+  "posPronoun": "Voornaamwoord",
+  "posVerb": "Werkwoord",
+  "practiceModeTitle": "Oefen",
+  "practiceWordsOnly": "Oefen net woorde",
   "progress": "Vordering: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Voer asseblief 'n JSON-lêer in",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Kies asseblief studiemateriaal",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Bestudeer",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Merk as Bestudeer",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Luister...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Herkenning voltooi",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Wys die {count} mees onlangse items",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Spraakherkenning misluk: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Kontroleer...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Herkenning voltooi",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Vertaal...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Erkende uitspraak:",
+  "recordDeleted": "Rekord suksesvol verwyder",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Vertaling voltooi (stoor vereis)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Verfris",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Gestorde vertaling gelaai",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Vertaling misluk: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Herstel",
+  "resetPracticeHistory": "Stel oefengeskiedenis terug",
+  "retry": "Probeer weer?",
+  "reviewAll": "Hersien alles",
+  "reviewCount": "{count} keer hersien",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Voer teks in om te vertaal",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Stoor...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Geen vertaling om te stoor",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "복습",
+  "roleAi": "KI",
+  "roleThirdParty": "Derde party",
+  "roleUser": "Gebruiker",
+  "save": "Stoor",
+  "saveData": "Stoor",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Stoor misluk: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Speel...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Stoor vertalings vanaf soekmodus",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Geen teks om te speel",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Gestoor",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Terugspeel misluk: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Stoor...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Bron Taal",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Teiltaal",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Soortgelyke teks gevind",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Gebruik Bestaande",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Skep Nuwe",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "{count} keer hersien",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Praat",
-  "speakingPractice": "Praatoefening",
-  "intervalSeconds": "Interval: {seconds}s",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Jou Uitspraak",
-  "correctAnswer": "Korrekte Antwoord",
   "score": "Akkuraatheid: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "Perfek!",
-  "good": "Goed",
-  "tryAgain": "Probeer weer",
-  "startPractice": "Begin Oefening",
-  "stopPractice": "Stop",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Begin Toer",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Stem Invoer",
-  "tutorialMicDesc": "Tik die mikrofoon vir stem invoer.",
-  "tutorialTabDesc": "Jy kan die gewenste leerwyse hier kies.",
-  "tutorialTapToContinue": "Tik om voort te gaan",
-  "tutorialTransTitle": "Vertaal",
-  "tutorialTransDesc": "Tik hier om jou teks te vertaal.",
-  "tutorialSaveTitle": "Stoor",
-  "tutorialSaveDesc": "Stoor jou vertaling.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": " telling",
+  "search": "Soek",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Soekvoorwaardes",
+  "searchSentenceHint": "Soek sin...",
+  "searchWordHint": "Soek woord...",
+  "sectionSentence": "Sin-afdeling",
+  "sectionSentences": "sin",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Woordafdeling",
+  "sectionWords": "woord",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Kies bestaande naam",
+  "selectMaterialPrompt": "Kies asseblief studiemateriaal",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "Keuse van leermateriaal",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Kies woordsoort",
+  "selectParticipants": "Kies deelnemers",
+  "selectSentenceType": "Kies sinsoort",
+  "selectStudyMaterial": "Kies Materiaal",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "KI-klets",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "Kies & Filter",
-  "tutorialM2SelectDesc": "Kies materiaal of 'Hersien Alles'.",
-  "tutorialM2ListTitle": "Studielys",
-  "tutorialM2ListDesc": "Gaan jou kaarte na en draai hulle om. (Long-press to delete)",
-  "tutorialM3SelectTitle": "Kies Materiaal",
-  "tutorialM3SelectDesc": "Kies stel vir praatoefening.",
-  "tutorialM3IntervalTitle": "Interval",
-  "tutorialM3IntervalDesc": "Pas wagtyd tussen sinne aan.",
-  "tutorialM3StartTitle": "Begin",
-  "tutorialM3StartDesc": "Druk speel om te begin.",
+  "sentence": "Sin",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Registreer",
+  "similarTextFound": "Soortgelyke teks gevind",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "건너뛰기",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Bron:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Bron Taal",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "Praat nou!",
+  "speaker": "Spreker",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Kies spreker",
+  "speakingPractice": "Praatoefening",
+  "startChat": "Begin gesprek",
+  "startPractice": "Begin Oefening",
+  "startTutorial": "Begin Toer",
   "startWarning": "Waarskuwing",
-  "noVoiceDetected": "Geen stem bespeur",
-  "tooltipSearch": "Soek",
-  "tooltipStudyReview": "Studie+Hersiening",
-  "tooltipSpeaking": "Praat",
+  "startsWith": "Begin met",
+  "statusCheckEmail": "Gaan asseblief jou e-pos na om die verifikasie te voltooi.",
+  "statusDownloading": "Laai af: {name}...",
+  "statusImportFailed": "Invoer het misluk: {error}",
+  "statusImportSuccess": "{name} invoer voltooi",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Aanmelding is gekanselleer.",
+  "statusLoginFailed": "Aanmelding het misluk: {error}",
+  "statusLoginSuccess": "Suksesvol aangemeld.",
+  "statusLogoutSuccess": "Uitgeteken.",
+  "statusSignUpFailed": "Registrasie het misluk: {error}",
+  "statusSigningUp": "Besig om te registreer...",
+  "stopPractice": "Stop",
+  "studyComplete": "Bestudeer",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Rekords ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Formeel",
+  "styleInformal": "Informele",
+  "stylePolite": "Beleefd",
+  "styleSlang": "Sleng",
+  "subject": "Onderwerp:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Ruil tale om",
+  "switchToAi": "Skakel oor na KI-modus",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Skakel oor na Vennootmodus",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Besig om data te sinchroniseer...",
+  "tabConversation": "Gesprek",
+  "tabReview": "Hersiening ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "sin",
+  "tabSpeaking": "Praat",
+  "tabStudyMaterial": "Materiaal ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "woord",
+  "tagFormal": "Formeel",
+  "tagSelection": "Kies merker",
+  "targetLanguage": "Teiltaal",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Teiltaal Filter:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "Tyd om te dink voor die antwoord gewys word.",
+  "thinkingTimeInterval": "Speelvertraging",
+  "timeUp": "Tyd is op!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Titelmerker (Versameling)",
   "tooltipDecrease": "Verminder",
   "tooltipIncrease": "Verhoog",
-  "languageSettings": "Taalinstellings",
-  "tutorialM2DropdownDesc": "Kies studiemateriaal.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Voer JSON-lêer in vanaf toestelgids.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "Konteks Merker",
-  "tutorialContextDesc": "Voeg konteks by (bv. Oggend) om soortgelyke sinne te onderskei.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "Limiet bereik",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "Soek",
+  "tooltipSpeaking": "Praat",
+  "tooltipStudyReview": "Studie+Hersiening",
+  "totalRecords": "Totale {count} rekords (sien alles)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Vertaal",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Vertaal...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Vertaling",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "Keuse van leermateriaal",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Vertaling voltooi (stoor vereis)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "woord",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "sin",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "Ek ruil my taal met die taal wat ek leer.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "Kies 'n studiemateriaal",
-  "sectionWord": "Woordafdeling",
-  "sectionSentence": "Sin-afdeling",
-  "tabWord": "woord",
-  "tabSentence": "sin",
-  "errorProfanity": "Dit bevat vloektaal, daarom kan dit nie vertaal word nie.",
-  "errorHateSpeech": "Kan nie vertaal nie omdat dit haatspraak bevat.",
-  "errorSexualContent": "선정적인 내용이 포함되어 있어 번역할 수 없습니다.",
-  "errorOtherSafety": "AI 안전 정책에 의해 번역이 거부되었습니다.",
-  "clearAll": "모두 지우기",
-  "disambiguationTitle": "의미 선택",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "어떤 의미로 번역하시겠습니까?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "건너뛰기",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "입력",
-  "reviewModeTitle": "복습",
-  "practiceModeTitle": "Oefen",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "Vertaling misluk: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Vertalingslimiet oorskry",
+  "translationLimitMessage": "Jy het al jou daaglikse gratis vertalings (5 keer) gebruik.\\n\\nWil jy 'n advertensie kyk om 5 keer onmiddellik aan te vul?",
+  "translationLoaded": "Gestorde vertaling gelaai",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "Klets",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "Basiese Woordbewaarplek",
-  "basicSentenceRepository": "Basiese Sinbewaarplek",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "Formeel",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "Titelmerker (Versameling)",
-  "generalTags": "Algemene merkers",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "Enkelvoud",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "Vertalings is 5 keer aangevul!",
+  "translationResultHint": "Vertalingsresultaat - kan gewysig word",
+  "tryAgain": "Probeer weer",
+  "tutorialAiChatDesc": "Oefen regte gesprekke met KI-personas.",
+  "tutorialAiChatTitle": "KI-klets",
+  "tutorialContextDesc": "Voeg konteks by (bv. Oggend) om soortgelyke sinne te onderskei.",
+  "tutorialContextTitle": "Konteks Merker",
+  "tutorialLangSettingsDesc": "Stel die bron- en doeltale vir vertaling in.",
+  "tutorialLangSettingsTitle": "Taalinstellings",
+  "tutorialM1ToggleDesc": "Skakel woord- en sinmodusse hier om.",
+  "tutorialM1ToggleTitle": "Woord-/Sinmodus",
+  "tutorialM2DropdownDesc": "Kies studiemateriaal.",
+  "tutorialM2ImportDesc": "Voer JSON-lêer in vanaf toestelgids.",
+  "tutorialM2ListDesc": "Gaan jou kaarte na en draai hulle om. (Long-press to delete)",
+  "tutorialM2ListTitle": "Studielys",
+  "tutorialM2SearchDesc": "Soek gestoorde woorde en sinne om hulle vinnig te vind.",
+  "tutorialM2SelectDesc": "Kies materiaal of 'Hersien Alles'.",
+  "tutorialM2SelectTitle": "Kies & Filter",
+  "tutorialM3IntervalDesc": "Pas wagtyd tussen sinne aan.",
+  "tutorialM3IntervalTitle": "Stel interval in",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "Kies stel vir praatoefening.",
+  "tutorialM3SelectTitle": "Kies Materiaal",
+  "tutorialM3StartDesc": "Druk speel om te begin.",
+  "tutorialM3StartTitle": "Begin",
+  "tutorialM3WordsDesc": "Merk om net gestoorde woorde te oefen.",
+  "tutorialM3WordsTitle": "Woordoefening",
+  "tutorialMicDesc": "Tik die mikrofoon vir stem invoer.",
+  "tutorialMicTitle": "Stem Invoer",
+  "tutorialSaveDesc": "Stoor jou vertaling.",
+  "tutorialSaveTitle": "Stoor",
+  "tutorialSwapDesc": "Ek ruil my taal met die taal wat ek leer.",
+  "tutorialTabDesc": "Jy kan die gewenste leerwyse hier kies.",
+  "tutorialTapToContinue": "Tik om voort te gaan",
+  "tutorialTransDesc": "Tik hier om jou teks te vertaal.",
+  "tutorialTransTitle": "Vertaal",
+  "typeExclamation": "Uitroep",
+  "typeImperative": "Bevel",
+  "typeQuestion": "Vraag",
+  "typeStatement": "Stelling",
+  "usageLimitTitle": "Limiet bereik",
+  "useExistingText": "Gebruik Bestaande",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "Neutraal",
-  "chatAllConversations": "Alle gesprekke",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Wil jy hierdie gesprek uitvee?\nJy sal nie die uitgeveede gesprek kan herstel nie.",
-  "notSelected": "- Nie gekies nie -",
-  "myWordbook": "My Woordeboek",
-  "mySentenceCollection": "My Sinversameling",
-  "newSubjectName": "Nuwe Onderwerp Naam",
-  "enterNewSubjectName": "Voer nuwe naam in",
-  "addNewSubject": "Voeg nuwe naam by",
-  "selectExistingSubject": "Kies bestaande naam",
-  "addTagHint": "Voeg merker by...",
-  "save": "Stoor",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Gaan asseblief jou e-pos na om die verifikasie te voltooi.",
-  "emailAlreadyInUse": "Hierdie e-posadres is reeds in gebruik. Meld asseblief aan of gebruik 'wagwoord vergeet'."
+  "viewOnlineGuide": "Bekyk aanlyn gids",
+  "voluntaryTranslations": "Vrywillige vertalings",
+  "watchAdAndRefill": "Kyk advertensie en vul aan (+5 keer)",
+  "word": "Woord",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Verdedig die basis deur woorde te sê voordat die vyande arriveer.",
+  "wordDefenseTitle": "Woordverdediging",
+  "wordModeLabel": "Woordmodus",
+  "yourPronunciation": "Jou Uitspraak"
 }

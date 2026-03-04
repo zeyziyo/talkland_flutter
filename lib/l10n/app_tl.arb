@@ -1,188 +1,105 @@
 {
   "@@locale": "tl",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Magpatuloy sa Kakao",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Tulong at Gabay",
-  "helpTabModes": "Paglalarawan ng Mode",
-  "helpTabJson": "Format ng JSON",
-  "helpTabTour": "Mag-tour",
-  "helpMode1Desc": "Kilalanin ang boses, isalin, at pakinggan ang resulta.",
-  "helpMode1Details": "• Mga Setting ng Wika: Pindutin ang icon sa itaas/ibaba para baguhin ang wika\n• Toggle ng Salita/Pangungusap: Lumipat ng mode\n• Input ng Boses: Pindutin ang icon ng mikropono para magsimula/huminto sa pakikinig\n• Input ng Teksto: Direktang mag-type para magsalin\n• Awtomatikong Paghahanap: Tukuyin ang magkatulad na umiiral na mga pangungusap\n• Isalin: Pindutin ang button na Isalin para agad na magsalin\n• Pakinggan: TTS playback gamit ang icon ng speaker\n• I-save: Magdagdag ng mga tala sa 'I-save ang Data'\n• I-clear: I-reset ang input",
-  "helpMode2Desc": "Pag-aralan ang mga naka-save na pangungusap at suriin kung kabisado mo na ang mga ito gamit ang awtomatikong feature na pagtatago.",
-  "helpMode2Details": "• Pumili ng Materyal: Pumili ng partikular na set ng materyal o 'Buong Pag-aaral'\n• I-flip ang Card: Suriin ang pagsasalin gamit ang 'Ipakita/Itago' (awtomatikong pagsusuri sa pag-aaral)\n• Pakinggan: TTS playback ng pangungusap\n• Tapos na sa Pag-aaral: Ipahiwatig na tapos na ang pag-aaral gamit ang checkmark (V)\n• I-delete: Pindutin nang matagal ang card para i-delete ang tala\n• Mga Kundisyon sa Paghahanap: I-filter ayon sa tag, kamakailang item, panimulang titik",
-  "helpMode3Desc": "Makinig at gayahin ang mga pangungusap (Shadowing) upang sanayin ang iyong pagbigkas.",
-  "helpMode3Details": "• Pumili ng Materyal: Pumili ng set ng materyal na pag-aaralan\n• Itakda ang Interval: Ayusin ang oras ng paghihintay sa pagitan ng mga pangungusap gamit ang mga button na [-] [+]. (3 segundo hanggang 60 segundo)\n• Simulan/Hinto: Kontrolin ang sesyon ng shadowing\n• Magsalita: Makinig at ulitin pagkatapos ng boses\n• Feedback: Ipinapakita ang score ng accuracy (0-100) at kulay\n• Mga Kundisyon sa Paghahanap: I-filter ang target ng pagsasanay ayon sa tag, kamakailang item, panimulang titik",
-  "helpModeChatDesc": "Makipag-usap sa isang AI persona upang magsanay ng tunay na pag-uusap.",
-  "helpModeChatDetails": "• AI Chat: Magsalita sa aking wika para magsanay sa pag-uusap\n• Multi Persona: Maaaring baguhin ang kasarian/wika/pangalan ng kabilang panig gamit ang menu sa ibabaw ng speech bubble\n• Magdagdag ng Partner: Magdagdag ng bagong kausap (Stranger) gamit ang button na +\n• GPS: Pagsasadula batay sa kasalukuyang lokasyon\n• Awtomatikong I-save: Awtomatikong isalin at i-save ang nilalaman ng pag-uusap",
-  "helpJsonDesc": "Para mag-import ng materyal sa pag-aaral sa Mode 3 bilang isang JSON file, sundin ang format na ito:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Mag-import ng buong set ng pag-uusap bilang JSON file.",
-  "helpDialogueImportDetails": "• Istraktura ng JSON: Gumamit ng array na `dialogues` sa halip na `entries`\n• Awtomatikong Pag-recover: Na-recover ang pamagat ng pag-uusap, persona, at pagkakasunud-sunod ng mensahe.\n• Lokasyon: Lumalabas ang mga na-import na pag-uusap sa tab na 'Kasaysayan' ng AI Chat Mode.",
-  "helpTourDesc": "Ginagabayan ka ng **Highlight Circle** sa mga pangunahing feature.\n(Hal: Maaari mong i-delete ang card na itinuturo ng **Highlight Circle** sa pamamagitan ng pagpindot nang matagal dito.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manwal na Input",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Tagapagsalita",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Lumipat sa AI Mode",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Lumipat sa Partner Mode",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Kasalukuyang Lokasyon",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Lokasyon",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Ako",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Kasalukuyang Piniling Materyal:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic na Imbakan ng Pangungusap/Salita",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Salita",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Pangungusap",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Katumpakan",
+  "adLoading": "Naglo-load ng ad. Subukan muli mamaya.",
+  "addNewSubject": "Magdagdag ng bagong pamagat",
+  "addParticipant": "Magdagdag ng Kalahok",
+  "addTagHint": "Magdagdag ng tag...",
+  "alreadyHaveAccount": "Mayroon ka nang account?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Pag-aaral ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Awtomatikong Mag-play",
+  "basic": "Basic",
+  "basicDefault": "Basic",
+  "basicMaterialRepository": "Basic na Imbakan ng Pangungusap/Salita",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Materyal sa Pag-aaral ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Basic na Imbakan ng Pangungusap",
+  "basicSentences": "Basic na Imbakan ng Pangungusap",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Pag-aaral",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Maghanap",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Isalin",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Pakinggan",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "I-save ang Data",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Na-save",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "I-delete",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Impormasyon ng Materyal",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Basic na Imbakan ng Salita",
+  "basicWords": "Basic na Imbakan ng Salita",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Kanselahin",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "Kumpirmahin",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "I-refresh",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Mga Tala sa Pag-aaral ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Layon",
+  "casePossessive": "Pang-angkin",
+  "casePossessivePronoun": "Panghalip na Pang-angkin",
+  "caseReflexive": "Panaong Pabalik",
+  "caseSubject": "Paksa",
+  "chatAiChat": "Chat",
+  "chatAllConversations": "Lahat ng Usapan",
+  "chatChoosePersona": "Pumili ng Persona",
+  "chatEndMessage": "Gusto mo bang tapusin ang pag-uusap?",
+  "chatEndTitle": "Tapusin at I-save ang Pag-uusap",
+  "chatFailed": "Nabigo ang Chat: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "I-filter ang Target na Wika:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Sipi mula sa pag-uusap ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Walang tala sa pag-aaral para sa napiling wika",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Kasaysayan ng Pag-uusap",
+  "chatNew": "Bagong Pag-uusap",
+  "chatNewChat": "Bagong Chat",
+  "chatNoConversations": "Wala pang pag-uusap",
+  "chatSaveAndExit": "I-save at Lumabas",
+  "chatStartNewPrompt": "Subukang magsimula ng bagong pag-uusap para sa pagsasanay!",
+  "chatTypeHint": "I-type ang mensahe...",
+  "chatUntitled": "Pag-uusap na Walang Pamagat",
+  "checking": "Sinusuri...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Subukang i-save ang mga pagsasalin mula sa search mode",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Ipakita",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Itago",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "I-delete ang Record",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "I-clear Lahat",
+  "confirm": "Kumpirmahin",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Gusto mo bang i-delete ang tala na ito sa pag-aaral?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Na-delete ang record",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Sigurado ka bang gusto mong burahin ang usapang ito?\n Hindi na ito maibabalik pa.",
+  "confirmDeleteParticipant": "Sigurado ka bang gusto mong tanggalin ang kalahok na ito?",
+  "contextTagHint": "Isulat ang sitwasyon para madaling makilala sa ibang pagkakataon",
+  "contextTagLabel": "Konteksto/Sitwasyon (Opsyonal) - Hal: Pagbati sa Umaga, Pormal",
+  "copiedToClipboard": "Kinopya sa clipboard!",
+  "copy": "Kopyahin",
+  "correctAnswer": "Tamang Sagot",
+  "createNew": "Magpatuloy gamit ang Bagong Pangungusap",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Kasalukuyang Lokasyon",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Kasalukuyang Piniling Materyal:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "I-delete",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Nabigong I-delete: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Mag-import ng JSON File",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "I-delete ang Record",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Nag-i-import...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Magsanay sa pag-uusap sa pamamagitan ng pagsasadula. Pumili at sabihin ang naaangkop na sagot.",
+  "dialogueQuestTitle": "Pagsasanay sa Pag-uusap",
+  "disambiguationPrompt": "Aling kahulugan ang gusto mong isalin?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "Pumili ng Kahulugan",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Wala ka pang account?",
+  "editParticipant": "I-edit ang Kalahok",
+  "email": "Email",
+  "emailAlreadyInUse": "Ang email na ito ay ginagamit na. Mag-login o gamitin ang pagbawi ng password.",
+  "enterNewSubjectName": "Ipasok ang bagong pamagat",
+  "enterSentenceHint": "Magpasok ng pangungusap...",
+  "enterTextHint": "Maglagay ng tekstong isasalin",
+  "enterTextToTranslate": "Mag-type ng tekstong isasalin",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Magpasok ng salita...",
+  "error": "Error",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "Hindi maisasalin dahil naglalaman ito ng mapoot na pananalita.",
+  "errorOtherSafety": "Tinanggihan ang pagsasalin ng AI safety policy.",
+  "errorProfanity": "Hindi maisasalin dahil naglalaman ito ng kalapastanganan.",
+  "errorSelectCategory": "Pumili muna ng salita o pangungusap!",
+  "errorSexualContent": "Hindi maisasalin dahil naglalaman ito ng malaswang content.",
+  "errors": "Mga Error:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Babae",
+  "file": "File:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Lahat",
+  "flip": "Ipakita",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Pahambing",
+  "formInfinitive": "Infinitive/Kasalukuyan",
+  "formPast": "Nakaraan",
+  "formPastParticiple": "Nakaraang Partisipyo",
+  "formPlural": "Maramihan",
+  "formPositive": "Positibo",
+  "formPresent": "Kasalukuyan",
+  "formPresentParticiple": "Present Participle (-ing)",
+  "formSingular": "Isahan",
+  "formSuperlative": "Pasukdol",
+  "formThirdPersonSingular": "Pangatlong Panauhan na Isahan",
+  "gameModeDesc": "Piliin ang game mode na pagsasanayan",
+  "gameModeTitle": "Mode ng Laro",
+  "gameOver": "Game Over",
+  "gender": "Kasarian",
+  "generalTags": "Pangkalahatang mga Tag",
+  "getMaterials": "Kumuha ng Mga Materyal",
+  "good": "Maganda",
+  "googleContinue": "Magpatuloy sa Google",
+  "helpDialogueImportDesc": "Mag-import ng buong set ng pag-uusap bilang JSON file.",
+  "helpDialogueImportDetails": "• Istraktura ng JSON: Gumamit ng array na `dialogues` sa halip na `entries`\n• Awtomatikong Pag-recover: Na-recover ang pamagat ng pag-uusap, persona, at pagkakasunud-sunod ng mensahe.\n• Lokasyon: Lumalabas ang mga na-import na pag-uusap sa tab na 'Kasaysayan' ng AI Chat Mode.",
+  "helpJsonDesc": "Para mag-import ng materyal sa pag-aaral sa Mode 3 bilang isang JSON file, sundin ang format na ito:",
+  "helpJsonTypeDialogue": "Dayalogo",
+  "helpJsonTypeSentence": "Pangungusap",
+  "helpJsonTypeWord": "Salita",
+  "helpMode1Desc": "Kilalanin ang boses, isalin, at pakinggan ang resulta.",
+  "helpMode1Details": "• Mga Setting ng Wika: Pindutin ang icon sa itaas/ibaba para baguhin ang wika\n• Toggle ng Salita/Pangungusap: Lumipat ng mode\n• Input ng Boses: Pindutin ang icon ng mikropono para magsimula/huminto sa pakikinig\n• Input ng Teksto: Direktang mag-type para magsalin\n• Awtomatikong Paghahanap: Tukuyin ang magkatulad na umiiral na mga pangungusap\n• Isalin: Pindutin ang button na Isalin para agad na magsalin\n• Pakinggan: TTS playback gamit ang icon ng speaker\n• I-save: Magdagdag ng mga tala sa 'I-save ang Data'\n• I-clear: I-reset ang input",
+  "helpMode2Desc": "Pag-aralan ang mga naka-save na pangungusap at suriin kung kabisado mo na ang mga ito gamit ang awtomatikong feature na pagtatago.",
+  "helpMode2Details": "• Pumili ng Materyal: Pumili ng partikular na set ng materyal o 'Buong Pag-aaral'\n• I-flip ang Card: Suriin ang pagsasalin gamit ang 'Ipakita/Itago' (awtomatikong pagsusuri sa pag-aaral)\n• Pakinggan: TTS playback ng pangungusap\n• Tapos na sa Pag-aaral: Ipahiwatig na tapos na ang pag-aaral gamit ang checkmark (V)\n• I-delete: Pindutin nang matagal ang card para i-delete ang tala\n• Mga Kundisyon sa Paghahanap: I-filter ayon sa tag, kamakailang item, panimulang titik",
+  "helpMode3Desc": "Makinig at gayahin ang mga pangungusap (Shadowing) upang sanayin ang iyong pagbigkas.",
+  "helpMode3Details": "• Pumili ng Materyal: Pumili ng set ng materyal na pag-aaralan\n• Itakda ang Interval: Ayusin ang oras ng paghihintay sa pagitan ng mga pangungusap gamit ang mga button na [-] [+]. (3 segundo hanggang 60 segundo)\n• Simulan/Hinto: Kontrolin ang sesyon ng shadowing\n• Magsalita: Makinig at ulitin pagkatapos ng boses\n• Feedback: Ipinapakita ang score ng accuracy (0-100) at kulay\n• Mga Kundisyon sa Paghahanap: I-filter ang target ng pagsasanay ayon sa tag, kamakailang item, panimulang titik",
+  "helpModeChatDesc": "Makipag-usap sa isang AI persona upang magsanay ng tunay na pag-uusap.",
+  "helpModeChatDetails": "• AI Chat: Magsalita sa aking wika para magsanay sa pag-uusap\n• Multi Persona: Maaaring baguhin ang kasarian/wika/pangalan ng kabilang panig gamit ang menu sa ibabaw ng speech bubble\n• Magdagdag ng Partner: Magdagdag ng bagong kausap (Stranger) gamit ang button na +\n• GPS: Pagsasadula batay sa kasalukuyang lokasyon\n• Awtomatikong I-save: Awtomatikong isalin at i-save ang nilalaman ng pag-uusap",
+  "helpTabJson": "Format ng JSON",
+  "helpTabModes": "Paglalarawan ng Mode",
+  "helpTabTour": "Mag-tour",
+  "helpTitle": "Tulong at Gabay",
+  "helpTourDesc": "Ginagabayan ka ng **Highlight Circle** sa mga pangunahing feature.\n(Hal: Maaari mong i-delete ang card na itinuturo ng **Highlight Circle** sa pamamagitan ng pagpindot nang matagal dito.)",
+  "hide": "Itago",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Naidagdag: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Tapos na sa Pag-import",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Mayroon nang materyal na may parehong pamagat. Subukang baguhin ang pamagat.",
+  "importErrorMessage": "Nabigong mag-import ng file:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Nabigong Mag-import",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Kabuuang: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Mag-import ng JSON File",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Naidagdag: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Mangyaring mag-import ng JSON file",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Nilaktawan: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Mga Error:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Kabuuang: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Error",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Nag-i-import...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Nabigong mag-import ng file:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "Input",
+  "intervalSeconds": "Interval: {seconds} segundo",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Mangyaring maglagay ng valid na email.",
+  "kakaoContinue": "Magpatuloy sa Kakao",
+  "labelLangCode": "Language Code (Hal: en-US, ko-KR)",
+  "labelName": "Pangalan",
+  "labelNote": "Tala",
+  "labelPOS": "Bahagi ng Pananalita",
+  "labelRole": "Papel",
+  "labelSentence": "Pangungusap",
+  "labelSentenceCollection": "Koleksyon ng mga Pangungusap",
+  "labelSentenceType": "Uri ng Pangungusap",
+  "labelShowMemorized": "Tapos na",
+  "labelType": "Uri:",
+  "labelWord": "Salita",
+  "labelWordbook": "Talaan ng mga Salita",
+  "language": "Wika",
+  "languageSettings": "Mga Setting ng Wika",
+  "languageSettingsTitle": "Mga Setting ng Wika",
+  "libTitleFirstMeeting": "Unang Pagkikita",
+  "libTitleGreetings1": "Pagbati 1",
+  "libTitleNouns1": "Pangngalan 1",
+  "libTitleVerbs1": "Pandiwa 1",
+  "listen": "Pakinggan",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Nakikinig...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Ikinakarga ang mga kalahok...",
+  "location": "Lokasyon",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Mag-login",
+  "logout": "Mag-logout",
+  "logoutConfirmMessage": "Sigurado ka bang gusto mong mag-logout sa device na ito?",
+  "logoutConfirmTitle": "Mag-logout",
+  "male": "Lalaki",
+  "manageParticipants": "Pamahalaan ang mga Kalahok",
+  "manual": "Manwal na Input",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Markahan Bilang Pinag-aralan",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Impormasyon ng Materyal",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Ako",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Mag-import ng materyal mula sa device",
+  "menuHelp": "Tulong",
+  "menuLanguageSettings": "Mga Setting ng Wika",
+  "menuOnlineLibrary": "Online Library",
+  "menuSelectMaterialSet": "Pumili ng set ng materyal sa pag-aaral",
+  "menuSettings": "Mga Setting ng Wika",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Tutorial",
+  "menuWebDownload": "Homepage",
+  "metadataDialogTitle": "Detalyadong Kategorya",
+  "metadataFormType": "Uri ng Gramatika",
+  "metadataRootWord": "Salitang-ugat",
+  "micButtonTooltip": "Simulan ang pagkilala sa boses",
+  "mode1SelectedMaterial": "Kasalukuyang napiling set ng materyal: {name}",
+  "mode2Title": "Pag-aaral",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Susunod",
+  "mode3Start": "Simulan",
+  "mode3Stop": "Hentuan",
+  "mode3TryAgain": "Subukang Muli",
+  "mySentenceCollection": "Aking Koleksyon ng Pangungusap",
+  "myWordbook": "Aking Aklat ng Salita",
+  "neutral": "Neutral",
+  "newSubjectName": "Bagong Pamagat ng Paksa/Pangungusap",
+  "next": "Susunod",
+  "noDialogueHistory": "Walang history ng dayalogo.",
+  "noInternetWarningMic": "Walang koneksyon sa internet. Maaaring hindi gumana ang voice recognition offline.",
+  "noInternetWarningTranslate": "Walang koneksyon sa internet. Hindi magagamit ang pagsasalin offline. Mangyaring gumamit ng review mode.",
+  "noMaterialsInCategory": "Walang materyal sa kategoryang ito.",
+  "noParticipantsFound": "Walang nakarehistrong kalahok.",
+  "noRecords": "Walang tala sa pag-aaral para sa napiling wika",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Walang materyal sa pag-aaral.",
+  "noTextToPlay": "Walang tekstong ipe-play",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Walang pagsasalin na ise-save",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Walang nakitang boses",
+  "notSelected": "- Walang Napili -",
+  "onlineLibraryCheckInternet": "Suriin ang iyong koneksyon sa internet o subukang muli sa ibang pagkakataon.",
+  "onlineLibraryLoadFailed": "Nabigo ang pagkarga ng materyal.",
+  "onlineLibraryNoMaterials": "Walang materyal.",
+  "participantDeleted": "Natanggal na ang kalahok.",
+  "participantRename": "Palitan ang Pangalan ng Kalahok",
+  "partner": "Kasosyo",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Partner Mode",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Password",
+  "passwordTooShort": "Dapat ay hindi bababa sa 6 na character ang password.",
+  "perfect": "Perpekto!",
+  "personaFriend": "Kaibigan na Lokal",
+  "personaGuide": "Tour Guide",
+  "personaTeacher": "Guro sa Ingles",
+  "playAgain": "Maglaro Muli",
+  "playbackFailed": "Nabigong Mag-playback: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Pumili ng Materyal sa Pag-aaral",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Nagpe-play...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Paksa:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Pinagmulan:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "File:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Pang-uri",
+  "posAdverb": "Pang-abay",
+  "posConjunction": "Pang-ugnay",
+  "posInterjection": "Pandamdam",
+  "posNoun": "Pangngalan",
+  "posPreposition": "Preposisyon",
+  "posPronoun": "Panghalip",
+  "posVerb": "Pandiwa",
+  "practiceModeTitle": "Pagsasanay",
+  "practiceWordsOnly": "Magsanay ng Mga Salita Lamang",
   "progress": "Pag-unlad: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Mangyaring mag-import ng JSON file",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Pumili ng materyal sa pag-aaral",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Tapos na sa Pag-aaral",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Markahan Bilang Pinag-aralan",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Nakikinig...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Nakilala",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Tingnan ang {count} Kamakailang Nilikha",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Nabigong Kilalanin ang Boses: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Sinusuri...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Nakilala",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Isinasalin...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Nakilalang Pagbigkas:",
+  "recordDeleted": "Na-delete ang record",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Tapos na ang Pagsasalin (Kailangang I-save)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "I-refresh",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Na-load ang Naka-save na Pagsasalin",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Nabigong Isalin: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "I-reset",
+  "resetPracticeHistory": "I-reset ang History ng Pagsasanay",
+  "retry": "Subukan Muli?",
+  "reviewAll": "Buong Pag-aaral",
+  "reviewCount": "Pag-aaral {count} beses",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Mag-type ng tekstong isasalin",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Nagse-save...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Walang pagsasalin na ise-save",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "Pag-aaral",
+  "roleAi": "AI",
+  "roleThirdParty": "Ikatlong Partido",
+  "roleUser": "Gumagamit",
+  "save": "I-save",
+  "saveData": "I-save ang Data",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Nabigong I-save: {error}",
   "@saveFailed": {
@@ -380,65 +497,19 @@
       }
     }
   },
-  "playing": "Nagpe-play...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Subukang i-save ang mga pagsasalin mula sa search mode",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Walang tekstong ipe-play",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Na-save",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Nabigong Mag-playback: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Nagse-save...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Source na Wika",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Target na Wika",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "May Natagpuang Magkatulad na Teksto",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Gumamit ng Umiiral na Teksto",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Magpatuloy gamit ang Bagong Pangungusap",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Pag-aaral {count} beses",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Magsalita",
-  "speakingPractice": "Pagsasanay sa Pagbigkas",
-  "intervalSeconds": "Interval: {seconds} segundo",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Ang Pagbigkas Mo",
-  "correctAnswer": "Tamang Sagot",
-  "score": "Accuracy: {score}%",
+  "score": "Score: {score}%",
   "@score": {
     "placeholders": {
       "score": {
@@ -446,89 +517,161 @@
       }
     }
   },
-  "perfect": "Perpekto!",
-  "good": "Maganda",
-  "tryAgain": "Subukan Muli",
-  "startPractice": "Simulan ang Pagsasanay",
-  "stopPractice": "Hentuan ang Pagsasanay",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Simulan ang Tutorial",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Input ng Boses",
-  "tutorialMicDesc": "Maaari kang mag-input gamit ang boses sa pamamagitan ng pagpindot sa button ng mikropono.",
-  "tutorialTabDesc": "Dito maaari mong piliin ang gustong mode ng pag-aaral.",
-  "tutorialTapToContinue": "I-tap ang screen para magpatuloy",
-  "tutorialTransTitle": "Isalin",
-  "tutorialTransDesc": "Isinasalin ang tekstong in-input mo.",
-  "tutorialSaveTitle": "I-save",
-  "tutorialSaveDesc": "I-save ang isinalin na resulta sa iyong tala sa pag-aaral.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Iskor",
+  "search": "Maghanap",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Mga Kundisyon sa Paghahanap",
+  "searchSentenceHint": "Maghanap ng pangungusap...",
+  "searchWordHint": "Maghanap ng salita...",
+  "sectionSentence": "Seksyon ng Pangungusap",
+  "sectionSentences": "Mga Pangungusap",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Seksyon ng Salita",
+  "sectionWords": "Mga Salita",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Pumili ng kasalukuyang pamagat",
+  "selectMaterialPrompt": "Pumili ng materyal sa pag-aaral",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "Pumili ng set ng materyal sa pag-aaral",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Pumili ng POS",
+  "selectParticipants": "Pumili ng mga Kalahok",
+  "selectSentenceType": "Pumili ng Uri ng Pangungusap",
+  "selectStudyMaterial": "Pumili ng Materyal sa Pag-aaral",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI Chat",
-  "tutorialAiChatDesc": "Magsanay sa pag-uusap sa totoong buhay sa pamamagitan ng AI persona.",
-  "tutorialM2SelectTitle": "Pumili ng Materyal",
-  "tutorialM2SelectDesc": "Pindutin ang icon ng set ng materyal (📚) sa itaas na app bar para pumili ng materyal na pag-aaralan.",
-  "tutorialM2ListTitle": "Listahan ng Pag-aaral",
-  "tutorialM2ListDesc": "Maaari mong i-delete ang card na ito sa pamamagitan ng pagpindot nang matagal dito (Long Click). Suriin ang mga naka-save na pangungusap at i-flip ang mga ito.",
-  "tutorialM3SelectTitle": "Pumili ng Materyal",
-  "tutorialM3SelectDesc": "Pindutin ang icon ng set ng materyal (📚) sa itaas na app bar para pumili ng materyal na pagsasanayan.",
-  "tutorialM3IntervalTitle": "Itakda ang Interval",
-  "tutorialM3IntervalDesc": "Inaayos ang oras ng paghihintay sa pagitan ng mga pangungusap.",
-  "tutorialM3StartTitle": "Simulan ang Pagsasanay",
-  "tutorialM3StartDesc": "Pindutin ang button na play para pakinggan ang boses ng katutubong tagapagsalita at sundin ito.",
+  "sentence": "Pangungusap",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Mag-sign up",
+  "similarTextFound": "May Natagpuang Magkatulad na Teksto",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "Laktawan",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Pinagmulan:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Source na Wika",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Aking Wika (Source)",
+  "speakNow": "Magsalita Ngayon!",
+  "speaker": "Tagapagsalita",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Pumili ng Tagapagsalita",
+  "speakingPractice": "Pagsasanay sa Pagbigkas",
+  "startChat": "Simulan ang Chat",
+  "startPractice": "Simulan ang Pagsasanay",
+  "startTutorial": "Simulan ang Tutorial",
   "startWarning": "Babala",
-  "noVoiceDetected": "Walang nakitang boses",
-  "tooltipSearch": "Maghanap",
-  "tooltipStudyReview": "Mag-aral+Mag-review",
-  "tooltipSpeaking": "Magsalita",
+  "startsWith": "Nagsisimula sa",
+  "statusCheckEmail": "Pakisuy ang iyong email para makumpleto ang verification.",
+  "statusDownloading": "Dina-download: {name}...",
+  "statusImportFailed": "Nabigo ang pag-import: {error}",
+  "statusImportSuccess": "Matagumpay na nai-import ang {name}",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Kinansela ang pag-login.",
+  "statusLoginFailed": "Nabigo ang pag-login: {error}",
+  "statusLoginSuccess": "Matagumpay na nakapag-login.",
+  "statusLogoutSuccess": "Nag-logout na.",
+  "statusSignUpFailed": "Nabigo ang pag-sign up: {error}",
+  "statusSigningUp": "Nag-sign up...",
+  "stopPractice": "Hentuan ang Pagsasanay",
+  "studyComplete": "Tapos na sa Pag-aaral",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Mga Tala sa Pag-aaral ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Pormal",
+  "styleInformal": "Impormal",
+  "stylePolite": "Magalang",
+  "styleSlang": "Slang",
+  "subject": "Paksa:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Pagpalitin ang Mga Wika",
+  "switchToAi": "Lumipat sa AI Mode",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Lumipat sa Partner Mode",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Sini-sync ang data...",
+  "tabConversation": "Usapan",
+  "tabReview": "Pag-aaral ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "Pangungusap",
+  "tabSpeaking": "Magsalita",
+  "tabStudyMaterial": "Materyal sa Pag-aaral ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "Salita",
+  "tagFormal": "Pormal",
+  "tagSelection": "Pagpili ng Tag",
+  "targetLanguage": "Target na Wika",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "I-filter ang Target na Wika:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Wika sa Pag-aaral (Target)",
+  "thinkingTimeDesc": "Ang oras para mag-isip bago ipakita ang tamang sagot.",
+  "thinkingTimeInterval": "Pagitan ng Pag-play",
+  "timeUp": "Tapos na ang Oras!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Tag ng Pamagat (Sarbey)",
   "tooltipDecrease": "Bawasan",
   "tooltipIncrease": "Dagdagan",
-  "languageSettings": "Mga Setting ng Wika",
-  "tutorialM2DropdownDesc": "Maaari kang pumili ng materyal na pag-aaralan sa pamamagitan ng menu sa itaas.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Mag-import ng JSON file mula sa folder ng device.",
-  "tutorialLangSettingsTitle": "Mga Setting ng Wika",
-  "tutorialLangSettingsDesc": "Itakda ang source na wika at ang target na wika na isasalin.",
-  "copy": "Kopyahin",
-  "copiedToClipboard": "Kinopya sa clipboard!",
-  "tutorialContextTitle": "Tag ng Sitwasyon/Konteksto",
-  "tutorialContextDesc": "Kahit na pareho ang pangungusap, maaari mo itong i-save nang hiwalay kung isusulat mo ang sitwasyon (hal. Umaga, Gabi).",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Ang oras para mag-isip bago ipakita ang tamang sagot.",
-  "autoPlay": "Awtomatikong Mag-play",
-  "timeUp": "Tapos na ang Oras!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Piliin ang game mode na pagsasanayan",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Sabihin ang salita para ipagtanggol ang base bago dumating ang kaaway.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Magsanay sa pag-uusap sa pamamagitan ng pagsasadula. Pumili at sabihin ang naaangkop na sagot.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Uri:",
-  "labelWord": "Salita",
-  "labelSentence": "Pangungusap",
-  "contextTagLabel": "Konteksto/Sitwasyon (Opsyonal) - Hal: Pagbati sa Umaga, Pormal",
-  "contextTagHint": "Isulat ang sitwasyon para madaling makilala sa ibang pagkakataon",
-  "usageLimitTitle": "Naabot na ang Limitasyon",
-  "translationLimitExceeded": "Lumampas sa limitasyon ng pagsasalin",
-  "translationLimitMessage": "Naubos mo na ang lahat ng libreng pagsasalin sa araw na ito (5 beses).\\n\\nManood ng ad para agad na mapunan ang 5 beses?",
-  "watchAdAndRefill": "Manood ng Ad at Punan (+5 beses)",
-  "translationRefilled": "Napunan na ang bilang ng pagsasalin nang 5 beses!",
-  "adLoading": "Naglo-load ng ad. Subukan muli mamaya.",
-  "reviewAll": "Buong Pag-aaral",
+  "tooltipSearch": "Maghanap",
+  "tooltipSpeaking": "Magsalita",
+  "tooltipStudyReview": "Mag-aral+Mag-review",
   "totalRecords": "Kabuuang {count} na record (Tingnan Lahat)",
   "@totalRecords": {
     "description": "Total records count",
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "Lahat",
-  "practiceWordsOnly": "Magsanay ng Mga Salita Lamang",
-  "resetPracticeHistory": "I-reset ang History ng Pagsasanay",
-  "retry": "Subukan Muli?",
-  "noStudyMaterial": "Walang materyal sa pag-aaral.",
-  "gameOver": "Game Over",
-  "playAgain": "Maglaro Muli",
-  "speakNow": "Magsalita Ngayon!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "Tingnan ang Online na Gabay",
-  "getMaterials": "Kumuha ng Mga Materyal",
-  "swapLanguages": "Pagpalitin ang Mga Wika",
-  "next": "Susunod",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Pagsasanay sa Salita",
-  "tutorialM3WordsDesc": "Kung naka-check, magsanay lang ng mga naka-save na salita.",
-  "enterTextHint": "Maglagay ng tekstong isasalin",
-  "micButtonTooltip": "Simulan ang pagkilala sa boses",
-  "menuHelp": "Tulong",
-  "menuWebDownload": "Homepage",
-  "menuDeviceImport": "Mag-import ng materyal mula sa device",
-  "menuSettings": "Mga Setting ng Wika",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Isalin",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic na Imbakan ng Salita",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Isinasalin...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic na Imbakan ng Pangungusap",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Pagsasalin",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "Pumili ng set ng materyal sa pag-aaral",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Tapos na ang Pagsasalin (Kailangang I-save)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "Mga Salita",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "Mga Pangungusap",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Mga Setting ng Wika",
-  "sourceLanguageLabel": "Aking Wika (Source)",
-  "targetLanguageLabel": "Wika sa Pag-aaral (Target)",
-  "mode3Start": "Simulan",
-  "mode3Stop": "Hentuan",
-  "mode3Next": "Susunod",
-  "mode3TryAgain": "Subukang Muli",
-  "tutorialM3ResetTitle": "I-reset ang History",
-  "tutorialSwapDesc": "Pagpalitin ang aking wika at ang wika sa pag-aaral.",
-  "recognizedText": "Nakilalang Pagbigkas:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "I-reset ang pag-unlad at score ng accuracy para magsimula muli sa simula.",
-  "menuSelectMaterialSet": "Pumili ng set ng materyal sa pag-aaral",
-  "sectionWord": "Seksyon ng Salita",
-  "sectionSentence": "Seksyon ng Pangungusap",
-  "tabWord": "Salita",
-  "tabSentence": "Pangungusap",
-  "errorProfanity": "Hindi maisasalin dahil naglalaman ito ng kalapastanganan.",
-  "errorHateSpeech": "Hindi maisasalin dahil naglalaman ito ng mapoot na pananalita.",
-  "errorSexualContent": "Hindi maisasalin dahil naglalaman ito ng malaswang content.",
-  "errorOtherSafety": "Tinanggihan ang pagsasalin ng AI safety policy.",
-  "clearAll": "I-clear Lahat",
-  "disambiguationTitle": "Pumili ng Kahulugan",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "Aling kahulugan ang gusto mong isalin?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "Laktawan",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Input",
-  "reviewModeTitle": "Pag-aaral",
-  "practiceModeTitle": "Pagsasanay",
-  "chatHistoryTitle": "Kasaysayan ng Pag-uusap",
-  "chatNew": "Bagong Pag-uusap",
-  "chatNewChat": "Bagong Chat",
-  "chatChoosePersona": "Pumili ng Persona",
-  "chatTypeHint": "I-type ang mensahe...",
-  "chatFailed": "Nabigo ang Chat: {error}",
-  "@chatFailed": {
+  "translationFailed": "Nabigong Isalin: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "Wala pang pag-uusap",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Subukang magsimula ng bagong pag-uusap para sa pagsasanay!",
-  "chatFromConversation": "Sipi mula sa pag-uusap ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Lumampas sa limitasyon ng pagsasalin",
+  "translationLimitMessage": "Naubos mo na ang lahat ng libreng pagsasalin sa araw na ito (5 beses).\\n\\nManood ng ad para agad na mapunan ang 5 beses?",
+  "translationLoaded": "Na-load ang Naka-save na Pagsasalin",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Kaibigan na Lokal",
-  "chatUntitled": "Pag-uusap na Walang Pamagat",
-  "chatAiChat": "Chat",
-  "mode1SelectedMaterial": "Kasalukuyang napiling set ng materyal: {name}",
-  "basicWordRepository": "Basic na Imbakan ng Salita",
-  "basicSentenceRepository": "Basic na Imbakan ng Pangungusap",
-  "chatEndTitle": "Tapusin at I-save ang Pag-uusap",
-  "chatEndMessage": "Gusto mo bang tapusin ang pag-uusap?",
-  "chatSaveAndExit": "I-save at Lumabas",
-  "errorSelectCategory": "Pumili muna ng salita o pangungusap!",
-  "tutorialM1ToggleTitle": "Word/Pangungusap Mode",
+  "translationRefilled": "Napunan na ang bilang ng pagsasalin nang 5 beses!",
+  "translationResultHint": "Resulta ng Pagsasalin - Maaaring i-edit",
+  "tryAgain": "Subukan Muli",
+  "tutorialAiChatDesc": "Magsanay sa pag-uusap sa totoong buhay sa pamamagitan ng AI persona.",
+  "tutorialAiChatTitle": "AI Chat",
+  "tutorialContextDesc": "Kahit na pareho ang pangungusap, maaari mo itong i-save nang hiwalay kung isusulat mo ang sitwasyon (hal. Umaga, Gabi).",
+  "tutorialContextTitle": "Tag ng Sitwasyon/Konteksto",
+  "tutorialLangSettingsDesc": "Itakda ang source na wika at ang target na wika na isasalin.",
+  "tutorialLangSettingsTitle": "Mga Setting ng Wika",
   "tutorialM1ToggleDesc": "Lumipat ng word at pangungusap mode dito.",
-  "metadataDialogTitle": "Detalyadong Kategorya",
-  "tagFormal": "Pormal",
-  "selectPOS": "Pumili ng POS",
-  "selectSentenceType": "Pumili ng Uri ng Pangungusap",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Pangngalan",
-  "posVerb": "Pandiwa",
-  "posAdjective": "Pang-uri",
-  "posAdverb": "Pang-abay",
-  "posPronoun": "Panghalip",
-  "posPreposition": "Preposisyon",
-  "posConjunction": "Pang-ugnay",
-  "posInterjection": "Pandamdam",
-  "typeStatement": "Pahayag",
-  "typeQuestion": "Tanong",
+  "tutorialM1ToggleTitle": "Word/Pangungusap Mode",
+  "tutorialM2DropdownDesc": "Maaari kang pumili ng materyal na pag-aaralan sa pamamagitan ng menu sa itaas.",
+  "tutorialM2ImportDesc": "Mag-import ng JSON file mula sa folder ng device.",
+  "tutorialM2ListDesc": "Maaari mong i-delete ang card na ito sa pamamagitan ng pagpindot nang matagal dito (Long Click). Suriin ang mga naka-save na pangungusap at i-flip ang mga ito.",
+  "tutorialM2ListTitle": "Listahan ng Pag-aaral",
+  "tutorialM2SearchDesc": "Maaari kang maghanap at mabilis na mahanap ang mga naka-save na salita at pangungusap.",
+  "tutorialM2SelectDesc": "Pindutin ang icon ng set ng materyal (📚) sa itaas na app bar para pumili ng materyal na pag-aaralan.",
+  "tutorialM2SelectTitle": "Pumili ng Materyal",
+  "tutorialM3IntervalDesc": "Inaayos ang oras ng paghihintay sa pagitan ng mga pangungusap.",
+  "tutorialM3IntervalTitle": "Itakda ang Interval",
+  "tutorialM3ResetDesc": "I-reset ang pag-unlad at score ng accuracy para magsimula muli sa simula.",
+  "tutorialM3ResetTitle": "I-reset ang History",
+  "tutorialM3SelectDesc": "Pindutin ang icon ng set ng materyal (📚) sa itaas na app bar para pumili ng materyal na pagsasanayan.",
+  "tutorialM3SelectTitle": "Pumili ng Materyal",
+  "tutorialM3StartDesc": "Pindutin ang button na play para pakinggan ang boses ng katutubong tagapagsalita at sundin ito.",
+  "tutorialM3StartTitle": "Simulan ang Pagsasanay",
+  "tutorialM3WordsDesc": "Kung naka-check, magsanay lang ng mga naka-save na salita.",
+  "tutorialM3WordsTitle": "Pagsasanay sa Salita",
+  "tutorialMicDesc": "Maaari kang mag-input gamit ang boses sa pamamagitan ng pagpindot sa button ng mikropono.",
+  "tutorialMicTitle": "Input ng Boses",
+  "tutorialSaveDesc": "I-save ang isinalin na resulta sa iyong tala sa pag-aaral.",
+  "tutorialSaveTitle": "I-save",
+  "tutorialSwapDesc": "Pagpalitin ang aking wika at ang wika sa pag-aaral.",
+  "tutorialTabDesc": "Dito maaari mong piliin ang gustong mode ng pag-aaral.",
+  "tutorialTapToContinue": "I-tap ang screen para magpatuloy",
+  "tutorialTransDesc": "Isinasalin ang tekstong in-input mo.",
+  "tutorialTransTitle": "Isalin",
   "typeExclamation": "Bulalas",
   "typeImperative": "Pautos",
-  "labelNote": "Tala",
-  "labelShowMemorized": "Tapos na",
-  "titleTagSelection": "Tag ng Pamagat (Sarbey)",
-  "generalTags": "Pangkalahatang mga Tag",
-  "tagSelection": "Pagpili ng Tag",
-  "metadataFormType": "Uri ng Gramatika",
-  "formInfinitive": "Infinitive/Kasalukuyan",
-  "formPast": "Nakaraan",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle (-ing)",
-  "formPresent": "Kasalukuyan",
-  "formThirdPersonSingular": "Pangatlong Panauhan na Isahan",
-  "formPlural": "Maramihan",
-  "formSingular": "Isahan",
-  "caseSubject": "Paksa",
-  "caseObject": "Layon",
-  "casePossessive": "Pang-angkin",
-  "casePossessivePronoun": "Panghalip na Pang-angkin",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Mga Kundisyon sa Paghahanap",
-  "recentNItems": "Tingnan ang {count} Kamakailang Nilikha",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "typeQuestion": "Tanong",
+  "typeStatement": "Pahayag",
+  "usageLimitTitle": "Naabot na ang Limitasyon",
+  "useExistingText": "Gumamit ng Umiiral na Teksto",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Nagsisimula sa",
-  "reset": "I-reset",
-  "participantRename": "Palitan ang Pangalan ng Kalahok",
-  "labelName": "Pangalan",
-  "gender": "Kasarian",
-  "language": "Wika",
-  "male": "Lalaki",
-  "female": "Babae",
-  "neutral": "Neutral",
-  "chatAllConversations": "Lahat ng Usapan",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Sigurado ka bang gusto mong burahin ang usapang ito?\n Hindi na ito maibabalik pa.",
-  "notSelected": "- Walang Napili -",
-  "myWordbook": "Aking Aklat ng Salita",
-  "mySentenceCollection": "Aking Koleksyon ng Pangungusap",
-  "newSubjectName": "Bagong Pamagat ng Paksa/Pangungusap",
-  "enterNewSubjectName": "Ipasok ang bagong pamagat",
-  "addNewSubject": "Magdagdag ng bagong pamagat",
-  "selectExistingSubject": "Pumili ng kasalukuyang pamagat",
-  "addTagHint": "Magdagdag ng tag...",
-  "save": "I-save",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Pakisuy ang iyong email para makumpleto ang verification.",
-  "emailAlreadyInUse": "Ang email na ito ay ginagamit na. Mag-login o gamitin ang pagbawi ng password."
+  "viewOnlineGuide": "Tingnan ang Online na Gabay",
+  "voluntaryTranslations": "Boluntaryong Pagsasalin",
+  "watchAdAndRefill": "Manood ng Ad at Punan (+5 beses)",
+  "word": "Salita",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Sabihin ang salita para ipagtanggol ang base bago dumating ang kaaway.",
+  "wordDefenseTitle": "Word Defense",
+  "wordModeLabel": "Word Mode",
+  "yourPronunciation": "Ang Pagbigkas Mo"
 }

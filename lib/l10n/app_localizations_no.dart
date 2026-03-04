@@ -9,35 +9,327 @@ class AppLocalizationsNo extends AppLocalizations {
   AppLocalizationsNo([String locale = 'no']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => 'Nøyaktighet';
 
   @override
-  String get kakaoContinue => 'Fortsett med Kakao';
+  String get adLoading => 'Laster inn annonse. Vennligst prøv igjen senere.';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => 'Legg til nytt navn';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => 'Legg til deltaker';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => 'Legg til tagg...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => 'Har du allerede en konto?';
 
   @override
-  String get helpTitle => 'Hjelp & Guide';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => 'Moduser';
+  String get autoPlay => 'Autospill';
 
   @override
-  String get helpTabJson => 'JSON Format';
+  String get basic => 'Grunnleggende';
 
   @override
-  String get helpTabTour => 'Tur';
+  String get basicDefault => 'Grunnleggende';
+
+  @override
+  String get basicMaterialRepository => 'Grunnleggende setnings-/ord-lager';
+
+  @override
+  String get basicSentenceRepository => 'Grunnleggende setningslager';
+
+  @override
+  String get basicSentences => 'Grunnleggende setningslager';
+
+  @override
+  String get basicWordRepository => 'Grunnleggende ordlager';
+
+  @override
+  String get basicWords => 'Grunnleggende ordlager';
+
+  @override
+  String get cancel => 'Avbryt';
+
+  @override
+  String get caseObject => 'Akkusativ';
+
+  @override
+  String get casePossessive => 'Genitiv';
+
+  @override
+  String get casePossessivePronoun => 'Possessivt pronomen';
+
+  @override
+  String get caseReflexive => 'Refleksivt pronomen';
+
+  @override
+  String get caseSubject => 'Nominativ';
+
+  @override
+  String get chatAiChat => 'Chat';
+
+  @override
+  String get chatAllConversations => 'Alle samtaler';
+
+  @override
+  String get chatChoosePersona => 'Velg persona';
+
+  @override
+  String get chatEndMessage => 'Vil du avslutte samtalen?';
+
+  @override
+  String get chatEndTitle => 'Avslutt og lagre samtale';
+
+  @override
+  String chatFailed(Object error) {
+    return 'Chat feilet: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'Utdrag fra samtale ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => 'Samtalehistorikk';
+
+  @override
+  String get chatNew => 'Ny samtale';
+
+  @override
+  String get chatNewChat => 'Ny samtale';
+
+  @override
+  String get chatNoConversations => 'Ingen samtaler ennå';
+
+  @override
+  String get chatSaveAndExit => 'Lagre og avslutt';
+
+  @override
+  String get chatStartNewPrompt => 'Start en ny samtale for å øve!';
+
+  @override
+  String get chatTypeHint => 'Skriv inn en melding...';
+
+  @override
+  String get chatUntitled => 'Samtale uten tittel';
+
+  @override
+  String get checking => 'Sjekker...';
+
+  @override
+  String get clearAll => 'Fjern alle';
+
+  @override
+  String get confirm => 'Bekreft';
+
+  @override
+  String get confirmDelete =>
+      'Er du sikker på at du vil slette denne oppføringen?';
+
+  @override
+  String get confirmDeleteConversation =>
+      'Vil du slette denne samtalen?\nSlettede samtaler kan ikke gjenopprettes.';
+
+  @override
+  String get confirmDeleteParticipant => 'Vil du slette denne deltakeren?';
+
+  @override
+  String get contextTagHint =>
+      'Skriv ned situasjonen for å gjøre det lettere å skille dem senere';
+
+  @override
+  String get contextTagLabel =>
+      'Kontekst/situasjon (valgfritt) - f.eks. Morgenhilsen, Formell';
+
+  @override
+  String get copiedToClipboard => 'Kopiert til utklippstavlen!';
+
+  @override
+  String get copy => 'Kopier';
+
+  @override
+  String get correctAnswer => 'Riktig Svar';
+
+  @override
+  String get createNew => 'Opprett Ny';
+
+  @override
+  String get currentLocation => 'Nåværende posisjon';
+
+  @override
+  String get currentMaterialLabel => 'Nåværende valgte materiale:';
+
+  @override
+  String get delete => 'Slett';
+
+  @override
+  String deleteFailed(String error) {
+    return 'Sletting feilet: $error';
+  }
+
+  @override
+  String get deleteRecord => 'Slett Oppføring';
+
+  @override
+  String get dialogueQuestDesc =>
+      'Øv på samtaler gjennom rollespill. Velg riktig svar og si det.';
+
+  @override
+  String get dialogueQuestTitle => 'Dialog-quest';
+
+  @override
+  String get disambiguationPrompt => 'Hvilken betydning vil du oversette med?';
+
+  @override
+  String get disambiguationTitle => 'Velg betydning';
+
+  @override
+  String get dontHaveAccount => 'Har du ingen konto?';
+
+  @override
+  String get editParticipant => 'Rediger deltaker';
+
+  @override
+  String get email => 'E-post';
+
+  @override
+  String get emailAlreadyInUse =>
+      'E-postadressen er allerede registrert. Vennligst logg inn eller bruk funksjonen for å gjenopprette passord.';
+
+  @override
+  String get enterNewSubjectName => 'Skriv inn nytt navn';
+
+  @override
+  String get enterSentenceHint => 'Skriv en setning...';
+
+  @override
+  String get enterTextHint => 'Skriv inn teksten du vil oversette';
+
+  @override
+  String get enterTextToTranslate => 'Skriv inn tekst for oversettelse';
+
+  @override
+  String get enterWordHint => 'Skriv et ord...';
+
+  @override
+  String get error => 'Feil';
+
+  @override
+  String get errorHateSpeech =>
+      'Kan ikke oversette fordi det inneholder hatefulle ytringer.';
+
+  @override
+  String get errorOtherSafety =>
+      'Oversettelsen ble avvist av AI-sikkerhetspolicyen.';
+
+  @override
+  String get errorProfanity =>
+      'Kan ikke oversette fordi det inneholder banning.';
+
+  @override
+  String get errorSelectCategory => 'Velg et ord eller en setning først!';
+
+  @override
+  String get errorSexualContent =>
+      'Kan ikke oversette fordi det inneholder seksuelt innhold.';
+
+  @override
+  String get errors => 'Feil:';
+
+  @override
+  String get female => 'Kvinne';
+
+  @override
+  String get file => 'Fil:';
+
+  @override
+  String get filterAll => 'Alle';
+
+  @override
+  String get flip => 'Snu';
+
+  @override
+  String get formComparative => 'Komparativ';
+
+  @override
+  String get formInfinitive => 'Infinitiv/Presens';
+
+  @override
+  String get formPast => 'Fortid';
+
+  @override
+  String get formPastParticiple => 'Perfektum partisipp';
+
+  @override
+  String get formPlural => 'Flertall';
+
+  @override
+  String get formPositive => 'Positiv';
+
+  @override
+  String get formPresent => 'Presens';
+
+  @override
+  String get formPresentParticiple => 'Presens partisipp (ing)';
+
+  @override
+  String get formSingular => 'Entall';
+
+  @override
+  String get formSuperlative => 'Superlativ';
+
+  @override
+  String get formThirdPersonSingular => '3. person entall';
+
+  @override
+  String get gameModeDesc => 'Velg spillmodusen du vil øve på';
+
+  @override
+  String get gameModeTitle => 'Spillmodus';
+
+  @override
+  String get gameOver => 'Spillet er over';
+
+  @override
+  String get gender => 'Kjønn';
+
+  @override
+  String get generalTags => 'Generelle tagger';
+
+  @override
+  String get getMaterials => 'Få materialer';
+
+  @override
+  String get good => 'Bra';
+
+  @override
+  String get googleContinue => 'Fortsett med Google';
+
+  @override
+  String get helpDialogueImportDesc => 'Importer hele dialogsett fra JSON-fil.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc => 'For import i Modus 3, opprett JSON:';
+
+  @override
+  String get helpJsonTypeDialogue => 'Dialog';
+
+  @override
+  String get helpJsonTypeSentence => 'Setning';
+
+  @override
+  String get helpJsonTypeWord => 'Ord';
 
   @override
   String get helpMode1Desc =>
@@ -69,160 +361,43 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• AI-chat: Øv på samtaler med en AI-persona.\n• Deltakeradministrasjon: Angi språkene for deg og AI-en for å unngå språkinkonsistenser.\n• GPS-rollespill: Skap naturlige samtalesituasjoner basert på din nåværende posisjon.\n• Bevaring av historikk: Alle samtaler lagres sikkert basert på ID, og historikken beholdes selv om du endrer navn.';
 
   @override
-  String get helpJsonDesc => 'For import i Modus 3, opprett JSON:';
+  String get helpTabJson => 'JSON-format';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => 'Moduser';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => 'Tur';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => 'Hjelp & Guide';
 
   @override
   String get helpTourDesc =>
       'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => 'Sted';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => 'Me';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return 'Gjennomgang ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return 'Materiell ($count)';
-  }
-
-  @override
-  String get mode2Title => 'Gjennomgang';
-
-  @override
-  String get search => 'Søk';
-
-  @override
-  String get translate => 'Oversett';
-
-  @override
-  String get listen => 'Lytt';
-
-  @override
-  String get saveData => 'Lagre';
-
-  @override
-  String get saved => 'Lagret';
-
-  @override
-  String get delete => 'Slett';
-
-  @override
-  String get materialInfo => 'Materialinfo';
-
-  @override
-  String get cancel => 'Avbryt';
-
-  @override
-  String get confirm => 'OK';
-
-  @override
-  String get refresh => 'Oppdater';
-
-  @override
-  String studyRecords(int count) {
-    return 'Oppføringer ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => 'Målspråk Filter:';
-
-  @override
-  String get noRecords => 'Ingen oppføringer for valgt språk';
-
-  @override
-  String get saveTranslationsFromSearch => 'Lagre oversettelser fra søkemodus';
-
-  @override
-  String get flip => 'Snu';
-
-  @override
   String get hide => 'Skjul';
 
   @override
-  String get deleteRecord => 'Slett Oppføring';
-
-  @override
-  String get confirmDelete =>
-      'Er du sikker på at du vil slette denne oppføringen?';
-
-  @override
-  String get recordDeleted => 'Oppføring slettet';
-
-  @override
-  String deleteFailed(String error) {
-    return 'Sletting feilet: $error';
+  String importAdded(int count) {
+    return 'Lagt til: $count';
   }
 
   @override
-  String get importJsonFile => 'Importer JSON';
-
-  @override
-  String get importing => 'Importerer...';
-
-  @override
   String get importComplete => 'Import Ferdig';
+
+  @override
+  String get importDuplicateTitleError =>
+      'Det finnes allerede et materiale med samme tittel. Endre tittelen og prøv igjen.';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'Kunne ikke importere fil:\\n$error';
+  }
 
   @override
   String get importFailed => 'Import Feilet';
@@ -233,45 +408,10 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => 'Importer JSON';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get roleThirdParty => '제삼자';
-
-  @override
-  String get speakerSelect => '발화자 선택';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return 'Totalt: $count';
-  }
-
-  @override
-  String importAdded(int count) {
-    return 'Lagt til: $count';
-  }
+  String get importJsonFilePrompt => 'Vennligst importer en JSON-fil';
 
   @override
   String importSkipped(int count) {
@@ -279,133 +419,15 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get errors => 'Feil:';
-
-  @override
-  String get error => 'Feil';
-
-  @override
-  String importErrorMessage(String error) {
-    return 'Kunne ikke importere fil:\\n$error';
+  String importTotal(int count) {
+    return 'Totalt: $count';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => 'Importerer...';
 
   @override
-  String get selectStudyMaterial => 'Velg Materiell';
-
-  @override
-  String get subject => 'Emne:';
-
-  @override
-  String get source => 'Kilde:';
-
-  @override
-  String get file => 'Fil:';
-
-  @override
-  String progress(int current, int total) {
-    return 'Fremdrift: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => 'Vennligst importer en JSON-fil';
-
-  @override
-  String get selectMaterialPrompt => 'Vennligst velg studiemateriell';
-
-  @override
-  String get studyComplete => 'Studert';
-
-  @override
-  String get markAsStudied => 'Marker som Studert';
-
-  @override
-  String get listening => 'Lytter...';
-
-  @override
-  String get recognized => 'Gjenkjenning ferdig';
-
-  @override
-  String recognitionFailed(String error) {
-    return 'Talegjenkjenning feilet: $error';
-  }
-
-  @override
-  String get checking => 'Sjekker...';
-
-  @override
-  String get translating => 'Oversetter...';
-
-  @override
-  String get translationComplete => 'Oversettelse ferdig (må lagres)';
-
-  @override
-  String get translationLoaded => 'Lagret oversettelse lastet';
-
-  @override
-  String translationFailed(String error) {
-    return 'Oversettelse feilet: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => 'Skriv inn tekst for oversettelse';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => 'Lagrer...';
-
-  @override
-  String get noTranslationToSave => 'Ingen oversettelse å lagre';
-
-  @override
-  String saveFailed(String error) {
-    return 'Lagring feilet: $error';
-  }
-
-  @override
-  String get playing => 'Spiller...';
-
-  @override
-  String get noTextToPlay => 'Ingen tekst å spille';
-
-  @override
-  String playbackFailed(String error) {
-    return 'Avspilling feilet: $error';
-  }
-
-  @override
-  String get sourceLanguage => 'Kildespråk';
-
-  @override
-  String get targetLanguage => 'Målspråk';
-
-  @override
-  String get similarTextFound => 'Lignende tekst funnet';
-
-  @override
-  String get useExistingText => 'Bruk Eksisterende';
-
-  @override
-  String get createNew => 'Opprett Ny';
-
-  @override
-  String reviewCount(int count) {
-    return 'Gjennomgått $count ganger';
-  }
-
-  @override
-  String get tabSpeaking => 'Snakke';
-
-  @override
-  String get speakingPractice => 'Taleøvelse';
+  String get inputModeTitle => 'Inndata';
 
   @override
   String intervalSeconds(int seconds) {
@@ -413,10 +435,373 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get yourPronunciation => 'Din uttale';
+  String get invalidEmail => 'Skriv inn en gyldig e-postadresse.';
 
   @override
-  String get correctAnswer => 'Riktig Svar';
+  String get kakaoContinue => 'Fortsett med Kakao';
+
+  @override
+  String get labelLangCode => 'Språkkode (f.eks. en-US, ko-KR)';
+
+  @override
+  String get labelName => 'Navn';
+
+  @override
+  String get labelNote => 'Notat';
+
+  @override
+  String get labelPOS => 'Ordklasse';
+
+  @override
+  String get labelRole => 'Rolle';
+
+  @override
+  String get labelSentence => 'Setning';
+
+  @override
+  String get labelSentenceCollection => 'Setningssamling';
+
+  @override
+  String get labelSentenceType => 'Setningstype';
+
+  @override
+  String get labelShowMemorized => 'Ferdig';
+
+  @override
+  String get labelType => 'Type:';
+
+  @override
+  String get labelWord => 'Ord';
+
+  @override
+  String get labelWordbook => 'Ordliste';
+
+  @override
+  String get language => 'Språk';
+
+  @override
+  String get languageSettings => 'Språkinnstillinger';
+
+  @override
+  String get languageSettingsTitle => 'Språkinnstillinger';
+
+  @override
+  String get libTitleFirstMeeting => 'Første møte';
+
+  @override
+  String get libTitleGreetings1 => 'Hilsener 1';
+
+  @override
+  String get libTitleNouns1 => 'Substantiver 1';
+
+  @override
+  String get libTitleVerbs1 => 'Verb 1';
+
+  @override
+  String get listen => 'Lytt';
+
+  @override
+  String get listening => 'Lytter...';
+
+  @override
+  String get loadingParticipants => 'Laster inn deltakere...';
+
+  @override
+  String get location => 'Sted';
+
+  @override
+  String get login => 'Logg inn';
+
+  @override
+  String get logout => 'Logg ut';
+
+  @override
+  String get logoutConfirmMessage => 'Vil du logge ut av denne enheten?';
+
+  @override
+  String get logoutConfirmTitle => 'Logg ut';
+
+  @override
+  String get male => 'Mann';
+
+  @override
+  String get manageParticipants => 'Administrer deltakere';
+
+  @override
+  String get manual => 'Manuell inntasting';
+
+  @override
+  String get markAsStudied => 'Marker som Studert';
+
+  @override
+  String get materialInfo => 'Materialinfo';
+
+  @override
+  String get me => 'Meg';
+
+  @override
+  String get menuDeviceImport => 'Importer materiale fra enheten';
+
+  @override
+  String get menuHelp => 'Hjelp';
+
+  @override
+  String get menuLanguageSettings => 'Språkinnstillinger';
+
+  @override
+  String get menuOnlineLibrary => 'Nettbibliotek';
+
+  @override
+  String get menuSelectMaterialSet => 'Velg et studiemateriell';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuTutorial => 'Opplæring';
+
+  @override
+  String get menuWebDownload => 'Bruksanvisning';
+
+  @override
+  String get metadataDialogTitle => 'Detaljert klassifisering';
+
+  @override
+  String get metadataFormType => 'Grammatisk form';
+
+  @override
+  String get metadataRootWord => 'Rotord';
+
+  @override
+  String get micButtonTooltip => 'Start talegjenkjenning';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return 'Nåværende valgte materiale: $name';
+  }
+
+  @override
+  String get mode2Title => 'Gjennomgang';
+
+  @override
+  String get mode3Next => 'Neste';
+
+  @override
+  String get mode3Start => 'Start';
+
+  @override
+  String get mode3Stop => 'Stopp';
+
+  @override
+  String get mode3TryAgain => 'Prøv igjen';
+
+  @override
+  String get mySentenceCollection => 'Mine setninger';
+
+  @override
+  String get myWordbook => 'Min ordliste';
+
+  @override
+  String get neutral => 'Nøytral';
+
+  @override
+  String get newSubjectName => 'Nytt emnenavn/setningssamling';
+
+  @override
+  String get next => 'Neste';
+
+  @override
+  String get noDialogueHistory => 'Ingen dialoghistorikk.';
+
+  @override
+  String get noInternetWarningMic =>
+      'Ingen internettforbindelse. Talegjenkjenning er kanskje ikke tilgjengelig i offline-modus.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'Ingen internettforbindelse. Oversettelsesfunksjonen er ikke tilgjengelig i offline-modus. Vennligst bruk repetisjonsmodus.';
+
+  @override
+  String get noMaterialsInCategory =>
+      'Det er ingen materialer i denne kategorien.';
+
+  @override
+  String get noParticipantsFound => 'Ingen registrerte deltakere.';
+
+  @override
+  String get noRecords => 'Ingen oppføringer for valgt språk';
+
+  @override
+  String get noStudyMaterial => 'Ingen studiemateriell.';
+
+  @override
+  String get noTextToPlay => 'Ingen tekst å spille';
+
+  @override
+  String get noTranslationToSave => 'Ingen oversettelse å lagre';
+
+  @override
+  String get noVoiceDetected => 'Ingen stemme oppdaget';
+
+  @override
+  String get notSelected => '- Ikke valgt -';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'Sjekk internettforbindelsen eller prøv igjen senere.';
+
+  @override
+  String get onlineLibraryLoadFailed => 'Kunne ikke laste inn materialet.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'Ingen materialer.';
+
+  @override
+  String get participantDeleted => 'Deltakeren er slettet.';
+
+  @override
+  String get participantRename => 'Endre navn på deltaker';
+
+  @override
+  String get partner => 'Partner';
+
+  @override
+  String get partnerMode => 'Partnermodus';
+
+  @override
+  String get password => 'Passord';
+
+  @override
+  String get passwordTooShort => 'Passordet må være minst 6 tegn langt.';
+
+  @override
+  String get perfect => 'Perfekt!';
+
+  @override
+  String get personaFriend => 'Lokal venn';
+
+  @override
+  String get personaGuide => 'Reiseleder';
+
+  @override
+  String get personaTeacher => 'Engelsklærer';
+
+  @override
+  String get playAgain => 'Spill igjen';
+
+  @override
+  String playbackFailed(String error) {
+    return 'Avspilling feilet: $error';
+  }
+
+  @override
+  String get playing => 'Spiller...';
+
+  @override
+  String get posAdjective => 'Adjektiv';
+
+  @override
+  String get posAdverb => 'Adverb';
+
+  @override
+  String get posConjunction => 'Konjunksjon';
+
+  @override
+  String get posInterjection => 'Interjeksjon';
+
+  @override
+  String get posNoun => 'Substantiv';
+
+  @override
+  String get posPreposition => 'Preposisjon';
+
+  @override
+  String get posPronoun => 'Pronomen';
+
+  @override
+  String get posVerb => 'Verb';
+
+  @override
+  String get practiceModeTitle => 'Øving';
+
+  @override
+  String get practiceWordsOnly => 'Øv bare på ord';
+
+  @override
+  String progress(int current, int total) {
+    return 'Fremdrift: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return 'Vis nylig opprettede $count';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return 'Talegjenkjenning feilet: $error';
+  }
+
+  @override
+  String get recognized => 'Gjenkjenning ferdig';
+
+  @override
+  String get recognizedText => 'Gjenkjent uttale:';
+
+  @override
+  String get recordDeleted => 'Oppføring slettet';
+
+  @override
+  String get refresh => 'Oppdater';
+
+  @override
+  String get reset => 'Tilbakestill';
+
+  @override
+  String get resetPracticeHistory => 'Tilbakestill øvingshistorikk';
+
+  @override
+  String get retry => 'Prøv igjen?';
+
+  @override
+  String get reviewAll => 'Gjennomgå alle';
+
+  @override
+  String reviewCount(int count) {
+    return 'Gjennomgått $count ganger';
+  }
+
+  @override
+  String get reviewModeTitle => 'Repetisjon';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => 'Tredjepart';
+
+  @override
+  String get roleUser => 'Bruker';
+
+  @override
+  String get save => 'Lagre';
+
+  @override
+  String get saveData => 'Lagre';
+
+  @override
+  String saveFailed(String error) {
+    return 'Lagring feilet: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch => 'Lagre oversettelser fra søkemodus';
+
+  @override
+  String get saved => 'Lagret';
+
+  @override
+  String get saving => 'Lagrer...';
 
   @override
   String score(String score) {
@@ -424,144 +809,239 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get perfect => 'Perfekt!';
+  String get scoreLabel => 'Poeng';
 
   @override
-  String get good => 'Bra';
+  String get search => 'Søk';
 
   @override
-  String get tryAgain => 'Prøv igjen';
+  String get searchConditions => 'Søkevilkår';
 
   @override
-  String get startPractice => 'Start';
+  String get searchSentenceHint => 'Søk etter setning...';
 
   @override
-  String get stopPractice => 'Stopp';
+  String get searchWordHint => 'Søk etter ord...';
 
   @override
-  String get menuOnlineLibrary => 'Online Library';
+  String get sectionSentence => 'Setningsseksjon';
 
   @override
-  String get startTutorial => 'Start Tur';
+  String get sectionSentences => 'Setninger';
 
   @override
-  String get menuTutorial => 'Tutorial';
+  String get sectionWord => 'Ordseksjon';
 
   @override
-  String get tutorialMicTitle => 'Stemmeinndata';
+  String get sectionWords => 'Ord';
 
   @override
-  String get tutorialMicDesc => 'Trykk på mikrofonen for stemmeinndata.';
+  String get selectExistingSubject => 'Velg eksisterende navn';
 
   @override
-  String get tutorialTabDesc => 'Her kan du velge ønsket læringsmodus.';
+  String get selectMaterialPrompt => 'Vennligst velg studiemateriell';
 
   @override
-  String get tutorialTapToContinue => 'Trykk for å fortsette';
+  String get selectMaterialSet => 'Velg læremateriell';
 
   @override
-  String get tutorialTransTitle => 'Oversett';
+  String get selectPOS => 'Velg ordklasse';
 
   @override
-  String get tutorialTransDesc => 'Trykk her for å oversette tekst.';
+  String get selectParticipants => 'Velg deltakere';
 
   @override
-  String get tutorialSaveTitle => 'Lagre';
+  String get selectSentenceType => 'Velg setningstype';
 
   @override
-  String get tutorialSaveDesc => 'Lagre oversettelsen i studieoppføringer.';
-
-  @override
-  String get selectParticipants => 'Select Participants';
-
-  @override
-  String get loadingParticipants => 'Loading participants...';
-
-  @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
+  String get selectStudyMaterial => 'Velg Materiell';
 
   @override
   String get sendingMessage => '메시지 전송 중...';
 
   @override
-  String get startChat => 'Start Chat';
+  String get sentence => 'Setning';
 
   @override
-  String get manageParticipants => 'Manage Participants';
+  String get signUp => 'Registrer deg';
 
   @override
-  String get tutorialAiChatTitle => 'AI-chat';
+  String get similarTextFound => 'Lignende tekst funnet';
 
   @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
+  String get skip => 'Hopp over';
 
   @override
-  String get tutorialM2SelectTitle => 'Velg & Filter';
+  String get source => 'Kilde:';
 
   @override
-  String get tutorialM2SelectDesc => 'Velg materiell eller \'Gjennomgå Alle\'.';
+  String get sourceLanguage => 'Kildespråk';
 
   @override
-  String get tutorialM2ListTitle => 'Studieliste';
+  String get sourceLanguageLabel => 'Source Language';
 
   @override
-  String get tutorialM2ListDesc =>
-      'Sjekk kortene og snu dem. (Long-press to delete)';
+  String get speakNow => 'Snakk nå!';
 
   @override
-  String get tutorialM3SelectTitle => 'Velg Materiell';
+  String get speaker => 'Taler';
 
   @override
-  String get tutorialM3SelectDesc => 'Velg sett for taleøvelse.';
+  String get speakerSelect => 'Velg taler';
 
   @override
-  String get tutorialM3IntervalTitle => 'Intervall';
+  String get speakingPractice => 'Taleøvelse';
 
   @override
-  String get tutorialM3IntervalDesc => 'Juster ventetid mellom setninger.';
+  String get startChat => 'Start samtale';
 
   @override
-  String get tutorialM3StartTitle => 'Start';
+  String get startPractice => 'Start';
 
   @override
-  String get tutorialM3StartDesc => 'Trykk play for å starte.';
+  String get startTutorial => 'Start Tur';
 
   @override
   String get startWarning => 'Advarsel';
 
   @override
-  String get noVoiceDetected => 'Ingen stemme oppdaget';
+  String get startsWith => 'Starter med';
 
   @override
-  String get tooltipSearch => 'Søk';
+  String get statusCheckEmail =>
+      'Vennligst sjekk e-posten din for å fullføre bekreftelsen.';
 
   @override
-  String get tooltipStudyReview => 'Studie+Repetisjon';
+  String statusDownloading(Object name) {
+    return 'Laster ned: $name...';
+  }
 
   @override
-  String get tooltipSpeaking => 'Tale';
+  String statusImportFailed(Object error) {
+    return 'Import mislyktes: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name import fullført';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => 'Innlogging avbrutt.';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return 'Innlogging mislyktes: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => 'Logget inn.';
+
+  @override
+  String get statusLogoutSuccess => 'Logget ut.';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return 'Registrering mislyktes: $error';
+  }
+
+  @override
+  String get statusSigningUp => 'Registrerer...';
+
+  @override
+  String get stopPractice => 'Stopp';
+
+  @override
+  String get studyComplete => 'Studert';
+
+  @override
+  String studyRecords(int count) {
+    return 'Oppføringer ($count)';
+  }
+
+  @override
+  String get styleFormal => 'Formell';
+
+  @override
+  String get styleInformal => 'Uformell';
+
+  @override
+  String get stylePolite => 'Høflig';
+
+  @override
+  String get styleSlang => 'Slang';
+
+  @override
+  String get subject => 'Emne:';
+
+  @override
+  String get swapLanguages => 'Bytt språk';
+
+  @override
+  String get switchToAi => 'Bytt til AI-modus';
+
+  @override
+  String get switchToPartner => 'Bytt til partnermodus';
+
+  @override
+  String get syncingData => 'Synkroniserer data...';
+
+  @override
+  String get tabConversation => 'Samtale';
+
+  @override
+  String tabReview(int count) {
+    return 'Gjennomgang ($count)';
+  }
+
+  @override
+  String get tabSentence => 'dømme';
+
+  @override
+  String get tabSpeaking => 'Snakke';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return 'Materiell ($count)';
+  }
+
+  @override
+  String get tabWord => 'ord';
+
+  @override
+  String get tagFormal => 'Høflig';
+
+  @override
+  String get tagSelection => 'Valg av tag';
+
+  @override
+  String get targetLanguage => 'Målspråk';
+
+  @override
+  String get targetLanguageFilter => 'Målspråk Filter:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc => 'Tid til å tenke før svaret avsløres.';
+
+  @override
+  String get thinkingTimeInterval => 'Tenketidsintervall';
+
+  @override
+  String get timeUp => 'Tiden er ute!';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
+
+  @override
+  String get titleTagSelection => 'Titteltag (ressurssamling)';
 
   @override
   String get tooltipDecrease => 'Reduser';
@@ -570,650 +1050,204 @@ class AppLocalizationsNo extends AppLocalizations {
   String get tooltipIncrease => 'Øk';
 
   @override
-  String get languageSettings => 'Språkinnstillinger';
+  String get tooltipSearch => 'Søk';
 
   @override
-  String get tutorialM2DropdownDesc => 'Velg studiemateriale.';
+  String get tooltipSpeaking => 'Tale';
 
   @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
+  String get tooltipStudyReview => 'Studie+Repetisjon';
 
   @override
-  String get tutorialM2ImportDesc => 'Importer JSON-fil fra enhetsmappe.';
+  String totalRecords(int count) {
+    return 'Totalt $count poster (Vis alle)';
+  }
 
   @override
-  String get tutorialLangSettingsTitle => 'Language Settings';
+  String get translate => 'Oversett';
 
   @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
+  String get translating => 'Oversetter...';
 
   @override
-  String get copy => 'Copy';
+  String get translation => 'Oversettelse';
 
   @override
-  String get copiedToClipboard => 'Copied to clipboard!';
+  String get translationComplete => 'Oversettelse ferdig (må lagres)';
 
   @override
-  String get tutorialContextTitle => 'Kontekstmerke';
+  String translationFailed(String error) {
+    return 'Oversettelse feilet: $error';
+  }
+
+  @override
+  String get translationLimitExceeded => 'Oversettelsesgrense overskredet';
+
+  @override
+  String get translationLimitMessage =>
+      'Du har brukt alle dine daglige gratis oversettelser (5 ganger).\\n\\nVil du se en annonse for å fylle på 5 ganger umiddelbart?';
+
+  @override
+  String get translationLoaded => 'Lagret oversettelse lastet';
+
+  @override
+  String get translationRefilled => 'Oversettelsesantallet er fylt på med 5!';
+
+  @override
+  String get translationResultHint => 'Oversettelsesresultat - kan redigeres';
+
+  @override
+  String get tryAgain => 'Prøv igjen';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'Øv på virkelige samtaler med en AI-persona.';
+
+  @override
+  String get tutorialAiChatTitle => 'AI-chat';
 
   @override
   String get tutorialContextDesc =>
       'Legg til kontekst (f.eks. Morgen) for å skille lignende setninger.';
 
   @override
-  String get thinkingTimeInterval => 'Playback Delay';
+  String get tutorialContextTitle => 'Kontekstmerke';
 
   @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
+  String get tutorialLangSettingsDesc =>
+      'Angi kilde- og målspråk for oversettelse.';
 
   @override
-  String get autoPlay => 'Auto-Play';
+  String get tutorialLangSettingsTitle => 'Språkinnstillinger';
 
   @override
-  String get timeUp => 'Time Up!';
+  String get tutorialM1ToggleDesc => 'Bytt mellom ord- og setningsmodus her.';
 
   @override
-  String get gameModeTitle => 'Game Mode';
+  String get tutorialM1ToggleTitle => 'Ord-/setningsmodus';
 
   @override
-  String get gameModeDesc => 'Choose your practice mode';
+  String get tutorialM2DropdownDesc => 'Velg studiemateriale.';
 
   @override
-  String get wordDefenseTitle => 'Word Defense';
+  String get tutorialM2ImportDesc => 'Importer JSON-fil fra enhetsmappe.';
 
   @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
+  String get tutorialM2ListDesc =>
+      'Sjekk kortene og snu dem. (Long-press to delete)';
 
   @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
+  String get tutorialM2ListTitle => 'Studieliste';
 
   @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
+  String get tutorialM2SearchDesc =>
+      'Søk etter lagrede ord og setninger for å finne dem raskt.';
 
   @override
-  String get translation => 'Translation';
+  String get tutorialM2SelectDesc => 'Velg materiell eller \'Gjennomgå Alle\'.';
 
   @override
-  String get labelType => 'Type:';
+  String get tutorialM2SelectTitle => 'Velg & Filter';
 
   @override
-  String get labelWord => 'Word';
+  String get tutorialM3IntervalDesc => 'Juster ventetid mellom setninger.';
 
   @override
-  String get labelSentence => 'Sentence';
-
-  @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
-
-  @override
-  String get usageLimitTitle => 'Grense nådd';
-
-  @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
-
-  @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
-
-  @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
-
-  @override
-  String get translationRefilled => 'Translations refilled by 5!';
-
-  @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
-
-  @override
-  String get reviewAll => 'Review All';
-
-  @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
-
-  @override
-  String get filterAll => 'All';
-
-  @override
-  String get practiceWordsOnly => 'Practice Words Only';
-
-  @override
-  String get resetPracticeHistory => 'Reset Practice History';
-
-  @override
-  String get retry => 'Retry?';
-
-  @override
-  String get noStudyMaterial => 'No study material found.';
-
-  @override
-  String get gameOver => 'Game Over';
-
-  @override
-  String get playAgain => 'Play Again';
-
-  @override
-  String get speakNow => 'Speak now!';
-
-  @override
-  String get scoreLabel => 'Score';
-
-  @override
-  String get viewOnlineGuide => 'View Online User Guide';
-
-  @override
-  String get getMaterials => 'Get Materials';
-
-  @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
-
-  @override
-  String get wordModeLabel => 'Word Mode';
-
-  @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get menuHelp => 'Help';
-
-  @override
-  String get menuWebDownload => 'Get Material from Web';
-
-  @override
-  String get menuDeviceImport => 'Import from Device';
-
-  @override
-  String get menuSettings => 'Settings';
-
-  @override
-  String get basicWords => 'Basic Word Repository';
-
-  @override
-  String get basicSentences => 'Basic Sentence Repository';
-
-  @override
-  String get selectMaterialSet => 'Velg læremateriell';
-
-  @override
-  String get sectionWords => 'Ord';
-
-  @override
-  String get sectionSentences => 'Setninger';
-
-  @override
-  String get languageSettingsTitle => 'Language Settings';
-
-  @override
-  String get sourceLanguageLabel => 'Source Language';
-
-  @override
-  String get targetLanguageLabel => 'Target Language';
-
-  @override
-  String get mode3Start => 'Start';
-
-  @override
-  String get mode3Stop => 'Stop';
-
-  @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc =>
-      'Jeg bytter ut språket mitt med språket jeg lærer.';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
+  String get tutorialM3IntervalTitle => 'Intervall';
 
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
 
   @override
-  String get menuSelectMaterialSet => 'Velg et studiemateriell';
+  String get tutorialM3ResetTitle => 'Reset History';
 
   @override
-  String get sectionWord => 'Ordseksjon';
+  String get tutorialM3SelectDesc => 'Velg sett for taleøvelse.';
 
   @override
-  String get sectionSentence => 'Setningsseksjon';
+  String get tutorialM3SelectTitle => 'Velg Materiell';
 
   @override
-  String get tabWord => 'ord';
+  String get tutorialM3StartDesc => 'Trykk play for å starte.';
 
   @override
-  String get tabSentence => 'dømme';
+  String get tutorialM3StartTitle => 'Start';
 
   @override
-  String get errorProfanity =>
-      'Kan ikke oversette fordi det inneholder banning.';
+  String get tutorialM3WordsDesc => 'Sjekk for å øve bare på lagrede ord.';
 
   @override
-  String get errorHateSpeech =>
-      'Kan ikke oversette fordi det inneholder hatefulle ytringer.';
+  String get tutorialM3WordsTitle => 'Ordøving';
 
   @override
-  String get errorSexualContent =>
-      'Kan ikke oversette fordi det inneholder seksuelt innhold.';
+  String get tutorialMicDesc => 'Trykk på mikrofonen for stemmeinndata.';
 
   @override
-  String get errorOtherSafety =>
-      'Oversettelsen ble avvist av AI-sikkerhetspolicyen.';
+  String get tutorialMicTitle => 'Stemmeinndata';
 
   @override
-  String get clearAll => 'Fjern alle';
+  String get tutorialSaveDesc => 'Lagre oversettelsen i studieoppføringer.';
 
   @override
-  String get disambiguationTitle => 'Velg betydning';
+  String get tutorialSaveTitle => 'Lagre';
 
   @override
-  String get disambiguationPrompt => 'Hvilken betydning vil du oversette med?';
+  String get tutorialSwapDesc =>
+      'Jeg bytter ut språket mitt med språket jeg lærer.';
 
   @override
-  String get skip => 'Hopp over';
+  String get tutorialTabDesc => 'Her kan du velge ønsket læringsmodus.';
 
   @override
-  String get inputModeTitle => 'Input';
+  String get tutorialTapToContinue => 'Trykk for å fortsette';
 
   @override
-  String get reviewModeTitle => 'Review';
+  String get tutorialTransDesc => 'Trykk her for å oversette tekst.';
 
   @override
-  String get practiceModeTitle => 'Øving';
+  String get tutorialTransTitle => 'Oversett';
 
   @override
-  String get chatHistoryTitle => 'Conversation History';
+  String get typeExclamation => 'Utrop';
 
   @override
-  String get chatNew => 'New Chat';
+  String get typeImperative => 'Imperativ';
 
   @override
-  String get chatNewChat => 'New Chat';
+  String get typeQuestion => 'Spørsmål';
 
   @override
-  String get chatChoosePersona => 'Choose a Persona';
+  String get typeStatement => 'Påstand';
 
   @override
-  String get chatTypeHint => 'Type a message...';
+  String get usageLimitTitle => 'Grense nådd';
 
   @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
+  String get useExistingText => 'Bruk Eksisterende';
 
   @override
-  String get chatNoConversations => 'No conversations yet';
+  String get viewOnlineGuide => 'Se online guide';
 
   @override
-  String get noDialogueHistory => 'No dialogue history.';
+  String get voluntaryTranslations => 'Frivillige oversettelser';
 
   @override
-  String get chatStartNewPrompt => 'Start a new chat to practice!';
+  String get watchAdAndRefill => 'Se annonse og fyll på (+5 ganger)';
 
   @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
+  String get word => 'Ord';
 
   @override
-  String get personaTeacher => 'English Teacher';
+  String get wordDefenseDesc =>
+      'Forsvar basen ved å si ord før fienden ankommer.';
 
   @override
-  String get personaGuide => 'Travel Guide';
+  String get wordDefenseTitle => 'Ord-forsvar';
 
   @override
-  String get personaFriend => 'Local Friend';
+  String get wordModeLabel => 'Ordmodus';
 
   @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => 'Chat';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => 'Grunnleggende ordlager';
-
-  @override
-  String get basicSentenceRepository => 'Grunnleggende setningslager';
-
-  @override
-  String get chatEndTitle => 'End & Save Chat';
-
-  @override
-  String get chatEndMessage =>
-      'Do you want to end this conversation? You can set a title for it.';
-
-  @override
-  String get chatSaveAndExit => 'Save & Exit';
-
-  @override
-  String get errorSelectCategory => 'Please select word or sentence first!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => 'Høflig';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => 'Titteltag (ressurssamling)';
-
-  @override
-  String get generalTags => 'Generelle tagger';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => 'Entall';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => 'Nøytral';
-
-  @override
-  String get chatAllConversations => 'Alle samtaler';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation =>
-      'Vil du slette denne samtalen?\nSlettede samtaler kan ikke gjenopprettes.';
-
-  @override
-  String get notSelected => '- Ikke valgt -';
-
-  @override
-  String get myWordbook => 'Min ordliste';
-
-  @override
-  String get mySentenceCollection => 'Mine setninger';
-
-  @override
-  String get newSubjectName => 'Nytt emnenavn/setningssamling';
-
-  @override
-  String get enterNewSubjectName => 'Skriv inn nytt navn';
-
-  @override
-  String get addNewSubject => 'Legg til nytt navn';
-
-  @override
-  String get selectExistingSubject => 'Velg eksisterende navn';
-
-  @override
-  String get addTagHint => 'Legg til tagg...';
-
-  @override
-  String get save => 'Lagre';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail =>
-      'Vennligst sjekk e-posten din for å fullføre bekreftelsen.';
-
-  @override
-  String get emailAlreadyInUse =>
-      'E-postadressen er allerede registrert. Vennligst logg inn eller bruk funksjonen for å gjenopprette passord.';
+  String get yourPronunciation => 'Din uttale';
 }

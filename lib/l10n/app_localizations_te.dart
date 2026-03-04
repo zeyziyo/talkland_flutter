@@ -9,35 +9,327 @@ class AppLocalizationsTe extends AppLocalizations {
   AppLocalizationsTe([String locale = 'te']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => 'ఖచ్చితత్వం';
 
   @override
-  String get kakaoContinue => 'Kakaoతో కొనసాగించండి';
+  String get adLoading =>
+      'ప్రకటనను లోడ్ చేస్తోంది. దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => 'కొత్త పేరును జోడించు';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => 'భాగస్వామిని చేర్చు';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => 'ట్యాగ్‌ను జోడించు...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => 'ఇప్పటికే ఖాతా ఉందా?';
 
   @override
-  String get helpTitle => 'సహాయం & గైడ్';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => 'మోడ్‌లు';
+  String get autoPlay => 'ఆటో ప్లే';
 
   @override
-  String get helpTabJson => 'JSON ఫార్మాట్';
+  String get basic => 'ప్రాథమిక';
 
   @override
-  String get helpTabTour => 'టూర్';
+  String get basicDefault => 'ప్రాథమిక డిఫాల్ట్';
+
+  @override
+  String get basicMaterialRepository => 'ప్రాథమిక వాక్యం/పదం నిల్వ';
+
+  @override
+  String get basicSentenceRepository => 'ప్రాథమిక వాక్య రిపోజిటరీ';
+
+  @override
+  String get basicSentences => 'ప్రాథమిక వాక్య నిల్వ';
+
+  @override
+  String get basicWordRepository => 'ప్రాథమిక పద రిపోజిటరీ';
+
+  @override
+  String get basicWords => 'ప్రాథమిక పద నిల్వ';
+
+  @override
+  String get cancel => 'రద్దు చేయి';
+
+  @override
+  String get caseObject => 'ఆబ్జెక్టివ్';
+
+  @override
+  String get casePossessive => 'ఆస్తికరమైన';
+
+  @override
+  String get casePossessivePronoun => 'ఆస్తికరమైన సర్వనామం';
+
+  @override
+  String get caseReflexive => 'రిఫ్లెక్సివ్';
+
+  @override
+  String get caseSubject => 'సబ్జెక్టివ్';
+
+  @override
+  String get chatAiChat => 'చాటింగ్';
+
+  @override
+  String get chatAllConversations => 'అన్ని సంభాషణలు';
+
+  @override
+  String get chatChoosePersona => 'వ్యక్తిత్వాన్ని ఎంచుకోండి';
+
+  @override
+  String get chatEndMessage => 'మీరు చాట్‌ను ముగించాలనుకుంటున్నారా?';
+
+  @override
+  String get chatEndTitle => 'చాట్‌ను ముగించి, సేవ్ చేయండి';
+
+  @override
+  String chatFailed(Object error) {
+    return 'చాట్ విఫలమైంది: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'సంభాషణ నుండి సంగ్రహించబడింది ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => 'చాట్ చరిత్ర';
+
+  @override
+  String get chatNew => 'కొత్త చాట్';
+
+  @override
+  String get chatNewChat => 'కొత్త చాట్';
+
+  @override
+  String get chatNoConversations => 'ఇంకా సంభాషణలు ఏమీ లేవు';
+
+  @override
+  String get chatSaveAndExit => 'సేవ్ చేసి నిష్క్రమించు';
+
+  @override
+  String get chatStartNewPrompt => 'అభ్యాసం కోసం కొత్త సంభాషణను ప్రారంభించండి!';
+
+  @override
+  String get chatTypeHint => 'సందేశాన్ని టైప్ చేయండి...';
+
+  @override
+  String get chatUntitled => 'పేరు లేని చాట్';
+
+  @override
+  String get checking => 'తనిఖీ చేస్తోంది...';
+
+  @override
+  String get clearAll => 'అన్నీ తొలగించు';
+
+  @override
+  String get confirm => 'సరే';
+
+  @override
+  String get confirmDelete =>
+      'మీరు ఖచ్చితంగా ఈ రికార్డును తొలగించాలనుకుంటున్నారా?';
+
+  @override
+  String get confirmDeleteConversation =>
+      'మీరు ఈ సంభాషణను తొలగించాలనుకుంటున్నారా?\nతొలగించిన సంభాషణను తిరిగి పొందలేరు.';
+
+  @override
+  String get confirmDeleteParticipant => 'ఈ భాగస్వామిని తొలగించాలా?';
+
+  @override
+  String get contextTagHint =>
+      'తర్వాత వేరు చేయడానికి సహాయపడటానికి పరిస్థితిని నమోదు చేయండి';
+
+  @override
+  String get contextTagLabel =>
+      'సందర్భం/పరిస్థితి (ఐచ్ఛికం) - ఉదా: ఉదయకాల శుభాకాంక్షలు, గౌరవప్రదమైన ప్రసంగం';
+
+  @override
+  String get copiedToClipboard => 'క్లిప్‌బోర్డ్‌కు నకలు చేయబడింది!';
+
+  @override
+  String get copy => 'నకలు చేయి';
+
+  @override
+  String get correctAnswer => 'సరైన సమాధానం';
+
+  @override
+  String get createNew => 'కొత్తది సృష్టించు';
+
+  @override
+  String get currentLocation => 'ప్రస్తుత స్థానం';
+
+  @override
+  String get currentMaterialLabel => 'ప్రస్తుత ఎంపిక చేసిన మెటీరియల్ సేకరణ:';
+
+  @override
+  String get delete => 'తొలగించు';
+
+  @override
+  String deleteFailed(String error) {
+    return 'తొలగింపు విఫలమైంది: $error';
+  }
+
+  @override
+  String get deleteRecord => 'రికార్డును తొలగించు';
+
+  @override
+  String get dialogueQuestDesc =>
+      'సంభాషణ అభ్యాసం కోసం రోల్-ప్లేయింగ్ గేమ్. సరైన సమాధానాన్ని ఎంచుకోండి మరియు చెప్పండి.';
+
+  @override
+  String get dialogueQuestTitle => 'సంభాషణ అన్వేషణ';
+
+  @override
+  String get disambiguationPrompt => 'మీరు ఏ అర్థంతో అనువదించాలనుకుంటున్నారు?';
+
+  @override
+  String get disambiguationTitle => 'అర్థాన్ని ఎంచుకోండి';
+
+  @override
+  String get dontHaveAccount => 'ఖాతా లేదా?';
+
+  @override
+  String get editParticipant => 'భాగస్వామిని సవరించు';
+
+  @override
+  String get email => 'ఇమెయిల్';
+
+  @override
+  String get emailAlreadyInUse =>
+      'ఈ ఇమెయిల్ ఇప్పటికే ఉపయోగంలో ఉంది. దయచేసి లాగిన్ అవ్వండి లేదా మీ పాస్‌వర్డ్‌ను తిరిగి పొందండి.';
+
+  @override
+  String get enterNewSubjectName => 'కొత్త పేరును నమోదు చేయండి';
+
+  @override
+  String get enterSentenceHint => 'వాక్యాన్ని నమోదు చేయండి...';
+
+  @override
+  String get enterTextHint => 'అనువదించడానికి వచనాన్ని నమోదు చేయండి';
+
+  @override
+  String get enterTextToTranslate => 'అనువదించడానికి వచనాన్ని నమోదు చేయండి';
+
+  @override
+  String get enterWordHint => 'పదాన్ని నమోదు చేయండి...';
+
+  @override
+  String get error => 'లోపం';
+
+  @override
+  String get errorHateSpeech => 'ద్వేషపూరిత ప్రసంగం ఉన్నందున అనువదించలేము.';
+
+  @override
+  String get errorOtherSafety =>
+      'AI భద్రతా విధానం ద్వారా అనువాదం తిరస్కరించబడింది.';
+
+  @override
+  String get errorProfanity => 'అభ్యంతరకర పదాలు ఉన్నందున అనువదించలేము.';
+
+  @override
+  String get errorSelectCategory =>
+      'దయచేసి ముందుగా ఒక పదం లేదా వాక్యాన్ని ఎంచుకోండి!';
+
+  @override
+  String get errorSexualContent => 'శృంగారభరిత కంటెంట్ ఉన్నందున అనువదించలేము.';
+
+  @override
+  String get errors => 'లోపాలు:';
+
+  @override
+  String get female => 'స్త్రీ';
+
+  @override
+  String get file => 'ఫైల్:';
+
+  @override
+  String get filterAll => 'అన్నీ';
+
+  @override
+  String get flip => 'తిప్పు';
+
+  @override
+  String get formComparative => 'తులనాత్మక డిగ్రీ';
+
+  @override
+  String get formInfinitive => 'ఇన్ఫినిటివ్/ప్రస్తుత కాలం';
+
+  @override
+  String get formPast => 'గత కాలం';
+
+  @override
+  String get formPastParticiple => 'గత పార్టిసిపుల్';
+
+  @override
+  String get formPlural => 'బహువచనం';
+
+  @override
+  String get formPositive => 'పాజిటివ్ డిగ్రీ';
+
+  @override
+  String get formPresent => 'ప్రస్తుత కాలం';
+
+  @override
+  String get formPresentParticiple => 'ప్రస్తుత పార్టిసిపుల్ (-ing)';
+
+  @override
+  String get formSingular => 'ఏకవచనం';
+
+  @override
+  String get formSuperlative => 'సూపర్లేటివ్ డిగ్రీ';
+
+  @override
+  String get formThirdPersonSingular => 'మూడవ వ్యక్తి ఏకవచనం';
+
+  @override
+  String get gameModeDesc => 'ప్రాక్టీస్ చేయడానికి గేమ్ మోడ్‌ను ఎంచుకోండి';
+
+  @override
+  String get gameModeTitle => 'గేమ్ మోడ్';
+
+  @override
+  String get gameOver => 'గేమ్ ఓవర్';
+
+  @override
+  String get gender => 'లింగం';
+
+  @override
+  String get generalTags => 'సాధారణ ట్యాగ్‌లు';
+
+  @override
+  String get getMaterials => 'మెటీరియల్‌లను పొందండి';
+
+  @override
+  String get good => 'బాగుంది';
+
+  @override
+  String get googleContinue => 'Googleతో కొనసాగించు';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'JSON ఫైల్‌ల నుండి మొత్తం సంభాషణ సెట్‌లను దిగుమతి చేయండి.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc => 'మోడ్ 3లో దిగుమతి చేయడానికి, JSONని సృష్టించండి:';
+
+  @override
+  String get helpJsonTypeDialogue => 'సంభాషణ (Dialogue)';
+
+  @override
+  String get helpJsonTypeSentence => 'వాక్యం (Sentence)';
+
+  @override
+  String get helpJsonTypeWord => 'పదం (Word)';
 
   @override
   String get helpMode1Desc =>
@@ -69,161 +361,43 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• AI చాటింగ్: వ్యక్తిత్వంతో నిజమైన సంభాషణను ప్రాక్టీస్ చేయండి.\n• పార్టిసిపెంట్ నిర్వహణ: మీ భాషను మరియు AI భాషను సెట్ చేయడం ద్వారా భాషా అసమానతలను నివారించండి.\n• GPS రోల్-ప్లే: మీ ప్రస్తుత స్థానం ఆధారంగా సహజమైన సంభాషణ పరిస్థితులను సెట్ చేయండి.\n• రికార్డ్ నిలుపుదల: అన్ని సంభాషణలు ID ఆధారంగా సురక్షితంగా నిల్వ చేయబడతాయి మరియు మీరు పేరు మార్చినప్పటికీ ట్రాక్ చేయబడతాయి.';
 
   @override
-  String get helpJsonDesc => 'మోడ్ 3లో దిగుమతి చేయడానికి, JSONని సృష్టించండి:';
+  String get helpTabJson => 'JSON ఫార్మాట్';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => 'మోడ్‌లు';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => 'టూర్';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => 'సహాయం & గైడ్';
 
   @override
   String get helpTourDesc =>
       'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => 'స్థానం';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => 'Me';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return 'సమీక్ష ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return 'మెటీరియల్ ($count)';
-  }
-
-  @override
-  String get mode2Title => 'సమీక్ష';
-
-  @override
-  String get search => 'శోధించు';
-
-  @override
-  String get translate => 'అనువాదం';
-
-  @override
-  String get listen => 'వినండి';
-
-  @override
-  String get saveData => 'సేవ్ చేయి';
-
-  @override
-  String get saved => 'సేవ్ చేయబడింది';
-
-  @override
-  String get delete => 'తొలగించు';
-
-  @override
-  String get materialInfo => 'విషయ సమాచారం';
-
-  @override
-  String get cancel => 'రద్దు చేయి';
-
-  @override
-  String get confirm => 'సరే';
-
-  @override
-  String get refresh => 'రీఫ్రెష్';
-
-  @override
-  String studyRecords(int count) {
-    return 'రికార్డులు ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => 'లక్ష్య భాష ఫిల్టర్:';
-
-  @override
-  String get noRecords => 'ఎంచుకున్న భాషకు రికార్డులు లేవు';
-
-  @override
-  String get saveTranslationsFromSearch =>
-      'శోధన మోడ్ నుండి అనువాదాలను సేవ్ చేయండి';
-
-  @override
-  String get flip => 'తిప్పు';
-
-  @override
   String get hide => 'దాచు';
 
   @override
-  String get deleteRecord => 'రికార్డును తొలగించు';
-
-  @override
-  String get confirmDelete =>
-      'మీరు ఖచ్చితంగా ఈ రికార్డును తొలగించాలనుకుంటున్నారా?';
-
-  @override
-  String get recordDeleted => 'రికార్డు విజయవంతంగా తొలగించబడింది';
-
-  @override
-  String deleteFailed(String error) {
-    return 'తొలగింపు విఫలమైంది: $error';
+  String importAdded(int count) {
+    return 'జోడించబడింది: $count';
   }
 
   @override
-  String get importJsonFile => 'JSON దిగుమతి';
-
-  @override
-  String get importing => 'దిగుమతి అవుతోంది...';
-
-  @override
   String get importComplete => 'దిగుమతి పూర్తయింది';
+
+  @override
+  String get importDuplicateTitleError =>
+      'అదే పేరుతో మెటీరియల్ ఇప్పటికే ఉంది. పేరును మార్చి మళ్లీ ప్రయత్నించండి.';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'ఫైల్‌ని దిగుమతి చేయడంలో విఫలమైంది:\\n$error';
+  }
 
   @override
   String get importFailed => 'దిగుమతి విఫలమైంది';
@@ -234,45 +408,10 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => 'JSON దిగుమతి';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get roleThirdParty => '제삼자';
-
-  @override
-  String get speakerSelect => '발화자 선택';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return 'మొత్తం: $count';
-  }
-
-  @override
-  String importAdded(int count) {
-    return 'జోడించబడింది: $count';
-  }
+  String get importJsonFilePrompt => 'దయచేసి JSON ఫైల్‌ని దిగుమతి చేయండి';
 
   @override
   String importSkipped(int count) {
@@ -280,133 +419,15 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
-  String get errors => 'లోపాలు:';
-
-  @override
-  String get error => 'లోపం';
-
-  @override
-  String importErrorMessage(String error) {
-    return 'ఫైల్‌ని దిగుమతి చేయడంలో విఫలమైంది:\\n$error';
+  String importTotal(int count) {
+    return 'మొత్తం: $count';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => 'దిగుమతి అవుతోంది...';
 
   @override
-  String get selectStudyMaterial => 'మెటీరియల్ ఎంచుకోండి';
-
-  @override
-  String get subject => 'విషయం:';
-
-  @override
-  String get source => 'మూలం:';
-
-  @override
-  String get file => 'ఫైల్:';
-
-  @override
-  String progress(int current, int total) {
-    return 'పురోగతి: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => 'దయచేసి JSON ఫైల్‌ని దిగుమతి చేయండి';
-
-  @override
-  String get selectMaterialPrompt => 'దయచేసి స్టడీ మెటీరియల్‌ని ఎంచుకోండి';
-
-  @override
-  String get studyComplete => 'చదివాను';
-
-  @override
-  String get markAsStudied => 'చదివినట్లుగా గుర్తించు';
-
-  @override
-  String get listening => 'వింటున్నాను...';
-
-  @override
-  String get recognized => 'గుర్తింపు పూర్తయింది';
-
-  @override
-  String recognitionFailed(String error) {
-    return 'వాయిస్ గుర్తింపు విఫలమైంది: $error';
-  }
-
-  @override
-  String get checking => 'తనిఖీ చేస్తోంది...';
-
-  @override
-  String get translating => 'అనువదిస్తోంది...';
-
-  @override
-  String get translationComplete => 'అనువాదం పూర్తయింది (సేవ్ చేయాలి)';
-
-  @override
-  String get translationLoaded => 'సేవ్ చేసిన అనువాదం లోడ్ చేయబడింది';
-
-  @override
-  String translationFailed(String error) {
-    return 'అనువాదం విఫలమైంది: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => 'అనువదించడానికి వచనాన్ని నమోదు చేయండి';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => 'సేవ్ అవుతోంది...';
-
-  @override
-  String get noTranslationToSave => 'సేవ్ చేయడానికి అనువాదం లేదు';
-
-  @override
-  String saveFailed(String error) {
-    return 'సేవ్ చేయడం విఫలమైంది: $error';
-  }
-
-  @override
-  String get playing => 'ప్లే అవుతోంది...';
-
-  @override
-  String get noTextToPlay => 'ప్లే చేయడానికి వచనం లేదు';
-
-  @override
-  String playbackFailed(String error) {
-    return 'ప్లేబ్యాక్ విఫలమైంది: $error';
-  }
-
-  @override
-  String get sourceLanguage => 'మూల భాష';
-
-  @override
-  String get targetLanguage => 'లక్ష్య భాష';
-
-  @override
-  String get similarTextFound => 'అలాంటి వచనం కనుగొనబడింది';
-
-  @override
-  String get useExistingText => 'ఉన్నది వాడుకో';
-
-  @override
-  String get createNew => 'కొత్తది సృష్టించు';
-
-  @override
-  String reviewCount(int count) {
-    return '$count సార్లు సమీక్షించబడింది';
-  }
-
-  @override
-  String get tabSpeaking => 'మాట్లాడటం';
-
-  @override
-  String get speakingPractice => 'మాట్లాడే సాధన';
+  String get inputModeTitle => 'ఇన్‌పుట్';
 
   @override
   String intervalSeconds(int seconds) {
@@ -414,10 +435,373 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
-  String get yourPronunciation => 'మీ ఉచ్చారణ';
+  String get invalidEmail => 'దయచేసి సరైన ఇమెయిల్‌ను నమోదు చేయండి.';
 
   @override
-  String get correctAnswer => 'సరైన సమాధానం';
+  String get kakaoContinue => 'Kakaoతో కొనసాగించండి';
+
+  @override
+  String get labelLangCode => 'భాషా కోడ్ (ఉదా: en-US, ko-KR)';
+
+  @override
+  String get labelName => 'పేరు';
+
+  @override
+  String get labelNote => 'గమనిక';
+
+  @override
+  String get labelPOS => 'భాషా భాగం';
+
+  @override
+  String get labelRole => 'పాత్ర';
+
+  @override
+  String get labelSentence => 'వాక్యం';
+
+  @override
+  String get labelSentenceCollection => 'వాక్యాల సమాహారం';
+
+  @override
+  String get labelSentenceType => 'వాక్య రకం';
+
+  @override
+  String get labelShowMemorized => 'పూర్తయింది';
+
+  @override
+  String get labelType => 'రకం:';
+
+  @override
+  String get labelWord => 'పదం';
+
+  @override
+  String get labelWordbook => 'పదాల పుస్తకం';
+
+  @override
+  String get language => 'భాష';
+
+  @override
+  String get languageSettings => 'భాష సెట్టింగ్‌లు';
+
+  @override
+  String get languageSettingsTitle => 'భాషా సెట్టింగ్‌లు';
+
+  @override
+  String get libTitleFirstMeeting => 'మొదటి సమావేశం';
+
+  @override
+  String get libTitleGreetings1 => 'శుభాకాంక్షలు 1';
+
+  @override
+  String get libTitleNouns1 => 'నామవాచకాలు 1';
+
+  @override
+  String get libTitleVerbs1 => 'క్రియలు 1';
+
+  @override
+  String get listen => 'వినండి';
+
+  @override
+  String get listening => 'వింటున్నాను...';
+
+  @override
+  String get loadingParticipants => 'భాగస్వాములను లోడ్ చేస్తోంది...';
+
+  @override
+  String get location => 'స్థానం';
+
+  @override
+  String get login => 'లాగిన్';
+
+  @override
+  String get logout => 'నిష్క్రమించు';
+
+  @override
+  String get logoutConfirmMessage => 'ప్రస్తుత పరికరం నుండి నిష్క్రమించాలా?';
+
+  @override
+  String get logoutConfirmTitle => 'నిష్క్రమించు';
+
+  @override
+  String get male => 'పురుషుడు';
+
+  @override
+  String get manageParticipants => 'భాగస్వాములను నిర్వహించు';
+
+  @override
+  String get manual => 'మాన్యువల్ ఇన్‌పుట్';
+
+  @override
+  String get markAsStudied => 'చదివినట్లుగా గుర్తించు';
+
+  @override
+  String get materialInfo => 'విషయ సమాచారం';
+
+  @override
+  String get me => 'నేను';
+
+  @override
+  String get menuDeviceImport => 'పరికరంలో మెటీరియల్‌ను దిగుమతి చేయండి';
+
+  @override
+  String get menuHelp => 'సహాయం';
+
+  @override
+  String get menuLanguageSettings => 'భాషా అమరికలు';
+
+  @override
+  String get menuOnlineLibrary => 'ఆన్‌లైన్ లైబ్రరీ';
+
+  @override
+  String get menuSelectMaterialSet => 'అధ్యయన సామగ్రిని ఎంచుకోండి';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuTutorial => 'విధాన పర్యటన';
+
+  @override
+  String get menuWebDownload => 'వినియోగదారు మాన్యువల్';
+
+  @override
+  String get metadataDialogTitle => 'వివరణాత్మక వర్గీకరణ';
+
+  @override
+  String get metadataFormType => 'వ్యాకరణ రూపం';
+
+  @override
+  String get metadataRootWord => 'రూట్ వర్డ్';
+
+  @override
+  String get micButtonTooltip => 'వాయిస్ రికగ్నిషన్‌ను ప్రారంభించు';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return 'ప్రస్తుతం ఎంచుకున్న మెటీరియల్ సేకరణ: $name';
+  }
+
+  @override
+  String get mode2Title => 'సమీక్ష';
+
+  @override
+  String get mode3Next => 'తర్వాత';
+
+  @override
+  String get mode3Start => 'ప్రారంభించు';
+
+  @override
+  String get mode3Stop => 'ఆపు';
+
+  @override
+  String get mode3TryAgain => 'మళ్లీ ప్రయత్నించండి';
+
+  @override
+  String get mySentenceCollection => 'నా వాక్యాల సేకరణ';
+
+  @override
+  String get myWordbook => 'నా పదజాలం';
+
+  @override
+  String get neutral => 'తటస్థ';
+
+  @override
+  String get newSubjectName => 'కొత్త పదజాలం/వాక్యాల సేకరణ పేరు';
+
+  @override
+  String get next => 'తర్వాత';
+
+  @override
+  String get noDialogueHistory => 'సంభాషణ చరిత్ర లేదు.';
+
+  @override
+  String get noInternetWarningMic =>
+      'ఇంటర్నెట్ కనెక్షన్ లేదు. ఆఫ్‌లైన్‌లో వాయిస్ రికగ్నిషన్ అందుబాటులో ఉండకపోవచ్చు.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'ఇంటర్నెట్ కనెక్షన్ లేదు. ఆఫ్‌లైన్‌లో అనువాద ఫీచర్ అందుబాటులో లేదు. దయచేసి సమీక్ష మోడ్‌ను ఉపయోగించండి.';
+
+  @override
+  String get noMaterialsInCategory => 'ఈ వర్గంలో మెటీరియల్ ఏదీ లేదు.';
+
+  @override
+  String get noParticipantsFound => 'నమోదు చేసుకున్న భాగస్వాములు లేరు.';
+
+  @override
+  String get noRecords => 'ఎంచుకున్న భాషకు రికార్డులు లేవు';
+
+  @override
+  String get noStudyMaterial => 'అధ్యయన సామగ్రి లేదు.';
+
+  @override
+  String get noTextToPlay => 'ప్లే చేయడానికి వచనం లేదు';
+
+  @override
+  String get noTranslationToSave => 'సేవ్ చేయడానికి అనువాదం లేదు';
+
+  @override
+  String get noVoiceDetected => 'వాయిస్ గుర్తించబడలేదు';
+
+  @override
+  String get notSelected => '- ఎంచుకోలేదు -';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'మీ ఇంటర్నెట్ కనెక్షన్‌ను తనిఖీ చేయండి లేదా తర్వాత మళ్లీ ప్రయత్నించండి.';
+
+  @override
+  String get onlineLibraryLoadFailed => 'మెటీరియల్‌లను లోడ్ చేయడంలో విఫలమైంది.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'మెటీరియల్ ఏదీ లేదు.';
+
+  @override
+  String get participantDeleted => 'భాగస్వామి తొలగించబడింది.';
+
+  @override
+  String get participantRename => 'భాగస్వామి పేరు మార్చండి';
+
+  @override
+  String get partner => 'భాగస్వామి';
+
+  @override
+  String get partnerMode => 'భాగస్వామి మోడ్';
+
+  @override
+  String get password => 'పాస్‌వర్డ్';
+
+  @override
+  String get passwordTooShort => 'పాస్‌వర్డ్ కనీసం 6 అక్షరాలు ఉండాలి.';
+
+  @override
+  String get perfect => 'పర్ఫెక్ట్!';
+
+  @override
+  String get personaFriend => 'స్థానిక స్నేహితుడు';
+
+  @override
+  String get personaGuide => 'ట్రావెల్ గైడ్';
+
+  @override
+  String get personaTeacher => 'ఆంగ్ల ఉపాధ్యాయుడు';
+
+  @override
+  String get playAgain => 'మళ్లీ ఆడు';
+
+  @override
+  String playbackFailed(String error) {
+    return 'ప్లేబ్యాక్ విఫలమైంది: $error';
+  }
+
+  @override
+  String get playing => 'ప్లే అవుతోంది...';
+
+  @override
+  String get posAdjective => 'విశేషణం';
+
+  @override
+  String get posAdverb => 'క్రియా విశేషణం';
+
+  @override
+  String get posConjunction => 'సంయోజకం';
+
+  @override
+  String get posInterjection => 'ఆశ్చర్యార్థకం';
+
+  @override
+  String get posNoun => 'నామవాచకం';
+
+  @override
+  String get posPreposition => 'సర్గ/అవ్యయం';
+
+  @override
+  String get posPronoun => 'సర్వనామం';
+
+  @override
+  String get posVerb => 'క్రియ';
+
+  @override
+  String get practiceModeTitle => 'అభ్యాసం';
+
+  @override
+  String get practiceWordsOnly => 'పదాలను మాత్రమే ప్రాక్టీస్ చేయండి';
+
+  @override
+  String progress(int current, int total) {
+    return 'పురోగతి: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return 'ఇటీవల సృష్టించబడిన $count ఐటెమ్‌లను చూడండి';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return 'వాయిస్ గుర్తింపు విఫలమైంది: $error';
+  }
+
+  @override
+  String get recognized => 'గుర్తింపు పూర్తయింది';
+
+  @override
+  String get recognizedText => 'గుర్తించబడిన ఉచ్చారణ:';
+
+  @override
+  String get recordDeleted => 'రికార్డు విజయవంతంగా తొలగించబడింది';
+
+  @override
+  String get refresh => 'రీఫ్రెష్';
+
+  @override
+  String get reset => 'రీసెట్ చేయి';
+
+  @override
+  String get resetPracticeHistory => 'ప్రాక్టీస్ చరిత్రను రీసెట్ చేయండి';
+
+  @override
+  String get retry => 'మళ్లీ ప్రయత్నించాలా?';
+
+  @override
+  String get reviewAll => 'అన్నీ సమీక్షించు';
+
+  @override
+  String reviewCount(int count) {
+    return '$count సార్లు సమీక్షించబడింది';
+  }
+
+  @override
+  String get reviewModeTitle => 'సమీక్ష';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => 'మూడవ వ్యక్తి';
+
+  @override
+  String get roleUser => 'వినియోగదారు';
+
+  @override
+  String get save => 'భద్రపరచు';
+
+  @override
+  String get saveData => 'సేవ్ చేయి';
+
+  @override
+  String saveFailed(String error) {
+    return 'సేవ్ చేయడం విఫలమైంది: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch =>
+      'శోధన మోడ్ నుండి అనువాదాలను సేవ్ చేయండి';
+
+  @override
+  String get saved => 'సేవ్ చేయబడింది';
+
+  @override
+  String get saving => 'సేవ్ అవుతోంది...';
 
   @override
   String score(String score) {
@@ -425,34 +809,399 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
-  String get perfect => 'పర్ఫెక్ట్!';
+  String get scoreLabel => 'స్కోర్';
 
   @override
-  String get good => 'బాగుంది';
+  String get search => 'శోధించు';
 
   @override
-  String get tryAgain => 'మళ్ళీ ప్రయత్నించు';
+  String get searchConditions => 'శోధన పరిస్థితులు';
+
+  @override
+  String get searchSentenceHint => 'వాక్యం కోసం వెతుకు...';
+
+  @override
+  String get searchWordHint => 'పదం కోసం వెతుకు...';
+
+  @override
+  String get sectionSentence => 'వాక్య విభాగం';
+
+  @override
+  String get sectionSentences => 'వాక్యాలు';
+
+  @override
+  String get sectionWord => 'పద విభాగం';
+
+  @override
+  String get sectionWords => 'పదాలు';
+
+  @override
+  String get selectExistingSubject => 'ఉన్న పేరును ఎంచుకోండి';
+
+  @override
+  String get selectMaterialPrompt => 'దయచేసి స్టడీ మెటీరియల్‌ని ఎంచుకోండి';
+
+  @override
+  String get selectMaterialSet => 'అభ్యాస సామగ్రి సమితిని ఎంచుకోండి';
+
+  @override
+  String get selectPOS => 'మాట యొక్క భాగాన్ని ఎంచుకోండి';
+
+  @override
+  String get selectParticipants => 'భాగస్వాములను ఎంచుకోండి';
+
+  @override
+  String get selectSentenceType => 'వాక్యం రకాన్ని ఎంచుకోండి';
+
+  @override
+  String get selectStudyMaterial => 'మెటీరియల్ ఎంచుకోండి';
+
+  @override
+  String get sendingMessage => '메시지 전송 중...';
+
+  @override
+  String get sentence => 'వాక్యం';
+
+  @override
+  String get signUp => 'సైన్ అప్';
+
+  @override
+  String get similarTextFound => 'అలాంటి వచనం కనుగొనబడింది';
+
+  @override
+  String get skip => 'దాటవేయి';
+
+  @override
+  String get source => 'మూలం:';
+
+  @override
+  String get sourceLanguage => 'మూల భాష';
+
+  @override
+  String get sourceLanguageLabel => 'Source Language';
+
+  @override
+  String get speakNow => 'ఇప్పుడు మాట్లాడండి!';
+
+  @override
+  String get speaker => 'మాట్లాడేవారు';
+
+  @override
+  String get speakerSelect => 'మాట్లాడేవారిని ఎంచుకోండి';
+
+  @override
+  String get speakingPractice => 'మాట్లాడే సాధన';
+
+  @override
+  String get startChat => 'చాట్ ప్రారంభించు';
 
   @override
   String get startPractice => 'సాధన ప్రారంభించు';
 
   @override
-  String get stopPractice => 'ఆపు';
-
-  @override
-  String get menuOnlineLibrary => 'Online Library';
-
-  @override
   String get startTutorial => 'టూర్ ప్రారంభించు';
 
   @override
-  String get menuTutorial => 'Tutorial';
+  String get startWarning => 'హెచ్చరిక';
+
+  @override
+  String get startsWith => 'ప్రారంభమయ్యే అక్షరం';
+
+  @override
+  String get statusCheckEmail =>
+      'దయచేసి మీ ఇమెయిల్‌ను ధృవీకరించడం ద్వారా ప్రామాణీకరణను పూర్తి చేయండి.';
+
+  @override
+  String statusDownloading(Object name) {
+    return 'డౌన్‌లోడ్ చేస్తోంది: $name...';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return 'దిగుమతి విఫలమైంది: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name దిగుమతి పూర్తయింది';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => 'లాగిన్ రద్దు చేయబడింది.';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return 'లాగిన్ విఫలమైంది: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => 'లాగిన్ విజయవంతమైంది.';
+
+  @override
+  String get statusLogoutSuccess => 'నిష్క్రమించబడింది.';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return 'సైన్ అప్ విఫలమైంది: $error';
+  }
+
+  @override
+  String get statusSigningUp => 'సైన్ అప్ చేస్తోంది...';
+
+  @override
+  String get stopPractice => 'ఆపు';
+
+  @override
+  String get studyComplete => 'చదివాను';
+
+  @override
+  String studyRecords(int count) {
+    return 'రికార్డులు ($count)';
+  }
+
+  @override
+  String get styleFormal => 'గౌరవంగా';
+
+  @override
+  String get styleInformal => 'అనధికారిక';
+
+  @override
+  String get stylePolite => 'మర్యాదగా';
+
+  @override
+  String get styleSlang => 'స్లాంగ్';
+
+  @override
+  String get subject => 'విషయం:';
+
+  @override
+  String get swapLanguages => 'భాషలను మార్చు';
+
+  @override
+  String get switchToAi => 'AI మోడ్‌కు మారు';
+
+  @override
+  String get switchToPartner => 'భాగస్వామి మోడ్‌కు మారు';
+
+  @override
+  String get syncingData => 'డేటా సమకాలీకరిస్తోంది...';
+
+  @override
+  String get tabConversation => 'సంభాషణ';
+
+  @override
+  String tabReview(int count) {
+    return 'సమీక్ష ($count)';
+  }
+
+  @override
+  String get tabSentence => 'వాక్యం';
+
+  @override
+  String get tabSpeaking => 'మాట్లాడటం';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return 'మెటీరియల్ ($count)';
+  }
+
+  @override
+  String get tabWord => 'పదం';
+
+  @override
+  String get tagFormal => 'గౌరవంగా';
+
+  @override
+  String get tagSelection => 'ట్యాగ్ ఎంపిక';
+
+  @override
+  String get targetLanguage => 'లక్ష్య భాష';
+
+  @override
+  String get targetLanguageFilter => 'లక్ష్య భాష ఫిల్టర్:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc =>
+      'సమాధానం బహిర్గతం చేయడానికి ముందు ఆలోచించడానికి సమయం.';
+
+  @override
+  String get thinkingTimeInterval => 'ప్లేబ్యాక్ విరామం';
+
+  @override
+  String get timeUp => 'సమయం ముగిసింది!';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
+
+  @override
+  String get titleTagSelection => 'శీర్షిక ట్యాగ్ (సేకరణ)';
+
+  @override
+  String get tooltipDecrease => 'తగ్గించు';
+
+  @override
+  String get tooltipIncrease => 'పెంచు';
+
+  @override
+  String get tooltipSearch => 'వెతకండి';
+
+  @override
+  String get tooltipSpeaking => 'మాట్లాడటం';
+
+  @override
+  String get tooltipStudyReview => 'అధ్యయనం+సమీక్ష';
+
+  @override
+  String totalRecords(int count) {
+    return 'మొత్తం $count రికార్డులు (అన్నింటినీ చూడండి)';
+  }
+
+  @override
+  String get translate => 'అనువాదం';
+
+  @override
+  String get translating => 'అనువదిస్తోంది...';
+
+  @override
+  String get translation => 'అనువాదం';
+
+  @override
+  String get translationComplete => 'అనువాదం పూర్తయింది (సేవ్ చేయాలి)';
+
+  @override
+  String translationFailed(String error) {
+    return 'అనువాదం విఫలమైంది: $error';
+  }
+
+  @override
+  String get translationLimitExceeded => 'అనువాద పరిమితి మించిపోయింది';
+
+  @override
+  String get translationLimitMessage =>
+      'మీ రోజువారీ ఉచిత అనువాదాలను (5 సార్లు) మీరు ఉపయోగించారు.\\n\\nమీరు ప్రకటన చూసి వెంటనే 5 సార్లు రీఫిల్ చేయాలనుకుంటున్నారా?';
+
+  @override
+  String get translationLoaded => 'సేవ్ చేసిన అనువాదం లోడ్ చేయబడింది';
+
+  @override
+  String get translationRefilled => 'అనువాదాల సంఖ్య 5 సార్లు రీఫిల్ చేయబడింది!';
+
+  @override
+  String get translationResultHint =>
+      'అనువాద ఫలితం - సవరించడానికి అందుబాటులో ఉంది';
+
+  @override
+  String get tryAgain => 'మళ్ళీ ప్రయత్నించు';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'AI వ్యక్తిత్వంతో నిజమైన సంభాషణను ప్రాక్టీస్ చేయండి.';
+
+  @override
+  String get tutorialAiChatTitle => 'AI చాటింగ్';
+
+  @override
+  String get tutorialContextDesc =>
+      'సారూప్య వాక్యాలను వేరు చేయడానికి సందర్భాన్ని (ఉదా. ఉదయం) జోడించండి.';
+
+  @override
+  String get tutorialContextTitle => 'సందర్భ ట్యాగ్';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'అనువదించడానికి మూలం మరియు గమ్య భాషను సెట్ చేయండి.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'భాషా సెట్టింగ్‌లు';
+
+  @override
+  String get tutorialM1ToggleDesc =>
+      'పదం మరియు వాక్యం మోడ్‌ల మధ్య ఇక్కడ మారండి.';
+
+  @override
+  String get tutorialM1ToggleTitle => 'పదం/వాక్యం మోడ్';
+
+  @override
+  String get tutorialM2DropdownDesc => 'అధ్యయన విషయాలను ఎంచుకోండి.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'పరికర ఫోల్డర్ నుండి JSON ఫైల్‌ను దిగుమతి చేయండి.';
+
+  @override
+  String get tutorialM2ListDesc =>
+      'మీ కార్డులను తనిఖీ చేయండి మరియు వాటిని తిప్పండి. (Long-press to delete)';
+
+  @override
+  String get tutorialM2ListTitle => 'స్టడీ జాబితా';
+
+  @override
+  String get tutorialM2SearchDesc =>
+      'సేవ్ చేసిన పదాలు మరియు వాక్యాలను శోధించడం ద్వారా వాటిని త్వరగా కనుగొనండి.';
+
+  @override
+  String get tutorialM2SelectDesc =>
+      'మెటీరియల్ ఎంచుకోండి లేదా \'అన్నీ సమీక్షించు\'కి మారండి.';
+
+  @override
+  String get tutorialM2SelectTitle => 'ఎంచుకోండి & ఫిల్టర్';
+
+  @override
+  String get tutorialM3IntervalDesc =>
+      'వాక్యాల మధ్య వేచి ఉండే సమయాన్ని సర్దుబాటు చేయండి.';
+
+  @override
+  String get tutorialM3IntervalTitle => 'విరామం';
+
+  @override
+  String get tutorialM3ResetDesc =>
+      'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get tutorialM3ResetTitle => 'Reset History';
+
+  @override
+  String get tutorialM3SelectDesc => 'మాట్లాడే సాధన కోసం సెట్‌ను ఎంచుకోండి.';
+
+  @override
+  String get tutorialM3SelectTitle => 'మెటీరియల్ ఎంచుకోండి';
+
+  @override
+  String get tutorialM3StartDesc => 'ప్రారంభించడానికి ప్లే నొక్కండి.';
+
+  @override
+  String get tutorialM3StartTitle => 'ప్రారంభించు';
+
+  @override
+  String get tutorialM3WordsDesc =>
+      'గుర్తించబడితే, సేవ్ చేసిన పదాలను మాత్రమే ప్రాక్టీస్ చేయండి.';
+
+  @override
+  String get tutorialM3WordsTitle => 'పద అభ్యాసం';
+
+  @override
+  String get tutorialMicDesc => 'వాయిస్ ఇన్‌పుట్ కోసం మైక్ బటన్‌ను నొక్కండి.';
 
   @override
   String get tutorialMicTitle => 'వాయిస్ ఇన్‌పుట్';
 
   @override
-  String get tutorialMicDesc => 'వాయిస్ ఇన్‌పుట్ కోసం మైక్ బటన్‌ను నొక్కండి.';
+  String get tutorialSaveDesc => 'మీ అనువాదాన్ని సేవ్ చేయండి.';
+
+  @override
+  String get tutorialSaveTitle => 'సేవ్';
+
+  @override
+  String get tutorialSwapDesc =>
+      'నేను నేర్చుకుంటున్న భాషతో నా భాషను మార్చుకుంటాను.';
 
   @override
   String get tutorialTabDesc =>
@@ -462,760 +1211,51 @@ class AppLocalizationsTe extends AppLocalizations {
   String get tutorialTapToContinue => 'కొనసాగించడానికి నొక్కండి';
 
   @override
-  String get tutorialTransTitle => 'అనువాదం';
-
-  @override
   String get tutorialTransDesc => 'మీ వచనాన్ని అనువదించడానికి ఇక్కడ నొక్కండి.';
 
   @override
-  String get tutorialSaveTitle => 'సేవ్';
+  String get tutorialTransTitle => 'అనువాదం';
 
   @override
-  String get tutorialSaveDesc => 'మీ అనువాదాన్ని సేవ్ చేయండి.';
+  String get typeExclamation => 'ఆశ్చర్యార్థక వాక్యం';
 
   @override
-  String get selectParticipants => 'Select Participants';
+  String get typeImperative => 'ఆదేశం';
 
   @override
-  String get loadingParticipants => 'Loading participants...';
+  String get typeQuestion => 'ప్రశ్న';
 
   @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
-
-  @override
-  String get sendingMessage => '메시지 전송 중...';
-
-  @override
-  String get startChat => 'Start Chat';
-
-  @override
-  String get manageParticipants => 'Manage Participants';
-
-  @override
-  String get tutorialAiChatTitle => 'AI చాటింగ్';
-
-  @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
-
-  @override
-  String get tutorialM2SelectTitle => 'ఎంచుకోండి & ఫిల్టర్';
-
-  @override
-  String get tutorialM2SelectDesc =>
-      'మెటీరియల్ ఎంచుకోండి లేదా \'అన్నీ సమీక్షించు\'కి మారండి.';
-
-  @override
-  String get tutorialM2ListTitle => 'స్టడీ జాబితా';
-
-  @override
-  String get tutorialM2ListDesc =>
-      'మీ కార్డులను తనిఖీ చేయండి మరియు వాటిని తిప్పండి. (Long-press to delete)';
-
-  @override
-  String get tutorialM3SelectTitle => 'మెటీరియల్ ఎంచుకోండి';
-
-  @override
-  String get tutorialM3SelectDesc => 'మాట్లాడే సాధన కోసం సెట్‌ను ఎంచుకోండి.';
-
-  @override
-  String get tutorialM3IntervalTitle => 'విరామం';
-
-  @override
-  String get tutorialM3IntervalDesc =>
-      'వాక్యాల మధ్య వేచి ఉండే సమయాన్ని సర్దుబాటు చేయండి.';
-
-  @override
-  String get tutorialM3StartTitle => 'ప్రారంభించు';
-
-  @override
-  String get tutorialM3StartDesc => 'ప్రారంభించడానికి ప్లే నొక్కండి.';
-
-  @override
-  String get startWarning => 'హెచ్చరిక';
-
-  @override
-  String get noVoiceDetected => 'వాయిస్ గుర్తించబడలేదు';
-
-  @override
-  String get tooltipSearch => 'వెతకండి';
-
-  @override
-  String get tooltipStudyReview => 'అధ్యయనం+సమీక్ష';
-
-  @override
-  String get tooltipSpeaking => 'మాట్లాడటం';
-
-  @override
-  String get tooltipDecrease => 'తగ్గించు';
-
-  @override
-  String get tooltipIncrease => 'పెంచు';
-
-  @override
-  String get languageSettings => 'భాష సెట్టింగ్‌లు';
-
-  @override
-  String get tutorialM2DropdownDesc => 'అధ్యయన విషయాలను ఎంచుకోండి.';
-
-  @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
-
-  @override
-  String get tutorialM2ImportDesc =>
-      'పరికర ఫోల్డర్ నుండి JSON ఫైల్‌ను దిగుమతి చేయండి.';
-
-  @override
-  String get tutorialLangSettingsTitle => 'Language Settings';
-
-  @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
-
-  @override
-  String get copy => 'Copy';
-
-  @override
-  String get copiedToClipboard => 'Copied to clipboard!';
-
-  @override
-  String get tutorialContextTitle => 'సందర్భ ట్యాగ్';
-
-  @override
-  String get tutorialContextDesc =>
-      'సారూప్య వాక్యాలను వేరు చేయడానికి సందర్భాన్ని (ఉదా. ఉదయం) జోడించండి.';
-
-  @override
-  String get thinkingTimeInterval => 'Playback Delay';
-
-  @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
-
-  @override
-  String get autoPlay => 'Auto-Play';
-
-  @override
-  String get timeUp => 'Time Up!';
-
-  @override
-  String get gameModeTitle => 'Game Mode';
-
-  @override
-  String get gameModeDesc => 'Choose your practice mode';
-
-  @override
-  String get wordDefenseTitle => 'Word Defense';
-
-  @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
-
-  @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
-
-  @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get translation => 'Translation';
-
-  @override
-  String get labelType => 'Type:';
-
-  @override
-  String get labelWord => 'Word';
-
-  @override
-  String get labelSentence => 'Sentence';
-
-  @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
+  String get typeStatement => 'ప్రకటన';
 
   @override
   String get usageLimitTitle => 'పరిమితి చేరుకుంది';
 
   @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
+  String get useExistingText => 'ఉన్నది వాడుకో';
 
   @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
+  String get viewOnlineGuide => 'ఆన్‌లైన్ గైడ్‌ను చూడండి';
 
   @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
+  String get voluntaryTranslations => 'స్వచ్ఛంద అనువాదాలు';
 
   @override
-  String get translationRefilled => 'Translations refilled by 5!';
+  String get watchAdAndRefill => 'ప్రకటన చూసి రీఫిల్ చేయండి (+5 సార్లు)';
 
   @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
+  String get word => 'పదం';
 
   @override
-  String get reviewAll => 'Review All';
+  String get wordDefenseDesc =>
+      'శత్రువులు రాకముందే పదాన్ని చెప్పడం ద్వారా స్థావరాన్ని రక్షించండి.';
 
   @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
+  String get wordDefenseTitle => 'పద రక్షణ';
 
   @override
-  String get filterAll => 'All';
+  String get wordModeLabel => 'పద మోడ్';
 
   @override
-  String get practiceWordsOnly => 'Practice Words Only';
-
-  @override
-  String get resetPracticeHistory => 'Reset Practice History';
-
-  @override
-  String get retry => 'Retry?';
-
-  @override
-  String get noStudyMaterial => 'No study material found.';
-
-  @override
-  String get gameOver => 'Game Over';
-
-  @override
-  String get playAgain => 'Play Again';
-
-  @override
-  String get speakNow => 'Speak now!';
-
-  @override
-  String get scoreLabel => 'Score';
-
-  @override
-  String get viewOnlineGuide => 'View Online User Guide';
-
-  @override
-  String get getMaterials => 'Get Materials';
-
-  @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
-
-  @override
-  String get wordModeLabel => 'Word Mode';
-
-  @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get menuHelp => 'Help';
-
-  @override
-  String get menuWebDownload => 'Get Material from Web';
-
-  @override
-  String get menuDeviceImport => 'Import from Device';
-
-  @override
-  String get menuSettings => 'Settings';
-
-  @override
-  String get basicWords => 'Basic Word Repository';
-
-  @override
-  String get basicSentences => 'Basic Sentence Repository';
-
-  @override
-  String get selectMaterialSet => 'అభ్యాస సామగ్రి సమితిని ఎంచుకోండి';
-
-  @override
-  String get sectionWords => 'పదాలు';
-
-  @override
-  String get sectionSentences => 'వాక్యాలు';
-
-  @override
-  String get languageSettingsTitle => 'Language Settings';
-
-  @override
-  String get sourceLanguageLabel => 'Source Language';
-
-  @override
-  String get targetLanguageLabel => 'Target Language';
-
-  @override
-  String get mode3Start => 'Start';
-
-  @override
-  String get mode3Stop => 'Stop';
-
-  @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc =>
-      'నేను నేర్చుకుంటున్న భాషతో నా భాషను మార్చుకుంటాను.';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
-
-  @override
-  String get tutorialM3ResetDesc =>
-      'Clear your progress and accuracy scores to start fresh.';
-
-  @override
-  String get menuSelectMaterialSet => 'అధ్యయన సామగ్రిని ఎంచుకోండి';
-
-  @override
-  String get sectionWord => 'పద విభాగం';
-
-  @override
-  String get sectionSentence => 'వాక్య విభాగం';
-
-  @override
-  String get tabWord => 'పదం';
-
-  @override
-  String get tabSentence => 'వాక్యం';
-
-  @override
-  String get errorProfanity => 'అభ్యంతరకర పదాలు ఉన్నందున అనువదించలేము.';
-
-  @override
-  String get errorHateSpeech => 'ద్వేషపూరిత ప్రసంగం ఉన్నందున అనువదించలేము.';
-
-  @override
-  String get errorSexualContent => 'శృంగారభరిత కంటెంట్ ఉన్నందున అనువదించలేము.';
-
-  @override
-  String get errorOtherSafety =>
-      'AI భద్రతా విధానం ద్వారా అనువాదం తిరస్కరించబడింది.';
-
-  @override
-  String get clearAll => 'అన్నీ తొలగించు';
-
-  @override
-  String get disambiguationTitle => 'అర్థాన్ని ఎంచుకోండి';
-
-  @override
-  String get disambiguationPrompt => 'మీరు ఏ అర్థంతో అనువదించాలనుకుంటున్నారు?';
-
-  @override
-  String get skip => 'దాటవేయి';
-
-  @override
-  String get inputModeTitle => 'Input';
-
-  @override
-  String get reviewModeTitle => 'Review';
-
-  @override
-  String get practiceModeTitle => 'అభ్యాసం';
-
-  @override
-  String get chatHistoryTitle => 'Conversation History';
-
-  @override
-  String get chatNew => 'New Chat';
-
-  @override
-  String get chatNewChat => 'New Chat';
-
-  @override
-  String get chatChoosePersona => 'Choose a Persona';
-
-  @override
-  String get chatTypeHint => 'Type a message...';
-
-  @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
-
-  @override
-  String get chatNoConversations => 'No conversations yet';
-
-  @override
-  String get noDialogueHistory => 'No dialogue history.';
-
-  @override
-  String get chatStartNewPrompt => 'Start a new chat to practice!';
-
-  @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
-
-  @override
-  String get personaTeacher => 'English Teacher';
-
-  @override
-  String get personaGuide => 'Travel Guide';
-
-  @override
-  String get personaFriend => 'Local Friend';
-
-  @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => 'చాటింగ్';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => 'ప్రాథమిక పద రిపోజిటరీ';
-
-  @override
-  String get basicSentenceRepository => 'ప్రాథమిక వాక్య రిపోజిటరీ';
-
-  @override
-  String get chatEndTitle => 'End & Save Chat';
-
-  @override
-  String get chatEndMessage =>
-      'Do you want to end this conversation? You can set a title for it.';
-
-  @override
-  String get chatSaveAndExit => 'Save & Exit';
-
-  @override
-  String get errorSelectCategory => 'Please select word or sentence first!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => 'గౌరవంగా';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => 'శీర్షిక ట్యాగ్ (సేకరణ)';
-
-  @override
-  String get generalTags => 'సాధారణ ట్యాగ్‌లు';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => 'ఏకవచనం';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => 'తటస్థ';
-
-  @override
-  String get chatAllConversations => 'అన్ని సంభాషణలు';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation =>
-      'మీరు ఈ సంభాషణను తొలగించాలనుకుంటున్నారా?\nతొలగించిన సంభాషణను తిరిగి పొందలేరు.';
-
-  @override
-  String get notSelected => '- ఎంచుకోలేదు -';
-
-  @override
-  String get myWordbook => 'నా పదజాలం';
-
-  @override
-  String get mySentenceCollection => 'నా వాక్యాల సేకరణ';
-
-  @override
-  String get newSubjectName => 'కొత్త పదజాలం/వాక్యాల సేకరణ పేరు';
-
-  @override
-  String get enterNewSubjectName => 'కొత్త పేరును నమోదు చేయండి';
-
-  @override
-  String get addNewSubject => 'కొత్త పేరును జోడించు';
-
-  @override
-  String get selectExistingSubject => 'ఉన్న పేరును ఎంచుకోండి';
-
-  @override
-  String get addTagHint => 'ట్యాగ్‌ను జోడించు...';
-
-  @override
-  String get save => 'భద్రపరచు';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail =>
-      'దయచేసి మీ ఇమెయిల్‌ను ధృవీకరించడం ద్వారా ప్రామాణీకరణను పూర్తి చేయండి.';
-
-  @override
-  String get emailAlreadyInUse =>
-      'ఈ ఇమెయిల్ ఇప్పటికే ఉపయోగంలో ఉంది. దయచేసి లాగిన్ అవ్వండి లేదా మీ పాస్‌వర్డ్‌ను తిరిగి పొందండి.';
+  String get yourPronunciation => 'మీ ఉచ్చారణ';
 }

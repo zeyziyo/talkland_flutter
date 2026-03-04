@@ -1,188 +1,105 @@
 {
   "@@locale": "cs",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Pokračovat přes Kakao",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Nápověda a Průvodce",
-  "helpTabModes": "Režimy",
-  "helpTabJson": "Formát JSON",
-  "helpTabTour": "Prohlídka",
-  "helpMode1Desc": "Rozpoznání hlasu, překlad a poslech výsledku.",
-  "helpMode1Details": "• Hlas: Klepněte na mikrofon pro start/stop\n• Text: Pište přímo pro překlad\n• Auto-Hledání: Detekuje podobné věty\n• Překlad: Tlačítko pro okamžitý překlad\n• Poslech: Ikona reproduktoru pro TTS\n• Uložit: Přidá do historie\n• Vymazat: Resetovat vše",
-  "helpMode2Desc": "Opakování uložených vět se skrytým překladem.",
-  "helpMode2Details": "• Výběr: Zvolte sadu nebo 'Vše'\n• Karta: 'Zobrazit/Skrýt' překlad\n• Poslech: Přehrát TTS věty\n• Nastudováno: Zaškrtnout (V) pro hotové\n• Smazat: Dlouhý stisk pro smazání\n• Filtr: Zobrazit vše nebo dle materiálu",
-  "helpMode3Desc": "Poslouchejte větu a opakujte ji (stínování) a procvičujte výslovnost.",
-  "helpMode3Details": "• Výběr: Zvolte balíček\n• Interval: [-] [+] prodleva (3s-60s)\n• Start/Stop: Ovládání relace\n• Mluvit: Poslouchejte a opakujte\n• Skóre: Přesnost (0-100)\n• Znovu: Tlačítko opakování při nerozpoznání",
-  "helpModeChatDesc": "Procvičujte si konverzaci s AI postavou.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "Pro import v Režimu 3 vytvořte JSON:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Poloha",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Přesnost",
+  "adLoading": "Načítání reklamy. Zkuste to prosím později.",
+  "addNewSubject": "Přidat nový název",
+  "addParticipant": "Přidat účastníka",
+  "addTagHint": "Přidat štítek...",
+  "alreadyHaveAccount": "Již máte účet?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Opakování ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Automatické přehrávání",
+  "basic": "Základní",
+  "basicDefault": "Základní",
+  "basicMaterialRepository": "Základní úložiště vět/slov",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Materiály ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Základní úložiště vět",
+  "basicSentences": "Základní úložiště vět",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Opakování",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Hledat",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Přeložit",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Poslouchat",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Uložit",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Uloženo",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Smazat",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Informace o materiálu",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Základní úložiště slov",
+  "basicWords": "Základní úložiště slov",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Zrušit",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "OK",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Obnovit",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Záznamy ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Akuzativ",
+  "casePossessive": "Genitiv",
+  "casePossessivePronoun": "Přivlastňovací zájmeno",
+  "caseReflexive": "Zvratné zájmeno",
+  "caseSubject": "Nominativ",
+  "chatAiChat": "Chat",
+  "chatAllConversations": "Všechny konverzace",
+  "chatChoosePersona": "Vyberte personu",
+  "chatEndMessage": "Chcete konverzaci ukončit?",
+  "chatEndTitle": "Ukončit a uložit konverzaci",
+  "chatFailed": "Chat selhal: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Filtr jazyka:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Výňatek z konverzace ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Žádné záznamy pro vybraný jazyk",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Historie chatu",
+  "chatNew": "Nový chat",
+  "chatNewChat": "Nový chat",
+  "chatNoConversations": "Zatím žádné konverzace",
+  "chatSaveAndExit": "Uložit a ukončit",
+  "chatStartNewPrompt": "Začněte nový dialog pro trénink!",
+  "chatTypeHint": "Zadejte zprávu...",
+  "chatUntitled": "Konverzace bez názvu",
+  "checking": "Kontrola...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Uložte překlady z režimu vyhledávání",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Otočit",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Skrýt",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Smazat záznam",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "모두 지우기",
+  "confirm": "Potvrdit",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Opravdu chcete smazat tento záznam?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Záznam úspěšně smazán",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Opravdu chcete smazat tuto konverzaci?\nSmazané konverzace nelze obnovit.",
+  "confirmDeleteParticipant": "Opravdu chcete tohoto účastníka smazat?",
+  "contextTagHint": "Napište situaci pro snadnější rozlišení později",
+  "contextTagLabel": "Kontext/Situace (volitelné) – např. Ranní pozdrav, Vykání",
+  "copiedToClipboard": "Zkopírováno do schránky!",
+  "copy": "Kopírovat",
+  "correctAnswer": "Správná odpověď",
+  "createNew": "Vytvořit nový",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Aktuální poloha",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Aktuálně vybraná sbírka materiálů:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Smazat",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Chyba mazání: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Import JSON",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Smazat záznam",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Importování...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Procvičujte si konverzace hraním rolí. Vyberte a vyslovte vhodné odpovědi.",
+  "dialogueQuestTitle": "Dialogová výprava",
+  "disambiguationPrompt": "어떤 의미로 번역하시겠습니까?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "의미 선택",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Nemáte účet?",
+  "editParticipant": "Upravit účastníka",
+  "email": "E-mail",
+  "emailAlreadyInUse": "Tato e-mailová adresa je již používána. Přihlaste se nebo si obnovte heslo.",
+  "enterNewSubjectName": "Zadejte nový název",
+  "enterSentenceHint": "Zadejte větu...",
+  "enterTextHint": "Zadejte text k překladu",
+  "enterTextToTranslate": "Zadejte text k překladu",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Zadejte slovo...",
+  "error": "Chyba",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "혐오 표현이 포함되어 있어 번역할 수 없습니다.",
+  "errorOtherSafety": "AI 안전 정책에 의해 번역이 거부되었습니다.",
+  "errorProfanity": "비속어가 포함되어 있어 번역할 수 없습니다.",
+  "errorSelectCategory": "Nejprve vyberte slovo nebo větu!",
+  "errorSexualContent": "선정적인 내용이 포함되어 있어 번역할 수 없습니다.",
+  "errors": "Chyby:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Žena",
+  "file": "Soubor:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Vše",
+  "flip": "Otočit",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Komparativ",
+  "formInfinitive": "Infinitiv/Přítomný čas",
+  "formPast": "Minulý čas",
+  "formPastParticiple": "Minulé příčestí",
+  "formPlural": "Množné číslo",
+  "formPositive": "Pozitiv",
+  "formPresent": "Přítomný čas",
+  "formPresentParticiple": "Přítomné příčestí (-ing)",
+  "formSingular": "Jednotné číslo",
+  "formSuperlative": "Superlativ",
+  "formThirdPersonSingular": "3. osoba jednotného čísla",
+  "gameModeDesc": "Vyberte si herní režim pro procvičování",
+  "gameModeTitle": "Herní režim",
+  "gameOver": "Konec hry",
+  "gender": "Pohlaví",
+  "generalTags": "Obecné štítky",
+  "getMaterials": "Získat materiály",
+  "good": "Dobré",
+  "googleContinue": "Pokračovat s Googlem",
+  "helpDialogueImportDesc": "Importujte celou sadu dialogů pomocí souboru JSON.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "Pro import v Režimu 3 vytvořte JSON:",
+  "helpJsonTypeDialogue": "Dialog",
+  "helpJsonTypeSentence": "Věta",
+  "helpJsonTypeWord": "Slovo",
+  "helpMode1Desc": "Rozpoznání hlasu, překlad a poslech výsledku.",
+  "helpMode1Details": "• Hlas: Klepněte na mikrofon pro start/stop\n• Text: Pište přímo pro překlad\n• Auto-Hledání: Detekuje podobné věty\n• Překlad: Tlačítko pro okamžitý překlad\n• Poslech: Ikona reproduktoru pro TTS\n• Uložit: Přidá do historie\n• Vymazat: Resetovat vše",
+  "helpMode2Desc": "Opakování uložených vět se skrytým překladem.",
+  "helpMode2Details": "• Výběr: Zvolte sadu nebo 'Vše'\n• Karta: 'Zobrazit/Skrýt' překlad\n• Poslech: Přehrát TTS věty\n• Nastudováno: Zaškrtnout (V) pro hotové\n• Smazat: Dlouhý stisk pro smazání\n• Filtr: Zobrazit vše nebo dle materiálu",
+  "helpMode3Desc": "Poslouchejte větu a opakujte ji (stínování) a procvičujte výslovnost.",
+  "helpMode3Details": "• Výběr: Zvolte balíček\n• Interval: [-] [+] prodleva (3s-60s)\n• Start/Stop: Ovládání relace\n• Mluvit: Poslouchejte a opakujte\n• Skóre: Přesnost (0-100)\n• Znovu: Tlačítko opakování při nerozpoznání",
+  "helpModeChatDesc": "Procvičujte si konverzaci s AI postavou.",
+  "helpModeChatDetails": "• AI Chat: Procvičujte si konverzace s personami.\n• Správa účastníků: Nastavte si jazyk svůj a jazyk AI, abyste zabránili neshodám v jazycích.\n• GPS hraní rolí: Vytvořte si přirozené konverzační situace na základě vaší aktuální polohy.\n• Uchovávání záznamů: Všechny konverzace jsou bezpečně uloženy na základě ID a záznamy zůstanou zachovány i po přejmenování.",
+  "helpTabJson": "Formát JSON",
+  "helpTabModes": "Režimy",
+  "helpTabTour": "Prohlídka",
+  "helpTitle": "Nápověda a Průvodce",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "Skrýt",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Přidáno: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Import dokončen",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Materiál se stejným názvem již existuje. Změňte název a zkuste to znovu.",
+  "importErrorMessage": "Nelze importovat soubor:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Import selhal",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Celkem: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Import JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Přidáno: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Prosím importujte soubor JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Přeskočeno: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Chyby:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Celkem: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Chyba",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Importování...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Nelze importovat soubor:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "입력",
+  "intervalSeconds": "Interval: {seconds} sekund",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Zadejte platný e-mail.",
+  "kakaoContinue": "Pokračovat přes Kakao",
+  "labelLangCode": "Kód jazyka (např. en-US, ko-KR)",
+  "labelName": "Jméno",
+  "labelNote": "Poznámka",
+  "labelPOS": "Slovní druh",
+  "labelRole": "Role",
+  "labelSentence": "Věta",
+  "labelSentenceCollection": "Sbírka vět",
+  "labelSentenceType": "Typ věty",
+  "labelShowMemorized": "Hotovo",
+  "labelType": "Typ:",
+  "labelWord": "Slovo",
+  "labelWordbook": "Slovníček",
+  "language": "Jazyk",
+  "languageSettings": "Nastavení jazyka",
+  "languageSettingsTitle": "Nastavení jazyka",
+  "libTitleFirstMeeting": "První setkání",
+  "libTitleGreetings1": "Pozdravy 1",
+  "libTitleNouns1": "Podstatná jména 1",
+  "libTitleVerbs1": "Slovesa 1",
+  "listen": "Poslouchat",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Poslouchám...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Načítání účastníků...",
+  "location": "Poloha",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Přihlásit se",
+  "logout": "Odhlásit se",
+  "logoutConfirmMessage": "Chcete se odhlásit z tohoto zařízení?",
+  "logoutConfirmTitle": "Odhlásit se",
+  "male": "Muž",
+  "manageParticipants": "Správa účastníků",
+  "manual": "Ruční zadání",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Označit jako nastudované",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Informace o materiálu",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Já",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Importovat materiály ze zařízení",
+  "menuHelp": "Nápověda",
+  "menuLanguageSettings": "Nastavení jazyka",
+  "menuOnlineLibrary": "Online knihovna",
+  "menuSelectMaterialSet": "Vyberte studijní materiál",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Průvodce používáním",
+  "menuWebDownload": "Uživatelská příručka",
+  "metadataDialogTitle": "Podrobná klasifikace",
+  "metadataFormType": "Gramatický tvar",
+  "metadataRootWord": "Kořenové slovo",
+  "micButtonTooltip": "Spustit rozpoznávání hlasu",
+  "mode1SelectedMaterial": "Aktuálně vybraná sada materiálů: {name}",
+  "mode2Title": "Opakování",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Další",
+  "mode3Start": "Začít",
+  "mode3Stop": "Konec",
+  "mode3TryAgain": "Zkusit znovu",
+  "mySentenceCollection": "Moje sbírka vět",
+  "myWordbook": "Moje slovní zásoba",
+  "neutral": "Neutrální",
+  "newSubjectName": "Nový název sbírky",
+  "next": "Další",
+  "noDialogueHistory": "Žádná historie dialogů.",
+  "noInternetWarningMic": "Není připojení k internetu. Rozpoznávání hlasu nemusí být v offline režimu dostupné.",
+  "noInternetWarningTranslate": "Není připojení k internetu. Překlad není v offline režimu dostupný. Použijte režim opakování.",
+  "noMaterialsInCategory": "V této kategorii nejsou žádné materiály.",
+  "noParticipantsFound": "Žádní registrovaní účastníci.",
+  "noRecords": "Žádné záznamy pro vybraný jazyk",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Žádný studijní materiál.",
+  "noTextToPlay": "Žádný text k přehrání",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Žádný překlad k uložení",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Hlas nerozpoznán",
+  "notSelected": "- Nevybráno -",
+  "onlineLibraryCheckInternet": "Zkontrolujte připojení k internetu nebo to zkuste později.",
+  "onlineLibraryLoadFailed": "Nepodařilo se načíst materiály.",
+  "onlineLibraryNoMaterials": "Žádné materiály.",
+  "participantDeleted": "Účastník byl smazán.",
+  "participantRename": "Přejmenovat účastníka",
+  "partner": "Partner",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Režim partnera",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Heslo",
+  "passwordTooShort": "Heslo musí mít alespoň 6 znaků.",
+  "perfect": "Perfektní!",
+  "personaFriend": "Místní přítel",
+  "personaGuide": "Turistický průvodce",
+  "personaTeacher": "Učitel angličtiny",
+  "playAgain": "Hrát znovu",
+  "playbackFailed": "Přehrávání selhalo: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Vybrat materiál",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Přehrávání...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Předmět:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Zdroj:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "Soubor:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Přídavné jméno",
+  "posAdverb": "Příslovce",
+  "posConjunction": "Spojka",
+  "posInterjection": "Citoslovce",
+  "posNoun": "Podstatné jméno",
+  "posPreposition": "Předložka",
+  "posPronoun": "Zájmeno",
+  "posVerb": "Sloveso",
+  "practiceModeTitle": "Cvičení",
+  "practiceWordsOnly": "Procvičovat pouze slova",
   "progress": "Postup: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Prosím importujte soubor JSON",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Prosím vyberte studijní materiál",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Nastudováno",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Označit jako nastudované",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Poslouchám...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Rozpoznávání dokončeno",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Zobrazit posledních {count} položek",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Rozpoznávání řeči selhalo: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Kontrola...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Rozpoznávání dokončeno",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Překládám...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Rozpoznaný text:",
+  "recordDeleted": "Záznam úspěšně smazán",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Překlad dokončen (nutné uložit)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Obnovit",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Načten uložený překlad",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Překlad selhal: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Resetovat",
+  "resetPracticeHistory": "Resetovat historii procvičování",
+  "retry": "Zkusit znovu?",
+  "reviewAll": "Zopakovat vše",
+  "reviewCount": "Opakováno {count} krát",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Zadejte text k překladu",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Ukládání...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Žádný překlad k uložení",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "복습",
+  "roleAi": "AI",
+  "roleThirdParty": "Třetí strana",
+  "roleUser": "Uživatel",
+  "save": "Uložit",
+  "saveData": "Uložit",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Ukládání selhalo: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Přehrávání...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Uložte překlady z režimu vyhledávání",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Žádný text k přehrání",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Uloženo",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Přehrávání selhalo: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Ukládání...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Zdrojový jazyk",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Cílový jazyk",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Nalezen podobný text",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Použít existující",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Vytvořit nový",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Opakováno {count} krát",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Mluvení",
-  "speakingPractice": "Procvičování mluvení",
-  "intervalSeconds": "Interval: {seconds}s",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Vaše výslovnost",
-  "correctAnswer": "Správná odpověď",
   "score": "Přesnost: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "Perfektní!",
-  "good": "Dobré",
-  "tryAgain": "Zkusit znovu",
-  "startPractice": "Začít cvičit",
-  "stopPractice": "Zastavit",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Spustit prohlídku",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Hlasový vstup",
-  "tutorialMicDesc": "Klepněte na mikrofon pro hlasový vstup.",
-  "tutorialTabDesc": "Zde můžete vybrat požadovaný režim učení.",
-  "tutorialTapToContinue": "Klepněte pro pokračování",
-  "tutorialTransTitle": "Překlad",
-  "tutorialTransDesc": "Klepněte zde pro překlad.",
-  "tutorialSaveTitle": "Uložit",
-  "tutorialSaveDesc": "Uložte překlad do záznamů.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Skóre",
+  "search": "Hledat",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Podmínky vyhledávání",
+  "searchSentenceHint": "Hledat větu...",
+  "searchWordHint": "Hledat slovo...",
+  "sectionSentence": "Sekce věty",
+  "sectionSentences": "문장",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Sekce slov",
+  "sectionWords": "단어",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Vybrat existující název",
+  "selectMaterialPrompt": "Prosím vyberte studijní materiál",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "학습 자료집 선택",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Vyberte slovní druh",
+  "selectParticipants": "Vyberte účastníky",
+  "selectSentenceType": "Vyberte typ věty",
+  "selectStudyMaterial": "Vybrat materiál",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI Chat",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "Výběr a Filtr",
-  "tutorialM2SelectDesc": "Vyberte materiály nebo 'Opakovat vše'.",
-  "tutorialM2ListTitle": "Seznam",
-  "tutorialM2ListDesc": "Prohlížejte karty a otáčejte je. (Long-press to delete)",
-  "tutorialM3SelectTitle": "Výběr materiálu",
-  "tutorialM3SelectDesc": "Vyberte sadu pro mluvení.",
-  "tutorialM3IntervalTitle": "Interval",
-  "tutorialM3IntervalDesc": "Nastavte čas mezi větami.",
-  "tutorialM3StartTitle": "Start",
-  "tutorialM3StartDesc": "Klepněte na Play pro start.",
+  "sentence": "Věta",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Zaregistrovat se",
+  "similarTextFound": "Nalezen podobný text",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "건너뛰기",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Zdroj:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Zdrojový jazyk",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "Mluvte nyní!",
+  "speaker": "Mluvčí",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Vyberte mluvčího",
+  "speakingPractice": "Procvičování mluvení",
+  "startChat": "Začít chat",
+  "startPractice": "Začít cvičit",
+  "startTutorial": "Spustit prohlídku",
   "startWarning": "Varování",
-  "noVoiceDetected": "Hlas nerozpoznán",
-  "tooltipSearch": "Hledat",
-  "tooltipStudyReview": "Studium+Opakování",
-  "tooltipSpeaking": "Mluvení",
+  "startsWith": "Začíná na",
+  "statusCheckEmail": "Ověřte prosím svou e-mailovou adresu, abyste dokončili ověření.",
+  "statusDownloading": "Stahování: {name}...",
+  "statusImportFailed": "Import selhal: {error}",
+  "statusImportSuccess": "{name} importováno",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Přihlášení bylo zrušeno.",
+  "statusLoginFailed": "Přihlášení selhalo: {error}",
+  "statusLoginSuccess": "Přihlášení proběhlo úspěšně.",
+  "statusLogoutSuccess": "Odhlášení proběhlo úspěšně.",
+  "statusSignUpFailed": "Registrace selhala: {error}",
+  "statusSigningUp": "Probíhá registrace...",
+  "stopPractice": "Zastavit",
+  "studyComplete": "Nastudováno",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Záznamy ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Vykání",
+  "styleInformal": "Tykaní",
+  "stylePolite": "Zdvořilé",
+  "styleSlang": "Slang/Hovorové výrazy",
+  "subject": "Předmět:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Prohodit jazyky",
+  "switchToAi": "Přepnout do režimu AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Přepnout do režimu partnera",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Synchronizace dat...",
+  "tabConversation": "Konverzace",
+  "tabReview": "Opakování ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "věta",
+  "tabSpeaking": "Mluvení",
+  "tabStudyMaterial": "Materiály ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "slovo",
+  "tagFormal": "Formální",
+  "tagSelection": "Výběr štítku",
+  "targetLanguage": "Cílový jazyk",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Filtr jazyka:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "Čas na rozmyšlenou před zobrazením správné odpovědi.",
+  "thinkingTimeInterval": "Doba na rozmyšlenou",
+  "timeUp": "Čas vypršel!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Štítky názvu (sbírka)",
   "tooltipDecrease": "Snížit",
   "tooltipIncrease": "Zvýšit",
-  "languageSettings": "Nastavení jazyka",
-  "tutorialM2DropdownDesc": "Vyberte studijní materiály.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Importovat soubor JSON ze složky zařízení.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "Kontextový štítek",
-  "tutorialContextDesc": "Přidejte kontext (např. Ráno) pro rozlišení podobných vět.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "Limit vyčerpán",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "Hledat",
+  "tooltipSpeaking": "Mluvení",
+  "tooltipStudyReview": "Studium+Opakování",
+  "totalRecords": "Celkem {count} záznamů (Zobrazit vše)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Přeložit",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Překládám...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Překlad",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "학습 자료집 선택",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Překlad dokončen (nutné uložit)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "단어",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "문장",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "Vyměňuji si jazyk s jazykem, který se učím.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "Vyberte studijní materiál",
-  "sectionWord": "Sekce slov",
-  "sectionSentence": "Sekce věty",
-  "tabWord": "slovo",
-  "tabSentence": "věta",
-  "errorProfanity": "비속어가 포함되어 있어 번역할 수 없습니다.",
-  "errorHateSpeech": "혐오 표현이 포함되어 있어 번역할 수 없습니다.",
-  "errorSexualContent": "선정적인 내용이 포함되어 있어 번역할 수 없습니다.",
-  "errorOtherSafety": "AI 안전 정책에 의해 번역이 거부되었습니다.",
-  "clearAll": "모두 지우기",
-  "disambiguationTitle": "의미 선택",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "어떤 의미로 번역하시겠습니까?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "건너뛰기",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "입력",
-  "reviewModeTitle": "복습",
-  "practiceModeTitle": "Cvičení",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "Překlad selhal: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Překročen limit překladů",
+  "translationLimitMessage": "Vyčerpali jste svůj denní limit bezplatných překladů (5).\\n\\nChcete se podívat na reklamu a okamžitě si dobít 5 překladů?",
+  "translationLoaded": "Načten uložený překlad",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "Chat",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "Základní úložiště slov",
-  "basicSentenceRepository": "Základní úložiště vět",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "Formální",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "Štítky názvu (sbírka)",
-  "generalTags": "Obecné štítky",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "Jednotné číslo",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "Počet překladů dobit o 5!",
+  "translationResultHint": "Výsledek překladu - lze upravit",
+  "tryAgain": "Zkusit znovu",
+  "tutorialAiChatDesc": "Procvičujte si konverzace s AI personou.",
+  "tutorialAiChatTitle": "AI Chat – Nápověda",
+  "tutorialContextDesc": "Přidejte kontext (např. Ráno) pro rozlišení podobných vět.",
+  "tutorialContextTitle": "Kontextový štítek",
+  "tutorialLangSettingsDesc": "Nastavte zdrojový a cílový jazyk pro překlad.",
+  "tutorialLangSettingsTitle": "Nastavení jazyka",
+  "tutorialM1ToggleDesc": "Přepínejte mezi režimem slov a vět zde.",
+  "tutorialM1ToggleTitle": "Režim slova/věty",
+  "tutorialM2DropdownDesc": "Vyberte studijní materiály.",
+  "tutorialM2ImportDesc": "Importovat soubor JSON ze složky zařízení.",
+  "tutorialM2ListDesc": "Prohlížejte karty a otáčejte je. (Long-press to delete)",
+  "tutorialM2ListTitle": "Seznam",
+  "tutorialM2SearchDesc": "Rychle vyhledejte uložená slova a věty.",
+  "tutorialM2SelectDesc": "Vyberte materiály nebo 'Opakovat vše'.",
+  "tutorialM2SelectTitle": "Výběr a Filtr",
+  "tutorialM3IntervalDesc": "Nastavte čas mezi větami.",
+  "tutorialM3IntervalTitle": "Nastavení intervalu",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "Vyberte sadu pro mluvení.",
+  "tutorialM3SelectTitle": "Výběr materiálu",
+  "tutorialM3StartDesc": "Klepněte na Play pro start.",
+  "tutorialM3StartTitle": "Start",
+  "tutorialM3WordsDesc": "Pokud je zaškrtnuto, procvičují se pouze uložená slova.",
+  "tutorialM3WordsTitle": "Procvičování slov",
+  "tutorialMicDesc": "Klepněte na mikrofon pro hlasový vstup.",
+  "tutorialMicTitle": "Hlasový vstup",
+  "tutorialSaveDesc": "Uložte překlad do záznamů.",
+  "tutorialSaveTitle": "Uložit",
+  "tutorialSwapDesc": "Vyměňuji si jazyk s jazykem, který se učím.",
+  "tutorialTabDesc": "Zde můžete vybrat požadovaný režim učení.",
+  "tutorialTapToContinue": "Klepněte pro pokračování",
+  "tutorialTransDesc": "Klepněte zde pro překlad.",
+  "tutorialTransTitle": "Překlad",
+  "typeExclamation": "Vzrušující věta",
+  "typeImperative": "Rozkazovací věta",
+  "typeQuestion": "Otázka",
+  "typeStatement": "Oznamovací věta",
+  "usageLimitTitle": "Limit vyčerpán",
+  "useExistingText": "Použít existující",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "Neutrální",
-  "chatAllConversations": "Všechny konverzace",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Opravdu chcete smazat tuto konverzaci?\nSmazané konverzace nelze obnovit.",
-  "notSelected": "- Nevybráno -",
-  "myWordbook": "Moje slovní zásoba",
-  "mySentenceCollection": "Moje sbírka vět",
-  "newSubjectName": "Nový název sbírky",
-  "enterNewSubjectName": "Zadejte nový název",
-  "addNewSubject": "Přidat nový název",
-  "selectExistingSubject": "Vybrat existující název",
-  "addTagHint": "Přidat štítek...",
-  "save": "Uložit",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Ověřte prosím svou e-mailovou adresu, abyste dokončili ověření.",
-  "emailAlreadyInUse": "Tato e-mailová adresa je již používána. Přihlaste se nebo si obnovte heslo."
+  "viewOnlineGuide": "Zobrazit online průvodce",
+  "voluntaryTranslations": "Dobrovolné překlady",
+  "watchAdAndRefill": "Dobít pomocí reklamy (+5)",
+  "word": "Slovo",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Braňte základnu vyslovováním slov, než dorazí nepřátelé.",
+  "wordDefenseTitle": "Slovní obrana",
+  "wordModeLabel": "Režim slov",
+  "yourPronunciation": "Vaše výslovnost"
 }

@@ -1,188 +1,105 @@
 {
   "@@locale": "uk",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Продовжити з Kakao",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Допомога та Гайд",
-  "helpTabModes": "Режими",
-  "helpTabJson": "Формат JSON",
-  "helpTabTour": "Тур",
-  "helpMode1Desc": "Розпізнавання голосу, переклад та прослуховування.",
-  "helpMode1Details": "• Голос: Натисніть мікрофон для старту/стопу\n• Текст: Введіть текст для перекладу\n• Авто-пошук: Виявляє схожі речення\n• Переклад: Кнопка для миттєвого перекладу\n• Слухати: Динамік для озвучення\n• Зберегти: Додає в історію\n• Очистити: Скидання всіх полів",
-  "helpMode2Desc": "Повторення збережених речень з прихованим перекладом.",
-  "helpMode2Details": "• Вибір: Виберіть набір або 'Все'\n• Картка: 'Показати/Сховати' переклад\n• Слухати: Озвучити речення\n• Вивчено: Галочка (V) для завершених\n• Видалити: Довгий натиск для видалення\n• Фільтр: Всі або за матеріалом",
-  "helpMode3Desc": "Слухайте речення та повторюйте за ним (Shadowing), щоб практикувати вимову.",
-  "helpMode3Details": "• Вибір: Виберіть пакет\n• Інтервал: [-] [+] пауза (3с-60с)\n• Старт/Стоп: Керування сесією\n• Говорити: Слухайте та повторюйте\n• Оцінка: Точність (0-100)\n• Повтор: Кнопка повтору, якщо голос не виявлено",
-  "helpModeChatDesc": "Практикуйте розмовну мову в реальних умовах, спілкуючись із AI-персоною.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "Для імпорту матеріалів у режимі 3 створіть файл JSON:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Місцезнаходження",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Точність",
+  "adLoading": "Завантаження реклами. Спробуйте ще раз пізніше.",
+  "addNewSubject": "Додати нову назву",
+  "addParticipant": "Додати учасника",
+  "addTagHint": "Додати тег...",
+  "alreadyHaveAccount": "Вже маєте обліковий запис?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Огляд ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Автоматичне відтворення",
+  "basic": "Базовий",
+  "basicDefault": "Базовий",
+  "basicMaterialRepository": "Базове сховище речень/слів",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Матеріали ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Базовий репозиторій речень",
+  "basicSentences": "Базове сховище речень",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Огляд",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Пошук",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Перекласти",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Слухати",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Зберегти",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Збережено",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Видалити",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Інформація про матеріал",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Базовий репозиторій слів",
+  "basicWords": "Базове сховище слів",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Скасувати",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "ОК",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Оновити",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Записи ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Знахідний відмінок",
+  "casePossessive": "Присвійний відмінок",
+  "casePossessivePronoun": "Присвійний займенник",
+  "caseReflexive": "Зворотний займенник",
+  "caseSubject": "Називний відмінок",
+  "chatAiChat": "Чат",
+  "chatAllConversations": "Всі розмови",
+  "chatChoosePersona": "Виберіть персонажа",
+  "chatEndMessage": "Ви дійсно хочете завершити чат?",
+  "chatEndTitle": "Завершення та збереження чату",
+  "chatFailed": "Помилка чату: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Фільтр мови:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Витяг з розмови ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Немає записів для вибраної мови",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Історія чату",
+  "chatNew": "Новий чат",
+  "chatNewChat": "Новий чат",
+  "chatNoConversations": "Поки немає розмов",
+  "chatSaveAndExit": "Зберегти та вийти",
+  "chatStartNewPrompt": "Спробуйте почати нову розмову для практики!",
+  "chatTypeHint": "Введіть повідомлення...",
+  "chatUntitled": "Чат без назви",
+  "checking": "Перевірка...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Збережіть переклади з режиму пошуку",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Перевернути",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Сховати",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Видалити запис",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "Очистити все",
+  "confirm": "ОК",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Ви впевнені, що хочете видалити цей запис?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Запис успішно видалено",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Ви впевнені, що хочете видалити цю розмову?\nВи не зможете відновити її.",
+  "confirmDeleteParticipant": "Видалити цього учасника?",
+  "contextTagHint": "Опишіть ситуацію, щоб було легше розрізняти пізніше",
+  "contextTagLabel": "Контекст/Ситуація (необов'язково) - Напр.: Ранкове привітання, Ввічливість",
+  "copiedToClipboard": "Скопійовано в буфер обміну!",
+  "copy": "Копіювати",
+  "correctAnswer": "Правильна відповідь",
+  "createNew": "Створити новий",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Поточне місцезнаходження",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Поточний вибраний набір матеріалів:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Видалити",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Помилка видалення: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Імпорт JSON",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Видалити запис",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Імпортування...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Практикуйте розмови за допомогою рольової гри. Вибирайте відповідні відповіді та промовляйте їх.",
+  "dialogueQuestTitle": "Діалоговий квест",
+  "disambiguationPrompt": "Яке значення ви маєте на увазі?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "Виберіть значення",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Не маєте облікового запису?",
+  "editParticipant": "Редагувати учасника",
+  "email": "Електронна пошта",
+  "emailAlreadyInUse": "Ця електронна адреса вже використовується. Будь ласка, увійдіть або відновіть пароль.",
+  "enterNewSubjectName": "Введіть нову назву",
+  "enterSentenceHint": "Введіть речення...",
+  "enterTextHint": "Введіть текст для перекладу",
+  "enterTextToTranslate": "Введіть текст для перекладу",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Введіть слово...",
+  "error": "Помилка",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "Переклад неможливий, оскільки містить мову ненависті.",
+  "errorOtherSafety": "Переклад відхилено політикою безпеки ШІ.",
+  "errorProfanity": "Переклад неможливий, оскільки містить нецензурну лексику.",
+  "errorSelectCategory": "Спочатку виберіть слово або речення!",
+  "errorSexualContent": "Переклад неможливий, оскільки містить контент сексуального характеру.",
+  "errors": "Помилки:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Жінка",
+  "file": "Файл:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Все",
+  "flip": "Перевернути",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Порівняльний ступінь",
+  "formInfinitive": "Інфінітив/Теперішній час",
+  "formPast": "Минулий час",
+  "formPastParticiple": "Минулий час дієприкметника",
+  "formPlural": "Множина",
+  "formPositive": "Ступінь рівності",
+  "formPresent": "Теперішній час",
+  "formPresentParticiple": "Теперішній час дієприкметника (-ing)",
+  "formSingular": "Однина",
+  "formSuperlative": "Найвищий ступінь",
+  "formThirdPersonSingular": "3-тя особа однини",
+  "gameModeDesc": "Виберіть режим гри для практики",
+  "gameModeTitle": "Режим гри",
+  "gameOver": "Гра закінчена",
+  "gender": "Стать",
+  "generalTags": "Загальні теги",
+  "getMaterials": "Отримати матеріали",
+  "good": "Добре",
+  "googleContinue": "Продовжити з Google",
+  "helpDialogueImportDesc": "Імпортуйте повний набір діалогів з JSON-файлу.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "Для імпорту матеріалів у режимі 3 створіть файл JSON:",
+  "helpJsonTypeDialogue": "Діалог (Dialogue)",
+  "helpJsonTypeSentence": "Речення (Sentence)",
+  "helpJsonTypeWord": "Слово (Word)",
+  "helpMode1Desc": "Розпізнавання голосу, переклад та прослуховування.",
+  "helpMode1Details": "• Голос: Натисніть мікрофон для старту/стопу\n• Текст: Введіть текст для перекладу\n• Авто-пошук: Виявляє схожі речення\n• Переклад: Кнопка для миттєвого перекладу\n• Слухати: Динамік для озвучення\n• Зберегти: Додає в історію\n• Очистити: Скидання всіх полів",
+  "helpMode2Desc": "Повторення збережених речень з прихованим перекладом.",
+  "helpMode2Details": "• Вибір: Виберіть набір або 'Все'\n• Картка: 'Показати/Сховати' переклад\n• Слухати: Озвучити речення\n• Вивчено: Галочка (V) для завершених\n• Видалити: Довгий натиск для видалення\n• Фільтр: Всі або за матеріалом",
+  "helpMode3Desc": "Слухайте речення та повторюйте за ним (Shadowing), щоб практикувати вимову.",
+  "helpMode3Details": "• Вибір: Виберіть пакет\n• Інтервал: [-] [+] пауза (3с-60с)\n• Старт/Стоп: Керування сесією\n• Говорити: Слухайте та повторюйте\n• Оцінка: Точність (0-100)\n• Повтор: Кнопка повтору, якщо голос не виявлено",
+  "helpModeChatDesc": "Практикуйте розмовну мову в реальних умовах, спілкуючись із AI-персоною.",
+  "helpModeChatDetails": "• AI Чат: Практикуйте реальні розмови з персонажем.\n• Керування учасниками: Встановіть мови для себе та AI, щоб уникнути мовних невідповідностей.\n• GPS Рольова гра: Створюйте природні розмовні ситуації на основі вашого поточного місцезнаходження.\n• Збереження історії: Усі розмови надійно зберігаються на основі ID, і історія зберігається навіть після зміни імені.",
+  "helpTabJson": "Формат JSON",
+  "helpTabModes": "Режими",
+  "helpTabTour": "Тур",
+  "helpTitle": "Допомога та Гайд",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "Сховати",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Додано: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Імпорт завершено",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Матеріал з такою назвою вже існує. Змініть назву та спробуйте ще раз.",
+  "importErrorMessage": "Не вдалося імпортувати файл:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Помилка імпорту",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Всього: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Імпорт JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Додано: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Будь ласка, імпортуйте файл JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Пропущено: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Помилки:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Всього: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Помилка",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Імпортування...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Не вдалося імпортувати файл:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "Ввід",
+  "intervalSeconds": "Інтервал: {seconds}с",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Введіть дійсну адресу електронної пошти.",
+  "kakaoContinue": "Продовжити з Kakao",
+  "labelLangCode": "Код мови (напр., en-US, ko-KR)",
+  "labelName": "Ім'я",
+  "labelNote": "Примітка",
+  "labelPOS": "Частина мови",
+  "labelRole": "Роль",
+  "labelSentence": "Речення",
+  "labelSentenceCollection": "Збірка речень",
+  "labelSentenceType": "Тип речення",
+  "labelShowMemorized": "Вивчено",
+  "labelType": "Тип:",
+  "labelWord": "Слово",
+  "labelWordbook": "Збірка слів",
+  "language": "Мова",
+  "languageSettings": "Налаштування мови",
+  "languageSettingsTitle": "Налаштування мови",
+  "libTitleFirstMeeting": "Перша зустріч",
+  "libTitleGreetings1": "Привітання 1",
+  "libTitleNouns1": "Іменники 1",
+  "libTitleVerbs1": "Дієслова 1",
+  "listen": "Слухати",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Слухаю...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Завантаження учасників...",
+  "location": "Місцезнаходження",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Увійти",
+  "logout": "Вийти",
+  "logoutConfirmMessage": "Ви дійсно хочете вийти з цього пристрою?",
+  "logoutConfirmTitle": "Вихід",
+  "male": "Чоловік",
+  "manageParticipants": "Керування учасниками",
+  "manual": "Вручну",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Позначити як вивчене",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Інформація про матеріал",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Я",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Імпортувати матеріали з пристрою",
+  "menuHelp": "Довідка",
+  "menuLanguageSettings": "Налаштування мови",
+  "menuOnlineLibrary": "Онлайн бібліотека",
+  "menuSelectMaterialSet": "Виберіть навчальний матеріал",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Навчальний тур",
+  "menuWebDownload": "Інструкція користувача",
+  "metadataDialogTitle": "Детальна класифікація",
+  "metadataFormType": "Граматична форма",
+  "metadataRootWord": "Початкова форма (Root Word)",
+  "micButtonTooltip": "Почати розпізнавання голосу",
+  "mode1SelectedMaterial": "Поточний вибраний набір матеріалів: {name}",
+  "mode2Title": "Огляд",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Далі",
+  "mode3Start": "Почати",
+  "mode3Stop": "Закінчити",
+  "mode3TryAgain": "Спробувати знову",
+  "mySentenceCollection": "Мій збірник речень",
+  "myWordbook": "Мій словник",
+  "neutral": "Нейтральний",
+  "newSubjectName": "Нова назва словника/збірки фраз",
+  "next": "Далі",
+  "noDialogueHistory": "Немає історії діалогів.",
+  "noInternetWarningMic": "Немає підключення до Інтернету. Розпізнавання голосу може бути недоступним в автономному режимі.",
+  "noInternetWarningTranslate": "Немає підключення до Інтернету. Функція перекладу недоступна в автономному режимі. Використовуйте режим повторення.",
+  "noMaterialsInCategory": "У цій категорії немає матеріалів.",
+  "noParticipantsFound": "Немає зареєстрованих учасників.",
+  "noRecords": "Немає записів для вибраної мови",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Немає навчальних матеріалів.",
+  "noTextToPlay": "Немає тексту для відтворення",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Немає перекладу для збереження",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Голос не виявлено",
+  "notSelected": "- Не вибрано -",
+  "onlineLibraryCheckInternet": "Перевірте підключення до Інтернету або спробуйте пізніше.",
+  "onlineLibraryLoadFailed": "Не вдалося завантажити матеріали.",
+  "onlineLibraryNoMaterials": "Немає матеріалів.",
+  "participantDeleted": "Учасника видалено.",
+  "participantRename": "Перейменувати учасника",
+  "partner": "Партнер",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Режим партнера",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Пароль",
+  "passwordTooShort": "Пароль повинен містити не менше 6 символів.",
+  "perfect": "Чудово!",
+  "personaFriend": "Місцевий друг",
+  "personaGuide": "Гід",
+  "personaTeacher": "Вчитель англійської мови",
+  "playAgain": "Грати знову",
+  "playbackFailed": "Помилка відтворення: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Виберіть матеріал",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Відтворення...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Тема:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Джерело:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "Файл:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Прикметник",
+  "posAdverb": "Прислівник",
+  "posConjunction": "Сполучник",
+  "posInterjection": "Вигук",
+  "posNoun": "Іменник",
+  "posPreposition": "Прийменник",
+  "posPronoun": "Займенник",
+  "posVerb": "Дієслово",
+  "practiceModeTitle": "Практика",
+  "practiceWordsOnly": "Тільки практика слів",
   "progress": "Прогрес: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Будь ласка, імпортуйте файл JSON",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Будь ласка, виберіть навчальний матеріал",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Вивчено",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Позначити як вивчене",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Слухаю...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Розпізнавання завершено",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Показати останні {count} створених",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Помилка розпізнавання: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Перевірка...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Розпізнавання завершено",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Переклад...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Розпізнаний текст:",
+  "recordDeleted": "Запис успішно видалено",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Переклад завершено (потрібно зберегти)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Оновити",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Завантажено збережений переклад",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Помилка перекладу: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Скинути",
+  "resetPracticeHistory": "Скинути історію практики",
+  "retry": "Спробувати ще раз?",
+  "reviewAll": "Повторити все",
+  "reviewCount": "Переглянуто {count} разів",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Введіть текст для перекладу",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Збереження...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Немає перекладу для збереження",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "Повторення",
+  "roleAi": "AI",
+  "roleThirdParty": "Третя сторона",
+  "roleUser": "Користувач",
+  "save": "Зберегти",
+  "saveData": "Зберегти",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Помилка збереження: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Відтворення...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Збережіть переклади з режиму пошуку",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Немає тексту для відтворення",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Збережено",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Помилка відтворення: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Збереження...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Вихідна мова",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Цільова мова",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Знайдено схожий текст",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Використати існуючий",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Створити новий",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Переглянуто {count} разів",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Розмова",
-  "speakingPractice": "Розмовна практика",
-  "intervalSeconds": "Інтервал: {seconds}с",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Ваша вимова",
-  "correctAnswer": "Правильна відповідь",
   "score": "Точність: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "Чудово!",
-  "good": "Добре",
-  "tryAgain": "Спробуйте ще",
-  "startPractice": "Почати практику",
-  "stopPractice": "Зупинити",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Почати тур",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Голосовий ввід",
-  "tutorialMicDesc": "Натисніть мікрофон для вводу голосом.",
-  "tutorialTabDesc": "Тут ви можете вибрати бажаний режим навчання.",
-  "tutorialTapToContinue": "Торкніться, щоб продовжити",
-  "tutorialTransTitle": "Переклад",
-  "tutorialTransDesc": "Натисніть тут, щоб перекласти текст.",
-  "tutorialSaveTitle": "Зберегти",
-  "tutorialSaveDesc": "Збережіть переклад у навчальні записи.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Рахунок",
+  "search": "Пошук",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Умови пошуку",
+  "searchSentenceHint": "Пошук речення...",
+  "searchWordHint": "Пошук слова...",
+  "sectionSentence": "Розділ речення",
+  "sectionSentences": "Речення",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Розділ слів",
+  "sectionWords": "Слова",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Виберіть існуючу назву",
+  "selectMaterialPrompt": "Будь ласка, виберіть навчальний матеріал",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "Виберіть навчальний набір",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Виберіть частину мови",
+  "selectParticipants": "Виберіть учасників",
+  "selectSentenceType": "Виберіть тип речення",
+  "selectStudyMaterial": "Виберіть матеріал",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI Чат",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "Вибір та Фільтр",
-  "tutorialM2SelectDesc": "Виберіть матеріали або 'Огляд всього'.",
-  "tutorialM2ListTitle": "Список",
-  "tutorialM2ListDesc": "Переглядайте картки та перевертайте їх. (Long-press to delete)",
-  "tutorialM3SelectTitle": "Вибір матеріалу",
-  "tutorialM3SelectDesc": "Виберіть набір для практики.",
-  "tutorialM3IntervalTitle": "Інтервал",
-  "tutorialM3IntervalDesc": "Налаштуйте час очікування.",
-  "tutorialM3StartTitle": "Почати",
-  "tutorialM3StartDesc": "Натисніть Play для початку.",
+  "sentence": "Речення",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Зареєструватися",
+  "similarTextFound": "Знайдено схожий текст",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "Пропустити",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Джерело:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Вихідна мова",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "Говоріть зараз!",
+  "speaker": "Мовець",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Виберіть мовця",
+  "speakingPractice": "Розмовна практика",
+  "startChat": "Почати чат",
+  "startPractice": "Почати практику",
+  "startTutorial": "Почати тур",
   "startWarning": "Увага",
-  "noVoiceDetected": "Голос не виявлено",
-  "tooltipSearch": "Пошук",
-  "tooltipStudyReview": "Навчання+Повторення",
-  "tooltipSpeaking": "Говоріння",
+  "startsWith": "Починається з",
+  "statusCheckEmail": "Будь ласка, перевірте електронну пошту, щоб завершити аутентифікацію.",
+  "statusDownloading": "Завантаження: {name}...",
+  "statusImportFailed": "Помилка імпорту: {error}",
+  "statusImportSuccess": "{name} імпортовано",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Вхід скасовано.",
+  "statusLoginFailed": "Помилка входу: {error}",
+  "statusLoginSuccess": "Успішний вхід.",
+  "statusLogoutSuccess": "Ви вийшли з системи.",
+  "statusSignUpFailed": "Помилка реєстрації: {error}",
+  "statusSigningUp": "Реєстрація...",
+  "stopPractice": "Зупинити",
+  "studyComplete": "Вивчено",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Записи ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Офіційний",
+  "styleInformal": "Неофіційний",
+  "stylePolite": "Ввічливий",
+  "styleSlang": "Сленг",
+  "subject": "Тема:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Змінити мови",
+  "switchToAi": "Перейти в режим AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Перейти в режим партнера",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Синхронізація даних...",
+  "tabConversation": "Розмова",
+  "tabReview": "Огляд ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "речення",
+  "tabSpeaking": "Розмова",
+  "tabStudyMaterial": "Матеріали ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "слово",
+  "tagFormal": "Ввічливе мовлення",
+  "tagSelection": "Вибір тегу",
+  "targetLanguage": "Цільова мова",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Фільтр мови:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "Час на роздуми перед показом правильної відповіді.",
+  "thinkingTimeInterval": "Інтервал часу на роздуми",
+  "timeUp": "Час вийшов!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Тег заголовка (матеріали)",
   "tooltipDecrease": "Зменшити",
   "tooltipIncrease": "Збільшити",
-  "languageSettings": "Налаштування мови",
-  "tutorialM2DropdownDesc": "Виберіть навчальні матеріали.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Імпортувати JSON-файл з папки пристрою.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "Тег контексту",
-  "tutorialContextDesc": "Додайте контекст (наприклад, Ранок), щоб розрізняти схожі речення.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "Досягнуто ліміту використання",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "Пошук",
+  "tooltipSpeaking": "Говоріння",
+  "tooltipStudyReview": "Навчання+Повторення",
+  "totalRecords": "Всього {count} записів (Переглянути все)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Перекласти",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Переклад...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Переклад",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "Виберіть навчальний набір",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Переклад завершено (потрібно зберегти)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "Слова",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "Речення",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "Я міняю свою мову з мовою, яку вивчаю.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "Виберіть навчальний матеріал",
-  "sectionWord": "Розділ слів",
-  "sectionSentence": "Розділ речення",
-  "tabWord": "слово",
-  "tabSentence": "речення",
-  "errorProfanity": "Переклад неможливий, оскільки містить нецензурну лексику.",
-  "errorHateSpeech": "Переклад неможливий, оскільки містить мову ненависті.",
-  "errorSexualContent": "Переклад неможливий, оскільки містить контент сексуального характеру.",
-  "errorOtherSafety": "Переклад відхилено політикою безпеки ШІ.",
-  "clearAll": "Очистити все",
-  "disambiguationTitle": "Виберіть значення",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "Яке значення ви маєте на увазі?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "Пропустити",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Input",
-  "reviewModeTitle": "Review",
-  "practiceModeTitle": "Практика",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "Помилка перекладу: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Перевищено ліміт перекладів",
+  "translationLimitMessage": "Ви використали всі безкоштовні щоденні переклади (5 разів).\\n\\nПереглянути рекламу, щоб миттєво поповнити запас на 5 разів?",
+  "translationLoaded": "Завантажено збережений переклад",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "Чат",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "Базовий репозиторій слів",
-  "basicSentenceRepository": "Базовий репозиторій речень",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "Ввічливе мовлення",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "Тег заголовка (матеріали)",
-  "generalTags": "Загальні теги",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "Однина",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "Кількість перекладів поповнено на 5!",
+  "translationResultHint": "Результат перекладу - можна редагувати",
+  "tryAgain": "Спробуйте ще",
+  "tutorialAiChatDesc": "Практикуйте реальні розмови з AI персонажем.",
+  "tutorialAiChatTitle": "AI Чат",
+  "tutorialContextDesc": "Додайте контекст (наприклад, Ранок), щоб розрізняти схожі речення.",
+  "tutorialContextTitle": "Тег контексту",
+  "tutorialLangSettingsDesc": "Встановіть вихідну та цільову мови для перекладу.",
+  "tutorialLangSettingsTitle": "Налаштування мови",
+  "tutorialM1ToggleDesc": "Перемикайте режими слів і речень тут.",
+  "tutorialM1ToggleTitle": "Режим слів/речень",
+  "tutorialM2DropdownDesc": "Виберіть навчальні матеріали.",
+  "tutorialM2ImportDesc": "Імпортувати JSON-файл з папки пристрою.",
+  "tutorialM2ListDesc": "Переглядайте картки та перевертайте їх. (Long-press to delete)",
+  "tutorialM2ListTitle": "Список",
+  "tutorialM2SearchDesc": "Швидко знаходьте збережені слова та речення за допомогою пошуку.",
+  "tutorialM2SelectDesc": "Виберіть матеріали або 'Огляд всього'.",
+  "tutorialM2SelectTitle": "Вибір та Фільтр",
+  "tutorialM3IntervalDesc": "Налаштуйте час очікування.",
+  "tutorialM3IntervalTitle": "Інтервал",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "Виберіть набір для практики.",
+  "tutorialM3SelectTitle": "Вибір матеріалу",
+  "tutorialM3StartDesc": "Натисніть Play для початку.",
+  "tutorialM3StartTitle": "Почати",
+  "tutorialM3WordsDesc": "Якщо позначено, практикуйте лише збережені слова.",
+  "tutorialM3WordsTitle": "Практика слів",
+  "tutorialMicDesc": "Натисніть мікрофон для вводу голосом.",
+  "tutorialMicTitle": "Голосовий ввід",
+  "tutorialSaveDesc": "Збережіть переклад у навчальні записи.",
+  "tutorialSaveTitle": "Зберегти",
+  "tutorialSwapDesc": "Я міняю свою мову з мовою, яку вивчаю.",
+  "tutorialTabDesc": "Тут ви можете вибрати бажаний режим навчання.",
+  "tutorialTapToContinue": "Торкніться, щоб продовжити",
+  "tutorialTransDesc": "Натисніть тут, щоб перекласти текст.",
+  "tutorialTransTitle": "Переклад",
+  "typeExclamation": "Окличне речення",
+  "typeImperative": "Спонукальне речення",
+  "typeQuestion": "Питальне речення",
+  "typeStatement": "Розповідне речення",
+  "usageLimitTitle": "Досягнуто ліміту використання",
+  "useExistingText": "Використати існуючий",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "Нейтральний",
-  "chatAllConversations": "Всі розмови",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Ви впевнені, що хочете видалити цю розмову?\nВи не зможете відновити її.",
-  "notSelected": "- Не вибрано -",
-  "myWordbook": "Мій словник",
-  "mySentenceCollection": "Мій збірник речень",
-  "newSubjectName": "Нова назва словника/збірки фраз",
-  "enterNewSubjectName": "Введіть нову назву",
-  "addNewSubject": "Додати нову назву",
-  "selectExistingSubject": "Виберіть існуючу назву",
-  "addTagHint": "Додати тег...",
-  "save": "Зберегти",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Будь ласка, перевірте електронну пошту, щоб завершити аутентифікацію.",
-  "emailAlreadyInUse": "Ця електронна адреса вже використовується. Будь ласка, увійдіть або відновіть пароль."
+  "viewOnlineGuide": "Переглянути онлайн посібник",
+  "voluntaryTranslations": "Добровільні переклади",
+  "watchAdAndRefill": "Переглянути рекламу та поповнити (+5 разів)",
+  "word": "Слово",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Захистіть базу, вимовляючи слова, перш ніж вороги досягнуть її.",
+  "wordDefenseTitle": "Захист слів",
+  "wordModeLabel": "Режим слів",
+  "yourPronunciation": "Ваша вимова"
 }

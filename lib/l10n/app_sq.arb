@@ -1,188 +1,105 @@
 {
   "@@locale": "sq",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Vazhdo me Kakao",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Ndihmë & Udhëzime",
-  "helpTabModes": "Përshkrimi i Modit",
-  "helpTabJson": "Formati JSON",
-  "helpTabTour": "Bëni një shëtitje",
-  "helpMode1Desc": "Njihni zërin për të përkthyer dhe dëgjoni rezultatin.",
-  "helpMode1Details": "• Cilësimet e gjuhës: Ndryshoni gjuhën duke shtypur ikonat lart/poshtë\n• Ndërroni Fjalë/Fjali: Ndërroni modalitetin\n• Hyrja zanore: Shtypni ikonën e mikrofonit për të filluar/ndaluar dëgjimin\n• Hyrja e tekstit: Shkruani drejtpërdrejt për të përkthyer\n• Kërkimi automatik: Zbuloni fjali ekzistuese të ngjashme\n• Përkthimi: Përktheni menjëherë duke shtypur butonin e përkthimit\n• Dëgjimi: Luaj me TTS përmes ikonës së altoparlantit\n• Ruajtja: Shto një rekord me 'Ruaj të dhënat'\n• Fshirja: Rivendosni hyrjen",
-  "helpMode2Desc": "Rishikoni fjalitë e ruajtura dhe kontrolloni nëse i mbani mend me funksionin e fshehjes automatike.",
-  "helpMode2Details": "• Zgjidhni materialin: Zgjidhni një libër burim specifik ose 'Rishikim të plotë'\n• Kthejeni kartën: Kontrolloni përkthimin me 'Shfaq/Fshih' (kontrolli automatik i mësimit)\n• Dëgjimi: Luaj TTS të fjalive\n• Mësimi i përfunduar: Përfundoni mësimin me një shenjë tik (V)\n• Fshirja: Fshini regjistrimet duke shtypur gjatë kartën\n• Kushtet e kërkimit: Filtro sipas etiketave, artikujve të fundit ose shkronjave fillestare",
-  "helpMode3Desc": "Dëgjoni fjalinë dhe përsëriteni (Shadowing) për të praktikuar shqiptimin.",
-  "helpMode3Details": "• Zgjidhni materialin: Zgjidhni librin e burimeve për të studiuar\n• Vendosni intervalin: Rregulloni kohën e pritjes midis fjalive me butonat [-] [+](3 sekonda deri në 60 sekonda)\n• Fillimi/Ndalo: Kontrolloni seancën e hijezimit\n• Të folurit: Dëgjoni zërin dhe përsëriteni\n• Reagimet: Shfaqni rezultatin e saktësisë (0-100) dhe ngjyrat\n• Kushtet e kërkimit: Filtro objektivat e praktikës sipas etiketës, artikujve të fundit ose shkronjave fillestare",
-  "helpModeChatDesc": "Praktikoni biseda reale duke biseduar me një personazh AI.",
-  "helpModeChatDetails": "• Biseda AI: Ushtroni bisedën duke folur në gjuhën tuaj\n• Multi-Personazh: Ndryshoni gjininë/gjuhën/emrin e palës tjetër me menunë mbi flluskën e të folurit\n• Shto partner: Shto një bashkëbisedues të ri (i panjohur) me butonin +\n• GPS: Sitcom i bazuar në vendndodhjen aktuale\n• Ruajtja automatike: Përkthimi dhe ruajtja automatike e përmbajtjes së bisedës",
-  "helpJsonDesc": "Për të importuar materialet e studimit për t'u përdorur në Modalitetin 3 si një skedar JSON, ndiqni formatin e mëposhtëm:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Importoni një grup të tërë dialogësh si një skedar JSON.",
-  "helpDialogueImportDetails": "• Struktura JSON: Përdorni një varg `dialogues` në vend të `entries`\n• Rikuperimi automatik: Titulli i dialogut, personazhi dhe rendi i mesazheve restaurohen.\n• Vendndodhja: Dialogët e importuar shfaqen në skedën 'Histori' të modalitetit të bisedës AI.",
-  "helpTourDesc": "**Rrethi i theksuar** do t'ju udhëzojë për funksionet kryesore.\n(Për shembull: Ju mund të fshini një kartë duke shtypur gjatë kartën e treguar nga **rrethi i theksuar**.)",
-  "partnerMode": "Modaliteti i partnerit",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Hyrje manuale",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Folësi",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Kalo në Modalitetin AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Kalo në Modalitetin e Partnerit",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Vendndodhja aktuale",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Vendndodhja",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Unë",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Libri burim aktual i zgjedhur:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Depo bazë e fjalive/fjalëve",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Fjalë",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Fjali",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Saktësia",
+  "adLoading": "Po ngarkohet reklama. Ju lutemi provoni përsëri pas pak.",
+  "addNewSubject": "Shto emër të ri",
+  "addParticipant": "Shto pjesëmarrës",
+  "addTagHint": "Shto etiketë...",
+  "alreadyHaveAccount": "Keni tashmë një llogari?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Rishikim ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Luaj automatikisht",
+  "basic": "Bazë",
+  "basicDefault": "Bazë",
+  "basicMaterialRepository": "Depo bazë e fjalive/fjalëve",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Material studimi ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Depo bazë e fjalive",
+  "basicSentences": "Depo bazë e fjalive",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Rishikim",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Kërko",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Përkthe",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Dëgjo",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Ruaj të dhënat",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "U ruajt me sukses",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Fshi",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Informacione materiale",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Depo bazë e fjalëve",
+  "basicWords": "Depo bazë e fjalëve",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Anulo",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "Konfirmo",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Rifresko",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Regjistrime studimi ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Kallëzore",
+  "casePossessive": "Gjinore",
+  "casePossessivePronoun": "Përemër pronor",
+  "caseReflexive": "Përemër vetor",
+  "caseSubject": "Rasnore",
+  "chatAiChat": "Bisedë",
+  "chatAllConversations": "Të gjitha bisedat",
+  "chatChoosePersona": "Zgjidhni personazhin",
+  "chatEndMessage": "A jeni i sigurt që dëshironi ta përfundoni bisedën?",
+  "chatEndTitle": "Përfundo dhe ruaj bisedën",
+  "chatFailed": "Biseda dështoi: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Filtri i gjuhës së synuar:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Ekstrakt nga biseda ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Nuk ka regjistrime studimi për gjuhën e zgjedhur",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Historia e bisedës",
+  "chatNew": "Bisedë e re",
+  "chatNewChat": "Bisedë e re",
+  "chatNoConversations": "Ende nuk ka biseda",
+  "chatSaveAndExit": "Ruaj dhe dil",
+  "chatStartNewPrompt": "Fillo një bisedë të re për të praktikuar!",
+  "chatTypeHint": "Shkruaj një mesazh...",
+  "chatUntitled": "Bisedë pa titull",
+  "checking": "Duke kontrolluar...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Provoje të ruash përkthimet nga modaliteti i kërkimit",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Shfaq",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Fshih",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Fshi regjistrimin",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "Pastroji të gjitha",
+  "confirm": "Konfirmo",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "A jeni i sigurt që dëshironi ta fshini këtë regjistrim studimi?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Regjistrimi u fshi",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "A jeni i sigurt që dëshironi ta fshini këtë bisedë?\nBisedat e fshira nuk mund të rikthehen.",
+  "confirmDeleteParticipant": "A jeni i sigurt që dëshironi të fshini këtë pjesëmarrës?",
+  "contextTagHint": "Shkruani situatën në mënyrë që të jetë e lehtë për t'u dalluar më vonë",
+  "contextTagLabel": "Konteksti/Situata (opsionale) - P.sh.: Përshëndetje e mëngjesit, forma zyrtare",
+  "copiedToClipboard": "U kopjua në kujtesën e shkurtër!",
+  "copy": "Kopjo",
+  "correctAnswer": "Përgjigje e saktë",
+  "createNew": "Vazhdo me një fjali të re",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Vendndodhja aktuale",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Libri burim aktual i zgjedhur:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Fshi",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Fshirja dështoi: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Importo skedarin JSON",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Fshi regjistrimin",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Duke importuar...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Ushtroni bisedën përmes sitcom. Zgjidhni dhe thoni përgjigjen e duhur.",
+  "dialogueQuestTitle": "Kërkimi i dialogut",
+  "disambiguationPrompt": "Si do të donit ta përktheni atë?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "Zgjidh kuptimin",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Nuk keni llogari?",
+  "editParticipant": "Redakto pjesëmarrës",
+  "email": "Email",
+  "emailAlreadyInUse": "Ky email është tashmë i regjistruar. Ju lutemi identifkohuni ose përdorni opsionin e rivendosjes së fjalëkalimit.",
+  "enterNewSubjectName": "Vendos emrin e ri",
+  "enterSentenceHint": "Shkruaj një fjali...",
+  "enterTextHint": "Vendosni tekstin për të përkthyer",
+  "enterTextToTranslate": "Vendosni tekstin për ta përkthyer",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Shkruaj një fjalë...",
+  "error": "Gabim",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "Përkthimi nuk mund të bëhet sepse përmban gjuhë urrejtjeje.",
+  "errorOtherSafety": "Përkthimi u refuzua nga politika e sigurisë së AI.",
+  "errorProfanity": "Përkthimi nuk mund të bëhet sepse përmban fjalë të pista.",
+  "errorSelectCategory": "Ju lutemi zgjidhni së pari një fjalë ose fjali!",
+  "errorSexualContent": "Përkthimi nuk mund të bëhet sepse përmban përmbajtje seksuale.",
+  "errors": "Gabime:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Femër",
+  "file": "Skedari:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Të gjitha",
+  "flip": "Shfaq",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Krahasore",
+  "formInfinitive": "Forma bazë/E tashme",
+  "formPast": "E shkuar",
+  "formPastParticiple": "Pjesorja e shkuar",
+  "formPlural": "Shumës",
+  "formPositive": "Formë pohore",
+  "formPresent": "E tashme",
+  "formPresentParticiple": "Pjesorja e tashme (-ing)",
+  "formSingular": "Njëjës",
+  "formSuperlative": "Mbiore",
+  "formThirdPersonSingular": "Veta e tretë njëjës",
+  "gameModeDesc": "Zgjidhni modalitetin e lojës për të praktikuar",
+  "gameModeTitle": "Modaliteti i lojës",
+  "gameOver": "Loja ka mbaruar",
+  "gender": "Gjinia",
+  "generalTags": "Etiketa të përgjithshme",
+  "getMaterials": "Merrni Materiale",
+  "good": "Mirë",
+  "googleContinue": "Vazhdo me Google",
+  "helpDialogueImportDesc": "Importoni një grup të tërë dialogësh si një skedar JSON.",
+  "helpDialogueImportDetails": "• Struktura JSON: Përdorni një varg `dialogues` në vend të `entries`\n• Rikuperimi automatik: Titulli i dialogut, personazhi dhe rendi i mesazheve restaurohen.\n• Vendndodhja: Dialogët e importuar shfaqen në skedën 'Histori' të modalitetit të bisedës AI.",
+  "helpJsonDesc": "Për të importuar materialet e studimit për t'u përdorur në Modalitetin 3 si një skedar JSON, ndiqni formatin e mëposhtëm:",
+  "helpJsonTypeDialogue": "Dialog",
+  "helpJsonTypeSentence": "Fjali",
+  "helpJsonTypeWord": "Fjalë",
+  "helpMode1Desc": "Njihni zërin për të përkthyer dhe dëgjoni rezultatin.",
+  "helpMode1Details": "• Cilësimet e gjuhës: Ndryshoni gjuhën duke shtypur ikonat lart/poshtë\n• Ndërroni Fjalë/Fjali: Ndërroni modalitetin\n• Hyrja zanore: Shtypni ikonën e mikrofonit për të filluar/ndaluar dëgjimin\n• Hyrja e tekstit: Shkruani drejtpërdrejt për të përkthyer\n• Kërkimi automatik: Zbuloni fjali ekzistuese të ngjashme\n• Përkthimi: Përktheni menjëherë duke shtypur butonin e përkthimit\n• Dëgjimi: Luaj me TTS përmes ikonës së altoparlantit\n• Ruajtja: Shto një rekord me 'Ruaj të dhënat'\n• Fshirja: Rivendosni hyrjen",
+  "helpMode2Desc": "Rishikoni fjalitë e ruajtura dhe kontrolloni nëse i mbani mend me funksionin e fshehjes automatike.",
+  "helpMode2Details": "• Zgjidhni materialin: Zgjidhni një libër burim specifik ose 'Rishikim të plotë'\n• Kthejeni kartën: Kontrolloni përkthimin me 'Shfaq/Fshih' (kontrolli automatik i mësimit)\n• Dëgjimi: Luaj TTS të fjalive\n• Mësimi i përfunduar: Përfundoni mësimin me një shenjë tik (V)\n• Fshirja: Fshini regjistrimet duke shtypur gjatë kartën\n• Kushtet e kërkimit: Filtro sipas etiketave, artikujve të fundit ose shkronjave fillestare",
+  "helpMode3Desc": "Dëgjoni fjalinë dhe përsëriteni (Shadowing) për të praktikuar shqiptimin.",
+  "helpMode3Details": "• Zgjidhni materialin: Zgjidhni librin e burimeve për të studiuar\n• Vendosni intervalin: Rregulloni kohën e pritjes midis fjalive me butonat [-] [+](3 sekonda deri në 60 sekonda)\n• Fillimi/Ndalo: Kontrolloni seancën e hijezimit\n• Të folurit: Dëgjoni zërin dhe përsëriteni\n• Reagimet: Shfaqni rezultatin e saktësisë (0-100) dhe ngjyrat\n• Kushtet e kërkimit: Filtro objektivat e praktikës sipas etiketës, artikujve të fundit ose shkronjave fillestare",
+  "helpModeChatDesc": "Praktikoni biseda reale duke biseduar me një personazh AI.",
+  "helpModeChatDetails": "• Biseda AI: Ushtroni bisedën duke folur në gjuhën tuaj\n• Multi-Personazh: Ndryshoni gjininë/gjuhën/emrin e palës tjetër me menunë mbi flluskën e të folurit\n• Shto partner: Shto një bashkëbisedues të ri (i panjohur) me butonin +\n• GPS: Sitcom i bazuar në vendndodhjen aktuale\n• Ruajtja automatike: Përkthimi dhe ruajtja automatike e përmbajtjes së bisedës",
+  "helpTabJson": "Formati JSON",
+  "helpTabModes": "Përshkrimi i Modit",
+  "helpTabTour": "Bëni një shëtitje",
+  "helpTitle": "Ndihmë & Udhëzime",
+  "helpTourDesc": "**Rrethi i theksuar** do t'ju udhëzojë për funksionet kryesore.\n(Për shembull: Ju mund të fshini një kartë duke shtypur gjatë kartën e treguar nga **rrethi i theksuar**.)",
+  "hide": "Fshih",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "U shtua: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Importimi u përfundua",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Një material me të njëjtin titull ekziston tashmë. Ju lutemi ndryshoni titullin dhe provoni përsëri.",
+  "importErrorMessage": "Importimi i skedarit dështoi:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Importimi dështoi",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Totali: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Importo skedarin JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "U shtua: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Ju lutemi importoni një skedar JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "U anashkalua: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Gabime:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Totali: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Gabim",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Duke importuar...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Importimi i skedarit dështoi:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "Hyrje",
+  "intervalSeconds": "Intervali: {seconds} sekonda",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Ju lutemi futni një email të vlefshëm.",
+  "kakaoContinue": "Vazhdo me Kakao",
+  "labelLangCode": "Kodi i gjuhës (psh. en-US, ko-KR)",
+  "labelName": "Emri",
+  "labelNote": "Shënim",
+  "labelPOS": "Pjesë e ligjëratës",
+  "labelRole": "Roli",
+  "labelSentence": "Fjali",
+  "labelSentenceCollection": "Koleksion Fjalish",
+  "labelSentenceType": "Lloji i fjalisë",
+  "labelShowMemorized": "Mbaruar",
+  "labelType": "Lloji:",
+  "labelWord": "Fjalë",
+  "labelWordbook": "Fjalor",
+  "language": "Gjuha",
+  "languageSettings": "Cilësimet e gjuhës",
+  "languageSettingsTitle": "Cilësimet e gjuhës",
+  "libTitleFirstMeeting": "Takimi i parë",
+  "libTitleGreetings1": "Përshëndetje 1",
+  "libTitleNouns1": "Emra 1",
+  "libTitleVerbs1": "Folje 1",
+  "listen": "Dëgjo",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Duke dëgjuar...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Duke ngarkuar pjesëmarrësit...",
+  "location": "Vendndodhja",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Hyr",
+  "logout": "Dil",
+  "logoutConfirmMessage": "A jeni i sigurt që dëshironi të dilni nga ky pajisje?",
+  "logoutConfirmTitle": "Dil",
+  "male": "Mashkull",
+  "manageParticipants": "Menaxho pjesëmarrësit",
+  "manual": "Hyrje manuale",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Shënoje si të studiuar",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Informacione materiale",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Unë",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Importo material nga pajisja",
+  "menuHelp": "Ndihmë",
+  "menuLanguageSettings": "Cilësimet e gjuhës",
+  "menuOnlineLibrary": "Biblioteka online",
+  "menuSelectMaterialSet": "Zgjidhni librin e materialeve të studimit",
+  "menuSettings": "Cilësimet e gjuhës",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Tutorial përdorimi",
+  "menuWebDownload": "Faqja kryesore",
+  "metadataDialogTitle": "Klasifikimi i detajuar",
+  "metadataFormType": "Forma gramatikore",
+  "metadataRootWord": "Fjala rrënjë (Root Word)",
+  "micButtonTooltip": "Filloni njohjen e zërit",
+  "mode1SelectedMaterial": "Libri burim aktual i zgjedhur: {name}",
+  "mode2Title": "Rishikim",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Tjetër",
+  "mode3Start": "Fillo",
+  "mode3Stop": "Ndalo",
+  "mode3TryAgain": "Provoje përsëri",
+  "mySentenceCollection": "Koleksioni im i fjalive",
+  "myWordbook": "Libri im i fjalëve",
+  "neutral": "Asnjëanës",
+  "newSubjectName": "Emri i ri i grupit/fjalorit",
+  "next": "Tjetër",
+  "noDialogueHistory": "Nuk ka histori dialogu.",
+  "noInternetWarningMic": "Nuk ka lidhje interneti. Njohja e zërit mund të mos jetë e mundur jashtë linje.",
+  "noInternetWarningTranslate": "Nuk ka lidhje interneti. Funksioni i përkthimit nuk mund të përdoret jashtë linje. Ju lutemi përdorni modalitetin e rishikimit.",
+  "noMaterialsInCategory": "Nuk ka materiale në këtë kategori.",
+  "noParticipantsFound": "Nuk u gjetën pjesëmarrës të regjistruar.",
+  "noRecords": "Nuk ka regjistrime studimi për gjuhën e zgjedhur",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Nuk ka material studimi.",
+  "noTextToPlay": "Nuk ka tekst për të luajtur",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Nuk ka përkthim për të ruajtur",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Nuk u zbulua asnjë zë",
+  "notSelected": "- Nuk është zgjedhur -",
+  "onlineLibraryCheckInternet": "Ju lutemi kontrolloni lidhjen tuaj të internetit ose provoni përsëri më vonë.",
+  "onlineLibraryLoadFailed": "Ngarkimi i materialeve dështoi.",
+  "onlineLibraryNoMaterials": "Nuk ka materiale.",
+  "participantDeleted": "Pjesëmarrësi është fshirë.",
+  "participantRename": "Riemëro pjesëmarrësin",
+  "partner": "Partner",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Modaliteti i partnerit",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Fjalëkalimi",
+  "passwordTooShort": "Fjalëkalimi duhet të jetë të paktën 6 karaktere.",
+  "perfect": "E përkryer!",
+  "personaFriend": "Shok vendas",
+  "personaGuide": "Guida turistike",
+  "personaTeacher": "Mësues i anglishtes",
+  "playAgain": "Luaj përsëri",
+  "playbackFailed": "Luajtja dështoi: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Zgjidh materialin e studimit",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Duke luajtur...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Subjekti:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Burimi:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "Skedari:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Mbiemër",
+  "posAdverb": "Ndajfolje",
+  "posConjunction": "Lidhëz",
+  "posInterjection": "Pasthirrmë",
+  "posNoun": "Emër",
+  "posPreposition": "Parafjalë",
+  "posPronoun": "Përemër",
+  "posVerb": "Folje",
+  "practiceModeTitle": "Praktiko",
+  "practiceWordsOnly": "Ushtroni vetëm fjalët",
   "progress": "Progresi: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Ju lutemi importoni një skedar JSON",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Ju lutemi zgjidhni materialin e studimit",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Studimi u përfundua",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Shënoje si të studiuar",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Duke dëgjuar...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "U njoh",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Shiko {count} artikujt e krijuar së fundmi",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Njohja e zërit dështoi: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Duke kontrolluar...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "U njoh",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Duke përkthyer...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Shqiptimi i njohur:",
+  "recordDeleted": "Regjistrimi u fshi",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Përkthimi u përfundua (duhet të ruhet)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Rifresko",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Përkthimi i ruajtur u ngarkua",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Përkthimi dështoi: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Rivendos",
+  "resetPracticeHistory": "Rivendosni historikun e praktikës",
+  "retry": "Provo përsëri?",
+  "reviewAll": "Rishikim i plotë",
+  "reviewCount": "Rishikuar {count} herë",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Vendosni tekstin për ta përkthyer",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Duke ruajtur...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Nuk ka përkthim për të ruajtur",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "Rishikim",
+  "roleAi": "AI",
+  "roleThirdParty": "Palë e tretë",
+  "roleUser": "Përdorues",
+  "save": "Ruaj",
+  "saveData": "Ruaj të dhënat",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Ruajtja dështoi: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Duke luajtur...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Provoje të ruash përkthimet nga modaliteti i kërkimit",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Nuk ka tekst për të luajtur",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "U ruajt me sukses",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Luajtja dështoi: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Duke ruajtur...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Gjuha burimore",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Gjuha e synuar",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "U gjet tekst i ngjashëm",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Përdorni tekstin ekzistues",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Vazhdo me një fjali të re",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Rishikuar {count} herë",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Të folurit",
-  "speakingPractice": "Ushtrim i të folurit",
-  "intervalSeconds": "Intervali: {seconds} sekonda",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Shqiptimi juaj",
-  "correctAnswer": "Përgjigje e saktë",
   "score": "Saktësia: {score}%",
   "@score": {
     "placeholders": {
@@ -446,89 +517,161 @@
       }
     }
   },
-  "perfect": "E përkryer!",
-  "good": "Mirë",
-  "tryAgain": "Provoje përsëri",
-  "startPractice": "Fillo praktikën",
-  "stopPractice": "Ndalo praktikën",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Fillo udhëzuesin",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Hyrja zanore",
-  "tutorialMicDesc": "Mund të shtypni butonin e mikrofonit për të vendosur me zë.",
-  "tutorialTabDesc": "Këtu mund të zgjidhni modalitetin e dëshiruar të studimit.",
-  "tutorialTapToContinue": "Shtypni ekranin për të vazhduar",
-  "tutorialTransTitle": "Përktheje",
-  "tutorialTransDesc": "Përktheni tekstin e vendosur.",
-  "tutorialSaveTitle": "Ruaje",
-  "tutorialSaveDesc": "Ruajeni rezultatin e përkthyer në regjistrin e studimit.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Rezultati",
+  "search": "Kërko",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Kushtet e kërkimit",
+  "searchSentenceHint": "Kërko fjali...",
+  "searchWordHint": "Kërko fjalë...",
+  "sectionSentence": "Seksioni i fjalive",
+  "sectionSentences": "Fjalitë",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Seksioni i fjalëve",
+  "sectionWords": "Fjalët",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Zgjidh emër ekzistues",
+  "selectMaterialPrompt": "Ju lutemi zgjidhni materialin e studimit",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "Zgjidhni librin e materialeve të studimit",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Zgjidh pjesën e ligjëratës",
+  "selectParticipants": "Zgjidhni pjesëmarrësit",
+  "selectSentenceType": "Zgjidh llojin e fjalisë",
+  "selectStudyMaterial": "Zgjidh materialin e studimit",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "Bisedë me AI",
-  "tutorialAiChatDesc": "Ushtroni bisedat e jetës reale me personazhet AI.",
-  "tutorialM2SelectTitle": "Zgjidhni Materialin",
-  "tutorialM2SelectDesc": "Shtypni ikonën e librit burim (📚) në shiritin e aplikacionit të sipërm për të zgjedhur materialin për të studiuar.",
-  "tutorialM2ListTitle": "Lista e Studimit",
-  "tutorialM2ListDesc": "Ju mund ta fshini këtë kartë duke e shtypur gjatë (Shtypni Gjatë). Kontrolloni dhe ktheni fjalinë e ruajtur.",
-  "tutorialM3SelectTitle": "Zgjidhni Materialin",
-  "tutorialM3SelectDesc": "Shtypni ikonën e librit burim (📚) në shiritin e aplikacionit të sipërm për të zgjedhur materialin për të ushtruar.",
-  "tutorialM3IntervalTitle": "Vendosni Intervalin",
-  "tutorialM3IntervalDesc": "Rregulloni kohën e pritjes midis fjalive.",
-  "tutorialM3StartTitle": "Fillo Praktikën",
-  "tutorialM3StartDesc": "Shtypni butonin e luajtjes për të dëgjuar zërin e folësit amtar dhe përsëriteni.",
+  "sentence": "Fjali",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Regjistrohu",
+  "similarTextFound": "U gjet tekst i ngjashëm",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "Anashkalo",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Burimi:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Gjuha burimore",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Gjuha ime (Burimi)",
+  "speakNow": "Foli tani!",
+  "speaker": "Folësi",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Zgjidhni folësin",
+  "speakingPractice": "Ushtrim i të folurit",
+  "startChat": "Fillo bisedën",
+  "startPractice": "Fillo praktikën",
+  "startTutorial": "Fillo udhëzuesin",
   "startWarning": "Paralajmërim",
-  "noVoiceDetected": "Nuk u zbulua asnjë zë",
-  "tooltipSearch": "Kërko",
-  "tooltipStudyReview": "Studim+Rishikim",
-  "tooltipSpeaking": "Të folurit",
+  "startsWith": "Shkronja fillestare",
+  "statusCheckEmail": "Ju lutemi, verifikoni email-in për të përfunduar vërtetimin.",
+  "statusDownloading": "Duke shkarkuar: {name}...",
+  "statusImportFailed": "Importimi dështoi: {error}",
+  "statusImportSuccess": "{name} importuar me sukses",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Hyrja u anulua.",
+  "statusLoginFailed": "Hyrja dështoi: {error}",
+  "statusLoginSuccess": "Hyrja u krye me sukses.",
+  "statusLogoutSuccess": "Keni dalë me sukses.",
+  "statusSignUpFailed": "Regjistrimi dështoi: {error}",
+  "statusSigningUp": "Duke u regjistruar...",
+  "stopPractice": "Ndalo praktikën",
+  "studyComplete": "Studimi u përfundua",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Regjistrime studimi ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Formale",
+  "styleInformal": "Joformale",
+  "stylePolite": "E sjellshme",
+  "styleSlang": "Slang",
+  "subject": "Subjekti:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Shkëmbeni gjuhët",
+  "switchToAi": "Kalo në Modalitetin AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Kalo në Modalitetin e Partnerit",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Duke sinkronizuar të dhënat...",
+  "tabConversation": "Bisedë",
+  "tabReview": "Rishikim ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "Fjali",
+  "tabSpeaking": "Të folurit",
+  "tabStudyMaterial": "Material studimi ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "Fjalë",
+  "tagFormal": "Formale",
+  "tagSelection": "Zgjedhja e etiketës",
+  "targetLanguage": "Gjuha e synuar",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Filtri i gjuhës së synuar:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Gjuha e studimit (Synimi)",
+  "thinkingTimeDesc": "Koha për të menduar përpara se të zbulohet përgjigja.",
+  "thinkingTimeInterval": "Vonesa e riprodhimit",
+  "timeUp": "Koha ka mbaruar!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Etiketa e titullit (Set burimesh)",
   "tooltipDecrease": "Zvogëlo",
   "tooltipIncrease": "Rrit",
-  "languageSettings": "Cilësimet e gjuhës",
-  "tutorialM2DropdownDesc": "Mund të zgjidhni materialin për të studiuar përmes menysë së sipërme.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Importoni një skedar JSON nga dosja e pajisjes tuaj.",
-  "tutorialLangSettingsTitle": "Cilësimet e gjuhës",
-  "tutorialLangSettingsDesc": "Vendosni gjuhën burimore dhe gjuhën e synuar për të përkthyer.",
-  "copy": "Kopjo",
-  "copiedToClipboard": "U kopjua në kujtesën e shkurtër!",
-  "tutorialContextTitle": "Etiketa e situatës/kontekstit",
-  "tutorialContextDesc": "Edhe nëse është e njëjta fjali, mund ta ruani veçmas duke shkruar situatën (p.sh. mëngjes, mbrëmje).",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Koha për të menduar përpara se të zbulohet përgjigja.",
-  "autoPlay": "Luaj automatikisht",
-  "timeUp": "Koha ka mbaruar!",
-  "gameModeTitle": "Modaliteti i lojës",
-  "gameModeDesc": "Zgjidhni modalitetin e lojës për të praktikuar",
-  "wordDefenseTitle": "Mbrojtja e fjalëve",
-  "wordDefenseDesc": "Mbroni bazën duke thënë fjalët përpara se të mbërrijnë armiqtë.",
-  "dialogueQuestTitle": "Kërkimi i dialogut",
-  "dialogueQuestDesc": "Ushtroni bisedën përmes sitcom. Zgjidhni dhe thoni përgjigjen e duhur.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Lloji:",
-  "labelWord": "Fjalë",
-  "labelSentence": "Fjali",
-  "contextTagLabel": "Konteksti/Situata (opsionale) - P.sh.: Përshëndetje e mëngjesit, forma zyrtare",
-  "contextTagHint": "Shkruani situatën në mënyrë që të jetë e lehtë për t'u dalluar më vonë",
-  "usageLimitTitle": "Arritja e kufirit",
-  "translationLimitExceeded": "Kufiri i përkthimit tejkalohet",
-  "translationLimitMessage": "Ju keni përdorur të gjitha përkthimet falas ditore (5 herë).\\n\\nA dëshironi të shikoni një reklamë dhe të rimbushni 5 herë menjëherë?",
-  "watchAdAndRefill": "Shikoni reklamën dhe rimbushni (+5 herë)",
-  "translationRefilled": "Numri i përkthimeve u rimbush 5 herë!",
-  "adLoading": "Po ngarkohet reklama. Ju lutemi provoni përsëri pas pak.",
-  "reviewAll": "Rishikim i plotë",
+  "tooltipSearch": "Kërko",
+  "tooltipSpeaking": "Të folurit",
+  "tooltipStudyReview": "Studim+Rishikim",
   "totalRecords": "Gjithsej {count} regjistrime (shiko të gjitha)",
   "@totalRecords": {
     "description": "Total records count",
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "Të gjitha",
-  "practiceWordsOnly": "Ushtroni vetëm fjalët",
-  "resetPracticeHistory": "Rivendosni historikun e praktikës",
-  "retry": "Provo përsëri?",
-  "noStudyMaterial": "Nuk ka material studimi.",
-  "gameOver": "Loja ka mbaruar",
-  "playAgain": "Luaj përsëri",
-  "speakNow": "Foli tani!",
-  "scoreLabel": "Rezultati",
-  "viewOnlineGuide": "Shikoni Udhëzuesin Online",
-  "getMaterials": "Merrni Materiale",
-  "swapLanguages": "Shkëmbeni gjuhët",
-  "next": "Tjetër",
-  "wordModeLabel": "Modaliteti i fjalës",
-  "accuracy": "Saktësia",
-  "basicDefault": "Bazë",
-  "basic": "Bazë",
-  "tutorialM3WordsTitle": "Praktikë e fjalëve",
-  "tutorialM3WordsDesc": "Nëse kontrollohet, ushtroni vetëm fjalët e ruajtura.",
-  "enterTextHint": "Vendosni tekstin për të përkthyer",
-  "micButtonTooltip": "Filloni njohjen e zërit",
-  "menuHelp": "Ndihmë",
-  "menuWebDownload": "Faqja kryesore",
-  "menuDeviceImport": "Importo material nga pajisja",
-  "menuSettings": "Cilësimet e gjuhës",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Përkthe",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Depo bazë e fjalëve",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Duke përkthyer...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Depo bazë e fjalive",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Përkthim",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "Zgjidhni librin e materialeve të studimit",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Përkthimi u përfundua (duhet të ruhet)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "Fjalët",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "Fjalitë",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Cilësimet e gjuhës",
-  "sourceLanguageLabel": "Gjuha ime (Burimi)",
-  "targetLanguageLabel": "Gjuha e studimit (Synimi)",
-  "mode3Start": "Fillo",
-  "mode3Stop": "Ndalo",
-  "mode3Next": "Tjetër",
-  "mode3TryAgain": "Provoje përsëri",
-  "tutorialM3ResetTitle": "Rivendos regjistrimin",
-  "tutorialSwapDesc": "Shkëmbeni gjuhën time dhe gjuhën e studimit me njëra-tjetrën.",
-  "recognizedText": "Shqiptimi i njohur:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Rivendosni progresin dhe rezultatin e saktësisë për të filluar nga e para.",
-  "menuSelectMaterialSet": "Zgjidhni librin e materialeve të studimit",
-  "sectionWord": "Seksioni i fjalëve",
-  "sectionSentence": "Seksioni i fjalive",
-  "tabWord": "Fjalë",
-  "tabSentence": "Fjali",
-  "errorProfanity": "Përkthimi nuk mund të bëhet sepse përmban fjalë të pista.",
-  "errorHateSpeech": "Përkthimi nuk mund të bëhet sepse përmban gjuhë urrejtjeje.",
-  "errorSexualContent": "Përkthimi nuk mund të bëhet sepse përmban përmbajtje seksuale.",
-  "errorOtherSafety": "Përkthimi u refuzua nga politika e sigurisë së AI.",
-  "clearAll": "Pastroji të gjitha",
-  "disambiguationTitle": "Zgjidh kuptimin",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "Si do të donit ta përktheni atë?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "Anashkalo",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Hyrje",
-  "reviewModeTitle": "Rishikim",
-  "practiceModeTitle": "Praktiko",
-  "chatHistoryTitle": "Historia e bisedës",
-  "chatNew": "Bisedë e re",
-  "chatNewChat": "Bisedë e re",
-  "chatChoosePersona": "Zgjidhni personazhin",
-  "chatTypeHint": "Shkruaj një mesazh...",
-  "chatFailed": "Biseda dështoi: {error}",
-  "@chatFailed": {
+  "translationFailed": "Përkthimi dështoi: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "Ende nuk ka biseda",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Fillo një bisedë të re për të praktikuar!",
-  "chatFromConversation": "Ekstrakt nga biseda ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Kufiri i përkthimit tejkalohet",
+  "translationLimitMessage": "Ju keni përdorur të gjitha përkthimet falas ditore (5 herë).\\n\\nA dëshironi të shikoni një reklamë dhe të rimbushni 5 herë menjëherë?",
+  "translationLoaded": "Përkthimi i ruajtur u ngarkua",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "Mësues i anglishtes",
-  "personaGuide": "Guida turistike",
-  "personaFriend": "Shok vendas",
-  "chatUntitled": "Bisedë pa titull",
-  "chatAiChat": "Bisedë",
-  "mode1SelectedMaterial": "Libri burim aktual i zgjedhur: {name}",
-  "basicWordRepository": "Depo bazë e fjalëve",
-  "basicSentenceRepository": "Depo bazë e fjalive",
-  "chatEndTitle": "Përfundo dhe ruaj bisedën",
-  "chatEndMessage": "A jeni i sigurt që dëshironi ta përfundoni bisedën?",
-  "chatSaveAndExit": "Ruaj dhe dil",
-  "errorSelectCategory": "Ju lutemi zgjidhni së pari një fjalë ose fjali!",
-  "tutorialM1ToggleTitle": "Modaliteti i Fjalës/Fjalive",
+  "translationRefilled": "Numri i përkthimeve u rimbush 5 herë!",
+  "translationResultHint": "Rezultati i përkthimit - mund të modifikohet",
+  "tryAgain": "Provoje përsëri",
+  "tutorialAiChatDesc": "Ushtroni bisedat e jetës reale me personazhet AI.",
+  "tutorialAiChatTitle": "Bisedë me AI",
+  "tutorialContextDesc": "Edhe nëse është e njëjta fjali, mund ta ruani veçmas duke shkruar situatën (p.sh. mëngjes, mbrëmje).",
+  "tutorialContextTitle": "Etiketa e situatës/kontekstit",
+  "tutorialLangSettingsDesc": "Vendosni gjuhën burimore dhe gjuhën e synuar për të përkthyer.",
+  "tutorialLangSettingsTitle": "Cilësimet e gjuhës",
   "tutorialM1ToggleDesc": "Ndërroni modalitetet e fjalëve dhe fjalive këtu.",
-  "metadataDialogTitle": "Klasifikimi i detajuar",
-  "tagFormal": "Formale",
-  "selectPOS": "Zgjidh pjesën e ligjëratës",
-  "selectSentenceType": "Zgjidh llojin e fjalisë",
-  "metadataRootWord": "Fjala rrënjë (Root Word)",
-  "posNoun": "Emër",
-  "posVerb": "Folje",
-  "posAdjective": "Mbiemër",
-  "posAdverb": "Ndajfolje",
-  "posPronoun": "Përemër",
-  "posPreposition": "Parafjalë",
-  "posConjunction": "Lidhëz",
-  "posInterjection": "Pasthirrmë",
-  "typeStatement": "Deklaratë",
-  "typeQuestion": "Pyetje",
+  "tutorialM1ToggleTitle": "Modaliteti i Fjalës/Fjalive",
+  "tutorialM2DropdownDesc": "Mund të zgjidhni materialin për të studiuar përmes menysë së sipërme.",
+  "tutorialM2ImportDesc": "Importoni një skedar JSON nga dosja e pajisjes tuaj.",
+  "tutorialM2ListDesc": "Ju mund ta fshini këtë kartë duke e shtypur gjatë (Shtypni Gjatë). Kontrolloni dhe ktheni fjalinë e ruajtur.",
+  "tutorialM2ListTitle": "Lista e Studimit",
+  "tutorialM2SearchDesc": "Mund të gjeni shpejt fjalë dhe fjali të ruajtura duke i kërkuar ato.",
+  "tutorialM2SelectDesc": "Shtypni ikonën e librit burim (📚) në shiritin e aplikacionit të sipërm për të zgjedhur materialin për të studiuar.",
+  "tutorialM2SelectTitle": "Zgjidhni Materialin",
+  "tutorialM3IntervalDesc": "Rregulloni kohën e pritjes midis fjalive.",
+  "tutorialM3IntervalTitle": "Vendosni Intervalin",
+  "tutorialM3ResetDesc": "Rivendosni progresin dhe rezultatin e saktësisë për të filluar nga e para.",
+  "tutorialM3ResetTitle": "Rivendos regjistrimin",
+  "tutorialM3SelectDesc": "Shtypni ikonën e librit burim (📚) në shiritin e aplikacionit të sipërm për të zgjedhur materialin për të ushtruar.",
+  "tutorialM3SelectTitle": "Zgjidhni Materialin",
+  "tutorialM3StartDesc": "Shtypni butonin e luajtjes për të dëgjuar zërin e folësit amtar dhe përsëriteni.",
+  "tutorialM3StartTitle": "Fillo Praktikën",
+  "tutorialM3WordsDesc": "Nëse kontrollohet, ushtroni vetëm fjalët e ruajtura.",
+  "tutorialM3WordsTitle": "Praktikë e fjalëve",
+  "tutorialMicDesc": "Mund të shtypni butonin e mikrofonit për të vendosur me zë.",
+  "tutorialMicTitle": "Hyrja zanore",
+  "tutorialSaveDesc": "Ruajeni rezultatin e përkthyer në regjistrin e studimit.",
+  "tutorialSaveTitle": "Ruaje",
+  "tutorialSwapDesc": "Shkëmbeni gjuhën time dhe gjuhën e studimit me njëra-tjetrën.",
+  "tutorialTabDesc": "Këtu mund të zgjidhni modalitetin e dëshiruar të studimit.",
+  "tutorialTapToContinue": "Shtypni ekranin për të vazhduar",
+  "tutorialTransDesc": "Përktheni tekstin e vendosur.",
+  "tutorialTransTitle": "Përktheje",
   "typeExclamation": "Thirrje",
   "typeImperative": "Urdhërore",
-  "labelNote": "Shënim",
-  "labelShowMemorized": "Mbaruar",
-  "titleTagSelection": "Etiketa e titullit (Set burimesh)",
-  "generalTags": "Etiketa të përgjithshme",
-  "tagSelection": "Zgjedhja e etiketës",
-  "metadataFormType": "Forma gramatikore",
-  "formInfinitive": "Forma bazë/E tashme",
-  "formPast": "E shkuar",
-  "formPastParticiple": "Pjesorja e shkuar",
-  "formPresentParticiple": "Pjesorja e tashme (-ing)",
-  "formPresent": "E tashme",
-  "formThirdPersonSingular": "Veta e tretë njëjës",
-  "formPlural": "Shumës",
-  "formSingular": "Njëjës",
-  "caseSubject": "Rasnore",
-  "caseObject": "Kallëzore",
-  "casePossessive": "Gjinore",
-  "casePossessivePronoun": "Përemër pronor",
-  "caseReflexive": "Përemër vetor",
-  "formPositive": "Formë pohore",
-  "formComparative": "Krahasore",
-  "formSuperlative": "Mbiore",
-  "searchConditions": "Kushtet e kërkimit",
-  "recentNItems": "Shiko {count} artikujt e krijuar së fundmi",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "typeQuestion": "Pyetje",
+  "typeStatement": "Deklaratë",
+  "usageLimitTitle": "Arritja e kufirit",
+  "useExistingText": "Përdorni tekstin ekzistues",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Shkronja fillestare",
-  "reset": "Rivendos",
-  "participantRename": "Riemëro pjesëmarrësin",
-  "labelName": "Emri",
-  "gender": "Gjinia",
-  "language": "Gjuha",
-  "male": "Mashkull",
-  "female": "Femër",
-  "neutral": "Asnjëanës",
-  "chatAllConversations": "Të gjitha bisedat",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "A jeni i sigurt që dëshironi ta fshini këtë bisedë?\nBisedat e fshira nuk mund të rikthehen.",
-  "notSelected": "- Nuk është zgjedhur -",
-  "myWordbook": "Libri im i fjalëve",
-  "mySentenceCollection": "Koleksioni im i fjalive",
-  "newSubjectName": "Emri i ri i grupit/fjalorit",
-  "enterNewSubjectName": "Vendos emrin e ri",
-  "addNewSubject": "Shto emër të ri",
-  "selectExistingSubject": "Zgjidh emër ekzistues",
-  "addTagHint": "Shto etiketë...",
-  "save": "Ruaj",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Ju lutemi, verifikoni email-in për të përfunduar vërtetimin.",
-  "emailAlreadyInUse": "Ky email është tashmë i regjistruar. Ju lutemi identifkohuni ose përdorni opsionin e rivendosjes së fjalëkalimit."
+  "viewOnlineGuide": "Shikoni Udhëzuesin Online",
+  "voluntaryTranslations": "Përkthime vullnetare",
+  "watchAdAndRefill": "Shikoni reklamën dhe rimbushni (+5 herë)",
+  "word": "Fjalë",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Mbroni bazën duke thënë fjalët përpara se të mbërrijnë armiqtë.",
+  "wordDefenseTitle": "Mbrojtja e fjalëve",
+  "wordModeLabel": "Modaliteti i fjalës",
+  "yourPronunciation": "Shqiptimi juaj"
 }

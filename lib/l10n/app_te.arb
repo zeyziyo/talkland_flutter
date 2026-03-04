@@ -1,188 +1,105 @@
 {
   "@@locale": "te",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Kakaoతో కొనసాగించండి",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "సహాయం & గైడ్",
-  "helpTabModes": "మోడ్‌లు",
-  "helpTabJson": "JSON ఫార్మాట్",
-  "helpTabTour": "టూర్",
-  "helpMode1Desc": "వాయిస్‌ని గుర్తించండి, అనువదించండి మరియు ఫలితాన్ని వినండి.",
-  "helpMode1Details": "• వాయిస్: ప్రారంభించడానికి/ఆపడానికి మైక్‌ని నొక్కండి\n• వచనం: అనువదించడానికి నేరుగా టైప్ చేయండి\n• ఆటో-సెర్చ్: ఇలాంటి వాక్యాలను గుర్తిస్తుంది\n• అనువాదం: తక్షణ అనువాద బటన్\n• వినండి: TTS కోసం స్పీకర్ ఐకాన్\n• సేవ్: చరిత్రకు జోడిస్తుంది\n• క్లియర్: అన్నీ రీసెట్ చేయండి",
-  "helpMode2Desc": "దాచిన అనువాదంతో సేవ్ చేసిన వాక్యాలను సమీక్షించండి.",
-  "helpMode2Details": "• ఎంచుకోండి: సెట్ లేదా 'అన్నీ సమీక్షించు' ఎంచుకోండి\n• తిప్పు: అనువాదం 'చూపు/దాచు'\n• వినండి: వాక్యానికి TTS ప్లే చేయండి\n• గుర్తించు: పూర్తయిన వాటికి టిక్ (V)\n• తొలగించు: తొలగించడానికి కార్డును గట్టిగా నొక్కండి\n• ఫిల్టర్: అన్నీ లేదా మెటీరియల్ వారీగా చూడండి",
-  "helpMode3Desc": "వాక్యాన్ని విని, అనుకరిస్తూ (Shadowing) ఉచ్ఛారణను ప్రాక్టీస్ చేయండి.",
-  "helpMode3Details": "• ఎంచుకోండి: ప్యాకేజీని ఎంచుకోండి\n• విరామం: [-] [+] వేచి ఉండే సమయం (3సె-60సె)\n• ప్రారంభించు/ఆపు: సెషన్‌ను నియంత్రించండి\n• మాట్లాడు: ఆడియో వినండి మరియు పునరావృతం చేయండి\n• స్కోర్: ఖచ్చితత్వం (0-100)\n• మళ్ళీ ప్రయత్నించు: వాయిస్ గుర్తించబడకపోతే బటన్",
-  "helpModeChatDesc": "AI వ్యక్తిత్వంతో సంభాషిస్తూ నిజ జీవిత సంభాషణను ప్రాక్టీస్ చేయండి.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "మోడ్ 3లో దిగుమతి చేయడానికి, JSONని సృష్టించండి:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "స్థానం",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "ఖచ్చితత్వం",
+  "adLoading": "ప్రకటనను లోడ్ చేస్తోంది. దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.",
+  "addNewSubject": "కొత్త పేరును జోడించు",
+  "addParticipant": "భాగస్వామిని చేర్చు",
+  "addTagHint": "ట్యాగ్‌ను జోడించు...",
+  "alreadyHaveAccount": "ఇప్పటికే ఖాతా ఉందా?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "సమీక్ష ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "ఆటో ప్లే",
+  "basic": "ప్రాథమిక",
+  "basicDefault": "ప్రాథమిక డిఫాల్ట్",
+  "basicMaterialRepository": "ప్రాథమిక వాక్యం/పదం నిల్వ",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "మెటీరియల్ ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "ప్రాథమిక వాక్య రిపోజిటరీ",
+  "basicSentences": "ప్రాథమిక వాక్య నిల్వ",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "సమీక్ష",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "శోధించు",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "అనువాదం",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "వినండి",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "సేవ్ చేయి",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "సేవ్ చేయబడింది",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "తొలగించు",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "విషయ సమాచారం",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "ప్రాథమిక పద రిపోజిటరీ",
+  "basicWords": "ప్రాథమిక పద నిల్వ",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "రద్దు చేయి",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "సరే",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "రీఫ్రెష్",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "రికార్డులు ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "ఆబ్జెక్టివ్",
+  "casePossessive": "ఆస్తికరమైన",
+  "casePossessivePronoun": "ఆస్తికరమైన సర్వనామం",
+  "caseReflexive": "రిఫ్లెక్సివ్",
+  "caseSubject": "సబ్జెక్టివ్",
+  "chatAiChat": "చాటింగ్",
+  "chatAllConversations": "అన్ని సంభాషణలు",
+  "chatChoosePersona": "వ్యక్తిత్వాన్ని ఎంచుకోండి",
+  "chatEndMessage": "మీరు చాట్‌ను ముగించాలనుకుంటున్నారా?",
+  "chatEndTitle": "చాట్‌ను ముగించి, సేవ్ చేయండి",
+  "chatFailed": "చాట్ విఫలమైంది: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "లక్ష్య భాష ఫిల్టర్:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "సంభాషణ నుండి సంగ్రహించబడింది ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "ఎంచుకున్న భాషకు రికార్డులు లేవు",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "చాట్ చరిత్ర",
+  "chatNew": "కొత్త చాట్",
+  "chatNewChat": "కొత్త చాట్",
+  "chatNoConversations": "ఇంకా సంభాషణలు ఏమీ లేవు",
+  "chatSaveAndExit": "సేవ్ చేసి నిష్క్రమించు",
+  "chatStartNewPrompt": "అభ్యాసం కోసం కొత్త సంభాషణను ప్రారంభించండి!",
+  "chatTypeHint": "సందేశాన్ని టైప్ చేయండి...",
+  "chatUntitled": "పేరు లేని చాట్",
+  "checking": "తనిఖీ చేస్తోంది...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "శోధన మోడ్ నుండి అనువాదాలను సేవ్ చేయండి",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "తిప్పు",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "దాచు",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "రికార్డును తొలగించు",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "అన్నీ తొలగించు",
+  "confirm": "సరే",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "మీరు ఖచ్చితంగా ఈ రికార్డును తొలగించాలనుకుంటున్నారా?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "రికార్డు విజయవంతంగా తొలగించబడింది",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "మీరు ఈ సంభాషణను తొలగించాలనుకుంటున్నారా?\nతొలగించిన సంభాషణను తిరిగి పొందలేరు.",
+  "confirmDeleteParticipant": "ఈ భాగస్వామిని తొలగించాలా?",
+  "contextTagHint": "తర్వాత వేరు చేయడానికి సహాయపడటానికి పరిస్థితిని నమోదు చేయండి",
+  "contextTagLabel": "సందర్భం/పరిస్థితి (ఐచ్ఛికం) - ఉదా: ఉదయకాల శుభాకాంక్షలు, గౌరవప్రదమైన ప్రసంగం",
+  "copiedToClipboard": "క్లిప్‌బోర్డ్‌కు నకలు చేయబడింది!",
+  "copy": "నకలు చేయి",
+  "correctAnswer": "సరైన సమాధానం",
+  "createNew": "కొత్తది సృష్టించు",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "ప్రస్తుత స్థానం",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "ప్రస్తుత ఎంపిక చేసిన మెటీరియల్ సేకరణ:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "తొలగించు",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "తొలగింపు విఫలమైంది: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "JSON దిగుమతి",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "రికార్డును తొలగించు",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "దిగుమతి అవుతోంది...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "సంభాషణ అభ్యాసం కోసం రోల్-ప్లేయింగ్ గేమ్. సరైన సమాధానాన్ని ఎంచుకోండి మరియు చెప్పండి.",
+  "dialogueQuestTitle": "సంభాషణ అన్వేషణ",
+  "disambiguationPrompt": "మీరు ఏ అర్థంతో అనువదించాలనుకుంటున్నారు?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "అర్థాన్ని ఎంచుకోండి",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "ఖాతా లేదా?",
+  "editParticipant": "భాగస్వామిని సవరించు",
+  "email": "ఇమెయిల్",
+  "emailAlreadyInUse": "ఈ ఇమెయిల్ ఇప్పటికే ఉపయోగంలో ఉంది. దయచేసి లాగిన్ అవ్వండి లేదా మీ పాస్‌వర్డ్‌ను తిరిగి పొందండి.",
+  "enterNewSubjectName": "కొత్త పేరును నమోదు చేయండి",
+  "enterSentenceHint": "వాక్యాన్ని నమోదు చేయండి...",
+  "enterTextHint": "అనువదించడానికి వచనాన్ని నమోదు చేయండి",
+  "enterTextToTranslate": "అనువదించడానికి వచనాన్ని నమోదు చేయండి",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "పదాన్ని నమోదు చేయండి...",
+  "error": "లోపం",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "ద్వేషపూరిత ప్రసంగం ఉన్నందున అనువదించలేము.",
+  "errorOtherSafety": "AI భద్రతా విధానం ద్వారా అనువాదం తిరస్కరించబడింది.",
+  "errorProfanity": "అభ్యంతరకర పదాలు ఉన్నందున అనువదించలేము.",
+  "errorSelectCategory": "దయచేసి ముందుగా ఒక పదం లేదా వాక్యాన్ని ఎంచుకోండి!",
+  "errorSexualContent": "శృంగారభరిత కంటెంట్ ఉన్నందున అనువదించలేము.",
+  "errors": "లోపాలు:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "స్త్రీ",
+  "file": "ఫైల్:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "అన్నీ",
+  "flip": "తిప్పు",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "తులనాత్మక డిగ్రీ",
+  "formInfinitive": "ఇన్ఫినిటివ్/ప్రస్తుత కాలం",
+  "formPast": "గత కాలం",
+  "formPastParticiple": "గత పార్టిసిపుల్",
+  "formPlural": "బహువచనం",
+  "formPositive": "పాజిటివ్ డిగ్రీ",
+  "formPresent": "ప్రస్తుత కాలం",
+  "formPresentParticiple": "ప్రస్తుత పార్టిసిపుల్ (-ing)",
+  "formSingular": "ఏకవచనం",
+  "formSuperlative": "సూపర్లేటివ్ డిగ్రీ",
+  "formThirdPersonSingular": "మూడవ వ్యక్తి ఏకవచనం",
+  "gameModeDesc": "ప్రాక్టీస్ చేయడానికి గేమ్ మోడ్‌ను ఎంచుకోండి",
+  "gameModeTitle": "గేమ్ మోడ్",
+  "gameOver": "గేమ్ ఓవర్",
+  "gender": "లింగం",
+  "generalTags": "సాధారణ ట్యాగ్‌లు",
+  "getMaterials": "మెటీరియల్‌లను పొందండి",
+  "good": "బాగుంది",
+  "googleContinue": "Googleతో కొనసాగించు",
+  "helpDialogueImportDesc": "JSON ఫైల్‌ల నుండి మొత్తం సంభాషణ సెట్‌లను దిగుమతి చేయండి.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "మోడ్ 3లో దిగుమతి చేయడానికి, JSONని సృష్టించండి:",
+  "helpJsonTypeDialogue": "సంభాషణ (Dialogue)",
+  "helpJsonTypeSentence": "వాక్యం (Sentence)",
+  "helpJsonTypeWord": "పదం (Word)",
+  "helpMode1Desc": "వాయిస్‌ని గుర్తించండి, అనువదించండి మరియు ఫలితాన్ని వినండి.",
+  "helpMode1Details": "• వాయిస్: ప్రారంభించడానికి/ఆపడానికి మైక్‌ని నొక్కండి\n• వచనం: అనువదించడానికి నేరుగా టైప్ చేయండి\n• ఆటో-సెర్చ్: ఇలాంటి వాక్యాలను గుర్తిస్తుంది\n• అనువాదం: తక్షణ అనువాద బటన్\n• వినండి: TTS కోసం స్పీకర్ ఐకాన్\n• సేవ్: చరిత్రకు జోడిస్తుంది\n• క్లియర్: అన్నీ రీసెట్ చేయండి",
+  "helpMode2Desc": "దాచిన అనువాదంతో సేవ్ చేసిన వాక్యాలను సమీక్షించండి.",
+  "helpMode2Details": "• ఎంచుకోండి: సెట్ లేదా 'అన్నీ సమీక్షించు' ఎంచుకోండి\n• తిప్పు: అనువాదం 'చూపు/దాచు'\n• వినండి: వాక్యానికి TTS ప్లే చేయండి\n• గుర్తించు: పూర్తయిన వాటికి టిక్ (V)\n• తొలగించు: తొలగించడానికి కార్డును గట్టిగా నొక్కండి\n• ఫిల్టర్: అన్నీ లేదా మెటీరియల్ వారీగా చూడండి",
+  "helpMode3Desc": "వాక్యాన్ని విని, అనుకరిస్తూ (Shadowing) ఉచ్ఛారణను ప్రాక్టీస్ చేయండి.",
+  "helpMode3Details": "• ఎంచుకోండి: ప్యాకేజీని ఎంచుకోండి\n• విరామం: [-] [+] వేచి ఉండే సమయం (3సె-60సె)\n• ప్రారంభించు/ఆపు: సెషన్‌ను నియంత్రించండి\n• మాట్లాడు: ఆడియో వినండి మరియు పునరావృతం చేయండి\n• స్కోర్: ఖచ్చితత్వం (0-100)\n• మళ్ళీ ప్రయత్నించు: వాయిస్ గుర్తించబడకపోతే బటన్",
+  "helpModeChatDesc": "AI వ్యక్తిత్వంతో సంభాషిస్తూ నిజ జీవిత సంభాషణను ప్రాక్టీస్ చేయండి.",
+  "helpModeChatDetails": "• AI చాటింగ్: వ్యక్తిత్వంతో నిజమైన సంభాషణను ప్రాక్టీస్ చేయండి.\n• పార్టిసిపెంట్ నిర్వహణ: మీ భాషను మరియు AI భాషను సెట్ చేయడం ద్వారా భాషా అసమానతలను నివారించండి.\n• GPS రోల్-ప్లే: మీ ప్రస్తుత స్థానం ఆధారంగా సహజమైన సంభాషణ పరిస్థితులను సెట్ చేయండి.\n• రికార్డ్ నిలుపుదల: అన్ని సంభాషణలు ID ఆధారంగా సురక్షితంగా నిల్వ చేయబడతాయి మరియు మీరు పేరు మార్చినప్పటికీ ట్రాక్ చేయబడతాయి.",
+  "helpTabJson": "JSON ఫార్మాట్",
+  "helpTabModes": "మోడ్‌లు",
+  "helpTabTour": "టూర్",
+  "helpTitle": "సహాయం & గైడ్",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "దాచు",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "జోడించబడింది: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "దిగుమతి పూర్తయింది",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "అదే పేరుతో మెటీరియల్ ఇప్పటికే ఉంది. పేరును మార్చి మళ్లీ ప్రయత్నించండి.",
+  "importErrorMessage": "ఫైల్‌ని దిగుమతి చేయడంలో విఫలమైంది:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "దిగుమతి విఫలమైంది",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "మొత్తం: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "JSON దిగుమతి",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "జోడించబడింది: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "దయచేసి JSON ఫైల్‌ని దిగుమతి చేయండి",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "దాటవేయబడింది: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "లోపాలు:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "మొత్తం: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "లోపం",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "దిగుమతి అవుతోంది...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "ఫైల్‌ని దిగుమతి చేయడంలో విఫలమైంది:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "ఇన్‌పుట్",
+  "intervalSeconds": "విరామం: {seconds}సెకన్లు",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "దయచేసి సరైన ఇమెయిల్‌ను నమోదు చేయండి.",
+  "kakaoContinue": "Kakaoతో కొనసాగించండి",
+  "labelLangCode": "భాషా కోడ్ (ఉదా: en-US, ko-KR)",
+  "labelName": "పేరు",
+  "labelNote": "గమనిక",
+  "labelPOS": "భాషా భాగం",
+  "labelRole": "పాత్ర",
+  "labelSentence": "వాక్యం",
+  "labelSentenceCollection": "వాక్యాల సమాహారం",
+  "labelSentenceType": "వాక్య రకం",
+  "labelShowMemorized": "పూర్తయింది",
+  "labelType": "రకం:",
+  "labelWord": "పదం",
+  "labelWordbook": "పదాల పుస్తకం",
+  "language": "భాష",
+  "languageSettings": "భాష సెట్టింగ్‌లు",
+  "languageSettingsTitle": "భాషా సెట్టింగ్‌లు",
+  "libTitleFirstMeeting": "మొదటి సమావేశం",
+  "libTitleGreetings1": "శుభాకాంక్షలు 1",
+  "libTitleNouns1": "నామవాచకాలు 1",
+  "libTitleVerbs1": "క్రియలు 1",
+  "listen": "వినండి",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "వింటున్నాను...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "భాగస్వాములను లోడ్ చేస్తోంది...",
+  "location": "స్థానం",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "లాగిన్",
+  "logout": "నిష్క్రమించు",
+  "logoutConfirmMessage": "ప్రస్తుత పరికరం నుండి నిష్క్రమించాలా?",
+  "logoutConfirmTitle": "నిష్క్రమించు",
+  "male": "పురుషుడు",
+  "manageParticipants": "భాగస్వాములను నిర్వహించు",
+  "manual": "మాన్యువల్ ఇన్‌పుట్",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "చదివినట్లుగా గుర్తించు",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "విషయ సమాచారం",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "నేను",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "పరికరంలో మెటీరియల్‌ను దిగుమతి చేయండి",
+  "menuHelp": "సహాయం",
+  "menuLanguageSettings": "భాషా అమరికలు",
+  "menuOnlineLibrary": "ఆన్‌లైన్ లైబ్రరీ",
+  "menuSelectMaterialSet": "అధ్యయన సామగ్రిని ఎంచుకోండి",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "విధాన పర్యటన",
+  "menuWebDownload": "వినియోగదారు మాన్యువల్",
+  "metadataDialogTitle": "వివరణాత్మక వర్గీకరణ",
+  "metadataFormType": "వ్యాకరణ రూపం",
+  "metadataRootWord": "రూట్ వర్డ్",
+  "micButtonTooltip": "వాయిస్ రికగ్నిషన్‌ను ప్రారంభించు",
+  "mode1SelectedMaterial": "ప్రస్తుతం ఎంచుకున్న మెటీరియల్ సేకరణ: {name}",
+  "mode2Title": "సమీక్ష",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "తర్వాత",
+  "mode3Start": "ప్రారంభించు",
+  "mode3Stop": "ఆపు",
+  "mode3TryAgain": "మళ్లీ ప్రయత్నించండి",
+  "mySentenceCollection": "నా వాక్యాల సేకరణ",
+  "myWordbook": "నా పదజాలం",
+  "neutral": "తటస్థ",
+  "newSubjectName": "కొత్త పదజాలం/వాక్యాల సేకరణ పేరు",
+  "next": "తర్వాత",
+  "noDialogueHistory": "సంభాషణ చరిత్ర లేదు.",
+  "noInternetWarningMic": "ఇంటర్నెట్ కనెక్షన్ లేదు. ఆఫ్‌లైన్‌లో వాయిస్ రికగ్నిషన్ అందుబాటులో ఉండకపోవచ్చు.",
+  "noInternetWarningTranslate": "ఇంటర్నెట్ కనెక్షన్ లేదు. ఆఫ్‌లైన్‌లో అనువాద ఫీచర్ అందుబాటులో లేదు. దయచేసి సమీక్ష మోడ్‌ను ఉపయోగించండి.",
+  "noMaterialsInCategory": "ఈ వర్గంలో మెటీరియల్ ఏదీ లేదు.",
+  "noParticipantsFound": "నమోదు చేసుకున్న భాగస్వాములు లేరు.",
+  "noRecords": "ఎంచుకున్న భాషకు రికార్డులు లేవు",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "అధ్యయన సామగ్రి లేదు.",
+  "noTextToPlay": "ప్లే చేయడానికి వచనం లేదు",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "సేవ్ చేయడానికి అనువాదం లేదు",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "వాయిస్ గుర్తించబడలేదు",
+  "notSelected": "- ఎంచుకోలేదు -",
+  "onlineLibraryCheckInternet": "మీ ఇంటర్నెట్ కనెక్షన్‌ను తనిఖీ చేయండి లేదా తర్వాత మళ్లీ ప్రయత్నించండి.",
+  "onlineLibraryLoadFailed": "మెటీరియల్‌లను లోడ్ చేయడంలో విఫలమైంది.",
+  "onlineLibraryNoMaterials": "మెటీరియల్ ఏదీ లేదు.",
+  "participantDeleted": "భాగస్వామి తొలగించబడింది.",
+  "participantRename": "భాగస్వామి పేరు మార్చండి",
+  "partner": "భాగస్వామి",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "భాగస్వామి మోడ్",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "పాస్‌వర్డ్",
+  "passwordTooShort": "పాస్‌వర్డ్ కనీసం 6 అక్షరాలు ఉండాలి.",
+  "perfect": "పర్ఫెక్ట్!",
+  "personaFriend": "స్థానిక స్నేహితుడు",
+  "personaGuide": "ట్రావెల్ గైడ్",
+  "personaTeacher": "ఆంగ్ల ఉపాధ్యాయుడు",
+  "playAgain": "మళ్లీ ఆడు",
+  "playbackFailed": "ప్లేబ్యాక్ విఫలమైంది: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "మెటీరియల్ ఎంచుకోండి",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "ప్లే అవుతోంది...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "విషయం:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "మూలం:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "ఫైల్:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "విశేషణం",
+  "posAdverb": "క్రియా విశేషణం",
+  "posConjunction": "సంయోజకం",
+  "posInterjection": "ఆశ్చర్యార్థకం",
+  "posNoun": "నామవాచకం",
+  "posPreposition": "సర్గ/అవ్యయం",
+  "posPronoun": "సర్వనామం",
+  "posVerb": "క్రియ",
+  "practiceModeTitle": "అభ్యాసం",
+  "practiceWordsOnly": "పదాలను మాత్రమే ప్రాక్టీస్ చేయండి",
   "progress": "పురోగతి: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "దయచేసి JSON ఫైల్‌ని దిగుమతి చేయండి",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "దయచేసి స్టడీ మెటీరియల్‌ని ఎంచుకోండి",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "చదివాను",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "చదివినట్లుగా గుర్తించు",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "వింటున్నాను...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "గుర్తింపు పూర్తయింది",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "ఇటీవల సృష్టించబడిన {count} ఐటెమ్‌లను చూడండి",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "వాయిస్ గుర్తింపు విఫలమైంది: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "తనిఖీ చేస్తోంది...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "గుర్తింపు పూర్తయింది",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "అనువదిస్తోంది...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "గుర్తించబడిన ఉచ్చారణ:",
+  "recordDeleted": "రికార్డు విజయవంతంగా తొలగించబడింది",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "అనువాదం పూర్తయింది (సేవ్ చేయాలి)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "రీఫ్రెష్",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "సేవ్ చేసిన అనువాదం లోడ్ చేయబడింది",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "అనువాదం విఫలమైంది: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "రీసెట్ చేయి",
+  "resetPracticeHistory": "ప్రాక్టీస్ చరిత్రను రీసెట్ చేయండి",
+  "retry": "మళ్లీ ప్రయత్నించాలా?",
+  "reviewAll": "అన్నీ సమీక్షించు",
+  "reviewCount": "{count} సార్లు సమీక్షించబడింది",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "అనువదించడానికి వచనాన్ని నమోదు చేయండి",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "సేవ్ అవుతోంది...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "సేవ్ చేయడానికి అనువాదం లేదు",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "సమీక్ష",
+  "roleAi": "AI",
+  "roleThirdParty": "మూడవ వ్యక్తి",
+  "roleUser": "వినియోగదారు",
+  "save": "భద్రపరచు",
+  "saveData": "సేవ్ చేయి",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "సేవ్ చేయడం విఫలమైంది: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "ప్లే అవుతోంది...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "శోధన మోడ్ నుండి అనువాదాలను సేవ్ చేయండి",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "ప్లే చేయడానికి వచనం లేదు",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "సేవ్ చేయబడింది",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "ప్లేబ్యాక్ విఫలమైంది: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "సేవ్ అవుతోంది...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "మూల భాష",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "లక్ష్య భాష",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "అలాంటి వచనం కనుగొనబడింది",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "ఉన్నది వాడుకో",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "కొత్తది సృష్టించు",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "{count} సార్లు సమీక్షించబడింది",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "మాట్లాడటం",
-  "speakingPractice": "మాట్లాడే సాధన",
-  "intervalSeconds": "విరామం: {seconds}సెకన్లు",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "మీ ఉచ్చారణ",
-  "correctAnswer": "సరైన సమాధానం",
   "score": "ఖచ్చితత్వం: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "పర్ఫెక్ట్!",
-  "good": "బాగుంది",
-  "tryAgain": "మళ్ళీ ప్రయత్నించు",
-  "startPractice": "సాధన ప్రారంభించు",
-  "stopPractice": "ఆపు",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "టూర్ ప్రారంభించు",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "వాయిస్ ఇన్‌పుట్",
-  "tutorialMicDesc": "వాయిస్ ఇన్‌పుట్ కోసం మైక్ బటన్‌ను నొక్కండి.",
-  "tutorialTabDesc": "మీరు ఇక్కడ మీ కావలసిన అభ్యాస మోడ్‌ను ఎంచుకోవచ్చు.",
-  "tutorialTapToContinue": "కొనసాగించడానికి నొక్కండి",
-  "tutorialTransTitle": "అనువాదం",
-  "tutorialTransDesc": "మీ వచనాన్ని అనువదించడానికి ఇక్కడ నొక్కండి.",
-  "tutorialSaveTitle": "సేవ్",
-  "tutorialSaveDesc": "మీ అనువాదాన్ని సేవ్ చేయండి.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "స్కోర్",
+  "search": "శోధించు",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "శోధన పరిస్థితులు",
+  "searchSentenceHint": "వాక్యం కోసం వెతుకు...",
+  "searchWordHint": "పదం కోసం వెతుకు...",
+  "sectionSentence": "వాక్య విభాగం",
+  "sectionSentences": "వాక్యాలు",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "పద విభాగం",
+  "sectionWords": "పదాలు",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "ఉన్న పేరును ఎంచుకోండి",
+  "selectMaterialPrompt": "దయచేసి స్టడీ మెటీరియల్‌ని ఎంచుకోండి",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "అభ్యాస సామగ్రి సమితిని ఎంచుకోండి",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "మాట యొక్క భాగాన్ని ఎంచుకోండి",
+  "selectParticipants": "భాగస్వాములను ఎంచుకోండి",
+  "selectSentenceType": "వాక్యం రకాన్ని ఎంచుకోండి",
+  "selectStudyMaterial": "మెటీరియల్ ఎంచుకోండి",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI చాటింగ్",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "ఎంచుకోండి & ఫిల్టర్",
-  "tutorialM2SelectDesc": "మెటీరియల్ ఎంచుకోండి లేదా 'అన్నీ సమీక్షించు'కి మారండి.",
-  "tutorialM2ListTitle": "స్టడీ జాబితా",
-  "tutorialM2ListDesc": "మీ కార్డులను తనిఖీ చేయండి మరియు వాటిని తిప్పండి. (Long-press to delete)",
-  "tutorialM3SelectTitle": "మెటీరియల్ ఎంచుకోండి",
-  "tutorialM3SelectDesc": "మాట్లాడే సాధన కోసం సెట్‌ను ఎంచుకోండి.",
-  "tutorialM3IntervalTitle": "విరామం",
-  "tutorialM3IntervalDesc": "వాక్యాల మధ్య వేచి ఉండే సమయాన్ని సర్దుబాటు చేయండి.",
-  "tutorialM3StartTitle": "ప్రారంభించు",
-  "tutorialM3StartDesc": "ప్రారంభించడానికి ప్లే నొక్కండి.",
+  "sentence": "వాక్యం",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "సైన్ అప్",
+  "similarTextFound": "అలాంటి వచనం కనుగొనబడింది",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "దాటవేయి",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "మూలం:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "మూల భాష",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "ఇప్పుడు మాట్లాడండి!",
+  "speaker": "మాట్లాడేవారు",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "మాట్లాడేవారిని ఎంచుకోండి",
+  "speakingPractice": "మాట్లాడే సాధన",
+  "startChat": "చాట్ ప్రారంభించు",
+  "startPractice": "సాధన ప్రారంభించు",
+  "startTutorial": "టూర్ ప్రారంభించు",
   "startWarning": "హెచ్చరిక",
-  "noVoiceDetected": "వాయిస్ గుర్తించబడలేదు",
-  "tooltipSearch": "వెతకండి",
-  "tooltipStudyReview": "అధ్యయనం+సమీక్ష",
-  "tooltipSpeaking": "మాట్లాడటం",
+  "startsWith": "ప్రారంభమయ్యే అక్షరం",
+  "statusCheckEmail": "దయచేసి మీ ఇమెయిల్‌ను ధృవీకరించడం ద్వారా ప్రామాణీకరణను పూర్తి చేయండి.",
+  "statusDownloading": "డౌన్‌లోడ్ చేస్తోంది: {name}...",
+  "statusImportFailed": "దిగుమతి విఫలమైంది: {error}",
+  "statusImportSuccess": "{name} దిగుమతి పూర్తయింది",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "లాగిన్ రద్దు చేయబడింది.",
+  "statusLoginFailed": "లాగిన్ విఫలమైంది: {error}",
+  "statusLoginSuccess": "లాగిన్ విజయవంతమైంది.",
+  "statusLogoutSuccess": "నిష్క్రమించబడింది.",
+  "statusSignUpFailed": "సైన్ అప్ విఫలమైంది: {error}",
+  "statusSigningUp": "సైన్ అప్ చేస్తోంది...",
+  "stopPractice": "ఆపు",
+  "studyComplete": "చదివాను",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "రికార్డులు ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "గౌరవంగా",
+  "styleInformal": "అనధికారిక",
+  "stylePolite": "మర్యాదగా",
+  "styleSlang": "స్లాంగ్",
+  "subject": "విషయం:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "భాషలను మార్చు",
+  "switchToAi": "AI మోడ్‌కు మారు",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "భాగస్వామి మోడ్‌కు మారు",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "డేటా సమకాలీకరిస్తోంది...",
+  "tabConversation": "సంభాషణ",
+  "tabReview": "సమీక్ష ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "వాక్యం",
+  "tabSpeaking": "మాట్లాడటం",
+  "tabStudyMaterial": "మెటీరియల్ ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "పదం",
+  "tagFormal": "గౌరవంగా",
+  "tagSelection": "ట్యాగ్ ఎంపిక",
+  "targetLanguage": "లక్ష్య భాష",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "లక్ష్య భాష ఫిల్టర్:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "సమాధానం బహిర్గతం చేయడానికి ముందు ఆలోచించడానికి సమయం.",
+  "thinkingTimeInterval": "ప్లేబ్యాక్ విరామం",
+  "timeUp": "సమయం ముగిసింది!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "శీర్షిక ట్యాగ్ (సేకరణ)",
   "tooltipDecrease": "తగ్గించు",
   "tooltipIncrease": "పెంచు",
-  "languageSettings": "భాష సెట్టింగ్‌లు",
-  "tutorialM2DropdownDesc": "అధ్యయన విషయాలను ఎంచుకోండి.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "పరికర ఫోల్డర్ నుండి JSON ఫైల్‌ను దిగుమతి చేయండి.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "సందర్భ ట్యాగ్",
-  "tutorialContextDesc": "సారూప్య వాక్యాలను వేరు చేయడానికి సందర్భాన్ని (ఉదా. ఉదయం) జోడించండి.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "పరిమితి చేరుకుంది",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "వెతకండి",
+  "tooltipSpeaking": "మాట్లాడటం",
+  "tooltipStudyReview": "అధ్యయనం+సమీక్ష",
+  "totalRecords": "మొత్తం {count} రికార్డులు (అన్నింటినీ చూడండి)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "అనువాదం",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "అనువదిస్తోంది...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "అనువాదం",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "అభ్యాస సామగ్రి సమితిని ఎంచుకోండి",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "అనువాదం పూర్తయింది (సేవ్ చేయాలి)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "పదాలు",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "వాక్యాలు",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "నేను నేర్చుకుంటున్న భాషతో నా భాషను మార్చుకుంటాను.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "అధ్యయన సామగ్రిని ఎంచుకోండి",
-  "sectionWord": "పద విభాగం",
-  "sectionSentence": "వాక్య విభాగం",
-  "tabWord": "పదం",
-  "tabSentence": "వాక్యం",
-  "errorProfanity": "అభ్యంతరకర పదాలు ఉన్నందున అనువదించలేము.",
-  "errorHateSpeech": "ద్వేషపూరిత ప్రసంగం ఉన్నందున అనువదించలేము.",
-  "errorSexualContent": "శృంగారభరిత కంటెంట్ ఉన్నందున అనువదించలేము.",
-  "errorOtherSafety": "AI భద్రతా విధానం ద్వారా అనువాదం తిరస్కరించబడింది.",
-  "clearAll": "అన్నీ తొలగించు",
-  "disambiguationTitle": "అర్థాన్ని ఎంచుకోండి",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "మీరు ఏ అర్థంతో అనువదించాలనుకుంటున్నారు?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "దాటవేయి",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Input",
-  "reviewModeTitle": "Review",
-  "practiceModeTitle": "అభ్యాసం",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "అనువాదం విఫలమైంది: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "అనువాద పరిమితి మించిపోయింది",
+  "translationLimitMessage": "మీ రోజువారీ ఉచిత అనువాదాలను (5 సార్లు) మీరు ఉపయోగించారు.\\n\\nమీరు ప్రకటన చూసి వెంటనే 5 సార్లు రీఫిల్ చేయాలనుకుంటున్నారా?",
+  "translationLoaded": "సేవ్ చేసిన అనువాదం లోడ్ చేయబడింది",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "చాటింగ్",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "ప్రాథమిక పద రిపోజిటరీ",
-  "basicSentenceRepository": "ప్రాథమిక వాక్య రిపోజిటరీ",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "గౌరవంగా",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "శీర్షిక ట్యాగ్ (సేకరణ)",
-  "generalTags": "సాధారణ ట్యాగ్‌లు",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "ఏకవచనం",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "అనువాదాల సంఖ్య 5 సార్లు రీఫిల్ చేయబడింది!",
+  "translationResultHint": "అనువాద ఫలితం - సవరించడానికి అందుబాటులో ఉంది",
+  "tryAgain": "మళ్ళీ ప్రయత్నించు",
+  "tutorialAiChatDesc": "AI వ్యక్తిత్వంతో నిజమైన సంభాషణను ప్రాక్టీస్ చేయండి.",
+  "tutorialAiChatTitle": "AI చాటింగ్",
+  "tutorialContextDesc": "సారూప్య వాక్యాలను వేరు చేయడానికి సందర్భాన్ని (ఉదా. ఉదయం) జోడించండి.",
+  "tutorialContextTitle": "సందర్భ ట్యాగ్",
+  "tutorialLangSettingsDesc": "అనువదించడానికి మూలం మరియు గమ్య భాషను సెట్ చేయండి.",
+  "tutorialLangSettingsTitle": "భాషా సెట్టింగ్‌లు",
+  "tutorialM1ToggleDesc": "పదం మరియు వాక్యం మోడ్‌ల మధ్య ఇక్కడ మారండి.",
+  "tutorialM1ToggleTitle": "పదం/వాక్యం మోడ్",
+  "tutorialM2DropdownDesc": "అధ్యయన విషయాలను ఎంచుకోండి.",
+  "tutorialM2ImportDesc": "పరికర ఫోల్డర్ నుండి JSON ఫైల్‌ను దిగుమతి చేయండి.",
+  "tutorialM2ListDesc": "మీ కార్డులను తనిఖీ చేయండి మరియు వాటిని తిప్పండి. (Long-press to delete)",
+  "tutorialM2ListTitle": "స్టడీ జాబితా",
+  "tutorialM2SearchDesc": "సేవ్ చేసిన పదాలు మరియు వాక్యాలను శోధించడం ద్వారా వాటిని త్వరగా కనుగొనండి.",
+  "tutorialM2SelectDesc": "మెటీరియల్ ఎంచుకోండి లేదా 'అన్నీ సమీక్షించు'కి మారండి.",
+  "tutorialM2SelectTitle": "ఎంచుకోండి & ఫిల్టర్",
+  "tutorialM3IntervalDesc": "వాక్యాల మధ్య వేచి ఉండే సమయాన్ని సర్దుబాటు చేయండి.",
+  "tutorialM3IntervalTitle": "విరామం",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "మాట్లాడే సాధన కోసం సెట్‌ను ఎంచుకోండి.",
+  "tutorialM3SelectTitle": "మెటీరియల్ ఎంచుకోండి",
+  "tutorialM3StartDesc": "ప్రారంభించడానికి ప్లే నొక్కండి.",
+  "tutorialM3StartTitle": "ప్రారంభించు",
+  "tutorialM3WordsDesc": "గుర్తించబడితే, సేవ్ చేసిన పదాలను మాత్రమే ప్రాక్టీస్ చేయండి.",
+  "tutorialM3WordsTitle": "పద అభ్యాసం",
+  "tutorialMicDesc": "వాయిస్ ఇన్‌పుట్ కోసం మైక్ బటన్‌ను నొక్కండి.",
+  "tutorialMicTitle": "వాయిస్ ఇన్‌పుట్",
+  "tutorialSaveDesc": "మీ అనువాదాన్ని సేవ్ చేయండి.",
+  "tutorialSaveTitle": "సేవ్",
+  "tutorialSwapDesc": "నేను నేర్చుకుంటున్న భాషతో నా భాషను మార్చుకుంటాను.",
+  "tutorialTabDesc": "మీరు ఇక్కడ మీ కావలసిన అభ్యాస మోడ్‌ను ఎంచుకోవచ్చు.",
+  "tutorialTapToContinue": "కొనసాగించడానికి నొక్కండి",
+  "tutorialTransDesc": "మీ వచనాన్ని అనువదించడానికి ఇక్కడ నొక్కండి.",
+  "tutorialTransTitle": "అనువాదం",
+  "typeExclamation": "ఆశ్చర్యార్థక వాక్యం",
+  "typeImperative": "ఆదేశం",
+  "typeQuestion": "ప్రశ్న",
+  "typeStatement": "ప్రకటన",
+  "usageLimitTitle": "పరిమితి చేరుకుంది",
+  "useExistingText": "ఉన్నది వాడుకో",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "తటస్థ",
-  "chatAllConversations": "అన్ని సంభాషణలు",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "మీరు ఈ సంభాషణను తొలగించాలనుకుంటున్నారా?\nతొలగించిన సంభాషణను తిరిగి పొందలేరు.",
-  "notSelected": "- ఎంచుకోలేదు -",
-  "myWordbook": "నా పదజాలం",
-  "mySentenceCollection": "నా వాక్యాల సేకరణ",
-  "newSubjectName": "కొత్త పదజాలం/వాక్యాల సేకరణ పేరు",
-  "enterNewSubjectName": "కొత్త పేరును నమోదు చేయండి",
-  "addNewSubject": "కొత్త పేరును జోడించు",
-  "selectExistingSubject": "ఉన్న పేరును ఎంచుకోండి",
-  "addTagHint": "ట్యాగ్‌ను జోడించు...",
-  "save": "భద్రపరచు",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "దయచేసి మీ ఇమెయిల్‌ను ధృవీకరించడం ద్వారా ప్రామాణీకరణను పూర్తి చేయండి.",
-  "emailAlreadyInUse": "ఈ ఇమెయిల్ ఇప్పటికే ఉపయోగంలో ఉంది. దయచేసి లాగిన్ అవ్వండి లేదా మీ పాస్‌వర్డ్‌ను తిరిగి పొందండి."
+  "viewOnlineGuide": "ఆన్‌లైన్ గైడ్‌ను చూడండి",
+  "voluntaryTranslations": "స్వచ్ఛంద అనువాదాలు",
+  "watchAdAndRefill": "ప్రకటన చూసి రీఫిల్ చేయండి (+5 సార్లు)",
+  "word": "పదం",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "శత్రువులు రాకముందే పదాన్ని చెప్పడం ద్వారా స్థావరాన్ని రక్షించండి.",
+  "wordDefenseTitle": "పద రక్షణ",
+  "wordModeLabel": "పద మోడ్",
+  "yourPronunciation": "మీ ఉచ్చారణ"
 }

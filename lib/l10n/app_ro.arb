@@ -1,188 +1,105 @@
 {
   "@@locale": "ro",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Continuă cu Kakao",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Ajutor & Ghid",
-  "helpTabModes": "Moduri",
-  "helpTabJson": "Format JSON",
-  "helpTabTour": "Tur",
-  "helpMode1Desc": "Recunoaștere vocală, traducere și ascultare rezultat.",
-  "helpMode1Details": "• Voce: Apasă microfon pentru start/stop\n• Text: Scrie direct pentru traducere\n• Auto-Căutare: Detectează propoziții similare\n• Traducere: Buton pentru traducere instantă\n• Ascultă: Icoană difuzor pentru TTS\n• Salvează: Adaugă în istoric\n• Șterge: Resetează tot",
-  "helpMode2Desc": "Recapitulare propoziții salvate cu ascundere traducere.",
-  "helpMode2Details": "• Selectare: Alege set sau 'Tot'\n• Întoarce: 'Arată/Ascunde' traducerea\n• Ascultă: Redă TTS propoziție\n• Studiat: Bifează (V) pentru completat\n• Șterge: Apăsare lungă pentru ștergere\n• Filtru: Toate sau după material",
-  "helpMode3Desc": "Ascultă și repetă propoziții (Shadowing) pentru a-ți exersa pronunția.",
-  "helpMode3Details": "• Selectare: Alege pachet\n• Interval: [-] [+] pauză (3s-60s)\n• Start/Stop: Control sesiune\n• Vorbește: Ascultă și repetă\n• Scor: Acuratețe (0-100)\n• Reîncearcă: Buton dacă vocea nu este detectată",
-  "helpModeChatDesc": "Exersează conversații reale vorbind cu un personaj AI.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "Pentru import materiale în Mod 3, creați JSON:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Locație",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Acuratețe",
+  "adLoading": "Se încarcă anunțul. Te rugăm să încerci din nou mai târziu.",
+  "addNewSubject": "Adăugați titlu nou",
+  "addParticipant": "Adaugă participant",
+  "addTagHint": "Adăugați etichetă...",
+  "alreadyHaveAccount": "Ai deja un cont?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Recapitulare ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Redare automată",
+  "basic": "Bază",
+  "basicDefault": "Bază",
+  "basicMaterialRepository": "Depozit de bază cu propoziții/cuvinte",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Material ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Depozit de propoziții de bază",
+  "basicSentences": "Depozit de bază cu propoziții",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Recapitulare",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Căutare",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Traducere",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Ascultă",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Salvare",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Salvat",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Șterge",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Informații material",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Depozit de cuvinte de bază",
+  "basicWords": "Depozit de bază cu cuvinte",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Anulare",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "OK",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Reîmprospătare",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Înregistrări ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Acuzativ",
+  "casePossessive": "Genitiv",
+  "casePossessivePronoun": "Pronume posesiv",
+  "caseReflexive": "Reflexiv",
+  "caseSubject": "Nominativ",
+  "chatAiChat": "Conversație",
+  "chatAllConversations": "Toate conversațiile",
+  "chatChoosePersona": "Alege personajul",
+  "chatEndMessage": "Sigur dorești să închei conversația?",
+  "chatEndTitle": "Încheie și salvează conversația",
+  "chatFailed": "Conversație eșuată: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Filtru Limbă:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Extras din conversație ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Nu există înregistrări pentru limba selectată",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Istoric conversații",
+  "chatNew": "Conversație nouă",
+  "chatNewChat": "Conversație nouă",
+  "chatNoConversations": "Nu există conversații încă",
+  "chatSaveAndExit": "Salvează și ieși",
+  "chatStartNewPrompt": "Începe o nouă conversație pentru a exersa!",
+  "chatTypeHint": "Scrie un mesaj...",
+  "chatUntitled": "Conversație fără titlu",
+  "checking": "Verificare...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Vă rugăm să salvați traducerile din modul de căutare",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Întoarce",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Ascunde",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Șterge Înregistrare",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "Șterge tot",
+  "confirm": "Confirmă",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Sigur doriți să ștergeți această înregistrare?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Înregistrare ștearsă cu succes",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Sigur dorești să ștergi această conversație?\nConversațiile șterse nu pot fi recuperate.",
+  "confirmDeleteParticipant": "Sigur dorești să ștergi acest participant?",
+  "contextTagHint": "Descrie situația pentru a o identifica mai ușor ulterior",
+  "contextTagLabel": "Context/Situație (opțional) - ex: Salut de dimineață, Politețe",
+  "copiedToClipboard": "Copiat în clipboard!",
+  "copy": "Copiază",
+  "correctAnswer": "Răspuns Corect",
+  "createNew": "Creează Nou",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Locația actuală",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Culegere selectată curent:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Șterge",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Ștergere eșuată: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Import JSON",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Șterge Înregistrare",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Se importă...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Exersează conversații prin joc de rol. Selectează răspunsurile potrivite și spune-le.",
+  "dialogueQuestTitle": "Misiune dialog",
+  "disambiguationPrompt": "Ce sens doriți să traducem?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "Selectați sensul",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Nu ai un cont?",
+  "editParticipant": "Editează participant",
+  "email": "Email",
+  "emailAlreadyInUse": "Acest e-mail este deja înregistrat. Te rugăm să te autentifici sau să recuperezi parola.",
+  "enterNewSubjectName": "Introduceți titlul nou",
+  "enterSentenceHint": "Introdu o propoziție...",
+  "enterTextHint": "Introdu textul de tradus",
+  "enterTextToTranslate": "Introduceți text pentru traducere",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Introdu un cuvânt...",
+  "error": "Eroare",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "Nu se poate traduce deoarece conține discurs instigator la ură.",
+  "errorOtherSafety": "Traducerea a fost refuzată de politica de siguranță AI.",
+  "errorProfanity": "Nu se poate traduce deoarece conține cuvinte obscene.",
+  "errorSelectCategory": "Selectează mai întâi un cuvânt sau o propoziție!",
+  "errorSexualContent": "Nu se poate traduce deoarece conține conținut sexual explicit.",
+  "errors": "Erori:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Feminin",
+  "file": "Fișier:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Toate",
+  "flip": "Întoarce",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Comparativ",
+  "formInfinitive": "Infinitiv/Prezent",
+  "formPast": "Trecut",
+  "formPastParticiple": "Participiu trecut",
+  "formPlural": "Forma de plural",
+  "formPositive": "Pozitiv",
+  "formPresent": "Prezent",
+  "formPresentParticiple": "Participiu prezent (ing)",
+  "formSingular": "Forma de singular",
+  "formSuperlative": "Superlativ",
+  "formThirdPersonSingular": "Persoana a III-a singular",
+  "gameModeDesc": "Selectează modul de joc pe care vrei să-l exersezi",
+  "gameModeTitle": "Mod joc",
+  "gameOver": "Joc terminat",
+  "gender": "Gen",
+  "generalTags": "Etichete generale",
+  "getMaterials": "Obține materiale",
+  "good": "Bine",
+  "googleContinue": "Continuă cu Google",
+  "helpDialogueImportDesc": "Importă seturi complete de dialoguri din fișiere JSON.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "Pentru import materiale în Mod 3, creați JSON:",
+  "helpJsonTypeDialogue": "Dialog",
+  "helpJsonTypeSentence": "Sentință",
+  "helpJsonTypeWord": "Cuvânt",
+  "helpMode1Desc": "Recunoaștere vocală, traducere și ascultare rezultat.",
+  "helpMode1Details": "• Voce: Apasă microfon pentru start/stop\n• Text: Scrie direct pentru traducere\n• Auto-Căutare: Detectează propoziții similare\n• Traducere: Buton pentru traducere instantă\n• Ascultă: Icoană difuzor pentru TTS\n• Salvează: Adaugă în istoric\n• Șterge: Resetează tot",
+  "helpMode2Desc": "Recapitulare propoziții salvate cu ascundere traducere.",
+  "helpMode2Details": "• Selectare: Alege set sau 'Tot'\n• Întoarce: 'Arată/Ascunde' traducerea\n• Ascultă: Redă TTS propoziție\n• Studiat: Bifează (V) pentru completat\n• Șterge: Apăsare lungă pentru ștergere\n• Filtru: Toate sau după material",
+  "helpMode3Desc": "Ascultă și repetă propoziții (Shadowing) pentru a-ți exersa pronunția.",
+  "helpMode3Details": "• Selectare: Alege pachet\n• Interval: [-] [+] pauză (3s-60s)\n• Start/Stop: Control sesiune\n• Vorbește: Ascultă și repetă\n• Scor: Acuratețe (0-100)\n• Reîncearcă: Buton dacă vocea nu este detectată",
+  "helpModeChatDesc": "Exersează conversații reale vorbind cu un personaj AI.",
+  "helpModeChatDetails": "• Chat AI: Exersează conversații reale cu personaje.\n• Gestionarea participanților: Setează-ți limba și limba AI-ului pentru a evita nepotrivirile lingvistice.\n• Situații GPS: Creează situații de conversație naturale bazate pe locația ta curentă.\n• Păstrarea istoricului: Toate conversațiile sunt stocate în siguranță pe baza ID-ului, iar istoricul se păstrează chiar dacă schimbi numele.",
+  "helpTabJson": "Format JSON",
+  "helpTabModes": "Moduri",
+  "helpTabTour": "Tur",
+  "helpTitle": "Ajutor & Ghid",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "Ascunde",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Adăugat: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Import Complet",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Există deja un material cu același titlu. Te rugăm să schimbi titlul și să încerci din nou.",
+  "importErrorMessage": "Nu s-a putut importa fișierul:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Import Eșuat",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Total: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Import JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Adăugat: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Vă rugăm importați fișier JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Sărit: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Erori:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Total: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Eroare",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Se importă...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Nu s-a putut importa fișierul:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "Introducere",
+  "intervalSeconds": "Interval: {seconds} secunde",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Introdu o adresă de email validă.",
+  "kakaoContinue": "Continuă cu Kakao",
+  "labelLangCode": "Cod limbă (ex: en-US, ko-KR)",
+  "labelName": "Nume",
+  "labelNote": "Notă",
+  "labelPOS": "Parte de vorbire",
+  "labelRole": "Rol",
+  "labelSentence": "Sentință",
+  "labelSentenceCollection": "Colecție de propoziții",
+  "labelSentenceType": "Tip de propoziție",
+  "labelShowMemorized": "Terminat",
+  "labelType": "Tip:",
+  "labelWord": "Cuvânt",
+  "labelWordbook": "Culegere de cuvinte",
+  "language": "Limbă",
+  "languageSettings": "Setări limbă",
+  "languageSettingsTitle": "Setări de limbă",
+  "libTitleFirstMeeting": "Prima întâlnire",
+  "libTitleGreetings1": "Salutări 1",
+  "libTitleNouns1": "Substantive 1",
+  "libTitleVerbs1": "Verbe 1",
+  "listen": "Ascultă",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Ascult...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Se încarcă participanții...",
+  "location": "Locație",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Autentificare",
+  "logout": "Deconectare",
+  "logoutConfirmMessage": "Sigur dorești să te deconectezi de pe acest dispozitiv?",
+  "logoutConfirmTitle": "Deconectare",
+  "male": "Masculin",
+  "manageParticipants": "Gestionează participanți",
+  "manual": "Introducere manuală",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Marchează ca Studiat",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Informații material",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Eu",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Importă materiale de pe dispozitiv",
+  "menuHelp": "Ajutor",
+  "menuLanguageSettings": "Setări limbă",
+  "menuOnlineLibrary": "Bibliotecă online",
+  "menuSelectMaterialSet": "Selectați un material de studiu",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Tutorial de utilizare",
+  "menuWebDownload": "Manual de utilizare",
+  "metadataDialogTitle": "Clasificare detaliată",
+  "metadataFormType": "Forma gramaticală",
+  "metadataRootWord": "Forma de bază (Root Word)",
+  "micButtonTooltip": "Începe recunoașterea vocală",
+  "mode1SelectedMaterial": "Culegere selectată curent: {name}",
+  "mode2Title": "Recapitulare",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Următorul",
+  "mode3Start": "Start",
+  "mode3Stop": "Stop",
+  "mode3TryAgain": "Încearcă din nou",
+  "mySentenceCollection": "Colecția mea de fraze",
+  "myWordbook": "Vocabularul meu",
+  "neutral": "Neutru",
+  "newSubjectName": "Titlu nou caiet/colecție",
+  "next": "Următorul",
+  "noDialogueHistory": "Nu există istoric de dialoguri.",
+  "noInternetWarningMic": "Nu există conexiune la internet. Recunoașterea vocală ar putea să nu funcționeze offline.",
+  "noInternetWarningTranslate": "Nu există conexiune la internet. Funcția de traducere nu este disponibilă offline. Te rugăm să folosești modul de revizuire.",
+  "noMaterialsInCategory": "Nu există materiale în această categorie.",
+  "noParticipantsFound": "Nu există participanți înregistrați.",
+  "noRecords": "Nu există înregistrări pentru limba selectată",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Nu există material de studiu.",
+  "noTextToPlay": "Nicio text de redat",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Nicio traducere de salvat",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Voce nedetectată",
+  "notSelected": "- Neselectat -",
+  "onlineLibraryCheckInternet": "Verifică-ți conexiunea la internet sau încearcă din nou mai târziu.",
+  "onlineLibraryLoadFailed": "Încărcarea materialelor a eșuat.",
+  "onlineLibraryNoMaterials": "Nu există materiale.",
+  "participantDeleted": "Participantul a fost șters.",
+  "participantRename": "Redenumește participantul",
+  "partner": "Partener",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Mod partener",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Parolă",
+  "passwordTooShort": "Parola trebuie să aibă cel puțin 6 caractere.",
+  "perfect": "Perfect!",
+  "personaFriend": "Prieten local",
+  "personaGuide": "Ghid turistic",
+  "personaTeacher": "Profesor de engleză",
+  "playAgain": "Joacă din nou",
+  "playbackFailed": "Redare eșuată: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Selectare Material",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Redare...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Subiect:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Sursă:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "Fișier:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Adjectiv",
+  "posAdverb": "Adverb",
+  "posConjunction": "Conjuncție",
+  "posInterjection": "Interjecție",
+  "posNoun": "Substantiv",
+  "posPreposition": "Prepoziție",
+  "posPronoun": "Pronume",
+  "posVerb": "Verb",
+  "practiceModeTitle": "Exersează",
+  "practiceWordsOnly": "Exersează doar cuvinte",
   "progress": "Progres: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Vă rugăm importați fișier JSON",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Vă rugăm selectați material de studiu",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Studiat",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Marchează ca Studiat",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Ascult...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Recunoaștere completă",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Vezi cele mai recente {count} elemente create",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Recunoaștere vocală eșuată: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Verificare...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Recunoaștere completă",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Traducere...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Pronunție recunoscută:",
+  "recordDeleted": "Înregistrare ștearsă cu succes",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Traducere completă (necesită salvare)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Reîmprospătare",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Traducere salvată încărcată",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Traducere eșuată: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Resetează",
+  "resetPracticeHistory": "Resetează istoricul de exerciții",
+  "retry": "Încearcă din nou?",
+  "reviewAll": "Revizuiește tot",
+  "reviewCount": "Recapitulat de {count} ori",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Introduceți text pentru traducere",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Salvare...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Nicio traducere de salvat",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "Revizuire",
+  "roleAi": "AI",
+  "roleThirdParty": "Terț",
+  "roleUser": "Utilizator",
+  "save": "Salvare",
+  "saveData": "Salvare",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Salvare eșuată: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Redare...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Vă rugăm să salvați traducerile din modul de căutare",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Nicio text de redat",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Salvat",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Redare eșuată: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Salvare...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Limbă Sursă",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Limbă Țintă",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Text similar găsit",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Folosește Existent",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Creează Nou",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Recapitulat de {count} ori",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Vorbire",
-  "speakingPractice": "Practică Vorbire",
-  "intervalSeconds": "Interval: {seconds}s",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Pronunția ta",
-  "correctAnswer": "Răspuns Corect",
   "score": "Acuratețe: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "Perfect!",
-  "good": "Bine",
-  "tryAgain": "Încearcă din nou",
-  "startPractice": "Începe Practica",
-  "stopPractice": "Oprește",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Start Tur",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Intrare Vocală",
-  "tutorialMicDesc": "Apasă microfonul pentru intrare vocală.",
-  "tutorialTabDesc": "Aici puteți selecta modul de învățare dorit.",
-  "tutorialTapToContinue": "Atingeți pentru a continua",
-  "tutorialTransTitle": "Traducere",
-  "tutorialTransDesc": "Apasă aici pentru a traduce textul.",
-  "tutorialSaveTitle": "Salvare",
-  "tutorialSaveDesc": "Salvează traducerea în înregistrări.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Scor",
+  "search": "Căutare",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Condiții de căutare",
+  "searchSentenceHint": "Caută propoziție...",
+  "searchWordHint": "Caută cuvânt...",
+  "sectionSentence": "Secțiunea de propoziții",
+  "sectionSentences": "Fraze",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Secțiune de cuvinte",
+  "sectionWords": "Cuvinte",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Selectați titlu existent",
+  "selectMaterialPrompt": "Vă rugăm selectați material de studiu",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "Selectați setul de materiale de învățare",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Selectează partea de vorbire",
+  "selectParticipants": "Selectează participanți",
+  "selectSentenceType": "Selectează tipul de propoziție",
+  "selectStudyMaterial": "Selectare Material",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "Chat AI",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "Selectare & Filtru",
-  "tutorialM2SelectDesc": "Alege materiale sau 'Recapitulare Tot'.",
-  "tutorialM2ListTitle": "Listă Studiu",
-  "tutorialM2ListDesc": "Verifică cardurile și întoarce-le. (Long-press to delete)",
-  "tutorialM3SelectTitle": "Selectare Material",
-  "tutorialM3SelectDesc": "Alege un set pentru practică.",
-  "tutorialM3IntervalTitle": "Interval",
-  "tutorialM3IntervalDesc": "Reglează timpul de așteptare",
-  "tutorialM3StartTitle": "Start",
-  "tutorialM3StartDesc": "Apasă play pentru a începe.",
+  "sentence": "Sentință",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Înregistrare",
+  "similarTextFound": "Text similar găsit",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "Omite",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Sursă:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Limbă Sursă",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "Vorbește acum!",
+  "speaker": "Vorbitor",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Selectează vorbitorul",
+  "speakingPractice": "Practică Vorbire",
+  "startChat": "Începe conversația",
+  "startPractice": "Începe Practica",
+  "startTutorial": "Start Tur",
   "startWarning": "Avertisment",
-  "noVoiceDetected": "Voce nedetectată",
-  "tooltipSearch": "Căutare",
-  "tooltipStudyReview": "Studiu+Revizuire",
-  "tooltipSpeaking": "Vorbire",
+  "startsWith": "Începe cu",
+  "statusCheckEmail": "Verifică-ți emailul pentru a finaliza autentificarea.",
+  "statusDownloading": "Se descarcă: {name}...",
+  "statusImportFailed": "Importare eșuată: {error}",
+  "statusImportSuccess": "{name} a fost importat cu succes",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Autentificare anulată.",
+  "statusLoginFailed": "Autentificare eșuată: {error}",
+  "statusLoginSuccess": "Autentificare reușită.",
+  "statusLogoutSuccess": "Deconectare reușită.",
+  "statusSignUpFailed": "Înregistrare eșuată: {error}",
+  "statusSigningUp": "Se înregistrează...",
+  "stopPractice": "Oprește",
+  "studyComplete": "Studiat",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Înregistrări ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Formal",
+  "styleInformal": "Informal",
+  "stylePolite": "Politicos",
+  "styleSlang": "Argou/Slang",
+  "subject": "Subiect:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Schimbă limbile",
+  "switchToAi": "Trece la modul AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Trece la modul partener",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Se sincronizează datele...",
+  "tabConversation": "Conversație",
+  "tabReview": "Recapitulare ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "propoziție",
+  "tabSpeaking": "Vorbire",
+  "tabStudyMaterial": "Material ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "cuvânt",
+  "tagFormal": "Formal",
+  "tagSelection": "Selectarea etichetelor",
+  "targetLanguage": "Limbă Țintă",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Filtru Limbă:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "Timpul de gândire înainte de a dezvălui răspunsul corect.",
+  "thinkingTimeInterval": "Întârziere de redare",
+  "timeUp": "Timpul a expirat!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Etichetă titlu (culegere)",
   "tooltipDecrease": "Scădere",
   "tooltipIncrease": "Creștere",
-  "languageSettings": "Setări limbă",
-  "tutorialM2DropdownDesc": "Selectați materiale de studiu.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Importați fișier JSON din folderul dispozitivului.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "Etichetă context",
-  "tutorialContextDesc": "Adăugați context (ex. Dimineața) pentru a distinge propoziții similare.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "Limita atinsă",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "Căutare",
+  "tooltipSpeaking": "Vorbire",
+  "tooltipStudyReview": "Studiu+Revizuire",
+  "totalRecords": "Total {count} înregistrări (vezi tot)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Traducere",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Traducere...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Traducere",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "Selectați setul de materiale de învățare",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Traducere completă (necesită salvare)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "Cuvinte",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "Fraze",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "Îmi schimb limba cu limba pe care o învăț.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "Selectați un material de studiu",
-  "sectionWord": "Secțiune de cuvinte",
-  "sectionSentence": "Secțiunea de propoziții",
-  "tabWord": "cuvânt",
-  "tabSentence": "propoziție",
-  "errorProfanity": "Nu se poate traduce deoarece conține cuvinte obscene.",
-  "errorHateSpeech": "Nu se poate traduce deoarece conține discurs instigator la ură.",
-  "errorSexualContent": "Nu se poate traduce deoarece conține conținut sexual explicit.",
-  "errorOtherSafety": "Traducerea a fost refuzată de politica de siguranță AI.",
-  "clearAll": "Șterge tot",
-  "disambiguationTitle": "Selectați sensul",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "Ce sens doriți să traducem?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "Omite",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Input",
-  "reviewModeTitle": "Review",
-  "practiceModeTitle": "Exersează",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "Traducere eșuată: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Limită de traducere depășită",
+  "translationLimitMessage": "Ai folosit toate traducerile gratuite zilnice (5).\\n\\nVrei să vizionezi un anunț pentru a reîncărca imediat 5?",
+  "translationLoaded": "Traducere salvată încărcată",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "Chat",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "Depozit de cuvinte de bază",
-  "basicSentenceRepository": "Depozit de propoziții de bază",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "Formal",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "Etichetă titlu (culegere)",
-  "generalTags": "Etichete generale",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "Singular",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "Numărul de traduceri a fost reîncărcat cu 5!",
+  "translationResultHint": "Rezultatul traducerii - poate fi modificat",
+  "tryAgain": "Încearcă din nou",
+  "tutorialAiChatDesc": "Exersează conversații reale cu personaje AI.",
+  "tutorialAiChatTitle": "Chat AI",
+  "tutorialContextDesc": "Adăugați context (ex. Dimineața) pentru a distinge propoziții similare.",
+  "tutorialContextTitle": "Etichetă context",
+  "tutorialLangSettingsDesc": "Setează limba sursă și limba țintă pentru traducere.",
+  "tutorialLangSettingsTitle": "Setări de limbă",
+  "tutorialM1ToggleDesc": "Comută între modurile cuvânt și propoziție aici.",
+  "tutorialM1ToggleTitle": "Mod cuvânt/propoziție",
+  "tutorialM2DropdownDesc": "Selectați materiale de studiu.",
+  "tutorialM2ImportDesc": "Importați fișier JSON din folderul dispozitivului.",
+  "tutorialM2ListDesc": "Verifică cardurile și întoarce-le. (Long-press to delete)",
+  "tutorialM2ListTitle": "Listă Studiu",
+  "tutorialM2SearchDesc": "Caută și găsește rapid cuvinte și propoziții salvate.",
+  "tutorialM2SelectDesc": "Alege materiale sau 'Recapitulare Tot'.",
+  "tutorialM2SelectTitle": "Selectare & Filtru",
+  "tutorialM3IntervalDesc": "Reglează timpul de așteptare",
+  "tutorialM3IntervalTitle": "Setează intervalul",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "Alege un set pentru practică.",
+  "tutorialM3SelectTitle": "Selectare Material",
+  "tutorialM3StartDesc": "Apasă play pentru a începe.",
+  "tutorialM3StartTitle": "Start",
+  "tutorialM3WordsDesc": "Dacă este bifat, vei exersa doar cuvintele salvate.",
+  "tutorialM3WordsTitle": "Exerciții cu cuvinte",
+  "tutorialMicDesc": "Apasă microfonul pentru intrare vocală.",
+  "tutorialMicTitle": "Intrare Vocală",
+  "tutorialSaveDesc": "Salvează traducerea în înregistrări.",
+  "tutorialSaveTitle": "Salvare",
+  "tutorialSwapDesc": "Îmi schimb limba cu limba pe care o învăț.",
+  "tutorialTabDesc": "Aici puteți selecta modul de învățare dorit.",
+  "tutorialTapToContinue": "Atingeți pentru a continua",
+  "tutorialTransDesc": "Apasă aici pentru a traduce textul.",
+  "tutorialTransTitle": "Traducere",
+  "typeExclamation": "Exclamativă",
+  "typeImperative": "Imperativă",
+  "typeQuestion": "Întrebare",
+  "typeStatement": "Afirmativă",
+  "usageLimitTitle": "Limita atinsă",
+  "useExistingText": "Folosește Existent",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "Neutru",
-  "chatAllConversations": "Toate conversațiile",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Sigur dorești să ștergi această conversație?\nConversațiile șterse nu pot fi recuperate.",
-  "notSelected": "- Neselectat -",
-  "myWordbook": "Vocabularul meu",
-  "mySentenceCollection": "Colecția mea de fraze",
-  "newSubjectName": "Titlu nou caiet/colecție",
-  "enterNewSubjectName": "Introduceți titlul nou",
-  "addNewSubject": "Adăugați titlu nou",
-  "selectExistingSubject": "Selectați titlu existent",
-  "addTagHint": "Adăugați etichetă...",
-  "save": "Salvare",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Verifică-ți emailul pentru a finaliza autentificarea.",
-  "emailAlreadyInUse": "Acest e-mail este deja înregistrat. Te rugăm să te autentifici sau să recuperezi parola."
+  "viewOnlineGuide": "Vezi ghidul online",
+  "voluntaryTranslations": "Traduceri voluntare",
+  "watchAdAndRefill": "Vezi un anunț și reîncarcă (+5)",
+  "word": "Cuvânt",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Spune cuvintele pentru a apăra baza înainte ca inamicii să ajungă.",
+  "wordDefenseTitle": "Apărarea cuvintelor",
+  "wordModeLabel": "Mod cuvânt",
+  "yourPronunciation": "Pronunția ta"
 }

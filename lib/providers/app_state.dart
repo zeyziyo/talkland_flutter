@@ -19,6 +19,7 @@ import '../models/chat_participant.dart';
 import 'package:uuid/uuid.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'dart:ui' as ui;
 
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../services/supabase_service.dart';

@@ -1,188 +1,105 @@
 {
   "@@locale": "zh_CN",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "使用Kakao继续",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "帮助与指南",
-  "helpTabModes": "模式",
-  "helpTabJson": "JSON 格式",
-  "helpTabTour": "新手引导",
-  "helpMode1Desc": "语音识别、翻译并收听结果。",
-  "helpMode1Details": "• 语言设置：通过顶部翻译图标更改语言\n• 帮助：通过顶部帮助图标查看指南\n• 语音输入：点击麦克风图标开始/停止聆听\n• 文本输入：直接输入文本进行翻译\n• 自动搜索：检测相似的现有句子\n• 翻译：点击按钮立即翻译\n• 收听：点击扬声器图标收听 TTS（原文/译文）\n• 保存：“保存数据”添加到历史记录\n• 清除：重置所有输入",
-  "helpMode2Desc": "复习已保存的句子，自动隐藏译文并跟踪复习次数。",
-  "helpMode2Details": "• 选择资料：选择特定资料集或“复习全部”\n• 翻转卡片：使用“显示/隐藏”查看译文\n• 收听：播放特定句子的 TTS\n• 标记已学：勾选 (V) 已完成的项目\n• 删除：长按卡片删除记录\n• 筛选：查看全部或按资料筛选",
-  "helpMode3Desc": "听句子并跟读（影子跟读），练习发音。",
-  "helpMode3Details": "• 选择资料：选择学习包\n• 间隔：使用 [-] [+] 调整等待时间（3秒-60秒）\n• 开始/停止：控制跟读会话\n• 说话：聆听音频并跟读\n• 反馈：准确率评分（0-100）及颜色代码\n• 重试：如果未检测到声音，请使用重试按钮",
-  "helpModeChatDesc": "与AI角色对话，练习实际会话。",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "要在模式 3 中导入学习资料，请创建具有以下结构的 JSON 文件：",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "开始教程后，**高亮圆圈**将引导您了解主要功能。\n(例如：当**高亮圆圈**指向学习卡片时，长按可将其删除。)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "位置",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "准确率",
+  "adLoading": "正在加载广告。请稍后重试。",
+  "addNewSubject": "添加新标题",
+  "addParticipant": "添加参与者",
+  "addTagHint": "添加标签...",
+  "alreadyHaveAccount": "已有账号？",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "复习 ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "自动播放",
+  "basic": "基本",
+  "basicDefault": "基本",
+  "basicMaterialRepository": "基本语句/单词库",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "学习资料 ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "基础句库",
+  "basicSentences": "基础句库",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "复习",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "搜索",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "翻译",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "收听",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "保存数据",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "已保存",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "删除",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "资料信息",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "基础词汇库",
+  "basicWords": "基础词库",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "取消",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "确认",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "刷新",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "学习记录 ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "宾格",
+  "casePossessive": "所有格",
+  "casePossessivePronoun": "所有格代词",
+  "caseReflexive": "反身代词",
+  "caseSubject": "主格",
+  "chatAiChat": "聊天",
+  "chatAllConversations": "所有对话",
+  "chatChoosePersona": "选择角色",
+  "chatEndMessage": "要结束对话吗？",
+  "chatEndTitle": "结束并保存对话",
+  "chatFailed": "聊天失败: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "目标语言筛选:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "对话摘录 ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "所选语言没有学习记录",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "对话记录",
+  "chatNew": "新对话",
+  "chatNewChat": "新对话",
+  "chatNoConversations": "还没有对话",
+  "chatSaveAndExit": "保存后退出",
+  "chatStartNewPrompt": "开始新的对话练习吧！",
+  "chatTypeHint": "输入消息...",
+  "chatUntitled": "无标题对话",
+  "checking": "正在检查...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "在搜索模式下保存翻译",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "翻转",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "隐藏",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "删除记录",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "全部清除",
+  "confirm": "确认",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "确定要删除这条学习记录吗？",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "记录已删除",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "确定要删除此对话吗？\n删除后将无法恢复。",
+  "confirmDeleteParticipant": "确定要删除此参与者吗？",
+  "contextTagHint": "为了方便以后区分，请描述情景",
+  "contextTagLabel": "上下文/情景 (可选) - 例如: 早上问候，敬语",
+  "copiedToClipboard": "已复制到剪贴板！",
+  "copy": "复制",
+  "correctAnswer": "正确答案",
+  "createNew": "新建条目",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "当前位置",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "当前选择的资料集：",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "删除",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "删除失败: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "导入 JSON 文件",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "删除记录",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "正在导入...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "通过情景对话进行练习。选择合适的答案并说出来。",
+  "dialogueQuestTitle": "对话任务",
+  "disambiguationPrompt": "您想翻译成哪个意思？",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "选择释义",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "没有账号？",
+  "editParticipant": "编辑参与者",
+  "email": "电子邮件",
+  "emailAlreadyInUse": "此邮箱已被注册，请直接登录或找回密码。",
+  "enterNewSubjectName": "输入新标题",
+  "enterSentenceHint": "输入句子...",
+  "enterTextHint": "输入要翻译的文本",
+  "enterTextToTranslate": "请输入要翻译的文本",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "输入单词...",
+  "error": "错误",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "包含仇恨言论，无法翻译。",
+  "errorOtherSafety": "由于 AI 安全策略，翻译被拒绝。",
+  "errorProfanity": "包含不雅内容，无法翻译。",
+  "errorSelectCategory": "请先选择单词或句子！",
+  "errorSexualContent": "包含性暗示内容，无法翻译。",
+  "errors": "错误:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "女性",
+  "file": "文件:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "全部",
+  "flip": "翻转",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "比较级",
+  "formInfinitive": "原形/现在形",
+  "formPast": "过去式",
+  "formPastParticiple": "过去分词",
+  "formPlural": "复数",
+  "formPositive": "原级",
+  "formPresent": "现在式",
+  "formPresentParticiple": "现在分词 (ing)",
+  "formSingular": "单数",
+  "formSuperlative": "最高级",
+  "formThirdPersonSingular": "第三人称单数",
+  "gameModeDesc": "选择要练习的游戏模式",
+  "gameModeTitle": "游戏模式",
+  "gameOver": "游戏结束",
+  "gender": "性别",
+  "generalTags": "通用标签",
+  "getMaterials": "获取资料",
+  "good": "不错",
+  "googleContinue": "使用 Google 账号继续",
+  "helpDialogueImportDesc": "通过 JSON 文件导入整个对话集。",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "要在模式 3 中导入学习资料，请创建具有以下结构的 JSON 文件：",
+  "helpJsonTypeDialogue": "对话（Dialogue）",
+  "helpJsonTypeSentence": "句子（Sentence）",
+  "helpJsonTypeWord": "单词（Word）",
+  "helpMode1Desc": "语音识别、翻译并收听结果。",
+  "helpMode1Details": "• 语言设置：通过顶部翻译图标更改语言\n• 帮助：通过顶部帮助图标查看指南\n• 语音输入：点击麦克风图标开始/停止聆听\n• 文本输入：直接输入文本进行翻译\n• 自动搜索：检测相似的现有句子\n• 翻译：点击按钮立即翻译\n• 收听：点击扬声器图标收听 TTS（原文/译文）\n• 保存：“保存数据”添加到历史记录\n• 清除：重置所有输入",
+  "helpMode2Desc": "复习已保存的句子，自动隐藏译文并跟踪复习次数。",
+  "helpMode2Details": "• 选择资料：选择特定资料集或“复习全部”\n• 翻转卡片：使用“显示/隐藏”查看译文\n• 收听：播放特定句子的 TTS\n• 标记已学：勾选 (V) 已完成的项目\n• 删除：长按卡片删除记录\n• 筛选：查看全部或按资料筛选",
+  "helpMode3Desc": "听句子并跟读（影子跟读），练习发音。",
+  "helpMode3Details": "• 选择资料：选择学习包\n• 间隔：使用 [-] [+] 调整等待时间（3秒-60秒）\n• 开始/停止：控制跟读会话\n• 说话：聆听音频并跟读\n• 反馈：准确率评分（0-100）及颜色代码\n• 重试：如果未检测到声音，请使用重试按钮",
+  "helpModeChatDesc": "与AI角色对话，练习实际会话。",
+  "helpModeChatDetails": "• AI 聊天：与角色扮演进行真实对话练习。\n• 参与者管理：分别设置您和 AI 的语言，避免语言不匹配。\n• GPS 情景：根据当前位置模拟自然的对话场景。\n• 记录保存：所有对话都基于 ID 安全存储，即使重命名也能保留记录。",
+  "helpTabJson": "JSON 格式",
+  "helpTabModes": "模式",
+  "helpTabTour": "新手引导",
+  "helpTitle": "帮助与指南",
+  "helpTourDesc": "开始教程后，**高亮圆圈**将引导您了解主要功能。\n(例如：当**高亮圆圈**指向学习卡片时，长按可将其删除。)",
+  "hide": "隐藏",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "添加: {count} 项",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "导入完成",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "已存在相同标题的资料。请更改标题后重试。",
+  "importErrorMessage": "文件导入失败:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "导入失败",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "总计: {count} 项",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "导入 JSON 文件",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "添加: {count} 项",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "请导入 JSON 文件",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "跳过: {count} 项",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "错误:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "总计: {count} 项",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "错误",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "正在导入...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "文件导入失败:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "输入",
+  "intervalSeconds": "间隔: {seconds}秒",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "请输入有效的电子邮件。",
+  "kakaoContinue": "使用Kakao继续",
+  "labelLangCode": "语言代码 (例: en-US, ko-KR)",
+  "labelName": "名称",
+  "labelNote": "注释",
+  "labelPOS": "词性",
+  "labelRole": "角色",
+  "labelSentence": "句子",
+  "labelSentenceCollection": "句子集",
+  "labelSentenceType": "句子类型",
+  "labelShowMemorized": "已完成",
+  "labelType": "类型：",
+  "labelWord": "单词",
+  "labelWordbook": "单词本",
+  "language": "语言",
+  "languageSettings": "语言设置",
+  "languageSettingsTitle": "语言设置",
+  "libTitleFirstMeeting": "初次见面",
+  "libTitleGreetings1": "问候 1",
+  "libTitleNouns1": "名词 1",
+  "libTitleVerbs1": "动词 1",
+  "listen": "收听",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "正在聆听...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "正在加载参与者...",
+  "location": "位置",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "登录",
+  "logout": "退出登录",
+  "logoutConfirmMessage": "确定要从当前设备退出登录吗？",
+  "logoutConfirmTitle": "退出登录",
+  "male": "男性",
+  "manageParticipants": "管理参与者",
+  "manual": "手动输入",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "标记为已学习",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "资料信息",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "我",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "从设备导入资料",
+  "menuHelp": "帮助",
+  "menuLanguageSettings": "语言设置",
+  "menuOnlineLibrary": "在线资料库",
+  "menuSelectMaterialSet": "选择学习资料",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "使用教程",
+  "menuWebDownload": "使用说明书",
+  "metadataDialogTitle": "详细分类",
+  "metadataFormType": "语法形式",
+  "metadataRootWord": "词根 (Root Word)",
+  "micButtonTooltip": "开始语音识别",
+  "mode1SelectedMaterial": "当前选择的资料集: {name}",
+  "mode2Title": "复习",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "下一个",
+  "mode3Start": "开始",
+  "mode3Stop": "停止",
+  "mode3TryAgain": "重试",
+  "mySentenceCollection": "我的句子集",
+  "myWordbook": "我的词汇本",
+  "neutral": "中性",
+  "newSubjectName": "新建词汇本/句子集标题",
+  "next": "下一个",
+  "noDialogueHistory": "没有对话历史记录。",
+  "noInternetWarningMic": "没有网络连接。离线状态下语音识别可能无法使用。",
+  "noInternetWarningTranslate": "没有网络连接。离线状态下翻译功能无法使用。请使用复习模式。",
+  "noMaterialsInCategory": "此类别下没有资料。",
+  "noParticipantsFound": "没有已注册的参与者。",
+  "noRecords": "所选语言没有学习记录",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "没有学习资料。",
+  "noTextToPlay": "没有可播放的文本",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "没有可保存的翻译",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "未检测到声音",
+  "notSelected": "- 未选择 -",
+  "onlineLibraryCheckInternet": "请检查网络连接，或稍后重试。",
+  "onlineLibraryLoadFailed": "加载资料失败。",
+  "onlineLibraryNoMaterials": "没有资料。",
+  "participantDeleted": "参与者已删除。",
+  "participantRename": "重命名参与者",
+  "partner": "伙伴",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "伙伴模式",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "密码",
+  "passwordTooShort": "密码必须至少为 6 个字符。",
+  "perfect": "完美！",
+  "personaFriend": "当地朋友",
+  "personaGuide": "旅行指南",
+  "personaTeacher": "英语老师",
+  "playAgain": "再玩一次",
+  "playbackFailed": "播放失败: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "选择学习资料",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "正在播放...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "主题:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "来源:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "文件:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "形容词",
+  "posAdverb": "副词",
+  "posConjunction": "连词",
+  "posInterjection": "感叹词",
+  "posNoun": "名词",
+  "posPreposition": "介词/助词",
+  "posPronoun": "代词",
+  "posVerb": "动词",
+  "practiceModeTitle": "练习",
+  "practiceWordsOnly": "仅练习单词",
   "progress": "进度: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "请导入 JSON 文件",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "请选择学习资料",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "已学习",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "标记为已学习",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "正在聆听...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "识别完成",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "查看最近创建的 {count} 个项目",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "语音识别失败: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "正在检查...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "识别完成",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "正在翻译...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "识别到的发音：",
+  "recordDeleted": "记录已删除",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "翻译完成 (需保存)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "刷新",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "已加载保存的翻译",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "翻译失败: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "重置",
+  "resetPracticeHistory": "重置练习记录",
+  "retry": "重试？",
+  "reviewAll": "全部复习",
+  "reviewCount": "复习 {count} 次",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "请输入要翻译的文本",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "正在保存...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "没有可保存的翻译",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "复习",
+  "roleAi": "AI",
+  "roleThirdParty": "第三方",
+  "roleUser": "用户",
+  "save": "保存",
+  "saveData": "保存数据",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "保存失败: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "正在播放...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "在搜索模式下保存翻译",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "没有可播放的文本",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "已保存",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "播放失败: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "正在保存...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "源语言",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "目标语言",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "发现相似文本",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "使用现有",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "新建条目",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "复习 {count} 次",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "口语",
-  "speakingPractice": "口语练习",
-  "intervalSeconds": "间隔: {seconds}秒",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "你的发音",
-  "correctAnswer": "正确答案",
   "score": "准确率: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "完美！",
-  "good": "不错",
-  "tryAgain": "再试一次",
-  "startPractice": "开始练习",
-  "stopPractice": "停止练习",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "开始教程",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "语音输入",
-  "tutorialMicDesc": "点击麦克风按钮开始语音输入。",
-  "tutorialTabDesc": "您可以在这里选择所需的学习模式。",
-  "tutorialTapToContinue": "点击继续",
-  "tutorialTransTitle": "翻译",
-  "tutorialTransDesc": "点击此处翻译您的文本。",
-  "tutorialSaveTitle": "保存",
-  "tutorialSaveDesc": "将翻译保存到学习记录。",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "分数",
+  "search": "搜索",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "搜索条件",
+  "searchSentenceHint": "搜索句子...",
+  "searchWordHint": "搜索单词...",
+  "sectionSentence": "句子部分",
+  "sectionSentences": "句子",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "文字部分",
+  "sectionWords": "单词",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "选择现有标题",
+  "selectMaterialPrompt": "请选择学习资料",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "选择学习资料集",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "选择词性",
+  "selectParticipants": "选择参与者",
+  "selectSentenceType": "选择句子类型",
+  "selectStudyMaterial": "选择学习资料",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI 聊天",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "选择与筛选",
-  "tutorialM2SelectDesc": "选择学习资料或切换到“复习全部”。",
-  "tutorialM2ListTitle": "学习列表",
-  "tutorialM2ListDesc": "查看已保存的卡片并翻转查看答案。(长按删除)",
-  "tutorialM3SelectTitle": "选择资料",
-  "tutorialM3SelectDesc": "选择用于口语练习的资料集。",
-  "tutorialM3IntervalTitle": "间隔",
-  "tutorialM3IntervalDesc": "调整句子之间的等待时间。",
-  "tutorialM3StartTitle": "开始练习",
-  "tutorialM3StartDesc": "点击播放开始聆听和跟读。",
+  "sentence": "句子",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "注册",
+  "similarTextFound": "发现相似文本",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "跳过",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "来源:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "源语言",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "现在说话！",
+  "speaker": "说话者",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "选择发话人",
+  "speakingPractice": "口语练习",
+  "startChat": "开始对话",
+  "startPractice": "开始练习",
+  "startTutorial": "开始教程",
   "startWarning": "警告",
-  "noVoiceDetected": "未检测到声音",
-  "tooltipSearch": "搜索",
-  "tooltipStudyReview": "学习+复习",
-  "tooltipSpeaking": "口语",
+  "startsWith": "起始字符",
+  "statusCheckEmail": "请验证您的电子邮件以完成身份验证。",
+  "statusDownloading": "下载中: {name}...",
+  "statusImportFailed": "导入失败: {error}",
+  "statusImportSuccess": "{name} 导入完成",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "登录已取消。",
+  "statusLoginFailed": "登录失败: {error}",
+  "statusLoginSuccess": "登录成功。",
+  "statusLogoutSuccess": "已退出登录。",
+  "statusSignUpFailed": "注册失败: {error}",
+  "statusSigningUp": "注册中...",
+  "stopPractice": "停止练习",
+  "studyComplete": "已学习",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "学习记录 ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "敬语",
+  "styleInformal": "非敬语",
+  "stylePolite": "礼貌",
+  "styleSlang": "俚语/俗语",
+  "subject": "主题:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "切换语言",
+  "switchToAi": "切换到 AI 模式",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "切换到伙伴模式",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "数据同步中...",
+  "tabConversation": "对话",
+  "tabReview": "复习 ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "句子",
+  "tabSpeaking": "口语",
+  "tabStudyMaterial": "学习资料 ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "单词",
+  "tagFormal": "敬语",
+  "tagSelection": "选择标签",
+  "targetLanguage": "目标语言",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "目标语言筛选:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "在显示答案之前，给自己一些思考时间。",
+  "thinkingTimeInterval": "播放延迟",
+  "timeUp": "时间到！",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "标题标签（资料集）",
   "tooltipDecrease": "减少",
   "tooltipIncrease": "增加",
-  "languageSettings": "语言设置",
-  "tutorialM2DropdownDesc": "选择学习资料。",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "从设备文件夹导入JSON文件。",
-  "tutorialLangSettingsTitle": "语言设置",
-  "tutorialLangSettingsDesc": "设置翻译的源语言和目标语言。",
-  "copy": "复制",
-  "copiedToClipboard": "已复制到剪贴板！",
-  "tutorialContextTitle": "上下文标签",
-  "tutorialContextDesc": "添加上下文（例如：早上）以区分相似的句子。",
-  "thinkingTimeInterval": "播放延迟",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "已达用量上限",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "搜索",
+  "tooltipSpeaking": "口语",
+  "tooltipStudyReview": "学习+复习",
+  "totalRecords": "总共 {count} 条记录（查看全部）",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "翻译",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "基础词库",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "正在翻译...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "基础句库",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "翻译",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "选择学习资料集",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "翻译完成 (需保存)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "单词",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "句子",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "我用我正在学习的语言替换我的母语。",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "选择学习资料",
-  "sectionWord": "文字部分",
-  "sectionSentence": "句子部分",
-  "tabWord": "单词",
-  "tabSentence": "句子",
-  "errorProfanity": "包含不雅内容，无法翻译。",
-  "errorHateSpeech": "包含仇恨言论，无法翻译。",
-  "errorSexualContent": "包含性暗示内容，无法翻译。",
-  "errorOtherSafety": "由于 AI 安全策略，翻译被拒绝。",
-  "clearAll": "全部清除",
-  "disambiguationTitle": "选择释义",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "您想翻译成哪个意思？",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "跳过",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Input",
-  "reviewModeTitle": "Review",
-  "practiceModeTitle": "练习",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "翻译失败: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "超出翻译限额",
+  "translationLimitMessage": "您已用完每日免费翻译 (5 次)。\\n\\n观看广告立即补充 5 次吗？",
+  "translationLoaded": "已加载保存的翻译",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "聊天",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "基础词汇库",
-  "basicSentenceRepository": "基础句库",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "敬语",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "标题标签（资料集）",
-  "generalTags": "通用标签",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "单数",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "翻译次数已补充 5 次！",
+  "translationResultHint": "翻译结果 - 可修改",
+  "tryAgain": "再试一次",
+  "tutorialAiChatDesc": "与 AI 角色扮演进行真实对话练习。",
+  "tutorialAiChatTitle": "AI 聊天",
+  "tutorialContextDesc": "添加上下文（例如：早上）以区分相似的句子。",
+  "tutorialContextTitle": "上下文标签",
+  "tutorialLangSettingsDesc": "设置翻译的源语言和目标语言。",
+  "tutorialLangSettingsTitle": "语言设置",
+  "tutorialM1ToggleDesc": "在这里切换单词和句子模式。",
+  "tutorialM1ToggleTitle": "单词/句子模式",
+  "tutorialM2DropdownDesc": "选择学习资料。",
+  "tutorialM2ImportDesc": "从设备文件夹导入JSON文件。",
+  "tutorialM2ListDesc": "查看已保存的卡片并翻转查看答案。(长按删除)",
+  "tutorialM2ListTitle": "学习列表",
+  "tutorialM2SearchDesc": "搜索已保存的单词和句子，以便快速查找。",
+  "tutorialM2SelectDesc": "选择学习资料或切换到“复习全部”。",
+  "tutorialM2SelectTitle": "选择与筛选",
+  "tutorialM3IntervalDesc": "调整句子之间的等待时间。",
+  "tutorialM3IntervalTitle": "间隔",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "选择用于口语练习的资料集。",
+  "tutorialM3SelectTitle": "选择资料",
+  "tutorialM3StartDesc": "点击播放开始聆听和跟读。",
+  "tutorialM3StartTitle": "开始练习",
+  "tutorialM3WordsDesc": "勾选后，只练习已保存的单词。",
+  "tutorialM3WordsTitle": "单词练习",
+  "tutorialMicDesc": "点击麦克风按钮开始语音输入。",
+  "tutorialMicTitle": "语音输入",
+  "tutorialSaveDesc": "将翻译保存到学习记录。",
+  "tutorialSaveTitle": "保存",
+  "tutorialSwapDesc": "我用我正在学习的语言替换我的母语。",
+  "tutorialTabDesc": "您可以在这里选择所需的学习模式。",
+  "tutorialTapToContinue": "点击继续",
+  "tutorialTransDesc": "点击此处翻译您的文本。",
+  "tutorialTransTitle": "翻译",
+  "typeExclamation": "感叹句",
+  "typeImperative": "祈使句",
+  "typeQuestion": "疑问句",
+  "typeStatement": "陈述句",
+  "usageLimitTitle": "已达用量上限",
+  "useExistingText": "使用现有",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "中性",
-  "chatAllConversations": "所有对话",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "确定要删除此对话吗？\n删除后将无法恢复。",
-  "notSelected": "- 未选择 -",
-  "myWordbook": "我的词汇本",
-  "mySentenceCollection": "我的句子集",
-  "newSubjectName": "新建词汇本/句子集标题",
-  "enterNewSubjectName": "输入新标题",
-  "addNewSubject": "添加新标题",
-  "selectExistingSubject": "选择现有标题",
-  "addTagHint": "添加标签...",
-  "save": "保存",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "请验证您的电子邮件以完成身份验证。",
-  "emailAlreadyInUse": "此邮箱已被注册，请直接登录或找回密码。"
+  "viewOnlineGuide": "查看在线指南",
+  "voluntaryTranslations": "自愿翻译",
+  "watchAdAndRefill": "观看广告并补充 (+5 次)",
+  "word": "单词",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "在敌人到达之前说出单词，保卫基地。",
+  "wordDefenseTitle": "单词防御",
+  "wordModeLabel": "单词模式",
+  "yourPronunciation": "你的发音"
 }

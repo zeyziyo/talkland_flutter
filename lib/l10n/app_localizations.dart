@@ -252,65 +252,617 @@ abstract class AppLocalizations {
     Locale('zu')
   ];
 
+  /// No description provided for @accuracy.
+  ///
+  /// In ko, this message translates to:
+  /// **'정확도'**
+  String get accuracy;
+
+  /// No description provided for @adLoading.
+  ///
+  /// In ko, this message translates to:
+  /// **'광고를 불러오는 중입니다. 잠시 후 다시 시도해주세요.'**
+  String get adLoading;
+
+  /// No description provided for @addNewSubject.
+  ///
+  /// In ko, this message translates to:
+  /// **'새 제목 추가'**
+  String get addNewSubject;
+
+  /// No description provided for @addParticipant.
+  ///
+  /// In ko, this message translates to:
+  /// **'참가자 추가'**
+  String get addParticipant;
+
+  /// No description provided for @addTagHint.
+  ///
+  /// In ko, this message translates to:
+  /// **'태그 추가...'**
+  String get addTagHint;
+
+  /// No description provided for @alreadyHaveAccount.
+  ///
+  /// In ko, this message translates to:
+  /// **'이미 계정이 있으신가요?'**
+  String get alreadyHaveAccount;
+
+  /// Application title
+  ///
+  /// In ko, this message translates to:
+  /// **'Talkie'**
+  String get appTitle;
+
+  /// No description provided for @autoPlay.
+  ///
+  /// In ko, this message translates to:
+  /// **'자동 재생'**
+  String get autoPlay;
+
+  /// No description provided for @basic.
+  ///
+  /// In ko, this message translates to:
+  /// **'기본'**
+  String get basic;
+
+  /// No description provided for @basicDefault.
+  ///
+  /// In ko, this message translates to:
+  /// **'기본'**
+  String get basicDefault;
+
+  /// Name for default basic repository
+  ///
+  /// In ko, this message translates to:
+  /// **'기본 문장/단어 저장소'**
+  String get basicMaterialRepository;
+
+  /// No description provided for @basicSentenceRepository.
+  ///
+  /// In ko, this message translates to:
+  /// **'기본 문장 저장소'**
+  String get basicSentenceRepository;
+
+  /// Default name for basic sentences material
+  ///
+  /// In ko, this message translates to:
+  /// **'기본 문장 저장소'**
+  String get basicSentences;
+
+  /// No description provided for @basicWordRepository.
+  ///
+  /// In ko, this message translates to:
+  /// **'기본 단어 저장소'**
+  String get basicWordRepository;
+
+  /// Default name for basic vocabulary material
+  ///
+  /// In ko, this message translates to:
+  /// **'기본 단어 저장소'**
+  String get basicWords;
+
+  /// Cancel button
+  ///
+  /// In ko, this message translates to:
+  /// **'취소'**
+  String get cancel;
+
+  /// No description provided for @caseObject.
+  ///
+  /// In ko, this message translates to:
+  /// **'목적격'**
+  String get caseObject;
+
+  /// No description provided for @casePossessive.
+  ///
+  /// In ko, this message translates to:
+  /// **'소유격'**
+  String get casePossessive;
+
+  /// No description provided for @casePossessivePronoun.
+  ///
+  /// In ko, this message translates to:
+  /// **'소유대명사'**
+  String get casePossessivePronoun;
+
+  /// No description provided for @caseReflexive.
+  ///
+  /// In ko, this message translates to:
+  /// **'재귀대명사'**
+  String get caseReflexive;
+
+  /// No description provided for @caseSubject.
+  ///
+  /// In ko, this message translates to:
+  /// **'주격'**
+  String get caseSubject;
+
+  /// No description provided for @chatAiChat.
+  ///
+  /// In ko, this message translates to:
+  /// **'채팅'**
+  String get chatAiChat;
+
+  /// No description provided for @chatAllConversations.
+  ///
+  /// In ko, this message translates to:
+  /// **'전체 대화'**
+  String get chatAllConversations;
+
+  /// No description provided for @chatChoosePersona.
+  ///
+  /// In ko, this message translates to:
+  /// **'페르소나 선택'**
+  String get chatChoosePersona;
+
+  /// No description provided for @chatEndMessage.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화를 종료하시겠습니까?'**
+  String get chatEndMessage;
+
+  /// No description provided for @chatEndTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화 종료 및 저장'**
+  String get chatEndTitle;
+
+  /// No description provided for @chatFailed.
+  ///
+  /// In ko, this message translates to:
+  /// **'채팅 실패: {error}'**
+  String chatFailed(Object error);
+
+  /// No description provided for @chatFromConversation.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화 발췌 ({speaker})'**
+  String chatFromConversation(Object speaker);
+
+  /// No description provided for @chatHistoryTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화 기록'**
+  String get chatHistoryTitle;
+
+  /// No description provided for @chatNew.
+  ///
+  /// In ko, this message translates to:
+  /// **'새 대화'**
+  String get chatNew;
+
+  /// No description provided for @chatNewChat.
+  ///
+  /// In ko, this message translates to:
+  /// **'새 대화'**
+  String get chatNewChat;
+
+  /// No description provided for @chatNoConversations.
+  ///
+  /// In ko, this message translates to:
+  /// **'아직 대화가 없습니다'**
+  String get chatNoConversations;
+
+  /// No description provided for @chatSaveAndExit.
+  ///
+  /// In ko, this message translates to:
+  /// **'저장 후 종료'**
+  String get chatSaveAndExit;
+
+  /// No description provided for @chatStartNewPrompt.
+  ///
+  /// In ko, this message translates to:
+  /// **'연습을 위해 새 대화를 시작해보세요!'**
+  String get chatStartNewPrompt;
+
+  /// No description provided for @chatTypeHint.
+  ///
+  /// In ko, this message translates to:
+  /// **'메시지를 입력하세요...'**
+  String get chatTypeHint;
+
+  /// No description provided for @chatUntitled.
+  ///
+  /// In ko, this message translates to:
+  /// **'제목 없는 대화'**
+  String get chatUntitled;
+
+  /// Checking for duplicates
+  ///
+  /// In ko, this message translates to:
+  /// **'확인 중...'**
+  String get checking;
+
+  /// No description provided for @clearAll.
+  ///
+  /// In ko, this message translates to:
+  /// **'모두 지우기'**
+  String get clearAll;
+
+  /// Confirm/OK button
+  ///
+  /// In ko, this message translates to:
+  /// **'확인'**
+  String get confirm;
+
+  /// Delete confirmation message
+  ///
+  /// In ko, this message translates to:
+  /// **'이 학습 기록을 삭제하시겠습니까?'**
+  String get confirmDelete;
+
+  /// No description provided for @confirmDeleteConversation.
+  ///
+  /// In ko, this message translates to:
+  /// **'이 대화를 삭제하시겠습니까?\n삭제된 대화는 복구할 수 없습니다.'**
+  String get confirmDeleteConversation;
+
+  /// No description provided for @confirmDeleteParticipant.
+  ///
+  /// In ko, this message translates to:
+  /// **'이 참가자를 삭제하시겠습니까?'**
+  String get confirmDeleteParticipant;
+
+  /// No description provided for @contextTagHint.
+  ///
+  /// In ko, this message translates to:
+  /// **'나중에 구분하기 쉽도록 상황을 적어주세요'**
+  String get contextTagHint;
+
+  /// No description provided for @contextTagLabel.
+  ///
+  /// In ko, this message translates to:
+  /// **'문맥/상황 (선택사항) - 예: 아침인사, 존댓말'**
+  String get contextTagLabel;
+
+  /// No description provided for @copiedToClipboard.
+  ///
+  /// In ko, this message translates to:
+  /// **'클립보드에 복사되었습니다!'**
+  String get copiedToClipboard;
+
+  /// No description provided for @copy.
+  ///
+  /// In ko, this message translates to:
+  /// **'복사'**
+  String get copy;
+
+  /// No description provided for @correctAnswer.
+  ///
+  /// In ko, this message translates to:
+  /// **'정답'**
+  String get correctAnswer;
+
+  /// Create new entry button
+  ///
+  /// In ko, this message translates to:
+  /// **'새 문장으로 진행'**
+  String get createNew;
+
+  /// Label for GPS location
+  ///
+  /// In ko, this message translates to:
+  /// **'현재 위치'**
+  String get currentLocation;
+
+  /// Banner label for current material
+  ///
+  /// In ko, this message translates to:
+  /// **'현재 선택 자료집:'**
+  String get currentMaterialLabel;
+
+  /// Delete button
+  ///
+  /// In ko, this message translates to:
+  /// **'삭제'**
+  String get delete;
+
+  /// Delete error message
+  ///
+  /// In ko, this message translates to:
+  /// **'삭제 실패: {error}'**
+  String deleteFailed(String error);
+
+  /// Delete record dialog title
+  ///
+  /// In ko, this message translates to:
+  /// **'레코드 삭제'**
+  String get deleteRecord;
+
+  /// No description provided for @dialogueQuestDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'상황극을 통해 대화 연습을 하세요. 적절한 답변을 선택하고 말해보세요.'**
+  String get dialogueQuestDesc;
+
+  /// No description provided for @dialogueQuestTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화 퀘스트'**
+  String get dialogueQuestTitle;
+
+  /// Prompt for disambiguation dialog
+  ///
+  /// In ko, this message translates to:
+  /// **'어떤 의미로 번역하시겠습니까?'**
+  String get disambiguationPrompt;
+
+  /// Title for disambiguation dialog
+  ///
+  /// In ko, this message translates to:
+  /// **'의미 선택'**
+  String get disambiguationTitle;
+
+  /// No description provided for @dontHaveAccount.
+  ///
+  /// In ko, this message translates to:
+  /// **'계정이 없으신가요?'**
+  String get dontHaveAccount;
+
+  /// No description provided for @editParticipant.
+  ///
+  /// In ko, this message translates to:
+  /// **'참가자 수정'**
+  String get editParticipant;
+
+  /// No description provided for @email.
+  ///
+  /// In ko, this message translates to:
+  /// **'이메일'**
+  String get email;
+
+  /// No description provided for @emailAlreadyInUse.
+  ///
+  /// In ko, this message translates to:
+  /// **'이미 등록된 이메일입니다. 로그인하거나 비밀번호 찾기를 이용해주세요.'**
+  String get emailAlreadyInUse;
+
+  /// No description provided for @enterNewSubjectName.
+  ///
+  /// In ko, this message translates to:
+  /// **'새 제목 입력'**
+  String get enterNewSubjectName;
+
+  /// No description provided for @enterSentenceHint.
+  ///
+  /// In ko, this message translates to:
+  /// **'문장을 입력하세요...'**
+  String get enterSentenceHint;
+
+  /// No description provided for @enterTextHint.
+  ///
+  /// In ko, this message translates to:
+  /// **'번역할 텍스트를 입력하세요'**
+  String get enterTextHint;
+
+  /// Empty input warning
+  ///
+  /// In ko, this message translates to:
+  /// **'번역할 텍스트를 입력하세요'**
+  String get enterTextToTranslate;
+
+  /// No description provided for @enterWordHint.
+  ///
+  /// In ko, this message translates to:
+  /// **'단어를 입력하세요...'**
+  String get enterWordHint;
+
+  /// Error dialog title
+  ///
+  /// In ko, this message translates to:
+  /// **'오류'**
+  String get error;
+
+  /// No description provided for @errorHateSpeech.
+  ///
+  /// In ko, this message translates to:
+  /// **'혐오 표현이 포함되어 있어 번역할 수 없습니다.'**
+  String get errorHateSpeech;
+
+  /// No description provided for @errorOtherSafety.
+  ///
+  /// In ko, this message translates to:
+  /// **'AI 안전 정책에 의해 번역이 거부되었습니다.'**
+  String get errorOtherSafety;
+
+  /// No description provided for @errorProfanity.
+  ///
+  /// In ko, this message translates to:
+  /// **'비속어가 포함되어 있어 번역할 수 없습니다.'**
+  String get errorProfanity;
+
+  /// No description provided for @errorSelectCategory.
+  ///
+  /// In ko, this message translates to:
+  /// **'먼저 단어나 문장을 선택하세요!'**
+  String get errorSelectCategory;
+
+  /// No description provided for @errorSexualContent.
+  ///
+  /// In ko, this message translates to:
+  /// **'선정적인 내용이 포함되어 있어 번역할 수 없습니다.'**
+  String get errorSexualContent;
+
+  /// Error section label
+  ///
+  /// In ko, this message translates to:
+  /// **'오류:'**
+  String get errors;
+
+  /// No description provided for @female.
+  ///
+  /// In ko, this message translates to:
+  /// **'여성'**
+  String get female;
+
+  /// File label
+  ///
+  /// In ko, this message translates to:
+  /// **'파일:'**
+  String get file;
+
+  /// No description provided for @filterAll.
+  ///
+  /// In ko, this message translates to:
+  /// **'전체'**
+  String get filterAll;
+
+  /// Show translation button
+  ///
+  /// In ko, this message translates to:
+  /// **'보이기'**
+  String get flip;
+
+  /// No description provided for @formComparative.
+  ///
+  /// In ko, this message translates to:
+  /// **'비교급'**
+  String get formComparative;
+
+  /// No description provided for @formInfinitive.
+  ///
+  /// In ko, this message translates to:
+  /// **'원형/현재형'**
+  String get formInfinitive;
+
+  /// No description provided for @formPast.
+  ///
+  /// In ko, this message translates to:
+  /// **'과거형'**
+  String get formPast;
+
+  /// No description provided for @formPastParticiple.
+  ///
+  /// In ko, this message translates to:
+  /// **'과거분사'**
+  String get formPastParticiple;
+
+  /// No description provided for @formPlural.
+  ///
+  /// In ko, this message translates to:
+  /// **'복수형'**
+  String get formPlural;
+
+  /// No description provided for @formPositive.
+  ///
+  /// In ko, this message translates to:
+  /// **'원급'**
+  String get formPositive;
+
+  /// No description provided for @formPresent.
+  ///
+  /// In ko, this message translates to:
+  /// **'현재형'**
+  String get formPresent;
+
+  /// No description provided for @formPresentParticiple.
+  ///
+  /// In ko, this message translates to:
+  /// **'현재분사 (ing)'**
+  String get formPresentParticiple;
+
+  /// No description provided for @formSingular.
+  ///
+  /// In ko, this message translates to:
+  /// **'단수형'**
+  String get formSingular;
+
+  /// No description provided for @formSuperlative.
+  ///
+  /// In ko, this message translates to:
+  /// **'최상급'**
+  String get formSuperlative;
+
+  /// No description provided for @formThirdPersonSingular.
+  ///
+  /// In ko, this message translates to:
+  /// **'3인칭 단수'**
+  String get formThirdPersonSingular;
+
+  /// No description provided for @gameModeDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'연습할 게임 모드를 선택하세요'**
+  String get gameModeDesc;
+
+  /// No description provided for @gameModeTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'게임 모드'**
+  String get gameModeTitle;
+
+  /// No description provided for @gameOver.
+  ///
+  /// In ko, this message translates to:
+  /// **'Game Over'**
+  String get gameOver;
+
+  /// No description provided for @gender.
+  ///
+  /// In ko, this message translates to:
+  /// **'성별'**
+  String get gender;
+
+  /// No description provided for @generalTags.
+  ///
+  /// In ko, this message translates to:
+  /// **'일반 태그'**
+  String get generalTags;
+
+  /// No description provided for @getMaterials.
+  ///
+  /// In ko, this message translates to:
+  /// **'자료 받기'**
+  String get getMaterials;
+
+  /// No description provided for @good.
+  ///
+  /// In ko, this message translates to:
+  /// **'좋아요'**
+  String get good;
+
   /// No description provided for @googleContinue.
   ///
   /// In ko, this message translates to:
   /// **'Google로 계속하기'**
   String get googleContinue;
 
-  /// No description provided for @kakaoContinue.
+  /// No description provided for @helpDialogueImportDesc.
   ///
   /// In ko, this message translates to:
-  /// **'카카오로 계속하기'**
-  String get kakaoContinue;
+  /// **'JSON 파일로 전체 대화 세트를 가져옵니다.'**
+  String get helpDialogueImportDesc;
 
-  /// No description provided for @logout.
+  /// No description provided for @helpDialogueImportDetails.
   ///
   /// In ko, this message translates to:
-  /// **'로그아웃'**
-  String get logout;
+  /// **'• JSON 구조: `entries` 배열 내에 `speaker`를 지정하여 대화 흐름을 구성합니다.\n• 참가자 설정: `participants` 정보를 정확히 입력하면 AI 채팅 모드에서 페르소나와 언어가 자동으로 설정됩니다.\n• 위치: 가져온 대화는 AI 채팅 모드의 \'기록\' 탭에 나타납니다.'**
+  String get helpDialogueImportDetails;
 
-  /// No description provided for @logoutConfirmTitle.
+  /// No description provided for @helpJsonDesc.
   ///
   /// In ko, this message translates to:
-  /// **'로그아웃'**
-  String get logoutConfirmTitle;
+  /// **'학습 자료를 JSON 파일로 대량으로 가져오는 방법입니다.'**
+  String get helpJsonDesc;
 
-  /// No description provided for @logoutConfirmMessage.
+  /// No description provided for @helpJsonTypeDialogue.
   ///
   /// In ko, this message translates to:
-  /// **'현재 기기에서 로그아웃하시겠습니까?'**
-  String get logoutConfirmMessage;
+  /// **'대화 (Dialogue)'**
+  String get helpJsonTypeDialogue;
 
-  /// No description provided for @syncingData.
+  /// No description provided for @helpJsonTypeSentence.
   ///
   /// In ko, this message translates to:
-  /// **'데이터 동기화 중...'**
-  String get syncingData;
+  /// **'문장 (Sentence)'**
+  String get helpJsonTypeSentence;
 
-  /// No description provided for @helpTitle.
+  /// No description provided for @helpJsonTypeWord.
   ///
   /// In ko, this message translates to:
-  /// **'도움말 & 가이드'**
-  String get helpTitle;
-
-  /// No description provided for @helpTabModes.
-  ///
-  /// In ko, this message translates to:
-  /// **'모드 설명'**
-  String get helpTabModes;
-
-  /// No description provided for @helpTabJson.
-  ///
-  /// In ko, this message translates to:
-  /// **'JSON 형식'**
-  String get helpTabJson;
-
-  /// No description provided for @helpTabTour.
-  ///
-  /// In ko, this message translates to:
-  /// **'체험하기'**
-  String get helpTabTour;
+  /// **'단어 (Word)'**
+  String get helpJsonTypeWord;
 
   /// No description provided for @helpMode1Desc.
   ///
@@ -360,41 +912,29 @@ abstract class AppLocalizations {
   /// **'• AI 채팅: 페르소나와 실전 대화를 연습하세요.\n• 참가자 관리: 내 언어와 AI의 언어를 각각 설정하여 언어 불일치를 방지할 수 있습니다.\n• GPS 상황극: 현재 위치 기반으로 자연스러운 대화 상황을 연출합니다.\n• 기록 보존: 모든 대화는 ID 기반으로 안전하게 저장되며, 이름을 바꿔도 기록이 유지됩니다.'**
   String get helpModeChatDetails;
 
-  /// No description provided for @helpJsonDesc.
+  /// No description provided for @helpTabJson.
   ///
   /// In ko, this message translates to:
-  /// **'학습 자료를 JSON 파일로 대량으로 가져오는 방법입니다.'**
-  String get helpJsonDesc;
+  /// **'JSON 형식'**
+  String get helpTabJson;
 
-  /// No description provided for @helpJsonTypeDialogue.
+  /// No description provided for @helpTabModes.
   ///
   /// In ko, this message translates to:
-  /// **'대화 (Dialogue)'**
-  String get helpJsonTypeDialogue;
+  /// **'모드 설명'**
+  String get helpTabModes;
 
-  /// No description provided for @helpJsonTypeSentence.
+  /// No description provided for @helpTabTour.
   ///
   /// In ko, this message translates to:
-  /// **'문장 (Sentence)'**
-  String get helpJsonTypeSentence;
+  /// **'체험하기'**
+  String get helpTabTour;
 
-  /// No description provided for @helpJsonTypeWord.
+  /// No description provided for @helpTitle.
   ///
   /// In ko, this message translates to:
-  /// **'단어 (Word)'**
-  String get helpJsonTypeWord;
-
-  /// No description provided for @helpDialogueImportDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'JSON 파일로 전체 대화 세트를 가져옵니다.'**
-  String get helpDialogueImportDesc;
-
-  /// No description provided for @helpDialogueImportDetails.
-  ///
-  /// In ko, this message translates to:
-  /// **'• JSON 구조: `entries` 배열 내에 `speaker`를 지정하여 대화 흐름을 구성합니다.\n• 참가자 설정: `participants` 정보를 정확히 입력하면 AI 채팅 모드에서 페르소나와 언어가 자동으로 설정됩니다.\n• 위치: 가져온 대화는 AI 채팅 모드의 \'기록\' 탭에 나타납니다.'**
-  String get helpDialogueImportDetails;
+  /// **'도움말 & 가이드'**
+  String get helpTitle;
 
   /// No description provided for @helpTourDesc.
   ///
@@ -402,245 +942,35 @@ abstract class AppLocalizations {
   /// **'**하이라이트 원**이 주요 기능을 안내합니다.\n(예: **하이라이트 원**이 가리키는 카드를 길게 눌러 삭제할 수 있습니다.)'**
   String get helpTourDesc;
 
-  /// Label for Partner Mode logic
-  ///
-  /// In ko, this message translates to:
-  /// **'파트너 모드'**
-  String get partnerMode;
-
-  /// Label for manual input in Partner Mode
-  ///
-  /// In ko, this message translates to:
-  /// **'수동 입력'**
-  String get manual;
-
-  /// Label for speaker selection
-  ///
-  /// In ko, this message translates to:
-  /// **'화자'**
-  String get speaker;
-
-  /// Tooltip for switching to AI mode
-  ///
-  /// In ko, this message translates to:
-  /// **'AI 모드로 전환'**
-  String get switchToAi;
-
-  /// Tooltip for switching to Partner mode
-  ///
-  /// In ko, this message translates to:
-  /// **'파트너 모드로 전환'**
-  String get switchToPartner;
-
-  /// Label for GPS location
-  ///
-  /// In ko, this message translates to:
-  /// **'현재 위치'**
-  String get currentLocation;
-
-  /// Label for location field in chat save dialog
-  ///
-  /// In ko, this message translates to:
-  /// **'위치'**
-  String get location;
-
-  /// Label for partner speaker
-  ///
-  /// In ko, this message translates to:
-  /// **'파트너'**
-  String get partner;
-
-  /// Label for self speaker
-  ///
-  /// In ko, this message translates to:
-  /// **'나'**
-  String get me;
-
-  /// Banner label for current material
-  ///
-  /// In ko, this message translates to:
-  /// **'현재 선택 자료집:'**
-  String get currentMaterialLabel;
-
-  /// Name for default basic repository
-  ///
-  /// In ko, this message translates to:
-  /// **'기본 문장/단어 저장소'**
-  String get basicMaterialRepository;
-
-  /// Toggle option for Word
-  ///
-  /// In ko, this message translates to:
-  /// **'단어'**
-  String get word;
-
-  /// Toggle option for Sentence
-  ///
-  /// In ko, this message translates to:
-  /// **'문장'**
-  String get sentence;
-
-  /// Application title
-  ///
-  /// In ko, this message translates to:
-  /// **'Talkie'**
-  String get appTitle;
-
-  /// Review tab label with count
-  ///
-  /// In ko, this message translates to:
-  /// **'복습 ({count})'**
-  String tabReview(int count);
-
-  /// Study material tab label with count
-  ///
-  /// In ko, this message translates to:
-  /// **'학습 자료 ({count})'**
-  String tabStudyMaterial(int count);
-
-  /// Mode 2 title for help dialog
-  ///
-  /// In ko, this message translates to:
-  /// **'복습'**
-  String get mode2Title;
-
-  /// Search mode label
-  ///
-  /// In ko, this message translates to:
-  /// **'검색'**
-  String get search;
-
-  /// Translate button
-  ///
-  /// In ko, this message translates to:
-  /// **'번역'**
-  String get translate;
-
-  /// Listen/TTS button
-  ///
-  /// In ko, this message translates to:
-  /// **'듣기'**
-  String get listen;
-
-  /// Save translation button
-  ///
-  /// In ko, this message translates to:
-  /// **'데이터 저장'**
-  String get saveData;
-
-  /// Data saved status
-  ///
-  /// In ko, this message translates to:
-  /// **'저장 완료'**
-  String get saved;
-
-  /// Delete button
-  ///
-  /// In ko, this message translates to:
-  /// **'삭제'**
-  String get delete;
-
-  /// Title for material metadata section
-  ///
-  /// In ko, this message translates to:
-  /// **'자료 정보'**
-  String get materialInfo;
-
-  /// Cancel button
-  ///
-  /// In ko, this message translates to:
-  /// **'취소'**
-  String get cancel;
-
-  /// Confirm/OK button
-  ///
-  /// In ko, this message translates to:
-  /// **'확인'**
-  String get confirm;
-
-  /// Refresh button
-  ///
-  /// In ko, this message translates to:
-  /// **'새로고침'**
-  String get refresh;
-
-  /// Study records title with count
-  ///
-  /// In ko, this message translates to:
-  /// **'학습 기록 ({count})'**
-  String studyRecords(int count);
-
-  /// Language filter label
-  ///
-  /// In ko, this message translates to:
-  /// **'대상 언어 필터:'**
-  String get targetLanguageFilter;
-
-  /// Empty state message
-  ///
-  /// In ko, this message translates to:
-  /// **'선택한 언어의 학습 기록이 없습니다'**
-  String get noRecords;
-
-  /// Instruction to save data
-  ///
-  /// In ko, this message translates to:
-  /// **'검색 모드에서 번역을 저장해보세요'**
-  String get saveTranslationsFromSearch;
-
-  /// Show translation button
-  ///
-  /// In ko, this message translates to:
-  /// **'보이기'**
-  String get flip;
-
   /// Hide translation button
   ///
   /// In ko, this message translates to:
   /// **'숨기기'**
   String get hide;
 
-  /// Delete record dialog title
+  /// Successfully imported count
   ///
   /// In ko, this message translates to:
-  /// **'레코드 삭제'**
-  String get deleteRecord;
-
-  /// Delete confirmation message
-  ///
-  /// In ko, this message translates to:
-  /// **'이 학습 기록을 삭제하시겠습니까?'**
-  String get confirmDelete;
-
-  /// Delete success message
-  ///
-  /// In ko, this message translates to:
-  /// **'레코드가 삭제되었습니다'**
-  String get recordDeleted;
-
-  /// Delete error message
-  ///
-  /// In ko, this message translates to:
-  /// **'삭제 실패: {error}'**
-  String deleteFailed(String error);
-
-  /// Import JSON button
-  ///
-  /// In ko, this message translates to:
-  /// **'JSON 파일 불러오기'**
-  String get importJsonFile;
-
-  /// Import in progress
-  ///
-  /// In ko, this message translates to:
-  /// **'자료 가져오는 중...'**
-  String get importing;
+  /// **'추가: {count}개'**
+  String importAdded(int count);
 
   /// Import success title
   ///
   /// In ko, this message translates to:
   /// **'불러오기 완료'**
   String get importComplete;
+
+  /// No description provided for @importDuplicateTitleError.
+  ///
+  /// In ko, this message translates to:
+  /// **'동일한 제목의 자료가 이미 존재합니다. 제목을 변경한 후 다시 시도해주세요.'**
+  String get importDuplicateTitleError;
+
+  /// Import error message
+  ///
+  /// In ko, this message translates to:
+  /// **'파일 불러오기 실패:\\n{error}'**
+  String importErrorMessage(String error);
 
   /// Import error title
   ///
@@ -654,137 +984,11 @@ abstract class AppLocalizations {
   /// **'파일: {fileName}'**
   String importFile(String fileName);
 
-  /// No description provided for @addParticipant.
+  /// Import JSON button
   ///
   /// In ko, this message translates to:
-  /// **'참가자 추가'**
-  String get addParticipant;
-
-  /// No description provided for @editParticipant.
-  ///
-  /// In ko, this message translates to:
-  /// **'참가자 수정'**
-  String get editParticipant;
-
-  /// No description provided for @labelRole.
-  ///
-  /// In ko, this message translates to:
-  /// **'역할'**
-  String get labelRole;
-
-  /// No description provided for @labelLangCode.
-  ///
-  /// In ko, this message translates to:
-  /// **'언어 코드 (예: en-US, ko-KR)'**
-  String get labelLangCode;
-
-  /// No description provided for @roleUser.
-  ///
-  /// In ko, this message translates to:
-  /// **'사용자'**
-  String get roleUser;
-
-  /// No description provided for @roleAi.
-  ///
-  /// In ko, this message translates to:
-  /// **'AI'**
-  String get roleAi;
-
-  /// No description provided for @roleThirdParty.
-  ///
-  /// In ko, this message translates to:
-  /// **'제삼자'**
-  String get roleThirdParty;
-
-  /// No description provided for @speakerSelect.
-  ///
-  /// In ko, this message translates to:
-  /// **'발화자 선택'**
-  String get speakerSelect;
-
-  /// No description provided for @participantDeleted.
-  ///
-  /// In ko, this message translates to:
-  /// **'참가자가 삭제되었습니다.'**
-  String get participantDeleted;
-
-  /// No description provided for @confirmDeleteParticipant.
-  ///
-  /// In ko, this message translates to:
-  /// **'이 참가자를 삭제하시겠습니까?'**
-  String get confirmDeleteParticipant;
-
-  /// Total import count
-  ///
-  /// In ko, this message translates to:
-  /// **'전체: {count}개'**
-  String importTotal(int count);
-
-  /// Successfully imported count
-  ///
-  /// In ko, this message translates to:
-  /// **'추가: {count}개'**
-  String importAdded(int count);
-
-  /// Skipped import count
-  ///
-  /// In ko, this message translates to:
-  /// **'건너뜀: {count}개'**
-  String importSkipped(int count);
-
-  /// Error section label
-  ///
-  /// In ko, this message translates to:
-  /// **'오류:'**
-  String get errors;
-
-  /// Error dialog title
-  ///
-  /// In ko, this message translates to:
-  /// **'오류'**
-  String get error;
-
-  /// Import error message
-  ///
-  /// In ko, this message translates to:
-  /// **'파일 불러오기 실패:\\n{error}'**
-  String importErrorMessage(String error);
-
-  /// No description provided for @importDuplicateTitleError.
-  ///
-  /// In ko, this message translates to:
-  /// **'동일한 제목의 자료가 이미 존재합니다. 제목을 변경한 후 다시 시도해주세요.'**
-  String get importDuplicateTitleError;
-
-  /// Study material selector label
-  ///
-  /// In ko, this message translates to:
-  /// **'학습 자료 선택'**
-  String get selectStudyMaterial;
-
-  /// Subject label
-  ///
-  /// In ko, this message translates to:
-  /// **'제목:'**
-  String get subject;
-
-  /// Source label
-  ///
-  /// In ko, this message translates to:
-  /// **'출처:'**
-  String get source;
-
-  /// File label
-  ///
-  /// In ko, this message translates to:
-  /// **'파일:'**
-  String get file;
-
-  /// Progress indicator
-  ///
-  /// In ko, this message translates to:
-  /// **'진행률: {current} / {total}'**
-  String progress(int current, int total);
+  /// **'JSON 파일 불러오기'**
+  String get importJsonFile;
 
   /// Empty state prompt
   ///
@@ -792,173 +996,29 @@ abstract class AppLocalizations {
   /// **'JSON 파일을 불러와주세요'**
   String get importJsonFilePrompt;
 
-  /// Selection prompt
+  /// Skipped import count
   ///
   /// In ko, this message translates to:
-  /// **'학습 자료를 선택하세요'**
-  String get selectMaterialPrompt;
+  /// **'건너뜀: {count}개'**
+  String importSkipped(int count);
 
-  /// Study complete button text
+  /// Total import count
   ///
   /// In ko, this message translates to:
-  /// **'학습 완료'**
-  String get studyComplete;
+  /// **'전체: {count}개'**
+  String importTotal(int count);
 
-  /// Mark study button text
+  /// Import in progress
   ///
   /// In ko, this message translates to:
-  /// **'학습 표시'**
-  String get markAsStudied;
+  /// **'자료 가져오는 중...'**
+  String get importing;
 
-  /// STT listening status
+  /// No description provided for @inputModeTitle.
   ///
   /// In ko, this message translates to:
-  /// **'듣는 중...'**
-  String get listening;
-
-  /// STT complete status
-  ///
-  /// In ko, this message translates to:
-  /// **'인식 완료'**
-  String get recognized;
-
-  /// STT error message
-  ///
-  /// In ko, this message translates to:
-  /// **'음성 인식 실패: {error}'**
-  String recognitionFailed(String error);
-
-  /// Checking for duplicates
-  ///
-  /// In ko, this message translates to:
-  /// **'확인 중...'**
-  String get checking;
-
-  /// Translation in progress
-  ///
-  /// In ko, this message translates to:
-  /// **'번역 중...'**
-  String get translating;
-
-  /// Translation done status
-  ///
-  /// In ko, this message translates to:
-  /// **'번역 완료 (저장 필요)'**
-  String get translationComplete;
-
-  /// Existing translation loaded
-  ///
-  /// In ko, this message translates to:
-  /// **'저장된 번역 불러옴'**
-  String get translationLoaded;
-
-  /// Translation error
-  ///
-  /// In ko, this message translates to:
-  /// **'번역 실패: {error}'**
-  String translationFailed(String error);
-
-  /// Empty input warning
-  ///
-  /// In ko, this message translates to:
-  /// **'번역할 텍스트를 입력하세요'**
-  String get enterTextToTranslate;
-
-  /// No description provided for @translationResultHint.
-  ///
-  /// In ko, this message translates to:
-  /// **'번역 결과 - 수정 가능함'**
-  String get translationResultHint;
-
-  /// No description provided for @voluntaryTranslations.
-  ///
-  /// In ko, this message translates to:
-  /// **'자발적 번역'**
-  String get voluntaryTranslations;
-
-  /// Save in progress
-  ///
-  /// In ko, this message translates to:
-  /// **'저장 중...'**
-  String get saving;
-
-  /// Save error - no data
-  ///
-  /// In ko, this message translates to:
-  /// **'저장할 번역이 없습니다'**
-  String get noTranslationToSave;
-
-  /// Save error message
-  ///
-  /// In ko, this message translates to:
-  /// **'저장 실패: {error}'**
-  String saveFailed(String error);
-
-  /// TTS playing status
-  ///
-  /// In ko, this message translates to:
-  /// **'재생 중...'**
-  String get playing;
-
-  /// TTS error - no text
-  ///
-  /// In ko, this message translates to:
-  /// **'재생할 텍스트가 없습니다'**
-  String get noTextToPlay;
-
-  /// TTS error message
-  ///
-  /// In ko, this message translates to:
-  /// **'재생 실패: {error}'**
-  String playbackFailed(String error);
-
-  /// Source language label
-  ///
-  /// In ko, this message translates to:
-  /// **'원본 언어'**
-  String get sourceLanguage;
-
-  /// Target language label
-  ///
-  /// In ko, this message translates to:
-  /// **'대상 언어'**
-  String get targetLanguage;
-
-  /// Duplicate detection title
-  ///
-  /// In ko, this message translates to:
-  /// **'유사한 텍스트 발견'**
-  String get similarTextFound;
-
-  /// Use existing text button
-  ///
-  /// In ko, this message translates to:
-  /// **'기존 텍스트 사용'**
-  String get useExistingText;
-
-  /// Create new entry button
-  ///
-  /// In ko, this message translates to:
-  /// **'새 문장으로 진행'**
-  String get createNew;
-
-  /// Review count display
-  ///
-  /// In ko, this message translates to:
-  /// **'복습 {count}회'**
-  String reviewCount(int count);
-
-  /// No description provided for @tabSpeaking.
-  ///
-  /// In ko, this message translates to:
-  /// **'말하기'**
-  String get tabSpeaking;
-
-  /// No description provided for @speakingPractice.
-  ///
-  /// In ko, this message translates to:
-  /// **'말하기 연습'**
-  String get speakingPractice;
+  /// **'입력'**
+  String get inputModeTitle;
 
   /// No description provided for @intervalSeconds.
   ///
@@ -966,125 +1026,143 @@ abstract class AppLocalizations {
   /// **'간격: {seconds}초'**
   String intervalSeconds(int seconds);
 
-  /// No description provided for @yourPronunciation.
+  /// No description provided for @invalidEmail.
   ///
   /// In ko, this message translates to:
-  /// **'내 발음'**
-  String get yourPronunciation;
+  /// **'유효한 이메일을 입력하세요.'**
+  String get invalidEmail;
 
-  /// No description provided for @correctAnswer.
+  /// No description provided for @kakaoContinue.
   ///
   /// In ko, this message translates to:
-  /// **'정답'**
-  String get correctAnswer;
+  /// **'카카오로 계속하기'**
+  String get kakaoContinue;
 
-  /// No description provided for @score.
+  /// No description provided for @labelLangCode.
   ///
   /// In ko, this message translates to:
-  /// **'정확도: {score}%'**
-  String score(String score);
+  /// **'언어 코드 (예: en-US, ko-KR)'**
+  String get labelLangCode;
 
-  /// No description provided for @perfect.
+  /// No description provided for @labelName.
   ///
   /// In ko, this message translates to:
-  /// **'완벽해요!'**
-  String get perfect;
+  /// **'이름'**
+  String get labelName;
 
-  /// No description provided for @good.
+  /// No description provided for @labelNote.
   ///
   /// In ko, this message translates to:
-  /// **'좋아요'**
-  String get good;
+  /// **'주석'**
+  String get labelNote;
 
-  /// No description provided for @tryAgain.
+  /// No description provided for @labelPOS.
   ///
   /// In ko, this message translates to:
-  /// **'다시 시도'**
-  String get tryAgain;
+  /// **'품사'**
+  String get labelPOS;
 
-  /// No description provided for @startPractice.
+  /// No description provided for @labelRole.
   ///
   /// In ko, this message translates to:
-  /// **'연습 시작'**
-  String get startPractice;
+  /// **'역할'**
+  String get labelRole;
 
-  /// No description provided for @stopPractice.
+  /// No description provided for @labelSentence.
   ///
   /// In ko, this message translates to:
-  /// **'연습 중지'**
-  String get stopPractice;
+  /// **'문장'**
+  String get labelSentence;
 
-  /// No description provided for @menuOnlineLibrary.
+  /// No description provided for @labelSentenceCollection.
   ///
   /// In ko, this message translates to:
-  /// **'온라인 자료실'**
-  String get menuOnlineLibrary;
+  /// **'문장 자료집'**
+  String get labelSentenceCollection;
 
-  /// No description provided for @startTutorial.
+  /// No description provided for @labelSentenceType.
   ///
   /// In ko, this message translates to:
-  /// **'튜토리얼 시작'**
-  String get startTutorial;
+  /// **'문장의 종류'**
+  String get labelSentenceType;
 
-  /// No description provided for @menuTutorial.
+  /// No description provided for @labelShowMemorized.
   ///
   /// In ko, this message translates to:
-  /// **'사용법 투어'**
-  String get menuTutorial;
+  /// **'끝낸것'**
+  String get labelShowMemorized;
 
-  /// No description provided for @tutorialMicTitle.
+  /// No description provided for @labelType.
   ///
   /// In ko, this message translates to:
-  /// **'음성 입력'**
-  String get tutorialMicTitle;
+  /// **'종류:'**
+  String get labelType;
 
-  /// No description provided for @tutorialMicDesc.
+  /// No description provided for @labelWord.
   ///
   /// In ko, this message translates to:
-  /// **'마이크 버튼을 눌러 음성으로 입력할 수 있습니다.'**
-  String get tutorialMicDesc;
+  /// **'단어'**
+  String get labelWord;
 
-  /// No description provided for @tutorialTabDesc.
+  /// No description provided for @labelWordbook.
   ///
   /// In ko, this message translates to:
-  /// **'여기서 원하는 학습 모드를 선택할 수 있습니다.'**
-  String get tutorialTabDesc;
+  /// **'단어 자료집'**
+  String get labelWordbook;
 
-  /// No description provided for @tutorialTapToContinue.
+  /// No description provided for @language.
   ///
   /// In ko, this message translates to:
-  /// **'화면을 탭하여 계속'**
-  String get tutorialTapToContinue;
+  /// **'언어'**
+  String get language;
 
-  /// No description provided for @tutorialTransTitle.
+  /// No description provided for @languageSettings.
   ///
   /// In ko, this message translates to:
-  /// **'번역하기'**
-  String get tutorialTransTitle;
+  /// **'언어 설정'**
+  String get languageSettings;
 
-  /// No description provided for @tutorialTransDesc.
+  /// No description provided for @languageSettingsTitle.
   ///
   /// In ko, this message translates to:
-  /// **'입력한 텍스트를 번역합니다.'**
-  String get tutorialTransDesc;
+  /// **'언어 설정'**
+  String get languageSettingsTitle;
 
-  /// No description provided for @tutorialSaveTitle.
+  /// No description provided for @libTitleFirstMeeting.
   ///
   /// In ko, this message translates to:
-  /// **'저장하기'**
-  String get tutorialSaveTitle;
+  /// **'첫 만남'**
+  String get libTitleFirstMeeting;
 
-  /// No description provided for @tutorialSaveDesc.
+  /// No description provided for @libTitleGreetings1.
   ///
   /// In ko, this message translates to:
-  /// **'번역된 결과를 학습 기록에 저장하세요.'**
-  String get tutorialSaveDesc;
+  /// **'인사 1'**
+  String get libTitleGreetings1;
 
-  /// No description provided for @selectParticipants.
+  /// No description provided for @libTitleNouns1.
   ///
   /// In ko, this message translates to:
-  /// **'참가자 선택'**
-  String get selectParticipants;
+  /// **'명사 1'**
+  String get libTitleNouns1;
+
+  /// No description provided for @libTitleVerbs1.
+  ///
+  /// In ko, this message translates to:
+  /// **'동사 1'**
+  String get libTitleVerbs1;
+
+  /// Listen/TTS button
+  ///
+  /// In ko, this message translates to:
+  /// **'듣기'**
+  String get listen;
+
+  /// STT listening status
+  ///
+  /// In ko, this message translates to:
+  /// **'듣는 중...'**
+  String get listening;
 
   /// No description provided for @loadingParticipants.
   ///
@@ -1092,11 +1170,215 @@ abstract class AppLocalizations {
   /// **'참가자 불러오는 중...'**
   String get loadingParticipants;
 
-  /// No description provided for @noParticipantsFound.
+  /// Label for location field in chat save dialog
   ///
   /// In ko, this message translates to:
-  /// **'등록된 참가자가 없습니다.'**
-  String get noParticipantsFound;
+  /// **'위치'**
+  String get location;
+
+  /// No description provided for @login.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그인'**
+  String get login;
+
+  /// No description provided for @logout.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그아웃'**
+  String get logout;
+
+  /// No description provided for @logoutConfirmMessage.
+  ///
+  /// In ko, this message translates to:
+  /// **'현재 기기에서 로그아웃하시겠습니까?'**
+  String get logoutConfirmMessage;
+
+  /// No description provided for @logoutConfirmTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그아웃'**
+  String get logoutConfirmTitle;
+
+  /// No description provided for @male.
+  ///
+  /// In ko, this message translates to:
+  /// **'남성'**
+  String get male;
+
+  /// No description provided for @manageParticipants.
+  ///
+  /// In ko, this message translates to:
+  /// **'참가자 관리'**
+  String get manageParticipants;
+
+  /// Label for manual input in Partner Mode
+  ///
+  /// In ko, this message translates to:
+  /// **'수동 입력'**
+  String get manual;
+
+  /// Mark study button text
+  ///
+  /// In ko, this message translates to:
+  /// **'학습 표시'**
+  String get markAsStudied;
+
+  /// Title for material metadata section
+  ///
+  /// In ko, this message translates to:
+  /// **'자료 정보'**
+  String get materialInfo;
+
+  /// Label for self speaker
+  ///
+  /// In ko, this message translates to:
+  /// **'나'**
+  String get me;
+
+  /// No description provided for @menuDeviceImport.
+  ///
+  /// In ko, this message translates to:
+  /// **'기기에서 자료 가져오기'**
+  String get menuDeviceImport;
+
+  /// No description provided for @menuHelp.
+  ///
+  /// In ko, this message translates to:
+  /// **'도움말'**
+  String get menuHelp;
+
+  /// No description provided for @menuLanguageSettings.
+  ///
+  /// In ko, this message translates to:
+  /// **'언어 설정'**
+  String get menuLanguageSettings;
+
+  /// No description provided for @menuOnlineLibrary.
+  ///
+  /// In ko, this message translates to:
+  /// **'온라인 자료실'**
+  String get menuOnlineLibrary;
+
+  /// No description provided for @menuSelectMaterialSet.
+  ///
+  /// In ko, this message translates to:
+  /// **'학습 자료집 선택'**
+  String get menuSelectMaterialSet;
+
+  /// Menu item for language settings
+  ///
+  /// In ko, this message translates to:
+  /// **'언어 설정'**
+  String get menuSettings;
+
+  /// No description provided for @menuTutorial.
+  ///
+  /// In ko, this message translates to:
+  /// **'사용법 투어'**
+  String get menuTutorial;
+
+  /// No description provided for @menuWebDownload.
+  ///
+  /// In ko, this message translates to:
+  /// **'사용설명서'**
+  String get menuWebDownload;
+
+  /// No description provided for @metadataDialogTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'상세 분류'**
+  String get metadataDialogTitle;
+
+  /// No description provided for @metadataFormType.
+  ///
+  /// In ko, this message translates to:
+  /// **'문법 형태'**
+  String get metadataFormType;
+
+  /// No description provided for @metadataRootWord.
+  ///
+  /// In ko, this message translates to:
+  /// **'원형 (Root Word)'**
+  String get metadataRootWord;
+
+  /// No description provided for @micButtonTooltip.
+  ///
+  /// In ko, this message translates to:
+  /// **'음성 인식 시작'**
+  String get micButtonTooltip;
+
+  /// No description provided for @mode1SelectedMaterial.
+  ///
+  /// In ko, this message translates to:
+  /// **'현재 선택된 자료집: {name}'**
+  String mode1SelectedMaterial(Object name);
+
+  /// Mode 2 title for help dialog
+  ///
+  /// In ko, this message translates to:
+  /// **'복습'**
+  String get mode2Title;
+
+  /// No description provided for @mode3Next.
+  ///
+  /// In ko, this message translates to:
+  /// **'다음'**
+  String get mode3Next;
+
+  /// No description provided for @mode3Start.
+  ///
+  /// In ko, this message translates to:
+  /// **'시작'**
+  String get mode3Start;
+
+  /// No description provided for @mode3Stop.
+  ///
+  /// In ko, this message translates to:
+  /// **'종료'**
+  String get mode3Stop;
+
+  /// No description provided for @mode3TryAgain.
+  ///
+  /// In ko, this message translates to:
+  /// **'재시도'**
+  String get mode3TryAgain;
+
+  /// No description provided for @mySentenceCollection.
+  ///
+  /// In ko, this message translates to:
+  /// **'나의 문장집'**
+  String get mySentenceCollection;
+
+  /// No description provided for @myWordbook.
+  ///
+  /// In ko, this message translates to:
+  /// **'나의 단어장'**
+  String get myWordbook;
+
+  /// No description provided for @neutral.
+  ///
+  /// In ko, this message translates to:
+  /// **'중성'**
+  String get neutral;
+
+  /// No description provided for @newSubjectName.
+  ///
+  /// In ko, this message translates to:
+  /// **'새 단어장/문장집 제목'**
+  String get newSubjectName;
+
+  /// No description provided for @next.
+  ///
+  /// In ko, this message translates to:
+  /// **'다음'**
+  String get next;
+
+  /// No description provided for @noDialogueHistory.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화 내역이 없습니다.'**
+  String get noDialogueHistory;
 
   /// No description provided for @noInternetWarningMic.
   ///
@@ -1116,383 +1398,17 @@ abstract class AppLocalizations {
   /// **'이 카테고리에는 자료가 없습니다.'**
   String get noMaterialsInCategory;
 
-  /// No description provided for @onlineLibraryLoadFailed.
+  /// No description provided for @noParticipantsFound.
   ///
   /// In ko, this message translates to:
-  /// **'자료를 불러오는데 실패했습니다.'**
-  String get onlineLibraryLoadFailed;
+  /// **'등록된 참가자가 없습니다.'**
+  String get noParticipantsFound;
 
-  /// No description provided for @onlineLibraryCheckInternet.
+  /// Empty state message
   ///
   /// In ko, this message translates to:
-  /// **'인터넷 연결을 확인하거나 나중에 다시 시도해주세요.'**
-  String get onlineLibraryCheckInternet;
-
-  /// No description provided for @onlineLibraryNoMaterials.
-  ///
-  /// In ko, this message translates to:
-  /// **'자료가 없습니다.'**
-  String get onlineLibraryNoMaterials;
-
-  /// No description provided for @sendingMessage.
-  ///
-  /// In ko, this message translates to:
-  /// **'메시지 전송 중...'**
-  String get sendingMessage;
-
-  /// No description provided for @startChat.
-  ///
-  /// In ko, this message translates to:
-  /// **'대화 시작'**
-  String get startChat;
-
-  /// No description provided for @manageParticipants.
-  ///
-  /// In ko, this message translates to:
-  /// **'참가자 관리'**
-  String get manageParticipants;
-
-  /// No description provided for @tutorialAiChatTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'AI 채팅'**
-  String get tutorialAiChatTitle;
-
-  /// No description provided for @tutorialAiChatDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'AI 페르소나와 실전 대화를 연습해 보세요.'**
-  String get tutorialAiChatDesc;
-
-  /// No description provided for @tutorialM2SelectTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'자료집 선택'**
-  String get tutorialM2SelectTitle;
-
-  /// No description provided for @tutorialM2SelectDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'우측 상단 메뉴(⋮)를 눌러 학습할 자료집을 선택하거나 온라인 자료실을 이용하세요.'**
-  String get tutorialM2SelectDesc;
-
-  /// No description provided for @tutorialM2ListTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'학습 목록'**
-  String get tutorialM2ListTitle;
-
-  /// No description provided for @tutorialM2ListDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'저장된 항목을 확인하고 뒤집어보세요. 카드를 길게 누르면 삭제할 수 있습니다.'**
-  String get tutorialM2ListDesc;
-
-  /// No description provided for @tutorialM3SelectTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'자료 선택'**
-  String get tutorialM3SelectTitle;
-
-  /// No description provided for @tutorialM3SelectDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'우측 상단 메뉴(⋮)에서 연습하고 싶은 자료집을 선택하세요.'**
-  String get tutorialM3SelectDesc;
-
-  /// No description provided for @tutorialM3IntervalTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'간격 설정'**
-  String get tutorialM3IntervalTitle;
-
-  /// No description provided for @tutorialM3IntervalDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'문장 사이의 대기 시간을 조절합니다.'**
-  String get tutorialM3IntervalDesc;
-
-  /// No description provided for @tutorialM3StartTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'연습 시작'**
-  String get tutorialM3StartTitle;
-
-  /// No description provided for @tutorialM3StartDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'재생 버튼을 눌러 원어민 음성을 듣고 따라하세요.'**
-  String get tutorialM3StartDesc;
-
-  /// No description provided for @startWarning.
-  ///
-  /// In ko, this message translates to:
-  /// **'주의'**
-  String get startWarning;
-
-  /// No description provided for @noVoiceDetected.
-  ///
-  /// In ko, this message translates to:
-  /// **'목소리가 감지되지 않았어요'**
-  String get noVoiceDetected;
-
-  /// No description provided for @tooltipSearch.
-  ///
-  /// In ko, this message translates to:
-  /// **'검색'**
-  String get tooltipSearch;
-
-  /// No description provided for @tooltipStudyReview.
-  ///
-  /// In ko, this message translates to:
-  /// **'학습+복습'**
-  String get tooltipStudyReview;
-
-  /// No description provided for @tooltipSpeaking.
-  ///
-  /// In ko, this message translates to:
-  /// **'말하기'**
-  String get tooltipSpeaking;
-
-  /// No description provided for @tooltipDecrease.
-  ///
-  /// In ko, this message translates to:
-  /// **'감소'**
-  String get tooltipDecrease;
-
-  /// No description provided for @tooltipIncrease.
-  ///
-  /// In ko, this message translates to:
-  /// **'증가'**
-  String get tooltipIncrease;
-
-  /// No description provided for @languageSettings.
-  ///
-  /// In ko, this message translates to:
-  /// **'언어 설정'**
-  String get languageSettings;
-
-  /// No description provided for @tutorialM2DropdownDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'상단 메뉴를 통해 학습할 자료를 선택할 수 있습니다.'**
-  String get tutorialM2DropdownDesc;
-
-  /// No description provided for @tutorialM2SearchDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'저장된 단어와 문장을 검색하여 빠르게 찾을 수 있습니다.'**
-  String get tutorialM2SearchDesc;
-
-  /// No description provided for @tutorialM2ImportDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'기기의 폴더에서 JSON 파일을 불러옵니다.'**
-  String get tutorialM2ImportDesc;
-
-  /// No description provided for @tutorialLangSettingsTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'언어 설정'**
-  String get tutorialLangSettingsTitle;
-
-  /// No description provided for @tutorialLangSettingsDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'번역할 원본 언어와 대상 언어를 설정합니다.'**
-  String get tutorialLangSettingsDesc;
-
-  /// No description provided for @copy.
-  ///
-  /// In ko, this message translates to:
-  /// **'복사'**
-  String get copy;
-
-  /// No description provided for @copiedToClipboard.
-  ///
-  /// In ko, this message translates to:
-  /// **'클립보드에 복사되었습니다!'**
-  String get copiedToClipboard;
-
-  /// No description provided for @tutorialContextTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'상황/문맥 태그'**
-  String get tutorialContextTitle;
-
-  /// No description provided for @tutorialContextDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'같은 문장이라도 상황(예: 아침, 저녁)을 적어두면 별도로 저장할 수 있어요.'**
-  String get tutorialContextDesc;
-
-  /// No description provided for @thinkingTimeInterval.
-  ///
-  /// In ko, this message translates to:
-  /// **'재생 시차'**
-  String get thinkingTimeInterval;
-
-  /// No description provided for @thinkingTimeDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'정답이 공개되기 전 생각할 시간입니다.'**
-  String get thinkingTimeDesc;
-
-  /// No description provided for @autoPlay.
-  ///
-  /// In ko, this message translates to:
-  /// **'자동 재생'**
-  String get autoPlay;
-
-  /// No description provided for @timeUp.
-  ///
-  /// In ko, this message translates to:
-  /// **'시간 초과!'**
-  String get timeUp;
-
-  /// No description provided for @gameModeTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'게임 모드'**
-  String get gameModeTitle;
-
-  /// No description provided for @gameModeDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'연습할 게임 모드를 선택하세요'**
-  String get gameModeDesc;
-
-  /// No description provided for @wordDefenseTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'단어 디펜스'**
-  String get wordDefenseTitle;
-
-  /// No description provided for @wordDefenseDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'적이 도착하기 전에 단어를 말해서 기지를 방어하세요.'**
-  String get wordDefenseDesc;
-
-  /// No description provided for @dialogueQuestTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'대화 퀘스트'**
-  String get dialogueQuestTitle;
-
-  /// No description provided for @dialogueQuestDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'상황극을 통해 대화 연습을 하세요. 적절한 답변을 선택하고 말해보세요.'**
-  String get dialogueQuestDesc;
-
-  /// Label for translation toggle
-  ///
-  /// In ko, this message translates to:
-  /// **'번역'**
-  String get translation;
-
-  /// No description provided for @labelType.
-  ///
-  /// In ko, this message translates to:
-  /// **'종류:'**
-  String get labelType;
-
-  /// No description provided for @labelWord.
-  ///
-  /// In ko, this message translates to:
-  /// **'단어'**
-  String get labelWord;
-
-  /// No description provided for @labelSentence.
-  ///
-  /// In ko, this message translates to:
-  /// **'문장'**
-  String get labelSentence;
-
-  /// No description provided for @contextTagLabel.
-  ///
-  /// In ko, this message translates to:
-  /// **'문맥/상황 (선택사항) - 예: 아침인사, 존댓말'**
-  String get contextTagLabel;
-
-  /// No description provided for @contextTagHint.
-  ///
-  /// In ko, this message translates to:
-  /// **'나중에 구분하기 쉽도록 상황을 적어주세요'**
-  String get contextTagHint;
-
-  /// No description provided for @usageLimitTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'한도 도달'**
-  String get usageLimitTitle;
-
-  /// No description provided for @translationLimitExceeded.
-  ///
-  /// In ko, this message translates to:
-  /// **'번역 한도 초과'**
-  String get translationLimitExceeded;
-
-  /// No description provided for @translationLimitMessage.
-  ///
-  /// In ko, this message translates to:
-  /// **'일일 무료 번역(5회)을 모두 사용했습니다.\\n\\n광고를 보고 5회를 즉시 충전하시겠습니까?'**
-  String get translationLimitMessage;
-
-  /// No description provided for @watchAdAndRefill.
-  ///
-  /// In ko, this message translates to:
-  /// **'광고 보고 충전 (+5회)'**
-  String get watchAdAndRefill;
-
-  /// No description provided for @translationRefilled.
-  ///
-  /// In ko, this message translates to:
-  /// **'번역 횟수가 5회 충전되었습니다!'**
-  String get translationRefilled;
-
-  /// No description provided for @adLoading.
-  ///
-  /// In ko, this message translates to:
-  /// **'광고를 불러오는 중입니다. 잠시 후 다시 시도해주세요.'**
-  String get adLoading;
-
-  /// No description provided for @reviewAll.
-  ///
-  /// In ko, this message translates to:
-  /// **'전체 복습'**
-  String get reviewAll;
-
-  /// Total records count
-  ///
-  /// In ko, this message translates to:
-  /// **'총 {count}개의 기록 (전체 보기)'**
-  String totalRecords(int count);
-
-  /// No description provided for @filterAll.
-  ///
-  /// In ko, this message translates to:
-  /// **'전체'**
-  String get filterAll;
-
-  /// No description provided for @practiceWordsOnly.
-  ///
-  /// In ko, this message translates to:
-  /// **'단어만 연습'**
-  String get practiceWordsOnly;
-
-  /// No description provided for @resetPracticeHistory.
-  ///
-  /// In ko, this message translates to:
-  /// **'연습 기록 초기화'**
-  String get resetPracticeHistory;
-
-  /// No description provided for @retry.
-  ///
-  /// In ko, this message translates to:
-  /// **'다시 시도?'**
-  String get retry;
+  /// **'선택한 언어의 학습 기록이 없습니다'**
+  String get noRecords;
 
   /// No description provided for @noStudyMaterial.
   ///
@@ -1500,395 +1416,89 @@ abstract class AppLocalizations {
   /// **'학습 자료가 없습니다.'**
   String get noStudyMaterial;
 
-  /// No description provided for @gameOver.
+  /// TTS error - no text
   ///
   /// In ko, this message translates to:
-  /// **'Game Over'**
-  String get gameOver;
+  /// **'재생할 텍스트가 없습니다'**
+  String get noTextToPlay;
 
-  /// No description provided for @playAgain.
+  /// Save error - no data
   ///
   /// In ko, this message translates to:
-  /// **'다시 하기'**
-  String get playAgain;
+  /// **'저장할 번역이 없습니다'**
+  String get noTranslationToSave;
 
-  /// No description provided for @speakNow.
+  /// No description provided for @noVoiceDetected.
   ///
   /// In ko, this message translates to:
-  /// **'지금 말하세요!'**
-  String get speakNow;
+  /// **'목소리가 감지되지 않았어요'**
+  String get noVoiceDetected;
 
-  /// No description provided for @scoreLabel.
+  /// No description provided for @notSelected.
   ///
   /// In ko, this message translates to:
-  /// **'점수'**
-  String get scoreLabel;
+  /// **'- 선택 안함 -'**
+  String get notSelected;
 
-  /// No description provided for @viewOnlineGuide.
+  /// No description provided for @onlineLibraryCheckInternet.
   ///
   /// In ko, this message translates to:
-  /// **'온라인 가이드 보기'**
-  String get viewOnlineGuide;
+  /// **'인터넷 연결을 확인하거나 나중에 다시 시도해주세요.'**
+  String get onlineLibraryCheckInternet;
 
-  /// No description provided for @getMaterials.
+  /// No description provided for @onlineLibraryLoadFailed.
   ///
   /// In ko, this message translates to:
-  /// **'자료 받기'**
-  String get getMaterials;
+  /// **'자료를 불러오는데 실패했습니다.'**
+  String get onlineLibraryLoadFailed;
 
-  /// No description provided for @swapLanguages.
+  /// No description provided for @onlineLibraryNoMaterials.
   ///
   /// In ko, this message translates to:
-  /// **'언어 전환'**
-  String get swapLanguages;
+  /// **'자료가 없습니다.'**
+  String get onlineLibraryNoMaterials;
 
-  /// No description provided for @next.
+  /// No description provided for @participantDeleted.
   ///
   /// In ko, this message translates to:
-  /// **'다음'**
-  String get next;
+  /// **'참가자가 삭제되었습니다.'**
+  String get participantDeleted;
 
-  /// No description provided for @wordModeLabel.
+  /// No description provided for @participantRename.
   ///
   /// In ko, this message translates to:
-  /// **'단어 모드'**
-  String get wordModeLabel;
+  /// **'참가자 이름 변경'**
+  String get participantRename;
 
-  /// No description provided for @accuracy.
+  /// Label for partner speaker
   ///
   /// In ko, this message translates to:
-  /// **'정확도'**
-  String get accuracy;
+  /// **'파트너'**
+  String get partner;
 
-  /// No description provided for @basicDefault.
+  /// Label for Partner Mode logic
   ///
   /// In ko, this message translates to:
-  /// **'기본'**
-  String get basicDefault;
+  /// **'파트너 모드'**
+  String get partnerMode;
 
-  /// No description provided for @basic.
+  /// No description provided for @password.
   ///
   /// In ko, this message translates to:
-  /// **'기본'**
-  String get basic;
+  /// **'비밀번호'**
+  String get password;
 
-  /// No description provided for @tutorialM3WordsTitle.
+  /// No description provided for @passwordTooShort.
   ///
   /// In ko, this message translates to:
-  /// **'단어 연습'**
-  String get tutorialM3WordsTitle;
+  /// **'비밀번호는 6자 이상이어야 합니다.'**
+  String get passwordTooShort;
 
-  /// No description provided for @tutorialM3WordsDesc.
+  /// No description provided for @perfect.
   ///
   /// In ko, this message translates to:
-  /// **'체크하면 저장된 단어만 연습합니다.'**
-  String get tutorialM3WordsDesc;
-
-  /// No description provided for @enterTextHint.
-  ///
-  /// In ko, this message translates to:
-  /// **'번역할 텍스트를 입력하세요'**
-  String get enterTextHint;
-
-  /// No description provided for @micButtonTooltip.
-  ///
-  /// In ko, this message translates to:
-  /// **'음성 인식 시작'**
-  String get micButtonTooltip;
-
-  /// No description provided for @menuHelp.
-  ///
-  /// In ko, this message translates to:
-  /// **'도움말'**
-  String get menuHelp;
-
-  /// No description provided for @menuWebDownload.
-  ///
-  /// In ko, this message translates to:
-  /// **'사용설명서'**
-  String get menuWebDownload;
-
-  /// No description provided for @menuDeviceImport.
-  ///
-  /// In ko, this message translates to:
-  /// **'기기에서 자료 가져오기'**
-  String get menuDeviceImport;
-
-  /// Menu item for language settings
-  ///
-  /// In ko, this message translates to:
-  /// **'언어 설정'**
-  String get menuSettings;
-
-  /// Default name for basic vocabulary material
-  ///
-  /// In ko, this message translates to:
-  /// **'기본 단어 저장소'**
-  String get basicWords;
-
-  /// Default name for basic sentences material
-  ///
-  /// In ko, this message translates to:
-  /// **'기본 문장 저장소'**
-  String get basicSentences;
-
-  /// Title for the material selection dialog
-  ///
-  /// In ko, this message translates to:
-  /// **'학습 자료집 선택'**
-  String get selectMaterialSet;
-
-  /// Header for words section in material selection
-  ///
-  /// In ko, this message translates to:
-  /// **'단어'**
-  String get sectionWords;
-
-  /// Header for sentences section in material selection
-  ///
-  /// In ko, this message translates to:
-  /// **'문장'**
-  String get sectionSentences;
-
-  /// No description provided for @languageSettingsTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'언어 설정'**
-  String get languageSettingsTitle;
-
-  /// No description provided for @sourceLanguageLabel.
-  ///
-  /// In ko, this message translates to:
-  /// **'내 언어 (Source)'**
-  String get sourceLanguageLabel;
-
-  /// No description provided for @targetLanguageLabel.
-  ///
-  /// In ko, this message translates to:
-  /// **'학습 언어 (Target)'**
-  String get targetLanguageLabel;
-
-  /// No description provided for @mode3Start.
-  ///
-  /// In ko, this message translates to:
-  /// **'시작'**
-  String get mode3Start;
-
-  /// No description provided for @mode3Stop.
-  ///
-  /// In ko, this message translates to:
-  /// **'종료'**
-  String get mode3Stop;
-
-  /// No description provided for @mode3Next.
-  ///
-  /// In ko, this message translates to:
-  /// **'다음'**
-  String get mode3Next;
-
-  /// No description provided for @mode3TryAgain.
-  ///
-  /// In ko, this message translates to:
-  /// **'재시도'**
-  String get mode3TryAgain;
-
-  /// No description provided for @tutorialM3ResetTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'필터 및 설정'**
-  String get tutorialM3ResetTitle;
-
-  /// No description provided for @tutorialSwapDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'내 언어와 학습 언어를 서로 바꿉니다.'**
-  String get tutorialSwapDesc;
-
-  /// No description provided for @recognizedText.
-  ///
-  /// In ko, this message translates to:
-  /// **'인식된 발음:'**
-  String get recognizedText;
-
-  /// No description provided for @titleFormat.
-  ///
-  /// In ko, this message translates to:
-  /// **'{type}: {materialName}'**
-  String titleFormat(Object materialName, Object type);
-
-  /// No description provided for @tutorialM3ResetDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'태그를 선택하거나 암기한 항목 제외 등 연습 대상을 자유롭게 설정할 수 있습니다.'**
-  String get tutorialM3ResetDesc;
-
-  /// No description provided for @menuSelectMaterialSet.
-  ///
-  /// In ko, this message translates to:
-  /// **'학습 자료집 선택'**
-  String get menuSelectMaterialSet;
-
-  /// No description provided for @sectionWord.
-  ///
-  /// In ko, this message translates to:
-  /// **'단어 섹션'**
-  String get sectionWord;
-
-  /// No description provided for @sectionSentence.
-  ///
-  /// In ko, this message translates to:
-  /// **'문장 섹션'**
-  String get sectionSentence;
-
-  /// No description provided for @tabWord.
-  ///
-  /// In ko, this message translates to:
-  /// **'단어'**
-  String get tabWord;
-
-  /// No description provided for @tabSentence.
-  ///
-  /// In ko, this message translates to:
-  /// **'문장'**
-  String get tabSentence;
-
-  /// No description provided for @errorProfanity.
-  ///
-  /// In ko, this message translates to:
-  /// **'비속어가 포함되어 있어 번역할 수 없습니다.'**
-  String get errorProfanity;
-
-  /// No description provided for @errorHateSpeech.
-  ///
-  /// In ko, this message translates to:
-  /// **'혐오 표현이 포함되어 있어 번역할 수 없습니다.'**
-  String get errorHateSpeech;
-
-  /// No description provided for @errorSexualContent.
-  ///
-  /// In ko, this message translates to:
-  /// **'선정적인 내용이 포함되어 있어 번역할 수 없습니다.'**
-  String get errorSexualContent;
-
-  /// No description provided for @errorOtherSafety.
-  ///
-  /// In ko, this message translates to:
-  /// **'AI 안전 정책에 의해 번역이 거부되었습니다.'**
-  String get errorOtherSafety;
-
-  /// No description provided for @clearAll.
-  ///
-  /// In ko, this message translates to:
-  /// **'모두 지우기'**
-  String get clearAll;
-
-  /// Title for disambiguation dialog
-  ///
-  /// In ko, this message translates to:
-  /// **'의미 선택'**
-  String get disambiguationTitle;
-
-  /// Prompt for disambiguation dialog
-  ///
-  /// In ko, this message translates to:
-  /// **'어떤 의미로 번역하시겠습니까?'**
-  String get disambiguationPrompt;
-
-  /// Skip button
-  ///
-  /// In ko, this message translates to:
-  /// **'건너뛰기'**
-  String get skip;
-
-  /// No description provided for @inputModeTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'입력'**
-  String get inputModeTitle;
-
-  /// No description provided for @reviewModeTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'복습'**
-  String get reviewModeTitle;
-
-  /// No description provided for @practiceModeTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'발음 연습'**
-  String get practiceModeTitle;
-
-  /// No description provided for @chatHistoryTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'대화 기록'**
-  String get chatHistoryTitle;
-
-  /// No description provided for @chatNew.
-  ///
-  /// In ko, this message translates to:
-  /// **'새 대화'**
-  String get chatNew;
-
-  /// No description provided for @chatNewChat.
-  ///
-  /// In ko, this message translates to:
-  /// **'새 대화'**
-  String get chatNewChat;
-
-  /// No description provided for @chatChoosePersona.
-  ///
-  /// In ko, this message translates to:
-  /// **'페르소나 선택'**
-  String get chatChoosePersona;
-
-  /// No description provided for @chatTypeHint.
-  ///
-  /// In ko, this message translates to:
-  /// **'메시지를 입력하세요...'**
-  String get chatTypeHint;
-
-  /// No description provided for @chatFailed.
-  ///
-  /// In ko, this message translates to:
-  /// **'채팅 실패: {error}'**
-  String chatFailed(Object error);
-
-  /// No description provided for @chatNoConversations.
-  ///
-  /// In ko, this message translates to:
-  /// **'아직 대화가 없습니다'**
-  String get chatNoConversations;
-
-  /// No description provided for @noDialogueHistory.
-  ///
-  /// In ko, this message translates to:
-  /// **'대화 내역이 없습니다.'**
-  String get noDialogueHistory;
-
-  /// No description provided for @chatStartNewPrompt.
-  ///
-  /// In ko, this message translates to:
-  /// **'연습을 위해 새 대화를 시작해보세요!'**
-  String get chatStartNewPrompt;
-
-  /// No description provided for @chatFromConversation.
-  ///
-  /// In ko, this message translates to:
-  /// **'대화 발췌 ({speaker})'**
-  String chatFromConversation(Object speaker);
-
-  /// No description provided for @personaTeacher.
-  ///
-  /// In ko, this message translates to:
-  /// **'영어 선생님'**
-  String get personaTeacher;
-
-  /// No description provided for @personaGuide.
-  ///
-  /// In ko, this message translates to:
-  /// **'여행 가이드'**
-  String get personaGuide;
+  /// **'완벽해요!'**
+  String get perfect;
 
   /// No description provided for @personaFriend.
   ///
@@ -1896,113 +1506,35 @@ abstract class AppLocalizations {
   /// **'현지인 친구'**
   String get personaFriend;
 
-  /// No description provided for @chatUntitled.
+  /// No description provided for @personaGuide.
   ///
   /// In ko, this message translates to:
-  /// **'제목 없는 대화'**
-  String get chatUntitled;
+  /// **'여행 가이드'**
+  String get personaGuide;
 
-  /// No description provided for @chatAiChat.
+  /// No description provided for @personaTeacher.
   ///
   /// In ko, this message translates to:
-  /// **'채팅'**
-  String get chatAiChat;
+  /// **'영어 선생님'**
+  String get personaTeacher;
 
-  /// No description provided for @mode1SelectedMaterial.
+  /// No description provided for @playAgain.
   ///
   /// In ko, this message translates to:
-  /// **'현재 선택된 자료집: {name}'**
-  String mode1SelectedMaterial(Object name);
+  /// **'다시 하기'**
+  String get playAgain;
 
-  /// No description provided for @basicWordRepository.
+  /// TTS error message
   ///
   /// In ko, this message translates to:
-  /// **'기본 단어 저장소'**
-  String get basicWordRepository;
+  /// **'재생 실패: {error}'**
+  String playbackFailed(String error);
 
-  /// No description provided for @basicSentenceRepository.
+  /// TTS playing status
   ///
   /// In ko, this message translates to:
-  /// **'기본 문장 저장소'**
-  String get basicSentenceRepository;
-
-  /// No description provided for @chatEndTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'대화 종료 및 저장'**
-  String get chatEndTitle;
-
-  /// No description provided for @chatEndMessage.
-  ///
-  /// In ko, this message translates to:
-  /// **'대화를 종료하시겠습니까?'**
-  String get chatEndMessage;
-
-  /// No description provided for @chatSaveAndExit.
-  ///
-  /// In ko, this message translates to:
-  /// **'저장 후 종료'**
-  String get chatSaveAndExit;
-
-  /// No description provided for @errorSelectCategory.
-  ///
-  /// In ko, this message translates to:
-  /// **'먼저 단어나 문장을 선택하세요!'**
-  String get errorSelectCategory;
-
-  /// No description provided for @tutorialM1ToggleTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'단어/문장 모드'**
-  String get tutorialM1ToggleTitle;
-
-  /// No description provided for @tutorialM1ToggleDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'단어와 문장 모드를 여기서 전환하세요.'**
-  String get tutorialM1ToggleDesc;
-
-  /// No description provided for @metadataDialogTitle.
-  ///
-  /// In ko, this message translates to:
-  /// **'상세 분류'**
-  String get metadataDialogTitle;
-
-  /// No description provided for @tagFormal.
-  ///
-  /// In ko, this message translates to:
-  /// **'존댓말'**
-  String get tagFormal;
-
-  /// No description provided for @selectPOS.
-  ///
-  /// In ko, this message translates to:
-  /// **'품사 선택'**
-  String get selectPOS;
-
-  /// No description provided for @selectSentenceType.
-  ///
-  /// In ko, this message translates to:
-  /// **'문장 종류 선택'**
-  String get selectSentenceType;
-
-  /// No description provided for @metadataRootWord.
-  ///
-  /// In ko, this message translates to:
-  /// **'원형 (Root Word)'**
-  String get metadataRootWord;
-
-  /// No description provided for @posNoun.
-  ///
-  /// In ko, this message translates to:
-  /// **'명사'**
-  String get posNoun;
-
-  /// No description provided for @posVerb.
-  ///
-  /// In ko, this message translates to:
-  /// **'동사'**
-  String get posVerb;
+  /// **'재생 중...'**
+  String get playing;
 
   /// No description provided for @posAdjective.
   ///
@@ -2016,18 +1548,6 @@ abstract class AppLocalizations {
   /// **'부사'**
   String get posAdverb;
 
-  /// No description provided for @posPronoun.
-  ///
-  /// In ko, this message translates to:
-  /// **'대명사'**
-  String get posPronoun;
-
-  /// No description provided for @posPreposition.
-  ///
-  /// In ko, this message translates to:
-  /// **'전치사/조사'**
-  String get posPreposition;
-
   /// No description provided for @posConjunction.
   ///
   /// In ko, this message translates to:
@@ -2040,167 +1560,47 @@ abstract class AppLocalizations {
   /// **'감탄사'**
   String get posInterjection;
 
-  /// No description provided for @typeStatement.
+  /// No description provided for @posNoun.
   ///
   /// In ko, this message translates to:
-  /// **'평서문'**
-  String get typeStatement;
+  /// **'명사'**
+  String get posNoun;
 
-  /// No description provided for @typeQuestion.
+  /// No description provided for @posPreposition.
   ///
   /// In ko, this message translates to:
-  /// **'의문문'**
-  String get typeQuestion;
+  /// **'전치사/조사'**
+  String get posPreposition;
 
-  /// No description provided for @typeExclamation.
+  /// No description provided for @posPronoun.
   ///
   /// In ko, this message translates to:
-  /// **'감탄문'**
-  String get typeExclamation;
+  /// **'대명사'**
+  String get posPronoun;
 
-  /// No description provided for @typeImperative.
+  /// No description provided for @posVerb.
   ///
   /// In ko, this message translates to:
-  /// **'명령문'**
-  String get typeImperative;
+  /// **'동사'**
+  String get posVerb;
 
-  /// No description provided for @labelNote.
+  /// No description provided for @practiceModeTitle.
   ///
   /// In ko, this message translates to:
-  /// **'주석'**
-  String get labelNote;
+  /// **'발음 연습'**
+  String get practiceModeTitle;
 
-  /// No description provided for @labelShowMemorized.
+  /// No description provided for @practiceWordsOnly.
   ///
   /// In ko, this message translates to:
-  /// **'끝낸것'**
-  String get labelShowMemorized;
+  /// **'단어만 연습'**
+  String get practiceWordsOnly;
 
-  /// No description provided for @titleTagSelection.
+  /// Progress indicator
   ///
   /// In ko, this message translates to:
-  /// **'제목 태그 (자료집)'**
-  String get titleTagSelection;
-
-  /// No description provided for @generalTags.
-  ///
-  /// In ko, this message translates to:
-  /// **'일반 태그'**
-  String get generalTags;
-
-  /// No description provided for @tagSelection.
-  ///
-  /// In ko, this message translates to:
-  /// **'태그 선택'**
-  String get tagSelection;
-
-  /// No description provided for @metadataFormType.
-  ///
-  /// In ko, this message translates to:
-  /// **'문법 형태'**
-  String get metadataFormType;
-
-  /// No description provided for @formInfinitive.
-  ///
-  /// In ko, this message translates to:
-  /// **'원형/현재형'**
-  String get formInfinitive;
-
-  /// No description provided for @formPast.
-  ///
-  /// In ko, this message translates to:
-  /// **'과거형'**
-  String get formPast;
-
-  /// No description provided for @formPastParticiple.
-  ///
-  /// In ko, this message translates to:
-  /// **'과거분사'**
-  String get formPastParticiple;
-
-  /// No description provided for @formPresentParticiple.
-  ///
-  /// In ko, this message translates to:
-  /// **'현재분사 (ing)'**
-  String get formPresentParticiple;
-
-  /// No description provided for @formPresent.
-  ///
-  /// In ko, this message translates to:
-  /// **'현재형'**
-  String get formPresent;
-
-  /// No description provided for @formThirdPersonSingular.
-  ///
-  /// In ko, this message translates to:
-  /// **'3인칭 단수'**
-  String get formThirdPersonSingular;
-
-  /// No description provided for @formPlural.
-  ///
-  /// In ko, this message translates to:
-  /// **'복수형'**
-  String get formPlural;
-
-  /// No description provided for @formSingular.
-  ///
-  /// In ko, this message translates to:
-  /// **'단수형'**
-  String get formSingular;
-
-  /// No description provided for @caseSubject.
-  ///
-  /// In ko, this message translates to:
-  /// **'주격'**
-  String get caseSubject;
-
-  /// No description provided for @caseObject.
-  ///
-  /// In ko, this message translates to:
-  /// **'목적격'**
-  String get caseObject;
-
-  /// No description provided for @casePossessive.
-  ///
-  /// In ko, this message translates to:
-  /// **'소유격'**
-  String get casePossessive;
-
-  /// No description provided for @casePossessivePronoun.
-  ///
-  /// In ko, this message translates to:
-  /// **'소유대명사'**
-  String get casePossessivePronoun;
-
-  /// No description provided for @caseReflexive.
-  ///
-  /// In ko, this message translates to:
-  /// **'재귀대명사'**
-  String get caseReflexive;
-
-  /// No description provided for @formPositive.
-  ///
-  /// In ko, this message translates to:
-  /// **'원급'**
-  String get formPositive;
-
-  /// No description provided for @formComparative.
-  ///
-  /// In ko, this message translates to:
-  /// **'비교급'**
-  String get formComparative;
-
-  /// No description provided for @formSuperlative.
-  ///
-  /// In ko, this message translates to:
-  /// **'최상급'**
-  String get formSuperlative;
-
-  /// No description provided for @searchConditions.
-  ///
-  /// In ko, this message translates to:
-  /// **'검색 조건'**
-  String get searchConditions;
+  /// **'진행률: {current} / {total}'**
+  String progress(int current, int total);
 
   /// No description provided for @recentNItems.
   ///
@@ -2208,11 +1608,35 @@ abstract class AppLocalizations {
   /// **'최근 생성된 {count}개 보기'**
   String recentNItems(int count);
 
-  /// No description provided for @startsWith.
+  /// STT error message
   ///
   /// In ko, this message translates to:
-  /// **'시작 글자'**
-  String get startsWith;
+  /// **'음성 인식 실패: {error}'**
+  String recognitionFailed(String error);
+
+  /// STT complete status
+  ///
+  /// In ko, this message translates to:
+  /// **'인식 완료'**
+  String get recognized;
+
+  /// No description provided for @recognizedText.
+  ///
+  /// In ko, this message translates to:
+  /// **'인식된 발음:'**
+  String get recognizedText;
+
+  /// Delete success message
+  ///
+  /// In ko, this message translates to:
+  /// **'레코드가 삭제되었습니다'**
+  String get recordDeleted;
+
+  /// Refresh button
+  ///
+  /// In ko, this message translates to:
+  /// **'새로고침'**
+  String get refresh;
 
   /// No description provided for @reset.
   ///
@@ -2220,101 +1644,149 @@ abstract class AppLocalizations {
   /// **'초기화'**
   String get reset;
 
-  /// No description provided for @participantRename.
+  /// No description provided for @resetPracticeHistory.
   ///
   /// In ko, this message translates to:
-  /// **'참가자 이름 변경'**
-  String get participantRename;
+  /// **'연습 기록 초기화'**
+  String get resetPracticeHistory;
 
-  /// No description provided for @labelName.
+  /// No description provided for @retry.
   ///
   /// In ko, this message translates to:
-  /// **'이름'**
-  String get labelName;
+  /// **'다시 시도?'**
+  String get retry;
 
-  /// No description provided for @gender.
+  /// No description provided for @reviewAll.
   ///
   /// In ko, this message translates to:
-  /// **'성별'**
-  String get gender;
+  /// **'전체 복습'**
+  String get reviewAll;
 
-  /// No description provided for @language.
+  /// Review count display
   ///
   /// In ko, this message translates to:
-  /// **'언어'**
-  String get language;
+  /// **'복습 {count}회'**
+  String reviewCount(int count);
 
-  /// No description provided for @male.
+  /// No description provided for @reviewModeTitle.
   ///
   /// In ko, this message translates to:
-  /// **'남성'**
-  String get male;
+  /// **'복습'**
+  String get reviewModeTitle;
 
-  /// No description provided for @female.
+  /// No description provided for @roleAi.
   ///
   /// In ko, this message translates to:
-  /// **'여성'**
-  String get female;
+  /// **'AI'**
+  String get roleAi;
 
-  /// No description provided for @neutral.
+  /// No description provided for @roleThirdParty.
   ///
   /// In ko, this message translates to:
-  /// **'중성'**
-  String get neutral;
+  /// **'제삼자'**
+  String get roleThirdParty;
 
-  /// No description provided for @chatAllConversations.
+  /// No description provided for @roleUser.
   ///
   /// In ko, this message translates to:
-  /// **'전체 대화'**
-  String get chatAllConversations;
+  /// **'사용자'**
+  String get roleUser;
 
-  /// No description provided for @tabConversation.
+  /// No description provided for @save.
   ///
   /// In ko, this message translates to:
-  /// **'대화'**
-  String get tabConversation;
+  /// **'저장'**
+  String get save;
 
-  /// No description provided for @confirmDeleteConversation.
+  /// Save translation button
   ///
   /// In ko, this message translates to:
-  /// **'이 대화를 삭제하시겠습니까?\n삭제된 대화는 복구할 수 없습니다.'**
-  String get confirmDeleteConversation;
+  /// **'데이터 저장'**
+  String get saveData;
 
-  /// No description provided for @notSelected.
+  /// Save error message
   ///
   /// In ko, this message translates to:
-  /// **'- 선택 안함 -'**
-  String get notSelected;
+  /// **'저장 실패: {error}'**
+  String saveFailed(String error);
 
-  /// No description provided for @myWordbook.
+  /// Instruction to save data
   ///
   /// In ko, this message translates to:
-  /// **'나의 단어장'**
-  String get myWordbook;
+  /// **'검색 모드에서 번역을 저장해보세요'**
+  String get saveTranslationsFromSearch;
 
-  /// No description provided for @mySentenceCollection.
+  /// Data saved status
   ///
   /// In ko, this message translates to:
-  /// **'나의 문장집'**
-  String get mySentenceCollection;
+  /// **'저장 완료'**
+  String get saved;
 
-  /// No description provided for @newSubjectName.
+  /// Save in progress
   ///
   /// In ko, this message translates to:
-  /// **'새 단어장/문장집 제목'**
-  String get newSubjectName;
+  /// **'저장 중...'**
+  String get saving;
 
-  /// No description provided for @enterNewSubjectName.
+  /// No description provided for @score.
   ///
   /// In ko, this message translates to:
-  /// **'새 제목 입력'**
-  String get enterNewSubjectName;
+  /// **'정확도: {score}%'**
+  String score(String score);
 
-  /// No description provided for @addNewSubject.
+  /// No description provided for @scoreLabel.
   ///
   /// In ko, this message translates to:
-  /// **'새 제목 추가'**
-  String get addNewSubject;
+  /// **'점수'**
+  String get scoreLabel;
+
+  /// Search mode label
+  ///
+  /// In ko, this message translates to:
+  /// **'검색'**
+  String get search;
+
+  /// No description provided for @searchConditions.
+  ///
+  /// In ko, this message translates to:
+  /// **'검색 조건'**
+  String get searchConditions;
+
+  /// No description provided for @searchSentenceHint.
+  ///
+  /// In ko, this message translates to:
+  /// **'문장 검색...'**
+  String get searchSentenceHint;
+
+  /// No description provided for @searchWordHint.
+  ///
+  /// In ko, this message translates to:
+  /// **'단어 검색...'**
+  String get searchWordHint;
+
+  /// No description provided for @sectionSentence.
+  ///
+  /// In ko, this message translates to:
+  /// **'문장 섹션'**
+  String get sectionSentence;
+
+  /// Header for sentences section in material selection
+  ///
+  /// In ko, this message translates to:
+  /// **'문장'**
+  String get sectionSentences;
+
+  /// No description provided for @sectionWord.
+  ///
+  /// In ko, this message translates to:
+  /// **'단어 섹션'**
+  String get sectionWord;
+
+  /// Header for words section in material selection
+  ///
+  /// In ko, this message translates to:
+  /// **'단어'**
+  String get sectionWords;
 
   /// No description provided for @selectExistingSubject.
   ///
@@ -2322,17 +1794,227 @@ abstract class AppLocalizations {
   /// **'기존 제목 선택'**
   String get selectExistingSubject;
 
-  /// No description provided for @addTagHint.
+  /// Selection prompt
   ///
   /// In ko, this message translates to:
-  /// **'태그 추가...'**
-  String get addTagHint;
+  /// **'학습 자료를 선택하세요'**
+  String get selectMaterialPrompt;
 
-  /// No description provided for @save.
+  /// Title for the material selection dialog
   ///
   /// In ko, this message translates to:
-  /// **'저장'**
-  String get save;
+  /// **'학습 자료집 선택'**
+  String get selectMaterialSet;
+
+  /// No description provided for @selectPOS.
+  ///
+  /// In ko, this message translates to:
+  /// **'품사 선택'**
+  String get selectPOS;
+
+  /// No description provided for @selectParticipants.
+  ///
+  /// In ko, this message translates to:
+  /// **'참가자 선택'**
+  String get selectParticipants;
+
+  /// No description provided for @selectSentenceType.
+  ///
+  /// In ko, this message translates to:
+  /// **'문장 종류 선택'**
+  String get selectSentenceType;
+
+  /// Study material selector label
+  ///
+  /// In ko, this message translates to:
+  /// **'학습 자료 선택'**
+  String get selectStudyMaterial;
+
+  /// No description provided for @sendingMessage.
+  ///
+  /// In ko, this message translates to:
+  /// **'메시지 전송 중...'**
+  String get sendingMessage;
+
+  /// Toggle option for Sentence
+  ///
+  /// In ko, this message translates to:
+  /// **'문장'**
+  String get sentence;
+
+  /// No description provided for @signUp.
+  ///
+  /// In ko, this message translates to:
+  /// **'회원가입'**
+  String get signUp;
+
+  /// Duplicate detection title
+  ///
+  /// In ko, this message translates to:
+  /// **'유사한 텍스트 발견'**
+  String get similarTextFound;
+
+  /// Skip button
+  ///
+  /// In ko, this message translates to:
+  /// **'건너뛰기'**
+  String get skip;
+
+  /// Source label
+  ///
+  /// In ko, this message translates to:
+  /// **'출처:'**
+  String get source;
+
+  /// Source language label
+  ///
+  /// In ko, this message translates to:
+  /// **'원본 언어'**
+  String get sourceLanguage;
+
+  /// No description provided for @sourceLanguageLabel.
+  ///
+  /// In ko, this message translates to:
+  /// **'내 언어 (Source)'**
+  String get sourceLanguageLabel;
+
+  /// No description provided for @speakNow.
+  ///
+  /// In ko, this message translates to:
+  /// **'지금 말하세요!'**
+  String get speakNow;
+
+  /// Label for speaker selection
+  ///
+  /// In ko, this message translates to:
+  /// **'화자'**
+  String get speaker;
+
+  /// No description provided for @speakerSelect.
+  ///
+  /// In ko, this message translates to:
+  /// **'발화자 선택'**
+  String get speakerSelect;
+
+  /// No description provided for @speakingPractice.
+  ///
+  /// In ko, this message translates to:
+  /// **'말하기 연습'**
+  String get speakingPractice;
+
+  /// No description provided for @startChat.
+  ///
+  /// In ko, this message translates to:
+  /// **'대화 시작'**
+  String get startChat;
+
+  /// No description provided for @startPractice.
+  ///
+  /// In ko, this message translates to:
+  /// **'연습 시작'**
+  String get startPractice;
+
+  /// No description provided for @startTutorial.
+  ///
+  /// In ko, this message translates to:
+  /// **'튜토리얼 시작'**
+  String get startTutorial;
+
+  /// No description provided for @startWarning.
+  ///
+  /// In ko, this message translates to:
+  /// **'주의'**
+  String get startWarning;
+
+  /// No description provided for @startsWith.
+  ///
+  /// In ko, this message translates to:
+  /// **'시작 글자'**
+  String get startsWith;
+
+  /// No description provided for @statusCheckEmail.
+  ///
+  /// In ko, this message translates to:
+  /// **'이메일을 확인하여 인증을 완료해주세요.'**
+  String get statusCheckEmail;
+
+  /// No description provided for @statusDownloading.
+  ///
+  /// In ko, this message translates to:
+  /// **'다운로드 중: {name}...'**
+  String statusDownloading(Object name);
+
+  /// No description provided for @statusImportFailed.
+  ///
+  /// In ko, this message translates to:
+  /// **'가져오기 실패: {error}'**
+  String statusImportFailed(Object error);
+
+  /// No description provided for @statusImportSuccess.
+  ///
+  /// In ko, this message translates to:
+  /// **'{name} 가져오기 완료'**
+  String statusImportSuccess(Object name);
+
+  /// No description provided for @statusLoggingIn.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그인 중...'**
+  String get statusLoggingIn;
+
+  /// No description provided for @statusLoginCancelled.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그인이 취소되었습니다.'**
+  String get statusLoginCancelled;
+
+  /// No description provided for @statusLoginFailed.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그인 실패: {error}'**
+  String statusLoginFailed(Object error);
+
+  /// No description provided for @statusLoginSuccess.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그인에 성공했습니다.'**
+  String get statusLoginSuccess;
+
+  /// No description provided for @statusLogoutSuccess.
+  ///
+  /// In ko, this message translates to:
+  /// **'로그아웃되었습니다.'**
+  String get statusLogoutSuccess;
+
+  /// No description provided for @statusSignUpFailed.
+  ///
+  /// In ko, this message translates to:
+  /// **'회원가입 실패: {error}'**
+  String statusSignUpFailed(Object error);
+
+  /// No description provided for @statusSigningUp.
+  ///
+  /// In ko, this message translates to:
+  /// **'회원가입 중...'**
+  String get statusSigningUp;
+
+  /// No description provided for @stopPractice.
+  ///
+  /// In ko, this message translates to:
+  /// **'연습 중지'**
+  String get stopPractice;
+
+  /// Study complete button text
+  ///
+  /// In ko, this message translates to:
+  /// **'학습 완료'**
+  String get studyComplete;
+
+  /// Study records title with count
+  ///
+  /// In ko, this message translates to:
+  /// **'학습 기록 ({count})'**
+  String studyRecords(int count);
 
   /// No description provided for @styleFormal.
   ///
@@ -2358,125 +2040,521 @@ abstract class AppLocalizations {
   /// **'슬랭/속어'**
   String get styleSlang;
 
-  /// No description provided for @statusDownloading.
+  /// Subject label
   ///
   /// In ko, this message translates to:
-  /// **'다운로드 중: {name}...'**
-  String statusDownloading(Object name);
+  /// **'제목:'**
+  String get subject;
 
-  /// No description provided for @statusImportSuccess.
+  /// No description provided for @swapLanguages.
   ///
   /// In ko, this message translates to:
-  /// **'{name} 가져오기 완료'**
-  String statusImportSuccess(Object name);
+  /// **'언어 전환'**
+  String get swapLanguages;
 
-  /// No description provided for @statusImportFailed.
+  /// Tooltip for switching to AI mode
   ///
   /// In ko, this message translates to:
-  /// **'가져오기 실패: {error}'**
-  String statusImportFailed(Object error);
+  /// **'AI 모드로 전환'**
+  String get switchToAi;
 
-  /// No description provided for @statusLoginSuccess.
+  /// Tooltip for switching to Partner mode
   ///
   /// In ko, this message translates to:
-  /// **'로그인에 성공했습니다.'**
-  String get statusLoginSuccess;
+  /// **'파트너 모드로 전환'**
+  String get switchToPartner;
 
-  /// No description provided for @statusLoginFailed.
+  /// No description provided for @syncingData.
   ///
   /// In ko, this message translates to:
-  /// **'로그인 실패: {error}'**
-  String statusLoginFailed(Object error);
+  /// **'데이터 동기화 중...'**
+  String get syncingData;
 
-  /// No description provided for @statusLoginCancelled.
+  /// No description provided for @tabConversation.
   ///
   /// In ko, this message translates to:
-  /// **'로그인이 취소되었습니다.'**
-  String get statusLoginCancelled;
+  /// **'대화'**
+  String get tabConversation;
 
-  /// No description provided for @statusLoggingIn.
+  /// Review tab label with count
   ///
   /// In ko, this message translates to:
-  /// **'로그인 중...'**
-  String get statusLoggingIn;
+  /// **'복습 ({count})'**
+  String tabReview(int count);
 
-  /// No description provided for @statusLogoutSuccess.
+  /// No description provided for @tabSentence.
   ///
   /// In ko, this message translates to:
-  /// **'로그아웃되었습니다.'**
-  String get statusLogoutSuccess;
+  /// **'문장'**
+  String get tabSentence;
 
-  /// No description provided for @email.
+  /// No description provided for @tabSpeaking.
   ///
   /// In ko, this message translates to:
-  /// **'이메일'**
-  String get email;
+  /// **'말하기'**
+  String get tabSpeaking;
 
-  /// No description provided for @password.
+  /// Study material tab label with count
   ///
   /// In ko, this message translates to:
-  /// **'비밀번호'**
-  String get password;
+  /// **'학습 자료 ({count})'**
+  String tabStudyMaterial(int count);
 
-  /// No description provided for @login.
+  /// No description provided for @tabWord.
   ///
   /// In ko, this message translates to:
-  /// **'로그인'**
-  String get login;
+  /// **'단어'**
+  String get tabWord;
 
-  /// No description provided for @signUp.
+  /// No description provided for @tagFormal.
   ///
   /// In ko, this message translates to:
-  /// **'회원가입'**
-  String get signUp;
+  /// **'존댓말'**
+  String get tagFormal;
 
-  /// No description provided for @dontHaveAccount.
+  /// No description provided for @tagSelection.
   ///
   /// In ko, this message translates to:
-  /// **'계정이 없으신가요?'**
-  String get dontHaveAccount;
+  /// **'태그 선택'**
+  String get tagSelection;
 
-  /// No description provided for @alreadyHaveAccount.
+  /// Target language label
   ///
   /// In ko, this message translates to:
-  /// **'이미 계정이 있으신가요?'**
-  String get alreadyHaveAccount;
+  /// **'대상 언어'**
+  String get targetLanguage;
 
-  /// No description provided for @invalidEmail.
+  /// Language filter label
   ///
   /// In ko, this message translates to:
-  /// **'유효한 이메일을 입력하세요.'**
-  String get invalidEmail;
+  /// **'대상 언어 필터:'**
+  String get targetLanguageFilter;
 
-  /// No description provided for @passwordTooShort.
+  /// No description provided for @targetLanguageLabel.
   ///
   /// In ko, this message translates to:
-  /// **'비밀번호는 6자 이상이어야 합니다.'**
-  String get passwordTooShort;
+  /// **'학습 언어 (Target)'**
+  String get targetLanguageLabel;
 
-  /// No description provided for @statusSigningUp.
+  /// No description provided for @thinkingTimeDesc.
   ///
   /// In ko, this message translates to:
-  /// **'회원가입 중...'**
-  String get statusSigningUp;
+  /// **'정답이 공개되기 전 생각할 시간입니다.'**
+  String get thinkingTimeDesc;
 
-  /// No description provided for @statusSignUpFailed.
+  /// No description provided for @thinkingTimeInterval.
   ///
   /// In ko, this message translates to:
-  /// **'회원가입 실패: {error}'**
-  String statusSignUpFailed(Object error);
+  /// **'재생 시차'**
+  String get thinkingTimeInterval;
 
-  /// No description provided for @statusCheckEmail.
+  /// No description provided for @timeUp.
   ///
   /// In ko, this message translates to:
-  /// **'이메일을 확인하여 인증을 완료해주세요.'**
-  String get statusCheckEmail;
+  /// **'시간 초과!'**
+  String get timeUp;
 
-  /// No description provided for @emailAlreadyInUse.
+  /// No description provided for @titleFormat.
   ///
   /// In ko, this message translates to:
-  /// **'이미 등록된 이메일입니다. 로그인하거나 비밀번호 찾기를 이용해주세요.'**
-  String get emailAlreadyInUse;
+  /// **'{type}: {materialName}'**
+  String titleFormat(Object materialName, Object type);
+
+  /// No description provided for @titleTagSelection.
+  ///
+  /// In ko, this message translates to:
+  /// **'제목 태그 (자료집)'**
+  String get titleTagSelection;
+
+  /// No description provided for @tooltipDecrease.
+  ///
+  /// In ko, this message translates to:
+  /// **'감소'**
+  String get tooltipDecrease;
+
+  /// No description provided for @tooltipIncrease.
+  ///
+  /// In ko, this message translates to:
+  /// **'증가'**
+  String get tooltipIncrease;
+
+  /// No description provided for @tooltipSearch.
+  ///
+  /// In ko, this message translates to:
+  /// **'검색'**
+  String get tooltipSearch;
+
+  /// No description provided for @tooltipSpeaking.
+  ///
+  /// In ko, this message translates to:
+  /// **'말하기'**
+  String get tooltipSpeaking;
+
+  /// No description provided for @tooltipStudyReview.
+  ///
+  /// In ko, this message translates to:
+  /// **'학습+복습'**
+  String get tooltipStudyReview;
+
+  /// Total records count
+  ///
+  /// In ko, this message translates to:
+  /// **'총 {count}개의 기록 (전체 보기)'**
+  String totalRecords(int count);
+
+  /// Translate button
+  ///
+  /// In ko, this message translates to:
+  /// **'번역'**
+  String get translate;
+
+  /// Translation in progress
+  ///
+  /// In ko, this message translates to:
+  /// **'번역 중...'**
+  String get translating;
+
+  /// Label for translation toggle
+  ///
+  /// In ko, this message translates to:
+  /// **'번역'**
+  String get translation;
+
+  /// Translation done status
+  ///
+  /// In ko, this message translates to:
+  /// **'번역 완료 (저장 필요)'**
+  String get translationComplete;
+
+  /// Translation error
+  ///
+  /// In ko, this message translates to:
+  /// **'번역 실패: {error}'**
+  String translationFailed(String error);
+
+  /// No description provided for @translationLimitExceeded.
+  ///
+  /// In ko, this message translates to:
+  /// **'번역 한도 초과'**
+  String get translationLimitExceeded;
+
+  /// No description provided for @translationLimitMessage.
+  ///
+  /// In ko, this message translates to:
+  /// **'일일 무료 번역(5회)을 모두 사용했습니다.\\n\\n광고를 보고 5회를 즉시 충전하시겠습니까?'**
+  String get translationLimitMessage;
+
+  /// Existing translation loaded
+  ///
+  /// In ko, this message translates to:
+  /// **'저장된 번역 불러옴'**
+  String get translationLoaded;
+
+  /// No description provided for @translationRefilled.
+  ///
+  /// In ko, this message translates to:
+  /// **'번역 횟수가 5회 충전되었습니다!'**
+  String get translationRefilled;
+
+  /// No description provided for @translationResultHint.
+  ///
+  /// In ko, this message translates to:
+  /// **'번역 결과 - 수정 가능함'**
+  String get translationResultHint;
+
+  /// No description provided for @tryAgain.
+  ///
+  /// In ko, this message translates to:
+  /// **'다시 시도'**
+  String get tryAgain;
+
+  /// No description provided for @tutorialAiChatDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'AI 페르소나와 실전 대화를 연습해 보세요.'**
+  String get tutorialAiChatDesc;
+
+  /// No description provided for @tutorialAiChatTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'AI 채팅'**
+  String get tutorialAiChatTitle;
+
+  /// No description provided for @tutorialContextDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'같은 문장이라도 상황(예: 아침, 저녁)을 적어두면 별도로 저장할 수 있어요.'**
+  String get tutorialContextDesc;
+
+  /// No description provided for @tutorialContextTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'상황/문맥 태그'**
+  String get tutorialContextTitle;
+
+  /// No description provided for @tutorialLangSettingsDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'번역할 원본 언어와 대상 언어를 설정합니다.'**
+  String get tutorialLangSettingsDesc;
+
+  /// No description provided for @tutorialLangSettingsTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'언어 설정'**
+  String get tutorialLangSettingsTitle;
+
+  /// No description provided for @tutorialM1ToggleDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'단어와 문장 모드를 여기서 전환하세요.'**
+  String get tutorialM1ToggleDesc;
+
+  /// No description provided for @tutorialM1ToggleTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'단어/문장 모드'**
+  String get tutorialM1ToggleTitle;
+
+  /// No description provided for @tutorialM2DropdownDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'상단 메뉴를 통해 학습할 자료를 선택할 수 있습니다.'**
+  String get tutorialM2DropdownDesc;
+
+  /// No description provided for @tutorialM2ImportDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'기기의 폴더에서 JSON 파일을 불러옵니다.'**
+  String get tutorialM2ImportDesc;
+
+  /// No description provided for @tutorialM2ListDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'저장된 항목을 확인하고 뒤집어보세요. 카드를 길게 누르면 삭제할 수 있습니다.'**
+  String get tutorialM2ListDesc;
+
+  /// No description provided for @tutorialM2ListTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'학습 목록'**
+  String get tutorialM2ListTitle;
+
+  /// No description provided for @tutorialM2SearchDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'저장된 단어와 문장을 검색하여 빠르게 찾을 수 있습니다.'**
+  String get tutorialM2SearchDesc;
+
+  /// No description provided for @tutorialM2SelectDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'우측 상단 메뉴(⋮)를 눌러 학습할 자료집을 선택하거나 온라인 자료실을 이용하세요.'**
+  String get tutorialM2SelectDesc;
+
+  /// No description provided for @tutorialM2SelectTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'자료집 선택'**
+  String get tutorialM2SelectTitle;
+
+  /// No description provided for @tutorialM3IntervalDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'문장 사이의 대기 시간을 조절합니다.'**
+  String get tutorialM3IntervalDesc;
+
+  /// No description provided for @tutorialM3IntervalTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'간격 설정'**
+  String get tutorialM3IntervalTitle;
+
+  /// No description provided for @tutorialM3ResetDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'태그를 선택하거나 암기한 항목 제외 등 연습 대상을 자유롭게 설정할 수 있습니다.'**
+  String get tutorialM3ResetDesc;
+
+  /// No description provided for @tutorialM3ResetTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'필터 및 설정'**
+  String get tutorialM3ResetTitle;
+
+  /// No description provided for @tutorialM3SelectDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'우측 상단 메뉴(⋮)에서 연습하고 싶은 자료집을 선택하세요.'**
+  String get tutorialM3SelectDesc;
+
+  /// No description provided for @tutorialM3SelectTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'자료 선택'**
+  String get tutorialM3SelectTitle;
+
+  /// No description provided for @tutorialM3StartDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'재생 버튼을 눌러 원어민 음성을 듣고 따라하세요.'**
+  String get tutorialM3StartDesc;
+
+  /// No description provided for @tutorialM3StartTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'연습 시작'**
+  String get tutorialM3StartTitle;
+
+  /// No description provided for @tutorialM3WordsDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'체크하면 저장된 단어만 연습합니다.'**
+  String get tutorialM3WordsDesc;
+
+  /// No description provided for @tutorialM3WordsTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'단어 연습'**
+  String get tutorialM3WordsTitle;
+
+  /// No description provided for @tutorialMicDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'마이크 버튼을 눌러 음성으로 입력할 수 있습니다.'**
+  String get tutorialMicDesc;
+
+  /// No description provided for @tutorialMicTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'음성 입력'**
+  String get tutorialMicTitle;
+
+  /// No description provided for @tutorialSaveDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'번역된 결과를 학습 기록에 저장하세요.'**
+  String get tutorialSaveDesc;
+
+  /// No description provided for @tutorialSaveTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'저장하기'**
+  String get tutorialSaveTitle;
+
+  /// No description provided for @tutorialSwapDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'내 언어와 학습 언어를 서로 바꿉니다.'**
+  String get tutorialSwapDesc;
+
+  /// No description provided for @tutorialTabDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'여기서 원하는 학습 모드를 선택할 수 있습니다.'**
+  String get tutorialTabDesc;
+
+  /// No description provided for @tutorialTapToContinue.
+  ///
+  /// In ko, this message translates to:
+  /// **'화면을 탭하여 계속'**
+  String get tutorialTapToContinue;
+
+  /// No description provided for @tutorialTransDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'입력한 텍스트를 번역합니다.'**
+  String get tutorialTransDesc;
+
+  /// No description provided for @tutorialTransTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'번역하기'**
+  String get tutorialTransTitle;
+
+  /// No description provided for @typeExclamation.
+  ///
+  /// In ko, this message translates to:
+  /// **'감탄문'**
+  String get typeExclamation;
+
+  /// No description provided for @typeImperative.
+  ///
+  /// In ko, this message translates to:
+  /// **'명령문'**
+  String get typeImperative;
+
+  /// No description provided for @typeQuestion.
+  ///
+  /// In ko, this message translates to:
+  /// **'의문문'**
+  String get typeQuestion;
+
+  /// No description provided for @typeStatement.
+  ///
+  /// In ko, this message translates to:
+  /// **'평서문'**
+  String get typeStatement;
+
+  /// No description provided for @usageLimitTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'한도 도달'**
+  String get usageLimitTitle;
+
+  /// Use existing text button
+  ///
+  /// In ko, this message translates to:
+  /// **'기존 텍스트 사용'**
+  String get useExistingText;
+
+  /// No description provided for @viewOnlineGuide.
+  ///
+  /// In ko, this message translates to:
+  /// **'온라인 가이드 보기'**
+  String get viewOnlineGuide;
+
+  /// No description provided for @voluntaryTranslations.
+  ///
+  /// In ko, this message translates to:
+  /// **'자발적 번역'**
+  String get voluntaryTranslations;
+
+  /// No description provided for @watchAdAndRefill.
+  ///
+  /// In ko, this message translates to:
+  /// **'광고 보고 충전 (+5회)'**
+  String get watchAdAndRefill;
+
+  /// Toggle option for Word
+  ///
+  /// In ko, this message translates to:
+  /// **'단어'**
+  String get word;
+
+  /// No description provided for @wordDefenseDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'적이 도착하기 전에 단어를 말해서 기지를 방어하세요.'**
+  String get wordDefenseDesc;
+
+  /// No description provided for @wordDefenseTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'단어 디펜스'**
+  String get wordDefenseTitle;
+
+  /// No description provided for @wordModeLabel.
+  ///
+  /// In ko, this message translates to:
+  /// **'단어 모드'**
+  String get wordModeLabel;
+
+  /// No description provided for @yourPronunciation.
+  ///
+  /// In ko, this message translates to:
+  /// **'내 발음'**
+  String get yourPronunciation;
 }
 
 class _AppLocalizationsDelegate

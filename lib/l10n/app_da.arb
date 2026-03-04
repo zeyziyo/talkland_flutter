@@ -1,188 +1,105 @@
 {
   "@@locale": "da",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Fortsæt med Kakao",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Hjælp & Guide",
-  "helpTabModes": "Tilstande",
-  "helpTabJson": "JSON Format",
-  "helpTabTour": "Tur",
-  "helpMode1Desc": "Talegenkendelse, oversættelse og lyt til resultat.",
-  "helpMode1Details": "• Stemme: Tryk mikrofon for start/stop\n• Tekst: Skriv direkte for at oversætte\n• Auto-Søg: Finder lignende sætninger\n• Oversæt: Knap for øjeblikkelig oversættelse\n• Lyt: Højttalerikon for TTS\n• Gem: Tilføjer til historik\n• Ryd: Nulstil alt",
-  "helpMode2Desc": "Gennemgå gemte sætninger med skjult oversættelse.",
-  "helpMode2Details": "• Vælg: Vælg sæt eller 'Alle'\n• Vend: 'Vis/Skjul' oversættelse\n• Lyt: Afspil TTS for sætning\n• Marker: Flueben (V) for færdige\n• Slet: Langt tryk for at slette\n• Filter: Vis alle eller efter materiale",
-  "helpMode3Desc": "Øv din udtale ved at lytte til sætninger og gentage dem (Shadowing).",
-  "helpMode3Details": "• Vælg: Vælg pakke\n• Interval: [-] [+] ventetid (3s-60s)\n• Start/Stop: Kontroller session\n• Tal: Lyt og gentag\n• Score: Nøjagtighed (0-100)\n• Prøv igen: Knap hvis stemme ej fundet",
-  "helpModeChatDesc": "Øv dig i praktisk samtale ved at tale med en AI-persona.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "For import i Tilstand 3, opret JSON:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Placering",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Nøjagtighed",
+  "adLoading": "Indlæser annonce. Prøv igen om et øjeblik.",
+  "addNewSubject": "Tilføj ny overskrift",
+  "addParticipant": "Tilføj deltager",
+  "addTagHint": "Tilføj tag...",
+  "alreadyHaveAccount": "Har du allerede en konto?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Gennemgang ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Afspil automatisk",
+  "basic": "Grundlæggende",
+  "basicDefault": "Grundlæggende",
+  "basicMaterialRepository": "Grundlæggende ord-/sætningslager",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Materiale ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Grundlæggende sætningsarkiv",
+  "basicSentences": "Grundlæggende sætningslager",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Gennemgang",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Søg",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Oversæt",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Lyt",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Gem",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Gemt",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Slet",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Materialeinfo",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Grundlæggende ordarkiv",
+  "basicWords": "Grundlæggende ordlager",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Annuller",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "OK",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Opdater",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Optegnelser ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Akkusativ",
+  "casePossessive": "Genitiv",
+  "casePossessivePronoun": "Possessivt pronomen",
+  "caseReflexive": "Refleksivt pronomen",
+  "caseSubject": "Nominativ",
+  "chatAiChat": "Chat",
+  "chatAllConversations": "Alle samtaler",
+  "chatChoosePersona": "Vælg persona",
+  "chatEndMessage": "Vil du afslutte samtalen?",
+  "chatEndTitle": "Afslut og gem samtale",
+  "chatFailed": "Chat mislykkedes: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Målsprog Filter:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Uddrag fra samtale ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Ingen optegnelser for valgt sprog",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Chathistorik",
+  "chatNew": "Ny chat",
+  "chatNewChat": "Ny chat",
+  "chatNoConversations": "Ingen samtaler endnu",
+  "chatSaveAndExit": "Gem og afslut",
+  "chatStartNewPrompt": "Start en ny samtale for at øve dig!",
+  "chatTypeHint": "Skriv en besked...",
+  "chatUntitled": "Unavngivet samtale",
+  "checking": "Tjekker...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Gem oversættelser fra søgetilstand",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Vend",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Skjul",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Slet Optegnelse",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "모두 지우기",
+  "confirm": "Bekræft",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Er du sikker på at slette denne optegnelse?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Optegnelse slettet",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Er du sikker på, at du vil slette denne samtale?\nSlettede samtaler kan ikke gendannes.",
+  "confirmDeleteParticipant": "Vil du slette denne deltager?",
+  "contextTagHint": "Skriv situationen ned for at gøre det lettere at skelne den senere",
+  "contextTagLabel": "Kontekst/situation (valgfrit) - f.eks. morgenhilsen, høflig tale",
+  "copiedToClipboard": "Kopieret til udklipsholder!",
+  "copy": "Kopiér",
+  "correctAnswer": "Rigtigt Svar",
+  "createNew": "Opret Ny",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Nuværende placering",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Aktuelt valgte materiale:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Slet",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Sletning fejlede: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Importer JSON",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Slet Optegnelse",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "Importerer...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Øv dig i samtaler gennem rollespil. Vælg og sig det passende svar.",
+  "dialogueQuestTitle": "Dialog-quest",
+  "disambiguationPrompt": "어떤 의미로 번역하시겠습니까?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "의미 선택",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Har du ikke en konto?",
+  "editParticipant": "Rediger deltager",
+  "email": "E-mail",
+  "emailAlreadyInUse": "Denne e-mailadresse er allerede i brug. Log ind, eller brug 'Glemt kodeord'.",
+  "enterNewSubjectName": "Indtast ny overskrift",
+  "enterSentenceHint": "Indtast en sætning...",
+  "enterTextHint": "Indtast tekst for at oversætte",
+  "enterTextToTranslate": "Indtast tekst til oversættelse",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Indtast et ord...",
+  "error": "Fejl",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "혐오 표현이 포함되어 있어 번역할 수 없습니다.",
+  "errorOtherSafety": "AI 안전 정책에 의해 번역이 거부되었습니다.",
+  "errorProfanity": "비속어가 포함되어 있어 번역할 수 없습니다.",
+  "errorSelectCategory": "Vælg et ord eller en sætning først!",
+  "errorSexualContent": "선정적인 내용이 포함되어 있어 번역할 수 없습니다.",
+  "errors": "Fejl:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Kvinde",
+  "file": "Fil:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Alle",
+  "flip": "Vend",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Komparativ",
+  "formInfinitive": "Infinitiv/nutid",
+  "formPast": "Datid",
+  "formPastParticiple": "Perfektum participium",
+  "formPlural": "Flertal",
+  "formPositive": "Positiv",
+  "formPresent": "Nutid",
+  "formPresentParticiple": "Nutids participium (ing)",
+  "formSingular": "Ental",
+  "formSuperlative": "Superlativ",
+  "formThirdPersonSingular": "3. person ental",
+  "gameModeDesc": "Vælg den spiltilstand, du vil øve dig i",
+  "gameModeTitle": "Spiltilstand",
+  "gameOver": "Spillet er slut",
+  "gender": "Køn",
+  "generalTags": "Generelle tags",
+  "getMaterials": "Hent materialer",
+  "good": "Godt",
+  "googleContinue": "Fortsæt med Google",
+  "helpDialogueImportDesc": "Importer et helt dialogsæt med en JSON-fil.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "For import i Tilstand 3, opret JSON:",
+  "helpJsonTypeDialogue": "Dialog (Dialogue)",
+  "helpJsonTypeSentence": "Sætning (Sentence)",
+  "helpJsonTypeWord": "Ord (Word)",
+  "helpMode1Desc": "Talegenkendelse, oversættelse og lyt til resultat.",
+  "helpMode1Details": "• Stemme: Tryk mikrofon for start/stop\n• Tekst: Skriv direkte for at oversætte\n• Auto-Søg: Finder lignende sætninger\n• Oversæt: Knap for øjeblikkelig oversættelse\n• Lyt: Højttalerikon for TTS\n• Gem: Tilføjer til historik\n• Ryd: Nulstil alt",
+  "helpMode2Desc": "Gennemgå gemte sætninger med skjult oversættelse.",
+  "helpMode2Details": "• Vælg: Vælg sæt eller 'Alle'\n• Vend: 'Vis/Skjul' oversættelse\n• Lyt: Afspil TTS for sætning\n• Marker: Flueben (V) for færdige\n• Slet: Langt tryk for at slette\n• Filter: Vis alle eller efter materiale",
+  "helpMode3Desc": "Øv din udtale ved at lytte til sætninger og gentage dem (Shadowing).",
+  "helpMode3Details": "• Vælg: Vælg pakke\n• Interval: [-] [+] ventetid (3s-60s)\n• Start/Stop: Kontroller session\n• Tal: Lyt og gentag\n• Score: Nøjagtighed (0-100)\n• Prøv igen: Knap hvis stemme ej fundet",
+  "helpModeChatDesc": "Øv dig i praktisk samtale ved at tale med en AI-persona.",
+  "helpModeChatDetails": "• AI-chat: Øv dig i samtaler med en persona.\n• Deltagerstyring: Indstil dine sprog og AI's sprog separat for at undgå sprogforskelle.\n• GPS-rollespil: Skab naturlige samtalesituationer baseret på din nuværende placering.\n• Logføring: Alle samtaler gemmes sikkert baseret på ID, og loggen bevares, selvom du ændrer navn.",
+  "helpTabJson": "JSON-format",
+  "helpTabModes": "Tilstande",
+  "helpTabTour": "Tur",
+  "helpTitle": "Hjælp & Guide",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "Skjul",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Tilføjet: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Import Færdig",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Et materiale med samme titel findes allerede. Prøv igen efter at have ændret titlen.",
+  "importErrorMessage": "Kunne ikke importere fil:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Import Fejlede",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Total: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Importer JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Tilføjet: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Venligst importer en JSON fil",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Sprunget over: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Fejl:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Total: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Fejl",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "Importerer...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Kunne ikke importere fil:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "입력",
+  "intervalSeconds": "Interval: {seconds} sekunder",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Indtast en gyldig e-mail.",
+  "kakaoContinue": "Fortsæt med Kakao",
+  "labelLangCode": "Sprogkode (f.eks. en-US, ko-KR)",
+  "labelName": "Navn",
+  "labelNote": "Note",
+  "labelPOS": "Ordart",
+  "labelRole": "Rolle",
+  "labelSentence": "Sætning",
+  "labelSentenceCollection": "Sætningssamling",
+  "labelSentenceType": "Sætningstype",
+  "labelShowMemorized": "Færdig",
+  "labelType": "Type:",
+  "labelWord": "Ord",
+  "labelWordbook": "Ordbog",
+  "language": "Sprog",
+  "languageSettings": "Sprogindstillinger",
+  "languageSettingsTitle": "Sprogindstillinger",
+  "libTitleFirstMeeting": "Første møde",
+  "libTitleGreetings1": "Hilsner 1",
+  "libTitleNouns1": "Substantiver 1",
+  "libTitleVerbs1": "Verber 1",
+  "listen": "Lyt",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Lytter...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Indlæser deltagere...",
+  "location": "Placering",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Log ind",
+  "logout": "Log ud",
+  "logoutConfirmMessage": "Er du sikker på, at du vil logge ud af denne enhed?",
+  "logoutConfirmTitle": "Log ud",
+  "male": "Mand",
+  "manageParticipants": "Administrer deltagere",
+  "manual": "Manuel input",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Marker som Studeret",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Materialeinfo",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Mig",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Importer materiale fra enhed",
+  "menuHelp": "Hjælp",
+  "menuLanguageSettings": "Sprogindstillinger",
+  "menuOnlineLibrary": "Online bibliotek",
+  "menuSelectMaterialSet": "Vælg et studiemateriale",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Vejledningstur",
+  "menuWebDownload": "Brugervejledning",
+  "metadataDialogTitle": "Detaljeret klassificering",
+  "metadataFormType": "Grammatisk form",
+  "metadataRootWord": "Rodform (Root Word)",
+  "micButtonTooltip": "Start stemmegenkendelse",
+  "mode1SelectedMaterial": "Aktuelt valgte materiale: {name}",
+  "mode2Title": "Gennemgang",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Næste",
+  "mode3Start": "Start",
+  "mode3Stop": "Stop",
+  "mode3TryAgain": "Prøv igen",
+  "mySentenceCollection": "Min sætningssamling",
+  "myWordbook": "Min ordbog",
+  "neutral": "Neutral",
+  "newSubjectName": "Nyt emneoverskrift",
+  "next": "Næste",
+  "noDialogueHistory": "Ingen dialoghistorik.",
+  "noInternetWarningMic": "Ingen internetforbindelse. Stemmegenkendelse er muligvis ikke tilgængelig i offline-tilstand.",
+  "noInternetWarningTranslate": "Ingen internetforbindelse. Oversættelsesfunktionen er ikke tilgængelig i offline-tilstand. Brug venligst repetitionstilstanden.",
+  "noMaterialsInCategory": "Der er intet materiale i denne kategori.",
+  "noParticipantsFound": "Ingen registrerede deltagere.",
+  "noRecords": "Ingen optegnelser for valgt sprog",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Intet studiemateriale.",
+  "noTextToPlay": "Ingen tekst at afspille",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Ingen oversættelse at gemme",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Ingen stemme registreret",
+  "notSelected": "- Ikke valgt -",
+  "onlineLibraryCheckInternet": "Tjek din internetforbindelse eller prøv igen senere.",
+  "onlineLibraryLoadFailed": "Kunne ikke indlæse materialet.",
+  "onlineLibraryNoMaterials": "Intet materiale tilgængeligt.",
+  "participantDeleted": "Deltageren er blevet slettet.",
+  "participantRename": "Omdøb deltager",
+  "partner": "Partner",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Partnertilstand",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Adgangskode",
+  "passwordTooShort": "Adgangskoden skal være mindst 6 tegn.",
+  "perfect": "Perfekt!",
+  "personaFriend": "Lokal ven",
+  "personaGuide": "Rejseguide",
+  "personaTeacher": "Engelsklærer",
+  "playAgain": "Spil igen",
+  "playbackFailed": "Afspilning fejlede: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Vælg Materiale",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Afspiller...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Emne:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Kilde:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "Fil:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Adjektiv",
+  "posAdverb": "Adverbium",
+  "posConjunction": "Konjunktion",
+  "posInterjection": "Interjektion",
+  "posNoun": "Substantiv",
+  "posPreposition": "Præposition",
+  "posPronoun": "Pronomen",
+  "posVerb": "Verbum",
+  "practiceModeTitle": "Øvelse",
+  "practiceWordsOnly": "Kun øve ord",
   "progress": "Fremskridt: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Venligst importer en JSON fil",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Venligst vælg studiemateriale",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Studeret",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Marker som Studeret",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Lytter...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Genkendelse færdig",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Vis de seneste {count} elementer",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Talegenkendelse fejlede: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Tjekker...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Genkendelse færdig",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Oversætter...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Genkendt udtale:",
+  "recordDeleted": "Optegnelse slettet",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Oversættelse færdig (kræver gem)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Opdater",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Gemt oversættelse indlæst",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Oversættelse fejlede: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Nulstil",
+  "resetPracticeHistory": "Nulstil øvelseshistorik",
+  "retry": "Prøv igen?",
+  "reviewAll": "Gennemgå alle",
+  "reviewCount": "Gennemgået {count} gange",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Indtast tekst til oversættelse",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Gemmer...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Ingen oversættelse at gemme",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "복습",
+  "roleAi": "AI",
+  "roleThirdParty": "Tredjepart",
+  "roleUser": "Bruger",
+  "save": "Gem",
+  "saveData": "Gem",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Gem fejlede: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Afspiller...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Gem oversættelser fra søgetilstand",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Ingen tekst at afspille",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Gemt",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Afspilning fejlede: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Gemmer...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Kildesprog",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Målsprog",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Lignende tekst fundet",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Brug Eksisterende",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Opret Ny",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Gennemgået {count} gange",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Tale",
-  "speakingPractice": "Taleøvelse",
-  "intervalSeconds": "Interval: {seconds}s",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Din udtale",
-  "correctAnswer": "Rigtigt Svar",
   "score": "Nøjagtighed: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "Perfekt!",
-  "good": "Godt",
-  "tryAgain": "Prøv igen",
-  "startPractice": "Start Øvelse",
-  "stopPractice": "Stop",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Start Tur",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Stemmeindput",
-  "tutorialMicDesc": "Tryk på mikrofonen for stemmeindput.",
-  "tutorialTabDesc": "Her kan du vælge den ønskede læringstilstand.",
-  "tutorialTapToContinue": "Tryk for at fortsætte",
-  "tutorialTransTitle": "Oversæt",
-  "tutorialTransDesc": "Tryk her for at oversætte tekst.",
-  "tutorialSaveTitle": "Gem",
-  "tutorialSaveDesc": "Gem din oversættelse.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Score",
+  "search": "Søg",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Søgekriterier",
+  "searchSentenceHint": "Søg i sætninger...",
+  "searchWordHint": "Søg i ord...",
+  "sectionSentence": "Sætningsafsnit",
+  "sectionSentences": "문장",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Ordsektion",
+  "sectionWords": "단어",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Vælg eksisterende overskrift",
+  "selectMaterialPrompt": "Venligst vælg studiemateriale",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "학습 자료집 선택",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Vælg ordklasse",
+  "selectParticipants": "Vælg deltagere",
+  "selectSentenceType": "Vælg sætningstype",
+  "selectStudyMaterial": "Vælg Materiale",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI Chat",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "Vælg & Filter",
-  "tutorialM2SelectDesc": "Vælg materiale eller 'Gennemgå Alle'.",
-  "tutorialM2ListTitle": "Studieliste",
-  "tutorialM2ListDesc": "Tjek kort og vend dem. (Long-press to delete)",
-  "tutorialM3SelectTitle": "Vælg Materiale",
-  "tutorialM3SelectDesc": "Vælg sæt til taleøvelse.",
-  "tutorialM3IntervalTitle": "Interval",
-  "tutorialM3IntervalDesc": "Juster ventetid mellem sætninger.",
-  "tutorialM3StartTitle": "Start",
-  "tutorialM3StartDesc": "Tryk play for at starte.",
+  "sentence": "Sætning",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Tilmeld dig",
+  "similarTextFound": "Lignende tekst fundet",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "건너뛰기",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Kilde:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Kildesprog",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "Tal nu!",
+  "speaker": "Taler",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Vælg taler",
+  "speakingPractice": "Taleøvelse",
+  "startChat": "Start chat",
+  "startPractice": "Start Øvelse",
+  "startTutorial": "Start Tur",
   "startWarning": "Advarsel",
-  "noVoiceDetected": "Ingen stemme registreret",
-  "tooltipSearch": "Søg",
-  "tooltipStudyReview": "Studie+Gentagelse",
-  "tooltipSpeaking": "Tale",
+  "startsWith": "Starter med",
+  "statusCheckEmail": "Bekræft din e-mail for at fuldføre godkendelsen.",
+  "statusDownloading": "Downloader: {name}...",
+  "statusImportFailed": "Import mislykkedes: {error}",
+  "statusImportSuccess": "{name} importeret",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Login annulleret.",
+  "statusLoginFailed": "Login mislykkedes: {error}",
+  "statusLoginSuccess": "Logget ind.",
+  "statusLogoutSuccess": "Logget ud.",
+  "statusSignUpFailed": "Tilmelding mislykkedes: {error}",
+  "statusSigningUp": "Tilmelder...",
+  "stopPractice": "Stop",
+  "studyComplete": "Studeret",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Optegnelser ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Høflig tale",
+  "styleInformal": "Uformel tale",
+  "stylePolite": "Høflighed",
+  "styleSlang": "Slang",
+  "subject": "Emne:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Skift sprog",
+  "switchToAi": "Skift til AI-tilstand",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Skift til partnertilstand",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Synkroniserer data...",
+  "tabConversation": "Samtale",
+  "tabReview": "Gennemgang ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "dømme",
+  "tabSpeaking": "Tale",
+  "tabStudyMaterial": "Materiale ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "ord",
+  "tagFormal": "Formalt",
+  "tagSelection": "Valg af tag",
+  "targetLanguage": "Målsprog",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Målsprog Filter:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "Tænketid før det korrekte svar afsløres.",
+  "thinkingTimeInterval": "Forsinkelse ved afspilning",
+  "timeUp": "Tiden er gået!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Titel-tag (samling)",
   "tooltipDecrease": "Formindsk",
   "tooltipIncrease": "Forøg",
-  "languageSettings": "Sprogindstillinger",
-  "tutorialM2DropdownDesc": "Vælg studiemateriale.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Importer JSON-fil fra enhedsmappe.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "Konteksthjælp",
-  "tutorialContextDesc": "Tilføj kontekst (f.eks. Morgen) for at skelne lignende sætninger.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "Grænse nået",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "Søg",
+  "tooltipSpeaking": "Tale",
+  "tooltipStudyReview": "Studie+Gentagelse",
+  "totalRecords": "I alt {count} poster (vis alle)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Oversæt",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Oversætter...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Oversættelse",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "학습 자료집 선택",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Oversættelse færdig (kræver gem)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "단어",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "문장",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "Jeg bytter mit sprog ud med det sprog, jeg lærer.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "Vælg et studiemateriale",
-  "sectionWord": "Ordsektion",
-  "sectionSentence": "Sætningsafsnit",
-  "tabWord": "ord",
-  "tabSentence": "dømme",
-  "errorProfanity": "비속어가 포함되어 있어 번역할 수 없습니다.",
-  "errorHateSpeech": "혐오 표현이 포함되어 있어 번역할 수 없습니다.",
-  "errorSexualContent": "선정적인 내용이 포함되어 있어 번역할 수 없습니다.",
-  "errorOtherSafety": "AI 안전 정책에 의해 번역이 거부되었습니다.",
-  "clearAll": "모두 지우기",
-  "disambiguationTitle": "의미 선택",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "어떤 의미로 번역하시겠습니까?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "건너뛰기",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "입력",
-  "reviewModeTitle": "복습",
-  "practiceModeTitle": "Øvelse",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "Oversættelse fejlede: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Oversættelsesgrænse overskredet",
+  "translationLimitMessage": "Du har brugt alle de gratis daglige oversættelser (5 gange).\\n\\nVil du se en annonce og straks genopfylde 5 gange?",
+  "translationLoaded": "Gemt oversættelse indlæst",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "Chat",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "Grundlæggende ordarkiv",
-  "basicSentenceRepository": "Grundlæggende sætningsarkiv",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "Formalt",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "Titel-tag (samling)",
-  "generalTags": "Generelle tags",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "Ental",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "Antallet af oversættelser er blevet genopfyldt 5 gange!",
+  "translationResultHint": "Oversættelsesresultat - kan redigeres",
+  "tryAgain": "Prøv igen",
+  "tutorialAiChatDesc": "Øv dig i samtaler med en AI-persona.",
+  "tutorialAiChatTitle": "AI-chat",
+  "tutorialContextDesc": "Tilføj kontekst (f.eks. Morgen) for at skelne lignende sætninger.",
+  "tutorialContextTitle": "Konteksthjælp",
+  "tutorialLangSettingsDesc": "Indstil kildesproget og målsproget for oversættelse.",
+  "tutorialLangSettingsTitle": "Sprogindstillinger",
+  "tutorialM1ToggleDesc": "Skift mellem ord- og sætningstilstand her.",
+  "tutorialM1ToggleTitle": "Ord-/sætningstilstand",
+  "tutorialM2DropdownDesc": "Vælg studiemateriale.",
+  "tutorialM2ImportDesc": "Importer JSON-fil fra enhedsmappe.",
+  "tutorialM2ListDesc": "Tjek kort og vend dem. (Long-press to delete)",
+  "tutorialM2ListTitle": "Studieliste",
+  "tutorialM2SearchDesc": "Du kan hurtigt finde gemte ord og sætninger ved at søge.",
+  "tutorialM2SelectDesc": "Vælg materiale eller 'Gennemgå Alle'.",
+  "tutorialM2SelectTitle": "Vælg & Filter",
+  "tutorialM3IntervalDesc": "Juster ventetid mellem sætninger.",
+  "tutorialM3IntervalTitle": "Intervalindstilling",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "Vælg sæt til taleøvelse.",
+  "tutorialM3SelectTitle": "Vælg Materiale",
+  "tutorialM3StartDesc": "Tryk play for at starte.",
+  "tutorialM3StartTitle": "Start",
+  "tutorialM3WordsDesc": "Hvis du markerer dette, vil du kun øve de gemte ord.",
+  "tutorialM3WordsTitle": "Ordøvelse",
+  "tutorialMicDesc": "Tryk på mikrofonen for stemmeindput.",
+  "tutorialMicTitle": "Stemmeindput",
+  "tutorialSaveDesc": "Gem din oversættelse.",
+  "tutorialSaveTitle": "Gem",
+  "tutorialSwapDesc": "Jeg bytter mit sprog ud med det sprog, jeg lærer.",
+  "tutorialTabDesc": "Her kan du vælge den ønskede læringstilstand.",
+  "tutorialTapToContinue": "Tryk for at fortsætte",
+  "tutorialTransDesc": "Tryk her for at oversætte tekst.",
+  "tutorialTransTitle": "Oversæt",
+  "typeExclamation": "Udråbssætning",
+  "typeImperative": "Imperativ sætning",
+  "typeQuestion": "Spørgsmål",
+  "typeStatement": "Deklarativ sætning",
+  "usageLimitTitle": "Grænse nået",
+  "useExistingText": "Brug Eksisterende",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "Neutral",
-  "chatAllConversations": "Alle samtaler",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Er du sikker på, at du vil slette denne samtale?\nSlettede samtaler kan ikke gendannes.",
-  "notSelected": "- Ikke valgt -",
-  "myWordbook": "Min ordbog",
-  "mySentenceCollection": "Min sætningssamling",
-  "newSubjectName": "Nyt emneoverskrift",
-  "enterNewSubjectName": "Indtast ny overskrift",
-  "addNewSubject": "Tilføj ny overskrift",
-  "selectExistingSubject": "Vælg eksisterende overskrift",
-  "addTagHint": "Tilføj tag...",
-  "save": "Gem",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Bekræft din e-mail for at fuldføre godkendelsen.",
-  "emailAlreadyInUse": "Denne e-mailadresse er allerede i brug. Log ind, eller brug 'Glemt kodeord'."
+  "viewOnlineGuide": "Se online guide",
+  "voluntaryTranslations": "Frivillige oversættelser",
+  "watchAdAndRefill": "Se annonce og genopfyld (+5 gange)",
+  "word": "Ord",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Forsvar basen ved at sige ord, før fjenden ankommer.",
+  "wordDefenseTitle": "Ord-forsvar",
+  "wordModeLabel": "Ordtilstand",
+  "yourPronunciation": "Din udtale"
 }

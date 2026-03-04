@@ -82,8 +82,8 @@ class Mode3Widget extends StatelessWidget {
                             controller: textEditingController,
                             focusNode: focusNode,
                             hintText: appState.recordTypeFilter == 'word' 
-                                ? '연습할 단어 검색 (현재 탭)...' 
-                                : '연습할 문장 검색 (현재 탭)...',
+                                ? l10n.searchWordHint 
+                                : l10n.searchSentenceHint,
                             onChanged: (value) {
                               if (value.isEmpty) {
                                 appState.setSearchQuery('');

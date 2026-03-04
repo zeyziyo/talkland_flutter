@@ -9,39 +9,330 @@ class AppLocalizationsBo extends AppLocalizations {
   AppLocalizationsBo([String locale = 'bo']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => 'ཏག་ཏག་ཚད།';
 
   @override
-  String get kakaoContinue => 'ཀ་ཀའོ་བརྒྱུད་མཐུད་མཐུད་པ།';
+  String get adLoading => 'ཁྱབ་བསྒྲགས་ནང་འཇུག་བྱེད་བཞིན་པ། གནས་སྐབས་སྒུག་རོགས།';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => 'མིང་གསརཔ་བསྣོན།';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => 'མཉམ་ཞུགས་པ་སྣོན་པ།';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => 'ཚད་རྟགས་ཁ་སྣོན།...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => 'ཁྱེད་ལ་རྩིས་ཐོ་ཡོད་དམ?';
 
   @override
-  String get helpTitle => 'Help & Guide';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => 'Modes';
+  String get autoPlay => 'རང་འགུལ་སྒྲ་འབྱིན།';
 
   @override
-  String get helpTabJson => 'JSON Format';
+  String get basic => 'རྨང་གཞི།';
 
   @override
-  String get helpTabTour => 'Tour';
+  String get basicDefault => 'རྨང་གཞི།';
+
+  @override
+  String get basicMaterialRepository => 'རྨང་གཞིའི་ཚིག་/ཐ་སྙད་ཉར་མཛོད།';
+
+  @override
+  String get basicSentenceRepository => 'རྨང་གཞིའི་ཚིག་ཉར་མཛོད།';
+
+  @override
+  String get basicSentences => 'རྨང་གཞིའི་ཚིག་ཉར་མཛོད།';
+
+  @override
+  String get basicWordRepository => 'རྨང་གཞིའི་ཐ་སྙད་ཉར་མཛོད།';
+
+  @override
+  String get basicWords => 'རྨང་གཞིའི་ཐ་སྙད་ཉར་མཛོད།';
+
+  @override
+  String get cancel => 'འ বাতিল';
+
+  @override
+  String get caseObject => 'ཡུལ་སྒྲ།';
+
+  @override
+  String get casePossessive => 'བདག་སྒྲ།';
+
+  @override
+  String get casePossessivePronoun => 'བདག་གི་མིང་ཚབ།';
+
+  @override
+  String get caseReflexive => 'རང་སྟོན་མིང་ཚབ།';
+
+  @override
+  String get caseSubject => 'བྱེད་སྒྲ།';
+
+  @override
+  String get chatAiChat => 'ཁ་བརྡ།';
+
+  @override
+  String get chatAllConversations => 'གླེང་མོལ་ཡོངས་རྫོགས།';
+
+  @override
+  String get chatChoosePersona => 'མི་སྣ་འདེམས།';
+
+  @override
+  String get chatEndMessage => 'གླེང་མོ་མཇུག་སྒྲིལ་འདོད་དམ?';
+
+  @override
+  String get chatEndTitle => 'གླེང་མོ་མཇུག་སྒྲིལ་བ་དང་ཉར་ཚགས་བྱེད་པ།';
+
+  @override
+  String chatFailed(Object error) {
+    return 'གླེང་མོ་བྱེད་མ་ཐུབ: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'གླེང་མོ་བཏོན་པ ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => 'གླེང་མོའི་ལོ་རྒྱུས།';
+
+  @override
+  String get chatNew => 'གླེང་མོ་གསར་བ།';
+
+  @override
+  String get chatNewChat => 'གླེང་མོ་གསར་བ།';
+
+  @override
+  String get chatNoConversations => 'ད་དུང་གླེང་མོ་མེད།';
+
+  @override
+  String get chatSaveAndExit => 'ཉར་ཚགས་བྱས་རྗེས་ཕྱིར་འཐོན་པ།';
+
+  @override
+  String get chatStartNewPrompt =>
+      'ཉམས་ལེན་བྱེད་པའི་ཆེད་དུ་གླེང་མོ་གསར་བ་ཞིག་འགོ་བཙུགས་དང་!';
+
+  @override
+  String get chatTypeHint => 'འཕྲིན་ཐུང་ནང་འཇུག་བྱེད་རོགས...';
+
+  @override
+  String get chatUntitled => 'མགོ་བརྗོད་མེད་པའི་གླེང་མོ།';
+
+  @override
+  String get checking => 'ཞིབ་བཤེར་བྱེད་བཞིན་པ...';
+
+  @override
+  String get clearAll => 'ཡོངས་བསལ་བ།';
+
+  @override
+  String get confirm => 'ཁག་ཐེག';
+
+  @override
+  String get confirmDelete => 'སློབ་སྦྱོང་ཟིན་ཐོ་འདི་བསུབ་འདོད་དམ?';
+
+  @override
+  String get confirmDeleteConversation =>
+      'ཁྱེད་ཀྱིས་གླེང་མོལ་འདི་དོར་འདོད་དམ།\nགླེང་མོལ་བསུབས་པ་ཕྱིར་སློག་བྱེད་མི་ཐུབ།';
+
+  @override
+  String get confirmDeleteParticipant => 'མཉམ་ཞུགས་པ་འདི་བསུབ་འདོད་དམ?';
+
+  @override
+  String get contextTagHint =>
+      'ཕྱིས་སུ་དབྱེ་འབྱེད་སླ་བའི་ཆེད་དུ་གནས་སྟངས་འབྲི་རོགས།';
+
+  @override
+  String get contextTagLabel =>
+      'ཡིག་འབྲུ་/གནས་སྟངས་ (འདེམས་ཆོག) - དཔེར་ན། ཞོགས་པའི་འཚམས་འདྲི། གུས་ཞབས་ཀྱི་སྐད་ཆ།';
+
+  @override
+  String get copiedToClipboard => 'འབྲི་པང་ནང་དུ་འདྲ་བཤུས་བྱས་ཟིན!';
+
+  @override
+  String get copy => 'འདྲ་བཤུས།';
+
+  @override
+  String get correctAnswer => 'ལན་འགྲིག་པ།';
+
+  @override
+  String get createNew => 'ཚིག་གསར་བའི་ཐོག་ནས་མུ་མཐུད་དུ་འགྲོ་།';
+
+  @override
+  String get currentLocation => 'ད་ལྟའི་གནས་ས།';
+
+  @override
+  String get currentMaterialLabel => 'ད་ལྟར་བདམས་པའི་སློབ་སྦྱོང་དཔྱད་ཆས:';
+
+  @override
+  String get delete => 'བསུབ།';
+
+  @override
+  String deleteFailed(String error) {
+    return 'བསུབ་མི་ཐུབ: $error';
+  }
+
+  @override
+  String get deleteRecord => 'ཟིན་ཐོ་བསུབ།';
+
+  @override
+  String get dialogueQuestDesc =>
+      'གནས་སྟངས་འཁྲབ་སྟོན་བརྒྱུད་དེ་གླེང་མོའི་ཉམས་ལེན་བྱེད་རོགས། འོས་འཚམ་གྱི་ལན་འདེམས་པ་དང་བཤད་རོགས།';
+
+  @override
+  String get dialogueQuestTitle => 'གླེང་མོའི་འཚོལ་ཞིབ།';
+
+  @override
+  String get disambiguationPrompt => 'དོན་སྙིང་གང་ཞིག་ཏུ་བསྒྱུར་འདོད་དམ?';
+
+  @override
+  String get disambiguationTitle => 'དོན་སྙིང་འདེམས།';
+
+  @override
+  String get dontHaveAccount => 'ཁྱེད་ལ་རྩིས་ཐོ་མེད་དམ?';
+
+  @override
+  String get editParticipant => 'མཉམ་ཞུགས་པ་བཟོ་བཅོས་བྱེད།';
+
+  @override
+  String get email => 'གློག་རྡུལ་ཡིག་ཟམ།';
+
+  @override
+  String get emailAlreadyInUse =>
+      'གློག་འཕྲིན་ཁ་བྱང་འདི་སྔོན་ནས་ཐོ་འགོད་ཟིན་པས། ཐོ་འཇུག་བྱེད་པའམ་ཡང་ན་གསང་གྲངས་འཚོལ་བར་བེད་སྤྱོད་བྱེད་རོགས།';
+
+  @override
+  String get enterNewSubjectName => 'མིང་གསརཔ་བཙུགས།';
+
+  @override
+  String get enterSentenceHint => 'ཚིག་གཞི་བཙུགས་...';
+
+  @override
+  String get enterTextHint => 'བསྒྱུར་དགོས་པའི་ཡི་གེ་ནང་འཇུག་བྱེད་རོགས།';
+
+  @override
+  String get enterTextToTranslate => 'བསྒྱུར་དགོས་པའི་ཡི་གེ་ནང་འཇུག་བྱེད།';
+
+  @override
+  String get enterWordHint => 'མིང་ཚིག་བཙུགས་...';
+
+  @override
+  String get error => 'ནོར།';
+
+  @override
+  String get errorHateSpeech => 'སྡང་བའི་རྣམ་འགྱུར་འདུས་ཡོད་པས་བསྒྱུར་མི་ཐུབ།';
+
+  @override
+  String get errorOtherSafety =>
+      'AI བདེ་འཇགས་སྲིད་ཇུས་ཀྱི་དབང་གིས་བསྒྱུར་བ་དང་ལེན་བྱེད་མི་ཐུབ།';
+
+  @override
+  String get errorProfanity => 'མི་གཙང་བའི་ཚིག་འདུས་ཡོད་པས་བསྒྱུར་མི་ཐུབ།';
+
+  @override
+  String get errorSelectCategory => 'ཐོག་མར་ཐ་སྙད་དམ་ཡང་ན་ཚིག་ཅིག་འདེམས་རོགས!';
+
+  @override
+  String get errorSexualContent => 'འདོད་པའི་ནང་དོན་འདུས་ཡོད་པས་བསྒྱུར་མི་ཐུབ།';
+
+  @override
+  String get errors => 'ནོར:';
+
+  @override
+  String get female => 'མོ།';
+
+  @override
+  String get file => 'ཡིག་ཆ:';
+
+  @override
+  String get filterAll => 'ཡོངས་།';
+
+  @override
+  String get flip => 'མངོན་པར་བྱེད།';
+
+  @override
+  String get formComparative => 'བསྡུར་ཚད།';
+
+  @override
+  String get formInfinitive => 'མ་ཚིག་/ད་ལྟ་བ།';
+
+  @override
+  String get formPast => 'འདས་པ།';
+
+  @override
+  String get formPastParticiple => 'འདས་པའི་ལས་ཚིག';
+
+  @override
+  String get formPlural => 'མང་ཚིག';
+
+  @override
+  String get formPositive => 'ཐོག་མའི་རིམ།';
+
+  @override
+  String get formPresent => 'ད་ལྟ་བ།';
+
+  @override
+  String get formPresentParticiple => 'ད་ལྟའི་ལས་ཚིག(ing)';
+
+  @override
+  String get formSingular => 'ཁེར་ཚིག';
+
+  @override
+  String get formSuperlative => 'ཆེས་མཐོའི་རིམ།';
+
+  @override
+  String get formThirdPersonSingular => 'མི་གསུམ་པ་ཁེར་ཚིག';
+
+  @override
+  String get gameModeDesc => 'ཉམས་ལེན་བྱེད་པའི་རྩེད་མོའི་ཐབས་ལམ་འདེམས་རོགས།';
+
+  @override
+  String get gameModeTitle => 'རྩེད་མོའི་ཐབས་ལམ།';
+
+  @override
+  String get gameOver => 'རྩེད་འགྲན་མཇུག་བསྡུས།';
+
+  @override
+  String get gender => 'ཕོ་མོ།';
+
+  @override
+  String get generalTags => 'སྤྱིར་བཏང་གི་རྟགས།';
+
+  @override
+  String get getMaterials => 'དཔྱད་ཆས་ལེན་པ།';
+
+  @override
+  String get good => 'ཡག་པོ།';
+
+  @override
+  String get googleContinue => 'Google བརྒྱུད་ནས་མུ་མཐུད་དུ་འགྲོ་།';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'JSON ཡིག་ཆ་བརྒྱུད་ནས་གླེང་མོའི་ཚོགས་ཚང་མ་ནང་འདྲེན་བྱེད།';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc =>
+      'To import study materials in Mode 3, create a JSON file with the following structure:';
+
+  @override
+  String get helpJsonTypeDialogue => 'གླེང་མོ (Dialogue)';
+
+  @override
+  String get helpJsonTypeSentence => 'ཚིག་ (Sentence)';
+
+  @override
+  String get helpJsonTypeWord => 'ཐ་སྙད་ (Word)';
 
   @override
   String get helpMode1Desc =>
-      'Recognize voice, translate to target language, and listen to the result.';
+      'སྐད་ངག་ངོས་འཛིན་བྱས་ཏེ་བསྒྱུར་བ་དང་། མཇུག་འབྲས་ལ་ཉན་ཐུབ།';
 
   @override
   String get helpMode1Details =>
@@ -69,744 +360,681 @@ class AppLocalizationsBo extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• AI གླེང་མོ། མི་སྣ་དང་མཉམ་དུ་དངོས་སྦྱོང་གླེང་མོ་བྱེད་པ།\n• མཉམ་ཞུགས་པ་དོ་དམ། ངའི་སྐད་དང་ AI ཡི་སྐད་སོ་སོར་སྒྲིག་སྟེ་སྐད་ཆ་མི་མཐུན་པ་སྔོན་འགོག་བྱེད་ཐུབ།\n• GPS གནས་སྟངས་འཁྲབ་སྟོན། ད་ལྟའི་གནས་གཞི་གཞིར་བཞག་ནས་རང་བྱུང་གླེང་མོའི་གནས་སྟངས་འཁྲབ་སྟོན།\n• ཟིན་ཐོ་ཉར་ཚགས། གླེང་མོ་ཚང་མ་ID གཞིར་བཞག་ནས་བདེ་འཇགས་ངང་ཉར་ཚགས་བྱེད་པ་དང་། མིང་བསྒྱུར་རུང་ཟིན་ཐོ་མུ་མཐུད་དུ་ཉར་ཚགས་བྱེད།';
 
   @override
-  String get helpJsonDesc =>
-      'To import study materials in Mode 3, create a JSON file with the following structure:';
+  String get helpTabJson => 'JSON རྣམ་གཞག';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => 'ཐབས་ལམ་གྱི་འགྲེལ་བཤད།';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => 'ཉམས་ལེན་བྱེད།';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => 'རོགས་རམ་ & ལམ་སྟོན།';
 
   @override
   String get helpTourDesc =>
-      'The **Highlight Circle** will guide you through the main features.\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
+      '**མཐོང་འདེམས་རྟགས་དང་པོ** ཡིས་གཙོ་གནད་ནུས་པར་ལམ་སྟོན་བྱེད།\n(དཔེར་ན། **མཐོང་འདེམས་རྟགས་དང་པོ** ཡིས་སྟོན་པའི་ཤོག་བྱང་ལ་མཛུབ་མོས་མནན་ནས་བསུབ་ཆོག)';
 
   @override
-  String get partnerMode => 'Partner Mode';
+  String get hide => 'སྦེད་པ།';
 
   @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => 'Location';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => 'Me';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return 'Review ($count)';
+  String importAdded(int count) {
+    return 'སྣོན་པ: $count ཁ།';
   }
 
   @override
-  String tabStudyMaterial(int count) {
-    return 'Study Material ($count)';
+  String get importComplete => 'ནང་འདྲེན་ལེགས་འགྲུབ།';
+
+  @override
+  String get importDuplicateTitleError =>
+      'མགོ་བརྗོད་གཅིག་མཚུངས་ཀྱི་དཔྱད་ཆས་ད་སྔོན་ནས་ཡོད། མགོ་བརྗོད་བསྒྱུར་རྗེས་ཡང་བསྐྱར་འབད་བརྩོན་བྱེད་རོགས།';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'ཡིག་ཆ་ནང་འདྲེན་བྱེད་མ་ཐུབ: \\n$error';
   }
 
   @override
-  String get mode2Title => 'Review';
+  String get importFailed => 'ནང་འདྲེན་བྱེད་མ་ཐུབ།';
 
   @override
-  String get search => 'Search';
-
-  @override
-  String get translate => 'Translate';
-
-  @override
-  String get listen => 'Listen';
-
-  @override
-  String get saveData => 'Save Data';
-
-  @override
-  String get saved => 'Saved';
-
-  @override
-  String get delete => 'Delete';
-
-  @override
-  String get materialInfo => 'Material Info';
-
-  @override
-  String get cancel => 'Cancel';
-
-  @override
-  String get confirm => 'OK';
-
-  @override
-  String get refresh => 'Refresh';
-
-  @override
-  String studyRecords(int count) {
-    return 'Study Records ($count)';
+  String importFile(String fileName) {
+    return 'ཡིག་ཆ: $fileName';
   }
 
   @override
-  String get targetLanguageFilter => 'Target Language Filter:';
+  String get importJsonFile => 'JSON ཡིག་ཆ་ནང་འདྲེན་བྱེད།';
 
   @override
-  String get noRecords => 'No study records for selected language';
+  String get importJsonFilePrompt => 'JSON ཡིག་ཆ་ནང་འདྲེན་བྱེད་རོགས།';
 
   @override
-  String get saveTranslationsFromSearch => 'Save translations from search mode';
-
-  @override
-  String get flip => 'Show';
-
-  @override
-  String get hide => 'Hide';
-
-  @override
-  String get deleteRecord => 'Delete Record';
-
-  @override
-  String get confirmDelete =>
-      'Are you sure you want to delete this study record?';
-
-  @override
-  String get recordDeleted => 'Record deleted successfully';
-
-  @override
-  String deleteFailed(String error) {
-    return 'Delete failed: $error';
+  String importSkipped(int count) {
+    return 'མི་དགོས་པར་བཞག: $count ཁ།';
   }
 
   @override
-  String get importJsonFile => 'Import JSON File';
+  String importTotal(int count) {
+    return 'སྤྱི: $count ཁ།';
+  }
 
   @override
   String get importing => 'Importing...';
 
   @override
-  String get importComplete => 'Import Complete';
+  String get inputModeTitle => 'ནང་འཇུག';
 
   @override
-  String get importFailed => 'Import Failed';
-
-  @override
-  String importFile(String fileName) {
-    return 'File: $fileName';
+  String intervalSeconds(int seconds) {
+    return 'བར་ཐག: $seconds སྐར་ཆ།';
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get invalidEmail => 'ནུས་པ་ལྡན་པའི་གློག་རྡུལ་ཡིག་ཟམ་ཞིག་འཇུག་རོགས།';
 
   @override
-  String get editParticipant => 'Edit Participant';
+  String get kakaoContinue => 'ཀ་ཀའོ་བརྒྱུད་མཐུད་མཐུད་པ།';
 
   @override
-  String get labelRole => 'Role';
+  String get labelLangCode => 'སྐད་ཆའི་ཨང་རྟགས་ (དཔེར་ན། en-US, ko-KR)';
 
   @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
+  String get labelName => 'མིང་།';
 
   @override
-  String get roleUser => 'User';
+  String get labelNote => 'ཟིན་བྲིས།';
+
+  @override
+  String get labelPOS => 'རྣམ་དབྱེ།';
+
+  @override
+  String get labelRole => 'ལས་འགན།';
+
+  @override
+  String get labelSentence => 'ཚིག';
+
+  @override
+  String get labelSentenceCollection => 'ཚིག་གཞི་ཕྱོགས་སྒྲིག';
+
+  @override
+  String get labelSentenceType => 'ཚིག་གཞི་དབྱེ་བ།';
+
+  @override
+  String get labelShowMemorized => 'མཇུག་རྫོགས་པ།';
+
+  @override
+  String get labelType => 'རིགས:';
+
+  @override
+  String get labelWord => 'ཐ་སྙད།';
+
+  @override
+  String get labelWordbook => 'མིང་ཚིག་དེབ་';
+
+  @override
+  String get language => 'སྐད་ཆ།';
+
+  @override
+  String get languageSettings => 'སྐད་ཆའི་སྒྲིག་འགོད།';
+
+  @override
+  String get languageSettingsTitle => 'སྐད་ཆའི་སྒྲིག་འགོད།';
+
+  @override
+  String get libTitleFirstMeeting => 'ཐོག་མའི་ཐུག་འཕྲད།';
+
+  @override
+  String get libTitleGreetings1 => 'འཚམས་འདྲི་ ༡';
+
+  @override
+  String get libTitleNouns1 => 'མིང་ཚིག་ ༡';
+
+  @override
+  String get libTitleVerbs1 => 'བྱ་ཚིག་ ༡';
+
+  @override
+  String get listen => 'ཉོན།';
+
+  @override
+  String get listening => 'ཉན་བཞིན་པ...';
+
+  @override
+  String get loadingParticipants => 'མཉམ་ཞུགས་པ་ནང་འཇུག་བྱེད་བཞིན་པ...';
+
+  @override
+  String get location => 'གནས་ས།';
+
+  @override
+  String get login => 'འཛུལ་ཞུགས།';
+
+  @override
+  String get logout => 'ཕྱིར་འཐོན་';
+
+  @override
+  String get logoutConfirmMessage => 'ད་ལྟའི་སྒྲིག་ཆས་ནས་ཕྱིར་འཐོན་འདོད་དམ?';
+
+  @override
+  String get logoutConfirmTitle => 'ཕྱིར་འཐོན་';
+
+  @override
+  String get male => 'ཕོ།';
+
+  @override
+  String get manageParticipants => 'མཉམ་ཞུགས་པ་དོ་དམ།';
+
+  @override
+  String get manual => 'ལག་འབྲི།';
+
+  @override
+  String get markAsStudied => 'སློབ་སྦྱོང་མཚན་རྟགས་འགོད།';
+
+  @override
+  String get materialInfo => 'དཔྱད་ཆས་གནས་ཚུལ།';
+
+  @override
+  String get me => 'ང་།';
+
+  @override
+  String get menuDeviceImport => 'སྒྲིག་ཆས་ནས་དཔྱད་ཆས་ལེན་པ།';
+
+  @override
+  String get menuHelp => 'རོགས་རམ།';
+
+  @override
+  String get menuLanguageSettings => 'སྐད་ཡིག་སྒྲིག་འཛུགས།';
+
+  @override
+  String get menuOnlineLibrary => 'དྲ་ཐོག་དཔྱད་མཛོད།';
+
+  @override
+  String get menuSelectMaterialSet => 'སློབ་སྦྱོང་དཔྱད་ཆས་ཚོགས་པ་འདེམས།';
+
+  @override
+  String get menuSettings => 'སྐད་ཆའི་སྒྲིག་འགོད།';
+
+  @override
+  String get menuTutorial => 'བཀོལ་སྟངས་སྐོར་བ།';
+
+  @override
+  String get menuWebDownload => 'བཀོལ་སྤྱོད་འགྲེལ་བཤད།';
+
+  @override
+  String get metadataDialogTitle => 'ཞིབ་ཕྲའི་དབྱེ་བ།';
+
+  @override
+  String get metadataFormType => 'བརྡ་སྤྲོད་རྣམ་པ།';
+
+  @override
+  String get metadataRootWord => 'མ་ཚིག (Root Word)';
+
+  @override
+  String get micButtonTooltip => 'སྐད་ངག་ངོས་འཛིན་འགོ་བཙུགས།';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return 'ད་ལྟར་བདམས་པའི་དཔྱད་ཆས: $name';
+  }
+
+  @override
+  String get mode2Title => 'བསྐྱར་སྦྱོང་།';
+
+  @override
+  String get mode3Next => 'རྗེས་མ།';
+
+  @override
+  String get mode3Start => 'འགོ་བཙུགས།';
+
+  @override
+  String get mode3Stop => 'མཇུག་སྒྲིལ།';
+
+  @override
+  String get mode3TryAgain => 'ཡང་བསྐྱར་འབད་བརྩོན་བྱེད།';
+
+  @override
+  String get mySentenceCollection => 'ངའི་ཚིག་གྲུབ་ཕྱོགས་བསྡུས།';
+
+  @override
+  String get myWordbook => 'ངའི་ཐ་སྙད་ཕྱོགས་བསྡུས།';
+
+  @override
+  String get neutral => 'ཕྱོགས་གཏོགས་མེད།';
+
+  @override
+  String get newSubjectName => 'བརྗོད་བྱའི་མིང་གསརཔ།';
+
+  @override
+  String get next => 'རྗེས་མ།';
+
+  @override
+  String get noDialogueHistory => 'གླེང་མོའི་ལོ་རྒྱུས་མེད།';
+
+  @override
+  String get noInternetWarningMic =>
+      'དྲ་རྒྱ་མི་འདུག དྲ་རྒྱ་མེད་པའི་སྐབས་སུ་སྐད་ངག་ངོས་འཛིན་བྱེད་མི་ཐུབ་པའང་སྲིད།';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'དྲ་རྒྱ་མི་འདུག དྲ་རྒྱ་མེད་པའི་སྐབས་སུ་བསྒྱུར་བའི་ནུས་པ་སྤྱོད་མི་ཐུབ། བསྐྱར་སྦྱོང་ཐབས་ལམ་སྤྱོད་རོགས།';
+
+  @override
+  String get noMaterialsInCategory => 'རིགས་དབྱེ་འདིའི་ནང་དུ་དཔྱད་ཆས་མེད།';
+
+  @override
+  String get noParticipantsFound => 'ཐོ་འགོད་བྱས་པའི་མཉམ་ཞུགས་པ་མེད།';
+
+  @override
+  String get noRecords => 'བདམས་པའི་སྐད་ཆའི་སློབ་སྦྱོང་ཟིན་ཐོ་མེད།';
+
+  @override
+  String get noStudyMaterial => 'སློབ་སྦྱོང་དཔྱད་ཆས་མེད།';
+
+  @override
+  String get noTextToPlay => 'སྒྲ་འབྱིན་དགོས་པའི་ཡི་གེ་མེད།';
+
+  @override
+  String get noTranslationToSave => 'ཉར་ཚགས་བྱེད་དགོས་པའི་བསྒྱུར་བ་མེད།';
+
+  @override
+  String get noVoiceDetected => 'སྐད་སྒྲ་ཚོར་མ་བྱུང་།';
+
+  @override
+  String get notSelected => '- གདམ་ག་བྱས་མེད། -';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'དྲ་རྒྱའི་མཐུད་སྦྱོར་ཞིབ་བཤེར་བྱེད་པའམ་ཡང་ན་ཕྱིས་སུ་ཡང་བསྐྱར་འབད་བརྩོན་བྱེད་རོགས།';
+
+  @override
+  String get onlineLibraryLoadFailed =>
+      'དཔྱད་ཆས་ནང་འཇུག་བྱེད་པར་འཐུས་ཤོར་བྱུང་།';
+
+  @override
+  String get onlineLibraryNoMaterials => 'དཔྱད་ཆས་མེད།';
+
+  @override
+  String get participantDeleted => 'མཉམ་ཞུགས་པ་བསུབས་ཟིན།';
+
+  @override
+  String get participantRename => 'མཉམ་ཞུགས་པའི་མིང་བསྒྱུར།';
+
+  @override
+  String get partner => 'རོགས་ཟླ།';
+
+  @override
+  String get partnerMode => 'རོགས་ཟླའི་ཐབས་ལམ།';
+
+  @override
+  String get password => 'གསང་ཨང་།';
+
+  @override
+  String get passwordTooShort => 'གསང་ཨང་ཡིག་གྲངས་6ཡན་དགོས།';
+
+  @override
+  String get perfect => 'འགྲིག་འགྲིག';
+
+  @override
+  String get personaFriend => 'ས་གནས་གྲོགས་པོ།';
+
+  @override
+  String get personaGuide => 'ཡུལ་སྐོར་ལམ་སྟོན།';
+
+  @override
+  String get personaTeacher => 'དབྱིན་ཇིའི་དགེ་རྒན།';
+
+  @override
+  String get playAgain => 'ཡང་བསྐྱར་རྩེད།';
+
+  @override
+  String playbackFailed(String error) {
+    return 'སྒྲ་འབྱིན་བྱེད་མ་ཐུབ: $error';
+  }
+
+  @override
+  String get playing => 'སྒྲ་འབྱིན་བཞིན་པ...';
+
+  @override
+  String get posAdjective => 'གཟུགས་ཚིག';
+
+  @override
+  String get posAdverb => 'བྱ་ཚིག་འབྲེལ་ཡུ།';
+
+  @override
+  String get posConjunction => 'འབྲེལ་མཐུད་ཚིག';
+
+  @override
+  String get posInterjection => 'ངུ་རྟགས་ཚིག';
+
+  @override
+  String get posNoun => 'མིང་ཚིག';
+
+  @override
+  String get posPreposition => 'གནས་སྟོན་ཚིག';
+
+  @override
+  String get posPronoun => 'མིང་ཚབ་ཚིག';
+
+  @override
+  String get posVerb => 'བྱ་ཚིག';
+
+  @override
+  String get practiceModeTitle => 'སྦྱོང་བརྡར།';
+
+  @override
+  String get practiceWordsOnly => 'ཐ་སྙད་ཁོ་ནར་ཉམས་ལེན་བྱེད།';
+
+  @override
+  String progress(int current, int total) {
+    return 'འཕེལ་རིམ: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return 'ཉེ་ལམ་དུ་བཟོས་པའི་ $count ལ་བལྟ་བ།';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return 'སྐད་ངག་ངོས་འཛིན་བྱེད་མ་ཐུབ: $error';
+  }
+
+  @override
+  String get recognized => 'ངོས་འཛིན་ལེགས་འགྲུབ།';
+
+  @override
+  String get recognizedText => 'ངོས་འཛིན་བྱས་པའི་ཀློག་སྟངས:';
+
+  @override
+  String get recordDeleted => 'ཟིན་ཐོ་བསུབས་ཟིན།';
+
+  @override
+  String get refresh => 'བསྐྱར་སོས་བྱེད།';
+
+  @override
+  String get reset => 'ཐོག་མར་སླར་གསོ།';
+
+  @override
+  String get resetPracticeHistory => 'ཉམས་ལེན་ལོ་རྒྱུས་སླར་སོས་བྱེད།';
+
+  @override
+  String get retry => 'ཡང་བསྐྱར་འབད་བརྩོན་བྱེད་དམ?';
+
+  @override
+  String get reviewAll => 'ཡོངས་བསྐྱར་སྦྱོང་།';
+
+  @override
+  String reviewCount(int count) {
+    return 'བསྐྱར་སྦྱོང་ $count ཐེངས།';
+  }
+
+  @override
+  String get reviewModeTitle => 'བསྐྱར་སྦྱོང་།';
 
   @override
   String get roleAi => 'AI';
 
   @override
-  String get roleThirdParty => '제삼자';
+  String get roleThirdParty => 'ཕྱོགས་གསུམ་པ།';
 
   @override
-  String get speakerSelect => '발화자 선택';
+  String get roleUser => 'བཀོལ་སྤྱོད་པ།';
 
   @override
-  String get participantDeleted => 'Participant deleted.';
+  String get save => 'བསྲུང་';
 
   @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return 'Total: $count items';
-  }
-
-  @override
-  String importAdded(int count) {
-    return 'Added: $count items';
-  }
-
-  @override
-  String importSkipped(int count) {
-    return 'Skipped: $count items';
-  }
-
-  @override
-  String get errors => 'Errors:';
-
-  @override
-  String get error => 'Error';
-
-  @override
-  String importErrorMessage(String error) {
-    return 'Failed to import file:\\n$error';
-  }
-
-  @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
-
-  @override
-  String get selectStudyMaterial => 'Select Study Material';
-
-  @override
-  String get subject => 'Title:';
-
-  @override
-  String get source => 'Source:';
-
-  @override
-  String get file => 'File:';
-
-  @override
-  String progress(int current, int total) {
-    return 'Progress: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => 'Please import a JSON file';
-
-  @override
-  String get selectMaterialPrompt => 'Please select a study material';
-
-  @override
-  String get studyComplete => 'Studied';
-
-  @override
-  String get markAsStudied => 'Mark as Studied';
-
-  @override
-  String get listening => 'Listening...';
-
-  @override
-  String get recognized => 'Recognition complete';
-
-  @override
-  String recognitionFailed(String error) {
-    return 'Speech recognition failed: $error';
-  }
-
-  @override
-  String get checking => 'Checking...';
-
-  @override
-  String get translating => 'Translating...';
-
-  @override
-  String get translationComplete => 'Translation complete (save required)';
-
-  @override
-  String get translationLoaded => 'Loaded saved translation';
-
-  @override
-  String translationFailed(String error) {
-    return 'Translation failed: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => 'Please enter text to translate';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => 'Saving...';
-
-  @override
-  String get noTranslationToSave => 'No translation to save';
+  String get saveData => 'གཞི་གྲངས་ཉར་ཚགས།';
 
   @override
   String saveFailed(String error) {
-    return 'Save failed: $error';
+    return 'ཉར་ཚགས་བྱེད་མ་ཐུབ: $error';
   }
 
   @override
-  String get playing => 'Playing...';
+  String get saveTranslationsFromSearch =>
+      'འཚོལ་ཞིབ་ཐབས་ལམ་ནས་བསྒྱུར་བ་ཉར་ཚགས་བྱེད་རོགས།';
 
   @override
-  String get noTextToPlay => 'No text to play';
+  String get saved => 'ཉར་ཚགས་ལེགས་འགྲུབ།';
 
   @override
-  String playbackFailed(String error) {
-    return 'Playback failed: $error';
-  }
-
-  @override
-  String get sourceLanguage => 'Source Language';
-
-  @override
-  String get targetLanguage => 'Target Language';
-
-  @override
-  String get similarTextFound => 'Similar text found';
-
-  @override
-  String get useExistingText => 'Use Existing';
-
-  @override
-  String get createNew => 'Create New Entry';
-
-  @override
-  String reviewCount(int count) {
-    return 'Review $count time(s)';
-  }
-
-  @override
-  String get tabSpeaking => 'Speaking';
-
-  @override
-  String get speakingPractice => 'Speaking Practice';
-
-  @override
-  String intervalSeconds(int seconds) {
-    return 'Interval: ${seconds}s';
-  }
-
-  @override
-  String get yourPronunciation => 'Your Pronunciation';
-
-  @override
-  String get correctAnswer => 'Correct Answer';
+  String get saving => 'ཉར་ཚགས་བྱེད་བཞིན་པ...';
 
   @override
   String score(String score) {
-    return 'Accuracy: $score%';
+    return 'ཏག་ཏག་ཚད: $score%';
   }
 
   @override
-  String get perfect => 'Perfect!';
+  String get scoreLabel => 'སྐར་གྲངས།';
 
   @override
-  String get good => 'Good';
+  String get search => 'འཚོལ།';
 
   @override
-  String get tryAgain => 'Try Again';
+  String get searchConditions => 'འཚོལ་ཞིབ་ཆ་རྐྱེན།';
 
   @override
-  String get startPractice => 'Start Practice';
+  String get searchSentenceHint => 'ཚིག་གཞི་འཚོལ་ཞིབ...';
 
   @override
-  String get stopPractice => 'Stop Practice';
+  String get searchWordHint => 'མིང་ཚིག་འཚོལ་ཞིབ...';
 
   @override
-  String get menuOnlineLibrary => 'Online Library';
+  String get sectionSentence => 'ཚིག་སྡེ་ཚན།';
 
   @override
-  String get startTutorial => 'Start Tutorial';
+  String get sectionSentences => 'ཚིག';
 
   @override
-  String get menuTutorial => 'Tutorial';
+  String get sectionWord => 'ཐ་སྙད་སྡེ་ཚན།';
 
   @override
-  String get tutorialMicTitle => 'Voice Input';
+  String get sectionWords => 'ཐ་སྙད།';
 
   @override
-  String get tutorialMicDesc => 'Tap the mic button to start voice input.';
+  String get selectExistingSubject => 'ཡོད་པའི་མིང་འདེམས།';
 
   @override
-  String get tutorialTabDesc =>
-      'You can select your desired learning mode here.';
+  String get selectMaterialPrompt => 'སློབ་སྦྱོང་དཔྱད་ཆས་འདེམས་རོགས།';
 
   @override
-  String get tutorialTapToContinue => 'Tap to continue';
+  String get selectMaterialSet => 'སློབ་སྦྱོང་དཔྱད་ཆས་ཚོགས་པ་འདེམས།';
 
   @override
-  String get tutorialTransTitle => 'Translate';
+  String get selectPOS => 'རིགས་གྲས་འདེམས།';
 
   @override
-  String get tutorialTransDesc => 'Tap here to translate your text.';
+  String get selectParticipants => 'མཉམ་ཞུགས་པ་འདེམས།';
 
   @override
-  String get tutorialSaveTitle => 'Save';
+  String get selectSentenceType => 'ཚིག་རིགས་འདེམས།';
 
   @override
-  String get tutorialSaveDesc => 'Save your translation to study records.';
-
-  @override
-  String get selectParticipants => 'Select Participants';
-
-  @override
-  String get loadingParticipants => 'Loading participants...';
-
-  @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
+  String get selectStudyMaterial => 'སློབ་སྦྱོང་དཔྱད་ཆས་འདེམས།';
 
   @override
   String get sendingMessage => '메시지 전송 중...';
 
   @override
-  String get startChat => 'Start Chat';
+  String get sentence => 'ཚིག';
 
   @override
-  String get manageParticipants => 'Manage Participants';
+  String get signUp => 'ཐོ་འགོད་བྱེད།';
 
   @override
-  String get tutorialAiChatTitle => 'AI ཁ་བརྡ།';
+  String get similarTextFound => 'འདྲ་བའི་ཡི་གེ་རྙེད་བྱུང་།';
 
   @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
+  String get skip => 'མི་དགོས་པར་བཞག';
 
   @override
-  String get tutorialM2SelectTitle => 'Select & Filter';
+  String get source => 'འབྱུང་ཁུངས:';
 
   @override
-  String get tutorialM2SelectDesc =>
-      'Choose study materials or switch to \'Review All\'.';
+  String get sourceLanguage => 'འབྱུང་ཁུངས་སྐད་ཆ།';
 
   @override
-  String get tutorialM2ListTitle => 'Study List';
+  String get sourceLanguageLabel => 'ངའི་སྐད་ཆ (Source)';
 
   @override
-  String get tutorialM2ListDesc =>
-      'Long-press this card to delete it. Check your saved sentences and flip them.';
+  String get speakNow => 'ད་ལྟ་བཤད་རོགས!';
 
   @override
-  String get tutorialM3SelectTitle => 'Select Material';
+  String get speaker => 'གཏམ་བཤད་པ།';
 
   @override
-  String get tutorialM3SelectDesc =>
-      'Choose a material set for speaking practice.';
+  String get speakerSelect => 'གཏམ་བཤད་པ་འདེམས།';
 
   @override
-  String get tutorialM3IntervalTitle => 'Interval';
+  String get speakingPractice => 'སྐད་ཆ་ཤོད་པའི་ཉམས་ལེན།';
 
   @override
-  String get tutorialM3IntervalDesc =>
-      'Adjust the waiting time between sentences.';
+  String get startChat => 'གླེང་མོ་འགོ་བཙུགས།';
 
   @override
-  String get tutorialM3StartTitle => 'Start Practice';
+  String get startPractice => 'ཉམས་ལེན་འགོ་བཙུགས།';
 
   @override
-  String get tutorialM3StartDesc =>
-      'Tap play to start listening and shadowing.';
+  String get startTutorial => 'སློབ་ཚན་འགོ་བཙུགས།';
 
   @override
-  String get startWarning => 'Warning';
+  String get startWarning => 'དོགས་ཟོན།';
 
   @override
-  String get noVoiceDetected => 'No voice detected';
+  String get startsWith => 'འགོ་བཙུགས་པའི་ཡི་གེ';
 
   @override
-  String get tooltipSearch => 'Search';
+  String get statusCheckEmail =>
+      'ཁྱེད་ཀྱི་གློག་འཕྲིན་ནང་ཞིབ་བཤེར་བྱས་ཏེ་དེའི་ར་སྤྲོད་གནང་རོགས།';
 
   @override
-  String get tooltipStudyReview => 'Study+Review';
-
-  @override
-  String get tooltipSpeaking => 'Speaking';
-
-  @override
-  String get tooltipDecrease => 'Decrease';
-
-  @override
-  String get tooltipIncrease => 'Increase';
-
-  @override
-  String get languageSettings => 'Language Settings';
-
-  @override
-  String get tutorialM2DropdownDesc => 'Select study materials.';
-
-  @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
-
-  @override
-  String get tutorialM2ImportDesc => 'Import JSON file from device folder.';
-
-  @override
-  String get tutorialLangSettingsTitle => 'Language Settings';
-
-  @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
-
-  @override
-  String get copy => 'Copy';
-
-  @override
-  String get copiedToClipboard => 'Copied to clipboard!';
-
-  @override
-  String get tutorialContextTitle => 'Context Tag';
-
-  @override
-  String get tutorialContextDesc =>
-      'Add context (e.g., Morning) to distinguish similar sentences.';
-
-  @override
-  String get thinkingTimeInterval => 'Playback Delay';
-
-  @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
-
-  @override
-  String get autoPlay => 'Auto-Play';
-
-  @override
-  String get timeUp => 'Time Up!';
-
-  @override
-  String get gameModeTitle => 'Game Mode';
-
-  @override
-  String get gameModeDesc => 'Choose your practice mode';
-
-  @override
-  String get wordDefenseTitle => 'Word Defense';
-
-  @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
-
-  @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
-
-  @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get translation => 'Translation';
-
-  @override
-  String get labelType => 'Type:';
-
-  @override
-  String get labelWord => 'Word';
-
-  @override
-  String get labelSentence => 'Sentence';
-
-  @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
-
-  @override
-  String get usageLimitTitle => 'Limit Reached';
-
-  @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
-
-  @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
-
-  @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
-
-  @override
-  String get translationRefilled => 'Translations refilled by 5!';
-
-  @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
-
-  @override
-  String get reviewAll => 'Review All';
-
-  @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
+  String statusDownloading(Object name) {
+    return 'ཕབ་ལེན་བྱེད་བཞིན་པ: $name...';
   }
 
   @override
-  String get filterAll => 'All';
+  String statusImportFailed(Object error) {
+    return 'ནང་འདྲེན་བྱེད་མ་ཐུབ: $error';
+  }
 
   @override
-  String get practiceWordsOnly => 'Practice Words Only';
+  String statusImportSuccess(Object name) {
+    return '$name ནང་འདྲེན་ལེགས་འགྲུབ།';
+  }
 
   @override
-  String get resetPracticeHistory => 'Reset Practice History';
+  String get statusLoggingIn => 'Logging in with Google...';
 
   @override
-  String get retry => 'Retry?';
+  String get statusLoginCancelled => 'འཛུལ་ཞུགས་མེད་པར་བཟོས།';
 
   @override
-  String get noStudyMaterial => 'No study material found.';
+  String statusLoginFailed(Object error) {
+    return 'འཛུལ་ཞུགས་བྱེད་པར་འཐུས་ཤོར་བྱུང་: $error';
+  }
 
   @override
-  String get gameOver => 'Game Over';
+  String get statusLoginSuccess => 'འཛུལ་ཞུགས་བྱེད་པར་ལེགས་འགྲུབ་བྱུང་།';
 
   @override
-  String get playAgain => 'Play Again';
+  String get statusLogoutSuccess => 'ཕྱིར་འཐོན་ཟིན།';
 
   @override
-  String get speakNow => 'Speak now!';
+  String statusSignUpFailed(Object error) {
+    return 'ཐོ་འགོད་བྱེད་པར་འཐུས་ཤོར་བྱུང་: $error';
+  }
 
   @override
-  String get scoreLabel => 'Score';
+  String get statusSigningUp => 'ཐོ་འགོད་བྱེད་བཞིན་པ...';
 
   @override
-  String get viewOnlineGuide => 'View Online User Guide';
+  String get stopPractice => 'ཉམས་ལེན་མཚམས་འཇོག';
 
   @override
-  String get getMaterials => 'Get Materials';
+  String get studyComplete => 'སློབ་སྦྱོང་ལེགས་འགྲུབ།';
 
   @override
-  String get swapLanguages => 'Swap Languages';
+  String studyRecords(int count) {
+    return 'སློབ་སྦྱོང་ཟིན་ཐོ་($count)';
+  }
 
   @override
-  String get next => 'Next';
+  String get styleFormal => 'གུས་ཞབས།';
 
   @override
-  String get wordModeLabel => 'Word Mode';
+  String get styleInformal => 'སྤྱིར་བཏང་།';
 
   @override
-  String get accuracy => 'Accuracy';
+  String get stylePolite => 'གོང་བཀུར།';
 
   @override
-  String get basicDefault => 'Basic (Default)';
+  String get styleSlang => 'སླང་/སྤྱིར་བཏང་།';
 
   @override
-  String get basic => 'Basic';
+  String get subject => 'མགོ་བརྗོད:';
 
   @override
-  String get tutorialM3WordsTitle => 'Practice Words';
+  String get swapLanguages => 'སྐད་ཆ་བརྗེ་སྒྱུར་བྱེད།';
 
   @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
+  String get switchToAi => 'AI ཐབས་ལམ་ལ་བསྒྱུར།';
 
   @override
-  String get enterTextHint => 'Enter text to translate';
+  String get switchToPartner => 'རོགས་ཟླའི་ཐབས་ལམ་ལ་བསྒྱུར།';
 
   @override
-  String get micButtonTooltip => 'Start Listening';
+  String get syncingData => 'གཞི་གྲངས་མཐུན་སྒྲིག་བྱེད་བཞིན་པ...';
 
   @override
-  String get menuHelp => 'Help';
+  String get tabConversation => 'གླེང་མོ།';
 
   @override
-  String get menuWebDownload => 'Get Material from Web';
+  String tabReview(int count) {
+    return 'བསྐྱར་སྦྱོང་ ($count)';
+  }
 
   @override
-  String get menuDeviceImport => 'Import from Device';
+  String get tabSentence => 'ཚིག';
 
   @override
-  String get menuSettings => 'Language Settings';
+  String get tabSpeaking => 'སྐད་ཆ་ཤོད་པ།';
 
   @override
-  String get basicWords => 'Basic Word Repository';
+  String tabStudyMaterial(int count) {
+    return 'སློབ་སྦྱོང་དཔྱད་ཆས་ ($count)';
+  }
 
   @override
-  String get basicSentences => 'Basic Sentence Repository';
+  String get tabWord => 'ཐ་སྙད།';
 
   @override
-  String get selectMaterialSet => 'Select Study Material Set';
+  String get tagFormal => 'གུས་ཞབས།';
 
   @override
-  String get sectionWords => 'Words';
+  String get tagSelection => 'རྟགས་འདེམས།';
 
   @override
-  String get sectionSentences => 'Sentences';
+  String get targetLanguage => 'དམིགས་འབེན་སྐད་ཆ།';
 
   @override
-  String get languageSettingsTitle => 'Language Settings';
+  String get targetLanguageFilter => 'དམིགས་འབེན་སྐད་ཆའི་ཚགས་དབྱེ།:';
 
   @override
-  String get sourceLanguageLabel => 'My Language (Source)';
+  String get targetLanguageLabel => 'སློབ་སྦྱོང་སྐད་ཆ (Target)';
 
   @override
-  String get targetLanguageLabel => 'Study Language (Target)';
+  String get thinkingTimeDesc =>
+      'ལན་འགྲིག་པ་ཡོངས་བསྒྲགས་མ་བྱས་པའི་སྔོན་གྱི་བསམ་བློ་གཏོང་བའི་དུས་ཚོད།';
 
   @override
-  String get mode3Start => 'Start';
+  String get thinkingTimeInterval => 'སྒྲ་འབྱིན་བསྐྱར་ལྡེབ།';
 
   @override
-  String get mode3Stop => 'Stop';
-
-  @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc => 'Switch between source and target languages.';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
+  String get timeUp => 'དུས་ཚོད་རྫོགས་པ!';
 
   @override
   String titleFormat(Object materialName, Object type) {
@@ -814,410 +1042,223 @@ class AppLocalizationsBo extends AppLocalizations {
   }
 
   @override
+  String get titleTagSelection => 'མགོ་བརྗོད་ཀྱི་རྟགས།(ཡིག་ཚགས།)';
+
+  @override
+  String get tooltipDecrease => 'ཇེ་ཉུང་།';
+
+  @override
+  String get tooltipIncrease => 'ཇེ་མང་།';
+
+  @override
+  String get tooltipSearch => 'འཚོལ།';
+
+  @override
+  String get tooltipSpeaking => 'སྐད་ཆ་ཤོད་པ།';
+
+  @override
+  String get tooltipStudyReview => 'སློབ་སྦྱོང་+བསྐྱར་སྦྱོང་།';
+
+  @override
+  String totalRecords(int count) {
+    return 'ཟིན་ཐོ་བསྡོམས་$count ཡོད (ཡོངས་ལ་བལྟ་བ།)';
+  }
+
+  @override
+  String get translate => 'བསྒྱུར།';
+
+  @override
+  String get translating => 'བསྒྱུར་བཞིན་པ...';
+
+  @override
+  String get translation => 'བསྒྱུར་བ།';
+
+  @override
+  String get translationComplete => 'བསྒྱུར་བ་ལེགས་འགྲུབ་ (ཉར་ཚགས་དགོས།)';
+
+  @override
+  String translationFailed(String error) {
+    return 'བསྒྱུར་བ་བྱེད་མ་ཐུབ: $error';
+  }
+
+  @override
+  String get translationLimitExceeded => 'བསྒྱུར་བའི་ཚད་ལས་བརྒལ་བ།';
+
+  @override
+  String get translationLimitMessage =>
+      'ཉིན་རེའི་རིན་མེད་བསྒྱུར་བ་(ཐེངས་5)ཚང་མ་བཀོལ་ཚར་བ།\\n\\nཁྱབ་བསྒྲགས་བལྟས་ཏེ་ཐེངས་5མྱུར་དུ་ཁ་གསབ་བྱེད་དམ?';
+
+  @override
+  String get translationLoaded => 'ཉར་ཚགས་བྱས་པའི་བསྒྱུར་བ་ནང་འཇུག་བྱས།';
+
+  @override
+  String get translationRefilled => 'བསྒྱུར་བའི་ཐེངས་གྲངས་ཐེངས་5ཁ་གསབ་བྱས་ཟིན!';
+
+  @override
+  String get translationResultHint =>
+      'བསྒྱུར་བའི་མཇུག་འབྲས - བཟོ་བཅོས་བྱེད་ཆོག';
+
+  @override
+  String get tryAgain => 'ཡང་བསྐྱར་འབད་བརྩོན་བྱེད།';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'AI མི་སྣ་དང་མཉམ་དུ་དངོས་སྦྱོང་གླེང་མོ་བྱེད་རོགས།';
+
+  @override
+  String get tutorialAiChatTitle => 'AI ཁ་བརྡ།';
+
+  @override
+  String get tutorialContextDesc =>
+      'ཚིག་གཅིག་པ་ཡིན་ནའང་གནས་སྟངས་(དཔེར་ན། ཞོགས་པ། དགོང་དྲོ)བྲིས་ཚེ་སོ་སོར་ཉར་ཚགས་བྱེད་ཆོག';
+
+  @override
+  String get tutorialContextTitle => 'གནས་སྟངས་/ཡིག་འབྲུའི་རྟགས།';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'བསྒྱུར་དགོས་པའི་ཐོག་མའི་སྐད་ཆ་དང་དམིགས་འབེན་སྐད་ཆ་སྒྲིག་འགོད་བྱེད།';
+
+  @override
+  String get tutorialLangSettingsTitle => 'སྐད་ཆའི་སྒྲིག་འགོད།';
+
+  @override
+  String get tutorialM1ToggleDesc =>
+      'ཐ་སྙད་དང་ཚིག་ཐབས་ལམ་འདི་ནས་བརྗེ་བསྒྱུར་བྱེད་རོགས།';
+
+  @override
+  String get tutorialM1ToggleTitle => 'ཐ་སྙད་/ཚིག་ཐབས་ལམ།';
+
+  @override
+  String get tutorialM2DropdownDesc =>
+      'གོང་གི་འདེམས་ཐོའི་བརྒྱུད་ནས་སློབ་སྦྱོང་བྱེད་པའི་དཔྱད་ཆས་འདེམས་ཆོག';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'སྒྲིག་ཆས་ཀྱི་ཡིག་སྣོད་ནས་ JSON ཡིག་ཆ་ནང་འཇུག་བྱེད།';
+
+  @override
+  String get tutorialM2ListDesc =>
+      'Long-press this card to delete it. Check your saved sentences and flip them.';
+
+  @override
+  String get tutorialM2ListTitle => 'སློབ་སྦྱོང་མིང་ཐོ།';
+
+  @override
+  String get tutorialM2SearchDesc =>
+      'ཉར་ཚགས་བྱས་པའི་ཐ་སྙད་དང་ཚིག་འཚོལ་ཞིབ་བྱས་ཏེ་མགྱོགས་མྱུར་ངང་རྙེད་ཐུབ།';
+
+  @override
+  String get tutorialM2SelectDesc =>
+      'Choose study materials or switch to \'Review All\'.';
+
+  @override
+  String get tutorialM2SelectTitle => 'Select & Filter';
+
+  @override
+  String get tutorialM3IntervalDesc =>
+      'ཚིག་བར་གྱི་སྒུག་པའི་དུས་ཚོད་སྙོམས་སྒྲིག་བྱེད།';
+
+  @override
+  String get tutorialM3IntervalTitle => 'བར་ཐག་སྒྲིག';
+
+  @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
 
   @override
-  String get menuSelectMaterialSet => 'Select Study Material Set';
+  String get tutorialM3ResetTitle => 'Reset History';
 
   @override
-  String get sectionWord => 'Word Section';
+  String get tutorialM3SelectDesc =>
+      'གཡས་གོང་གི་འདེམས་ཐོ་(⋮)ནས་ཉམས་ལེན་བྱེད་འདོད་པའི་དཔྱད་ཆས་ཚོགས་པ་འདེམས་རོགས།';
 
   @override
-  String get sectionSentence => 'Sentence Section';
+  String get tutorialM3SelectTitle => 'Select Material';
 
   @override
-  String get tabWord => 'word';
+  String get tutorialM3StartDesc =>
+      'སྒྲ་འབྱིན་མཐེབ་ལ་མནན་ནས་ཐོག་མའི་སྐད་ལ་ཉན་པ་དང་དེའི་རྗེས་སུ་སློབས་རོགས།';
 
   @override
-  String get tabSentence => 'sentence';
+  String get tutorialM3StartTitle => 'ཉམས་ལེན་འགོ་བཙུགས།';
 
   @override
-  String get errorProfanity =>
-      'Translation cannot be processed due to profanity.';
+  String get tutorialM3WordsDesc =>
+      'ཞིབ་བཤེར་བྱས་ཚེ་ཉར་ཚགས་བྱས་པའི་ཐ་སྙད་ཁོ་ནར་ཉམས་ལེན་བྱེད།';
 
   @override
-  String get errorHateSpeech =>
-      'Translation cannot be processed due to hate speech.';
+  String get tutorialM3WordsTitle => 'ཐ་སྙད་ཉམས་ལེན།';
 
   @override
-  String get errorSexualContent =>
-      'Translation cannot be processed due to sexual content.';
+  String get tutorialMicDesc =>
+      'སྐད་སྡེར་རྟགས་མནན་ནས་སྐད་ངག་བརྒྱུད་ནས་ནང་འཇུག་བྱེད་ཆོག';
 
   @override
-  String get errorOtherSafety => 'Translation was blocked by AI safety policy.';
+  String get tutorialMicTitle => 'སྐད་ངག་ནང་འཇུག';
 
   @override
-  String get clearAll => 'Clear All';
+  String get tutorialSaveDesc =>
+      'བསྒྱུར་བའི་མཇུག་འབྲས་སློབ་སྦྱོང་ཟིན་ཐོར་ཉར་ཚགས་བྱེད་རོགས།';
 
   @override
-  String get disambiguationTitle => 'Select Meaning';
+  String get tutorialSaveTitle => 'ཉར་ཚགས་བྱེད།';
 
   @override
-  String get disambiguationPrompt => 'Which meaning do you intend?';
+  String get tutorialSwapDesc => 'ངའི་སྐད་ཆ་དང་སློབ་སྦྱོང་སྐད་ཆ་ཕན་ཚུན་བརྗེ་བ།';
 
   @override
-  String get skip => 'Skip';
+  String get tutorialTabDesc => 'འདི་ནས་དགོས་མཁོའི་སློབ་སྦྱོང་ཐབས་ལམ་འདེམས་ཆོག';
 
   @override
-  String get inputModeTitle => 'Input';
+  String get tutorialTapToContinue => 'བརྙན་ཡོལ་ལ་རེག་ནས་མུ་མཐུད་དུ་འགྲོ';
 
   @override
-  String get reviewModeTitle => 'Review';
+  String get tutorialTransDesc => 'ནང་འཇུག་བྱས་པའི་ཡི་གེ་བསྒྱུར་བ།';
 
   @override
-  String get practiceModeTitle => 'སྦྱོང་བརྡར།';
+  String get tutorialTransTitle => 'བསྒྱུར་བ།';
 
   @override
-  String get chatHistoryTitle => 'Conversation History';
+  String get typeExclamation => 'འབོད་སྒྲའི་ཚིག';
 
   @override
-  String get chatNew => 'New Chat';
+  String get typeImperative => 'བཀའ་རྒྱའི་ཚིག';
 
   @override
-  String get chatNewChat => 'New Chat';
+  String get typeQuestion => 'དྲི་ཚིག';
 
   @override
-  String get chatChoosePersona => 'Choose a Persona';
+  String get typeStatement => 'བརྗོད་ཚིག';
 
   @override
-  String get chatTypeHint => 'Type a message...';
+  String get usageLimitTitle => 'ཚད་ལ་སླེབས་པ།';
 
   @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
+  String get useExistingText => 'ད་ཡོད་ཀྱི་ཡི་གེ་བཀོལ་སྤྱོད་བྱེད།';
 
   @override
-  String get chatNoConversations => 'No conversations yet';
+  String get viewOnlineGuide => 'དྲ་ཐོག་ལམ་སྟོན་ལ་བལྟ་བ།';
 
   @override
-  String get noDialogueHistory => 'No dialogue history.';
+  String get voluntaryTranslations => 'རང་མོས་བསྒྱུར་བ།';
 
   @override
-  String get chatStartNewPrompt => 'Start a new chat to practice!';
+  String get watchAdAndRefill => 'ཁྱབ་བསྒྲགས་བལྟས་ཏེ་ཁ་གསབ་བྱེད (+5 ཐེངས།)';
 
   @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
+  String get word => 'ཐ་སྙད།';
 
   @override
-  String get personaTeacher => 'English Teacher';
+  String get wordDefenseDesc =>
+      'དགྲ་འབྱོར་བའི་སྔོན་ལ་ཐ་སྙད་ཤོད་དེ་རྟེན་གཞི་སྲུང་སྐྱོབ་བྱེད།';
 
   @override
-  String get personaGuide => 'Travel Guide';
+  String get wordDefenseTitle => 'ཐ་སྙད་སྲུང་བ།';
 
   @override
-  String get personaFriend => 'Local Friend';
+  String get wordModeLabel => 'ཐ་སྙད་ཐབས་ལམ།';
 
   @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => 'ཁ་བརྡ།';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => 'Basic Word Repository';
-
-  @override
-  String get basicSentenceRepository => 'Basic Sentence Repository';
-
-  @override
-  String get chatEndTitle => 'End & Save Chat';
-
-  @override
-  String get chatEndMessage =>
-      'Do you want to end this conversation? You can set a title for it.';
-
-  @override
-  String get chatSaveAndExit => 'Save & Exit';
-
-  @override
-  String get errorSelectCategory => 'Please select word or sentence first!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => 'Formal';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => 'མགོ་བརྗོད་ཀྱི་རྟགས།(ཡིག་ཚགས།)';
-
-  @override
-  String get generalTags => 'སྤྱིར་བཏང་གི་རྟགས།';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => 'Singular';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => 'ཕྱོགས་གཏོགས་མེད།';
-
-  @override
-  String get chatAllConversations => 'གླེང་མོལ་ཡོངས་རྫོགས།';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation =>
-      'ཁྱེད་ཀྱིས་གླེང་མོལ་འདི་དོར་འདོད་དམ།\nགླེང་མོལ་བསུབས་པ་ཕྱིར་སློག་བྱེད་མི་ཐུབ།';
-
-  @override
-  String get notSelected => '- གདམ་ག་བྱས་མེད། -';
-
-  @override
-  String get myWordbook => 'ངའི་ཐ་སྙད་ཕྱོགས་བསྡུས།';
-
-  @override
-  String get mySentenceCollection => 'ངའི་ཚིག་གྲུབ་ཕྱོགས་བསྡུས།';
-
-  @override
-  String get newSubjectName => 'བརྗོད་བྱའི་མིང་གསརཔ།';
-
-  @override
-  String get enterNewSubjectName => 'མིང་གསརཔ་བཙུགས།';
-
-  @override
-  String get addNewSubject => 'མིང་གསརཔ་བསྣོན།';
-
-  @override
-  String get selectExistingSubject => 'ཡོད་པའི་མིང་འདེམས།';
-
-  @override
-  String get addTagHint => 'ཚད་རྟགས་ཁ་སྣོན།...';
-
-  @override
-  String get save => 'བསྲུང་';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail =>
-      'ཁྱེད་ཀྱི་གློག་འཕྲིན་ནང་ཞིབ་བཤེར་བྱས་ཏེ་དེའི་ར་སྤྲོད་གནང་རོགས།';
-
-  @override
-  String get emailAlreadyInUse =>
-      'གློག་འཕྲིན་ཁ་བྱང་འདི་སྔོན་ནས་ཐོ་འགོད་ཟིན་པས། ཐོ་འཇུག་བྱེད་པའམ་ཡང་ན་གསང་གྲངས་འཚོལ་བར་བེད་སྤྱོད་བྱེད་རོགས།';
+  String get yourPronunciation => 'ངའི་ཀློག་སྟངས།';
 }

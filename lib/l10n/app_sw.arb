@@ -1,188 +1,105 @@
 {
   "@@locale": "sw",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "Endelea na Kakao",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "Msaada & Mwongozo",
-  "helpTabModes": "Njia",
-  "helpTabJson": "Muundo wa JSON",
-  "helpTabTour": "Ziara",
-  "helpMode1Desc": "Tambua sauti, tafsiri na sikiliza matokeo.",
-  "helpMode1Details": "• Sauti: Gonga maikrofoni kuanza/kusimamisha\n• Maandishi: Andika moja kwa moja kwa kutafsiri\n• Utafutaji Kiotomatiki: Inagundua sentensi zinazofanana\n• Tafsiri: Kitufe cha tafsiri ya papo hapo\n• Sikiliza: Aikoni ya spika kwa TTS\n• Hifadhi: Inaongeza kwenye historia\n• Futa: Weka upya yote",
-  "helpMode2Desc": "Pitia sentensi zilizohifadhiwa na tafsiri iliyofichwa.",
-  "helpMode2Details": "• Chagua: Chagua seti au 'Pitia Zote'\n• Geuza: 'Onyesha/Ficha' tafsiri\n• Sikiliza: Cheza TTS kwa sentensi\n• Weka alama: Tiki (V) kwa zilizokamilika\n• Futa: Bonyeza kwa muda mrefu kufuta\n• Kichujio: Tazama zote au kwa nyenzo",
-  "helpMode3Desc": "Sikiliza sentensi na urudie (Shadowing) ili kufanya mazoezi ya matamshi.",
-  "helpMode3Details": "• Chagua: Chagua kifurushi\n• Muda: [-] [+] muda wa kusubiri (3s-60s)\n• Anza/Simama: Dhibiti kikao\n• Zungumza: Sikiliza na rudia\n• Alama: Usahihi (0-100)\n• Jaribu tena: Kitufe ikiwa sauti haigunduliwi",
-  "helpModeChatDesc": "Fanya mazoezi ya mazungumzo halisi kwa kuzungumza na AI.",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "Kwa kuleta katika Hali 3, unda JSON:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "Mahali",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "Me",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "Usahihi",
+  "adLoading": "Inapakia tangazo. Tafadhali jaribu tena baadaye.",
+  "addNewSubject": "Ongeza jina jipya",
+  "addParticipant": "Ongeza Mshiriki",
+  "addTagHint": "Ongeza lebo...",
+  "alreadyHaveAccount": "Tayari una akaunti?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "Mapitio ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "Cheza Kiotomatiki",
+  "basic": "Msingi",
+  "basicDefault": "Msingi",
+  "basicMaterialRepository": "Hifadhi ya Msingi ya Sentensi/Maneno",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "Nyenzo ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "Hifadhi ya Sentensi za Msingi",
+  "basicSentences": "Hifadhi ya Msingi ya Sentensi",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "Mapitio",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "Tafuta",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "Tafsiri",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "Sikiliza",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "Hifadhi",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "Imehifadhiwa",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "Futa",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "Maelezo ya nyenzo",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "Hifadhi ya Maneno ya Msingi",
+  "basicWords": "Hifadhi ya Msingi ya Maneno",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "Ghairi",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "Sawa",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "Onyesha upya",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "Rekodi ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "Lengo",
+  "casePossessive": "Miliki",
+  "casePossessivePronoun": "Kiwakilishi cha Kumiliki",
+  "caseReflexive": "Kiwakilishi cha Reflexive",
+  "caseSubject": "Nominative",
+  "chatAiChat": "Ongea",
+  "chatAllConversations": "Mazungumzo Yote",
+  "chatChoosePersona": "Chagua Mhusika",
+  "chatEndMessage": "Unataka kumaliza gumzo?",
+  "chatEndTitle": "Maliza na Uhifadhi Gumzo",
+  "chatFailed": "Gumzo Limegoma: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "Kichujio cha Lugha:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "Dondoo la Mazungumzo ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "Hakuna rekodi kwa lugha iliyochaguliwa",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "Historia ya Gumzo",
+  "chatNew": "Gumzo Jipya",
+  "chatNewChat": "Gumzo Jipya",
+  "chatNoConversations": "Hakuna mazungumzo bado",
+  "chatSaveAndExit": "Hifadhi na Uondoke",
+  "chatStartNewPrompt": "Anza mazungumzo mapya kwa mazoezi!",
+  "chatTypeHint": "Andika ujumbe...",
+  "chatUntitled": "Gumzo Lisilo na Kichwa",
+  "checking": "Inaangalia...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "Hifadhi tafsiri kutoka kwa hali ya utafutaji",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "Geuza",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "Ficha",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "Futa Rekodi",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "Futa zote",
+  "confirm": "Sawa",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "Una uhakika unataka kufuta rekodi hii?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "Rekodi imefutwa",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "Unataka kufuta mazungumzo haya?\nHazitaweza kurejeshwa.",
+  "confirmDeleteParticipant": "Unataka kumfuta mshiriki huyu?",
+  "contextTagHint": "Andika hali ili iwe rahisi kutofautisha baadaye",
+  "contextTagLabel": "Muktadha/Hali (Si Lazima) - mfano: salamu ya asubuhi, lugha rasmi",
+  "copiedToClipboard": "Imenakiliwa kwenye ubao wa kunakili!",
+  "copy": "Nakili",
+  "correctAnswer": "Jibu Sahihi",
+  "createNew": "Unda Mpya",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "Eneo la Sasa",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "Kitabu cha Sasa Kilichochaguliwa:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "Futa",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "Kufuta kumeshindikana: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "Leta JSON",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "Futa Rekodi",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "inaleta...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "Fanya mazoezi ya mazungumzo kupitia mchezo wa kuigiza. Chagua jibu linalofaa na useme.",
+  "dialogueQuestTitle": "Jitihada za Mazungumzo",
+  "disambiguationPrompt": "Ungependa itafsiriwe kwa maana gani?",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "Chagua maana",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "Huna akaunti?",
+  "editParticipant": "Hariri Mshiriki",
+  "email": "Barua pepe",
+  "emailAlreadyInUse": "Barua pepe hii tayari inatumika. Tafadhali ingia au tumia urejeshaji wa nywila.",
+  "enterNewSubjectName": "Ingiza jina jipya",
+  "enterSentenceHint": "Andika sentensi...",
+  "enterTextHint": "Ingiza maandishi ya kutafsiri",
+  "enterTextToTranslate": "Weka maandishi ya kutafsiri",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "Andika neno...",
+  "error": "Kosa",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "Haiwezi kutafsiri kwa sababu ina matamshi ya chuki.",
+  "errorOtherSafety": "Tafsiri imekataliwa na sera ya usalama ya AI.",
+  "errorProfanity": "Haiwezi kutafsiri kwa sababu ina lugha chafu.",
+  "errorSelectCategory": "Kwanza chagua neno au sentensi!",
+  "errorSexualContent": "Haiwezi kutafsiri kwa sababu ina maudhui ya ngono.",
+  "errors": "Makosa:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "Kike",
+  "file": "Faili:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "Zote",
+  "flip": "Geuza",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "Linganishi",
+  "formInfinitive": "Infinitive/Sasa",
+  "formPast": "Iliyopita",
+  "formPastParticiple": "Mshiriki wa Zamani",
+  "formPlural": "Wingi",
+  "formPositive": "Chanya",
+  "formPresent": "Sasa",
+  "formPresentParticiple": "Mshiriki wa Sasa (ing)",
+  "formSingular": "Umoja",
+  "formSuperlative": "Mkuu",
+  "formThirdPersonSingular": "Mtu wa Tatu Umoja",
+  "gameModeDesc": "Chagua hali ya mchezo ya kufanya mazoezi",
+  "gameModeTitle": "Hali ya Mchezo",
+  "gameOver": "Mchezo Umekwisha",
+  "gender": "Jinsia",
+  "generalTags": "Tagi za jumla",
+  "getMaterials": "Pata Nyenzo",
+  "good": "Nzuri",
+  "googleContinue": "Endelea na Google",
+  "helpDialogueImportDesc": "Ingiza seti nzima ya mazungumzo kutoka kwa faili ya JSON.",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "Kwa kuleta katika Hali 3, unda JSON:",
+  "helpJsonTypeDialogue": "Mazungumzo",
+  "helpJsonTypeSentence": "Sentensi",
+  "helpJsonTypeWord": "Neno",
+  "helpMode1Desc": "Tambua sauti, tafsiri na sikiliza matokeo.",
+  "helpMode1Details": "• Sauti: Gonga maikrofoni kuanza/kusimamisha\n• Maandishi: Andika moja kwa moja kwa kutafsiri\n• Utafutaji Kiotomatiki: Inagundua sentensi zinazofanana\n• Tafsiri: Kitufe cha tafsiri ya papo hapo\n• Sikiliza: Aikoni ya spika kwa TTS\n• Hifadhi: Inaongeza kwenye historia\n• Futa: Weka upya yote",
+  "helpMode2Desc": "Pitia sentensi zilizohifadhiwa na tafsiri iliyofichwa.",
+  "helpMode2Details": "• Chagua: Chagua seti au 'Pitia Zote'\n• Geuza: 'Onyesha/Ficha' tafsiri\n• Sikiliza: Cheza TTS kwa sentensi\n• Weka alama: Tiki (V) kwa zilizokamilika\n• Futa: Bonyeza kwa muda mrefu kufuta\n• Kichujio: Tazama zote au kwa nyenzo",
+  "helpMode3Desc": "Sikiliza sentensi na urudie (Shadowing) ili kufanya mazoezi ya matamshi.",
+  "helpMode3Details": "• Chagua: Chagua kifurushi\n• Muda: [-] [+] muda wa kusubiri (3s-60s)\n• Anza/Simama: Dhibiti kikao\n• Zungumza: Sikiliza na rudia\n• Alama: Usahihi (0-100)\n• Jaribu tena: Kitufe ikiwa sauti haigunduliwi",
+  "helpModeChatDesc": "Fanya mazoezi ya mazungumzo halisi kwa kuzungumza na AI.",
+  "helpModeChatDetails": "• Gumzo la AI: Fanya mazoezi ya mazungumzo halisi na wahusika.\n• Usimamizi wa Washiriki: Weka lugha yako na lugha ya AI ili kuzuia kutolingana kwa lugha.\n• Mchezo wa Kuigiza wa GPS: Unda hali za mazungumzo asilia kulingana na eneo lako la sasa.\n• Hifadhi ya Historia: Mazungumzo yote yamehifadhiwa kwa usalama kulingana na Kitambulisho, na historia huhifadhiwa hata kama unabadilisha jina.",
+  "helpTabJson": "Muundo wa JSON",
+  "helpTabModes": "Njia",
+  "helpTabTour": "Ziara",
+  "helpTitle": "Msaada & Mwongozo",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "Ficha",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "Imeongezwa: {count}",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "Kuleta Kukamilika",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "Nyenzo iliyo na kichwa sawa tayari ipo. Tafadhali badilisha kichwa na ujaribu tena.",
+  "importErrorMessage": "Imeshindwa kuleta faili:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "Kuleta Kumeshindikana",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "Jumla: {count}",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "Leta JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "Imeongezwa: {count}",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "Tafadhali leta faili ya JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "Imerukwa: {count}",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "Makosa:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "Jumla: {count}",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "Kosa",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "inaleta...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "Imeshindwa kuleta faili:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "Uingizaji",
+  "intervalSeconds": "Muda: {seconds}s",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "Tafadhali ingiza barua pepe halali.",
+  "kakaoContinue": "Endelea na Kakao",
+  "labelLangCode": "Msimbo wa Lugha (mfano: en-US, ko-KR)",
+  "labelName": "Jina",
+  "labelNote": "Dokezo",
+  "labelPOS": "Aina ya maneno",
+  "labelRole": "Nafasi",
+  "labelSentence": "Sentensi",
+  "labelSentenceCollection": "Mkusanyiko wa sentensi",
+  "labelSentenceType": "Aina ya sentensi",
+  "labelShowMemorized": "Nimemaliza",
+  "labelType": "Aina:",
+  "labelWord": "Neno",
+  "labelWordbook": "Mkusanyiko wa maneno",
+  "language": "Lugha",
+  "languageSettings": "Mipangilio ya lugha",
+  "languageSettingsTitle": "Mipangilio ya Lugha",
+  "libTitleFirstMeeting": "Mkutano wa Kwanza",
+  "libTitleGreetings1": "Salamu 1",
+  "libTitleNouns1": "Majina 1",
+  "libTitleVerbs1": "Vitendo 1",
+  "listen": "Sikiliza",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "Inasikiliza...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "Inapakia Washiriki...",
+  "location": "Mahali",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "Ingia",
+  "logout": "Ondoka",
+  "logoutConfirmMessage": "Unataka kuondoka kwenye kifaa hiki?",
+  "logoutConfirmTitle": "Ondoka",
+  "male": "Kiume",
+  "manageParticipants": "Simamia Washiriki",
+  "manual": "Uingizaji Kiotomatiki",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "Weka alama imesomwa",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "Maelezo ya nyenzo",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "Mimi",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "Ingiza Nyenzo kutoka kwa Kifaa",
+  "menuHelp": "Msaada",
+  "menuLanguageSettings": "Mipangilio ya Lugha",
+  "menuOnlineLibrary": "Maktaba ya Mtandaoni",
+  "menuSelectMaterialSet": "Chagua nyenzo ya kujifunzia",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "Ziara ya Jinsi ya Kutumia",
+  "menuWebDownload": "Mwongozo wa Mtumiaji",
+  "metadataDialogTitle": "Uainishaji wa Kina",
+  "metadataFormType": "Aina ya Kisima",
+  "metadataRootWord": "Mzizi (Neno Msingi)",
+  "micButtonTooltip": "Anza Utambuzi wa Sauti",
+  "mode1SelectedMaterial": "Kitabu cha Sasa Kilichochaguliwa: {name}",
+  "mode2Title": "Mapitio",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "Inayofuata",
+  "mode3Start": "Anza",
+  "mode3Stop": "Acha",
+  "mode3TryAgain": "Jaribu Tena",
+  "mySentenceCollection": "Mkusanyiko Wangu wa Sentensi",
+  "myWordbook": "Kitabu Changu cha Maneno",
+  "neutral": "Si upande wowote",
+  "newSubjectName": "Jina jipya la mada/sentensi",
+  "next": "Inayofuata",
+  "noDialogueHistory": "Hakuna historia ya mazungumzo.",
+  "noInternetWarningMic": "Hakuna muunganisho wa intaneti. Utambuzi wa sauti unaweza usiwezekane nje ya mtandao.",
+  "noInternetWarningTranslate": "Hakuna muunganisho wa intaneti. Kitendaji cha tafsiri hakipatikani nje ya mtandao. Tafadhali tumia hali ya kukagua.",
+  "noMaterialsInCategory": "Hakuna nyenzo katika kitengo hiki.",
+  "noParticipantsFound": "Hakuna washiriki waliosajiliwa.",
+  "noRecords": "Hakuna rekodi kwa lugha iliyochaguliwa",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "Hakuna nyenzo za kujifunzia.",
+  "noTextToPlay": "Hakuna maandishi ya kucheza",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "Hakuna tafsiri ya kuhifadhi",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "Sauti haijagunduliwa",
+  "notSelected": "- Haijachaguliwa -",
+  "onlineLibraryCheckInternet": "Tafadhali angalia muunganisho wako wa intaneti au ujaribu tena baadaye.",
+  "onlineLibraryLoadFailed": "Imeshindwa kupakia nyenzo.",
+  "onlineLibraryNoMaterials": "Hakuna nyenzo.",
+  "participantDeleted": "Mshiriki amefutwa.",
+  "participantRename": "Badilisha Jina la Mshiriki",
+  "partner": "Mshirika",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "Hali ya Mshirika",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "Nenosiri",
+  "passwordTooShort": "Nenosiri lazima liwe na angalau herufi 6.",
+  "perfect": "Nzuri sana!",
+  "personaFriend": "Rafiki Mwenyeji",
+  "personaGuide": "Mwongoza Watalii",
+  "personaTeacher": "Mwalimu wa Kiingereza",
+  "playAgain": "Cheza Tena",
+  "playbackFailed": "Kucheza kumeshindikana: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "Chagua Nyenzo",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "Inacheza...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "Somo:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "Chanzo:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "Faili:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "Sifa",
+  "posAdverb": "Kielezi",
+  "posConjunction": "Kiunganishi",
+  "posInterjection": "Mshangao",
+  "posNoun": "Nomino",
+  "posPreposition": "Kihusishi",
+  "posPronoun": "Kiwakilishi",
+  "posVerb": "Kitenzi",
+  "practiceModeTitle": "Mazoezi",
+  "practiceWordsOnly": "Fanya Mazoezi ya Maneno Tu",
   "progress": "Maendeleo: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "Tafadhali leta faili ya JSON",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "Tafadhali chagua nyenzo za kusoma",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "Imesomwa",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "Weka alama imesomwa",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "Inasikiliza...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "Utambuzi umekamilika",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "Onyesha {count} Zilizoundwa Hivi Karibuni",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "Utambuzi wa sauti umeshindikana: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "Inaangalia...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "Utambuzi umekamilika",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "Inatafsiri...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "Matamshi Yanayotambuliwa:",
+  "recordDeleted": "Rekodi imefutwa",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "Tafsiri imekamilika (inahitaji kuhifadhi)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "Onyesha upya",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "Tafsiri iliyohifadhiwa imepakiwa",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "Tafsiri imeshindikana: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "Weka Upya",
+  "resetPracticeHistory": "Weka Upya Historia ya Mazoezi",
+  "retry": "Jaribu Tena?",
+  "reviewAll": "Kagua Yote",
+  "reviewCount": "Imepitiwa mara {count}",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "Weka maandishi ya kutafsiri",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "Inahifadhi...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "Hakuna tafsiri ya kuhifadhi",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "Kagua",
+  "roleAi": "Akili Bandia",
+  "roleThirdParty": "Mtu wa Tatu",
+  "roleUser": "Mtumiaji",
+  "save": "Hifadhi",
+  "saveData": "Hifadhi",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "Kuhifadhi kumeshindikana: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "Inacheza...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "Hifadhi tafsiri kutoka kwa hali ya utafutaji",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "Hakuna maandishi ya kucheza",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "Imehifadhiwa",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "Kucheza kumeshindikana: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "Inahifadhi...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "Lugha Chanzo",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "Lugha Lengwa",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "Maandishi yanayofanana yamepatikana",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "Tumia Iliyopo",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "Unda Mpya",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "Imepitiwa mara {count}",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "Kuzungumza",
-  "speakingPractice": "Mazoezi ya Kuzungumza",
-  "intervalSeconds": "Muda: {seconds}s",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "Matamshi Yako",
-  "correctAnswer": "Jibu Sahihi",
   "score": "Usahihi: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "Nzuri sana!",
-  "good": "Nzuri",
-  "tryAgain": "Jaribu tena",
-  "startPractice": "Anza Mazoezi",
-  "stopPractice": "Simamisha",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "Anza Ziara",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "Ingizo la Sauti",
-  "tutorialMicDesc": "Gonga maikrofoni kwa ingizo la sauti.",
-  "tutorialTabDesc": "Unaweza kuchagua hali ya kujifunza unayotaka hapa.",
-  "tutorialTapToContinue": "Gusa ili kuendelea",
-  "tutorialTransTitle": "Tafsiri",
-  "tutorialTransDesc": "Gonga hapa kutafsiri maandishi yako.",
-  "tutorialSaveTitle": "Hifadhi",
-  "tutorialSaveDesc": "Hifadhi tafsiri yako.",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "Alama",
+  "search": "Tafuta",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "Masharti ya Utafutaji",
+  "searchSentenceHint": "Tafuta sentensi...",
+  "searchWordHint": "Tafuta neno...",
+  "sectionSentence": "Sehemu ya sentensi",
+  "sectionSentences": "Sentensi",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "Sehemu ya maneno",
+  "sectionWords": "Maneno",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "Chagua jina lililopo",
+  "selectMaterialPrompt": "Tafadhali chagua nyenzo za kusoma",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "Chagua seti ya nyenzo za kujifunzia",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "Chagua Sehemu ya Hotuba",
+  "selectParticipants": "Chagua Washiriki",
+  "selectSentenceType": "Chagua Aina ya Sentensi",
+  "selectStudyMaterial": "Chagua Nyenzo",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "Ongea na AI",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "Chagua & Kichujio",
-  "tutorialM2SelectDesc": "Chagua nyenzo au 'Pitia Zote'.",
-  "tutorialM2ListTitle": "Orodha ya Kusoma",
-  "tutorialM2ListDesc": "Angalia kadi zako na uzigeuze. (Long-press to delete)",
-  "tutorialM3SelectTitle": "Chagua Nyenzo",
-  "tutorialM3SelectDesc": "Chagua seti kwa mazoezi ya kuzungumza.",
-  "tutorialM3IntervalTitle": "Muda",
-  "tutorialM3IntervalDesc": "Rekebisha muda wa kusubiri.",
-  "tutorialM3StartTitle": "Anza",
-  "tutorialM3StartDesc": "Bofya cheza ili kuanza.",
+  "sentence": "Sentensi",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "Jisajili",
+  "similarTextFound": "Maandishi yanayofanana yamepatikana",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "Ruka",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "Chanzo:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "Lugha Chanzo",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "Sema Sasa!",
+  "speaker": "Mzungumzaji",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "Chagua Mzungumzaji",
+  "speakingPractice": "Mazoezi ya Kuzungumza",
+  "startChat": "Anza Gumzo",
+  "startPractice": "Anza Mazoezi",
+  "startTutorial": "Anza Ziara",
   "startWarning": "Onyo",
-  "noVoiceDetected": "Sauti haijagunduliwa",
-  "tooltipSearch": "Tafuta",
-  "tooltipStudyReview": "Kusoma+Kurudia",
-  "tooltipSpeaking": "Kuzungumza",
+  "startsWith": "Huanza na",
+  "statusCheckEmail": "Tafadhali thibitisha barua pepe ili ukamilishe uthibitishaji.",
+  "statusDownloading": "Inapakua: {name}...",
+  "statusImportFailed": "Imeshindwa Kuleta: {error}",
+  "statusImportSuccess": "{name} Imekamilika Kuleta",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "Kuingia kumeghairiwa.",
+  "statusLoginFailed": "Imeshindwa kuingia: {error}",
+  "statusLoginSuccess": "Umefanikiwa kuingia.",
+  "statusLogoutSuccess": "Umeondoka.",
+  "statusSignUpFailed": "Imeshindwa kusajili: {error}",
+  "statusSigningUp": "Inasajili...",
+  "stopPractice": "Simamisha",
+  "studyComplete": "Imesomwa",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "Rekodi ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "Rasmi",
+  "styleInformal": "Isiyo Rasmi",
+  "stylePolite": "Heshima",
+  "styleSlang": "Mitaani",
+  "subject": "Somo:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "Badilisha Lugha",
+  "switchToAi": "Badilisha kwenda Hali ya AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "Badilisha kwenda Hali ya Mshirika",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "Inasawazisha data...",
+  "tabConversation": "Mazungumzo",
+  "tabReview": "Mapitio ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "sentensi",
+  "tabSpeaking": "Kuzungumza",
+  "tabStudyMaterial": "Nyenzo ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "neno",
+  "tagFormal": "Rasmi",
+  "tagSelection": "Uchaguzi wa Lebo",
+  "targetLanguage": "Lugha Lengwa",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "Kichujio cha Lugha:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "Muda wa kufikiria kabla ya jibu sahihi kufichuliwa.",
+  "thinkingTimeInterval": "Muda wa Kuchelewa wa Uchezaji",
+  "timeUp": "Muda Umekwisha!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "Tagi ya kichwa (Maktaba)",
   "tooltipDecrease": "Punguza",
   "tooltipIncrease": "Ongeza",
-  "languageSettings": "Mipangilio ya lugha",
-  "tutorialM2DropdownDesc": "Chagua nyenzo za kusoma.",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "Leta faili ya JSON kutoka kwenye folda ya kifaa.",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "Lebo ya Muktadha",
-  "tutorialContextDesc": "Ongeza muktadha (k.m. Asubuhi) ili kutofautisha sentensi zinazofanana.",
-  "thinkingTimeInterval": "Playback Delay",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "Upeo wa matumizi umefikiwa",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "Tafuta",
+  "tooltipSpeaking": "Kuzungumza",
+  "tooltipStudyReview": "Kusoma+Kurudia",
+  "totalRecords": "Jumla ya rekodi {count} (Angalia Zote)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "Tafsiri",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "Inatafsiri...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "Tafsiri",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "Chagua seti ya nyenzo za kujifunzia",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "Tafsiri imekamilika (inahitaji kuhifadhi)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "Maneno",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "Sentensi",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "Ninabadilisha lugha yangu na lugha ninayojifunza.",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "Chagua nyenzo ya kujifunzia",
-  "sectionWord": "Sehemu ya maneno",
-  "sectionSentence": "Sehemu ya sentensi",
-  "tabWord": "neno",
-  "tabSentence": "sentensi",
-  "errorProfanity": "Haiwezi kutafsiri kwa sababu ina lugha chafu.",
-  "errorHateSpeech": "Haiwezi kutafsiri kwa sababu ina matamshi ya chuki.",
-  "errorSexualContent": "Haiwezi kutafsiri kwa sababu ina maudhui ya ngono.",
-  "errorOtherSafety": "Tafsiri imekataliwa na sera ya usalama ya AI.",
-  "clearAll": "Futa zote",
-  "disambiguationTitle": "Chagua maana",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "Ungependa itafsiriwe kwa maana gani?",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "Ruka",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Input",
-  "reviewModeTitle": "Review",
-  "practiceModeTitle": "Mazoezi",
-  "chatHistoryTitle": "Conversation History",
-  "chatNew": "New Chat",
-  "chatNewChat": "New Chat",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "Tafsiri imeshindikana: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "Umefikia kikomo cha tafsiri",
+  "translationLimitMessage": "Umetumia tafsiri zote za bure za kila siku (mara 5).\\n\\nJe, ungependa kutazama tangazo na kujaza mara 5 mara moja?",
+  "translationLoaded": "Tafsiri iliyohifadhiwa imepakiwa",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "Ongea",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "Hifadhi ya Maneno ya Msingi",
-  "basicSentenceRepository": "Hifadhi ya Sentensi za Msingi",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "Save & Exit",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "Rasmi",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "Tagi ya kichwa (Maktaba)",
-  "generalTags": "Tagi za jumla",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "Umoja",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "Hesabu ya tafsiri imejazwa tena mara 5!",
+  "translationResultHint": "Matokeo ya Tafsiri - Inaweza Kurekebishwa",
+  "tryAgain": "Jaribu tena",
+  "tutorialAiChatDesc": "Fanya mazoezi ya mazungumzo halisi na wahusika wa AI.",
+  "tutorialAiChatTitle": "Ongea na AI",
+  "tutorialContextDesc": "Ongeza muktadha (k.m. Asubuhi) ili kutofautisha sentensi zinazofanana.",
+  "tutorialContextTitle": "Lebo ya Muktadha",
+  "tutorialLangSettingsDesc": "Weka lugha asili na lugha lengwa ya kutafsiri.",
+  "tutorialLangSettingsTitle": "Mipangilio ya Lugha",
+  "tutorialM1ToggleDesc": "Badilisha hali za neno na sentensi hapa.",
+  "tutorialM1ToggleTitle": "Hali ya Neno/Sentensi",
+  "tutorialM2DropdownDesc": "Chagua nyenzo za kusoma.",
+  "tutorialM2ImportDesc": "Leta faili ya JSON kutoka kwenye folda ya kifaa.",
+  "tutorialM2ListDesc": "Angalia kadi zako na uzigeuze. (Long-press to delete)",
+  "tutorialM2ListTitle": "Orodha ya Kusoma",
+  "tutorialM2SearchDesc": "Tafuta na upate maneno na sentensi zilizohifadhiwa haraka.",
+  "tutorialM2SelectDesc": "Chagua nyenzo au 'Pitia Zote'.",
+  "tutorialM2SelectTitle": "Chagua & Kichujio",
+  "tutorialM3IntervalDesc": "Rekebisha muda wa kusubiri.",
+  "tutorialM3IntervalTitle": "Muda",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "Chagua seti kwa mazoezi ya kuzungumza.",
+  "tutorialM3SelectTitle": "Chagua Nyenzo",
+  "tutorialM3StartDesc": "Bofya cheza ili kuanza.",
+  "tutorialM3StartTitle": "Anza",
+  "tutorialM3WordsDesc": "Fanya mazoezi ya maneno yaliyohifadhiwa tu wakati imechaguliwa.",
+  "tutorialM3WordsTitle": "Mazoezi ya Maneno",
+  "tutorialMicDesc": "Gonga maikrofoni kwa ingizo la sauti.",
+  "tutorialMicTitle": "Ingizo la Sauti",
+  "tutorialSaveDesc": "Hifadhi tafsiri yako.",
+  "tutorialSaveTitle": "Hifadhi",
+  "tutorialSwapDesc": "Ninabadilisha lugha yangu na lugha ninayojifunza.",
+  "tutorialTabDesc": "Unaweza kuchagua hali ya kujifunza unayotaka hapa.",
+  "tutorialTapToContinue": "Gusa ili kuendelea",
+  "tutorialTransDesc": "Gonga hapa kutafsiri maandishi yako.",
+  "tutorialTransTitle": "Tafsiri",
+  "typeExclamation": "Mshangao",
+  "typeImperative": "Agizo",
+  "typeQuestion": "Swali",
+  "typeStatement": "Kauli",
+  "usageLimitTitle": "Upeo wa matumizi umefikiwa",
+  "useExistingText": "Tumia Iliyopo",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "Si upande wowote",
-  "chatAllConversations": "Mazungumzo Yote",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "Unataka kufuta mazungumzo haya?\nHazitaweza kurejeshwa.",
-  "notSelected": "- Haijachaguliwa -",
-  "myWordbook": "Kitabu Changu cha Maneno",
-  "mySentenceCollection": "Mkusanyiko Wangu wa Sentensi",
-  "newSubjectName": "Jina jipya la mada/sentensi",
-  "enterNewSubjectName": "Ingiza jina jipya",
-  "addNewSubject": "Ongeza jina jipya",
-  "selectExistingSubject": "Chagua jina lililopo",
-  "addTagHint": "Ongeza lebo...",
-  "save": "Hifadhi",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "Tafadhali thibitisha barua pepe ili ukamilishe uthibitishaji.",
-  "emailAlreadyInUse": "Barua pepe hii tayari inatumika. Tafadhali ingia au tumia urejeshaji wa nywila."
+  "viewOnlineGuide": "Angalia Mwongozo wa Mtandaoni",
+  "voluntaryTranslations": "Tafsiri za Hiari",
+  "watchAdAndRefill": "Tazama Tangazo na Ujazwe Tena (+5)",
+  "word": "Neno",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "Tetea msingi wako kwa kusema neno kabla adui hajafika.",
+  "wordDefenseTitle": "Ulinzi wa Neno",
+  "wordModeLabel": "Hali ya Neno",
+  "yourPronunciation": "Matamshi Yako"
 }

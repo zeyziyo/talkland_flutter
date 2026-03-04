@@ -23,6 +23,14 @@
 
 ---
 
+### [2026-03-04] 리소스 소실 복구 및 전 세계 언어 현지화 완결 (v16.2.0)
+
+- **Data Recovery**: `git checkout`으로 유실되었던 10,537개의 l10n 번역 항목을 `mark_all_untranslated.py` 도구를 통해 전수 식별하고 재번역하여 시스템 무결성을 완벽히 복구했습니다.
+- **Missing Keys Restoration**: `flutter analyze` 에러를 유발하던 `menuLanguageSettings`, `libTitleNouns1`, `enterWordHint` 등 13개의 필수 리소스 키를 마스터 ARB 파일에 복원하고 80개 언어 전체에 반영했습니다.
+- **Mistranslation Fix**: 앱바 메뉴의 "사용 설명서"(`menuWebDownload`)가 일부 언어에서 영문으로 노출되던 이슈를 78개 언어 모두에서 각국의 로컬 언어(예: JA 取扱説明書, ES Manual de usuario)로 자동 수정 및 검증 완료했습니다.
+- **Verification**: `flutter gen-l10n` 및 `flutter analyze` 정적 분석 결과 "No issues found!" 상태를 달성하여 배포 안정성을 확보했습니다.
+
+
 ### [2026-03-03] 온라인 자료실 현지화 제목 자동 복구 및 시스템 무결성 확보 (v16.1.0)
 
 - **Localization Repair**: 앱 시작 시 백그라운드 무음 구동(`_initializeAll` -> `fetchOnlineMaterialsList`)을 통해, 사용자가 '온라인 자료실' 메뉴를 직접 열지 않아도 기존에 잘못된 영문 표시명(예: `Nouns 1`)이 설정된 모국어 번역 제목(예: `명사 1`)으로 자동 전환 및 복구되도록 시스템을 고도화했습니다.

@@ -9,35 +9,325 @@ class AppLocalizationsEl extends AppLocalizations {
   AppLocalizationsEl([String locale = 'el']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => 'Ακρίβεια';
 
   @override
-  String get kakaoContinue => 'Συνέχεια με Kakao';
+  String get adLoading => 'Φόρτωση διαφήμισης. Προσπαθήστε ξανά σε λίγο.';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => 'Προσθήκη νέου τίτλου';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => 'Προσθήκη συμμετέχοντα';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => 'Προσθήκη ετικέτας...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => 'Έχετε ήδη λογαριασμό;';
 
   @override
-  String get helpTitle => 'Βοήθεια & Οδηγός';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => 'Λειτουργίες';
+  String get autoPlay => 'Αυτόματη αναπαραγωγή';
 
   @override
-  String get helpTabJson => 'Μορφή JSON';
+  String get basic => 'Βασικό';
 
   @override
-  String get helpTabTour => 'Περιήγηση';
+  String get basicDefault => 'Βασικό';
+
+  @override
+  String get basicMaterialRepository => 'Βασικό αποθετήριο προτάσεων/λέξεων';
+
+  @override
+  String get basicSentenceRepository => 'Βασικό Αποθετήριο Φράσεων';
+
+  @override
+  String get basicSentences => 'Βασικό αποθετήριο προτάσεων';
+
+  @override
+  String get basicWordRepository => 'Βασικό Αποθετήριο Λέξεων';
+
+  @override
+  String get basicWords => 'Βασικό αποθετήριο λέξεων';
+
+  @override
+  String get cancel => 'Ακύρωση';
+
+  @override
+  String get caseObject => 'Αιτιατική';
+
+  @override
+  String get casePossessive => 'Γενική';
+
+  @override
+  String get casePossessivePronoun => 'Κτητική αντωνυμία';
+
+  @override
+  String get caseReflexive => 'Αυτοπαθής';
+
+  @override
+  String get caseSubject => 'Ονομαστική';
+
+  @override
+  String get chatAiChat => 'Συνομιλία';
+
+  @override
+  String get chatAllConversations => 'Όλες οι συνομιλίες';
+
+  @override
+  String get chatChoosePersona => 'Επιλογή περσόνας';
+
+  @override
+  String get chatEndMessage => 'Θέλετε να τερματίσετε τη συνομιλία;';
+
+  @override
+  String get chatEndTitle => 'Τερματισμός και αποθήκευση συνομιλίας';
+
+  @override
+  String chatFailed(Object error) {
+    return 'Αποτυχία συνομιλίας: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'Απόσπασμα συνομιλίας ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => 'Ιστορικό συνομιλιών';
+
+  @override
+  String get chatNew => 'Νέα συνομιλία';
+
+  @override
+  String get chatNewChat => 'Νέα συνομιλία';
+
+  @override
+  String get chatNoConversations => 'Δεν υπάρχουν ακόμη συνομιλίες';
+
+  @override
+  String get chatSaveAndExit => 'Αποθήκευση και έξοδος';
+
+  @override
+  String get chatStartNewPrompt => 'Ξεκινήστε μια νέα συνομιλία για εξάσκηση!';
+
+  @override
+  String get chatTypeHint => 'Πληκτρολογήστε ένα μήνυμα...';
+
+  @override
+  String get chatUntitled => 'Συνομιλία χωρίς τίτλο';
+
+  @override
+  String get checking => 'Έλεγχος...';
+
+  @override
+  String get clearAll => '모두 지우기';
+
+  @override
+  String get confirm => 'Επιβεβαίωση';
+
+  @override
+  String get confirmDelete => 'Είστε σίγουροι για τη διαγραφή;';
+
+  @override
+  String get confirmDeleteConversation =>
+      'Θέλετε να διαγράψετε αυτήν τη συνομιλία;\nΔεν θα μπορείτε να την επαναφέρετε.';
+
+  @override
+  String get confirmDeleteParticipant =>
+      'Θέλετε να διαγράψετε αυτόν τον συμμετέχοντα;';
+
+  @override
+  String get contextTagHint =>
+      'Γράψτε την κατάσταση για να τη διακρίνετε αργότερα';
+
+  @override
+  String get contextTagLabel =>
+      'Πλαίσιο/Κατάσταση (προαιρετικό) - π.χ. Καλημέρα, Ευγενική ομιλία';
+
+  @override
+  String get copiedToClipboard => 'Αντιγράφηκε στο πρόχειρο!';
+
+  @override
+  String get copy => 'Αντιγραφή';
+
+  @override
+  String get correctAnswer => 'Σωστή Απάντηση';
+
+  @override
+  String get createNew => 'Δημιουργία Νέου';
+
+  @override
+  String get currentLocation => 'Τρέχουσα τοποθεσία';
+
+  @override
+  String get currentMaterialLabel => 'Τρέχουσα επιλεγμένη συλλογή υλικού:';
+
+  @override
+  String get delete => 'Διαγραφή';
+
+  @override
+  String deleteFailed(String error) {
+    return 'Αποτυχία διαγραφής: $error';
+  }
+
+  @override
+  String get deleteRecord => 'Διαγραφή Εγγραφής';
+
+  @override
+  String get dialogueQuestDesc =>
+      'Εξασκήστε συνομιλίες μέσω παιχνιδιού ρόλων. Επιλέξτε και πείτε τις κατάλληλες απαντήσεις.';
+
+  @override
+  String get dialogueQuestTitle => 'Αποστολή διαλόγου';
+
+  @override
+  String get disambiguationPrompt => '어떤 의미로 번역하시겠습니까?';
+
+  @override
+  String get disambiguationTitle => '의미 선택';
+
+  @override
+  String get dontHaveAccount => 'Δεν έχετε λογαριασμό;';
+
+  @override
+  String get editParticipant => 'Επεξεργασία συμμετέχοντα';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get emailAlreadyInUse =>
+      'Αυτό το email χρησιμοποιείται ήδη. Συνδεθείτε ή χρησιμοποιήστε την ανάκτηση κωδικού πρόσβασης.';
+
+  @override
+  String get enterNewSubjectName => 'Εισαγωγή νέου τίτλου';
+
+  @override
+  String get enterSentenceHint => 'Εισαγάγετε μια πρόταση...';
+
+  @override
+  String get enterTextHint => 'Εισαγάγετε το κείμενο για μετάφραση';
+
+  @override
+  String get enterTextToTranslate => 'Εισάγετε κείμενο προς μετάφραση';
+
+  @override
+  String get enterWordHint => 'Εισαγάγετε μια λέξη...';
+
+  @override
+  String get error => 'Σφάλμα';
+
+  @override
+  String get errorHateSpeech => '혐오 표현이 포함되어 있어 번역할 수 없습니다.';
+
+  @override
+  String get errorOtherSafety => 'AI 안전 정책에 의해 번역이 거부되었습니다.';
+
+  @override
+  String get errorProfanity => '비속어가 포함되어 있어 번역할 수 없습니다.';
+
+  @override
+  String get errorSelectCategory => 'Επιλέξτε πρώτα μια λέξη ή πρόταση!';
+
+  @override
+  String get errorSexualContent => '선정적인 내용이 포함되어 있어 번역할 수 없습니다.';
+
+  @override
+  String get errors => 'Σφάλματα:';
+
+  @override
+  String get female => 'Γυναίκα';
+
+  @override
+  String get file => 'Αρχείο:';
+
+  @override
+  String get filterAll => 'Όλα';
+
+  @override
+  String get flip => 'Γύρισμα';
+
+  @override
+  String get formComparative => 'Συγκριτικός βαθμός';
+
+  @override
+  String get formInfinitive => 'Απαρέμφατο/Ενεστώτας';
+
+  @override
+  String get formPast => 'Παρελθόν';
+
+  @override
+  String get formPastParticiple => 'Παθητική μετοχή';
+
+  @override
+  String get formPlural => 'Πληθυντικός';
+
+  @override
+  String get formPositive => 'Θετικός βαθμός';
+
+  @override
+  String get formPresent => 'Ενεστώτας';
+
+  @override
+  String get formPresentParticiple => 'Ενεργητική μετοχή (-ing)';
+
+  @override
+  String get formSingular => 'Ενικός';
+
+  @override
+  String get formSuperlative => 'Υπερθετικός βαθμός';
+
+  @override
+  String get formThirdPersonSingular => '3ο ενικό πρόσωπο';
+
+  @override
+  String get gameModeDesc => 'Επιλέξτε μια λειτουργία παιχνιδιού για εξάσκηση';
+
+  @override
+  String get gameModeTitle => 'Λειτουργία παιχνιδιού';
+
+  @override
+  String get gameOver => 'Τέλος παιχνιδιού';
+
+  @override
+  String get gender => 'Φύλο';
+
+  @override
+  String get generalTags => 'Γενικές ετικέτες';
+
+  @override
+  String get getMaterials => 'Λήψη υλικών';
+
+  @override
+  String get good => 'Καλά';
+
+  @override
+  String get googleContinue => 'Συνέχεια με το Google';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Εισαγάγετε ένα ολόκληρο σετ διαλόγων από ένα αρχείο JSON.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc =>
+      'Για εισαγωγή υλικού στη Λειτουργία 3, δημιουργήστε JSON:';
+
+  @override
+  String get helpJsonTypeDialogue => 'Διάλογος';
+
+  @override
+  String get helpJsonTypeSentence => 'Πρόταση';
+
+  @override
+  String get helpJsonTypeWord => 'Λέξη';
 
   @override
   String get helpMode1Desc =>
@@ -69,161 +359,43 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• Συνομιλία AI: Εξασκήστε ρεαλιστικές συνομιλίες με περσόνες.\n• Διαχείριση συμμετεχόντων: Ορίστε τις γλώσσες μου και της AI για την αποφυγή γλωσσικών ασυμφωνιών.\n• Παιχνίδι ρόλων GPS: Δημιουργήστε φυσικές συνομιλίες βάσει της τρέχουσας τοποθεσίας.\n• Διατήρηση ιστορικού: Όλες οι συνομιλίες αποθηκεύονται με ασφάλεια βάσει ID, ακόμη και μετά την αλλαγή ονόματος.';
 
   @override
-  String get helpJsonDesc =>
-      'Για εισαγωγή υλικού στη Λειτουργία 3, δημιουργήστε JSON:';
+  String get helpTabJson => 'Μορφή JSON';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => 'Λειτουργίες';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => 'Περιήγηση';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => 'Βοήθεια & Οδηγός';
 
   @override
   String get helpTourDesc =>
       'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => 'Τοποθεσία';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => 'Me';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return 'Επανάληψη ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return 'Υλικό ($count)';
-  }
-
-  @override
-  String get mode2Title => 'Επανάληψη';
-
-  @override
-  String get search => 'Αναζήτηση';
-
-  @override
-  String get translate => 'Μετάφραση';
-
-  @override
-  String get listen => 'Ακρόαση';
-
-  @override
-  String get saveData => 'Αποθήκευση';
-
-  @override
-  String get saved => 'Αποθηκεύτηκε';
-
-  @override
-  String get delete => 'Διαγραφή';
-
-  @override
-  String get materialInfo => 'Πληροφορίες υλικού';
-
-  @override
-  String get cancel => 'Ακύρωση';
-
-  @override
-  String get confirm => 'OK';
-
-  @override
-  String get refresh => 'Ανανέωση';
-
-  @override
-  String studyRecords(int count) {
-    return 'Εγγραφές ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => 'Φίλτρο Γλώσσας:';
-
-  @override
-  String get noRecords => 'Χωρίς εγγραφές για την επιλεγμένη γλώσσα';
-
-  @override
-  String get saveTranslationsFromSearch =>
-      'Αποθηκεύστε μεταφράσεις από τη λειτουργία αναζήτησης';
-
-  @override
-  String get flip => 'Γύρισμα';
-
-  @override
   String get hide => 'Απόκρυψη';
 
   @override
-  String get deleteRecord => 'Διαγραφή Εγγραφής';
-
-  @override
-  String get confirmDelete => 'Είστε σίγουροι για τη διαγραφή;';
-
-  @override
-  String get recordDeleted => 'Η εγγραφή διαγράφηκε επιτυχώς';
-
-  @override
-  String deleteFailed(String error) {
-    return 'Αποτυχία διαγραφής: $error';
+  String importAdded(int count) {
+    return 'Προστέθηκαν: $count';
   }
 
   @override
-  String get importJsonFile => 'Εισαγωγή JSON';
-
-  @override
-  String get importing => 'Εισαγωγή...';
-
-  @override
   String get importComplete => 'Ολοκληρώθηκε';
+
+  @override
+  String get importDuplicateTitleError =>
+      'Υπάρχει ήδη υλικό με τον ίδιο τίτλο. Αλλάξτε τον τίτλο και δοκιμάστε ξανά.';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'Αποτυχία εισαγωγής:\\n$error';
+  }
 
   @override
   String get importFailed => 'Απέτυχε';
@@ -234,45 +406,10 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => 'Εισαγωγή JSON';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get roleThirdParty => '제삼자';
-
-  @override
-  String get speakerSelect => '발화자 선택';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return 'Σύνολο: $count';
-  }
-
-  @override
-  String importAdded(int count) {
-    return 'Προστέθηκαν: $count';
-  }
+  String get importJsonFilePrompt => 'Παρακαλώ εισάγετε αρχείο JSON';
 
   @override
   String importSkipped(int count) {
@@ -280,134 +417,15 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get errors => 'Σφάλματα:';
-
-  @override
-  String get error => 'Σφάλμα';
-
-  @override
-  String importErrorMessage(String error) {
-    return 'Αποτυχία εισαγωγής:\\n$error';
+  String importTotal(int count) {
+    return 'Σύνολο: $count';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => 'Εισαγωγή...';
 
   @override
-  String get selectStudyMaterial => 'Επιλογή Υλικού';
-
-  @override
-  String get subject => 'Θέμα:';
-
-  @override
-  String get source => 'Πηγή:';
-
-  @override
-  String get file => 'Αρχείο:';
-
-  @override
-  String progress(int current, int total) {
-    return 'Πρόοδος: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => 'Παρακαλώ εισάγετε αρχείο JSON';
-
-  @override
-  String get selectMaterialPrompt => 'Παρακαλώ επιλέξτε υλικό μελέτης';
-
-  @override
-  String get studyComplete => 'Μελετήθηκε';
-
-  @override
-  String get markAsStudied => 'Σήμανση ως Μελετημένο';
-
-  @override
-  String get listening => 'Ακούγοντας...';
-
-  @override
-  String get recognized => 'Αναγνώριση ολοκληρώθηκε';
-
-  @override
-  String recognitionFailed(String error) {
-    return 'Αποτυχία αναγνώρισης φωνής: $error';
-  }
-
-  @override
-  String get checking => 'Έλεγχος...';
-
-  @override
-  String get translating => 'Μετάφραση...';
-
-  @override
-  String get translationComplete =>
-      'Μετάφραση ολοκληρώθηκε (απαιτείται αποθήκευση)';
-
-  @override
-  String get translationLoaded => 'Φορτώθηκε αποθηκευμένη μετάφραση';
-
-  @override
-  String translationFailed(String error) {
-    return 'Αποτυχία μετάφρασης: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => 'Εισάγετε κείμενο προς μετάφραση';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => 'Αποθήκευση...';
-
-  @override
-  String get noTranslationToSave => 'Καμία μετάφραση για αποθήκευση';
-
-  @override
-  String saveFailed(String error) {
-    return 'Αποτυχία αποθήκευσης: $error';
-  }
-
-  @override
-  String get playing => 'Αναπαραγωγή...';
-
-  @override
-  String get noTextToPlay => 'Κανένα κείμενο για αναπαραγωγή';
-
-  @override
-  String playbackFailed(String error) {
-    return 'Αποτυχία αναπαραγωγής: $error';
-  }
-
-  @override
-  String get sourceLanguage => 'Γλώσσα Πηγή';
-
-  @override
-  String get targetLanguage => 'Γλώσσα Στόχος';
-
-  @override
-  String get similarTextFound => 'Βρέθηκε παρόμοιο κείμενο';
-
-  @override
-  String get useExistingText => 'Χρήση Υπάρχοντος';
-
-  @override
-  String get createNew => 'Δημιουργία Νέου';
-
-  @override
-  String reviewCount(int count) {
-    return 'Επαναλήφθηκε $count φορές';
-  }
-
-  @override
-  String get tabSpeaking => 'Ομιλία';
-
-  @override
-  String get speakingPractice => 'Πρακτική Ομιλίας';
+  String get inputModeTitle => '입력';
 
   @override
   String intervalSeconds(int seconds) {
@@ -415,10 +433,376 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get yourPronunciation => 'Η προφορά σας';
+  String get invalidEmail => 'Εισαγάγετε ένα έγκυρο email.';
 
   @override
-  String get correctAnswer => 'Σωστή Απάντηση';
+  String get kakaoContinue => 'Συνέχεια με Kakao';
+
+  @override
+  String get labelLangCode => 'Κωδικός γλώσσας (π.χ. en-US, ko-KR)';
+
+  @override
+  String get labelName => 'Όνομα';
+
+  @override
+  String get labelNote => 'Σημείωση';
+
+  @override
+  String get labelPOS => 'Μέρος του λόγου';
+
+  @override
+  String get labelRole => 'Ρόλος';
+
+  @override
+  String get labelSentence => 'Πρόταση';
+
+  @override
+  String get labelSentenceCollection => 'Συλλογή προτάσεων';
+
+  @override
+  String get labelSentenceType => 'Τύπος πρότασης';
+
+  @override
+  String get labelShowMemorized => 'Ολοκληρωμένο';
+
+  @override
+  String get labelType => 'Τύπος:';
+
+  @override
+  String get labelWord => 'Λέξη';
+
+  @override
+  String get labelWordbook => 'Λεξιλόγιο';
+
+  @override
+  String get language => 'Γλώσσα';
+
+  @override
+  String get languageSettings => 'Ρυθμίσεις γλώσσας';
+
+  @override
+  String get languageSettingsTitle => 'Ρυθμίσεις γλώσσας';
+
+  @override
+  String get libTitleFirstMeeting => 'Πρώτη γνωριμία';
+
+  @override
+  String get libTitleGreetings1 => 'Χαιρετισμοί 1';
+
+  @override
+  String get libTitleNouns1 => 'Ουσιαστικά 1';
+
+  @override
+  String get libTitleVerbs1 => 'Ρήματα 1';
+
+  @override
+  String get listen => 'Ακρόαση';
+
+  @override
+  String get listening => 'Ακούγοντας...';
+
+  @override
+  String get loadingParticipants => 'Φόρτωση συμμετεχόντων...';
+
+  @override
+  String get location => 'Τοποθεσία';
+
+  @override
+  String get login => 'Σύνδεση';
+
+  @override
+  String get logout => 'Αποσύνδεση';
+
+  @override
+  String get logoutConfirmMessage =>
+      'Θέλετε να αποσυνδεθείτε από αυτήν τη συσκευή;';
+
+  @override
+  String get logoutConfirmTitle => 'Αποσύνδεση';
+
+  @override
+  String get male => 'Άνδρας';
+
+  @override
+  String get manageParticipants => 'Διαχείριση συμμετεχόντων';
+
+  @override
+  String get manual => 'Χειροκίνητη εισαγωγή';
+
+  @override
+  String get markAsStudied => 'Σήμανση ως Μελετημένο';
+
+  @override
+  String get materialInfo => 'Πληροφορίες υλικού';
+
+  @override
+  String get me => 'Εγώ';
+
+  @override
+  String get menuDeviceImport => 'Εισαγωγή υλικού από τη συσκευή';
+
+  @override
+  String get menuHelp => 'Βοήθεια';
+
+  @override
+  String get menuLanguageSettings => 'Ρυθμίσεις γλώσσας';
+
+  @override
+  String get menuOnlineLibrary => 'Διαδικτυακή βιβλιοθήκη';
+
+  @override
+  String get menuSelectMaterialSet => 'Επιλέξτε ένα υλικό μελέτης';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuTutorial => 'Ξενάγηση χρήσης';
+
+  @override
+  String get menuWebDownload => 'Εγχειρίδιο χρήστη';
+
+  @override
+  String get metadataDialogTitle => 'Αναλυτική ταξινόμηση';
+
+  @override
+  String get metadataFormType => 'Μορφή γραμματικής';
+
+  @override
+  String get metadataRootWord => 'Ρίζα λέξης';
+
+  @override
+  String get micButtonTooltip => 'Έναρξη αναγνώρισης φωνής';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return 'Τρέχουσα επιλεγμένη συλλογή υλικού: $name';
+  }
+
+  @override
+  String get mode2Title => 'Επανάληψη';
+
+  @override
+  String get mode3Next => 'Επόμενο';
+
+  @override
+  String get mode3Start => 'Έναρξη';
+
+  @override
+  String get mode3Stop => 'Τέλος';
+
+  @override
+  String get mode3TryAgain => 'Ξανά';
+
+  @override
+  String get mySentenceCollection => 'Η συλλογή μου από προτάσεις';
+
+  @override
+  String get myWordbook => 'Το βιβλίο μου με λέξεις';
+
+  @override
+  String get neutral => 'Ουδέτερο';
+
+  @override
+  String get newSubjectName => 'Νέος τίτλος Λεξιλογίου/Φράσεων';
+
+  @override
+  String get next => 'Επόμενο';
+
+  @override
+  String get noDialogueHistory => 'Δεν υπάρχει ιστορικό διαλόγων.';
+
+  @override
+  String get noInternetWarningMic =>
+      'Δεν υπάρχει σύνδεση στο διαδίκτυο. Η αναγνώριση φωνής ενδέχεται να μην είναι δυνατή εκτός σύνδεσης.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'Δεν υπάρχει σύνδεση στο διαδίκτυο. Η λειτουργία μετάφρασης δεν είναι διαθέσιμη εκτός σύνδεσης. Χρησιμοποιήστε τη λειτουργία επανάληψης.';
+
+  @override
+  String get noMaterialsInCategory =>
+      'Δεν υπάρχουν υλικά σε αυτήν την κατηγορία.';
+
+  @override
+  String get noParticipantsFound => 'Δεν βρέθηκαν εγγεγραμμένοι συμμετέχοντες.';
+
+  @override
+  String get noRecords => 'Χωρίς εγγραφές για την επιλεγμένη γλώσσα';
+
+  @override
+  String get noStudyMaterial => 'Δεν υπάρχει υλικό μελέτης.';
+
+  @override
+  String get noTextToPlay => 'Κανένα κείμενο για αναπαραγωγή';
+
+  @override
+  String get noTranslationToSave => 'Καμία μετάφραση για αποθήκευση';
+
+  @override
+  String get noVoiceDetected => 'Δεν ανιχνεύθηκε φωνή';
+
+  @override
+  String get notSelected => '- Δεν έχει επιλεγεί -';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'Ελέγξτε τη σύνδεσή σας στο διαδίκτυο ή δοκιμάστε ξανά αργότερα.';
+
+  @override
+  String get onlineLibraryLoadFailed => 'Αποτυχία φόρτωσης υλικών.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'Δεν υπάρχουν υλικά.';
+
+  @override
+  String get participantDeleted => 'Ο συμμετέχων διαγράφηκε.';
+
+  @override
+  String get participantRename => 'Μετονομασία συμμετέχοντα';
+
+  @override
+  String get partner => 'Συνεργάτης';
+
+  @override
+  String get partnerMode => 'Λειτουργία συνεργάτη';
+
+  @override
+  String get password => 'Κωδικός πρόσβασης';
+
+  @override
+  String get passwordTooShort =>
+      'Ο κωδικός πρόσβασης πρέπει να έχει τουλάχιστον 6 χαρακτήρες.';
+
+  @override
+  String get perfect => 'Τέλεια!';
+
+  @override
+  String get personaFriend => 'Τοπικός φίλος';
+
+  @override
+  String get personaGuide => 'Τουριστικός οδηγός';
+
+  @override
+  String get personaTeacher => 'Δάσκαλος Αγγλικών';
+
+  @override
+  String get playAgain => 'Ξανά';
+
+  @override
+  String playbackFailed(String error) {
+    return 'Αποτυχία αναπαραγωγής: $error';
+  }
+
+  @override
+  String get playing => 'Αναπαραγωγή...';
+
+  @override
+  String get posAdjective => 'Επίθετο';
+
+  @override
+  String get posAdverb => 'Επίρρημα';
+
+  @override
+  String get posConjunction => 'Σύνδεσμος';
+
+  @override
+  String get posInterjection => 'Επιφώνημα';
+
+  @override
+  String get posNoun => 'Ουσιαστικό';
+
+  @override
+  String get posPreposition => 'Πρόθεση';
+
+  @override
+  String get posPronoun => 'Αντωνυμία';
+
+  @override
+  String get posVerb => 'Ρήμα';
+
+  @override
+  String get practiceModeTitle => 'Εξάσκηση';
+
+  @override
+  String get practiceWordsOnly => 'Εξάσκηση μόνο λέξεων';
+
+  @override
+  String progress(int current, int total) {
+    return 'Πρόοδος: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return 'Εμφάνιση $count πρόσφατα δημιουργημένων';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return 'Αποτυχία αναγνώρισης φωνής: $error';
+  }
+
+  @override
+  String get recognized => 'Αναγνώριση ολοκληρώθηκε';
+
+  @override
+  String get recognizedText => 'Αναγνωρισμένο κείμενο:';
+
+  @override
+  String get recordDeleted => 'Η εγγραφή διαγράφηκε επιτυχώς';
+
+  @override
+  String get refresh => 'Ανανέωση';
+
+  @override
+  String get reset => 'Επαναφορά';
+
+  @override
+  String get resetPracticeHistory => 'Επαναφορά ιστορικού εξάσκησης';
+
+  @override
+  String get retry => 'Επανάληψη;';
+
+  @override
+  String get reviewAll => 'Επισκόπηση όλων';
+
+  @override
+  String reviewCount(int count) {
+    return 'Επαναλήφθηκε $count φορές';
+  }
+
+  @override
+  String get reviewModeTitle => '복습';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => 'Τρίτος';
+
+  @override
+  String get roleUser => 'Χρήστης';
+
+  @override
+  String get save => 'Αποθήκευση';
+
+  @override
+  String get saveData => 'Αποθήκευση';
+
+  @override
+  String saveFailed(String error) {
+    return 'Αποτυχία αποθήκευσης: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch =>
+      'Αποθηκεύστε μεταφράσεις από τη λειτουργία αναζήτησης';
+
+  @override
+  String get saved => 'Αποθηκεύτηκε';
+
+  @override
+  String get saving => 'Αποθήκευση...';
 
   @override
   String score(String score) {
@@ -426,34 +810,397 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get perfect => 'Τέλεια!';
+  String get scoreLabel => 'Σκορ';
 
   @override
-  String get good => 'Καλά';
+  String get search => 'Αναζήτηση';
 
   @override
-  String get tryAgain => 'Δοκιμάστε ξανά';
+  String get searchConditions => 'Όροι αναζήτησης';
+
+  @override
+  String get searchSentenceHint => 'Αναζήτηση πρότασης...';
+
+  @override
+  String get searchWordHint => 'Αναζήτηση λέξης...';
+
+  @override
+  String get sectionSentence => 'Ενότητα προτάσεων';
+
+  @override
+  String get sectionSentences => '문장';
+
+  @override
+  String get sectionWord => 'Ενότητα λέξεων';
+
+  @override
+  String get sectionWords => '단어';
+
+  @override
+  String get selectExistingSubject => 'Επιλογή υπάρχοντος τίτλου';
+
+  @override
+  String get selectMaterialPrompt => 'Παρακαλώ επιλέξτε υλικό μελέτης';
+
+  @override
+  String get selectMaterialSet => '학습 자료집 선택';
+
+  @override
+  String get selectPOS => 'Επιλογή μέρους του λόγου';
+
+  @override
+  String get selectParticipants => 'Επιλογή συμμετεχόντων';
+
+  @override
+  String get selectSentenceType => 'Επιλογή τύπου πρότασης';
+
+  @override
+  String get selectStudyMaterial => 'Επιλογή Υλικού';
+
+  @override
+  String get sendingMessage => '메시지 전송 중...';
+
+  @override
+  String get sentence => 'Πρόταση';
+
+  @override
+  String get signUp => 'Εγγραφή';
+
+  @override
+  String get similarTextFound => 'Βρέθηκε παρόμοιο κείμενο';
+
+  @override
+  String get skip => '건너뛰기';
+
+  @override
+  String get source => 'Πηγή:';
+
+  @override
+  String get sourceLanguage => 'Γλώσσα Πηγή';
+
+  @override
+  String get sourceLanguageLabel => 'Source Language';
+
+  @override
+  String get speakNow => 'Μιλήστε τώρα!';
+
+  @override
+  String get speaker => 'Ομιλητής';
+
+  @override
+  String get speakerSelect => 'Επιλογή ομιλητή';
+
+  @override
+  String get speakingPractice => 'Πρακτική Ομιλίας';
+
+  @override
+  String get startChat => 'Έναρξη συνομιλίας';
 
   @override
   String get startPractice => 'Έναρξη Πρακτικής';
 
   @override
-  String get stopPractice => 'Διακοπή';
-
-  @override
-  String get menuOnlineLibrary => 'Online Library';
-
-  @override
   String get startTutorial => 'Έναρξη Περιήγησης';
 
   @override
-  String get menuTutorial => 'Tutorial';
+  String get startWarning => 'Προειδοποίηση';
+
+  @override
+  String get startsWith => 'Ξεκινά με';
+
+  @override
+  String get statusCheckEmail =>
+      'Ελέγξτε το email σας για να ολοκληρώσετε την επαλήθευση.';
+
+  @override
+  String statusDownloading(Object name) {
+    return 'Λήψη: $name...';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return 'Αποτυχία εισαγωγής: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name εισαγωγή ολοκληρώθηκε';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => 'Η σύνδεση ακυρώθηκε.';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return 'Αποτυχία σύνδεσης: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => 'Επιτυχής σύνδεση.';
+
+  @override
+  String get statusLogoutSuccess => 'Αποσυνδεθήκατε.';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return 'Αποτυχία εγγραφής: $error';
+  }
+
+  @override
+  String get statusSigningUp => 'Εγγραφή...';
+
+  @override
+  String get stopPractice => 'Διακοπή';
+
+  @override
+  String get studyComplete => 'Μελετήθηκε';
+
+  @override
+  String studyRecords(int count) {
+    return 'Εγγραφές ($count)';
+  }
+
+  @override
+  String get styleFormal => 'Επίσημο';
+
+  @override
+  String get styleInformal => 'Ανεπιτήδευτο';
+
+  @override
+  String get stylePolite => 'Ευγενικό';
+
+  @override
+  String get styleSlang => 'Αργκό';
+
+  @override
+  String get subject => 'Θέμα:';
+
+  @override
+  String get swapLanguages => 'Αντιμετάθεση γλωσσών';
+
+  @override
+  String get switchToAi => 'Εναλλαγή σε λειτουργία AI';
+
+  @override
+  String get switchToPartner => 'Εναλλαγή σε λειτουργία συνεργάτη';
+
+  @override
+  String get syncingData => 'Συγχρονισμός δεδομένων...';
+
+  @override
+  String get tabConversation => 'Συνομιλία';
+
+  @override
+  String tabReview(int count) {
+    return 'Επανάληψη ($count)';
+  }
+
+  @override
+  String get tabSentence => 'πρόταση';
+
+  @override
+  String get tabSpeaking => 'Ομιλία';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return 'Υλικό ($count)';
+  }
+
+  @override
+  String get tabWord => 'λέξη';
+
+  @override
+  String get tagFormal => 'Επίσημο';
+
+  @override
+  String get tagSelection => 'Επιλογή ετικέτας';
+
+  @override
+  String get targetLanguage => 'Γλώσσα Στόχος';
+
+  @override
+  String get targetLanguageFilter => 'Φίλτρο Γλώσσας:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc =>
+      'Χρόνος για σκέψη πριν αποκαλυφθεί η σωστή απάντηση.';
+
+  @override
+  String get thinkingTimeInterval => 'Χρονικό διάστημα σκέψης';
+
+  @override
+  String get timeUp => 'Έληξε ο χρόνος!';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
+
+  @override
+  String get titleTagSelection => 'Ετικέτα τίτλου (Συλλογή)';
+
+  @override
+  String get tooltipDecrease => 'Μείωση';
+
+  @override
+  String get tooltipIncrease => 'Αύξηση';
+
+  @override
+  String get tooltipSearch => 'Αναζήτηση';
+
+  @override
+  String get tooltipSpeaking => 'Ομιλία';
+
+  @override
+  String get tooltipStudyReview => 'Μελέτη+Επανάληψη';
+
+  @override
+  String totalRecords(int count) {
+    return 'Σύνολο $count εγγραφών (Προβολή όλων)';
+  }
+
+  @override
+  String get translate => 'Μετάφραση';
+
+  @override
+  String get translating => 'Μετάφραση...';
+
+  @override
+  String get translation => 'Μετάφραση';
+
+  @override
+  String get translationComplete =>
+      'Μετάφραση ολοκληρώθηκε (απαιτείται αποθήκευση)';
+
+  @override
+  String translationFailed(String error) {
+    return 'Αποτυχία μετάφρασης: $error';
+  }
+
+  @override
+  String get translationLimitExceeded => 'Υπέρβαση ορίου μετάφρασης';
+
+  @override
+  String get translationLimitMessage =>
+      'Έχετε χρησιμοποιήσει όλες τις δωρεάν μεταφράσεις της ημέρας (5).\\n\\nΘέλετε να παρακολουθήσετε μια διαφήμιση για να ανανεώσετε αμέσως 5 μεταφράσεις;';
+
+  @override
+  String get translationLoaded => 'Φορτώθηκε αποθηκευμένη μετάφραση';
+
+  @override
+  String get translationRefilled => 'Οι μεταφράσεις σας ανανεώθηκαν κατά 5!';
+
+  @override
+  String get translationResultHint => 'Αποτέλεσμα μετάφρασης - Επεξεργάσιμο';
+
+  @override
+  String get tryAgain => 'Δοκιμάστε ξανά';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'Εξασκήστε ρεαλιστικές συνομιλίες με περσόνες AI.';
+
+  @override
+  String get tutorialAiChatTitle => 'Συνομιλία AI';
+
+  @override
+  String get tutorialContextDesc =>
+      'Προσθέστε πλαίσιο (π.χ. Πρωί) για να διακρίνετε παρόμοιες προτάσεις.';
+
+  @override
+  String get tutorialContextTitle => 'Ετικέτα περιβάλλοντος';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Ορίστε την αρχική και την επιθυμητή γλώσσα για μετάφραση.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Ρυθμίσεις γλώσσας';
+
+  @override
+  String get tutorialM1ToggleDesc =>
+      'Αλλάξτε τη λειτουργία λέξεων και προτάσεων εδώ.';
+
+  @override
+  String get tutorialM1ToggleTitle => 'Λειτουργία λέξεων/προτάσεων';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Επιλέξτε εκπαιδευτικό υλικό.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Εισαγωγή αρχείου JSON από φάκελο συσκευής.';
+
+  @override
+  String get tutorialM2ListDesc =>
+      'Ελέγξτε τις κάρτες και γυρίστε τις. (Long-press to delete)';
+
+  @override
+  String get tutorialM2ListTitle => 'Λίστα Μελέτης';
+
+  @override
+  String get tutorialM2SearchDesc =>
+      'Αναζητήστε και βρείτε γρήγορα αποθηκευμένες λέξεις και προτάσεις.';
+
+  @override
+  String get tutorialM2SelectDesc => 'Επιλέξτε υλικό ή \'Επανάληψη Όλων\'.';
+
+  @override
+  String get tutorialM2SelectTitle => 'Επιλογή & Φίλτρο';
+
+  @override
+  String get tutorialM3IntervalDesc => 'Ρυθμίστε το χρόνο αναμονής.';
+
+  @override
+  String get tutorialM3IntervalTitle => 'Διάστημα';
+
+  @override
+  String get tutorialM3ResetDesc =>
+      'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get tutorialM3ResetTitle => 'Reset History';
+
+  @override
+  String get tutorialM3SelectDesc => 'Επιλέξτε σετ για πρακτική ομιλίας.';
+
+  @override
+  String get tutorialM3SelectTitle => 'Επιλογή Υλικού';
+
+  @override
+  String get tutorialM3StartDesc => 'Πατήστε play για έναρξη.';
+
+  @override
+  String get tutorialM3StartTitle => 'Έναρξη';
+
+  @override
+  String get tutorialM3WordsDesc =>
+      'Εάν επιλεγεί, μόνο οι αποθηκευμένες λέξεις θα εξασκηθούν.';
+
+  @override
+  String get tutorialM3WordsTitle => 'Εξάσκηση λέξεων';
+
+  @override
+  String get tutorialMicDesc => 'Πατήστε το μικρόφωνο για φωνητική εισαγωγή.';
 
   @override
   String get tutorialMicTitle => 'Φωνητική Είσοδος';
 
   @override
-  String get tutorialMicDesc => 'Πατήστε το μικρόφωνο για φωνητική εισαγωγή.';
+  String get tutorialSaveDesc => 'Αποθηκεύστε τη μετάφραση.';
+
+  @override
+  String get tutorialSaveTitle => 'Αποθήκευση';
+
+  @override
+  String get tutorialSwapDesc =>
+      'Ανταλλάσσω τη γλώσσα μου με τη γλώσσα που μαθαίνω.';
 
   @override
   String get tutorialTabDesc =>
@@ -463,757 +1210,52 @@ class AppLocalizationsEl extends AppLocalizations {
   String get tutorialTapToContinue => 'Πατήστε για συνέχεια';
 
   @override
-  String get tutorialTransTitle => 'Μετάφραση';
-
-  @override
   String get tutorialTransDesc => 'Πατήστε εδώ για μετάφραση.';
 
   @override
-  String get tutorialSaveTitle => 'Αποθήκευση';
+  String get tutorialTransTitle => 'Μετάφραση';
 
   @override
-  String get tutorialSaveDesc => 'Αποθηκεύστε τη μετάφραση.';
+  String get typeExclamation => 'Επιφώνημα';
 
   @override
-  String get selectParticipants => 'Select Participants';
+  String get typeImperative => 'Προστακτική';
 
   @override
-  String get loadingParticipants => 'Loading participants...';
+  String get typeQuestion => 'Ερώτηση';
 
   @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
-
-  @override
-  String get sendingMessage => '메시지 전송 중...';
-
-  @override
-  String get startChat => 'Start Chat';
-
-  @override
-  String get manageParticipants => 'Manage Participants';
-
-  @override
-  String get tutorialAiChatTitle => 'AI Chat';
-
-  @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
-
-  @override
-  String get tutorialM2SelectTitle => 'Επιλογή & Φίλτρο';
-
-  @override
-  String get tutorialM2SelectDesc => 'Επιλέξτε υλικό ή \'Επανάληψη Όλων\'.';
-
-  @override
-  String get tutorialM2ListTitle => 'Λίστα Μελέτης';
-
-  @override
-  String get tutorialM2ListDesc =>
-      'Ελέγξτε τις κάρτες και γυρίστε τις. (Long-press to delete)';
-
-  @override
-  String get tutorialM3SelectTitle => 'Επιλογή Υλικού';
-
-  @override
-  String get tutorialM3SelectDesc => 'Επιλέξτε σετ για πρακτική ομιλίας.';
-
-  @override
-  String get tutorialM3IntervalTitle => 'Διάστημα';
-
-  @override
-  String get tutorialM3IntervalDesc => 'Ρυθμίστε το χρόνο αναμονής.';
-
-  @override
-  String get tutorialM3StartTitle => 'Έναρξη';
-
-  @override
-  String get tutorialM3StartDesc => 'Πατήστε play για έναρξη.';
-
-  @override
-  String get startWarning => 'Προειδοποίηση';
-
-  @override
-  String get noVoiceDetected => 'Δεν ανιχνεύθηκε φωνή';
-
-  @override
-  String get tooltipSearch => 'Αναζήτηση';
-
-  @override
-  String get tooltipStudyReview => 'Μελέτη+Επανάληψη';
-
-  @override
-  String get tooltipSpeaking => 'Ομιλία';
-
-  @override
-  String get tooltipDecrease => 'Μείωση';
-
-  @override
-  String get tooltipIncrease => 'Αύξηση';
-
-  @override
-  String get languageSettings => 'Ρυθμίσεις γλώσσας';
-
-  @override
-  String get tutorialM2DropdownDesc => 'Επιλέξτε εκπαιδευτικό υλικό.';
-
-  @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
-
-  @override
-  String get tutorialM2ImportDesc =>
-      'Εισαγωγή αρχείου JSON από φάκελο συσκευής.';
-
-  @override
-  String get tutorialLangSettingsTitle => 'Language Settings';
-
-  @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
-
-  @override
-  String get copy => 'Copy';
-
-  @override
-  String get copiedToClipboard => 'Copied to clipboard!';
-
-  @override
-  String get tutorialContextTitle => 'Ετικέτα περιβάλλοντος';
-
-  @override
-  String get tutorialContextDesc =>
-      'Προσθέστε πλαίσιο (π.χ. Πρωί) για να διακρίνετε παρόμοιες προτάσεις.';
-
-  @override
-  String get thinkingTimeInterval => 'Playback Delay';
-
-  @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
-
-  @override
-  String get autoPlay => 'Auto-Play';
-
-  @override
-  String get timeUp => 'Time Up!';
-
-  @override
-  String get gameModeTitle => 'Game Mode';
-
-  @override
-  String get gameModeDesc => 'Choose your practice mode';
-
-  @override
-  String get wordDefenseTitle => 'Word Defense';
-
-  @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
-
-  @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
-
-  @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
-
-  @override
-  String get translation => 'Translation';
-
-  @override
-  String get labelType => 'Type:';
-
-  @override
-  String get labelWord => 'Word';
-
-  @override
-  String get labelSentence => 'Sentence';
-
-  @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
+  String get typeStatement => 'Δήλωση';
 
   @override
   String get usageLimitTitle => 'Έφτασε το όριο';
 
   @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
+  String get useExistingText => 'Χρήση Υπάρχοντος';
 
   @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
+  String get viewOnlineGuide => 'Προβολή διαδικτυακού οδηγού';
 
   @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
+  String get voluntaryTranslations => 'Εθελοντικές μεταφράσεις';
 
   @override
-  String get translationRefilled => 'Translations refilled by 5!';
+  String get watchAdAndRefill =>
+      'Παρακολουθήστε μια διαφήμιση και ανανεώστε (+5)';
 
   @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
+  String get word => 'Λέξη';
 
   @override
-  String get reviewAll => 'Review All';
+  String get wordDefenseDesc =>
+      'Υπερασπιστείτε τη βάση σας λέγοντας τις λέξεις πριν φτάσουν οι εχθροί.';
 
   @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
+  String get wordDefenseTitle => 'Άμυνα λέξεων';
 
   @override
-  String get filterAll => 'All';
+  String get wordModeLabel => 'Λειτουργία λέξεων';
 
   @override
-  String get practiceWordsOnly => 'Practice Words Only';
-
-  @override
-  String get resetPracticeHistory => 'Reset Practice History';
-
-  @override
-  String get retry => 'Retry?';
-
-  @override
-  String get noStudyMaterial => 'No study material found.';
-
-  @override
-  String get gameOver => 'Game Over';
-
-  @override
-  String get playAgain => 'Play Again';
-
-  @override
-  String get speakNow => 'Speak now!';
-
-  @override
-  String get scoreLabel => 'Score';
-
-  @override
-  String get viewOnlineGuide => 'View Online User Guide';
-
-  @override
-  String get getMaterials => 'Get Materials';
-
-  @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
-
-  @override
-  String get wordModeLabel => 'Word Mode';
-
-  @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get menuHelp => 'Help';
-
-  @override
-  String get menuWebDownload => 'Get Material from Web';
-
-  @override
-  String get menuDeviceImport => 'Import from Device';
-
-  @override
-  String get menuSettings => 'Settings';
-
-  @override
-  String get basicWords => 'Basic Word Repository';
-
-  @override
-  String get basicSentences => 'Basic Sentence Repository';
-
-  @override
-  String get selectMaterialSet => '학습 자료집 선택';
-
-  @override
-  String get sectionWords => '단어';
-
-  @override
-  String get sectionSentences => '문장';
-
-  @override
-  String get languageSettingsTitle => 'Language Settings';
-
-  @override
-  String get sourceLanguageLabel => 'Source Language';
-
-  @override
-  String get targetLanguageLabel => 'Target Language';
-
-  @override
-  String get mode3Start => 'Start';
-
-  @override
-  String get mode3Stop => 'Stop';
-
-  @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc =>
-      'Ανταλλάσσω τη γλώσσα μου με τη γλώσσα που μαθαίνω.';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
-
-  @override
-  String get tutorialM3ResetDesc =>
-      'Clear your progress and accuracy scores to start fresh.';
-
-  @override
-  String get menuSelectMaterialSet => 'Επιλέξτε ένα υλικό μελέτης';
-
-  @override
-  String get sectionWord => 'Ενότητα λέξεων';
-
-  @override
-  String get sectionSentence => 'Ενότητα προτάσεων';
-
-  @override
-  String get tabWord => 'λέξη';
-
-  @override
-  String get tabSentence => 'πρόταση';
-
-  @override
-  String get errorProfanity => '비속어가 포함되어 있어 번역할 수 없습니다.';
-
-  @override
-  String get errorHateSpeech => '혐오 표현이 포함되어 있어 번역할 수 없습니다.';
-
-  @override
-  String get errorSexualContent => '선정적인 내용이 포함되어 있어 번역할 수 없습니다.';
-
-  @override
-  String get errorOtherSafety => 'AI 안전 정책에 의해 번역이 거부되었습니다.';
-
-  @override
-  String get clearAll => '모두 지우기';
-
-  @override
-  String get disambiguationTitle => '의미 선택';
-
-  @override
-  String get disambiguationPrompt => '어떤 의미로 번역하시겠습니까?';
-
-  @override
-  String get skip => '건너뛰기';
-
-  @override
-  String get inputModeTitle => '입력';
-
-  @override
-  String get reviewModeTitle => '복습';
-
-  @override
-  String get practiceModeTitle => 'Εξάσκηση';
-
-  @override
-  String get chatHistoryTitle => 'Conversation History';
-
-  @override
-  String get chatNew => 'New Chat';
-
-  @override
-  String get chatNewChat => 'New Chat';
-
-  @override
-  String get chatChoosePersona => 'Choose a Persona';
-
-  @override
-  String get chatTypeHint => 'Type a message...';
-
-  @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
-
-  @override
-  String get chatNoConversations => 'No conversations yet';
-
-  @override
-  String get noDialogueHistory => 'No dialogue history.';
-
-  @override
-  String get chatStartNewPrompt => 'Start a new chat to practice!';
-
-  @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
-
-  @override
-  String get personaTeacher => 'English Teacher';
-
-  @override
-  String get personaGuide => 'Travel Guide';
-
-  @override
-  String get personaFriend => 'Local Friend';
-
-  @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => 'Συνομιλία';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => 'Βασικό Αποθετήριο Λέξεων';
-
-  @override
-  String get basicSentenceRepository => 'Βασικό Αποθετήριο Φράσεων';
-
-  @override
-  String get chatEndTitle => 'End & Save Chat';
-
-  @override
-  String get chatEndMessage =>
-      'Do you want to end this conversation? You can set a title for it.';
-
-  @override
-  String get chatSaveAndExit => 'Save & Exit';
-
-  @override
-  String get errorSelectCategory => 'Please select word or sentence first!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => 'Επίσημο';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => 'Ετικέτα τίτλου (Συλλογή)';
-
-  @override
-  String get generalTags => 'Γενικές ετικέτες';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => 'Ενικός';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => 'Ουδέτερο';
-
-  @override
-  String get chatAllConversations => 'Όλες οι συνομιλίες';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation =>
-      'Θέλετε να διαγράψετε αυτήν τη συνομιλία;\nΔεν θα μπορείτε να την επαναφέρετε.';
-
-  @override
-  String get notSelected => '- Δεν έχει επιλεγεί -';
-
-  @override
-  String get myWordbook => 'Το βιβλίο μου με λέξεις';
-
-  @override
-  String get mySentenceCollection => 'Η συλλογή μου από προτάσεις';
-
-  @override
-  String get newSubjectName => 'Νέος τίτλος Λεξιλογίου/Φράσεων';
-
-  @override
-  String get enterNewSubjectName => 'Εισαγωγή νέου τίτλου';
-
-  @override
-  String get addNewSubject => 'Προσθήκη νέου τίτλου';
-
-  @override
-  String get selectExistingSubject => 'Επιλογή υπάρχοντος τίτλου';
-
-  @override
-  String get addTagHint => 'Προσθήκη ετικέτας...';
-
-  @override
-  String get save => 'Αποθήκευση';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail =>
-      'Ελέγξτε το email σας για να ολοκληρώσετε την επαλήθευση.';
-
-  @override
-  String get emailAlreadyInUse =>
-      'Αυτό το email χρησιμοποιείται ήδη. Συνδεθείτε ή χρησιμοποιήστε την ανάκτηση κωδικού πρόσβασης.';
+  String get yourPronunciation => 'Η προφορά σας';
 }

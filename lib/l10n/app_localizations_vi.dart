@@ -9,35 +9,327 @@ class AppLocalizationsVi extends AppLocalizations {
   AppLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => 'Độ chính xác';
 
   @override
-  String get kakaoContinue => 'Tiếp tục với Kakao';
+  String get adLoading => 'Đang tải quảng cáo. Vui lòng thử lại sau.';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => 'Thêm tên mới';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => 'Thêm người tham gia';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => 'Thêm thẻ...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => 'Bạn đã có tài khoản?';
 
   @override
-  String get helpTitle => 'Trợ giúp & Hướng dẫn';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => 'Chế độ';
+  String get autoPlay => 'Tự động phát';
 
   @override
-  String get helpTabJson => 'Định dạng JSON';
+  String get basic => 'Cơ bản';
 
   @override
-  String get helpTabTour => 'Hướng dẫn';
+  String get basicDefault => 'Cơ bản';
+
+  @override
+  String get basicMaterialRepository => 'Kho từ/câu cơ bản';
+
+  @override
+  String get basicSentenceRepository => 'Kho câu cơ bản';
+
+  @override
+  String get basicSentences => 'Kho câu cơ bản';
+
+  @override
+  String get basicWordRepository => 'Kho từ cơ bản';
+
+  @override
+  String get basicWords => 'Kho từ cơ bản';
+
+  @override
+  String get cancel => 'Hủy';
+
+  @override
+  String get caseObject => 'Tân cách';
+
+  @override
+  String get casePossessive => 'Sở hữu cách';
+
+  @override
+  String get casePossessivePronoun => 'Đại từ sở hữu';
+
+  @override
+  String get caseReflexive => 'Phản thân đại từ';
+
+  @override
+  String get caseSubject => 'Chủ cách';
+
+  @override
+  String get chatAiChat => 'Trò chuyện';
+
+  @override
+  String get chatAllConversations => 'Toàn bộ hội thoại';
+
+  @override
+  String get chatChoosePersona => 'Chọn nhân vật';
+
+  @override
+  String get chatEndMessage => 'Bạn có muốn kết thúc cuộc trò chuyện không?';
+
+  @override
+  String get chatEndTitle => 'Kết thúc và lưu cuộc trò chuyện';
+
+  @override
+  String chatFailed(Object error) {
+    return 'Trò chuyện thất bại: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'Trích đoạn từ cuộc trò chuyện ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => 'Lịch sử trò chuyện';
+
+  @override
+  String get chatNew => 'Cuộc trò chuyện mới';
+
+  @override
+  String get chatNewChat => 'Trò chuyện mới';
+
+  @override
+  String get chatNoConversations => 'Chưa có cuộc trò chuyện nào';
+
+  @override
+  String get chatSaveAndExit => 'Lưu và thoát';
+
+  @override
+  String get chatStartNewPrompt =>
+      'Hãy bắt đầu một cuộc trò chuyện mới để luyện tập!';
+
+  @override
+  String get chatTypeHint => 'Nhập tin nhắn...';
+
+  @override
+  String get chatUntitled => 'Cuộc trò chuyện không có tiêu đề';
+
+  @override
+  String get checking => 'Đang kiểm tra...';
+
+  @override
+  String get clearAll => 'Xóa hết';
+
+  @override
+  String get confirm => 'Xác nhận';
+
+  @override
+  String get confirmDelete => 'Bạn có chắc chắn muốn xóa bản ghi này không?';
+
+  @override
+  String get confirmDeleteConversation =>
+      'Bạn có chắc chắn muốn xóa hội thoại này?\nHội thoại đã xóa không thể khôi phục.';
+
+  @override
+  String get confirmDeleteParticipant =>
+      'Bạn có muốn xóa người tham gia này không?';
+
+  @override
+  String get contextTagHint => 'Ghi lại tình huống để dễ phân biệt sau này';
+
+  @override
+  String get contextTagLabel =>
+      'Ngữ cảnh/Tình huống (tùy chọn) - Ví dụ: Chào buổi sáng, Kính ngữ';
+
+  @override
+  String get copiedToClipboard => 'Đã sao chép vào bộ nhớ tạm!';
+
+  @override
+  String get copy => 'Sao chép';
+
+  @override
+  String get correctAnswer => 'Đáp án đúng';
+
+  @override
+  String get createNew => 'Tạo mục mới';
+
+  @override
+  String get currentLocation => 'Vị trí hiện tại';
+
+  @override
+  String get currentMaterialLabel => 'Bộ tài liệu đã chọn:';
+
+  @override
+  String get delete => 'Xóa';
+
+  @override
+  String deleteFailed(String error) {
+    return 'Xóa thất bại: $error';
+  }
+
+  @override
+  String get deleteRecord => 'Xóa bản ghi';
+
+  @override
+  String get dialogueQuestDesc =>
+      'Luyện tập hội thoại thông qua nhập vai. Chọn và nói câu trả lời thích hợp.';
+
+  @override
+  String get dialogueQuestTitle => 'Nhiệm vụ hội thoại';
+
+  @override
+  String get disambiguationPrompt => 'Bạn muốn dịch theo nghĩa nào?';
+
+  @override
+  String get disambiguationTitle => 'Chọn nghĩa';
+
+  @override
+  String get dontHaveAccount => 'Bạn chưa có tài khoản?';
+
+  @override
+  String get editParticipant => 'Sửa người tham gia';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get emailAlreadyInUse =>
+      'Email này đã được sử dụng. Vui lòng đăng nhập hoặc sử dụng chức năng tìm mật khẩu.';
+
+  @override
+  String get enterNewSubjectName => 'Nhập tên mới';
+
+  @override
+  String get enterSentenceHint => 'Nhập câu...';
+
+  @override
+  String get enterTextHint => 'Nhập văn bản cần dịch';
+
+  @override
+  String get enterTextToTranslate => 'Vui lòng nhập văn bản để dịch';
+
+  @override
+  String get enterWordHint => 'Nhập từ...';
+
+  @override
+  String get error => 'Lỗi';
+
+  @override
+  String get errorHateSpeech =>
+      'Không thể dịch vì chứa nội dung kích động thù hận.';
+
+  @override
+  String get errorOtherSafety =>
+      'Bản dịch bị từ chối theo chính sách an toàn AI.';
+
+  @override
+  String get errorProfanity => 'Không thể dịch vì chứa từ ngữ tục tĩu.';
+
+  @override
+  String get errorSelectCategory => 'Vui lòng chọn từ hoặc câu trước!';
+
+  @override
+  String get errorSexualContent => 'Không thể dịch vì chứa nội dung khiêu dâm.';
+
+  @override
+  String get errors => 'Lỗi:';
+
+  @override
+  String get female => 'Nữ';
+
+  @override
+  String get file => 'Tập tin:';
+
+  @override
+  String get filterAll => 'Tất cả';
+
+  @override
+  String get flip => 'Lật';
+
+  @override
+  String get formComparative => 'So sánh hơn';
+
+  @override
+  String get formInfinitive => 'Nguyên thể/Hiện tại';
+
+  @override
+  String get formPast => 'Quá khứ';
+
+  @override
+  String get formPastParticiple => 'Quá khứ phân từ';
+
+  @override
+  String get formPlural => 'Số nhiều';
+
+  @override
+  String get formPositive => 'Nguyên cấp';
+
+  @override
+  String get formPresent => 'Hiện tại';
+
+  @override
+  String get formPresentParticiple => 'Hiện tại phân từ (ing)';
+
+  @override
+  String get formSingular => 'Số ít';
+
+  @override
+  String get formSuperlative => 'So sánh nhất';
+
+  @override
+  String get formThirdPersonSingular => 'Ngôi thứ ba số ít';
+
+  @override
+  String get gameModeDesc => 'Chọn chế độ trò chơi để luyện tập';
+
+  @override
+  String get gameModeTitle => 'Chế độ trò chơi';
+
+  @override
+  String get gameOver => 'Kết thúc trò chơi';
+
+  @override
+  String get gender => 'Giới tính';
+
+  @override
+  String get generalTags => 'Thẻ chung';
+
+  @override
+  String get getMaterials => 'Nhận tài liệu';
+
+  @override
+  String get good => 'Tốt';
+
+  @override
+  String get googleContinue => 'Tiếp tục với Google';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Nhập toàn bộ bộ hội thoại bằng tệp JSON.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc =>
+      'Để nhập tài liệu học tập trong Chế độ 3, hãy tạo tệp JSON với cấu trúc sau:';
+
+  @override
+  String get helpJsonTypeDialogue => 'Hội thoại';
+
+  @override
+  String get helpJsonTypeSentence => 'Câu';
+
+  @override
+  String get helpJsonTypeWord => 'Từ';
 
   @override
   String get helpMode1Desc =>
@@ -69,160 +361,43 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• Trò chuyện AI: Luyện tập hội thoại thực tế với nhân vật.\n• Quản lý người tham gia: Cài đặt ngôn ngữ của bạn và ngôn ngữ của AI để tránh sai lệch ngôn ngữ.\n• Nhập vai GPS: Tạo tình huống hội thoại tự nhiên dựa trên vị trí hiện tại.\n• Lưu giữ lịch sử: Tất cả cuộc trò chuyện được lưu trữ an toàn dựa trên ID và lịch sử được giữ lại ngay cả khi bạn đổi tên.';
 
   @override
-  String get helpJsonDesc =>
-      'Để nhập tài liệu học tập trong Chế độ 3, hãy tạo tệp JSON với cấu trúc sau:';
+  String get helpTabJson => 'Định dạng JSON';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => 'Chế độ';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => 'Hướng dẫn';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => 'Trợ giúp & Hướng dẫn';
 
   @override
   String get helpTourDesc =>
       'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => 'Vị trí';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => 'Tôi';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return 'Ôn tập ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return 'Tài liệu học ($count)';
-  }
-
-  @override
-  String get mode2Title => 'Ôn tập';
-
-  @override
-  String get search => 'Tìm kiếm';
-
-  @override
-  String get translate => 'Dịch';
-
-  @override
-  String get listen => 'Nghe';
-
-  @override
-  String get saveData => 'Lưu';
-
-  @override
-  String get saved => 'Đã lưu';
-
-  @override
-  String get delete => 'Xóa';
-
-  @override
-  String get materialInfo => 'Thông tin tài liệu';
-
-  @override
-  String get cancel => 'Hủy';
-
-  @override
-  String get confirm => 'OK';
-
-  @override
-  String get refresh => 'Làm mới';
-
-  @override
-  String studyRecords(int count) {
-    return 'Bản ghi học tập ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => 'Lọc ngôn ngữ đích:';
-
-  @override
-  String get noRecords => 'Không có bản ghi cho ngôn ngữ đã chọn';
-
-  @override
-  String get saveTranslationsFromSearch => 'Lưu bản dịch từ chế độ tìm kiếm';
-
-  @override
-  String get flip => 'Lật';
-
-  @override
   String get hide => 'Ẩn';
 
   @override
-  String get deleteRecord => 'Xóa bản ghi';
-
-  @override
-  String get confirmDelete => 'Bạn có chắc chắn muốn xóa bản ghi này không?';
-
-  @override
-  String get recordDeleted => 'Đã xóa bản ghi thành công';
-
-  @override
-  String deleteFailed(String error) {
-    return 'Xóa thất bại: $error';
+  String importAdded(int count) {
+    return 'Đã thêm: $count';
   }
 
   @override
-  String get importJsonFile => 'Nhập file JSON';
-
-  @override
-  String get importing => 'Đang nhập...';
-
-  @override
   String get importComplete => 'Nhập hoàn tất';
+
+  @override
+  String get importDuplicateTitleError =>
+      'Đã có tài liệu có tiêu đề giống nhau. Vui lòng thay đổi tiêu đề và thử lại.';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'Không thể nhập tập tin:\\n$error';
+  }
 
   @override
   String get importFailed => 'Nhập thất bại';
@@ -233,45 +408,10 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => 'Nhập file JSON';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get roleThirdParty => '제삼자';
-
-  @override
-  String get speakerSelect => '발화자 선택';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return 'Tổng: $count';
-  }
-
-  @override
-  String importAdded(int count) {
-    return 'Đã thêm: $count';
-  }
+  String get importJsonFilePrompt => 'Vui lòng nhập tập tin JSON';
 
   @override
   String importSkipped(int count) {
@@ -279,133 +419,15 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get errors => 'Lỗi:';
-
-  @override
-  String get error => 'Lỗi';
-
-  @override
-  String importErrorMessage(String error) {
-    return 'Không thể nhập tập tin:\\n$error';
+  String importTotal(int count) {
+    return 'Tổng: $count';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => 'Đang nhập...';
 
   @override
-  String get selectStudyMaterial => 'Chọn tài liệu học';
-
-  @override
-  String get subject => 'Chủ đề:';
-
-  @override
-  String get source => 'Nguồn:';
-
-  @override
-  String get file => 'Tập tin:';
-
-  @override
-  String progress(int current, int total) {
-    return 'Tiến độ: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => 'Vui lòng nhập tập tin JSON';
-
-  @override
-  String get selectMaterialPrompt => 'Vui lòng chọn tài liệu học';
-
-  @override
-  String get studyComplete => 'Đã học';
-
-  @override
-  String get markAsStudied => 'Đánh dấu đã học';
-
-  @override
-  String get listening => 'Đang nghe...';
-
-  @override
-  String get recognized => 'Nhận dạng hoàn tất';
-
-  @override
-  String recognitionFailed(String error) {
-    return 'Nhận dạng giọng nói thất bại: $error';
-  }
-
-  @override
-  String get checking => 'Đang kiểm tra...';
-
-  @override
-  String get translating => 'Đang dịch...';
-
-  @override
-  String get translationComplete => 'Dịch hoàn tất (cần lưu)';
-
-  @override
-  String get translationLoaded => 'Đã tải bản dịch đã lưu';
-
-  @override
-  String translationFailed(String error) {
-    return 'Dịch thất bại: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => 'Vui lòng nhập văn bản để dịch';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => 'Đang lưu...';
-
-  @override
-  String get noTranslationToSave => 'Không có bản dịch để lưu';
-
-  @override
-  String saveFailed(String error) {
-    return 'Lưu thất bại: $error';
-  }
-
-  @override
-  String get playing => 'Đang phát...';
-
-  @override
-  String get noTextToPlay => 'Không có văn bản để phát';
-
-  @override
-  String playbackFailed(String error) {
-    return 'Phát thất bại: $error';
-  }
-
-  @override
-  String get sourceLanguage => 'Ngôn ngữ nguồn';
-
-  @override
-  String get targetLanguage => 'Ngôn ngữ đích';
-
-  @override
-  String get similarTextFound => 'Tìm thấy văn bản tương tự';
-
-  @override
-  String get useExistingText => 'Sử dụng bản có sẵn';
-
-  @override
-  String get createNew => 'Tạo mục mới';
-
-  @override
-  String reviewCount(int count) {
-    return 'Đã ôn tập $count lần';
-  }
-
-  @override
-  String get tabSpeaking => 'Nói';
-
-  @override
-  String get speakingPractice => 'Luyện nói';
+  String get inputModeTitle => 'Nhập';
 
   @override
   String intervalSeconds(int seconds) {
@@ -413,10 +435,374 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get yourPronunciation => 'Phát âm của bạn';
+  String get invalidEmail => 'Vui lòng nhập email hợp lệ.';
 
   @override
-  String get correctAnswer => 'Đáp án đúng';
+  String get kakaoContinue => 'Tiếp tục với Kakao';
+
+  @override
+  String get labelLangCode => 'Mã ngôn ngữ (ví dụ: en-US, ko-KR)';
+
+  @override
+  String get labelName => 'Tên';
+
+  @override
+  String get labelNote => 'Ghi chú';
+
+  @override
+  String get labelPOS => 'Loại từ';
+
+  @override
+  String get labelRole => 'Vai trò';
+
+  @override
+  String get labelSentence => 'Câu';
+
+  @override
+  String get labelSentenceCollection => 'Bộ sưu tập câu';
+
+  @override
+  String get labelSentenceType => 'Loại câu';
+
+  @override
+  String get labelShowMemorized => 'Đã hoàn thành';
+
+  @override
+  String get labelType => 'Loại:';
+
+  @override
+  String get labelWord => 'Từ';
+
+  @override
+  String get labelWordbook => 'Sổ từ vựng';
+
+  @override
+  String get language => 'Ngôn ngữ';
+
+  @override
+  String get languageSettings => 'Cài đặt ngôn ngữ';
+
+  @override
+  String get languageSettingsTitle => 'Cài đặt ngôn ngữ';
+
+  @override
+  String get libTitleFirstMeeting => 'Lần đầu gặp mặt';
+
+  @override
+  String get libTitleGreetings1 => 'Chào hỏi 1';
+
+  @override
+  String get libTitleNouns1 => 'Danh từ 1';
+
+  @override
+  String get libTitleVerbs1 => 'Động từ 1';
+
+  @override
+  String get listen => 'Nghe';
+
+  @override
+  String get listening => 'Đang nghe...';
+
+  @override
+  String get loadingParticipants => 'Đang tải người tham gia...';
+
+  @override
+  String get location => 'Vị trí';
+
+  @override
+  String get login => 'Đăng nhập';
+
+  @override
+  String get logout => 'Đăng xuất';
+
+  @override
+  String get logoutConfirmMessage =>
+      'Bạn có muốn đăng xuất khỏi thiết bị này không?';
+
+  @override
+  String get logoutConfirmTitle => 'Đăng xuất';
+
+  @override
+  String get male => 'Nam';
+
+  @override
+  String get manageParticipants => 'Quản lý người tham gia';
+
+  @override
+  String get manual => 'Nhập thủ công';
+
+  @override
+  String get markAsStudied => 'Đánh dấu đã học';
+
+  @override
+  String get materialInfo => 'Thông tin tài liệu';
+
+  @override
+  String get me => 'Tôi';
+
+  @override
+  String get menuDeviceImport => 'Nhập tài liệu từ thiết bị';
+
+  @override
+  String get menuHelp => 'Trợ giúp';
+
+  @override
+  String get menuLanguageSettings => 'Cài đặt ngôn ngữ';
+
+  @override
+  String get menuOnlineLibrary => 'Thư viện trực tuyến';
+
+  @override
+  String get menuSelectMaterialSet => 'Chọn tài liệu học tập';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuTutorial => 'Hướng dẫn sử dụng';
+
+  @override
+  String get menuWebDownload => 'Hướng dẫn sử dụng';
+
+  @override
+  String get metadataDialogTitle => 'Phân loại chi tiết';
+
+  @override
+  String get metadataFormType => 'Dạng ngữ pháp';
+
+  @override
+  String get metadataRootWord => 'Từ gốc';
+
+  @override
+  String get micButtonTooltip => 'Bắt đầu nhận dạng giọng nói';
+
+  @override
+  String mode1SelectedMaterial(Object name) {
+    return 'Bộ tài liệu đã chọn: $name';
+  }
+
+  @override
+  String get mode2Title => 'Ôn tập';
+
+  @override
+  String get mode3Next => 'Tiếp theo';
+
+  @override
+  String get mode3Start => 'Bắt đầu';
+
+  @override
+  String get mode3Stop => 'Kết thúc';
+
+  @override
+  String get mode3TryAgain => 'Thử lại';
+
+  @override
+  String get mySentenceCollection => 'Tuyển tập câu của tôi';
+
+  @override
+  String get myWordbook => 'Từ vựng của tôi';
+
+  @override
+  String get neutral => 'Trung tính';
+
+  @override
+  String get newSubjectName => 'Tên Sổ từ/Câu mới';
+
+  @override
+  String get next => 'Tiếp theo';
+
+  @override
+  String get noDialogueHistory => 'Không có lịch sử hội thoại.';
+
+  @override
+  String get noInternetWarningMic =>
+      'Không có kết nối Internet. Nhận dạng giọng nói có thể không khả dụng ở chế độ ngoại tuyến.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'Không có kết nối Internet. Chức năng dịch không khả dụng ở chế độ ngoại tuyến. Vui lòng sử dụng chế độ ôn tập.';
+
+  @override
+  String get noMaterialsInCategory =>
+      'Không có tài liệu nào trong danh mục này.';
+
+  @override
+  String get noParticipantsFound => 'Không tìm thấy người tham gia nào.';
+
+  @override
+  String get noRecords => 'Không có bản ghi cho ngôn ngữ đã chọn';
+
+  @override
+  String get noStudyMaterial => 'Không có tài liệu học tập.';
+
+  @override
+  String get noTextToPlay => 'Không có văn bản để phát';
+
+  @override
+  String get noTranslationToSave => 'Không có bản dịch để lưu';
+
+  @override
+  String get noVoiceDetected => 'Không phát hiện giọng nói';
+
+  @override
+  String get notSelected => '- Không chọn -';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'Vui lòng kiểm tra kết nối Internet hoặc thử lại sau.';
+
+  @override
+  String get onlineLibraryLoadFailed => 'Không tải được tài liệu.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'Không có tài liệu.';
+
+  @override
+  String get participantDeleted => 'Đã xóa người tham gia.';
+
+  @override
+  String get participantRename => 'Đổi tên người tham gia';
+
+  @override
+  String get partner => 'Đối tác';
+
+  @override
+  String get partnerMode => 'Chế độ đối tác';
+
+  @override
+  String get password => 'Mật khẩu';
+
+  @override
+  String get passwordTooShort => 'Mật khẩu phải có ít nhất 6 ký tự.';
+
+  @override
+  String get perfect => 'Hoàn hảo!';
+
+  @override
+  String get personaFriend => 'Bạn địa phương';
+
+  @override
+  String get personaGuide => 'Hướng dẫn viên du lịch';
+
+  @override
+  String get personaTeacher => 'Giáo viên tiếng Anh';
+
+  @override
+  String get playAgain => 'Chơi lại';
+
+  @override
+  String playbackFailed(String error) {
+    return 'Phát thất bại: $error';
+  }
+
+  @override
+  String get playing => 'Đang phát...';
+
+  @override
+  String get posAdjective => 'Tính từ';
+
+  @override
+  String get posAdverb => 'Trạng từ';
+
+  @override
+  String get posConjunction => 'Liên từ';
+
+  @override
+  String get posInterjection => 'Thán từ';
+
+  @override
+  String get posNoun => 'Danh từ';
+
+  @override
+  String get posPreposition => 'Giới từ';
+
+  @override
+  String get posPronoun => 'Đại từ';
+
+  @override
+  String get posVerb => 'Động từ';
+
+  @override
+  String get practiceModeTitle => 'Luyện tập';
+
+  @override
+  String get practiceWordsOnly => 'Chỉ luyện tập từ';
+
+  @override
+  String progress(int current, int total) {
+    return 'Tiến độ: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return 'Xem $count mục mới tạo gần đây';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return 'Nhận dạng giọng nói thất bại: $error';
+  }
+
+  @override
+  String get recognized => 'Nhận dạng hoàn tất';
+
+  @override
+  String get recognizedText => 'Phát âm đã nhận dạng:';
+
+  @override
+  String get recordDeleted => 'Đã xóa bản ghi thành công';
+
+  @override
+  String get refresh => 'Làm mới';
+
+  @override
+  String get reset => 'Đặt lại';
+
+  @override
+  String get resetPracticeHistory => 'Đặt lại lịch sử luyện tập';
+
+  @override
+  String get retry => 'Thử lại?';
+
+  @override
+  String get reviewAll => 'Ôn tập tất cả';
+
+  @override
+  String reviewCount(int count) {
+    return 'Đã ôn tập $count lần';
+  }
+
+  @override
+  String get reviewModeTitle => 'Ôn tập';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => 'Bên thứ ba';
+
+  @override
+  String get roleUser => 'Người dùng';
+
+  @override
+  String get save => 'Lưu';
+
+  @override
+  String get saveData => 'Lưu';
+
+  @override
+  String saveFailed(String error) {
+    return 'Lưu thất bại: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch => 'Lưu bản dịch từ chế độ tìm kiếm';
+
+  @override
+  String get saved => 'Đã lưu';
+
+  @override
+  String get saving => 'Đang lưu...';
 
   @override
   String score(String score) {
@@ -424,145 +810,240 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get perfect => 'Hoàn hảo!';
+  String get scoreLabel => 'Điểm';
 
   @override
-  String get good => 'Tốt';
+  String get search => 'Tìm kiếm';
 
   @override
-  String get tryAgain => 'Thử lại';
+  String get searchConditions => 'Điều kiện tìm kiếm';
 
   @override
-  String get startPractice => 'Bắt đầu luyện tập';
+  String get searchSentenceHint => 'Tìm kiếm câu...';
 
   @override
-  String get stopPractice => 'Dừng luyện tập';
+  String get searchWordHint => 'Tìm kiếm từ...';
 
   @override
-  String get menuOnlineLibrary => 'Online Library';
+  String get sectionSentence => 'Phần câu';
 
   @override
-  String get startTutorial => 'Bắt đầu hướng dẫn';
+  String get sectionSentences => 'Câu';
 
   @override
-  String get menuTutorial => 'Tutorial';
+  String get sectionWord => 'Phần chữ';
 
   @override
-  String get tutorialMicTitle => 'Nhập giọng nói';
+  String get sectionWords => 'Từ';
 
   @override
-  String get tutorialMicDesc => 'Nhấn nút mic để bắt đầu nhập giọng nói.';
+  String get selectExistingSubject => 'Chọn tên hiện có';
 
   @override
-  String get tutorialTabDesc => 'Bạn có thể chọn chế độ học mong muốn tại đây.';
+  String get selectMaterialPrompt => 'Vui lòng chọn tài liệu học';
 
   @override
-  String get tutorialTapToContinue => 'Chạm để tiếp tục';
+  String get selectMaterialSet => 'Chọn bộ tài liệu học tập';
 
   @override
-  String get tutorialTransTitle => 'Dịch';
+  String get selectPOS => 'Chọn từ loại';
 
   @override
-  String get tutorialTransDesc => 'Nhấn vào đây để dịch văn bản của bạn.';
+  String get selectParticipants => 'Chọn người tham gia';
 
   @override
-  String get tutorialSaveTitle => 'Lưu';
+  String get selectSentenceType => 'Chọn loại câu';
 
   @override
-  String get tutorialSaveDesc => 'Lưu bản dịch của bạn vào hồ sơ học tập.';
-
-  @override
-  String get selectParticipants => 'Select Participants';
-
-  @override
-  String get loadingParticipants => 'Loading participants...';
-
-  @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
+  String get selectStudyMaterial => 'Chọn tài liệu học';
 
   @override
   String get sendingMessage => '메시지 전송 중...';
 
   @override
-  String get startChat => 'Start Chat';
+  String get sentence => 'Câu';
 
   @override
-  String get manageParticipants => 'Manage Participants';
+  String get signUp => 'Đăng ký';
 
   @override
-  String get tutorialAiChatTitle => 'Trò chuyện AI';
+  String get similarTextFound => 'Tìm thấy văn bản tương tự';
 
   @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
+  String get skip => 'Bỏ qua';
 
   @override
-  String get tutorialM2SelectTitle => 'Chọn & Lọc';
+  String get source => 'Nguồn:';
 
   @override
-  String get tutorialM2SelectDesc =>
-      'Chọn tài liệu học hoặc chuyển sang \'Ôn tập tất cả\'.';
+  String get sourceLanguage => 'Ngôn ngữ nguồn';
 
   @override
-  String get tutorialM2ListTitle => 'Danh sách học';
+  String get sourceLanguageLabel => 'Source Language';
 
   @override
-  String get tutorialM2ListDesc =>
-      'Kiểm tra các thẻ đã lưu và lật chúng để xem câu trả lời. (Long-press to delete)';
+  String get speakNow => 'Nói ngay!';
 
   @override
-  String get tutorialM3SelectTitle => 'Chọn tài liệu';
+  String get speaker => 'Người nói';
 
   @override
-  String get tutorialM3SelectDesc => 'Chọn bộ tài liệu để luyện nói.';
+  String get speakerSelect => 'Chọn người nói';
 
   @override
-  String get tutorialM3IntervalTitle => 'Khoảng cách';
+  String get speakingPractice => 'Luyện nói';
 
   @override
-  String get tutorialM3IntervalDesc => 'Điều chỉnh thời gian chờ giữa các câu.';
+  String get startChat => 'Bắt đầu trò chuyện';
 
   @override
-  String get tutorialM3StartTitle => 'Bắt đầu luyện tập';
+  String get startPractice => 'Bắt đầu luyện tập';
 
   @override
-  String get tutorialM3StartDesc => 'Nhấn phát để bắt đầu nghe và nhại lại.';
+  String get startTutorial => 'Bắt đầu hướng dẫn';
 
   @override
   String get startWarning => 'Cảnh báo';
 
   @override
-  String get noVoiceDetected => 'Không phát hiện giọng nói';
+  String get startsWith => 'Bắt đầu bằng';
 
   @override
-  String get tooltipSearch => 'Tìm kiếm';
+  String get statusCheckEmail =>
+      'Vui lòng kiểm tra email để hoàn tất xác minh.';
 
   @override
-  String get tooltipStudyReview => 'Học+Ôn tập';
+  String statusDownloading(Object name) {
+    return 'Đang tải xuống: $name...';
+  }
 
   @override
-  String get tooltipSpeaking => 'Nói';
+  String statusImportFailed(Object error) {
+    return 'Nhập thất bại: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return 'Đã nhập $name thành công';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => 'Đăng nhập đã bị hủy.';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return 'Đăng nhập thất bại: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => 'Đăng nhập thành công.';
+
+  @override
+  String get statusLogoutSuccess => 'Đã đăng xuất.';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return 'Đăng ký thất bại: $error';
+  }
+
+  @override
+  String get statusSigningUp => 'Đang đăng ký...';
+
+  @override
+  String get stopPractice => 'Dừng luyện tập';
+
+  @override
+  String get studyComplete => 'Đã học';
+
+  @override
+  String studyRecords(int count) {
+    return 'Bản ghi học tập ($count)';
+  }
+
+  @override
+  String get styleFormal => 'Kính ngữ';
+
+  @override
+  String get styleInformal => 'Thân mật';
+
+  @override
+  String get stylePolite => 'Lịch sự';
+
+  @override
+  String get styleSlang => 'Tiếng lóng';
+
+  @override
+  String get subject => 'Chủ đề:';
+
+  @override
+  String get swapLanguages => 'Đổi ngôn ngữ';
+
+  @override
+  String get switchToAi => 'Chuyển sang chế độ AI';
+
+  @override
+  String get switchToPartner => 'Chuyển sang chế độ đối tác';
+
+  @override
+  String get syncingData => 'Đang đồng bộ dữ liệu...';
+
+  @override
+  String get tabConversation => 'Hội thoại';
+
+  @override
+  String tabReview(int count) {
+    return 'Ôn tập ($count)';
+  }
+
+  @override
+  String get tabSentence => 'câu';
+
+  @override
+  String get tabSpeaking => 'Nói';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return 'Tài liệu học ($count)';
+  }
+
+  @override
+  String get tabWord => 'từ';
+
+  @override
+  String get tagFormal => 'Kính ngữ';
+
+  @override
+  String get tagSelection => 'Chọn thẻ';
+
+  @override
+  String get targetLanguage => 'Ngôn ngữ đích';
+
+  @override
+  String get targetLanguageFilter => 'Lọc ngôn ngữ đích:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc =>
+      'Thời gian suy nghĩ trước khi câu trả lời đúng được tiết lộ.';
+
+  @override
+  String get thinkingTimeInterval => 'Độ trễ phát lại';
+
+  @override
+  String get timeUp => 'Hết giờ!';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
+  }
+
+  @override
+  String get titleTagSelection => 'Thẻ tiêu đề (tuyển tập)';
 
   @override
   String get tooltipDecrease => 'Giảm';
@@ -571,648 +1052,205 @@ class AppLocalizationsVi extends AppLocalizations {
   String get tooltipIncrease => 'Tăng';
 
   @override
-  String get languageSettings => 'Cài đặt ngôn ngữ';
+  String get tooltipSearch => 'Tìm kiếm';
 
   @override
-  String get tutorialM2DropdownDesc => 'Chọn tài liệu học tập.';
+  String get tooltipSpeaking => 'Nói';
 
   @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
+  String get tooltipStudyReview => 'Học+Ôn tập';
 
   @override
-  String get tutorialM2ImportDesc => 'Nhập tệp JSON từ thư mục thiết bị.';
+  String totalRecords(int count) {
+    return 'Tổng cộng $count bản ghi (Xem tất cả)';
+  }
 
   @override
-  String get tutorialLangSettingsTitle => 'Language Settings';
+  String get translate => 'Dịch';
 
   @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
+  String get translating => 'Đang dịch...';
 
   @override
-  String get copy => 'Sao chép';
+  String get translation => 'Dịch';
 
   @override
-  String get copiedToClipboard => 'Đã sao chép vào bộ nhớ tạm!';
+  String get translationComplete => 'Dịch hoàn tất (cần lưu)';
 
   @override
-  String get tutorialContextTitle => 'Thẻ ngữ cảnh';
+  String translationFailed(String error) {
+    return 'Dịch thất bại: $error';
+  }
+
+  @override
+  String get translationLimitExceeded => 'Đã vượt quá giới hạn dịch';
+
+  @override
+  String get translationLimitMessage =>
+      'Bạn đã sử dụng hết lượt dịch miễn phí hàng ngày (5 lần).\\n\\nBạn có muốn xem quảng cáo để nạp ngay 5 lượt không?';
+
+  @override
+  String get translationLoaded => 'Đã tải bản dịch đã lưu';
+
+  @override
+  String get translationRefilled => 'Bạn đã được nạp 5 lượt dịch!';
+
+  @override
+  String get translationResultHint => 'Kết quả dịch - Có thể chỉnh sửa';
+
+  @override
+  String get tryAgain => 'Thử lại';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'Luyện tập hội thoại thực tế với nhân vật AI.';
+
+  @override
+  String get tutorialAiChatTitle => 'Trò chuyện AI';
 
   @override
   String get tutorialContextDesc =>
       'Thêm ngữ cảnh (ví dụ: Buổi sáng) để phân biệt các câu tương tự.';
 
   @override
-  String get thinkingTimeInterval => 'Độ trễ phát lại';
+  String get tutorialContextTitle => 'Thẻ ngữ cảnh';
 
   @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
+  String get tutorialLangSettingsDesc =>
+      'Đặt ngôn ngữ gốc và ngôn ngữ đích để dịch.';
 
   @override
-  String get autoPlay => 'Auto-Play';
+  String get tutorialLangSettingsTitle => 'Cài đặt ngôn ngữ';
 
   @override
-  String get timeUp => 'Time Up!';
+  String get tutorialM1ToggleDesc =>
+      'Chuyển đổi giữa chế độ từ và câu tại đây.';
 
   @override
-  String get gameModeTitle => 'Game Mode';
+  String get tutorialM1ToggleTitle => 'Chế độ từ/câu';
 
   @override
-  String get gameModeDesc => 'Choose your practice mode';
+  String get tutorialM2DropdownDesc => 'Chọn tài liệu học tập.';
 
   @override
-  String get wordDefenseTitle => 'Word Defense';
+  String get tutorialM2ImportDesc => 'Nhập tệp JSON từ thư mục thiết bị.';
 
   @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
+  String get tutorialM2ListDesc =>
+      'Kiểm tra các thẻ đã lưu và lật chúng để xem câu trả lời. (Long-press to delete)';
 
   @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
+  String get tutorialM2ListTitle => 'Danh sách học';
 
   @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
+  String get tutorialM2SearchDesc =>
+      'Tìm và nhanh chóng định vị các từ và câu đã lưu.';
 
   @override
-  String get translation => 'Translation';
+  String get tutorialM2SelectDesc =>
+      'Chọn tài liệu học hoặc chuyển sang \'Ôn tập tất cả\'.';
 
   @override
-  String get labelType => 'Type:';
+  String get tutorialM2SelectTitle => 'Chọn & Lọc';
 
   @override
-  String get labelWord => 'Word';
+  String get tutorialM3IntervalDesc => 'Điều chỉnh thời gian chờ giữa các câu.';
 
   @override
-  String get labelSentence => 'Sentence';
-
-  @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
-
-  @override
-  String get usageLimitTitle => 'Đã đạt đến giới hạn';
-
-  @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
-
-  @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
-
-  @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
-
-  @override
-  String get translationRefilled => 'Translations refilled by 5!';
-
-  @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
-
-  @override
-  String get reviewAll => 'Review All';
-
-  @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
-
-  @override
-  String get filterAll => 'All';
-
-  @override
-  String get practiceWordsOnly => 'Practice Words Only';
-
-  @override
-  String get resetPracticeHistory => 'Reset Practice History';
-
-  @override
-  String get retry => 'Retry?';
-
-  @override
-  String get noStudyMaterial => 'No study material found.';
-
-  @override
-  String get gameOver => 'Game Over';
-
-  @override
-  String get playAgain => 'Play Again';
-
-  @override
-  String get speakNow => 'Speak now!';
-
-  @override
-  String get scoreLabel => 'Score';
-
-  @override
-  String get viewOnlineGuide => 'View Online User Guide';
-
-  @override
-  String get getMaterials => 'Get Materials';
-
-  @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
-
-  @override
-  String get wordModeLabel => 'Word Mode';
-
-  @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get menuHelp => 'Help';
-
-  @override
-  String get menuWebDownload => 'Get Material from Web';
-
-  @override
-  String get menuDeviceImport => 'Import from Device';
-
-  @override
-  String get menuSettings => 'Settings';
-
-  @override
-  String get basicWords => 'Basic Word Repository';
-
-  @override
-  String get basicSentences => 'Basic Sentence Repository';
-
-  @override
-  String get selectMaterialSet => 'Chọn bộ tài liệu học tập';
-
-  @override
-  String get sectionWords => 'Từ';
-
-  @override
-  String get sectionSentences => 'Câu';
-
-  @override
-  String get languageSettingsTitle => 'Language Settings';
-
-  @override
-  String get sourceLanguageLabel => 'Source Language';
-
-  @override
-  String get targetLanguageLabel => 'Target Language';
-
-  @override
-  String get mode3Start => 'Start';
-
-  @override
-  String get mode3Stop => 'Stop';
-
-  @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc =>
-      'Tôi sử dụng song song ngôn ngữ mẹ đẻ với ngôn ngữ mà tôi đang học.';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
+  String get tutorialM3IntervalTitle => 'Khoảng cách';
 
   @override
   String get tutorialM3ResetDesc =>
       'Clear your progress and accuracy scores to start fresh.';
 
   @override
-  String get menuSelectMaterialSet => 'Chọn tài liệu học tập';
+  String get tutorialM3ResetTitle => 'Reset History';
 
   @override
-  String get sectionWord => 'Phần chữ';
+  String get tutorialM3SelectDesc => 'Chọn bộ tài liệu để luyện nói.';
 
   @override
-  String get sectionSentence => 'Phần câu';
+  String get tutorialM3SelectTitle => 'Chọn tài liệu';
 
   @override
-  String get tabWord => 'từ';
+  String get tutorialM3StartDesc => 'Nhấn phát để bắt đầu nghe và nhại lại.';
 
   @override
-  String get tabSentence => 'câu';
+  String get tutorialM3StartTitle => 'Bắt đầu luyện tập';
 
   @override
-  String get errorProfanity => 'Không thể dịch vì chứa từ ngữ tục tĩu.';
+  String get tutorialM3WordsDesc => 'Chọn để chỉ luyện tập các từ đã lưu.';
 
   @override
-  String get errorHateSpeech =>
-      'Không thể dịch vì chứa nội dung kích động thù hận.';
+  String get tutorialM3WordsTitle => 'Luyện tập từ vựng';
 
   @override
-  String get errorSexualContent => 'Không thể dịch vì chứa nội dung khiêu dâm.';
+  String get tutorialMicDesc => 'Nhấn nút mic để bắt đầu nhập giọng nói.';
 
   @override
-  String get errorOtherSafety =>
-      'Bản dịch bị từ chối theo chính sách an toàn AI.';
+  String get tutorialMicTitle => 'Nhập giọng nói';
 
   @override
-  String get clearAll => 'Xóa hết';
+  String get tutorialSaveDesc => 'Lưu bản dịch của bạn vào hồ sơ học tập.';
 
   @override
-  String get disambiguationTitle => 'Chọn nghĩa';
+  String get tutorialSaveTitle => 'Lưu';
 
   @override
-  String get disambiguationPrompt => 'Bạn muốn dịch theo nghĩa nào?';
+  String get tutorialSwapDesc =>
+      'Tôi sử dụng song song ngôn ngữ mẹ đẻ với ngôn ngữ mà tôi đang học.';
 
   @override
-  String get skip => 'Bỏ qua';
+  String get tutorialTabDesc => 'Bạn có thể chọn chế độ học mong muốn tại đây.';
 
   @override
-  String get inputModeTitle => 'Input';
+  String get tutorialTapToContinue => 'Chạm để tiếp tục';
 
   @override
-  String get reviewModeTitle => 'Review';
+  String get tutorialTransDesc => 'Nhấn vào đây để dịch văn bản của bạn.';
 
   @override
-  String get practiceModeTitle => 'Luyện tập';
+  String get tutorialTransTitle => 'Dịch';
 
   @override
-  String get chatHistoryTitle => 'Lịch sử trò chuyện';
+  String get typeExclamation => 'Câu cảm thán';
 
   @override
-  String get chatNew => 'New Chat';
+  String get typeImperative => 'Câu mệnh lệnh';
 
   @override
-  String get chatNewChat => 'Trò chuyện mới';
+  String get typeQuestion => 'Câu hỏi';
 
   @override
-  String get chatChoosePersona => 'Choose a Persona';
+  String get typeStatement => 'Câu trần thuật';
 
   @override
-  String get chatTypeHint => 'Type a message...';
+  String get usageLimitTitle => 'Đã đạt đến giới hạn';
 
   @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
+  String get useExistingText => 'Sử dụng bản có sẵn';
 
   @override
-  String get chatNoConversations => 'No conversations yet';
+  String get viewOnlineGuide => 'Xem hướng dẫn trực tuyến';
 
   @override
-  String get noDialogueHistory => 'No dialogue history.';
+  String get voluntaryTranslations => 'Bản dịch đóng góp';
 
   @override
-  String get chatStartNewPrompt => 'Start a new chat to practice!';
+  String get watchAdAndRefill => 'Xem quảng cáo để nạp (+5 lượt)';
 
   @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
+  String get word => 'Từ';
 
   @override
-  String get personaTeacher => 'English Teacher';
+  String get wordDefenseDesc => 'Nói từ trước khi kẻ thù đến để bảo vệ căn cứ.';
 
   @override
-  String get personaGuide => 'Travel Guide';
+  String get wordDefenseTitle => 'Phòng thủ từ vựng';
 
   @override
-  String get personaFriend => 'Local Friend';
+  String get wordModeLabel => 'Chế độ từ';
 
   @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => 'Trò chuyện';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => 'Kho từ cơ bản';
-
-  @override
-  String get basicSentenceRepository => 'Kho câu cơ bản';
-
-  @override
-  String get chatEndTitle => 'End & Save Chat';
-
-  @override
-  String get chatEndMessage =>
-      'Do you want to end this conversation? You can set a title for it.';
-
-  @override
-  String get chatSaveAndExit => 'Lưu và thoát';
-
-  @override
-  String get errorSelectCategory => 'Please select word or sentence first!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => 'Kính ngữ';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => 'Thẻ tiêu đề (tuyển tập)';
-
-  @override
-  String get generalTags => 'Thẻ chung';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => 'Số ít';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => 'Trung tính';
-
-  @override
-  String get chatAllConversations => 'Toàn bộ hội thoại';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation =>
-      'Bạn có chắc chắn muốn xóa hội thoại này?\nHội thoại đã xóa không thể khôi phục.';
-
-  @override
-  String get notSelected => '- Không chọn -';
-
-  @override
-  String get myWordbook => 'Từ vựng của tôi';
-
-  @override
-  String get mySentenceCollection => 'Tuyển tập câu của tôi';
-
-  @override
-  String get newSubjectName => 'Tên Sổ từ/Câu mới';
-
-  @override
-  String get enterNewSubjectName => 'Nhập tên mới';
-
-  @override
-  String get addNewSubject => 'Thêm tên mới';
-
-  @override
-  String get selectExistingSubject => 'Chọn tên hiện có';
-
-  @override
-  String get addTagHint => 'Thêm thẻ...';
-
-  @override
-  String get save => 'Lưu';
-
-  @override
-  String get styleFormal => 'Formal';
-
-  @override
-  String get styleInformal => 'Informal';
-
-  @override
-  String get stylePolite => 'Polite';
-
-  @override
-  String get styleSlang => 'Slang';
-
-  @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
-  }
-
-  @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
-  }
-
-  @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
-  }
-
-  @override
-  String get statusLoginSuccess => 'Login successful.';
-
-  @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
-  }
-
-  @override
-  String get statusLoginCancelled => 'Login cancelled.';
-
-  @override
-  String get statusLoggingIn => 'Logging in with Google...';
-
-  @override
-  String get statusLogoutSuccess => 'Logged out.';
-
-  @override
-  String get email => 'Email';
-
-  @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
-  }
-
-  @override
-  String get statusCheckEmail =>
-      'Vui lòng kiểm tra email để hoàn tất xác minh.';
-
-  @override
-  String get emailAlreadyInUse =>
-      'Email này đã được sử dụng. Vui lòng đăng nhập hoặc sử dụng chức năng tìm mật khẩu.';
+  String get yourPronunciation => 'Phát âm của bạn';
 }

@@ -1,188 +1,105 @@
 {
   "@@locale": "th",
-  "googleContinue": "Continue with Google",
-  "kakaoContinue": "ดำเนินการต่อด้วย Kakao",
-  "logout": "Logout",
-  "logoutConfirmTitle": "Logout",
-  "logoutConfirmMessage": "Are you sure you want to logout from this device?",
-  "syncingData": "Syncing data...",
-  "helpTitle": "ช่วยเหลือ & คู่มือ",
-  "helpTabModes": "โหมด",
-  "helpTabJson": "รูปแบบ JSON",
-  "helpTabTour": "ทัวร์",
-  "helpMode1Desc": "จดจำเสียง แปลเป็นภาษาเป้าหมาย และฟังผลลัพธ์",
-  "helpMode1Details": "• เสียงเข้า: แตะไอคอนไมค์เพื่อเริ่ม/หยุด\n• ข้อความเข้า: พิมพ์โดยตรงเพื่อแปล\n• ค้นหาอัตโนมัติ: ตรวจจับประโยคที่มีอยู่\n• แปล: แตะปุ่มเพื่อแปลทันที\n• ฟัง: ไอคอนลำโพงสำหรับ TTS\n• บันทึก: เพิ่มลงในประวัติ\n• ล้าง: รีเซ็ตข้อมูลทั้งหมด",
-  "helpMode2Desc": "ทบทวนประโยคที่บันทึกไว้พร้อมซ่อนคำแปลอัตโนมัติ",
-  "helpMode2Details": "• เลือกสื่อ: เลือกชุดหรือ 'ทบทวนทั้งหมด'\n• พลิกการ์ด: ใช้ 'แสดง/ซ่อน' เพื่อดูคำแปล\n• ฟัง: เล่น TTS สำหรับประโยคนั้น\n• ทำเครื่องหมาย: ติ๊ก (V) สำหรับรายการที่เสร็จแล้ว\n• ลบ: กดค้างที่การ์ดเพื่อลบ\n• ตัวกรอง: ดูทั้งหมดหรือกรองตามสื่อ",
-  "helpMode3Desc": "ฝึกการออกเสียงโดยฟังและพูดตามประโยค (Shadowing)",
-  "helpMode3Details": "• เลือกสื่อ: เลือกแพ็คเกจการเรียนรู้\n• ระยะห่าง: [-] [+] ปรับเวลารอ (3วิ-60วิ)\n• เริ่ม/หยุด: ควบคุมเซสชัน\n• พูด: ฟังเสียงและพูดตาม\n• ผลตอบรับ: คะแนนความแม่นยำ (0-100)\n• ลองใหม่: ใช้ปุ่มลองใหม่หากไม่พบเสียง",
-  "helpModeChatDesc": "ฝึกสนทนาจริงกับ AI Persona",
-  "helpModeChatDetails": "• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history",
-  "helpJsonDesc": "เพื่อนำเข้าสื่อการเรียนรู้ในโหมด 3 กรุณาสร้างไฟล์ JSON ตามโครงสร้างนี้:",
-  "helpJsonTypeDialogue": "Dialogue",
-  "helpJsonTypeSentence": "Sentence",
-  "helpJsonTypeWord": "Word",
-  "helpDialogueImportDesc": "Import complete dialogue sets via JSON files.",
-  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
-  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
-  "partnerMode": "Partner Mode",
-  "@partnerMode": {
-    "description": "Label for Partner Mode logic"
-  },
-  "manual": "Manual",
-  "@manual": {
-    "description": "Label for manual input in Partner Mode"
-  },
-  "speaker": "Speaker",
-  "@speaker": {
-    "description": "Label for speaker selection"
-  },
-  "switchToAi": "Switch to AI",
-  "@switchToAi": {
-    "description": "Tooltip for switching to AI mode"
-  },
-  "switchToPartner": "Switch to Partner",
-  "@switchToPartner": {
-    "description": "Tooltip for switching to Partner mode"
-  },
-  "currentLocation": "Current Location",
-  "@currentLocation": {
-    "description": "Label for GPS location"
-  },
-  "location": "ตำแหน่ง",
-  "@location": {
-    "description": "Label for location field in chat save dialog"
-  },
-  "partner": "Partner",
-  "@partner": {
-    "description": "Label for partner speaker"
-  },
-  "me": "ฉัน",
-  "@me": {
-    "description": "Label for self speaker"
-  },
-  "currentMaterialLabel": "Current Selected Material:",
-  "@currentMaterialLabel": {
-    "description": "Banner label for current material"
-  },
-  "basicMaterialRepository": "Basic Repository",
-  "@basicMaterialRepository": {
-    "description": "Name for default basic repository"
-  },
-  "word": "Word",
-  "@word": {
-    "description": "Toggle option for Word"
-  },
-  "sentence": "Sentence",
-  "@sentence": {
-    "description": "Toggle option for Sentence"
-  },
+  "accuracy": "ความถูกต้อง",
+  "adLoading": "กำลังโหลดโฆษณา โปรดลองอีกครั้งในภายหลัง",
+  "addNewSubject": "เพิ่มชื่อใหม่",
+  "addParticipant": "เพิ่มผู้เข้าร่วม",
+  "addTagHint": "เพิ่มแท็ก...",
+  "alreadyHaveAccount": "มีบัญชีอยู่แล้ว?",
   "appTitle": "Talkie",
   "@appTitle": {
     "description": "Application title"
   },
-  "tabReview": "ทบทวน ({count})",
-  "@tabReview": {
-    "description": "Review tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "autoPlay": "เล่นอัตโนมัติ",
+  "basic": "พื้นฐาน",
+  "basicDefault": "พื้นฐาน",
+  "basicMaterialRepository": "คลังประโยค/คำศัพท์พื้นฐาน",
+  "@basicMaterialRepository": {
+    "description": "Name for default basic repository"
   },
-  "tabStudyMaterial": "สื่อการเรียนรู้ ({count})",
-  "@tabStudyMaterial": {
-    "description": "Study material tab label with count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "basicSentenceRepository": "คลังประโยคพื้นฐาน",
+  "basicSentences": "คลังประโยคพื้นฐาน",
+  "@basicSentences": {
+    "description": "Default name for basic sentences material"
   },
-  "mode2Title": "ทบทวน",
-  "@mode2Title": {
-    "description": "Mode 2 title for help dialog"
-  },
-  "search": "ค้นหา",
-  "@search": {
-    "description": "Search mode label"
-  },
-  "translate": "แปลภาษา",
-  "@translate": {
-    "description": "Translate button"
-  },
-  "listen": "ฟัง",
-  "@listen": {
-    "description": "Listen/TTS button"
-  },
-  "saveData": "บันทึกข้อมูล",
-  "@saveData": {
-    "description": "Save translation button"
-  },
-  "saved": "บันทึกแล้ว",
-  "@saved": {
-    "description": "Data saved status"
-  },
-  "delete": "ลบ",
-  "@delete": {
-    "description": "Delete button"
-  },
-  "materialInfo": "ข้อมูลเนื้อหา",
-  "@materialInfo": {
-    "description": "Title for material metadata section"
+  "basicWordRepository": "คลังคำศัพท์พื้นฐาน",
+  "basicWords": "คลังคำศัพท์พื้นฐาน",
+  "@basicWords": {
+    "description": "Default name for basic vocabulary material"
   },
   "cancel": "ยกเลิก",
   "@cancel": {
     "description": "Cancel button"
   },
-  "confirm": "ตกลง",
-  "@confirm": {
-    "description": "Confirm/OK button"
-  },
-  "refresh": "รีเฟรช",
-  "@refresh": {
-    "description": "Refresh button"
-  },
-  "studyRecords": "บันทึกการเรียนรู้ ({count})",
-  "@studyRecords": {
-    "description": "Study records title with count",
+  "caseObject": "กรรม",
+  "casePossessive": "แสดงความเป็นเจ้าของ",
+  "casePossessivePronoun": "สรรพนามแสดงความเป็นเจ้าของ",
+  "caseReflexive": "สะท้อน",
+  "caseSubject": "ประธาน",
+  "chatAiChat": "แชท",
+  "chatAllConversations": "การสนทนาทั้งหมด",
+  "chatChoosePersona": "เลือกบุคลิก",
+  "chatEndMessage": "คุณต้องการสิ้นสุดการสนทนาหรือไม่",
+  "chatEndTitle": "สิ้นสุดและบันทึกการสนทนา",
+  "chatFailed": "การแชทล้มเหลว: {error}",
+  "@chatFailed": {
     "placeholders": {
-      "count": {
-        "type": "int"
+      "error": {
+        "type": "Object"
       }
     }
   },
-  "targetLanguageFilter": "ตัวกรองภาษาเป้าหมาย:",
-  "@targetLanguageFilter": {
-    "description": "Language filter label"
+  "chatFromConversation": "คัดลอกจากการสนทนา ({speaker})",
+  "@chatFromConversation": {
+    "placeholders": {
+      "speaker": {
+        "type": "Object"
+      }
+    }
   },
-  "noRecords": "ไม่มีบันทึกสำหรับภาษาที่เลือก",
-  "@noRecords": {
-    "description": "Empty state message"
+  "chatHistoryTitle": "ประวัติการสนทนา",
+  "chatNew": "การสนทนาใหม่",
+  "chatNewChat": "เริ่มแชทใหม่",
+  "chatNoConversations": "ยังไม่มีการสนทนา",
+  "chatSaveAndExit": "บันทึกและออก",
+  "chatStartNewPrompt": "ลองเริ่มการสนทนาใหม่เพื่อฝึกฝน!",
+  "chatTypeHint": "พิมพ์ข้อความ...",
+  "chatUntitled": "การสนทนาที่ไม่มีชื่อ",
+  "checking": "กำลังตรวจสอบ...",
+  "@checking": {
+    "description": "Checking for duplicates"
   },
-  "saveTranslationsFromSearch": "บันทึกคำแปลจากโหมดค้นหา",
-  "@saveTranslationsFromSearch": {
-    "description": "Instruction to save data"
-  },
-  "flip": "พลิก",
-  "@flip": {
-    "description": "Show translation button"
-  },
-  "hide": "ซ่อน",
-  "@hide": {
-    "description": "Hide translation button"
-  },
-  "deleteRecord": "ลบบันทึก",
-  "@deleteRecord": {
-    "description": "Delete record dialog title"
+  "clearAll": "ล้างทั้งหมด",
+  "confirm": "ตกลง",
+  "@confirm": {
+    "description": "Confirm/OK button"
   },
   "confirmDelete": "คุณแน่ใจหรือไม่ว่าต้องการลบบันทึกนี้?",
   "@confirmDelete": {
     "description": "Delete confirmation message"
   },
-  "recordDeleted": "ลบบันทึกเรียบร้อยแล้ว",
-  "@recordDeleted": {
-    "description": "Delete success message"
+  "confirmDeleteConversation": "คุณต้องการลบการสนทนานี้หรือไม่\nการสนทนาที่ถูกลบจะไม่สามารถกู้คืนได้",
+  "confirmDeleteParticipant": "คุณต้องการลบผู้เข้าร่วมนี้หรือไม่",
+  "contextTagHint": "ระบุสถานการณ์เพื่อให้ง่ายต่อการแยกแยะในภายหลัง",
+  "contextTagLabel": "บริบท/สถานการณ์ (ไม่บังคับ) - เช่น ทักทายตอนเช้า, คำสุภาพ",
+  "copiedToClipboard": "คัดลอกไปยังคลิปบอร์ดแล้ว!",
+  "copy": "คัดลอก",
+  "correctAnswer": "คำตอบที่ถูกต้อง",
+  "createNew": "สร้างรายการใหม่",
+  "@createNew": {
+    "description": "Create new entry button"
+  },
+  "currentLocation": "ตำแหน่งปัจจุบัน",
+  "@currentLocation": {
+    "description": "Label for GPS location"
+  },
+  "currentMaterialLabel": "ชุดข้อมูลที่เลือกปัจจุบัน:",
+  "@currentMaterialLabel": {
+    "description": "Banner label for current material"
+  },
+  "delete": "ลบ",
+  "@delete": {
+    "description": "Delete button"
   },
   "deleteFailed": "การลบล้มเหลว: {error}",
   "@deleteFailed": {
@@ -193,17 +110,119 @@
       }
     }
   },
-  "importJsonFile": "นำเข้าไฟล์ JSON",
-  "@importJsonFile": {
-    "description": "Import JSON button"
+  "deleteRecord": "ลบบันทึก",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
   },
-  "importing": "กำลังนำเข้า...",
-  "@importing": {
-    "description": "Import in progress"
+  "dialogueQuestDesc": "ฝึกสนทนาผ่านสถานการณ์ เลือกคำตอบที่เหมาะสมและพูด",
+  "dialogueQuestTitle": "เควสบทสนทนา",
+  "disambiguationPrompt": "คุณต้องการให้แปลเป็นความหมายใด",
+  "@disambiguationPrompt": {
+    "description": "Prompt for disambiguation dialog"
+  },
+  "disambiguationTitle": "เลือกความหมาย",
+  "@disambiguationTitle": {
+    "description": "Title for disambiguation dialog"
+  },
+  "dontHaveAccount": "ยังไม่มีบัญชี?",
+  "editParticipant": "แก้ไขผู้เข้าร่วม",
+  "email": "อีเมล",
+  "emailAlreadyInUse": "อีเมลนี้ถูกใช้ไปแล้ว โปรดเข้าสู่ระบบหรือรีเซ็ตรหัสผ่าน",
+  "enterNewSubjectName": "ใส่ชื่อใหม่",
+  "enterSentenceHint": "พิมพ์ประโยค...",
+  "enterTextHint": "ป้อนข้อความที่จะแปล",
+  "enterTextToTranslate": "กรุณาป้อนข้อความเพื่อแปล",
+  "@enterTextToTranslate": {
+    "description": "Empty input warning"
+  },
+  "enterWordHint": "พิมพ์คำ...",
+  "error": "ข้อผิดพลาด",
+  "@error": {
+    "description": "Error dialog title"
+  },
+  "errorHateSpeech": "ไม่สามารถแปลได้เนื่องจากมีคำพูดแสดงความเกลียดชัง",
+  "errorOtherSafety": "การแปลถูกปฏิเสธโดยนโยบายความปลอดภัย AI",
+  "errorProfanity": "ไม่สามารถแปลได้เนื่องจากมีคำหยาบคาย",
+  "errorSelectCategory": "โปรดเลือกคำศัพท์หรือประโยคก่อน!",
+  "errorSexualContent": "ไม่สามารถแปลได้เนื่องจากมีเนื้อหาที่ไม่เหมาะสม",
+  "errors": "ข้อผิดพลาด:",
+  "@errors": {
+    "description": "Error section label"
+  },
+  "female": "หญิง",
+  "file": "ไฟล์:",
+  "@file": {
+    "description": "File label"
+  },
+  "filterAll": "ทั้งหมด",
+  "flip": "พลิก",
+  "@flip": {
+    "description": "Show translation button"
+  },
+  "formComparative": "ขั้นกว่า",
+  "formInfinitive": "Infinitive/ปัจจุบัน",
+  "formPast": "อดีต",
+  "formPastParticiple": "กริยารูปอดีต",
+  "formPlural": "พหูพจน์",
+  "formPositive": "ขั้นปกติ",
+  "formPresent": "ปัจจุบัน",
+  "formPresentParticiple": "Present Participle (ing)",
+  "formSingular": "เอกพจน์",
+  "formSuperlative": "ขั้นสูงสุด",
+  "formThirdPersonSingular": "เอกพจน์บุรุษที่ 3",
+  "gameModeDesc": "เลือกโหมดเกมเพื่อฝึกฝน",
+  "gameModeTitle": "โหมดเกม",
+  "gameOver": "จบเกม",
+  "gender": "เพศ",
+  "generalTags": "แท็กทั่วไป",
+  "getMaterials": "รับข้อมูล",
+  "good": "ดี",
+  "googleContinue": "ดำเนินการต่อด้วย Google",
+  "helpDialogueImportDesc": "นำเข้าชุดบทสนทนาทั้งหมดเป็นไฟล์ JSON",
+  "helpDialogueImportDetails": "• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode's 'History' tab.",
+  "helpJsonDesc": "เพื่อนำเข้าสื่อการเรียนรู้ในโหมด 3 กรุณาสร้างไฟล์ JSON ตามโครงสร้างนี้:",
+  "helpJsonTypeDialogue": "บทสนทนา",
+  "helpJsonTypeSentence": "ประโยค",
+  "helpJsonTypeWord": "คำศัพท์",
+  "helpMode1Desc": "จดจำเสียง แปลเป็นภาษาเป้าหมาย และฟังผลลัพธ์",
+  "helpMode1Details": "• เสียงเข้า: แตะไอคอนไมค์เพื่อเริ่ม/หยุด\n• ข้อความเข้า: พิมพ์โดยตรงเพื่อแปล\n• ค้นหาอัตโนมัติ: ตรวจจับประโยคที่มีอยู่\n• แปล: แตะปุ่มเพื่อแปลทันที\n• ฟัง: ไอคอนลำโพงสำหรับ TTS\n• บันทึก: เพิ่มลงในประวัติ\n• ล้าง: รีเซ็ตข้อมูลทั้งหมด",
+  "helpMode2Desc": "ทบทวนประโยคที่บันทึกไว้พร้อมซ่อนคำแปลอัตโนมัติ",
+  "helpMode2Details": "• เลือกสื่อ: เลือกชุดหรือ 'ทบทวนทั้งหมด'\n• พลิกการ์ด: ใช้ 'แสดง/ซ่อน' เพื่อดูคำแปล\n• ฟัง: เล่น TTS สำหรับประโยคนั้น\n• ทำเครื่องหมาย: ติ๊ก (V) สำหรับรายการที่เสร็จแล้ว\n• ลบ: กดค้างที่การ์ดเพื่อลบ\n• ตัวกรอง: ดูทั้งหมดหรือกรองตามสื่อ",
+  "helpMode3Desc": "ฝึกการออกเสียงโดยฟังและพูดตามประโยค (Shadowing)",
+  "helpMode3Details": "• เลือกสื่อ: เลือกแพ็คเกจการเรียนรู้\n• ระยะห่าง: [-] [+] ปรับเวลารอ (3วิ-60วิ)\n• เริ่ม/หยุด: ควบคุมเซสชัน\n• พูด: ฟังเสียงและพูดตาม\n• ผลตอบรับ: คะแนนความแม่นยำ (0-100)\n• ลองใหม่: ใช้ปุ่มลองใหม่หากไม่พบเสียง",
+  "helpModeChatDesc": "ฝึกสนทนาจริงกับ AI Persona",
+  "helpModeChatDetails": "• แชท AI: ฝึกสนทนาจริงกับบุคลิกต่างๆ\n• การจัดการผู้เข้าร่วม: ตั้งค่าภาษาของคุณและภาษาของ AI เพื่อหลีกเลี่ยงความไม่สอดคล้องกันของภาษา\n• สถานการณ์ GPS: สร้างสถานการณ์การสนทนาที่เป็นธรรมชาติโดยอิงจากตำแหน่งปัจจุบันของคุณ\n• การเก็บบันทึก: การสนทนาทั้งหมดจะถูกจัดเก็บอย่างปลอดภัยตาม ID และจะยังคงอยู่แม้ว่าคุณจะเปลี่ยนชื่อ",
+  "helpTabJson": "รูปแบบ JSON",
+  "helpTabModes": "โหมด",
+  "helpTabTour": "ทัวร์",
+  "helpTitle": "ช่วยเหลือ & คู่มือ",
+  "helpTourDesc": "The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)",
+  "hide": "ซ่อน",
+  "@hide": {
+    "description": "Hide translation button"
+  },
+  "importAdded": "เพิ่มแล้ว: {count} รายการ",
+  "@importAdded": {
+    "description": "Successfully imported count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "importComplete": "นำเข้าเสร็จสมบูรณ์",
   "@importComplete": {
     "description": "Import success title"
+  },
+  "importDuplicateTitleError": "มีข้อมูลชื่อเดียวกันอยู่แล้ว โปรดเปลี่ยนชื่อแล้วลองอีกครั้ง",
+  "importErrorMessage": "ไม่สามารถนำเข้าไฟล์ได้:\\n{error}",
+  "@importErrorMessage": {
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "importFailed": "การนำเข้าล้มเหลว",
   "@importFailed": {
@@ -218,31 +237,13 @@
       }
     }
   },
-  "addParticipant": "Add Participant",
-  "editParticipant": "Edit Participant",
-  "labelRole": "Role",
-  "labelLangCode": "Language Code (e.g. en-US, ko-KR)",
-  "roleUser": "User",
-  "roleAi": "AI",
-  "participantDeleted": "Participant deleted.",
-  "confirmDeleteParticipant": "Are you sure you want to delete this participant?",
-  "importTotal": "ทั้งหมด: {count} รายการ",
-  "@importTotal": {
-    "description": "Total import count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFile": "นำเข้าไฟล์ JSON",
+  "@importJsonFile": {
+    "description": "Import JSON button"
   },
-  "importAdded": "เพิ่มแล้ว: {count} รายการ",
-  "@importAdded": {
-    "description": "Successfully imported count",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "importJsonFilePrompt": "กรุณานำเข้าไฟล์ JSON",
+  "@importJsonFilePrompt": {
+    "description": "Empty state prompt"
   },
   "importSkipped": "ข้าม: {count} รายการ",
   "@importSkipped": {
@@ -253,40 +254,176 @@
       }
     }
   },
-  "errors": "ข้อผิดพลาด:",
-  "@errors": {
-    "description": "Error section label"
+  "importTotal": "ทั้งหมด: {count} รายการ",
+  "@importTotal": {
+    "description": "Total import count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
-  "error": "ข้อผิดพลาด",
-  "@error": {
-    "description": "Error dialog title"
+  "importing": "กำลังนำเข้า...",
+  "@importing": {
+    "description": "Import in progress"
   },
-  "importErrorMessage": "ไม่สามารถนำเข้าไฟล์ได้:\\n{error}",
-  "@importErrorMessage": {
-    "description": "Import error message",
+  "inputModeTitle": "ป้อนข้อมูล",
+  "intervalSeconds": "ระยะห่าง: {seconds}วิ",
+  "@intervalSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidEmail": "โปรดป้อนอีเมลที่ถูกต้อง",
+  "kakaoContinue": "ดำเนินการต่อด้วย Kakao",
+  "labelLangCode": "รหัสภาษา (เช่น en-US, ko-KR)",
+  "labelName": "ชื่อ",
+  "labelNote": "หมายเหตุ",
+  "labelPOS": "ชนิดของคำ",
+  "labelRole": "บทบาท",
+  "labelSentence": "ประโยค",
+  "labelSentenceCollection": "ชุดประโยค",
+  "labelSentenceType": "ชนิดของประโยค",
+  "labelShowMemorized": "สิ่งที่ทำเสร็จแล้ว",
+  "labelType": "ประเภท:",
+  "labelWord": "คำศัพท์",
+  "labelWordbook": "ชุดคำศัพท์",
+  "language": "ภาษา",
+  "languageSettings": "การตั้งค่าภาษา",
+  "languageSettingsTitle": "การตั้งค่าภาษา",
+  "libTitleFirstMeeting": "การพบกันครั้งแรก",
+  "libTitleGreetings1": "คำทักทาย 1",
+  "libTitleNouns1": "คำนาม 1",
+  "libTitleVerbs1": "คำกริยา 1",
+  "listen": "ฟัง",
+  "@listen": {
+    "description": "Listen/TTS button"
+  },
+  "listening": "กำลังฟัง...",
+  "@listening": {
+    "description": "STT listening status"
+  },
+  "loadingParticipants": "กำลังโหลดผู้เข้าร่วม...",
+  "location": "ตำแหน่ง",
+  "@location": {
+    "description": "Label for location field in chat save dialog"
+  },
+  "login": "เข้าสู่ระบบ",
+  "logout": "ออกจากระบบ",
+  "logoutConfirmMessage": "คุณต้องการออกจากระบบบนอุปกรณ์นี้หรือไม่",
+  "logoutConfirmTitle": "ออกจากระบบ",
+  "male": "ชาย",
+  "manageParticipants": "จัดการผู้เข้าร่วม",
+  "manual": "ป้อนด้วยตนเอง",
+  "@manual": {
+    "description": "Label for manual input in Partner Mode"
+  },
+  "markAsStudied": "ทำเครื่องหมายว่าเรียนแล้ว",
+  "@markAsStudied": {
+    "description": "Mark study button text"
+  },
+  "materialInfo": "ข้อมูลเนื้อหา",
+  "@materialInfo": {
+    "description": "Title for material metadata section"
+  },
+  "me": "ฉัน",
+  "@me": {
+    "description": "Label for self speaker"
+  },
+  "menuDeviceImport": "นำเข้าข้อมูลจากอุปกรณ์",
+  "menuHelp": "ช่วยเหลือ",
+  "menuLanguageSettings": "การตั้งค่าภาษา",
+  "menuOnlineLibrary": "คลังข้อมูลออนไลน์",
+  "menuSelectMaterialSet": "เลือกสื่อการเรียน",
+  "menuSettings": "Settings",
+  "@menuSettings": {
+    "description": "Menu item for language settings"
+  },
+  "menuTutorial": "คู่มือการใช้งาน",
+  "menuWebDownload": "คู่มือการใช้งาน",
+  "metadataDialogTitle": "หมวดหมู่โดยละเอียด",
+  "metadataFormType": "รูปแบบไวยากรณ์",
+  "metadataRootWord": "รากศัพท์ (Root Word)",
+  "micButtonTooltip": "เริ่มการรู้จำเสียง",
+  "mode1SelectedMaterial": "ชุดข้อมูลที่เลือกปัจจุบัน: {name}",
+  "mode2Title": "ทบทวน",
+  "@mode2Title": {
+    "description": "Mode 2 title for help dialog"
+  },
+  "mode3Next": "ถัดไป",
+  "mode3Start": "เริ่ม",
+  "mode3Stop": "จบ",
+  "mode3TryAgain": "ลองอีกครั้ง",
+  "mySentenceCollection": "คลังประโยคของฉัน",
+  "myWordbook": "คลังคำศัพท์ของฉัน",
+  "neutral": "เป็นกลาง",
+  "newSubjectName": "ชื่อชุดคำศัพท์/วลีใหม่",
+  "next": "ถัดไป",
+  "noDialogueHistory": "ไม่มีประวัติการสนทนา",
+  "noInternetWarningMic": "ไม่มีการเชื่อมต่ออินเทอร์เน็ต การรู้จำเสียงอาจไม่สามารถใช้งานได้ในโหมดออฟไลน์",
+  "noInternetWarningTranslate": "ไม่มีการเชื่อมต่ออินเทอร์เน็ต คุณสมบัติการแปลจะไม่สามารถใช้งานได้ในโหมดออฟไลน์ โปรดใช้โหมดทบทวน",
+  "noMaterialsInCategory": "ไม่มีข้อมูลในหมวดหมู่นี้",
+  "noParticipantsFound": "ไม่พบผู้เข้าร่วมที่ลงทะเบียน",
+  "noRecords": "ไม่มีบันทึกสำหรับภาษาที่เลือก",
+  "@noRecords": {
+    "description": "Empty state message"
+  },
+  "noStudyMaterial": "ไม่มีสื่อการเรียนรู้",
+  "noTextToPlay": "ไม่มีข้อความให้เล่น",
+  "@noTextToPlay": {
+    "description": "TTS error - no text"
+  },
+  "noTranslationToSave": "ไม่มีคำแปลให้บันทึก",
+  "@noTranslationToSave": {
+    "description": "Save error - no data"
+  },
+  "noVoiceDetected": "ไม่พบเสียง",
+  "notSelected": "- ไม่ได้เลือก -",
+  "onlineLibraryCheckInternet": "โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณหรือลองอีกครั้งในภายหลัง",
+  "onlineLibraryLoadFailed": "ไม่สามารถโหลดข้อมูลได้",
+  "onlineLibraryNoMaterials": "ไม่มีข้อมูล",
+  "participantDeleted": "ลบผู้เข้าร่วมแล้ว",
+  "participantRename": "เปลี่ยนชื่อผู้เข้าร่วม",
+  "partner": "คู่หู",
+  "@partner": {
+    "description": "Label for partner speaker"
+  },
+  "partnerMode": "โหมดคู่หู",
+  "@partnerMode": {
+    "description": "Label for Partner Mode logic"
+  },
+  "password": "รหัสผ่าน",
+  "passwordTooShort": "รหัสผ่านต้องมีความยาวอย่างน้อย 6 ตัวอักษร",
+  "perfect": "ยอดเยี่ยม!",
+  "personaFriend": "เพื่อนท้องถิ่น",
+  "personaGuide": "ไกด์นำเที่ยว",
+  "personaTeacher": "ครูสอนภาษาอังกฤษ",
+  "playAgain": "เล่นอีกครั้ง",
+  "playbackFailed": "การเล่นล้มเหลว: {error}",
+  "@playbackFailed": {
+    "description": "TTS error message",
     "placeholders": {
       "error": {
         "type": "String"
       }
     }
   },
-  "importDuplicateTitleError": "A material with the same title already exists. Please change the title and try again.",
-  "selectStudyMaterial": "เลือกสื่อการเรียนรู้",
-  "@selectStudyMaterial": {
-    "description": "Study material selector label"
+  "playing": "กำลังเล่น...",
+  "@playing": {
+    "description": "TTS playing status"
   },
-  "subject": "หัวข้อ:",
-  "@subject": {
-    "description": "Subject label"
-  },
-  "source": "ที่มา:",
-  "@source": {
-    "description": "Source label"
-  },
-  "file": "ไฟล์:",
-  "@file": {
-    "description": "File label"
-  },
+  "posAdjective": "คำคุณศัพท์",
+  "posAdverb": "คำวิเศษณ์",
+  "posConjunction": "คำสันธาน",
+  "posInterjection": "คำอุทาน",
+  "posNoun": "คำนาม",
+  "posPreposition": "คำบุพบท/คำลงท้าย",
+  "posPronoun": "คำสรรพนาม",
+  "posVerb": "คำกริยา",
+  "practiceModeTitle": "ฝึกฝน",
+  "practiceWordsOnly": "ฝึกเฉพาะคำศัพท์",
   "progress": "ความคืบหน้า: {current} / {total}",
   "@progress": {
     "description": "Progress indicator",
@@ -299,29 +436,13 @@
       }
     }
   },
-  "importJsonFilePrompt": "กรุณานำเข้าไฟล์ JSON",
-  "@importJsonFilePrompt": {
-    "description": "Empty state prompt"
-  },
-  "selectMaterialPrompt": "กรุณาเลือกสื่อการเรียนรู้",
-  "@selectMaterialPrompt": {
-    "description": "Selection prompt"
-  },
-  "studyComplete": "เรียนแล้ว",
-  "@studyComplete": {
-    "description": "Study complete button text"
-  },
-  "markAsStudied": "ทำเครื่องหมายว่าเรียนแล้ว",
-  "@markAsStudied": {
-    "description": "Mark study button text"
-  },
-  "listening": "กำลังฟัง...",
-  "@listening": {
-    "description": "STT listening status"
-  },
-  "recognized": "จดจำเสร็จสมบูรณ์",
-  "@recognized": {
-    "description": "STT complete status"
+  "recentNItems": "ดู {count} รายการที่สร้างล่าสุด",
+  "@recentNItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "recognitionFailed": "การจดจำเสียงล้มเหลว: {error}",
   "@recognitionFailed": {
@@ -332,44 +453,40 @@
       }
     }
   },
-  "checking": "กำลังตรวจสอบ...",
-  "@checking": {
-    "description": "Checking for duplicates"
+  "recognized": "จดจำเสร็จสมบูรณ์",
+  "@recognized": {
+    "description": "STT complete status"
   },
-  "translating": "กำลังแปล...",
-  "@translating": {
-    "description": "Translation in progress"
+  "recognizedText": "ข้อความที่รู้จัก:",
+  "recordDeleted": "ลบบันทึกเรียบร้อยแล้ว",
+  "@recordDeleted": {
+    "description": "Delete success message"
   },
-  "translationComplete": "แปลเสร็จสมบูรณ์ (ต้องบันทึก)",
-  "@translationComplete": {
-    "description": "Translation done status"
+  "refresh": "รีเฟรช",
+  "@refresh": {
+    "description": "Refresh button"
   },
-  "translationLoaded": "โหลดคำแปลที่บันทึกไว้",
-  "@translationLoaded": {
-    "description": "Existing translation loaded"
-  },
-  "translationFailed": "การแปลล้มเหลว: {error}",
-  "@translationFailed": {
-    "description": "Translation error",
+  "reset": "รีเซ็ต",
+  "resetPracticeHistory": "รีเซ็ตประวัติการฝึก",
+  "retry": "ลองอีกครั้ง?",
+  "reviewAll": "ทบทวนทั้งหมด",
+  "reviewCount": "ทบทวน {count} ครั้ง",
+  "@reviewCount": {
+    "description": "Review count display",
     "placeholders": {
-      "error": {
-        "type": "String"
+      "count": {
+        "type": "int"
       }
     }
   },
-  "enterTextToTranslate": "กรุณาป้อนข้อความเพื่อแปล",
-  "@enterTextToTranslate": {
-    "description": "Empty input warning"
-  },
-  "translationResultHint": "Translation result - editable",
-  "voluntaryTranslations": "Voluntary Translations",
-  "saving": "ไกำลังบันทึก...",
-  "@saving": {
-    "description": "Save in progress"
-  },
-  "noTranslationToSave": "ไม่มีคำแปลให้บันทึก",
-  "@noTranslationToSave": {
-    "description": "Save error - no data"
+  "reviewModeTitle": "ทบทวน",
+  "roleAi": "AI",
+  "roleThirdParty": "บุคคลที่สาม",
+  "roleUser": "ผู้ใช้",
+  "save": "บันทึก",
+  "saveData": "บันทึกข้อมูล",
+  "@saveData": {
+    "description": "Save translation button"
   },
   "saveFailed": "การบันทึกล้มเหลว: {error}",
   "@saveFailed": {
@@ -380,64 +497,18 @@
       }
     }
   },
-  "playing": "กำลังเล่น...",
-  "@playing": {
-    "description": "TTS playing status"
+  "saveTranslationsFromSearch": "บันทึกคำแปลจากโหมดค้นหา",
+  "@saveTranslationsFromSearch": {
+    "description": "Instruction to save data"
   },
-  "noTextToPlay": "ไม่มีข้อความให้เล่น",
-  "@noTextToPlay": {
-    "description": "TTS error - no text"
+  "saved": "บันทึกแล้ว",
+  "@saved": {
+    "description": "Data saved status"
   },
-  "playbackFailed": "การเล่นล้มเหลว: {error}",
-  "@playbackFailed": {
-    "description": "TTS error message",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
+  "saving": "ไกำลังบันทึก...",
+  "@saving": {
+    "description": "Save in progress"
   },
-  "sourceLanguage": "ภาษาต้นทาง",
-  "@sourceLanguage": {
-    "description": "Source language label"
-  },
-  "targetLanguage": "ภาษาเป้าหมาย",
-  "@targetLanguage": {
-    "description": "Target language label"
-  },
-  "similarTextFound": "พบข้อความที่คล้ายกัน",
-  "@similarTextFound": {
-    "description": "Duplicate detection title"
-  },
-  "useExistingText": "ใช้ที่มีอยู่",
-  "@useExistingText": {
-    "description": "Use existing text button"
-  },
-  "createNew": "สร้างรายการใหม่",
-  "@createNew": {
-    "description": "Create new entry button"
-  },
-  "reviewCount": "ทบทวน {count} ครั้ง",
-  "@reviewCount": {
-    "description": "Review count display",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "tabSpeaking": "การพูด",
-  "speakingPractice": "ฝึกพูด",
-  "intervalSeconds": "ระยะห่าง: {seconds}วิ",
-  "@intervalSeconds": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "yourPronunciation": "การออกเสียงของคุณ",
-  "correctAnswer": "คำตอบที่ถูกต้อง",
   "score": "ความแม่นยำ: {score}%",
   "@score": {
     "placeholders": {
@@ -446,90 +517,162 @@
       }
     }
   },
-  "perfect": "ยอดเยี่ยม!",
-  "good": "ดี",
-  "tryAgain": "ลองอีกครั้ง",
-  "startPractice": "เริ่มฝึก",
-  "stopPractice": "หยุดฝึก",
-  "menuOnlineLibrary": "Online Library",
-  "startTutorial": "เริ่มทัวร์",
-  "menuTutorial": "Tutorial",
-  "tutorialMicTitle": "เสียงเข้า",
-  "tutorialMicDesc": "แตะปุ่มไมค์เพื่อเริ่มเสียงเข้า",
-  "tutorialTabDesc": "คุณสามารถเลือกโหมดการเรียนรู้ที่ต้องการได้ที่นี่",
-  "tutorialTapToContinue": "แตะเพื่อดำเนินการต่อ",
-  "tutorialTransTitle": "แปลภาษา",
-  "tutorialTransDesc": "แตะที่นี่เพื่อแปลข้อความของคุณ",
-  "tutorialSaveTitle": "บันทึก",
-  "tutorialSaveDesc": "บันทึกคำแปลของคุณลงในบันทึกการเรียนรู้",
-  "selectParticipants": "Select Participants",
-  "loadingParticipants": "Loading participants...",
-  "noParticipantsFound": "No participants found.",
-  "noInternetWarningMic": "No internet connection. Voice recognition may not work offline.",
-  "noInternetWarningTranslate": "No internet connection. Translation is unavailable offline. Please use Review mode.",
-  "noMaterialsInCategory": "No materials in this category.",
-  "onlineLibraryLoadFailed": "Failed to load materials.",
-  "onlineLibraryCheckInternet": "Please check your internet connection or try again later.",
-  "onlineLibraryNoMaterials": "No materials found.",
+  "scoreLabel": "คะแนน",
+  "search": "ค้นหา",
+  "@search": {
+    "description": "Search mode label"
+  },
+  "searchConditions": "เงื่อนไขการค้นหา",
+  "searchSentenceHint": "ค้นหาประโยค...",
+  "searchWordHint": "ค้นหาคำศัพท์...",
+  "sectionSentence": "ส่วนประโยค",
+  "sectionSentences": "ประโยค",
+  "@sectionSentences": {
+    "description": "Header for sentences section in material selection"
+  },
+  "sectionWord": "ส่วนของคำ",
+  "sectionWords": "คำศัพท์",
+  "@sectionWords": {
+    "description": "Header for words section in material selection"
+  },
+  "selectExistingSubject": "เลือกชื่อที่มีอยู่",
+  "selectMaterialPrompt": "กรุณาเลือกสื่อการเรียนรู้",
+  "@selectMaterialPrompt": {
+    "description": "Selection prompt"
+  },
+  "selectMaterialSet": "เลือกชุดสื่อการเรียนรู้",
+  "@selectMaterialSet": {
+    "description": "Title for the material selection dialog"
+  },
+  "selectPOS": "เลือกส่วนของคำพูด",
+  "selectParticipants": "เลือกผู้เข้าร่วม",
+  "selectSentenceType": "เลือกประเภทประโยค",
+  "selectStudyMaterial": "เลือกสื่อการเรียนรู้",
+  "@selectStudyMaterial": {
+    "description": "Study material selector label"
+  },
   "sendingMessage": "메시지 전송 중...",
-  "startChat": "Start Chat",
-  "manageParticipants": "Manage Participants",
-  "tutorialAiChatTitle": "AI แชท",
-  "tutorialAiChatDesc": "Practice real conversation with AI personas here.",
-  "tutorialM2SelectTitle": "เลือก & กรอง",
-  "tutorialM2SelectDesc": "เลือกสื่อการเรียนรู้หรือสลับไปที่ 'ทบทวนทั้งหมด'",
-  "tutorialM2ListTitle": "รายการเรียนรู้",
-  "tutorialM2ListDesc": "ตรวจสอบการ์ดที่บันทึกไว้และพลิกดูคำตอบ (Long-press to delete)",
-  "tutorialM3SelectTitle": "เลือกสื่อ",
-  "tutorialM3SelectDesc": "เลือกชุดสื่อสำหรับการฝึกพูด",
-  "tutorialM3IntervalTitle": "ระยะห่าง",
-  "tutorialM3IntervalDesc": "ปรับเวลารอระหว่างประโยค",
-  "tutorialM3StartTitle": "เริ่มฝึก",
-  "tutorialM3StartDesc": "แตะเล่นเพื่อเริ่มฟังและพูดตาม",
+  "sentence": "ประโยค",
+  "@sentence": {
+    "description": "Toggle option for Sentence"
+  },
+  "signUp": "สมัครสมาชิก",
+  "similarTextFound": "พบข้อความที่คล้ายกัน",
+  "@similarTextFound": {
+    "description": "Duplicate detection title"
+  },
+  "skip": "ข้าม",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "source": "ที่มา:",
+  "@source": {
+    "description": "Source label"
+  },
+  "sourceLanguage": "ภาษาต้นทาง",
+  "@sourceLanguage": {
+    "description": "Source language label"
+  },
+  "sourceLanguageLabel": "Source Language",
+  "speakNow": "พูดเลย!",
+  "speaker": "ผู้พูด",
+  "@speaker": {
+    "description": "Label for speaker selection"
+  },
+  "speakerSelect": "เลือกผู้พูด",
+  "speakingPractice": "ฝึกพูด",
+  "startChat": "เริ่มการสนทนา",
+  "startPractice": "เริ่มฝึก",
+  "startTutorial": "เริ่มทัวร์",
   "startWarning": "คำเตือน",
-  "noVoiceDetected": "ไม่พบเสียง",
-  "tooltipSearch": "ค้นหา",
-  "tooltipStudyReview": "เรียน+ทบทวน",
-  "tooltipSpeaking": "พูด",
+  "startsWith": "ขึ้นต้นด้วย",
+  "statusCheckEmail": "โปรดยืนยันอีเมลเพื่อดำเนินการยืนยันให้เสร็จสิ้น",
+  "statusDownloading": "กำลังดาวน์โหลด: {name}...",
+  "statusImportFailed": "นำเข้าล้มเหลว: {error}",
+  "statusImportSuccess": "{name} นำเข้าสำเร็จ",
+  "statusLoggingIn": "Logging in with Google...",
+  "statusLoginCancelled": "การเข้าสู่ระบบถูกยกเลิก",
+  "statusLoginFailed": "เข้าสู่ระบบล้มเหลว: {error}",
+  "statusLoginSuccess": "เข้าสู่ระบบสำเร็จ",
+  "statusLogoutSuccess": "ออกจากระบบแล้ว",
+  "statusSignUpFailed": "สมัครสมาชิกไม่สำเร็จ: {error}",
+  "statusSigningUp": "กำลังสมัครสมาชิก...",
+  "stopPractice": "หยุดฝึก",
+  "studyComplete": "เรียนแล้ว",
+  "@studyComplete": {
+    "description": "Study complete button text"
+  },
+  "studyRecords": "บันทึกการเรียนรู้ ({count})",
+  "@studyRecords": {
+    "description": "Study records title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "styleFormal": "คำสุภาพ",
+  "styleInformal": "คำไม่เป็นทางการ",
+  "stylePolite": "สุภาพ",
+  "styleSlang": "สแลง/คำหยาบ",
+  "subject": "หัวข้อ:",
+  "@subject": {
+    "description": "Subject label"
+  },
+  "swapLanguages": "สลับภาษา",
+  "switchToAi": "เปลี่ยนเป็นโหมด AI",
+  "@switchToAi": {
+    "description": "Tooltip for switching to AI mode"
+  },
+  "switchToPartner": "เปลี่ยนเป็นโหมดคู่หู",
+  "@switchToPartner": {
+    "description": "Tooltip for switching to Partner mode"
+  },
+  "syncingData": "กำลังซิงค์ข้อมูล...",
+  "tabConversation": "การสนทนา",
+  "tabReview": "ทบทวน ({count})",
+  "@tabReview": {
+    "description": "Review tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabSentence": "ประโยค",
+  "tabSpeaking": "การพูด",
+  "tabStudyMaterial": "สื่อการเรียนรู้ ({count})",
+  "@tabStudyMaterial": {
+    "description": "Study material tab label with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabWord": "คำ",
+  "tagFormal": "สุภาพ",
+  "tagSelection": "การเลือกแท็ก",
+  "targetLanguage": "ภาษาเป้าหมาย",
+  "@targetLanguage": {
+    "description": "Target language label"
+  },
+  "targetLanguageFilter": "ตัวกรองภาษาเป้าหมาย:",
+  "@targetLanguageFilter": {
+    "description": "Language filter label"
+  },
+  "targetLanguageLabel": "Target Language",
+  "thinkingTimeDesc": "เวลาในการคิดก่อนที่จะเปิดเผยคำตอบที่ถูกต้อง",
+  "thinkingTimeInterval": "ความล่าช้าในการเล่น",
+  "timeUp": "หมดเวลา!",
+  "titleFormat": "{type}: {materialName}",
+  "titleTagSelection": "แท็กชื่อเรื่อง (คอลเลกชัน)",
   "tooltipDecrease": "ลด",
   "tooltipIncrease": "เพิ่ม",
-  "languageSettings": "การตั้งค่าภาษา",
-  "tutorialM2DropdownDesc": "เลือกเนื้อหาการเรียน",
-  "tutorialM2SearchDesc": "Search through your saved words and sentences.",
-  "tutorialM2ImportDesc": "นำเข้าไฟล์ JSON จากโฟลเดอร์อุปกรณ์",
-  "tutorialLangSettingsTitle": "Language Settings",
-  "tutorialLangSettingsDesc": "Configure source and target languages for translation.",
-  "copy": "Copy",
-  "copiedToClipboard": "Copied to clipboard!",
-  "tutorialContextTitle": "แท็กบริบท",
-  "tutorialContextDesc": "เพิ่มบริบท (เช่น ตอนเช้า) เพื่อแยกแยะประโยคที่คล้ายกัน",
-  "thinkingTimeInterval": "ความล่าช้าในการเล่น",
-  "thinkingTimeDesc": "Time to think before the answer is revealed.",
-  "autoPlay": "Auto-Play",
-  "timeUp": "Time Up!",
-  "gameModeTitle": "Game Mode",
-  "gameModeDesc": "Choose your practice mode",
-  "wordDefenseTitle": "Word Defense",
-  "wordDefenseDesc": "Defend your base by speaking words correctly before enemies reach you.",
-  "dialogueQuestTitle": "Dialogue Quest",
-  "dialogueQuestDesc": "Roleplay in scenarios. Choose the right response and speak it aloud.",
-  "translation": "Translation",
-  "@translation": {
-    "description": "Label for translation toggle"
-  },
-  "labelType": "Type:",
-  "labelWord": "Word",
-  "labelSentence": "Sentence",
-  "contextTagLabel": "Context/Situation (Optional) - Ex: Morning greeting, polite form",
-  "contextTagHint": "Describe situation for easier classification later",
-  "usageLimitTitle": "ถึงขีดจำกัดการใช้งานแล้ว",
-  "translationLimitExceeded": "Translation Limit Exceeded",
-  "translationLimitMessage": "You have used all your free daily translations (5). Watch an ad to refill 5 immediately?",
-  "watchAdAndRefill": "Watch Ad & Refill (+5)",
-  "translationRefilled": "Translations refilled by 5!",
-  "adLoading": "Loading ad, please try again in a moment.",
-  "reviewAll": "Review All",
-  "totalRecords": "Total {count} records (View All)",
+  "tooltipSearch": "ค้นหา",
+  "tooltipSpeaking": "พูด",
+  "tooltipStudyReview": "เรียน+ทบทวน",
+  "totalRecords": "บันทึกทั้งหมด {count} รายการ (ดูทั้งหมด)",
   "@totalRecords": {
     "description": "Total records count",
     "placeholders": {
@@ -538,220 +681,92 @@
       }
     }
   },
-  "filterAll": "All",
-  "practiceWordsOnly": "Practice Words Only",
-  "resetPracticeHistory": "Reset Practice History",
-  "retry": "Retry?",
-  "noStudyMaterial": "No study material found.",
-  "gameOver": "Game Over",
-  "playAgain": "Play Again",
-  "speakNow": "Speak now!",
-  "scoreLabel": "Score",
-  "viewOnlineGuide": "View Online User Guide",
-  "getMaterials": "Get Materials",
-  "swapLanguages": "Swap Languages",
-  "next": "Next",
-  "wordModeLabel": "Word Mode",
-  "accuracy": "Accuracy",
-  "basicDefault": "Basic (Default)",
-  "basic": "Basic",
-  "tutorialM3WordsTitle": "Practice Words",
-  "tutorialM3WordsDesc": "Check this to practice only your saved words.",
-  "enterTextHint": "Enter text to translate",
-  "micButtonTooltip": "Start Listening",
-  "menuHelp": "Help",
-  "menuWebDownload": "Get Material from Web",
-  "menuDeviceImport": "Import from Device",
-  "menuSettings": "Settings",
-  "@menuSettings": {
-    "description": "Menu item for language settings"
+  "translate": "แปลภาษา",
+  "@translate": {
+    "description": "Translate button"
   },
-  "basicWords": "Basic Word Repository",
-  "@basicWords": {
-    "description": "Default name for basic vocabulary material"
+  "translating": "กำลังแปล...",
+  "@translating": {
+    "description": "Translation in progress"
   },
-  "basicSentences": "Basic Sentence Repository",
-  "@basicSentences": {
-    "description": "Default name for basic sentences material"
+  "translation": "คำแปล",
+  "@translation": {
+    "description": "Label for translation toggle"
   },
-  "selectMaterialSet": "เลือกชุดสื่อการเรียนรู้",
-  "@selectMaterialSet": {
-    "description": "Title for the material selection dialog"
+  "translationComplete": "แปลเสร็จสมบูรณ์ (ต้องบันทึก)",
+  "@translationComplete": {
+    "description": "Translation done status"
   },
-  "sectionWords": "คำศัพท์",
-  "@sectionWords": {
-    "description": "Header for words section in material selection"
-  },
-  "sectionSentences": "ประโยค",
-  "@sectionSentences": {
-    "description": "Header for sentences section in material selection"
-  },
-  "languageSettingsTitle": "Language Settings",
-  "sourceLanguageLabel": "Source Language",
-  "targetLanguageLabel": "Target Language",
-  "mode3Start": "Start",
-  "mode3Stop": "Stop",
-  "mode3Next": "Next",
-  "mode3TryAgain": "Try Again",
-  "tutorialM3ResetTitle": "Reset History",
-  "tutorialSwapDesc": "ฉันสลับใช้ภาษาที่ฉันกำลังเรียนอยู่",
-  "recognizedText": "Recognized Text:",
-  "titleFormat": "{type}: {materialName}",
-  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
-  "menuSelectMaterialSet": "เลือกสื่อการเรียน",
-  "sectionWord": "ส่วนของคำ",
-  "sectionSentence": "ส่วนประโยค",
-  "tabWord": "คำ",
-  "tabSentence": "ประโยค",
-  "errorProfanity": "ไม่สามารถแปลได้เนื่องจากมีคำหยาบคาย",
-  "errorHateSpeech": "ไม่สามารถแปลได้เนื่องจากมีคำพูดแสดงความเกลียดชัง",
-  "errorSexualContent": "ไม่สามารถแปลได้เนื่องจากมีเนื้อหาที่ไม่เหมาะสม",
-  "errorOtherSafety": "การแปลถูกปฏิเสธโดยนโยบายความปลอดภัย AI",
-  "clearAll": "ล้างทั้งหมด",
-  "disambiguationTitle": "เลือกความหมาย",
-  "@disambiguationTitle": {
-    "description": "Title for disambiguation dialog"
-  },
-  "disambiguationPrompt": "คุณต้องการให้แปลเป็นความหมายใด",
-  "@disambiguationPrompt": {
-    "description": "Prompt for disambiguation dialog"
-  },
-  "skip": "ข้าม",
-  "@skip": {
-    "description": "Skip button"
-  },
-  "inputModeTitle": "Input",
-  "reviewModeTitle": "Review",
-  "practiceModeTitle": "ฝึกฝน",
-  "chatHistoryTitle": "ประวัติการสนทนา",
-  "chatNew": "New Chat",
-  "chatNewChat": "เริ่มแชทใหม่",
-  "chatChoosePersona": "Choose a Persona",
-  "chatTypeHint": "Type a message...",
-  "chatFailed": "Chat failed: {error}",
-  "@chatFailed": {
+  "translationFailed": "การแปลล้มเหลว: {error}",
+  "@translationFailed": {
+    "description": "Translation error",
     "placeholders": {
       "error": {
-        "type": "Object"
+        "type": "String"
       }
     }
   },
-  "chatNoConversations": "No conversations yet",
-  "noDialogueHistory": "No dialogue history.",
-  "chatStartNewPrompt": "Start a new chat to practice!",
-  "chatFromConversation": "From Conversation ({speaker})",
-  "@chatFromConversation": {
-    "placeholders": {
-      "speaker": {
-        "type": "Object"
-      }
-    }
+  "translationLimitExceeded": "เกินขีดจำกัดการแปล",
+  "translationLimitMessage": "คุณใช้การแปลฟรีรายวัน (5 ครั้ง) หมดแล้ว\n\nต้องการดูโฆษณาเพื่อเติม 5 ครั้งทันทีหรือไม่",
+  "translationLoaded": "โหลดคำแปลที่บันทึกไว้",
+  "@translationLoaded": {
+    "description": "Existing translation loaded"
   },
-  "personaTeacher": "English Teacher",
-  "personaGuide": "Travel Guide",
-  "personaFriend": "Local Friend",
-  "chatUntitled": "Untitled Conversation",
-  "chatAiChat": "แชท",
-  "mode1SelectedMaterial": "Current Material Set: {name}",
-  "basicWordRepository": "คลังคำศัพท์พื้นฐาน",
-  "basicSentenceRepository": "คลังประโยคพื้นฐาน",
-  "chatEndTitle": "End & Save Chat",
-  "chatEndMessage": "Do you want to end this conversation? You can set a title for it.",
-  "chatSaveAndExit": "บันทึกและออก",
-  "errorSelectCategory": "Please select word or sentence first!",
-  "tutorialM1ToggleTitle": "Word/Sentence Mode",
-  "tutorialM1ToggleDesc": "Switch between Word and Sentence mode here. Words are saved with larger text.",
-  "metadataDialogTitle": "Details",
-  "tagFormal": "สุภาพ",
-  "selectPOS": "Select POS",
-  "selectSentenceType": "Select Sentence Type",
-  "metadataRootWord": "Root Word",
-  "posNoun": "Noun",
-  "posVerb": "Verb",
-  "posAdjective": "Adjective",
-  "posAdverb": "Adverb",
-  "posPronoun": "Pronoun",
-  "posPreposition": "Preposition",
-  "posConjunction": "Conjunction",
-  "posInterjection": "Interjection",
-  "typeStatement": "Statement",
-  "typeQuestion": "Question",
-  "typeExclamation": "Exclamation",
-  "typeImperative": "Imperative",
-  "labelNote": "Note",
-  "labelShowMemorized": "Finished",
-  "titleTagSelection": "แท็กชื่อเรื่อง (คอลเลกชัน)",
-  "generalTags": "แท็กทั่วไป",
-  "tagSelection": "Select Tags",
-  "metadataFormType": "Form Type",
-  "formInfinitive": "Infinitive/Present",
-  "formPast": "Past",
-  "formPastParticiple": "Past Participle",
-  "formPresentParticiple": "Present Participle",
-  "formPresent": "Present",
-  "formThirdPersonSingular": "3rd Person Singular",
-  "formPlural": "Plural",
-  "formSingular": "เอกพจน์",
-  "caseSubject": "Subject",
-  "caseObject": "Object",
-  "casePossessive": "Possessive",
-  "casePossessivePronoun": "Possessive Pronoun",
-  "caseReflexive": "Reflexive",
-  "formPositive": "Positive",
-  "formComparative": "Comparative",
-  "formSuperlative": "Superlative",
-  "searchConditions": "Search Conditions",
-  "recentNItems": "Recent {count} items",
-  "@recentNItems": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
+  "translationRefilled": "เติมจำนวนการแปล 5 ครั้งแล้ว!",
+  "translationResultHint": "ผลการแปล - แก้ไขได้",
+  "tryAgain": "ลองอีกครั้ง",
+  "tutorialAiChatDesc": "ฝึกสนทนาจริงกับบุคลิก AI",
+  "tutorialAiChatTitle": "AI แชท",
+  "tutorialContextDesc": "เพิ่มบริบท (เช่น ตอนเช้า) เพื่อแยกแยะประโยคที่คล้ายกัน",
+  "tutorialContextTitle": "แท็กบริบท",
+  "tutorialLangSettingsDesc": "ตั้งค่าภาษาต้นฉบับและภาษาเป้าหมายสำหรับการแปล",
+  "tutorialLangSettingsTitle": "การตั้งค่าภาษา",
+  "tutorialM1ToggleDesc": "สลับระหว่างโหมดคำศัพท์และประโยคที่นี่",
+  "tutorialM1ToggleTitle": "โหมดคำศัพท์/ประโยค",
+  "tutorialM2DropdownDesc": "เลือกเนื้อหาการเรียน",
+  "tutorialM2ImportDesc": "นำเข้าไฟล์ JSON จากโฟลเดอร์อุปกรณ์",
+  "tutorialM2ListDesc": "ตรวจสอบการ์ดที่บันทึกไว้และพลิกดูคำตอบ (Long-press to delete)",
+  "tutorialM2ListTitle": "รายการเรียนรู้",
+  "tutorialM2SearchDesc": "ค้นหาและค้นหาคำศัพท์และประโยคที่บันทึกไว้อย่างรวดเร็ว",
+  "tutorialM2SelectDesc": "เลือกสื่อการเรียนรู้หรือสลับไปที่ 'ทบทวนทั้งหมด'",
+  "tutorialM2SelectTitle": "เลือก & กรอง",
+  "tutorialM3IntervalDesc": "ปรับเวลารอระหว่างประโยค",
+  "tutorialM3IntervalTitle": "ระยะห่าง",
+  "tutorialM3ResetDesc": "Clear your progress and accuracy scores to start fresh.",
+  "tutorialM3ResetTitle": "Reset History",
+  "tutorialM3SelectDesc": "เลือกชุดสื่อสำหรับการฝึกพูด",
+  "tutorialM3SelectTitle": "เลือกสื่อ",
+  "tutorialM3StartDesc": "แตะเล่นเพื่อเริ่มฟังและพูดตาม",
+  "tutorialM3StartTitle": "เริ่มฝึก",
+  "tutorialM3WordsDesc": "ทำเครื่องหมายเพื่อฝึกเฉพาะคำศัพท์ที่บันทึกไว้",
+  "tutorialM3WordsTitle": "ฝึกคำศัพท์",
+  "tutorialMicDesc": "แตะปุ่มไมค์เพื่อเริ่มเสียงเข้า",
+  "tutorialMicTitle": "เสียงเข้า",
+  "tutorialSaveDesc": "บันทึกคำแปลของคุณลงในบันทึกการเรียนรู้",
+  "tutorialSaveTitle": "บันทึก",
+  "tutorialSwapDesc": "ฉันสลับใช้ภาษาที่ฉันกำลังเรียนอยู่",
+  "tutorialTabDesc": "คุณสามารถเลือกโหมดการเรียนรู้ที่ต้องการได้ที่นี่",
+  "tutorialTapToContinue": "แตะเพื่อดำเนินการต่อ",
+  "tutorialTransDesc": "แตะที่นี่เพื่อแปลข้อความของคุณ",
+  "tutorialTransTitle": "แปลภาษา",
+  "typeExclamation": "ประโยคอุทาน",
+  "typeImperative": "ประโยคคำสั่ง",
+  "typeQuestion": "ประโยคคำถาม",
+  "typeStatement": "ประโยคบอกเล่า",
+  "usageLimitTitle": "ถึงขีดจำกัดการใช้งานแล้ว",
+  "useExistingText": "ใช้ที่มีอยู่",
+  "@useExistingText": {
+    "description": "Use existing text button"
   },
-  "startsWith": "Starts with",
-  "reset": "Reset",
-  "participantRename": "Rename Participant",
-  "labelName": "Name",
-  "gender": "Gender",
-  "language": "Language",
-  "male": "Male",
-  "female": "Female",
-  "neutral": "เป็นกลาง",
-  "chatAllConversations": "การสนทนาทั้งหมด",
-  "tabConversation": "Conversation",
-  "confirmDeleteConversation": "คุณต้องการลบการสนทนานี้หรือไม่\nการสนทนาที่ถูกลบจะไม่สามารถกู้คืนได้",
-  "notSelected": "- ไม่ได้เลือก -",
-  "myWordbook": "คลังคำศัพท์ของฉัน",
-  "mySentenceCollection": "คลังประโยคของฉัน",
-  "newSubjectName": "ชื่อชุดคำศัพท์/วลีใหม่",
-  "enterNewSubjectName": "ใส่ชื่อใหม่",
-  "addNewSubject": "เพิ่มชื่อใหม่",
-  "selectExistingSubject": "เลือกชื่อที่มีอยู่",
-  "addTagHint": "เพิ่มแท็ก...",
-  "save": "บันทึก",
-  "styleFormal": "Formal",
-  "styleInformal": "Informal",
-  "stylePolite": "Polite",
-  "styleSlang": "Slang",
-  "statusDownloading": "Downloading: {name}...",
-  "statusImportSuccess": "{name} Imported Successfully",
-  "statusImportFailed": "Import Failed: {error}",
-  "statusLoginSuccess": "Login successful.",
-  "statusLoginFailed": "Login failed: {error}",
-  "statusLoginCancelled": "Login cancelled.",
-  "statusLoggingIn": "Logging in with Google...",
-  "statusLogoutSuccess": "Logged out.",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "signUp": "Sign Up",
-  "dontHaveAccount": "Don't have an account?",
-  "alreadyHaveAccount": "Already have an account?",
-  "invalidEmail": "Please enter a valid email.",
-  "passwordTooShort": "Password must be at least 6 characters.",
-  "statusSigningUp": "Signing up...",
-  "statusSignUpFailed": "Sign up failed: {error}",
-  "statusCheckEmail": "โปรดยืนยันอีเมลเพื่อดำเนินการยืนยันให้เสร็จสิ้น",
-  "emailAlreadyInUse": "อีเมลนี้ถูกใช้ไปแล้ว โปรดเข้าสู่ระบบหรือรีเซ็ตรหัสผ่าน"
+  "viewOnlineGuide": "ดูคู่มือออนไลน์",
+  "voluntaryTranslations": "การแปลโดยผู้ใช้",
+  "watchAdAndRefill": "ดูโฆษณาเพื่อเติม (+5 ครั้ง)",
+  "word": "คำศัพท์",
+  "@word": {
+    "description": "Toggle option for Word"
+  },
+  "wordDefenseDesc": "ป้องกันฐานของคุณโดยพูดคำศัพท์ก่อนที่ศัตรูจะมาถึง",
+  "wordDefenseTitle": "ป้องกันคำศัพท์",
+  "wordModeLabel": "โหมดคำศัพท์",
+  "yourPronunciation": "การออกเสียงของคุณ"
 }

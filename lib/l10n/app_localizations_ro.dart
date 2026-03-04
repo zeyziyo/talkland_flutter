@@ -9,35 +9,331 @@ class AppLocalizationsRo extends AppLocalizations {
   AppLocalizationsRo([String locale = 'ro']) : super(locale);
 
   @override
-  String get googleContinue => 'Continue with Google';
+  String get accuracy => 'Acuratețe';
 
   @override
-  String get kakaoContinue => 'Continuă cu Kakao';
+  String get adLoading =>
+      'Se încarcă anunțul. Te rugăm să încerci din nou mai târziu.';
 
   @override
-  String get logout => 'Logout';
+  String get addNewSubject => 'Adăugați titlu nou';
 
   @override
-  String get logoutConfirmTitle => 'Logout';
+  String get addParticipant => 'Adaugă participant';
 
   @override
-  String get logoutConfirmMessage =>
-      'Are you sure you want to logout from this device?';
+  String get addTagHint => 'Adăugați etichetă...';
 
   @override
-  String get syncingData => 'Syncing data...';
+  String get alreadyHaveAccount => 'Ai deja un cont?';
 
   @override
-  String get helpTitle => 'Ajutor & Ghid';
+  String get appTitle => 'Talkie';
 
   @override
-  String get helpTabModes => 'Moduri';
+  String get autoPlay => 'Redare automată';
 
   @override
-  String get helpTabJson => 'Format JSON';
+  String get basic => 'Bază';
 
   @override
-  String get helpTabTour => 'Tur';
+  String get basicDefault => 'Bază';
+
+  @override
+  String get basicMaterialRepository => 'Depozit de bază cu propoziții/cuvinte';
+
+  @override
+  String get basicSentenceRepository => 'Depozit de propoziții de bază';
+
+  @override
+  String get basicSentences => 'Depozit de bază cu propoziții';
+
+  @override
+  String get basicWordRepository => 'Depozit de cuvinte de bază';
+
+  @override
+  String get basicWords => 'Depozit de bază cu cuvinte';
+
+  @override
+  String get cancel => 'Anulare';
+
+  @override
+  String get caseObject => 'Acuzativ';
+
+  @override
+  String get casePossessive => 'Genitiv';
+
+  @override
+  String get casePossessivePronoun => 'Pronume posesiv';
+
+  @override
+  String get caseReflexive => 'Reflexiv';
+
+  @override
+  String get caseSubject => 'Nominativ';
+
+  @override
+  String get chatAiChat => 'Conversație';
+
+  @override
+  String get chatAllConversations => 'Toate conversațiile';
+
+  @override
+  String get chatChoosePersona => 'Alege personajul';
+
+  @override
+  String get chatEndMessage => 'Sigur dorești să închei conversația?';
+
+  @override
+  String get chatEndTitle => 'Încheie și salvează conversația';
+
+  @override
+  String chatFailed(Object error) {
+    return 'Conversație eșuată: $error';
+  }
+
+  @override
+  String chatFromConversation(Object speaker) {
+    return 'Extras din conversație ($speaker)';
+  }
+
+  @override
+  String get chatHistoryTitle => 'Istoric conversații';
+
+  @override
+  String get chatNew => 'Conversație nouă';
+
+  @override
+  String get chatNewChat => 'Conversație nouă';
+
+  @override
+  String get chatNoConversations => 'Nu există conversații încă';
+
+  @override
+  String get chatSaveAndExit => 'Salvează și ieși';
+
+  @override
+  String get chatStartNewPrompt => 'Începe o nouă conversație pentru a exersa!';
+
+  @override
+  String get chatTypeHint => 'Scrie un mesaj...';
+
+  @override
+  String get chatUntitled => 'Conversație fără titlu';
+
+  @override
+  String get checking => 'Verificare...';
+
+  @override
+  String get clearAll => 'Șterge tot';
+
+  @override
+  String get confirm => 'Confirmă';
+
+  @override
+  String get confirmDelete => 'Sigur doriți să ștergeți această înregistrare?';
+
+  @override
+  String get confirmDeleteConversation =>
+      'Sigur dorești să ștergi această conversație?\nConversațiile șterse nu pot fi recuperate.';
+
+  @override
+  String get confirmDeleteParticipant =>
+      'Sigur dorești să ștergi acest participant?';
+
+  @override
+  String get contextTagHint =>
+      'Descrie situația pentru a o identifica mai ușor ulterior';
+
+  @override
+  String get contextTagLabel =>
+      'Context/Situație (opțional) - ex: Salut de dimineață, Politețe';
+
+  @override
+  String get copiedToClipboard => 'Copiat în clipboard!';
+
+  @override
+  String get copy => 'Copiază';
+
+  @override
+  String get correctAnswer => 'Răspuns Corect';
+
+  @override
+  String get createNew => 'Creează Nou';
+
+  @override
+  String get currentLocation => 'Locația actuală';
+
+  @override
+  String get currentMaterialLabel => 'Culegere selectată curent:';
+
+  @override
+  String get delete => 'Șterge';
+
+  @override
+  String deleteFailed(String error) {
+    return 'Ștergere eșuată: $error';
+  }
+
+  @override
+  String get deleteRecord => 'Șterge Înregistrare';
+
+  @override
+  String get dialogueQuestDesc =>
+      'Exersează conversații prin joc de rol. Selectează răspunsurile potrivite și spune-le.';
+
+  @override
+  String get dialogueQuestTitle => 'Misiune dialog';
+
+  @override
+  String get disambiguationPrompt => 'Ce sens doriți să traducem?';
+
+  @override
+  String get disambiguationTitle => 'Selectați sensul';
+
+  @override
+  String get dontHaveAccount => 'Nu ai un cont?';
+
+  @override
+  String get editParticipant => 'Editează participant';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get emailAlreadyInUse =>
+      'Acest e-mail este deja înregistrat. Te rugăm să te autentifici sau să recuperezi parola.';
+
+  @override
+  String get enterNewSubjectName => 'Introduceți titlul nou';
+
+  @override
+  String get enterSentenceHint => 'Introdu o propoziție...';
+
+  @override
+  String get enterTextHint => 'Introdu textul de tradus';
+
+  @override
+  String get enterTextToTranslate => 'Introduceți text pentru traducere';
+
+  @override
+  String get enterWordHint => 'Introdu un cuvânt...';
+
+  @override
+  String get error => 'Eroare';
+
+  @override
+  String get errorHateSpeech =>
+      'Nu se poate traduce deoarece conține discurs instigator la ură.';
+
+  @override
+  String get errorOtherSafety =>
+      'Traducerea a fost refuzată de politica de siguranță AI.';
+
+  @override
+  String get errorProfanity =>
+      'Nu se poate traduce deoarece conține cuvinte obscene.';
+
+  @override
+  String get errorSelectCategory =>
+      'Selectează mai întâi un cuvânt sau o propoziție!';
+
+  @override
+  String get errorSexualContent =>
+      'Nu se poate traduce deoarece conține conținut sexual explicit.';
+
+  @override
+  String get errors => 'Erori:';
+
+  @override
+  String get female => 'Feminin';
+
+  @override
+  String get file => 'Fișier:';
+
+  @override
+  String get filterAll => 'Toate';
+
+  @override
+  String get flip => 'Întoarce';
+
+  @override
+  String get formComparative => 'Comparativ';
+
+  @override
+  String get formInfinitive => 'Infinitiv/Prezent';
+
+  @override
+  String get formPast => 'Trecut';
+
+  @override
+  String get formPastParticiple => 'Participiu trecut';
+
+  @override
+  String get formPlural => 'Forma de plural';
+
+  @override
+  String get formPositive => 'Pozitiv';
+
+  @override
+  String get formPresent => 'Prezent';
+
+  @override
+  String get formPresentParticiple => 'Participiu prezent (ing)';
+
+  @override
+  String get formSingular => 'Forma de singular';
+
+  @override
+  String get formSuperlative => 'Superlativ';
+
+  @override
+  String get formThirdPersonSingular => 'Persoana a III-a singular';
+
+  @override
+  String get gameModeDesc =>
+      'Selectează modul de joc pe care vrei să-l exersezi';
+
+  @override
+  String get gameModeTitle => 'Mod joc';
+
+  @override
+  String get gameOver => 'Joc terminat';
+
+  @override
+  String get gender => 'Gen';
+
+  @override
+  String get generalTags => 'Etichete generale';
+
+  @override
+  String get getMaterials => 'Obține materiale';
+
+  @override
+  String get good => 'Bine';
+
+  @override
+  String get googleContinue => 'Continuă cu Google';
+
+  @override
+  String get helpDialogueImportDesc =>
+      'Importă seturi complete de dialoguri din fișiere JSON.';
+
+  @override
+  String get helpDialogueImportDetails =>
+      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+
+  @override
+  String get helpJsonDesc => 'Pentru import materiale în Mod 3, creați JSON:';
+
+  @override
+  String get helpJsonTypeDialogue => 'Dialog';
+
+  @override
+  String get helpJsonTypeSentence => 'Sentință';
+
+  @override
+  String get helpJsonTypeWord => 'Cuvânt';
 
   @override
   String get helpMode1Desc =>
@@ -69,160 +365,43 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get helpModeChatDetails =>
-      '• Start Chat: Tap bubble icon on top right\n• Choose Persona: Pick teacher, guide or friend\n• Chat & Save: AI responses are auto-translated. Tap any message to save it to Mode 2\n• Dual Language: View both mother tongue and target language for all messages\n• TTS: Tap speaker icon to hear pronunciation for both languages\n• Auto-Title: AI suggests a title based on topic\n• Management: View past chats in history';
+      '• Chat AI: Exersează conversații reale cu personaje.\n• Gestionarea participanților: Setează-ți limba și limba AI-ului pentru a evita nepotrivirile lingvistice.\n• Situații GPS: Creează situații de conversație naturale bazate pe locația ta curentă.\n• Păstrarea istoricului: Toate conversațiile sunt stocate în siguranță pe baza ID-ului, iar istoricul se păstrează chiar dacă schimbi numele.';
 
   @override
-  String get helpJsonDesc => 'Pentru import materiale în Mod 3, creați JSON:';
+  String get helpTabJson => 'Format JSON';
 
   @override
-  String get helpJsonTypeDialogue => 'Dialogue';
+  String get helpTabModes => 'Moduri';
 
   @override
-  String get helpJsonTypeSentence => 'Sentence';
+  String get helpTabTour => 'Tur';
 
   @override
-  String get helpJsonTypeWord => 'Word';
-
-  @override
-  String get helpDialogueImportDesc =>
-      'Import complete dialogue sets via JSON files.';
-
-  @override
-  String get helpDialogueImportDetails =>
-      '• JSON Structure: Uses `dialogues` array instead of `entries`.\n• Auto-Restoration: Conversation title, persona, and message order are recovered.\n• Location: Imported chats appear in the AI Chat mode\'s \'History\' tab.';
+  String get helpTitle => 'Ajutor & Ghid';
 
   @override
   String get helpTourDesc =>
       'The **Highlight Circle** will guide you through the main features.\\n(e.g., You can delete a record by long-pressing when the **Highlight Circle** points to it.)';
 
   @override
-  String get partnerMode => 'Partner Mode';
-
-  @override
-  String get manual => 'Manual';
-
-  @override
-  String get speaker => 'Speaker';
-
-  @override
-  String get switchToAi => 'Switch to AI';
-
-  @override
-  String get switchToPartner => 'Switch to Partner';
-
-  @override
-  String get currentLocation => 'Current Location';
-
-  @override
-  String get location => 'Locație';
-
-  @override
-  String get partner => 'Partner';
-
-  @override
-  String get me => 'Me';
-
-  @override
-  String get currentMaterialLabel => 'Current Selected Material:';
-
-  @override
-  String get basicMaterialRepository => 'Basic Repository';
-
-  @override
-  String get word => 'Word';
-
-  @override
-  String get sentence => 'Sentence';
-
-  @override
-  String get appTitle => 'Talkie';
-
-  @override
-  String tabReview(int count) {
-    return 'Recapitulare ($count)';
-  }
-
-  @override
-  String tabStudyMaterial(int count) {
-    return 'Material ($count)';
-  }
-
-  @override
-  String get mode2Title => 'Recapitulare';
-
-  @override
-  String get search => 'Căutare';
-
-  @override
-  String get translate => 'Traducere';
-
-  @override
-  String get listen => 'Ascultă';
-
-  @override
-  String get saveData => 'Salvare';
-
-  @override
-  String get saved => 'Salvat';
-
-  @override
-  String get delete => 'Șterge';
-
-  @override
-  String get materialInfo => 'Informații material';
-
-  @override
-  String get cancel => 'Anulare';
-
-  @override
-  String get confirm => 'OK';
-
-  @override
-  String get refresh => 'Reîmprospătare';
-
-  @override
-  String studyRecords(int count) {
-    return 'Înregistrări ($count)';
-  }
-
-  @override
-  String get targetLanguageFilter => 'Filtru Limbă:';
-
-  @override
-  String get noRecords => 'Nu există înregistrări pentru limba selectată';
-
-  @override
-  String get saveTranslationsFromSearch =>
-      'Vă rugăm să salvați traducerile din modul de căutare';
-
-  @override
-  String get flip => 'Întoarce';
-
-  @override
   String get hide => 'Ascunde';
 
   @override
-  String get deleteRecord => 'Șterge Înregistrare';
-
-  @override
-  String get confirmDelete => 'Sigur doriți să ștergeți această înregistrare?';
-
-  @override
-  String get recordDeleted => 'Înregistrare ștearsă cu succes';
-
-  @override
-  String deleteFailed(String error) {
-    return 'Ștergere eșuată: $error';
+  String importAdded(int count) {
+    return 'Adăugat: $count';
   }
 
   @override
-  String get importJsonFile => 'Import JSON';
-
-  @override
-  String get importing => 'Se importă...';
-
-  @override
   String get importComplete => 'Import Complet';
+
+  @override
+  String get importDuplicateTitleError =>
+      'Există deja un material cu același titlu. Te rugăm să schimbi titlul și să încerci din nou.';
+
+  @override
+  String importErrorMessage(String error) {
+    return 'Nu s-a putut importa fișierul:\\n$error';
+  }
 
   @override
   String get importFailed => 'Import Eșuat';
@@ -233,45 +412,10 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
-  String get addParticipant => 'Add Participant';
+  String get importJsonFile => 'Import JSON';
 
   @override
-  String get editParticipant => 'Edit Participant';
-
-  @override
-  String get labelRole => 'Role';
-
-  @override
-  String get labelLangCode => 'Language Code (e.g. en-US, ko-KR)';
-
-  @override
-  String get roleUser => 'User';
-
-  @override
-  String get roleAi => 'AI';
-
-  @override
-  String get roleThirdParty => '제삼자';
-
-  @override
-  String get speakerSelect => '발화자 선택';
-
-  @override
-  String get participantDeleted => 'Participant deleted.';
-
-  @override
-  String get confirmDeleteParticipant =>
-      'Are you sure you want to delete this participant?';
-
-  @override
-  String importTotal(int count) {
-    return 'Total: $count';
-  }
-
-  @override
-  String importAdded(int count) {
-    return 'Adăugat: $count';
-  }
+  String get importJsonFilePrompt => 'Vă rugăm importați fișier JSON';
 
   @override
   String importSkipped(int count) {
@@ -279,509 +423,173 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
-  String get errors => 'Erori:';
-
-  @override
-  String get error => 'Eroare';
-
-  @override
-  String importErrorMessage(String error) {
-    return 'Nu s-a putut importa fișierul:\\n$error';
+  String importTotal(int count) {
+    return 'Total: $count';
   }
 
   @override
-  String get importDuplicateTitleError =>
-      'A material with the same title already exists. Please change the title and try again.';
+  String get importing => 'Se importă...';
 
   @override
-  String get selectStudyMaterial => 'Selectare Material';
-
-  @override
-  String get subject => 'Subiect:';
-
-  @override
-  String get source => 'Sursă:';
-
-  @override
-  String get file => 'Fișier:';
-
-  @override
-  String progress(int current, int total) {
-    return 'Progres: $current / $total';
-  }
-
-  @override
-  String get importJsonFilePrompt => 'Vă rugăm importați fișier JSON';
-
-  @override
-  String get selectMaterialPrompt => 'Vă rugăm selectați material de studiu';
-
-  @override
-  String get studyComplete => 'Studiat';
-
-  @override
-  String get markAsStudied => 'Marchează ca Studiat';
-
-  @override
-  String get listening => 'Ascult...';
-
-  @override
-  String get recognized => 'Recunoaștere completă';
-
-  @override
-  String recognitionFailed(String error) {
-    return 'Recunoaștere vocală eșuată: $error';
-  }
-
-  @override
-  String get checking => 'Verificare...';
-
-  @override
-  String get translating => 'Traducere...';
-
-  @override
-  String get translationComplete => 'Traducere completă (necesită salvare)';
-
-  @override
-  String get translationLoaded => 'Traducere salvată încărcată';
-
-  @override
-  String translationFailed(String error) {
-    return 'Traducere eșuată: $error';
-  }
-
-  @override
-  String get enterTextToTranslate => 'Introduceți text pentru traducere';
-
-  @override
-  String get translationResultHint => 'Translation result - editable';
-
-  @override
-  String get voluntaryTranslations => 'Voluntary Translations';
-
-  @override
-  String get saving => 'Salvare...';
-
-  @override
-  String get noTranslationToSave => 'Nicio traducere de salvat';
-
-  @override
-  String saveFailed(String error) {
-    return 'Salvare eșuată: $error';
-  }
-
-  @override
-  String get playing => 'Redare...';
-
-  @override
-  String get noTextToPlay => 'Nicio text de redat';
-
-  @override
-  String playbackFailed(String error) {
-    return 'Redare eșuată: $error';
-  }
-
-  @override
-  String get sourceLanguage => 'Limbă Sursă';
-
-  @override
-  String get targetLanguage => 'Limbă Țintă';
-
-  @override
-  String get similarTextFound => 'Text similar găsit';
-
-  @override
-  String get useExistingText => 'Folosește Existent';
-
-  @override
-  String get createNew => 'Creează Nou';
-
-  @override
-  String reviewCount(int count) {
-    return 'Recapitulat de $count ori';
-  }
-
-  @override
-  String get tabSpeaking => 'Vorbire';
-
-  @override
-  String get speakingPractice => 'Practică Vorbire';
+  String get inputModeTitle => 'Introducere';
 
   @override
   String intervalSeconds(int seconds) {
-    return 'Interval: ${seconds}s';
+    return 'Interval: $seconds secunde';
   }
 
   @override
-  String get yourPronunciation => 'Pronunția ta';
+  String get invalidEmail => 'Introdu o adresă de email validă.';
 
   @override
-  String get correctAnswer => 'Răspuns Corect';
+  String get kakaoContinue => 'Continuă cu Kakao';
 
   @override
-  String score(String score) {
-    return 'Acuratețe: $score%';
-  }
+  String get labelLangCode => 'Cod limbă (ex: en-US, ko-KR)';
 
   @override
-  String get perfect => 'Perfect!';
+  String get labelName => 'Nume';
 
   @override
-  String get good => 'Bine';
+  String get labelNote => 'Notă';
 
   @override
-  String get tryAgain => 'Încearcă din nou';
+  String get labelPOS => 'Parte de vorbire';
 
   @override
-  String get startPractice => 'Începe Practica';
+  String get labelRole => 'Rol';
 
   @override
-  String get stopPractice => 'Oprește';
+  String get labelSentence => 'Sentință';
 
   @override
-  String get menuOnlineLibrary => 'Online Library';
+  String get labelSentenceCollection => 'Colecție de propoziții';
 
   @override
-  String get startTutorial => 'Start Tur';
+  String get labelSentenceType => 'Tip de propoziție';
 
   @override
-  String get menuTutorial => 'Tutorial';
+  String get labelShowMemorized => 'Terminat';
 
   @override
-  String get tutorialMicTitle => 'Intrare Vocală';
+  String get labelType => 'Tip:';
 
   @override
-  String get tutorialMicDesc => 'Apasă microfonul pentru intrare vocală.';
+  String get labelWord => 'Cuvânt';
 
   @override
-  String get tutorialTabDesc => 'Aici puteți selecta modul de învățare dorit.';
+  String get labelWordbook => 'Culegere de cuvinte';
 
   @override
-  String get tutorialTapToContinue => 'Atingeți pentru a continua';
-
-  @override
-  String get tutorialTransTitle => 'Traducere';
-
-  @override
-  String get tutorialTransDesc => 'Apasă aici pentru a traduce textul.';
-
-  @override
-  String get tutorialSaveTitle => 'Salvare';
-
-  @override
-  String get tutorialSaveDesc => 'Salvează traducerea în înregistrări.';
-
-  @override
-  String get selectParticipants => 'Select Participants';
-
-  @override
-  String get loadingParticipants => 'Loading participants...';
-
-  @override
-  String get noParticipantsFound => 'No participants found.';
-
-  @override
-  String get noInternetWarningMic =>
-      'No internet connection. Voice recognition may not work offline.';
-
-  @override
-  String get noInternetWarningTranslate =>
-      'No internet connection. Translation is unavailable offline. Please use Review mode.';
-
-  @override
-  String get noMaterialsInCategory => 'No materials in this category.';
-
-  @override
-  String get onlineLibraryLoadFailed => 'Failed to load materials.';
-
-  @override
-  String get onlineLibraryCheckInternet =>
-      'Please check your internet connection or try again later.';
-
-  @override
-  String get onlineLibraryNoMaterials => 'No materials found.';
-
-  @override
-  String get sendingMessage => '메시지 전송 중...';
-
-  @override
-  String get startChat => 'Start Chat';
-
-  @override
-  String get manageParticipants => 'Manage Participants';
-
-  @override
-  String get tutorialAiChatTitle => 'Chat AI';
-
-  @override
-  String get tutorialAiChatDesc =>
-      'Practice real conversation with AI personas here.';
-
-  @override
-  String get tutorialM2SelectTitle => 'Selectare & Filtru';
-
-  @override
-  String get tutorialM2SelectDesc =>
-      'Alege materiale sau \'Recapitulare Tot\'.';
-
-  @override
-  String get tutorialM2ListTitle => 'Listă Studiu';
-
-  @override
-  String get tutorialM2ListDesc =>
-      'Verifică cardurile și întoarce-le. (Long-press to delete)';
-
-  @override
-  String get tutorialM3SelectTitle => 'Selectare Material';
-
-  @override
-  String get tutorialM3SelectDesc => 'Alege un set pentru practică.';
-
-  @override
-  String get tutorialM3IntervalTitle => 'Interval';
-
-  @override
-  String get tutorialM3IntervalDesc => 'Reglează timpul de așteptare';
-
-  @override
-  String get tutorialM3StartTitle => 'Start';
-
-  @override
-  String get tutorialM3StartDesc => 'Apasă play pentru a începe.';
-
-  @override
-  String get startWarning => 'Avertisment';
-
-  @override
-  String get noVoiceDetected => 'Voce nedetectată';
-
-  @override
-  String get tooltipSearch => 'Căutare';
-
-  @override
-  String get tooltipStudyReview => 'Studiu+Revizuire';
-
-  @override
-  String get tooltipSpeaking => 'Vorbire';
-
-  @override
-  String get tooltipDecrease => 'Scădere';
-
-  @override
-  String get tooltipIncrease => 'Creștere';
+  String get language => 'Limbă';
 
   @override
   String get languageSettings => 'Setări limbă';
 
   @override
-  String get tutorialM2DropdownDesc => 'Selectați materiale de studiu.';
+  String get languageSettingsTitle => 'Setări de limbă';
 
   @override
-  String get tutorialM2SearchDesc =>
-      'Search through your saved words and sentences.';
+  String get libTitleFirstMeeting => 'Prima întâlnire';
 
   @override
-  String get tutorialM2ImportDesc =>
-      'Importați fișier JSON din folderul dispozitivului.';
+  String get libTitleGreetings1 => 'Salutări 1';
 
   @override
-  String get tutorialLangSettingsTitle => 'Language Settings';
+  String get libTitleNouns1 => 'Substantive 1';
 
   @override
-  String get tutorialLangSettingsDesc =>
-      'Configure source and target languages for translation.';
+  String get libTitleVerbs1 => 'Verbe 1';
 
   @override
-  String get copy => 'Copy';
+  String get listen => 'Ascultă';
 
   @override
-  String get copiedToClipboard => 'Copied to clipboard!';
+  String get listening => 'Ascult...';
 
   @override
-  String get tutorialContextTitle => 'Etichetă context';
+  String get loadingParticipants => 'Se încarcă participanții...';
 
   @override
-  String get tutorialContextDesc =>
-      'Adăugați context (ex. Dimineața) pentru a distinge propoziții similare.';
+  String get location => 'Locație';
 
   @override
-  String get thinkingTimeInterval => 'Playback Delay';
+  String get login => 'Autentificare';
 
   @override
-  String get thinkingTimeDesc => 'Time to think before the answer is revealed.';
+  String get logout => 'Deconectare';
 
   @override
-  String get autoPlay => 'Auto-Play';
+  String get logoutConfirmMessage =>
+      'Sigur dorești să te deconectezi de pe acest dispozitiv?';
 
   @override
-  String get timeUp => 'Time Up!';
+  String get logoutConfirmTitle => 'Deconectare';
 
   @override
-  String get gameModeTitle => 'Game Mode';
+  String get male => 'Masculin';
 
   @override
-  String get gameModeDesc => 'Choose your practice mode';
+  String get manageParticipants => 'Gestionează participanți';
 
   @override
-  String get wordDefenseTitle => 'Word Defense';
+  String get manual => 'Introducere manuală';
 
   @override
-  String get wordDefenseDesc =>
-      'Defend your base by speaking words correctly before enemies reach you.';
+  String get markAsStudied => 'Marchează ca Studiat';
 
   @override
-  String get dialogueQuestTitle => 'Dialogue Quest';
+  String get materialInfo => 'Informații material';
 
   @override
-  String get dialogueQuestDesc =>
-      'Roleplay in scenarios. Choose the right response and speak it aloud.';
+  String get me => 'Eu';
 
   @override
-  String get translation => 'Translation';
+  String get menuDeviceImport => 'Importă materiale de pe dispozitiv';
 
   @override
-  String get labelType => 'Type:';
+  String get menuHelp => 'Ajutor';
 
   @override
-  String get labelWord => 'Word';
+  String get menuLanguageSettings => 'Setări limbă';
 
   @override
-  String get labelSentence => 'Sentence';
+  String get menuOnlineLibrary => 'Bibliotecă online';
 
   @override
-  String get contextTagLabel =>
-      'Context/Situation (Optional) - Ex: Morning greeting, polite form';
-
-  @override
-  String get contextTagHint =>
-      'Describe situation for easier classification later';
-
-  @override
-  String get usageLimitTitle => 'Limita atinsă';
-
-  @override
-  String get translationLimitExceeded => 'Translation Limit Exceeded';
-
-  @override
-  String get translationLimitMessage =>
-      'You have used all your free daily translations (5). Watch an ad to refill 5 immediately?';
-
-  @override
-  String get watchAdAndRefill => 'Watch Ad & Refill (+5)';
-
-  @override
-  String get translationRefilled => 'Translations refilled by 5!';
-
-  @override
-  String get adLoading => 'Loading ad, please try again in a moment.';
-
-  @override
-  String get reviewAll => 'Review All';
-
-  @override
-  String totalRecords(int count) {
-    return 'Total $count records (View All)';
-  }
-
-  @override
-  String get filterAll => 'All';
-
-  @override
-  String get practiceWordsOnly => 'Practice Words Only';
-
-  @override
-  String get resetPracticeHistory => 'Reset Practice History';
-
-  @override
-  String get retry => 'Retry?';
-
-  @override
-  String get noStudyMaterial => 'No study material found.';
-
-  @override
-  String get gameOver => 'Game Over';
-
-  @override
-  String get playAgain => 'Play Again';
-
-  @override
-  String get speakNow => 'Speak now!';
-
-  @override
-  String get scoreLabel => 'Score';
-
-  @override
-  String get viewOnlineGuide => 'View Online User Guide';
-
-  @override
-  String get getMaterials => 'Get Materials';
-
-  @override
-  String get swapLanguages => 'Swap Languages';
-
-  @override
-  String get next => 'Next';
-
-  @override
-  String get wordModeLabel => 'Word Mode';
-
-  @override
-  String get accuracy => 'Accuracy';
-
-  @override
-  String get basicDefault => 'Basic (Default)';
-
-  @override
-  String get basic => 'Basic';
-
-  @override
-  String get tutorialM3WordsTitle => 'Practice Words';
-
-  @override
-  String get tutorialM3WordsDesc =>
-      'Check this to practice only your saved words.';
-
-  @override
-  String get enterTextHint => 'Enter text to translate';
-
-  @override
-  String get micButtonTooltip => 'Start Listening';
-
-  @override
-  String get menuHelp => 'Help';
-
-  @override
-  String get menuWebDownload => 'Get Material from Web';
-
-  @override
-  String get menuDeviceImport => 'Import from Device';
+  String get menuSelectMaterialSet => 'Selectați un material de studiu';
 
   @override
   String get menuSettings => 'Settings';
 
   @override
-  String get basicWords => 'Basic Word Repository';
+  String get menuTutorial => 'Tutorial de utilizare';
 
   @override
-  String get basicSentences => 'Basic Sentence Repository';
+  String get menuWebDownload => 'Manual de utilizare';
 
   @override
-  String get selectMaterialSet => 'Selectați setul de materiale de învățare';
+  String get metadataDialogTitle => 'Clasificare detaliată';
 
   @override
-  String get sectionWords => 'Cuvinte';
+  String get metadataFormType => 'Forma gramaticală';
 
   @override
-  String get sectionSentences => 'Fraze';
+  String get metadataRootWord => 'Forma de bază (Root Word)';
 
   @override
-  String get languageSettingsTitle => 'Language Settings';
+  String get micButtonTooltip => 'Începe recunoașterea vocală';
 
   @override
-  String get sourceLanguageLabel => 'Source Language';
+  String mode1SelectedMaterial(Object name) {
+    return 'Culegere selectată curent: $name';
+  }
 
   @override
-  String get targetLanguageLabel => 'Target Language';
+  String get mode2Title => 'Recapitulare';
+
+  @override
+  String get mode3Next => 'Următorul';
 
   @override
   String get mode3Start => 'Start';
@@ -790,349 +598,376 @@ class AppLocalizationsRo extends AppLocalizations {
   String get mode3Stop => 'Stop';
 
   @override
-  String get mode3Next => 'Next';
-
-  @override
-  String get mode3TryAgain => 'Try Again';
-
-  @override
-  String get tutorialM3ResetTitle => 'Reset History';
-
-  @override
-  String get tutorialSwapDesc => 'Îmi schimb limba cu limba pe care o învăț.';
-
-  @override
-  String get recognizedText => 'Recognized Text:';
-
-  @override
-  String titleFormat(Object materialName, Object type) {
-    return '$type: $materialName';
-  }
-
-  @override
-  String get tutorialM3ResetDesc =>
-      'Clear your progress and accuracy scores to start fresh.';
-
-  @override
-  String get menuSelectMaterialSet => 'Selectați un material de studiu';
-
-  @override
-  String get sectionWord => 'Secțiune de cuvinte';
-
-  @override
-  String get sectionSentence => 'Secțiunea de propoziții';
-
-  @override
-  String get tabWord => 'cuvânt';
-
-  @override
-  String get tabSentence => 'propoziție';
-
-  @override
-  String get errorProfanity =>
-      'Nu se poate traduce deoarece conține cuvinte obscene.';
-
-  @override
-  String get errorHateSpeech =>
-      'Nu se poate traduce deoarece conține discurs instigator la ură.';
-
-  @override
-  String get errorSexualContent =>
-      'Nu se poate traduce deoarece conține conținut sexual explicit.';
-
-  @override
-  String get errorOtherSafety =>
-      'Traducerea a fost refuzată de politica de siguranță AI.';
-
-  @override
-  String get clearAll => 'Șterge tot';
-
-  @override
-  String get disambiguationTitle => 'Selectați sensul';
-
-  @override
-  String get disambiguationPrompt => 'Ce sens doriți să traducem?';
-
-  @override
-  String get skip => 'Omite';
-
-  @override
-  String get inputModeTitle => 'Input';
-
-  @override
-  String get reviewModeTitle => 'Review';
-
-  @override
-  String get practiceModeTitle => 'Exersează';
-
-  @override
-  String get chatHistoryTitle => 'Conversation History';
-
-  @override
-  String get chatNew => 'New Chat';
-
-  @override
-  String get chatNewChat => 'New Chat';
-
-  @override
-  String get chatChoosePersona => 'Choose a Persona';
-
-  @override
-  String get chatTypeHint => 'Type a message...';
-
-  @override
-  String chatFailed(Object error) {
-    return 'Chat failed: $error';
-  }
-
-  @override
-  String get chatNoConversations => 'No conversations yet';
-
-  @override
-  String get noDialogueHistory => 'No dialogue history.';
-
-  @override
-  String get chatStartNewPrompt => 'Start a new chat to practice!';
-
-  @override
-  String chatFromConversation(Object speaker) {
-    return 'From Conversation ($speaker)';
-  }
-
-  @override
-  String get personaTeacher => 'English Teacher';
-
-  @override
-  String get personaGuide => 'Travel Guide';
-
-  @override
-  String get personaFriend => 'Local Friend';
-
-  @override
-  String get chatUntitled => 'Untitled Conversation';
-
-  @override
-  String get chatAiChat => 'Chat';
-
-  @override
-  String mode1SelectedMaterial(Object name) {
-    return 'Current Material Set: $name';
-  }
-
-  @override
-  String get basicWordRepository => 'Depozit de cuvinte de bază';
-
-  @override
-  String get basicSentenceRepository => 'Depozit de propoziții de bază';
-
-  @override
-  String get chatEndTitle => 'End & Save Chat';
-
-  @override
-  String get chatEndMessage =>
-      'Do you want to end this conversation? You can set a title for it.';
-
-  @override
-  String get chatSaveAndExit => 'Save & Exit';
-
-  @override
-  String get errorSelectCategory => 'Please select word or sentence first!';
-
-  @override
-  String get tutorialM1ToggleTitle => 'Word/Sentence Mode';
-
-  @override
-  String get tutorialM1ToggleDesc =>
-      'Switch between Word and Sentence mode here. Words are saved with larger text.';
-
-  @override
-  String get metadataDialogTitle => 'Details';
-
-  @override
-  String get tagFormal => 'Formal';
-
-  @override
-  String get selectPOS => 'Select POS';
-
-  @override
-  String get selectSentenceType => 'Select Sentence Type';
-
-  @override
-  String get metadataRootWord => 'Root Word';
-
-  @override
-  String get posNoun => 'Noun';
-
-  @override
-  String get posVerb => 'Verb';
-
-  @override
-  String get posAdjective => 'Adjective';
-
-  @override
-  String get posAdverb => 'Adverb';
-
-  @override
-  String get posPronoun => 'Pronoun';
-
-  @override
-  String get posPreposition => 'Preposition';
-
-  @override
-  String get posConjunction => 'Conjunction';
-
-  @override
-  String get posInterjection => 'Interjection';
-
-  @override
-  String get typeStatement => 'Statement';
-
-  @override
-  String get typeQuestion => 'Question';
-
-  @override
-  String get typeExclamation => 'Exclamation';
-
-  @override
-  String get typeImperative => 'Imperative';
-
-  @override
-  String get labelNote => 'Note';
-
-  @override
-  String get labelShowMemorized => 'Finished';
-
-  @override
-  String get titleTagSelection => 'Etichetă titlu (culegere)';
-
-  @override
-  String get generalTags => 'Etichete generale';
-
-  @override
-  String get tagSelection => 'Select Tags';
-
-  @override
-  String get metadataFormType => 'Form Type';
-
-  @override
-  String get formInfinitive => 'Infinitive/Present';
-
-  @override
-  String get formPast => 'Past';
-
-  @override
-  String get formPastParticiple => 'Past Participle';
-
-  @override
-  String get formPresentParticiple => 'Present Participle';
-
-  @override
-  String get formPresent => 'Present';
-
-  @override
-  String get formThirdPersonSingular => '3rd Person Singular';
-
-  @override
-  String get formPlural => 'Plural';
-
-  @override
-  String get formSingular => 'Singular';
-
-  @override
-  String get caseSubject => 'Subject';
-
-  @override
-  String get caseObject => 'Object';
-
-  @override
-  String get casePossessive => 'Possessive';
-
-  @override
-  String get casePossessivePronoun => 'Possessive Pronoun';
-
-  @override
-  String get caseReflexive => 'Reflexive';
-
-  @override
-  String get formPositive => 'Positive';
-
-  @override
-  String get formComparative => 'Comparative';
-
-  @override
-  String get formSuperlative => 'Superlative';
-
-  @override
-  String get searchConditions => 'Search Conditions';
-
-  @override
-  String recentNItems(int count) {
-    return 'Recent $count items';
-  }
-
-  @override
-  String get startsWith => 'Starts with';
-
-  @override
-  String get reset => 'Reset';
-
-  @override
-  String get participantRename => 'Rename Participant';
-
-  @override
-  String get labelName => 'Name';
-
-  @override
-  String get gender => 'Gender';
-
-  @override
-  String get language => 'Language';
-
-  @override
-  String get male => 'Male';
-
-  @override
-  String get female => 'Female';
-
-  @override
-  String get neutral => 'Neutru';
-
-  @override
-  String get chatAllConversations => 'Toate conversațiile';
-
-  @override
-  String get tabConversation => 'Conversation';
-
-  @override
-  String get confirmDeleteConversation =>
-      'Sigur dorești să ștergi această conversație?\nConversațiile șterse nu pot fi recuperate.';
-
-  @override
-  String get notSelected => '- Neselectat -';
-
-  @override
-  String get myWordbook => 'Vocabularul meu';
+  String get mode3TryAgain => 'Încearcă din nou';
 
   @override
   String get mySentenceCollection => 'Colecția mea de fraze';
 
   @override
+  String get myWordbook => 'Vocabularul meu';
+
+  @override
+  String get neutral => 'Neutru';
+
+  @override
   String get newSubjectName => 'Titlu nou caiet/colecție';
 
   @override
-  String get enterNewSubjectName => 'Introduceți titlul nou';
+  String get next => 'Următorul';
 
   @override
-  String get addNewSubject => 'Adăugați titlu nou';
+  String get noDialogueHistory => 'Nu există istoric de dialoguri.';
+
+  @override
+  String get noInternetWarningMic =>
+      'Nu există conexiune la internet. Recunoașterea vocală ar putea să nu funcționeze offline.';
+
+  @override
+  String get noInternetWarningTranslate =>
+      'Nu există conexiune la internet. Funcția de traducere nu este disponibilă offline. Te rugăm să folosești modul de revizuire.';
+
+  @override
+  String get noMaterialsInCategory =>
+      'Nu există materiale în această categorie.';
+
+  @override
+  String get noParticipantsFound => 'Nu există participanți înregistrați.';
+
+  @override
+  String get noRecords => 'Nu există înregistrări pentru limba selectată';
+
+  @override
+  String get noStudyMaterial => 'Nu există material de studiu.';
+
+  @override
+  String get noTextToPlay => 'Nicio text de redat';
+
+  @override
+  String get noTranslationToSave => 'Nicio traducere de salvat';
+
+  @override
+  String get noVoiceDetected => 'Voce nedetectată';
+
+  @override
+  String get notSelected => '- Neselectat -';
+
+  @override
+  String get onlineLibraryCheckInternet =>
+      'Verifică-ți conexiunea la internet sau încearcă din nou mai târziu.';
+
+  @override
+  String get onlineLibraryLoadFailed => 'Încărcarea materialelor a eșuat.';
+
+  @override
+  String get onlineLibraryNoMaterials => 'Nu există materiale.';
+
+  @override
+  String get participantDeleted => 'Participantul a fost șters.';
+
+  @override
+  String get participantRename => 'Redenumește participantul';
+
+  @override
+  String get partner => 'Partener';
+
+  @override
+  String get partnerMode => 'Mod partener';
+
+  @override
+  String get password => 'Parolă';
+
+  @override
+  String get passwordTooShort =>
+      'Parola trebuie să aibă cel puțin 6 caractere.';
+
+  @override
+  String get perfect => 'Perfect!';
+
+  @override
+  String get personaFriend => 'Prieten local';
+
+  @override
+  String get personaGuide => 'Ghid turistic';
+
+  @override
+  String get personaTeacher => 'Profesor de engleză';
+
+  @override
+  String get playAgain => 'Joacă din nou';
+
+  @override
+  String playbackFailed(String error) {
+    return 'Redare eșuată: $error';
+  }
+
+  @override
+  String get playing => 'Redare...';
+
+  @override
+  String get posAdjective => 'Adjectiv';
+
+  @override
+  String get posAdverb => 'Adverb';
+
+  @override
+  String get posConjunction => 'Conjuncție';
+
+  @override
+  String get posInterjection => 'Interjecție';
+
+  @override
+  String get posNoun => 'Substantiv';
+
+  @override
+  String get posPreposition => 'Prepoziție';
+
+  @override
+  String get posPronoun => 'Pronume';
+
+  @override
+  String get posVerb => 'Verb';
+
+  @override
+  String get practiceModeTitle => 'Exersează';
+
+  @override
+  String get practiceWordsOnly => 'Exersează doar cuvinte';
+
+  @override
+  String progress(int current, int total) {
+    return 'Progres: $current / $total';
+  }
+
+  @override
+  String recentNItems(int count) {
+    return 'Vezi cele mai recente $count elemente create';
+  }
+
+  @override
+  String recognitionFailed(String error) {
+    return 'Recunoaștere vocală eșuată: $error';
+  }
+
+  @override
+  String get recognized => 'Recunoaștere completă';
+
+  @override
+  String get recognizedText => 'Pronunție recunoscută:';
+
+  @override
+  String get recordDeleted => 'Înregistrare ștearsă cu succes';
+
+  @override
+  String get refresh => 'Reîmprospătare';
+
+  @override
+  String get reset => 'Resetează';
+
+  @override
+  String get resetPracticeHistory => 'Resetează istoricul de exerciții';
+
+  @override
+  String get retry => 'Încearcă din nou?';
+
+  @override
+  String get reviewAll => 'Revizuiește tot';
+
+  @override
+  String reviewCount(int count) {
+    return 'Recapitulat de $count ori';
+  }
+
+  @override
+  String get reviewModeTitle => 'Revizuire';
+
+  @override
+  String get roleAi => 'AI';
+
+  @override
+  String get roleThirdParty => 'Terț';
+
+  @override
+  String get roleUser => 'Utilizator';
+
+  @override
+  String get save => 'Salvare';
+
+  @override
+  String get saveData => 'Salvare';
+
+  @override
+  String saveFailed(String error) {
+    return 'Salvare eșuată: $error';
+  }
+
+  @override
+  String get saveTranslationsFromSearch =>
+      'Vă rugăm să salvați traducerile din modul de căutare';
+
+  @override
+  String get saved => 'Salvat';
+
+  @override
+  String get saving => 'Salvare...';
+
+  @override
+  String score(String score) {
+    return 'Acuratețe: $score%';
+  }
+
+  @override
+  String get scoreLabel => 'Scor';
+
+  @override
+  String get search => 'Căutare';
+
+  @override
+  String get searchConditions => 'Condiții de căutare';
+
+  @override
+  String get searchSentenceHint => 'Caută propoziție...';
+
+  @override
+  String get searchWordHint => 'Caută cuvânt...';
+
+  @override
+  String get sectionSentence => 'Secțiunea de propoziții';
+
+  @override
+  String get sectionSentences => 'Fraze';
+
+  @override
+  String get sectionWord => 'Secțiune de cuvinte';
+
+  @override
+  String get sectionWords => 'Cuvinte';
 
   @override
   String get selectExistingSubject => 'Selectați titlu existent';
 
   @override
-  String get addTagHint => 'Adăugați etichetă...';
+  String get selectMaterialPrompt => 'Vă rugăm selectați material de studiu';
 
   @override
-  String get save => 'Salvare';
+  String get selectMaterialSet => 'Selectați setul de materiale de învățare';
+
+  @override
+  String get selectPOS => 'Selectează partea de vorbire';
+
+  @override
+  String get selectParticipants => 'Selectează participanți';
+
+  @override
+  String get selectSentenceType => 'Selectează tipul de propoziție';
+
+  @override
+  String get selectStudyMaterial => 'Selectare Material';
+
+  @override
+  String get sendingMessage => '메시지 전송 중...';
+
+  @override
+  String get sentence => 'Sentință';
+
+  @override
+  String get signUp => 'Înregistrare';
+
+  @override
+  String get similarTextFound => 'Text similar găsit';
+
+  @override
+  String get skip => 'Omite';
+
+  @override
+  String get source => 'Sursă:';
+
+  @override
+  String get sourceLanguage => 'Limbă Sursă';
+
+  @override
+  String get sourceLanguageLabel => 'Source Language';
+
+  @override
+  String get speakNow => 'Vorbește acum!';
+
+  @override
+  String get speaker => 'Vorbitor';
+
+  @override
+  String get speakerSelect => 'Selectează vorbitorul';
+
+  @override
+  String get speakingPractice => 'Practică Vorbire';
+
+  @override
+  String get startChat => 'Începe conversația';
+
+  @override
+  String get startPractice => 'Începe Practica';
+
+  @override
+  String get startTutorial => 'Start Tur';
+
+  @override
+  String get startWarning => 'Avertisment';
+
+  @override
+  String get startsWith => 'Începe cu';
+
+  @override
+  String get statusCheckEmail =>
+      'Verifică-ți emailul pentru a finaliza autentificarea.';
+
+  @override
+  String statusDownloading(Object name) {
+    return 'Se descarcă: $name...';
+  }
+
+  @override
+  String statusImportFailed(Object error) {
+    return 'Importare eșuată: $error';
+  }
+
+  @override
+  String statusImportSuccess(Object name) {
+    return '$name a fost importat cu succes';
+  }
+
+  @override
+  String get statusLoggingIn => 'Logging in with Google...';
+
+  @override
+  String get statusLoginCancelled => 'Autentificare anulată.';
+
+  @override
+  String statusLoginFailed(Object error) {
+    return 'Autentificare eșuată: $error';
+  }
+
+  @override
+  String get statusLoginSuccess => 'Autentificare reușită.';
+
+  @override
+  String get statusLogoutSuccess => 'Deconectare reușită.';
+
+  @override
+  String statusSignUpFailed(Object error) {
+    return 'Înregistrare eșuată: $error';
+  }
+
+  @override
+  String get statusSigningUp => 'Se înregistrează...';
+
+  @override
+  String get stopPractice => 'Oprește';
+
+  @override
+  String get studyComplete => 'Studiat';
+
+  @override
+  String studyRecords(int count) {
+    return 'Înregistrări ($count)';
+  }
 
   @override
   String get styleFormal => 'Formal';
@@ -1141,80 +976,291 @@ class AppLocalizationsRo extends AppLocalizations {
   String get styleInformal => 'Informal';
 
   @override
-  String get stylePolite => 'Polite';
+  String get stylePolite => 'Politicos';
 
   @override
-  String get styleSlang => 'Slang';
+  String get styleSlang => 'Argou/Slang';
 
   @override
-  String statusDownloading(Object name) {
-    return 'Downloading: $name...';
+  String get subject => 'Subiect:';
+
+  @override
+  String get swapLanguages => 'Schimbă limbile';
+
+  @override
+  String get switchToAi => 'Trece la modul AI';
+
+  @override
+  String get switchToPartner => 'Trece la modul partener';
+
+  @override
+  String get syncingData => 'Se sincronizează datele...';
+
+  @override
+  String get tabConversation => 'Conversație';
+
+  @override
+  String tabReview(int count) {
+    return 'Recapitulare ($count)';
   }
 
   @override
-  String statusImportSuccess(Object name) {
-    return '$name Imported Successfully';
+  String get tabSentence => 'propoziție';
+
+  @override
+  String get tabSpeaking => 'Vorbire';
+
+  @override
+  String tabStudyMaterial(int count) {
+    return 'Material ($count)';
   }
 
   @override
-  String statusImportFailed(Object error) {
-    return 'Import Failed: $error';
+  String get tabWord => 'cuvânt';
+
+  @override
+  String get tagFormal => 'Formal';
+
+  @override
+  String get tagSelection => 'Selectarea etichetelor';
+
+  @override
+  String get targetLanguage => 'Limbă Țintă';
+
+  @override
+  String get targetLanguageFilter => 'Filtru Limbă:';
+
+  @override
+  String get targetLanguageLabel => 'Target Language';
+
+  @override
+  String get thinkingTimeDesc =>
+      'Timpul de gândire înainte de a dezvălui răspunsul corect.';
+
+  @override
+  String get thinkingTimeInterval => 'Întârziere de redare';
+
+  @override
+  String get timeUp => 'Timpul a expirat!';
+
+  @override
+  String titleFormat(Object materialName, Object type) {
+    return '$type: $materialName';
   }
 
   @override
-  String get statusLoginSuccess => 'Login successful.';
+  String get titleTagSelection => 'Etichetă titlu (culegere)';
 
   @override
-  String statusLoginFailed(Object error) {
-    return 'Login failed: $error';
+  String get tooltipDecrease => 'Scădere';
+
+  @override
+  String get tooltipIncrease => 'Creștere';
+
+  @override
+  String get tooltipSearch => 'Căutare';
+
+  @override
+  String get tooltipSpeaking => 'Vorbire';
+
+  @override
+  String get tooltipStudyReview => 'Studiu+Revizuire';
+
+  @override
+  String totalRecords(int count) {
+    return 'Total $count înregistrări (vezi tot)';
   }
 
   @override
-  String get statusLoginCancelled => 'Login cancelled.';
+  String get translate => 'Traducere';
 
   @override
-  String get statusLoggingIn => 'Logging in with Google...';
+  String get translating => 'Traducere...';
 
   @override
-  String get statusLogoutSuccess => 'Logged out.';
+  String get translation => 'Traducere';
 
   @override
-  String get email => 'Email';
+  String get translationComplete => 'Traducere completă (necesită salvare)';
 
   @override
-  String get password => 'Password';
-
-  @override
-  String get login => 'Login';
-
-  @override
-  String get signUp => 'Sign Up';
-
-  @override
-  String get dontHaveAccount => 'Don\'t have an account?';
-
-  @override
-  String get alreadyHaveAccount => 'Already have an account?';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 6 characters.';
-
-  @override
-  String get statusSigningUp => 'Signing up...';
-
-  @override
-  String statusSignUpFailed(Object error) {
-    return 'Sign up failed: $error';
+  String translationFailed(String error) {
+    return 'Traducere eșuată: $error';
   }
 
   @override
-  String get statusCheckEmail =>
-      'Verifică-ți emailul pentru a finaliza autentificarea.';
+  String get translationLimitExceeded => 'Limită de traducere depășită';
 
   @override
-  String get emailAlreadyInUse =>
-      'Acest e-mail este deja înregistrat. Te rugăm să te autentifici sau să recuperezi parola.';
+  String get translationLimitMessage =>
+      'Ai folosit toate traducerile gratuite zilnice (5).\\n\\nVrei să vizionezi un anunț pentru a reîncărca imediat 5?';
+
+  @override
+  String get translationLoaded => 'Traducere salvată încărcată';
+
+  @override
+  String get translationRefilled =>
+      'Numărul de traduceri a fost reîncărcat cu 5!';
+
+  @override
+  String get translationResultHint =>
+      'Rezultatul traducerii - poate fi modificat';
+
+  @override
+  String get tryAgain => 'Încearcă din nou';
+
+  @override
+  String get tutorialAiChatDesc =>
+      'Exersează conversații reale cu personaje AI.';
+
+  @override
+  String get tutorialAiChatTitle => 'Chat AI';
+
+  @override
+  String get tutorialContextDesc =>
+      'Adăugați context (ex. Dimineața) pentru a distinge propoziții similare.';
+
+  @override
+  String get tutorialContextTitle => 'Etichetă context';
+
+  @override
+  String get tutorialLangSettingsDesc =>
+      'Setează limba sursă și limba țintă pentru traducere.';
+
+  @override
+  String get tutorialLangSettingsTitle => 'Setări de limbă';
+
+  @override
+  String get tutorialM1ToggleDesc =>
+      'Comută între modurile cuvânt și propoziție aici.';
+
+  @override
+  String get tutorialM1ToggleTitle => 'Mod cuvânt/propoziție';
+
+  @override
+  String get tutorialM2DropdownDesc => 'Selectați materiale de studiu.';
+
+  @override
+  String get tutorialM2ImportDesc =>
+      'Importați fișier JSON din folderul dispozitivului.';
+
+  @override
+  String get tutorialM2ListDesc =>
+      'Verifică cardurile și întoarce-le. (Long-press to delete)';
+
+  @override
+  String get tutorialM2ListTitle => 'Listă Studiu';
+
+  @override
+  String get tutorialM2SearchDesc =>
+      'Caută și găsește rapid cuvinte și propoziții salvate.';
+
+  @override
+  String get tutorialM2SelectDesc =>
+      'Alege materiale sau \'Recapitulare Tot\'.';
+
+  @override
+  String get tutorialM2SelectTitle => 'Selectare & Filtru';
+
+  @override
+  String get tutorialM3IntervalDesc => 'Reglează timpul de așteptare';
+
+  @override
+  String get tutorialM3IntervalTitle => 'Setează intervalul';
+
+  @override
+  String get tutorialM3ResetDesc =>
+      'Clear your progress and accuracy scores to start fresh.';
+
+  @override
+  String get tutorialM3ResetTitle => 'Reset History';
+
+  @override
+  String get tutorialM3SelectDesc => 'Alege un set pentru practică.';
+
+  @override
+  String get tutorialM3SelectTitle => 'Selectare Material';
+
+  @override
+  String get tutorialM3StartDesc => 'Apasă play pentru a începe.';
+
+  @override
+  String get tutorialM3StartTitle => 'Start';
+
+  @override
+  String get tutorialM3WordsDesc =>
+      'Dacă este bifat, vei exersa doar cuvintele salvate.';
+
+  @override
+  String get tutorialM3WordsTitle => 'Exerciții cu cuvinte';
+
+  @override
+  String get tutorialMicDesc => 'Apasă microfonul pentru intrare vocală.';
+
+  @override
+  String get tutorialMicTitle => 'Intrare Vocală';
+
+  @override
+  String get tutorialSaveDesc => 'Salvează traducerea în înregistrări.';
+
+  @override
+  String get tutorialSaveTitle => 'Salvare';
+
+  @override
+  String get tutorialSwapDesc => 'Îmi schimb limba cu limba pe care o învăț.';
+
+  @override
+  String get tutorialTabDesc => 'Aici puteți selecta modul de învățare dorit.';
+
+  @override
+  String get tutorialTapToContinue => 'Atingeți pentru a continua';
+
+  @override
+  String get tutorialTransDesc => 'Apasă aici pentru a traduce textul.';
+
+  @override
+  String get tutorialTransTitle => 'Traducere';
+
+  @override
+  String get typeExclamation => 'Exclamativă';
+
+  @override
+  String get typeImperative => 'Imperativă';
+
+  @override
+  String get typeQuestion => 'Întrebare';
+
+  @override
+  String get typeStatement => 'Afirmativă';
+
+  @override
+  String get usageLimitTitle => 'Limita atinsă';
+
+  @override
+  String get useExistingText => 'Folosește Existent';
+
+  @override
+  String get viewOnlineGuide => 'Vezi ghidul online';
+
+  @override
+  String get voluntaryTranslations => 'Traduceri voluntare';
+
+  @override
+  String get watchAdAndRefill => 'Vezi un anunț și reîncarcă (+5)';
+
+  @override
+  String get word => 'Cuvânt';
+
+  @override
+  String get wordDefenseDesc =>
+      'Spune cuvintele pentru a apăra baza înainte ca inamicii să ajungă.';
+
+  @override
+  String get wordDefenseTitle => 'Apărarea cuvintelor';
+
+  @override
+  String get wordModeLabel => 'Mod cuvânt';
+
+  @override
+  String get yourPronunciation => 'Pronunția ta';
 }
