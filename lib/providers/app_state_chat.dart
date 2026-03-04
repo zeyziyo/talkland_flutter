@@ -226,6 +226,7 @@ extension AppStateChat on AppState {
           });
           _activeParticipants.add(p);
         }
+      }
 
       _dialogueGroups.insert(0, DialogueGroup(
         id: dialogueId,
