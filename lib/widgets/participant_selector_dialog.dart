@@ -81,8 +81,10 @@ class _ParticipantSelectorDialogState extends State<ParticipantSelectorDialog> {
                 final isSelected = _selectedIds.contains(p.id);
 
                 return CheckboxListTile(
-                  title: Text(p.name),
-                  subtitle: Text(p.role == 'user' ? '나' : 'AI'),
+                  title: Text(
+                    p.name,
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   secondary: CircleAvatar(
                     backgroundColor: p.role == 'user' ? Colors.blue[100] : Colors.green[100],
                     child: Icon(p.role == 'user' ? Icons.person : Icons.smart_toy),
