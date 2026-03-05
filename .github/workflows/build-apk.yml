@@ -37,46 +37,44 @@ jobs:
         flutter clean
         flutter pub get
 
-    - name: Pre-download sqlite3 native assets
+    - name: Pre-download sqlite3 native assets (jniLibs Injection)
       run: |
         VERSION="3.1.2"
-        PUB_CACHE_DIR="${PUB_CACHE:-$HOME/.pub-cache}"
-        # Find the actual directory for the sqlite3 package in pub cache
-        # Note: Package is 'sqlite3', so we look for 'sqlite3-VERSION'
-        TARGET_DIR=$(find "$PUB_CACHE_DIR" -name "sqlite3-$VERSION" -type d | head -n 1)
-        
-        if [ -z "$TARGET_DIR" ]; then
-          echo ">>> sqlite3-$VERSION not found in found cache. Creating custom path..."
-          TARGET_DIR="$PUB_CACHE_DIR/hosted/pub.dev/sqlite3-$VERSION"
-          mkdir -p "$TARGET_DIR"
-        fi
-        
-        echo ">>> Target Directory: $TARGET_DIR"
         BASE_URL="https://github.com/simolus3/sqlite3.dart/releases/download/sqlite3-$VERSION"
+        JNI_BASE="android/app/src/main/jniLibs"
         
-        for arch in arm arm64 x64 ia32; do
+        # 아키텍처 맵핑 정의 (Source -> Android JNI Dir)
+        declare -A ARCH_MAP=(
+          ["arm"]="armeabi-v7a"
+          ["arm64"]="arm64-v8a"
+          ["ia32"]="x86"
+          ["x64"]="x86_64"
+        )
+        
+        echo ">>> Injecting sqlite3 $VERSION native assets to $JNI_BASE"
+        for arch in "${!ARCH_MAP[@]}"; do
+          DIR="${ARCH_MAP[$arch]}"
           FILE="libsqlite3.$arch.android.so"
-          echo ">>> Processing $FILE..."
-          if [ ! -f "$TARGET_DIR/$FILE" ]; then
-            echo ">>> Downloading $FILE..."
-            if ! curl --fail --location --show-error --connect-timeout 60 --retry 10 --retry-delay 5 --retry-connrefused \
-              -o "$TARGET_DIR/$FILE" "$BASE_URL/$FILE"; then
-              echo "Error: Failed to download $FILE. Build aborted."
-              exit 1
-            fi
-          else
-            echo ">>> $FILE already exists, skipping download."
+          TARGET_FILE="$JNI_BASE/$DIR/libsqlite3.so"
+          
+          mkdir -p "$JNI_BASE/$DIR"
+          echo ">>> Processing $FILE for $DIR..."
+          
+          if ! curl --fail --location --show-error --connect-timeout 60 --retry 10 --retry-delay 5 --retry-connrefused \
+            -o "$TARGET_FILE" "$BASE_URL/$FILE"; then
+            echo "Error: Failed to download $FILE. Build aborted."
+            exit 1
           fi
         done
         
-        echo ">>> Verifying assets in $TARGET_DIR:"
-        ls -lh "$TARGET_DIR"/*.so
-        count=$(ls -1 "$TARGET_DIR"/*.so 2>/dev/null | wc -l)
+        echo ">>> Verifying injected assets in $JNI_BASE:"
+        find "$JNI_BASE" -name "libsqlite3.so" -ls
+        count=$(find "$JNI_BASE" -name "libsqlite3.so" | wc -l)
         if [ "$count" -lt 4 ]; then
-          echo "Error: Found only $count of 4 assets! Build aborted."
+          echo "Error: Found only $count of 4 jniLibs assets! Build aborted."
           exit 1
         fi
-        echo ">>> All 4 sqlite3 native assets verified."
+        echo ">>> All 4 sqlite3 JNI assets successfully injected."
 
     - name: Generate Localizations
       run: flutter gen-l10n
@@ -99,7 +97,7 @@ jobs:
         echo "KAKAO_NATIVE_APP_KEY=${{ secrets.KAKAO_NATIVE_APP_KEY }}" >> .env
         echo "KAKAO_JAVASCRIPT_KEY=${{ secrets.KAKAO_JAVASCRIPT_KEY }}" >> .env
 
-    - name: Build APK (with verbose logging)
+    - name: Build APK (Release)
       env:
         FLUTTER_ROOT: ${{ env.FLUTTER_ROOT }}
       run: flutter build apk --release --verbose
