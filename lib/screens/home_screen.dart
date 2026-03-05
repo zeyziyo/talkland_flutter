@@ -17,8 +17,10 @@ import '../widgets/online_library_dialog.dart';
 import '../constants/app_constants.dart';
 import 'participant_manage_screen.dart';
 import 'auth_screen.dart';
+import 'package:flutter/services.dart';
 
 class HomeScreen extends StatefulWidget {
+  static const _channel = MethodChannel('com.zeyziyo.talkie/settings');
   const HomeScreen({super.key});
 
   @override
@@ -107,14 +109,10 @@ class _HomeScreenState extends State<HomeScreen> {
           textColor: Colors.white,
           onPressed: () async {
             if (Platform.isAndroid) {
-              // Note: Using a generic approach for settings if possible, or guiding via message
-              // url_launcher doesn't easily support deep links to specific settings without a plugin
-              // but we can try common paths or just show a message.
-              final Uri url = Uri.parse('package:com.android.settings'); 
-              if (await canLaunchUrl(url)) {
-                await launchUrl(url);
-              } else {
-                // Fallback for some Android versions
+              try {
+                await HomeScreen._channel.invokeMethod('openTtsSettings');
+              } catch (e) {
+                // Fallback to url_launcher if MethodChannel fails
                 final Uri altUrl = Uri.parse('intent:#Intent;action=android.settings.TTS_SETTINGS;end');
                 await launchUrl(altUrl);
               }
