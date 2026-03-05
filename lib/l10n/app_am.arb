@@ -1,6 +1,8 @@
 {
   "@@locale": "am",
   "accuracy": "ትክክለኛነት",
+  "ttsMissing": "የዚህ ቋንቋ የድምፅ ሞተር በመሣሪያዎ ላይ አልተጫነም።",
+  "ttsInstallGuide": "እባክዎ በAndroid ቅንብሮች > Google TTS ውስጥ ተገቢውን የቋንቋ ውሂብ ይጫኑ።",
   "adLoading": "ማስታወቂያ እየተጫነ ነው። እባክዎ ቆይተው እንደገና ይሞክሩ።",
   "addNewSubject": "አዲስ ርዕስ ያክሉ",
   "addParticipant": "ተሳታፊ ጨምር",

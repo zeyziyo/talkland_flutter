@@ -12,6 +12,14 @@ class AppLocalizationsSl extends AppLocalizations {
   String get accuracy => 'Točnost';
 
   @override
+  String get ttsMissing =>
+      'Za ta jezik ni nameščen mehanizem za pretvorbo besedila v govor.';
+
+  @override
+  String get ttsInstallGuide =>
+      'V nastavitvah sistema Android > Google TTS namestite podatke za ta jezik.';
+
+  @override
   String get adLoading => 'Oglas se nalaga. Poskusite znova pozneje.';
 
   @override

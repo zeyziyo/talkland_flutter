@@ -1,6 +1,8 @@
 {
   "@@locale": "uz",
   "accuracy": "Aniqlik",
+  "ttsMissing": "Ushbu til uchun ovozli dvigatel qurilmangizga o'rnatilmagan.",
+  "ttsInstallGuide": "Android Sozlamalari > Google TTS bo'limida mos til ma'lumotlarini o'rnating.",
   "adLoading": "Reklama yuklanmoqda. Bir ozdan keyin qayta urinib ko'ring.",
   "addNewSubject": "Yangi nom qo'shish",
   "addParticipant": "Ishtirokchi qo'shish",

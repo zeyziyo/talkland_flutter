@@ -506,7 +506,7 @@ class _ChatScreenState extends State<ChatScreen> {
     }
   }
   
-  void _speak(String text, String languageCode, {String? role, String? gender}) {
+  Future<void> _speak(String text, String languageCode, {String? role, String? gender}) async {
     if (text.isEmpty) return;
     
     // Determine the actual locale to use
@@ -523,7 +523,16 @@ class _ChatScreenState extends State<ChatScreen> {
     // Determine Gender (Use provided gender or fallback to AppState)
     final resolvedGender = gender ?? (role == 'user' ? appState.chatUserGender : appState.chatAiGender);
 
-    _speechService.speak(cleanText, lang: localeId, gender: resolvedGender);
+    try {
+      await _speechService.speak(cleanText, lang: localeId, gender: resolvedGender);
+    } catch (e) {
+      appState.handleTtsError(e);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('TTS Error: $e')),
+        );
+      }
+    }
   }
 
   @override

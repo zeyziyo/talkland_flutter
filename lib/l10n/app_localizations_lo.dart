@@ -12,6 +12,14 @@ class AppLocalizationsLo extends AppLocalizations {
   String get accuracy => 'ຄວາມຖືກຕ້ອງ';
 
   @override
+  String get ttsMissing =>
+      'ບໍ່​ມີ​ເຄື່ອງ​ມື​ສຽງ​ສຳ​ລັບ​ພາ​ສາ​ນີ້​ຕິດ​ຕັ້ງ​ຢູ່​ໃນ​ອຸ​ປະ​ກອນ​ຂອງ​ທ່ານ.';
+
+  @override
+  String get ttsInstallGuide =>
+      'ກະລຸນາຕິດຕັ້ງຂໍ້ມູນພາສານັ້ນໃນການຕັ້ງຄ່າ Android > Google TTS.';
+
+  @override
   String get adLoading => 'ກຳລັງໂຫຼດໂຄສະນາ. ກະລຸນາລອງໃໝ່ອີກຄັ້ງໃນພາຍຫຼັງ.';
 
   @override

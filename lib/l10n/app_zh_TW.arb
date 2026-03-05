@@ -1,6 +1,8 @@
 {
   "@@locale": "zh_TW",
   "accuracy": "準確度",
+  "ttsMissing": "您的裝置未安裝此語言的語音引擎。",
+  "ttsInstallGuide": "請在「Android 設定」>「Google 文字轉語音」中安裝相應的語言資料。",
   "adLoading": "正在載入廣告。請稍後重試。",
   "addNewSubject": "新增標題",
   "addParticipant": "新增參與者",

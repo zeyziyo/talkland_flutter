@@ -12,6 +12,14 @@ class AppLocalizationsKm extends AppLocalizations {
   String get accuracy => 'ភាពត្រឹមត្រូវ';
 
   @override
+  String get ttsMissing =>
+      'ម៉ាស៊ីនសំឡេងសម្រាប់ភាសានេះ មិនត្រូវបានដំឡើងនៅលើឧបករណ៍របស់អ្នកទេ។';
+
+  @override
+  String get ttsInstallGuide =>
+      'សូមដំឡើងទិន្នន័យភាសានេះនៅក្នុង កំណត់ត្រា Android > Google TTS ។';
+
+  @override
   String get adLoading =>
       'កំពុងផ្ទុកការផ្សាយពាណិជ្ជកម្ម។ សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ។';
 

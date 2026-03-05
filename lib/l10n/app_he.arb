@@ -1,6 +1,8 @@
 {
   "@@locale": "he",
   "accuracy": "דיוק",
+  "ttsMissing": "מנוע הדיבור לשפה זו אינו מותקן במכשיר שלך.",
+  "ttsInstallGuide": "התקן את נתוני השפה בהגדרות אנדרואיד > Google TTS.",
   "adLoading": "טוען מודעה. אנא נסה שוב מאוחר יותר.",
   "addNewSubject": "הוסף כותרת חדשה",
   "addParticipant": "הוסף משתתף",

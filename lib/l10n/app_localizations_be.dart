@@ -12,6 +12,14 @@ class AppLocalizationsBe extends AppLocalizations {
   String get accuracy => 'Дакладнасць';
 
   @override
+  String get ttsMissing =>
+      'На прыладзе адсутнічае галасавы рухавік для гэтай мовы.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Калі ласка, усталюйце адпаведныя моўныя даныя ў наладах Android > Google TTS.';
+
+  @override
   String get adLoading =>
       'Рэклама загружаецца. Калі ласка, паспрабуйце пазней.';
 

@@ -12,6 +12,14 @@ class AppLocalizationsTa extends AppLocalizations {
   String get accuracy => 'துல்லியம்';
 
   @override
+  String get ttsMissing =>
+      'இந்த மொழிக்குரிய குரல் இயந்திரம் உங்கள் சாதனத்தில் நிறுவப்படவில்லை.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Android அமைப்புகள் > Google TTS இல் அந்த மொழித் தரவை நிறுவவும்.';
+
+  @override
   String get adLoading =>
       'விளம்பரம் ஏற்றப்படுகிறது. தயவுசெய்து சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.';
 

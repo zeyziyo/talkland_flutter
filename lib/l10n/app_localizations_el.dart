@@ -12,6 +12,14 @@ class AppLocalizationsEl extends AppLocalizations {
   String get accuracy => 'Ακρίβεια';
 
   @override
+  String get ttsMissing =>
+      'Η φωνητική μηχανή για αυτήν τη γλώσσα δεν είναι εγκατεστημένη στη συσκευή σας.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Εγκαταστήστε τα δεδομένα γλώσσας στις Ρυθμίσεις Android > Google TTS.';
+
+  @override
   String get adLoading => 'Φόρτωση διαφήμισης. Προσπαθήστε ξανά σε λίγο.';
 
   @override

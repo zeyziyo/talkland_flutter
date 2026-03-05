@@ -12,6 +12,14 @@ class AppLocalizationsKy extends AppLocalizations {
   String get accuracy => 'Тактык';
 
   @override
+  String get ttsMissing =>
+      'Бул тил үчүн үн кыймылдаткычы түзмөгүңүзгө орнотулган эмес.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Android Орнотуулары > Google TTS бөлүмүнөн тиешелүү тил маалыматтарын орнотуңуз.';
+
+  @override
   String get adLoading =>
       'Жарнама жүктөлүүдө. Бир аздан кийин кайра аракет кылыңыз.';
 

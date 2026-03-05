@@ -12,6 +12,14 @@ class AppLocalizationsFil extends AppLocalizations {
   String get accuracy => 'Katumpakan';
 
   @override
+  String get ttsMissing =>
+      'Wala pang voice engine para sa wikang ito na naka-install sa device.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Pumunta sa Android Settings > Google TTS para i-install ang language data.';
+
+  @override
   String get adLoading =>
       'Naglo-load ng ad. Subukang muli sa ibang pagkakataon.';
 

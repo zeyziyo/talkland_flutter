@@ -12,6 +12,14 @@ class AppLocalizationsKn extends AppLocalizations {
   String get accuracy => 'ನಿಖರತೆ';
 
   @override
+  String get ttsMissing =>
+      'ಈ ಭಾಷೆಯ ಧ್ವನಿ ಎಂಜಿನ್ ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಸ್ಥಾಪಿಸಲ್ಪಟ್ಟಿಲ್ಲ.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Android ಸೆಟ್ಟಿಂಗ್‌ಗಳು > Google TTS ನಲ್ಲಿ ಸಂಬಂಧಿತ ಭಾಷಾ ಡೇಟಾವನ್ನು ಸ್ಥಾಪಿಸಿ.';
+
+  @override
   String get adLoading =>
       'ಜಾಹೀರಾತನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.';
 

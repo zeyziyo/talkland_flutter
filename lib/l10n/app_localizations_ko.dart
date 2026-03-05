@@ -12,6 +12,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get accuracy => '정확도';
 
   @override
+  String get ttsMissing => '이 언어의 음성 엔진이 기기에 설치되어 있지 않습니다.';
+
+  @override
+  String get ttsInstallGuide => '안드로이드 설정 > Google TTS에서 해당 언어 데이터를 설치해 주세요.';
+
+  @override
   String get adLoading => '광고를 불러오는 중입니다. 잠시 후 다시 시도해주세요.';
 
   @override

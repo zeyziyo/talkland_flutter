@@ -282,6 +282,44 @@ class AppState extends ChangeNotifier {
   String _chatUserGender = 'male'; 
   String _chatAiGender = 'female';
   
+  // TTS Error Notification
+  final ValueNotifier<TtsErrorData?> ttsErrorNotifier = ValueNotifier(null);
+  
+  void handleTtsError(Object e) {
+    if (e is TtsEngineMissingException) {
+      final langCode = e.langCode;
+      
+      // Get Native Name and Display Name
+      String? nativeName;
+      String? displayName;
+      
+      try {
+        // Look up in LanguageConstants
+        final match = LanguageConstants.supportedLanguages.firstWhere(
+          (l) => l['code'] == langCode || (langCode.contains('-') && l['code'] == langCode.split('-')[0]),
+          orElse: () => {},
+        );
+        
+        if (match.isNotEmpty) {
+          displayName = match['name'];
+          // Try to get native name from localizations if available or just use display name
+          // Since we don't have a direct "Native Name" field in supportedLanguages, 
+          // we'll use the localized name from the lang's own map if possible.
+          final nativeMap = LanguageConstants.getLanguageMap(match['code']!);
+          nativeName = nativeMap[match['code']!]; 
+        }
+      } catch (_) {}
+
+      ttsErrorNotifier.value = TtsErrorData(
+        langCode: langCode,
+        displayName: displayName ?? langCode,
+        nativeName: nativeName,
+      );
+    } else {
+      debugPrint('[TTS Error] $e');
+    }
+  }
+
   // Duplicate Check
   List<Map<String, dynamic>> _similarSources = [];
   int? _selectedSourceId;
@@ -821,4 +859,16 @@ class AppState extends ChangeNotifier {
     _cancelMode3Timers();
     super.dispose();
   }
+}
+
+class TtsErrorData {
+  final String langCode;
+  final String displayName;
+  final String? nativeName;
+
+  TtsErrorData({
+    required this.langCode,
+    required this.displayName,
+    this.nativeName,
+  });
 }

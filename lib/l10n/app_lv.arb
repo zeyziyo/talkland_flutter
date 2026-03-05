@@ -1,6 +1,8 @@
 {
   "@@locale": "lv",
   "accuracy": "Precizitāte",
+  "ttsMissing": "Šajā valodā nav instalēta runas dzinēja jūsu ierīcē.",
+  "ttsInstallGuide": "Lūdzu, instalējiet valodas datus Android iestatījumos > Google TTS.",
   "adLoading": "Reklāma tiek ielādēta. Lūdzu, mēģiniet vēlreiz vēlāk.",
   "addNewSubject": "Pievienot jaunu nosaukumu",
   "addParticipant": "Pievienot dalībnieku",

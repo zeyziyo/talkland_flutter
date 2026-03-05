@@ -1,6 +1,8 @@
 {
   "@@locale": "nl",
   "accuracy": "Nauwkeurigheid",
+  "ttsMissing": "De spraakengine voor deze taal is niet op uw apparaat geïnstalleerd.",
+  "ttsInstallGuide": "Ga naar Android Instellingen > Google TTS en installeer de bijbehorende taalgegevens.",
   "adLoading": "Advertentie wordt geladen. Probeer het over een moment nog eens.",
   "addNewSubject": "Nieuwe titel toevoegen",
   "addParticipant": "Deelnemer toevoegen",

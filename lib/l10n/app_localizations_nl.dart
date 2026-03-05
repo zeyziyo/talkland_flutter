@@ -12,6 +12,14 @@ class AppLocalizationsNl extends AppLocalizations {
   String get accuracy => 'Nauwkeurigheid';
 
   @override
+  String get ttsMissing =>
+      'De spraakengine voor deze taal is niet op uw apparaat geïnstalleerd.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Ga naar Android Instellingen > Google TTS en installeer de bijbehorende taalgegevens.';
+
+  @override
   String get adLoading =>
       'Advertentie wordt geladen. Probeer het over een moment nog eens.';
 

@@ -1,6 +1,8 @@
 {
   "@@locale": "cy",
   "accuracy": "Cywirdeb",
+  "ttsMissing": "Nid yw injan lleferydd ar gyfer yr iaith hon wedi'i gosod ar eich dyfais.",
+  "ttsInstallGuide": "Ewch i Gosodiadau Android > Google TTS a gosod data'r iaith honno.",
   "adLoading": "Wrthi'n llwytho hysbyseb. Ceisiwch eto yn nes ymlaen.",
   "addNewSubject": "Ychwanegu teitl newydd",
   "addParticipant": "Ychwanegu Cyfranogwr",

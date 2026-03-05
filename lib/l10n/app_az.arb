@@ -1,6 +1,8 @@
 {
   "@@locale": "az",
   "accuracy": "Dəqiqlik",
+  "ttsMissing": "Bu dil üçün mətn-nitq mühərriki cihazda quraşdırılmayıb.",
+  "ttsInstallGuide": "Zəhmət olmasa, Android Parametrləri > Google TTS bölməsindən müvafiq dil məlumatlarını quraşdırın.",
   "adLoading": "Reklam yüklənir. Zəhmət olmasa, bir az sonra yenidən cəhd edin.",
   "addNewSubject": "Yeni ad əlavə edin",
   "addParticipant": "İştirakçı əlavə et",

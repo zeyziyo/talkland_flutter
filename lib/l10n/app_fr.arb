@@ -1,6 +1,8 @@
 {
   "@@locale": "fr",
   "accuracy": "Précision",
+  "ttsMissing": "Le moteur de synthèse vocale pour cette langue n'est pas installé sur votre appareil.",
+  "ttsInstallGuide": "Veuillez installer les données de langue correspondantes dans les paramètres Android > Synthèse vocale Google.",
   "adLoading": "Chargement de la publicité en cours. Veuillez réessayer plus tard.",
   "addNewSubject": "Ajouter un nouveau titre",
   "addParticipant": "Ajouter un participant",

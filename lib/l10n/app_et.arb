@@ -1,6 +1,8 @@
 {
   "@@locale": "et",
   "accuracy": "Täpsus",
+  "ttsMissing": "Selle keele kõnesünteesimootor pole sinu seadmesse installitud.",
+  "ttsInstallGuide": "Installi vastavad keeleandmed Androidi seadetes > Google'i kõnesünteesis.",
   "adLoading": "Reklaami laadimine, proovige mõne aja pärast uuesti.",
   "addNewSubject": "Lisa uus nimi",
   "addParticipant": "Lisa osaleja",

@@ -12,6 +12,14 @@ class AppLocalizationsCs extends AppLocalizations {
   String get accuracy => 'Přesnost';
 
   @override
+  String get ttsMissing =>
+      'Pro tento jazyk není v zařízení nainstalován hlasový modul.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Nainstalujte jazyková data v Nastavení Android > Google TTS.';
+
+  @override
   String get adLoading => 'Načítání reklamy. Zkuste to prosím později.';
 
   @override

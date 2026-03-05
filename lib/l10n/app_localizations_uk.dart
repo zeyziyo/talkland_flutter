@@ -12,6 +12,14 @@ class AppLocalizationsUk extends AppLocalizations {
   String get accuracy => 'Точність';
 
   @override
+  String get ttsMissing =>
+      'На вашому пристрої не встановлено мовний рушій для цього голосу.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Будь ласка, встановіть мовні дані в налаштуваннях Android > Google TTS.';
+
+  @override
   String get adLoading => 'Завантаження реклами. Спробуйте ще раз пізніше.';
 
   @override

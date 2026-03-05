@@ -12,6 +12,14 @@ class AppLocalizationsSi extends AppLocalizations {
   String get accuracy => 'නිරවද්‍යතාවය';
 
   @override
+  String get ttsMissing =>
+      'මෙම භාෂාව සඳහා හඬ එන්ජිම ඔබගේ උපාංගයේ ස්ථාපනය කර නොමැත.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Android සැකසීම් > Google TTS වෙතින් අදාළ භාෂා දත්ත ස්ථාපනය කරන්න.';
+
+  @override
   String get adLoading =>
       'දැන්වීම් පූරණය වෙමින් පවතී. කරුණාකර පසුව නැවත උත්සාහ කරන්න.';
 

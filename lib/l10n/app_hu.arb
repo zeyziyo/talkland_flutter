@@ -1,6 +1,8 @@
 {
   "@@locale": "hu",
   "accuracy": "Pontosság",
+  "ttsMissing": "Ehhez a nyelvhez nincs telepítve hangmotor az eszközön.",
+  "ttsInstallGuide": "Telepítse a nyelvi adatokat az Android Beállítások > Google TTS menüpontban.",
   "adLoading": "Hirdetés betöltése folyamatban. Kérlek, próbáld újra később.",
   "addNewSubject": "Új név hozzáadása",
   "addParticipant": "Résztvevő hozzáadása",

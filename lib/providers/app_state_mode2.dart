@@ -94,6 +94,7 @@ extension AppStateMode2 on AppState {
       await _speechService.speak(text, lang: getServiceLocale(lang));
     } catch (e) {
       debugPrint('[AppState] Error playing TTS: $e');
+      handleTtsError(e);
     }
   }
 
@@ -542,6 +543,7 @@ extension AppStateMode2 on AppState {
       await _speechService.speak(text, lang: getServiceLocale(lang));
     } catch (e) {
       debugPrint('[AppState] Error playing material TTS: $e');
+      handleTtsError(e);
     }
   }
 }

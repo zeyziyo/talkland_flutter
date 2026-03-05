@@ -12,6 +12,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get accuracy => '准确率';
 
   @override
+  String get ttsMissing => '您的设备未安装此语言的语音引擎。';
+
+  @override
+  String get ttsInstallGuide => '请在安卓设置 > Google TTS 中安装相应的语言数据。';
+
+  @override
   String get adLoading => '正在加载广告。请稍后重试。';
 
   @override
@@ -1229,6 +1235,12 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get accuracy => '准确率';
+
+  @override
+  String get ttsMissing => '您的设备上未安装此语言的语音引擎。';
+
+  @override
+  String get ttsInstallGuide => '请在安卓设置 > Google 文字转语音中安装相应的语言数据。';
 
   @override
   String get adLoading => '正在加载广告。请稍后重试。';
@@ -2449,6 +2461,12 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get accuracy => '準確度';
+
+  @override
+  String get ttsMissing => '您的裝置未安裝此語言的語音引擎。';
+
+  @override
+  String get ttsInstallGuide => '請在「Android 設定」>「Google 文字轉語音」中安裝相應的語言資料。';
 
   @override
   String get adLoading => '正在載入廣告。請稍後重試。';

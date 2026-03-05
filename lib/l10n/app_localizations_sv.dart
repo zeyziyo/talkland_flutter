@@ -12,6 +12,14 @@ class AppLocalizationsSv extends AppLocalizations {
   String get accuracy => 'Noggrannhet';
 
   @override
+  String get ttsMissing =>
+      'Den här språkets röstmotor är inte installerad på enheten.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Installera språkdata under Android-inställningar > Google TTS.';
+
+  @override
   String get adLoading => 'Laddar annons. Försök igen om en stund.';
 
   @override

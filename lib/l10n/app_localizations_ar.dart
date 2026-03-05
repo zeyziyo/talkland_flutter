@@ -12,6 +12,14 @@ class AppLocalizationsAr extends AppLocalizations {
   String get accuracy => 'الدقة';
 
   @override
+  String get ttsMissing =>
+      'محرك تحويل النص إلى كلام لهذه اللغة غير مثبت على جهازك.';
+
+  @override
+  String get ttsInstallGuide =>
+      'يرجى تثبيت بيانات اللغة المقابلة في إعدادات Android> Google TTS.';
+
+  @override
   String get adLoading => 'جارٍ تحميل الإعلان. يرجى المحاولة مرة أخرى لاحقًا.';
 
   @override

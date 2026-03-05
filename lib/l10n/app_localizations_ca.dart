@@ -12,6 +12,14 @@ class AppLocalizationsCa extends AppLocalizations {
   String get accuracy => 'Precisió';
 
   @override
+  String get ttsMissing =>
+      'No s\'ha instal·lat el motor de veu per a aquest idioma al dispositiu.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Instal·leu les dades d\'idioma a Configuració d\'Android > TTS de Google.';
+
+  @override
   String get adLoading =>
       'S\'està carregant l\'anunci. Torna-ho a provar més tard.';
 

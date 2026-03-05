@@ -12,6 +12,14 @@ class AppLocalizationsMl extends AppLocalizations {
   String get accuracy => 'കൃത്യത';
 
   @override
+  String get ttsMissing =>
+      'ഈ ഭാഷയുടെ വോയിസ് എഞ്ചിൻ നിങ്ങളുടെ ഉപകരണത്തിൽ ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Android ക്രമീകരണങ്ങൾ > Google TTS-ൽ ഈ ഭാഷാ ഡാറ്റ ഇൻസ്റ്റാൾ ചെയ്യുക.';
+
+  @override
   String get adLoading =>
       'പരസ്യം ലോഡ് ചെയ്യുന്നു. ദയവായി കുറച്ച് കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക.';
 

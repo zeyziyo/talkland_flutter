@@ -12,6 +12,14 @@ class AppLocalizationsLt extends AppLocalizations {
   String get accuracy => 'Tikslumas';
 
   @override
+  String get ttsMissing =>
+      'Šiam kalbos paketui įrenginyje neįdiegta jokio teksto į kalbą variklio.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Įdiekite kalbos duomenis skiltyje „Android“ nustatymai > „Google TTS“.';
+
+  @override
   String get adLoading =>
       'Įkeliamas skelbimas. Bandykite dar kartą po kurio laiko.';
 

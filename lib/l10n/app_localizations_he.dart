@@ -12,6 +12,13 @@ class AppLocalizationsHe extends AppLocalizations {
   String get accuracy => 'דיוק';
 
   @override
+  String get ttsMissing => 'מנוע הדיבור לשפה זו אינו מותקן במכשיר שלך.';
+
+  @override
+  String get ttsInstallGuide =>
+      'התקן את נתוני השפה בהגדרות אנדרואיד > Google TTS.';
+
+  @override
   String get adLoading => 'טוען מודעה. אנא נסה שוב מאוחר יותר.';
 
   @override

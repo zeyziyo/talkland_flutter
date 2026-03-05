@@ -12,6 +12,14 @@ class AppLocalizationsHr extends AppLocalizations {
   String get accuracy => 'Točnost';
 
   @override
+  String get ttsMissing =>
+      'Glasovni pogon za ovaj jezik nije instaliran na vašem uređaju.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Instalirajte podatke za odgovarajući jezik u Postavke sustava Android > Google TTS.';
+
+  @override
   String get adLoading => 'Učitavanje oglasa. Pokušajte ponovno kasnije.';
 
   @override

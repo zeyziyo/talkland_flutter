@@ -12,6 +12,14 @@ class AppLocalizationsVi extends AppLocalizations {
   String get accuracy => 'Độ chính xác';
 
   @override
+  String get ttsMissing =>
+      'Không tìm thấy công cụ chuyển văn bản thành giọng nói cho ngôn ngữ này trên thiết bị của bạn.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Vui lòng cài đặt dữ liệu ngôn ngữ tương ứng trong Cài đặt Android > Google TTS.';
+
+  @override
   String get adLoading => 'Đang tải quảng cáo. Vui lòng thử lại sau.';
 
   @override

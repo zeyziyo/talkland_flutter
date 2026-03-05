@@ -1,6 +1,8 @@
 {
   "@@locale": "ur",
   "accuracy": "درستگی",
+  "ttsMissing": "اس زبان کا صوتی انجن آپ کے آلے پر نصب نہیں ہے۔",
+  "ttsInstallGuide": "براہ کرم Android ترتیبات > Google TTS میں اس زبان کا ڈیٹا انسٹال کریں۔",
   "adLoading": "اشتہار لوڈ ہو رہا ہے۔ براہ کرم بعد میں دوبارہ کوشش کریں۔",
   "addNewSubject": "نیا عنوان شامل کریں",
   "addParticipant": "شریک شامل کریں",

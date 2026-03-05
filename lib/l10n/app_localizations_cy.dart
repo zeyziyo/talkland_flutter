@@ -12,6 +12,14 @@ class AppLocalizationsCy extends AppLocalizations {
   String get accuracy => 'Cywirdeb';
 
   @override
+  String get ttsMissing =>
+      'Nid yw injan lleferydd ar gyfer yr iaith hon wedi\'i gosod ar eich dyfais.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Ewch i Gosodiadau Android > Google TTS a gosod data\'r iaith honno.';
+
+  @override
   String get adLoading =>
       'Wrthi\'n llwytho hysbyseb. Ceisiwch eto yn nes ymlaen.';
 

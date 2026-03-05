@@ -12,6 +12,14 @@ class AppLocalizationsSq extends AppLocalizations {
   String get accuracy => 'Saktësia';
 
   @override
+  String get ttsMissing =>
+      'Motori i zërit për këtë gjuhë nuk është instaluar në pajisjen tuaj.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Ju lutemi instaloni të dhënat e gjuhës përkatëse te Cilësimet e Android > Google TTS.';
+
+  @override
   String get adLoading =>
       'Po ngarkohet reklama. Ju lutemi provoni përsëri pas pak.';
 

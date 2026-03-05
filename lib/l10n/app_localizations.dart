@@ -258,6 +258,18 @@ abstract class AppLocalizations {
   /// **'정확도'**
   String get accuracy;
 
+  /// No description provided for @ttsMissing.
+  ///
+  /// In ko, this message translates to:
+  /// **'이 언어의 음성 엔진이 기기에 설치되어 있지 않습니다.'**
+  String get ttsMissing;
+
+  /// No description provided for @ttsInstallGuide.
+  ///
+  /// In ko, this message translates to:
+  /// **'안드로이드 설정 > Google TTS에서 해당 언어 데이터를 설치해 주세요.'**
+  String get ttsInstallGuide;
+
   /// No description provided for @adLoading.
   ///
   /// In ko, this message translates to:

@@ -12,6 +12,14 @@ class AppLocalizationsHy extends AppLocalizations {
   String get accuracy => 'Ճշգրտություն';
 
   @override
+  String get ttsMissing =>
+      'Ձեր սարքի վրա այս լեզվի ձայնային շարժիչը տեղադրված չէ։';
+
+  @override
+  String get ttsInstallGuide =>
+      'Խնդրում ենք տեղադրել համապատասխան լեզվի տվյալները Android-ի կարգավորումներ > Google TTS-ում։';
+
+  @override
   String get adLoading => 'Գովազդը բեռնվում է: Փորձեք մի փոքր ուշ:';
 
   @override

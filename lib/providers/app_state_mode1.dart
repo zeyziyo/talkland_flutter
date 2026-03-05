@@ -454,11 +454,11 @@ extension AppStateMode1 on AppState {
         lang: getServiceLocale(_targetLang),
       );
       
-      _isSpeaking = false;
       _statusMessage = ''; 
       notify();
     } catch (e) {
       _isSpeaking = false;
+      handleTtsError(e);
       _statusMessage = '재생 실패: $e';
       notify();
     }

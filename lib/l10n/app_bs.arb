@@ -1,6 +1,8 @@
 {
   "@@locale": "bs",
   "accuracy": "Tačnost",
+  "ttsMissing": "Jezični paket za ovaj jezik nije instaliran na vašem uređaju.",
+  "ttsInstallGuide": "Molimo vas da instalirate podatke za odgovarajući jezik u Android postavkama > Google TTS.",
   "adLoading": "Oglas se učitava. Pokušajte ponovo kasnije.",
   "addNewSubject": "Dodaj novi naslov",
   "addParticipant": "Dodaj sudionika",

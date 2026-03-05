@@ -12,6 +12,14 @@ class AppLocalizationsTr extends AppLocalizations {
   String get accuracy => 'Doğruluk';
 
   @override
+  String get ttsMissing =>
+      'Bu dil için konuşma motoru cihazınızda yüklü değil.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Lütfen Android Ayarları > Google TTS\'den ilgili dil verilerini yükleyin.';
+
+  @override
   String get adLoading =>
       'Reklam yükleniyor. Lütfen daha sonra tekrar deneyin.';
 

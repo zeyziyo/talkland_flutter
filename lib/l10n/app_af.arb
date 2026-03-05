@@ -1,6 +1,8 @@
 {
   "@@locale": "af",
   "accuracy": "Akkuraatheid",
+  "ttsMissing": "Die stem-enjin vir hierdie taal is nie op jou toestel geïnstalleer nie.",
+  "ttsInstallGuide": "Installeer die taaldata in Android-instellings > Google TTS.",
   "adLoading": "Advertensie word gelaai. Probeer asseblief later weer.",
   "addNewSubject": "Voeg nuwe naam by",
   "addParticipant": "Voeg deelnemer by",

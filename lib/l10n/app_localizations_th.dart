@@ -12,6 +12,14 @@ class AppLocalizationsTh extends AppLocalizations {
   String get accuracy => 'ความถูกต้อง';
 
   @override
+  String get ttsMissing =>
+      'ไม่มีเอ็นจินเสียงสำหรับภาษาดังกล่าวติดตั้งในอุปกรณ์ของคุณ';
+
+  @override
+  String get ttsInstallGuide =>
+      'โปรดติดตั้งข้อมูลภาษาที่ การตั้งค่า Android > Google TTS';
+
+  @override
   String get adLoading => 'กำลังโหลดโฆษณา โปรดลองอีกครั้งในภายหลัง';
 
   @override

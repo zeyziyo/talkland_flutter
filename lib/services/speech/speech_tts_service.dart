@@ -76,7 +76,10 @@ class SpeechTtsService {
           lang = lang.split('-')[0];
           isAvailable = await _flutterTts.isLanguageAvailable(lang);
         }
-        if (!isAvailable) return;
+        
+        if (!isAvailable) {
+          throw TtsEngineMissingException(lang);
+        }
 
         await _flutterTts.setLanguage(lang);
         await _setBestVoice(lang, gender ?? 'any');
@@ -173,4 +176,11 @@ class SpeechTtsService {
     await _flutterTts.stop();
     currentlySpeakingText.value = null;
   }
+}
+
+class TtsEngineMissingException implements Exception {
+  final String langCode;
+  TtsEngineMissingException(this.langCode);
+  @override
+  String toString() => 'TTS Engine for $langCode is not installed.';
 }

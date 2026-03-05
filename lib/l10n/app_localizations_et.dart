@@ -12,6 +12,14 @@ class AppLocalizationsEt extends AppLocalizations {
   String get accuracy => 'Täpsus';
 
   @override
+  String get ttsMissing =>
+      'Selle keele kõnesünteesimootor pole sinu seadmesse installitud.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Installi vastavad keeleandmed Androidi seadetes > Google\'i kõnesünteesis.';
+
+  @override
   String get adLoading =>
       'Reklaami laadimine, proovige mõne aja pärast uuesti.';
 

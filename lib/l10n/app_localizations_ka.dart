@@ -12,6 +12,14 @@ class AppLocalizationsKa extends AppLocalizations {
   String get accuracy => 'სიზუსტე';
 
   @override
+  String get ttsMissing =>
+      'ამ ენისთვის მეტყველების ძრავა თქვენს მოწყობილობაზე დაინსტალირებული არ არის.';
+
+  @override
+  String get ttsInstallGuide =>
+      'გთხოვთ, დააინსტალიროთ ენის მონაცემები Android-ის პარამეტრებიდან > Google TTS.';
+
+  @override
   String get adLoading =>
       'მიმდინარეობს რეკლამის ჩატვირთვა. გთხოვთ, სცადოთ მოგვიანებით.';
 

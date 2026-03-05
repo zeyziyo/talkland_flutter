@@ -1,6 +1,8 @@
 {
   "@@locale": "it",
   "accuracy": "Precisione",
+  "ttsMissing": "Il motore di sintesi vocale per questa lingua non è installato sul dispositivo.",
+  "ttsInstallGuide": "Installa i dati della lingua in Impostazioni Android > Sintesi vocale di Google.",
   "adLoading": "Caricamento annuncio in corso. Riprova più tardi.",
   "addNewSubject": "Aggiungi nuovo titolo",
   "addParticipant": "Aggiungi partecipante",

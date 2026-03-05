@@ -1,6 +1,8 @@
 {
   "@@locale": "sk",
   "accuracy": "Presnosť",
+  "ttsMissing": "Hlasový engine pre tento jazyk nie je nainštalovaný vo vašom zariadení.",
+  "ttsInstallGuide": "Nainštalujte jazykové dáta v Nastavenia Android > Google TTS.",
   "adLoading": "Načítava sa reklama. Skúste to znova neskôr.",
   "addNewSubject": "Pridať nový názov",
   "addParticipant": "Pridať účastníka",

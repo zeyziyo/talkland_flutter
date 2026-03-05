@@ -12,6 +12,14 @@ class AppLocalizationsMy extends AppLocalizations {
   String get accuracy => 'တိကျမှု';
 
   @override
+  String get ttsMissing =>
+      'ဤဘာသာစကားအတွက် အသံအင်ဂျင်ကို သင့်စက်တွင် ထည့်သွင်းထားခြင်းမရှိပါ။';
+
+  @override
+  String get ttsInstallGuide =>
+      'Android ဆက်တင်များ > Google TTS တွင် သက်ဆိုင်ရာဘာသာစကားဒေတာကို ထည့်သွင်းပါ။';
+
+  @override
   String get adLoading => 'ကြော်ငြာကို တင်နေပါသည်။ ခဏနေမှ ထပ်ကြိုးစားပေးပါ။';
 
   @override

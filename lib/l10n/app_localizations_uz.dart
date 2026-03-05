@@ -12,6 +12,14 @@ class AppLocalizationsUz extends AppLocalizations {
   String get accuracy => 'Aniqlik';
 
   @override
+  String get ttsMissing =>
+      'Ushbu til uchun ovozli dvigatel qurilmangizga o\'rnatilmagan.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Android Sozlamalari > Google TTS bo\'limida mos til ma\'lumotlarini o\'rnating.';
+
+  @override
   String get adLoading =>
       'Reklama yuklanmoqda. Bir ozdan keyin qayta urinib ko\'ring.';
 

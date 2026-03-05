@@ -1,6 +1,8 @@
 {
   "@@locale": "pl",
   "accuracy": "Dokładność",
+  "ttsMissing": "Silnik mowy dla tego języka nie jest zainstalowany na Twoim urządzeniu.",
+  "ttsInstallGuide": "Zainstaluj dane językowe w Ustawieniach Androida > Google TTS.",
   "adLoading": "Trwa ładowanie reklamy. Spróbuj ponownie za chwilę.",
   "addNewSubject": "Dodaj nowy tytuł",
   "addParticipant": "Dodaj uczestnika",

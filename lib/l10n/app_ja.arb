@@ -1,6 +1,8 @@
 {
   "@@locale": "ja",
   "accuracy": "正確度",
+  "ttsMissing": "この言語の音声エンジンがデバイスにインストールされていません。",
+  "ttsInstallGuide": "Androidの設定 > Googleテキスト読み上げから、該当する言語データをインストールしてください。",
   "adLoading": "広告を読み込み中です。しばらくしてからもう一度試してください。",
   "addNewSubject": "新しいタイトルを追加",
   "addParticipant": "参加者を追加",

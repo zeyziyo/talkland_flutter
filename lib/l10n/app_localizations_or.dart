@@ -12,6 +12,14 @@ class AppLocalizationsOr extends AppLocalizations {
   String get accuracy => 'ସଠିକତା';
 
   @override
+  String get ttsMissing =>
+      'ଏହି ଭାଷା ପାଇଁ ଭଏସ୍ ଇଞ୍ଜିନ୍ ଆପଣଙ୍କ ଡିଭାଇସରେ ସ୍ଥାପିତ ହୋଇନାହିଁ।';
+
+  @override
+  String get ttsInstallGuide =>
+      'ଆଣ୍ଡ୍ରଏଡ୍ ସେଟିଙ୍ଗ୍ସ > ଗୁଗଲ୍ TTS ରେ ଏହି ଭାଷା ଡାଟା ସ୍ଥାପନ କରନ୍ତୁ।';
+
+  @override
   String get adLoading =>
       'ବିଜ୍ଞାପନ ଲୋଡ୍ ହେଉଛି। ଦୟାକରି ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।';
 

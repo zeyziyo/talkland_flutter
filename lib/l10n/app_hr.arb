@@ -1,6 +1,8 @@
 {
   "@@locale": "hr",
   "accuracy": "Točnost",
+  "ttsMissing": "Glasovni pogon za ovaj jezik nije instaliran na vašem uređaju.",
+  "ttsInstallGuide": "Instalirajte podatke za odgovarajući jezik u Postavke sustava Android > Google TTS.",
   "adLoading": "Učitavanje oglasa. Pokušajte ponovno kasnije.",
   "addNewSubject": "Dodaj novi naslov",
   "addParticipant": "Dodaj sudionika",

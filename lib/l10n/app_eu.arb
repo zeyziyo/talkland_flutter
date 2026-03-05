@@ -1,6 +1,8 @@
 {
   "@@locale": "eu",
   "accuracy": "Zehaztasuna",
+  "ttsMissing": "Hizkuntza honetarako ahots-motorra ez dago zure gailuan instalatuta.",
+  "ttsInstallGuide": "Instalatu hizkuntza-datuak Android ezarpenak > Google TTS atalean.",
   "adLoading": "Iragarkia kargatzen ari da. Mesedez, saiatu berriro geroago.",
   "addNewSubject": "Gehitu izenburu berria",
   "addParticipant": "Parte-hartzailea gehitu",

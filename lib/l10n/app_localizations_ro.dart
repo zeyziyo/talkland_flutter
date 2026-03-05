@@ -12,6 +12,14 @@ class AppLocalizationsRo extends AppLocalizations {
   String get accuracy => 'Acuratețe';
 
   @override
+  String get ttsMissing =>
+      'Motorul vocal pentru această limbă nu este instalat pe dispozitiv.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Instalează datele lingvistice corespunzătoare în Setări Android > Google TTS.';
+
+  @override
   String get adLoading =>
       'Se încarcă anunțul. Te rugăm să încerci din nou mai târziu.';
 

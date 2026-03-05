@@ -12,6 +12,14 @@ class AppLocalizationsBn extends AppLocalizations {
   String get accuracy => 'সঠিকতা';
 
   @override
+  String get ttsMissing =>
+      'এই ভাষার ভয়েস ইঞ্জিন আপনার ডিভাইসে ইনস্টল করা নেই।';
+
+  @override
+  String get ttsInstallGuide =>
+      'Android সেটিংস > Google TTS থেকে এই ভাষার ডেটা ইনস্টল করুন।';
+
+  @override
   String get adLoading => 'বিজ্ঞাপন লোড হচ্ছে। কিছুক্ষণ পর আবার চেষ্টা করুন।';
 
   @override

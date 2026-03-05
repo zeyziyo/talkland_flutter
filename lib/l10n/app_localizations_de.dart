@@ -12,6 +12,14 @@ class AppLocalizationsDe extends AppLocalizations {
   String get accuracy => 'Genauigkeit';
 
   @override
+  String get ttsMissing =>
+      'Die Sprachausgabe-Engine für diese Sprache ist auf Ihrem Gerät nicht installiert.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Bitte installieren Sie die entsprechenden Sprachdaten in den Android-Einstellungen > Google Text-in-Sprache.';
+
+  @override
   String get adLoading =>
       'Werbung wird geladen. Bitte versuchen Sie es später noch einmal.';
 

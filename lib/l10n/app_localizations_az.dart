@@ -12,6 +12,14 @@ class AppLocalizationsAz extends AppLocalizations {
   String get accuracy => 'Dəqiqlik';
 
   @override
+  String get ttsMissing =>
+      'Bu dil üçün mətn-nitq mühərriki cihazda quraşdırılmayıb.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Zəhmət olmasa, Android Parametrləri > Google TTS bölməsindən müvafiq dil məlumatlarını quraşdırın.';
+
+  @override
   String get adLoading =>
       'Reklam yüklənir. Zəhmət olmasa, bir az sonra yenidən cəhd edin.';
 

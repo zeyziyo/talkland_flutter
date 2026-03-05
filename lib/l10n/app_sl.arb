@@ -1,6 +1,8 @@
 {
   "@@locale": "sl",
   "accuracy": "Točnost",
+  "ttsMissing": "Za ta jezik ni nameščen mehanizem za pretvorbo besedila v govor.",
+  "ttsInstallGuide": "V nastavitvah sistema Android > Google TTS namestite podatke za ta jezik.",
   "adLoading": "Oglas se nalaga. Poskusite znova pozneje.",
   "addNewSubject": "Dodaj novo ime",
   "addParticipant": "Dodaj udeleženca",

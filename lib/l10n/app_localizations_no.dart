@@ -12,6 +12,14 @@ class AppLocalizationsNo extends AppLocalizations {
   String get accuracy => 'Nøyaktighet';
 
   @override
+  String get ttsMissing =>
+      'Talemotoren for dette språket er ikke installert på enheten din.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Vennligst installer språkdataene i Android-innstillinger > Google TTS.';
+
+  @override
   String get adLoading => 'Laster inn annonse. Vennligst prøv igjen senere.';
 
   @override

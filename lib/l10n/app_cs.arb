@@ -1,6 +1,8 @@
 {
   "@@locale": "cs",
   "accuracy": "Přesnost",
+  "ttsMissing": "Pro tento jazyk není v zařízení nainstalován hlasový modul.",
+  "ttsInstallGuide": "Nainstalujte jazyková data v Nastavení Android > Google TTS.",
   "adLoading": "Načítání reklamy. Zkuste to prosím později.",
   "addNewSubject": "Přidat nový název",
   "addParticipant": "Přidat účastníka",

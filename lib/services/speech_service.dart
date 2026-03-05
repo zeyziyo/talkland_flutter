@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'speech/speech_stt_service.dart';
 import 'speech/speech_tts_service.dart';
+export 'speech/speech_tts_service.dart' show TtsEngineMissingException;
 
 /// Speech service for STT and TTS across platforms (Facade)
 class SpeechService {

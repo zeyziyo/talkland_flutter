@@ -12,6 +12,14 @@ class AppLocalizationsLv extends AppLocalizations {
   String get accuracy => 'Precizitāte';
 
   @override
+  String get ttsMissing =>
+      'Šajā valodā nav instalēta runas dzinēja jūsu ierīcē.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Lūdzu, instalējiet valodas datus Android iestatījumos > Google TTS.';
+
+  @override
   String get adLoading =>
       'Reklāma tiek ielādēta. Lūdzu, mēģiniet vēlreiz vēlāk.';
 

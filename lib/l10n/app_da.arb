@@ -1,6 +1,8 @@
 {
   "@@locale": "da",
   "accuracy": "Nøjagtighed",
+  "ttsMissing": "Lydmotoren for dette sprog er ikke installeret på din enhed.",
+  "ttsInstallGuide": "Installer sprogdataene under Android-indstillinger > Google TTS.",
   "adLoading": "Indlæser annonce. Prøv igen om et øjeblik.",
   "addNewSubject": "Tilføj ny overskrift",
   "addParticipant": "Tilføj deltager",

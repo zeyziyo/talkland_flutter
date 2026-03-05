@@ -12,6 +12,14 @@ class AppLocalizationsBo extends AppLocalizations {
   String get accuracy => 'ཏག་ཏག་ཚད།';
 
   @override
+  String get ttsMissing =>
+      'སྐད་ཡིག་འདིའི་སྒྲ་འབྱིན་འཕྲུལ་ཆས་འདི་ཁྱེད་ཀྱི་སྒྲིག་ཆས་སུ་བཙུགས་མེད།';
+
+  @override
+  String get ttsInstallGuide =>
+      'Android སྒྲིག་འཛུགས་> Google TTS ནང་དུ་སྐད་ཡིག་གི་གནས་སྡུད་འདི་བཙུགས་རོགས།';
+
+  @override
   String get adLoading => 'ཁྱབ་བསྒྲགས་ནང་འཇུག་བྱེད་བཞིན་པ། གནས་སྐབས་སྒུག་རོགས།';
 
   @override

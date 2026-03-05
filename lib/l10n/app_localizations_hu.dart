@@ -12,6 +12,14 @@ class AppLocalizationsHu extends AppLocalizations {
   String get accuracy => 'Pontosság';
 
   @override
+  String get ttsMissing =>
+      'Ehhez a nyelvhez nincs telepítve hangmotor az eszközön.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Telepítse a nyelvi adatokat az Android Beállítások > Google TTS menüpontban.';
+
+  @override
   String get adLoading =>
       'Hirdetés betöltése folyamatban. Kérlek, próbáld újra később.';
 

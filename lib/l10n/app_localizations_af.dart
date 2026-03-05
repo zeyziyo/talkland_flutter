@@ -12,6 +12,14 @@ class AppLocalizationsAf extends AppLocalizations {
   String get accuracy => 'Akkuraatheid';
 
   @override
+  String get ttsMissing =>
+      'Die stem-enjin vir hierdie taal is nie op jou toestel geïnstalleer nie.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Installeer die taaldata in Android-instellings > Google TTS.';
+
+  @override
   String get adLoading =>
       'Advertensie word gelaai. Probeer asseblief later weer.';
 

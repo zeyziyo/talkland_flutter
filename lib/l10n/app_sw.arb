@@ -1,6 +1,8 @@
 {
   "@@locale": "sw",
   "accuracy": "Usahihi",
+  "ttsMissing": "Injini ya sauti ya lugha hii haijasakinishwa kwenye kifaa chako.",
+  "ttsInstallGuide": "Tafadhali sakinisha data ya lugha husika katika Mipangilio ya Android > Google TTS.",
   "adLoading": "Inapakia tangazo. Tafadhali jaribu tena baadaye.",
   "addNewSubject": "Ongeza jina jipya",
   "addParticipant": "Ongeza Mshiriki",

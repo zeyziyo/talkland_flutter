@@ -1,6 +1,8 @@
 {
   "@@locale": "tr",
   "accuracy": "Doğruluk",
+  "ttsMissing": "Bu dil için konuşma motoru cihazınızda yüklü değil.",
+  "ttsInstallGuide": "Lütfen Android Ayarları > Google TTS'den ilgili dil verilerini yükleyin.",
   "adLoading": "Reklam yükleniyor. Lütfen daha sonra tekrar deneyin.",
   "addNewSubject": "Yeni Başlık Ekle",
   "addParticipant": "Katılımcı Ekle",

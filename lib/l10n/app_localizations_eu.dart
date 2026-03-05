@@ -12,6 +12,14 @@ class AppLocalizationsEu extends AppLocalizations {
   String get accuracy => 'Zehaztasuna';
 
   @override
+  String get ttsMissing =>
+      'Hizkuntza honetarako ahots-motorra ez dago zure gailuan instalatuta.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Instalatu hizkuntza-datuak Android ezarpenak > Google TTS atalean.';
+
+  @override
   String get adLoading =>
       'Iragarkia kargatzen ari da. Mesedez, saiatu berriro geroago.';
 

@@ -12,6 +12,14 @@ class AppLocalizationsPl extends AppLocalizations {
   String get accuracy => 'Dokładność';
 
   @override
+  String get ttsMissing =>
+      'Silnik mowy dla tego języka nie jest zainstalowany na Twoim urządzeniu.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Zainstaluj dane językowe w Ustawieniach Androida > Google TTS.';
+
+  @override
   String get adLoading => 'Trwa ładowanie reklamy. Spróbuj ponownie za chwilę.';
 
   @override

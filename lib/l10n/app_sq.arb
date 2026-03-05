@@ -1,6 +1,8 @@
 {
   "@@locale": "sq",
   "accuracy": "Saktësia",
+  "ttsMissing": "Motori i zërit për këtë gjuhë nuk është instaluar në pajisjen tuaj.",
+  "ttsInstallGuide": "Ju lutemi instaloni të dhënat e gjuhës përkatëse te Cilësimet e Android > Google TTS.",
   "adLoading": "Po ngarkohet reklama. Ju lutemi provoni përsëri pas pak.",
   "addNewSubject": "Shto emër të ri",
   "addParticipant": "Shto pjesëmarrës",

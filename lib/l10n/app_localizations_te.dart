@@ -12,6 +12,14 @@ class AppLocalizationsTe extends AppLocalizations {
   String get accuracy => 'ఖచ్చితత్వం';
 
   @override
+  String get ttsMissing =>
+      'ఈ భాషకు సంబంధించిన వాయిస్ ఇంజిన్ మీ పరికరంలో ఇన్స్టాల్ చేయబడలేదు.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Android సెట్టింగ్‌లు > Google TTSలో సంబంధిత భాషా డేటాను ఇన్స్టాల్ చేయండి.';
+
+  @override
   String get adLoading =>
       'ప్రకటనను లోడ్ చేస్తోంది. దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.';
 

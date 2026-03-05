@@ -12,6 +12,14 @@ class AppLocalizationsGl extends AppLocalizations {
   String get accuracy => 'Precisión';
 
   @override
+  String get ttsMissing =>
+      'Non hai o motor de voz para este idioma instalado no teu dispositivo.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Por favor, instala os datos do idioma en Configuración de Android > Google TTS.';
+
+  @override
   String get adLoading => 'Cargando anuncio. Téntao de novo en breve.';
 
   @override

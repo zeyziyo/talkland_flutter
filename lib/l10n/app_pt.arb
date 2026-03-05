@@ -1,6 +1,8 @@
 {
   "@@locale": "pt",
   "accuracy": "Precisão",
+  "ttsMissing": "O motor de voz para este idioma não está instalado no dispositivo.",
+  "ttsInstallGuide": "Instale os dados do idioma em Configurações do Android > Google TTS.",
   "adLoading": "Carregando anúncio. Por favor, tente novamente mais tarde.",
   "addNewSubject": "Adicionar novo nome",
   "addParticipant": "Adicionar participante",

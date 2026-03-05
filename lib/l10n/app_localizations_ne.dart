@@ -12,6 +12,13 @@ class AppLocalizationsNe extends AppLocalizations {
   String get accuracy => 'शुद्धता';
 
   @override
+  String get ttsMissing => 'यो भाषाको लागि आवाज इन्जिन उपकरणमा स्थापित छैन।';
+
+  @override
+  String get ttsInstallGuide =>
+      'कृपया Android सेटिङहरू > Google TTS मा सम्बन्धित भाषा डेटा स्थापना गर्नुहोस्।';
+
+  @override
   String get adLoading =>
       'विज्ञापन लोड हुँदैछ। कृपया पछि फेरि प्रयास गर्नुहोस्।';
 

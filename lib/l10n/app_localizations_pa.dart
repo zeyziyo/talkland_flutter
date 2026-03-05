@@ -12,6 +12,14 @@ class AppLocalizationsPa extends AppLocalizations {
   String get accuracy => 'ਸ਼ੁੱਧਤਾ';
 
   @override
+  String get ttsMissing =>
+      'ਇਸ ਭਾਸ਼ਾ ਦਾ ਵੌਇਸ ਇੰਜਣ ਤੁਹਾਡੇ ਜੰਤਰ \'ਤੇ ਸਥਾਪਤ ਨਹੀਂ ਹੈ।';
+
+  @override
+  String get ttsInstallGuide =>
+      'ਕਿਰਪਾ ਕਰਕੇ ਐਂਡਰਾਇਡ ਸੈਟਿੰਗਾਂ > Google TTS ਤੋਂ ਇਸ ਭਾਸ਼ਾ ਲਈ ਡਾਟਾ ਸਥਾਪਤ ਕਰੋ।';
+
+  @override
   String get adLoading =>
       'ਇਸ਼ਤਿਹਾਰ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
 

@@ -12,6 +12,14 @@ class AppLocalizationsMn extends AppLocalizations {
   String get accuracy => 'Нарийвчлал';
 
   @override
+  String get ttsMissing =>
+      'Энэ хэлний дуут хөдөлгүүр таны төхөөрөмж дээр суугаагүй байна.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Андройд тохиргоо > Google TTS хэсгээс энэ хэлний өгөгдлийг суулгана уу.';
+
+  @override
   String get adLoading =>
       'Зар татаж байна. Хэсэг хугацааны дараа дахин оролдоно уу.';
 

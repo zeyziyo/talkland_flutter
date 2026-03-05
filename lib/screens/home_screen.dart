@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +67,67 @@ class _HomeScreenState extends State<HomeScreen> {
     _pageController = PageController(initialPage: appState.currentMode);
     appState.setPageController(_pageController);
 
+    // TTS Error Listener
+    appState.ttsErrorNotifier.addListener(_showTtsInstallGuide);
+
     // v15.8.4: Show Kakao Key Hash removed (User Request)
+  }
+
+  void _showTtsInstallGuide() {
+    if (!mounted) return;
+    final appState = Provider.of<AppState>(context, listen: false);
+    final errorData = appState.ttsErrorNotifier.value;
+    if (errorData == null) return;
+
+    // Reset the value immediately
+    appState.ttsErrorNotifier.value = null;
+
+    final l10n = AppLocalizations.of(context);
+    if (l10n == null) return;
+
+    final String langInfo = errorData.nativeName != null && errorData.nativeName != errorData.displayName
+        ? '${errorData.displayName} (${errorData.nativeName})'
+        : errorData.displayName;
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('[$langInfo] ${l10n.ttsMissing}', style: const TextStyle(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 4),
+            Text(l10n.ttsInstallGuide, style: const TextStyle(fontSize: 12)),
+          ],
+        ),
+        backgroundColor: Colors.orange.shade900,
+        duration: const Duration(seconds: 12),
+        action: SnackBarAction(
+          label: '설정 열기',
+          textColor: Colors.white,
+          onPressed: () async {
+            if (Platform.isAndroid) {
+              // Note: Using a generic approach for settings if possible, or guiding via message
+              // url_launcher doesn't easily support deep links to specific settings without a plugin
+              // but we can try common paths or just show a message.
+              final Uri url = Uri.parse('package:com.android.settings'); 
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url);
+              } else {
+                // Fallback for some Android versions
+                final Uri altUrl = Uri.parse('intent:#Intent;action=android.settings.TTS_SETTINGS;end');
+                await launchUrl(altUrl);
+              }
+            } else if (Platform.isIOS) {
+              final Uri url = Uri.parse('App-Prefs:root=ACCESSIBILITY&path=SPOKEN_CONTENT/VOICES');
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url);
+              }
+            }
+          },
+        ),
+      ),
+    );
   }
 
   void _loadBannerAd() {
@@ -91,6 +152,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void dispose() {
+    final appState = Provider.of<AppState>(context, listen: false);
+    appState.ttsErrorNotifier.removeListener(_showTtsInstallGuide);
     _bannerAd?.dispose();
     _pageController.dispose();
     super.dispose();

@@ -12,6 +12,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get accuracy => '正確度';
 
   @override
+  String get ttsMissing => 'この言語の音声エンジンがデバイスにインストールされていません。';
+
+  @override
+  String get ttsInstallGuide =>
+      'Androidの設定 > Googleテキスト読み上げから、該当する言語データをインストールしてください。';
+
+  @override
   String get adLoading => '広告を読み込み中です。しばらくしてからもう一度試してください。';
 
   @override

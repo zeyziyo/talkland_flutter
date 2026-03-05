@@ -1,6 +1,8 @@
 {
   "@@locale": "zh_CN",
   "accuracy": "准确率",
+  "ttsMissing": "您的设备上未安装此语言的语音引擎。",
+  "ttsInstallGuide": "请在安卓设置 > Google 文字转语音中安装相应的语言数据。",
   "adLoading": "正在加载广告。请稍后重试。",
   "addNewSubject": "添加新标题",
   "addParticipant": "添加参与者",

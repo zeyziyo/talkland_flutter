@@ -12,6 +12,14 @@ class AppLocalizationsSr extends AppLocalizations {
   String get accuracy => 'Тачност';
 
   @override
+  String get ttsMissing =>
+      'Глас мотора за овај језик није инсталиран на вашем уређају.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Инсталирајте одговарајуће језичке податке у подешавањима за Андроид > Google TTS.';
+
+  @override
   String get adLoading => 'Оглас се учитава. Покушајте поново касније.';
 
   @override

@@ -1,6 +1,8 @@
 {
   "@@locale": "fi",
   "accuracy": "Tarkkuus",
+  "ttsMissing": "Tämän kielen puhemoottoria ei ole asennettu laitteeseesi.",
+  "ttsInstallGuide": "Asenna kielipaketti Android-asetuksista > Googlen tekstistä puheeksi -toiminnosta.",
   "adLoading": "Mainoksen lataus käynnissä. Yritä hetken kuluttua uudelleen.",
   "addNewSubject": "Lisää uusi nimi",
   "addParticipant": "Lisää osallistuja",

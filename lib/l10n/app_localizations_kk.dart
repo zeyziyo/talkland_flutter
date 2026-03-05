@@ -12,6 +12,14 @@ class AppLocalizationsKk extends AppLocalizations {
   String get accuracy => 'Дәлдік';
 
   @override
+  String get ttsMissing =>
+      'Бұл тіл үшін дыбыстық қозғалтқыш құрылғыда орнатылмаған.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Android параметрлері > Google TTS бөлімінде тіл деректерін орнатыңыз.';
+
+  @override
   String get adLoading =>
       'Жарнама жүктелуде. Бірнеше секундтан кейін қайталап көріңіз.';
 

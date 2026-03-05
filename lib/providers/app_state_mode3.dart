@@ -276,9 +276,12 @@ extension AppStateMode3 on AppState {
     
     notify();
     
-    final sourceText = _currentMode3Question!['source_text'] as String;
     final sourceLang = _currentMode3Question!['source_lang'] as String;
-    await _speechService.speak(sourceText, lang: getServiceLocale(sourceLang));
+    try {
+      await _speechService.speak(sourceText, lang: getServiceLocale(sourceLang));
+    } catch (e) {
+      handleTtsError(e);
+    }
   }
   
   List<Map<String, Object?>> _getAvailableQuestions() {

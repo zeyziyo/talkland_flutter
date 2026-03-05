@@ -12,6 +12,14 @@ class AppLocalizationsMs extends AppLocalizations {
   String get accuracy => 'Ketepatan';
 
   @override
+  String get ttsMissing =>
+      'Enjin suara untuk bahasa ini tidak dipasang pada peranti anda.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Sila pasang data bahasa yang berkaitan dalam Tetapan Android > Google TTS.';
+
+  @override
   String get adLoading => 'Memuatkan iklan. Sila cuba sebentar lagi.';
 
   @override

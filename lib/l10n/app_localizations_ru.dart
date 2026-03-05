@@ -12,6 +12,14 @@ class AppLocalizationsRu extends AppLocalizations {
   String get accuracy => 'Точность';
 
   @override
+  String get ttsMissing =>
+      'В вашем устройстве не установлен движок озвучивания для этого языка.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Пожалуйста, установите языковой пакет в настройках Android > Google TTS.';
+
+  @override
   String get adLoading =>
       'Загрузка рекламы. Пожалуйста, повторите попытку позже.';
 

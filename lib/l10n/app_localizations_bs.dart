@@ -12,6 +12,14 @@ class AppLocalizationsBs extends AppLocalizations {
   String get accuracy => 'Tačnost';
 
   @override
+  String get ttsMissing =>
+      'Jezični paket za ovaj jezik nije instaliran na vašem uređaju.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Molimo vas da instalirate podatke za odgovarajući jezik u Android postavkama > Google TTS.';
+
+  @override
   String get adLoading => 'Oglas se učitava. Pokušajte ponovo kasnije.';
 
   @override

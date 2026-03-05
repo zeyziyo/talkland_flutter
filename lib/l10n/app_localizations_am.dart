@@ -12,6 +12,13 @@ class AppLocalizationsAm extends AppLocalizations {
   String get accuracy => 'ትክክለኛነት';
 
   @override
+  String get ttsMissing => 'የዚህ ቋንቋ የድምፅ ሞተር በመሣሪያዎ ላይ አልተጫነም።';
+
+  @override
+  String get ttsInstallGuide =>
+      'እባክዎ በAndroid ቅንብሮች > Google TTS ውስጥ ተገቢውን የቋንቋ ውሂብ ይጫኑ።';
+
+  @override
   String get adLoading => 'ማስታወቂያ እየተጫነ ነው። እባክዎ ቆይተው እንደገና ይሞክሩ።';
 
   @override

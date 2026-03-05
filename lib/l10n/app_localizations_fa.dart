@@ -12,6 +12,13 @@ class AppLocalizationsFa extends AppLocalizations {
   String get accuracy => 'دقت';
 
   @override
+  String get ttsMissing => 'موتور صوتی این زبان روی دستگاه شما نصب نشده است.';
+
+  @override
+  String get ttsInstallGuide =>
+      'لطفاً داده های زبان مربوطه را در تنظیمات Android > Google TTS نصب کنید.';
+
+  @override
   String get adLoading => 'در حال بارگیری تبلیغ. لطفا بعدا دوباره امتحان کنید.';
 
   @override

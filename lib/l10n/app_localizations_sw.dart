@@ -12,6 +12,14 @@ class AppLocalizationsSw extends AppLocalizations {
   String get accuracy => 'Usahihi';
 
   @override
+  String get ttsMissing =>
+      'Injini ya sauti ya lugha hii haijasakinishwa kwenye kifaa chako.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Tafadhali sakinisha data ya lugha husika katika Mipangilio ya Android > Google TTS.';
+
+  @override
   String get adLoading => 'Inapakia tangazo. Tafadhali jaribu tena baadaye.';
 
   @override

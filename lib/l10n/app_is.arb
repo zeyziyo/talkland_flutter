@@ -1,6 +1,8 @@
 {
   "@@locale": "is",
   "accuracy": "Nákvæmni",
+  "ttsMissing": "Raddræðuvél fyrir þetta tungumál er ekki uppsett á tækinu þínu.",
+  "ttsInstallGuide": "Vinsamlegast settu upp viðeigandi tungumálapakka í Android stillingum > Google Texti í Tal.",
   "adLoading": "Auglýsing er að hlaðast. Vinsamlegast reyndu aftur síðar.",
   "addNewSubject": "Bæta við nýju nafni",
   "addParticipant": "Bæta við þátttakanda",

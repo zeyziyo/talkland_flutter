@@ -1,6 +1,8 @@
 {
   "@@locale": "fil",
   "accuracy": "Katumpakan",
+  "ttsMissing": "Wala pang voice engine para sa wikang ito na naka-install sa device.",
+  "ttsInstallGuide": "Pumunta sa Android Settings > Google TTS para i-install ang language data.",
   "adLoading": "Naglo-load ng ad. Subukang muli sa ibang pagkakataon.",
   "addNewSubject": "Idagdag ang bagong pamagat",
   "addParticipant": "Magdagdag ng Kalahok",

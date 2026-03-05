@@ -12,6 +12,14 @@ class AppLocalizationsDa extends AppLocalizations {
   String get accuracy => 'Nøjagtighed';
 
   @override
+  String get ttsMissing =>
+      'Lydmotoren for dette sprog er ikke installeret på din enhed.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Installer sprogdataene under Android-indstillinger > Google TTS.';
+
+  @override
   String get adLoading => 'Indlæser annonce. Prøv igen om et øjeblik.';
 
   @override

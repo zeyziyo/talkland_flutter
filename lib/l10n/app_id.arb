@@ -1,6 +1,8 @@
 {
   "@@locale": "id",
   "accuracy": "Akurasi",
+  "ttsMissing": "Mesin suara untuk bahasa ini belum terpasang di perangkat Anda.",
+  "ttsInstallGuide": "Silakan pasang data bahasa yang sesuai di Setelan Android > Google TTS.",
   "adLoading": "Memuat iklan. Silakan coba lagi nanti.",
   "addNewSubject": "Tambahkan Judul Baru",
   "addParticipant": "Tambah Peserta",

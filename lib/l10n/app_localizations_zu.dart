@@ -12,6 +12,14 @@ class AppLocalizationsZu extends AppLocalizations {
   String get accuracy => 'Ukunemba';
 
   @override
+  String get ttsMissing =>
+      'Injini yezwi yalolu limi ayifakiwe kudivayisi yakho.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Sicela ufake idatha yolimi olufanele kuzilungiselelo ze-Android > Google TTS.';
+
+  @override
   String get adLoading =>
       'Iskhangiso siyalayisha. Zama futhi ngemva kwesikhashana.';
 

@@ -1,6 +1,8 @@
 {
   "@@locale": "zu",
   "accuracy": "Ukunemba",
+  "ttsMissing": "Injini yezwi yalolu limi ayifakiwe kudivayisi yakho.",
+  "ttsInstallGuide": "Sicela ufake idatha yolimi olufanele kuzilungiselelo ze-Android > Google TTS.",
   "adLoading": "Iskhangiso siyalayisha. Zama futhi ngemva kwesikhashana.",
   "addNewSubject": "Engeza Isihloko Esisha",
   "addParticipant": "Engeza umhlanganyeli",

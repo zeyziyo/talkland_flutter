@@ -12,6 +12,14 @@ class AppLocalizationsFi extends AppLocalizations {
   String get accuracy => 'Tarkkuus';
 
   @override
+  String get ttsMissing =>
+      'Tämän kielen puhemoottoria ei ole asennettu laitteeseesi.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Asenna kielipaketti Android-asetuksista > Googlen tekstistä puheeksi -toiminnosta.';
+
+  @override
   String get adLoading =>
       'Mainoksen lataus käynnissä. Yritä hetken kuluttua uudelleen.';
 

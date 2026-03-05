@@ -1,6 +1,8 @@
 {
   "@@locale": "sv",
   "accuracy": "Noggrannhet",
+  "ttsMissing": "Den här språkets röstmotor är inte installerad på enheten.",
+  "ttsInstallGuide": "Installera språkdata under Android-inställningar > Google TTS.",
   "adLoading": "Laddar annons. Försök igen om en stund.",
   "addNewSubject": "Lägg till nytt namn",
   "addParticipant": "Lägg till deltagare",

@@ -1,6 +1,8 @@
 {
   "@@locale": "nb",
   "accuracy": "Nøyaktighet",
+  "ttsMissing": "Stemmemotoren for dette språket er ikke installert på enheten din.",
+  "ttsInstallGuide": "Installer språkdataene i Android-innstillinger > Google TTS.",
   "adLoading": "Laster inn annonsen. Prøv igjen senere.",
   "addNewSubject": "Legg til nytt navn",
   "addParticipant": "Legg til deltaker",

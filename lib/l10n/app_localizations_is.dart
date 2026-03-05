@@ -12,6 +12,14 @@ class AppLocalizationsIs extends AppLocalizations {
   String get accuracy => 'Nákvæmni';
 
   @override
+  String get ttsMissing =>
+      'Raddræðuvél fyrir þetta tungumál er ekki uppsett á tækinu þínu.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Vinsamlegast settu upp viðeigandi tungumálapakka í Android stillingum > Google Texti í Tal.';
+
+  @override
   String get adLoading =>
       'Auglýsing er að hlaðast. Vinsamlegast reyndu aftur síðar.';
 

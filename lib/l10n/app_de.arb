@@ -1,6 +1,8 @@
 {
   "@@locale": "de",
   "accuracy": "Genauigkeit",
+  "ttsMissing": "Die Sprachausgabe-Engine für diese Sprache ist auf Ihrem Gerät nicht installiert.",
+  "ttsInstallGuide": "Bitte installieren Sie die entsprechenden Sprachdaten in den Android-Einstellungen > Google Text-in-Sprache.",
   "adLoading": "Werbung wird geladen. Bitte versuchen Sie es später noch einmal.",
   "addNewSubject": "Neuen Titel hinzufügen",
   "addParticipant": "Teilnehmer hinzufügen",

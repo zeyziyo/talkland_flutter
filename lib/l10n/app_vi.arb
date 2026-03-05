@@ -1,6 +1,8 @@
 {
   "@@locale": "vi",
   "accuracy": "Độ chính xác",
+  "ttsMissing": "Không tìm thấy công cụ chuyển văn bản thành giọng nói cho ngôn ngữ này trên thiết bị của bạn.",
+  "ttsInstallGuide": "Vui lòng cài đặt dữ liệu ngôn ngữ tương ứng trong Cài đặt Android > Google TTS.",
   "adLoading": "Đang tải quảng cáo. Vui lòng thử lại sau.",
   "addNewSubject": "Thêm tên mới",
   "addParticipant": "Thêm người tham gia",

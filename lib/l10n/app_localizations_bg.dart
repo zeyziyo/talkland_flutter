@@ -12,6 +12,14 @@ class AppLocalizationsBg extends AppLocalizations {
   String get accuracy => 'Точност';
 
   @override
+  String get ttsMissing =>
+      'Гласовият двигател за този език не е инсталиран на вашето устройство.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Моля, инсталирайте езиковите данни в Настройки на Android > Google TTS.';
+
+  @override
   String get adLoading =>
       'Рекламата се зарежда. Моля, опитайте отново по-късно.';
 

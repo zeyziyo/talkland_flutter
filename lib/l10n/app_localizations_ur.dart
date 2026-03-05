@@ -12,6 +12,13 @@ class AppLocalizationsUr extends AppLocalizations {
   String get accuracy => 'درستگی';
 
   @override
+  String get ttsMissing => 'اس زبان کا صوتی انجن آپ کے آلے پر نصب نہیں ہے۔';
+
+  @override
+  String get ttsInstallGuide =>
+      'براہ کرم Android ترتیبات > Google TTS میں اس زبان کا ڈیٹا انسٹال کریں۔';
+
+  @override
   String get adLoading =>
       'اشتہار لوڈ ہو رہا ہے۔ براہ کرم بعد میں دوبارہ کوشش کریں۔';
 

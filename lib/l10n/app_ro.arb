@@ -1,6 +1,8 @@
 {
   "@@locale": "ro",
   "accuracy": "Acuratețe",
+  "ttsMissing": "Motorul vocal pentru această limbă nu este instalat pe dispozitiv.",
+  "ttsInstallGuide": "Instalează datele lingvistice corespunzătoare în Setări Android > Google TTS.",
   "adLoading": "Se încarcă anunțul. Te rugăm să încerci din nou mai târziu.",
   "addNewSubject": "Adăugați titlu nou",
   "addParticipant": "Adaugă participant",

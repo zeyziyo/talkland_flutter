@@ -12,6 +12,14 @@ class AppLocalizationsEn extends AppLocalizations {
   String get accuracy => 'Accuracy';
 
   @override
+  String get ttsMissing =>
+      'The voice engine for this language is not installed on your device.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Please install the language data in Android Settings > Google TTS.';
+
+  @override
   String get adLoading => 'Loading ad, please try again in a moment.';
 
   @override

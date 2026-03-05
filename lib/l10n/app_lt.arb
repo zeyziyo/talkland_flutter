@@ -1,6 +1,8 @@
 {
   "@@locale": "lt",
   "accuracy": "Tikslumas",
+  "ttsMissing": "Šiam kalbos paketui įrenginyje neįdiegta jokio teksto į kalbą variklio.",
+  "ttsInstallGuide": "Įdiekite kalbos duomenis skiltyje „Android“ nustatymai > „Google TTS“.",
   "adLoading": "Įkeliamas skelbimas. Bandykite dar kartą po kurio laiko.",
   "addNewSubject": "Pridėti naują pavadinimą",
   "addParticipant": "Pridėti dalyvį",

@@ -12,6 +12,14 @@ class AppLocalizationsSk extends AppLocalizations {
   String get accuracy => 'Presnosť';
 
   @override
+  String get ttsMissing =>
+      'Hlasový engine pre tento jazyk nie je nainštalovaný vo vašom zariadení.';
+
+  @override
+  String get ttsInstallGuide =>
+      'Nainštalujte jazykové dáta v Nastavenia Android > Google TTS.';
+
+  @override
   String get adLoading => 'Načítava sa reklama. Skúste to znova neskôr.';
 
   @override

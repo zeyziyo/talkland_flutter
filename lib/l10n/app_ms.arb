@@ -1,6 +1,8 @@
 {
   "@@locale": "ms",
   "accuracy": "Ketepatan",
+  "ttsMissing": "Enjin suara untuk bahasa ini tidak dipasang pada peranti anda.",
+  "ttsInstallGuide": "Sila pasang data bahasa yang berkaitan dalam Tetapan Android > Google TTS.",
   "adLoading": "Memuatkan iklan. Sila cuba sebentar lagi.",
   "addNewSubject": "Tambah Tajuk baharu",
   "addParticipant": "Tambah Peserta",
