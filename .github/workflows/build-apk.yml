@@ -37,12 +37,15 @@ jobs:
         flutter clean
         flutter pub get
 
-    - name: Ensure app_links release directory exists
+    - name: Fix potential plugin path issues (app_links etc.)
       run: |
-        # Workaround for AGP 8.x + app_links plugin missing source directory issue
+        # Workaround for AGP 8.3+ and certain plugins missing release source directories
+        # This prevents 'checkReleaseAarMetadata' and 'compileReleaseKotlin' failures
         PUB_CACHE_DIR="${PUB_CACHE:-$HOME/.pub-cache}"
-        mkdir -p "$PUB_CACHE_DIR/hosted/pub.dev/app_links-6.4.1/android/src/release/java"
-        echo ">>> Ensured app_links release directory exists at $PUB_CACHE_DIR"
+        TARGET_DIR="$PUB_CACHE_DIR/hosted/pub.dev/app_links-6.4.1/android/src/release/java"
+        mkdir -p "$TARGET_DIR"
+        touch "$TARGET_DIR/.keep"
+        echo ">>> Ensured plugin source directory exists at: $TARGET_DIR"
 
     - name: Pre-download sqlite3 native assets (jniLibs Injection)
       run: |
@@ -60,13 +63,15 @@ jobs:
           
           mkdir -p "$JNI_BASE/$target_dir"
           echo ">>> Downloading $src_file for $target_dir..."
-          if ! curl --fail --location --show-error --connect-timeout 60 --retry 15 --retry-delay 10 --retry-connrefused \
+          # Use verbose curl for better diagnostics, retrying on connection issues
+          if ! curl --fail --location --show-error --connect-timeout 60 --retry 15 --retry-delay 5 --retry-connrefused \
             -o "$target_file" "$BASE_URL/$src_file"; then
             echo "Error: Failed to download $src_file from $BASE_URL/$src_file. Build aborted."
             exit 1
           fi
         }
         
+        # Exact mapping for sqlite3-3.1.2 release assets
         download_asset "arm" "armeabi-v7a"
         download_asset "arm64" "arm64-v8a"
         download_asset "ia32" "x86"
@@ -76,7 +81,7 @@ jobs:
         find "$JNI_BASE" -name "libsqlite3.so" -ls
         count=$(find "$JNI_BASE" -name "libsqlite3.so" | wc -l)
         if [ "$count" -lt 4 ]; then
-          echo "Error: Only found $count of 4 jniLibs assets! Build aborted."
+          echo "Error: Only found $count of 4 required JNI assets! Build aborted."
           exit 1
         fi
         echo ">>> All 4 sqlite3 JNI assets successfully injected and verified."
