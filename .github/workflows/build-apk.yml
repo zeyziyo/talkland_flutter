@@ -43,29 +43,29 @@ jobs:
         BASE_URL="https://github.com/simolus3/sqlite3.dart/releases/download/sqlite3-$VERSION"
         JNI_BASE="android/app/src/main/jniLibs"
         
-        # 아키텍처 맵핑 정의 (Source -> Android JNI Dir)
-        declare -A ARCH_MAP=(
-          ["arm"]="armeabi-v7a"
-          ["arm64"]="arm64-v8a"
-          ["ia32"]="x86"
-          ["x64"]="x86_64"
-        )
-        
         echo ">>> Injecting sqlite3 $VERSION native assets to $JNI_BASE"
-        for arch in "${!ARCH_MAP[@]}"; do
-          DIR="${ARCH_MAP[$arch]}"
-          FILE="libsqlite3.$arch.android.so"
-          TARGET_FILE="$JNI_BASE/$DIR/libsqlite3.so"
+        
+        # 아키텍처 맵핑: [Source Arch] -> [Target JNI Dir]
+        # Source filenames are: libsqlite3.arm.android.so, libsqlite3.arm64.android.so, etc.
+        download_asset() {
+          local src_arch=$1
+          local target_dir=$2
+          local src_file="libsqlite3.${src_arch}.android.so"
+          local target_file="$JNI_BASE/${target_dir}/libsqlite3.so"
           
-          mkdir -p "$JNI_BASE/$DIR"
-          echo ">>> Processing $FILE for $DIR..."
-          
-          if ! curl --fail --location --show-error --connect-timeout 60 --retry 10 --retry-delay 5 --retry-connrefused \
-            -o "$TARGET_FILE" "$BASE_URL/$FILE"; then
-            echo "Error: Failed to download $FILE. Build aborted."
+          mkdir -p "$JNI_BASE/$target_dir"
+          echo ">>> Downloading $src_file for $target_dir..."
+          if ! curl --fail --location --show-error --connect-timeout 60 --retry 15 --retry-delay 10 --retry-connrefused \
+            -o "$target_file" "$BASE_URL/$src_file"; then
+            echo "Error: Failed to download $src_file. Build aborted."
             exit 1
           fi
-        done
+        }
+        
+        download_asset "arm" "armeabi-v7a"
+        download_asset "arm64" "arm64-v8a"
+        download_asset "ia32" "x86"
+        download_asset "x64" "x86_64"
         
         echo ">>> Verifying injected assets in $JNI_BASE:"
         find "$JNI_BASE" -name "libsqlite3.so" -ls
@@ -74,7 +74,7 @@ jobs:
           echo "Error: Found only $count of 4 jniLibs assets! Build aborted."
           exit 1
         fi
-        echo ">>> All 4 sqlite3 JNI assets successfully injected."
+        echo ">>> All 4 sqlite3 JNI assets successfully injected and verified."
 
     - name: Generate Localizations
       run: flutter gen-l10n

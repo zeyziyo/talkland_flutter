@@ -63,6 +63,12 @@ android {
         checkReleaseBuilds = false
         abortOnError = false
     }
+
+    packaging {
+        resources {
+            pickFirsts.add("lib/**/libsqlite3.so")
+        }
+    }
 }
 
 flutter {
