@@ -1,7 +1,10 @@
 package com.zeyziyo.talkie
 
 import android.content.Intent
+import android.media.AudioManager
+import android.os.Bundle
 import android.provider.Settings
+import io.flutter.embedding.android.FlutterActivity
 import io.flutter.plugin.common.MethodChannel
 
 class MainActivity : FlutterActivity() {
