@@ -32,41 +32,51 @@ jobs:
         channel: 'stable' # Use latest stable version
         cache: true       # Enable Flutter pub cache
         
-    - name: Get dependencies
-      run: flutter pub get
+    - name: Clean and Get dependencies
+      run: |
+        flutter clean
+        flutter pub get
 
     - name: Pre-download sqlite3 native assets
       run: |
         VERSION="3.1.2"
-        BASE_URL="https://github.com/simolus3/sqlite3.dart/releases/download/sqlite3-$VERSION"
         PUB_CACHE_DIR="${PUB_CACHE:-$HOME/.pub-cache}"
-        TARGET_DIR="$PUB_CACHE_DIR/hosted/pub.dev/sqlite3-$VERSION"
-        mkdir -p "$TARGET_DIR"
+        # Find the actual directory for the sqlite3 package in pub cache
+        # Note: Package is 'sqlite3', so we look for 'sqlite3-VERSION'
+        TARGET_DIR=$(find "$PUB_CACHE_DIR" -name "sqlite3-$VERSION" -type d | head -n 1)
         
-        echo ">>> Downloading sqlite3 $VERSION native assets to $TARGET_DIR"
+        if [ -z "$TARGET_DIR" ]; then
+          echo ">>> sqlite3-$VERSION not found in found cache. Creating custom path..."
+          TARGET_DIR="$PUB_CACHE_DIR/hosted/pub.dev/sqlite3-$VERSION"
+          mkdir -p "$TARGET_DIR"
+        fi
+        
+        echo ">>> Target Directory: $TARGET_DIR"
+        BASE_URL="https://github.com/simolus3/sqlite3.dart/releases/download/sqlite3-$VERSION"
+        
         for arch in arm arm64 x64 ia32; do
           FILE="libsqlite3.$arch.android.so"
-          echo ">>> Fetching $FILE..."
-          if ! curl --fail --location --show-error --connect-timeout 60 --retry 15 --retry-delay 10 --retry-connrefused \
-            -o "$TARGET_DIR/$FILE" "$BASE_URL/$FILE"; then
-            echo "Error: Failed to download $FILE. Build aborted."
-            exit 1
+          echo ">>> Processing $FILE..."
+          if [ ! -f "$TARGET_DIR/$FILE" ]; then
+            echo ">>> Downloading $FILE..."
+            if ! curl --fail --location --show-error --connect-timeout 60 --retry 10 --retry-delay 5 --retry-connrefused \
+              -o "$TARGET_DIR/$FILE" "$BASE_URL/$FILE"; then
+              echo "Error: Failed to download $FILE. Build aborted."
+              exit 1
+            fi
+          else
+            echo ">>> $FILE already exists, skipping download."
           fi
         done
         
         echo ">>> Verifying assets in $TARGET_DIR:"
-        ls -lh "$TARGET_DIR"
+        ls -lh "$TARGET_DIR"/*.so
         count=$(ls -1 "$TARGET_DIR"/*.so 2>/dev/null | wc -l)
         if [ "$count" -lt 4 ]; then
-          echo "Error: Only found $count of 4 assets even after success reports! Build aborted."
+          echo "Error: Found only $count of 4 assets! Build aborted."
           exit 1
         fi
         echo ">>> All 4 sqlite3 native assets verified."
-
-    - name: Clean and Install Dependencies
-      run: |
-        flutter clean
-        flutter pub get
 
     - name: Generate Localizations
       run: flutter gen-l10n
@@ -89,7 +99,7 @@ jobs:
         echo "KAKAO_NATIVE_APP_KEY=${{ secrets.KAKAO_NATIVE_APP_KEY }}" >> .env
         echo "KAKAO_JAVASCRIPT_KEY=${{ secrets.KAKAO_JAVASCRIPT_KEY }}" >> .env
 
-    - name: Build APK
+    - name: Build APK (with verbose logging)
       env:
         FLUTTER_ROOT: ${{ env.FLUTTER_ROOT }}
       run: flutter build apk --release --verbose
