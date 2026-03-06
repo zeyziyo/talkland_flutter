@@ -356,7 +356,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpMode2Details =>
-      '• Materials: Access \'Select Material Set\' or \'Online Library\' via the top-right menu (⋮).\n• Flip Card: Use \'Show/Hide\' to check translations.\n• Listen: Tap speaker icons for pronunciation.\n• Mastery: Mark items as studied with the checkmark (V).\n• Delete: Long-press a card to remove it from your records.\n• Filter: Search and filter by tags or starting letters.';
+      '• Materials: Access \'Select Material Set\' or \'Online Library\' via the top-right menu (⋮).\n• Flip Card: Use \'Show/Hide\' to check translations.\n• Listen: Tap speaker icons for pronunciation.\n• Mastery: Mark items as studied with the checkmark (V).\n• Delete: Long-press a card to remove it from your records.\n• Filter: Real-time smart search and filter by tags or starting letters.';
 
   @override
   String get helpMode3Desc =>

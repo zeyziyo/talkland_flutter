@@ -21,7 +21,12 @@
 
 ---
 
----
+### [2026-03-06] 검색 고도화 및 UI 테마 일관성 확보 (v1.8.13)
+
+- **Search Accuracy (Mode 2/3)**: 기존의 포괄적인 JSON 문자열 검색(`t.data_json LIKE ?`)을 데이터베이스 엔진이 제공하는 정밀한 **`json_extract`** 함수 방식으로 전면 개편했습니다. 이제 대상 언어(`target_lang`)와 원본 언어(`source_lang`)의 `.text` 필드 및 `caption`만을 정확하게 조준하여 "물" 검색 시 "책" 같은 엉뚱한 결과가 출력되지 않도록 필터링 무결성을 확보했습니다.
+- **As-You-Type Filtering**: `SearchBar` 위젯의 키보드 입력 발생 시점에 실시간 필터링을 트리거하여(`appState.setSearchQuery(value)`), 엔터키 없이도 즉각 반응하는 스마트 검색을 구현했습니다.
+- **Focus & Overlay Recovery (v1.8.12)**: 자동완성 항복 클릭 시 `selection['type']` 참조 에러로 인해 모드 전환이 먹통이 되고 오버레이가 사라지지 않던 치명적 버그 수정. `FocusManager.instance.primaryFocus?.unfocus()`를 활용한 전역 포커스 회수 도입으로 앱 내비게이션 안정성 달성.
+- **UI Unification (Mode 4)**: '대화 기록(Chat History)'에 있는 `TextField` 검색창 디자인을 모드 2, 3과 동일한 비율의 "다크 테마 둥근 검색바(`Colors.grey.shade900`, 흰색 텍스트)"로 교체하여 앱 전반의 다크 모드 통일감 향상.
 
 ### [2026-03-05] 카자흐스탄어 TTS 지원 해결 및 로케일 매핑 보강 (v16.2.3)
 
