@@ -263,7 +263,11 @@ extension AppStateMode2 on AppState {
       }
       
       if (_searchQuery.isNotEmpty) {
-        conditions.add('(t.data_json LIKE ? OR m.caption LIKE ?)');
+        // Phase 17500: Use json_extract to precisely target text fields in both languages, avoiding irrelevant matches
+        conditions.add("(json_extract(t.data_json, '\$.' || ? || '.text') LIKE ? OR json_extract(t.data_json, '\$.' || ? || '.text') LIKE ? OR m.caption LIKE ?)");
+        whereArgs.add(_sourceLang);
+        whereArgs.add('%$_searchQuery%');
+        whereArgs.add(_targetLang);
         whereArgs.add('%$_searchQuery%');
         whereArgs.add('%$_searchQuery%');
       }

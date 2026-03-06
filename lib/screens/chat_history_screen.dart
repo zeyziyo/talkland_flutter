@@ -102,10 +102,17 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
                   Expanded(
                     child: TextField(
                       controller: _searchController,
+                      style: const TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         hintText: l10n.search,
-                        prefixIcon: const Icon(Icons.search),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                        hintStyle: TextStyle(color: Colors.grey.shade400),
+                        prefixIcon: const Icon(Icons.search, color: Colors.white70),
+                        filled: true,
+                        fillColor: Colors.grey.shade900,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30), // Match Material 3 SearchBar rounding
+                          borderSide: BorderSide.none,
+                        ),
                         contentPadding: const EdgeInsets.symmetric(horizontal: 16),
                       ),
                       onChanged: (val) => setState(() {}),
