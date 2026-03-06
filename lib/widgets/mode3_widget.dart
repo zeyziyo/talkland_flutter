@@ -65,7 +65,7 @@ class Mode3Widget extends StatelessWidget {
                            // Just jump to result within current tab
                            appState.jumpToSearchResult(selection['text']!, selection['type']!);
                            if (appState.mode3SessionActive) appState.startMode3SessionDirectly();
-                           FocusScope.of(context).unfocus(); // Phase 113: Dismiss overlay
+                           FocusManager.instance.primaryFocus?.unfocus(); // Phase 113: Dismiss overlay
                         },
                         fieldViewBuilder: (context, textEditingController, focusNode, onFieldSubmitted) {
                           // Phase 109: Robust Sync
