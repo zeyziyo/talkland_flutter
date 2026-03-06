@@ -23,7 +23,7 @@ class MainActivity : FlutterActivity() {
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL).setMethodCallHandler { call, result ->
             if (call.method == "openTtsSettings") {
                 try {
-                    val intent = Intent(Settings.ACTION_TTS_SETTINGS)
+                    val intent = Intent("com.android.settings.TTS_SETTINGS")
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
                     result.success(true)
