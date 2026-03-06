@@ -212,15 +212,30 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                 return TextField(
                                   controller: controller,
                                   focusNode: focusNode,
-                                  minLines: 2,
-                                  maxLines: null,
+                                  minLines: 3,
+                                  maxLines: 3,
                                   decoration: InputDecoration(
                                     hintText: appState.recordTypeFilter == 'word' ? l10n.enterWordHint : l10n.enterSentenceHint,
                                     hintStyle: TextStyle(
                                       color: Colors.grey.shade400,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w400,
                                       fontStyle: FontStyle.italic,
                                     ),
-                                    border: const OutlineInputBorder(),
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(8),
+                                      borderSide: BorderSide(color: Colors.grey.shade300, width: 1.5),
+                                    ),
+                                    enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(8),
+                                      borderSide: BorderSide(color: Colors.grey.shade300, width: 1.5),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(8),
+                                      borderSide: BorderSide(color: Colors.blue.shade400, width: 2.0),
+                                    ),
+                                    filled: true,
+                                    fillColor: Colors.grey.shade50,
                                     suffixIcon: Row(
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
@@ -512,12 +527,31 @@ class _Mode1WidgetState extends State<Mode1Widget> {
                                   child: TextField(
                                     controller: _translatedTextController,
                                     decoration: InputDecoration(
-                                      border: const OutlineInputBorder(),
                                       hintText: l10n.translationResultHint,
-                                      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                                      hintStyle: TextStyle(
+                                        color: Colors.grey.shade400,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w400,
+                                        fontStyle: FontStyle.italic,
+                                      ),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                        borderSide: BorderSide(color: Colors.grey.shade300, width: 1.5),
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                        borderSide: BorderSide(color: Colors.grey.shade300, width: 1.5),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                        borderSide: BorderSide(color: Colors.green.shade400, width: 2.0),
+                                      ),
+                                      filled: true,
+                                      fillColor: Colors.green.shade50.withValues(alpha: 0.3),
+                                      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                                     ),
-                                    minLines: 1,
-                                    maxLines: null,
+                                    minLines: 3,
+                                    maxLines: 3,
                                     readOnly: false, // Phase 83: Enable editing
                                     onChanged: (val) {
                                       // Phase 83: Allow user to refine translation

@@ -456,6 +456,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Row(
                       children: [
                         Expanded(
+                          flex: 3,
                           child: Container(
                             height: 40,
                             decoration: BoxDecoration(
@@ -488,41 +489,52 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                         ),
-                        const SizedBox(width: 16),
+                        const SizedBox(width: 12),
                         // Mini Language Swap Button
-                        InkWell(
-                          key: _swapButtonKey, // Attached Key
-                          onTap: () => appState.swapLanguages(),
-                          borderRadius: BorderRadius.circular(8),
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                            decoration: BoxDecoration(
-                              color: Colors.blue[50],
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: Colors.blue.shade200),
-                            ),
-                            child: Row(
-                              children: [
-                                Text(
-                                  appState.sourceLang.toUpperCase(),
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.blue.shade800,
+                        Expanded(
+                          flex: 4,
+                          child: InkWell(
+                            key: _swapButtonKey, // Attached Key
+                            onTap: () => appState.swapLanguages(),
+                            borderRadius: BorderRadius.circular(8),
+                            child: Container(
+                              height: 40,
+                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                              decoration: BoxDecoration(
+                                color: Colors.blue[50],
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.blue.shade200),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Flexible(
+                                    child: Text(
+                                      appState.languageNames[appState.sourceLang] ?? appState.sourceLang.toUpperCase(),
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.blue.shade800,
+                                      ),
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(width: 4),
-                                Icon(Icons.swap_horiz, size: 16, color: Colors.blue.shade400),
-                                const SizedBox(width: 4),
-                                Text(
-                                  appState.targetLang.toUpperCase(),
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.blue.shade800,
+                                  const SizedBox(width: 4),
+                                  Icon(Icons.swap_horiz, size: 16, color: Colors.blue.shade600),
+                                  const SizedBox(width: 4),
+                                  Flexible(
+                                    child: Text(
+                                      appState.languageNames[appState.targetLang] ?? appState.targetLang.toUpperCase(),
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.blue.shade800,
+                                      ),
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -971,9 +983,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     initialValue: tempSource,
                     decoration: const InputDecoration(border: OutlineInputBorder()),
                     items: LanguageConstants.supportedLanguages.map((lang) {
+                      final nativeName = LanguageConstants.getLanguageMap(lang['code']!)[lang['code']!] ?? lang['name'];
                       return DropdownMenuItem<String>(
                         value: lang['code'],
-                        child: Text(lang['name']!),
+                        child: Text('${lang['name']} ($nativeName)'),
                       );
                     }).toList(),
                     onChanged: (value) {
@@ -1001,9 +1014,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     initialValue: tempTarget,
                     decoration: const InputDecoration(border: OutlineInputBorder()),
                     items: LanguageConstants.supportedLanguages.map((lang) {
+                      final nativeName = LanguageConstants.getLanguageMap(lang['code']!)[lang['code']!] ?? lang['name'];
                       return DropdownMenuItem<String>(
                         value: lang['code'],
-                        child: Text(lang['name']!),
+                        child: Text('${lang['name']} ($nativeName)'),
                       );
                     }).toList(),
                     onChanged: (value) {
@@ -1055,10 +1069,10 @@ class _HomeScreenState extends State<HomeScreen> {
         onTap: onTap,
         child: Container(
           decoration: BoxDecoration(
-            color: isSelected ? Colors.white : Colors.transparent,
+            color: isSelected ? Colors.indigoAccent : Colors.transparent,
             borderRadius: BorderRadius.circular(10),
             boxShadow: isSelected ? [
-              BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 4, offset: const Offset(0, 2))
+              BoxShadow(color: Colors.black.withValues(alpha: 0.1), blurRadius: 4, offset: const Offset(0, 2))
             ] : null,
           ),
           margin: const EdgeInsets.all(4),
@@ -1067,8 +1081,8 @@ class _HomeScreenState extends State<HomeScreen> {
             label,
             style: TextStyle(
               fontSize: 16, // Increased as requested
-              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-              color: isSelected ? Colors.blue : Colors.grey.shade600,
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.w600,
+              color: isSelected ? Colors.white : Colors.grey.shade700,
             ),
           ),
         ),
