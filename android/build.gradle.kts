@@ -21,9 +21,11 @@ subprojects {
             force("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
             force("androidx.lifecycle:lifecycle-viewmodel:2.7.0")
             force("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+            force("androidx.core:core:1.13.1")
             force("androidx.core:core-ktx:1.13.1")
             force("androidx.work:work-runtime:2.9.0")
             force("androidx.work:work-runtime-ktx:2.9.0")
+            force("androidx.annotation:annotation:1.7.1")
         }
     }
 }
