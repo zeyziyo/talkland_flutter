@@ -1109,18 +1109,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       ),
     );
   }
-  
+
   Widget _buildModernTab({required bool isSelected, required IconData icon, required String label}) {
      return Tab(
-       height: 44, // v15.9: Compact height
+       height: 44, // Slimmer height
        child: Row(
          mainAxisAlignment: MainAxisAlignment.center,
          mainAxisSize: MainAxisSize.min,
          children: [
-           Icon(icon, size: 22), // slightly smaller icon
+           Icon(icon, size: 22),
            if (isSelected) 
              Padding(
-               padding: const EdgeInsets.only(left: 6.0),
+               padding: const EdgeInsets.only(left: 8.0),
                child: Text(
                  label, 
                  style: const TextStyle(
