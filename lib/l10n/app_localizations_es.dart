@@ -1354,4 +1354,10 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get helpTag =>
       'Introduce palabras clave para clasificar o buscar más tarde.';
+
+  @override
+  String get ecoMode => '저사양 모드 (Eco Mode)';
+
+  @override
+  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

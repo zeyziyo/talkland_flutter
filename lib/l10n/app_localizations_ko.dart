@@ -1313,4 +1313,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get helpTag => '나중에 분류하거나 검색하기 위한 키워드를 입력하세요.';
+
+  @override
+  String get ecoMode => '저사양 모드 (Eco Mode)';
+
+  @override
+  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

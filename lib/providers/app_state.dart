@@ -269,6 +269,7 @@ class AppState extends ChangeNotifier {
   bool _isSaved = false;
   String _note = '';
   bool _isWordMode = true;
+  bool _useSimpleMic = false; // Phase 17610: Eco mode for low-end devices
   String _sourcePos = ''; 
   String _sourceFormType = ''; 
   String _sourceRoot = ''; 
@@ -474,6 +475,7 @@ class AppState extends ChangeNotifier {
   
   // Essential Getters for UI
   String get recordTypeFilter => _recordTypeFilter;
+  bool get useSimpleMic => _useSimpleMic;
   bool get isRecommendationLoading => _isRecommendationLoading;
   List<Map<String, dynamic>> get recommendedItems => _recommendedItems;
   List<Map<String, dynamic>> get studyMaterials => _studyMaterials;

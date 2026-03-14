@@ -1345,4 +1345,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpTag => 'Enter keywords for categorization or searching later.';
+
+  @override
+  String get ecoMode => 'Eco Mode (Low-end devices)';
+
+  @override
+  String get ecoModeDesc => 'Simplifies icons to save memory/resources.';
 }

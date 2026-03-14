@@ -2717,6 +2717,18 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'나중에 분류하거나 검색하기 위한 키워드를 입력하세요.'**
   String get helpTag;
+
+  /// No description provided for @ecoMode.
+  ///
+  /// In ko, this message translates to:
+  /// **'저사양 모드 (Eco Mode)'**
+  String get ecoMode;
+
+  /// No description provided for @ecoModeDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'아이콘을 단순화하여 메모리와 리소스를 절약합니다.'**
+  String get ecoModeDesc;
 }
 
 class _AppLocalizationsDelegate

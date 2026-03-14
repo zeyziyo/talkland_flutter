@@ -1363,4 +1363,10 @@ class AppLocalizationsMy extends AppLocalizations {
   @override
   String get helpTag =>
       'နောက်ပိုင်း အမျိုးအစားခွဲ ဒါမှမဟုတ် ရှာဖွေဖို့အတွက် သော့ချက်စာလုံးကို ရိုက်ထည့်ပါ။';
+
+  @override
+  String get ecoMode => '저사양 모드 (Eco Mode)';
+
+  @override
+  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

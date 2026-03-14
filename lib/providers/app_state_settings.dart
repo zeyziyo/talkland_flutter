@@ -27,6 +27,7 @@ extension AppStateSettings on AppState {
     // Chat Gender Settings
     _chatUserGender = _prefs?.getString('chatUserGender') ?? 'male';
     _chatAiGender = _prefs?.getString('chatAiGender') ?? 'female';
+    _useSimpleMic = _prefs?.getBool('useSimpleMic') ?? false;
 
     // Onboarding Settings
     final hasSeenOnboarding = _prefs?.getBool('has_seen_onboarding') ?? false;
@@ -38,6 +39,7 @@ extension AppStateSettings on AppState {
     await _prefs?.setString('targetLang', _targetLang);
     await _prefs?.setString('chatUserGender', _chatUserGender);
     await _prefs?.setString('chatAiGender', _chatAiGender);
+    await _prefs?.setBool('useSimpleMic', _useSimpleMic);
   }
 
   void setChatUserGender(String gender) {
@@ -48,6 +50,12 @@ extension AppStateSettings on AppState {
 
   void setChatAiGender(String gender) {
     _chatAiGender = gender;
+    _saveSettings();
+    notify();
+  }
+
+  void setUseSimpleMic(bool value) {
+    _useSimpleMic = value;
     _saveSettings();
     notify();
   }

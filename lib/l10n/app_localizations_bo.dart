@@ -1351,4 +1351,10 @@ class AppLocalizationsBo extends AppLocalizations {
   @override
   String get helpTag =>
       'མ་འོངས་པར་དབྱེ་དཔྱད་འབད་ནི་དང་འཚོལ་ཞིབ་འབད་ནིའི་དོན་ལུ་ түлхүүр үг བཙུགས།';
+
+  @override
+  String get ecoMode => '저사양 모드 (Eco Mode)';
+
+  @override
+  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

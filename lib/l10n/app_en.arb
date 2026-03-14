@@ -795,5 +795,7 @@
   "openSettings": "Open Settings",
   "helpNotebook": "Select a folder to save translated results.",
   "helpNote": "Record meanings, examples, or context freely.",
-  "helpTag": "Enter keywords for categorization or searching later."
+  "helpTag": "Enter keywords for categorization or searching later.",
+  "ecoMode": "Eco Mode (Low-end devices)",
+  "ecoModeDesc": "Simplifies icons to save memory/resources."
 }

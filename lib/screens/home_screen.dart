@@ -1055,6 +1055,22 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       }
                     },
                   ),
+                  const SizedBox(height: 24),
+
+                  // Phase 17610: Eco Mode Toggle
+                  const Divider(),
+                  const SizedBox(height: 8),
+                  SwitchListTile(
+                    contentPadding: EdgeInsets.zero,
+                    title: Text(l10n.ecoMode, style: const TextStyle(fontWeight: FontWeight.bold)),
+                    subtitle: Text(l10n.ecoModeDesc, style: const TextStyle(fontSize: 12)),
+                    value: appState.useSimpleMic,
+                    activeThumbColor: Colors.green,
+                    onChanged: (value) {
+                      appState.setUseSimpleMic(value);
+                      setDialogState(() {}); // Rebuild dialog to reflect switch state
+                    },
+                  ),
                 ],
               ),
               actions: [
