@@ -626,12 +626,96 @@ class MeshMicIcon extends StatelessWidget {
             ),
         ],
       ),
-      child: Image.asset(
-        'assets/mic_geometric_final.png',
-        width: size,
-        height: size,
-        fit: BoxFit.contain,
+      child: CustomPaint(
+        size: Size(size, size),
+        painter: MeshMicPainter(color: color),
       ),
     );
   }
+}
+
+class MeshMicPainter extends CustomPainter {
+  final Color color;
+
+  MeshMicPainter({required this.color});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final double centerX = size.width / 2;
+    final double centerY = size.height * 0.42;
+    final double micWidth = size.width * 0.42;
+    final double micHeight = size.height * 0.68;
+
+    // 1. Sleek Capsule Body with 3D Depth
+    final RRect micBodyRRect = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(centerX, centerY), width: micWidth, height: micHeight),
+      Radius.circular(micWidth / 2),
+    );
+
+    final HSLColor hsl = HSLColor.fromColor(color);
+    
+    // Multi-tone Metallic Gradient for 3D effect
+    final Paint bodyPaint = Paint()
+      ..shader = LinearGradient(
+        colors: [
+          hsl.withLightness(0.2).toColor(),
+          hsl.withLightness(0.5).toColor(),
+          hsl.withLightness(0.8).toColor(), // Highlight
+          hsl.withLightness(0.5).toColor(),
+          hsl.withLightness(0.2).toColor(),
+        ],
+        stops: const [0.0, 0.25, 0.5, 0.75, 1.0],
+        begin: Alignment.centerLeft,
+        end: Alignment.centerRight,
+      ).createShader(micBodyRRect.outerRect);
+
+    canvas.drawRRect(micBodyRRect, bodyPaint);
+
+    // 2. Mesh/Grille Pattern (Subtle)
+    final Paint meshPaint = Paint()
+      ..color = Colors.black.withValues(alpha: 0.15)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.2;
+
+    for (double y = centerY - micHeight / 2 + 12; y < centerY + micHeight / 3; y += 7) {
+      canvas.drawLine(
+        Offset(centerX - micWidth / 2 + 5, y),
+        Offset(centerX + micWidth / 2 - 5, y),
+        meshPaint,
+      );
+    }
+
+    // 3. Realistic Cradle (U-Shape)
+    final Paint cradlePaint = Paint()
+      ..color = hsl.withLightness(0.3).toColor()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 6.0
+      ..strokeCap = StrokeCap.round;
+
+    final Rect cradleRect = Rect.fromCenter(
+      center: Offset(centerX, centerY + 8),
+      width: micWidth + 18,
+      height: micHeight,
+    );
+    canvas.drawArc(cradleRect, 0.15 * 3.1415, 0.7 * 3.1415, false, cradlePaint);
+
+    // 4. Sturdy Base/Stand
+    final Paint standPaint = Paint()..color = hsl.withLightness(0.2).toColor();
+    // Pillar
+    canvas.drawRect(
+      Rect.fromCenter(center: Offset(centerX, size.height * 0.88), width: 10, height: 16),
+      standPaint,
+    );
+    // Base Plate
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+        Rect.fromCenter(center: Offset(centerX, size.height * 0.95), width: size.width * 0.6, height: 8),
+        const Radius.circular(4),
+      ),
+      standPaint,
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant MeshMicPainter oldDelegate) => oldDelegate.color != color;
 }
