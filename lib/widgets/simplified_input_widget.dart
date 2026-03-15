@@ -96,8 +96,6 @@ class _SimplifiedInputWidgetState extends State<SimplifiedInputWidget> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('${l10n.inputModeTitle}:', style: const TextStyle(fontSize: 11, color: Colors.black45, fontWeight: FontWeight.bold)),
-                            const SizedBox(width: 4),
                             _buildSimpleLangButton(context, state.sourceLang, (val) {
                               state.setSourceLang(val);
                               // Sync with global state (ONLY if it's the learning lang)
@@ -125,8 +123,6 @@ class _SimplifiedInputWidgetState extends State<SimplifiedInputWidget> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('${l10n.translation}:', style: const TextStyle(fontSize: 11, color: Colors.black45, fontWeight: FontWeight.bold)),
-                            const SizedBox(width: 4),
                             _buildSimpleLangButton(context, state.targetLang, (val) {
                               state.setTargetLang(val);
                               // Sync with global state (ONLY if it's the learning lang)
@@ -267,19 +263,9 @@ class _SimplifiedInputWidgetState extends State<SimplifiedInputWidget> {
     final appState = Provider.of<AppState>(context, listen: false);
     final myLang = appState.sourceLang; // UI Language (Source in Settings)
     
-    // Naming Logic: EnglishName(NativeName) based on 'My Language'
-    String displayName;
+    // Naming Logic: Simplified to show only the name in 'My Language'
     final myLangMap = LanguageConstants.getLanguageMap(myLang);
-    final nativeMap = LanguageConstants.getLanguageMap(currentLang);
-    
-    final nameInMyLang = myLangMap[currentLang] ?? currentLang.toUpperCase();
-    final nativeName = nativeMap[currentLang] ?? nameInMyLang;
-    
-    if (nameInMyLang == nativeName) {
-      displayName = nameInMyLang;
-    } else {
-      displayName = '$nameInMyLang($nativeName)';
-    }
+    final String displayName = myLangMap[currentLang] ?? currentLang.toUpperCase();
 
     final Widget labelWidget = Container(
       padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
