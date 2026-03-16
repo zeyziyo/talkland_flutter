@@ -243,11 +243,11 @@ extension AppStateAuth on AppState {
         // Phase 17469: Localize titles by fetching the 'subject' from the actual source JSON
         final String baseRepoUrl = AppConstants.materialsBaseUrl;
         
-        // Parallel fetch for subjects (Limit concurrent requests if needed, but for small index it's okay)
-        final localizedMaterials = await Future.wait(rawMaterials.map((m) async {
+        // Parallel fetch for subjects & Strict Filtering by Native Language
+        final List<Map<String, dynamic>?> filteredResults = await Future.wait(rawMaterials.map((m) async {
           try {
             final String? path = m['path'] as String?;
-            if (path == null) return m;
+            if (path == null) return null;
 
             // Construct source URL based on current app source language (Native Language)
             final String langDir = LanguageConstants.supportedLanguages.firstWhere(
@@ -264,25 +264,20 @@ extension AppStateAuth on AppState {
               if (localizedSubject != null) {
                  return {...m, 'localized_name': localizedSubject};
               }
-            } else if (langDir != 'English') {
-              // Fallback to English if target language folder not found (e.g., 404)
-              final String fallbackUrl = '$baseRepoUrl/English/$path';
-              final fResponse = await http.get(Uri.parse(fallbackUrl)).timeout(const Duration(seconds: 5));
-              if (fResponse.statusCode == 200) {
-                final fData = json.decode(utf8.decode(fResponse.bodyBytes));
-                final String? fallbackSubject = fData['subject'] as String?;
-                if (fallbackSubject != null) {
-                   return {...m, 'localized_name': fallbackSubject};
-                }
-              }
+              return m; // Show original if subject missing but file exists
+            } else {
+              // v59 Improvement: Strict filtering. If not found in native lang folder, skip it.
+              debugPrint('[Online] Material not available in $langDir: ${m['name']}');
+              return null; 
             }
           } catch (e) {
-            debugPrint('[Online] Localization Error for ${m['name']}: $e');
+            debugPrint('[Online] Filter Error for ${m['name']}: $e');
+            return null;
           }
-          return m; // Fallback to original name
         }));
 
-        _onlineMaterials = localizedMaterials;
+        // Remove nulls (filtered out items)
+        _onlineMaterials = filteredResults.whereType<Map<String, dynamic>>().toList();
         
         // Phase 17480: Proactively repair existing local notebook titles using sync keys
         await _repairLocalTitles();

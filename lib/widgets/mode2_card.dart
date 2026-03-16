@@ -35,7 +35,8 @@ class Mode2Card extends StatelessWidget {
     final recordTargetLang = record['target_lang'] as String? ?? appState.targetLang;
     
     // Check if we need to swap display based on current AppState settings
-    final isSwapped = appState.sourceLang == recordTargetLang;
+    // v59: Unified XOR logic for robust swapping
+    final isSwapped = (appState.sourceLang == recordTargetLang) ^ appState.isDirectionSwapped;
     
     // Determine what to show as "Source" (Top) and "Target" (Hidden/Bottom)
     final topLang = isSwapped ? recordTargetLang : recordSourceLang;

@@ -362,7 +362,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get helpMode1Desc =>
-      'Adnabod llais neu fewnbynnu testun i gyfieithu ar unwaith, a\'i gadw i\'r rhestr astudio.';
+      'Dechreuwch ddysgu iaith yn y ffordd fwyaf greddfol gyda\'r meicroffon 3D premiwm ac eiconau bysellfwrdd mawr.';
 
   @override
   String get helpMode1Details =>
@@ -1304,7 +1304,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Gyda Talkie, gallwch gyfieithu ar unwaith rhwng yr ieithoedd o\'ch dewis o 80 o ieithoedd a dysgu dro ar ôl tro.';
+      'Croeso i Talkie! Rydym yn cefnogi pob un o\'r 80+ o ieithoedd ledled y byd gyda 100% o gywirdeb, ynghyd â dyluniad 3D premiwm newydd a pherfformiad wedi\'i optimeiddio ar gyfer profiad dysgu perffaith.';
 
   @override
   String get welcomeButton => 'Dechrau';
@@ -1356,10 +1356,4 @@ class AppLocalizationsCy extends AppLocalizations {
   @override
   String get helpTag =>
       'Rhowch eiriau allweddol i\'w dosbarthu neu i chwilio amdanynt yn nes ymlaen.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

@@ -5,8 +5,6 @@
         {
             "text": "Do you have any rooms available?",
             "note": "",
-            "form_type": "Interrogative",
-            "style": "Formal",
             "tags": [
                 "hotel",
                 "check-in"
@@ -15,8 +13,6 @@
         {
             "text": "I'd like to book a room.",
             "note": "",
-            "form_type": "Declarative",
-            "style": "Formal",
             "tags": [
                 "hotel",
                 "booking"
@@ -25,8 +21,6 @@
         {
             "text": "Do you have Wi-Fi?",
             "note": "",
-            "form_type": "Interrogative",
-            "style": "Informal",
             "tags": [
                 "hotel",
                 "service"

@@ -5,8 +5,6 @@
         {
             "text": "¡Adiós!",
             "note": "",
-            "form_type": "Exclamativa",
-            "style": "Informal",
             "tags": [
                 "despedida",
                 "saludo"
@@ -15,8 +13,6 @@
         {
             "text": "Hasta mañana.",
             "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
             "tags": [
                 "despedida",
                 "saludo"
@@ -25,8 +21,6 @@
         {
             "text": "Hasta pronto.",
             "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
             "tags": [
                 "despedida",
                 "saludo"
@@ -35,8 +29,6 @@
         {
             "text": "Nos vemos.",
             "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
             "tags": [
                 "despedida",
                 "saludo"

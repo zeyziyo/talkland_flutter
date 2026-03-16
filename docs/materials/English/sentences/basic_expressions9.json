@@ -5,8 +5,6 @@
         {
             "text": "I'm happy.",
             "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
             "tags": [
                 "emotion",
                 "positive"
@@ -15,31 +13,25 @@
         {
             "text": "I'm sad.",
             "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
             "tags": [
-                "emotion",
-                "negative"
+                "negative",
+                "emotion"
             ]
         },
         {
             "text": "I'm tired.",
             "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
             "tags": [
-                "emotion",
-                "physical"
+                "physical",
+                "emotion"
             ]
         },
         {
             "text": "I'm hungry.",
             "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
             "tags": [
-                "emotion",
-                "physical"
+                "physical",
+                "emotion"
             ]
         }
     ]

@@ -360,11 +360,12 @@ class AppLocalizationsRo extends AppLocalizations {
   String get helpJsonTypeWord => 'Cuvânt';
 
   @override
-  String get helpMode1Desc => '음성을 인식하거나 텍스트를 입력하여 즉시 번역하고, 학습 리스트에 저장하세요.';
+  String get helpMode1Desc =>
+      'Începeți să învățați limbi străine în cel mai intuitiv mod, cu microfonul 3D premium și pictogramele mari ale tastaturii.';
 
   @override
   String get helpMode1Details =>
-      '• 언어 설정: 홈 화면 상단의 언어 버튼으로 내 언어와 학습 중인 언어를 확인하고 학습 언어를 변경할 수 있습니다.\n• 심플 입력: 중앙의 대형 마이크 및 텍스트 창을 통해 즉시 입력하세요.\n• 설정 확인: 입력이 끝나면 오른쪽의 파란색 체크 버튼을 누르세요. 상세 설정 창이 나타납니다.\n• 상세 설정: 나타난 다이얼로그에서 저장할 자료집, 주석(메모), 태그를 지정할 수 있습니다.\n• 지금 번역하기: 설정을 마친 후 초록색 번역 버튼을 누르면 인공지능이 즉시 번역을 수행합니다.\n• 자동 검색: 입력 중 유사한 기존 번역을 실시간으로 감지하여 보여줍니다.\n• 듣기 및 저장: 번역 결과 하단의 스피커 아이콘으로 발음을 듣고, \'데이터 저장\'을 통해 학습 리스트에 추가하세요.';
+      '• Setări limbă: Verificați limba dvs. și limba pe care o învățați cu butonul de limbă din partea de sus a ecranului de pornire și puteți schimba limba de învățare.\n• Introducere simplă: Introduceți imediat prin microfonul mare din centru și fereastra de text.\n• Verificați setările: Apăsați butonul albastru de verificare din dreapta după ce ați terminat de introdus. Va apărea o fereastră de setări detaliate.\n• Setări detaliate: Puteți specifica culegerea de date de salvat, adnotările (notele) și etichetele în dialogul care apare.\n• Traduceți acum: După ce ați terminat de setat, faceți clic pe butonul verde de traducere pentru ca inteligența artificială să efectueze imediat traducerea.\n• Căutare automată: Detectează și afișează în timp real traducerile existente similare în timpul introducerii.\n• Ascultați și salvați: Ascultați pronunția cu pictograma difuzorului din partea de jos a rezultatelor traducerii și adăugați-o în lista de învățare prin „Salvare date”.';
 
   @override
   String get helpMode2Desc =>
@@ -1299,7 +1300,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Cu Talkie, poți obține traduceri instantanee bidirecționale și învățare repetată nelimitată în oricare dintre cele 80 de limbi.';
+      'Bine ați venit la Talkie! Acceptăm peste 80 de limbi din întreaga lume cu integritate 100% și oferim o experiență de învățare perfectă cu un nou design 3D premium și performanțe optimizate.';
 
   @override
   String get welcomeButton => 'Începe';
@@ -1351,10 +1352,4 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get helpTag =>
       'Introduceți cuvinte cheie pentru a clasifica sau căuta mai târziu.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

@@ -1,0 +1,56 @@
+{
+    "default_type": "word",
+    "subject": "동사 1",
+    "entries": [
+        {
+            "text": "가다",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "오다",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "먹다",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "마시다",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "자다",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "보다",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "사다",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "팔다",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "읽다",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "쓰다",
+            "note": "",
+            "tags": []
+        }
+    ]
+}

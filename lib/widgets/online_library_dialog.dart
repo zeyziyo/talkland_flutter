@@ -211,14 +211,13 @@ class _OnlineLibraryDialogState extends State<OnlineLibraryDialog> {
   }
 
   String _getLocalizedTitle(AppLocalizations l10n, Map<String, dynamic> material) {
-    final id = material['id']?.toString();
-    switch (id) {
-      case 'nouns_1': return l10n.libTitleNouns1;
-      case 'verbs_1': return l10n.libTitleVerbs1;
-      case 'greetings_1': return l10n.libTitleGreetings1;
-      case 'first_meeting': return l10n.libTitleFirstMeeting;
+    // JSON 내부의 'subject' 값(localized_name)이 있으면 최우선으로 사용
+    if (material['localized_name'] != null && material['localized_name'].toString().isNotEmpty) {
+      return material['localized_name'].toString();
     }
-    return material['localized_name'] ?? material['name'] ?? material['title'] ?? 'Untitled';
+    
+    // 백업으로 기존 필드들 탐색
+    return material['name'] ?? material['title'] ?? material['id'] ?? 'Untitled';
   }
 
   String _translateStatus(BuildContext context, String status, AppLocalizations l10n) {

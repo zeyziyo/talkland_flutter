@@ -343,7 +343,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get helpJsonTypeWord => '单词 (Word)';
 
   @override
-  String get helpMode1Desc => '通过语音识别或文本输入即时翻译，并保存到学习列表。';
+  String get helpMode1Desc => '通过优质的3D麦克风和大型键盘图标，以最直观的方式开始语言学习。';
 
   @override
   String get helpMode1Details =>
@@ -1253,7 +1253,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get welcomeTitle => '欢迎使用 Talkie!';
 
   @override
-  String get welcomeDesc => '使用Talkie，您可以立即在80种语言之间进行相互翻译，并进行无限重复学习。';
+  String get welcomeDesc =>
+      '欢迎来到Talkie！我们以100%的完整性支持全球80多种语言，并通过全新的优质3D设计和优化的性能，为您带来完美的学习体验。';
 
   @override
   String get welcomeButton => '开始使用';
@@ -1302,12 +1303,6 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get helpTag => '输入用于日后分类或搜索的关键词。';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -1649,7 +1644,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get helpJsonTypeWord => '单词（Word）';
 
   @override
-  String get helpMode1Desc => '通过语音识别或文本输入即时翻译，并保存到学习列表。';
+  String get helpMode1Desc => '通过高级3D麦克风和大尺寸键盘图标，以最直观的方式开始语言学习。';
 
   @override
   String get helpMode1Details =>
@@ -2560,7 +2555,8 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get welcomeTitle => '欢迎使用 Talkie!';
 
   @override
-  String get welcomeDesc => '使用Talkie，您可以立即在80种语言之间进行互译，并进行无限重复学习。';
+  String get welcomeDesc =>
+      '欢迎来到Talkie！我们以100%的完整性支持全球80多种语言，并通过全新的高级3D设计和优化的性能，为您提供完美的学习体验。';
 
   @override
   String get welcomeButton => '开始使用';
@@ -2950,7 +2946,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get helpJsonTypeWord => '單字 (Word)';
 
   @override
-  String get helpMode1Desc => '透過語音識別或文本輸入即時翻譯，並保存到學習列表。';
+  String get helpMode1Desc => '透過頂級 3D 麥克風和大尺寸鍵盤圖示，以最直觀的方式開始語言學習。';
 
   @override
   String get helpMode1Details =>
@@ -3861,7 +3857,8 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get welcomeTitle => '欢迎使用 Talkie!';
 
   @override
-  String get welcomeDesc => '透過 Talkie，你可以使用 80 種語言即時互相翻譯，並進行無限次重複學習。';
+  String get welcomeDesc =>
+      '歡迎使用 Talkie！我們以 100% 的完整性支援全球超過 80 種語言，並透過全新的頂級 3D 設計和最佳化效能，提供完美的學習體驗。';
 
   @override
   String get welcomeButton => '开始使用';

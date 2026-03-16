@@ -96,13 +96,13 @@ dart run sqflite_common_ffi_web:setup --dir web
 - **온라인 직접 임포트 고도화 (Phase 75.9)**: 서버 인덱스를 통해 최신 학습 자료를 앱 내에서 직접 실시간 임포트하는 체계를 구축했습니다. 과거의 복잡한 오프라인 병합 과정 없이도 다국어 파일이 지능적으로 통합되며, 화자 메타데이터 보완 로직으로 '콩글리쉬' 발음 문제를 근본적으로 해결했습니다. (2026-02-07)
 - **가져오기(Import) 알림 개선**: JSON 파일 가져오기 실패 시 상세 에러 내용을 다이얼로그로 표시하여 문제 진단을 용이하게 함.
 
-## 최근 업데이트 (Recent Updates - 2026-03-03)
+## 최근 업데이트 (Recent Updates - 2026-03-16)
 
-- **메인 화면 리모델링 및 심플 모드 도입 (2026-03-10)**: 탭 전환 구조를 하단 네비게이션으로 변경하고, 불필요한 설정을 숨긴 '심플 입력' 모드를 도입하여 사용성을 극대화했습니다.
-- **언어 표기 지능화**: 설정 메뉴에서 언어 이름을 "한국어", "영어(English)"와 같이 모국어와 학습어의 특성에 맞춰 병기하도록 개선했습니다.
-- **안내 배너 개선**: 메인 화면 상단에 파란색 테마의 가이드 배너를 추가하여 앱의 핵심 가치를 명확히 전달합니다.
-- **데이터베이스 최적화**: 리모델링 이후에도 기존 데이터와의 호환성을 완벽히 유지하며, 단일화된 구조로 성능을 최적화했습니다.
-- **온라인 자료실 자동 현지화 시스템 (v16.1.0)**: 사용자의 모국어 설정에 맞춰 자료집 제목(예: Nouns 1 -> 명사 1)이 백그라운드에서 자동으로 복구 및 매핑되도록 무결성을 대폭 개선했습니다.
+- **Talkie 최신 업데이트 (v2.0.0 준비)**: 프로젝트 전반의 기술적 부채를 청산하고 프리미엄 디자인 언어를 적용한 대규모 업데이트를 단행했습니다. (2026-03-16)
+- **글로벌 현지화 무결성 (L10n 100% Integrity)**: 전 세계 80개 이상의 모든 지원 언어에 대해 마스터 파일(`app_ko.arb`)과 1:1 동기화 및 전수 감사를 완료했습니다. 이제 전 세계 어디서나 완벽한 지역화 경험을 제공합니다.
+- **프리미엄 3D 디자인 시스템**: 구식 벡터 드로잉 아이콘을 폐기하고, 모든 해상도(1x, 2x, 3x)에서 선명한 글래스모피즘 기반의 3D 마이크 아이콘을 도입했습니다.
+- **데이터 엔진 성능 최적화**: 미사용 필드(POS 등)를 정리하고 DB 구조를 간소화하여, 수만 개의 학습 데이터를 처리할 때도 지연 없는(Jank-free) 반응 속도를 확보했습니다.
+- **온라인 자료실 가용성 확대**: 주요 4개 국어(KO, EN, JA, ES)의 학습 자료를 현지인 수준으로 정교화하여 우선 배치했습니다.
 
 
 
@@ -132,8 +132,8 @@ You can import both individual sentences (`entries`) and complete conversation s
 
 ## 지원 언어 (Supported Languages)
 
-Talkie는 이제 **전 세계 80개 언어**를 완벽하게 지원합니다:
-Talkie now fully supports **80 languages** worldwide:
+Talkie는 이제 **전 세계 80개 언어**를 100% 완벽하게 지원하며, 모든 언어 리소스에 대해 정밀 감사(Audit)를 완료했습니다:
+Talkie now provides **100% integrity** for **80+ languages** worldwide, with complete localization audits:
 
 - **동아시아 (East Asia, 4)**: Korean, Japanese, Chinese (Simplified), Chinese (Traditional)
 - **유럽 (Europe, 25)**: English, Spanish, French, German, Italian, Portuguese, Russian, Polish, Ukrainian, Dutch, Greek, Czech, Romanian, Swedish, Danish, Finnish, Norwegian, Hungarian, **Albanian, Armenian, Basque, Belarusian, Bosnian, Bulgarian, Catalan, Croatian, Estonian, Galician, Icelandic, Latvian, Lithuanian, Macedonian, Serbian, Slovak, Slovenian, Welsh**

@@ -1,0 +1,56 @@
+{
+    "default_type": "word",
+    "subject": "Verbos 1",
+    "entries": [
+        {
+            "text": "Ir",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Venir",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Comer",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Beber",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Dormir",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Ver",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Comprar",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Vender",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Leer",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Escribir",
+            "note": "",
+            "tags": []
+        }
+    ]
+}

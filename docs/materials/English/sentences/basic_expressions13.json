@@ -5,31 +5,25 @@
         {
             "text": "What time does the train leave?",
             "note": "",
-            "form_type": "Interrogative",
-            "style": "Informal",
             "tags": [
-                "transport",
-                "train"
+                "train",
+                "transport"
             ]
         },
         {
             "text": "A ticket to..., please.",
             "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
             "tags": [
-                "transport",
-                "ticket"
+                "ticket",
+                "transport"
             ]
         },
         {
             "text": "Where is the bus stop?",
             "note": "",
-            "form_type": "Interrogative",
-            "style": "Informal",
             "tags": [
-                "transport",
-                "bus"
+                "bus",
+                "transport"
             ]
         }
     ]

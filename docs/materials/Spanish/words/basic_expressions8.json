@@ -5,7 +5,6 @@
         {
             "text": "el padre",
             "note": "",
-            "pos": "Sustantivo",
             "tags": [
                 "familia",
                 "básico"
@@ -14,7 +13,6 @@
         {
             "text": "la madre",
             "note": "",
-            "pos": "Sustantivo",
             "tags": [
                 "familia",
                 "básico"
@@ -23,7 +21,6 @@
         {
             "text": "el hijo",
             "note": "",
-            "pos": "Sustantivo",
             "tags": [
                 "familia"
             ]
@@ -31,7 +28,6 @@
         {
             "text": "la hija",
             "note": "",
-            "pos": "Sustantivo",
             "tags": [
                 "familia"
             ]
@@ -39,7 +35,6 @@
         {
             "text": "el hermano",
             "note": "",
-            "pos": "Sustantivo",
             "tags": [
                 "familia"
             ]
@@ -47,7 +42,6 @@
         {
             "text": "el novio",
             "note": "",
-            "pos": "Sustantivo",
             "tags": [
                 "familia",
                 "relación"
@@ -56,7 +50,6 @@
         {
             "text": "la novia",
             "note": "",
-            "pos": "Sustantivo",
             "tags": [
                 "familia",
                 "relación"

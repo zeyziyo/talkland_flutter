@@ -5,8 +5,6 @@
         {
             "text": "¡Taxi!",
             "note": "",
-            "form_type": "Exclamativa",
-            "style": "Informal",
             "tags": [
                 "taxi",
                 "transporte"
@@ -15,18 +13,14 @@
         {
             "text": "¿A dónde quiere ir?",
             "note": "",
-            "form_type": "Interrogativa",
-            "style": "Formal",
             "tags": [
-                "taxi",
-                "pregunta"
+                "pregunta",
+                "taxi"
             ]
         },
         {
             "text": "Voy al hotel, por favor.",
             "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
             "tags": [
                 "taxi",
                 "destino"
@@ -35,18 +29,14 @@
         {
             "text": "Pare aquí, por favor.",
             "note": "",
-            "form_type": "Imperativa",
-            "style": "Informal",
             "tags": [
-                "taxi",
-                "petición"
+                "petición",
+                "taxi"
             ]
         },
         {
             "text": "¿Cuánto es?",
             "note": "",
-            "form_type": "Interrogativa",
-            "style": "Informal",
             "tags": [
                 "taxi",
                 "pago"

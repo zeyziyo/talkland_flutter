@@ -355,11 +355,12 @@ class AppLocalizationsSw extends AppLocalizations {
   String get helpJsonTypeWord => 'Neno';
 
   @override
-  String get helpMode1Desc => '음성을 인식하거나 텍스트를 입력하여 즉시 번역하고, 학습 리스트에 저장하세요.';
+  String get helpMode1Desc =>
+      'Anza kujifunza lugha kwa njia angavu zaidi kupitia maikrofoni ya 3D ya premium na ikoni kubwa za kibodi.';
 
   @override
   String get helpMode1Details =>
-      '• 언어 설정: 홈 화면 상단의 언어 버튼으로 내 언어와 학습 중인 언어를 확인하고 학습 언어를 변경할 수 있습니다.\n• 심플 입력: 중앙의 대형 마이크 및 텍스트 창을 통해 즉시 입력하세요.\n• 설정 확인: 입력이 끝나면 오른쪽의 파란색 체크 버튼을 누르세요. 상세 설정 창이 나타납니다.\n• 상세 설정: 나타난 다이얼로그에서 저장할 자료집, 주석(메모), 태그를 지정할 수 있습니다.\n• 지금 번역하기: 설정을 마친 후 초록색 번역 버튼을 누르면 인공지능이 즉시 번역을 수행합니다.\n• 자동 검색: 입력 중 유사한 기존 번역을 실시간으로 감지하여 보여줍니다.\n• 듣기 및 저장: 번역 결과 하단의 스피커 아이콘으로 발음을 듣고, \'데이터 저장\'을 통해 학습 리스트에 추가하세요.';
+      '• Mpangilio wa Lugha: Angalia lugha yako na lugha unayojifunza na ubadilishe lugha ya kujifunzia kwa kutumia kitufe cha lugha kilicho juu ya skrini ya nyumbani.\n• Uingizaji Rahisi: Ingiza mara moja kupitia maikrofoni kubwa na dirisha la maandishi katikati.\n• Thibitisha Mipangilio: Baada ya kumaliza kuingiza, bonyeza kitufe cha tiki ya bluu upande wa kulia. Dirisha la mipangilio ya kina litaonekana.\n• Mipangilio ya Kina: Unaweza kutaja mkusanyiko wa nyenzo za kuhifadhi, dokezo (kumbukumbu), na lebo kwenye mazungumzo yanayoonekana.\n• Tafsiri Sasa: Baada ya kumaliza mipangilio, bonyeza kitufe cha kijani cha kutafsiri na akili bandia itafanya tafsiri mara moja.\n• Utafutaji Kiotomatiki: Hugundua na kuonyesha tafsiri zinazofanana zilizopo kwa wakati halisi unapoandika.\n• Sikiliza na Uhifadhi: Sikiliza matamshi na ikoni ya spika chini ya matokeo ya tafsiri, na uiongeze kwenye orodha yako ya kujifunza kupitia \'Hifadhi Data\'.';
 
   @override
   String get helpMode2Desc =>
@@ -1290,7 +1291,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Ukiwa na Talkie, unaweza kutafsiri na kujifunza bila kikomo kati ya lugha 80 mara moja.';
+      'Karibu Talkie! Tunasaidia lugha zote 80+ ulimwenguni kwa uadilifu wa 100%, na tunakupa uzoefu kamili wa kujifunza na muundo mpya wa 3D wa premium na utendaji ulioboreshwa.';
 
   @override
   String get welcomeButton => 'Anza';
@@ -1342,10 +1343,4 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get helpTag => 'Weka maneno muhimu ya kuainisha au kutafuta baadaye.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

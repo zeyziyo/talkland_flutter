@@ -1,4 +1,17 @@
 [한국어(ko-KR)]
+- [최신 업데이트 사항] 프리미엄 디자인 및 전 세계 80개 언어 무결성 달성.
+- 프리미엄 3D 디자인: 모든 해상도 지원 고화질 마이크 아이콘 및 글래스모피즘 테마 도입.
+- L10n 무결성 100%: 전 세계 80개 이상의 모든 언어에 대해 1:1 완전 현지화 및 동기화 달성.
+- 성능 극대화: 데이터 구조 최적화 및 DB 경량화로 수만 개의 데이터를 지연 없이 처리.
+- 온라인 자료실: 핵심 4개 국어(KO, EN, JA, ES) 자료 현지인 검수 완료 및 실시간 동기화.
+
+[English(en-US)]
+- [Latest Updates] Massive upgrade with premium design and 80+ language integrity.
+- Premium 3D Design: Introduced high-resolution mic icons and Glassmorphism themes supporting all resolutions.
+- 100% L10n Integrity: Achieved perfect 1:1 localization and synchronization for 80+ languages worldwide.
+- Performance Max: Process tens of thousands of data points jank-free via DB & data structure optimization.
+- Online Library: Verified core materials for 4 languages (KO/EN/JA/ES) with real-time sync.
+
 - AI와 함께하는 스마트 언어 학습 서비스 'Talkie'의 첫 번째 테스트 버전을 출시합니다.
 - 실시간 음성 인식 및 번역을 통한 학습 자료 생성 기능을 지원합니다.
 - 전 세계 80개 언어별 맞춤형 사용설명서 시스템이 탑재되었습니다.

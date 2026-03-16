@@ -356,11 +356,12 @@ class AppLocalizationsVi extends AppLocalizations {
   String get helpJsonTypeWord => 'Từ';
 
   @override
-  String get helpMode1Desc => '음성을 인식하거나 텍스트를 입력하여 즉시 번역하고, 학습 리스트에 저장하세요.';
+  String get helpMode1Desc =>
+      'Bắt đầu học ngôn ngữ một cách trực quan nhất với micrô 3D cao cấp và biểu tượng bàn phím lớn.';
 
   @override
   String get helpMode1Details =>
-      '• 언어 설정: 홈 화면 상단의 언어 버튼으로 내 언어와 학습 중인 언어를 확인하고 학습 언어를 변경할 수 있습니다.\n• 심플 입력: 중앙의 대형 마이크 및 텍스트 창을 통해 즉시 입력하세요.\n• 설정 확인: 입력이 끝나면 오른쪽의 파란색 체크 버튼을 누르세요. 상세 설정 창이 나타납니다.\n• 상세 설정: 나타난 다이얼로그에서 저장할 자료집, 주석(메모), 태그를 지정할 수 있습니다.\n• 지금 번역하기: 설정을 마친 후 초록색 번역 버튼을 누르면 인공지능이 즉시 번역을 수행합니다.\n• 자동 검색: 입력 중 유사한 기존 번역을 실시간으로 감지하여 보여줍니다.\n• 듣기 및 저장: 번역 결과 하단의 스피커 아이콘으로 발음을 듣고, \'데이터 저장\'을 통해 학습 리스트에 추가하세요.';
+      '• Cài đặt ngôn ngữ: Kiểm tra ngôn ngữ của tôi và ngôn ngữ đang học, đồng thời thay đổi ngôn ngữ học bằng nút ngôn ngữ ở trên cùng của màn hình chính.\n• Nhập đơn giản: Nhập ngay lập tức thông qua micrô lớn và cửa sổ văn bản ở giữa.\n• Xác nhận cài đặt: Sau khi nhập xong, hãy nhấp vào nút kiểm tra màu xanh lam ở bên phải. Cửa sổ cài đặt chi tiết sẽ xuất hiện.\n• Cài đặt chi tiết: Trong hộp thoại xuất hiện, bạn có thể chỉ định bộ sưu tập tài liệu, chú thích (ghi nhớ) và thẻ để lưu.\n• Dịch ngay bây giờ: Sau khi hoàn tất cài đặt, hãy nhấp vào nút dịch màu xanh lục để trí tuệ nhân tạo thực hiện dịch ngay lập tức.\n• Tìm kiếm tự động: Phát hiện và hiển thị các bản dịch hiện có tương tự theo thời gian thực trong khi nhập.\n• Nghe và lưu: Nghe phát âm bằng biểu tượng loa ở cuối kết quả dịch và thêm vào danh sách học tập thông qua \'Lưu dữ liệu\'.';
 
   @override
   String get helpMode2Desc =>
@@ -1289,7 +1290,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Với Talkie, bạn có thể dịch qua lại tức thì giữa 80 ngôn ngữ và học lặp đi lặp lại vô hạn số lần.';
+      'Chào mừng bạn đến với Talkie! Chúng tôi hỗ trợ hơn 80 ngôn ngữ trên toàn thế giới với độ chính xác 100%, cùng với thiết kế 3D cao cấp mới và hiệu suất tối ưu hóa để mang lại trải nghiệm học tập hoàn hảo.';
 
   @override
   String get welcomeButton => 'Bắt đầu';
@@ -1338,10 +1339,4 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get helpTag => 'Nhập từ khóa để phân loại hoặc tìm kiếm sau này.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

@@ -24,10 +24,19 @@ class Mode3PracticeCard extends StatelessWidget {
     final targetId = record['target_id'] as int? ?? record['id'] as int;
 
     
-    // In Mode 3, Top is ALWAYS Source (Mother Tongue), Bottom is Target (Learning Language)
-    final topText = record['source_text'] as String;
-    
-
+    // In Mode 3, Top is Source (Mother Tongue), Bottom is Target (Learning Language)
+    // v59: Adapted to respect swap state with unified XOR logic
+    final isSwapped = (appState.sourceLang == (record['target_lang'] as String? ?? '')) ^ appState.isDirectionSwapped;
+    final topText = isSwapped 
+        ? (record['target_text'] as String? ?? '') 
+        : (record['source_text'] as String? ?? '');
+        
+    final bottomText = isSwapped 
+        ? (record['source_text'] as String? ?? '') 
+        : (record['target_text'] as String? ?? '');
+        
+    final topLang = isSwapped ? record['target_lang'] : record['source_lang'];
+    final bottomLang = isSwapped ? record['source_lang'] : record['target_lang'];
 
     final contextTag = record['note'] as String?;
     final isMemorized = record['is_memorized'] == true;
@@ -187,10 +196,10 @@ class Mode3PracticeCard extends StatelessWidget {
                        // Check State
                        if (appState.showRetryButton) ...[
                           // Result View
-                          _buildResultView(gradientColors),
+                          _buildResultView(gradientColors, bottomText: bottomText),
                        ] else ...[
                           // Listening / Idle View
-                          _buildListeningView(),
+                          _buildListeningView(bottomText: bottomText, bottomLang: bottomLang, topText: topText, topLang: topLang),
                        ],
                     ],
                   ),
@@ -202,7 +211,7 @@ class Mode3PracticeCard extends StatelessWidget {
     );
   }
 
-  Widget _buildResultView(List<Color> gradientColors) {
+  Widget _buildResultView(List<Color> gradientColors, {required String bottomText}) {
     final score = appState.mode3Score ?? 0.0;
     
     return Column(
@@ -212,7 +221,7 @@ class Mode3PracticeCard extends StatelessWidget {
              style: TextStyle(color: _getScoreColor(score), fontWeight: FontWeight.bold, fontSize: 18)
          ),
          const SizedBox(height: 8),
-         Text(record['target_text'] as String, 
+         Text(bottomText, 
              textAlign: TextAlign.center,
              style: const TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold)
          ),
@@ -255,11 +264,11 @@ class Mode3PracticeCard extends StatelessWidget {
              ),
            ],
          ),
-      ],
+       ],
     );
   }
 
-  Widget _buildListeningView() {
+  Widget _buildListeningView({required String bottomText, required String bottomLang, required String topText, required String topLang}) {
     if (appState.isListening) {
       return Column(
         children: [
@@ -277,7 +286,7 @@ class Mode3PracticeCard extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(color: Colors.white10, borderRadius: BorderRadius.circular(6)),
               child: Text(
-                _getFirstLetterHint(record['target_text'] as String), 
+                _getFirstLetterHint(bottomText), 
                 style: const TextStyle(fontSize: 14, color: Colors.white70, fontFamily: 'monospace', letterSpacing: 2)
               ),
            ),
@@ -318,8 +327,8 @@ class Mode3PracticeCard extends StatelessWidget {
                  size: 40,
                  iconSize: 20,
                  onPressed: () => appState.playMaterialTts(
-                    text: record['target_text'] as String,
-                    lang: record['target_lang'] as String,
+                    text: bottomText,
+                    lang: bottomLang,
                  ),
                ),
                
@@ -341,7 +350,7 @@ class Mode3PracticeCard extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(color: Colors.white10, borderRadius: BorderRadius.circular(6)),
               child: Text(
-                _getFirstLetterHint(record['target_text'] as String), 
+                _getFirstLetterHint(bottomText), 
                 style: const TextStyle(fontSize: 14, color: Colors.white70, fontFamily: 'monospace', letterSpacing: 2)
               ),
            ),

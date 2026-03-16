@@ -5,41 +5,33 @@
         {
             "text": "¡Ayuda!",
             "note": "",
-            "form_type": "Exclamativa",
-            "style": "Informal",
             "tags": [
-                "emergencia",
-                "esencial"
+                "esencial",
+                "emergencia"
             ]
         },
         {
             "text": "¡Llame a un médico!",
             "note": "",
-            "form_type": "Imperativa",
-            "style": "Informal",
             "tags": [
-                "emergencia",
-                "médico"
+                "médico",
+                "emergencia"
             ]
         },
         {
             "text": "Me han robado.",
             "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
             "tags": [
-                "emergencia",
-                "crimen"
+                "crimen",
+                "emergencia"
             ]
         },
         {
             "text": "Es urgente.",
             "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
             "tags": [
-                "emergencia",
-                "esencial"
+                "esencial",
+                "emergencia"
             ]
         }
     ]

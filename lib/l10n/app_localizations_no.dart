@@ -356,11 +356,12 @@ class AppLocalizationsNo extends AppLocalizations {
   String get helpJsonTypeWord => 'Ord';
 
   @override
-  String get helpMode1Desc => '음성을 인식하거나 텍스트를 입력하여 즉시 번역하고, 학습 리스트에 저장하세요.';
+  String get helpMode1Desc =>
+      'Kom i gang med språklæring på den mest intuitive måten med en førsteklasses 3D-mikrofon og et stort tastaturikon.';
 
   @override
   String get helpMode1Details =>
-      '• 언어 설정: 홈 화면 상단의 언어 버튼으로 내 언어와 학습 중인 언어를 확인하고 학습 언어를 변경할 수 있습니다.\n• 심플 입력: 중앙의 대형 마이크 및 텍스트 창을 통해 즉시 입력하세요.\n• 설정 확인: 입력이 끝나면 오른쪽의 파란색 체크 버튼을 누르세요. 상세 설정 창이 나타납니다.\n• 상세 설정: 나타난 다이얼로그에서 저장할 자료집, 주석(메모), 태그를 지정할 수 있습니다.\n• 지금 번역하기: 설정을 마친 후 초록색 번역 버튼을 누르면 인공지능이 즉시 번역을 수행합니다.\n• 자동 검색: 입력 중 유사한 기존 번역을 실시간으로 감지하여 보여줍니다.\n• 듣기 및 저장: 번역 결과 하단의 스피커 아이콘으로 발음을 듣고, \'데이터 저장\'을 통해 학습 리스트에 추가하세요.';
+      '• Språkinnstillinger: Sjekk morsmålet ditt og språket du lærer, og endre språket du lærer med språkknappen øverst på startskjermen.\n• Enkel inndata: Skriv inn umiddelbart via den store mikrofonen og tekstvinduet i midten.\n• Sjekk innstillinger: Når du er ferdig med å skrive inn, trykker du på den blå hakeknappen til høyre. Detaljerte innstillingsvinduer vises.\n• Detaljerte innstillinger: I dialogboksen som vises, kan du spesifisere samlingen av data som skal lagres, kommentarer (notater) og tagger.\n• Oversett nå: Etter at du har fullført innstillingene, trykker du på den grønne oversettelsesknappen for å få kunstig intelligens til å oversette umiddelbart.\n• Automatisk søk: Oppdager og viser lignende eksisterende oversettelser i sanntid mens du skriver.\n• Lytt og lagre: Lytt til uttalen med høyttalerikonet nederst i oversettelsesresultatene, og legg til i læringslisten din via \'Lagre data\'.';
 
   @override
   String get helpMode2Desc =>
@@ -1286,7 +1287,7 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Med Talkie kan du umiddelbart oversette mellom 80 språk og lære ubegrenset med repetisjoner.';
+      'Velkommen til Talkie! Vi støtter alle språk i verden (over 80) med 100 % integritet, og gir deg en perfekt læringsopplevelse med ny førsteklasses 3D-design og optimalisert ytelse.';
 
   @override
   String get welcomeButton => 'Kom i gang';
@@ -1338,10 +1339,4 @@ class AppLocalizationsNo extends AppLocalizations {
   @override
   String get helpTag =>
       'Skriv inn nøkkelord for å klassifisere eller søke senere.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

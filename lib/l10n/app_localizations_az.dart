@@ -359,7 +359,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get helpMode1Desc =>
-      'Səsi tanıyaraq və ya mətn daxil edərək dərhal tərcümə edin və öyrənmə siyahısına əlavə edin.';
+      'Premium 3D mikrofonlar və böyük klaviatura ikonları vasitəsilə dil öyrənməyə ən intuitiv şəkildə başlayın.';
 
   @override
   String get helpMode1Details =>
@@ -1300,7 +1300,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Talkie ilə 80 dildən istədiyiniz arasında ani qarşılıqlı tərcümə və sonsuz təkrarlama öyrənməsi mümkündür.';
+      'Talkie-yə xoş gəlmisiniz! Dünyada 80-dən çox dili 100% sədaqətlə dəstəkləyirik və yeni premium 3D dizaynı və optimallaşdırılmış performansı ilə mükəmməl öyrənmə təcrübəsi təqdim edirik.';
 
   @override
   String get welcomeButton => 'Başla';
@@ -1352,10 +1352,4 @@ class AppLocalizationsAz extends AppLocalizations {
   @override
   String get helpTag =>
       'Sonra təsnif etmək və ya axtarmaq üçün açar sözlər daxil edin.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

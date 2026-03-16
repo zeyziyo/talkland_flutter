@@ -356,7 +356,7 @@ class AppLocalizationsBo extends AppLocalizations {
 
   @override
   String get helpMode1Desc =>
-      'ངོས་འཛིན་གྱི་སྒྲ་བསྡུ་ལེན་བྱེད་པའམ་ཡང་ན་ཡིག་ནང་འཇུག་སྟེ་འཕྲལ་མར་སྐད་བསྒྱུར་བྱེད་པ་དང་སྦྱོང་སའི་ཐོ་ཡིག་ནང་དུ་ཉར་ཚགས་བྱེད་དོ།';
+      'སྤུས་དག་གསུམ་ཚད་ཀྱི་ཕྲ་མཇུག་དང་མཐེབ་གཞོང་ཆེ་བའི་རི་མོ་བརྒྱུད་ནས་སྐད་ཡིག་སྦྱོང་འགོ་ལམ་སང་ཚུགས།';
 
   @override
   String get helpMode1Details =>
@@ -1298,7 +1298,7 @@ class AppLocalizationsBo extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Talkie ནང་དུ་སྐད་ཡིག་ ༨༠ ལས་ཁྱེད་ཀྱིས་འདོད་པ་གང་རུང་བར་ཐད་ཀར་ཕན་ཚུན་སྐད་བསྒྱུར་དང་བསྐྱར་ཟློས་སློབ་སྦྱོང་བྱེད་ཐུབ།';
+      'Talkie ནང་ལ་ཕེབས་པ་དགའ་བསུ་ཞུ། འཛམ་གླིང་ནང་གི་སྐད་ཡིག་ 80 ལྷག་ཙམ་ལ་བརྒྱ་ཆ་བརྒྱ་ཐམ་པའི་ཆ་ཚང་དང་ལྡན་པའི་རྒྱབ་སྐྱོར་བྱེད་པ་དང་། སྤུས་ལེགས་གསུམ་ཚད་ཀྱི་བཟོ་བཀོད་གསར་པ་དང་ནུས་རྩལ་ལེགས་བཅོས་བྱས་པ་བརྒྱུད་ནས་སྦྱོང་བརྡར་གྱི་ཉམས་མྱོང་ཆ་ཚང་ཞིག་སྟེར་ངེས།';
 
   @override
   String get welcomeButton => 'འགོ་འཛུགས།';
@@ -1351,10 +1351,4 @@ class AppLocalizationsBo extends AppLocalizations {
   @override
   String get helpTag =>
       'མ་འོངས་པར་དབྱེ་དཔྱད་འབད་ནི་དང་འཚོལ་ཞིབ་འབད་ནིའི་དོན་ལུ་ түлхүүр үг བཙུགས།';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

@@ -5,55 +5,101 @@
         {
             "text": "red",
             "note": "",
-            "pos": "Adjective",
             "tags": [
-                "color",
-                "basic"
+                "basic",
+                "color"
             ]
         },
         {
             "text": "blue",
             "note": "",
-            "pos": "Adjective",
             "tags": [
-                "color",
-                "basic"
+                "basic",
+                "color"
             ]
         },
         {
             "text": "yellow",
             "note": "",
-            "pos": "Adjective",
             "tags": [
-                "color",
-                "basic"
+                "basic",
+                "color"
             ]
         },
         {
             "text": "green",
             "note": "",
-            "pos": "Adjective",
             "tags": [
-                "color",
-                "basic"
+                "basic",
+                "color"
             ]
         },
         {
             "text": "white",
             "note": "",
-            "pos": "Adjective",
             "tags": [
-                "color",
-                "basic"
+                "basic",
+                "color"
             ]
         },
         {
             "text": "black",
             "note": "",
-            "pos": "Adjective",
+            "tags": [
+                "basic",
+                "color"
+            ]
+        },
+        {
+            "text": "blanco",
+            "note": "",
             "tags": [
                 "color",
-                "basic"
+                "básico"
+            ]
+        },
+        {
+            "text": "negro",
+            "note": "",
+            "tags": [
+                "color",
+                "básico"
+            ]
+        },
+        {
+            "text": "gris",
+            "note": "",
+            "tags": [
+                "color",
+                "básico"
+            ]
+        },
+        {
+            "text": "marrón",
+            "note": "color marrón / castaño",
+            "tags": [
+                "color"
+            ]
+        },
+        {
+            "text": "rosa",
+            "note": "",
+            "tags": [
+                "color"
+            ]
+        },
+        {
+            "text": "dorado",
+            "note": "",
+            "tags": [
+                "color"
+            ]
+        },
+        {
+            "text": "plateado",
+            "note": "",
+            "tags": [
+                "color"
             ]
         }
     ]

@@ -5,55 +5,101 @@
         {
             "text": "빨간색",
             "note": "",
-            "pos": "형용사",
             "tags": [
-                "색깔",
-                "기본"
+                "기본",
+                "색깔"
             ]
         },
         {
             "text": "파란색",
             "note": "",
-            "pos": "형용사",
             "tags": [
-                "색깔",
-                "기본"
+                "기본",
+                "색깔"
             ]
         },
         {
             "text": "노란색",
             "note": "",
-            "pos": "형용사",
             "tags": [
-                "색깔",
-                "기본"
+                "기본",
+                "색깔"
             ]
         },
         {
             "text": "초록색",
             "note": "",
-            "pos": "형용사",
             "tags": [
-                "색깔",
-                "기본"
+                "기본",
+                "색깔"
             ]
         },
         {
             "text": "흰색",
             "note": "",
-            "pos": "형용사",
             "tags": [
-                "색깔",
-                "기본"
+                "기본",
+                "색깔"
             ]
         },
         {
             "text": "검은색",
             "note": "",
-            "pos": "형용사",
             "tags": [
-                "색깔",
-                "기본"
+                "기본",
+                "색깔"
+            ]
+        },
+        {
+            "text": "blanco",
+            "note": "",
+            "tags": [
+                "básico",
+                "color"
+            ]
+        },
+        {
+            "text": "negro",
+            "note": "",
+            "tags": [
+                "básico",
+                "color"
+            ]
+        },
+        {
+            "text": "gris",
+            "note": "",
+            "tags": [
+                "básico",
+                "color"
+            ]
+        },
+        {
+            "text": "marrón",
+            "note": "color marrón / castaño",
+            "tags": [
+                "color"
+            ]
+        },
+        {
+            "text": "rosa",
+            "note": "",
+            "tags": [
+                "color"
+            ]
+        },
+        {
+            "text": "dorado",
+            "note": "",
+            "tags": [
+                "color"
+            ]
+        },
+        {
+            "text": "plateado",
+            "note": "",
+            "tags": [
+                "color"
             ]
         }
     ]

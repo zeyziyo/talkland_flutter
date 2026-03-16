@@ -4,39 +4,23 @@
     "entries": [
         {
             "text": "Hello!",
-            "note": "",
-            "form_type": "Exclamatory",
-            "style": "Informal",
+            "note": "General greeting",
             "tags": [
                 "greeting",
                 "basic"
             ]
         },
         {
-            "text": "Good afternoon.",
-            "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
+            "text": "Good morning.",
+            "note": "Morning greeting",
             "tags": [
                 "greeting",
-                "basic"
+                "morning"
             ]
         },
         {
             "text": "Goodbye.",
-            "note": "",
-            "form_type": "Exclamatory",
-            "style": "Informal",
-            "tags": [
-                "greeting",
-                "farewell"
-            ]
-        },
-        {
-            "text": "See you later.",
-            "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
+            "note": "Farewell",
             "tags": [
                 "greeting",
                 "farewell"
@@ -44,9 +28,7 @@
         },
         {
             "text": "Yes.",
-            "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
+            "note": "Affirmation",
             "tags": [
                 "response",
                 "basic"
@@ -54,29 +36,15 @@
         },
         {
             "text": "No.",
-            "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
+            "note": "Negation",
             "tags": [
                 "response",
                 "basic"
             ]
         },
         {
-            "text": "Excuse me!",
-            "note": "",
-            "form_type": "Exclamatory",
-            "style": "Formal",
-            "tags": [
-                "politeness",
-                "basic"
-            ]
-        },
-        {
             "text": "Thank you.",
-            "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
+            "note": "Gratitude",
             "tags": [
                 "gratitude",
                 "essential"
@@ -84,42 +52,34 @@
         },
         {
             "text": "You're welcome.",
-            "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
+            "note": "Response to thanks",
             "tags": [
-                "response",
-                "politeness"
-            ]
-        },
-        {
-            "text": "How much is it?",
-            "note": "",
-            "form_type": "Interrogative",
-            "style": "Informal",
-            "tags": [
-                "shopping",
-                "question"
+                "politeness",
+                "response"
             ]
         },
         {
             "text": "I'm sorry.",
-            "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
+            "note": "Apology",
             "tags": [
                 "apology",
                 "essential"
             ]
         },
         {
-            "text": "Where is the bathroom?",
-            "note": "",
-            "form_type": "Interrogative",
-            "style": "Informal",
+            "text": "How much is this?",
+            "note": "Price inquiry",
             "tags": [
-                "question",
-                "essential"
+                "shopping",
+                "question"
+            ]
+        },
+        {
+            "text": "Excuse me.",
+            "note": "Politeness / Attention",
+            "tags": [
+                "politeness",
+                "basic"
             ]
         }
     ]

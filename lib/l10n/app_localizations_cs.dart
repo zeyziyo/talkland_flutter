@@ -354,7 +354,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get helpMode1Desc =>
-      'Okamžitě překládejte rozpoznáním hlasu nebo zadáním textu a uložte si je do seznamu učení.';
+      'Začněte se učit jazyky tím nejintuitivnějším způsobem s prémiovým 3D mikrofonem a ikonou velké klávesnice.';
 
   @override
   String get helpMode1Details =>
@@ -1283,7 +1283,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'S Talkie můžete okamžitě překládat mezi 80 jazyky a učit se donekonečna.';
+      'Vítejte v Talkie! Podporujeme více než 80 jazyků z celého světa se 100% integritou. Nový prémiový 3D design a optimalizovaný výkon vám přinášejí dokonalý zážitek z učení.';
 
   @override
   String get welcomeButton => 'Začít';
@@ -1335,10 +1335,4 @@ class AppLocalizationsCs extends AppLocalizations {
   @override
   String get helpTag =>
       'Zadejte klíčová slova pro pozdější kategorizaci nebo vyhledávání.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

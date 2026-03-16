@@ -5,25 +5,22 @@
         {
             "text": "father",
             "note": "",
-            "pos": "Noun",
             "tags": [
-                "family",
-                "basic"
+                "basic",
+                "family"
             ]
         },
         {
             "text": "mother",
             "note": "",
-            "pos": "Noun",
             "tags": [
-                "family",
-                "basic"
+                "basic",
+                "family"
             ]
         },
         {
             "text": "son",
             "note": "",
-            "pos": "Noun",
             "tags": [
                 "family"
             ]
@@ -31,7 +28,6 @@
         {
             "text": "daughter",
             "note": "",
-            "pos": "Noun",
             "tags": [
                 "family"
             ]
@@ -39,7 +35,6 @@
         {
             "text": "brother",
             "note": "",
-            "pos": "Noun",
             "tags": [
                 "family"
             ]
@@ -47,7 +42,6 @@
         {
             "text": "sister",
             "note": "",
-            "pos": "Noun",
             "tags": [
                 "family"
             ]

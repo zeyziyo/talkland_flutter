@@ -1,0 +1,106 @@
+{
+    "default_type": "word",
+    "subject": "色 1",
+    "entries": [
+        {
+            "text": "rojo",
+            "note": "",
+            "tags": [
+                "básico",
+                "color"
+            ]
+        },
+        {
+            "text": "azul",
+            "note": "",
+            "tags": [
+                "básico",
+                "color"
+            ]
+        },
+        {
+            "text": "amarillo",
+            "note": "",
+            "tags": [
+                "básico",
+                "color"
+            ]
+        },
+        {
+            "text": "verde",
+            "note": "",
+            "tags": [
+                "básico",
+                "color"
+            ]
+        },
+        {
+            "text": "naranja",
+            "note": "",
+            "tags": [
+                "básico",
+                "color"
+            ]
+        },
+        {
+            "text": "morado",
+            "note": "",
+            "tags": [
+                "básico",
+                "color"
+            ]
+        },
+        {
+            "text": "blanco",
+            "note": "",
+            "tags": [
+                "básico",
+                "color"
+            ]
+        },
+        {
+            "text": "negro",
+            "note": "",
+            "tags": [
+                "básico",
+                "color"
+            ]
+        },
+        {
+            "text": "gris",
+            "note": "",
+            "tags": [
+                "básico",
+                "color"
+            ]
+        },
+        {
+            "text": "marrón",
+            "note": "color marrón / castaño",
+            "tags": [
+                "color"
+            ]
+        },
+        {
+            "text": "rosa",
+            "note": "",
+            "tags": [
+                "color"
+            ]
+        },
+        {
+            "text": "dorado",
+            "note": "",
+            "tags": [
+                "color"
+            ]
+        },
+        {
+            "text": "plateado",
+            "note": "",
+            "tags": [
+                "color"
+            ]
+        }
+    ]
+}

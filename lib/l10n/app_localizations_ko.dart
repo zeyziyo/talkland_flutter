@@ -345,7 +345,8 @@ class AppLocalizationsKo extends AppLocalizations {
   String get helpJsonTypeWord => '단어 (Word)';
 
   @override
-  String get helpMode1Desc => '음성을 인식하거나 텍스트를 입력하여 즉시 번역하고, 학습 리스트에 저장하세요.';
+  String get helpMode1Desc =>
+      '프리미엄 3D 마이크와 대형 키보드 아이콘을 통해 가장 직관적인 방식으로 언어 학습을 시작하세요.';
 
   @override
   String get helpMode1Details =>
@@ -1264,7 +1265,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Talkie로 80가지 언어 중 원하는 언어 간 즉시 상호 번역 및 무한 반복 학습이 가능합니다.';
+      'Talkie에 오신 것을 환영합니다! 전 세계 80개 이상의 모든 언어를 100% 무결성으로 지원하며, 새로운 프리미엄 3D 디자인과 최적화된 성능으로 완벽한 학습 경험을 선사합니다.';
 
   @override
   String get welcomeButton => '시작하기';
@@ -1313,10 +1314,4 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get helpTag => '나중에 분류하거나 검색하기 위한 키워드를 입력하세요.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

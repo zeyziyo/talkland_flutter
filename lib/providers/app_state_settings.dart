@@ -54,11 +54,15 @@ extension AppStateSettings on AppState {
     notify();
   }
 
+  /// Internal setter for automatic optimization (UI toggle removed as requested)
   void setUseSimpleMic(bool value) {
-    _useSimpleMic = value;
-    _saveSettings();
-    notify();
+    if (_useSimpleMic != value) {
+      _useSimpleMic = value;
+      _saveSettings();
+      notify();
+    }
   }
+
 
   void setSourceLang(String lang) {
     _sourceLang = lang;
@@ -77,6 +81,9 @@ extension AppStateSettings on AppState {
     // 3. Reset Mode 3 (incompatible source)
     selectMaterial(null);
     loadStudyMaterials(); // Refresh availability
+    
+    // v59 Improvement: Clear online materials cache so it re-filters for the new source language
+    _onlineMaterials = [];
     
     notify();
   }

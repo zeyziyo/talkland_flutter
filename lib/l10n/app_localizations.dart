@@ -909,7 +909,7 @@ abstract class AppLocalizations {
   /// No description provided for @helpMode1Desc.
   ///
   /// In ko, this message translates to:
-  /// **'음성을 인식하거나 텍스트를 입력하여 즉시 번역하고, 학습 리스트에 저장하세요.'**
+  /// **'프리미엄 3D 마이크와 대형 키보드 아이콘을 통해 가장 직관적인 방식으로 언어 학습을 시작하세요.'**
   String get helpMode1Desc;
 
   /// No description provided for @helpMode1Details.
@@ -2619,7 +2619,7 @@ abstract class AppLocalizations {
   /// No description provided for @welcomeDesc.
   ///
   /// In ko, this message translates to:
-  /// **'Talkie로 80가지 언어 중 원하는 언어 간 즉시 상호 번역 및 무한 반복 학습이 가능합니다.'**
+  /// **'Talkie에 오신 것을 환영합니다! 전 세계 80개 이상의 모든 언어를 100% 무결성으로 지원하며, 새로운 프리미엄 3D 디자인과 최적화된 성능으로 완벽한 학습 경험을 선사합니다.'**
   String get welcomeDesc;
 
   /// No description provided for @welcomeButton.
@@ -2717,18 +2717,6 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'나중에 분류하거나 검색하기 위한 키워드를 입력하세요.'**
   String get helpTag;
-
-  /// No description provided for @ecoMode.
-  ///
-  /// In ko, this message translates to:
-  /// **'저사양 모드 (Eco Mode)'**
-  String get ecoMode;
-
-  /// No description provided for @ecoModeDesc.
-  ///
-  /// In ko, this message translates to:
-  /// **'아이콘을 단순화하여 메모리와 리소스를 절약합니다.'**
-  String get ecoModeDesc;
 }
 
 class _AppLocalizationsDelegate

@@ -4,39 +4,23 @@
     "entries": [
         {
             "text": "¡Hola!",
-            "note": "",
-            "form_type": "Exclamativa",
-            "style": "Informal",
+            "note": "Saludo general",
             "tags": [
                 "saludo",
                 "básico"
             ]
         },
         {
-            "text": "Buenas tardes.",
-            "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
+            "text": "Buenos días.",
+            "note": "Saludo por la mañana",
             "tags": [
                 "saludo",
-                "básico"
+                "mañana"
             ]
         },
         {
             "text": "Adiós.",
-            "note": "",
-            "form_type": "Exclamativa",
-            "style": "Informal",
-            "tags": [
-                "saludo",
-                "despedida"
-            ]
-        },
-        {
-            "text": "Hasta luego.",
-            "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
+            "note": "Despedida",
             "tags": [
                 "saludo",
                 "despedida"
@@ -44,9 +28,7 @@
         },
         {
             "text": "Sí.",
-            "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
+            "note": "Afirmación",
             "tags": [
                 "respuesta",
                 "básico"
@@ -54,172 +36,50 @@
         },
         {
             "text": "No.",
-            "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
+            "note": "Negación",
             "tags": [
                 "respuesta",
-                "básico"
-            ]
-        },
-        {
-            "text": "¡Disculpe!",
-            "note": "",
-            "form_type": "Exclamativa",
-            "style": "Formal",
-            "tags": [
-                "cortesía",
                 "básico"
             ]
         },
         {
             "text": "Gracias.",
-            "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
+            "note": "Agradecimiento",
             "tags": [
                 "agradecimiento",
                 "esencial"
-            ]
-        },
-        {
-            "text": "¡Muchas gracias!",
-            "note": "",
-            "form_type": "Exclamativa",
-            "style": "Informal",
-            "tags": [
-                "agradecimiento",
-                "esencial"
-            ]
-        },
-        {
-            "text": "Gracias por su ayuda.",
-            "note": "",
-            "form_type": "Afirmativa",
-            "style": "Formal",
-            "tags": [
-                "agradecimiento",
-                "cortesía"
             ]
         },
         {
             "text": "De nada.",
-            "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
+            "note": "Respuesta a gracias",
             "tags": [
-                "respuesta",
-                "cortesía"
+                "cortesía",
+                "respuesta"
             ]
         },
         {
-            "text": "De acuerdo.",
-            "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
-            "tags": [
-                "respuesta",
-                "básico"
-            ]
-        },
-        {
-            "text": "¿Cuánto cuesta?",
-            "note": "",
-            "form_type": "Interrogativa",
-            "style": "Informal",
-            "tags": [
-                "compras",
-                "pregunta"
-            ]
-        },
-        {
-            "text": "¡Discúlpeme!",
-            "note": "",
-            "form_type": "Exclamativa",
-            "style": "Formal",
+            "text": "Lo siento.",
+            "note": "Disculpa",
             "tags": [
                 "disculpa",
                 "esencial"
             ]
         },
         {
-            "text": "No entiendo.",
-            "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
+            "text": "¿Cuánto cuesta esto?",
+            "note": "Pregunta por el precio",
             "tags": [
-                "comunicación",
+                "compras",
+                "pregunta"
+            ]
+        },
+        {
+            "text": "¡Disculpe!",
+            "note": "Llamado de atención",
+            "tags": [
+                "cortesía",
                 "básico"
-            ]
-        },
-        {
-            "text": "Entendí.",
-            "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
-            "tags": [
-                "comunicación",
-                "básico"
-            ]
-        },
-        {
-            "text": "No sé.",
-            "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
-            "tags": [
-                "respuesta",
-                "básico"
-            ]
-        },
-        {
-            "text": "Prohibido.",
-            "note": "",
-            "form_type": "Afirmativa",
-            "style": "Formal",
-            "tags": [
-                "aviso",
-                "señal"
-            ]
-        },
-        {
-            "text": "¿Dónde están los baños?",
-            "note": "",
-            "form_type": "Interrogativa",
-            "style": "Informal",
-            "tags": [
-                "pregunta",
-                "esencial"
-            ]
-        },
-        {
-            "text": "¡Feliz año nuevo!",
-            "note": "",
-            "form_type": "Exclamativa",
-            "style": "Informal",
-            "tags": [
-                "saludo",
-                "celebración"
-            ]
-        },
-        {
-            "text": "¡Feliz cumpleaños!",
-            "note": "",
-            "form_type": "Exclamativa",
-            "style": "Informal",
-            "tags": [
-                "saludo",
-                "celebración"
-            ]
-        },
-        {
-            "text": "¡Felicidades!",
-            "note": "",
-            "form_type": "Exclamativa",
-            "style": "Informal",
-            "tags": [
-                "saludo",
-                "celebración"
             ]
         }
     ]

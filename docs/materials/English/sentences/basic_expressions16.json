@@ -5,8 +5,6 @@
         {
             "text": "Help!",
             "note": "",
-            "form_type": "Exclamatory",
-            "style": "Informal",
             "tags": [
                 "emergency",
                 "essential"
@@ -15,18 +13,14 @@
         {
             "text": "Call a doctor!",
             "note": "",
-            "form_type": "Imperative",
-            "style": "Informal",
             "tags": [
-                "emergency",
-                "medical"
+                "medical",
+                "emergency"
             ]
         },
         {
             "text": "I've been robbed.",
             "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
             "tags": [
                 "emergency",
                 "crime"
@@ -35,8 +29,6 @@
         {
             "text": "It's an emergency.",
             "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
             "tags": [
                 "emergency",
                 "essential"

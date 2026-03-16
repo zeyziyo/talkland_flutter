@@ -1,0 +1,56 @@
+{
+    "default_type": "word",
+    "subject": "명사 1",
+    "entries": [
+        {
+            "text": "사람",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "물",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "밥",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "빵",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "사과",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "우유",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "고기",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "옷",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "집",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "책",
+            "note": "",
+            "tags": []
+        }
+    ]
+}

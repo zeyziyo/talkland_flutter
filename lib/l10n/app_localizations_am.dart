@@ -350,7 +350,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get helpMode1Desc =>
-      'ድምጽን በመለየት ወይም ጽሑፍን በማስገባት ወዲያውኑ ይተርጉሙ እና በትምህርት ዝርዝርዎ ውስጥ ያስቀምጡ።';
+      'በፕሪሚየም 3D ማይክሮፎን እና ትልቅ የቁልፍ ሰሌዳ አዶዎች አማካኝነት ቋንቋን መማር በጣም በሚያስተውል መንገድ ይጀምሩ።';
 
   @override
   String get helpMode1Details =>
@@ -1276,7 +1276,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'በTalkie በመጠቀም ከ80 ቋንቋዎች መካከል የሚፈልጉትን ቋንቋዎች በፍጥነት መተረጎምና ማለቂያ በሌለው መልኩ መማር ይችላሉ።';
+      'ወደ ቶኪ እንኳን ደህና መጡ! ከ 80 በላይ የሆኑ ሁሉንም ቋንቋዎች በ 100% ታማኝነት እንደግፋለን፣ እና በአዲሱ የፕሪሚየም 3D ዲዛይን እና በተሻሻለ አፈጻጸም ፍጹም የመማር ልምድን እናቀርባለን።';
 
   @override
   String get welcomeButton => 'ይጀምሩ';
@@ -1325,10 +1325,4 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get helpTag => 'ለመመደብ ወይም ለመፈለግ ቁልፍ ቃላትን ያስገቡ።';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

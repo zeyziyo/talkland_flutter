@@ -191,6 +191,8 @@
   "helpJsonTypeDialogue": "Dialog",
   "helpJsonTypeSentence": "Satz",
   "helpJsonTypeWord": "Wort",
+  "helpMode1Desc": "Starte dein Sprachenlernen auf die intuitivste Weise mit einem hochwertigen 3D-Mikrofon und großen Tastatursymbolen.",
+  "helpMode1Details": "• Spracheinstellungen: Überprüfen Sie Ihre Muttersprache und die aktuelle Lernsprache oben auf dem Bildschirm und ändern Sie die Lernsprache über die Schaltflächen.\n• Einfache Eingabe: Starten Sie sofort über das große Mikrofon in der Mitte oder das Texteingabefeld.\n• Einstellungen bestätigen: Tippen Sie nach der Eingabe auf die blaue Häkchen-Schaltfläche rechts. Das Fenster für die detaillierten Einstellungen wird angezeigt.\n• Detaillierte Einstellungen: Legen Sie im Dialogfeld den Materialsatz, Notizen (Memos) und Tags für die Speicherung fest.\n• Jetzt übersetzen: Tippen Sie nach der Konfiguration auf die grüne Übersetzungsschaltfläche, um die KI-Übersetzung sofort durchzuführen.\n• Automatische Suche: Erkennt ähnliche vorhandene Übersetzungen in Echtzeit während der Eingabe.\n• Hören & Speichern: Hören Sie die Aussprache über das Lautsprechersymbol und tippen Sie auf 'Daten speichern', um sie Ihrer Lernliste hinzuzufügen.",
   "helpMode2Desc": "Gespeicherte Sätze wiederholen mit Auto-Ausblenden und Wiederholungszähler.",
   "helpMode2Details": "• Materialauswahl: Verwende das Menü (⋮) oben rechts für 'Lernmaterial auswählen' oder 'Online-Materialbibliothek'\n• Karte umdrehen: 'Anzeigen/Verbergen' zur Überprüfung der Übersetzung\n• Anhören: Wiedergabe der Aussprache über das Lautsprechersymbol\n• Lernen abgeschlossen: Markiere Karten mit einem Häkchen (V) als gelernt\n• Löschen: Gedrückt halten (Long Click) um die Karte zu löschen\n• Suche und Filter: Suchleiste (intelligente Echtzeitsuche) sowie Tag- und Anfangsbuchstabenfilter",
   "helpMode3Desc": "Übe deine Aussprache, indem du Sätze anhörst und nachsprichst (Shadowing).",
@@ -777,7 +779,7 @@
   "ttsUnsupportedNatively": "Dieses Gerät unterstützt die Sprachausgabe für diese Sprache in den Standardeinstellungen nicht.",
   "homeTab": "Startseite",
   "welcomeTitle": "Willkommen bei Talkie!",
-  "welcomeDesc": "Mit Talkie können Sie sofortiges wechselseitiges Übersetzen und unbegrenztes Wiederholungslernen zwischen 80 beliebigen Sprachen nutzen.",
+  "welcomeDesc": "Willkommen bei Talkie! Wir unterstützen mit 100-prozentiger Integrität über 80 Sprachen weltweit und bieten mit einem neuen, hochwertigen 3D-Design und optimierter Leistung ein perfektes Lernerlebnis.",
   "welcomeButton": "Loslegen",
   "labelDetails": "Detaileinstellungen",
   "translationResult": "Übersetzungsergebnis",
@@ -793,7 +795,5 @@
   "openSettings": "Einstellungen öffnen",
   "helpNotebook": "Wählen Sie den Ordner zum Speichern der übersetzten Ergebnisse aus.",
   "helpNote": "Notieren Sie frei die Bedeutung, Beispiele oder Situationen eines Wortes.",
-  "helpTag": "Geben Sie Schlüsselwörter zur späteren Kategorisierung oder Suche ein.",
-  "helpMode1Desc": "Übersetzen Sie Sprache oder Text sofort und speichern Sie diese in Ihrer Lernliste.",
-  "helpMode1Details": "• Spracheinstellungen: Überprüfen Sie Ihre Muttersprache und die aktuelle Lernsprache oben auf dem Bildschirm und ändern Sie die Lernsprache über die Schaltflächen.\n• Einfache Eingabe: Starten Sie sofort über das große Mikrofon in der Mitte oder das Texteingabefeld.\n• Einstellungen bestätigen: Tippen Sie nach der Eingabe auf die blaue Häkchen-Schaltfläche rechts. Das Fenster für die detaillierten Einstellungen wird angezeigt.\n• Detaillierte Einstellungen: Legen Sie im Dialogfeld den Materialsatz, Notizen (Memos) und Tags für die Speicherung fest.\n• Jetzt übersetzen: Tippen Sie nach der Konfiguration auf die grüne Übersetzungsschaltfläche, um die KI-Übersetzung sofort durchzuführen.\n• Automatische Suche: Erkennt ähnliche vorhandene Übersetzungen in Echtzeit während der Eingabe.\n• Hören & Speichern: Hören Sie die Aussprache über das Lautsprechersymbol und tippen Sie auf 'Daten speichern', um sie Ihrer Lernliste hinzuzufügen."
+  "helpTag": "Geben Sie Schlüsselwörter zur späteren Kategorisierung oder Suche ein."
 }

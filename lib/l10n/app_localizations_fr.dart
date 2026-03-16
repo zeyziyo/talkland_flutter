@@ -361,7 +361,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get helpMode1Desc =>
-      'Traduisez instantanément par reconnaissance vocale ou saisie de texte et enregistrez dans votre liste d\'étude.';
+      'Commencez votre apprentissage des langues de la manière la plus intuitive qui soit, grâce à un micro 3D premium et à une icône de clavier grand format.';
 
   @override
   String get helpMode1Details =>
@@ -1309,7 +1309,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Avec Talkie, traduisez instantanément et apprenez à l\'infini dans la langue de votre choix parmi 80 langues.';
+      'Bienvenue sur Talkie ! Nous prenons en charge plus de 80 langues du monde entier avec une intégrité à 100 %. Découvrez une expérience d\'apprentissage parfaite avec un nouveau design 3D premium et des performances optimisées.';
 
   @override
   String get welcomeButton => 'Commencer';
@@ -1361,10 +1361,4 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get helpTag =>
       'Entrez des mots-clés pour classer ou rechercher plus tard.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

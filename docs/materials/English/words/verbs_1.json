@@ -1,0 +1,56 @@
+{
+    "default_type": "word",
+    "subject": "Verbs 1",
+    "entries": [
+        {
+            "text": "Go",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Come",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Eat",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Drink",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Sleep",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "See / Watch",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Buy",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Sell",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Read",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Write",
+            "note": "",
+            "tags": []
+        }
+    ]
+}

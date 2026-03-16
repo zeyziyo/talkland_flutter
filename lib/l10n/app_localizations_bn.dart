@@ -354,7 +354,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get helpMode1Desc =>
-      'কথা শনাক্ত করতে বা টেক্সট প্রবেশ করে তাৎক্ষণিকভাবে অনুবাদ করুন, এবং শেখার তালিকায় সংরক্ষণ করুন।';
+      'প্রিমিয়াম 3D মাইক্রোফোন এবং বড় কীবোর্ড আইকনের মাধ্যমে সবচেয়ে সহজ উপায়ে ভাষা শেখা শুরু করুন।';
 
   @override
   String get helpMode1Details =>
@@ -1289,7 +1289,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'টকি-এর মাধ্যমে 80টি ভাষার মধ্যে যেকোনো ভাষায় তাৎক্ষণিক পারস্পরিক অনুবাদ এবং সীমাহীন পুনরাবৃত্তি শেখা সম্ভব।';
+      'Talkie-তে স্বাগতম! বিশ্বব্যাপী ৮০টিরও বেশি ভাষার ১০০% নির্ভুল সমর্থন এবং নতুন প্রিমিয়াম 3D ডিজাইন ও অপ্টিমাইজ করা পারফরম্যান্সের সাথে একটি নিখুঁত শেখার অভিজ্ঞতা উপভোগ করুন।';
 
   @override
   String get welcomeButton => 'শুরু করুন';
@@ -1341,10 +1341,4 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get helpTag => 'শ্রেণীবদ্ধ বা অনুসন্ধানের জন্য কীওয়ার্ড লিখুন।';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

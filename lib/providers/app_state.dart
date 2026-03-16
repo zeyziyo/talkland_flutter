@@ -269,7 +269,7 @@ class AppState extends ChangeNotifier {
   bool _isSaved = false;
   String _note = '';
   bool _isWordMode = true;
-  bool _useSimpleMic = false; // Phase 17610: Eco mode for low-end devices
+  bool _useSimpleMic = false; // Internal flag for automatic eco-optimization (No UI)
   String _sourcePos = ''; 
   String _sourceFormType = ''; 
   String _sourceRoot = ''; 

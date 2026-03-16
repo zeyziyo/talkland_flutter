@@ -5,8 +5,6 @@
         {
             "text": "¿Se puede nadar aquí?",
             "note": "",
-            "form_type": "Interrogativa",
-            "style": "Informal",
             "tags": [
                 "playa",
                 "pregunta"
@@ -15,8 +13,6 @@
         {
             "text": "Una toalla, por favor.",
             "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
             "tags": [
                 "playa",
                 "petición"
@@ -25,8 +21,6 @@
         {
             "text": "¡Qué bonito es el mar!",
             "note": "",
-            "form_type": "Exclamativa",
-            "style": "Informal",
             "tags": [
                 "playa",
                 "opinión"

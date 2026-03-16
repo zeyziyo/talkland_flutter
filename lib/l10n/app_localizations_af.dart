@@ -356,7 +356,7 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get helpMode1Desc =>
-      'Vertaal onmiddellik deur spraak te herken of teks in te voer, en stoor dit in jou studeerkamerlys.';
+      'Begin jou taalleerreis op die mees intuïtiewe manier met die premium 3D-mikrofoon en groot sleutelbordikone.';
 
   @override
   String get helpMode1Details =>
@@ -1285,7 +1285,7 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Talkie bied onmiddellike heen-en-weer vertaling en onbeperkte herhaalde leer in enige van 80 tale.';
+      'Welkom by Talkie! Ondersteun alle 80+ tale wêreldwyd met 100% integriteit, kompleet met nuwe premium 3D-ontwerpe en geoptimaliseerde werkverrigting vir \'n perfekte leerervaring.';
 
   @override
   String get welcomeButton => 'Begin';
@@ -1336,10 +1336,4 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get helpTag => 'Sleutelwoorde vir latere kategorisering of soektogte.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

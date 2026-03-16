@@ -5,88 +5,78 @@
         {
             "text": "rojo",
             "note": "",
-            "pos": "Adjetivo",
             "tags": [
-                "color",
-                "básico"
+                "básico",
+                "color"
             ]
         },
         {
             "text": "azul",
             "note": "",
-            "pos": "Adjetivo",
             "tags": [
-                "color",
-                "básico"
+                "básico",
+                "color"
             ]
         },
         {
             "text": "amarillo",
             "note": "",
-            "pos": "Adjetivo",
             "tags": [
-                "color",
-                "básico"
+                "básico",
+                "color"
             ]
         },
         {
             "text": "verde",
             "note": "",
-            "pos": "Adjetivo",
             "tags": [
-                "color",
-                "básico"
+                "básico",
+                "color"
             ]
         },
         {
             "text": "naranja",
             "note": "",
-            "pos": "Adjetivo",
             "tags": [
-                "color",
-                "básico"
+                "básico",
+                "color"
             ]
         },
         {
             "text": "morado",
             "note": "",
-            "pos": "Adjetivo",
             "tags": [
-                "color",
-                "básico"
+                "básico",
+                "color"
             ]
         },
         {
             "text": "blanco",
             "note": "",
-            "pos": "Adjetivo",
             "tags": [
-                "color",
-                "básico"
+                "básico",
+                "color"
             ]
         },
         {
             "text": "negro",
             "note": "",
-            "pos": "Adjetivo",
             "tags": [
-                "color",
-                "básico"
+                "básico",
+                "color"
             ]
         },
         {
             "text": "gris",
             "note": "",
-            "pos": "Adjetivo",
             "tags": [
-                "color",
-                "básico"
+                "básico",
+                "color"
             ]
         },
         {
             "text": "marrón",
             "note": "color marrón / castaño",
-            "pos": "Adjetivo",
             "tags": [
                 "color"
             ]
@@ -94,7 +84,6 @@
         {
             "text": "rosa",
             "note": "",
-            "pos": "Adjetivo",
             "tags": [
                 "color"
             ]
@@ -102,7 +91,6 @@
         {
             "text": "dorado",
             "note": "",
-            "pos": "Adjetivo",
             "tags": [
                 "color"
             ]
@@ -110,7 +98,6 @@
         {
             "text": "plateado",
             "note": "",
-            "pos": "Adjetivo",
             "tags": [
                 "color"
             ]

@@ -5,51 +5,41 @@
         {
             "text": "Te quiero.",
             "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
             "tags": [
-                "emoción",
-                "amor"
+                "amor",
+                "emoción"
             ]
         },
         {
             "text": "Soy feliz.",
             "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
             "tags": [
-                "emoción",
-                "positivo"
+                "positivo",
+                "emoción"
             ]
         },
         {
             "text": "Estoy cansado/a.",
             "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
             "tags": [
-                "emoción",
-                "físico"
+                "físico",
+                "emoción"
             ]
         },
         {
             "text": "Tengo hambre.",
             "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
             "tags": [
-                "emoción",
-                "físico"
+                "físico",
+                "emoción"
             ]
         },
         {
             "text": "Estoy bien.",
             "note": "",
-            "form_type": "Afirmativa",
-            "style": "Informal",
             "tags": [
-                "emoción",
-                "positivo"
+                "positivo",
+                "emoción"
             ]
         }
     ]

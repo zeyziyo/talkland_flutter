@@ -5,31 +5,25 @@
         {
             "text": "Goodbye!",
             "note": "",
-            "form_type": "Exclamatory",
-            "style": "Informal",
             "tags": [
-                "farewell",
-                "greeting"
+                "greeting",
+                "farewell"
             ]
         },
         {
             "text": "See you tomorrow.",
             "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
             "tags": [
-                "farewell",
-                "greeting"
+                "greeting",
+                "farewell"
             ]
         },
         {
             "text": "Take care.",
             "note": "",
-            "form_type": "Declarative",
-            "style": "Informal",
             "tags": [
-                "farewell",
-                "greeting"
+                "greeting",
+                "farewell"
             ]
         }
     ]

@@ -360,7 +360,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get helpMode1Desc =>
-      'Reconeix la veu o introdueix text per traduir a l\'instant i desar-ho a la llista d\'aprenentatge.';
+      'Comença a aprendre idiomes de la manera més intuïtiva, amb un micròfon 3D premium i una icona de teclat gran.';
 
   @override
   String get helpMode1Details =>
@@ -1310,7 +1310,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Amb Talkie pots traduir instantàniament entre 80 idiomes i aprendre de manera il·limitada.';
+      'Benvingut/da a Talkie! Admetem més de 80 idiomes d\'arreu del món amb una integritat del 100 %. Gaudeix d\'una experiència d\'aprenentatge perfecta amb nous dissenys 3D premium i rendiment optimitzat.';
 
   @override
   String get welcomeButton => 'Comença';
@@ -1362,10 +1362,4 @@ class AppLocalizationsCa extends AppLocalizations {
   @override
   String get helpTag =>
       'Introdueix paraules clau per classificar o cercar més tard.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

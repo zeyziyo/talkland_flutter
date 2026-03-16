@@ -606,9 +606,6 @@ class MeshMicIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appState = Provider.of<AppState>(context);
-    final bool useSimple = appState.useSimpleMic;
-
     return Container(
       width: size,
       height: size,
@@ -619,89 +616,21 @@ class MeshMicIcon extends StatelessWidget {
           if (isListening)
             BoxShadow(
               color: color.withAlpha((0.4 * 255).toInt()),
-              blurRadius: 25,
+              blurRadius: 30,
               spreadRadius: 8,
             ),
         ],
       ),
-      child: useSimple
-          ? CustomPaint(
-              size: Size(size, size),
-              painter: SimpleMicPainter(color: color),
-            )
-          : Image.asset(
-              'assets/icon_mic.png',
-              width: size,
-              height: size,
-              fit: BoxFit.contain,
-            ),
+      child: Center(
+        child: Image.asset(
+          'assets/icon_mic.png',
+          width: size * 0.9,
+          height: size * 0.9,
+          fit: BoxFit.contain,
+          // Color filtering is removed to show the premium 3D textures of the new asset
+        ),
+      ),
     );
   }
 }
 
-/// Eco Mode를 위한 단순화된 마이크 페인터 (리소스 소모 최소화)
-class SimpleMicPainter extends CustomPainter {
-  final Color color;
-  SimpleMicPainter({required this.color});
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final double centerX = size.width / 2;
-    final double centerY = size.height / 2;
-    final double radius = size.width * 0.45;
-
-    // 1. Simple Flat Background
-    final Paint bgPaint = Paint()
-      ..color = const Color(0xFF1A237E).withAlpha((0.8 * 255).toInt()) // Deep Navy
-      ..style = PaintingStyle.fill;
-    canvas.drawCircle(Offset(centerX, centerY), radius, bgPaint);
-
-    final double micWidth = size.width * 0.25;
-    final double micHeight = size.height * 0.45;
-    final double micX = centerX - micWidth / 2;
-    final double micY = centerY - micHeight * 0.6;
-
-    // 2. Simple Mic Body (Capsule)
-    final Paint micPaint = Paint()
-      ..color = Colors.white.withAlpha((0.9 * 255).toInt())
-      ..style = PaintingStyle.fill;
-    canvas.drawRRect(
-      RRect.fromRectAndRadius(
-        Rect.fromLTWH(micX, micY, micWidth, micHeight),
-        Radius.circular(micWidth / 2),
-      ),
-      micPaint,
-    );
-
-    // 3. Simple Cradle (U-Shape)
-    final Paint cradlePaint = Paint()
-      ..color = Colors.white.withAlpha((0.9 * 255).toInt())
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 3.0
-      ..strokeCap = StrokeCap.round;
-    
-    canvas.drawArc(
-      Rect.fromCenter(
-        center: Offset(centerX, centerY + 2),
-        width: micWidth + 12,
-        height: micHeight * 0.55,
-      ),
-      0, 3.1415, false, cradlePaint,
-    );
-
-    // 4. Simple Stand
-    canvas.drawLine(
-      Offset(centerX, centerY + micHeight * 0.28),
-      Offset(centerX, centerY + micHeight * 0.45),
-      cradlePaint..strokeWidth = 4.0,
-    );
-    canvas.drawLine(
-      Offset(centerX - 15, centerY + micHeight * 0.45),
-      Offset(centerX + 15, centerY + micHeight * 0.45),
-      cradlePaint..strokeWidth = 3.0,
-    );
-  }
-
-  @override
-  bool shouldRepaint(covariant SimpleMicPainter oldDelegate) => oldDelegate.color != color;
-}

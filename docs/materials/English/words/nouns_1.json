@@ -1,0 +1,56 @@
+{
+    "default_type": "word",
+    "subject": "Nouns 1",
+    "entries": [
+        {
+            "text": "Person",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Water",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Rice / Meal",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Bread",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Apple",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Milk",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Meat",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Clothes",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "House",
+            "note": "",
+            "tags": []
+        },
+        {
+            "text": "Book",
+            "note": "",
+            "tags": []
+        }
+    ]
+}

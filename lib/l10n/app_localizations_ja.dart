@@ -344,7 +344,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get helpJsonTypeWord => '単語 (Word)';
 
   @override
-  String get helpMode1Desc => '音声認識またはテキスト入力で即座に翻訳し、学習リストに保存しましょう。';
+  String get helpMode1Desc => 'プレミアム3Dマイクと大きなキーボードアイコンで、最も直感的な方法で言語学習を始めましょう。';
 
   @override
   String get helpMode1Details =>
@@ -1259,7 +1259,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get welcomeTitle => 'Talkieへようこそ！';
 
   @override
-  String get welcomeDesc => 'Talkieでは80の言語から好きな言語を選んで、即座に相互翻訳や無限反復学習ができます。';
+  String get welcomeDesc =>
+      'Talkieへようこそ！世界80以上の言語を100%の完全性でサポートし、新しいプレミアム3Dデザインと最適化されたパフォーマンスで完璧な学習体験を提供します。';
 
   @override
   String get welcomeButton => '始める';
@@ -1308,10 +1309,4 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get helpTag => '後で分類したり検索したりするためのキーワードを入力してください。';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

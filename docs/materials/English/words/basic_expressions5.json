@@ -5,43 +5,38 @@
         {
             "text": "zero",
             "note": "",
-            "pos": "Noun",
             "tags": [
-                "number",
-                "basic"
+                "basic",
+                "number"
             ]
         },
         {
             "text": "one",
             "note": "",
-            "pos": "Noun",
             "tags": [
-                "number",
-                "basic"
+                "basic",
+                "number"
             ]
         },
         {
             "text": "two",
             "note": "",
-            "pos": "Noun",
             "tags": [
-                "number",
-                "basic"
+                "basic",
+                "number"
             ]
         },
         {
             "text": "ten",
             "note": "",
-            "pos": "Noun",
             "tags": [
-                "number",
-                "basic"
+                "basic",
+                "number"
             ]
         },
         {
             "text": "hundred",
             "note": "",
-            "pos": "Noun",
             "tags": [
                 "number"
             ]
@@ -49,7 +44,6 @@
         {
             "text": "thousand",
             "note": "",
-            "pos": "Noun",
             "tags": [
                 "number"
             ]

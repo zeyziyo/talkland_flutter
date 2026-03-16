@@ -358,7 +358,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get helpMode1Desc =>
-      'ভয়েচ ৰিকগনাইজ কৰক বা পাঠ্য লিখি ততালিকে অনুবাদ কৰক আৰু আপোনাৰ শিকাৰ তালিকাত ইয়াক সংৰক্ষণ কৰক।';
+      'এটাৰ প্ৰিমিয়াম 3D মাইক্ৰ\'ফোন আৰু ডাঙৰ কিবৰ্ড আইকনৰ সহায়ত ভাষা শিকাৰ আটাইতকৈ সহজ উপায়টো আৰম্ভ কৰক।';
 
   @override
   String get helpMode1Details =>
@@ -1296,7 +1296,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Talkie ৰ সহায়ত ৮০টা ভাষাৰ মাজত যিকোনো ভাষালৈ তাৎক্ষণিকভাৱে অনুবাদ কৰিব পাৰি আৰু সীমাহীনভাৱে শিকিব পাৰি।';
+      'Talkie লৈ স্বাগতম! আমি বিশ্বৰ 80 তকৈও অধিক ভাষাক 100% সত্যতাৰে সমৰ্থন কৰোঁ, আৰু নতুন প্ৰিমিয়াম 3D ডিজাইন আৰু অনুকূলিত প্ৰদৰ্শনেৰে এক নিখুঁত শিক্ষাৰ অভিজ্ঞতা প্ৰদান কৰোঁ।';
 
   @override
   String get welcomeButton => 'আৰম্ভ কৰক';
@@ -1348,10 +1348,4 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get helpTag => ' পিছত শ্ৰেণীবিভাজন বা সন্ধান কৰিবলৈ কিৱৰ্ডসমূহ লিখক।';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

@@ -360,11 +360,12 @@ class AppLocalizationsUz extends AppLocalizations {
   String get helpJsonTypeWord => 'So\'z';
 
   @override
-  String get helpMode1Desc => '음성을 인식하거나 텍스트를 입력하여 즉시 번역하고, 학습 리스트에 저장하세요.';
+  String get helpMode1Desc =>
+      'Premium 3D mikrofon va katta klaviatura yordamida til o\'rganishni eng intuitiv usulda boshlang.';
 
   @override
   String get helpMode1Details =>
-      '• 언어 설정: 홈 화면 상단의 언어 버튼으로 내 언어와 학습 중인 언어를 확인하고 학습 언어를 변경할 수 있습니다.\n• 심플 입력: 중앙의 대형 마이크 및 텍스트 창을 통해 즉시 입력하세요.\n• 설정 확인: 입력이 끝나면 오른쪽의 파란색 체크 버튼을 누르세요. 상세 설정 창이 나타납니다.\n• 상세 설정: 나타난 다이얼로그에서 저장할 자료집, 주석(메모), 태그를 지정할 수 있습니다.\n• 지금 번역하기: 설정을 마친 후 초록색 번역 버튼을 누르면 인공지능이 즉시 번역을 수행합니다.\n• 자동 검색: 입력 중 유사한 기존 번역을 실시간으로 감지하여 보여줍니다.\n• 듣기 및 저장: 번역 결과 하단의 스피커 아이콘으로 발음을 듣고, \'데이터 저장\'을 통해 학습 리스트에 추가하세요.';
+      '• Til sozlamalari: Bosh ekran tepasidagi til tugmasi orqali o\'z tilingiz va o\'rganayotgan tilingizni tekshiring va o\'rganish tilini o\'zgartirishingiz mumkin.\n• Oddiy kiritish: Markazdagi katta mikrofon va matn oynasi orqali darhol kiriting.\n• Sozlamalarni tekshirish: Kiritish tugagandan so\'ng, o\'ng tomondagi ko\'k belgi tugmasini bosing. Batafsil sozlash oynasi paydo bo\'ladi.\n• Batafsil sozlash: Paydo bo\'lgan dialog oynasida saqlanadigan materiallar to\'plami, izoh (eslatma), teglar belgilashingiz mumkin.\n• Hozir tarjima qilish: Sozlashni tugatgandan so\'ng, yashil tarjima tugmasini bosish orqali sun\'iy intellekt darhol tarjimani amalga oshiradi.\n• Avtomatik qidiruv: Kiritish paytida o\'xshash mavjud tarjimalarni real vaqtda aniqlaydi va ko\'rsatadi.\n• Tinglash va saqlash: Tarjima natijalari ostidagi karnay belgisi bilan talaffuzni tinglang va \'Ma\'lumotlarni saqlash\' orqali o\'quv ro\'yxatiga qo\'shing.';
 
   @override
   String get helpMode2Desc =>
@@ -1304,7 +1305,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Talkie orqali 80 ta tildan istalgan tilga bir zumda o‘zaro tarjima va cheksiz takroriy o‘rganish imkoniyatiga ega bo‘ling.';
+      'Talkiega xush kelibsiz! Dunyoning 80 dan ortiq barcha tillarini 100% sifat bilan qo\'llab-quvvatlaymiz va yangi premium 3D dizayn va optimallashtirilgan ishlash bilan mukammal o\'rganish tajribasini taqdim etamiz.';
 
   @override
   String get welcomeButton => 'Boshlash';
@@ -1356,10 +1357,4 @@ class AppLocalizationsUz extends AppLocalizations {
   @override
   String get helpTag =>
       'Keyinroq saralash yoki qidirish uchun kalit so\'zlarni kiriting.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

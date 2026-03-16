@@ -359,11 +359,12 @@ class AppLocalizationsLt extends AppLocalizations {
   String get helpJsonTypeWord => 'Žodis';
 
   @override
-  String get helpMode1Desc => '음성을 인식하거나 텍스트를 입력하여 즉시 번역하고, 학습 리스트에 저장하세요.';
+  String get helpMode1Desc =>
+      'Pradėkite mokytis kalbų intuityviausiu būdu su aukščiausios kokybės 3D mikrofonu ir didelėmis klaviatūros piktogramomis.';
 
   @override
   String get helpMode1Details =>
-      '• 언어 설정: 홈 화면 상단의 언어 버튼으로 내 언어와 학습 중인 언어를 확인하고 학습 언어를 변경할 수 있습니다.\n• 심플 입력: 중앙의 대형 마이크 및 텍스트 창을 통해 즉시 입력하세요.\n• 설정 확인: 입력이 끝나면 오른쪽의 파란색 체크 버튼을 누르세요. 상세 설정 창이 나타납니다.\n• 상세 설정: 나타난 다이얼로그에서 저장할 자료집, 주석(메모), 태그를 지정할 수 있습니다.\n• 지금 번역하기: 설정을 마친 후 초록색 번역 버튼을 누르면 인공지능이 즉시 번역을 수행합니다.\n• 자동 검색: 입력 중 유사한 기존 번역을 실시간으로 감지하여 보여줍니다.\n• 듣기 및 저장: 번역 결과 하단의 스피커 아이콘으로 발음을 듣고, \'데이터 저장\'을 통해 학습 리스트에 추가하세요.';
+      '• Kalbos nustatymai: pagrindinio ekrano viršuje esančiu kalbos mygtuku galite peržiūrėti savo kalbą ir kalbą, kurios mokotės, ir pakeisti mokymosi kalbą.\n• Paprastas įvedimas: iškart įveskite naudodami didelį mikrofoną ir teksto langą centre.\n• Nustatymų patvirtinimas: baigę įvesti, spustelėkite mėlyną varnelės mygtuką dešinėje. Atsidarys išsamus nustatymų langas.\n• Išsamūs nustatymai: pasirodžiusiame dialogo lange galite nurodyti duomenų rinkinį, anotacijas (pastabas) ir žymas, kurias norite išsaugoti.\n• Versti dabar: baigę nustatymus, spustelėkite žalią vertimo mygtuką ir dirbtinis intelektas iškart atliks vertimą.\n• Automatinė paieška: įvesdami realiuoju laiku aptinkate ir parodote panašius esamus vertimus.\n• Klausytis ir išsaugoti: klausykite tarimo naudodami garsiakalbio piktogramą vertimo rezultato apačioje ir pridėkite jį prie mokymosi sąrašo naudodami „Išsaugoti duomenis“.';
 
   @override
   String get helpMode2Desc =>
@@ -1299,7 +1300,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get welcomeDesc =>
-      'Su Talkie galite akimirksniu versti tarp norimų 80 kalbų ir mokytis be galo.';
+      'Sveiki atvykę į Talkie! Palaikome daugiau nei 80 kalbų visame pasaulyje su 100 % vientisumu, o naujas aukščiausios kokybės 3D dizainas ir optimizuotas našumas užtikrina nepriekaištingą mokymosi patirtį.';
 
   @override
   String get welcomeButton => 'Pradėti';
@@ -1351,10 +1352,4 @@ class AppLocalizationsLt extends AppLocalizations {
   @override
   String get helpTag =>
       'Įveskite raktinius žodžius, kad vėliau galėtumėte rūšiuoti ar ieškoti.';
-
-  @override
-  String get ecoMode => '저사양 모드 (Eco Mode)';
-
-  @override
-  String get ecoModeDesc => '아이콘을 단순화하여 메모리와 리소스를 절약합니다.';
 }

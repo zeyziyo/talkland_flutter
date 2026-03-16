@@ -1057,20 +1057,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
                   const SizedBox(height: 24),
 
-                  // Phase 17610: Eco Mode Toggle
                   const Divider(),
                   const SizedBox(height: 8),
-                  SwitchListTile(
-                    contentPadding: EdgeInsets.zero,
-                    title: Text(l10n.ecoMode, style: const TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: Text(l10n.ecoModeDesc, style: const TextStyle(fontSize: 12)),
-                    value: appState.useSimpleMic,
-                    activeThumbColor: Colors.green,
-                    onChanged: (value) {
-                      appState.setUseSimpleMic(value);
-                      setDialogState(() {}); // Rebuild dialog to reflect switch state
-                    },
-                  ),
                 ],
               ),
               actions: [
@@ -1128,25 +1116,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   Widget _buildModernTab({required bool isSelected, required IconData icon, required String label}) {
      return Tab(
-       height: 44, // Slimmer height
-       child: Row(
-         mainAxisAlignment: MainAxisAlignment.center,
-         mainAxisSize: MainAxisSize.min,
-         children: [
-           Icon(icon, size: 22),
-           if (isSelected) 
-             Padding(
-               padding: const EdgeInsets.only(left: 8.0),
-               child: Text(
-                 label, 
-                 style: const TextStyle(
-                   fontWeight: FontWeight.bold,
-                   fontSize: 14,
-                 ),
-                 overflow: TextOverflow.ellipsis,
+       height: 44, 
+       child: Center(
+         child: isSelected 
+           ? Text(
+               label, 
+               style: const TextStyle(
+                 fontWeight: FontWeight.bold,
+                 fontSize: 14,
                ),
-             ),
-         ],
+               overflow: TextOverflow.ellipsis,
+             )
+           : Icon(icon, size: 24), // Show icon only when not selected (v59)
        ),
      );
   }
