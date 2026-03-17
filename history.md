@@ -21,6 +21,13 @@
 
 ---
 
+### [2026-03-17] 데이터 구조 최신화 및 UI 무결성 확보 (v1.9.6+59)
+
+- **Data Structure Optimization (v20)**: 설계 문서(`integrated_data_structure.md`)에 따라 `pos`, `style`, `form_type`, `caption` 등 미사용 필드를 프로젝트 전반(DB 스키마, 레파지토리, 서비스 레이어, AppState)에서 완전히 제거했습니다. 이를 통해 데이터 정합성을 높이고 스토리지 효율을 개선했습니다.
+- **System Integrity Recovery**: 데이터 구조 변경 과정에서 발생한 `SentenceRepository`, `WordRepository`, `SupabaseService` 등의 심각한 구문 에러 및 타입 불일치를 전수 수정하여 앱의 안정성을 복구했습니다.
+- **Microphone Icon Update**: 홈 화면의 마이크 아이콘을 `assets/icon_mic.png` 및 해상도별 변체(`2.0x`, `3.0x`)로 교체하여 다양한 기기 해상도에서의 시각적 선명도를 확보했습니다.
+- **Static Analysis**: `flutter analyze` 실행 결과 **0 issues**를 달성하여 배포 안정성을 입증했습니다.
+
 ### [2026-03-09] 온보딩 및 홈 화면 내비게이션 개선 (v1.9.1)
 
 - **Smart Mode Tabs (Swipe Indicator)**: 사용자가 앱의 다른 기능(모드)이 있음을 항상 인지하고 스와이프를 유도할 수 있도록 `AppBar` 하단에 **상시 노출되는 탭 바**를 추가했습니다.

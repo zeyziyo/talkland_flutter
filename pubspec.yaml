@@ -2,7 +2,7 @@ name: talkie
 description: "Talkie - Language learning app with speech recognition and translation"
 publish_to: 'none'
 
-version: 1.9.6+59
+version: 1.9.6+60
 
 environment:
   sdk: ^3.5.0
@@ -92,6 +92,8 @@ flutter:
     - .env
     - assets/help/
     - assets/icon_mic.png
+    - assets/icon_mic_2.png
+    - assets/icon_mic_premium.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -6,100 +6,100 @@
             "text": "빨간색",
             "note": "",
             "tags": [
-                "기본",
-                "색깔"
+                "색깔",
+                "기본"
             ]
         },
         {
             "text": "파란색",
             "note": "",
             "tags": [
-                "기본",
-                "색깔"
+                "색깔",
+                "기본"
             ]
         },
         {
             "text": "노란색",
             "note": "",
             "tags": [
-                "기본",
-                "색깔"
+                "색깔",
+                "기본"
             ]
         },
         {
             "text": "초록색",
             "note": "",
             "tags": [
-                "기본",
-                "색깔"
+                "색깔",
+                "기본"
+            ]
+        },
+        {
+            "text": "주황색",
+            "note": "",
+            "tags": [
+                "색깔",
+                "기본"
+            ]
+        },
+        {
+            "text": "보라색",
+            "note": "",
+            "tags": [
+                "색깔",
+                "기본"
             ]
         },
         {
             "text": "흰색",
             "note": "",
             "tags": [
-                "기본",
-                "색깔"
+                "색깔",
+                "기본"
             ]
         },
         {
             "text": "검은색",
             "note": "",
             "tags": [
-                "기본",
+                "색깔",
+                "기본"
+            ]
+        },
+        {
+            "text": "회색",
+            "note": "",
+            "tags": [
+                "색깔",
+                "기본"
+            ]
+        },
+        {
+            "text": "갈색",
+            "note": "",
+            "tags": [
                 "색깔"
             ]
         },
         {
-            "text": "blanco",
+            "text": "분홍색",
             "note": "",
             "tags": [
-                "básico",
-                "color"
+                "색깔"
             ]
         },
         {
-            "text": "negro",
+            "text": "금색",
             "note": "",
             "tags": [
-                "básico",
-                "color"
+                "색깔"
             ]
         },
         {
-            "text": "gris",
+            "text": "은색",
             "note": "",
             "tags": [
-                "básico",
-                "color"
-            ]
-        },
-        {
-            "text": "marrón",
-            "note": "color marrón / castaño",
-            "tags": [
-                "color"
-            ]
-        },
-        {
-            "text": "rosa",
-            "note": "",
-            "tags": [
-                "color"
-            ]
-        },
-        {
-            "text": "dorado",
-            "note": "",
-            "tags": [
-                "color"
-            ]
-        },
-        {
-            "text": "plateado",
-            "note": "",
-            "tags": [
-                "color"
+                "색깔"
             ]
         }
     ]

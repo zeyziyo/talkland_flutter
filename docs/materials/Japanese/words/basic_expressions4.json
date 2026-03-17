@@ -3,103 +3,103 @@
     "subject": "色 1",
     "entries": [
         {
-            "text": "rojo",
-            "note": "",
+            "text": "赤",
+            "note": "あか",
             "tags": [
-                "básico",
-                "color"
+                "色",
+                "基本"
             ]
         },
         {
-            "text": "azul",
-            "note": "",
+            "text": "青",
+            "note": "あお",
             "tags": [
-                "básico",
-                "color"
+                "色",
+                "基本"
             ]
         },
         {
-            "text": "amarillo",
-            "note": "",
+            "text": "黄色",
+            "note": "きいろ",
             "tags": [
-                "básico",
-                "color"
+                "色",
+                "基本"
             ]
         },
         {
-            "text": "verde",
-            "note": "",
+            "text": "緑",
+            "note": "みどり",
             "tags": [
-                "básico",
-                "color"
+                "色",
+                "基本"
             ]
         },
         {
-            "text": "naranja",
+            "text": "オレンジ",
             "note": "",
             "tags": [
-                "básico",
-                "color"
+                "色",
+                "基本"
             ]
         },
         {
-            "text": "morado",
-            "note": "",
+            "text": "紫",
+            "note": "むらさき",
             "tags": [
-                "básico",
-                "color"
+                "色",
+                "基本"
             ]
         },
         {
-            "text": "blanco",
-            "note": "",
+            "text": "白",
+            "note": "しろ",
             "tags": [
-                "básico",
-                "color"
+                "色",
+                "基本"
             ]
         },
         {
-            "text": "negro",
-            "note": "",
+            "text": "黒",
+            "note": "くろ",
             "tags": [
-                "básico",
-                "color"
+                "色",
+                "基本"
             ]
         },
         {
-            "text": "gris",
-            "note": "",
+            "text": "灰色",
+            "note": "はいいろ",
             "tags": [
-                "básico",
-                "color"
+                "色",
+                "基本"
             ]
         },
         {
-            "text": "marrón",
-            "note": "color marrón / castaño",
+            "text": "茶色",
+            "note": "ちゃいろ",
             "tags": [
-                "color"
+                "色"
             ]
         },
         {
-            "text": "rosa",
+            "text": "ピンク",
             "note": "",
             "tags": [
-                "color"
+                "色"
             ]
         },
         {
-            "text": "dorado",
-            "note": "",
+            "text": "金",
+            "note": "きん",
             "tags": [
-                "color"
+                "色"
             ]
         },
         {
-            "text": "plateado",
-            "note": "",
+            "text": "銀",
+            "note": "ぎん",
             "tags": [
-                "color"
+                "色"
             ]
         }
     ]

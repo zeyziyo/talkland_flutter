@@ -71,7 +71,7 @@ class _SearchFilterDialogState extends State<SearchFilterDialog> {
               _buildDropdown(
                 label: l10n.labelFilterMaterial,
                 value: selectedTitle,
-                items: titleTags.where((t) => t != 'Basic' && t != 'Noun').toList(),
+                items: titleTags,
                 l10n: l10n,
                 isTitle: true,
                 onChanged: (val) async {

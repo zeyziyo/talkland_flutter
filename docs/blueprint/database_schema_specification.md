@@ -34,7 +34,6 @@
 | `notebook_title` | TEXT | 자료집(단어장) 제목 |
 | `source_lang` | TEXT | 입력 언어 코드 (e.g., 'ko') |
 | `target_lang` | TEXT | 번역 언어 코드 (e.g., 'en') |
-| `caption` | TEXT | 주석/노트 (개인별 메모) |
 | `tags` | TEXT | 태그 (쉼표로 구분된 문자열) |
 | `is_memorized` | INTEGER | 암기 여부 (0: 미암기, 1: 암기) |
 | `is_synced` | INTEGER | 클라우드 동기화 성공 여부 |

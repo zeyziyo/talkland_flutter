@@ -157,24 +157,17 @@ class _OnlineLibraryDialogState extends State<OnlineLibraryDialog> {
                     SnackBar(content: Text(_translateStatus(context, 'L10N:statusImportSuccess|${material['name']}', l10n))),
                   );
                   
-                  // Phase 79.2 + 81.1: Refresh materials
                   await state.loadStudyMaterials(); 
-
-                  // Phase 97.5: Stay in current mode instead of forcing transition
-                  // Phase 110: Integrated post-import logic
                   if (type == 'dialogue') {
                     final String? dId = result['dialogue_id'] as String?;
                     if (dId != null) {
-                      state.setRecordTypeFilter('sentence'); // Dialogue items are sentences
+                      state.setRecordTypeFilter('sentence');
                       state.selectMaterial(dId);
-                      
                       final group = state.dialogueGroups.cast<DialogueGroup?>().firstWhere(
                         (g) => g?.id == dId, 
                         orElse: () => null,
                       );
-                      if (group != null) {
-                        await state.loadExistingDialogue(group);
-                      }
+                      if (group != null) await state.loadExistingDialogue(group);
                     }
                   } else {
                     final dynamic mIdRaw = result['material_id'];
@@ -184,13 +177,28 @@ class _OnlineLibraryDialogState extends State<OnlineLibraryDialog> {
                     } else if (mIdRaw is int && mIdRaw > 0) {
                       materialId = mIdRaw.toString();
                     }
-
                     if (materialId != null) {
                       state.setRecordTypeFilter(type == 'word' ? 'word' : 'sentence');
                       state.selectMaterial(materialId);
                     }
                   }
                   if (context.mounted) Navigator.pop(context);
+                } else if (result['error'] == 'StudyLangNotFound') {
+                  // v59.6: Dedicated popup for missing Study Language support
+                  final targetLang = result['targetLang'] as String? ?? 'Unknown';
+                  showDialog(
+                    context: context,
+                    builder: (ctx) => AlertDialog(
+                      title: const Text('학습 언어 미지원'),
+                      content: Text('선택하신 자료는 현재 설정된 학습 언어($targetLang)를 지원하지 않아 로컬에 저장할 수 없습니다.'),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.pop(ctx),
+                          child: const Text('확인'),
+                        ),
+                      ],
+                    ),
+                  );
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(content: Text(_translateStatus(context, result['error'] ?? '', l10n))),

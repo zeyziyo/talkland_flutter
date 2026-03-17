@@ -34,7 +34,6 @@ class DataTransferService {
       final fileCreatedAt = (meta['created_at'] ?? data['created_at']) as String? ?? DateTime.now().toIso8601String();
       final batchCreatedAt = DateTime.now().toIso8601String();
       final entryDefaultType = (data['default_type'] ?? meta['default_type'] ?? defaultType) as String? ?? 'sentence';
-      final entryPos = (data['pos'] ?? meta['pos']) as String?;
       
       final fileTags = (meta['tags'] as List?)?.map((e) => e.toString().trim()).where((e) => e.isNotEmpty).toList() ?? [];
 
@@ -139,10 +138,19 @@ class DataTransferService {
                   final Set<String> uniqueTags = {
                      ...fileTags, 
                      ...entryTags, 
-                     materialSubject.trim(), 
-                     syncSubject.trim()
                   };
-                  final List<String> allTags = uniqueTags.where((t) => t.isNotEmpty).toList();
+                  final List<String> allTags = uniqueTags.where((t) {
+                    final lowerT = t.toLowerCase().trim();
+                    if (lowerT.isEmpty) return false;
+                    // v59.5: Enhanced Blacklist Filter for Tags (System keywords/Filenames)
+                    if (lowerT.endsWith('.json') || lowerT.endsWith('.csv')) return false;
+                    if (lowerT == materialSubject.toLowerCase().trim()) return false;
+                    if (lowerT == syncSubject.toLowerCase().trim()) return false;
+                    if (fileName != null && lowerT == fileName.toLowerCase().trim()) return false;
+                    if (lowerT.startsWith('remote_') && lowerT.endsWith('_merged.json')) return false;
+                    if (lowerT.contains('uuid')) return false; // Common system id pattern
+                    return true;
+                  }).toList();
                   final type = entry['type'] as String? ?? entryDefaultType;
                   final tableContent = type == 'word' ? 'words' : 'sentences';
 
@@ -153,9 +161,6 @@ class DataTransferService {
                   final int gId = UnifiedRepository.generateGroupId(
                     text: idBaseText,
                     type: type,
-                    pos: _getVal(entry, 'pos', entryPos),
-                    style: _getVal(entry, 'style'),
-                    formType: _getVal(entry, 'form_type'),
                   );
 
                   // Phase 160: Multilingual Merge (Upsert) Logic
@@ -172,28 +177,20 @@ class DataTransferService {
                   // Add/Update Source Data (Ensure latest from entry overrides or supplements)
                   finalContentMap[sourceLang] = {
                     'text': sText,
-                    'pos': _getVal(entry, 'pos', entryPos),
                     'note': _getVal(entry, 'note'),
                   };
                   if (type == 'word') {
-                    finalContentMap[sourceLang]['form_type'] = _getVal(entry, 'form_type');
                     finalContentMap[sourceLang]['root'] = _getVal(entry, 'root');
-                  } else {
-                    finalContentMap[sourceLang]['style'] = _getVal(entry, 'style');
                   }
 
                   // Add/Update Target Data
                   if (hasTarget) {
                     finalContentMap[targetLang] = {
                       'text': tText,
-                      'pos': _getVal(entry, 'target_pos') ?? _getVal(entry, 'pos', entryPos),
                       'note': _getVal(entry, 'note'),
                     };
                     if (type == 'word') {
-                      finalContentMap[targetLang]['form_type'] = _getVal(entry, 'target_form_type');
                       finalContentMap[targetLang]['root'] = _getVal(entry, 'target_root');
-                    } else {
-                      finalContentMap[targetLang]['style'] = _getVal(entry, 'target_style') ?? _getVal(entry, 'style');
                     }
                   }
 
@@ -206,9 +203,9 @@ class DataTransferService {
                   final metaTable = type == 'word' ? 'words_meta' : 'sentences_meta';
                   batch.rawInsert('''
                     INSERT INTO $metaTable (
-                      group_id, notebook_title, source_lang, target_lang, caption, tags,
+                      group_id, notebook_title, source_lang, target_lang, tags,
                       is_memorized, is_synced, review_count, last_reviewed, created_at
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     ON CONFLICT(group_id, notebook_title) DO UPDATE SET
                       source_lang = excluded.source_lang,
                       target_lang = excluded.target_lang,
@@ -216,14 +213,12 @@ class DataTransferService {
                       is_synced = MAX($metaTable.is_synced, excluded.is_synced),
                       is_memorized = MAX($metaTable.is_memorized, excluded.is_memorized),
                       review_count = MAX($metaTable.review_count, excluded.review_count),
-                      last_reviewed = MAX($metaTable.last_reviewed, excluded.last_reviewed),
-                      caption = COALESCE(NULLIF(excluded.caption, ''), $metaTable.caption)
+                      last_reviewed = MAX($metaTable.last_reviewed, excluded.last_reviewed)
                   ''', [
                     gId,
                     materialSubject,
                     sourceLang,
                     targetLang,
-                    _getVal(entry, 'note') ?? '',
                     allTags.join(','),
                     0, 0, 0, null,
                     batchCreatedAt
@@ -366,9 +361,6 @@ class DataTransferService {
         'text': item['text'],
         'translation': item['translation'] ?? '',
         'type': type,
-        'pos': item['pos'],
-        'form_type': item['form_type'],
-        'style': item['style'],
         'root': item['root'],
         'note': item['note'],
         'tags': tags,

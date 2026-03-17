@@ -33,7 +33,6 @@ class SentenceRepository {
       'notebook_title': data['notebook_title'] ?? 'My Sentencebook',
       'source_lang': data['source_lang'] ?? 'auto',
       'target_lang': data['target_lang'] ?? 'auto',
-      'caption': data['caption'] ?? data['note'],
       'tags': data['tags'],
       'is_memorized': (data['is_memorized'] == true || data['is_memorized'] == 1) ? 1 : 0,
       'is_synced': (data['is_synced'] == true || data['is_synced'] == 1) ? 1 : 0,
@@ -41,16 +40,13 @@ class SentenceRepository {
       'last_reviewed': data['last_reviewed'],
       'created_at': data['created_at_meta'] ?? data['created_at'] ?? DateTime.now().toIso8601String(),
     };
-
     if (existingMeta.isNotEmpty) {
       final old = existingMeta.first;
-      metaValues['is_memorized'] = old['is_memorized'];
-      metaValues['review_count'] = old['review_count'];
-      metaValues['last_reviewed'] = old['last_reviewed'];
-      metaValues['is_synced'] = old['is_synced'];
-      
-      if ((metaValues['caption'] == null || metaValues['caption'].toString().isEmpty) && old['caption'] != null) {
-          metaValues['caption'] = old['caption'];
+      if (old.containsKey('is_memorized')) {
+          metaValues['is_memorized'] = old['is_memorized'];
+          metaValues['review_count'] = old['review_count'];
+          metaValues['last_reviewed'] = old['last_reviewed'];
+          metaValues['is_synced'] = old['is_synced'];
       }
       
       // Update existing meta
@@ -69,7 +65,7 @@ class SentenceRepository {
     // Phase 129: JOIN sentences and sentences_meta
     final results = await db.rawQuery('''
       SELECT s.group_id, s.data_json, s.created_at,
-             sm.notebook_title, sm.source_lang, sm.target_lang, sm.caption, sm.tags,
+             sm.notebook_title, sm.source_lang, sm.target_lang, sm.tags,
              sm.is_memorized, sm.review_count, sm.last_reviewed, sm.id as meta_id
       FROM sentences s
       JOIN sentences_meta sm ON s.group_id = sm.group_id
@@ -97,7 +93,7 @@ class SentenceRepository {
     // Phase 129: Search with json_each for precision
     final results = await db.rawQuery('''
       SELECT DISTINCT s.group_id, s.data_json, s.created_at,
-             sm.notebook_title, sm.source_lang, sm.target_lang, sm.caption, sm.tags,
+             sm.notebook_title, sm.source_lang, sm.target_lang, sm.tags,
              sm.is_memorized, sm.review_count, sm.last_reviewed
       FROM sentences s
       JOIN sentences_meta sm ON s.group_id = sm.group_id,
@@ -137,9 +133,7 @@ class SentenceRepository {
         ...row,
         'lang_code': bestLang,
         'text': bestMatch?['text'] ?? '',
-        'pos': bestMatch?['pos'],
-        'style': bestMatch?['style'],
-        'note': row['caption'], // Use personal note/caption
+        'note': bestMatch?['note'],
       };
     }).toList();
   }
@@ -148,7 +142,7 @@ class SentenceRepository {
     final db = await _db;
     final results = await db.rawQuery('''
       SELECT s.group_id, s.data_json, s.created_at,
-             sm.notebook_title, sm.source_lang, sm.target_lang, sm.caption, sm.tags,
+             sm.notebook_title, sm.source_lang, sm.target_lang, sm.tags,
              sm.is_memorized, sm.review_count, sm.last_reviewed
       FROM sentences s
       JOIN sentences_meta sm ON s.group_id = sm.group_id
@@ -162,9 +156,7 @@ class SentenceRepository {
       return {
         ...row,
         'text': langData['text'],
-        'pos': langData['pos'],
-        'style': langData['style'],
-        'note': row['caption'] ?? langData['note'],
+        'note': langData['note'],
       };
     }).toList();
   }
@@ -179,7 +171,7 @@ class SentenceRepository {
     final db = await _db;
     final results = await db.rawQuery('''
       SELECT s.group_id, s.data_json, s.created_at,
-             sm.notebook_title, sm.source_lang, sm.target_lang, sm.caption, sm.tags,
+             sm.notebook_title, sm.source_lang, sm.target_lang, sm.tags,
              sm.is_memorized, sm.review_count, sm.last_reviewed
       FROM sentences s
       JOIN sentences_meta sm ON s.group_id = sm.group_id
@@ -195,8 +187,8 @@ class SentenceRepository {
     
     final langData = data[targetLang] as Map<String, dynamic>;
     
-    // Check personal note (caption) if provided
-    final String? currentNote = row['caption'] ?? langData['note'];
+    // Check shared note if provided
+    final String? currentNote = langData['note'];
     if (note != null && currentNote != note) return null;
     
     return {

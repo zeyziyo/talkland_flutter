@@ -9,7 +9,7 @@ class UnifiedRepository {
   static Future<Database> get _db async => await DatabaseHelper.database;
 
   /// 내용 기반 해시 ID 생성 (integrated_data_structure.md 3.1 준수)
-  static int generateContentId(String text, {required String type, String? pos, String? style}) {
+  static int generateContentId(String text, {required String type}) {
     // 1. 정규화 (소문자 + 앞뒤 공백 제거)
     String normalizedText = text.trim().toLowerCase();
     
@@ -18,13 +18,8 @@ class UnifiedRepository {
     
     // 3. 구성 요소 결합
     String combined;
-    if (type == 'word') {
-      // Rule 3.1.A: hash(영어/피봇단어 + 품사)
-      combined = '${normalizedText}_${(pos ?? "unknown").toLowerCase()}';
-    } else {
-      // Rule 3.1.B: hash(표준_문장 + 문체)
-      combined = '${normalizedText}_${(style ?? "formal").toLowerCase()}';
-    }
+    // Rule 3.1: hash(텍스트 내용)
+    combined = normalizedText;
     
     // 4. FNV-1a Hash 알고리즘 (32비트)
     final bytes = utf8.encode(combined);
@@ -43,26 +38,10 @@ class UnifiedRepository {
   /// AppState 등에서 사용하기 편리한 래퍼
   static int generateGroupId({
     required String text, 
-    required String type, 
-    String? pos, 
-    String? style,
-    String? formType,
+    required String type,
   }) {
     String standardText = text.trim();
-    if (type == 'sentence' && formType != null) {
-      // Rule 3.1.B: 부호 보정
-      final suffix = standardText.endsWith('.') || standardText.endsWith('?') || standardText.endsWith('!');
-      if (!suffix) {
-        if (formType == 'Question') {
-          standardText += '?';
-        } else if (formType == 'Exclamation') {
-          standardText += '!';
-        } else {
-          standardText += '.';
-        }
-      }
-    }
-    return generateContentId(standardText, type: type, pos: pos, style: style);
+    return generateContentId(standardText, type: type);
   }
 
   static Future<int> saveUnifiedRecord({
@@ -71,9 +50,6 @@ class UnifiedRepository {
     required String translation,
     required String targetLang,
     required String type,
-    String? pos,
-    String? formType,
-    String? style,
     String? root,
     String? note,
     List<String>? tags,
@@ -81,8 +57,8 @@ class UnifiedRepository {
     String? syncSubject,
     int? sequenceOrder,
     int? groupId,
+    int? reviewCount,
     String? notebookTitle,
-    String? knownProperties,
   }) async {
     final db = txn ?? await _db;
     // table variable removed as it is unused in v19 logic
@@ -96,9 +72,6 @@ class UnifiedRepository {
       gId = generateGroupId(
         text: text, 
         type: type, 
-        pos: pos, 
-        style: style, 
-        formType: formType
       );
     }
     
@@ -130,42 +103,32 @@ class UnifiedRepository {
     // Source Language
     contentMap[lang] = {
       'text': text,
-      'pos': pos,
       'note': note,
     };
     if (type == 'word') {
       contentMap[lang]['root'] = root;
-      contentMap[lang]['form_type'] = formType;
-    } else {
-      contentMap[lang]['style'] = style;
     }
 
     // Target Language
     if (translation.isNotEmpty && targetLang.isNotEmpty && targetLang != 'auto') {
       contentMap[targetLang] = {
         'text': translation,
-        'pos': pos,
         'note': note,
       };
-      if (type != 'word') {
-        contentMap[targetLang]['style'] = style;
-      }
     }
 
-    // 6. Data Construction for Insert
-    // Phase 129: Pass both Content and Meta to Repository
     final insertData = {
       'group_id': gId,
       'data_json': jsonEncode(contentMap),
       'created_at': timestamp,
       // Meta fields
-      'notebook_title': notebookTitle ?? (syncSubject ?? 'My Collection'), // Use explicit title if provided, fallback to syncSubject (Phase 160) or default
+      'notebook_title': notebookTitle ?? (syncSubject ?? 'My Collection'),
       'source_lang': lang,
       'target_lang': targetLang,
-      'caption': note, // Note plays dual role: shared content note & personal caption
+      'review_count': reviewCount ?? 0,
       'tags': tags?.join(','),
       'is_memorized': 0,
-      'created_at_meta': timestamp, // Pass separate timestamp for meta created_at
+      'created_at_meta': timestamp,
     };
 
     // 7. Insert via Repository (which handles split)
@@ -186,9 +149,6 @@ class UnifiedRepository {
     required String text,
     required String lang,
     required String type,
-    String? pos,
-    String? formType,
-    String? style,
     String? root,
     String? note,
     Transaction? txn,
@@ -203,14 +163,10 @@ class UnifiedRepository {
       
       final entry = {
         'text': text,
-        'pos': pos,
         'note': note,
       };
       if (type == 'word') {
         entry['root'] = root;
-        entry['form_type'] = formType;
-      } else {
-        entry['style'] = style;
       }
       translations[lang] = entry;
       

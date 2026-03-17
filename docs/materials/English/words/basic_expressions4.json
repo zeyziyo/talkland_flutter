@@ -6,97 +6,97 @@
             "text": "red",
             "note": "",
             "tags": [
-                "basic",
-                "color"
+                "color",
+                "basic"
             ]
         },
         {
             "text": "blue",
             "note": "",
             "tags": [
-                "basic",
-                "color"
+                "color",
+                "basic"
             ]
         },
         {
             "text": "yellow",
             "note": "",
             "tags": [
-                "basic",
-                "color"
+                "color",
+                "basic"
             ]
         },
         {
             "text": "green",
             "note": "",
             "tags": [
-                "basic",
-                "color"
+                "color",
+                "basic"
+            ]
+        },
+        {
+            "text": "orange",
+            "note": "",
+            "tags": [
+                "color",
+                "basic"
+            ]
+        },
+        {
+            "text": "purple",
+            "note": "",
+            "tags": [
+                "color",
+                "basic"
             ]
         },
         {
             "text": "white",
             "note": "",
             "tags": [
-                "basic",
-                "color"
+                "color",
+                "basic"
             ]
         },
         {
             "text": "black",
             "note": "",
             "tags": [
-                "basic",
-                "color"
+                "color",
+                "basic"
             ]
         },
         {
-            "text": "blanco",
+            "text": "gray",
             "note": "",
             "tags": [
                 "color",
-                "básico"
+                "basic"
             ]
         },
         {
-            "text": "negro",
-            "note": "",
-            "tags": [
-                "color",
-                "básico"
-            ]
-        },
-        {
-            "text": "gris",
-            "note": "",
-            "tags": [
-                "color",
-                "básico"
-            ]
-        },
-        {
-            "text": "marrón",
-            "note": "color marrón / castaño",
-            "tags": [
-                "color"
-            ]
-        },
-        {
-            "text": "rosa",
+            "text": "brown",
             "note": "",
             "tags": [
                 "color"
             ]
         },
         {
-            "text": "dorado",
+            "text": "pink",
             "note": "",
             "tags": [
                 "color"
             ]
         },
         {
-            "text": "plateado",
+            "text": "gold",
+            "note": "",
+            "tags": [
+                "color"
+            ]
+        },
+        {
+            "text": "silver",
             "note": "",
             "tags": [
                 "color"

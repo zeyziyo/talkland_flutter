@@ -24,7 +24,7 @@
 *   **`user_words_meta`**
     *   **PK**: `id` (UUID).
     *   **FK**: `user_id` (Auth User), `group_id` (Public Words).
-    *   **Columns**: `notebook_title`, `source_lang`, `target_lang`, `caption`, `tags`, `is_memorized`.
+    *   **Columns**: `notebook_title`, `source_lang`, `target_lang`, `tags`, `is_memorized`.
 
 *   **`user_sentences_meta`**
     *   **PK**: `id`.

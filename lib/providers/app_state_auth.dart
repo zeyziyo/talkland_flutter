@@ -100,8 +100,6 @@ extension AppStateAuth on AppState {
             }
             
             final note = (entry['note'] ?? entry['context']) as String?;
-            final pos = entry['pos'] as String?;
-            final formType = entry['form_type'] as String?;
             final root = entry['root'] as String?;
             final entryType = entry['type'] as String? ?? defaultType;
             final entryTags = (entry['tags'] as List?)?.map((e) => e.toString()).toList() ?? [];
@@ -113,8 +111,6 @@ extension AppStateAuth on AppState {
               targetText: targetText ?? '',
               targetLang: _targetLang,
               note: note,
-              pos: pos,
-              formType: formType,
               root: root,
               type: entryType,
               tags: entryTags,
@@ -338,127 +334,82 @@ extension AppStateAuth on AppState {
 
       if (allData.isEmpty) throw Exception('Failed to download any language data');
 
-      // Pivot to English if available, else whatever we got
-      final baseLang = allData.containsKey('en') ? 'en' : allData.keys.first;
-      final pivotEntries = allData[baseLang]!['entries'] as List? ?? [];
+      // v59.6: Strict Dual-Language Verification
+      final hasSource = allData.containsKey(_sourceLang);
+      final hasTarget = allData.containsKey(_targetLang);
+      
+      if (!hasSource) {
+        throw Exception('Source language ($_sourceLang) data not found in repository.');
+      }
+
+      // v59.6: Handle Missing Study Language (Target Language)
+      // If requested target language is not available, we return a specific signal for UI components to show a popup.
+      if (!hasTarget) {
+        _statusMessage = 'L10N:errStudyLangNotFound'; // Placeholder for localized error
+        notify();
+        return {'success': false, 'error': 'StudyLangNotFound', 'targetLang': _targetLang};
+      }
+
+      // v59.6: Pivot Role Isolation
+      // 'en' is ONLY used for generating deterministic group IDs to ensure consistency across languages.
+      // Data extraction (Text, Tags, Subject) is done EXCLUSIVELY from _sourceLang.
+      final pivotLang = allData.containsKey('en') ? 'en' : _sourceLang;
+      final pivotEntries = allData[pivotLang]!['entries'] as List? ?? [];
+      
+      // Source of truth for Metadata (Tags, Subject)
+      final sourceData = allData[_sourceLang]!;
+      final sourceEntries = sourceData['entries'] as List? ?? [];
+      final sourceMeta = sourceData['meta'] as Map<String, dynamic>? ?? {};
+      final targetEntries = allData[_targetLang]!['entries'] as List? ?? [];
       
       final List<Map<String, dynamic>> masterEntries = [];
-      final List<Future<void> Function()> translationTasks = [];
-      final Map<int, Map<String, dynamic>> translatedDataRows = {};
+
+      final String localType = type ?? (material['type'] as String? ?? 'word');
 
       for (int i = 0; i < pivotEntries.length; i++) {
         final pivotEntry = pivotEntries[i] as Map<String, dynamic>;
-        final pivotText = pivotEntry['text'] ?? '';
-        final pivotNote = pivotEntry['note'] ?? pivotEntry['context'];
-        final pivotMeta = pivotEntry['meta'] as Map<String, dynamic>? ?? {};
+        final String gIdPivotText = (pivotEntry['text'] ?? '').toString();
         
-        translatedDataRows[i] = {
-           'source_text': '',
-           'target_text': '',
-           'source_note': '',
-           'target_note': '',
-           'pos': pivotEntry['pos'] ?? pivotMeta['pos'],
-           'form_type': pivotEntry['form_type'] ?? pivotMeta['form_type'],
-           'style': pivotEntry['style'] ?? pivotMeta['style'],
-           'root': pivotEntry['root'] ?? pivotMeta['root'],
+        // v59.6: Deterministic Group ID generation using English pivot if available
+        final int gId = UnifiedRepository.generateGroupId(
+          text: gIdPivotText,
+          type: localType,
+        );
+
+        // Extract Localized Data (Strictly from _sourceLang and _targetLang)
+        // We assume entries are ordered identically across all files in the Online Library.
+        Map<String, dynamic>? srcEntry;
+        if (sourceEntries.length > i) srcEntry = sourceEntries[i] as Map<String, dynamic>;
+        
+        Map<String, dynamic>? tgtEntry;
+        if (targetEntries.length > i) tgtEntry = targetEntries[i] as Map<String, dynamic>;
+
+        if (srcEntry == null) continue;
+
+        // v59.6: Strict Tag and Content Extraction from Localized Source
+        final Map<String, dynamic> merged = {
+          'group_id': gId,
+          'source_text': srcEntry['text'] ?? '',
+          'target_text': tgtEntry?['text'] ?? '',
+          'note': (srcEntry['note'] ?? srcEntry['context'])?.toString() ?? '',
+          'tags': srcEntry['tags'] as List? ?? [], // 100% from My Language JSON
+          'pos': srcEntry['pos'] ?? sourceMeta['pos'],
+          'form_type': srcEntry['form_type'] ?? sourceMeta['form_type'],
+          'style': srcEntry['style'] ?? sourceMeta['style'],
+          'root': srcEntry['root'] ?? sourceMeta['root'],
         };
         
-        // Handle Source Language
-        if (allData.containsKey(_sourceLang) && (allData[_sourceLang]!['entries'] as List).length > i) {
-            final srcEntry = allData[_sourceLang]!['entries'][i];
-            translatedDataRows[i]!['source_text'] = srcEntry['text'] ?? '';
-            translatedDataRows[i]!['source_note'] = srcEntry['note'] ?? srcEntry['context'];
-        } else if (pivotText.toString().trim().isNotEmpty && baseLang == 'en') {
-            final mIndex = i;
-            translatedDataRows[i]!['source_text'] = pivotText;
-            translatedDataRows[i]!['source_note'] = '(Translating...)';
-            
-            translationTasks.add(() async {
-               try {
-                   final result = await TranslationService.translate(
-                       text: pivotText, sourceLang: 'en', targetLang: _sourceLang, note: pivotNote?.toString()
-                   );
-                   if (result['isValid'] == true && result['text'] != null && result['text'].toString().isNotEmpty) {
-                       translatedDataRows[mIndex]!['source_text'] = result['text'];
-                       translatedDataRows[mIndex]!['source_note'] = pivotNote != null ? '(EN: $pivotText) $pivotNote' : '(EN: $pivotText)';
-                       translatedDataRows[mIndex]!['pos'] ??= result['pos'];
-                       translatedDataRows[mIndex]!['form_type'] ??= result['formType'];
-                       translatedDataRows[mIndex]!['root'] ??= result['root'];
-                       translatedDataRows[mIndex]!['style'] ??= result['style'];
-                   } else {
-                       translatedDataRows[mIndex]!['source_note'] = '(Translation failed) $pivotNote';
-                   }
-               } catch (e) {
-                   translatedDataRows[mIndex]!['source_note'] = '(API Error) $pivotNote';
-               }
-            });
-        }
-        
-        // Handle Target Language
-        if (allData.containsKey(_targetLang) && (allData[_targetLang]!['entries'] as List).length > i) {
-            final tgtEntry = allData[_targetLang]!['entries'][i];
-            translatedDataRows[i]!['target_text'] = tgtEntry['text'] ?? '';
-            translatedDataRows[i]!['target_note'] = tgtEntry['note'] ?? tgtEntry['context'];
-        } else if (pivotText.toString().trim().isNotEmpty && baseLang == 'en') {
-            final mIndex = i;
-            translatedDataRows[i]!['target_text'] = pivotText;
-            translatedDataRows[i]!['target_note'] = '(Translating...)';
-            
-            translationTasks.add(() async {
-               try {
-                   final result = await TranslationService.translate(
-                       text: pivotText, sourceLang: 'en', targetLang: _targetLang, note: pivotNote?.toString()
-                   );
-                   if (result['isValid'] == true && result['text'] != null && result['text'].toString().isNotEmpty) {
-                       translatedDataRows[mIndex]!['target_text'] = result['text'];
-                       translatedDataRows[mIndex]!['target_note'] = pivotNote != null ? '(EN: $pivotText) $pivotNote' : '(EN: $pivotText)';
-                       // Only merge metadata if not already acquired by source
-                       translatedDataRows[mIndex]!['pos'] ??= result['pos'];
-                       translatedDataRows[mIndex]!['form_type'] ??= result['formType'];
-                       translatedDataRows[mIndex]!['root'] ??= result['root'];
-                       translatedDataRows[mIndex]!['style'] ??= result['style'];
-                   } else {
-                       translatedDataRows[mIndex]!['target_note'] = '(Translation failed) $pivotNote';
-                   }
-               } catch (e) {
-                   translatedDataRows[mIndex]!['target_note'] = '(API Error) $pivotNote';
-               }
-            });
-        }
-      }
-
-      // Execute Translations in Batches
-      if (translationTasks.isNotEmpty) {
-        _statusMessage = 'L10N:statusTranslatingMissing';
-        notify();
-        for (var i = 0; i < translationTasks.length; i += 10) {
-          final end = (i + 10 < translationTasks.length) ? i + 10 : translationTasks.length;
-          await Future.wait(translationTasks.sublist(i, end).map((f) => f()));
-        }
-      }
-
-      // Build Master Entries
-      for (int i = 0; i < pivotEntries.length; i++) {
-        final tData = translatedDataRows[i]!;
-        final pivotEntry = pivotEntries[i] as Map<String, dynamic>;
-        final Map<String, dynamic> merged = Map<String, dynamic>.from(pivotEntry);
-        
-        // Finalize translation results into standard format
-        merged['source_text'] = tData['source_text'];
-        merged['target_text'] = tData['target_text'];
-        merged['note'] = tData['source_note']?.isNotEmpty == true ? tData['source_note'] : tData['target_note'];
-        merged['pos'] = tData['pos'] ?? merged['pos'];
-        merged['form_type'] = tData['form_type'] ?? merged['form_type'];
-        merged['style'] = tData['style'] ?? merged['style'];
-        merged['root'] = tData['root'] ?? merged['root'];
-
         masterEntries.add(merged);
       }
 
-      final Map<String, dynamic> masterData = Map<String, dynamic>.from(allData[baseLang]!);
-      masterData['entries'] = masterEntries;
-      masterData['source_language'] = _sourceLang;
-      masterData['target_language'] = _targetLang;
+      // v59.6: Strict Master Data Construction
+      final Map<String, dynamic> masterData = {
+        'entries': masterEntries,
+        'source_language': _sourceLang,
+        'target_language': _targetLang,
+        'default_type': type,
+        'subject': mName, 
+      };
 
       final masterJson = json.encode(masterData);
       final syncKey = mId ?? relativePath.split('/').last.replaceAll('.json', '');
@@ -467,8 +418,14 @@ extension AppStateAuth on AppState {
       _statusMessage = 'L10N:importing';
       notify();
 
+      // Phase 17522: Cleanup existing material with the same name before re-importing.
+      // This prevents "ghost records" (old ID based polluting tags) from persisting 
+      // when the underlying group_id generation logic or content changes.
+      await DatabaseService.deleteStudyMaterial(mName);
+
       final result = await DatabaseService.importFromJsonWithMetadata(
         masterJson, 
+        overrideSubject: mName, // Phase 17510: Use localized name as primary title
         fileName: 'remote_${mId}_merged.json',
         syncKey: syncKey, 
         userId: 'user', 

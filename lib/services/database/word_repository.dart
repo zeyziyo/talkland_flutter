@@ -33,27 +33,21 @@ class WordRepository {
       'notebook_title': data['notebook_title'] ?? 'My Wordbook',
       'source_lang': data['source_lang'] ?? 'auto',
       'target_lang': data['target_lang'] ?? 'auto',
-      'caption': data['caption'] ?? data['note'],
       'tags': data['tags'],
       // Default values for new record
       'is_memorized': (data['is_memorized'] == true || data['is_memorized'] == 1) ? 1 : 0,
-      'is_synced': (data['is_synced'] == true || data['is_synced'] == 1) ? 1 : 0, // Phase 129: Handle Sync Status
+      'is_synced': (data['is_synced'] == true || data['is_synced'] == 1) ? 1 : 0,
       'review_count': data['review_count'] ?? 0,
       'last_reviewed': data['last_reviewed'],
       'created_at': data['created_at_meta'] ?? data['created_at'] ?? DateTime.now().toIso8601String(),
     };
-
     if (existingMeta.isNotEmpty) {
-      // Preserve existing user stats if input doesn't explicitly overwrite them
-      // (Usually inputs from Import/Save might not have stats, so we keep existing)
       final old = existingMeta.first;
-      metaValues['is_memorized'] = old['is_memorized']; // Keep existing status
-      metaValues['review_count'] = old['review_count']; // Keep existing count
-      metaValues['last_reviewed'] = old['last_reviewed']; // Keep existing date
-      metaValues['is_synced'] = old['is_synced']; // Keep existing sync status
-      
-      if ((metaValues['caption'] == null || metaValues['caption'].toString().isEmpty) && old['caption'] != null) {
-          metaValues['caption'] = old['caption']; // Keep existing note if new is empty
+      if (old.containsKey('is_memorized')) {
+          metaValues['is_memorized'] = old['is_memorized'];
+          metaValues['review_count'] = old['review_count'];
+          metaValues['last_reviewed'] = old['last_reviewed'];
+          metaValues['is_synced'] = old['is_synced'];
       }
       
       // Update existing meta
@@ -75,7 +69,7 @@ class WordRepository {
     // Correct Query fix
     final rows = await db.rawQuery('''
       SELECT w.group_id, w.data_json, w.created_at,
-             wm.notebook_title, wm.source_lang, wm.target_lang, wm.caption, wm.tags,
+             wm.notebook_title, wm.source_lang, wm.target_lang, wm.tags,
              wm.is_memorized, wm.review_count, wm.last_reviewed, wm.id as meta_id
       FROM words w
       JOIN words_meta wm ON w.group_id = wm.group_id
@@ -104,7 +98,7 @@ class WordRepository {
     // Note: requires SQLite JSON1 extension (usually available in Flutter sqflite)
     final results = await db.rawQuery('''
       SELECT DISTINCT w.group_id, w.data_json, w.created_at,
-             wm.notebook_title, wm.source_lang, wm.target_lang, wm.caption, wm.tags,
+             wm.notebook_title, wm.source_lang, wm.target_lang, wm.tags,
              wm.is_memorized, wm.review_count, wm.last_reviewed
       FROM words w
       JOIN words_meta wm ON w.group_id = wm.group_id,
@@ -144,11 +138,8 @@ class WordRepository {
         ...row,
         'lang_code': bestLang,
         'text': bestMatch?['text'] ?? '',
-        'pos': bestMatch?['pos'],
-        'form_type': bestMatch?['form_type'],
         'root': bestMatch?['root'],
-        'note': row['caption'], // Use personal caption/note
-        // Original note from content: bestMatch?['note'] can be accessed if needed
+        'note': bestMatch?['note'], // Use shared note from content (caption is gone)
       };
     }).toList();
   }
@@ -157,7 +148,7 @@ class WordRepository {
     final db = await _db;
     final results = await db.rawQuery('''
       SELECT w.group_id, w.data_json, w.created_at,
-             wm.notebook_title, wm.source_lang, wm.target_lang, wm.caption, wm.tags,
+             wm.notebook_title, wm.source_lang, wm.target_lang, wm.tags,
              wm.is_memorized, wm.review_count, wm.last_reviewed
       FROM words w
       JOIN words_meta wm ON w.group_id = wm.group_id
@@ -171,10 +162,8 @@ class WordRepository {
       return {
         ...row,
         'text': langData['text'],
-        'pos': langData['pos'],
-        'form_type': langData['form_type'],
         'root': langData['root'],
-        'note': row['caption'] ?? langData['note'],
+        'note': langData['note'],
       };
     }).toList();
   }
@@ -183,7 +172,7 @@ class WordRepository {
     final db = await _db;
     final results = await db.rawQuery('''
       SELECT w.group_id, w.data_json, w.created_at,
-             wm.notebook_title, wm.source_lang, wm.target_lang, wm.caption, wm.tags,
+             wm.notebook_title, wm.source_lang, wm.target_lang, wm.tags,
              wm.is_memorized, wm.review_count, wm.last_reviewed
       FROM words w
       JOIN words_meta wm ON w.group_id = wm.group_id
@@ -199,8 +188,8 @@ class WordRepository {
     
     final langData = data[targetLang] as Map<String, dynamic>;
     
-    // Check personal note (caption) if provided
-    final String? currentNote = row['caption'] ?? langData['note'];
+    // Check shared note if provided
+    final String? currentNote = langData['note'];
     if (note != null && currentNote != note) return null;
     
     return {

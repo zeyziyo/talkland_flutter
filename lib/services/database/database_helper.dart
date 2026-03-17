@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 class DatabaseHelper {
   static Database? _database;
   static const String _dbName = 'talkie.db';
-  static const int _dbVersion = 25; // Phase 25: Force Re-create for Participant Loading Fix
+  static const int _dbVersion = 26; // Phase 26: Remove unused fields (pos, style, form_type, caption)
 
   static Future<Database>? _initFuture;
 
@@ -128,13 +128,12 @@ class DatabaseHelper {
         notebook_title TEXT NOT NULL,
         source_lang TEXT,
         target_lang TEXT,
-        caption TEXT,
         tags TEXT,
         is_memorized INTEGER DEFAULT 0,
         is_synced INTEGER DEFAULT 0,
         review_count INTEGER DEFAULT 0,
         last_reviewed TEXT,
-        created_at TEXT NOT NULL, -- Added per design
+        created_at TEXT NOT NULL,
         FOREIGN KEY (group_id) REFERENCES words (group_id) ON DELETE CASCADE
       )
     ''');
@@ -147,13 +146,12 @@ class DatabaseHelper {
         notebook_title TEXT NOT NULL,
         source_lang TEXT,
         target_lang TEXT,
-        caption TEXT,
         tags TEXT,
         is_memorized INTEGER DEFAULT 0,
         is_synced INTEGER DEFAULT 0,
         review_count INTEGER DEFAULT 0,
         last_reviewed TEXT,
-        created_at TEXT NOT NULL, -- Added per design
+        created_at TEXT NOT NULL,
         FOREIGN KEY (group_id) REFERENCES sentences (group_id) ON DELETE CASCADE
       )
     ''');

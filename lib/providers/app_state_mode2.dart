@@ -66,7 +66,7 @@ extension AppStateMode2 on AppState {
           'target_lang': targetSentence.langCode,
           'source_text': sourceSentence.text,
           'target_text': targetSentence.text,
-          'personal_note': entry['caption'] as String? ?? entry['personal_note'] as String?,
+          'personal_note': entry['personal_note'] as String?,
           'created_at': entry['created_at'],
           'review_count': entry['review_count'] as int? ?? 0,
           'last_reviewed': entry['last_reviewed'],
@@ -197,7 +197,9 @@ extension AppStateMode2 on AppState {
     
     // Phase 160: Sync _selectedNotebookTitle if a material tag is found
     final subjects = _studyMaterials.map((m) => m['subject'] as String).toList();
-    _selectedNotebookTitle = tags.firstWhere((t) => subjects.contains(t), orElse: () => '');
+    _selectedNotebookTitle = tags.any((t) => subjects.contains(t)) 
+        ? tags.firstWhere((t) => subjects.contains(t)) 
+        : null;
     
     loadRecordsByTags();
     notify();
@@ -240,7 +242,7 @@ extension AppStateMode2 on AppState {
       final String itemType = _recordTypeFilter == 'word' ? 'word' : 'sentence';
 
       // Phase 129: JOIN with Meta Table
-      String query = 'SELECT t.*, m.notebook_title, m.caption, m.tags as meta_tags, m.is_memorized, m.review_count, m.last_reviewed '
+      String query = 'SELECT t.*, m.notebook_title, m.tags as meta_tags, m.is_memorized, m.review_count, m.last_reviewed '
                      'FROM $table t '
                      'JOIN $metaTable m ON t.group_id = m.group_id ';
       
@@ -251,24 +253,21 @@ extension AppStateMode2 on AppState {
       whereArgs.add(_sourceLang);
       
       if (_selectedTags.isNotEmpty) {
-        // Phase 129: Use meta tags column
-        // Search tag in CSV string: ',tag,' like '%,tag,%'
-        // We handle comma wrapping in logic or expect spaces?
-        // Tags are stored as "tag1,tag2".
+        // Phase 129/17520: Search in both notebook_title and tags column
+        // Tags are stored as "tag1,tag2". We check for exact match in title OR partial match in CSV tags
         for (var tag in _selectedTags) {
-          // Robust check: tag at start, middle, or end
-          conditions.add("',' || m.tags || ',' LIKE ?");
-          whereArgs.add('%,$tag,%');
+          conditions.add("(m.notebook_title = ? OR ',' || m.tags || ',' LIKE ?)");
+          whereArgs.add(tag); // For notebook_title = ?
+          whereArgs.add('%,$tag,%'); // For LIKE ?
         }
       }
       
       if (_searchQuery.isNotEmpty) {
-        // Phase 17500: Use json_extract to precisely target text fields in both languages, avoiding irrelevant matches
-        conditions.add("(json_extract(t.data_json, '\$.' || ? || '.text') LIKE ? OR json_extract(t.data_json, '\$.' || ? || '.text') LIKE ? OR m.caption LIKE ?)");
+        // Phase 17500: Use json_extract to precisely target text fields in both languages
+        conditions.add("(json_extract(t.data_json, '\$.' || ? || '.text') LIKE ? OR json_extract(t.data_json, '\$.' || ? || '.text') LIKE ?)");
         whereArgs.add(_sourceLang);
         whereArgs.add('%$_searchQuery%');
         whereArgs.add(_targetLang);
-        whereArgs.add('%$_searchQuery%');
         whereArgs.add('%$_searchQuery%');
       }
       
@@ -337,9 +336,7 @@ extension AppStateMode2 on AppState {
           'source_text': sourceData['text'] ?? '',
           'target_text': targetData['text'] ?? '', 
           'is_pivot': isPivot,
-          'note': row['caption'] ?? sourceData['note'] ?? targetData['note'], // Phase 129: Use Meta Caption
-          'pos': sourceData['pos'],
-          'form_type': sourceData['form_type'],
+          'note': sourceData['note'] ?? targetData['note'],
           'root': sourceData['root'],
           'source_tags': sourceTags, 
           'target_tags': targetTags, 
@@ -418,7 +415,6 @@ extension AppStateMode2 on AppState {
 
       for (var entry in cloudLibrary) {
         final int groupId = entry['group_id'];
-        final String? note = entry['caption'];
         final List<String> tags = (entry['tags'] is List)
             ? List<String>.from(entry['tags'] as List)
             : (entry['tags'] as String?)?.split(',').where((t) => t.isNotEmpty).toList() ?? [];
@@ -451,11 +447,8 @@ extension AppStateMode2 on AppState {
             for (var c in contentList) {
                dataMap[c['lang_code']] = {
                  'text': c['text'],
-                 'pos': c['pos'],
                  'note': c['note'],
                  'root': c['root'],
-                 'style': c['style'],
-                 'form_type': c['form_type'],
                };
             }
 
@@ -477,7 +470,6 @@ extension AppStateMode2 on AppState {
                 'source_lang': baseLang,
                 'target_lang': _targetLang,
                 'tags': tags.join(','),
-                'caption': note,
                 'is_memorized': 0,
                 'is_synced': 1,
                 'created_at': DateTime.now().toIso8601String(),
@@ -498,7 +490,19 @@ extension AppStateMode2 on AppState {
     if (SupabaseService.client.auth.currentUser != null && !SupabaseService.client.auth.currentUser!.isAnonymous) {
       syncCloudLibraryToLocal().then((_) => loadRecordsByTags());
     }
+    
+    // v59.1: Force load and always auto-select the most recent material (first in the sorted list)
     _studyMaterials = await DatabaseService.getStudyMaterials(type: _recordTypeFilter, langCode: _sourceLang); 
+
+    if (_studyMaterials.isNotEmpty) {
+      final latestSubject = _studyMaterials.first['subject'] as String;
+      // If none selected or if we need to enforce "always select latest" on refresh
+      if (_selectedNotebookTitle != latestSubject) {
+        debugPrint('[AppState] Auto-selecting most recent material: $latestSubject');
+        selectMaterial(latestSubject);
+      }
+    }
+    
     notify();
   }
 

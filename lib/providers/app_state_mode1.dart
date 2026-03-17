@@ -62,10 +62,7 @@ extension AppStateMode1 on AppState {
     _sourceText = source['text'] as String;
     
     // Sync Metadata from Autocomplete Result
-    _sourcePos = source['pos'] as String? ?? '';
-    _sourceFormType = source['form_type'] as String? ?? '';
     _sourceRoot = source['root'] as String? ?? '';
-    _sourceStyle = source['style'] as String? ?? '';
     _note = source['note'] as String? ?? '';
 
     // Reset translation state for new source selection? 
@@ -196,40 +193,10 @@ extension AppStateMode1 on AppState {
         }
       }
 
-      // 4. AI 분석 결과 처리 (User Input 검증 및 별도 태그 처리)
-      final rawPos = result['pos'] as String? ?? '';
-      final rawForm = result['formType'] as String? ?? '';
+      // 4. AI 분석 결과 처리 (Root만 유지)
       final rawRoot = result['root'] as String? ?? '';
-
-      // POS: Only fill if empty AND valid
-      if (_sourcePos.isEmpty && AppState.posCategories.contains(rawPos)) {
-        _sourcePos = rawPos;
-      }
-
-      // FormType: Check validity
-      bool isValidForm = AppState.sentenceCategories.contains(rawForm) ||
-                         AppState.verbFormCategories.contains(rawForm) ||
-                         AppState.adjectiveFormCategories.contains(rawForm) ||
-                         AppState.pronounCaseCategories.contains(rawForm);
-
-      if (_sourceFormType.isEmpty && isValidForm) {
-        _sourceFormType = rawForm;
-      } else if (!isValidForm && rawForm.toLowerCase() == 'formal') {
-        // Special Case: 'formal' -> Add to specialized tags, don't clobber FormType
-        if (!_aiDetectedTags.contains('formal')) {
-          _aiDetectedTags.add('formal');
-        }
-      }
-      
-      // Root: Only fill if empty
-      if (_sourceRoot.isEmpty) {
+      if (_sourceRoot.isEmpty && rawRoot.isNotEmpty) {
         _sourceRoot = rawRoot;
-      }
-      
-      // Phase 98.1: Style (formality for sentences)
-      final rawStyle = result['style'] as String? ?? '';
-      if (_sourceStyle.isEmpty && rawStyle.isNotEmpty) {
-        _sourceStyle = rawStyle;
       }
       
       // 5. Increment Usage (NEW)
@@ -258,8 +225,6 @@ extension AppStateMode1 on AppState {
   /// Phase 98: Helper to save to Supabase (Dual Write with type branching + tag separation)
   Future<void> _saveToSupabase({
     int? groupId, // Phase 106: Accept canonical ID
-    String? pos,
-    String? formType,
     String? root,
   }) async {
       final authorId = SupabaseService.client.auth.currentUser?.id;
@@ -285,18 +250,13 @@ extension AppStateMode1 on AppState {
           'lang_code': _targetLang,
           'text': _translatedText,
           'group_id': gId,
-          'pos': pos,
+          'root': root,
           'tags': generalTags.isNotEmpty ? generalTags : null,
           'author_id': authorId,
           'status': 'approved',
         };
 
-        if (itemType == 'word') {
-          data['form_type'] = formType;
-          data['root'] = root;
-        } else {
-          data['style'] = _sourceStyle.isNotEmpty ? _sourceStyle : null;
-        }
+        // formType/style removed
 
         await SupabaseService.client.from(tableName).insert(data);
 
@@ -371,10 +331,7 @@ extension AppStateMode1 on AppState {
         translation: _translatedText, 
         targetLang: _targetLang, 
         type: itemType,
-        pos: _sourcePos.isNotEmpty ? _sourcePos : null,
-        formType: _sourceFormType.isNotEmpty ? _sourceFormType : null,
         root: _sourceRoot.isNotEmpty ? _sourceRoot : null,
-        style: _sourceStyle.isNotEmpty ? _sourceStyle : null, // Phase 98.1
         note: _note.isNotEmpty ? _note : null,
         tags: finalTags,
         syncSubject: syncKey,
@@ -393,10 +350,7 @@ extension AppStateMode1 on AppState {
           targetLang: _targetLang,
           englishText: _englishText.isNotEmpty ? _englishText : null,
           type: itemType,
-          pos: _sourcePos,
-          formType: _sourceFormType,
           root: _sourceRoot,
-          style: _sourceStyle,
           note: _note,
         );
 
@@ -408,8 +362,6 @@ extension AppStateMode1 on AppState {
 
         await _saveToSupabase(
           groupId: canonicalId, // Phase 106: Pass canonical ID
-          pos: _sourcePos,
-          formType: _sourceFormType,
           root: _sourceRoot,
         );
       } catch (e) {
@@ -496,8 +448,6 @@ extension AppStateMode1 on AppState {
     try {
       _sourceText = item['sourceText'] as String;
       _translatedText = item['translatedText'] as String;
-      _sourcePos = item['pos'] as String? ?? '';
-      _sourceFormType = item['formType'] as String? ?? '';
       _sourceRoot = item['root'] as String? ?? '';
       _note = item['explanation'] as String? ?? '';
       
@@ -573,8 +523,6 @@ extension AppStateMode1 on AppState {
       );
 
       _sourceText = match['text'] as String;
-      _sourcePos = match['pos'] as String? ?? '';
-      _sourceFormType = match['form_type'] as String? ?? ''; // sentences might not have form_type but let's keep safe
       _sourceRoot = match['root'] as String? ?? '';
     }
     

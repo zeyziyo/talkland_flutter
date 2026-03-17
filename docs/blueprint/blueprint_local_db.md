@@ -33,7 +33,6 @@
         *   `notebook_title`: 단어장 제목 (e.g., "나의 단어장", "필수 암기").
         *   `source_lang`: 사용자가 설정한 모국어 (e.g., "ko").
         *   `target_lang`: 사용자가 설정한 학습어 (e.g., "es").
-        *   `caption`: 주석/노트 (e.g., "과일").
         *   `tags`: 사용자 정의 태그 (e.g., "음식").
         *   `is_memorized`: 암기 여부 (Boolean).
         *   `review_count`: 복습 횟수.
@@ -69,7 +68,6 @@
     *   `notebook_title`: "나의 단어장"
     *   `source_lang`: "ko"
     *   `target_lang`: "es"
-    *   `caption`: "과일" (사용자 입력 주석)
     *   `tags`: "음식"
 
 ### 2-2. 동기화 전략 (Sync Strategy)

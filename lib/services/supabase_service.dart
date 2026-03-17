@@ -17,10 +17,7 @@ class SupabaseService {
     required String targetLang,
     String? englishText,
     String? type,
-    String? pos,
-    String? formType,
     String? root,
-    String? style,
     String? note,
   }) async {
     // 1. Check if canonical ID already exists in cloud
@@ -43,9 +40,6 @@ class SupabaseService {
     canonicalId = UnifiedRepository.generateGroupId(
       text: sourceText, 
       type: itemType,
-      pos: pos,
-      style: style,
-      formType: formType,
     );
     
     // 3. Register the new ID with basic data (Source + Pivot if any)
@@ -56,10 +50,7 @@ class SupabaseService {
       text: sourceText,
       langCode: sourceLang,
       type: itemType,
-      pos: pos,
-      formType: formType,
       root: root,
-      style: style,
       note: note,
     );
 
@@ -83,10 +74,7 @@ class SupabaseService {
     required String targetText,
     required String targetLang,
     String? note,
-    String? pos,
-    String? formType,
     String? root,
-    String? style,
     String? type,
     List<String>? tags,
     String? syncSubject,
@@ -117,9 +105,6 @@ class SupabaseService {
         groupId = UnifiedRepository.generateGroupId(
           text: sourceText,
           type: itemType,
-          pos: pos ?? validation['pos'] as String?,
-          style: style ?? validation['style'] as String?,
-          formType: formType ?? validation['formType'] as String?,
         );
 
         await saveEntry(
@@ -128,10 +113,7 @@ class SupabaseService {
           langCode: sourceLang,
           type: itemType,
           note: note,
-          pos: pos ?? validation['pos'] as String?,
-          formType: formType ?? validation['formType'] as String?,
           root: root ?? validation['root'] as String?,
-          style: style ?? validation['style'] as String?,
           tags: tags,
         );
 
@@ -214,10 +196,7 @@ class SupabaseService {
     required String langCode,
     required String type,
     String? note,
-    String? pos,
-    String? formType,
     String? root,
-    String? style,
     List<String>? tags,
   }) => SupabaseRepository.saveEntry(
     groupId: groupId,
@@ -225,10 +204,7 @@ class SupabaseService {
     langCode: langCode,
     type: type,
     note: note,
-    pos: pos,
-    formType: formType,
     root: root,
-    style: style,
     tags: tags,
   );
 
@@ -280,10 +256,7 @@ class SupabaseService {
     required String targetLang,
     required String speaker,
     required int sequenceOrder,
-    String? pos,
-    String? formType,
     String? root,
-    String? style,
   }) async {
     try {
       int? groupId = await findGroupId(sourceText, sourceLang);
@@ -292,19 +265,13 @@ class SupabaseService {
         groupId = UnifiedRepository.generateGroupId(
           text: sourceText,
           type: itemType,
-          pos: pos,
-          style: style,
-          formType: formType,
         );
         await saveEntry(
           groupId: groupId,
           text: sourceText,
           langCode: sourceLang,
           type: itemType,
-          pos: pos,
-          formType: formType,
           root: root,
-          style: style,
         );
       }
       await saveEntry(groupId: groupId, text: targetText, langCode: targetLang, type: 'sentence');
@@ -332,7 +299,6 @@ class SupabaseService {
     required String speaker,
     required int sequenceOrder,
     String? note,
-    String? style,
   }) async {
     // Phase 131: Use dedicated user_dialogue_messages table
     await SupabaseRepository.saveChatMessage(

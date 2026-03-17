@@ -14,6 +14,7 @@ import '../services/usage_service.dart';
 import '../models/sentence.dart';
 import '../services/database/sentence_repository.dart';
 import '../services/database/dialogue_repository.dart';
+import '../services/database/unified_repository.dart';
 import '../models/dialogue_group.dart';
 import '../models/chat_participant.dart';
 import 'package:uuid/uuid.dart';

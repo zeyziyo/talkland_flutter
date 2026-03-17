@@ -141,12 +141,12 @@ class TagRepository {
     final searchPattern = '%,$tag,%'; // Match specific tag in comma-csv
 
     return await db.rawQuery('''
-      SELECT w.*, wm.caption, 'words' as origin_table, wm.notebook_title
+      SELECT w.*, 'words' as origin_table, wm.notebook_title
       FROM words w
       JOIN words_meta wm ON w.group_id = wm.group_id
       WHERE ',' || wm.tags || ',' LIKE ?
       UNION ALL
-      SELECT s.*, sm.caption, 'sentences' as origin_table, sm.notebook_title
+      SELECT s.*, 'sentences' as origin_table, sm.notebook_title
       FROM sentences s
       JOIN sentences_meta sm ON s.group_id = sm.group_id
       WHERE ',' || sm.tags || ',' LIKE ?

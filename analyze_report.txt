@@ -1,8 +1,0 @@
-Analyzing talkie...                                             
-
-  error - The argument type 'String Function(Object)' can't be assigned to the parameter type 'String'.  - lib\screens\chat_screen.dart:1024:50 - argument_type_not_assignable
-  error - The argument type 'String Function(Object)' can't be assigned to the parameter type 'String'.  - lib\widgets\help_dialog.dart:113:23 - argument_type_not_assignable
-  error - The argument type 'String Function(Object)' can't be assigned to the parameter type 'String'.  - lib\widgets\simplified_input_widget.dart:84:21 - argument_type_not_assignable
-  error - The argument type 'String Function(Object)' can't be assigned to the parameter type 'String'.  - lib\widgets\welcome_banner.dart:81:21 - argument_type_not_assignable
-
-4 issues found. (ran in 2.4s)

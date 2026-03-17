@@ -141,37 +141,39 @@ class DatabaseService {
   // --- Material Management (Notebook based - Phase 160) ---
   // Material IDs are now strings (notebook titles)
   // getStudyMaterialById removed as it was for legacy table
-  static Future<List<Map<String, dynamic>>> getStudyMaterials({String? type, String? langCode}) async {
+  static Future<List<Map<String, dynamic>>> getStudyMaterials({String? type, required String langCode}) async {
     final db = await database;
-    String whereClause = langCode != null ? 'WHERE source_lang = ?' : '';
-    List<dynamic> whereArgs = langCode != null ? [langCode] : [];
-
     // Extract unique notebook titles from meta tables with type filtering
     if (type == 'word') {
       return await db.rawQuery('''
-        SELECT DISTINCT notebook_title as subject, 'Notebook' as source 
+        SELECT notebook_title as subject, 'Notebook' as source 
         FROM words_meta
-        $whereClause
-      ''', whereArgs);
+        WHERE source_lang = ?
+        GROUP BY notebook_title
+        ORDER BY MAX(created_at) DESC
+      ''', [langCode]);
     } else if (type == 'sentence') {
       return await db.rawQuery('''
-        SELECT DISTINCT notebook_title as subject, 'Notebook' as source 
+        SELECT notebook_title as subject, 'Notebook' as source 
         FROM sentences_meta
-        $whereClause
-      ''', whereArgs);
+        WHERE source_lang = ?
+        GROUP BY notebook_title
+        ORDER BY MAX(created_at) DESC
+      ''', [langCode]);
     }
     
     // Legacy/Unified fallback
     final List<Map<String, dynamic>> results = await db.rawQuery('''
-      SELECT DISTINCT notebook_title as subject, 'Notebook' as source 
-      FROM words_meta
-      ${langCode != null ? 'WHERE source_lang = ?' : ''}
-      UNION
-      SELECT DISTINCT notebook_title as subject, 'Notebook' as source 
-      FROM sentences_meta
-      ${langCode != null ? 'WHERE source_lang = ?' : ''}
-      ${langCode != null ? 'AND notebook_title NOT IN (SELECT notebook_title FROM words_meta WHERE source_lang = ?)' : 'WHERE notebook_title NOT IN (SELECT notebook_title FROM words_meta)'}
-    ''', langCode != null ? [langCode, langCode, langCode] : []);
+      SELECT notebook_title as subject, 'Notebook' as source 
+      FROM (
+        SELECT notebook_title, created_at, source_lang FROM words_meta
+        UNION ALL
+        SELECT notebook_title, created_at, source_lang FROM sentences_meta
+      )
+      WHERE source_lang = ?
+      GROUP BY notebook_title
+      ORDER BY MAX(created_at) DESC
+    ''', [langCode]);
     return results;
   }
 
@@ -251,11 +253,8 @@ class DatabaseService {
              ...row,
              'text': content['text'],
              'translation': trans,
-             'pos': content['pos'],
-             'note': row['caption'] ?? content['note'], // Phase 129: Use personal caption
+             'note': content['note'], // Use shared note
              'root': content['root'],
-             'form_type': content['form_type'],
-             'style': content['style'],
            };
         }).toList();
       },
@@ -282,7 +281,7 @@ class DatabaseService {
     
     // Phase 129: JOIN with Meta to get User Progress & Personal Notes
     final List<Map<String, dynamic>> rawWords = await db.rawQuery('''
-      SELECT w.*, wm.notebook_title, wm.source_lang, wm.target_lang, wm.caption, wm.tags,
+      SELECT w.*, wm.notebook_title, wm.source_lang, wm.target_lang, wm.tags,
              wm.is_memorized, wm.is_synced, wm.review_count, wm.last_reviewed
       FROM words w
       LEFT JOIN words_meta wm ON w.group_id = wm.group_id
@@ -290,7 +289,7 @@ class DatabaseService {
     ''', [groupId]);
 
     final List<Map<String, dynamic>> rawSentences = await db.rawQuery('''
-      SELECT s.*, sm.notebook_title, sm.source_lang, sm.target_lang, sm.caption, sm.tags,
+      SELECT s.*, sm.notebook_title, sm.source_lang, sm.target_lang, sm.tags,
              sm.is_memorized, sm.is_synced, sm.review_count, sm.last_reviewed
       FROM sentences s
       LEFT JOIN sentences_meta sm ON s.group_id = sm.group_id
@@ -311,10 +310,8 @@ class DatabaseService {
             ...row,
             'lang_code': lang,
             'text': content['text'],
-            'pos': content['pos'],
-            'note': row['caption'] ?? content['note'], // Prioritize personal caption
+            'note': content['note'],
             'root': content['root'],
-            'form_type': content['form_type'],
             // Meta fields are already in row from JOIN
           });
         }
@@ -331,9 +328,7 @@ class DatabaseService {
             ...row,
             'lang_code': lang,
             'text': content['text'],
-            'pos': content['pos'],
-            'note': row['caption'] ?? content['note'], // Prioritize personal caption
-            'style': content['style'],
+            'note': content['note'],
             // Meta fields are already in row from JOIN
           });
         }
@@ -388,9 +383,6 @@ class DatabaseService {
     required String translation,
     required String targetLang,
     required String type,
-    String? pos,
-    String? formType,
-    String? style,
     String? root,
     String? note,
     List<String>? tags,
@@ -405,9 +397,6 @@ class DatabaseService {
     translation: translation,
     targetLang: targetLang,
     type: type,
-    pos: pos,
-    formType: formType,
-    style: style,
     root: root,
     note: note,
     tags: tags,
@@ -423,9 +412,6 @@ class DatabaseService {
     required String text,
     required String lang,
     required String type,
-    String? pos,
-    String? formType,
-    String? style,
     String? root,
     String? note,
     Transaction? txn,
@@ -434,9 +420,6 @@ class DatabaseService {
     text: text,
     lang: lang,
     type: type,
-    pos: pos,
-    formType: formType,
-    style: style,
     root: root,
     note: note,
     txn: txn,

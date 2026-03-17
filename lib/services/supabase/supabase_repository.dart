@@ -10,10 +10,7 @@ class SupabaseRepository {
     required String langCode,
     required String type,
     String? note,
-    String? pos,
-    String? formType,
     String? root,
-    String? style,
     List<String>? tags,
   }) async {
     final data = <String, dynamic>{
@@ -21,17 +18,13 @@ class SupabaseRepository {
       'text': text,
       'lang_code': langCode,
       'note': note,
-      'pos': pos,
       'tags': tags,
       'status': 'approved',
       'author_id': SupabaseAuthService.currentUser?.id,
     };
 
     if (type == 'word') {
-      data['form_type'] = formType;
       data['root'] = root;
-    } else {
-      data['style'] = style;
     }
 
     await SupabaseHelper.client.from(_getTable(type)).insert(data);
@@ -117,7 +110,6 @@ class SupabaseRepository {
       'is_memorized': (isMemorized == true) ? 1 : 0,
       'review_count': reviewCount ?? 0,
       'last_reviewed': lastReviewed,
-      'caption': note, // Note maps to caption in meta tables
     }, onConflict: 'user_id, group_id, notebook_title');
   }
 

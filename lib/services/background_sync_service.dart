@@ -99,10 +99,7 @@ class BackgroundSyncService {
             targetLang: target['lang_code'],
             englishText: english['text'],
             type: words.contains(source) ? 'word' : 'sentence',
-            pos: source['pos'],
-            formType: source['form_type'],
             root: source['root'],
-            style: source['style'],
             note: source['note'],
           );
 
@@ -117,7 +114,8 @@ class BackgroundSyncService {
 
         // 3. Phase 98: Upload words to 'words' table, sentences to 'sentences' table
         // Use activeGroupId instead of groupId
-        final studyMaterials = await DatabaseService.getStudyMaterials();
+        final syncLang = source['lang_code'] as String? ?? 'en';
+        final studyMaterials = await DatabaseService.getStudyMaterials(langCode: syncLang);
         final materialSubjects = studyMaterials.map((m) => m['subject'] as String).toSet();
         final titleTags = tags.where((t) => materialSubjects.contains(t)).toList();
         final generalTags = tags.where((t) => !materialSubjects.contains(t)).toList();
@@ -129,8 +127,6 @@ class BackgroundSyncService {
             'text': word['text'],
             'lang_code': word['lang_code'],
             'note': word['note'],
-            'pos': word['pos'],
-            'form_type': word['form_type'],
             'root': word['root'],
             'tags': generalTags.isNotEmpty ? generalTags : null,
             'author_id': currentUser.id,
@@ -145,8 +141,6 @@ class BackgroundSyncService {
             'text': sentence['text'],
             'lang_code': sentence['lang_code'],
             'note': sentence['note'],
-            'pos': sentence['pos'],
-            'style': sentence['style'],
             'tags': generalTags.isNotEmpty ? generalTags : null,
             'author_id': currentUser.id,
             'status': 'approved',
