@@ -206,15 +206,18 @@ class _SimplifiedInputWidgetState extends State<SimplifiedInputWidget> {
                 ),
                 if (state.sourceText.isNotEmpty && !state.isSettingsConfirmed) ...[
                   const SizedBox(width: 8),
-                  Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.indigo,
-                      shape: BoxShape.circle,
+                  ElevatedButton(
+                    onPressed: () => _showSettingsDialog(context, state),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.orange.shade700,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                      elevation: 2,
                     ),
-                    child: IconButton(
-                      icon: const Icon(Icons.check, color: Colors.white),
-                      onPressed: () => _showSettingsDialog(context, state),
-                      tooltip: l10n.tooltipSettingsConfirm,
+                    child: Text(
+                      l10n.next,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
