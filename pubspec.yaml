@@ -92,8 +92,7 @@ flutter:
     - .env
     - assets/help/
     - assets/icon_mic.png
-    - assets/icon_mic_2.png
-    - assets/icon_mic_premium.png
+    - assets/icon_mic_purple.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

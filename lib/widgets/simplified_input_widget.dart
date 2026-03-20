@@ -646,7 +646,7 @@ class MeshMicIcon extends StatelessWidget {
       ),
       child: Center(
         child: Image.asset(
-          'assets/icon_mic.png',
+          'assets/icon_mic_purple.png',
           width: size * 0.9,
           height: size * 0.9,
           fit: BoxFit.contain,
