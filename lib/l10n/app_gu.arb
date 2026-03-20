@@ -7,6 +7,16 @@
   "inputLanguage": "ઇનપુટ ભાષા",
   "translationLanguage": "અનુવાદ ભાષા",
   "simplifiedGuidance": "રોજબરોજના સંવાદોને વિદેશી ભાષામાં તુરંત રૂપાંતરિત કરો! Talkie તમારી ભાષાકીય જીવનશૈલીને રેકોર્ડ કરે છે.",
+  "noDataForLanguage": "તમારી પસંદ કરેલી ભાષા માટે કોઈ તાલીમ સામગ્રી સ્થાનિક DBમાં નથી. મહેરબાની કરીને સામગ્રી ડાઉનલોડ કરો અથવા બીજી ભાષા પસંદ કરો.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "રદ કરો",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "સેટિંગ્સ ખોલો",
   "helpNotebook": "તમે અનુવાદિત પરિણામો સાચવવા માંગો છો તે ફોલ્ડર પસંદ કરો.",
   "helpNote": "શબ્દોનો અર્થ, ઉદાહરણો અથવા પરિસ્થિતિઓ જેવી માહિતી મુક્તપણે રેકોર્ડ કરો.",
-  "helpTag": "વર્ગીકરણ અથવા શોધ માટે કીવર્ડ્સ દાખલ કરો.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "વર્ગીકરણ અથવા શોધ માટે કીવર્ડ્સ દાખલ કરો."
 }

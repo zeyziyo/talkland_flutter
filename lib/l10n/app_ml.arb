@@ -7,6 +7,16 @@
   "inputLanguage": "ഇൻപുട്ട് ഭാഷ",
   "translationLanguage": "വിവർത്തന ഭാഷ",
   "simplifiedGuidance": "നിങ്ങളുടെ ദൈനംദിന സംഭാഷണങ്ങൾ തൽക്ഷണം ഒരു വിദേശ ഭാഷയിലേക്ക് മാറ്റുക! ടോക്കി നിങ്ങളുടെ ഭാഷാ ജീവിതം രേഖപ്പെടുത്തുന്നു.",
+  "noDataForLanguage": "നിങ്ങൾ തിരഞ്ഞെടുത്ത ഭാഷയിലുള്ള പഠന സാമഗ്രികൾ പ്രാദേശിക ഡാറ്റാബേസിൽ ലഭ്യമല്ല. ഡാറ്റ ഡൗൺലോഡ് ചെയ്യുക അല്ലെങ്കിൽ മറ്റൊരു ഭാഷ തിരഞ്ഞെടുക്കുക.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "റദ്ദാക്കുക",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "ക്രമീകരണങ്ങൾ തുറക്കുക",
   "helpNotebook": "പരിഭാഷപ്പെടുത്തിയ ഫലങ്ങൾ സംരക്ഷിക്കാൻ ഒരു ഫോൾഡർ തിരഞ്ഞെടുക്കുക.",
   "helpNote": "വാക്കുകളുടെ അർത്ഥം, ഉദാഹരണങ്ങൾ, സാഹചര്യങ്ങൾ എന്നിവ സ്വതന്ത്രമായി രേഖപ്പെടുത്തുക.",
-  "helpTag": "പിന്നീട് തരംതിരിക്കാനോ തിരയാനോ ഉള്ള കീവേഡുകൾ നൽകുക.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "പിന്നീട് തരംതിരിക്കാനോ തിരയാനോ ഉള്ള കീവേഡുകൾ നൽകുക."
 }

@@ -7,6 +7,16 @@
   "inputLanguage": "Кіру тілі",
   "translationLanguage": "Аударма тілі",
   "simplifiedGuidance": "Күнделікті әңгімелерді шетел тілдеріне лезде аударыңыз! Talkie сіздің тіл өміріңізді жазып отырады.",
+  "noDataForLanguage": "Тіліңізге арналған оқу деректері жергілікті деректер базасында жоқ. Деректерді жүктеп алыңыз немесе басқа тілді таңдаңыз.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Болдырмау",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Параметрлерді ашу",
   "helpNotebook": "Аударылған нәтижелерді сақтау үшін қалтаны таңдаңыз.",
   "helpNote": "Сөздің мағынасын, мысалды немесе жағдайды еркін жазыңыз.",
-  "helpTag": "Кейінірек сұрыптау немесе іздеу үшін кілт сөздерді енгізіңіз.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Кейінірек сұрыптау немесе іздеу үшін кілт сөздерді енгізіңіз."
 }

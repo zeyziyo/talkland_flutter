@@ -7,6 +7,16 @@
   "inputLanguage": "Оролтын хэл",
   "translationLanguage": "Орчуулгын хэл",
   "simplifiedGuidance": "Өдөр тутмын яриаг гадаад хэл рүү шууд хөрвүүлээрэй! Talkie таны хэлний амьдралыг тэмдэглэнэ.",
+  "noDataForLanguage": "Таны сонгосон хэл дээр сургалтын материал Local DB-д байхгүй байна. Материалыг татаж авах эсвэл өөр хэл сонгоно уу.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Цуцлах",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Тохиргоог нээх",
   "helpNotebook": "Орчуулгын үр дүнг хадгалах хавтас сонгоно уу.",
   "helpNote": "Үгийн утга, жишээ, нөхцөл байдлыг чөлөөтэй тэмдэглээрэй.",
-  "helpTag": "Дараа нь ангилах эсвэл хайх түлхүүр үгээ оруулна уу.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Дараа нь ангилах эсвэл хайх түлхүүр үгээ оруулна уу."
 }

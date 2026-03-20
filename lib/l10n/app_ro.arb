@@ -7,6 +7,16 @@
   "inputLanguage": "Limbă de intrare",
   "translationLanguage": "Limbă de traducere",
   "simplifiedGuidance": "Transformă conversațiile de zi cu zi în limbi străine instantaneu! Talkie îți va înregistra viața lingvistică.",
+  "noDataForLanguage": "Nu există date de învățare pentru limba selectată în baza de date locală. Vă rugăm să descărcați datele sau să selectați o altă limbă.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Anulare",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Deschide setările",
   "helpNotebook": "Selectați folderul unde să salvați rezultatele traducerii.",
   "helpNote": "Înregistrați liber semnificația, exemplele sau situațiile cuvântului.",
-  "helpTag": "Introduceți cuvinte cheie pentru a clasifica sau căuta mai târziu.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Introduceți cuvinte cheie pentru a clasifica sau căuta mai târziu."
 }

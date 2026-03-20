@@ -22,6 +22,10 @@ class AppLocalizationsEn extends AppLocalizations {
       'Set \'My Language\' & \'Learning Language\' in Settings, then translate and save.';
 
   @override
+  String get noDataForLanguage =>
+      'No study materials for the selected language in local DB. Please download materials or select another language.';
+
+  @override
   String versionLabel(String version) {
     return 'Version: $version';
   }
@@ -1353,4 +1357,23 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpTag => 'Enter keywords for categorization or searching later.';
+
+  @override
+  String get requestTranslation => 'Request Translation';
+
+  @override
+  String get statusRequestSuccess => 'Translation request submitted!';
+
+  @override
+  String statusRequestFailed(String error) {
+    return 'Request failed: $error';
+  }
+
+  @override
+  String get studyLangNotFoundTitle => 'Language Not Supported';
+
+  @override
+  String studyLangNotFoundDesc(String targetLang) {
+    return 'The selected material does not support your current study language ($targetLang). Would you like to request a translation?';
+  }
 }

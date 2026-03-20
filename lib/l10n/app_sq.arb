@@ -7,6 +7,16 @@
   "inputLanguage": "Gjuha e hyrjes",
   "translationLanguage": "Gjuha e përkthimit",
   "simplifiedGuidance": "Konvertoni bisedat e përditshme në një gjuhë të huaj menjëherë! Talkie regjistron jetën tuaj gjuhësore.",
+  "noDataForLanguage": "Nuk ka të dhëna trajnimi për gjuhën e zgjedhur në DB-në lokale. Shkarkoni materialet ose zgjidhni një gjuhë tjetër.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Anulo",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Hap cilësimet",
   "helpNotebook": "Zgjidhni dosjen ku dëshironi të ruani rezultatet e përkthimit.",
   "helpNote": "Regjistroni lirisht kuptimin, shembujt ose situatat e fjalëve.",
-  "helpTag": "Fut çelësfjalët për t'i klasifikuar ose kërkuar më vonë.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Fut çelësfjalët për t'i klasifikuar ose kërkuar më vonë."
 }

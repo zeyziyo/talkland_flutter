@@ -7,6 +7,16 @@
   "inputLanguage": "Улазни језик",
   "translationLanguage": "Језик превода",
   "simplifiedGuidance": "Тренутна конверзија свакодневних разговора на стране језике! Talkie бележи твој језички живот.",
+  "noDataForLanguage": "Нема доступних материјала за учење за изабрани језик у локалној бази података. Преузмите материјале или изаберите други језик.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Откажи",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Отвори подешавања",
   "helpNotebook": "Изаберите фасциклу за чување преведених резултата.",
   "helpNote": "Слободно забележите значење речи, примере или ситуације.",
-  "helpTag": "Унесите кључне речи за каснију класификацију или претрагу.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Унесите кључне речи за каснију класификацију или претрагу."
 }

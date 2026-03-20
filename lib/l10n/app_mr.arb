@@ -7,6 +7,16 @@
   "inputLanguage": "इनपुट भाषा",
   "translationLanguage": "भाषांतरण भाषा",
   "simplifiedGuidance": "रोजच्या बोलचालीचे परदेशी भाषेत झटपट रूपांतरण! Talkie तुमच्या भाषिक जीवनाची नोंद ठेवते.",
+  "noDataForLanguage": "निवडलेल्या भाषेसाठी शिक्षण साहित्य लोकल डेटाबेसमध्ये उपलब्ध नाही. साहित्य डाउनलोड करा किंवा दुसरी भाषा निवडा.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "रद्द करा",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "सेटिंग्ज उघडा",
   "helpNotebook": "अनुवादित निकाल जतन करण्यासाठी फोल्डर निवडा.",
   "helpNote": "शब्दाचा अर्थ, उदाहरण किंवा परिस्थिती यासारख्या गोष्टीlibertyने लिहा.",
-  "helpTag": "नंतर वर्गीकरण किंवा शोध घेण्यासाठी कीवर्ड प्रविष्ट करा.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "नंतर वर्गीकरण किंवा शोध घेण्यासाठी कीवर्ड प्रविष्ट करा."
 }

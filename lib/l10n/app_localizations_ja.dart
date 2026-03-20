@@ -21,6 +21,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get simplifiedGuidance => '日常会話を外国語に瞬間変換！Talkieがあなたの言語生活を記録します。';
 
   @override
+  String get noDataForLanguage =>
+      '選択された言語の学習データがローカルDBにありません。データをダウンロードするか、別の言語を選択してください。';
+
+  @override
   String versionLabel(String version) {
     return 'Version: $version';
   }
@@ -1317,4 +1321,23 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get helpTag => '後で分類したり検索したりするためのキーワードを入力してください。';
+
+  @override
+  String get requestTranslation => '번역 요청하기';
+
+  @override
+  String get statusRequestSuccess => '번역 요청이 완료되었습니다.';
+
+  @override
+  String statusRequestFailed(String error) {
+    return '번역 요청 실패: $error';
+  }
+
+  @override
+  String get studyLangNotFoundTitle => '학습 언어 미지원';
+
+  @override
+  String studyLangNotFoundDesc(String targetLang) {
+    return '선택하신 자료는 현재 설정된 학습 언어($targetLang)를 지원하지 않아 로컬에 저장할 수 없습니다. 번역을 요청하시겠습니까?';
+  }
 }

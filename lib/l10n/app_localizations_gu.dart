@@ -22,6 +22,10 @@ class AppLocalizationsGu extends AppLocalizations {
       'રોજબરોજના સંવાદોને વિદેશી ભાષામાં તુરંત રૂપાંતરિત કરો! Talkie તમારી ભાષાકીય જીવનશૈલીને રેકોર્ડ કરે છે.';
 
   @override
+  String get noDataForLanguage =>
+      'તમારી પસંદ કરેલી ભાષા માટે કોઈ તાલીમ સામગ્રી સ્થાનિક DBમાં નથી. મહેરબાની કરીને સામગ્રી ડાઉનલોડ કરો અથવા બીજી ભાષા પસંદ કરો.';
+
+  @override
   String versionLabel(String version) {
     return 'Version: $version';
   }
@@ -1350,4 +1354,23 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get helpTag => 'વર્ગીકરણ અથવા શોધ માટે કીવર્ડ્સ દાખલ કરો.';
+
+  @override
+  String get requestTranslation => '번역 요청하기';
+
+  @override
+  String get statusRequestSuccess => '번역 요청이 완료되었습니다.';
+
+  @override
+  String statusRequestFailed(String error) {
+    return '번역 요청 실패: $error';
+  }
+
+  @override
+  String get studyLangNotFoundTitle => '학습 언어 미지원';
+
+  @override
+  String studyLangNotFoundDesc(String targetLang) {
+    return '선택하신 자료는 현재 설정된 학습 언어($targetLang)를 지원하지 않아 로컬에 저장할 수 없습니다. 번역을 요청하시겠습니까?';
+  }
 }

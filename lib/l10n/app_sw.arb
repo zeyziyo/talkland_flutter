@@ -7,6 +7,16 @@
   "inputLanguage": "Lugha ya kuingiza",
   "translationLanguage": "Lugha ya kutafsiri",
   "simplifiedGuidance": "Badilisha mazungumzo ya kila siku mara moja katika lugha ya kigeni! Talkie inarekodi maisha yako ya lugha.",
+  "noDataForLanguage": "Hakuna data ya kujifunza kwa lugha uliyochagua kwenye DB ya ndani. Tafadhali pakua data au chagua lugha nyingine.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Ghairi",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Fungua Mipangilio",
   "helpNotebook": "Chagua folda ya kuhifadhi matokeo yaliyotafsiriwa.",
   "helpNote": "Andika maana za maneno, mifano, au hali mbalimbali kwa uhuru.",
-  "helpTag": "Weka maneno muhimu ya kuainisha au kutafuta baadaye.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Weka maneno muhimu ya kuainisha au kutafuta baadaye."
 }

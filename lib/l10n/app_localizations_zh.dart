@@ -21,6 +21,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get simplifiedGuidance => '将日常对话瞬间翻译成外语！Talkie会记录您的语言生活。';
 
   @override
+  String get noDataForLanguage => '本地数据库中没有您所选语言的学习资料。请下载资料或选择其他语言。';
+
+  @override
   String versionLabel(String version) {
     return 'Version: $version';
   }
@@ -1311,6 +1314,25 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get helpTag => '输入用于日后分类或搜索的关键词。';
+
+  @override
+  String get requestTranslation => '번역 요청하기';
+
+  @override
+  String get statusRequestSuccess => '번역 요청이 완료되었습니다.';
+
+  @override
+  String statusRequestFailed(String error) {
+    return '번역 요청 실패: $error';
+  }
+
+  @override
+  String get studyLangNotFoundTitle => '학습 언어 미지원';
+
+  @override
+  String studyLangNotFoundDesc(String targetLang) {
+    return '선택하신 자료는 현재 설정된 학습 언어($targetLang)를 지원하지 않아 로컬에 저장할 수 없습니다. 번역을 요청하시겠습니까?';
+  }
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -1328,6 +1350,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get simplifiedGuidance => '将日常对话瞬间转换为外语！Talkie会记录您的语言生活。';
+
+  @override
+  String get noDataForLanguage => '本地数据库中没有您所选语言的学习资料。请下载资料或选择其他语言。';
 
   @override
   String versionLabel(String version) {
@@ -2638,6 +2663,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get simplifiedGuidance => '將日常對話瞬間翻譯成外語！ Talkie 將記錄您的語言生活。';
+
+  @override
+  String get noDataForLanguage => '您選擇的語言沒有學習資料在本機資料庫中。請下載資料或選擇其他語言。';
 
   @override
   String versionLabel(String version) {

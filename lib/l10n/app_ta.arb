@@ -7,6 +7,16 @@
   "inputLanguage": "உள்ளீட்டு மொழி",
   "translationLanguage": "மொழிபெயர்ப்பு மொழி",
   "simplifiedGuidance": "அன்றாட உரையாடல்களை உடனடியாக வெளிநாட்டு மொழியில் மாற்றுக! Talkie உங்கள் மொழி வாழ்க்கையைப் பதிவு செய்கிறது.",
+  "noDataForLanguage": "தேர்ந்தெடுக்கப்பட்ட மொழிக்கு கற்றல் தரவு எதுவும் உள்ளூர் தரவுத்தளத்தில் இல்லை. தரவைப் பதிவிறக்கவும் அல்லது வேறொரு மொழியைத் தேர்ந்தெடுக்கவும்.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "ரத்துசெய்",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "அமைப்புகளைத் திற",
   "helpNotebook": "மொழிபெயர்க்கப்பட்ட முடிவுகளை சேமிக்க ஒரு கோப்புறையைத் தேர்ந்தெடுக்கவும்.",
   "helpNote": "வார்த்தையின் அர்த்தம், எடுத்துக்காட்டுகள் அல்லது சூழ்நிலைகள் போன்றவற்றை சுதந்திரமாகப் பதிவு செய்யுங்கள்.",
-  "helpTag": "பின்னர் வகைப்படுத்த அல்லது தேட முக்கிய வார்த்தைகளை உள்ளிடவும்.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "பின்னர் வகைப்படுத்த அல்லது தேட முக்கிய வார்த்தைகளை உள்ளிடவும்."
 }

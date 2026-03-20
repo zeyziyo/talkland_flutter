@@ -7,6 +7,16 @@
   "inputLanguage": "ພາສາປ້ອນຂໍ້ມູນ",
   "translationLanguage": "ພາສາແປ",
   "simplifiedGuidance": "ປ່ຽນການສົນທະນາປະຈຳວັນເປັນພາສາຕ່າງປະເທດທັນທີ! Talkie ຈະບັນທຶກຊີວິດພາສາຂອງທ່ານ.",
+  "noDataForLanguage": "ບໍ່ມີຂໍ້ມູນການຮຽນຮູ້ສຳລັບພາສາທີ່ທ່ານເລືອກໃນຖານຂໍ້ມູນທ້ອງຖິ່ນ. ກະລຸນາດາວໂຫຼດຂໍ້ມູນ ຫຼືເລືອກພາສາອື່ນ.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "ຍົກເລີກ",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "ເປີດການຕັ້ງຄ່າ",
   "helpNotebook": "ເລືອກໂຟນເດີ້ເພື່ອບັນທຶກຜົນການແປ.",
   "helpNote": "ບັນທຶກຄວາມໝາຍ, ຕົວຢ່າງ, ສະຖານະການ, ແລະອື່ນໆ ຕາມໃຈ.",
-  "helpTag": "ປ້ອນຄຳສັບຫຼັກສຳລັບການຈັດໝວດໝູ່ ຫຼື ຄົ້ນຫາໃນພາຍຫຼັງ.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "ປ້ອນຄຳສັບຫຼັກສຳລັບການຈັດໝວດໝູ່ ຫຼື ຄົ້ນຫາໃນພາຍຫຼັງ."
 }

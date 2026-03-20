@@ -7,6 +7,16 @@
   "inputLanguage": "इनपुट भाषा",
   "translationLanguage": "अनुवाद भाषा",
   "simplifiedGuidance": "विदेशी भाषामा दैनिक कुराकानीलाई तुरुन्तै रूपान्तरण गर्नुहोस्! Talkie ले तपाईंको भाषा जीवन रेकर्ड गर्दछ।",
+  "noDataForLanguage": "तपाईंले रोज्नुभएको भाषाको लागि स्थानीय DB मा सिक्ने सामग्री उपलब्ध छैन। कृपया सामग्री डाउनलोड गर्नुहोस् वा अर्को भाषा रोज्नुहोस्।",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "रद्द गर्नुहोस्",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "सेटिङहरू खोल्नुहोस्",
   "helpNotebook": "अनुवादित परिणामहरू बचत गर्न फोल्डर छान्नुहोस्।",
   "helpNote": "शब्दको अर्थ, उदाहरण वा स्थिति जस्ता कुराहरू स्वतन्त्र रूपमा रेकर्ड गर्नुहोस्।",
-  "helpTag": "पछि वर्गीकरण वा खोजीका लागि कुञ्जी शब्दहरू प्रविष्ट गर्नुहोस्।",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "पछि वर्गीकरण वा खोजीका लागि कुञ्जी शब्दहरू प्रविष्ट गर्नुहोस्।"
 }

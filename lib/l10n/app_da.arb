@@ -7,6 +7,16 @@
   "inputLanguage": "Inputsprog",
   "translationLanguage": "Oversættelsessprog",
   "simplifiedGuidance": "Konverter øjeblikkeligt hverdagsagtaler til fremmedsprog! Talkie registrerer dit sprog liv.",
+  "noDataForLanguage": "Der er ingen læringsmaterialer for det valgte sprog i den lokale database. Download materialerne, eller vælg et andet sprog.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Annuller",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Åbn indstillinger",
   "helpNotebook": "Vælg den mappe, hvor de oversatte resultater skal gemmes.",
   "helpNote": "Notér frit ordets betydning, eksempler eller situationer.",
-  "helpTag": "Indtast nøgleord til senere kategorisering eller søgning.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Indtast nøgleord til senere kategorisering eller søgning."
 }

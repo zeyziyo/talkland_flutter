@@ -74,6 +74,14 @@ extension AppStateMode2 on AppState {
       }
 
       _studyRecords = combinedRecords;
+      
+      // [Phase 15.8.14] Set message if no records found for this language pair
+      if (combinedRecords.isEmpty) {
+        _languageMessage = 'noDataForLanguage'; 
+      } else {
+        _languageMessage = null;
+      }
+      
       notify();
     } catch (e) {
       debugPrint('[AppState] Error loading study records (Supabase): $e');
@@ -320,12 +328,9 @@ extension AppStateMode2 on AppState {
         
         final sourceData = data[_sourceLang] as Map<String, dynamic>? ?? {};
         Map<String, dynamic> targetData = data[_targetLang] as Map<String, dynamic>? ?? {};
-        bool isPivot = false;
 
-        if (targetData.isEmpty && _targetLang != 'en') {
-          targetData = data['en'] as Map<String, dynamic>? ?? {};
-          if (targetData.isNotEmpty) isPivot = true;
-        }
+        // [Phase 15.8.14] Remove English pivot fallback. If no data for target lang, skip this record.
+        if (targetData.isEmpty) continue;
 
         pairedResults.add({
           'id': groupId, 
@@ -335,7 +340,7 @@ extension AppStateMode2 on AppState {
           'target_lang': _targetLang,
           'source_text': sourceData['text'] ?? '',
           'target_text': targetData['text'] ?? '', 
-          'is_pivot': isPivot,
+          'is_pivot': false,
           'note': sourceData['note'] ?? targetData['note'],
           'root': sourceData['root'],
           'source_tags': sourceTags, 
@@ -348,6 +353,14 @@ extension AppStateMode2 on AppState {
       }
 
       _materialRecords = pairedResults;
+      
+      // [Phase 15.8.14] Set message if no records found for this language pair
+      if (pairedResults.isEmpty) {
+        _languageMessage = 'noDataForLanguage'; 
+      } else {
+        _languageMessage = null;
+      }
+      
       notify();
     } catch (e) {
       debugPrint('[AppState] Error loading records by tags: $e');

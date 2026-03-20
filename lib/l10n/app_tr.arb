@@ -7,6 +7,16 @@
   "inputLanguage": "Giriş Dili",
   "translationLanguage": "Çeviri Dili",
   "simplifiedGuidance": "Günlük konuşmaları anında yabancı dillere çevirin! Talkie, dil deneyiminizi kaydeder.",
+  "noDataForLanguage": "Seçilen dil için yerel veritabanında eğitim materyali bulunmamaktadır. Lütfen materyalleri indirin veya başka bir dil seçin.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "İptal",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Ayarları Aç",
   "helpNotebook": "Çevrilen sonuçların kaydedileceği klasörü seçin.",
   "helpNote": "Kelimenin anlamını, örneklerini veya durumlarını serbestçe not alın.",
-  "helpTag": "Daha sonra sınıflandırmak veya aramak için anahtar kelimeler girin.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Daha sonra sınıflandırmak veya aramak için anahtar kelimeler girin."
 }

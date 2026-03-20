@@ -22,6 +22,10 @@ class AppLocalizationsTe extends AppLocalizations {
       'రోజువారీ సంభాషణలను తక్షణమే విదేశీ భాషలోకి మార్చండి! టాకీ మీ భాషా జీవితాన్ని రికార్డ్ చేస్తుంది.';
 
   @override
+  String get noDataForLanguage =>
+      'మీరు ఎంచుకున్న భాషకు సంబంధించిన అభ్యాస సామగ్రి స్థానిక DBలో లేదు. దయచేసి డౌన్‌లోడ్ చేయండి లేదా వేరే భాషను ఎంచుకోండి.';
+
+  @override
   String versionLabel(String version) {
     return 'Version: $version';
   }
@@ -1355,4 +1359,23 @@ class AppLocalizationsTe extends AppLocalizations {
   @override
   String get helpTag =>
       'తరువాత వర్గీకరించడానికి లేదా శోధించడానికి కీలకపదాలను నమోదు చేయండి.';
+
+  @override
+  String get requestTranslation => '번역 요청하기';
+
+  @override
+  String get statusRequestSuccess => '번역 요청이 완료되었습니다.';
+
+  @override
+  String statusRequestFailed(String error) {
+    return '번역 요청 실패: $error';
+  }
+
+  @override
+  String get studyLangNotFoundTitle => '학습 언어 미지원';
+
+  @override
+  String studyLangNotFoundDesc(String targetLang) {
+    return '선택하신 자료는 현재 설정된 학습 언어($targetLang)를 지원하지 않아 로컬에 저장할 수 없습니다. 번역을 요청하시겠습니까?';
+  }
 }

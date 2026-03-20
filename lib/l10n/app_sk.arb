@@ -7,6 +7,16 @@
   "inputLanguage": "Vstupný jazyk",
   "translationLanguage": "Jazyk prekladu",
   "simplifiedGuidance": "Okamžitá konverzia každodenných rozhovorov do cudzích jazykov! Talkie zaznamenáva váš jazykový život.",
+  "noDataForLanguage": "Pre zvolený jazyk nie sú v lokálnej DB žiadne učebné materiály. Stiahnite si materiály alebo vyberte iný jazyk.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Zrušiť",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Otvoriť nastavenia",
   "helpNotebook": "Vyberte priečinok, kam chcete uložiť preložené výsledky.",
   "helpNote": "Slobodne si zapisujte významy slov, príklady alebo situácie.",
-  "helpTag": "Zadajte kľúčové slová na neskoršie triedenie alebo vyhľadávanie.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Zadajte kľúčové slová na neskoršie triedenie alebo vyhľadávanie."
 }

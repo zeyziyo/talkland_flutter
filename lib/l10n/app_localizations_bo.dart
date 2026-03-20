@@ -22,6 +22,10 @@ class AppLocalizationsBo extends AppLocalizations {
       'སྐད་ཡིག་གཞན་པའི་ནང་དུ་ཉིན་རེའི་གཏམ་བཤད་ཐོག་མར་བསྒྱུར། སྐད་བརྡ་འཕྲུལ་ཆས་ཀྱིས་ཁྱེད་ཀྱི་སྐད་བརྡའི་འཚོ་བ་ཟིན་ཐོ་བཟོ།';
 
   @override
+  String get noDataForLanguage =>
+      'ཁྱོད་ཀྱིས་སེལ་འཐུ་བྱས་པའི་སྐད་ཡིག་ནང་གི་སློབ་སྦྱོང་གི་རྒྱུ་ཆ་འདི་ས་གནས་ཀྱི་མཛོད་གཞི་ནང་མེད། རྒྱུ་ཆ་འདི་ཕབ་ལེན་བྱེད་པའམ་ཡང་ན་སྐད་ཡིག་གཞན་ཞིག་འདེམས་རོགས།';
+
+  @override
   String versionLabel(String version) {
     return 'Version: $version';
   }
@@ -1359,4 +1363,23 @@ class AppLocalizationsBo extends AppLocalizations {
   @override
   String get helpTag =>
       'མ་འོངས་པར་དབྱེ་དཔྱད་འབད་ནི་དང་འཚོལ་ཞིབ་འབད་ནིའི་དོན་ལུ་ түлхүүр үг བཙུགས།';
+
+  @override
+  String get requestTranslation => '번역 요청하기';
+
+  @override
+  String get statusRequestSuccess => '번역 요청이 완료되었습니다.';
+
+  @override
+  String statusRequestFailed(String error) {
+    return '번역 요청 실패: $error';
+  }
+
+  @override
+  String get studyLangNotFoundTitle => '학습 언어 미지원';
+
+  @override
+  String studyLangNotFoundDesc(String targetLang) {
+    return '선택하신 자료는 현재 설정된 학습 언어($targetLang)를 지원하지 않아 로컬에 저장할 수 없습니다. 번역을 요청하시겠습니까?';
+  }
 }

@@ -7,6 +7,16 @@
   "inputLanguage": "འཇུག་པའི་སྐད།",
   "translationLanguage": "བསྒྱུར་བའི་སྐད།",
   "simplifiedGuidance": "སྐད་ཡིག་གཞན་པའི་ནང་དུ་ཉིན་རེའི་གཏམ་བཤད་ཐོག་མར་བསྒྱུར། སྐད་བརྡ་འཕྲུལ་ཆས་ཀྱིས་ཁྱེད་ཀྱི་སྐད་བརྡའི་འཚོ་བ་ཟིན་ཐོ་བཟོ།",
+  "noDataForLanguage": "ཁྱོད་ཀྱིས་སེལ་འཐུ་བྱས་པའི་སྐད་ཡིག་ནང་གི་སློབ་སྦྱོང་གི་རྒྱུ་ཆ་འདི་ས་གནས་ཀྱི་མཛོད་གཞི་ནང་མེད། རྒྱུ་ཆ་འདི་ཕབ་ལེན་བྱེད་པའམ་ཡང་ན་སྐད་ཡིག་གཞན་ཞིག་འདེམས་རོགས།",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "འ বাতিল",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "སྒྲིག་འཛུགས་ཁ་ཕྱེ།",
   "helpNotebook": "བསྒྱུར་ཡིག་འབྲི་དེབ་ཉར་ཚགས་འབད་ནིའི་ फोल्डर སེལ་འཐུ་འབད།",
   "helpNote": "མིང་ཚིག་གི་དོན་དང་ དཔེར་བརྗོད། གནས་སྟངས་ཚུ་རང་དབང་ཐོག་འབྲི།",
-  "helpTag": "མ་འོངས་པར་དབྱེ་དཔྱད་འབད་ནི་དང་འཚོལ་ཞིབ་འབད་ནིའི་དོན་ལུ་ түлхүүр үг བཙུགས།",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "མ་འོངས་པར་དབྱེ་དཔྱད་འབད་ནི་དང་འཚོལ་ཞིབ་འབད་ནིའི་དོན་ལུ་ түлхүүр үг བཙུགས།"
 }

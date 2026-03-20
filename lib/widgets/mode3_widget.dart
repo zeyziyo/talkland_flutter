@@ -235,11 +235,17 @@ class Mode3Widget extends StatelessWidget {
               Expanded(
                 child: materialRecords.isEmpty
                     ? Center(
-                        child: Text(
-                          materialRecords.isEmpty 
-                              ? l10n.noRecords 
-                              : l10n.selectMaterialPrompt,
-                          style: TextStyle(fontSize: 16, color: Colors.grey[600]),
+                        child: Padding(
+                          padding: const EdgeInsets.all(32.0),
+                          child: Text(
+                            appState.languageMessage == 'noDataForLanguage'
+                                ? l10n.noDataForLanguage
+                                : (materialRecords.isEmpty 
+                                    ? l10n.noRecords 
+                                    : l10n.selectMaterialPrompt),
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 16, color: Colors.grey[600]),
+                          ),
                         ),
                       )
                     : ListView.builder(

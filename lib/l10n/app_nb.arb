@@ -7,6 +7,16 @@
   "inputLanguage": "Inndataspråk",
   "translationLanguage": "Oversettelsesspråk",
   "simplifiedGuidance": "Konverter hverdagsprat til fremmedspråk på et øyeblikk! Talkie logger ditt språkliv.",
+  "noDataForLanguage": "Det finnes ingen læremateriell for det valgte språket i den lokale databasen. Last ned materiellet, eller velg et annet språk.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Avbryt",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Åpne innstillinger",
   "helpNotebook": "Velg mappen der du vil lagre de oversatte resultatene.",
   "helpNote": "Skriv ned betydningen av ordet, eksempler eller situasjoner.",
-  "helpTag": "Skriv inn nøkkelord for å klassifisere eller søke senere.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Skriv inn nøkkelord for å klassifisere eller søke senere."
 }

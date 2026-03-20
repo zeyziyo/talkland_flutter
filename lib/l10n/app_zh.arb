@@ -7,6 +7,16 @@
   "inputLanguage": "输入语言",
   "translationLanguage": "翻译语言",
   "simplifiedGuidance": "将日常对话瞬间翻译成外语！Talkie会记录您的语言生活。",
+  "noDataForLanguage": "本地数据库中没有您所选语言的学习资料。请下载资料或选择其他语言。",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "取消",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "打开设置",
   "helpNotebook": "选择保存翻译结果的文件夹。",
   "helpNote": "自由记录单词的释义、例句和使用场景等。",
-  "helpTag": "输入用于日后分类或搜索的关键词。",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "输入用于日后分类或搜索的关键词。"
 }

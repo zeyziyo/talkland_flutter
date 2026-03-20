@@ -248,10 +248,17 @@ class AppState extends ChangeNotifier {
     ...verbFormCategories,
     ...adjectiveFormCategories,
     ...pronounCaseCategories,
-  }.map((e) => e.toLowerCase()).toSet();
+  }.whereType<String>().map((e) => e.toLowerCase()).toSet();
 
   // ---------------------------------------------------------
-  // Fields (State Variables)
+  String? _languageMessage;
+  String? get languageMessage => _languageMessage;
+  void setLanguageMessage(String? msg) {
+    _languageMessage = msg;
+    notifyListeners();
+  }
+
+  // --- Auth & State Variables ---
   // ---------------------------------------------------------
 
   int _currentMode = 0;

@@ -7,6 +7,16 @@
   "inputLanguage": "輸入語言",
   "translationLanguage": "翻譯語言",
   "simplifiedGuidance": "將日常對話瞬間翻譯成外語！ Talkie 將記錄您的語言生活。",
+  "noDataForLanguage": "您選擇的語言沒有學習資料在本機資料庫中。請下載資料或選擇其他語言。",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "取消",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "開啟設定",
   "helpNotebook": "選擇儲存翻譯結果的資料夾。",
   "helpNote": "自由記錄單字的意思、例句或情境等。",
-  "helpTag": "輸入關鍵字以便日後分類或搜尋。",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "輸入關鍵字以便日後分類或搜尋。"
 }

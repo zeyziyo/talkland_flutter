@@ -7,6 +7,16 @@
   "inputLanguage": "შეყვანის ენა",
   "translationLanguage": "თარგმანის ენა",
   "simplifiedGuidance": "მყისიერად გადააკეთეთ ყოველდღიური საუბრები უცხო ენებზე! Talkie აღწერს თქვენს ენობრივ ცხოვრებას.",
+  "noDataForLanguage": "არ არის სასწავლო მასალა არჩეული ენისთვის ლოკალურ მონაცემთა ბაზაში. გთხოვთ, ჩამოტვირთოთ მასალა ან აირჩიოთ სხვა ენა.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "გაუქმება",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "პარამეტრების გახსნა",
   "helpNotebook": "აირჩიეთ საქაღალდე თარგმანების შესანახად.",
   "helpNote": "თავისუფლად ჩაიწერეთ სიტყვების მნიშვნელობები, მაგალითები ან კონტექსტი.",
-  "helpTag": "შეიყვანეთ საკვანძო სიტყვები შემდგომი კლასიფიკაციისთვის ან ძიებისთვის.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "შეიყვანეთ საკვანძო სიტყვები შემდგომი კლასიფიკაციისთვის ან ძიებისთვის."
 }

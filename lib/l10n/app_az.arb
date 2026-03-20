@@ -7,6 +7,16 @@
   "inputLanguage": "Giriş dili",
   "translationLanguage": "Tərcümə dili",
   "simplifiedGuidance": "Gündəlik söhbətləri anında xarici dilə çevirin! Talkie dil həyatınızı qeyd edir.",
+  "noDataForLanguage": "Seçdiyiniz dil üçün təlim materialları lokal verilənlər bazasında mövcud deyil. Materialları yükləyin və ya başqa dil seçin.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Ləğv Et",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Parametrləri aç",
   "helpNotebook": "Tərcümə olunmuş nəticələri saxlamaq üçün qovluq seçin.",
   "helpNote": "Sözün mənasını, nümunələrini və ya vəziyyətlərini sərbəst şəkildə qeyd edin.",
-  "helpTag": "Sonra təsnif etmək və ya axtarmaq üçün açar sözlər daxil edin.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Sonra təsnif etmək və ya axtarmaq üçün açar sözlər daxil edin."
 }

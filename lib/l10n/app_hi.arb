@@ -7,6 +7,16 @@
   "inputLanguage": "इनपुट भाषा",
   "translationLanguage": "अनुवाद भाषा",
   "simplifiedGuidance": "रोज़मर्रा की बातचीत को विदेशी भाषाओं में तुरंत बदलें! टॉकी आपकी भाषा जीवन को रिकॉर्ड करेगा।",
+  "noDataForLanguage": "चुनी हुई भाषा के लिए प्रशिक्षण डेटा स्थानीय डीबी में मौजूद नहीं है। डेटा डाउनलोड करें या कोई दूसरी भाषा चुनें।",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "रद्द करें",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "सेटिंग खोलें",
   "helpNotebook": "अनुवादित परिणामों को सहेजने के लिए फ़ोल्डर चुनें।",
   "helpNote": "शब्दों के अर्थ, उदाहरण या स्थितियों आदि को स्वतंत्र रूप से लिखें।",
-  "helpTag": "बाद में वर्गीकृत करने या खोजने के लिए कीवर्ड दर्ज करें।",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "बाद में वर्गीकृत करने या खोजने के लिए कीवर्ड दर्ज करें।"
 }

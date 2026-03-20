@@ -7,6 +7,16 @@
   "inputLanguage": "Idioma de entrada",
   "translationLanguage": "Idioma de tradução",
   "simplifiedGuidance": "Transforme instantaneamente conversas do dia a dia em um idioma estrangeiro! Talkie registra sua vida linguística.",
+  "noDataForLanguage": "Não há materiais de aprendizado para o idioma selecionado no banco de dados local. Por favor, baixe os materiais ou selecione outro idioma.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Cancelar",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Abrir Configurações",
   "helpNotebook": "Selecione a pasta onde deseja salvar os resultados traduzidos.",
   "helpNote": "Anote livremente o significado de palavras, exemplos, situações, etc.",
-  "helpTag": "Digite palavras-chave para classificar ou pesquisar mais tarde.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Digite palavras-chave para classificar ou pesquisar mais tarde."
 }

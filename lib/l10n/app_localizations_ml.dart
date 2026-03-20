@@ -22,6 +22,10 @@ class AppLocalizationsMl extends AppLocalizations {
       'നിങ്ങളുടെ ദൈനംദിന സംഭാഷണങ്ങൾ തൽക്ഷണം ഒരു വിദേശ ഭാഷയിലേക്ക് മാറ്റുക! ടോക്കി നിങ്ങളുടെ ഭാഷാ ജീവിതം രേഖപ്പെടുത്തുന്നു.';
 
   @override
+  String get noDataForLanguage =>
+      'നിങ്ങൾ തിരഞ്ഞെടുത്ത ഭാഷയിലുള്ള പഠന സാമഗ്രികൾ പ്രാദേശിക ഡാറ്റാബേസിൽ ലഭ്യമല്ല. ഡാറ്റ ഡൗൺലോഡ് ചെയ്യുക അല്ലെങ്കിൽ മറ്റൊരു ഭാഷ തിരഞ്ഞെടുക്കുക.';
+
+  @override
   String versionLabel(String version) {
     return 'Version: $version';
   }
@@ -1362,4 +1366,23 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get helpTag => 'പിന്നീട് തരംതിരിക്കാനോ തിരയാനോ ഉള്ള കീവേഡുകൾ നൽകുക.';
+
+  @override
+  String get requestTranslation => '번역 요청하기';
+
+  @override
+  String get statusRequestSuccess => '번역 요청이 완료되었습니다.';
+
+  @override
+  String statusRequestFailed(String error) {
+    return '번역 요청 실패: $error';
+  }
+
+  @override
+  String get studyLangNotFoundTitle => '학습 언어 미지원';
+
+  @override
+  String studyLangNotFoundDesc(String targetLang) {
+    return '선택하신 자료는 현재 설정된 학습 언어($targetLang)를 지원하지 않아 로컬에 저장할 수 없습니다. 번역을 요청하시겠습니까?';
+  }
 }

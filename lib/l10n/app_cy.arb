@@ -7,6 +7,16 @@
   "inputLanguage": "Iaith Mewnbwn",
   "translationLanguage": "Iaith Cyfieithu",
   "simplifiedGuidance": "Trawsnewidiwch sgyrsiau bob dydd yn syth i iaith dramor! Bydd Talkie yn cofnodi eich bywyd iaith.",
+  "noDataForLanguage": "Nid oes unrhyw ddata dysgu ar gyfer yr iaith a ddewiswyd yn y DB lleol. Lawrlwythwch y data neu dewiswch iaith arall.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Canslo",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Agor Gosodiadau",
   "helpNotebook": "Dewiswch y ffolder i gadw'r canlyniadau wedi'u cyfieithu.",
   "helpNote": "Cofnodwch ystyr geiriau, enghreifftiau, sefyllfaoedd, ac ati yn rhydd.",
-  "helpTag": "Rhowch eiriau allweddol i'w dosbarthu neu i chwilio amdanynt yn nes ymlaen.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Rhowch eiriau allweddol i'w dosbarthu neu i chwilio amdanynt yn nes ymlaen."
 }

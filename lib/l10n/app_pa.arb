@@ -7,6 +7,16 @@
   "inputLanguage": "ਇਨਪੁਟ ਭਾਸ਼ਾ",
   "translationLanguage": "ਅਨੁਵਾਦ ਭਾਸ਼ਾ",
   "simplifiedGuidance": "ਰੋਜ਼ਾਨਾ ਗੱਲਬਾਤ ਨੂੰ ਵਿਦੇਸ਼ੀ ਭਾਸ਼ਾ ਵਿੱਚ ਤੁਰੰਤ ਬਦਲੋ! ਟਾਕੀ ਤੁਹਾਡੀ ਭਾਸ਼ਾਈ ਜ਼ਿੰਦਗੀ ਨੂੰ ਰਿਕਾਰਡ ਕਰੇਗਾ।",
+  "noDataForLanguage": "ਤੁਹਾਡੀ ਚੁਣੀ ਹੋਈ ਭਾਸ਼ਾ ਲਈ ਕੋਈ ਵੀ ਸਿੱਖਣ ਵਾਲੀ ਸਮੱਗਰੀ ਲੋਕਲ ਡਾਟਾਬੇਸ ਵਿੱਚ ਨਹੀਂ ਹੈ। ਸਮੱਗਰੀ ਨੂੰ ਡਾਊਨਲੋਡ ਕਰੋ ਜਾਂ ਕੋਈ ਹੋਰ ਭਾਸ਼ਾ ਚੁਣੋ।",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "ਰੱਦ ਕਰੋ",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੋ",
   "helpNotebook": "ਅਨੁਵਾਦ ਕੀਤੇ ਨਤੀਜਿਆਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨ ਲਈ ਫੋਲਡਰ ਚੁਣੋ।",
   "helpNote": "ਸ਼ਬਦ ਦਾ ਅਰਥ, ਉਦਾਹਰਣਾਂ ਜਾਂ ਸਥਿਤੀਆਂ ਆਦਿ ਨੂੰ ਬੇਝਿਜਕ ਨੋਟ ਕਰੋ।",
-  "helpTag": "ਵਰਗੀਕਰਨ ਜਾਂ ਖੋਜ ਲਈ ਕੀਵਰਡ ਦਰਜ ਕਰੋ।",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "ਵਰਗੀਕਰਨ ਜਾਂ ਖੋਜ ਲਈ ਕੀਵਰਡ ਦਰਜ ਕਰੋ।"
 }

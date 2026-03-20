@@ -276,6 +276,12 @@ abstract class AppLocalizations {
   /// **'\'언어 설정\' 메뉴에서 \'내 언어\'와 \'학습 언어\'를 지정 후 번역, 저장해 보세요.'**
   String get simplifiedGuidance;
 
+  /// No description provided for @noDataForLanguage.
+  ///
+  /// In ko, this message translates to:
+  /// **'선택하신 언어의 학습 자료가 로컬 DB에 없습니다. 자료를 다운로드하거나 다른 언어를 선택해 주세요.'**
+  String get noDataForLanguage;
+
   /// No description provided for @versionLabel.
   ///
   /// In ko, this message translates to:
@@ -2729,6 +2735,36 @@ abstract class AppLocalizations {
   /// In ko, this message translates to:
   /// **'나중에 분류하거나 검색하기 위한 키워드를 입력하세요.'**
   String get helpTag;
+
+  /// No description provided for @requestTranslation.
+  ///
+  /// In ko, this message translates to:
+  /// **'번역 요청하기'**
+  String get requestTranslation;
+
+  /// No description provided for @statusRequestSuccess.
+  ///
+  /// In ko, this message translates to:
+  /// **'번역 요청이 완료되었습니다.'**
+  String get statusRequestSuccess;
+
+  /// No description provided for @statusRequestFailed.
+  ///
+  /// In ko, this message translates to:
+  /// **'번역 요청 실패: {error}'**
+  String statusRequestFailed(String error);
+
+  /// No description provided for @studyLangNotFoundTitle.
+  ///
+  /// In ko, this message translates to:
+  /// **'학습 언어 미지원'**
+  String get studyLangNotFoundTitle;
+
+  /// No description provided for @studyLangNotFoundDesc.
+  ///
+  /// In ko, this message translates to:
+  /// **'선택하신 자료는 현재 설정된 학습 언어({targetLang})를 지원하지 않아 로컬에 저장할 수 없습니다. 번역을 요청하시겠습니까?'**
+  String studyLangNotFoundDesc(String targetLang);
 }
 
 class _AppLocalizationsDelegate

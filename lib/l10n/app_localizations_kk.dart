@@ -22,6 +22,10 @@ class AppLocalizationsKk extends AppLocalizations {
       'Күнделікті әңгімелерді шетел тілдеріне лезде аударыңыз! Talkie сіздің тіл өміріңізді жазып отырады.';
 
   @override
+  String get noDataForLanguage =>
+      'Тіліңізге арналған оқу деректері жергілікті деректер базасында жоқ. Деректерді жүктеп алыңыз немесе басқа тілді таңдаңыз.';
+
+  @override
   String versionLabel(String version) {
     return 'Version: $version';
   }
@@ -1358,4 +1362,23 @@ class AppLocalizationsKk extends AppLocalizations {
   @override
   String get helpTag =>
       'Кейінірек сұрыптау немесе іздеу үшін кілт сөздерді енгізіңіз.';
+
+  @override
+  String get requestTranslation => '번역 요청하기';
+
+  @override
+  String get statusRequestSuccess => '번역 요청이 완료되었습니다.';
+
+  @override
+  String statusRequestFailed(String error) {
+    return '번역 요청 실패: $error';
+  }
+
+  @override
+  String get studyLangNotFoundTitle => '학습 언어 미지원';
+
+  @override
+  String studyLangNotFoundDesc(String targetLang) {
+    return '선택하신 자료는 현재 설정된 학습 언어($targetLang)를 지원하지 않아 로컬에 저장할 수 없습니다. 번역을 요청하시겠습니까?';
+  }
 }

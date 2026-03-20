@@ -22,6 +22,10 @@ class AppLocalizationsIt extends AppLocalizations {
       'Trasforma istantaneamente le conversazioni quotidiane in lingue straniere! Talkie registra la tua vita linguistica.';
 
   @override
+  String get noDataForLanguage =>
+      'Non ci sono dati di apprendimento per la lingua selezionata nel database locale. Scarica i dati o seleziona un\'altra lingua.';
+
+  @override
   String versionLabel(String version) {
     return 'Version: $version';
   }
@@ -1363,4 +1367,23 @@ class AppLocalizationsIt extends AppLocalizations {
   @override
   String get helpTag =>
       'Inserisci parole chiave per categorizzare o cercare in seguito.';
+
+  @override
+  String get requestTranslation => '번역 요청하기';
+
+  @override
+  String get statusRequestSuccess => '번역 요청이 완료되었습니다.';
+
+  @override
+  String statusRequestFailed(String error) {
+    return '번역 요청 실패: $error';
+  }
+
+  @override
+  String get studyLangNotFoundTitle => '학습 언어 미지원';
+
+  @override
+  String studyLangNotFoundDesc(String targetLang) {
+    return '선택하신 자료는 현재 설정된 학습 언어($targetLang)를 지원하지 않아 로컬에 저장할 수 없습니다. 번역을 요청하시겠습니까?';
+  }
 }

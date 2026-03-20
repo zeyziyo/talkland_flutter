@@ -360,13 +360,19 @@ class _Mode2WidgetState extends State<Mode2Widget> {
                             color: Colors.grey[300],
                           ),
                           const SizedBox(height: 16),
-                          Text(
-                            (selectedNotebookTitle == null || selectedNotebookTitle.isEmpty)
-                                ? l10n.selectMaterialPrompt 
-                                : l10n.noRecords,
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.grey[600],
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                            child: Text(
+                              appState.languageMessage == 'noDataForLanguage'
+                                  ? l10n.noDataForLanguage
+                                  : ((selectedNotebookTitle == null || selectedNotebookTitle.isEmpty)
+                                      ? l10n.selectMaterialPrompt 
+                                      : l10n.noRecords),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.grey[600],
+                              ),
                             ),
                           ),
                         ],

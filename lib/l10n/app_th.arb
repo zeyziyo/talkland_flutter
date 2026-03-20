@@ -7,6 +7,16 @@
   "inputLanguage": "ภาษาที่ใช้ป้อน",
   "translationLanguage": "ภาษาที่จะแปล",
   "simplifiedGuidance": "แปลงบทสนทนาในชีวิตประจำวันเป็นภาษาต่างประเทศได้ในพริบตา! Talkie จะบันทึกชีวิตทางภาษาของคุณ",
+  "noDataForLanguage": "ไม่มีข้อมูลการเรียนรู้ในภาษาที่คุณเลือกในฐานข้อมูลท้องถิ่น กรุณาดาวน์โหลดข้อมูลหรือเลือกภาษาอื่น",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "ยกเลิก",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "เปิดการตั้งค่า",
   "helpNotebook": "เลือกโฟลเดอร์ที่จะบันทึกผลการแปล",
   "helpNote": "บันทึกความหมาย ตัวอย่าง หรือสถานการณ์ของคำศัพท์ได้อย่างอิสระ",
-  "helpTag": "ป้อนคำหลักเพื่อจัดหมวดหมู่หรือค้นหาในภายหลัง",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "ป้อนคำหลักเพื่อจัดหมวดหมู่หรือค้นหาในภายหลัง"
 }

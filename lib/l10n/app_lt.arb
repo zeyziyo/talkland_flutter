@@ -7,6 +7,16 @@
   "inputLanguage": "Įvesties kalba",
   "translationLanguage": "Vertimo kalba",
   "simplifiedGuidance": "Akimirksniu paverskite kasdienius pokalbius į užsienio kalbas! „Talkie“ įrašys jūsų kalbos gyvenimą.",
+  "noDataForLanguage": "Šiai kalbai mokymosi medžiagos vietinėje DB nėra. Atsisiųskite medžiagą arba pasirinkite kitą kalbą.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Atšaukti",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Atverti nustatymus",
   "helpNotebook": "Pasirinkite aplanką, kuriame norite išsaugoti išverstus rezultatus.",
   "helpNote": "Laisvai įrašykite žodžių reikšmes, sakinius ar situacijas.",
-  "helpTag": "Įveskite raktinius žodžius, kad vėliau galėtumėte rūšiuoti ar ieškoti.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Įveskite raktinius žodžius, kad vėliau galėtumėte rūšiuoti ar ieškoti."
 }

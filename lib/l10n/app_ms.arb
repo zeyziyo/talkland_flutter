@@ -7,6 +7,16 @@
   "inputLanguage": "Bahasa Input",
   "translationLanguage": "Bahasa Terjemahan",
   "simplifiedGuidance": "Ubah perbualan harian ke bahasa asing dalam sekelip mata! Talkie merekodkan kehidupan bahasa anda.",
+  "noDataForLanguage": "Tiada data pembelajaran untuk bahasa yang dipilih dalam DB tempatan. Sila muat turun data atau pilih bahasa lain.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Batal",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Buka Tetapan",
   "helpNotebook": "Pilih folder untuk menyimpan hasil terjemahan.",
   "helpNote": "Catat makna, contoh ayat atau situasi perkataan dengan bebas.",
-  "helpTag": "Masukkan kata kunci untuk mengklasifikasikan atau mencari kemudian.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Masukkan kata kunci untuk mengklasifikasikan atau mencari kemudian."
 }

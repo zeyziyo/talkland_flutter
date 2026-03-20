@@ -7,6 +7,16 @@
   "inputLanguage": "Invoertaal",
   "translationLanguage": "Vertalingstaal",
   "simplifiedGuidance": "Skakel alledaagse gesprekke onmiddellik in vreemde tale om! Talkie teken jou taallewe aan.",
+  "noDataForLanguage": "Daar is geen leermateriaal vir die gekose taal in die plaaslike databasis nie. Laai die materiaal af of kies 'n ander taal.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Kanselleer",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Open instellings",
   "helpNotebook": "Kies 'n gids om vertaalde resultate te stoor.",
   "helpNote": "Teken die betekenis, voorbeelde of situasies van die woord vrylik aan.",
-  "helpTag": "Sleutelwoorde vir latere kategorisering of soektogte.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Sleutelwoorde vir latere kategorisering of soektogte."
 }

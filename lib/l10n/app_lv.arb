@@ -7,6 +7,16 @@
   "inputLanguage": "Ievades valoda",
   "translationLanguage": "Tulkošanas valoda",
   "simplifiedGuidance": "Mirklī pārvērtiet ikdienas sarunas svešvalodā! Talkie ierakstīs jūsu valodas dzīvi.",
+  "noDataForLanguage": "Izvēlētajai valodai mācību dati lokālajā datubāzē nav pieejami. Lūdzu, lejupielādējiet datus vai izvēlieties citu valodu.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Atcelt",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Atvērt iestatījumus",
   "helpNotebook": "Izvēlieties mapi, kurā saglabāt tulkojumus.",
   "helpNote": "Brīvi pierakstiet vārda nozīmi, piemērus vai kontekstu.",
-  "helpTag": "Ievadiet atslēgvārdus, lai tos vēlāk varētu kārtot vai meklēt.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Ievadiet atslēgvārdus, lai tos vēlāk varētu kārtot vai meklēt."
 }

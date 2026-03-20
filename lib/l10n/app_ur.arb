@@ -7,6 +7,16 @@
   "inputLanguage": "ان پٹ لینگویج",
   "translationLanguage": "ترجمہ کی لینگویج",
   "simplifiedGuidance": "روز مرہ کی گفتگو کو غیر ملکی زبان میں تبدیل کریں! ٹاکی آپ کی لسانی زندگی کو ریکارڈ کرے گا۔",
+  "noDataForLanguage": "منتخب کردہ زبان کے لیے لرننگ میٹریل لوکل ڈیٹا بیس میں نہیں ہے۔ میٹریل ڈاؤن لوڈ کریں یا کوئی دوسری زبان منتخب کریں۔",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "منسوخ",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "ترتیبات کھولیں",
   "helpNotebook": "ترجمہ شدہ نتائج کو محفوظ کرنے کے لیے فولڈر منتخب کریں۔",
   "helpNote": "الفاظ کے معنی، مثالیں، حالات وغیرہ آزادانہ طور پر ریکارڈ کریں۔",
-  "helpTag": "بعد میں درجہ بندی یا تلاش کرنے کے لیے مطلوبہ الفاظ درج کریں۔",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "بعد میں درجہ بندی یا تلاش کرنے کے لیے مطلوبہ الفاظ درج کریں۔"
 }

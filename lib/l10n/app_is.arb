@@ -7,6 +7,16 @@
   "inputLanguage": "Inntaksmál",
   "translationLanguage": "Þýðingarmál",
   "simplifiedGuidance": "Umbreyttu daglegum samtölum samstundis á erlent tungumál! Talkie heldur utan um tungumálanotkun þína.",
+  "noDataForLanguage": "Engin námsefni fyrir valið tungumál er að finna í staðbundnum gagnagrunni. Vinsamlegast halaðu niður efni eða veldu annað tungumál.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Hætta við",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Opna stillingar",
   "helpNotebook": "Veldu möppuna til að vista þýddar niðurstöður í.",
   "helpNote": "Skrifaðu frjálst um merkingu orðsins, dæmi eða aðstæður.",
-  "helpTag": "Sláðu inn leitarorð til að flokka eða leita seinna.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Sláðu inn leitarorð til að flokka eða leita seinna."
 }

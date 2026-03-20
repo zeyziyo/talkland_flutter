@@ -7,6 +7,16 @@
   "inputLanguage": "Γλώσσα εισαγωγής",
   "translationLanguage": "Γλώσσα μετάφρασης",
   "simplifiedGuidance": "Μετατρέψτε άμεσα τις καθημερινές συνομιλίες σε ξένη γλώσσα! Το Talkie καταγράφει την γλωσσική σας ζωή.",
+  "noDataForLanguage": "Δεν υπάρχουν μαθησιακά δεδομένα για την επιλεγμένη γλώσσα στην τοπική βάση δεδομένων. Κάντε λήψη των δεδομένων ή επιλέξτε άλλη γλώσσα.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Ακύρωση",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Άνοιγμα ρυθμίσεων",
   "helpNotebook": "Επιλέξτε έναν φάκελο για να αποθηκεύσετε τα μεταφρασμένα αποτελέσματα.",
   "helpNote": "Καταγράψτε ελεύθερα τις έννοιες, τα παραδείγματα ή τις περιστάσεις των λέξεων.",
-  "helpTag": "Εισαγάγετε λέξεις-κλειδιά για να ταξινομήσετε ή να αναζητήσετε αργότερα.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Εισαγάγετε λέξεις-κλειδιά για να ταξινομήσετε ή να αναζητήσετε αργότερα."
 }

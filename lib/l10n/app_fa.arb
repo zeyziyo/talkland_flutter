@@ -7,6 +7,16 @@
   "inputLanguage": "زبان ورودی",
   "translationLanguage": "زبان ترجمه",
   "simplifiedGuidance": "تبدیل فوری مکالمات روزمره به زبان خارجی! Talkie زندگی زبانی شما را ثبت می کند.",
+  "noDataForLanguage": "هیچ داده آموزشی برای زبان انتخابی شما در پایگاه داده محلی وجود ندارد. لطفاً داده ها را بارگیری کنید یا زبان دیگری را انتخاب کنید.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "لغو",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "باز کردن تنظیمات",
   "helpNotebook": "پوشه ای را برای ذخیره نتایج ترجمه انتخاب کنید.",
   "helpNote": "معانی، مثال ها، موقعیت ها و غیره کلمات را آزادانه یادداشت کنید.",
-  "helpTag": "برای طبقه بندی یا جستجو در آینده، کلمات کلیدی را وارد کنید.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "برای طبقه بندی یا جستجو در آینده، کلمات کلیدی را وارد کنید."
 }

@@ -7,6 +7,16 @@
   "inputLanguage": "ආදාන භාෂාව",
   "translationLanguage": "පරිවර්තන භාෂාව",
   "simplifiedGuidance": "දෛනික සංවාද ක්ෂණිකව විදේශ භාෂාවකට පරිවර්තනය කරන්න! Talkie ඔබගේ භාෂා ජීවිතය වාර්තා කරයි.",
+  "noDataForLanguage": "ඔබ තෝරාගත් භාෂාව සඳහා ඉගෙනුම් ද්‍රව්‍ය දේශීය දත්ත ගබඩාවේ නොමැත. කරුණාකර ද්‍රව්‍ය බාගත කරන්න හෝ වෙනත් භාෂාවක් තෝරන්න.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "අවලංගු කරන්න",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "සැකසුම් විවෘත කරන්න",
   "helpNotebook": "පරිවර්තන ප්‍රතිඵල සුරැකීමට ෆෝල්ඩරයක් තෝරන්න.",
   "helpNote": "වචනයේ තේරුම, උදාහරණ, තත්වයන් වැනි දේ නිදහසේ සටහන් කරන්න.",
-  "helpTag": "පසුව වර්ග කිරීමට හෝ සෙවීමට මූල පද ඇතුළත් කරන්න.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "පසුව වර්ග කිරීමට හෝ සෙවීමට මූල පද ඇතුළත් කරන්න."
 }

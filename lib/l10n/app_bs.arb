@@ -7,6 +7,16 @@
   "inputLanguage": "Ulazni jezik",
   "translationLanguage": "Jezik prijevoda",
   "simplifiedGuidance": "Trenutna konverzija svakodnevnih razgovora na strani jezik! Talkie bilježi vaš jezični život.",
+  "noDataForLanguage": "Nema materijala za učenje za odabrani jezik u lokalnoj bazi podataka. Preuzmite materijale ili odaberite drugi jezik.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Otkaži",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Otvori postavke",
   "helpNotebook": "Odaberite mapu za spremanje prevedenih rezultata.",
   "helpNote": "Slobodno zabilježite značenje riječi, primjere ili kontekst.",
-  "helpTag": "Unesite ključne riječi za kasniju klasifikaciju ili pretragu.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Unesite ključne riječi za kasniju klasifikaciju ili pretragu."
 }

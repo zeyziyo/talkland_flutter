@@ -7,6 +7,7 @@
   "inputLanguage": "Input Language",
   "translationLanguage": "Translation Language",
   "simplifiedGuidance": "Set 'My Language' & 'Learning Language' in Settings, then translate and save.",
+  "noDataForLanguage": "No study materials for the selected language in local DB. Please download materials or select another language.",
   "versionLabel": "Version: {version}",
   "@versionLabel": {
     "placeholders": {
@@ -804,5 +805,24 @@
   "openSettings": "Open Settings",
   "helpNotebook": "Select a folder to save translated results.",
   "helpNote": "Record meanings, examples, or context freely.",
-  "helpTag": "Enter keywords for categorization or searching later."
+  "helpTag": "Enter keywords for categorization or searching later.",
+  "requestTranslation": "Request Translation",
+  "statusRequestSuccess": "Translation request submitted!",
+  "statusRequestFailed": "Request failed: {error}",
+  "@statusRequestFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "studyLangNotFoundTitle": "Language Not Supported",
+  "studyLangNotFoundDesc": "The selected material does not support your current study language ({targetLang}). Would you like to request a translation?",
+  "@studyLangNotFoundDesc": {
+    "placeholders": {
+      "targetLang": {
+        "type": "String"
+      }
+    }
+  }
 }

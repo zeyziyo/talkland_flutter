@@ -7,6 +7,16 @@
   "inputLanguage": "Sarrerako hizkuntza",
   "translationLanguage": "Itzulpen-hizkuntza",
   "simplifiedGuidance": "Eguneroko elkarrizketak atzerriko hizkuntzetara berehala bihurtu! Talkiek zure hizkuntza-bizitza erregistratzen du.",
+  "noDataForLanguage": "Hautatutako hizkuntzarako ikasketa materialik ez dago tokiko DBan. Materiala deskargatu edo beste hizkuntza bat hautatu.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Ezeztatu",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Ezarpenak ireki",
   "helpNotebook": "Hautatu itzulpenak gordetzeko karpeta.",
   "helpNote": "Idatzi hitzaren esanahia, adibideak edo egoerak aske.",
-  "helpTag": "Sartu gero sailkatu edo bilatzeko gako-hitzak.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Sartu gero sailkatu edo bilatzeko gako-hitzak."
 }

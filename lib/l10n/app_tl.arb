@@ -7,6 +7,16 @@
   "inputLanguage": "Wika ng Input",
   "translationLanguage": "Wika ng Pagsasalin",
   "simplifiedGuidance": "Agad na isalin ang pang-araw-araw na pag-uusap sa ibang wika! Itatala ng Talkie ang iyong buhay pangwika.",
+  "noDataForLanguage": "Walang aralin para sa napiling wika sa lokal na DB. Mag-download o pumili ng ibang wika.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Kanselahin",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Buksan ang mga Setting",
   "helpNotebook": "Pumili ng folder kung saan ilalagay ang mga isinalin.",
   "helpNote": "Malayang isulat ang kahulugan, halimbawa, o sitwasyon ng salita.",
-  "helpTag": "Maglagay ng mga keyword para sa pag-uuri o paghahanap sa hinaharap.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Maglagay ng mga keyword para sa pag-uuri o paghahanap sa hinaharap."
 }

@@ -7,6 +7,16 @@
   "inputLanguage": "Мова ўводу",
   "translationLanguage": "Мова перакладу",
   "simplifiedGuidance": "Імгненна перакладайце штодзённыя размовы на замежныя мовы! Talkie будзе запісваць ваша моўнае жыццё.",
+  "noDataForLanguage": "Для абранай мовы няма навучальных матэрыялаў у лакальнай базе даных. Калі ласка, спампуйце матэрыялы альбо абярыце іншую мову.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Адмяніць",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Адкрыць налады",
   "helpNotebook": "Выберыце тэчку для захавання перакладзеных вынікаў.",
   "helpNote": "Запісвайце значэнне слоў, прыклады, сітуацыі і г.д. свабодна.",
-  "helpTag": "Увядзіце ключавыя словы для класіфікацыі ці пошуку пазней.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Увядзіце ключавыя словы для класіфікацыі ці пошуку пазней."
 }

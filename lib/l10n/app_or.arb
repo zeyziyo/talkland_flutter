@@ -7,6 +7,16 @@
   "inputLanguage": "ଇନପୁଟ୍ ଭାଷା",
   "translationLanguage": "ଅନୁବାଦ ଭାଷା",
   "simplifiedGuidance": "ଦୈନନ୍ଦିନ କଥାବାର୍ତ୍ତାକୁ ବିଦେଶୀ ଭାଷାରେ ତୁରନ୍ତ ରୂପାନ୍ତର କରନ୍ତୁ! Talkie ଆପଣଙ୍କର ଭାଷା ଜୀବନକୁ ରେକର୍ଡ କରିବ।",
+  "noDataForLanguage": "ଆପଣଙ୍କ ଦ୍ୱାରା ଚୟନ କରାଯାଇଥିବା ଭାଷା ପାଇଁ କୌଣସି ଶିକ୍ଷଣ ଉପାଦାନ ସ୍ଥାନୀୟ DB ରେ ନାହିଁ | ଦୟାକରି ଉପାଦାନଗୁଡିକ ଡାଉନଲୋଡ୍ କରନ୍ତୁ କିମ୍ବା ଅନ୍ୟ ଏକ ଭାଷା ଚୟନ କରନ୍ତୁ |",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "ବାତିଲ୍ କରନ୍ତୁ",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "ସେଟିଂ ଖୋଲନ୍ତୁ",
   "helpNotebook": "ଅନୁବାଦ ହୋଇଥିବା ଫଳାଫଳକୁ ସଞ୍ଚୟ କରିବାକୁ ଫୋଲ୍ଡର ଚୟନ କରନ୍ତୁ।",
   "helpNote": "ଶବ୍ଦର ଅର୍ଥ କିମ୍ବା ଉଦାହରଣ, ପରିସ୍ଥିତି ଇତ୍ୟାଦିକୁ ମୁକ୍ତ ଭାବରେ ରେକର୍ଡ଼ କରନ୍ତୁ।",
-  "helpTag": "ପରେ ବର୍ଗୀକରଣ କିମ୍ବା ଖୋଜିବା ପାଇଁ କୀୱାର୍ଡ଼ ପ୍ରବେଶ କରନ୍ତୁ।",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "ପରେ ବର୍ଗୀକରଣ କିମ୍ବା ଖୋଜିବା ପାଇଁ କୀୱାର୍ଡ଼ ପ୍ରବେଶ କରନ୍ତୁ।"
 }

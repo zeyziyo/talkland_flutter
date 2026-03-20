@@ -682,5 +682,16 @@ extension AppStateAuth on AppState {
     _dialogueGroups = [];
     notify();
   }
+
+  /// Phase 17462: Request missing translation for online material
+  Future<Map<String, dynamic>> requestTranslation(String materialId, String langCode) async {
+    try {
+      await SupabaseService.requestTranslation(materialId, langCode);
+      return {'success': true};
+    } catch (e) {
+      debugPrint('[AppState] Translation request failed: $e');
+      return {'success': false, 'error': e.toString()};
+    }
+  }
 }
 // End of AppStateAuth

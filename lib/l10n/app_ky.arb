@@ -7,6 +7,16 @@
   "inputLanguage": "Киргиз тили",
   "translationLanguage": "Котормо тили",
   "simplifiedGuidance": "Күнүмдүк сүйлөшүүлөрдү заматта чет тилге которуңуз! Talkie сиздин тил жашооңузду жазып алат.",
+  "noDataForLanguage": "Тандалган тил үчүн окуу материалдары жергиликтүү базада жок. Материалдарды жүктөп алыңыз же башка тилди тандаңыз.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Артка",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Жөндөөлөрдү ачуу",
   "helpNotebook": "Которулган натыйжаларды сактай турган папканы тандаңыз.",
   "helpNote": "Сөздүн маанисин, мисалдарын же контекстти жазыңыз.",
-  "helpTag": "Кийинчерээк классификациялоо же издөө үчүн ачкыч сөздөрдү киргизиңиз.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Кийинчерээк классификациялоо же издөө үчүн ачкыч сөздөрдү киргизиңиз."
 }

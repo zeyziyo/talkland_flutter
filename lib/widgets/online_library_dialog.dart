@@ -186,15 +186,33 @@ class _OnlineLibraryDialogState extends State<OnlineLibraryDialog> {
                 } else if (result['error'] == 'StudyLangNotFound') {
                   // v59.6: Dedicated popup for missing Study Language support
                   final targetLang = result['targetLang'] as String? ?? 'Unknown';
+                  final materialId = material['id']?.toString() ?? 'unknown';
                   showDialog(
                     context: context,
                     builder: (ctx) => AlertDialog(
-                      title: const Text('학습 언어 미지원'),
-                      content: Text('선택하신 자료는 현재 설정된 학습 언어($targetLang)를 지원하지 않아 로컬에 저장할 수 없습니다.'),
+                      title: Text(l10n.studyLangNotFoundTitle), // "학습 언어 미지원"
+                      content: Text(l10n.studyLangNotFoundDesc(targetLang)), // "국 현재 설정된 학습 언어... 번역을 요청하시겠습니까?"
                       actions: [
                         TextButton(
                           onPressed: () => Navigator.pop(ctx),
-                          child: const Text('확인'),
+                          child: Text(l10n.cancel),
+                        ),
+                        ElevatedButton(
+                          onPressed: () async {
+                            Navigator.pop(ctx);
+                            final reqResult = await state.requestTranslation(materialId, targetLang);
+                            if (context.mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(reqResult['success'] == true 
+                                      ? l10n.statusRequestSuccess 
+                                      : l10n.statusRequestFailed(reqResult['error'] ?? 'Unknown Error')),
+                                  backgroundColor: reqResult['success'] == true ? Colors.green : Colors.red,
+                                ),
+                              );
+                            }
+                          },
+                          child: Text(l10n.requestTranslation), // "번역 요청하기"
                         ),
                       ],
                     ),

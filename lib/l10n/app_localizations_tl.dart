@@ -22,6 +22,10 @@ class AppLocalizationsTl extends AppLocalizations {
       'Agad na isalin ang pang-araw-araw na pag-uusap sa ibang wika! Itatala ng Talkie ang iyong buhay pangwika.';
 
   @override
+  String get noDataForLanguage =>
+      'Walang aralin para sa napiling wika sa lokal na DB. Mag-download o pumili ng ibang wika.';
+
+  @override
   String versionLabel(String version) {
     return 'Version: $version';
   }
@@ -1369,4 +1373,23 @@ class AppLocalizationsTl extends AppLocalizations {
   @override
   String get helpTag =>
       'Maglagay ng mga keyword para sa pag-uuri o paghahanap sa hinaharap.';
+
+  @override
+  String get requestTranslation => '번역 요청하기';
+
+  @override
+  String get statusRequestSuccess => '번역 요청이 완료되었습니다.';
+
+  @override
+  String statusRequestFailed(String error) {
+    return '번역 요청 실패: $error';
+  }
+
+  @override
+  String get studyLangNotFoundTitle => '학습 언어 미지원';
+
+  @override
+  String studyLangNotFoundDesc(String targetLang) {
+    return '선택하신 자료는 현재 설정된 학습 언어($targetLang)를 지원하지 않아 로컬에 저장할 수 없습니다. 번역을 요청하시겠습니까?';
+  }
 }

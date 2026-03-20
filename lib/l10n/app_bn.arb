@@ -7,6 +7,16 @@
   "inputLanguage": "ইনপুট ভাষা",
   "translationLanguage": "অনুবাদ ভাষা",
   "simplifiedGuidance": "দৈনন্দিন কথোপকথনগুলিকে তাৎক্ষণিকভাবে একটি বিদেশী ভাষায় রূপান্তর করুন! Talkie আপনার ভাষার জীবনকে রেকর্ড করে।",
+  "noDataForLanguage": "নির্বাচিত ভাষার জন্য কোনো শিক্ষণীয় উপকরণ লোকাল ডেটাবেসে নেই। অনুগ্রহ করে ডেটা ডাউনলোড করুন অথবা অন্য কোনো ভাষা নির্বাচন করুন।",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "বাতিল",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "সেটিংস খুলুন",
   "helpNotebook": "অনুবাদিত ফলাফল সংরক্ষণের জন্য একটি ফোল্ডার নির্বাচন করুন।",
   "helpNote": "শব্দের অর্থ, উদাহরণ বা পরিস্থিতি ইত্যাদি নির্দ্বিধায় লিখুন।",
-  "helpTag": "শ্রেণীবদ্ধ বা অনুসন্ধানের জন্য কীওয়ার্ড লিখুন।",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "শ্রেণীবদ্ধ বা অনুসন্ধানের জন্য কীওয়ার্ড লিখুন।"
 }

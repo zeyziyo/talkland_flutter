@@ -7,6 +7,16 @@
   "inputLanguage": "Ngôn ngữ nhập",
   "translationLanguage": "Ngôn ngữ dịch",
   "simplifiedGuidance": "Chuyển đổi tức thì các cuộc trò chuyện hàng ngày sang ngoại ngữ! Talkie sẽ ghi lại cuộc sống ngôn ngữ của bạn.",
+  "noDataForLanguage": "Không có tài liệu học tập cho ngôn ngữ bạn đã chọn trong cơ sở dữ liệu cục bộ. Vui lòng tải xuống tài liệu hoặc chọn một ngôn ngữ khác.",
+  "versionLabel": "Version: {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "developerContact": "Developer Contact: talkie.help@gmail.com",
   "cancel": "Hủy",
   "@cancel": {
     "description": "Cancel button"
@@ -795,14 +805,5 @@
   "openSettings": "Mở cài đặt",
   "helpNotebook": "Chọn thư mục để lưu trữ các kết quả đã dịch.",
   "helpNote": "Tự do ghi lại ý nghĩa, ví dụ hoặc tình huống của từ.",
-  "helpTag": "Nhập từ khóa để phân loại hoặc tìm kiếm sau này.",
-  "versionLabel": "Version: {version}",
-  "@versionLabel": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
-  "developerContact": "Developer Contact: talkie.help@gmail.com"
+  "helpTag": "Nhập từ khóa để phân loại hoặc tìm kiếm sau này."
 }

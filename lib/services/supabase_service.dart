@@ -347,4 +347,14 @@ class SupabaseService {
     langCode: langCode,
     avatarColor: avatarColor,
   );
+
+  /// Phase 17462: Request missing translation for online material
+  static Future<void> requestTranslation(String materialId, String langCode) async {
+    final userId = client.auth.currentUser?.id;
+    await client.from('translation_requests').insert({
+      'material_id': materialId,
+      'lang_code': langCode,
+      'user_id': userId,
+    });
+  }
 }

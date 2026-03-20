@@ -16,6 +16,7 @@
   "inputLanguage": "입력 언어",
   "translationLanguage": "번역 언어",
   "simplifiedGuidance": "'언어 설정' 메뉴에서 '내 언어'와 '학습 언어'를 지정 후 번역, 저장해 보세요.",
+  "noDataForLanguage": "선택하신 언어의 학습 자료가 로컬 DB에 없습니다. 자료를 다운로드하거나 다른 언어를 선택해 주세요.",
   "versionLabel": "버전: {version}",
   "@versionLabel": {
     "placeholders": {
@@ -808,5 +809,24 @@
   "openSettings": "설정 열기",
   "helpNotebook": "번역된 결과를 저장할 폴더를 선택합니다.",
   "helpNote": "단어의 뜻이나 예문, 상황 등을 자유롭게 기록하세요.",
-  "helpTag": "나중에 분류하거나 검색하기 위한 키워드를 입력하세요."
+  "helpTag": "나중에 분류하거나 검색하기 위한 키워드를 입력하세요.",
+  "requestTranslation": "번역 요청하기",
+  "statusRequestSuccess": "번역 요청이 완료되었습니다.",
+  "statusRequestFailed": "번역 요청 실패: {error}",
+  "@statusRequestFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "studyLangNotFoundTitle": "학습 언어 미지원",
+  "studyLangNotFoundDesc": "선택하신 자료는 현재 설정된 학습 언어({targetLang})를 지원하지 않아 로컬에 저장할 수 없습니다. 번역을 요청하시겠습니까?",
+  "@studyLangNotFoundDesc": {
+    "placeholders": {
+      "targetLang": {
+        "type": "String"
+      }
+    }
+  }
 }
