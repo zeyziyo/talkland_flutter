@@ -526,13 +526,9 @@ class _SimplifiedInputWidgetState extends State<SimplifiedInputWidget> {
           const Divider(color: Colors.black12),
           const SizedBox(height: 16),
           Text(
-            l10n.versionLabel(AppConstants.appVersion),
+            '${l10n.versionLabel(AppConstants.appVersion)}  |  ${l10n.developerContact}',
             style: TextStyle(color: Colors.grey.shade500, fontSize: 12),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            l10n.developerContact,
-            style: TextStyle(color: Colors.grey.shade500, fontSize: 12),
+            textAlign: TextAlign.center,
           ),
           const SizedBox(height: 16),
         ],

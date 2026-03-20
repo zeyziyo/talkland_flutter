@@ -19,7 +19,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get simplifiedGuidance =>
-      'Talkie로 80가지 언어 중 원하는 언어 간 즉시 상호 번역 및 무한 반복 학습이 가능합니다!';
+      '\'언어 설정\' 메뉴에서 \'내 언어\'와 \'학습 언어\'를 지정 후 번역, 저장해 보세요.';
 
   @override
   String versionLabel(String version) {
@@ -27,7 +27,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get developerContact => '개발자 연락처: talkie.help@gmail.com';
+  String get developerContact => '문의: talkie.help@gmail.com';
 
   @override
   String get cancel => '취소';

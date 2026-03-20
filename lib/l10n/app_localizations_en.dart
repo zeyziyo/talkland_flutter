@@ -19,7 +19,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get simplifiedGuidance =>
-      'Talkie enables instant mutual translation and infinite repetitive learning between 80 languages!';
+      'Set \'My Language\' & \'Learning Language\' in Settings, then translate and save.';
 
   @override
   String versionLabel(String version) {
@@ -27,7 +27,7 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get developerContact => 'Developer Contact: talkie.help@gmail.com';
+  String get developerContact => 'Contact: talkie.help@gmail.com';
 
   @override
   String get cancel => 'Cancel';
